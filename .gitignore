@@ -1,2 +1,4 @@
-log.txt
+*.swp
 node_modules/
+elm-stuff/
+Client.txt

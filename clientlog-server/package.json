@@ -4,7 +4,7 @@
   "main": "src/main.js",
   "license": "MIT",
   "scripts": {
-    "serve": "node ./src/main.js"
+    "serve": "nodemon ./src/main.js"
   },
   "dependencies": {
     "tail": "^1.2.3",
@@ -13,5 +13,8 @@
   "optionalDependencies": {
     "bufferutil": "^3.0.5",
     "utf-8-validate": "^4.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
   }
 }
