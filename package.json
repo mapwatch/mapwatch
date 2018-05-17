@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "serve": "concurrently --kill-others --names \"www,server\" \"cd www && ./dev.sh\" \"cd clientlog-server && yarn serve\""
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  }
+}

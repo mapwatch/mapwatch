@@ -63,7 +63,7 @@ class WSServer {
       const q = Querystring.parse(url.query)
       const client = {ws, req, url, q}
       this.clients.push(client)
-      log('connection', client)
+      // log('connection', client)
 
       client.ws.on('message', json => {
         const msg = JSON.parse(json)
@@ -73,7 +73,7 @@ class WSServer {
           const filter = new RegExp(config.filter || '')
           // by default, blacklist-filter everything/match nothing
           const bfilter = config.blacklistFilter ? new RegExp(config.blacklistFilter) : null
-          log('recv:init', {client, config, filter, bfilter})
+          log('recv:init', {config, filter, bfilter})
           // TODO: close existing logtail, if any
           client.logtail = new TailSender(config.clientLogPath, line => {
             if (filter.test(line.data) && !(bfilter && bfilter.test(line.data))) {

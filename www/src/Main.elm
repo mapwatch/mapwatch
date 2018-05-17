@@ -1,5 +1,7 @@
 module Main exposing (main)
 
+import Date
+import Regex
 import Ports
 import Html as H
 import Html.Attributes as A
@@ -21,7 +23,7 @@ type alias Flags =
 
 
 type alias Model =
-    { lines : List String
+    { lines : List LogLine
     , config : Ports.Config
     }
 
@@ -29,7 +31,103 @@ type alias Model =
 type Msg
     = StartWatching
     | InputClientLogPath String
-    | LogLine String
+    | RecvLogLine String
+
+
+type alias LogLine =
+    Result { raw : String, err : String }
+        { raw : String
+        , date : Date.Date
+        , info : LogInfo
+        }
+
+
+type LogInfo
+    = Opening
+    | ConnectingToInstanceServer String
+    | YouHaveEntered String
+
+
+regexParseFirst : String -> String -> Maybe Regex.Match
+regexParseFirst regex txt =
+    txt
+        |> Regex.find (Regex.AtMost 1) (Regex.regex regex)
+        |> List.head
+
+
+regexParseFirstRes : String -> err -> String -> Result err Regex.Match
+regexParseFirstRes regex err txt =
+    regexParseFirst regex txt |> Result.fromMaybe err
+
+
+parseLogInfo : String -> Maybe LogInfo
+parseLogInfo raw =
+    let
+        parseOpening =
+            case regexParseFirst "LOG FILE OPENING" raw of
+                Just _ ->
+                    Just Opening
+
+                _ ->
+                    Nothing
+
+        parseEntered =
+            case regexParseFirst "You have entered (.*)\\.$" raw |> Maybe.map .submatches of
+                Just [ Just zone ] ->
+                    Just <| YouHaveEntered zone
+
+                _ ->
+                    Nothing
+
+        parseConnecting =
+            case regexParseFirst "Connecting to instance server at (.*)$" raw |> Maybe.map .submatches of
+                Just [ Just addr ] ->
+                    Just <| ConnectingToInstanceServer addr
+
+                _ ->
+                    Nothing
+    in
+        [ parseOpening, parseEntered, parseConnecting ]
+            -- use the first matching parser
+            |> List.map (Maybe.withDefault [] << Maybe.map List.singleton)
+            |> List.concat
+            |> List.head
+
+
+parseLogLine : String -> LogLine
+parseLogLine raw =
+    let
+        date : Result String Date.Date
+        date =
+            raw
+                -- rearrange the date so the built-in js parser likes it
+                |> regexParseFirstRes "\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}" "no date in logline"
+                |> Result.map (Regex.split Regex.All (Regex.regex "[/: ]") << .match)
+                |> Result.andThen
+                    (\strs ->
+                        case strs of
+                            [ yr, mo, d, h, mn, s ] ->
+                                Date.fromString <| (String.join "-" [ yr, mo, d ]) ++ "T" ++ (String.join ":" [ h, mn, s ]) ++ "Z"
+
+                            _ ->
+                                Err ("date parsed-count mismatch: " ++ toString strs)
+                    )
+
+        result d i =
+            { raw = raw
+            , date = d
+            , info = i
+            }
+
+        info =
+            parseLogInfo raw
+                |> Result.fromMaybe "logline not recognized"
+
+        error err =
+            { err = err, raw = raw }
+    in
+        Result.map2 result date info
+            |> Result.mapError error
 
 
 initModel : Flags -> Model
@@ -60,20 +158,41 @@ update msg model =
             in
                 ( { model | config = { config | clientLogPath = path } }, Cmd.none )
 
-        LogLine line ->
-            ( { model | lines = line :: model.lines }, Cmd.none )
+        RecvLogLine raw ->
+            let
+                line =
+                    parseLogLine raw
+            in
+                ( { model
+                    | lines = line :: model.lines
+                  }
+                , Cmd.none
+                )
 
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch
-        [ Ports.logline LogLine
+        [ Ports.logline RecvLogLine
         ]
 
 
-viewLogLine : String -> H.Html msg
-viewLogLine str =
-    H.li [] [ H.text str ]
+viewLogLine : LogLine -> H.Html msg
+viewLogLine mline =
+    H.li []
+        (case mline of
+            Ok line ->
+                [ H.text (toString line.date)
+                , H.text (toString line.info)
+                , H.div [] [ H.i [] [ H.text line.raw ] ]
+                ]
+
+            Err { raw, err } ->
+                [ H.text "PARSE ERROR: "
+                , H.text err
+                , H.div [] [ H.i [] [ H.text raw ] ]
+                ]
+        )
 
 
 viewConfig : Model -> H.Html Msg
