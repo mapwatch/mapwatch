@@ -23,8 +23,10 @@ type alias Flags =
 
 
 type alias Model =
-    { lines : List LogLine
+    { parsedLines : List ParsedLogLine
+    , lines : List LogLine
     , config : Ports.Config
+    , entries : List InstanceEntry
     }
 
 
@@ -35,17 +37,25 @@ type Msg
 
 
 type alias LogLine =
-    Result { raw : String, err : String }
-        { raw : String
-        , date : Date.Date
-        , info : LogInfo
-        }
+    { raw : String
+    , date : Date.Date
+    , info : LogInfo
+    }
+
+
+type alias ParsedLogLine =
+    Result { raw : String, err : String } LogLine
 
 
 type LogInfo
     = Opening
     | ConnectingToInstanceServer String
     | YouHaveEntered String
+
+
+type InstanceEntry
+    = InstanceEntry { zone : String, addr : String, at : Date.Date }
+    | OpenedEntry { at : Date.Date }
 
 
 regexParseFirst : String -> String -> Maybe Regex.Match
@@ -94,7 +104,7 @@ parseLogInfo raw =
             |> List.head
 
 
-parseLogLine : String -> LogLine
+parseLogLine : String -> ParsedLogLine
 parseLogLine raw =
     let
         date : Result String Date.Date
@@ -132,7 +142,9 @@ parseLogLine raw =
 
 initModel : Flags -> Model
 initModel flags =
-    { lines = []
+    { parsedLines = []
+    , lines = []
+    , entries = []
     , config =
         { wshost = flags.wshost
         , clientLogPath = "../Client.txt"
@@ -160,14 +172,42 @@ update msg model =
 
         RecvLogLine raw ->
             let
-                line =
-                    parseLogLine raw
+                updateLogLines model =
+                    let
+                        parsedLine =
+                            parseLogLine raw
+                    in
+                        (case parsedLine of
+                            Ok line ->
+                                { model | lines = line :: model.lines }
+
+                            _ ->
+                                model
+                        )
+                            |> (\m -> { m | parsedLines = parsedLine :: model.parsedLines })
             in
-                ( { model
-                    | lines = line :: model.lines
-                  }
-                , Cmd.none
-                )
+                model
+                    |> updateLogLines
+                    |> updateInstanceEntries
+                    |> \m -> ( m, Cmd.none )
+
+
+updateInstanceEntries : Model -> Model
+updateInstanceEntries model =
+    case List.head model.lines of
+        Nothing ->
+            model
+
+        Just first ->
+            case model.lines |> List.take 2 |> List.map .info of
+                (ConnectingToInstanceServer addr) :: (YouHaveEntered zone) :: _ ->
+                    { model | entries = InstanceEntry { zone = zone, addr = addr, at = first.date } :: model.entries }
+
+                Opening :: _ ->
+                    { model | entries = OpenedEntry { at = first.date } :: model.entries }
+
+                _ ->
+                    model
 
 
 subscriptions : Model -> Sub Msg
@@ -177,7 +217,7 @@ subscriptions model =
         ]
 
 
-viewLogLine : LogLine -> H.Html msg
+viewLogLine : ParsedLogLine -> H.Html msg
 viewLogLine mline =
     H.li []
         (case mline of
@@ -193,6 +233,16 @@ viewLogLine mline =
                 , H.div [] [ H.i [] [ H.text raw ] ]
                 ]
         )
+
+
+viewInstanceEntry : InstanceEntry -> H.Html msg
+viewInstanceEntry entry =
+    case entry of
+        InstanceEntry entry ->
+            H.li [] [ H.text <| toString entry.at ++ ": " ++ entry.zone ++ "@" ++ entry.addr ]
+
+        OpenedEntry entry ->
+            H.li [] [ H.text <| toString entry.at ++ ": game reopened" ]
 
 
 viewConfig : Model -> H.Html Msg
@@ -215,5 +265,8 @@ view model =
     H.div []
         [ H.text "Hello elm-world!"
         , viewConfig model
-        , H.ul [] (List.map viewLogLine model.lines)
+        , H.text "instance-entries:"
+        , H.ul [] (List.map viewInstanceEntry model.entries)
+        , H.text "parsed loglines:"
+        , H.ul [] (List.map viewLogLine model.parsedLines)
         ]
