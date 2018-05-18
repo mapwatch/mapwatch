@@ -3,8 +3,12 @@ module View exposing (view)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
+import Time
+import Dict
 import LogLine
 import Model as Model exposing (Model, Msg(..))
+import Entry as Entry exposing (Instance, Entry)
+import MapRun as MapRun exposing (MapRun)
 
 
 viewLogLine : LogLine.Line -> H.Html msg
@@ -16,7 +20,7 @@ viewLogLine line =
         ]
 
 
-instanceToString : Maybe Model.Instance -> String
+instanceToString : Maybe Instance -> String
 instanceToString instance =
     case instance of
         Just i ->
@@ -26,32 +30,55 @@ instanceToString instance =
             "(none)"
 
 
-viewInstanceEntry : Model.InstanceEntry -> H.Html msg
-viewInstanceEntry entry =
+viewEntry : Entry -> H.Html msg
+viewEntry entry =
     H.li []
         [ H.text <|
             toString entry.at
                 ++ ": "
-                ++ toString entry.dur
-                ++ "ms"
-                ++ (if entry.last then
-                        "????"
-                    else
-                        ""
-                   )
-                ++ ", "
                 ++ instanceToString entry.instance
+                ++ ", "
+                ++ toString (Entry.zoneType entry)
         ]
 
 
-viewCurrentInstance : Maybe Model.CurrentInstance -> H.Html msg
-viewCurrentInstance cur =
-    case cur of
-        Just entry ->
-            H.ul [] [ H.li [] [ H.text <| toString entry.at ++ ": (now), " ++ instanceToString entry.instance ] ]
+viewMapSub : String -> Time.Time -> H.Html msg
+viewMapSub zone dur =
+    H.li [] [ H.text <| zone ++ ": " ++ formatDuration dur ]
 
-        Nothing ->
-            H.ul [] [ H.li [] [ H.text "(none yet)" ] ]
+
+viewMapRun : MapRun -> H.Html msg
+viewMapRun run =
+    H.li []
+        [ H.text <| (Maybe.withDefault "(unknown)" run.startZone) ++ ": " ++ formatDuration (MapRun.totalDuration run)
+        , H.ul [] (List.map (uncurry viewMapSub) <| Dict.toList run.durations)
+        ]
+
+
+formatDuration : Float -> String
+formatDuration dur0 =
+    let
+        dur =
+            floor dur0
+
+        h =
+            dur // (truncate Time.hour)
+
+        m =
+            dur % (truncate Time.hour) // (truncate Time.minute)
+
+        s =
+            dur % (truncate Time.minute) // (truncate Time.second)
+
+        ms =
+            dur % (truncate Time.second)
+
+        pad0 length num =
+            num
+                |> toString
+                |> String.padLeft length '0'
+    in
+        String.join ":" [ pad0 2 h, pad0 2 m, pad0 2 s, pad0 4 ms ]
 
 
 viewConfig : Model -> H.Html Msg
@@ -84,10 +111,19 @@ view model =
     H.div []
         [ H.text "Hello elm-world!"
         , viewConfig model
-        , H.text "instance-entries:"
-        , viewCurrentInstance model.current
-        , H.ul [] (List.map viewInstanceEntry model.entries)
         , viewParseError model.parseError
-        , H.text "linebuf:"
-        , H.ul [] (List.map viewLogLine model.linebuf)
+        , H.text "map-runs:"
+        , H.ul []
+            (case MapRun.fromCurrentEntries model.now model.entries of
+                Nothing ->
+                    [ H.li [] [ H.text "(not currently running)" ] ]
+
+                Just run ->
+                    [ viewMapRun run ]
+            )
+        , H.ul [] (List.map viewMapRun model.runs)
+        , H.text "pending-entries:"
+        , H.ul [] (List.map viewEntry model.entries)
+        , H.text "pending-lines:"
+        , H.ul [] (List.map viewLogLine model.lines)
         ]

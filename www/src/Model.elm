@@ -2,9 +2,6 @@ module Model
     exposing
         ( Model
         , Msg(..)
-        , CurrentInstance
-        , InstanceEntry
-        , Instance
         , init
         , update
         , subscriptions
@@ -13,14 +10,11 @@ module Model
 import Set
 import Date
 import Time
-import LogLine
 import Ports
-
-
-towns : Set.Set String
-towns =
-    Set.fromList
-        [ "Oriath", "Enlightened Hideout" ]
+import LogLine
+import Entry
+import MapRun
+import AnimationFrame
 
 
 type alias Flags =
@@ -30,37 +24,28 @@ type alias Flags =
 
 type alias Model =
     { config : Ports.Config
+    , now : Date.Date
     , parseError : Maybe LogLine.ParseError
-    , linebuf : List LogLine.Line
-    , current : Maybe CurrentInstance
-    , entries : List InstanceEntry
+    , lines : List LogLine.Line
+    , entries : List Entry.Entry
+    , runs : List MapRun.MapRun
     }
 
 
 type Msg
-    = StartWatching
+    = Tick Date.Date
+    | StartWatching
     | InputClientLogPath String
     | RecvLogLine String
 
 
-type alias Instance =
-    { zone : String, addr : String }
-
-
-type alias InstanceEntry =
-    { instance : Maybe Instance, at : Date.Date, dur : Time.Time, last : Bool }
-
-
-type alias CurrentInstance =
-    { instance : Maybe Instance, at : Date.Date }
-
-
 initModel : Flags -> Model
 initModel flags =
-    { linebuf = []
-    , parseError = Nothing
-    , current = Nothing
+    { parseError = Nothing
+    , now = Date.fromTime 0
+    , lines = []
     , entries = []
+    , runs = []
     , config =
         { wshost = flags.wshost
         , clientLogPath = "../Client.txt"
@@ -79,7 +64,7 @@ updateLogLines raw model =
         Ok line ->
             { model
                 | parseError = Nothing
-                , linebuf = line :: model.linebuf
+                , lines = line :: model.lines
             }
 
         Err err ->
@@ -88,67 +73,38 @@ updateLogLines raw model =
             }
 
 
-updateInstanceEntries : Model -> Model
-updateInstanceEntries model =
-    let
-        prev : Maybe CurrentInstance
-        prev =
-            model.current
+updateEntries : Model -> Model
+updateEntries model =
+    case Entry.fromLogLines model.lines of
+        Nothing ->
+            model
 
-        current : Maybe CurrentInstance
-        current =
-            case List.head model.linebuf of
-                Nothing ->
-                    Nothing
-
-                Just first ->
-                    case model.linebuf |> List.take 2 |> List.map .info of
-                        (LogLine.YouHaveEntered zone) :: (LogLine.ConnectingToInstanceServer addr) :: _ ->
-                            Just { instance = Just { zone = zone, addr = addr }, at = first.date }
-
-                        LogLine.Opening :: _ ->
-                            Just { instance = Nothing, at = first.date }
-
-                        _ ->
-                            Nothing
-
-        nextEntry : CurrentInstance -> CurrentInstance -> InstanceEntry
-        nextEntry prev current =
-            { instance = prev.instance
-            , at = prev.at
-            , dur = (Date.toTime current.at) - (Date.toTime prev.at)
-            , last =
-                case current.instance of
-                    Just _ ->
-                        False
-
-                    Nothing ->
-                        True
+        Just entry ->
+            { model
+                | lines = []
+                , entries = entry :: model.entries
             }
 
-        entries =
-            case Maybe.map2 nextEntry prev current of
-                Nothing ->
-                    model.entries
 
-                Just entry ->
-                    entry :: model.entries
-    in
-        case current of
-            Just _ ->
-                { model
-                    | current = current
-                    , entries = entries
-                    , linebuf = []
-                }
+updateMapRuns : Model -> Model
+updateMapRuns model =
+    case MapRun.fromEntries model.entries of
+        Nothing ->
+            model
 
-            Nothing ->
-                model
+        Just ( run, entries ) ->
+            { model
+                | entries = entries
+                , runs = run :: model.runs
+            }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
+        Tick now ->
+            ( { model | now = now }, Cmd.none )
+
         StartWatching ->
             ( model, Ports.startWatching model.config )
 
@@ -162,7 +118,8 @@ update msg model =
         RecvLogLine raw ->
             model
                 |> updateLogLines raw
-                |> updateInstanceEntries
+                |> updateEntries
+                |> updateMapRuns
                 |> \m -> ( m, Cmd.none )
 
 
@@ -170,4 +127,5 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch
         [ Ports.logline RecvLogLine
+        , AnimationFrame.times (Tick << Date.fromTime)
         ]
