@@ -1,6 +1,7 @@
 module Main exposing (main)
 
 import Date
+import Time
 import Regex
 import Ports
 import Html as H
@@ -27,6 +28,7 @@ type alias Model =
     , lines : List LogLine
     , config : Ports.Config
     , entries : List InstanceEntry
+    , current : Maybe CurrentInstance
     }
 
 
@@ -53,9 +55,16 @@ type LogInfo
     | YouHaveEntered String
 
 
-type InstanceEntry
-    = InstanceEntry { zone : String, addr : String, at : Date.Date }
-    | OpenedEntry { at : Date.Date }
+type alias Instance =
+    { zone : String, addr : String }
+
+
+type alias InstanceEntry =
+    { instance : Maybe Instance, at : Date.Date, dur : Time.Time, last : Bool }
+
+
+type alias CurrentInstance =
+    { instance : Maybe Instance, at : Date.Date }
 
 
 regexParseFirst : String -> String -> Maybe Regex.Match
@@ -145,6 +154,7 @@ initModel flags =
     { parsedLines = []
     , lines = []
     , entries = []
+    , current = Nothing
     , config =
         { wshost = flags.wshost
         , clientLogPath = "../Client.txt"
@@ -194,20 +204,60 @@ update msg model =
 
 updateInstanceEntries : Model -> Model
 updateInstanceEntries model =
-    case List.head model.lines of
-        Nothing ->
-            model
+    let
+        prev : Maybe CurrentInstance
+        prev =
+            model.current
 
-        Just first ->
-            case model.lines |> List.take 2 |> List.map .info of
-                (ConnectingToInstanceServer addr) :: (YouHaveEntered zone) :: _ ->
-                    { model | entries = InstanceEntry { zone = zone, addr = addr, at = first.date } :: model.entries }
+        current : Maybe CurrentInstance
+        current =
+            case List.head model.lines of
+                Nothing ->
+                    Nothing
 
-                Opening :: _ ->
-                    { model | entries = OpenedEntry { at = first.date } :: model.entries }
+                Just first ->
+                    case model.lines |> List.take 2 |> List.map .info of
+                        (YouHaveEntered zone) :: (ConnectingToInstanceServer addr) :: _ ->
+                            Just { instance = Just { zone = zone, addr = addr }, at = first.date }
 
-                _ ->
-                    model
+                        Opening :: _ ->
+                            Just { instance = Nothing, at = first.date }
+
+                        _ ->
+                            Nothing
+
+        nextEntry : CurrentInstance -> CurrentInstance -> InstanceEntry
+        nextEntry prev current =
+            { instance = prev.instance
+            , at = prev.at
+            , dur = (Date.toTime current.at) - (Date.toTime prev.at)
+            , last =
+                case current.instance of
+                    Just _ ->
+                        False
+
+                    Nothing ->
+                        True
+            }
+
+        entries =
+            case Maybe.map2 nextEntry prev current of
+                Nothing ->
+                    model.entries
+
+                Just entry ->
+                    entry :: model.entries
+    in
+        { model
+            | current =
+                case current of
+                    Just _ ->
+                        current
+
+                    Nothing ->
+                        prev
+            , entries = entries
+        }
 
 
 subscriptions : Model -> Sub Msg
@@ -235,14 +285,42 @@ viewLogLine mline =
         )
 
 
+instanceToString : Maybe Instance -> String
+instanceToString instance =
+    case instance of
+        Just i ->
+            i.zone ++ "@" ++ i.addr
+
+        Nothing ->
+            "(none)"
+
+
 viewInstanceEntry : InstanceEntry -> H.Html msg
 viewInstanceEntry entry =
-    case entry of
-        InstanceEntry entry ->
-            H.li [] [ H.text <| toString entry.at ++ ": " ++ entry.zone ++ "@" ++ entry.addr ]
+    H.li []
+        [ H.text <|
+            toString entry.at
+                ++ ": "
+                ++ toString entry.dur
+                ++ "ms"
+                ++ (if entry.last then
+                        "????"
+                    else
+                        ""
+                   )
+                ++ ", "
+                ++ instanceToString entry.instance
+        ]
 
-        OpenedEntry entry ->
-            H.li [] [ H.text <| toString entry.at ++ ": game reopened" ]
+
+viewCurrentInstance : Maybe CurrentInstance -> H.Html msg
+viewCurrentInstance cur =
+    case cur of
+        Just entry ->
+            H.ul [] [ H.li [] [ H.text <| toString entry.at ++ ": (now), " ++ instanceToString entry.instance ] ]
+
+        Nothing ->
+            H.ul [] [ H.li [] [ H.text "(none yet)" ] ]
 
 
 viewConfig : Model -> H.Html Msg
@@ -266,6 +344,7 @@ view model =
         [ H.text "Hello elm-world!"
         , viewConfig model
         , H.text "instance-entries:"
+        , viewCurrentInstance model.current
         , H.ul [] (List.map viewInstanceEntry model.entries)
         , H.text "parsed loglines:"
         , H.ul [] (List.map viewLogLine model.parsedLines)
