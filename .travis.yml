@@ -1,0 +1,17 @@
+language: node_js
+
+install: 
+  - yarn global add elm
+  - travis_retry elm-package install --yes
+
+script:
+  - ./build.sh
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist/
+  github_token: $GITHUB_TOKEN
+  #keep_history: true
+  on:
+    branch: master
