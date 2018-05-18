@@ -36,6 +36,7 @@ type alias Model =
 type Msg
     = Tick Date.Date
     | StartWatching
+    | InputClientLog String
     | InputClientLogPath String
     | RecvLogLine String
 
@@ -119,6 +120,9 @@ update msg model =
                     model.config
             in
                 ( { model | config = { config | clientLogPath = path } }, Cmd.none )
+
+        InputClientLog id ->
+            ( model, Ports.inputClientLog id )
 
         RecvLogLine raw ->
             model

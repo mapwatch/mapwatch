@@ -10,4 +10,7 @@ type alias Config =
 port startWatching : Config -> Cmd msg
 
 
+port inputClientLog : String -> Cmd msg
+
+
 port logline : (String -> msg) -> Sub msg

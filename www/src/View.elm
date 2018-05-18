@@ -3,6 +3,7 @@ module View exposing (view)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
+import Json.Decode as Decode
 import Time
 import Dict
 import LogLine
@@ -115,8 +116,8 @@ viewConfig model =
             , H.input [ A.disabled True, A.type_ "text", A.value model.config.wshost ] []
             ]
         , H.div []
-            [ H.text "path to PoE Client.txt: "
-            , H.input [ A.type_ "text", E.onInput InputClientLogPath, A.value model.config.clientLogPath ] []
+            [ H.text "PoE Client.txt: "
+            , H.input [ A.type_ "file", A.id "clientTxt", E.on "change" (Decode.succeed <| InputClientLog "clientTxt") ] []
             ]
         , H.div [] [ H.button [ A.type_ "submit" ] [ H.text "Watch" ] ]
         ]
