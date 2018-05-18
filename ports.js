@@ -68,11 +68,37 @@ function progressSender(startedAt) {
   }
 }
 var watcher = null
+var POLL_INTERVAL = 1000
+// The HTML file api doesn't seem to have a way to notify me when the file changes.
+// We can poll for changes with no user interaction, though!
+function watchChanges(file) {
+  var startSize = file.size
+  watcher = setInterval(function() {
+    if (startSize !== file.size) {
+      console.log("Logfile updated:", startSize, "to", file.size)
+      if (startSize > file.size) {
+        console.error("Logfile shrank? I'm confused, I quit")
+        if (watcher) clearInterval(watcher)
+      }
+      else {
+        processFile(file.slice(startSize), file)
+      }
+    }
+  }, POLL_INTERVAL)
+}
+function processFile(fileSlice, watchedFile) {
+  if (watcher) clearInterval(watcher)
+  var sendProgress = progressSender(Date.now())
+  // sendProgress(0, fileSlice.size, Date.now())
+  readLines(fileSlice, {onLine: sendLine, onChunk: sendProgress, onDone: function(tail) {
+    // console.log("done processing file, watching changes")
+    sendLine(tail)
+    watchChanges(watchedFile)
+  }})
+}
 app.ports.inputClientLogWithId.subscribe(function(id) {
   var files = document.getElementById(id).files
-  if (files.length <= 0) return
-  var file = files[0]
-  var sendProgress = progressSender(Date.now())
-  sendProgress(0, file.size, Date.now())
-  readLines(file, {onLine: sendLine, onDone: sendLine, onChunk: sendProgress})
+  if (files.length > 0) {
+    processFile(files[0], files[0])
+  }
 })

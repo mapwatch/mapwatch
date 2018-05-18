@@ -2,6 +2,6 @@ TODO
 *.swp
 node_modules/
 elm-stuff/
-Client.txt
+testfiles/
 elm.js
 index.html
