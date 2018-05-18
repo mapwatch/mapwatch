@@ -1,24 +1,7 @@
-var app = Elm.Main.fullscreen({wshost: WSHOST})
-//app.ports.startWatching.subscribe(function(config) {
-//  var ws = new WebSocket(config.wshost)
-//  ws.onopen = function() {
-//    ws.send(JSON.stringify({
-//      type: 'INIT',
-//      clientLogPath: '../Client.txt',
-//      // send only the interesting log messages. Player chat messages are never interesting.
-//      blacklistFilter: '\\] #',
-//      filter: 'Connecting to instance server|: You have entered|LOG FILE OPENING',
-//    }))
-//  }
-//  // console.log(app)
-//  ws.onmessage = function(event) {
-//    var msg = JSON.parse(event.data)
-//    // console.log(msg.data)
-//    app.ports.logline.send(msg.data)
-//  }
-//})
+var app = Elm.Main.fullscreen({loadedAt: Date.now()})
 
-// Read client.txt and send it to Elm.
+// Read client.txt line-by-line, and send it to Elm.
+// Why aren't we doing the line-by-line logic in Elm? - because this used to be a websocket-server.
 
 function readFile(file, fn) {
   var reader = new FileReader()
@@ -69,14 +52,19 @@ function readLines(file, onLine, onDone, chunkSize) {
   }
   loop(0)
 }
-app.ports.inputClientLog.subscribe(function(id) {
+var filter = /Connecting to instance server|: You have entered|LOG FILE OPENING/
+// TODO blacklist other chat-channels, this only ignores global
+var blacklist = /] #/
+function sendLine(line) {
+  if (filter.test(line) && !blacklist.test(line)) {
+    // console.log('line: ', line)
+    app.ports.logline.send(line)
+  }
+}
+var watcher = null
+app.ports.inputClientLogWithId.subscribe(function(id) {
   var files = document.getElementById(id).files
   if (files.length <= 0) return
   var file = files[0]
-  // readLines(file, function(line) {console.log("line: ", line)}, function(tail) {console.log("done: ", JSON.stringify(tail))})
-  readLines(file, function(line) {
-    app.ports.logline.send(line)
-  }, function(tail) {
-    if (tail) app.ports.logline.send(tail)
-  })
+  readLines(file, sendLine, sendLine)
 })

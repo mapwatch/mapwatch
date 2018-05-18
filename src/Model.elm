@@ -19,12 +19,12 @@ import AnimationFrame
 
 
 type alias Flags =
-    { wshost : String
+    { loadedAt : Float
     }
 
 
 type alias Model =
-    { config : Ports.Config
+    { loadedAt : Date.Date
     , now : Date.Date
     , parseError : Maybe LogLine.ParseError
     , lines : List LogLine.Line
@@ -35,29 +35,27 @@ type alias Model =
 
 type Msg
     = Tick Date.Date
-    | StartWatching
-    | InputClientLog String
-    | InputClientLogPath String
+    | InputClientLogWithId String
     | RecvLogLine String
 
 
 initModel : Flags -> Model
 initModel flags =
-    { parseError = Nothing
-    , now = Date.fromTime 0
-    , lines = []
-    , entries = []
-    , runs = []
-    , config =
-        { wshost = flags.wshost
-        , clientLogPath = "../Client.txt"
+    let
+        loadedAt =
+            Date.fromTime flags.loadedAt
+    in
+        { parseError = Nothing
+        , loadedAt = loadedAt
+        , now = loadedAt
+        , lines = []
+        , entries = []
+        , runs = []
         }
-    }
 
 
 init flags =
-    initModel flags
-        |> update StartWatching
+    ( initModel flags, Cmd.none )
 
 
 updateLogLines : String -> Model -> Model
@@ -111,18 +109,8 @@ update msg model =
         Tick now ->
             ( { model | now = now }, Cmd.none )
 
-        StartWatching ->
-            ( model, Ports.startWatching model.config )
-
-        InputClientLogPath path ->
-            let
-                config =
-                    model.config
-            in
-                ( { model | config = { config | clientLogPath = path } }, Cmd.none )
-
-        InputClientLog id ->
-            ( model, Ports.inputClientLog id )
+        InputClientLogWithId id ->
+            ( model, Ports.inputClientLogWithId id )
 
         RecvLogLine raw ->
             model

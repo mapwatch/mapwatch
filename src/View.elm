@@ -110,16 +110,17 @@ formatDuration dur0 =
 
 viewConfig : Model -> H.Html Msg
 viewConfig model =
-    H.form [ E.onSubmit StartWatching ]
+    -- H.form [ E.onSubmit StartWatching ]
+    H.form []
         [ H.div []
-            [ H.text "local log server: "
-            , H.input [ A.disabled True, A.type_ "text", A.value model.config.wshost ] []
-            ]
-        , H.div []
-            [ H.text "PoE Client.txt: "
-            , H.input [ A.type_ "file", A.id "clientTxt", E.on "change" (Decode.succeed <| InputClientLog "clientTxt") ] []
-            ]
-        , H.div [] [ H.button [ A.type_ "submit" ] [ H.text "Watch" ] ]
+            (let
+                id =
+                    "clientTxt"
+             in
+                [ H.text "PoE Client.txt: "
+                , H.input [ A.type_ "file", A.id id, E.on "change" (Decode.succeed <| InputClientLogWithId id) ] []
+                ]
+            )
         ]
 
 
