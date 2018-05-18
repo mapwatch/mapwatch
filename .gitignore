@@ -1,8 +1,8 @@
-TODO
 *.swp
-node_modules/
-elm-stuff/
-testfiles/
-dist/
-elm.js
-index.html
+/TODO
+/node_modules/
+/elm-stuff/
+/testfiles/
+/dist/
+/elm.js
+/index.html
