@@ -2,9 +2,12 @@ module Model
     exposing
         ( Model
         , Msg(..)
+        , Progress
         , init
         , update
         , subscriptions
+        , isProgressDone
+        , progressDuration
         )
 
 import Set
@@ -23,8 +26,13 @@ type alias Flags =
     }
 
 
+type alias Progress =
+    Ports.Progress
+
+
 type alias Model =
     { loadedAt : Date.Date
+    , progress : Maybe Progress
     , now : Date.Date
     , parseError : Maybe LogLine.ParseError
     , lines : List LogLine.Line
@@ -37,6 +45,7 @@ type Msg
     = Tick Date.Date
     | InputClientLogWithId String
     | RecvLogLine String
+    | RecvProgress Progress
 
 
 initModel : Flags -> Model
@@ -46,6 +55,7 @@ initModel flags =
             Date.fromTime flags.loadedAt
     in
         { parseError = Nothing
+        , progress = Nothing
         , loadedAt = loadedAt
         , now = loadedAt
         , lines = []
@@ -119,10 +129,31 @@ update msg model =
                 |> updateMapRuns
                 |> \m -> ( m, Cmd.none )
 
+        RecvProgress p ->
+            ( { model | progress = Just p }, Cmd.none )
+
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch
         [ Ports.logline RecvLogLine
+        , Ports.progress RecvProgress
         , AnimationFrame.times (Tick << Date.fromTime)
         ]
+
+
+progressPercent : Progress -> Float
+progressPercent { val, max } =
+    toFloat val
+        / toFloat max
+        |> clamp 0 1
+
+
+isProgressDone : Progress -> Bool
+isProgressDone p =
+    progressPercent p >= 1
+
+
+progressDuration : Progress -> Time.Time
+progressDuration p =
+    p.updatedAt - p.startedAt

@@ -134,13 +134,18 @@ viewParseError err =
             H.div [] [ H.text <| "Log parsing error: " ++ toString err ]
 
 
-view : Model -> H.Html Msg
-view model =
+viewProgress : Model.Progress -> H.Html msg
+viewProgress p =
+    if Model.isProgressDone p then
+        H.div [] [ H.text <| "Processed " ++ toString p.max ++ " bytes in " ++ toString (Model.progressDuration p / 1000) ++ "s" ]
+    else
+        H.div [] [ H.progress [ A.value (toString p.val), A.max (toString p.max) ] [] ]
+
+
+viewResults : Model -> H.Html msg
+viewResults model =
     H.div []
-        [ H.text "Hello elm-world!"
-        , viewConfig model
-        , viewParseError model.parseError
-        , H.div []
+        [ H.div []
             [ H.text <|
                 (toString <| List.length model.runs)
                     ++ " map-runs. Average: "
@@ -163,4 +168,31 @@ view model =
         , H.ul [] (List.map viewEntry model.entries)
         , H.text "pending-lines:"
         , H.ul [] (List.map viewLogLine model.lines)
+        ]
+
+
+viewMain : Model -> H.Html Msg
+viewMain model =
+    case model.progress of
+        Nothing ->
+            -- waiting for file input, nothing to show yet
+            H.div [] []
+
+        Just p ->
+            H.div [] <|
+                (if Model.isProgressDone p then
+                    -- all done!
+                    [ viewResults model ]
+                 else
+                    []
+                )
+                    ++ [ viewProgress p ]
+
+
+view : Model -> H.Html Msg
+view model =
+    H.div []
+        [ viewConfig model
+        , viewParseError model.parseError
+        , viewMain model
         ]

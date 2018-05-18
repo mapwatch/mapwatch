@@ -30,10 +30,10 @@ function LineBuffer(onLine, onDone) {
   }
 }
 // read line-by-line.
-function readLines(file, onLine, onDone, chunkSize) {
-  chunkSize = chunkSize || Math.pow(2, 20)
+function readLines(file, config) {
+  var chunkSize = config.chunkSize || Math.pow(2, 20)
   var chunkNum = 0
-  var buf = LineBuffer(onLine, onDone)
+  var buf = LineBuffer(config.onLine, config.onDone)
   var loop = function(chunkNum) {
     var start = chunkSize * chunkNum
     var end = start + chunkSize
@@ -41,6 +41,7 @@ function readLines(file, onLine, onDone, chunkSize) {
     readFile(slice, function(txt) {
       // console.log('read chunk:', txt.length)
       buf.push(txt)
+      if (config.onChunk) config.onChunk(Math.min(end, file.size), file.size, Date.now())
       if (end < file.size) {
         // window.setTimeout(function(){loop(chunkNum+1)}, 1000)
         loop(chunkNum + 1)
@@ -61,10 +62,17 @@ function sendLine(line) {
     app.ports.logline.send(line)
   }
 }
+function progressSender(startedAt) {
+  return function (val, max, updatedAt) {
+    app.ports.progress.send({val: val, max: max, startedAt: startedAt, updatedAt: updatedAt})
+  }
+}
 var watcher = null
 app.ports.inputClientLogWithId.subscribe(function(id) {
   var files = document.getElementById(id).files
   if (files.length <= 0) return
   var file = files[0]
-  readLines(file, sendLine, sendLine)
+  var sendProgress = progressSender(Date.now())
+  sendProgress(0, file.size, Date.now())
+  readLines(file, {onLine: sendLine, onDone: sendLine, onChunk: sendProgress})
 })
