@@ -3,22 +3,23 @@ module Zone exposing (Type(..), zoneType, isTown, isMap)
 import Set
 
 
+hideouts : Set.Set String
+hideouts =
+    -- https://pathofexile.gamepedia.com/Hideout
+    -- JSON.stringify($.map($('td:nth-of-type(2)', $('tbody')[0]), function(td){return td.innerText}))
+    Set.fromList
+        [ "Unearthed Hideout", "Enlightened Hideout", "Coastal Hideout", "Overgrown Hideout", "Lush Hideout", "Battle-scarred Hideout", "Backstreet Hideout", "Immaculate Hideout" ]
+
+
 towns : Set.Set String
 towns =
     Set.fromList
-        -- TODO
-        [ "Oriath", "Enlightened Hideout" ]
-
-
-masterDailies : Set.Set String
-masterDailies =
-    Set.fromList
-        -- TODO copy from https://pathofexile.gamepedia.com/Mission_areas
-        [ "Divine Cathedral" -- elreon
-        , "Crumbled Laboratory" -- zana - TODO treat this as a real map
-        , "Forgotten Wood" -- haku
-        , "Untouched Temple" -- vorici/tora/catarina
-        ]
+        -- https://pathofexile.gamepedia.com/Town
+        -- JSON.stringify($.map($('li', $('ul')[0]), function(td){return td.innerText.split(' - ')[1]}))
+        [ "Lioneye's Watch", "The Forest Encampment", "The Sarn Encampment", "Highgate", "Overseer's Tower", "Lioneye's Watch", "The Bridge Encampment", "The Sarn Encampment", "Highgate", "Oriath Docks", "Oriath" ]
+        |> Set.union hideouts
+        -- special case: this one's not really a town, but you can enter maps from it
+        |> Set.union (Set.singleton "The Templar Laboratory")
 
 
 type Type
