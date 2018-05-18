@@ -1,5 +1,10 @@
 language: node_js
 
+# https://8thlight.com/blog/rob-looby/2016/04/07/caching-elm-builds-on-travis-ci.html
+cache:
+  directories:
+    - elm-stuff/build-artifacts
+
 install: 
   - npm install -g elm
   - elm --version
