@@ -4,9 +4,16 @@ import Date
 import Time
 import Regex
 import Ports
+import Set
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
+
+
+towns : Set.Set String
+towns =
+    Set.fromList
+        [ "Oriath", "Enlightened Hideout" ]
 
 
 main =
@@ -24,11 +31,12 @@ type alias Flags =
 
 
 type alias Model =
-    { parsedLines : List ParsedLogLine
-    , lines : List LogLine
-    , config : Ports.Config
-    , entries : List InstanceEntry
+    { config : Ports.Config
+    , parseError : Maybe ParseError
+    , linebuf : List LogLine
     , current : Maybe CurrentInstance
+    , entries : List InstanceEntry
+    , runs : List MapRun
     }
 
 
@@ -38,6 +46,14 @@ type Msg
     | RecvLogLine String
 
 
+type alias MapRun =
+    { instance : Instance
+    , start : Date.Date
+    , duration : Time.Time
+    , townDuration : Time.Time
+    }
+
+
 type alias LogLine =
     { raw : String
     , date : Date.Date
@@ -45,8 +61,12 @@ type alias LogLine =
     }
 
 
+type alias ParseError =
+    { raw : String, err : String }
+
+
 type alias ParsedLogLine =
-    Result { raw : String, err : String } LogLine
+    Result ParseError LogLine
 
 
 type LogInfo
@@ -151,10 +171,11 @@ parseLogLine raw =
 
 initModel : Flags -> Model
 initModel flags =
-    { parsedLines = []
-    , lines = []
-    , entries = []
+    { linebuf = []
+    , parseError = Nothing
     , current = Nothing
+    , entries = []
+    , runs = []
     , config =
         { wshost = flags.wshost
         , clientLogPath = "../Client.txt"
@@ -167,39 +188,19 @@ init flags =
         |> update StartWatching
 
 
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    case msg of
-        StartWatching ->
-            ( model, Ports.startWatching model.config )
+updateLogLines : String -> Model -> Model
+updateLogLines raw model =
+    case parseLogLine raw of
+        Ok line ->
+            { model
+                | parseError = Nothing
+                , linebuf = line :: model.linebuf
+            }
 
-        InputClientLogPath path ->
-            let
-                config =
-                    model.config
-            in
-                ( { model | config = { config | clientLogPath = path } }, Cmd.none )
-
-        RecvLogLine raw ->
-            let
-                updateLogLines model =
-                    let
-                        parsedLine =
-                            parseLogLine raw
-                    in
-                        (case parsedLine of
-                            Ok line ->
-                                { model | lines = line :: model.lines }
-
-                            _ ->
-                                model
-                        )
-                            |> (\m -> { m | parsedLines = parsedLine :: model.parsedLines })
-            in
-                model
-                    |> updateLogLines
-                    |> updateInstanceEntries
-                    |> \m -> ( m, Cmd.none )
+        Err err ->
+            { model
+                | parseError = Just err
+            }
 
 
 updateInstanceEntries : Model -> Model
@@ -211,12 +212,12 @@ updateInstanceEntries model =
 
         current : Maybe CurrentInstance
         current =
-            case List.head model.lines of
+            case List.head model.linebuf of
                 Nothing ->
                     Nothing
 
                 Just first ->
-                    case model.lines |> List.take 2 |> List.map .info of
+                    case model.linebuf |> List.take 2 |> List.map .info of
                         (YouHaveEntered zone) :: (ConnectingToInstanceServer addr) :: _ ->
                             Just { instance = Just { zone = zone, addr = addr }, at = first.date }
 
@@ -248,16 +249,36 @@ updateInstanceEntries model =
                 Just entry ->
                     entry :: model.entries
     in
-        { model
-            | current =
-                case current of
-                    Just _ ->
-                        current
+        case current of
+            Just _ ->
+                { model
+                    | current = current
+                    , entries = entries
+                    , linebuf = []
+                }
 
-                    Nothing ->
-                        prev
-            , entries = entries
-        }
+            Nothing ->
+                model
+
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        StartWatching ->
+            ( model, Ports.startWatching model.config )
+
+        InputClientLogPath path ->
+            let
+                config =
+                    model.config
+            in
+                ( { model | config = { config | clientLogPath = path } }, Cmd.none )
+
+        RecvLogLine raw ->
+            model
+                |> updateLogLines raw
+                |> updateInstanceEntries
+                |> \m -> ( m, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
@@ -267,22 +288,13 @@ subscriptions model =
         ]
 
 
-viewLogLine : ParsedLogLine -> H.Html msg
-viewLogLine mline =
+viewLogLine : LogLine -> H.Html msg
+viewLogLine line =
     H.li []
-        (case mline of
-            Ok line ->
-                [ H.text (toString line.date)
-                , H.text (toString line.info)
-                , H.div [] [ H.i [] [ H.text line.raw ] ]
-                ]
-
-            Err { raw, err } ->
-                [ H.text "PARSE ERROR: "
-                , H.text err
-                , H.div [] [ H.i [] [ H.text raw ] ]
-                ]
-        )
+        [ H.text (toString line.date)
+        , H.text (toString line.info)
+        , H.div [] [ H.i [] [ H.text line.raw ] ]
+        ]
 
 
 instanceToString : Maybe Instance -> String
@@ -338,6 +350,16 @@ viewConfig model =
         ]
 
 
+viewParseError : Maybe ParseError -> H.Html msg
+viewParseError err =
+    case err of
+        Nothing ->
+            H.div [] []
+
+        Just err ->
+            H.div [] [ H.text <| "Log parsing error: " ++ toString err ]
+
+
 view : Model -> H.Html Msg
 view model =
     H.div []
@@ -346,6 +368,7 @@ view model =
         , H.text "instance-entries:"
         , viewCurrentInstance model.current
         , H.ul [] (List.map viewInstanceEntry model.entries)
-        , H.text "parsed loglines:"
-        , H.ul [] (List.map viewLogLine model.parsedLines)
+        , viewParseError model.parseError
+        , H.text "linebuf:"
+        , H.ul [] (List.map viewLogLine model.linebuf)
         ]
