@@ -1,8 +1,8 @@
-module Entry exposing (Entry, Instance, ZoneType(..), fromLogLines, zoneType)
+module Entry exposing (Entry, Instance, fromLogLines, zoneType)
 
 import Date
-import Set
 import LogLine
+import Zone
 
 
 type alias Instance =
@@ -31,34 +31,8 @@ fromLogLines lines =
                     Nothing
 
 
-towns : Set.Set String
-towns =
-    Set.fromList
-        -- TODO
-        [ "Oriath", "Enlightened Hideout" ]
-
-
-type ZoneType
-    = Town
-    | NotTown
-    | NotZone
-
-
-zoneType_ : Maybe String -> ZoneType
-zoneType_ zone =
-    case zone of
-        Nothing ->
-            NotZone
-
-        Just zone ->
-            if Set.member zone towns then
-                Town
-            else
-                NotTown
-
-
-zoneType : Entry -> ZoneType
+zoneType : Entry -> Zone.Type
 zoneType entry =
     entry.instance
         |> Maybe.map .zone
-        |> zoneType_
+        |> Zone.zoneType

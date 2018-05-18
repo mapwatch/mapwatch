@@ -1,40 +1,57 @@
-module MapRun exposing (MapRun, fromEntries, fromCurrentEntries, totalDuration)
+module MapRun exposing (MapRun, fromEntries, fromCurrentEntries, totalDuration, averageDuration, durations, averageDurations)
 
 import Date
 import Time
 import Dict
 import Entry
+import Zone
 
 
 type alias MapRun =
     { started : Date.Date
     , startZone : Maybe String
     , durations : Dict.Dict String Time.Time
-    , entries : List Entry.Entry
+    , entries : List Entry.Entry -- for debugging
+    , portals : Int
     }
 
 
 splitDone : List Entry.Entry -> ( List Entry.Entry, List Entry.Entry )
 splitDone newestEntries =
-    case newestEntries of
-        [] ->
-            ( [], [] )
+    let
+        start : Maybe Entry.Instance
+        start =
+            -- the second-oldest entry - first-oldest is town
+            newestEntries |> List.reverse |> List.head |> Maybe.andThen .instance
 
-        a :: [] ->
-            ( [ a ], [] )
+        next first rest =
+            rest
+                |> loop
+                |> \( remaining, ready ) -> ( first :: remaining, ready )
 
-        a :: b :: rest ->
-            case ( Entry.zoneType a, Entry.zoneType b ) of
-                -- A new run starts when we leave town. The last/newest entry is in both: start-time in one, finish-time in another.
-                ( Entry.NotTown, Entry.Town ) ->
-                    ( [ a ], a :: b :: rest )
+        loop newestEntries =
+            case newestEntries of
+                [] ->
+                    ( [], [] )
 
-                _ ->
-                    let
-                        ( remaining, ready ) =
-                            splitDone <| b :: rest
-                    in
-                        ( a :: remaining, ready )
+                a :: [] ->
+                    ( [ a ], [] )
+
+                a :: b :: rest ->
+                    case ( Entry.zoneType a, Entry.zoneType b ) of
+                        -- A new run starts when we leave town into a *different* zone than the start zone.
+                        ( Zone.NotTown, Zone.Town ) ->
+                            if start == a.instance then
+                                -- not a different zone, keep looping
+                                next a (b :: rest)
+                            else
+                                -- The last/newest entry is in both: start-time in one, finish-time in another.
+                                ( [ a ], a :: b :: rest )
+
+                        _ ->
+                            next a (b :: rest)
+    in
+        loop newestEntries
 
 
 fromPartialEntries : List Entry.Entry -> Maybe MapRun
@@ -69,12 +86,20 @@ fromPartialEntries newestEntries =
 
                                 Just cur ->
                                     Just <| dur + cur
+
+                        dPortals =
+                            -- town->town doesn't count as a portal
+                            if (Entry.zoneType a == Zone.Town) && (Entry.zoneType b /= Zone.Town) then
+                                1
+                            else
+                                0
                     in
                         loop (b :: rest)
                             { run
                                 | durations = Dict.update zone updateDur run.durations
 
                                 -- , entries = a :: run.entries
+                                , portals = run.portals + dPortals
                             }
 
         oldestEntries =
@@ -90,6 +115,7 @@ fromPartialEntries newestEntries =
                     , entries = []
                     , started = oldest.at
                     , startZone = Maybe.map .zone oldest.instance
+                    , portals = 0
                     }
                     |> Just
 
@@ -109,6 +135,53 @@ fromCurrentEntries now entries =
     fromPartialEntries <| { instance = Nothing, at = now } :: entries
 
 
+type alias DurationSet =
+    { total : Time.Time, town : Time.Time, start : Time.Time, subs : Time.Time, notTown : Time.Time }
+
+
+filteredDuration : (String -> Time.Time -> Bool) -> Dict.Dict String Time.Time -> Time.Time
+filteredDuration pred dict =
+    dict
+        |> Dict.filter pred
+        |> Dict.values
+        |> List.sum
+
+
 totalDuration : MapRun -> Time.Time
 totalDuration run =
-    Dict.values run.durations |> List.sum
+    filteredDuration (\_ -> always True) run.durations
+
+
+durations : MapRun -> DurationSet
+durations run =
+    let
+        total =
+            totalDuration run
+
+        town =
+            filteredDuration (\z -> always <| Zone.isTown z) run.durations
+
+        notTown =
+            filteredDuration (\z -> always <| not <| Zone.isTown z) run.durations
+
+        start =
+            filteredDuration (\z -> always <| Just z == run.startZone) run.durations
+    in
+        { total = total, town = town, notTown = notTown, start = start, subs = notTown - start }
+
+
+averageDuration : List MapRun -> Time.Time
+averageDuration runs =
+    List.sum (List.map totalDuration runs) / (toFloat <| List.length runs)
+
+
+averageDurations : List MapRun -> DurationSet
+averageDurations runs =
+    let
+        durs =
+            List.map durations runs
+
+        avg getter =
+            (durs |> List.map getter |> List.sum) / (List.length runs |> toFloat)
+    in
+        { total = avg .total, town = avg .town, notTown = avg .notTown, start = avg .start, subs = avg .subs }

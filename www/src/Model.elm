@@ -14,6 +14,7 @@ import Ports
 import LogLine
 import Entry
 import MapRun
+import Zone
 import AnimationFrame
 
 
@@ -93,10 +94,14 @@ updateMapRuns model =
             model
 
         Just ( run, entries ) ->
-            { model
-                | entries = entries
-                , runs = run :: model.runs
-            }
+            if run.startZone |> Maybe.map Zone.isMap |> Maybe.withDefault False then
+                { model
+                    | entries = entries
+                    , runs = run :: model.runs
+                }
+            else
+                -- it's not an actual map-run: remove the relevant zone-entries, but don't show the map-run
+                { model | entries = entries }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )

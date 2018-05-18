@@ -49,10 +49,28 @@ viewMapSub zone dur =
 
 viewMapRun : MapRun -> H.Html msg
 viewMapRun run =
-    H.li []
-        [ H.text <| (Maybe.withDefault "(unknown)" run.startZone) ++ ": " ++ formatDuration (MapRun.totalDuration run)
-        , H.ul [] (List.map (uncurry viewMapSub) <| Dict.toList run.durations)
-        ]
+    let
+        d =
+            MapRun.durations run
+    in
+        H.li []
+            [ H.text <|
+                (Maybe.withDefault "(unknown)" run.startZone)
+                    ++ ": "
+                    ++ formatDuration d.start
+                    ++ " map + "
+                    ++ formatDuration d.subs
+                    ++ " sidezones + "
+                    ++ formatDuration d.town
+                    ++ " town ("
+                    ++ (toString run.portals)
+                    ++ " portals) = "
+                    ++ formatDuration d.total
+                    ++ " total"
+            , H.ul [] (List.map (uncurry viewMapSub) <| Dict.toList run.durations)
+
+            -- , H.ul [] [ H.li [] [ H.text <| toString run.entries ] ]
+            ]
 
 
 formatDuration : Float -> String
@@ -77,8 +95,16 @@ formatDuration dur0 =
             num
                 |> toString
                 |> String.padLeft length '0'
+
+        hpad =
+            (if h > 0 then
+                [ pad0 2 h ]
+             else
+                []
+            )
     in
-        String.join ":" [ pad0 2 h, pad0 2 m, pad0 2 s, pad0 4 ms ]
+        -- String.join ":" <| [ pad0 2 h, pad0 2 m, pad0 2 s, pad0 4 ms ]
+        String.join ":" <| hpad ++ [ pad0 2 m, pad0 2 s ]
 
 
 viewConfig : Model -> H.Html Msg
@@ -112,6 +138,15 @@ view model =
         [ H.text "Hello elm-world!"
         , viewConfig model
         , viewParseError model.parseError
+        , H.div []
+            [ H.text <|
+                (toString <| List.length model.runs)
+                    ++ " map-runs. Average: "
+                    ++ (MapRun.averageDurations model.runs |> .start |> formatDuration)
+                    ++ " map + "
+                    ++ (MapRun.averageDurations model.runs |> .subs |> formatDuration)
+                    ++ " sidezones"
+            ]
         , H.text "map-runs:"
         , H.ul []
             (case MapRun.fromCurrentEntries model.now model.entries of
