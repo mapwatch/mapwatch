@@ -1,7 +1,7 @@
 language: node_js
 
 install: 
-  - export PATH=$PATH:(yarn global path)
+  - export PATH=$PATH:$(yarn global path)
   - yarn global add elm
   - elm --version
   - travis_retry elm-package install --yes
