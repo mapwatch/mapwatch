@@ -100,6 +100,7 @@ viewConfig model =
                     , E.onInput InputMaxSize
                     , A.min "0"
                     , A.max "100"
+                    , A.tabindex 1
                     ]
                     []
                 , H.text " MB of history"
@@ -110,7 +111,13 @@ viewConfig model =
                         "clientTxt"
                  in
                     [ H.text "PoE Client.txt: "
-                    , H.input [ A.type_ "file", A.id id, E.on "change" (Decode.succeed <| InputClientLogWithId id) ] []
+                    , H.input
+                        [ A.type_ "file"
+                        , A.id id
+                        , E.on "change" (Decode.succeed <| InputClientLogWithId id)
+                        , A.tabindex 2
+                        ]
+                        []
                     ]
                 )
             , H.div []
@@ -326,7 +333,14 @@ viewMain model =
 view : Model -> H.Html Msg
 view model =
     H.div []
-        [ viewConfig model
+        [ H.div []
+            [ H.h1 [ A.style [ ( "display", "inline" ) ] ] [ H.text "Mapwatch" ]
+            , H.text " - Automatically track your "
+            , H.a [ A.target "_blank", A.href "https://www.pathofexile.com" ] [ H.text "Path of Exile" ]
+            , H.text " mapping time"
+            , H.div [ A.style [ ( "float", "right" ) ] ] [ H.a [ A.target "_blank", A.href "https://www.github.com/erosson/poe-mapwatch" ] [ H.text "Source code" ] ]
+            ]
+        , viewConfig model
         , viewParseError model.parseError
         , viewMain model
         ]
