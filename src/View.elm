@@ -118,6 +118,12 @@ viewConfig model =
                         , A.tabindex 2
                         ]
                         []
+                    , H.div []
+                        [ H.text "Usually it's at "
+                        , H.code [] [ H.text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
+                        , H.text " or "
+                        , H.code [] [ H.text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
+                        ]
                     ]
                 )
             , H.div []
