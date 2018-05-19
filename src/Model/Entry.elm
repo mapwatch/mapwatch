@@ -1,8 +1,8 @@
-module Entry exposing (Entry, Instance, fromLogLines, zoneType)
+module Model.Entry exposing (Entry, Instance, fromLogLines, zoneType)
 
 import Date
-import LogLine
-import Zone
+import Model.LogLine as LogLine
+import Model.Zone as Zone
 
 
 type alias Instance =

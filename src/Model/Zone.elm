@@ -1,4 +1,4 @@
-module Zone exposing (Type(..), zoneType, isTown, isMap)
+module Model.Zone exposing (Type(..), zoneType, isTown, isMap)
 
 import Set
 

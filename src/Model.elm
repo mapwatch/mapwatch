@@ -14,11 +14,11 @@ import Set
 import Date
 import Time
 import Ports
-import LogLine
-import Entry
-import MapRun
-import Zone
 import AnimationFrame
+import Model.LogLine as LogLine
+import Model.Entry as Entry
+import Model.MapRun as MapRun
+import Model.Zone as Zone
 
 
 type alias Flags =

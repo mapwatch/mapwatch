@@ -1,4 +1,4 @@
-module LogLine exposing (ParseError, ParsedLine, Info(..), Line, parse)
+module Model.LogLine exposing (ParseError, ParsedLine, Info(..), Line, parse)
 
 import Date
 import Regex

@@ -1,10 +1,10 @@
-module MapRun exposing (MapRun, fromEntries, fromCurrentEntries, totalDuration, averageDuration, durations, averageDurations)
+module Model.MapRun exposing (MapRun, fromEntries, fromCurrentEntries, totalDuration, averageDuration, durations, averageDurations)
 
 import Date
 import Time
 import Dict
-import Entry
-import Zone
+import Model.Entry as Entry
+import Model.Zone as Zone
 
 
 type alias MapRun =

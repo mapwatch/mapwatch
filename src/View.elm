@@ -6,10 +6,10 @@ import Html.Events as E
 import Json.Decode as Decode
 import Time
 import Dict
-import LogLine
 import Model as Model exposing (Model, Msg(..))
-import Entry as Entry exposing (Instance, Entry)
-import MapRun as MapRun exposing (MapRun)
+import Model.LogLine as LogLine
+import Model.Entry as Entry exposing (Instance, Entry)
+import Model.MapRun as MapRun exposing (MapRun)
 
 
 viewLogLine : LogLine.Line -> H.Html msg
