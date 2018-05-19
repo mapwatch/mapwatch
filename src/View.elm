@@ -5,6 +5,7 @@ import Html.Attributes as A
 import Html.Events as E
 import Json.Decode as Decode
 import Time
+import Date
 import Dict
 import Model as Model exposing (Model, Msg(..))
 import Model.LogLine as LogLine
@@ -78,18 +79,28 @@ formatDuration dur0 =
 
 viewConfig : Model -> H.Html Msg
 viewConfig model =
-    -- H.form [ E.onSubmit StartWatching ]
-    H.form []
-        [ H.div []
-            (let
-                id =
-                    "clientTxt"
-             in
-                [ H.text "PoE Client.txt: "
-                , H.input [ A.type_ "file", A.id id, E.on "change" (Decode.succeed <| InputClientLogWithId id) ] []
-                ]
-            )
-        ]
+    let
+        display =
+            case model.progress of
+                Nothing ->
+                    ""
+
+                Just _ ->
+                    "none"
+    in
+        -- H.form [ E.onSubmit StartWatching ]
+        H.form
+            [ A.style [ ( "display", display ) ] ]
+            [ H.div []
+                (let
+                    id =
+                        "clientTxt"
+                 in
+                    [ H.text "PoE Client.txt: "
+                    , H.input [ A.type_ "file", A.id id, E.on "change" (Decode.succeed <| InputClientLogWithId id) ] []
+                    ]
+                )
+            ]
 
 
 viewParseError : Maybe LogLine.ParseError -> H.Html msg
@@ -138,9 +149,15 @@ formatDurationSet d =
         ++ formatDuration d.all
 
 
+viewDate : Date.Date -> H.Html msg
+viewDate d =
+    H.span [ A.title (toString d) ]
+        [ H.text <| toString (Date.day d) ++ " " ++ toString (Date.month d) ]
+
+
 viewRun : Run.Run -> H.Html msg
 viewRun run =
-    H.li [] [ viewInstance run.first.instance, H.text <| " -- " ++ formatDurationSet (Run.durationSet run) ]
+    H.li [] [ viewDate run.last.leftAt, H.text " -- ", viewInstance run.first.instance, H.text <| " -- " ++ formatDurationSet (Run.durationSet run) ]
 
 
 viewResults : Model -> H.Html msg
@@ -161,7 +178,21 @@ viewResults model =
                 [ H.li [] [ H.text <| "total: " ++ formatDurationSet (Run.totalDurationSet model.runs) ]
                 , H.li [] [ H.text <| "average: " ++ formatDurationSet (Run.meanDurationSet model.runs) ]
                 ]
-            , H.div [] [ H.text "Current instance: ", viewInstance model.instance.val, H.text <| " " ++ toString { map = Instance.isMap model.instance.val, town = Instance.isTown model.instance.val } ]
+            , H.div [] [ H.text "You last entered: ", viewInstance model.instance.val, H.text <| " " ++ toString { map = Instance.isMap model.instance.val, town = Instance.isTown model.instance.val } ]
+            , H.div []
+                [ H.text "You're running: "
+                , H.ul []
+                    [ case model.runState of
+                        Run.Empty ->
+                            H.li [ A.title "Slacker." ] [ H.text "Nothing." ]
+
+                        Run.Started ->
+                            H.li [] [ viewInstance model.instance.val ]
+
+                        Run.Running run ->
+                            viewRun run
+                    ]
+                ]
             , H.div [] [ H.text <| "All runs: " ]
             , H.ul [] (List.map viewRun model.runs)
             ]
