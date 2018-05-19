@@ -92,7 +92,22 @@ viewConfig model =
         -- H.form [ E.onSubmit StartWatching ]
         H.form
             [ A.style [ ( "display", display ) ] ]
-            [ H.div []
+            [ H.p []
+                [ H.text "Give me your Path of Exile "
+                , H.code [] [ H.text "Client.txt" ]
+                , H.text " file, and I'll give you some statistics about your recent mapping activity. "
+                ]
+            , H.p []
+                [ H.text "Then, leave me open while you play - I'll keep watching, no need to upload again."
+                ]
+            , H.p []
+                [ H.text "Usually, the file I need is at "
+                , H.code [] [ H.text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
+                , H.text " or "
+                , H.code [] [ H.text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
+                ]
+            , H.hr [] []
+            , H.div []
                 [ H.text "Analyze only the last "
                 , H.input
                     [ A.type_ "number"
@@ -118,12 +133,6 @@ viewConfig model =
                         , A.tabindex 2
                         ]
                         []
-                    , H.div []
-                        [ H.text "Usually it's at "
-                        , H.code [] [ H.text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
-                        , H.text " or "
-                        , H.code [] [ H.text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
-                        ]
                     ]
                 )
             , H.div []
@@ -265,19 +274,23 @@ viewSideArea instance dur =
         H.li [] [ instanceEl, H.text <| ": " ++ formatDuration dur ]
 
 
+viewRunBody : Run.Run -> List (H.Html msg)
+viewRunBody run =
+    [ viewDate run.last.leftAt
+    , H.text " -- "
+    , viewInstance run.first.instance
+    , H.text <| " -- " ++ formatDurationSet (Run.durationSet run)
+    , H.ul []
+        (List.map (uncurry viewSideArea) <|
+            List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance)) <|
+                Run.durationPerInstance run
+        )
+    ]
+
+
 viewRun : Run.Run -> H.Html msg
-viewRun run =
-    H.li []
-        [ viewDate run.last.leftAt
-        , H.text " -- "
-        , viewInstance run.first.instance
-        , H.text <| " -- " ++ formatDurationSet (Run.durationSet run)
-        , H.ul []
-            (List.map (uncurry viewSideArea) <|
-                List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance)) <|
-                    Run.durationPerInstance run
-            )
-        ]
+viewRun =
+    viewRunBody >> H.li []
 
 
 viewResults : Model -> H.Html msg
@@ -285,9 +298,30 @@ viewResults model =
     let
         today =
             Run.filterToday model.now model.runs
+
+        nowRunningDur =
+            case Run.stateDuration model.now model.runState of
+                Nothing ->
+                    ""
+
+                Just dur ->
+                    " (" ++ formatDuration dur ++ ")"
     in
         H.div []
             [ H.div [] []
+            , H.p [] [ H.text "You last entered: ", viewInstance model.instance.val ]
+            , H.p []
+                [ H.text <| "You're now mapping in" ++ nowRunningDur ++ ": "
+                , case model.runState of
+                    Run.Empty ->
+                        H.span [ A.title "Slacker." ] [ H.text "(none)" ]
+
+                    Run.Started _ ->
+                        H.span [] [ viewInstance model.instance.val ]
+
+                    Run.Running run ->
+                        H.span [] (viewRunBody run)
+                ]
             , H.div [] [ H.text <| "Today: " ++ toString (List.length today) ++ " finished runs" ]
             , H.ul []
                 [ H.li [] [ H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet today) ]
@@ -297,21 +331,6 @@ viewResults model =
             , H.ul []
                 [ H.li [] [ H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet model.runs) ]
                 , H.li [] [ H.text <| "Average: " ++ formatDurationSet (Run.meanDurationSet model.runs) ]
-                ]
-            , H.div [] [ H.text "You last entered: ", viewInstance model.instance.val, H.text <| " " ++ toString { map = Instance.isMap model.instance.val, town = Instance.isTown model.instance.val } ]
-            , H.div []
-                [ H.text <| "You're running: (" ++ Maybe.withDefault "--:--" (Maybe.map formatDuration <| Run.stateDuration model.now model.runState) ++ ")"
-                , H.ul []
-                    [ case model.runState of
-                        Run.Empty ->
-                            H.li [ A.title "Slacker." ] [ H.text "Nothing." ]
-
-                        Run.Started _ ->
-                            H.li [] [ viewInstance model.instance.val ]
-
-                        Run.Running run ->
-                            viewRun run
-                    ]
                 ]
             , H.div [] [ H.text <| "Your last " ++ toString (min 100 <| List.length model.runs) ++ " runs: " ]
             , H.ul [] (List.map viewRun <| List.take 100 model.runs)
