@@ -16,8 +16,6 @@ import Time
 import Ports
 import AnimationFrame
 import Model.LogLine as LogLine
-import Model.Entry as Entry
-import Model.MapRun as MapRun
 import Model.Zone as Zone
 import Model.Instance as Instance
 import Model.Visit as Visit
@@ -39,14 +37,8 @@ type alias Model =
     , now : Date.Date
     , parseError : Maybe LogLine.ParseError
     , instance : Instance.State
-    , visits : List Visit.Visit
     , runState : Run.State
-    , runs2 : List Run.Run
-
-    -- TODO remove the stuff below
-    , lines : List LogLine.Line
-    , entries : List Entry.Entry
-    , runs : List MapRun.MapRun
+    , runs : List Run.Run
     }
 
 
@@ -68,13 +60,7 @@ initModel flags =
         , loadedAt = loadedAt
         , now = loadedAt
         , instance = Instance.init
-        , visits = []
         , runState = Run.Empty
-        , runs2 = []
-
-        -- TODO delete below
-        , lines = []
-        , entries = []
         , runs = []
         }
 
@@ -98,17 +84,17 @@ updateLine line model =
         runs =
             case lastRun of
                 Just lastRun ->
-                    lastRun :: model.runs2
+                    lastRun :: model.runs
 
                 Nothing ->
-                    model.runs2
+                    model.runs
     in
         { model
             | instance = instance
 
             -- , visits = visit |> Maybe.map (\v -> v :: model.visits) |> Maybe.withDefault model.visits
             , runState = runState
-            , runs2 = runs
+            , runs = runs
         }
 
 

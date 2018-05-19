@@ -8,10 +8,8 @@ import Time
 import Dict
 import Model as Model exposing (Model, Msg(..))
 import Model.LogLine as LogLine
-import Model.Entry as Entry exposing (Instance, Entry)
-import Model.MapRun as MapRun exposing (MapRun)
 import Model.Visit as Visit
-import Model.Instance as Instance
+import Model.Instance as Instance exposing (Instance)
 import Model.Run as Run
 
 
@@ -42,49 +40,6 @@ viewInstance instance =
 
         Nothing ->
             H.span [] [ H.text "(none)" ]
-
-
-viewEntry : Entry -> H.Html msg
-viewEntry entry =
-    H.li []
-        [ H.text <|
-            toString entry.at
-                ++ ": "
-                ++ formatInstance entry.instance
-                ++ ", "
-                ++ toString (Entry.zoneType entry)
-        ]
-
-
-viewMapSub : String -> Time.Time -> H.Html msg
-viewMapSub zone dur =
-    H.li [] [ H.text <| zone ++ ": " ++ formatDuration dur ]
-
-
-viewMapRun : MapRun -> H.Html msg
-viewMapRun run =
-    let
-        d =
-            MapRun.durations run
-    in
-        H.li []
-            [ H.text <|
-                (Maybe.withDefault "(unknown)" run.startZone)
-                    ++ ": "
-                    ++ formatDuration d.start
-                    ++ " map + "
-                    ++ formatDuration d.subs
-                    ++ " sidezones + "
-                    ++ formatDuration d.town
-                    ++ " town ("
-                    ++ (toString run.portals)
-                    ++ " portals) = "
-                    ++ formatDuration d.total
-                    ++ " total"
-            , H.ul [] (List.map (uncurry viewMapSub) <| Dict.toList run.durations)
-
-            -- , H.ul [] [ H.li [] [ H.text <| toString run.entries ] ]
-            ]
 
 
 formatDuration : Float -> String
@@ -192,7 +147,7 @@ viewResults : Model -> H.Html msg
 viewResults model =
     let
         today =
-            Run.filterToday model.now model.runs2
+            Run.filterToday model.now model.runs
     in
         H.div []
             [ H.div [] []
@@ -201,40 +156,14 @@ viewResults model =
                 [ H.li [] [ H.text <| "total: " ++ formatDurationSet (Run.totalDurationSet today) ]
                 , H.li [] [ H.text <| "average: " ++ formatDurationSet (Run.meanDurationSet today) ]
                 ]
-            , H.div [] [ H.text <| "All-time: " ++ toString (List.length model.runs2) ++ " finished runs" ]
+            , H.div [] [ H.text <| "All-time: " ++ toString (List.length model.runs) ++ " finished runs" ]
             , H.ul []
-                [ H.li [] [ H.text <| "total: " ++ formatDurationSet (Run.totalDurationSet model.runs2) ]
-                , H.li [] [ H.text <| "average: " ++ formatDurationSet (Run.meanDurationSet model.runs2) ]
+                [ H.li [] [ H.text <| "total: " ++ formatDurationSet (Run.totalDurationSet model.runs) ]
+                , H.li [] [ H.text <| "average: " ++ formatDurationSet (Run.meanDurationSet model.runs) ]
                 ]
             , H.div [] [ H.text "Current instance: ", viewInstance model.instance.val, H.text <| " " ++ toString { map = Instance.isMap model.instance.val, town = Instance.isTown model.instance.val } ]
             , H.div [] [ H.text <| "All runs: " ]
-            , H.ul [] (List.map viewRun model.runs2)
-
-            -- , H.div [] [ H.text <| "Visits: " ]
-            -- , H.ul [] (List.map viewVisit model.visits)
-            , H.div []
-                [ H.text <|
-                    (toString <| List.length model.runs)
-                        ++ " map-runs. Average: "
-                        ++ (MapRun.averageDurations model.runs |> .start |> formatDuration)
-                        ++ " map + "
-                        ++ (MapRun.averageDurations model.runs |> .subs |> formatDuration)
-                        ++ " sidezones"
-                ]
-            , H.text "map-runs:"
-            , H.ul []
-                (case MapRun.fromCurrentEntries model.now model.entries of
-                    Nothing ->
-                        [ H.li [] [ H.text "(not currently running)" ] ]
-
-                    Just run ->
-                        [ viewMapRun run ]
-                )
-            , H.ul [] (List.map viewMapRun model.runs)
-            , H.text "pending-entries:"
-            , H.ul [] (List.map viewEntry model.entries)
-            , H.text "pending-lines:"
-            , H.ul [] (List.map viewLogLine model.lines)
+            , H.ul [] (List.map viewRun model.runs)
             ]
 
 
