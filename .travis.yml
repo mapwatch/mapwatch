@@ -9,6 +9,8 @@ install:
   - npm install -g elm
   - elm --version
   - travis_retry elm-package install --yes
+  # Uncached elm builds take ages. Cached builds are quick, so this should rarely be needed.
+  - travis_wait 20
 
 script:
   - ./build.sh
