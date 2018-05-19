@@ -171,8 +171,11 @@ formatDurationSet : Run.DurationSet -> String
 formatDurationSet d =
     formatDuration d.start
         ++ " map + "
-        ++ formatDuration d.subs
-        ++ " sidezones + "
+        ++ (if d.subs > 0 then
+                formatDuration d.subs ++ " sidezones + "
+            else
+                ""
+           )
         ++ formatDuration d.town
         ++ " town ("
         ++ toString (floor <| 100 * (d.town / (max 1 d.all)))
