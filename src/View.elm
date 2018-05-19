@@ -93,21 +93,17 @@ viewConfig model =
         H.form
             [ A.style [ ( "display", display ) ] ]
             [ H.p []
-                [ H.text "Give me your Path of Exile "
+                [ H.text "Give me your "
+                , H.a [ A.target "_blank", A.href "https://www.pathofexile.com" ] [ H.text "Path of Exile" ]
+                , H.text " "
                 , H.code [] [ H.text "Client.txt" ]
                 , H.text " file, and I'll give you some statistics about your recent mapping activity. "
                 ]
             , H.p []
                 [ H.text "Then, leave me open while you play - I'll keep watching, no need to upload again."
                 ]
-            , H.p []
-                [ H.text "Usually, the file I need is at "
-                , H.code [] [ H.text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
-                , H.text " or "
-                , H.code [] [ H.text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
-                ]
             , H.hr [] []
-            , H.div []
+            , H.p []
                 [ H.text "Analyze only the last "
                 , H.input
                     [ A.type_ "number"
@@ -125,7 +121,7 @@ viewConfig model =
                     id =
                         "clientTxt"
                  in
-                    [ H.text "PoE Client.txt: "
+                    [ H.text "Client.txt: "
                     , H.input
                         [ A.type_ "file"
                         , A.id id
@@ -133,6 +129,13 @@ viewConfig model =
                         , A.tabindex 2
                         ]
                         []
+                    , H.div []
+                        [ H.text "Hint - the file I need is usually in one of these places:"
+                        , H.br [] []
+                        , H.code [] [ H.text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
+                        , H.br [] []
+                        , H.code [] [ H.text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
+                        ]
                     ]
                 )
             , H.div []
@@ -352,9 +355,8 @@ view model =
     H.div []
         [ H.div []
             [ H.h1 [ A.style [ ( "display", "inline" ) ] ] [ H.text "Mapwatch" ]
-            , H.text " - Automatically track your "
-            , H.a [ A.target "_blank", A.href "https://www.pathofexile.com" ] [ H.text "Path of Exile" ]
-            , H.text " mapping time"
+            , H.small []
+                [ H.text " - Passively analyze your Path of Exile mapping time" ]
             , H.div [ A.style [ ( "float", "right" ) ] ] [ H.a [ A.target "_blank", A.href "https://www.github.com/erosson/poe-mapwatch" ] [ H.text "Source code" ] ]
             ]
         , viewConfig model
