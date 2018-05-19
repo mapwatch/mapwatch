@@ -35,7 +35,8 @@ init =
 
 isTown : Maybe Instance -> Bool
 isTown =
-    Maybe.withDefault False << Maybe.map (Zone.isTown << .zone)
+    -- No-zone counts as town, since you log back in to town
+    Maybe.withDefault True << Maybe.map (Zone.isTown << .zone)
 
 
 isMap : Maybe Instance -> Bool

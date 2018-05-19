@@ -12,6 +12,7 @@ import Model.LogLine as LogLine
 import Model.Visit as Visit
 import Model.Instance as Instance exposing (Instance)
 import Model.Run as Run
+import Model.Zone as Zone
 
 
 viewLogLine : LogLine.Line -> H.Html msg
@@ -188,9 +189,24 @@ viewDate d =
         [ H.text <| toString (Date.day d) ++ " " ++ toString (Date.month d) ]
 
 
+viewSideArea : Maybe Instance -> Time.Time -> H.Html msg
+viewSideArea instance dur =
+    H.li [] [ viewInstance instance, H.text <| ": " ++ formatDuration dur ]
+
+
 viewRun : Run.Run -> H.Html msg
 viewRun run =
-    H.li [] [ viewDate run.last.leftAt, H.text " -- ", viewInstance run.first.instance, H.text <| " -- " ++ formatDurationSet (Run.durationSet run) ]
+    H.li []
+        [ viewDate run.last.leftAt
+        , H.text " -- "
+        , viewInstance run.first.instance
+        , H.text <| " -- " ++ formatDurationSet (Run.durationSet run)
+        , H.ul []
+            (List.map (uncurry viewSideArea) <|
+                List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance)) <|
+                    Run.durationPerInstance run
+            )
+        ]
 
 
 viewResults : Model -> H.Html msg

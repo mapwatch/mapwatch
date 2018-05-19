@@ -9,6 +9,7 @@ module Model.Run
         , totalDurationSet
         , meanDurationSet
         , stateDuration
+        , durationPerInstance
         , filterToday
         , update
         , tick
@@ -16,6 +17,7 @@ module Model.Run
 
 import Time
 import Date
+import Dict
 import Model.Instance as Instance exposing (Instance)
 import Model.Visit as Visit exposing (Visit)
 
@@ -123,6 +125,39 @@ filterToday date =
             ymd date == ymd run.first.leftAt
     in
         List.filter pred
+
+
+durationPerInstance : Run -> List ( Maybe Instance, Time.Time )
+durationPerInstance { visits } =
+    let
+        instanceToZoneKey instance =
+            case instance of
+                Just i ->
+                    i.zone
+
+                Nothing ->
+                    "(none)"
+
+        zoneKeyToZone key =
+            -- really wish dictionaries had more flexible keys
+            if key == "(none)" then
+                Nothing
+            else
+                Just key
+
+        update instance duration val0 =
+            val0
+                |> Maybe.withDefault ( instance, 0 )
+                |> Tuple.mapSecond ((+) duration)
+                |> Just
+
+        foldDurs ( instance, duration ) dict =
+            Dict.update (instanceToZoneKey instance) (update instance duration) dict
+    in
+        visits
+            |> List.map (\v -> ( v.instance, Visit.duration v ))
+            |> List.foldl foldDurs Dict.empty
+            |> Dict.values
 
 
 push : Visit -> Run -> Maybe Run
