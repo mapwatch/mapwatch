@@ -180,13 +180,13 @@ viewResults model =
                 ]
             , H.div [] [ H.text "You last entered: ", viewInstance model.instance.val, H.text <| " " ++ toString { map = Instance.isMap model.instance.val, town = Instance.isTown model.instance.val } ]
             , H.div []
-                [ H.text "You're running: "
+                [ H.text <| "You're running: (" ++ Maybe.withDefault "--:--" (Maybe.map formatDuration <| Run.stateDuration model.now model.runState) ++ ")"
                 , H.ul []
                     [ case model.runState of
                         Run.Empty ->
                             H.li [ A.title "Slacker." ] [ H.text "Nothing." ]
 
-                        Run.Started ->
+                        Run.Started _ ->
                             H.li [] [ viewInstance model.instance.val ]
 
                         Run.Running run ->

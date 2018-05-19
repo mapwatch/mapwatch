@@ -35,8 +35,7 @@ isMap =
 
 isOffline : Visit -> Bool
 isOffline v =
-    -- TODO threshold should be configurable
-    duration v > 20 * Time.minute
+    Instance.isDurationOffline <| duration v
 
 
 tryInit : Instance.State -> Instance.State -> Maybe Visit

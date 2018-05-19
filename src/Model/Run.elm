@@ -8,8 +8,10 @@ module Model.Run
         , durationSet
         , totalDurationSet
         , meanDurationSet
+        , stateDuration
         , filterToday
         , update
+        , tick
         )
 
 import Time
@@ -24,7 +26,7 @@ type alias Run =
 
 type State
     = Empty
-    | Started
+    | Started Date.Date
     | Running Run
 
 
@@ -34,6 +36,19 @@ init visit =
         Nothing
     else
         Just { first = visit, last = visit, visits = [ visit ], portals = 1 }
+
+
+stateDuration : Date.Date -> State -> Maybe Time.Time
+stateDuration now state =
+    case state of
+        Empty ->
+            Nothing
+
+        Started at ->
+            Just <| Date.toTime now - Date.toTime at
+
+        Running run ->
+            Just <| Date.toTime now - Date.toTime run.first.joinedAt
 
 
 duration : Run -> Time.Time
@@ -118,7 +133,40 @@ push visit run =
         Just { run | last = visit, visits = visit :: run.visits }
 
 
-update : Maybe Instance -> Maybe Visit -> State -> ( State, Maybe Run )
+tick : Date.Date -> Instance.State -> State -> ( State, Maybe Run )
+tick now instance state =
+    -- go offline when time has passed since the last log entry.
+    case state of
+        Empty ->
+            ( state, Nothing )
+
+        Started at ->
+            if Instance.isOffline now instance then
+                -- we just went offline while in a map - end/discard the run
+                ( Empty, Nothing )
+                    |> Debug.log "Run.tick: Started -> offline"
+            else
+                -- no changes
+                ( state, Nothing )
+
+        Running run ->
+            if Instance.isOffline now instance then
+                -- they went offline during a run. Start a new run.
+                if Instance.isTown instance.val then
+                    -- they went offline in town - end the run, discarding the time in town.
+                    ( Empty, Just run )
+                        |> Debug.log "Run.tick: Running<town> -> offline"
+                else
+                    -- they went offline in the map or a side area.
+                    -- we can't know how much time they actually spent running before disappearing - discard the run.
+                    ( Empty, Nothing )
+                        |> Debug.log "Run.tick: Running<not-town> -> offline"
+            else
+                -- no changes
+                ( state, Nothing )
+
+
+update : Instance.State -> Maybe Visit -> State -> ( State, Maybe Run )
 update instance visit state =
     -- we just joined `instance`, and just left `visit.instance`.
     --
@@ -134,10 +182,16 @@ update instance visit state =
         Just visit ->
             let
                 initRun =
-                    if Instance.isMap instance && Visit.isTown visit then
+                    if Instance.isMap instance.val && Visit.isTown visit then
                         -- when not running, entering a map from town starts a run.
                         -- TODO: Non-town -> Map could be a Zana mission - skip for now, takes more special-casing
-                        Started
+                        case instance.joinedAt of
+                            Just at ->
+                                Started at
+
+                            Nothing ->
+                                -- TODO change the Instance.State type to prevent this
+                                Debug.crash <| "instance.state has {val=notnull, joinedAt=null}: " ++ toString instance
                     else
                         -- ...and *only* entering a map. Ignore non-maps while not running.
                         Empty
@@ -146,7 +200,7 @@ update instance visit state =
                     Empty ->
                         ( initRun, Nothing )
 
-                    Started ->
+                    Started _ ->
                         -- first complete visit of the run!
                         if Visit.isMap visit then
                             case init visit of
@@ -174,13 +228,13 @@ update instance visit state =
                                     ( initRun, Nothing )
 
                             Just run ->
-                                if Instance.isMap instance && instance /= run.first.instance && Visit.isTown visit then
+                                if Instance.isMap instance.val && instance.val /= run.first.instance && Visit.isTown visit then
                                     -- entering a *new* map, from town, finishes this run and starts a new one. This condition is complex:
                                     -- * Reentering the same map does not! Ex: death, or portal-to-town to dump some gear.
                                     -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.
                                     -- * Even Non-Map -> Map does not! That's a Zana daily, or leaving an abyssal-depth/trial/other side-area. Has to be Town -> Map.
                                     ( initRun, Just run )
-                                else if instance == run.first.instance && Visit.isTown visit then
+                                else if instance.val == run.first.instance && Visit.isTown visit then
                                     -- reentering the *same* map from town is a portal.
                                     ( Running { run | portals = run.portals + 1 }, Nothing )
                                 else

@@ -1,5 +1,6 @@
 module Model.Instance exposing (..)
 
+import Time
 import Date
 import Model.LogLine as LogLine
 import Model.Zone as Zone
@@ -20,10 +21,16 @@ type Builder
 
 
 type alias State =
-    { val : Maybe Instance
-    , joinedAt : Maybe Date.Date
+    { val : Maybe Instance -- Nothing if no loglines processed yet, OR upon reopening the game
+    , joinedAt : Maybe Date.Date -- Nothing if no loglines have been processed yet
     , next : Builder
     }
+
+
+init : State
+init =
+    -- initial-date is awkward, only Nothing on init, but we need to be able to tell the difference
+    { val = Nothing, joinedAt = Nothing, next = Empty }
 
 
 isTown : Maybe Instance -> Bool
@@ -36,10 +43,25 @@ isMap =
     Maybe.withDefault False << Maybe.map (Zone.isMap << .zone)
 
 
-init : State
-init =
-    -- initial-date is awkward, only Nothing on init, but we need to be able to tell the difference
-    { val = Nothing, joinedAt = Nothing, next = Empty }
+duration : Date.Date -> State -> Maybe Time.Time
+duration now state =
+    Maybe.map (\at -> Date.toTime now - Date.toTime at) state.joinedAt
+
+
+offlineThreshold : Time.Time
+offlineThreshold =
+    -- TODO threshold should be configurable
+    20 * Time.minute
+
+
+isDurationOffline : Time.Time -> Bool
+isDurationOffline dur =
+    dur >= offlineThreshold
+
+
+isOffline : Date.Date -> State -> Bool
+isOffline now instance =
+    isDurationOffline <| Maybe.withDefault 0 <| duration now instance
 
 
 update : LogLine.Line -> State -> State

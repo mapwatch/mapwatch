@@ -79,7 +79,7 @@ updateLine line model =
             Visit.tryInit model.instance instance
 
         ( runState, lastRun ) =
-            Run.update instance.val visit model.runState
+            Run.update instance visit model.runState
 
         runs =
             case lastRun of
@@ -98,11 +98,28 @@ updateLine line model =
         }
 
 
+tick : Date.Date -> Model -> Model
+tick t model =
+    let
+        ( runState, lastRun ) =
+            Run.tick t model.instance model.runState
+
+        runs =
+            case lastRun of
+                Just lastRun ->
+                    lastRun :: model.runs
+
+                Nothing ->
+                    model.runs
+    in
+        { model | now = t, runState = runState, runs = runs }
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Tick now ->
-            ( { model | now = now }, Cmd.none )
+        Tick t ->
+            ( tick t model, Cmd.none )
 
         InputClientLogWithId id ->
             ( model, Ports.inputClientLogWithId id )
@@ -117,9 +134,6 @@ update msg model =
             )
                 |> \m -> ( m, Cmd.none )
 
-        -- |> updateLogLines raw
-        -- |> updateEntries
-        -- |> updateMapRuns
         RecvProgress p ->
             ( { model | progress = Just p }, Cmd.none )
 
