@@ -73,7 +73,10 @@ parse raw =
                     (\strs ->
                         case strs of
                             [ yr, mo, d, h, mn, s ] ->
-                                Date.fromString <| (String.join "-" [ yr, mo, d ]) ++ "T" ++ (String.join ":" [ h, mn, s ]) ++ "Z"
+                                -- no time zone designator - assume local time.
+                                -- This may act screwy around DST changes, but there's not much we can do -
+                                -- logged dates are local-time with no info about the timezone at the time of logging.
+                                Date.fromString <| (String.join "-" [ yr, mo, d ]) ++ "T" ++ (String.join ":" [ h, mn, s ])
 
                             _ ->
                                 Err ("date parsed-count mismatch: " ++ toString strs)
