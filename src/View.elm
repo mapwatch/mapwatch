@@ -276,9 +276,7 @@ viewSideArea instance dur =
 
 viewRunBody : Run.Run -> List (H.Html msg)
 viewRunBody run =
-    [ viewDate run.last.leftAt
-    , H.text " -- "
-    , viewInstance run.first.instance
+    [ viewInstance run.first.instance
     , H.text <| " -- " ++ formatDurationSet (Run.durationSet run)
     , H.ul []
         (List.map (uncurry viewSideArea) <|
@@ -289,8 +287,13 @@ viewRunBody run =
 
 
 viewRun : Run.Run -> H.Html msg
-viewRun =
-    viewRunBody >> H.li []
+viewRun run =
+    viewRunBody run
+        |> (++)
+            [ viewDate run.last.leftAt
+            , H.text " -- "
+            ]
+        |> H.li []
 
 
 viewResults : Model -> H.Html msg
