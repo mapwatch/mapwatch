@@ -19,6 +19,9 @@ import Model.LogLine as LogLine
 import Model.Entry as Entry
 import Model.MapRun as MapRun
 import Model.Zone as Zone
+import Model.Instance as Instance
+import Model.Visit as Visit
+import Model.Run as Run
 
 
 type alias Flags =
@@ -35,6 +38,12 @@ type alias Model =
     , progress : Maybe Progress
     , now : Date.Date
     , parseError : Maybe LogLine.ParseError
+    , instance : Instance.State
+    , visits : List Visit.Visit
+    , runState : Run.State
+    , runs2 : List Run.Run
+
+    -- TODO remove the stuff below
     , lines : List LogLine.Line
     , entries : List Entry.Entry
     , runs : List MapRun.MapRun
@@ -58,6 +67,12 @@ initModel flags =
         , progress = Nothing
         , loadedAt = loadedAt
         , now = loadedAt
+        , instance = Instance.init
+        , visits = []
+        , runState = Run.Empty
+        , runs2 = []
+
+        -- TODO delete below
         , lines = []
         , entries = []
         , runs = []
@@ -68,49 +83,33 @@ init flags =
     ( initModel flags, Cmd.none )
 
 
-updateLogLines : String -> Model -> Model
-updateLogLines raw model =
-    case LogLine.parse raw of
-        Ok line ->
-            { model
-                | parseError = Nothing
-                , lines = line :: model.lines
-            }
+updateLine : LogLine.Line -> Model -> Model
+updateLine line model =
+    let
+        instance =
+            Instance.update line model.instance
 
-        Err err ->
-            { model
-                | parseError = Just err
-            }
+        visit =
+            Visit.tryInit model.instance instance
 
+        ( runState, lastRun ) =
+            Run.update instance.val visit model.runState
 
-updateEntries : Model -> Model
-updateEntries model =
-    case Entry.fromLogLines model.lines of
-        Nothing ->
-            model
+        runs =
+            case lastRun of
+                Just lastRun ->
+                    lastRun :: model.runs2
 
-        Just entry ->
-            { model
-                | lines = []
-                , entries = entry :: model.entries
-            }
+                Nothing ->
+                    model.runs2
+    in
+        { model
+            | instance = instance
 
-
-updateMapRuns : Model -> Model
-updateMapRuns model =
-    case MapRun.fromEntries model.entries of
-        Nothing ->
-            model
-
-        Just ( run, entries ) ->
-            if run.startZone |> Maybe.map Zone.isMap |> Maybe.withDefault False then
-                { model
-                    | entries = entries
-                    , runs = run :: model.runs
-                }
-            else
-                -- it's not an actual map-run: remove the relevant zone-entries, but don't show the map-run
-                { model | entries = entries }
+            -- , visits = visit |> Maybe.map (\v -> v :: model.visits) |> Maybe.withDefault model.visits
+            , runState = runState
+            , runs2 = runs
+        }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -123,12 +122,18 @@ update msg model =
             ( model, Ports.inputClientLogWithId id )
 
         RecvLogLine raw ->
-            model
-                |> updateLogLines raw
-                |> updateEntries
-                |> updateMapRuns
+            (case LogLine.parse raw of
+                Ok line ->
+                    updateLine line model
+
+                Err err ->
+                    { model | parseError = Just err }
+            )
                 |> \m -> ( m, Cmd.none )
 
+        -- |> updateLogLines raw
+        -- |> updateEntries
+        -- |> updateMapRuns
         RecvProgress p ->
             ( { model | progress = Just p }, Cmd.none )
 
