@@ -192,9 +192,28 @@ viewDate d =
         [ H.text <| toString (Date.day d) ++ " " ++ toString (Date.month d) ]
 
 
+formatSideZoneType : Maybe Instance -> Maybe String
+formatSideZoneType instance =
+    case Zone.sideZoneType (Maybe.map .zone instance) of
+        Zone.OtherSideZone ->
+            Nothing
+
+        Zone.Mission master ->
+            Just <| toString master ++ " mission"
+
+
 viewSideArea : Maybe Instance -> Time.Time -> H.Html msg
 viewSideArea instance dur =
-    H.li [] [ viewInstance instance, H.text <| ": " ++ formatDuration dur ]
+    let
+        instanceEl =
+            case formatSideZoneType instance of
+                Nothing ->
+                    viewInstance instance
+
+                Just str ->
+                    H.span [] [ H.text <| str ++ " (", viewInstance instance, H.text ")" ]
+    in
+        H.li [] [ instanceEl, H.text <| ": " ++ formatDuration dur ]
 
 
 viewRun : Run.Run -> H.Html msg
