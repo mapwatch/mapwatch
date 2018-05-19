@@ -263,11 +263,12 @@ update instance visit state =
                                     ( initRun, Nothing )
 
                             Just run ->
-                                if Instance.isMap instance.val && instance.val /= run.first.instance && Visit.isTown visit then
-                                    -- entering a *new* map, from town, finishes this run and starts a new one. This condition is complex:
+                                if (not <| Instance.isTown instance.val) && instance.val /= run.first.instance && Visit.isTown visit then
+                                    -- entering a new non-town zone, from town, finishes this run and might start a new one. This condition is complex:
                                     -- * Reentering the same map does not! Ex: death, or portal-to-town to dump some gear.
                                     -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.
-                                    -- * Even Non-Map -> Map does not! That's a Zana daily, or leaving an abyssal-depth/trial/other side-area. Has to be Town -> Map.
+                                    -- * Even Non-Map -> Map does not! That's a Zana daily, or leaving an abyssal-depth/trial/other side-area.
+                                    -- * Town -> Non-Map does, though. Ex: map -> town -> uberlab.
                                     ( initRun, Just run )
                                 else if instance.val == run.first.instance && Visit.isTown visit then
                                     -- reentering the *same* map from town is a portal.
