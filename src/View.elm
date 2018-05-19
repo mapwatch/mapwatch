@@ -113,10 +113,43 @@ viewParseError err =
             H.div [] [ H.text <| "Log parsing error: " ++ toString err ]
 
 
+formatBytes : Int -> String
+formatBytes b =
+    let
+        k =
+            toFloat b / 1024
+
+        m =
+            k / 1024
+
+        g =
+            m / 1024
+
+        t =
+            g / 1024
+
+        ( val, unit ) =
+            if t >= 1 then
+                ( t, " TB" )
+            else if g >= 1 then
+                ( g, " GB" )
+            else if m >= 1 then
+                ( m, " MB" )
+            else if k >= 1 then
+                ( k, " KB" )
+            else
+                ( toFloat b, " bytes" )
+
+        places n val =
+            toString <| (toFloat <| floor <| val * (10 ^ n)) / (10 ^ n)
+    in
+        places 2 val ++ unit
+
+
 viewProgress : Model.Progress -> H.Html msg
 viewProgress p =
     if Model.isProgressDone p then
-        H.div [] [ H.text <| "Processed " ++ toString p.max ++ " bytes in " ++ toString (Model.progressDuration p / 1000) ++ "s" ]
+        H.div [] [ H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ toString (Model.progressDuration p / 1000) ++ "s" ]
     else
         H.div [] [ H.progress [ A.value (toString p.val), A.max (toString p.max) ] [] ]
 
