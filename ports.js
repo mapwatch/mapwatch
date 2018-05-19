@@ -1,4 +1,8 @@
-var app = Elm.Main.fullscreen({loadedAt: Date.now()})
+var app = Elm.Main.fullscreen({
+  loadedAt: Date.now(),
+  isBrowserSupported: !!window.FileReader,
+  // isBrowserSupported: false,
+})
 
 // Read client.txt line-by-line, and send it to Elm.
 // Why aren't we doing the line-by-line logic in Elm? - because this used to be a websocket-server.

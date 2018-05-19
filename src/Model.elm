@@ -24,6 +24,7 @@ import Model.Run as Run
 
 type alias Flags =
     { loadedAt : Float
+    , isBrowserSupported : Bool
     }
 
 
@@ -37,6 +38,7 @@ type alias Config =
 
 type alias Model =
     { config : Config
+    , isBrowserSupported : Bool
     , loadedAt : Date.Date
     , progress : Maybe Progress
     , now : Date.Date
@@ -62,6 +64,7 @@ initModel flags =
             Date.fromTime flags.loadedAt
     in
         { config = { maxSize = 20 }
+        , isBrowserSupported = flags.isBrowserSupported
         , parseError = Nothing
         , progress = Nothing
         , loadedAt = loadedAt

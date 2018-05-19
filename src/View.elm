@@ -113,6 +113,12 @@ viewConfig model =
                     , H.input [ A.type_ "file", A.id id, E.on "change" (Decode.succeed <| InputClientLogWithId id) ] []
                     ]
                 )
+            , H.div []
+                (if model.isBrowserSupported then
+                    []
+                 else
+                    [ H.text <| "Warning: we don't support your web browser. If you have trouble, try ", H.a [ A.href "https://www.google.com/chrome/" ] [ H.text "Chrome" ], H.text "." ]
+                )
             ]
 
 
