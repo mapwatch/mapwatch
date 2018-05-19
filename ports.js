@@ -29,9 +29,10 @@ function LineBuffer(onLine, onDone) {
     }
   }
 }
+var MB = Math.pow(2,20)
 // read line-by-line.
 function readLines(file, config) {
-  var chunkSize = config.chunkSize || Math.pow(2, 20)
+  var chunkSize = config.chunkSize || 1*MB
   var chunkNum = 0
   var buf = LineBuffer(config.onLine, config.onDone)
   var loop = function(chunkNum) {
@@ -96,9 +97,10 @@ function processFile(fileSlice, watchedFile) {
     watchChanges(watchedFile)
   }})
 }
-app.ports.inputClientLogWithId.subscribe(function(id) {
-  var files = document.getElementById(id).files
+app.ports.inputClientLogWithId.subscribe(function(config) {
+  var files = document.getElementById(config.id).files
+  var maxSize = (config.maxSize == null ? 20 : config.maxSize) * MB
   if (files.length > 0) {
-    processFile(files[0], files[0])
+    processFile(files[0].slice(Math.max(0, files[0].size - maxSize)), files[0])
   }
 })

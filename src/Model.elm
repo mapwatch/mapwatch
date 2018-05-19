@@ -31,8 +31,13 @@ type alias Progress =
     Ports.Progress
 
 
+type alias Config =
+    { maxSize : Int }
+
+
 type alias Model =
-    { loadedAt : Date.Date
+    { config : Config
+    , loadedAt : Date.Date
     , progress : Maybe Progress
     , now : Date.Date
     , parseError : Maybe LogLine.ParseError
@@ -45,6 +50,7 @@ type alias Model =
 type Msg
     = Tick Date.Date
     | InputClientLogWithId String
+    | InputMaxSize String
     | RecvLogLine String
     | RecvProgress Progress
 
@@ -55,7 +61,8 @@ initModel flags =
         loadedAt =
             Date.fromTime flags.loadedAt
     in
-        { parseError = Nothing
+        { config = { maxSize = 20 }
+        , parseError = Nothing
         , progress = Nothing
         , loadedAt = loadedAt
         , now = loadedAt
@@ -116,13 +123,24 @@ tick t model =
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
+update msg ({ config } as model) =
     case msg of
         Tick t ->
-            ( tick t model, Cmd.none )
+            if model.progress |> Maybe.map isProgressDone |> Maybe.withDefault False then
+                ( tick t model, Cmd.none )
+            else
+                ( model, Cmd.none )
 
         InputClientLogWithId id ->
-            ( model, Ports.inputClientLogWithId id )
+            ( model, Ports.inputClientLogWithId { id = id, maxSize = config.maxSize } )
+
+        InputMaxSize s ->
+            case String.toInt s of
+                Ok s ->
+                    ( { model | config = { config | maxSize = s } }, Cmd.none )
+
+                Err _ ->
+                    ( model, Cmd.none )
 
         RecvLogLine raw ->
             (case LogLine.parse raw of
@@ -143,7 +161,10 @@ subscriptions model =
     Sub.batch
         [ Ports.logline RecvLogLine
         , Ports.progress RecvProgress
-        , AnimationFrame.times (Tick << Date.fromTime)
+
+        -- Slow down animation, deliberately - don't eat poe's cpu
+        -- , AnimationFrame.times (Tick << Date.fromTime)
+        , Time.every (Time.second * 1) (Tick << Date.fromTime)
         ]
 
 

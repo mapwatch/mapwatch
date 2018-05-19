@@ -93,6 +93,18 @@ viewConfig model =
         H.form
             [ A.style [ ( "display", display ) ] ]
             [ H.div []
+                [ H.text "Analyze only the last "
+                , H.input
+                    [ A.type_ "number"
+                    , A.value <| toString model.config.maxSize
+                    , E.onInput InputMaxSize
+                    , A.min "0"
+                    , A.max "100"
+                    ]
+                    []
+                , H.text " MB of history"
+                ]
+            , H.div []
                 (let
                     id =
                         "clientTxt"
@@ -152,7 +164,22 @@ viewProgress p =
     if Model.isProgressDone p then
         H.div [] [ H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ toString (Model.progressDuration p / 1000) ++ "s" ]
     else
-        H.div [] [ H.progress [ A.value (toString p.val), A.max (toString p.max) ] [] ]
+        H.div []
+            [ H.progress [ A.value (toString p.val), A.max (toString p.max) ] []
+            , H.div []
+                [ H.text <|
+                    formatBytes p.val
+                        ++ " / "
+                        ++ formatBytes p.max
+                        ++ ": "
+                        ++ toString (floor <| toFloat p.val / toFloat p.max * 100)
+                        ++ "%"
+
+                -- ++ " in"
+                -- ++ toString (Model.progressDuration p / 1000)
+                -- ++ "s"
+                ]
+            ]
 
 
 viewVisit : Visit.Visit -> H.Html msg
@@ -178,7 +205,7 @@ formatDurationSet d =
            )
         ++ formatDuration d.town
         ++ " town ("
-        ++ toString (floor <| 100 * (d.town / (max 1 d.all)))
+        ++ toString (clamp 0 100 <| floor <| 100 * (d.town / (max 1 d.all)))
         ++ "%, "
         -- to 2 decimal places. Normally this is an int, except when used for the average
         ++ toString ((d.portals * 100 |> floor |> toFloat) / 100)
@@ -244,13 +271,13 @@ viewResults model =
             [ H.div [] []
             , H.div [] [ H.text <| "Today: " ++ toString (List.length today) ++ " finished runs" ]
             , H.ul []
-                [ H.li [] [ H.text <| "total: " ++ formatDurationSet (Run.totalDurationSet today) ]
-                , H.li [] [ H.text <| "average: " ++ formatDurationSet (Run.meanDurationSet today) ]
+                [ H.li [] [ H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet today) ]
+                , H.li [] [ H.text <| "Average: " ++ formatDurationSet (Run.meanDurationSet today) ]
                 ]
             , H.div [] [ H.text <| "All-time: " ++ toString (List.length model.runs) ++ " finished runs" ]
             , H.ul []
-                [ H.li [] [ H.text <| "total: " ++ formatDurationSet (Run.totalDurationSet model.runs) ]
-                , H.li [] [ H.text <| "average: " ++ formatDurationSet (Run.meanDurationSet model.runs) ]
+                [ H.li [] [ H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet model.runs) ]
+                , H.li [] [ H.text <| "Average: " ++ formatDurationSet (Run.meanDurationSet model.runs) ]
                 ]
             , H.div [] [ H.text "You last entered: ", viewInstance model.instance.val, H.text <| " " ++ toString { map = Instance.isMap model.instance.val, town = Instance.isTown model.instance.val } ]
             , H.div []
@@ -267,8 +294,8 @@ viewResults model =
                             viewRun run
                     ]
                 ]
-            , H.div [] [ H.text <| "All runs: " ]
-            , H.ul [] (List.map viewRun model.runs)
+            , H.div [] [ H.text <| "Your last " ++ toString (min 100 <| List.length model.runs) ++ " runs: " ]
+            , H.ul [] (List.map viewRun <| List.take 100 model.runs)
             ]
 
 

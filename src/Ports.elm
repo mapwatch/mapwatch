@@ -3,7 +3,7 @@ port module Ports exposing (..)
 import Time as Time exposing (Time)
 
 
-port inputClientLogWithId : String -> Cmd msg
+port inputClientLogWithId : { id : String, maxSize : Int } -> Cmd msg
 
 
 port logline : (String -> msg) -> Sub msg
