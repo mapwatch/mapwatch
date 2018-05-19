@@ -1,6 +1,7 @@
 module Model.Zone exposing (Type(..), SideZoneType(..), Master(..), zoneType, isTown, isMap, sideZoneType)
 
 import Set
+import Dict
 
 
 type Type
@@ -34,6 +35,7 @@ type
 type SideZoneType
     = OtherSideZone
     | Mission Master
+    | ElderGuardian Guardian
 
 
 sideZoneType : Maybe String -> SideZoneType
@@ -44,17 +46,12 @@ sideZoneType zone =
 
         Just zone ->
             -- given that this is a side zone, what kind is it?
-            if isMap zone then
-                Mission Zana
-            else if Set.member zone hakuMissions then
-                Mission Haku
-            else if Set.member zone toraMissions then
-                Mission Tora
-            else if Set.member zone vaganMissions then
-                Mission Vagan
-            else
-                -- TODO detect master-specific zones
-                OtherSideZone
+            case Dict.get zone sideZoneDict of
+                Nothing ->
+                    OtherSideZone
+
+                Just t ->
+                    t
 
 
 isTown zone =
@@ -63,6 +60,49 @@ isTown zone =
 
 isMap zone =
     Set.member zone maps
+
+
+type Guardian
+    = Eradicator
+    | Constrictor
+    | Purifier
+    | Enslaver
+
+
+valkeys : val -> List String -> Dict.Dict String val
+valkeys val keys =
+    List.map (\z -> ( z, val )) keys
+        |> Dict.fromList
+
+
+sideZoneDict : Dict.Dict String SideZoneType
+sideZoneDict =
+    List.foldl Dict.union
+        Dict.empty
+        [ Dict.map (\_ -> ElderGuardian) elderGuardianZones
+        , valkeys (Mission Tora) (Set.toList toraMissions)
+        , valkeys (Mission Haku) (Set.toList hakuMissions)
+        , valkeys (Mission Vagan) (Set.toList vaganMissions)
+        , valkeys (Mission Zana) (Set.toList maps)
+        ]
+
+
+elderGuardianZones : Dict.Dict String Guardian
+elderGuardianZones =
+    List.foldl Dict.union
+        Dict.empty
+        -- https://pathofexile.gamepedia.com/The_Eradicator
+        [ valkeys Eradicator [ "Repository of Derision", "Spires of Delusion", "Manor of Madness" ]
+
+        -- https://pathofexile.gamepedia.com/The_Constrictor
+        , valkeys Constrictor [ "Ruins of Despair", "Island of Devastation", "Sea of Isolation" ]
+
+        -- https://pathofexile.gamepedia.com/The_Purifier
+        , valkeys Purifier [ "Vaults of Insanity", "Halls of Delirium", "Pits of Sorrow" ]
+
+        -- https://pathofexile.gamepedia.com/The_Enslaver
+        , valkeys Enslaver [ "River of Hysteria", "Desert of Dementia", "Wastes of Lunacy" ]
+        ]
 
 
 hakuMissions : Set.Set String

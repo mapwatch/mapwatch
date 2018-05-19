@@ -201,6 +201,9 @@ formatSideZoneType instance =
         Zone.Mission master ->
             Just <| toString master ++ " mission"
 
+        Zone.ElderGuardian guardian ->
+            Just <| "Elder Guardian: The " ++ toString guardian
+
 
 viewSideArea : Maybe Instance -> Time.Time -> H.Html msg
 viewSideArea instance dur =
