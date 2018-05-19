@@ -298,28 +298,17 @@ viewResults model =
     let
         today =
             Run.filterToday model.now model.runs
-
-        nowRunningDur =
-            case Run.stateDuration model.now model.runState of
-                Nothing ->
-                    ""
-
-                Just dur ->
-                    " (" ++ formatDuration dur ++ ")"
     in
         H.div []
             [ H.div [] []
             , H.p [] [ H.text "You last entered: ", viewInstance model.instance.val ]
             , H.p []
-                [ H.text <| "You're now mapping in" ++ nowRunningDur ++ ": "
-                , case model.runState of
-                    Run.Empty ->
+                [ H.text <| "You're now mapping in: "
+                , case Run.current model.now model.instance model.runState of
+                    Nothing ->
                         H.span [ A.title "Slacker." ] [ H.text "(none)" ]
 
-                    Run.Started _ ->
-                        H.span [] [ viewInstance model.instance.val ]
-
-                    Run.Running run ->
+                    Just run ->
                         H.span [] (viewRunBody run)
                 ]
             , H.div [] [ H.text <| "Today: " ++ toString (List.length today) ++ " finished runs" ]

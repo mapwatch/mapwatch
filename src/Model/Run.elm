@@ -11,6 +11,7 @@ module Model.Run
         , stateDuration
         , durationPerInstance
         , filterToday
+        , current
         , update
         , tick
         )
@@ -199,6 +200,29 @@ tick now instance state =
             else
                 -- no changes
                 ( state, Nothing )
+
+
+current : Date.Date -> Instance.State -> State -> Maybe Run
+current now instance state =
+    let
+        visitResult v =
+            case update instance (Just v) state of
+                ( _, Just run ) ->
+                    Just run
+
+                ( Running run, _ ) ->
+                    Just run
+
+                _ ->
+                    Nothing
+    in
+        case state of
+            Empty ->
+                Nothing
+
+            _ ->
+                Visit.initSince instance now
+                    |> visitResult
 
 
 update : Instance.State -> Maybe Visit -> State -> ( State, Maybe Run )
