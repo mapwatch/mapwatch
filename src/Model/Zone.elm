@@ -109,8 +109,10 @@ hakuMissions : Set.Set String
 hakuMissions =
     -- https://pathofexile.gamepedia.com/Mission_areas
     -- JSON.stringify($('td:nth-of-type(4)', $('tbody')[0]).map(function(){return this.innerText}).filter(function(){return !!this.valueOf()}).toArray())
-    Set.fromList
+    Set.fromList <|
         [ "Haunted Cave", "Haunted Ruin", "Haunted Crypt", "Haunted Shrine", "Haunted Cell", "Haunted Mansion", "Haunted Trench", "Haunted Lair", "Haunted Abyss, Haunted Descent, Haunted Depth", "Haunted Tomb", "Haunted Shed" ]
+            -- TODO not sure why these are missing from the wiki... bet there's more
+            ++ [ "Haunted Pit" ]
 
 
 toraMissions : Set.Set String
