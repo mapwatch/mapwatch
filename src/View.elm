@@ -339,6 +339,8 @@ viewResults model =
                 ]
             , H.br [] []
             , H.p [] [ H.text <| "Your last " ++ toString (min 100 <| List.length model.runs) ++ " runs: " ]
+
+            -- TODO this is a long list. Use HTML.Keyed to make updates more efficient
             , H.ul [] (List.map viewRun <| List.take 100 model.runs)
             ]
 
