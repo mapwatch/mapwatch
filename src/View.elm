@@ -193,7 +193,7 @@ formatBytes b =
 viewProgress : Model.Progress -> H.Html msg
 viewProgress p =
     if Model.isProgressDone p then
-        H.div [] [ H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ toString (Model.progressDuration p / 1000) ++ "s" ]
+        H.div [] [ H.br [] [], H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ toString (Model.progressDuration p / 1000) ++ "s" ]
     else
         H.div []
             [ H.progress [ A.value (toString p.val), A.max (toString p.max) ] []
@@ -263,6 +263,12 @@ formatSideZoneType instance =
             Just <| "Elder Guardian: The " ++ toString guardian
 
 
+maskedText : String -> H.Html msg
+maskedText str =
+    -- This text is hidden on the webpage, but can be copypasted. Useful for formatting shared text.
+    H.span [ A.style [ ( "opacity", "0" ), ( "font-size", "0" ), ( "white-space", "pre" ) ] ] [ H.text str ]
+
+
 viewSideArea : Maybe Instance -> Time.Time -> H.Html msg
 viewSideArea instance dur =
     let
@@ -274,13 +280,13 @@ viewSideArea instance dur =
                 Just str ->
                     H.span [] [ H.text <| str ++ " (", viewInstance instance, H.text ")" ]
     in
-        H.li [] [ instanceEl, H.text <| ": " ++ formatDuration dur ]
+        H.li [] [ maskedText "     * ", instanceEl, H.text <| " | " ++ formatDuration dur ]
 
 
 viewRunBody : Run.Run -> List (H.Html msg)
 viewRunBody run =
     [ viewInstance run.first.instance
-    , H.text <| " -- " ++ formatDurationSet (Run.durationSet run)
+    , H.text <| " | " ++ formatDurationSet (Run.durationSet run)
     , H.ul []
         (List.map (uncurry viewSideArea) <|
             List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance)) <|
@@ -293,8 +299,10 @@ viewRun : Run.Run -> H.Html msg
 viewRun run =
     viewRunBody run
         |> (++)
-            [ viewDate run.last.leftAt
-            , H.text " -- "
+            [ maskedText "  * "
+
+            -- , viewDate run.last.leftAt
+            -- , H.text " | "
             ]
         |> H.li []
 
@@ -306,7 +314,7 @@ viewResults model =
             Run.filterToday model.now model.runs
     in
         H.div []
-            [ H.div [] []
+            [ H.br [] []
             , H.p [] [ H.text "You last entered: ", viewInstance model.instance.val ]
             , H.p []
                 [ H.text <| "You're now mapping in: "
@@ -317,17 +325,19 @@ viewResults model =
                     Just run ->
                         H.span [] (viewRunBody run)
                 ]
-            , H.div [] [ H.text <| "Today: " ++ toString (List.length today) ++ " finished runs" ]
+            , H.p [] [ H.text <| "Today: " ++ toString (List.length today) ++ " finished runs" ]
             , H.ul []
-                [ H.li [] [ H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet today) ]
-                , H.li [] [ H.text <| "Average: " ++ formatDurationSet (Run.meanDurationSet today) ]
+                [ H.li [] [ maskedText "  * ", H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet today) ]
+                , H.li [] [ maskedText "  * ", H.text <| "Average: " ++ formatDurationSet (Run.meanDurationSet today) ]
                 ]
-            , H.div [] [ H.text <| "All-time: " ++ toString (List.length model.runs) ++ " finished runs" ]
+            , H.br [] []
+            , H.p [] [ H.text <| "All-time: " ++ toString (List.length model.runs) ++ " finished runs" ]
             , H.ul []
-                [ H.li [] [ H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet model.runs) ]
-                , H.li [] [ H.text <| "Average: " ++ formatDurationSet (Run.meanDurationSet model.runs) ]
+                [ H.li [] [ maskedText "  * ", H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet model.runs) ]
+                , H.li [] [ maskedText "  * ", H.text <| "Average: " ++ formatDurationSet (Run.meanDurationSet model.runs) ]
                 ]
-            , H.div [] [ H.text <| "Your last " ++ toString (min 100 <| List.length model.runs) ++ " runs: " ]
+            , H.br [] []
+            , H.p [] [ H.text <| "Your last " ++ toString (min 100 <| List.length model.runs) ++ " runs: " ]
             , H.ul [] (List.map viewRun <| List.take 100 model.runs)
             ]
 
@@ -350,14 +360,22 @@ viewMain model =
                     ++ [ viewProgress p ]
 
 
+selfUrl =
+    "https://erosson.github.com/mapwatch"
+
+
+sourceUrl =
+    "https://www.github.com/erosson/poe-mapwatch"
+
+
 view : Model -> H.Html Msg
 view model =
     H.div []
         [ H.div []
-            [ H.h1 [ A.style [ ( "display", "inline" ) ] ] [ H.text "Mapwatch" ]
+            [ H.h1 [ A.style [ ( "display", "inline" ) ] ] [ maskedText "[", H.text "Mapwatch", maskedText <| "](" ++ selfUrl ++ ")" ]
             , H.small []
                 [ H.text " - Passively analyze your Path of Exile mapping time" ]
-            , H.div [ A.style [ ( "float", "right" ) ] ] [ H.a [ A.target "_blank", A.href "https://www.github.com/erosson/poe-mapwatch" ] [ H.text "Source code" ] ]
+            , H.div [ A.style [ ( "float", "right" ) ] ] [ H.a [ A.target "_blank", A.href sourceUrl ] [ maskedText " | [", H.text "Source code", maskedText <| "](" ++ sourceUrl ++ ")" ] ]
             ]
         , viewConfig model
         , viewParseError model.parseError
