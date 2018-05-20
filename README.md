@@ -6,6 +6,10 @@ Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file,
 
 Then, leave me open while you play - I'll keep watching, no need to upload again.
 
+[Example statistics](https://imgur.com/gGA5Ara):
+
+[![Example statistics](https://imgur.com/gGA5Ara.png)](https://imgur.com/gGA5Ara)
+
 ### Will this get me banned?
 
 I haven't asked GGG, but probably not. It only reads PoE's Client.txt log file, not the PoE process/memory. If you're paranoid, it works while the game's closed too.
