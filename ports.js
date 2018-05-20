@@ -59,8 +59,10 @@ function readLines(file, config) {
   loop(0)
 }
 var filter = /Connecting to instance server|: You have entered|LOG FILE OPENING/
-// TODO blacklist other chat-channels, this only ignores global
-var blacklist = /] #/
+// ignore chat messages, don't want people injecting commands.
+// #global, %party, @whisper, $trade, &guild
+// TODO: local has no prefix! `[A-Za-z_\-]+:` might work, needs more testing
+var blacklist = /] [#%@$&]/
 function sendLine(line) {
   if (filter.test(line) && !blacklist.test(line)) {
     // console.log('line: ', line)
