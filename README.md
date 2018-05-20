@@ -4,19 +4,27 @@
 
 Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file, and I'll give you some statistics about your recent mapping activity.
 
-Then, leave me open while you play - I'll keep watching, no need to upload again.
+Then, leave me open while you play - I'll keep watching, no need to upload again. ([Chrome only](https://chrome.google.com))
 
-[Example statistics](https://imgur.com/gGA5Ara):
+### Example statistics output
 
 [![Example statistics](https://imgur.com/gGA5Ara.png?1)](https://imgur.com/gGA5Ara)
 
-### Will this get me banned?
+### Is this legal?
 
-I haven't asked GGG, but probably not. It only reads PoE's Client.txt log file, not the PoE process/memory. If you're paranoid, it works while the game's closed too.
+I haven't asked GGG yet. Check back soon.
+
+It only reads PoE's Client.txt log file, not the PoE process/memory.
 
 ### Will this give me viruses?
 
 No. It's a web page; it has far less virus potential than a downloadable program.
+
+### It's not updating while I play - I have to re-upload client.txt to see changes.
+
+The live-updating part only works in Chrome - Firefox and/or IE do *not* work.
+
+I might create a downloadable client, where this feature would be more more reliable, if the demand (and legality) is there.
 
 ### The map I just finished isn't included in today's statistics yet.
 
