@@ -8,7 +8,7 @@ Then, leave me open while you play - I'll keep watching, no need to upload again
 
 [Example statistics](https://imgur.com/gGA5Ara):
 
-[![Example statistics](https://imgur.com/gGA5Ara.png)](https://imgur.com/gGA5Ara)
+[![Example statistics](https://imgur.com/gGA5Ara.png?1)](https://imgur.com/gGA5Ara)
 
 ### Will this get me banned?
 
