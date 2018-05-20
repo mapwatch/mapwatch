@@ -227,7 +227,10 @@ viewVisit visit =
 
 formatDurationSet : Run.DurationSet -> String
 formatDurationSet d =
-    formatDuration d.start
+    ""
+        ++ formatDuration d.all
+        ++ " = "
+        ++ formatDuration d.start
         ++ " map + "
         ++ (if d.subs > 0 then
                 formatDuration d.subs ++ " sidezones + "
@@ -236,12 +239,11 @@ formatDurationSet d =
            )
         ++ formatDuration d.town
         ++ " town ("
-        ++ toString (clamp 0 100 <| floor <| 100 * (d.town / (max 1 d.all)))
-        ++ "%, "
         -- to 2 decimal places. Normally this is an int, except when used for the average
         ++ toString ((d.portals * 100 |> floor |> toFloat) / 100)
-        ++ " portals) = "
-        ++ formatDuration d.all
+        ++ " portals, "
+        ++ toString (clamp 0 100 <| floor <| 100 * (d.town / (max 1 d.all)))
+        ++ "% in town)"
 
 
 viewDate : Date.Date -> H.Html msg
