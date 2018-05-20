@@ -123,7 +123,7 @@ filterToday date =
             ( Date.year date, Date.month date, Date.day date )
 
         pred run =
-            ymd date == ymd run.first.leftAt
+            ymd date == ymd run.last.leftAt
     in
         List.filter pred
 
