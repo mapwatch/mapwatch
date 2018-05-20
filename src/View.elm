@@ -300,9 +300,8 @@ viewRun run =
     viewRunBody run
         |> (++)
             [ maskedText "  * "
-
-            -- , viewDate run.last.leftAt
-            -- , H.text " | "
+            , viewDate run.last.leftAt
+            , H.text " | "
             ]
         |> H.li []
 
