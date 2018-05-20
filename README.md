@@ -1,12 +1,14 @@
 # [Mapwatch](https://erosson.github.io/mapwatch)
 
+[![Build Status](https://travis-ci.org/erosson/mapwatch.svg?branch=master)](https://travis-ci.org/erosson/mapwatch)
+
 Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file, and I'll give you some statistics about your recent mapping activity.
 
 Then, leave me open while you play - I'll keep watching, no need to upload again.
 
 ### Will this get me banned?
 
-I haven't asked, but probably not. It only reads PoE's Client.txt log file, not the PoE process/memory. If you're paranoid, it works while the game's closed too.
+I haven't asked GGG, but probably not. It only reads PoE's Client.txt log file, not the PoE process/memory. If you're paranoid, it works while the game's closed too.
 
 ### Will this give me viruses?
 
