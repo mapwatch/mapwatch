@@ -52,7 +52,7 @@ duration now state =
 offlineThreshold : Time.Time
 offlineThreshold =
     -- TODO threshold should be configurable
-    20 * Time.minute
+    30 * Time.minute
 
 
 isDurationOffline : Time.Time -> Bool

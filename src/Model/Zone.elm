@@ -148,6 +148,9 @@ towns =
         |> Set.union hideouts
         -- special case: this one's not really a town, but you can enter maps from it
         |> Set.union (Set.singleton "The Templar Laboratory")
+        -- special case: bestiary league zones shouldn't interrupt a map run, so count them as towns, even though they allow fighting
+        -- https://pathofexile.gamepedia.com/The_Menagerie
+        |> Set.union (Set.fromList [ "The Menagerie", "Menagerie Caverns", "Menagerie Depths", "Menagerie Sands", "Menagerie Wilds" ])
 
 
 maps : Set.Set String
