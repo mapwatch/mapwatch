@@ -6,7 +6,7 @@ Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file,
 
 Then, leave me open while you play - I'll keep watching, no need to upload again. ([Chrome only](https://chrome.google.com))
 
-### Example statistics output
+### Example output
 
 [![Example statistics](https://imgur.com/gGA5Ara.png?2)](https://imgur.com/gGA5Ara)
 
