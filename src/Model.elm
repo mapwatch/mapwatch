@@ -132,7 +132,7 @@ update msg ({ config } as model) =
             if model.progress |> Maybe.map isProgressDone |> Maybe.withDefault False then
                 ( tick t model, Cmd.none )
             else
-                ( model, Cmd.none )
+                ( { model | now = t }, Cmd.none )
 
         InputClientLogWithId id ->
             ( model, Ports.inputClientLogWithId { id = id, maxSize = config.maxSize } )
@@ -156,7 +156,14 @@ update msg ({ config } as model) =
                 |> \m -> ( m, Cmd.none )
 
         RecvProgress p ->
-            ( { model | progress = Just p }, Cmd.none )
+            { model | progress = Just p }
+                |> (\m ->
+                        if isProgressDone p then
+                            tick (Date.fromTime p.updatedAt) m
+                        else
+                            m
+                   )
+                |> \m -> ( m, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
