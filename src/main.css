@@ -1,37 +1,54 @@
-table {
+table.history {
   border-collapse: collapse;
+  margin: 2em;
 }
-tbody tr.main-area,
-tfoot {
-  border-top: 1px solid black;
+/* start styling with borders around every square, then selectively remove them */
+table.history tbody {
+  border: 1px solid black;
 }
-tbody tr {
+table.history tbody tr td {
   border-left: 1px solid black;
   border-right: 1px solid black;
-}
-tbody tr td {
   text-align: right;
 }
-tbody tr td.side-dur,
-tbody tr td.portals {
-  text-align: left;
+table.history tbody tr.main-area {
+  border-top: 1px solid black;
 }
-tbody tr td.zone,
-tbody tr td.date {
-  border-right: 1px solid black;
+table.history td.dur {
+  border-left: none;
+  border-right: none;
 }
-tbody tr.side-area td.zone,
-tbody tr.side-area td.side-dur,
-tbody tr td.portals,
-tbody tr td.town-pct {
-  /* border-top: 1px solid black; */
-  border-left: 1px solid black;
-}
-tbody tr.side-area {
+table.history tbody tr.side-area {
   font-size: 80%;
 }
+
 .paginator * {
   display: inline-block;
   text-align: center;
   width: 20%;
+}
+
+/* start styling with borders around every square, then selectively remove them */
+table.history-stats {
+  border-collapse: collapse;
+  margin: 2em;
+  border: 1px solid black;
+}
+table.history-stats tbody tr td {
+  border: 1px solid black;
+  text-align: right;
+}
+table.history-stats td.maps-completed {
+  text-align: left;
+}
+table.history-stats td.dur {
+  border-left: none;
+  border-right: none;
+}
+table.history-stats td:first-child {
+  border-top: none;
+  border-bottom: none;
+}
+table.history-stats th.title {
+  border-top: 1px solid black;
 }

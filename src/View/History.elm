@@ -69,24 +69,56 @@ isValidPage page model =
 viewMain : Int -> Model -> H.Html msg
 viewMain page model =
     H.div []
-        -- [ viewStats "Today" (Run.filterToday model.now model.runs)
-        -- , viewStats "All-time" model.runs
-        [ viewTable page model
+        [ viewStatsTable model
+        , viewHistoryTable page model
         ]
+
+
+viewStatsTable : Model -> H.Html msg
+viewStatsTable model =
+    H.table [ A.class "history-stats" ]
+        [ H.tbody []
+            (List.concat
+                [ viewStatsRows "Today" (Run.filterToday model.now model.runs)
+                , viewStatsRows "All-time" model.runs
+                ]
+            )
+        ]
+
+
+viewStatsRows : String -> List Run -> List (H.Html msg)
+viewStatsRows title runs =
+    [ H.tr []
+        [ H.th [ A.class "title" ] [ H.text <| title ]
+        , H.td [ A.colspan 10, A.class "maps-completed" ] [ H.text <| toString (List.length runs) ++ " maps completed" ]
+        ]
+    , H.tr []
+        ([ H.td [] []
+         , H.td [] [ H.text "Average time per map" ]
+         ]
+            ++ viewDurationSet (Run.meanDurationSet runs)
+        )
+    , H.tr []
+        ([ H.td [] []
+         , H.td [] [ H.text "Total time" ]
+         ]
+            ++ viewDurationSet (Run.totalDurationSet runs)
+        )
+    ]
+
+
+
+--[ H.div []
+--    [ H.text <|
+--    , viewStatsDurations (Run.totalDurationSet runs)
+--    , viewStatsDurations (Run.meanDurationSet runs)
+--    ]
+--]
 
 
 viewStatsDurations : Run.DurationSet -> H.Html msg
 viewStatsDurations =
     H.text << toString
-
-
-viewStats : String -> List Run -> H.Html msg
-viewStats title runs =
-    H.div []
-        [ H.text <| title ++ ": " ++ toString (List.length runs) ++ " runs"
-        , viewStatsDurations (Run.totalDurationSet runs)
-        , viewStatsDurations (Run.meanDurationSet runs)
-        ]
 
 
 viewPaginator : Int -> Int -> H.Html msg
@@ -131,8 +163,8 @@ viewPaginator page numItems =
             ]
 
 
-viewTable : Int -> Model -> H.Html msg
-viewTable page model =
+viewHistoryTable : Int -> Model -> H.Html msg
+viewHistoryTable page model =
     let
         paginator =
             viewPaginator page (List.length model.runs)
@@ -142,7 +174,7 @@ viewTable page model =
                 |> List.drop (page * perPage)
                 |> List.take perPage
     in
-        H.table []
+        H.table [ A.class "history" ]
             [ H.thead []
                 [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ]
 
@@ -186,6 +218,32 @@ pluralize one other n =
         other
 
 
+roundToPlaces : Float -> Float -> Float
+roundToPlaces p n =
+    (n * (10 ^ p) |> round |> toFloat) / (10 ^ p)
+
+
+viewDurationSet : Run.DurationSet -> List (H.Html msg)
+viewDurationSet d =
+    [ H.td [ A.class "dur total-dur" ] [ viewDuration d.all ]
+    , H.td [ A.class "dur" ] [ H.text " = " ]
+    , H.td [ A.class "dur" ] [ viewDuration d.start, H.text " in map " ]
+    , H.td [ A.class "dur" ] [ H.text " + " ]
+    , H.td [ A.class "dur" ] [ viewDuration d.town, H.text " in town " ]
+    ]
+        ++ (if d.subs > 0 then
+                [ H.td [ A.class "dur" ] [ H.text " + " ]
+                , H.td [ A.class "dur" ] [ viewDuration d.subs, H.text " in sides" ]
+                ]
+            else
+                [ H.td [ A.class "dur" ] [], H.td [ A.class "dur" ] [] ]
+           )
+        ++ [ H.td [ A.class "portals" ] [ H.text <| toString (roundToPlaces 2 d.portals) ++ pluralize " portal" " portals" d.portals ]
+           , H.td [ A.class "town-pct" ]
+                [ H.text <| toString (clamp 0 100 <| floor <| 100 * (d.town / (max 1 d.all))) ++ "% in town" ]
+           ]
+
+
 viewHistoryMainRow : Run -> H.Html msg
 viewHistoryMainRow r =
     let
@@ -195,23 +253,8 @@ viewHistoryMainRow r =
         H.tr [ A.class "main-area" ]
             ([ H.td [ A.class "date" ] [ viewDate r.last.leftAt ]
              , H.td [ A.class "zone" ] [ viewInstance r.first.instance ]
-             , H.td [ A.class "total-dur" ] [ viewDuration d.all, H.text " total " ]
-             , H.td [] [ H.text " = " ]
-             , H.td [] [ viewDuration d.start, H.text " map " ]
-             , H.td [] [ H.text " + " ]
-             , H.td [] [ viewDuration d.town, H.text " town " ]
              ]
-                ++ (if d.subs > 0 then
-                        [ H.td [] [ H.text " + " ]
-                        , H.td [] [ viewDuration d.subs, H.text " side" ]
-                        ]
-                    else
-                        [ H.td [] [], H.td [] [] ]
-                   )
-                ++ [ H.td [ A.class "portals" ] [ H.text <| toString d.portals ++ pluralize " portal" " portals" d.portals ]
-                   , H.td [ A.class "town-pct" ]
-                        [ H.text <| toString (clamp 0 100 <| floor <| 100 * (d.town / (max 1 d.all))) ++ "% in town" ]
-                   ]
+                ++ viewDurationSet d
             )
 
 
