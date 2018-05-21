@@ -10,7 +10,7 @@ viewLinks : List ( String, Route ) -> Route -> H.Html msg
 viewLinks links active =
     links
         |> List.map (uncurry <| viewLink active)
-        |> H.div [ A.class "nav" ]
+        |> H.nav []
 
 
 links : List ( String, Route )

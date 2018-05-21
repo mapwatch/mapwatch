@@ -60,10 +60,10 @@ table.history-stats th.title {
   border-top: 1px solid black;
 }
 
-.nav * {
+nav * {
   margin: 1em;
 }
-.nav .active {
+nav .active {
   background: lightgrey;
   border: 3px solid lightgrey;
   border-radius: 5px;
