@@ -1298,3 +1298,223 @@
 2018/05/19 18:19:57 642140 9b0 [INFO Client 14060] : You have entered Strand.
 2018/05/19 18:20:11 656531 d8 [INFO Client 14060] Connecting to instance server at 169.47.33.68:6112
 2018/05/19 18:20:12 657187 9b0 [INFO Client 14060] : You have entered Enlightened Hideout.
+2018/05/19 22:21:43 ***** LOG FILE OPENING *****
+2018/05/19 22:21:44 ***** LOG FILE OPENING *****
+2018/05/19 22:24:10 741750 d8 [INFO Client 5776] Connecting to instance server at 169.63.70.180:6112
+2018/05/19 22:24:32 763421 9b0 [INFO Client 5776] : You have entered Oriath.
+2018/05/19 22:25:05 796546 d8 [INFO Client 5776] Connecting to instance server at 169.45.243.88:6112
+2018/05/19 22:25:06 797796 9b0 [INFO Client 5776] : You have entered Enlightened Hideout.
+2018/05/19 22:29:20 ***** LOG FILE OPENING *****
+2018/05/19 22:29:20 ***** LOG FILE OPENING *****
+2018/05/19 23:29:37 ***** LOG FILE OPENING *****
+2018/05/19 23:29:38 ***** LOG FILE OPENING *****
+2018/05/19 23:30:19 4710718 d8 [INFO Client 5196] Connecting to instance server at 169.63.70.180:6112
+2018/05/19 23:30:36 4727921 9b0 [INFO Client 5196] : You have entered Oriath.
+2018/05/19 23:30:44 4735328 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/19 23:30:45 4736531 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/19 23:31:06 4757687 d8 [INFO Client 5196] Connecting to instance server at 169.47.57.199:6112
+2018/05/19 23:31:09 4760359 9b0 [INFO Client 5196] : You have entered Forgotten Wood.
+2018/05/19 23:31:14 4765218 d8 [INFO Client 5196] Connecting to instance server at 169.63.70.181:6112
+2018/05/19 23:31:15 4766781 9b0 [INFO Client 5196] : You have entered Haunted Cave.
+2018/05/19 23:31:49 4800687 d8 [INFO Client 5196] Connecting to instance server at 169.47.57.199:6112
+2018/05/19 23:31:50 4801234 9b0 [INFO Client 5196] : You have entered Forgotten Wood.
+2018/05/19 23:31:53 4804890 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/19 23:31:55 4806265 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/19 23:32:02 4813875 d8 [INFO Client 5196] Connecting to instance server at 169.63.70.188:6112
+2018/05/19 23:32:05 4816312 9b0 [INFO Client 5196] : You have entered Solitary Chamber.
+2018/05/19 23:33:23 4894125 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/19 23:33:23 4894734 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/19 23:33:28 4899187 d8 [INFO Client 5196] Connecting to instance server at 169.63.67.237:6112
+2018/05/19 23:33:31 4902703 9b0 [INFO Client 5196] : You have entered Watery Cave.
+2018/05/19 23:34:18 4949453 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/19 23:34:19 4949968 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/19 23:34:49 4980015 d8 [INFO Client 5196] Connecting to instance server at 169.47.33.74:6112
+2018/05/19 23:34:50 4981203 9b0 [INFO Client 5196] : You have entered Crumbled Laboratory.
+2018/05/19 23:34:55 4986765 d8 [INFO Client 5196] Connecting to instance server at 169.47.33.68:6112
+2018/05/19 23:35:05 4996921 9b0 [INFO Client 5196] : You have entered Strand.
+2018/05/19 23:40:27 5318062 d8 [INFO Client 5196] Connecting to instance server at 169.47.33.74:6112
+2018/05/19 23:40:27 5318875 9b0 [INFO Client 5196] : You have entered Crumbled Laboratory.
+2018/05/19 23:40:30 5321734 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/19 23:40:32 5323171 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/19 23:41:31 5382921 d8 [INFO Client 5196] Connecting to instance server at 169.45.243.88:6112
+2018/05/19 23:41:40 5391078 9b0 [INFO Client 5196] : You have entered Courthouse.
+2018/05/19 23:42:29 5440234 d8 [INFO Client 5196] Connecting to instance server at 169.47.33.69:6112
+2018/05/19 23:42:32 5443328 9b0 [INFO Client 5196] : You have entered Trial of Piercing Truth.
+2018/05/19 23:46:47 5698359 d8 [INFO Client 5196] Connecting to instance server at 169.45.243.88:6112
+2018/05/19 23:46:48 5699140 9b0 [INFO Client 5196] : You have entered Courthouse.
+2018/05/19 23:48:25 5796218 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/19 23:48:26 5797468 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/19 23:50:01 5892921 d8 [INFO Client 5196] Connecting to instance server at 169.45.243.88:6112
+2018/05/19 23:50:02 5893718 9b0 [INFO Client 5196] : You have entered Courthouse.
+2018/05/19 23:54:13 6144375 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/19 23:54:13 6144890 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/19 23:54:58 6189468 d8 [INFO Client 5196] Connecting to instance server at 169.63.70.164:6112
+2018/05/19 23:55:01 6192656 9b0 [INFO Client 5196] : You have entered Courthouse.
+2018/05/19 23:55:51 6242078 d8 [INFO Client 5196] Connecting to instance server at 158.85.40.126:6112
+2018/05/19 23:55:53 6244687 9b0 [INFO Client 5196] : You have entered Haunted Pit.
+2018/05/19 23:56:37 6288625 d8 [INFO Client 5196] Connecting to instance server at 169.63.70.164:6112
+2018/05/19 23:56:38 6289375 9b0 [INFO Client 5196] : You have entered Courthouse.
+2018/05/20 00:02:11 6622109 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/20 00:02:12 6623468 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/20 00:02:32 6643156 d8 [INFO Client 5196] Connecting to instance server at 169.63.70.164:6112
+2018/05/20 00:02:32 6643859 9b0 [INFO Client 5196] : You have entered Courthouse.
+2018/05/20 00:03:26 6697609 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/20 00:03:27 6698156 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/20 00:03:45 6716656 d8 [INFO Client 5196] Connecting to instance server at 158.85.40.124:6112
+2018/05/20 00:03:49 6719953 9b0 [INFO Client 5196] : You have entered Aspirants' Plaza.
+2018/05/20 00:03:54 6725406 d8 [INFO Client 5196] Connecting to instance server at 169.47.1.15:6112
+2018/05/20 00:03:54 6725921 9b0 [INFO Client 5196] : You have entered Enlightened Hideout.
+2018/05/20 01:42:04 ***** LOG FILE OPENING *****
+2018/05/20 01:42:04 ***** LOG FILE OPENING *****
+2018/05/20 01:42:31 12642031 d8 [INFO Client 5220] Connecting to instance server at 169.63.70.180:6112
+2018/05/20 01:42:48 12659218 9b0 [INFO Client 5220] : You have entered Oriath.
+2018/05/20 01:43:05 12676562 d8 [INFO Client 5220] Connecting to instance server at 169.47.33.94:6112
+2018/05/20 01:43:06 12677656 9b0 [INFO Client 5220] : You have entered Enlightened Hideout.
+2018/05/20 01:44:11 12742687 d8 [INFO Client 5220] Connecting to instance server at 169.47.1.2:6112
+2018/05/20 01:44:19 12750453 9b0 [INFO Client 5220] : You have entered Oriath.
+2018/05/20 01:53:48 13319140 d8 [INFO Client 5220] Connecting to instance server at 169.63.70.180:6112
+2018/05/20 01:53:49 13320109 9b0 [INFO Client 5220] : You have entered Oriath.
+2018/05/20 01:59:41 13672921 d8 [INFO Client 5220] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 01:59:42 13673484 9b0 [INFO Client 5220] : You have entered Enlightened Hideout.
+2018/05/20 02:00:25 13716171 d8 [INFO Client 5220] Connecting to instance server at 158.85.40.115:6112
+2018/05/20 02:00:34 13724968 9b0 [INFO Client 5220] : You have entered Courthouse.
+2018/05/20 02:05:25 14016734 d8 [INFO Client 5220] Connecting to instance server at 169.63.70.178:6112
+2018/05/20 02:05:28 14019171 9b0 [INFO Client 5220] : You have entered Abyssal Depths.
+2018/05/20 02:08:41 14212000 d8 [INFO Client 5220] Connecting to instance server at 158.85.40.115:6112
+2018/05/20 02:08:41 14212765 9b0 [INFO Client 5220] : You have entered Courthouse.
+2018/05/20 02:10:15 14306000 d8 [INFO Client 5220] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 02:10:16 14307500 9b0 [INFO Client 5220] : You have entered Enlightened Hideout.
+2018/05/20 03:57:35 ***** LOG FILE OPENING *****
+2018/05/20 03:57:36 ***** LOG FILE OPENING *****
+2018/05/20 03:58:39 20810500 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.227:6112
+2018/05/20 03:58:48 20819859 9b0 [INFO Client 2888] : You have entered Oriath.
+2018/05/20 03:58:54 20825796 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 03:58:55 20826875 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 03:59:44 20875140 d8 [INFO Client 2888] Connecting to instance server at 169.47.57.202:6112
+2018/05/20 03:59:51 20882906 9b0 [INFO Client 2888] : You have entered Relic Chambers.
+2018/05/20 04:02:04 21015296 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:02:04 21015828 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 04:03:06 21077453 d8 [INFO Client 2888] Connecting to instance server at 169.63.70.188:6112
+2018/05/20 04:03:15 21086578 9b0 [INFO Client 2888] : You have entered The Sarn Encampment.
+2018/05/20 04:04:02 21133828 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.227:6112
+2018/05/20 04:04:07 21138250 9b0 [INFO Client 2888] : You have entered Oriath.
+2018/05/20 04:04:27 21158265 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:04:27 21158828 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 04:07:53 21364000 d8 [INFO Client 2888] Connecting to instance server at 169.47.57.202:6112
+2018/05/20 04:08:00 21371328 9b0 [INFO Client 2888] : You have entered Relic Chambers.
+2018/05/20 04:13:46 21717437 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:13:47 21718046 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 04:16:41 21892250 d8 [INFO Client 2888] Connecting to instance server at 169.63.70.163:6112
+2018/05/20 04:16:48 21899906 9b0 [INFO Client 2888] : You have entered Canyon.
+2018/05/20 04:21:53 22204250 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:21:53 22204890 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 04:22:17 22228562 d8 [INFO Client 2888] Connecting to instance server at 169.45.243.88:6112
+2018/05/20 04:22:21 22232906 9b0 [INFO Client 2888] : You have entered Lighthouse.
+2018/05/20 04:27:32 22543671 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:27:33 22544234 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 04:28:00 22571234 d8 [INFO Client 2888] Connecting to instance server at 169.63.70.189:6112
+2018/05/20 04:28:05 22576109 9b0 [INFO Client 2888] : You have entered Lighthouse.
+2018/05/20 04:29:07 22637968 d8 [INFO Client 2888] Connecting to instance server at 169.47.33.90:6112
+2018/05/20 04:29:08 22638953 9b0 [INFO Client 2888] : You have entered Watery Pit.
+2018/05/20 04:29:24 22654953 d8 [INFO Client 2888] Connecting to instance server at 169.63.70.189:6112
+2018/05/20 04:29:24 22655859 9b0 [INFO Client 2888] : You have entered Lighthouse.
+2018/05/20 04:34:39 22970015 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:34:40 22971546 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 04:34:55 22986078 d8 [INFO Client 2888] Connecting to instance server at 169.63.70.189:6112
+2018/05/20 04:34:56 22987000 9b0 [INFO Client 2888] : You have entered Lighthouse.
+2018/05/20 04:36:12 23062937 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:36:12 23063500 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 04:36:30 23081671 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.238:6112
+2018/05/20 04:36:37 23088421 9b0 [INFO Client 2888] : You have entered Grotto.
+2018/05/20 04:38:07 23178390 d8 [INFO Client 2888] Connecting to instance server at 169.47.33.70:6112
+2018/05/20 04:38:08 23179937 9b0 [INFO Client 2888] : You have entered Ruined Arena.
+2018/05/20 04:38:26 23197562 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.238:6112
+2018/05/20 04:38:27 23198171 9b0 [INFO Client 2888] : You have entered Grotto.
+2018/05/20 04:41:51 23402640 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:41:53 23404062 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 04:42:11 23422156 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.238:6112
+2018/05/20 04:42:11 23422859 9b0 [INFO Client 2888] : You have entered Grotto.
+2018/05/20 04:45:14 23605656 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:45:15 23606187 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 04:45:47 23638468 d8 [INFO Client 2888] Connecting to instance server at 169.63.70.178:6112
+2018/05/20 04:45:52 23643031 9b0 [INFO Client 2888] : You have entered Volcano.
+2018/05/20 04:52:53 24064546 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 04:52:54 24065093 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/20 05:10:41 25132250 d8 [INFO Client 2888] Connecting to instance server at 169.47.33.68:6112
+2018/05/20 05:10:44 25135046 9b0 [INFO Client 2888] : You have entered Aspirants' Plaza.
+2018/05/20 05:10:47 25138625 d8 [INFO Client 2888] Connecting to instance server at 169.63.67.236:6112
+2018/05/20 05:10:48 25139109 9b0 [INFO Client 2888] : You have entered Enlightened Hideout.
+2018/05/21 17:37:54 ***** LOG FILE OPENING *****
+2018/05/21 17:37:55 ***** LOG FILE OPENING *****
+2018/05/21 17:38:40 156411781 d8 [INFO Client 1012] Connecting to instance server at 169.47.33.88:6112
+2018/05/21 17:39:01 156432375 9b0 [INFO Client 1012] : You have entered Oriath.
+2018/05/21 17:39:06 156437546 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 17:39:08 156438937 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 17:39:45 156476656 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.180:6112
+2018/05/21 17:39:47 156478750 9b0 [INFO Client 1012] : You have entered Crumbled Laboratory.
+2018/05/21 17:39:53 156484375 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.187:6112
+2018/05/21 17:40:04 156495375 9b0 [INFO Client 1012] : You have entered Arachnid Tomb.
+2018/05/21 17:44:52 156783234 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.180:6112
+2018/05/21 17:44:52 156783859 9b0 [INFO Client 1012] : You have entered Crumbled Laboratory.
+2018/05/21 17:45:05 156796671 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.187:6112
+2018/05/21 17:45:06 156797375 9b0 [INFO Client 1012] : You have entered Arachnid Tomb.
+2018/05/21 17:47:53 156964296 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.180:6112
+2018/05/21 17:47:54 156964953 9b0 [INFO Client 1012] : You have entered Crumbled Laboratory.
+2018/05/21 17:47:56 156967687 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 17:47:58 156969171 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 17:48:25 156996156 d8 [INFO Client 1012] Connecting to instance server at 169.63.67.237:6112
+2018/05/21 17:48:27 156998671 9b0 [INFO Client 1012] : You have entered Dry Forest.
+2018/05/21 17:48:55 157026109 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 17:48:55 157026656 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 17:49:03 157034625 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.181:6112
+2018/05/21 17:49:06 157037171 9b0 [INFO Client 1012] : You have entered Solitary Chamber.
+2018/05/21 17:50:17 157108828 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 17:50:18 157109375 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 17:50:22 157113328 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.180:6112
+2018/05/21 17:50:23 157114781 9b0 [INFO Client 1012] : You have entered Forgotten Wood.
+2018/05/21 17:50:29 157120328 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.103:6112
+2018/05/21 17:50:31 157122125 9b0 [INFO Client 1012] : You have entered Haunted Ruin.
+2018/05/21 17:51:26 157177468 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.180:6112
+2018/05/21 17:51:27 157177968 9b0 [INFO Client 1012] : You have entered Forgotten Wood.
+2018/05/21 17:51:31 157182515 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 17:51:32 157183906 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 17:52:13 157224625 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.125:6112
+2018/05/21 17:52:23 157234265 9b0 [INFO Client 1012] : You have entered Toxic Sewer.
+2018/05/21 17:54:58 157389375 d8 [INFO Client 1012] Connecting to instance server at 169.47.57.199:6112
+2018/05/21 17:54:59 157390687 9b0 [INFO Client 1012] : You have entered Haunted Trench.
+2018/05/21 17:56:13 157464875 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.125:6112
+2018/05/21 17:56:14 157465421 9b0 [INFO Client 1012] : You have entered Toxic Sewer.
+2018/05/21 17:57:12 157523890 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 17:57:14 157525218 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 17:59:15 157645984 d8 [INFO Client 1012] Connecting to instance server at 169.47.33.93:6112
+2018/05/21 17:59:23 157654000 9b0 [INFO Client 1012] : You have entered Conservatory.
+2018/05/21 17:59:51 157682234 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.121:6112
+2018/05/21 17:59:54 157685250 9b0 [INFO Client 1012] : You have entered Trial of Crippling Grief.
+2018/05/21 18:03:38 157909203 d8 [INFO Client 1012] Connecting to instance server at 169.47.33.93:6112
+2018/05/21 18:03:39 157910031 9b0 [INFO Client 1012] : You have entered Conservatory.
+2018/05/21 18:08:07 158178265 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 18:08:08 158179546 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 18:08:28 158199343 d8 [INFO Client 1012] Connecting to instance server at 169.47.33.93:6112
+2018/05/21 18:08:29 158200125 9b0 [INFO Client 1012] : You have entered Conservatory.
+2018/05/21 18:10:24 158315796 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 18:10:25 158316312 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 18:10:55 158346687 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.126:6112
+2018/05/21 18:11:00 158351593 9b0 [INFO Client 1012] : You have entered Relic Chambers.
+2018/05/21 18:16:39 158690671 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 18:16:40 158691171 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 18:16:53 158703968 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.126:6112
+2018/05/21 18:16:53 158704562 9b0 [INFO Client 1012] : You have entered Relic Chambers.
+2018/05/21 18:17:00 158711421 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.180:6112
+2018/05/21 18:17:08 158719515 9b0 [INFO Client 1012] : You have entered Gorge.
+2018/05/21 18:23:58 159129187 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.126:6112
+2018/05/21 18:23:58 159129859 9b0 [INFO Client 1012] : You have entered Relic Chambers.
+2018/05/21 18:24:07 159138250 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 18:24:08 159139593 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 18:24:50 159181562 d8 [INFO Client 1012] Connecting to instance server at 169.47.57.197:6112
+2018/05/21 18:24:55 159186265 9b0 [INFO Client 1012] : You have entered Lighthouse.
+2018/05/21 18:29:19 159450765 d8 [INFO Client 1012] Connecting to instance server at 169.47.1.2:6112
+2018/05/21 18:29:22 159452968 9b0 [INFO Client 1012] : You have entered Haunted Depth.
+2018/05/21 18:30:22 159513250 d8 [INFO Client 1012] Connecting to instance server at 169.47.57.197:6112
+2018/05/21 18:30:23 159514062 9b0 [INFO Client 1012] : You have entered Lighthouse.
+2018/05/21 18:31:00 159551156 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 18:31:01 159552531 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.

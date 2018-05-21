@@ -8,7 +8,7 @@ Then, [if you're using Google Chrome](https://chrome.google.com), leave me open 
 
 ### Example output
 
-[Run an example now!](https://erosson.github.io/mapwatch/?tickStart=%3CSat%20May%2019%202018%2018:20:12%20GMT-0400%20(EDT)%3E&example=stripped-client.txt#/)
+[Run an example now!](https://erosson.github.io/mapwatch/?tickStart=%3CMon%20May%2021%202018%2018:31:01%20GMT-0400%20(EDT)%3E&example=stripped-client.txt#/)
 
 Or, a screenshot (out-of-date):
 
