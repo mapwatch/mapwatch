@@ -11,6 +11,7 @@ import Model.Instance as Instance exposing (Instance)
 import Model.Run as Run exposing (Run)
 import Model.Zone as Zone
 import Model.Route as Route
+import View.Nav
 import View.Setup
 import View.NotFound
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
@@ -21,6 +22,7 @@ view page model =
     if isValidPage page model then
         H.div []
             [ viewHeader
+            , View.Nav.view model.route
             , View.Setup.view model
             , viewParseError model.parseError
             , viewBody page model

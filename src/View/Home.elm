@@ -13,6 +13,7 @@ import Model.Instance as Instance exposing (Instance)
 import Model.Run as Run
 import Model.Zone as Zone
 import View.Setup
+import View.Nav
 
 
 viewLogLine : LogLine.Line -> H.Html msg
@@ -302,7 +303,11 @@ sourceUrl =
 viewHeader : H.Html msg
 viewHeader =
     H.div []
-        [ H.h1 [ A.style [ ( "display", "inline" ) ] ] [ maskedText "[", H.text "Mapwatch", maskedText <| "](" ++ selfUrl ++ ")" ]
+        [ H.h1 [ A.class "title" ]
+            [ maskedText "["
+            , H.a [ A.href "/" ] [ H.text "Mapwatch" ]
+            , maskedText <| "](" ++ selfUrl ++ ")"
+            ]
         , H.small []
             [ H.text " - Passively analyze your Path of Exile mapping time" ]
         , H.div [ A.style [ ( "float", "right" ) ] ] [ H.a [ A.target "_blank", A.href sourceUrl ] [ maskedText " | [", H.text "Source code", maskedText <| "](" ++ sourceUrl ++ ")" ] ]
@@ -313,6 +318,7 @@ view : Model -> H.Html Msg
 view model =
     H.div []
         [ viewHeader
+        , View.Nav.view model.route
         , View.Setup.view model
         , viewParseError model.parseError
         , viewMain model

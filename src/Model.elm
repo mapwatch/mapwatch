@@ -7,6 +7,7 @@ module Model
         , update
         , subscriptions
         , isProgressDone
+        , isReady
         , progressDuration
         )
 
@@ -228,6 +229,11 @@ progressPercent { val, max } =
 isProgressDone : Progress -> Bool
 isProgressDone p =
     progressPercent p >= 1
+
+
+isReady : Model -> Bool
+isReady =
+    Maybe.withDefault False << Maybe.map isProgressDone << .progress
 
 
 progressDuration : Progress -> Time.Time
