@@ -1,11 +1,45 @@
+function parseQS(search) {
+  var qs = (search||'').split('?')[1]
+  var pairs = (qs||'').split('&')
+  var ret = {}
+  for (var i=0; i<pairs.length; i++) {
+    var pair = pairs[i].split('=')
+    ret[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1])
+  }
+  return ret
+}
+var qs = parseQS(document.location.search)
+if (qs.example) {
+  console.log("fetching example file: ", qs.example, qs)
+  fetch("./examples/"+qs.example)
+  .then(function(res) {
+    if (res.status < 200 || res.status >= 300) {
+      return Promise.reject("non-200 status: "+res.status)
+    }
+    return res.blob()
+  })
+  .then(function(blob) {
+    processFile(blob, blob)
+  })
+  .catch(function(err) {
+    console.error("Example-fetch error:", err)
+  })
+}
+
+var loadedAt = Date.now()
+var tickStart = qs.tickStart && new Date(qs.tickStart)
+var tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
+if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
 var app = Elm.Main.fullscreen({
-  loadedAt: Date.now(),
+  loadedAt: loadedAt,
+  tickOffset: tickOffset,
   isBrowserSupported: !!window.FileReader,
   // isBrowserSupported: false,
 })
 
 // Read client.txt line-by-line, and send it to Elm.
-// Why aren't we doing the line-by-line logic in Elm? - because this used to be a websocket-server.
+// Why aren't we doing the line-by-line logic in Elm? - because this used to be
+// a websocket-server, and might be one again in the future.
 
 function readFile(file, fn) {
   var reader = new FileReader()
@@ -110,31 +144,3 @@ app.ports.inputClientLogWithId.subscribe(function(config) {
     processFile(files[0].slice(Math.max(0, files[0].size - maxSize)), files[0])
   }
 })
-
-function parseQS(search) {
-  var qs = (search||'').split('?')[1]
-  var pairs = (qs||'').split('&')
-  var ret = {}
-  for (var i=0; i<pairs.length; i++) {
-    var pair = pairs[i].split('=')
-    ret[pair[0]] = pair[1]
-  }
-  return ret
-}
-var qs = parseQS(document.location.search)
-if (qs.example) {
-  console.log("fetching example file: ", qs.example, qs)
-  fetch("./examples/"+qs.example)
-  .then(function(res) {
-    if (res.status < 200 || res.status >= 300) {
-      return Promise.reject("non-200 status: "+res.status)
-    }
-    return res.blob()
-  })
-  .then(function(blob) {
-    processFile(blob, blob)
-  })
-  .catch(function(err) {
-    console.error("Example-fetch error:", err)
-  })
-}

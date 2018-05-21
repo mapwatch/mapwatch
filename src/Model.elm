@@ -26,6 +26,7 @@ import Model.Route as Route exposing (Route)
 
 type alias Flags =
     { loadedAt : Float
+    , tickOffset : Float
     , isBrowserSupported : Bool
     }
 
@@ -40,7 +41,7 @@ type alias Config =
 
 type alias Model =
     { config : Config
-    , isBrowserSupported : Bool
+    , flags : Flags
     , loadedAt : Date.Date
     , route : Route
     , progress : Maybe Progress
@@ -54,7 +55,7 @@ type alias Model =
 
 
 type Msg
-    = Tick Date.Date
+    = Tick Time.Time
     | InputClientLogWithId String
     | InputMaxSize String
     | RecvLogLine String
@@ -69,7 +70,7 @@ initModel flags route =
             Date.fromTime flags.loadedAt
     in
         { config = { maxSize = 20 }
-        , isBrowserSupported = flags.isBrowserSupported
+        , flags = flags
         , route = route
         , parseError = Nothing
         , progress = Nothing
@@ -126,9 +127,17 @@ updateRawLine raw model =
             model
 
 
-tick : Date.Date -> Model -> Model
-tick t model =
+applyTimeOffset : Model -> Time.Time -> Date.Date
+applyTimeOffset model t0 =
+    Date.fromTime <| t0 - model.flags.tickOffset
+
+
+tick : Time.Time -> Model -> Model
+tick t0 model =
     let
+        t =
+            applyTimeOffset model t0
+
         ( runState, lastRun ) =
             Run.tick t model.instance model.runState
 
@@ -150,7 +159,7 @@ update msg ({ config } as model) =
             if model.progress |> Maybe.map isProgressDone |> Maybe.withDefault False then
                 ( tick t model, Cmd.none )
             else
-                ( { model | now = t }, Cmd.none )
+                ( { model | now = applyTimeOffset model t }, Cmd.none )
 
         Navigate loc ->
             ( { model | route = Route.parse loc |> Debug.log "navigate" }, Cmd.none )
@@ -182,7 +191,15 @@ update msg ({ config } as model) =
             { model | progress = Just p }
                 |> (\m ->
                         if isProgressDone p then
-                            tick (Date.fromTime p.updatedAt) m
+                            -- man, I love elm, but conditional logging is so awkward
+                            let
+                                _ =
+                                    if not <| Maybe.withDefault False <| Maybe.map isProgressDone model.progress then
+                                        Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.withDefault (Date.fromTime 0) m.instance.joinedAt)
+                                    else
+                                        ""
+                            in
+                                tick p.updatedAt m
                         else
                             m
                    )
@@ -196,8 +213,8 @@ subscriptions model =
         , Ports.progress RecvProgress
 
         -- Slow down animation, deliberately - don't eat poe's cpu
-        -- , AnimationFrame.times (Tick << Date.fromTime)
-        , Time.every (Time.second * 1) (Tick << Date.fromTime)
+        -- , AnimationFrame.times Tick
+        , Time.every (Time.second * 1) Tick
         ]
 
 

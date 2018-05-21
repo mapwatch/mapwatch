@@ -78,7 +78,7 @@ view model =
                     ]
                 )
             , H.div []
-                (if model.isBrowserSupported then
+                (if model.flags.isBrowserSupported then
                     []
                  else
                     [ H.text <| "Warning: we don't support your web browser. If you have trouble, try ", H.a [ A.href "https://www.google.com/chrome/" ] [ H.text "Chrome" ], H.text "." ]
