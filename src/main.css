@@ -102,3 +102,6 @@ nav .inactive {
 table.timer-details td:first-child {
   text-align: right;
 }
+table.timer-details td {
+  width: 50%;
+}
