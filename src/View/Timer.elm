@@ -51,7 +51,10 @@ viewMain model =
             Run.current model.now model.instance model.runState
 
         history =
-            List.take 5 <| (Maybe.withDefault [] <| Maybe.map List.singleton run) ++ model.runs
+            List.take 5 <|
+                (Maybe.withDefault [] <| Maybe.map List.singleton run)
+                    -- ++ model.runs
+                    ++ today
 
         historyTable =
             H.table [ A.class "timer history" ]
