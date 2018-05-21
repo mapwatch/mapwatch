@@ -22,7 +22,7 @@ No. It's a web page; it has far less virus potential than a downloadable program
 
 The live-updating part only works in Chrome - Firefox and/or IE do *not* work.
 
-I might create a downloadable client, where this feature would be more more reliable, if the demand (and legality) is there.
+I could create a downloadable client, where this feature would be more more reliable, if the demand is there.
 
 ### The map I just finished isn't included in today's statistics yet.
 
@@ -41,6 +41,6 @@ The goal is that your map runs will be counted properly by just playing normally
 
 Unfortunately, I cannot fix this. PoE's log file doesn't have the information I need to fix this. Sorry.
 
-**Why?** The log file tells us the *zone name* and the *server address* (ex. "Vault@127.0.0.1:6112"). The server is assigned randomly, and there's lots of them, so usually we can tell the difference between two map-instances with the same name. However, servers are not unique - it is possible for two map-instances in a row to be assigned to the same server. If the zone name and server address are both the same, we have no other way to tell the two map-instances apart.
+**Why?** The log file tells us the *zone name* and the *server address* (ex. "Vault@127.0.0.1:6112"). The server is assigned randomly, and there's lots of them, so usually we can tell the difference between two map-instances with the same name. Not always, though - if two map-instances in a row are on the same server, they might look the same to us.
 
 If this bothers you enough, the workaround is to avoid running the same kind of map twice in a row. Maps with different names will never be confused.
