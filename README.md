@@ -26,7 +26,7 @@ No. It's a web page; it has far less virus potential than a downloadable program
 
 The live-updating part only works in Chrome - Firefox and/or IE do *not* work.
 
-I could create a downloadable client, where this feature would be more more reliable, if the demand is there.
+I could create a downloadable client where this feature would be more reliable, if the interest is there. I hope it's not necessary.
 
 ### The map I just finished isn't included in today's statistics yet.
 
