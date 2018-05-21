@@ -12,9 +12,7 @@ Then, leave me open while you play - I'll keep watching, no need to upload again
 
 ### Is this legal?
 
-I haven't asked GGG yet. Check back soon.
-
-It only reads PoE's Client.txt log file, not the PoE process/memory.
+[Yes!](https://imgur.com/LIZvAYu)
 
 ### Will this give me viruses?
 
