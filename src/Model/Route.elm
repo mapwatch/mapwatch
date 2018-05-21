@@ -10,6 +10,7 @@ type Route
     = Home
     | HistoryRoot
     | History Int
+    | Timer
     | Debug
     | DebugDumpLines
     | NotFound Navigation.Location
@@ -24,11 +25,13 @@ parse loc =
 parser : P.Parser (Route -> a) a
 parser =
     P.oneOf
-        [ P.map Home <| P.top
+        [ P.map Timer <| P.top
+        , P.map Home <| P.s "legacy"
         , P.map Debug <| P.s "debug"
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
         , P.map HistoryRoot <| P.s "history"
         , P.map History <| P.s "history" </> P.int
+        , P.map Timer <| P.s "timer"
         ]
 
 
@@ -36,13 +39,16 @@ stringify : Route -> String
 stringify route =
     case route of
         Home ->
-            "#/"
+            "#/legacy"
 
         HistoryRoot ->
             "#/history"
 
         History page ->
             "#/history/" ++ toString page
+
+        Timer ->
+            "#/"
 
         Debug ->
             "#/debug"

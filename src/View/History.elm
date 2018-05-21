@@ -1,4 +1,4 @@
-module View.History exposing (view)
+module View.History exposing (view, viewHistoryRun)
 
 import Html as H
 import Html.Attributes as A

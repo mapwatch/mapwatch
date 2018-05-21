@@ -1,0 +1,96 @@
+module View.Timer exposing (view)
+
+import Time
+import Html as H
+import Html.Attributes as A
+import Html.Events as E
+import Model as Model exposing (Model, Msg)
+import Model.Run as Run
+import View.Nav
+import View.Setup
+import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
+import View.History
+
+
+view : Model -> H.Html Msg
+view model =
+    H.div []
+        [ viewHeader
+        , View.Nav.view model.route
+        , View.Setup.view model
+        , viewParseError model.parseError
+        , viewBody model
+        ]
+
+
+viewBody : Model -> H.Html msg
+viewBody model =
+    case model.progress of
+        Nothing ->
+            -- waiting for file input, nothing to show yet
+            H.div [] []
+
+        Just p ->
+            H.div [] <|
+                (if Model.isProgressDone p then
+                    -- all done!
+                    [ viewMain model ]
+                 else
+                    [ viewProgress p ]
+                )
+
+
+viewMain : Model -> H.Html msg
+viewMain model =
+    let
+        today =
+            Run.filterToday model.now model.runs
+
+        history =
+            List.take 5 model.runs
+    in
+        case Run.current model.now model.instance model.runState of
+            Nothing ->
+                H.div []
+                    [ viewTimer Nothing
+                    , H.table [ A.class "timer-details" ]
+                        [ H.tbody []
+                            [ H.tr [] [ H.td [] [ H.text "Not mapping" ], H.td [] [] ]
+                            , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance model.instance.val ] ]
+                            , H.tr [] [ H.td [] [ H.text "Maps done today: " ], H.td [] [ H.text <| toString <| List.length today ] ]
+                            ]
+                        ]
+                    , H.table [ A.class "history" ]
+                        [ H.tbody [] (List.concat <| List.map View.History.viewHistoryRun history) ]
+                    ]
+
+            Just run ->
+                let
+                    d =
+                        Run.durationSet run
+                in
+                    H.div []
+                        [ viewTimer <| Just d.all
+                        , H.table [ A.class "timer-details" ]
+                            [ H.tr [] [ H.td [] [ H.text "Mapping in: " ], H.td [] [ viewInstance run.first.instance ] ]
+                            , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance model.instance.val ] ]
+                            , H.tr [] [ H.td [] [ H.text "Maps done today: " ], H.td [] [ H.text <| toString <| List.length today ] ]
+                            ]
+                        , H.table [ A.class "history" ]
+                            [ H.tbody [] (List.concat <| List.map View.History.viewHistoryRun history) ]
+                        ]
+
+
+viewTimer : Maybe Time.Time -> H.Html msg
+viewTimer d =
+    let
+        durStr =
+            case d of
+                Just d ->
+                    formatDuration d
+
+                Nothing ->
+                    "--:--"
+    in
+        H.div [ A.class "main-timer" ] <|
+            [ H.text durStr ]

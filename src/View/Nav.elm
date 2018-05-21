@@ -15,7 +15,8 @@ viewLinks links active =
 
 links : List ( String, Route )
 links =
-    [ ( "History", HistoryRoot )
+    [ ( "Timer", Timer )
+    , ( "History", HistoryRoot )
     , ( "Legacy", Home )
     ]
 

@@ -28,6 +28,9 @@ table.history td.dur {
 table.history tbody tr.side-area {
   font-size: 80%;
 }
+table.history tbody tr.side-area td.side-dur {
+  text-align: left;
+}
 
 .paginator * {
   display: inline-block;
@@ -67,4 +70,11 @@ nav .active {
   background: lightgrey;
   border: 3px solid lightgrey;
   border-radius: 5px;
+}
+
+.main-timer {
+  font-size: 800%;
+}
+table.timer-details td:first-child {
+  text-align: right;
 }

@@ -5,6 +5,7 @@ import Model as Model exposing (Model, Msg)
 import Model.Route as Route exposing (Route(..))
 import View.Home
 import View.History
+import View.Timer
 import View.DumpLines
 
 
@@ -19,6 +20,9 @@ view model =
 
         History page ->
             View.History.view page model
+
+        Timer ->
+            View.Timer.view model
 
         Debug ->
             H.div [] [ H.text "TODO" ]
