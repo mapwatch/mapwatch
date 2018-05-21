@@ -110,3 +110,31 @@ app.ports.inputClientLogWithId.subscribe(function(config) {
     processFile(files[0].slice(Math.max(0, files[0].size - maxSize)), files[0])
   }
 })
+
+function parseQS(search) {
+  var qs = (search||'').split('?')[1]
+  var pairs = (qs||'').split('&')
+  var ret = {}
+  for (var i=0; i<pairs.length; i++) {
+    var pair = pairs[i].split('=')
+    ret[pair[0]] = pair[1]
+  }
+  return ret
+}
+var qs = parseQS(document.location.search)
+if (qs.example) {
+  console.log("fetching example file: ", qs.example, qs)
+  fetch("./examples/"+qs.example)
+  .then(function(res) {
+    if (res.status < 200 || res.status >= 300) {
+      return Promise.reject("non-200 status: "+res.status)
+    }
+    return res.blob()
+  })
+  .then(function(blob) {
+    processFile(blob, blob)
+  })
+  .catch(function(err) {
+    console.error("Example-fetch error:", err)
+  })
+}

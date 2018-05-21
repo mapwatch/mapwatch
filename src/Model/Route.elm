@@ -11,6 +11,7 @@ type Route
     | HistoryRoot
     | History Int
     | Debug
+    | DebugDumpLines
     | NotFound Navigation.Location
 
 
@@ -25,6 +26,7 @@ parser =
     P.oneOf
         [ P.map Home <| P.top
         , P.map Debug <| P.s "debug"
+        , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
         , P.map HistoryRoot <| P.s "history"
         , P.map History <| P.s "history" </> P.int
         ]
@@ -44,6 +46,9 @@ stringify route =
 
         Debug ->
             "#/debug"
+
+        DebugDumpLines ->
+            "#/debug/dumplines"
 
         NotFound loc ->
             loc.hash

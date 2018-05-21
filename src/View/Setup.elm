@@ -34,7 +34,12 @@ view model =
                 , H.text " file, and I'll give you some statistics about your recent mapping activity. "
                 ]
             , H.p []
-                [ H.text "Then, leave me open while you play - I'll keep watching, no need to upload again."
+                [ H.text "Then, "
+                , H.a [ A.target "_blank", A.href "https://chrome.google.com" ] [ H.text "if you're using Google Chrome" ]
+                , H.text ", leave me open while you play - I'll keep watching, no need to upload again. "
+                ]
+            , H.p []
+                [ H.a [ A.target "_blank", A.href "?example=stripped-client.txt#/history" ] [ H.text "See an example." ]
                 ]
             , H.hr [] []
             , H.p []

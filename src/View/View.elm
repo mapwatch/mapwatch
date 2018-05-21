@@ -5,6 +5,7 @@ import Model as Model exposing (Model, Msg)
 import Model.Route as Route exposing (Route(..))
 import View.Home
 import View.History
+import View.DumpLines
 
 
 view : Model -> H.Html Msg
@@ -21,6 +22,9 @@ view model =
 
         Debug ->
             H.div [] [ H.text "TODO" ]
+
+        DebugDumpLines ->
+            View.DumpLines.view model
 
         NotFound _ ->
             H.div [] [ H.text "404'ed" ]

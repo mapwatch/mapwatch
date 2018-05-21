@@ -4,11 +4,15 @@
 
 Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file, and I'll give you some statistics about your recent mapping activity.
 
-Then, leave me open while you play - I'll keep watching, no need to upload again. ([Chrome only](https://chrome.google.com))
+Then, [if you're using Google Chrome](https://chrome.google.com), leave me open while you play - I'll keep watching, no need to upload again.
 
 ### Example output
 
-[![Example statistics](https://imgur.com/gGA5Ara.png?2)](https://imgur.com/gGA5Ara)
+[Run an example now!](https://erosson.github.io/mapwatch?example=stripped-client.txt#/history)
+
+Or, a screenshot (out-of-date):
+
+[![screenshot](https://imgur.com/gGA5Ara.png)](https://imgur.com/gGA5Ara)
 
 ### Is this legal?
 

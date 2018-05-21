@@ -49,6 +49,7 @@ type alias Model =
     , instance : Instance.State
     , runState : Run.State
     , runs : List Run.Run
+    , lines : List String
     }
 
 
@@ -77,6 +78,7 @@ initModel flags route =
         , instance = Instance.init
         , runState = Run.Empty
         , runs = []
+        , lines = []
         }
 
 
@@ -111,6 +113,17 @@ updateLine line model =
             , runState = runState
             , runs = runs
         }
+
+
+updateRawLine : String -> Model -> Model
+updateRawLine raw model =
+    -- *Only when debugging*, save all raw loglines.
+    case model.route of
+        Route.DebugDumpLines ->
+            { model | lines = raw :: model.lines }
+
+        _ ->
+            model
 
 
 tick : Date.Date -> Model -> Model
@@ -156,7 +169,9 @@ update msg ({ config } as model) =
         RecvLogLine raw ->
             (case LogLine.parse raw of
                 Ok line ->
-                    updateLine line model
+                    model
+                        |> updateLine line
+                        |> updateRawLine raw
 
                 Err err ->
                     { model | parseError = Just err }
