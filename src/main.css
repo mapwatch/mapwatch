@@ -7,7 +7,7 @@ h1.title a {
 
 table.history {
   border-collapse: collapse;
-  margin: 2em;
+  margin: 1em;
 }
 /* start styling with borders around every square, then selectively remove them */
 table.history tbody {
@@ -28,8 +28,14 @@ table.history td.dur {
 table.history tbody tr.side-area {
   font-size: 80%;
 }
-table.history tbody tr.side-area td.side-dur {
+table.history tbody tr.side-area td.side-dur,
+table.history tbody tr td.portals {
   text-align: left;
+}
+
+table.timer.history tfoot {
+  text-align: center;
+  border: 1px solid black;
 }
 
 .paginator * {
@@ -41,7 +47,7 @@ table.history tbody tr.side-area td.side-dur {
 /* start styling with borders around every square, then selectively remove them */
 table.history-stats {
   border-collapse: collapse;
-  margin: 2em;
+  margin: 1em;
   border: 1px solid black;
 }
 table.history-stats tbody tr td {
@@ -73,6 +79,9 @@ nav .active {
 }
 
 .main-timer {
+  margin: 1em;
+}
+.main-timer div {
   font-size: 800%;
 }
 table.timer-details td:first-child {

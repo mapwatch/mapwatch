@@ -305,7 +305,7 @@ viewHeader =
     H.div []
         [ H.h1 [ A.class "title" ]
             [ maskedText "["
-            , H.a [ A.href "/" ] [ H.text "Mapwatch" ]
+            , H.a [ A.href "./" ] [ H.text "Mapwatch" ]
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , H.small []

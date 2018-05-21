@@ -6,6 +6,7 @@ import Html.Attributes as A
 import Html.Events as E
 import Model as Model exposing (Model, Msg)
 import Model.Run as Run
+import Model.Route as Route
 import View.Nav
 import View.Setup
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
@@ -46,11 +47,19 @@ viewMain model =
         today =
             Run.filterToday model.now model.runs
 
+        run =
+            Run.current model.now model.instance model.runState
+
+        history =
+            List.take 5 <| (Maybe.withDefault [] <| Maybe.map List.singleton run) ++ model.runs
+
         historyTable =
-            H.table [ A.class "history" ]
-                [ H.tbody [] (List.concat <| List.map View.History.viewHistoryRun <| List.take 5 model.runs) ]
+            H.table [ A.class "timer history" ]
+                [ H.tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False }) <| history)
+                , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ H.a [ Route.href Route.HistoryRoot ] [ H.text "History" ] ] ] ]
+                ]
     in
-        case Run.current model.now model.instance model.runState of
+        case run of
             Nothing ->
                 H.div []
                     [ viewTimer Nothing
@@ -92,4 +101,4 @@ viewTimer d =
                     "--:--"
     in
         H.div [ A.class "main-timer" ] <|
-            [ H.text durStr ]
+            [ H.div [] [ H.text durStr ] ]

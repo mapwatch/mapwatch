@@ -39,7 +39,7 @@ view model =
                 , H.text ", leave me open while you play - I'll keep watching, no need to upload again. "
                 ]
             , H.p []
-                [ H.a [ A.target "_blank", A.href "?tickStart=<Sat%20May%2019%202018%2018:20:12%20GMT-0400%20(EDT)>&example=stripped-client.txt#/history" ] [ H.text "See an example." ]
+                [ H.a [ A.target "_blank", A.href "?tickStart=<Sat%20May%2019%202018%2018:20:12%20GMT-0400%20(EDT)>&example=stripped-client.txt#/" ] [ H.text "See an example." ]
                 ]
             , H.hr [] []
             , H.p []

@@ -182,7 +182,7 @@ viewHistoryTable page model =
 
                 -- , viewHistoryHeader
                 ]
-            , H.tbody [] (runs |> List.map viewHistoryRun |> List.concat)
+            , H.tbody [] (runs |> List.map (viewHistoryRun { showDate = True }) |> List.concat)
             , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ] ]
             ]
 
@@ -207,9 +207,13 @@ viewDuration =
     H.text << formatDuration
 
 
-viewHistoryRun : Run -> List (H.Html msg)
-viewHistoryRun r =
-    viewHistoryMainRow r :: (List.map (uncurry viewHistorySideAreaRow) (Run.durationPerSideArea r))
+type alias HistoryRowConfig =
+    { showDate : Bool }
+
+
+viewHistoryRun : HistoryRowConfig -> Run -> List (H.Html msg)
+viewHistoryRun config r =
+    viewHistoryMainRow config r :: (List.map (uncurry <| viewHistorySideAreaRow config) (Run.durationPerSideArea r))
 
 
 pluralize : String -> String -> number -> String
@@ -246,27 +250,36 @@ viewDurationSet d =
            ]
 
 
-viewHistoryMainRow : Run -> H.Html msg
-viewHistoryMainRow r =
+viewHistoryMainRow : HistoryRowConfig -> Run -> H.Html msg
+viewHistoryMainRow { showDate } r =
     let
         d =
             Run.durationSet r
     in
         H.tr [ A.class "main-area" ]
-            ([ H.td [ A.class "date" ] [ viewDate r.last.leftAt ]
-             , H.td [ A.class "zone" ] [ viewInstance r.first.instance ]
-             ]
+            ((if showDate then
+                [ H.td [ A.class "date" ] [ viewDate r.last.leftAt ] ]
+              else
+                []
+             )
+                ++ [ H.td [ A.class "zone" ] [ viewInstance r.first.instance ]
+                   ]
                 ++ viewDurationSet d
             )
 
 
-viewHistorySideAreaRow : Instance -> Time.Time -> H.Html msg
-viewHistorySideAreaRow instance d =
+viewHistorySideAreaRow : HistoryRowConfig -> Instance -> Time.Time -> H.Html msg
+viewHistorySideAreaRow { showDate } instance d =
     H.tr [ A.class "side-area" ]
-        [ H.td [ A.class "date" ] []
-        , H.td [] []
-        , H.td [ A.class "zone", A.colspan 6 ] [ viewSideAreaName (Just instance) ]
-        , H.td [ A.class "side-dur" ] [ viewDuration d ]
-        , H.td [ A.class "portals" ] []
-        , H.td [ A.class "town-pct" ] []
-        ]
+        ((if showDate then
+            [ H.td [ A.class "date" ] [] ]
+          else
+            []
+         )
+            ++ [ H.td [] []
+               , H.td [ A.class "zone", A.colspan 6 ] [ viewSideAreaName (Just instance) ]
+               , H.td [ A.class "side-dur" ] [ viewDuration d ]
+               , H.td [ A.class "portals" ] []
+               , H.td [ A.class "town-pct" ] []
+               ]
+        )

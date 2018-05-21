@@ -37,8 +37,16 @@ viewDebug =
 
 
 viewLink : Route -> String -> Route -> H.Html msg
-viewLink active label href =
+viewLink active0 label href =
     let
+        active =
+            case active0 of
+                History _ ->
+                    HistoryRoot
+
+                _ ->
+                    active0
+
         cls =
             if active == href then
                 "active"
