@@ -1,6 +1,7 @@
 #!/bin/sh -eux
 cd "`dirname "$0"`"
-rm -rf ./dist
-mkdir -p ./dist
-cp ./ports.js src/index.html ./dist/
-elm-make src/Main.elm --output=dist/elm.js
+dest=./dist
+rm -rf $dest
+mkdir -p $dest
+cp ./src/ports.js ./src/main.css ./src/index.html $dest
+elm-make src/Main.elm --output=$dest/elm.js
