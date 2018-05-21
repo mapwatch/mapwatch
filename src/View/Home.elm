@@ -1,9 +1,8 @@
-module View.Home exposing (view)
+module View.Home exposing (..)
 
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Json.Decode as Decode
 import Time
 import Date
 import Dict
@@ -184,8 +183,8 @@ viewDate d =
         [ H.text <| toString (Date.day d) ++ " " ++ toString (Date.month d) ]
 
 
-formatSideZoneType : Maybe Instance -> Maybe String
-formatSideZoneType instance =
+formatSideAreaType : Maybe Instance -> Maybe String
+formatSideAreaType instance =
     case Zone.sideZoneType (Maybe.map .zone instance) of
         Zone.OtherSideZone ->
             Nothing
@@ -197,35 +196,32 @@ formatSideZoneType instance =
             Just <| "Elder Guardian: The " ++ toString guardian
 
 
+viewSideAreaName : Maybe Instance -> H.Html msg
+viewSideAreaName instance =
+    case formatSideAreaType instance of
+        Nothing ->
+            viewInstance instance
+
+        Just str ->
+            H.span [] [ H.text <| str ++ " (", viewInstance instance, H.text ")" ]
+
+
 maskedText : String -> H.Html msg
 maskedText str =
     -- This text is hidden on the webpage, but can be copypasted. Useful for formatting shared text.
     H.span [ A.style [ ( "opacity", "0" ), ( "font-size", "0" ), ( "white-space", "pre" ) ] ] [ H.text str ]
 
 
-viewSideArea : Maybe Instance -> Time.Time -> H.Html msg
+viewSideArea : Instance -> Time.Time -> H.Html msg
 viewSideArea instance dur =
-    let
-        instanceEl =
-            case formatSideZoneType instance of
-                Nothing ->
-                    viewInstance instance
-
-                Just str ->
-                    H.span [] [ H.text <| str ++ " (", viewInstance instance, H.text ")" ]
-    in
-        H.li [] [ maskedText "     * ", instanceEl, H.text <| " | " ++ formatDuration dur ]
+    H.li [] [ maskedText "     * ", viewSideAreaName (Just instance), H.text <| " | " ++ formatDuration dur ]
 
 
 viewRunBody : Run.Run -> List (H.Html msg)
 viewRunBody run =
     [ viewInstance run.first.instance
     , H.text <| " | " ++ formatDurationSet (Run.durationSet run)
-    , H.ul []
-        (List.map (uncurry viewSideArea) <|
-            List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance)) <|
-                Run.durationPerInstance run
-        )
+    , H.ul [] (List.map (uncurry viewSideArea) (Run.durationPerSideArea run))
     ]
 
 
@@ -303,15 +299,20 @@ sourceUrl =
     "https://www.github.com/erosson/poe-mapwatch"
 
 
+viewHeader : H.Html msg
+viewHeader =
+    H.div []
+        [ H.h1 [ A.style [ ( "display", "inline" ) ] ] [ maskedText "[", H.text "Mapwatch", maskedText <| "](" ++ selfUrl ++ ")" ]
+        , H.small []
+            [ H.text " - Passively analyze your Path of Exile mapping time" ]
+        , H.div [ A.style [ ( "float", "right" ) ] ] [ H.a [ A.target "_blank", A.href sourceUrl ] [ maskedText " | [", H.text "Source code", maskedText <| "](" ++ sourceUrl ++ ")" ] ]
+        ]
+
+
 view : Model -> H.Html Msg
 view model =
     H.div []
-        [ H.div []
-            [ H.h1 [ A.style [ ( "display", "inline" ) ] ] [ maskedText "[", H.text "Mapwatch", maskedText <| "](" ++ selfUrl ++ ")" ]
-            , H.small []
-                [ H.text " - Passively analyze your Path of Exile mapping time" ]
-            , H.div [ A.style [ ( "float", "right" ) ] ] [ H.a [ A.target "_blank", A.href sourceUrl ] [ maskedText " | [", H.text "Source code", maskedText <| "](" ++ sourceUrl ++ ")" ] ]
-            ]
+        [ viewHeader
         , View.Setup.view model
         , viewParseError model.parseError
         , viewMain model

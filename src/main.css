@@ -1,0 +1,37 @@
+table {
+  border-collapse: collapse;
+}
+tbody tr.main-area,
+tfoot {
+  border-top: 1px solid black;
+}
+tbody tr {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+tbody tr td {
+  text-align: right;
+}
+tbody tr td.side-dur,
+tbody tr td.portals {
+  text-align: left;
+}
+tbody tr td.zone,
+tbody tr td.date {
+  border-right: 1px solid black;
+}
+tbody tr.side-area td.zone,
+tbody tr.side-area td.side-dur,
+tbody tr td.portals,
+tbody tr td.town-pct {
+  /* border-top: 1px solid black; */
+  border-left: 1px solid black;
+}
+tbody tr.side-area {
+  font-size: 80%;
+}
+.paginator * {
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+}

@@ -9,7 +9,7 @@ module Model.Run
         , totalDurationSet
         , meanDurationSet
         , stateDuration
-        , durationPerInstance
+        , durationPerSideArea
         , filterToday
         , current
         , update
@@ -126,6 +126,21 @@ filterToday date =
             ymd date == ymd run.last.leftAt
     in
         List.filter pred
+
+
+durationPerSideArea : Run -> List ( Instance, Time.Time )
+durationPerSideArea run =
+    durationPerInstance run
+        |> List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance))
+        |> List.map
+            (\( i, d ) ->
+                case i of
+                    Just i ->
+                        ( i, d )
+
+                    Nothing ->
+                        Debug.crash "Instance.isTown should have filtered this one"
+            )
 
 
 durationPerInstance : Run -> List ( Maybe Instance, Time.Time )
