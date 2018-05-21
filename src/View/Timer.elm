@@ -46,8 +46,9 @@ viewMain model =
         today =
             Run.filterToday model.now model.runs
 
-        history =
-            List.take 5 model.runs
+        historyTable =
+            H.table [ A.class "history" ]
+                [ H.tbody [] (List.concat <| List.map View.History.viewHistoryRun <| List.take 5 model.runs) ]
     in
         case Run.current model.now model.instance model.runState of
             Nothing ->
@@ -60,8 +61,7 @@ viewMain model =
                             , H.tr [] [ H.td [] [ H.text "Maps done today: " ], H.td [] [ H.text <| toString <| List.length today ] ]
                             ]
                         ]
-                    , H.table [ A.class "history" ]
-                        [ H.tbody [] (List.concat <| List.map View.History.viewHistoryRun history) ]
+                    , historyTable
                     ]
 
             Just run ->
@@ -76,8 +76,7 @@ viewMain model =
                             , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance model.instance.val ] ]
                             , H.tr [] [ H.td [] [ H.text "Maps done today: " ], H.td [] [ H.text <| toString <| List.length today ] ]
                             ]
-                        , H.table [ A.class "history" ]
-                            [ H.tbody [] (List.concat <| List.map View.History.viewHistoryRun history) ]
+                        , historyTable
                         ]
 
 
