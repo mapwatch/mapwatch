@@ -1,3 +1,6 @@
+body {
+  margin: 1em;
+}
 h1.title {
   display: inline;
 }
@@ -5,21 +8,31 @@ h1.title a {
   /* color: inherit; */
 }
 
+table, tr, td, th, thead, tfoot, tbody {
+  border-style: none;
+  white-space: nowrap;
+}
+tr {
+  margin: 0; padding: 0;
+}
+td, th {
+  padding: 0.2em;
+}
 table.history {
   border-collapse: collapse;
   margin: 1em;
 }
 /* start styling with borders around every square, then selectively remove them */
 table.history tbody {
-  border: 1px solid black;
+  border: 1px solid grey;
 }
 table.history tbody tr td {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
   text-align: right;
 }
 table.history tbody tr.main-area {
-  border-top: 1px solid black;
+  border-top: 1px solid grey;
 }
 table.history td.dur {
   border-left: none;
@@ -33,9 +46,10 @@ table.history tbody tr td.portals {
   text-align: left;
 }
 
+/* the timer's history link */
 table.timer.history tfoot {
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid grey;
 }
 
 .paginator * {
@@ -48,10 +62,10 @@ table.timer.history tfoot {
 table.history-stats {
   border-collapse: collapse;
   margin: 1em;
-  border: 1px solid black;
+  border: 1px solid grey;
 }
 table.history-stats tbody tr td {
-  border: 1px solid black;
+  border: 1px solid grey;
   text-align: right;
 }
 table.history-stats td.maps-completed {
@@ -66,16 +80,15 @@ table.history-stats td:first-child {
   border-bottom: none;
 }
 table.history-stats th.title {
-  border-top: 1px solid black;
+  border-top: 1px solid grey;
 }
 
 nav * {
   margin: 1em;
 }
-nav .active {
-  background: lightgrey;
-  border: 3px solid lightgrey;
-  border-radius: 5px;
+nav .inactive {
+  opacity: 0.5;
+  text-decoration: none;
 }
 
 .main-timer {
@@ -83,6 +96,8 @@ nav .active {
 }
 .main-timer div {
   font-size: 800%;
+  text-align: center;
+  width: 100%;
 }
 table.timer-details td:first-child {
   text-align: right;

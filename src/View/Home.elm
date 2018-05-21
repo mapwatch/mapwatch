@@ -296,10 +296,6 @@ selfUrl =
     "https://erosson.github.com/mapwatch"
 
 
-sourceUrl =
-    "https://www.github.com/erosson/poe-mapwatch"
-
-
 viewHeader : H.Html msg
 viewHeader =
     H.div []
@@ -309,8 +305,7 @@ viewHeader =
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , H.small []
-            [ H.text " - Passively analyze your Path of Exile mapping time" ]
-        , H.div [ A.style [ ( "float", "right" ) ] ] [ H.a [ A.target "_blank", A.href sourceUrl ] [ maskedText " | [", H.text "Source code", maskedText <| "](" ++ sourceUrl ++ ")" ] ]
+            [ H.text " - passively analyze your Path of Exile mapping time" ]
         ]
 
 
