@@ -12,7 +12,7 @@ Then, leave me open while you play - I'll keep watching, no need to upload again
 
 ### Is this legal?
 
-[Yes!](https://imgur.com/LIZvAYu)
+[GGG says: yes](https://imgur.com/LIZvAYu)
 
 ### Will this give me viruses?
 
