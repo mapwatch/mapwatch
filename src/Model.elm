@@ -15,11 +15,13 @@ import Date
 import Time
 import Ports
 import AnimationFrame
+import Navigation
 import Model.LogLine as LogLine
 import Model.Zone as Zone
 import Model.Instance as Instance
 import Model.Visit as Visit
 import Model.Run as Run
+import Model.Route as Route exposing (Route)
 
 
 type alias Flags =
@@ -40,6 +42,7 @@ type alias Model =
     { config : Config
     , isBrowserSupported : Bool
     , loadedAt : Date.Date
+    , route : Route
     , progress : Maybe Progress
     , now : Date.Date
     , parseError : Maybe LogLine.ParseError
@@ -55,16 +58,18 @@ type Msg
     | InputMaxSize String
     | RecvLogLine String
     | RecvProgress Progress
+    | Navigate Navigation.Location
 
 
-initModel : Flags -> Model
-initModel flags =
+initModel : Flags -> Route -> Model
+initModel flags route =
     let
         loadedAt =
             Date.fromTime flags.loadedAt
     in
         { config = { maxSize = 20 }
         , isBrowserSupported = flags.isBrowserSupported
+        , route = route
         , parseError = Nothing
         , progress = Nothing
         , loadedAt = loadedAt
@@ -75,8 +80,8 @@ initModel flags =
         }
 
 
-init flags =
-    ( initModel flags, Cmd.none )
+init flags loc =
+    ( initModel flags (Route.parse loc |> Debug.log "navigate:init"), Cmd.none )
 
 
 updateLine : LogLine.Line -> Model -> Model
@@ -133,6 +138,9 @@ update msg ({ config } as model) =
                 ( tick t model, Cmd.none )
             else
                 ( { model | now = t }, Cmd.none )
+
+        Navigate loc ->
+            ( { model | route = Route.parse loc |> Debug.log "navigate" }, Cmd.none )
 
         InputClientLogWithId id ->
             ( model, Ports.inputClientLogWithId { id = id, maxSize = config.maxSize } )

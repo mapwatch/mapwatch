@@ -1,12 +1,12 @@
 module Main exposing (main)
 
-import Html as H
-import View exposing (view)
+import View.View exposing (view)
 import Model exposing (init, update, subscriptions)
+import Navigation
 
 
 main =
-    H.programWithFlags
+    Navigation.programWithFlags Model.Navigate
         { init = init
         , update = update
         , subscriptions = subscriptions

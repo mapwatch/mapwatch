@@ -1,4 +1,4 @@
-module View exposing (view)
+module View.Home exposing (view)
 
 import Html as H
 import Html.Attributes as A
@@ -13,6 +13,7 @@ import Model.Visit as Visit
 import Model.Instance as Instance exposing (Instance)
 import Model.Run as Run
 import Model.Zone as Zone
+import View.Setup
 
 
 viewLogLine : LogLine.Line -> H.Html msg
@@ -76,75 +77,6 @@ formatDuration dur0 =
     in
         -- String.join ":" <| [ pad0 2 h, pad0 2 m, pad0 2 s, pad0 4 ms ]
         String.join ":" <| hpad ++ [ pad0 2 m, pad0 2 s ]
-
-
-viewConfig : Model -> H.Html Msg
-viewConfig model =
-    let
-        display =
-            case model.progress of
-                Nothing ->
-                    ""
-
-                Just _ ->
-                    "none"
-    in
-        -- H.form [ E.onSubmit StartWatching ]
-        H.form
-            [ A.style [ ( "display", display ) ] ]
-            [ H.p []
-                [ H.text "Give me your "
-                , H.a [ A.target "_blank", A.href "https://www.pathofexile.com" ] [ H.text "Path of Exile" ]
-                , H.text " "
-                , H.code [] [ H.text "Client.txt" ]
-                , H.text " file, and I'll give you some statistics about your recent mapping activity. "
-                ]
-            , H.p []
-                [ H.text "Then, leave me open while you play - I'll keep watching, no need to upload again."
-                ]
-            , H.hr [] []
-            , H.p []
-                [ H.text "Analyze only the last "
-                , H.input
-                    [ A.type_ "number"
-                    , A.value <| toString model.config.maxSize
-                    , E.onInput InputMaxSize
-                    , A.min "0"
-                    , A.max "100"
-                    , A.tabindex 1
-                    ]
-                    []
-                , H.text " MB of history"
-                ]
-            , H.div []
-                (let
-                    id =
-                        "clientTxt"
-                 in
-                    [ H.text "Client.txt: "
-                    , H.input
-                        [ A.type_ "file"
-                        , A.id id
-                        , E.on "change" (Decode.succeed <| InputClientLogWithId id)
-                        , A.tabindex 2
-                        ]
-                        []
-                    , H.div []
-                        [ H.text "Hint - the file I need is usually in one of these places:"
-                        , H.br [] []
-                        , H.code [] [ H.text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
-                        , H.br [] []
-                        , H.code [] [ H.text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
-                        ]
-                    ]
-                )
-            , H.div []
-                (if model.isBrowserSupported then
-                    []
-                 else
-                    [ H.text <| "Warning: we don't support your web browser. If you have trouble, try ", H.a [ A.href "https://www.google.com/chrome/" ] [ H.text "Chrome" ], H.text "." ]
-                )
-            ]
 
 
 viewParseError : Maybe LogLine.ParseError -> H.Html msg
@@ -380,7 +312,7 @@ view model =
                 [ H.text " - Passively analyze your Path of Exile mapping time" ]
             , H.div [ A.style [ ( "float", "right" ) ] ] [ H.a [ A.target "_blank", A.href sourceUrl ] [ maskedText " | [", H.text "Source code", maskedText <| "](" ++ sourceUrl ++ ")" ] ]
             ]
-        , viewConfig model
+        , View.Setup.view model
         , viewParseError model.parseError
         , viewMain model
         ]
