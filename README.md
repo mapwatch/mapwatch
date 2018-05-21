@@ -8,7 +8,7 @@ Then, [if you're using Google Chrome](https://chrome.google.com), leave me open 
 
 ### Example output
 
-[Run an example now!](https://erosson.github.io/mapwatch?example=stripped-client.txt#/history)
+[Run an example now!](https://erosson.github.io/mapwatch/?tickStart=%3CSat%20May%2019%202018%2018:20:12%20GMT-0400%20(EDT)%3E&example=stripped-client.txt#/)
 
 Or, a screenshot (out-of-date):
 
@@ -26,7 +26,7 @@ No. It's a web page; it has far less virus potential than a downloadable program
 
 The live-updating part only works in Chrome - Firefox and/or IE do *not* work.
 
-I could create a downloadable client, where this feature would be more more reliable, if the demand is there.
+I could create a downloadable client where this feature would be more reliable, if the interest is there. I hope it's not necessary.
 
 ### The map I just finished isn't included in today's statistics yet.
 
