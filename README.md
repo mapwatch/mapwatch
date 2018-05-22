@@ -30,7 +30,7 @@ Yes. Nothing in, or derived from, your `client.txt` ever leaves your computer. O
 
 The live-updating part only works in Chrome. Firefox/IE/others have no way to do this, as far as I know.
 
-I could create a downloadable version where this feature would be more reliable, but I hope it's not necessary. Releasing this as a webpage is safer for you, and easier for me to maintain.
+I could create a downloadable version where this feature would be more reliable, if there's enough interest.
 
 ### How do Zana missions work?
 
