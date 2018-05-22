@@ -3,8 +3,7 @@ cd "`dirname "$0"`"
 dest=./.dev
 rm -rf $dest
 mkdir -p $dest
-ln -s `pwd`/src/index.html $dest/
-ln -s `pwd`/src/ports.js $dest/
-ln -s `pwd`/src/*.css $dest/
-ln -s `pwd`/examples $dest/
+for f in `ls assets`; do
+  ln -s `pwd`/assets/$f $dest/
+done
 elm-live ./src/Main.elm --dir=$dest --output=$dest/elm.js --open

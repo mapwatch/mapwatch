@@ -11,6 +11,7 @@ import View.Nav
 import View.Setup
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
 import View.History
+import View.Icon as Icon
 
 
 view : Model -> H.Html Msg
@@ -59,7 +60,7 @@ viewMain model =
         historyTable =
             H.table [ A.class "timer history" ]
                 [ H.tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False }) <| history)
-                , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ H.a [ Route.href Route.HistoryRoot ] [ H.text "History" ] ] ] ]
+                , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ H.a [ Route.href Route.HistoryRoot ] [ Icon.fas "history", H.text " History" ] ] ] ]
                 ]
     in
         case run of

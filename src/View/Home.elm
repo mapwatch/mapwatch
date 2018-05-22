@@ -14,6 +14,7 @@ import Model.Run as Run
 import Model.Zone as Zone
 import View.Setup
 import View.Nav
+import View.Icon as Icon
 
 
 viewLogLine : LogLine.Line -> H.Html msg
@@ -301,7 +302,9 @@ viewHeader =
     H.div []
         [ H.h1 [ A.class "title" ]
             [ maskedText "["
-            , H.a [ A.href "./" ] [ H.text "Mapwatch" ]
+
+            -- , H.a [ A.href "./" ] [ Icon.fas "tachometer-alt", H.text " Mapwatch" ]
+            , H.a [ A.href "./" ] [ H.text " Mapwatch" ]
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , H.small []

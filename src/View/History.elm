@@ -15,6 +15,7 @@ import View.Nav
 import View.Setup
 import View.NotFound
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
+import View.Icon as Icon
 
 
 view : Int -> Model -> H.Html Msg
@@ -157,11 +158,11 @@ viewPaginator page numItems =
                 ( H.span [], H.span [] )
     in
         H.div [ A.class "paginator" ]
-            [ firstLink [ H.text "<< First" ]
-            , prevLink [ H.text "< Prev" ]
+            [ firstLink [ Icon.fas "fast-backward", H.text " First" ]
+            , prevLink [ Icon.fas "step-backward", H.text " Prev" ]
             , H.span [] [ H.text <| toString firstVisItem ++ " - " ++ toString lastVisItem ++ " of " ++ toString numItems ]
-            , nextLink [ H.text "Next >" ]
-            , lastLink [ H.text "Last >>" ]
+            , nextLink [ H.text "Next ", Icon.fas "step-forward" ]
+            , lastLink [ H.text "Last ", Icon.fas "fast-forward" ]
             ]
 
 

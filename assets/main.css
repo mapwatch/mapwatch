@@ -83,7 +83,7 @@ table.history-stats th.title {
   border-top: 1px solid grey;
 }
 
-nav * {
+nav > a {
   margin: 1em;
 }
 nav .inactive {
