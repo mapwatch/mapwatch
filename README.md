@@ -6,8 +6,6 @@ Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file,
 
 Then, [if you're using Google Chrome](https://chrome.google.com), leave me open while you play - I'll keep watching, no need to upload again.
 
-### Example output
-
 [Run an example now!](https://erosson.github.io/mapwatch/?tickStart=%3CMon%20May%2021%202018%2018:31:01%20GMT-0400%20(EDT)%3E&example=stripped-client.txt#/)
 
 Or, screenshots:
