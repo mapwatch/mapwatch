@@ -16,17 +16,21 @@ Or, screenshots:
 
 ### Is this legal?
 
-[GGG says yes.](https://imgur.com/44uuaiz)
+[Yes, says GGG.](https://imgur.com/44uuaiz)
 
-### Will this give me viruses?
+### Is this safe?
 
-No. There is no executable to download and run; it's just a web page.
+Yes. There's no executable to download and run - it's just a web page, far less virus potential.
+
+### Is this private?
+
+Yes. Nothing in/derived from your `client.txt` ever leaves your computer. Once Mapwatch has loaded, it'll even work offline.
 
 ### It's not updating while I play - I have to re-upload client.txt to see changes.
 
-The live-updating part only works in Chrome - Firefox and/or IE do *not* work.
+The live-updating part only works in Chrome. Firefox and IE have no way to do this, as far as I can tell.
 
-I could create a downloadable version where this would be more reliable, if people are interested, but I hope it's not necessary.
+I could create a downloadable version where this would be more reliable, but I hope it's not necessary.
 
 ### The map I just finished isn't included in today's statistics yet.
 
@@ -41,9 +45,17 @@ Restarting the game does not end a run - maybe it crashed, but you're restarting
 
 The idea is that your map runs will (eventually) be counted properly by just playing normally.
 
+### How do Zana missions work?
+
+They're treated as "side areas", like abyssal depths or trials, not a separate map run.
+
+### Does this track the labyrinth or acts 1-10?
+
+No, [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component)'s already good at those.
+
 ### I ran two Vault maps (for example) in a row, but Mapwatch thinks I only ran one map.
 
-Unfortunately, I cannot fix this. PoE's log file doesn't have the information I need to fix this. Sorry.
+Unfortunately, I can't fix this. PoE's log file sometimes doesn't have enough information to tell two maps apart. Sorry.
 
 **Why?** The log file tells us the *zone name* and the *server address* (ex. "Vault@127.0.0.1:6112"). The server is assigned randomly, and there's lots of them, so usually we can tell the difference between two map-instances with the same name. Not always, though - if two map-instances in a row are on the same server, they might look the same to us.
 
