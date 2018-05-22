@@ -30,7 +30,7 @@ Mapwatch uses Google Analytics, but [feel free to opt-out.](https://tools.google
 
 ### Why?
 
-Seeing how long I spend in each map, and how long I waste screwing around in town, helps me play more efficiently. Also, numbers are fun.
+Seeing how much time I spend in each map, and how much time I waste screwing around in town, helps me play more efficiently. Also, numbers are fun.
 
 ### How do Zana missions work?
 
