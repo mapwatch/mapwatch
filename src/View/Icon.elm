@@ -16,6 +16,10 @@ fas =
     fa "fas"
 
 
+fasPulse =
+    fa "fa-spin fa-pulse fas"
+
+
 
 -- fab =
 -- fa "fab"

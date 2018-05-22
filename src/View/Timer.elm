@@ -18,7 +18,7 @@ view : Model -> H.Html Msg
 view model =
     H.div []
         [ viewHeader
-        , View.Nav.view model.route
+        , View.Nav.view <| Just model.route
         , View.Setup.view model
         , viewParseError model.parseError
         , viewBody model

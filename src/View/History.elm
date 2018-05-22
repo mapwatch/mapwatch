@@ -20,16 +20,16 @@ import View.Icon as Icon
 
 view : Int -> Model -> H.Html Msg
 view page model =
-    if isValidPage page model then
+    if Model.isReady model && not (isValidPage page model) then
+        View.NotFound.view
+    else
         H.div []
             [ viewHeader
-            , View.Nav.view model.route
+            , View.Nav.view <| Just model.route
             , View.Setup.view model
             , viewParseError model.parseError
             , viewBody page model
             ]
-    else
-        View.NotFound.view
 
 
 viewBody : Int -> Model -> H.Html msg

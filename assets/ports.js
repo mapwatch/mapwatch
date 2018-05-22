@@ -9,8 +9,20 @@ function parseQS(search) {
   return ret
 }
 var qs = parseQS(document.location.search)
+var loadedAt = Date.now()
+var tickStart = qs.tickStart && new Date(qs.tickStart)
+var tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
+if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
+var app = Elm.Main.fullscreen({
+  loadedAt: loadedAt,
+  tickOffset: tickOffset,
+  isBrowserSupported: !!window.FileReader,
+  // isBrowserSupported: false,
+})
+
 if (qs.example) {
   console.log("fetching example file: ", qs.example, qs)
+  var sendProgress = progressSender(loadedAt)(0, 0, loadedAt)
   fetch("./examples/"+qs.example)
   .then(function(res) {
     if (res.status < 200 || res.status >= 300) {
@@ -25,17 +37,6 @@ if (qs.example) {
     console.error("Example-fetch error:", err)
   })
 }
-
-var loadedAt = Date.now()
-var tickStart = qs.tickStart && new Date(qs.tickStart)
-var tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
-if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
-var app = Elm.Main.fullscreen({
-  loadedAt: loadedAt,
-  tickOffset: tickOffset,
-  isBrowserSupported: !!window.FileReader,
-  // isBrowserSupported: false,
-})
 
 // Read client.txt line-by-line, and send it to Elm.
 // Why aren't we doing the line-by-line logic in Elm? - because this used to be

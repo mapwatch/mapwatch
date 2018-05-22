@@ -127,6 +127,8 @@ viewProgress : Model.Progress -> H.Html msg
 viewProgress p =
     if Model.isProgressDone p then
         H.div [] [ H.br [] [], H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ toString (Model.progressDuration p / 1000) ++ "s" ]
+    else if p.max <= 0 then
+        H.div [] [ Icon.fasPulse "spinner" ]
     else
         H.div []
             [ H.progress [ A.value (toString p.val), A.max (toString p.max) ] []
@@ -136,7 +138,7 @@ viewProgress p =
                         ++ " / "
                         ++ formatBytes p.max
                         ++ ": "
-                        ++ toString (floor <| toFloat p.val / toFloat p.max * 100)
+                        ++ toString (floor <| Model.progressPercent p * 100)
                         ++ "%"
 
                 -- ++ " in"
@@ -316,7 +318,7 @@ view : Model -> H.Html Msg
 view model =
     H.div []
         [ viewHeader
-        , View.Nav.view model.route
+        , View.Nav.view <| Just model.route
         , View.Setup.view model
         , viewParseError model.parseError
         , viewMain model

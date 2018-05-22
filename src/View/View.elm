@@ -7,6 +7,7 @@ import View.Home
 import View.History
 import View.Timer
 import View.DumpLines
+import View.NotFound
 
 
 view : Model -> H.Html Msg
@@ -30,5 +31,5 @@ view model =
         DebugDumpLines ->
             View.DumpLines.view model
 
-        NotFound _ ->
-            H.div [] [ H.text "404'ed" ]
+        NotFound loc ->
+            View.NotFound.view

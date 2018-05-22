@@ -6,6 +6,7 @@ module Model
         , init
         , update
         , subscriptions
+        , progressPercent
         , isProgressDone
         , isReady
         , progressDuration
@@ -222,7 +223,7 @@ subscriptions model =
 progressPercent : Progress -> Float
 progressPercent { val, max } =
     toFloat val
-        / toFloat max
+        / toFloat (Basics.max 1 max)
         |> clamp 0 1
 
 

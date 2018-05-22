@@ -11,7 +11,7 @@ sourceUrl =
     "https://www.github.com/erosson/mapwatch"
 
 
-viewLinks : List ( List (H.Html msg), Route ) -> Route -> H.Html msg
+viewLinks : List ( List (H.Html msg), Route ) -> Maybe Route -> H.Html msg
 viewLinks links active =
     links
         |> List.map (uncurry <| viewLink active)
@@ -51,19 +51,19 @@ viewDebug =
     viewLinks debugLinks
 
 
-viewLink : Route -> List (H.Html msg) -> Route -> H.Html msg
+viewLink : Maybe Route -> List (H.Html msg) -> Route -> H.Html msg
 viewLink active0 label href =
     let
         active =
             case active0 of
-                History _ ->
-                    HistoryRoot
+                Just (History _) ->
+                    Just HistoryRoot
 
                 _ ->
                     active0
 
         cls =
-            if active == href then
+            if active == Just href then
                 "active button disabled"
             else
                 "inactive button"
