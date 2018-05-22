@@ -26,6 +26,8 @@ Yes. There's no executable to download and run - it's just a web page, far less 
 
 Yes. Nothing in, or derived from, your `client.txt` ever leaves your computer. Once Mapwatch has loaded, it'll even work offline.
 
+Mapwatch uses Google Analytics. [Feel free to opt-out.](https://tools.google.com/dlpage/gaoptout)
+
 ### It's not updating while I play - I have to re-upload client.txt to see changes.
 
 The live-updating part only works in Chrome. Firefox/IE/others have no way to do this, as far as I know.
