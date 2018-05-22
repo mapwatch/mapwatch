@@ -24,9 +24,9 @@ Yes. There's no executable to download and run - it's just a web page, far less 
 
 ### Is this private?
 
-Yes. Nothing in, or derived from, your `client.txt` ever leaves your computer. Once Mapwatch has loaded, it'll even work offline.
+Nothing in, or derived from, your `client.txt` ever leaves your computer. Once Mapwatch has loaded, it'll even work offline.
 
-Mapwatch uses Google Analytics. [Feel free to opt-out.](https://tools.google.com/dlpage/gaoptout)
+Mapwatch uses Google Analytics, but [feel free to opt-out.](https://tools.google.com/dlpage/gaoptout)
 
 ### It's not updating while I play - I have to re-upload client.txt to see changes.
 
