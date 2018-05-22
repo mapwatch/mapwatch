@@ -59,4 +59,4 @@ Unfortunately, I can't fix this. PoE's log file sometimes doesn't have enough in
 
 **Why?** The log file tells us the *zone name* and the *server address* (ex. "Vault@127.0.0.1:6112"). The server is assigned randomly, and there's lots of them, so usually we can tell the difference between two map-instances with the same name. Not always, though - if two map-instances in a row are on the same server, they might look the same to us.
 
-If this bothers you enough, the workaround is to avoid running the same kind of map twice in a row. Maps with different names will never be confused.
+This should be pretty uncommon. Still, if it bothers you enough, the workaround is to avoid running the same kind of map twice in a row. Maps with different names will never be confused.
