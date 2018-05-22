@@ -47,7 +47,9 @@ The idea is that your map runs will (eventually) be counted properly by just pla
 
 ### How do Zana missions work?
 
-They're treated as "side areas", like abyssal depths or trials, not a separate map run.
+They're treated as "side areas", like abyssal depths or trials, not a separate map run. A map with a Zana mission adds 1, not 2, to your maps-completed-today count.
+
+Exception: Zana's dailies are a side area of the "Crumbled Laboratory" map. Yes, that's not actually a map, kind of awkward. I'd like to improve this soon.
 
 ### Does this track the labyrinth or acts 1-10?
 
