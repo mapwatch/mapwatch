@@ -10,9 +10,11 @@ Then, [if you're using Google Chrome](https://chrome.google.com), leave me open 
 
 [Run an example now!](https://erosson.github.io/mapwatch/?tickStart=%3CMon%20May%2021%202018%2018:31:01%20GMT-0400%20(EDT)%3E&example=stripped-client.txt#/)
 
-Or, a screenshot (out-of-date):
+Or, screenshots:
 
-[![screenshot](https://imgur.com/gGA5Ara.png)](https://imgur.com/gGA5Ara)
+[![Screenshot 1](https://i.imgur.com/PPRbLlZ.png)](https://imgur.com/a/VhFtZbU)
+
+[![Screenshot 2](https://i.imgur.com/DrMCKZD.png)](https://imgur.com/a/VhFtZbU)
 
 ### Is this legal?
 
@@ -20,13 +22,13 @@ Or, a screenshot (out-of-date):
 
 ### Will this give me viruses?
 
-No. It's a web page; it has far less virus potential than a downloadable program.
+No. There is no executable to download and run; it's just a web page.
 
 ### It's not updating while I play - I have to re-upload client.txt to see changes.
 
 The live-updating part only works in Chrome - Firefox and/or IE do *not* work.
 
-I could create a downloadable client where this feature would be more reliable, if the interest is there. I hope it's not necessary.
+I could create a downloadable version where this would be more reliable, if people are interested, but I hope it's not necessary.
 
 ### The map I just finished isn't included in today's statistics yet.
 
@@ -39,7 +41,7 @@ Returning to town does not end a run - maybe you died or you're dropping off loo
 
 Restarting the game does not end a run - maybe it crashed, but you're restarting and aren't done with the map yet.
 
-The goal is that your map runs will be counted properly by just playing normally.
+The idea is that your map runs will (eventually) be counted properly by just playing normally.
 
 ### I ran two Vault maps (for example) in a row, but Mapwatch thinks I only ran one map.
 
