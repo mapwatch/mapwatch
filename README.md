@@ -28,11 +28,9 @@ Nothing in, or derived from, your `client.txt` ever leaves your computer. Once M
 
 Mapwatch uses Google Analytics, but [feel free to opt-out.](https://tools.google.com/dlpage/gaoptout)
 
-### It's not updating while I play - I have to re-upload client.txt to see changes.
+### Why?
 
-The live-updating part only works in Chrome. Firefox/IE/others have no way to do this, as far as I know.
-
-I could create a downloadable version where this feature would be more reliable, if there's enough interest.
+Seeing how long I spend in each map, and how long I waste screwing around in town, helps me play more efficiently. Also, numbers are fun.
 
 ### How do Zana missions work?
 
@@ -43,6 +41,12 @@ Exception: Zana's dailies are a side area of the "Crumbled Laboratory" map. Yes,
 ### Does this track the labyrinth or acts 1-10?
 
 No. [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component)'s already good at those.
+
+### It's not updating while I play - I have to re-upload client.txt to see changes.
+
+The live-updating part only works in Chrome. Firefox/IE/others have no way to do this, as far as I know.
+
+I could create a downloadable version where this feature would be more reliable, if there's enough interest.
 
 ### The map I just finished isn't included in today's statistics yet.
 
