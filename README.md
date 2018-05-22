@@ -30,7 +30,17 @@ Yes. Nothing in/derived from your `client.txt` ever leaves your computer. Once M
 
 The live-updating part only works in Chrome. Firefox and IE have no way to do this, as far as I can tell.
 
-I could create a downloadable version where this would be more reliable, but I hope it's not necessary.
+I could create a downloadable version where this would be more reliable, but I hope it's not necessary. A webpage is safer for you, and easier for me to maintain.
+
+### How do Zana missions work?
+
+They're treated as "side areas", like abyssal depths or trials, not a separate map run. A map with a Zana mission adds 1, not 2, to your maps-completed-today count.
+
+Exception: Zana's dailies are a side area of the "Crumbled Laboratory" map. Yes, that's not actually a map, kind of awkward. I'd like to improve this soon.
+
+### Does this track the labyrinth or acts 1-10?
+
+No, [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component)'s already good at those.
 
 ### The map I just finished isn't included in today's statistics yet.
 
@@ -44,16 +54,6 @@ Returning to town does not end a run - maybe you died or you're dropping off loo
 Restarting the game does not end a run - maybe it crashed, but you're restarting and aren't done with the map yet.
 
 The idea is that your map runs will (eventually) be counted properly by just playing normally.
-
-### How do Zana missions work?
-
-They're treated as "side areas", like abyssal depths or trials, not a separate map run. A map with a Zana mission adds 1, not 2, to your maps-completed-today count.
-
-Exception: Zana's dailies are a side area of the "Crumbled Laboratory" map. Yes, that's not actually a map, kind of awkward. I'd like to improve this soon.
-
-### Does this track the labyrinth or acts 1-10?
-
-No, [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component)'s already good at those.
 
 ### I ran two Vault maps (for example) in a row, but Mapwatch thinks I only ran one map.
 
