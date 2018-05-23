@@ -8,7 +8,7 @@ Then, [if you're using Google Chrome](https://chrome.google.com), leave me open 
 
 [Run an example now!](https://erosson.github.io/mapwatch/?tickStart=%3CMon%20May%2021%202018%2018:31:01%20GMT-0400%20(EDT)%3E&example=stripped-client.txt#/)
 
-Or, screenshots:
+Or, screenshots (slightly outdated):
 
 [![Screenshot 1](https://i.imgur.com/PPRbLlZ.png)](https://imgur.com/a/VhFtZbU)
 
