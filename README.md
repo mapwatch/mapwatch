@@ -1,12 +1,12 @@
-# [Mapwatch](https://erosson.github.io/mapwatch)
+# [Mapwatch](https://mapwatch.github.io)
 
-[![Build Status](https://travis-ci.org/erosson/mapwatch.svg?branch=master)](https://travis-ci.org/erosson/mapwatch)
+[![Build Status](https://travis-ci.org/mapwatch/mapwatch.github.io.svg?branch=master)](https://travis-ci.org/mapwatch/mapwatch.github.io)
 
 Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file, and I'll give you some statistics about your recent mapping activity.
 
 Then, [if you're using Google Chrome](https://chrome.google.com), leave me open while you play - I'll keep watching, no need to upload again.
 
-[Run an example now!](https://erosson.github.io/mapwatch/?tickStart=1526941861000&example=stripped-client.txt#/)
+[Run an example now!](https://mapwatch.github.io?tickStart=1526941861000&example=stripped-client.txt#/)
 
 Or, screenshots (slightly outdated):
 
