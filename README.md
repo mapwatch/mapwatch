@@ -8,7 +8,7 @@ Then, [if you're using Google Chrome](https://chrome.google.com), leave me open 
 
 [Run an example now!](https://erosson.github.io/mapwatch/?tickStart=%3CMon%20May%2021%202018%2018:31:01%20GMT-0400%20(EDT)%3E&example=stripped-client.txt#/)
 
-Or, screenshots:
+Or, screenshots (slightly outdated):
 
 [![Screenshot 1](https://i.imgur.com/PPRbLlZ.png)](https://imgur.com/a/VhFtZbU)
 
@@ -37,6 +37,11 @@ Seeing how much time I spend in each map, and how much time I waste screwing aro
 They're treated as "side areas", like abyssal depths or trials, not a separate map run. A map with a Zana mission adds 1, not 2, to your maps-completed-today count.
 
 Exception: Zana's dailies are a side area of the "Crumbled Laboratory" map. Yes, that's not actually a map, kind of awkward. I'd like to improve this soon.
+
+### Any similar tools?
+
+* [Path of Maps](http://pathofmaps.com/) allows you to track loot from each map. It's less automatic, it takes some extra interaction/time during each map, but it can track things that Mapwatch doesn't.
+* [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component) times acts 1-10 and the Labyrinth with no extra interaction, much like Mapwatch. I don't think Livesplit times your maps.
 
 ### Does this track the labyrinth or acts 1-10?
 
@@ -67,4 +72,4 @@ Unfortunately, I can't fix this. PoE's log file sometimes doesn't have enough in
 
 **Why?** The log file tells us the *zone name* and the *server address* (ex. "Vault@127.0.0.1:6112"). The server is assigned randomly, and there's lots of them, so usually we can tell the difference between two map-instances with the same name. Not always, though - if two map-instances in a row are on the same server, they might look the same to us.
 
-This should be pretty uncommon. Still, if it bothers you enough, the workaround is to avoid running the same kind of map twice in a row. Maps with different names will never be confused.
+This should be pretty uncommon - I've never actually seen it happen, but it's possible. It could be more or less common depending on your location. If it bothers you enough, the workaround is to avoid running the same kind of map twice in a row. Maps with different names will never be confused.
