@@ -1,7 +1,8 @@
-module Model.Zone exposing (Type(..), SideZoneType(..), Master(..), zoneType, isTown, isMap, sideZoneType)
+module Model.Zone exposing (Type(..), SideZoneType(..), Master(..), zoneType, isTown, isMap, sideZoneType, maps)
 
 import Set
 import Dict
+import Model.MapList exposing (mapList)
 
 
 type Type
@@ -110,7 +111,7 @@ hakuMissions =
     -- https://pathofexile.gamepedia.com/Mission_areas
     -- JSON.stringify($('td:nth-of-type(4)', $('tbody')[0]).map(function(){return this.innerText}).filter(function(){return !!this.valueOf()}).toArray())
     Set.fromList <|
-        [ "Haunted Cave", "Haunted Ruin", "Haunted Crypt", "Haunted Shrine", "Haunted Cell", "Haunted Mansion", "Haunted Trench", "Haunted Lair", "Haunted Abyss, Haunted Descent, Haunted Depth", "Haunted Tomb", "Haunted Shed" ]
+        [ "Haunted Cave", "Haunted Ruin", "Haunted Crypt", "Haunted Shrine", "Haunted Cell", "Haunted Mansion", "Haunted Trench", "Haunted Lair", "Haunted Abyss", "Haunted Descent", "Haunted Depth", "Haunted Tomb", "Haunted Shed" ]
             -- TODO not sure why these are missing from the wiki... bet there's more
             ++ [ "Haunted Pit" ]
 
@@ -158,8 +159,6 @@ towns =
 maps : Set.Set String
 maps =
     Set.fromList <|
-        -- https://pathofexile.gamepedia.com/Map
-        -- JSON.stringify($.map($('td:nth-of-type(1)', $('tbody')[2]), function(td){return td.innerText.replace(/ Map$/, '')}))
-        [ "Beach", "Dungeon", "Graveyard", "Lookout", "Alleyways", "Arid Lake", "Desert", "Flooded Mine", "Marshes", "Pen", "Arcade", "Burial Chambers", "Cage", "Cells", "Excavation", "Iceberg", "Leyline", "Peninsula", "Port", "Springs", "Esh's Domain", "Tul's Domain", "Xoph's Domain", "The Apex of Sacrifice", "Canyon", "Chateau", "City Square", "Courthouse", "Gorge", "Grotto", "Lighthouse", "Relic Chambers", "Strand", "Whakawairua Tuahu", "Volcano", "Ancient City", "Barrows", "Channel", "Conservatory", "Haunted Mansion", "Ivory Temple", "Maze", "Spider Lair", "Sulphur Vents", "Toxic Sewer", "The Beachhead", "Academy", "Atoll", "Maelström of Chaos", "Ashen Wood", "Cemetery", "Hallowed Ground", "Fields", "Jungle Valley", "Mausoleum", "Phantasmagoria", "Thicket", "Underground Sea", "Wharf", "Arachnid Nest", "Bazaar", "Bone Crypt", "Olmec's Sanctum", "Coral Ruins", "Dunes", "Pillars of Arun", "Gardens", "Lava Chamber", "Ramparts", "Residence", "Tribunal", "Underground River", "Caer Blaidd, Wolfpack's Den", "Armoury", "Courtyard", "The Vinktar Square", "Geode", "Infested Valley", "Laboratory", "Mineral Pools", "Mud Geyser", "Overgrown Ruin", "Shore", "Mao Kun", "The Pale Court", "Tropical Island", "Uul-Netol's Domain", "Untainted Paradise", "Vaal Pyramid", "Vaults of Atziri", "Arena", "Estuary", "Moon Temple", "The Twilight Temple", "Museum", "The Putrid Cloister", "Plateau", "Scriptorium", "Sepulchre", "Temple", "Poorjoy's Asylum", "Tower", "Vault", "Waste Pool", "Arachnid Tomb", "Belfry", "Bog", "Cursed Crypt", "The Coward's Trial", "Orchard", "Pier", "Precinct", "Shipyard", "Siege", "The Beachhead", "Wasteland", "Colonnade", "Coves", "Factory", "Mesa", "Lair", "Pit", "Primordial Pool", "Promenade", "Hall of Grandmasters", "Spider Forest", "Waterways", "Castle Ruins", "Crystal Ore", "Defiled Cathedral", "Necropolis", "Death and Taxes", "Overgrown Shrine", "Acton's Nightmare", "Racecourse", "Summit", "Torture Chamber", "Oba's Cursed Trove", "Villa", "Arsenal", "Caldera", "Core", "Chayula's Domain", "Desert Spring", "Ghetto", "Malformation", "Park", "Shrine", "Terrace", "The Alluring Abyss", "Acid Lakes", "Colosseum", "Crimson Temple", "Dark Forest", "Dig", "Palace", "Plaza", "Basilica", "Carcass", "Lava Lake", "Reef", "Sunken City", "The Beachhead", "Forge of the Phoenix", "Lair of the Hydra", "Maze of the Minotaur", "Pit of the Chimera", "Vaal Temple", "The Shaper's Realm" ]
+        (List.map .name mapList)
             -- It's awkward to not track Zana dailies. This is the quickest fix.
             ++ [ "Crumbled Laboratory" ]

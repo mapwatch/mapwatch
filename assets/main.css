@@ -105,3 +105,8 @@ table.timer-details td:first-child {
 table.timer-details td {
   width: 50%;
 }
+
+.map-icon {
+  height: 1em;
+  width: 1em;
+}

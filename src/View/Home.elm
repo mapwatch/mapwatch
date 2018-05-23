@@ -40,7 +40,7 @@ viewInstance : Maybe Instance -> H.Html msg
 viewInstance instance =
     case instance of
         Just i ->
-            H.span [ A.title i.addr ] [ H.text i.zone ]
+            H.span [ A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
 
         Nothing ->
             H.span [] [ H.text "(none)" ]

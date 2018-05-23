@@ -7,6 +7,7 @@ import View.Home
 import View.History
 import View.Timer
 import View.DumpLines
+import View.MapIcons
 import View.NotFound
 
 
@@ -30,6 +31,9 @@ view model =
 
         DebugDumpLines ->
             View.DumpLines.view model
+
+        DebugMapIcons ->
+            View.MapIcons.view
 
         NotFound loc ->
             View.NotFound.view

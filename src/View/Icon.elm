@@ -4,6 +4,7 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import Json.Encode as Json
+import Model.MapList as MapList
 
 
 fa : String -> String -> H.Html msg
@@ -23,3 +24,15 @@ fasPulse =
 
 -- fab =
 -- fa "fab"
+
+
+map : String -> Maybe (H.Html msg)
+map name =
+    MapList.url name
+        |> Maybe.map (\src -> H.img [ A.class "map-icon", A.src src ] [])
+
+
+mapOrBlank : String -> H.Html msg
+mapOrBlank name =
+    map name
+        |> Maybe.withDefault (H.span [ A.class "map-icon" ] [])

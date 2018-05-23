@@ -13,6 +13,7 @@ type Route
     | Timer
     | Debug
     | DebugDumpLines
+    | DebugMapIcons
     | NotFound Navigation.Location
 
 
@@ -29,6 +30,7 @@ parser =
         , P.map Home <| P.s "legacy"
         , P.map Debug <| P.s "debug"
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
+        , P.map DebugMapIcons <| P.s "debug" </> P.s "mapicons"
         , P.map HistoryRoot <| P.s "history"
         , P.map History <| P.s "history" </> P.int
         , P.map Timer <| P.s "timer"
@@ -55,6 +57,9 @@ stringify route =
 
         DebugDumpLines ->
             "#/debug/dumplines"
+
+        DebugMapIcons ->
+            "#/debug/mapicons"
 
         NotFound loc ->
             loc.hash
