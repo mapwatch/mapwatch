@@ -4,12 +4,15 @@ import Html as H
 import Html.Attributes as A
 import Navigation
 import UrlParser as P exposing ((</>))
+import Http
 
 
 type Route
     = Home
     | HistoryRoot
     | History Int
+    | Maps String
+    | MapsRoot
     | Timer
     | Debug
     | DebugDumpLines
@@ -23,6 +26,17 @@ parse loc =
         |> Maybe.withDefault (NotFound loc)
 
 
+decodeString : P.Parser (String -> a) a
+decodeString =
+    P.map
+        (\s ->
+            Http.decodeUri s
+                -- |> Debug.log ("decode: " ++ s)
+                |> Maybe.withDefault s
+        )
+        P.string
+
+
 parser : P.Parser (Route -> a) a
 parser =
     P.oneOf
@@ -33,6 +47,8 @@ parser =
         , P.map DebugMapIcons <| P.s "debug" </> P.s "mapicons"
         , P.map HistoryRoot <| P.s "history"
         , P.map History <| P.s "history" </> P.int
+        , P.map MapsRoot <| P.s "map"
+        , P.map Maps <| P.s "map" </> decodeString
         , P.map Timer <| P.s "timer"
         ]
 
@@ -48,6 +64,12 @@ stringify route =
 
         History page ->
             "#/history/" ++ toString page
+
+        MapsRoot ->
+            "#/map"
+
+        Maps search ->
+            "#/map/" ++ Http.encodeUri search
 
         Timer ->
             "#/"

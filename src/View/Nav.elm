@@ -31,6 +31,7 @@ links : List ( List (H.Html msg), Route )
 links =
     [ ( [ Icon.fas "stopwatch", H.text " Timer" ], Timer )
     , ( [ Icon.fas "history", H.text " History" ], HistoryRoot )
+    , ( [ Icon.fas "map", H.text " Maps" ], MapsRoot )
 
     -- , ( H.span [] [H.text "Legacy"], Home )
     ]
@@ -58,6 +59,9 @@ viewLink active0 label href =
             case active0 of
                 Just (History _) ->
                     Just HistoryRoot
+
+                Just (Maps _) ->
+                    Just MapsRoot
 
                 _ ->
                     active0

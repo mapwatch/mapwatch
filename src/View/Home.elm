@@ -12,6 +12,7 @@ import Model.Visit as Visit
 import Model.Instance as Instance exposing (Instance)
 import Model.Run as Run
 import Model.Zone as Zone
+import Model.Route as Route
 import View.Setup
 import View.Nav
 import View.Icon as Icon
@@ -40,7 +41,10 @@ viewInstance : Maybe Instance -> H.Html msg
 viewInstance instance =
     case instance of
         Just i ->
-            H.span [ A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
+            if Zone.isMap i.zone then
+                H.a [ Route.href (Route.Maps i.zone), A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
+            else
+                H.span [ A.title i.addr ] [ H.text i.zone ]
 
         Nothing ->
             H.span [] [ H.text "(none)" ]

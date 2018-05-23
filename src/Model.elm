@@ -63,6 +63,7 @@ type Msg
     | RecvLogLine String
     | RecvProgress Progress
     | Navigate Navigation.Location
+    | MapsSearch String
 
 
 initModel : Flags -> Route -> Model
@@ -176,6 +177,14 @@ update msg ({ config } as model) =
 
                 Err _ ->
                     ( model, Cmd.none )
+
+        MapsSearch s ->
+            ( model
+            , Route.Maps s
+                |> Route.stringify
+                -- |> Debug.log "maps-search"
+                |> Navigation.modifyUrl
+            )
 
         RecvLogLine raw ->
             (case LogLine.parse raw of

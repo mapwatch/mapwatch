@@ -35,4 +35,4 @@ map name =
 mapOrBlank : String -> H.Html msg
 mapOrBlank name =
     map name
-        |> Maybe.withDefault (H.span [ A.class "map-icon" ] [])
+        |> Maybe.withDefault (H.span [] [])

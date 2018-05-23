@@ -9,6 +9,7 @@ import View.Timer
 import View.DumpLines
 import View.MapIcons
 import View.NotFound
+import View.Maps
 
 
 view : Model -> H.Html Msg
@@ -22,6 +23,12 @@ view model =
 
         History page ->
             View.History.view page model
+
+        MapsRoot ->
+            View.Maps.view "" model
+
+        Maps search ->
+            View.Maps.view search model
 
         Timer ->
             View.Timer.view model

@@ -1,4 +1,4 @@
-module View.History exposing (view, viewHistoryRun)
+module View.History exposing (view, viewHistoryRun, viewDurationSet)
 
 import Html as H
 import Html.Attributes as A
@@ -16,6 +16,7 @@ import View.Setup
 import View.NotFound
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
 import View.Icon as Icon
+import View.Util exposing (roundToPlaces)
 
 
 view : Int -> Model -> H.Html Msg
@@ -223,11 +224,6 @@ pluralize one other n =
         one
     else
         other
-
-
-roundToPlaces : Float -> Float -> Float
-roundToPlaces p n =
-    (n * (10 ^ p) |> round |> toFloat) / (10 ^ p)
 
 
 viewDurationSet : Run.DurationSet -> List (H.Html msg)

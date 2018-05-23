@@ -112,3 +112,23 @@ table.timer-details td {
   padding-right: 0.2em;
   max-width: none;
 }
+
+.search {
+  position: relative;
+  height: 2em;
+}
+.search .fas {
+  position: absolute;
+  top: 0.15em; left:0.15em;
+  z-index: 1;
+}
+.search input {
+  position: absolute;
+  top:0; left:0;
+  height: 1.6em;
+  padding-left: 1.8em;
+}
+
+table.by-map {
+  text-align: right;
+}

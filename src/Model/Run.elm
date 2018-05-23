@@ -10,6 +10,7 @@ module Model.Run
         , meanDurationSet
         , stateDuration
         , durationPerSideArea
+        , groupMapNames
         , filterToday
         , current
         , update
@@ -19,6 +20,8 @@ module Model.Run
 import Time
 import Date
 import Dict
+import Dict.Extra
+import Maybe.Extra
 import Model.Instance as Instance exposing (Instance)
 import Model.Visit as Visit exposing (Visit)
 
@@ -39,6 +42,17 @@ init visit =
         Nothing
     else
         Just { first = visit, last = visit, visits = [ visit ], portals = 1 }
+
+
+instance : Run -> Instance
+instance run =
+    -- this is guaranteed because init checks for it
+    case run.first.instance of
+        Nothing ->
+            Debug.crash "null-instance run"
+
+        Just i ->
+            i
 
 
 stateDuration : Date.Date -> State -> Maybe Time.Time
@@ -126,6 +140,22 @@ filterToday date =
             ymd date == ymd run.last.leftAt
     in
         List.filter pred
+
+
+byMap : List Run -> Dict.Dict String (List Run)
+byMap =
+    Dict.Extra.groupBy (instance >> .zone)
+
+
+groupMapNames : List Run -> List { a | name : String } -> List ( { a | name : String }, List Run )
+groupMapNames runs maps =
+    let
+        dict =
+            byMap runs
+    in
+        maps
+            |> List.map (\map -> Dict.get map.name dict |> Maybe.map ((,) map))
+            |> Maybe.Extra.values
 
 
 durationPerSideArea : Run -> List ( Instance, Time.Time )
