@@ -215,7 +215,7 @@ update msg ({ config } as model) =
                             let
                                 _ =
                                     if not <| Maybe.withDefault False <| Maybe.map isProgressDone model.progress then
-                                        Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.withDefault (Date.fromTime 0) m.instance.joinedAt)
+                                        Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.withDefault 0 <| Maybe.map Date.toTime m.instance.joinedAt)
                                     else
                                         ""
                             in

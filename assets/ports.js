@@ -10,7 +10,7 @@ function parseQS(search) {
 }
 var qs = parseQS(document.location.search)
 var loadedAt = Date.now()
-var tickStart = qs.tickStart && new Date(qs.tickStart)
+var tickStart = qs.tickStart && new Date(Number.isNaN(parseInt(qs.tickStart)) ? qs.tickStart : parseInt(qs.tickStart))
 var tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
 if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
 var app = Elm.Main.fullscreen({
