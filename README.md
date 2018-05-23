@@ -40,7 +40,7 @@ Exception: Zana's dailies are a side area of the "Crumbled Laboratory" map. Yes,
 
 ### Any similar tools?
 
-* [Path of Maps](http://pathofmaps.com/) allows you to track loot from each map. It takes some extra interaction/time during each map, but it tracks many things that Mapwatch doesn't.
+* [Path of Maps](http://pathofmaps.com/) allows you to track loot from each map. It's less automatic, it takes some extra interaction/time during each map, but it can track things that Mapwatch doesn't.
 * [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component) times acts 1-10 and the Labyrinth with no extra interaction, much like Mapwatch. I don't think Livesplit times your maps.
 
 ### Does this track the labyrinth or acts 1-10?
