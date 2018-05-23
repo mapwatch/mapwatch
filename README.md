@@ -46,7 +46,7 @@ No. [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component)'s alread
 
 The live-updating part only works in Chrome. Firefox/IE/others have no way to do this, as far as I know.
 
-I could create a downloadable version where this feature would be more reliable, if there's enough interest.
+I could create a downloadable version where this feature would be more reliable, if there's enough interest (or if Chrome ever breaks this). I'd rather not have to.
 
 ### The map I just finished isn't included in today's statistics yet.
 
