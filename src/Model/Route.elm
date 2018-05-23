@@ -1,4 +1,4 @@
-module Model.Route exposing (Route(..), parse, stringify, href)
+module Model.Route exposing (Route(..), HistoryParams, parse, stringify, href)
 
 import Html as H
 import Html.Attributes as A
@@ -7,10 +7,14 @@ import UrlParser as P exposing ((</>))
 import Http
 
 
+type alias HistoryParams =
+    { page : Int, search : String }
+
+
 type Route
     = Home
     | HistoryRoot
-    | History Int
+    | History HistoryParams
     | Maps String
     | MapsRoot
     | Timer
@@ -46,7 +50,8 @@ parser =
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
         , P.map DebugMapIcons <| P.s "debug" </> P.s "mapicons"
         , P.map HistoryRoot <| P.s "history"
-        , P.map History <| P.s "history" </> P.int
+        , P.map (\i -> HistoryParams i "" |> History) <| P.s "history" </> P.int
+        , P.map (\i -> \s -> HistoryParams i s |> History) <| P.s "history" </> P.int </> decodeString
         , P.map MapsRoot <| P.s "map"
         , P.map Maps <| P.s "map" </> decodeString
         , P.map Timer <| P.s "timer"
@@ -62,8 +67,8 @@ stringify route =
         HistoryRoot ->
             "#/history"
 
-        History page ->
-            "#/history/" ++ toString page
+        History { page, search } ->
+            "#/history/" ++ toString page ++ "/" ++ Http.encodeUri search
 
         MapsRoot ->
             "#/map"

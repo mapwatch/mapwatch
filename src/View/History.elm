@@ -6,6 +6,7 @@ import Html.Events as E
 import Time
 import Date
 import Dict
+import Regex
 import Model as Model exposing (Model, Msg(..))
 import Model.Instance as Instance exposing (Instance)
 import Model.Run as Run exposing (Run)
@@ -16,12 +17,12 @@ import View.Setup
 import View.NotFound
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
 import View.Icon as Icon
-import View.Util exposing (roundToPlaces)
+import View.Util exposing (roundToPlaces, viewSearch)
 
 
-view : Int -> Model -> H.Html Msg
-view page model =
-    if Model.isReady model && not (isValidPage page model) then
+view : Route.HistoryParams -> Model -> H.Html Msg
+view params model =
+    if Model.isReady model && not (isValidPage params.page model) then
         View.NotFound.view
     else
         H.div []
@@ -29,12 +30,12 @@ view page model =
             , View.Nav.view <| Just model.route
             , View.Setup.view model
             , viewParseError model.parseError
-            , viewBody page model
+            , viewBody params model
             ]
 
 
-viewBody : Int -> Model -> H.Html msg
-viewBody page model =
+viewBody : Route.HistoryParams -> Model -> H.Html Msg
+viewBody params model =
     case model.progress of
         Nothing ->
             -- waiting for file input, nothing to show yet
@@ -44,7 +45,7 @@ viewBody page model =
             H.div [] <|
                 (if Model.isProgressDone p then
                     -- all done!
-                    [ viewMain page model ]
+                    [ viewMain params model ]
                  else
                     []
                 )
@@ -70,21 +71,26 @@ isValidPage page model =
             page == (clamp 0 (numPages (List.length model.runs) - 1) page)
 
 
-viewMain : Int -> Model -> H.Html msg
-viewMain page model =
-    H.div []
-        [ viewStatsTable model
-        , viewHistoryTable page model
-        ]
+viewMain : Route.HistoryParams -> Model -> H.Html Msg
+viewMain params model =
+    let
+        runs =
+            Run.search params.search model.runs
+    in
+        H.div []
+            [ viewSearch [ A.placeholder "area name" ] (Route.HistoryParams params.page >> HistorySearch) params.search
+            , viewStatsTable model.now runs
+            , viewHistoryTable params runs
+            ]
 
 
-viewStatsTable : Model -> H.Html msg
-viewStatsTable model =
+viewStatsTable : Date.Date -> List Run -> H.Html msg
+viewStatsTable now runs =
     H.table [ A.class "history-stats" ]
         [ H.tbody []
             (List.concat
-                [ viewStatsRows "Today" (Run.filterToday model.now model.runs)
-                , viewStatsRows "All-time" model.runs
+                [ viewStatsRows "Today" (Run.filterToday now runs)
+                , viewStatsRows "All-time" runs
                 ]
             )
         ]
@@ -94,7 +100,7 @@ viewStatsRows : String -> List Run -> List (H.Html msg)
 viewStatsRows title runs =
     [ H.tr []
         [ H.th [ A.class "title" ] [ H.text <| title ]
-        , H.td [ A.colspan 10, A.class "maps-completed" ] [ H.text <| toString (List.length runs) ++ " maps completed" ]
+        , H.td [ A.colspan 10, A.class "maps-completed" ] [ H.text <| toString (List.length runs) ++ pluralize " map" " maps" (List.length runs) ++ " completed" ]
         ]
     , H.tr []
         ([ H.td [] []
@@ -125,8 +131,8 @@ viewStatsDurations =
     H.text << toString
 
 
-viewPaginator : Int -> Int -> H.Html msg
-viewPaginator page numItems =
+viewPaginator : Route.HistoryParams -> Int -> H.Html msg
+viewPaginator { page, search } numItems =
     let
         firstVisItem =
             clamp 1 numItems <| (page * perPage) + 1
@@ -143,8 +149,8 @@ viewPaginator page numItems =
         last =
             numPages numItems - 1
 
-        href =
-            Route.href << Route.History
+        href i =
+            Route.href <| Route.History { page = i, search = search }
 
         ( firstLink, prevLink ) =
             if page /= 0 then
@@ -167,14 +173,14 @@ viewPaginator page numItems =
             ]
 
 
-viewHistoryTable : Int -> Model -> H.Html msg
-viewHistoryTable page model =
+viewHistoryTable : Route.HistoryParams -> List Run -> H.Html msg
+viewHistoryTable ({ page } as params) queryRuns =
     let
         paginator =
-            viewPaginator page (List.length model.runs)
+            viewPaginator params (List.length queryRuns)
 
-        runs =
-            model.runs
+        pageRuns =
+            queryRuns
                 |> List.drop (page * perPage)
                 |> List.take perPage
     in
@@ -184,7 +190,7 @@ viewHistoryTable page model =
 
                 -- , viewHistoryHeader
                 ]
-            , H.tbody [] (runs |> List.map (viewHistoryRun { showDate = True }) |> List.concat)
+            , H.tbody [] (pageRuns |> List.map (viewHistoryRun { showDate = True }) |> List.concat)
             , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ] ]
             ]
 

@@ -19,10 +19,10 @@ view model =
             View.Home.view model
 
         HistoryRoot ->
-            View.History.view 0 model
+            View.History.view { page = 0, search = "" } model
 
-        History page ->
-            View.History.view page model
+        History params ->
+            View.History.view params model
 
         MapsRoot ->
             View.Maps.view "" model

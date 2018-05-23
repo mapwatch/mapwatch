@@ -11,11 +11,12 @@ import Model as Model exposing (Model, Msg(..))
 import Model.Instance as Instance exposing (Instance)
 import Model.Run as Run exposing (Run)
 import Model.MapList as MapList
+import Model.Route as Route
 import View.Nav
 import View.Setup
 import View.History
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
-import View.Util exposing (roundToPlaces)
+import View.Util exposing (roundToPlaces, viewSearch)
 
 
 -- import View.History as History
@@ -52,23 +53,10 @@ viewBody search model =
                     ++ [ viewProgress p ]
 
 
-viewSearch search =
-    H.div [ A.class "search" ]
-        [ Icon.fas "search"
-        , H.input
-            [ A.value search
-            , A.placeholder "map name..."
-            , A.tabindex 1
-            , E.onInput MapsSearch
-            ]
-            []
-        ]
-
-
 viewMain : String -> Model -> H.Html Msg
 viewMain search model =
     H.div []
-        [ viewSearch search
+        [ viewSearch [ A.placeholder "map name" ] MapsSearch search
         , MapList.mapList
             |> List.filter (.name >> Regex.contains (Regex.regex search |> Regex.caseInsensitive))
             |> Run.groupMapNames model.runs
@@ -92,7 +80,7 @@ viewMap map runs =
              , H.td [] [ H.text <| "(T" ++ toString map.tier ++ ")" ]
              , H.td [] [ H.text <| formatDuration durs.start ++ " in map" ]
              , H.td [] [ H.text <| toString (roundToPlaces 2 durs.portals) ++ " portals" ]
-             , H.td [] [ H.text <| "×" ++ toString num ]
+             , H.td [] [ H.text <| "×" ++ toString num ++ " runs" ]
              ]
              -- ++ (View.History.viewDurationSet <| )
             )
@@ -100,4 +88,4 @@ viewMap map runs =
 
 viewMapName : MapList.Map -> H.Html msg
 viewMapName map =
-    H.span [] [ Icon.mapOrBlank map.name, H.text map.name ]
+    H.a [ Route.href <| Route.History <| Route.HistoryParams 0 map.name ] [ Icon.mapOrBlank map.name, H.text map.name ]

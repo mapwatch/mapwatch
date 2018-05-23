@@ -10,6 +10,7 @@ module Model.Run
         , meanDurationSet
         , stateDuration
         , durationPerSideArea
+        , search
         , groupMapNames
         , filterToday
         , current
@@ -20,6 +21,7 @@ module Model.Run
 import Time
 import Date
 import Dict
+import Regex
 import Dict.Extra
 import Maybe.Extra
 import Model.Instance as Instance exposing (Instance)
@@ -53,6 +55,15 @@ instance run =
 
         Just i ->
             i
+
+
+search : String -> List Run -> List Run
+search query =
+    let
+        pred run =
+            Regex.contains (Regex.regex query |> Regex.caseInsensitive) (instance run).zone
+    in
+        List.filter pred
 
 
 stateDuration : Date.Date -> State -> Maybe Time.Time

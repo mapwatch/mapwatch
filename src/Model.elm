@@ -64,6 +64,7 @@ type Msg
     | RecvProgress Progress
     | Navigate Navigation.Location
     | MapsSearch String
+    | HistorySearch Route.HistoryParams
 
 
 initModel : Flags -> Route -> Model
@@ -183,6 +184,14 @@ update msg ({ config } as model) =
             , Route.Maps s
                 |> Route.stringify
                 -- |> Debug.log "maps-search"
+                |> Navigation.modifyUrl
+            )
+
+        HistorySearch ps ->
+            ( model
+            , Route.History ps
+                |> Route.stringify
+                |> Debug.log "history-search"
                 |> Navigation.modifyUrl
             )
 
