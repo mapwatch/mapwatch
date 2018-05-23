@@ -73,15 +73,15 @@ stateDuration now state =
             Nothing
 
         Started at ->
-            Just <| Date.toTime now - Date.toTime at
+            Just <| max 0 <| Date.toTime now - Date.toTime at
 
         Running run ->
-            Just <| Date.toTime now - Date.toTime run.first.joinedAt
+            Just <| max 0 <| Date.toTime now - Date.toTime run.first.joinedAt
 
 
 duration : Run -> Time.Time
 duration v =
-    Date.toTime v.last.leftAt - Date.toTime v.first.joinedAt
+    max 0 <| Date.toTime v.last.leftAt - Date.toTime v.first.joinedAt
 
 
 filteredDuration : (Visit -> Bool) -> Run -> Time.Time

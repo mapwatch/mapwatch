@@ -21,7 +21,7 @@ type alias Visit =
 
 duration : Visit -> Time.Time
 duration v =
-    Date.toTime v.leftAt - Date.toTime v.joinedAt
+    max 0 <| Date.toTime v.leftAt - Date.toTime v.joinedAt
 
 
 isTown : Visit -> Bool
