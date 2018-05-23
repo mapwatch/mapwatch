@@ -314,7 +314,7 @@ viewHeader =
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , H.small []
-            [ H.text " - passively analyze your Path of Exile mapping time" ]
+            [ H.text " - automatically time your Path of Exile map clears" ]
         ]
 
 

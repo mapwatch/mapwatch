@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "summary": "passively analyze your Path of Exile mapping time",
+    "summary": "automatically time your Path of Exile map clears",
     "repository": "https://github.com/erosson/mapwatch.git",
     "license": "GPL-3.0",
     "source-directories": [
