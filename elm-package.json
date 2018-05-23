@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "automatically time your Path of Exile map clears",
-    "repository": "https://github.com/mapwatch/mapwatch.github.io.git",
+    "repository": "https://github.com/mapwatch/mapwatch.git",
     "license": "GPL-3.0",
     "source-directories": [
         "./src"

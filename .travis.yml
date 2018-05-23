@@ -17,6 +17,8 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
+  repo: mapwatch/mapwatch.github.io
+  target-branch: master # github-pages: user pages use the master branch, not gh-pages branch
   local_dir: dist/
   github_token: $GITHUB_TOKEN
   #keep_history: true

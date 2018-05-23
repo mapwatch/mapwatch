@@ -300,7 +300,7 @@ viewMain model =
 
 
 selfUrl =
-    "https://mapwatch.github.com"
+    "https://mapwatch.github.io"
 
 
 viewHeader : H.Html msg

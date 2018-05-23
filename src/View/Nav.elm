@@ -8,7 +8,7 @@ import View.Icon as Icon
 
 
 sourceUrl =
-    "https://www.github.com/mapwatch/mapwatch.github.io"
+    "https://www.github.com/mapwatch/mapwatch"
 
 
 viewLinks : List ( List (H.Html msg), Route ) -> Maybe Route -> H.Html msg
