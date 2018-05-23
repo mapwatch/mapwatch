@@ -1,6 +1,6 @@
 # [Mapwatch](https://mapwatch.github.io)
 
-[![Build Status](https://travis-ci.org/mapwatch/mapwatch.github.io.svg?branch=master)](https://travis-ci.org/mapwatch/mapwatch.github.io)
+[![Build Status](https://travis-ci.org/mapwatch/mapwatch.svg?branch=master)](https://travis-ci.org/mapwatch/mapwatch.github.io)
 
 Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file, and I'll give you some statistics about your recent mapping activity.
 
@@ -42,6 +42,7 @@ Exception: Zana's dailies are a side area of the "Crumbled Laboratory" map. Yes,
 
 * [Path of Maps](http://pathofmaps.com/) allows you to track loot from each map. It's less automatic, it takes some extra interaction/time during each map, but it can track things that Mapwatch doesn't.
 * [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component) times acts 1-10 and the Labyrinth with no extra interaction, much like Mapwatch. I don't think Livesplit times your maps.
+* Any others out there I'm not aware of?
 
 ### Does this track the labyrinth or acts 1-10?
 
