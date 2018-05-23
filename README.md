@@ -38,6 +38,11 @@ They're treated as "side areas", like abyssal depths or trials, not a separate m
 
 Exception: Zana's dailies are a side area of the "Crumbled Laboratory" map. Yes, that's not actually a map, kind of awkward. I'd like to improve this soon.
 
+### Any similar tools?
+
+* [Path of Maps](http://pathofmaps.com/) allows you to track loot from each map. It takes some extra interaction/time during each map, but it tracks many things that Mapwatch doesn't.
+* [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component) times acts 1-10 and the Labyrinth with no extra interaction, much like Mapwatch. I don't think Livesplit times your maps.
+
 ### Does this track the labyrinth or acts 1-10?
 
 No. [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component)'s already good at those.
