@@ -24,3 +24,11 @@ viewSearch attrs msg search =
             )
             []
         ]
+
+
+pluralize : String -> String -> number -> String
+pluralize one other n =
+    if n == 1 then
+        one
+    else
+        other

@@ -17,7 +17,7 @@ import View.Setup
 import View.NotFound
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
 import View.Icon as Icon
-import View.Util exposing (roundToPlaces, viewSearch)
+import View.Util exposing (roundToPlaces, viewSearch, pluralize)
 
 
 view : Route.HistoryParams -> Model -> H.Html Msg
@@ -222,14 +222,6 @@ type alias HistoryRowConfig =
 viewHistoryRun : HistoryRowConfig -> Run -> List (H.Html msg)
 viewHistoryRun config r =
     viewHistoryMainRow config r :: (List.map (uncurry <| viewHistorySideAreaRow config) (Run.durationPerSideArea r))
-
-
-pluralize : String -> String -> number -> String
-pluralize one other n =
-    if n == 1 then
-        one
-    else
-        other
 
 
 viewDurationSet : Run.DurationSet -> List (H.Html msg)

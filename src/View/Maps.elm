@@ -16,7 +16,7 @@ import View.Nav
 import View.Setup
 import View.History
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
-import View.Util exposing (roundToPlaces, viewSearch)
+import View.Util exposing (roundToPlaces, viewSearch, pluralize)
 
 
 -- import View.History as History
@@ -78,8 +78,8 @@ viewMap map runs =
         H.tr []
             ([ H.td [ A.class "zone" ] [ viewMapName map ]
              , H.td [] [ H.text <| "(T" ++ toString map.tier ++ ")" ]
-             , H.td [] [ H.text <| formatDuration durs.start ++ " in map" ]
-             , H.td [] [ H.text <| toString (roundToPlaces 2 durs.portals) ++ " portals" ]
+             , H.td [] [ H.text <| formatDuration durs.start ++ " per map" ]
+             , H.td [] [ H.text <| toString (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
              , H.td [] [ H.text <| "×" ++ toString num ++ " runs" ]
              ]
              -- ++ (View.History.viewDurationSet <| )
