@@ -3,7 +3,7 @@ module View.Nav exposing (view, viewDebug)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Model.Route as Route exposing (Route(..))
+import Model.Route as Route exposing (Route(..), HistoryParams)
 import View.Icon as Icon
 
 
@@ -53,18 +53,30 @@ viewDebug =
 
 
 viewLink : Maybe Route -> List (H.Html msg) -> Route -> H.Html msg
-viewLink active0 label href =
+viewLink active0 label href0 =
     let
-        active =
-            case active0 of
-                Just (History _) ->
-                    Just HistoryRoot
+        -- if we've typed a search query, preserve it across nav links
+        searchHref search =
+            case href0 of
+                MapsRoot ->
+                    Maps search
 
-                Just (Maps _) ->
-                    Just MapsRoot
+                HistoryRoot ->
+                    History (HistoryParams 0 search)
 
                 _ ->
-                    active0
+                    href0
+
+        ( active, href ) =
+            case active0 of
+                Just (History { search }) ->
+                    ( Just HistoryRoot, searchHref search )
+
+                Just (Maps search) ->
+                    ( Just MapsRoot, searchHref search )
+
+                _ ->
+                    ( active0, href0 )
 
         cls =
             if active == Just href then

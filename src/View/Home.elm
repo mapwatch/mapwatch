@@ -42,7 +42,7 @@ viewInstance instance =
     case instance of
         Just i ->
             if Zone.isMap i.zone then
-                H.a [ Route.href (Route.Maps i.zone), A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
+                H.a [ Route.href (Route.History <| Route.HistoryParams 0 i.zone), A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
             else
                 H.span [ A.title i.addr ] [ H.text i.zone ]
 
