@@ -109,4 +109,6 @@ table.timer-details td {
 .map-icon {
   height: 1em;
   width: 1em;
+  padding-right: 0.2em;
+  max-width: none;
 }
