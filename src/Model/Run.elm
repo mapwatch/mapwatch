@@ -10,6 +10,7 @@ module Model.Run
         , meanDurationSet
         , stateDuration
         , durationPerSideArea
+        , bestDuration
         , search
         , groupMapNames
         , filterToday
@@ -139,6 +140,13 @@ meanDurationSet runs =
                 |> toFloat
     in
         { all = d.all / n, town = d.town / n, notTown = d.notTown / n, start = d.start / n, subs = d.subs / n, portals = d.portals / n }
+
+
+bestDuration : List Run -> Maybe Time.Time
+bestDuration runs =
+    runs
+        |> List.map (durationSet >> .start)
+        |> List.minimum
 
 
 filterToday : Date.Date -> List Run -> List Run

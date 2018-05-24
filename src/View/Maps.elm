@@ -72,6 +72,15 @@ viewMap map runs =
         durs =
             Run.meanDurationSet runs
 
+        best =
+            case Run.bestDuration runs of
+                Nothing ->
+                    -- no runs - should be impossible, but not important enough to Debug.crash over it
+                    "--:--"
+
+                Just dur ->
+                    formatDuration dur
+
         num =
             List.length runs
     in
@@ -80,7 +89,8 @@ viewMap map runs =
              , H.td [] [ H.text <| "(T" ++ toString map.tier ++ ")" ]
              , H.td [] [ H.text <| formatDuration durs.start ++ " per map" ]
              , H.td [] [ H.text <| toString (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
-             , H.td [] [ H.text <| "×" ++ toString num ++ " runs" ]
+             , H.td [] [ H.text <| "×" ++ toString num ++ " runs." ]
+             , H.td [] [ H.text <| "Best: " ++ best ]
              ]
              -- ++ (View.History.viewDurationSet <| )
             )
