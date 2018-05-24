@@ -1,6 +1,6 @@
 # [Mapwatch](https://mapwatch.github.io)
 
-[![Build Status](https://travis-ci.org/mapwatch/mapwatch.svg?branch=master)](https://travis-ci.org/mapwatch/mapwatch.github.io)
+[![Build Status](https://travis-ci.org/mapwatch/mapwatch.svg?branch=master)](https://travis-ci.org/mapwatch/mapwatch)
 
 Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file, and I'll give you some statistics about your recent mapping activity.
 
