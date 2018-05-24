@@ -13,9 +13,8 @@ roundToPlaces p n =
 
 viewSearch : List (H.Attribute msg) -> (String -> msg) -> String -> H.Html msg
 viewSearch attrs msg search =
-    H.div [ A.class "search" ]
-        [ Icon.fas "search"
-        , H.input
+    H.span [ A.class "search-text" ]
+        [ H.input
             ([ A.value search
              , A.tabindex 1
              , E.onInput msg
@@ -23,6 +22,7 @@ viewSearch attrs msg search =
                 ++ attrs
             )
             []
+        , Icon.fas "search"
         ]
 
 

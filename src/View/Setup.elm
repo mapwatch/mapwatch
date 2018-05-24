@@ -5,6 +5,7 @@ import Html.Attributes as A
 import Html.Events as E
 import Json.Decode as Decode
 import Model as Model exposing (Model, Msg(..))
+import View.Icon as Icon
 
 
 onChange : msg -> H.Attribute msg
@@ -83,4 +84,7 @@ view model =
                  else
                     [ H.text <| "Warning: we don't support your web browser. If you have trouble, try ", H.a [ A.href "https://www.google.com/chrome/" ] [ H.text "Chrome" ], H.text "." ]
                 )
+
+            -- uncomment and screenshot for a favicon.
+            -- , H.div [ A.class "favicon-source" ] [ Icon.fas "stopwatch" ]
             ]
