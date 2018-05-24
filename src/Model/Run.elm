@@ -12,6 +12,7 @@ module Model.Run
         , durationPerSideArea
         , bestDuration
         , search
+        , sort
         , groupMapNames
         , filterToday
         , current
@@ -65,6 +66,117 @@ search query =
             Regex.contains (Regex.regex query |> Regex.caseInsensitive) (instance run).zone
     in
         List.filter pred
+
+
+type SortField
+    = SortDate
+    | Name
+    | TimeTotal
+    | TimeMap
+    | TimeTown
+    | TimeSide
+    | Portals
+
+
+type SortDir
+    = Asc
+    | Desc
+
+
+sort : String -> List Run -> List Run
+sort str =
+    parseSort str |> uncurry sortParsed
+
+
+parseSortField : String -> SortField
+parseSortField str =
+    case str of
+        "name" ->
+            Name
+
+        "totalt" ->
+            TimeTotal
+
+        "mapt" ->
+            TimeMap
+
+        "townt" ->
+            TimeTown
+
+        "sidet" ->
+            TimeSide
+
+        "portals" ->
+            Portals
+
+        "date" ->
+            SortDate
+
+        _ ->
+            SortDate
+
+
+parseSort : String -> ( SortField, SortDir )
+parseSort str0 =
+    case String.uncons str0 of
+        Just ( '+', str ) ->
+            ( parseSortField str, Asc )
+
+        Just ( '-', str ) ->
+            ( parseSortField str, Desc )
+
+        _ ->
+            let
+                field =
+                    parseSortField str0
+            in
+                ( field
+                  -- date sorts desc by default, but names feel better asc (a-z), and durations feel better asc (fastest-slowest)
+                  -- but durations and
+                , if field == SortDate then
+                    Desc
+                  else
+                    Asc
+                )
+
+
+sortParsed : SortField -> SortDir -> List Run -> List Run
+sortParsed field dir runs =
+    -- optimize the common, default case, which conveniently is the default list order.
+    -- Same result as letting the else-branch run, but no sort cpu needed.
+    if field == SortDate && dir == Desc then
+        runs
+    else
+        runs
+            |> (case field of
+                    SortDate ->
+                        -- .last >> .leftAt >> Date.toTime |> List.sortBy
+                        -- already sorted by date-descending!
+                        List.reverse
+
+                    Name ->
+                        instance >> .zone |> List.sortBy
+
+                    TimeTotal ->
+                        duration |> List.sortBy
+
+                    TimeMap ->
+                        durationSet >> .start |> List.sortBy
+
+                    TimeTown ->
+                        durationSet >> .town |> List.sortBy
+
+                    TimeSide ->
+                        durationSet >> .subs |> List.sortBy
+
+                    Portals ->
+                        .portals |> List.sortBy
+               )
+            |> (if dir == Desc then
+                    List.reverse
+                else
+                    identity
+               )
 
 
 stateDuration : Date.Date -> State -> Maybe Time.Time

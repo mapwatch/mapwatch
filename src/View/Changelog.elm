@@ -12,8 +12,8 @@ import Date as Date exposing (Date)
 entries : List ( Date, List (List (H.Html msg)) )
 entries =
     [ ( ymd "2018/05/24"
-      , [ [ H.text "Created this changelog"
-          ]
+      , [ [ H.text "Created this changelog." ]
+        , [ H.text "Broke existing urls for search, to prepare for some future changes." ]
         ]
       )
     , ( ymd "2018/05/23"

@@ -3,7 +3,7 @@ module View.Nav exposing (view, viewDebug)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Model.Route as Route exposing (Route(..), HistoryParams)
+import Model.Route as Route exposing (Route(..), HistoryParams, MapsParams)
 import View.Icon as Icon
 
 
@@ -57,30 +57,32 @@ viewLink : Maybe Route -> List (H.Html msg) -> Route -> H.Html msg
 viewLink active0 label href0 =
     let
         -- if we've typed a search query, preserve it across nav links
+        searchHref : Maybe String -> Route
         searchHref search =
             case href0 of
                 MapsRoot ->
-                    Maps search
+                    Maps <| MapsParams search Nothing
 
                 HistoryRoot ->
-                    History (HistoryParams 0 search)
+                    History <| HistoryParams 0 search Nothing
 
                 _ ->
                     href0
 
+        -- detect active-state for routes with queries
         ( active, href ) =
             case active0 of
                 Just (History { search }) ->
                     ( Just HistoryRoot, searchHref search )
 
-                Just (Maps search) ->
+                Just (Maps { search }) ->
                     ( Just MapsRoot, searchHref search )
 
                 _ ->
                     ( active0, href0 )
 
         cls =
-            if active == Just href then
+            if active == Just href0 then
                 "active button disabled"
             else
                 "inactive button"

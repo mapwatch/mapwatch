@@ -75,10 +75,25 @@ viewMain : Route.HistoryParams -> Model -> H.Html Msg
 viewMain params model =
     let
         runs =
-            Run.search params.search model.runs
+            model.runs
+                |> (Maybe.withDefault identity <| Maybe.map Run.search <| params.search)
+                |> (Maybe.withDefault identity <| Maybe.map Run.sort <| params.sort)
     in
         H.div []
-            [ viewSearch [ A.placeholder "area name" ] (Route.HistoryParams params.page >> HistorySearch) params.search
+            [ H.div []
+                [ viewSearch [ A.placeholder "area name" ]
+                    (\q ->
+                        { params
+                            | search =
+                                if q == "" then
+                                    Nothing
+                                else
+                                    Just q
+                        }
+                            |> HistorySearch
+                    )
+                    params.search
+                ]
             , viewStatsTable model.now runs
             , viewHistoryTable params runs
             ]
@@ -132,7 +147,7 @@ viewStatsDurations =
 
 
 viewPaginator : Route.HistoryParams -> Int -> H.Html msg
-viewPaginator { page, search } numItems =
+viewPaginator { page, search, sort } numItems =
     let
         firstVisItem =
             clamp 1 numItems <| (page * perPage) + 1
@@ -150,7 +165,7 @@ viewPaginator { page, search } numItems =
             numPages numItems - 1
 
         href i =
-            Route.href <| Route.History { page = i, search = search }
+            Route.href <| Route.History { page = i, search = search, sort = sort }
 
         ( firstLink, prevLink ) =
             if page /= 0 then

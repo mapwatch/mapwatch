@@ -20,16 +20,16 @@ view model =
             View.Home.view model
 
         HistoryRoot ->
-            View.History.view { page = 0, search = "" } model
+            View.History.view { page = 0, search = Nothing, sort = Nothing } model
 
         History params ->
             View.History.view params model
 
         MapsRoot ->
-            View.Maps.view "" model
+            View.Maps.view { search = Nothing, sort = Nothing } model
 
-        Maps search ->
-            View.Maps.view search model
+        Maps params ->
+            View.Maps.view params model
 
         Timer ->
             View.Timer.view model

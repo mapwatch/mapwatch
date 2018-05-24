@@ -17,26 +17,22 @@ import View.Setup
 import View.History
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
 import View.Util exposing (roundToPlaces, viewSearch, pluralize)
-
-
--- import View.History as History
-
 import View.Icon as Icon
 
 
-view : String -> Model -> H.Html Msg
-view search model =
+view : Route.MapsParams -> Model -> H.Html Msg
+view params model =
     H.div []
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model
         , viewParseError model.parseError
-        , viewBody search model
+        , viewBody params model
         ]
 
 
-viewBody : String -> Model -> H.Html Msg
-viewBody search model =
+viewBody : Route.MapsParams -> Model -> H.Html Msg
+viewBody params model =
     case model.progress of
         Nothing ->
             -- waiting for file input, nothing to show yet
@@ -46,19 +42,29 @@ viewBody search model =
             H.div [] <|
                 (if Model.isProgressDone p then
                     -- all done!
-                    [ viewMain search model ]
+                    [ viewMain params model ]
                  else
                     []
                 )
                     ++ [ viewProgress p ]
 
 
-viewMain : String -> Model -> H.Html Msg
-viewMain search model =
+search : Maybe String -> List MapList.Map -> List MapList.Map
+search q ms =
+    case q of
+        Nothing ->
+            ms
+
+        Just q ->
+            List.filter (.name >> Regex.contains (Regex.regex q |> Regex.caseInsensitive)) ms
+
+
+viewMain : Route.MapsParams -> Model -> H.Html Msg
+viewMain params model =
     H.div []
-        [ viewSearch [ A.placeholder "map name" ] MapsSearch search
+        [ viewSearch [ A.placeholder "map name" ] MapsSearch params.search
         , MapList.mapList
-            |> List.filter (.name >> Regex.contains (Regex.regex search |> Regex.caseInsensitive))
+            |> search params.search
             |> Run.groupMapNames model.runs
             |> List.reverse
             |> List.map (uncurry viewMap)
@@ -98,4 +104,4 @@ viewMap map runs =
 
 viewMapName : MapList.Map -> H.Html msg
 viewMapName map =
-    H.a [ Route.href <| Route.History <| Route.HistoryParams 0 map.name ] [ Icon.mapOrBlank map.name, H.text map.name ]
+    H.a [ Route.href <| Route.History <| Route.HistoryParams 0 (Just map.name) Nothing ] [ Icon.mapOrBlank map.name, H.text map.name ]

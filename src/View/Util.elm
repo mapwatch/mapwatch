@@ -11,11 +11,11 @@ roundToPlaces p n =
     (n * (10 ^ p) |> round |> toFloat) / (10 ^ p)
 
 
-viewSearch : List (H.Attribute msg) -> (String -> msg) -> String -> H.Html msg
+viewSearch : List (H.Attribute msg) -> (String -> msg) -> Maybe String -> H.Html msg
 viewSearch attrs msg search =
     H.span [ A.class "search-text" ]
         [ H.input
-            ([ A.value search
+            ([ A.value <| Maybe.withDefault "" search
              , A.tabindex 1
              , E.onInput msg
              ]

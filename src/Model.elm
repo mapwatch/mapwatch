@@ -179,9 +179,9 @@ update msg ({ config } as model) =
                 Err _ ->
                     ( model, Cmd.none )
 
-        MapsSearch s ->
+        MapsSearch q ->
             ( model
-            , Route.Maps s
+            , Route.Maps (Route.MapsParams (Just q) Nothing)
                 |> Route.stringify
                 -- |> Debug.log "maps-search"
                 |> Navigation.modifyUrl
@@ -191,7 +191,7 @@ update msg ({ config } as model) =
             ( model
             , Route.History ps
                 |> Route.stringify
-                |> Debug.log "history-search"
+                -- |> Debug.log "history-search"
                 |> Navigation.modifyUrl
             )
 
