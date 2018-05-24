@@ -10,6 +10,7 @@ import View.DumpLines
 import View.MapIcons
 import View.NotFound
 import View.Maps
+import View.Changelog
 
 
 view : Model -> H.Html Msg
@@ -41,6 +42,9 @@ view model =
 
         DebugMapIcons ->
             View.MapIcons.view
+
+        Changelog ->
+            View.Changelog.view model.route
 
         NotFound loc ->
             View.NotFound.view

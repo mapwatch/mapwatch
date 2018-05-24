@@ -19,7 +19,7 @@ viewLinks links active =
         |> (\links ->
                 links
                     ++ [ H.a [ A.target "_blank", A.href sourceUrl, A.class "button inactive" ]
-                            [ Icon.fas "code-branch", H.text " Source code" ]
+                            [ Icon.fas "code", H.text " Code" ]
 
                        -- [ fab "github", H.text " Source code" ]
                        ]
@@ -32,6 +32,7 @@ links =
     [ ( [ Icon.fas "stopwatch", H.text " Timer" ], Timer )
     , ( [ Icon.fas "history", H.text " History" ], HistoryRoot )
     , ( [ Icon.fas "map", H.text " Maps" ], MapsRoot )
+    , ( [ Icon.fas "newspaper", H.text " Changes" ], Changelog )
 
     -- , ( H.span [] [H.text "Legacy"], Home )
     ]

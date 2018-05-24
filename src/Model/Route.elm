@@ -18,6 +18,7 @@ type Route
     | Maps String
     | MapsRoot
     | Timer
+    | Changelog
     | Debug
     | DebugDumpLines
     | DebugMapIcons
@@ -45,16 +46,17 @@ parser : P.Parser (Route -> a) a
 parser =
     P.oneOf
         [ P.map Timer <| P.top
-        , P.map Home <| P.s "legacy"
-        , P.map Debug <| P.s "debug"
-        , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
-        , P.map DebugMapIcons <| P.s "debug" </> P.s "mapicons"
+        , P.map Timer <| P.s "timer"
         , P.map HistoryRoot <| P.s "history"
         , P.map (\i -> HistoryParams i "" |> History) <| P.s "history" </> P.int
         , P.map (\i -> \s -> HistoryParams i s |> History) <| P.s "history" </> P.int </> decodeString
         , P.map MapsRoot <| P.s "map"
         , P.map Maps <| P.s "map" </> decodeString
-        , P.map Timer <| P.s "timer"
+        , P.map Changelog <| P.s "changelog"
+        , P.map Home <| P.s "legacy"
+        , P.map Debug <| P.s "debug"
+        , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
+        , P.map DebugMapIcons <| P.s "debug" </> P.s "mapicons"
         ]
 
 
@@ -78,6 +80,9 @@ stringify route =
 
         Timer ->
             "#/"
+
+        Changelog ->
+            "#/changelog"
 
         Debug ->
             "#/debug"
