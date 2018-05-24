@@ -13,7 +13,7 @@ type alias HistoryParams =
 
 
 type alias MapsParams =
-    { search : Maybe String, sort : Maybe String }
+    { search : Maybe String }
 
 
 type Route
@@ -76,7 +76,7 @@ parser =
         , P.map History <| P.map (\p -> HistoryParams (Maybe.withDefault 0 p)) <| P.s "history" <?> P.intParam "p" <?> P.stringParam "q" <?> P.stringParam "o"
 
         -- , P.map MapsRoot <| P.s "map"
-        , P.map Maps <| P.map MapsParams <| P.s "map" <?> P.stringParam "q" <?> P.stringParam "o"
+        , P.map Maps <| P.map MapsParams <| P.s "map" <?> P.stringParam "q"
         , P.map Changelog <| P.s "changelog"
         , P.map Home <| P.s "legacy"
         , P.map Debug <| P.s "debug"
@@ -128,8 +128,8 @@ stringify route =
         MapsRoot ->
             "#/map"
 
-        Maps { search, sort } ->
-            "#/map" ++ encodeQS [ ( "q", search ), ( "o", sort ) ]
+        Maps { search } ->
+            "#/map" ++ encodeQS [ ( "q", search ) ]
 
         Timer ->
             "#/"

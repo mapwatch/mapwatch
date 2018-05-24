@@ -61,7 +61,7 @@ viewLink active0 label href0 =
         searchHref search =
             case href0 of
                 MapsRoot ->
-                    Maps <| MapsParams search Nothing
+                    Maps <| MapsParams search
 
                 HistoryRoot ->
                     History <| HistoryParams 0 search Nothing

@@ -26,7 +26,7 @@ view model =
             View.History.view params model
 
         MapsRoot ->
-            View.Maps.view { search = Nothing, sort = Nothing } model
+            View.Maps.view { search = Nothing } model
 
         Maps params ->
             View.Maps.view params model

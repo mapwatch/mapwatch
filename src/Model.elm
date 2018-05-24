@@ -181,7 +181,7 @@ update msg ({ config } as model) =
 
         MapsSearch q ->
             ( model
-            , Route.Maps (Route.MapsParams (Just q) Nothing)
+            , Route.Maps (Route.MapsParams (Just q))
                 |> Route.stringify
                 -- |> Debug.log "maps-search"
                 |> Navigation.modifyUrl
