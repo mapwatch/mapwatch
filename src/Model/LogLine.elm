@@ -2,6 +2,7 @@ module Model.LogLine exposing (ParseError, ParsedLine, Info(..), Line, parse)
 
 import Date
 import Regex
+import Maybe.Extra
 import Util exposing (regexParseFirst, regexParseFirstRes)
 
 
@@ -55,8 +56,7 @@ parseLogInfo raw =
     in
         [ parseOpening, parseEntered, parseConnecting ]
             -- use the first matching parser
-            |> List.map (Maybe.withDefault [] << Maybe.map List.singleton)
-            |> List.concat
+            |> Maybe.Extra.values
             |> List.head
 
 

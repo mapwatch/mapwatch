@@ -7,6 +7,7 @@ import Time
 import Date
 import Dict
 import Regex
+import Maybe.Extra
 import Model as Model exposing (Model, Msg(..))
 import Model.Instance as Instance exposing (Instance)
 import Model.Run as Run exposing (Run)
@@ -81,10 +82,10 @@ viewMain params model =
 
         runs =
             model.runs
-                |> (++) (currentRun |> Maybe.map List.singleton |> Maybe.withDefault [])
-                |> (Maybe.withDefault identity <| Maybe.map Run.search params.search)
+                |> (++) (Maybe.Extra.toList currentRun)
+                |> Maybe.Extra.unwrap identity Run.search params.search
                 |> Run.filterBetween params
-                |> (Maybe.withDefault identity <| Maybe.map Run.sort params.sort)
+                |> Maybe.Extra.unwrap identity Run.sort params.sort
     in
         H.div []
             [ H.div []

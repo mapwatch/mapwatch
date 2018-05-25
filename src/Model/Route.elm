@@ -20,6 +20,7 @@ import UrlParser as P exposing ((</>), (<?>))
 import Http
 import Regex
 import Date as Date exposing (Date)
+import Maybe.Extra
 
 
 type alias HistoryParams =
@@ -135,7 +136,7 @@ boolParam name =
         parse s =
             not <| s == "" || s == "0" || s == "no" || s == "n" || s == "False" || s == "false"
     in
-        P.customParam name (Maybe.withDefault False << Maybe.map parse)
+        P.customParam name (Maybe.Extra.unwrap False parse)
 
 
 parser : P.Parser (Route -> a) a
@@ -174,8 +175,8 @@ encodeQS pairs0 =
         pairs : List ( String, String )
         pairs =
             pairs0
-                |> List.map (\( k, v ) -> Maybe.withDefault [] <| Maybe.map (\v -> [ ( k, v ) ]) v)
-                |> List.concat
+                |> List.map (\( k, v ) -> Maybe.map (\v -> ( k, v )) v)
+                |> Maybe.Extra.values
     in
         if List.isEmpty pairs then
             ""

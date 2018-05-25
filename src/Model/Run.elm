@@ -189,10 +189,10 @@ isBetween { after, before } run =
             Date.toTime run.first.joinedAt
 
         isAfter =
-            Maybe.withDefault True <| Maybe.map (Date.toTime >> (>=) at) after
+            Maybe.Extra.unwrap True (Date.toTime >> (>=) at) after
 
         isBefore =
-            Maybe.withDefault True <| Maybe.map (Date.toTime >> (<=) at) before
+            Maybe.Extra.unwrap True (Date.toTime >> (<=) at) before
     in
         isAfter && isBefore
 

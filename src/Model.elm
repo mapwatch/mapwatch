@@ -15,9 +15,10 @@ module Model
 import Set
 import Date
 import Time
-import Ports
+import Maybe.Extra
 import AnimationFrame
 import Navigation
+import Ports
 import Model.LogLine as LogLine
 import Model.Zone as Zone
 import Model.Instance as Instance
@@ -114,7 +115,7 @@ updateLine line model =
         { model
             | instance = instance
 
-            -- , visits = visit |> Maybe.map (\v -> v :: model.visits) |> Maybe.withDefault model.visits
+            -- , visits = Maybe.Extra.unwrap model.visits (\v -> v :: model.visits) visit
             , runState = runState
             , runs = runs
         }
@@ -160,7 +161,7 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg ({ config } as model) =
     case msg of
         Tick t ->
-            if model.progress |> Maybe.map isProgressDone |> Maybe.withDefault False then
+            if Maybe.Extra.unwrap False isProgressDone model.progress then
                 ( tick t model, Cmd.none )
             else
                 ( { model | now = applyTimeOffset model t }, Cmd.none )
@@ -214,8 +215,8 @@ update msg ({ config } as model) =
                             -- man, I love elm, but conditional logging is so awkward
                             let
                                 _ =
-                                    if not <| Maybe.withDefault False <| Maybe.map isProgressDone model.progress then
-                                        Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.withDefault 0 <| Maybe.map Date.toTime m.instance.joinedAt)
+                                    if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
+                                        Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.Extra.unwrap 0 Date.toTime m.instance.joinedAt)
                                     else
                                         ""
                             in
@@ -252,7 +253,7 @@ isProgressDone p =
 
 isReady : Model -> Bool
 isReady =
-    Maybe.withDefault False << Maybe.map isProgressDone << .progress
+    Maybe.Extra.unwrap False isProgressDone << .progress
 
 
 progressDuration : Progress -> Time.Time

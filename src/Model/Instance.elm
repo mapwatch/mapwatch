@@ -2,6 +2,7 @@ module Model.Instance exposing (..)
 
 import Time
 import Date
+import Maybe.Extra
 import Model.LogLine as LogLine
 import Model.Zone as Zone
 
@@ -36,12 +37,12 @@ init =
 isTown : Maybe Instance -> Bool
 isTown =
     -- No-zone counts as town, since you log back in to town
-    Maybe.withDefault True << Maybe.map (Zone.isTown << .zone)
+    Maybe.Extra.unwrap True (Zone.isTown << .zone)
 
 
 isMap : Maybe Instance -> Bool
 isMap =
-    Maybe.withDefault False << Maybe.map (Zone.isMap << .zone)
+    Maybe.Extra.unwrap False (Zone.isMap << .zone)
 
 
 duration : Date.Date -> State -> Maybe Time.Time

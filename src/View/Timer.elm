@@ -60,14 +60,14 @@ viewMain qs model =
             case qs.after of
                 Nothing ->
                     ( "today"
-                    , (Maybe.withDefault [] <| Maybe.map List.singleton run) ++ Run.filterToday model.now model.runs
+                    , Maybe.Extra.toList run ++ Run.filterToday model.now model.runs
                     , [ hideEarlierButton
                       ]
                     )
 
                 Just _ ->
                     ( "this session"
-                    , (Maybe.withDefault [] <| Maybe.map List.singleton run) ++ Run.filterBetween { before = Nothing, after = qs.after } (model.runs)
+                    , Maybe.Extra.toList run ++ Run.filterBetween { before = Nothing, after = qs.after } (model.runs)
                     , [ H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Nothing } ] [ Icon.fas "eye", H.text " Unhide all" ]
                       , hideEarlierButton
                       , H.a [ A.class "button", Route.href <| Route.History { hqs | after = qs.after, before = Just model.now } ] [ Icon.fas "camera", H.text " Snapshot history" ]
