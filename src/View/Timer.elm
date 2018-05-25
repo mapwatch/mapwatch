@@ -58,7 +58,7 @@ viewMain qs model =
             case qs.after of
                 Nothing ->
                     ( "today"
-                    , Run.filterToday model.now model.runs
+                    , (Maybe.withDefault [] <| Maybe.map List.singleton run) ++ (Run.filterToday model.now model.runs)
                     , [ hideEarlierButton
                       ]
                     )
