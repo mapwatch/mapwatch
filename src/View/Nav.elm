@@ -14,7 +14,7 @@ view active =
         [ timerLink active
         , historyLink active
         , mapsLink active
-        , changelogLink
+        , changelogLink active
         , sourceLink
         ]
 
@@ -93,8 +93,17 @@ mapsLink active =
         H.a [ cls, Route.href <| Maps qs ] [ Icon.fas "map", H.text " Maps" ]
 
 
-changelogLink =
-    H.a [ inactiveCls, Route.href <| Changelog ] [ Icon.fas "newspaper", H.text " Changes" ]
+changelogLink active =
+    let
+        cls =
+            case active of
+                Just Changelog ->
+                    activeCls
+
+                _ ->
+                    inactiveCls
+    in
+        H.a [ cls, Route.href <| Changelog ] [ Icon.fas "newspaper", H.text " Changes" ]
 
 
 sourceLink =
