@@ -170,10 +170,10 @@ formatDurationSet d =
     ""
         ++ formatDuration d.all
         ++ " = "
-        ++ formatDuration d.start
+        ++ formatDuration d.mainMap
         ++ " map + "
-        ++ (if d.subs > 0 then
-                formatDuration d.subs ++ " sidezones + "
+        ++ (if d.sides > 0 then
+                formatDuration d.sides ++ " sidezones + "
             else
                 ""
            )

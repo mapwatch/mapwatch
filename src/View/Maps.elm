@@ -93,7 +93,7 @@ viewMap qs map runs =
         H.tr []
             ([ H.td [ A.class "zone" ] [ viewMapName qs map ]
              , H.td [] [ H.text <| "(T" ++ toString map.tier ++ ")" ]
-             , H.td [] [ H.text <| formatDuration durs.start ++ " per map" ]
+             , H.td [] [ H.text <| formatDuration durs.mainMap ++ " per map" ]
              , H.td [] [ H.text <| toString (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
              , H.td [] [ H.text <| "×" ++ toString num ++ " runs." ]
              , H.td [] [ H.text <| "Best: " ++ best ]

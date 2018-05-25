@@ -256,13 +256,13 @@ viewDurationSet : Run.DurationSet -> List (H.Html msg)
 viewDurationSet d =
     [ H.td [ A.class "dur total-dur" ] [ viewDuration d.all ]
     , H.td [ A.class "dur" ] [ H.text " = " ]
-    , H.td [ A.class "dur" ] [ viewDuration d.start, H.text " in map " ]
+    , H.td [ A.class "dur" ] [ viewDuration d.mainMap, H.text " in map " ]
     , H.td [ A.class "dur" ] [ H.text " + " ]
     , H.td [ A.class "dur" ] [ viewDuration d.town, H.text " in town " ]
     ]
-        ++ (if d.subs > 0 then
+        ++ (if d.sides > 0 then
                 [ H.td [ A.class "dur" ] [ H.text " + " ]
-                , H.td [ A.class "dur" ] [ viewDuration d.subs, H.text " in sides" ]
+                , H.td [ A.class "dur" ] [ viewDuration d.sides, H.text " in sides" ]
                 ]
             else
                 [ H.td [ A.class "dur" ] [], H.td [ A.class "dur" ] [] ]

@@ -163,13 +163,13 @@ sortParsed field dir runs =
                         duration |> List.sortBy
 
                     TimeMap ->
-                        durationSet >> .start |> List.sortBy
+                        durationSet >> .mainMap |> List.sortBy
 
                     TimeTown ->
                         durationSet >> .town |> List.sortBy
 
                     TimeSide ->
-                        durationSet >> .subs |> List.sortBy
+                        durationSet >> .sides |> List.sortBy
 
                     Portals ->
                         .portals |> List.sortBy
@@ -228,7 +228,7 @@ filteredDuration pred run =
 
 
 type alias DurationSet =
-    { all : Time.Time, town : Time.Time, start : Time.Time, subs : Time.Time, notTown : Time.Time, portals : Float }
+    { all : Time.Time, town : Time.Time, mainMap : Time.Time, sides : Time.Time, notTown : Time.Time, portals : Float }
 
 
 durationSet : Run -> DurationSet
@@ -243,10 +243,10 @@ durationSet run =
         notTown =
             filteredDuration (not << Visit.isTown) run
 
-        start =
+        mainMap =
             filteredDuration (\v -> v.instance == run.first.instance) run
     in
-        { all = all, town = town, notTown = notTown, start = start, subs = notTown - start, portals = toFloat run.portals }
+        { all = all, town = town, notTown = notTown, mainMap = mainMap, sides = notTown - mainMap, portals = toFloat run.portals }
 
 
 totalDurationSet : List Run -> DurationSet
@@ -258,7 +258,7 @@ totalDurationSet runs =
         sum get =
             durs |> List.map get |> List.sum
     in
-        { all = sum .all, town = sum .town, notTown = sum .notTown, start = sum .start, subs = sum .subs, portals = sum .portals }
+        { all = sum .all, town = sum .town, notTown = sum .notTown, mainMap = sum .mainMap, sides = sum .sides, portals = sum .portals }
 
 
 meanDurationSet : List Run -> DurationSet
@@ -273,13 +273,13 @@ meanDurationSet runs =
                 |> max 1
                 |> toFloat
     in
-        { all = d.all / n, town = d.town / n, notTown = d.notTown / n, start = d.start / n, subs = d.subs / n, portals = d.portals / n }
+        { all = d.all / n, town = d.town / n, notTown = d.notTown / n, mainMap = d.mainMap / n, sides = d.sides / n, portals = d.portals / n }
 
 
 bestDuration : List Run -> Maybe Time.Time
 bestDuration runs =
     runs
-        |> List.map (durationSet >> .start)
+        |> List.map (durationSet >> .mainMap)
         |> List.minimum
 
 
