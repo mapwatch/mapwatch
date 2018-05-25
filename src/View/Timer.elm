@@ -4,6 +4,7 @@ import Time
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
+import Maybe.Extra
 import Model as Model exposing (Model, Msg)
 import Model.Run as Run
 import Model.Route as Route
@@ -47,6 +48,7 @@ viewMain qs model =
     let
         run =
             Run.current model.now model.instance model.runState
+                |> Maybe.Extra.filter (Run.isBetween { before = Nothing, after = qs.after })
 
         hideEarlierButton =
             H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Just model.now } ] [ Icon.fas "eye-slash", H.text " Hide earlier maps" ]
@@ -58,15 +60,14 @@ viewMain qs model =
             case qs.after of
                 Nothing ->
                     ( "today"
-                    , (Maybe.withDefault [] <| Maybe.map List.singleton run) ++ (Run.filterToday model.now model.runs)
+                    , (Maybe.withDefault [] <| Maybe.map List.singleton run) ++ Run.filterToday model.now model.runs
                     , [ hideEarlierButton
                       ]
                     )
 
                 Just _ ->
                     ( "this session"
-                    , Run.filterBetween { before = Nothing, after = qs.after }
-                        ((Maybe.withDefault [] <| Maybe.map List.singleton run) ++ model.runs)
+                    , (Maybe.withDefault [] <| Maybe.map List.singleton run) ++ Run.filterBetween { before = Nothing, after = qs.after } (model.runs)
                     , [ H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Nothing } ] [ Icon.fas "eye", H.text " Unhide all" ]
                       , hideEarlierButton
                       , H.a [ A.class "button", Route.href <| Route.History { hqs | after = qs.after, before = Just model.now } ] [ Icon.fas "camera", H.text " Snapshot history" ]
