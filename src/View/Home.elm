@@ -1,5 +1,8 @@
 module View.Home exposing (..)
 
+-- TODO: This used to be its own page. Now it's a graveyard of functions that get
+-- called from other pages. I should really clean it up and find these a new home.
+
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
@@ -16,25 +19,6 @@ import Model.Route as Route
 import View.Setup
 import View.Nav
 import View.Icon as Icon
-
-
-viewLogLine : LogLine.Line -> H.Html msg
-viewLogLine line =
-    H.li []
-        [ H.text (toString line.date)
-        , H.text (toString line.info)
-        , H.div [] [ H.i [] [ H.text line.raw ] ]
-        ]
-
-
-formatInstance : Maybe Instance -> String
-formatInstance instance =
-    case instance of
-        Just i ->
-            i.zone ++ "@" ++ i.addr
-
-        Nothing ->
-            "(none)"
 
 
 viewInstance : Route.HistoryParams -> Maybe Instance -> H.Html msg
@@ -153,39 +137,6 @@ viewProgress p =
             ]
 
 
-viewVisit : Visit.Visit -> H.Html msg
-viewVisit visit =
-    H.li []
-        [ H.text <|
-            formatDuration (Visit.duration visit)
-                ++ " -- "
-                ++ formatInstance visit.instance
-                ++ " "
-                ++ toString { map = Visit.isMap visit, town = Visit.isTown visit, offline = Visit.isOffline visit }
-        ]
-
-
-formatDurationSet : Run.DurationSet -> String
-formatDurationSet d =
-    ""
-        ++ formatDuration d.all
-        ++ " = "
-        ++ formatDuration d.mainMap
-        ++ " map + "
-        ++ (if d.sides > 0 then
-                formatDuration d.sides ++ " sidezones + "
-            else
-                ""
-           )
-        ++ formatDuration d.town
-        ++ " town ("
-        -- to 2 decimal places. Normally this is an int, except when used for the average
-        ++ toString ((d.portals * 100 |> floor |> toFloat) / 100)
-        ++ " portals, "
-        ++ toString (clamp 0 100 <| floor <| 100 * (d.town / (max 1 d.all)))
-        ++ "% in town)"
-
-
 viewDate : Date.Date -> H.Html msg
 viewDate d =
     H.span [ A.title (toString d) ]
@@ -221,88 +172,6 @@ maskedText str =
     H.span [ A.style [ ( "opacity", "0" ), ( "font-size", "0" ), ( "white-space", "pre" ) ] ] [ H.text str ]
 
 
-viewSideArea : Route.HistoryParams -> Instance -> Time.Time -> H.Html msg
-viewSideArea qs instance dur =
-    H.li [] [ maskedText "     * ", viewSideAreaName qs (Just instance), H.text <| " | " ++ formatDuration dur ]
-
-
-viewRunBody : Run.Run -> List (H.Html msg)
-viewRunBody run =
-    -- [ viewInstance run.first.instance
-    [ H.text "TODO remove me"
-    , H.text <| " | " ++ formatDurationSet (Run.durationSet run)
-
-    -- , H.ul [] (List.map (uncurry viewSideArea) (Run.durationPerSideArea run))
-    ]
-
-
-viewRun : Run.Run -> H.Html msg
-viewRun run =
-    viewRunBody run
-        |> (++)
-            [ maskedText "  * "
-            , viewDate run.last.leftAt
-            , H.text " | "
-            ]
-        |> H.li []
-
-
-viewResults : Model -> H.Html msg
-viewResults model =
-    let
-        today =
-            Run.filterToday model.now model.runs
-    in
-        H.div []
-            [ H.br [] []
-
-            -- , H.p [] [ H.text "You last entered: ", viewInstance model.instance.val ]
-            , H.p []
-                [ H.text <| "You're now mapping in: "
-                , case Run.current model.now model.instance model.runState of
-                    Nothing ->
-                        H.span [ A.title "Slacker." ] [ H.text "(none)" ]
-
-                    Just run ->
-                        H.span [] (viewRunBody run)
-                ]
-            , H.p [] [ H.text <| "Today: " ++ toString (List.length today) ++ " finished runs" ]
-            , H.ul []
-                [ H.li [] [ maskedText "  * ", H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet today) ]
-                , H.li [] [ maskedText "  * ", H.text <| "Average: " ++ formatDurationSet (Run.meanDurationSet today) ]
-                ]
-            , H.br [] []
-            , H.p [] [ H.text <| "All-time: " ++ toString (List.length model.runs) ++ " finished runs" ]
-            , H.ul []
-                [ H.li [] [ maskedText "  * ", H.text <| "Total: " ++ formatDurationSet (Run.totalDurationSet model.runs) ]
-                , H.li [] [ maskedText "  * ", H.text <| "Average: " ++ formatDurationSet (Run.meanDurationSet model.runs) ]
-                ]
-            , H.br [] []
-            , H.p [] [ H.text <| "Your last " ++ toString (min 100 <| List.length model.runs) ++ " runs: " ]
-
-            -- TODO this is a long list. Use HTML.Keyed to make updates more efficient
-            , H.ul [] (List.map viewRun <| List.take 100 model.runs)
-            ]
-
-
-viewMain : Model -> H.Html Msg
-viewMain model =
-    case model.progress of
-        Nothing ->
-            -- waiting for file input, nothing to show yet
-            H.div [] []
-
-        Just p ->
-            H.div [] <|
-                (if Model.isProgressDone p then
-                    -- all done!
-                    [ viewResults model ]
-                 else
-                    []
-                )
-                    ++ [ viewProgress p ]
-
-
 selfUrl =
     "https://mapwatch.github.io"
 
@@ -319,15 +188,4 @@ viewHeader =
             ]
         , H.small []
             [ H.text " - automatically time your Path of Exile map clears" ]
-        ]
-
-
-view : Model -> H.Html Msg
-view model =
-    H.div []
-        [ viewHeader
-        , View.Nav.view <| Just model.route
-        , View.Setup.view model
-        , viewParseError model.parseError
-        , viewMain model
         ]
