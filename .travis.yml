@@ -39,3 +39,4 @@ deploy:
       #- dist/Mapwatch-*-mac.zip
     on:
       branch: master
+      tags: true
