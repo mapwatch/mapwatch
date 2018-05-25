@@ -21,7 +21,7 @@ entries =
       )
     , ( ymd "2018/05/23"
       , [ [ H.text "Initial release and "
-          , H.a [ A.href "https://www.reddit.com/r/pathofexile/comments/8lnctd/mapwatch_a_new_tool_to_automatically_time_your/" ] [ H.text "announcement." ]
+          , H.a [ A.target "_blank", A.href "https://www.reddit.com/r/pathofexile/comments/8lnctd/mapwatch_a_new_tool_to_automatically_time_your/" ] [ H.text "announcement." ]
           ]
         ]
       )
