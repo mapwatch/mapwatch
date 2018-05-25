@@ -18,6 +18,7 @@ var app = Elm.Main.fullscreen({
   tickOffset: tickOffset,
   isBrowserSupported: !!window.FileReader,
   // isBrowserSupported: false,
+  platform: 'www',
 })
 
 if (qs.example) {

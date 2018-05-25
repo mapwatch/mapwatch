@@ -48,6 +48,7 @@ url name =
         Maybe.map2 fixUrl
             (Dict.get name mapsByName)
             (Dict.get name urlNames)
+            |> Maybe.map ((++) "https:")
 
 
 specialUrlNames =

@@ -1,6 +1,7 @@
 *.swp
 /TODO
 /elm-stuff/
+/node_modules
 /testfiles/
 /dist/
 /.dev
