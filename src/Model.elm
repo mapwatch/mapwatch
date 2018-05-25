@@ -63,7 +63,7 @@ type Msg
     | RecvLogLine String
     | RecvProgress Progress
     | Navigate Navigation.Location
-    | MapsSearch String
+    | MapsSearch Route.MapsParams
     | HistorySearch Route.HistoryParams
 
 
@@ -88,7 +88,7 @@ initModel flags route =
 
 
 init flags loc =
-    ( initModel flags (Route.parse loc |> Debug.log "navigate:init"), Cmd.none )
+    ( initModel flags (Route.parse loc), Cmd.none )
 
 
 updateLine : LogLine.Line -> Model -> Model
@@ -179,9 +179,9 @@ update msg ({ config } as model) =
                 Err _ ->
                     ( model, Cmd.none )
 
-        MapsSearch q ->
+        MapsSearch ps ->
             ( model
-            , Route.Maps (Route.MapsParams (Just q))
+            , Route.Maps ps
                 |> Route.stringify
                 -- |> Debug.log "maps-search"
                 |> Navigation.modifyUrl

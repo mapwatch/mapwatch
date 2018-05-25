@@ -62,18 +62,18 @@ search q ms =
 viewMain : Route.MapsParams -> Model -> H.Html Msg
 viewMain params model =
     H.div []
-        [ viewSearch [ A.placeholder "map name" ] MapsSearch params.search
+        [ viewSearch [ A.placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
         , MapList.mapList
             |> search params.search
-            |> Run.groupMapNames model.runs
+            |> Run.groupMapNames (Run.filterBetween params model.runs)
             |> List.reverse
-            |> List.map (uncurry viewMap)
+            |> List.map (uncurry <| viewMap params)
             |> \rows -> H.table [ A.class "by-map" ] [ H.body [] rows ]
         ]
 
 
-viewMap : MapList.Map -> List Run -> H.Html msg
-viewMap map runs =
+viewMap : Route.MapsParams -> MapList.Map -> List Run -> H.Html msg
+viewMap qs map runs =
     let
         durs =
             Run.meanDurationSet runs
@@ -91,7 +91,7 @@ viewMap map runs =
             List.length runs
     in
         H.tr []
-            ([ H.td [ A.class "zone" ] [ viewMapName map ]
+            ([ H.td [ A.class "zone" ] [ viewMapName qs map ]
              , H.td [] [ H.text <| "(T" ++ toString map.tier ++ ")" ]
              , H.td [] [ H.text <| formatDuration durs.start ++ " per map" ]
              , H.td [] [ H.text <| toString (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
@@ -102,6 +102,6 @@ viewMap map runs =
             )
 
 
-viewMapName : MapList.Map -> H.Html msg
-viewMapName map =
-    H.a [ Route.href <| Route.History <| Route.HistoryParams 0 (Just map.name) Nothing ] [ Icon.mapOrBlank map.name, H.text map.name ]
+viewMapName : Route.MapsParams -> MapList.Map -> H.Html msg
+viewMapName qs map =
+    H.a [ Route.href <| Route.History { page = 0, search = Just map.name, sort = Nothing, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank map.name, H.text map.name ]

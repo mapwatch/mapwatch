@@ -14,19 +14,19 @@ import View.History
 import View.Icon as Icon
 
 
-view : Model -> H.Html Msg
-view model =
+view : Route.TimerParams -> Model -> H.Html Msg
+view qs model =
     H.div []
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model
         , viewParseError model.parseError
-        , viewBody model
+        , viewBody qs model
         ]
 
 
-viewBody : Model -> H.Html msg
-viewBody model =
+viewBody : Route.TimerParams -> Model -> H.Html msg
+viewBody qs model =
     case model.progress of
         Nothing ->
             -- waiting for file input, nothing to show yet
@@ -36,61 +36,83 @@ viewBody model =
             H.div [] <|
                 (if Model.isProgressDone p then
                     -- all done!
-                    [ viewMain model ]
+                    [ viewMain qs model ]
                  else
                     [ viewProgress p ]
                 )
 
 
-viewMain : Model -> H.Html msg
-viewMain model =
+viewMain : Route.TimerParams -> Model -> H.Html msg
+viewMain qs model =
     let
-        today =
-            Run.filterToday model.now model.runs
-
         run =
             Run.current model.now model.instance model.runState
 
+        hideEarlierButton =
+            H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Just model.now } ] [ Icon.fas "eye-slash", H.text " Hide earlier maps" ]
+
+        hqs =
+            { search = Nothing, page = 0, sort = Nothing, after = Nothing, before = Nothing }
+
+        ( sessname, runs, sessionButtons ) =
+            case qs.after of
+                Nothing ->
+                    ( "today"
+                    , Run.filterToday model.now model.runs
+                    , [ hideEarlierButton
+                      ]
+                    )
+
+                Just _ ->
+                    ( "this session"
+                    , Run.filterBetween { before = Nothing, after = qs.after }
+                        ((Maybe.withDefault [] <| Maybe.map List.singleton run) ++ model.runs)
+                    , [ H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Nothing } ] [ Icon.fas "eye", H.text " Unhide all" ]
+                      , hideEarlierButton
+                      , H.a [ A.class "button", Route.href <| Route.History { hqs | after = qs.after, before = Just model.now } ] [ Icon.fas "camera", H.text " Snapshot history" ]
+                      ]
+                    )
+
         history =
-            List.take 5 <|
-                (Maybe.withDefault [] <| Maybe.map List.singleton run)
-                    -- ++ model.runs
-                    ++ today
+            List.take 5 runs
 
         historyTable =
             H.table [ A.class "timer history" ]
-                [ H.tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False }) <| history)
-                , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ H.a [ Route.href Route.HistoryRoot ] [ Icon.fas "history", H.text " History" ] ] ] ]
+                [ H.tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False } hqs) <| history)
+                , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ H.a [ Route.href <| Route.History { hqs | after = qs.after } ] [ Icon.fas "history", H.text " History" ] ] ] ]
                 ]
-    in
-        case run of
-            Nothing ->
-                H.div []
-                    [ viewTimer Nothing
-                    , H.table [ A.class "timer-details" ]
-                        [ H.tbody []
-                            [ H.tr [] [ H.td [] [ H.text "Not mapping" ], H.td [] [] ]
-                            , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance model.instance.val ] ]
-                            , H.tr [] [ H.td [] [ H.text "Maps done today: " ], H.td [] [ H.text <| toString <| List.length today ] ]
-                            ]
-                        ]
-                    , historyTable
-                    ]
 
-            Just run ->
-                let
-                    d =
-                        Run.durationSet run
-                in
-                    H.div []
-                        [ viewTimer <| Just d.all
-                        , H.table [ A.class "timer-details" ]
-                            [ H.tr [] [ H.td [] [ H.text "Mapping in: " ], H.td [] [ viewInstance run.first.instance ] ]
-                            , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance model.instance.val ] ]
-                            , H.tr [] [ H.td [] [ H.text "Maps done today: " ], H.td [] [ H.text <| toString <| List.length today ] ]
-                            ]
-                        , historyTable
-                        ]
+        ( timer, mappingNow ) =
+            case run of
+                Just run ->
+                    ( Just (Run.durationSet run).all
+                    , [ H.td [] [ H.text "Mapping in: " ], H.td [] [ viewInstance hqs run.first.instance ] ]
+                    )
+
+                Nothing ->
+                    ( Nothing
+                    , [ H.td [] [ H.text "Not mapping" ]
+                      , H.td [] []
+                      ]
+                    )
+    in
+        H.div []
+            [ viewTimer timer
+            , H.table [ A.class "timer-details" ]
+                [ H.tbody []
+                    [ H.tr [] mappingNow
+                    , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance hqs model.instance.val ] ]
+                    , H.tr [] [ H.td [] [ H.text <| "Maps done " ++ sessname ++ ": " ], H.td [] [ H.text <| toString <| List.length runs ] ]
+                    , H.tr [ A.class "session-buttons" ]
+                        (if qs.enableSession then
+                            [ H.td [ A.colspan 2 ] sessionButtons ]
+                         else
+                            []
+                        )
+                    ]
+                ]
+            , historyTable
+            ]
 
 
 viewTimer : Maybe Time.Time -> H.Html msg

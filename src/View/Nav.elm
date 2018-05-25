@@ -1,90 +1,102 @@
-module View.Nav exposing (view, viewDebug)
+module View.Nav exposing (view)
 
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Model.Route as Route exposing (Route(..), HistoryParams, MapsParams)
+import Model.Route as Route exposing (Route(..), HistoryParams, MapsParams, timerParams0, historyParams0, mapsParams0)
 import View.Icon as Icon
+import Date as Date exposing (Date)
 
 
-sourceUrl =
-    "https://www.github.com/mapwatch/mapwatch"
+view : Maybe Route -> H.Html msg
+view active =
+    H.nav []
+        [ timerLink active
+        , historyLink active
+        , mapsLink active
+        , changelogLink
+        , sourceLink
+        ]
 
 
-viewLinks : List ( List (H.Html msg), Route ) -> Maybe Route -> H.Html msg
-viewLinks links active =
-    links
-        |> List.map (uncurry <| viewLink active)
-        -- |> (++) [ H.a [ A.target "_blank", A.href sourceUrl ] [ maskedText " | [", H.text "Source code", maskedText <| "](" ++ sourceUrl ++ ")" ] ]
-        |> (\links ->
-                links
-                    ++ [ H.a [ A.target "_blank", A.href sourceUrl, A.class "button inactive" ]
-                            [ Icon.fas "code", H.text " Code" ]
-
-                       -- [ fab "github", H.text " Source code" ]
-                       ]
-           )
-        |> H.nav []
+inactiveCls =
+    A.class "inactive button"
 
 
-links : List ( List (H.Html msg), Route )
-links =
-    [ ( [ Icon.fas "stopwatch", H.text " Timer" ], Timer )
-    , ( [ Icon.fas "history", H.text " History" ], HistoryRoot )
-    , ( [ Icon.fas "map", H.text " Maps" ], MapsRoot )
-    , ( [ Icon.fas "newspaper", H.text " Changes" ], Changelog )
-
-    -- , ( H.span [] [H.text "Legacy"], Home )
-    ]
+activeCls =
+    A.class "active button disabled"
 
 
-view =
-    viewLinks links
-
-
-debugLinks =
-    links
-        ++ [ ( [ H.text "Debug" ], Debug )
-           , ( [ H.text "DumpLines" ], DebugDumpLines )
-           ]
-
-
-viewDebug =
-    viewLinks debugLinks
-
-
-viewLink : Maybe Route -> List (H.Html msg) -> Route -> H.Html msg
-viewLink active0 label href0 =
+timerLink : Maybe Route -> H.Html msg
+timerLink active =
     let
-        -- if we've typed a search query, preserve it across nav links
-        searchHref : Maybe String -> Route
-        searchHref search =
-            case href0 of
-                MapsRoot ->
-                    Maps <| MapsParams search
+        ( cls, qs ) =
+            case active of
+                Just (Timer qs) ->
+                    ( activeCls, qs )
 
-                HistoryRoot ->
-                    History <| HistoryParams 0 search Nothing
+                Just (History qs) ->
+                    ( inactiveCls, { timerParams0 | after = qs.after } )
 
-                _ ->
-                    href0
-
-        -- detect active-state for routes with queries
-        ( active, href ) =
-            case active0 of
-                Just (History { search }) ->
-                    ( Just HistoryRoot, searchHref search )
-
-                Just (Maps { search }) ->
-                    ( Just MapsRoot, searchHref search )
+                Just (Maps qs) ->
+                    ( inactiveCls, { timerParams0 | after = qs.after } )
 
                 _ ->
-                    ( active0, href0 )
-
-        cls =
-            if active == Just href0 then
-                "active button disabled"
-            else
-                "inactive button"
+                    ( inactiveCls, { timerParams0 | after = Nothing } )
     in
-        H.a [ Route.href href, A.class cls ] label
+        H.a [ cls, Route.href <| Timer qs ] [ Icon.fas "stopwatch", H.text " Timer" ]
+
+
+historyLink : Maybe Route -> H.Html msg
+historyLink active =
+    let
+        qs0 =
+            Route.HistoryParams 0 Nothing Nothing Nothing Nothing
+
+        ( cls, qs ) =
+            case active of
+                Just (History qs) ->
+                    ( activeCls, qs )
+
+                Just (Timer qs) ->
+                    ( inactiveCls, { qs0 | after = qs.after } )
+
+                Just (Maps qs) ->
+                    ( inactiveCls, { qs0 | search = qs.search, after = qs.after, before = qs.before } )
+
+                _ ->
+                    ( inactiveCls, qs0 )
+    in
+        H.a [ cls, Route.href <| History qs ] [ Icon.fas "history", H.text " History" ]
+
+
+mapsLink : Maybe Route -> H.Html msg
+mapsLink active =
+    let
+        qs0 =
+            Route.MapsParams Nothing Nothing Nothing
+
+        ( cls, qs ) =
+            case active of
+                Just (Maps qs) ->
+                    ( activeCls, qs )
+
+                Just (History qs) ->
+                    ( inactiveCls, { qs0 | search = qs.search, after = qs.after, before = qs.before } )
+
+                Just (Timer qs) ->
+                    ( inactiveCls, { qs0 | after = qs.after } )
+
+                _ ->
+                    ( inactiveCls, qs0 )
+    in
+        H.a [ cls, Route.href <| Maps qs ] [ Icon.fas "map", H.text " Maps" ]
+
+
+changelogLink =
+    H.a [ inactiveCls, Route.href <| Changelog ] [ Icon.fas "newspaper", H.text " Changes" ]
+
+
+sourceLink =
+    H.a [ A.target "_blank", A.href "https://www.github.com/mapwatch/mapwatch", inactiveCls ]
+        [ Icon.fas "code", H.text " Code" ]

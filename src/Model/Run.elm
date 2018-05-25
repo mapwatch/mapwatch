@@ -13,6 +13,8 @@ module Model.Run
         , bestDuration
         , search
         , sort
+        , isBetween
+        , filterBetween
         , groupMapNames
         , filterToday
         , current
@@ -177,6 +179,26 @@ sortParsed field dir runs =
                 else
                     identity
                )
+
+
+isBetween : { a | after : Maybe Date.Date, before : Maybe Date.Date } -> Run -> Bool
+isBetween { after, before } run =
+    let
+        at =
+            -- Date.toTime run.last.leftAt
+            Date.toTime run.first.joinedAt
+
+        isAfter =
+            Maybe.withDefault True <| Maybe.map (Date.toTime >> (>=) at) after
+
+        isBefore =
+            Maybe.withDefault True <| Maybe.map (Date.toTime >> (<=) at) before
+    in
+        isAfter && isBefore
+
+
+filterBetween qs =
+    List.filter (isBetween qs)
 
 
 stateDuration : Date.Date -> State -> Maybe Time.Time

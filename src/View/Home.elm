@@ -37,12 +37,13 @@ formatInstance instance =
             "(none)"
 
 
-viewInstance : Maybe Instance -> H.Html msg
-viewInstance instance =
+viewInstance : Route.HistoryParams -> Maybe Instance -> H.Html msg
+viewInstance qs instance =
     case instance of
         Just i ->
             if Zone.isMap i.zone then
-                H.a [ Route.href (Route.History <| Route.HistoryParams 0 (Just i.zone) Nothing), A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
+                -- TODO preserve before/after
+                H.a [ Route.href <| Route.History { qs | search = Just i.zone }, A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
             else
                 H.span [ A.title i.addr ] [ H.text i.zone ]
 
@@ -204,14 +205,14 @@ formatSideAreaType instance =
             Just <| "Elder Guardian: The " ++ toString guardian
 
 
-viewSideAreaName : Maybe Instance -> H.Html msg
-viewSideAreaName instance =
+viewSideAreaName : Route.HistoryParams -> Maybe Instance -> H.Html msg
+viewSideAreaName qs instance =
     case formatSideAreaType instance of
         Nothing ->
-            viewInstance instance
+            viewInstance qs instance
 
         Just str ->
-            H.span [] [ H.text <| str ++ " (", viewInstance instance, H.text ")" ]
+            H.span [] [ H.text <| str ++ " (", viewInstance qs instance, H.text ")" ]
 
 
 maskedText : String -> H.Html msg
@@ -220,16 +221,18 @@ maskedText str =
     H.span [ A.style [ ( "opacity", "0" ), ( "font-size", "0" ), ( "white-space", "pre" ) ] ] [ H.text str ]
 
 
-viewSideArea : Instance -> Time.Time -> H.Html msg
-viewSideArea instance dur =
-    H.li [] [ maskedText "     * ", viewSideAreaName (Just instance), H.text <| " | " ++ formatDuration dur ]
+viewSideArea : Route.HistoryParams -> Instance -> Time.Time -> H.Html msg
+viewSideArea qs instance dur =
+    H.li [] [ maskedText "     * ", viewSideAreaName qs (Just instance), H.text <| " | " ++ formatDuration dur ]
 
 
 viewRunBody : Run.Run -> List (H.Html msg)
 viewRunBody run =
-    [ viewInstance run.first.instance
+    -- [ viewInstance run.first.instance
+    [ H.text "TODO remove me"
     , H.text <| " | " ++ formatDurationSet (Run.durationSet run)
-    , H.ul [] (List.map (uncurry viewSideArea) (Run.durationPerSideArea run))
+
+    -- , H.ul [] (List.map (uncurry viewSideArea) (Run.durationPerSideArea run))
     ]
 
 
@@ -252,7 +255,8 @@ viewResults model =
     in
         H.div []
             [ H.br [] []
-            , H.p [] [ H.text "You last entered: ", viewInstance model.instance.val ]
+
+            -- , H.p [] [ H.text "You last entered: ", viewInstance model.instance.val ]
             , H.p []
                 [ H.text <| "You're now mapping in: "
                 , case Run.current model.now model.instance model.runState of

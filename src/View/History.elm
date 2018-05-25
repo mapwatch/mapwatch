@@ -74,10 +74,17 @@ isValidPage page model =
 viewMain : Route.HistoryParams -> Model -> H.Html Msg
 viewMain params model =
     let
+        currentRun : Maybe Run
+        currentRun =
+            -- include the current run if we're viewing a snapshot
+            Maybe.andThen (\b -> Run.current b model.instance model.runState) params.before
+
         runs =
             model.runs
-                |> (Maybe.withDefault identity <| Maybe.map Run.search <| params.search)
-                |> (Maybe.withDefault identity <| Maybe.map Run.sort <| params.sort)
+                |> (++) (currentRun |> Maybe.map List.singleton |> Maybe.withDefault [])
+                |> (Maybe.withDefault identity <| Maybe.map Run.search params.search)
+                |> Run.filterBetween params
+                |> (Maybe.withDefault identity <| Maybe.map Run.sort params.sort)
     in
         H.div []
             [ H.div []
@@ -94,27 +101,32 @@ viewMain params model =
                     )
                     params.search
                 ]
-            , viewStatsTable model.now runs
+            , viewStatsTable params model.now runs
             , viewHistoryTable params runs
             ]
 
 
-viewStatsTable : Date.Date -> List Run -> H.Html msg
-viewStatsTable now runs =
+viewStatsTable : Route.HistoryParams -> Date.Date -> List Run -> H.Html msg
+viewStatsTable qs now runs =
     H.table [ A.class "history-stats" ]
         [ H.tbody []
-            (List.concat
-                [ viewStatsRows "Today" (Run.filterToday now runs)
-                , viewStatsRows "All-time" runs
-                ]
+            (case ( qs.after, qs.before ) of
+                ( Nothing, Nothing ) ->
+                    List.concat
+                        [ viewStatsRows (H.text "Today") (Run.filterToday now runs)
+                        , viewStatsRows (H.text "All-time") runs
+                        ]
+
+                _ ->
+                    viewStatsRows (H.text "This session") (Run.filterBetween qs runs)
             )
         ]
 
 
-viewStatsRows : String -> List Run -> List (H.Html msg)
+viewStatsRows : H.Html msg -> List Run -> List (H.Html msg)
 viewStatsRows title runs =
     [ H.tr []
-        [ H.th [ A.class "title" ] [ H.text <| title ]
+        [ H.th [ A.class "title" ] [ title ]
         , H.td [ A.colspan 10, A.class "maps-completed" ] [ H.text <| toString (List.length runs) ++ pluralize " map" " maps" (List.length runs) ++ " completed" ]
         ]
     , H.tr []
@@ -147,7 +159,7 @@ viewStatsDurations =
 
 
 viewPaginator : Route.HistoryParams -> Int -> H.Html msg
-viewPaginator { page, search, sort } numItems =
+viewPaginator ({ page } as ps) numItems =
     let
         firstVisItem =
             clamp 1 numItems <| (page * perPage) + 1
@@ -165,7 +177,7 @@ viewPaginator { page, search, sort } numItems =
             numPages numItems - 1
 
         href i =
-            Route.href <| Route.History { page = i, search = search, sort = sort }
+            Route.href <| Route.History { ps | page = i }
 
         ( firstLink, prevLink ) =
             if page /= 0 then
@@ -205,7 +217,7 @@ viewHistoryTable ({ page } as params) queryRuns =
 
                 -- , viewHistoryHeader
                 ]
-            , H.tbody [] (pageRuns |> List.map (viewHistoryRun { showDate = True }) |> List.concat)
+            , H.tbody [] (pageRuns |> List.map (viewHistoryRun { showDate = True } params) |> List.concat)
             , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ] ]
             ]
 
@@ -234,9 +246,9 @@ type alias HistoryRowConfig =
     { showDate : Bool }
 
 
-viewHistoryRun : HistoryRowConfig -> Run -> List (H.Html msg)
-viewHistoryRun config r =
-    viewHistoryMainRow config r :: (List.map (uncurry <| viewHistorySideAreaRow config) (Run.durationPerSideArea r))
+viewHistoryRun : HistoryRowConfig -> Route.HistoryParams -> Run -> List (H.Html msg)
+viewHistoryRun config qs r =
+    viewHistoryMainRow config qs r :: (List.map (uncurry <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r))
 
 
 viewDurationSet : Run.DurationSet -> List (H.Html msg)
@@ -260,8 +272,8 @@ viewDurationSet d =
            ]
 
 
-viewHistoryMainRow : HistoryRowConfig -> Run -> H.Html msg
-viewHistoryMainRow { showDate } r =
+viewHistoryMainRow : HistoryRowConfig -> Route.HistoryParams -> Run -> H.Html msg
+viewHistoryMainRow { showDate } qs r =
     let
         d =
             Run.durationSet r
@@ -272,14 +284,14 @@ viewHistoryMainRow { showDate } r =
               else
                 []
              )
-                ++ [ H.td [ A.class "zone" ] [ viewInstance r.first.instance ]
+                ++ [ H.td [ A.class "zone" ] [ viewInstance qs r.first.instance ]
                    ]
                 ++ viewDurationSet d
             )
 
 
-viewHistorySideAreaRow : HistoryRowConfig -> Instance -> Time.Time -> H.Html msg
-viewHistorySideAreaRow { showDate } instance d =
+viewHistorySideAreaRow : HistoryRowConfig -> Route.HistoryParams -> Instance -> Time.Time -> H.Html msg
+viewHistorySideAreaRow { showDate } qs instance d =
     H.tr [ A.class "side-area" ]
         ((if showDate then
             [ H.td [ A.class "date" ] [] ]
@@ -287,7 +299,7 @@ viewHistorySideAreaRow { showDate } instance d =
             []
          )
             ++ [ H.td [] []
-               , H.td [ A.class "zone", A.colspan 6 ] [ viewSideAreaName (Just instance) ]
+               , H.td [ A.class "zone", A.colspan 6 ] [ viewSideAreaName qs <| Just instance ]
                , H.td [ A.class "side-dur" ] [ viewDuration d ]
                , H.td [ A.class "portals" ] []
                , H.td [ A.class "town-pct" ] []

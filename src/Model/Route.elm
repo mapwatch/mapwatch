@@ -1,4 +1,17 @@
-module Model.Route exposing (Route(..), HistoryParams, MapsParams, parse, stringify, href)
+module Model.Route
+    exposing
+        ( Route(..)
+        , HistoryParams
+        , historyParams0
+        , MapsParams
+        , mapsParams0
+        , TimerParams
+        , timerParams0
+        , parse
+        , stringify
+        , href
+        , dateToString
+        )
 
 import Html as H
 import Html.Attributes as A
@@ -6,23 +19,39 @@ import Navigation
 import UrlParser as P exposing ((</>), (<?>))
 import Http
 import Regex
+import Date as Date exposing (Date)
 
 
 type alias HistoryParams =
-    { page : Int, search : Maybe String, sort : Maybe String }
+    { page : Int, search : Maybe String, sort : Maybe String, after : Maybe Date, before : Maybe Date }
+
+
+historyParams0 =
+    HistoryParams 0 Nothing Nothing Nothing Nothing
 
 
 type alias MapsParams =
-    { search : Maybe String }
+    { search : Maybe String, after : Maybe Date, before : Maybe Date }
+
+
+mapsParams0 =
+    MapsParams Nothing Nothing Nothing
+
+
+type alias TimerParams =
+    { after : Maybe Date, enableSession : Bool }
+
+
+timerParams0 =
+    TimerParams Nothing False
 
 
 type Route
-    = Home
-    | HistoryRoot
+    = HistoryRoot
     | History HistoryParams
     | MapsRoot
     | Maps MapsParams
-    | Timer
+    | Timer TimerParams
     | Changelog
     | Debug
     | DebugDumpLines
@@ -36,6 +65,7 @@ parse loc =
         |> hashQS
         |> P.parseHash parser
         |> Maybe.withDefault (NotFound loc)
+        |> Debug.log "navigate to"
 
 
 hashQS : Navigation.Location -> Navigation.Location
@@ -66,19 +96,72 @@ decodeString =
         P.string
 
 
+dateFromString : String -> Maybe Date
+dateFromString =
+    Result.toMaybe << Date.fromString
+
+
+dateToString : Date -> String
+dateToString d =
+    -- compatible with dateFromString, identical to <input type="datetime-local">, and also reasonably short/user-readable
+    ""
+        -- autoformatter consistency
+        ++ (String.join "-" <|
+                List.map (\fn -> fn d)
+                    [ toString << Date.year
+                    , String.pad 2 '0' << toString << monthToInt << Date.month
+                    , String.pad 2 '0' << toString << Date.day
+                    ]
+           )
+        ++ "T"
+        ++ (String.join ":" <|
+                List.map (\fn -> String.pad 2 '0' <| toString <| fn d)
+                    [ Date.hour
+                    , Date.minute
+                    , Date.second
+                    ]
+           )
+
+
+dateParam : String -> P.QueryParser (Maybe Date -> a) a
+dateParam name =
+    P.customParam name <| Maybe.andThen dateFromString
+
+
+boolParam : String -> P.QueryParser (Bool -> a) a
+boolParam name =
+    let
+        parse : String -> Bool
+        parse s =
+            not <| s == "" || s == "0" || s == "no" || s == "n" || s == "False" || s == "false"
+    in
+        P.customParam name (Maybe.withDefault False << Maybe.map parse)
+
+
 parser : P.Parser (Route -> a) a
 parser =
     P.oneOf
-        [ P.map Timer <| P.top
-        , P.map Timer <| P.s "timer"
+        [ P.map Timer <| P.map TimerParams <| P.top <?> dateParam "a" <?> boolParam "enableSession"
+        , P.map Timer <| P.map TimerParams <| P.s "timer" <?> dateParam "a" <?> boolParam "enableSession"
 
         -- , P.map HistoryRoot <| P.s "history"
-        , P.map History <| P.map (\p -> HistoryParams (Maybe.withDefault 0 p)) <| P.s "history" <?> P.intParam "p" <?> P.stringParam "q" <?> P.stringParam "o"
+        , P.map History <|
+            P.map (\p -> HistoryParams (Maybe.withDefault 0 p)) <|
+                P.s "history"
+                    <?> P.intParam "p"
+                    <?> P.stringParam "q"
+                    <?> P.stringParam "o"
+                    <?> dateParam "a"
+                    <?> dateParam "b"
 
         -- , P.map MapsRoot <| P.s "map"
-        , P.map Maps <| P.map MapsParams <| P.s "map" <?> P.stringParam "q"
+        , P.map Maps <|
+            P.map MapsParams <|
+                P.s "map"
+                    <?> P.stringParam "q"
+                    <?> dateParam "a"
+                    <?> dateParam "b"
         , P.map Changelog <| P.s "changelog"
-        , P.map Home <| P.s "legacy"
         , P.map Debug <| P.s "debug"
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
         , P.map DebugMapIcons <| P.s "debug" </> P.s "mapicons"
@@ -106,33 +189,40 @@ encodeQS pairs0 =
 stringify : Route -> String
 stringify route =
     case route of
-        Home ->
-            "#/legacy"
-
         HistoryRoot ->
             "#/history"
 
-        History { page, search, sort } ->
+        History qs ->
             "#/history"
                 ++ encodeQS
                     [ ( "p"
-                      , if page == 0 then
+                      , if qs.page == 0 then
                             Nothing
                         else
-                            Just <| toString page
+                            Just <| toString qs.page
                       )
-                    , ( "q", search )
-                    , ( "o", sort )
+                    , ( "q", qs.search )
+                    , ( "o", qs.sort )
+                    , ( "a", Maybe.map dateToString qs.after )
+                    , ( "b", Maybe.map dateToString qs.before )
                     ]
 
         MapsRoot ->
             "#/map"
 
-        Maps { search } ->
-            "#/map" ++ encodeQS [ ( "q", search ) ]
+        Maps qs ->
+            "#/map"
+                ++ encodeQS
+                    [ ( "q", qs.search )
+                    , ( "a", Maybe.map dateToString qs.after )
+                    , ( "b", Maybe.map dateToString qs.before )
+                    ]
 
-        Timer ->
+        Timer qs ->
             "#/"
+                ++ encodeQS
+                    [ ( "a", Maybe.map dateToString qs.after )
+                    ]
 
         Changelog ->
             "#/changelog"
@@ -153,3 +243,43 @@ stringify route =
 href : Route -> H.Attribute msg
 href =
     A.href << stringify
+
+
+monthToInt : Date.Month -> Int
+monthToInt m =
+    case m of
+        Date.Jan ->
+            1
+
+        Date.Feb ->
+            2
+
+        Date.Mar ->
+            3
+
+        Date.Apr ->
+            4
+
+        Date.May ->
+            5
+
+        Date.Jun ->
+            6
+
+        Date.Jul ->
+            7
+
+        Date.Aug ->
+            8
+
+        Date.Sep ->
+            9
+
+        Date.Oct ->
+            10
+
+        Date.Nov ->
+            11
+
+        Date.Dec ->
+            12

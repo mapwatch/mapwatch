@@ -123,6 +123,13 @@ table.timer-details td:first-child {
 table.timer-details td {
   width: 50%;
 }
+table.timer-details .session-buttons td {
+  text-align: center;
+}
+table.timer-details .session-buttons .button {
+  margin-left: 1em;
+  margin-right: 1em;
+}
 
 .map-icon {
   height: 1em;
