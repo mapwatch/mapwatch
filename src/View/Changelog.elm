@@ -33,6 +33,13 @@ view route =
     H.div []
         [ viewHeader
         , View.Nav.view <| Just route
+        , H.div []
+            [ H.text "Is something broken? "
+            , H.a [ A.href "https://github.com/mapwatch/mapwatch/issues", A.target "_blank" ] [ H.text "File an issue on GitHub" ]
+            , H.text " or "
+            , H.a [ A.href "https://www.reddit.com/u/kawaritai", A.target "_blank" ] [ H.text "message the developer on Reddit" ]
+            , H.text "."
+            ]
         , H.ul [] (List.map (uncurry viewEntry) entries)
         ]
 
