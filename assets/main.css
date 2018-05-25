@@ -86,9 +86,6 @@ table.history-stats th.title {
 nav > a {
   margin: 1em;
 }
-nav > a:hover {
-  border-bottom: 0;
-}
 nav .inactive {
   opacity: 0.5;
   text-decoration: none;
@@ -155,4 +152,13 @@ table.timer-details .session-buttons .button {
 
 table.by-map {
   text-align: right;
+}
+
+a:hover {
+  /* without this, they move the entire ui below them down */
+  border-bottom: 0;
+}
+a.button:hover {
+  /* ...except this one */
+  border-bottom: 1px solid #eb99a1;
 }
