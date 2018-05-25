@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+  - "8"
 
 # https://8thlight.com/blog/rob-looby/2016/04/07/caching-elm-builds-on-travis-ci.html
 cache:
