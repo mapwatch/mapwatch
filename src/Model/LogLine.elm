@@ -39,8 +39,8 @@ parseLogInfo raw =
                     Nothing
 
         parseEntered =
-            case regexParseFirst "You have entered (.*)\\.$" raw |> Maybe.map .submatches of
-                Just [ Just zone ] ->
+            case regexParseFirst "You have entered (.*)\\.$|你已進入：(.*)。$" raw |> Maybe.map (.submatches >> Maybe.Extra.values) of
+                Just (zone :: _) ->
                     Just <| YouHaveEntered zone
 
                 _ ->

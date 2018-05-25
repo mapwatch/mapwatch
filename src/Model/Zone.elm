@@ -2,7 +2,8 @@ module Model.Zone exposing (Type(..), SideZoneType(..), Master(..), zoneType, is
 
 import Set
 import Dict
-import Model.MapList exposing (mapList)
+import Maybe.Extra
+import Model.MapList exposing (mapList, zoneAliases)
 
 
 type Type
@@ -142,8 +143,8 @@ hideouts =
         [ "Unearthed Hideout", "Enlightened Hideout", "Coastal Hideout", "Overgrown Hideout", "Lush Hideout", "Battle-scarred Hideout", "Backstreet Hideout", "Immaculate Hideout" ]
 
 
-towns : Set.Set String
-towns =
+englishTowns : Set.Set String
+englishTowns =
     Set.fromList
         -- https://pathofexile.gamepedia.com/Town
         -- JSON.stringify($.map($('li', $('ul')[0]), function(td){return td.innerText.split(' - ')[1]}))
@@ -154,6 +155,21 @@ towns =
         -- special case: bestiary league zones shouldn't interrupt a map run, so count them as towns, even though they allow fighting
         -- https://pathofexile.gamepedia.com/The_Menagerie
         |> Set.union (Set.fromList [ "The Menagerie", "Menagerie Caverns", "Menagerie Depths", "Menagerie Sands", "Menagerie Wilds" ])
+
+
+towns : Set.Set String
+towns =
+    zoneAliases
+        |> List.map
+            (\( nonenglish, english ) ->
+                if Set.member english englishTowns then
+                    Just nonenglish
+                else
+                    Nothing
+            )
+        |> Maybe.Extra.values
+        |> Set.fromList
+        |> Set.union englishTowns
 
 
 maps : Set.Set String

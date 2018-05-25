@@ -1,11 +1,32 @@
-module Model.MapList exposing (Map, mapList, url)
+module Model.MapList exposing (Map, mapList, url, zoneAliases, zoneAliasesDict)
 
 import Regex
 import Dict as Dict exposing (Dict)
+import Maybe.Extra
 
 
 type alias Map =
     { name : String, tier : Int, unique : Bool }
+
+
+zoneAliasesDict =
+    Dict.fromList zoneAliases
+
+
+englishMapsByName : Dict String Map
+englishMapsByName =
+    englishMapList
+        |> List.map (\m -> ( m.name, m ))
+        |> Dict.fromList
+
+
+mapList : List Map
+mapList =
+    let
+        buildAlias nonenglish english =
+            Dict.get english englishMapsByName |> Maybe.map (\m -> { m | name = nonenglish })
+    in
+        englishMapList ++ (List.map (uncurry buildAlias) zoneAliases |> Maybe.Extra.values)
 
 
 mapsByName : Dict String Map
@@ -15,8 +36,20 @@ mapsByName =
         |> Dict.fromList
 
 
-urlNames =
+englishUrlNames =
     Dict.union specialUrlNames rawUrlNames
+
+
+urlNames =
+    zoneAliases
+        |> List.map
+            (\( nonenglish, english ) ->
+                Dict.get english englishUrlNames
+                    |> Maybe.map ((,) nonenglish)
+            )
+        |> Maybe.Extra.values
+        |> Dict.fromList
+        |> Dict.union englishUrlNames
 
 
 url : String -> Maybe String
@@ -72,7 +105,7 @@ specialUrlNames =
         ]
 
 
-mapList =
+englishMapList =
     -- https://pathofexile.gamepedia.com/Map
     {- in the js console, run:
 
@@ -419,3 +452,203 @@ rawUrlNames =
         , ( "Forge of the Phoenix", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/Phoenix.png" )
         , ( "Vaal Temple", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/VaalTemple3.png" )
         ]
+
+
+zoneAliases =
+    -- support foreign zone names. Ideally we'd have the interface in other languages too, but this is easy to implement.
+    -- chinese from https://docs.google.com/spreadsheets/d/1CsuY6jHhg38qu9k--zlUNTK-AjY5nDPbiFULBM9Uvtw/edit#gid=0
+    [ ( "如履危牆", "Lookout" )
+    , ( "白沙灘頭", "Beach" )
+    , ( "墮影墓場", "Graveyard" )
+    , ( "禁魂炎獄", "Dungeon" )
+    , ( "危城巷弄", "Alleyways" )
+    , ( "穢陰獄牢", "Pen" )
+    , ( "貧瘠之地", "Desert" )
+    , ( "乾枯湖岸", "Arid Lake" )
+    , ( "洪災礦坑", "Flooded Mine" )
+    , ( "惡臭沼地", "Marshes" )
+    , ( "極原冰帽", "Iceberg" )
+    , ( "羈破牢籠", "Cage" )
+    , ( "奇術之泉", "Springs" )
+    , ( "挖掘場", "Excavation" )
+    , ( "荒涼牧野", "Leyline" )
+    , ( "乾潮林地", "Peninsula" )
+    , ( "失落城塢", "Port" )
+    , ( "旱地墓室", "Burial Chambers" )
+    , ( "幽魂監牢", "Cells" )
+    , ( "崩壞長廊", "Arcade" )
+    , ( "危城廣場", "City Square" )
+    , ( "古典密室", "Relic Chambers" )
+    , ( "失序教院", "Courthouse" )
+    , ( "致命岩灘", "Strand" )
+    , ( "禁閉祭壇", "Whakawairua Tuahu" )
+    , ( "古堡", "Chateau" )
+    , ( "幽暗地穴", "Grotto" )
+    , ( "烈陽山丘", "Gorge" )
+    , ( "火山炎域", "Volcano" )
+    , ( "絕望燈塔", "Lighthouse" )
+    , ( "炙陽峽谷", "Canyon" )
+    , ( "寧逸溫房", "Conservatory" )
+    , ( "硫磺蝕岸", "Sulphur Vents" )
+    , ( "幽魂宅邸", "Haunted Mansion" )
+    , ( "冥神之域", "Maze" )
+    , ( "秘密通道", "Channel" )
+    , ( "腐敗下水道", "Toxic Sewer" )
+    , ( "遠古危城", "Ancient City" )
+    , ( "象牙神殿", "Ivory Temple" )
+    , ( "巨蛛巢穴", "Spider Lair" )
+    , ( "熱林塚墓", "Barrows" )
+    , ( "靜縊陵墓", "Mausoleum" )
+    , ( "無疆田野", "Fields" )
+    , ( "劇毒林谷", "Jungle Valley" )
+    , ( "魔靈幻獄", "Phantasmagoria" )
+    , ( "惡靈學院", "Academy" )
+    , ( "驚懼樹叢", "Thicket" )
+    , ( "毒牙海港", "Wharf" )
+    , ( "旱木林地", "Ashen Wood" )
+    , ( "濱海山丘", "Atoll" )
+    , ( "混沌之淵", "Maelström of Chaos" )
+    , ( "晨曦墓地", "Cemetery" )
+    , ( "萬聖之地", "Hallowed Ground" )
+    , ( "濱海幽穴", "Underground Sea" )
+    , ( "喧囂判庭", "Tribunal" )
+    , ( "破碎堡礁", "Coral Ruins" )
+    , ( "熔岩之室", "Lava Chamber" )
+    , ( "神主居所", "Residence" )
+    , ( "濱海堡壘", "Ramparts" )
+    , ( "暮色沙丘", "Dunes" )
+    , ( "艾倫之柱", "Pillars of Arun" )
+    , ( "骨跡陵墓", "Bone Crypt" )
+    , ( "雙炎修道院", "Convent of the Twins' Flame" )
+    , ( "地底之河", "Underground River" )
+    , ( "塞爾．佈雷德狼穴", "Caer Blaidd, Wolfpack's Den" )
+    , ( "迷宮花園", "Gardens" )
+    , ( "異蛛巢穴", "Arachnid Nest" )
+    , ( "遠古市集", "Bazaar" )
+    , ( "實驗居所", "Laboratory" )
+    , ( "病疫林谷", "Infested Valley" )
+    , ( "長草遺跡", "Overgrown Ruin" )
+    , ( "瓦爾金字塔", "Vaal Pyramid" )
+    , ( "阿茲里的秘寶庫", "Vaults of Atziri" )
+    , ( "詭譎晶洞", "Geode" )
+    , ( "軍械庫", "Armoury" )
+    , ( "奇術之庭", "Courtyard" )
+    , ( "維克塔廣場", "The Vinktar Square" )
+    , ( "陰晦泥灘", "Mud Geyser" )
+    , ( "暮光海灘", "Shore" )
+    , ( "賊窩", "Mao Kun" )
+    , ( "晴空幽島", "Tropical Island" )
+    , ( "濕地礦山", "Mineral Pools" )
+    , ( "嬋娟神殿", "Moon Temple" )
+    , ( "暮色神廟", "The Twilight Temple" )
+    , ( "陰暗墓塚", "Sepulchre" )
+    , ( "闇獄尖塔", "Tower" )
+    , ( "死寂泥溝", "Waste Pool" )
+    , ( "海風高原", "Plateau" )
+    , ( "熔火岩灘", "Estuary" )
+    , ( "魔金寶庫", "Vault" )
+    , ( "奪魂之殿", "Temple" )
+    , ( "沉淪之間", "Poorjoy's Asylum" )
+    , ( "競技場", "Arena" )
+    , ( "古博物館", "Museum" )
+    , ( "腐臭迴廊", "The Putrid Cloister" )
+    , ( "墓影書坊", "Scriptorium" )
+    , ( "禁斷圍城", "Siege" )
+    , ( "熾炎船塢", "Shipyard" )
+    , ( "雲頂鐘樓", "Belfry" )
+    , ( "異蛛墓塚", "Arachnid Tomb" )
+    , ( "荒地", "Wasteland" )
+    , ( "苦行之域", "Precinct" )
+    , ( "瘴氣泥沼", "Bog" )
+    , ( "怒浪之港", "Pier" )
+    , ( "惡咒陵墓", "Cursed Crypt" )
+    , ( "懦者的試驗", "The Coward's Trial" )
+    , ( "密林果園", "Orchard" )
+    , ( "月色迴廊", "Promenade" )
+    , ( "元帥殿堂", "Hall of Grandmasters" )
+    , ( "餓獸巢穴", "Lair" )
+    , ( "激戰柱廊", "Colonnade" )
+    , ( "血腥沼澤", "Primordial Pool" )
+    , ( "巨蛛之林", "Spider Forest" )
+    , ( "疾風峽灣", "Coves" )
+    , ( "危機水道", "Waterways" )
+    , ( "鐵鏽工廠", "Factory" )
+    , ( "平頂荒漠", "Mesa" )
+    , ( "巨坑", "Pit" )
+    , ( "不潔教堂", "Defiled Cathedral" )
+    , ( "寒頂之巔", "Summit" )
+    , ( "密草神殿", "Overgrown Shrine" )
+    , ( "輪迴的夢魘", "Acton's Nightmare" )
+    , ( "遺跡廢墟", "Castle Ruins" )
+    , ( "紫晶礦山", "Crystal Ore" )
+    , ( "魅影別墅", "Villa" )
+    , ( "古拷刑室", "Torture Chamber" )
+    , ( "歐霸的咒怨寶庫", "Oba's Cursed Trove" )
+    , ( "魔影墓場", "Necropolis" )
+    , ( "亡者之財", "Death and Taxes" )
+    , ( "古競速場", "Racecourse" )
+    , ( "火山炎口", "Caldera" )
+    , ( "赤貧居所", "Ghetto" )
+    , ( "園林苑", "Park" )
+    , ( "畸形亡域", "Malformation" )
+    , ( "露台花園", "Terrace" )
+    , ( "奇術秘殿", "Shrine" )
+    , ( "古兵工廠", "Arsenal" )
+    , ( "硫磺荒漠", "Desert Spring" )
+    , ( "核心", "Core" )
+    , ( "小決鬥場", "Colosseum" )
+    , ( "尖酸苛泊", "Acid Lakes" )
+    , ( "夜語幽林", "Dark Forest" )
+    , ( "緋紅神殿", "Crimson Temple" )
+    , ( "廣場", "Plaza" )
+    , ( "違禁掘坑", "Dig" )
+    , ( "神域之殿", "Palace" )
+    , ( "岩漿熔湖", "Lava Lake" )
+    , ( "聖殿", "Basilica" )
+    , ( "亞特蘭提斯", "Sunken City" )
+    , ( "危機海礁", "Reef" )
+    , ( "惡臭屍域", "Carcass" )
+    , ( "奇美拉魔坑", "Pit of the Chimera" )
+    , ( "九頭蛇冰窟", "Lair of the Hydra" )
+    , ( "牛頭人謎域", "Maze of the Minotaur" )
+    , ( "火鳳凰熔核", "Forge of the Phoenix" )
+    , ( "瓦爾密殿", "Vaal Temple" )
+    , ( "塑者之界", "The Shaper's Realm" )
+    , ( "誘人的深淵", "The Alluring Abyss" )
+    , ( "生贄之尖", "The Apex of Sacrifice" )
+    , ( "獅眼守望", "Lioneye's Watch" )
+    , ( "森林營地", "The Forest Encampment" )
+    , ( "薩恩營地", "The Sarn Encampment" )
+    , ( "統治者之殿", "Highgate" )
+    , ( "監守高塔", "Overseer's Tower" )
+    , ( "獅眼守望", "Lioneye's Watch" )
+    , ( "橋墩營地", "The Bridge Encampment" )
+    , ( "薩恩營地", "The Sarn Encampment" )
+    , ( "統治者之殿", "Highgate" )
+    , ( "奧瑞亞港口", "Oriath Docks" )
+    , ( "奧瑞亞", "Oriath" )
+    , ( "藏身處 - 樹林（小）", "Unearthed Hideout" )
+    , ( "藏身處 - 圖書館（小）", "Enlightened Hideout" )
+    , ( "藏身處 - 海岸（小）", "Coastal Hideout" )
+    , ( "藏身處 - 花園（小）", "Overgrown Hideout" )
+    , ( "藏身處 - 樹林（小）", "Lush Hideout" )
+    , ( "藏身處 - 戰場遺跡（小）", "Battle-scarred Hideout" )
+    , ( "藏身處 - 貧民窟（小）", "Backstreet Hideout" )
+    , ( "藏身處 - 日耀神殿（小）", "Immaculate Hideout" )
+    , ( "藏身處 - 樹林（中）", "Unearthed Hideout" )
+    , ( "藏身處 - 圖書館（中）", "Enlightened Hideout" )
+    , ( "藏身處 - 海岸（中）", "Coastal Hideout" )
+    , ( "藏身處 - 花園（中）", "Overgrown Hideout" )
+    , ( "藏身處 - 樹林（中）", "Lush Hideout" )
+    , ( "藏身處 - 戰場遺跡（中）", "Battle-scarred Hideout" )
+    , ( "藏身處 - 貧民窟（中）", "Backstreet Hideout" )
+    , ( "藏身處 - 日耀神殿（中）", "Immaculate Hideout" )
+    , ( "藏身處 - 樹林（大）", "Unearthed Hideout" )
+    , ( "藏身處 - 圖書館（大）", "Enlightened Hideout" )
+    , ( "藏身處 - 海岸（大）", "Coastal Hideout" )
+    , ( "藏身處 - 花園（大）", "Overgrown Hideout" )
+    , ( "藏身處 - 樹林（大）", "Lush Hideout" )
+    , ( "藏身處 - 戰場遺跡（大）", "Battle-scarred Hideout" )
+    , ( "藏身處 - 貧民窟（大）", "Backstreet Hideout" )
+    , ( "藏身處 - 日耀神殿（大）", "Immaculate Hideout" )
+    ]

@@ -94,7 +94,7 @@ function readLines(file, config) {
   }
   loop(0)
 }
-var filter = /Connecting to instance server|: You have entered|LOG FILE OPENING/
+var filter = /Connecting to instance server|: You have entered|LOG FILE OPENING|你已進入：/
 // ignore chat messages, don't want people injecting commands.
 // #global, %party, @whisper, $trade, &guild
 // TODO: local has no prefix! `[A-Za-z_\-]+:` might work, needs more testing
