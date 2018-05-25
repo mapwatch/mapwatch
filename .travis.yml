@@ -33,6 +33,9 @@ deploy:
     skip_cleanup: true
     api_key: $GITHUB_TOKEN
     file_glob: true
-    file: dist/mapwatch-linux-x64/**/* # TODO: get wine sorted out and switch me to a windows build
+    file:
+      - dist/Mapwatch-*-linux.AppImage
+      #- dist/Mapwatch-*-win.exe # TODO: not until this thing's truly ready
+      #- dist/Mapwatch-*-mac.zip
     on:
       branch: master

@@ -4,17 +4,34 @@
   "description": "Automatically time your Path of Exile map clears. Electron version.",
   "main": "electron/main.js",
   "scripts": {
-    "_electron-packager": "yarn _build:electron && electron-packager dist/electron mapwatch --platform=$PLATFORM --arch=$ARCH --out=dist",
-    "_build:electron": "./build.sh && rm -rf dist/electron && mkdir -p dist/electron/dist && cp -rp dist/www dist/electron/dist/www && cp -rp electron package.json ./dist/electron",
-    "build:linux": "PLATFORM=linux ARCH=x64 yarn _electron-packager",
-    "build:win32": "PLATFORM=win32 ARCH=x64 yarn _electron-packager",
+    "_build:linux": "electron-builder --linux --x64 --publish=never",
+    "_build:win": "electron-builder --win --x64 --publish=never",
+    "_build:mac": "electron-builder --mac --publish=never",
+    "build:linux": "./build.sh && yarn _build:linux",
+    "build:win": "./build.sh && yarn _build:win",
+    "build:mac": "./build.sh && yarn _build:mac",
+    "build:all": "./build.sh && concurrently 'yarn _build:linux' 'yarn _build:win' 'yarn _build:mac'",
     "start": "./build.sh && electron ."
+  },
+  "build": {
+    "appId": "org.erosson.mapwatch",
+    "productName": "Mapwatch",
+    "artifactName": "${productName}-${version}-${os}.${ext}",
+    "files": [
+      "dist/www/",
+      "electron/",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist/"
+    }
   },
   "repository": "https://github.com/mapwatch/mapwatch",
   "author": "Evan Rosson",
   "license": "GPL-3.0",
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "electron": "^2.0.0",
-    "electron-packager": "^12.1.0"
+    "electron-builder": "^20.14.7"
   }
 }
