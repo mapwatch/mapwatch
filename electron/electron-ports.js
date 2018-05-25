@@ -2,7 +2,7 @@ const querystring = require('querystring')
 const fs = require('fs')
 const path = require('path')
 const readline = require('readline')
-const Elm = require('../dist/elm.js')
+const Elm = require('../dist/www/elm')
 
 const loadedAt = Date.now()
 const qs = querystring.parse(document.location.search.slice(1))

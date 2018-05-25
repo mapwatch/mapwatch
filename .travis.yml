@@ -6,21 +6,29 @@ cache:
     - elm-stuff/build-artifacts
 
 install: 
-  - npm install -g elm
+  - npm install -g elm # yarn globals aren't in the path by default for some reason
   - elm --version
+  - travis_retry yarn
   - travis_retry elm-package install --yes
 
 script:
   # Uncached elm builds take ages. Cached builds are quick, so this should rarely be needed.
   - travis_wait 30 ./build.sh
+  - yarn build:linux # TODO: get wine sorted out and switch me to a windows build
 
 deploy:
-  provider: pages
-  skip_cleanup: true
-  repo: mapwatch/mapwatch.github.io
-  target-branch: master # github-pages: user pages use the master branch, not gh-pages branch
-  local_dir: dist/
-  github_token: $GITHUB_TOKEN
-  #keep_history: true
-  on:
-    branch: master
+  - provider: pages
+    skip_cleanup: true
+    repo: mapwatch/mapwatch.github.io
+    target-branch: master # github-pages: user pages use the master branch, not gh-pages branch
+    local_dir: dist/www/
+    github_token: $GITHUB_TOKEN
+    #keep_history: true
+    on:
+      branch: master
+  - provider: releases
+    skip_cleanup: true
+    api_key: $GITHUB_TOKEN
+    file: dist/mapwatch-linux-x64 # TODO: get wine sorted out and switch me to a windows build
+    on:
+      branch: master
