@@ -17,6 +17,7 @@ entries =
         , [ H.text "Created an experimental session-tracking feature. Hidden by default. Beta: may change/disappear. "
           , H.a [ A.href "?enableSession=1" ] [ H.text "Feel free to try it out." ]
           ]
+        , [ H.text "Added basic support for Chinese-language log files." ]
         ]
       )
     , ( ymd "2018/05/23"
