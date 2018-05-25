@@ -6,6 +6,7 @@ node_js:
 cache:
   directories:
     - elm-stuff/build-artifacts
+    - node_modules/
 
 install: 
   - npm install -g elm # yarn globals aren't in the path by default for some reason
@@ -31,6 +32,7 @@ deploy:
   - provider: releases
     skip_cleanup: true
     api_key: $GITHUB_TOKEN
-    file: dist/mapwatch-linux-x64 # TODO: get wine sorted out and switch me to a windows build
+    file_glob: true
+    file: dist/mapwatch-linux-x64/**/* # TODO: get wine sorted out and switch me to a windows build
     on:
       branch: master
