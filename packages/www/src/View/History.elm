@@ -85,7 +85,7 @@ viewMain params model =
                 |> (++) (Maybe.Extra.toList currentRun)
                 |> Maybe.Extra.unwrap identity Run.search params.search
                 |> Run.filterBetween params
-                |> Maybe.Extra.unwrap identity Run.sort params.sort
+                |> Run.sort params.sort
     in
         H.div []
             [ H.div []
@@ -216,27 +216,53 @@ viewHistoryTable ({ page } as params) queryRuns =
             [ H.thead []
                 [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ]
 
-                -- , viewHistoryHeader
+                -- , viewHistoryHeader (Run.parseSort params.sort) params
                 ]
             , H.tbody [] (pageRuns |> List.map (viewHistoryRun { showDate = True } params) |> List.concat)
             , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ] ]
             ]
 
 
-viewHistoryHeader : H.Html msg
-viewHistoryHeader =
-    H.tr []
-        -- [ H.th [] [ H.text "Date" ]
-        -- , H.th [] []
-        [ H.th [] [ H.text "Zone" ]
-        , H.th [] [ H.text "Total" ]
-        , H.th [] []
-        , H.th [] [ H.text "Main" ]
-        , H.th [] []
-        , H.th [] [ H.text "Side" ]
-        , H.th [] []
-        , H.th [] [ H.text "Town" ]
-        ]
+viewSortLink : Run.SortField -> ( Run.SortField, Run.SortDir ) -> Route.HistoryParams -> H.Html msg
+viewSortLink thisField ( sortedField, dir ) qs =
+    let
+        ( icon, slug ) =
+            if thisField == sortedField then
+                -- already sorted on this field, link changes direction
+                ( Icon.fas
+                    (if dir == Run.Asc then
+                        "sort-up"
+                     else
+                        "sort-down"
+                    )
+                , Run.stringifySort thisField <| Just <| Run.reverseSort dir
+                )
+            else
+                -- link sorts by this field with default direction
+                ( Icon.fas "sort", Run.stringifySort thisField Nothing )
+    in
+        H.a [ Route.href <| Route.History { qs | sort = Just slug } ] [ icon ]
+
+
+viewHistoryHeader : ( Run.SortField, Run.SortDir ) -> Route.HistoryParams -> H.Html msg
+viewHistoryHeader sort qs =
+    let
+        link field =
+            viewSortLink field sort qs
+    in
+        H.tr []
+            [ H.th [] [ link Run.SortDate ]
+            , H.th [ A.class "zone" ] [ link Run.Name ]
+            , H.th [] [ link Run.TimeTotal ]
+            , H.th [] []
+            , H.th [] [ link Run.TimeMap ]
+            , H.th [] []
+            , H.th [] [ link Run.TimeTown ]
+            , H.th [] []
+            , H.th [] [ link Run.TimeSide ]
+            , H.th [] [ link Run.Portals ]
+            , H.th [] []
+            ]
 
 
 viewDuration =

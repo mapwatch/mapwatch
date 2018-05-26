@@ -13,7 +13,12 @@ module Model.Run
         , durationPerSideArea
         , bestDuration
         , search
+        , SortField(..)
+        , SortDir(..)
         , sort
+        , parseSort
+        , stringifySort
+        , reverseSort
         , isBetween
         , filterBetween
         , groupMapNames
@@ -81,47 +86,66 @@ type SortField
     | Portals
 
 
+sortFields =
+    [ Name, TimeTotal, TimeMap, TimeTown, TimeSide, Portals, SortDate ]
+
+
 type SortDir
     = Asc
     | Desc
 
 
-sort : String -> List Run -> List Run
+sort : Maybe String -> List Run -> List Run
 sort str =
-    parseSort str |> uncurry sortParsed
+    case str of
+        Nothing ->
+            -- skip the sort if no sort requested
+            identity
+
+        Just _ ->
+            parseSort str |> uncurry sortParsed
+
+
+stringifySortField : SortField -> String
+stringifySortField field =
+    case field of
+        Name ->
+            "name"
+
+        TimeTotal ->
+            "totalt"
+
+        TimeMap ->
+            "mapt"
+
+        TimeTown ->
+            "townt"
+
+        TimeSide ->
+            "sidet"
+
+        Portals ->
+            "portals"
+
+        SortDate ->
+            "date"
+
+
+sortFieldByString : Dict.Dict String SortField
+sortFieldByString =
+    sortFields
+        |> List.map (\f -> ( stringifySortField f, f ))
+        |> Dict.fromList
 
 
 parseSortField : String -> SortField
 parseSortField str =
-    case str of
-        "name" ->
-            Name
-
-        "totalt" ->
-            TimeTotal
-
-        "mapt" ->
-            TimeMap
-
-        "townt" ->
-            TimeTown
-
-        "sidet" ->
-            TimeSide
-
-        "portals" ->
-            Portals
-
-        "date" ->
-            SortDate
-
-        _ ->
-            SortDate
+    Maybe.withDefault SortDate <| Dict.get str sortFieldByString
 
 
-parseSort : String -> ( SortField, SortDir )
+parseSort : Maybe String -> ( SortField, SortDir )
 parseSort str0 =
-    case String.uncons str0 of
+    case String.uncons <| Maybe.withDefault "" str0 of
         Just ( '+', str ) ->
             ( parseSortField str, Asc )
 
@@ -131,7 +155,7 @@ parseSort str0 =
         _ ->
             let
                 field =
-                    parseSortField str0
+                    parseSortField (Maybe.withDefault "" str0)
             in
                 ( field
                   -- date sorts desc by default, but names feel better asc (a-z), and durations feel better asc (fastest-slowest)
@@ -141,6 +165,33 @@ parseSort str0 =
                   else
                     Asc
                 )
+
+
+reverseSort : SortDir -> SortDir
+reverseSort dir =
+    case dir of
+        Asc ->
+            Desc
+
+        Desc ->
+            Asc
+
+
+stringifySort : SortField -> Maybe SortDir -> String
+stringifySort field dir =
+    let
+        d =
+            case dir of
+                Nothing ->
+                    ""
+
+                Just Asc ->
+                    "+"
+
+                Just Desc ->
+                    "-"
+    in
+        d ++ stringifySortField field
 
 
 sortParsed : SortField -> SortDir -> List Run -> List Run

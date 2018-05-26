@@ -26,6 +26,12 @@ table.history {
 table.history tbody {
   border: 1px solid grey;
 }
+table.history thead tr th {
+  text-align: left;
+}
+table.history thead tr th.zone {
+  text-align: right;
+}
 table.history tbody tr td {
   border-left: 1px solid grey;
   border-right: 1px solid grey;
