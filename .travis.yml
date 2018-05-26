@@ -16,16 +16,14 @@ install:
 
 script:
   # Uncached elm builds take ages. Cached builds are quick, so this should rarely be needed.
-  - travis_wait 30 ./build.sh
-  - travis_wait ./lib.sh
-  - yarn build:linux # TODO: get wine sorted out and switch me to a windows build
+  - travis_wait 30 yarn build
 
 deploy:
   - provider: pages
     skip_cleanup: true
     repo: mapwatch/mapwatch.github.io
     target-branch: master # github-pages: user pages use the master branch, not gh-pages branch
-    local_dir: dist/www/
+    local_dir: packages/www/dist/
     github_token: $GITHUB_TOKEN
     #keep_history: true
     on:
@@ -35,7 +33,7 @@ deploy:
     api_key: $GITHUB_TOKEN
     file_glob: true
     file:
-      - dist/Mapwatch-*-linux.AppImage
+      - packages/electron/dist/Mapwatch-*-linux.AppImage
       #- dist/Mapwatch-*-win.exe # TODO: not until this thing's truly ready
       #- dist/Mapwatch-*-mac.zip
     on:

@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 cd "`dirname "$0"`"
-dest=./dist/www
+dest=./dist
 rm -rf $dest
 mkdir -p $dest
 for f in `ls assets`; do

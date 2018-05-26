@@ -1,0 +1,45 @@
+{
+  "name": "@mapwatch/electron",
+  "version": "1.0.0",
+  "description": "Automatically time your Path of Exile map clears. Electron version.",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "build:linux": "electron-builder --linux --x64 --publish=never",
+    "build:win": "electron-builder --win --x64 --publish=never",
+    "build:mac": "electron-builder --mac --publish=never",
+    "build:all": "concurrently 'yarn build:linux' 'yarn build:win' 'yarn build:mac'",
+    "build": "yarn build:linux     # TODO build:all",
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "org.erosson.mapwatch",
+    "productName": "Mapwatch",
+    "artifactName": "${productName}-${version}-${os}.${ext}",
+    "files": [
+      "node_modules/@mapwatch/www/dist/",
+      "node_modules/@mapwatch/www/package.json",
+      "main.js",
+      "index.html",
+      "electron-ports.js",
+      "package.json"
+    ],
+    "linux": {
+      "executableName": "mapwatch"
+    },
+    "directories": {
+      "output": "dist/"
+    }
+  },
+  "repository": "https://github.com/mapwatch/mapwatch",
+  "author": "Evan Rosson",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@mapwatch/www": "1.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "electron": "^2.0.0",
+    "electron-builder": "^20.14.7"
+  }
+}

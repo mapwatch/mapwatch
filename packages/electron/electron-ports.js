@@ -2,7 +2,7 @@ const querystring = require('querystring')
 const fs = require('fs')
 const path = require('path')
 const readline = require('readline')
-const Elm = require('../dist/www/elm')
+const Elm = require('@mapwatch/www')
 
 const loadedAt = Date.now()
 const qs = querystring.parse(document.location.search.slice(1))
@@ -50,7 +50,7 @@ function processFile(path_, maxSize) {
 }
 if (qs.example) {
   console.log("fetching example file: ", qs.example, qs)
-  processFile(path.join(__dirname, '../assets/examples', qs.example))
+  processFile(path.join(__dirname, './node_modules/@mapwatch/www/assets/examples', qs.example))
 }
 var MB = Math.pow(2,20)
 app.ports.inputClientLogWithId.subscribe(config => {

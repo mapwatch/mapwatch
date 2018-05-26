@@ -17,7 +17,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: path.join(__dirname, '../dist/www/favicon.jpeg')
+    icon: path.join(__dirname, 'node_modules/@mapwatch/www/dist/favicon.jpeg')
   })
 
   // and load the index.html of the app.

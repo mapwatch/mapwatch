@@ -3,13 +3,14 @@
 // TODO: we should probably have proper JS bindings before actually distributing this, so callers don't ahve to wrestle with reading the logfile. something like:
 // * subscribeMapRunEvents(onEvent)
 // * readLogs(path, ?maxSize, ?onClose)
-// * watchLogs(path, ?startAt)   
+// * watchLogs(path, ?startAt)
 // * pushLogLine(line)      // low-level alternative to readLogs/watchLogs
 const fs = require('fs')
 const path = require('path')
 const readline = require('readline')
 const loadedAt = Date.now()
-const mapwatch = require('../dist/lib/elm').Main.worker({
+// TODO move this to a separate package, to demonstrate how a real import looks
+const mapwatch = require('./dist/elm').Main.worker({
   loadedAt,
   tickOffset: 0,
   isBrowserSupported: true,
@@ -40,7 +41,7 @@ function watch(path_, lastSize) {
     })
   })
 }
-const path_ = path.join(__dirname,  "../assets/examples/stripped-client.txt")
+const path_ = path.join(__dirname,  "./node_modules/@mapwatch/www/assets/examples/stripped-client.txt")
 fs.stat(path_, (err, stats) => {
   // TODO real error handling
   if (err) return console.error(err)

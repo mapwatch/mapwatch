@@ -1,0 +1,11 @@
+{
+  "name": "@mapwatch/www",
+  "version": "1.0.0",
+  "main": "dist/elm.js",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "dev": "./dev.sh",
+    "build": "./build.sh"
+  }
+}

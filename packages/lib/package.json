@@ -1,0 +1,14 @@
+{
+  "name": "@mapwatch/lib",
+  "version": "1.0.0",
+  "main": "demo.js",
+  "license": "GPL-3.0",
+  "private": true,
+  "dependencies": {
+    "@mapwatch/www": "1.0.0"
+  },
+  "scripts": {
+    "demo": "yarn build && node ./demo.js",
+    "build": "./lib.sh"
+  }
+}
