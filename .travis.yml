@@ -28,8 +28,7 @@ install:
   - travis_retry elm-package install --yes
 
 script:
-  # Uncached elm builds take ages. Cached builds are quick, so this should rarely be needed.
-  - travis_wait 30 yarn build
+  - yarn build
 
 deploy:
   - provider: pages
