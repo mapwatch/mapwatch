@@ -17,6 +17,7 @@ install:
 script:
   # Uncached elm builds take ages. Cached builds are quick, so this should rarely be needed.
   - travis_wait 30 ./build.sh
+  - travis_wait ./lib.sh
   - yarn build:linux # TODO: get wine sorted out and switch me to a windows build
 
 deploy:

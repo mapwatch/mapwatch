@@ -4,6 +4,7 @@ module Model
         , Msg(..)
         , Progress
         , init
+        , initModel
         , update
         , subscriptions
         , progressPercent
@@ -92,7 +93,7 @@ init flags loc =
     ( initModel flags (Route.parse loc), Cmd.none )
 
 
-updateLine : LogLine.Line -> Model -> Model
+updateLine : LogLine.Line -> Model -> ( Model, Maybe Run.Run )
 updateLine line model =
     let
         instance =
@@ -112,13 +113,15 @@ updateLine line model =
                 Nothing ->
                     model.runs
     in
-        { model
+        ( { model
             | instance = instance
 
             -- , visits = Maybe.Extra.unwrap model.visits (\v -> v :: model.visits) visit
             , runState = runState
             , runs = runs
-        }
+          }
+        , lastRun
+        )
 
 
 updateRawLine : String -> Model -> Model
@@ -197,16 +200,29 @@ update msg ({ config } as model) =
             )
 
         RecvLogLine raw ->
-            (case LogLine.parse raw of
-                Ok line ->
-                    model
-                        |> updateLine line
-                        |> updateRawLine raw
+            let
+                ( m, lastRun ) =
+                    case LogLine.parse raw of
+                        Ok line ->
+                            model
+                                |> updateLine line
+                                |> Tuple.mapFirst (updateRawLine raw)
 
-                Err err ->
-                    { model | parseError = Just err }
-            )
-                |> \m -> ( m, Cmd.none )
+                        Err err ->
+                            ( { model | parseError = Just err }, Nothing )
+
+                cmd =
+                    Maybe.Extra.unwrap Cmd.none
+                        (\run ->
+                            Ports.mapRunEvent
+                                { instance = Run.instance run
+                                , startedAt = Date.toTime run.first.joinedAt
+                                , finishedAt = Date.toTime run.last.leftAt
+                                }
+                        )
+                        lastRun
+            in
+                ( m, cmd )
 
         RecvProgress p ->
             { model | progress = Just p }

@@ -4,6 +4,7 @@ module Model.Run
         , State(..)
         , DurationSet
         , init
+        , instance
         , duration
         , durationSet
         , totalDurationSet
