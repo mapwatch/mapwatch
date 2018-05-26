@@ -28,7 +28,7 @@ install:
 
 script:
   - yarn bootstrap
-  - yarn build
+  - sysconfcpus -n 2 yarn build
 
 deploy:
   - provider: pages

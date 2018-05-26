@@ -6,4 +6,4 @@ mkdir -p $dest
 for f in `ls assets`; do
   cp -r assets/$f $dest
 done
-sysconfcpus -n 2 elm-make src/Main.elm --output=$dest/elm.js
+elm-make src/Main.elm --output=$dest/elm.js
