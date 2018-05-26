@@ -8,12 +8,23 @@ cache:
     - packages/www/elm-stuff/build-artifacts
     - packages/lib/elm-stuff/build-artifacts
     - node_modules/
+    - sysconfcpus/
 
-install: 
+install:
   - npm install -g elm # yarn globals aren't in the path by default for some reason
   - elm --version
   - travis_retry yarn
-  - travis_retry elm-package install --yes
+  # https://github.com/elm/compiler/issues/1473
+  - |
+    if [ ! -d sysconfcpus/bin ];
+    then
+      git clone https://github.com/obmarg/libsysconfcpus.git;
+      cd libsysconfcpus;
+      ./configure --prefix=$TRAVIS_BUILD_DIR/sysconfcpus;
+      make && make install;
+      cd ..;
+    fi
+  - travis_retry ./sysconfcpus/bin/sysconfcpus -n 2 elm-package install --yes
 
 script:
   # Uncached elm builds take ages. Cached builds are quick, so this should rarely be needed.
