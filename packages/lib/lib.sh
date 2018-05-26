@@ -3,4 +3,4 @@ cd "`dirname "$0"`"
 dest=./dist
 rm -rf $dest
 mkdir -p $dest
-elm-make Main.elm --output=$dest/elm.js
+sysconfcpus -n 2 elm-make Main.elm --output=$dest/elm.js
