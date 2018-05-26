@@ -7,6 +7,9 @@
   "dependencies": {
     "@mapwatch/www": "1.0.0"
   },
+  "devDependencies": {
+    "elm": "^0.18.0"
+  },
   "scripts": {
     "postinstall": "elm-package install --yes",
     "demo": "yarn build && node ./demo.js",

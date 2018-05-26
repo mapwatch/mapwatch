@@ -11,8 +11,6 @@ cache:
     - sysconfcpus/
 
 install:
-  - npm install -g elm # yarn globals aren't in the path by default for some reason
-  - elm --version
   - travis_retry yarn
   # https://github.com/elm/compiler/issues/1473
   - |
@@ -27,7 +25,6 @@ install:
   - export PATH=$PATH:$TRAVIS_BUILD_DIR/sysconfcpus/bin
 
 script:
-  - yarn bootstrap
   - sysconfcpus -n 2 yarn build
 
 deploy:

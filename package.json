@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "bootstrap": "lerna bootstrap --stream",
+    "postinstall": "lerna bootstrap --stream",
     "dev:electron": "yarn build:www && cd ./packages/electron && yarn start",
     "build:electron": "yarn build:www && cd ./packages/electron && yarn build:all",
     "dev:www": "cd ./packages/www && yarn dev",

@@ -8,5 +8,8 @@
     "postinstall": "elm-package install --yes",
     "dev": "./dev.sh",
     "build": "./build.sh"
+  },
+  "devDependencies": {
+    "elm": "^0.18.0"
   }
 }
