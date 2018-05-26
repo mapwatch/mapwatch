@@ -25,9 +25,9 @@ install:
       cd ..;
     fi
   - export PATH=$PATH:$TRAVIS_BUILD_DIR/sysconfcpus/bin
-  - travis_retry elm-package install --yes
 
 script:
+  - yarn bootstrap
   - yarn build
 
 deploy:

@@ -5,6 +5,7 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
+    "install": "elm-package install --yes",
     "dev": "./dev.sh",
     "build": "./build.sh"
   }
