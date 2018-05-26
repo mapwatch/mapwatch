@@ -1,15 +1,15 @@
 {
-	"scripts": {
-		"bootstrap": "lerna bootstrap --stream",
-		"dev:electron": "yarn build:www && cd ./packages/electron && yarn start",
-		"build:electron": "yarn build:www && cd ./packages/electron && yarn build:all",
-		"dev:www": "cd ./packages/www && yarn dev",
-		"build:www": "cd ./packages/www && yarn build",
-		"build": "lerna run build --ignore @mapwatch/electron --ignore @mapwatch/lib --stream"
-	},
+  "scripts": {
+    "bootstrap": "lerna bootstrap --stream",
+    "dev:electron": "yarn build:www && cd ./packages/electron && yarn start",
+    "build:electron": "yarn build:www && cd ./packages/electron && yarn build:all",
+    "dev:www": "cd ./packages/www && yarn dev",
+    "build:www": "cd ./packages/www && yarn build",
+    "build": "lerna run build --stream"
+  },
   "license": "GPL-3.0",
   "private": true,
-	"devDependencies": {
-		"lerna": "^2.5.1"
-	}
+  "devDependencies": {
+    "lerna": "^2.5.1"
+  }
 }
