@@ -17,7 +17,11 @@ entries =
         , [ H.text "Created an experimental session-tracking feature. Hidden by default. Beta: may change/disappear. "
           , H.a [ A.href "?enableSession=1" ] [ H.text "Feel free to try it out." ]
           ]
-        , [ H.text "Added basic support for Chinese-language log files." ]
+        , [ H.text "Added basic support for "
+          , H.a [ A.target "_blank", A.href "?tickStart=1526242394000&example=chinese-client.txt#/" ] [ H.text "Chinese-language log files" ]
+          , H.text ". "
+          , H.a [ A.target "_blank", A.href "https://github.com/mapwatch/mapwatch/issues/12" ] [ H.text "Want your language supported?" ]
+          ]
         ]
       )
     , ( ymd "2018/05/23"
