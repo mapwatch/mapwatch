@@ -5,9 +5,9 @@ node_js:
 # https://8thlight.com/blog/rob-looby/2016/04/07/caching-elm-builds-on-travis-ci.html
 cache:
   directories:
-    - packages/*/elm-stuff/build-artifacts
+    - packages/www/elm-stuff/build-artifacts
+    - packages/lib/elm-stuff/build-artifacts
     - node_modules/
-    - packages/*/node_modules/
 
 install: 
   - npm install -g elm # yarn globals aren't in the path by default for some reason
