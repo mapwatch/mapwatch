@@ -35,6 +35,7 @@
   "author": "Evan Rosson",
   "license": "GPL-3.0",
   "dependencies": {
+    "@mapwatch/lib": "1.0.0",
     "@mapwatch/www": "1.0.0"
   },
   "devDependencies": {
