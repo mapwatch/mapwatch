@@ -1,29 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com" />
   <link rel="stylesheet" type="text/css" href="./node_modules/@mapwatch/www/dist/sakura-vader.css" />
   <link rel="stylesheet" type="text/css" href="./node_modules/@mapwatch/www/dist/main.css" />
   <link rel="stylesheet" type="text/css" href="./node_modules/@mapwatch/www/dist/fa/css/fontawesome-all.min.css" />
   <title>Mapwatch</title>
 </head>
 <body>
-  <!-- <h1>Hello World!</h1> -->
-  <!-- All of the Node.js APIs are available in this renderer process. -->
   <!-- We are using Node.js <script>document.write(process.versions.node)</script>, -->
   <!-- Chromium <script>document.write(process.versions.chrome)</script>, -->
   <!-- and Electron <script>document.write(process.versions.electron)</script>. -->
-  <script>
-    require('./electron-ports.js')
-  </script>
+  <script src="./electron-ports.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119582500-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-119582500-1');
-  </script>
+  <script async src="./analytics.js"></script>
 </body>
 </html>
