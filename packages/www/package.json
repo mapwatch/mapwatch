@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "postinstall": "elm-package install --yes",
-    "dev": "rm -rf .dev && cp -rp assets .dev && elm-live src/Main.elm --dir=.dev --output=.dev/elm.js --open",
+    "dev": "rm -rf .dev && mkdir -p .dev && for f in `ls assets`; do ln -s ../assets/$f .dev/; done && elm-live src/Main.elm --dir=.dev --output=.dev/elm.js --open",
     "build": "rm -rf dist && cp -rp assets dist && elm-make src/Main.elm --output=dist/elm.js"
   },
   "devDependencies": {
