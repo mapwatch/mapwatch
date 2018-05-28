@@ -213,11 +213,18 @@ viewHistoryTable ({ page } as params) queryRuns model =
                 |> List.drop (page * perPage)
                 |> List.take perPage
 
-        goal =
-            Run.parseGoalDuration params.goal
-
         goalDuration =
-            Run.goalDuration goal { session = queryRuns, allTime = model.runs }
+            Run.goalDuration (Run.parseGoalDuration params.goal)
+                { session =
+                    (case params.after of
+                        Just _ ->
+                            queryRuns
+
+                        Nothing ->
+                            Run.filterToday model.now model.runs
+                    )
+                , allTime = model.runs
+                }
     in
         H.table [ A.class "history" ]
             [ H.thead []
