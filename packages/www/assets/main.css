@@ -44,6 +44,10 @@ table.history td.dur {
   border-left: none;
   border-right: none;
 }
+table.history td.delta-dur {
+  margin: 0;
+  padding: 0;
+}
 table.history tbody tr.side-area {
   font-size: 80%;
 }
@@ -113,10 +117,18 @@ nav .inactive {
 }
 
 .main-timer {
-  margin: 1em;
+  margin: 0.5em;
 }
 .main-timer div {
   font-size: 800%;
+  text-align: center;
+  width: 100%;
+}
+.sub-timer {
+  margin: 0.5em;
+}
+.sub-timer div {
+  font-size: 300%;
   text-align: center;
   width: 100%;
 }
@@ -143,17 +155,18 @@ table.timer-details .session-buttons .button {
 
 .search-text {
   position: relative;
-  height: 2em;
+  /* height: 2em; */
+  margin-right: 1em;
 }
 .search-text .fas {
   position: absolute;
-  top: 0em; left:0.2em;
+  top: 0em; left:0.3em;
 }
 .search-text input {
   /* position: absolute; */
   /* top:0; left:0; */
-  height: 1.6em;
-  padding-left: 1.8em;
+  /* height: 1.6em; */
+  padding-left: 2em;
 }
 
 table.by-map {

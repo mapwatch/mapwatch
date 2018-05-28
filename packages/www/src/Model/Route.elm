@@ -24,11 +24,11 @@ import Maybe.Extra
 
 
 type alias HistoryParams =
-    { page : Int, search : Maybe String, sort : Maybe String, after : Maybe Date, before : Maybe Date }
+    { page : Int, search : Maybe String, sort : Maybe String, after : Maybe Date, before : Maybe Date, goal : Maybe String, enableGoals : Bool }
 
 
 historyParams0 =
-    HistoryParams 0 Nothing Nothing Nothing Nothing
+    HistoryParams 0 Nothing Nothing Nothing Nothing Nothing False
 
 
 type alias MapsParams =
@@ -40,11 +40,11 @@ mapsParams0 =
 
 
 type alias TimerParams =
-    { after : Maybe Date, enableSession : Bool }
+    { after : Maybe Date, goal : Maybe String, enableSession : Bool, enableGoals : Bool }
 
 
 timerParams0 =
-    TimerParams Nothing False
+    TimerParams Nothing Nothing False False
 
 
 type Route
@@ -142,8 +142,13 @@ boolParam name =
 parser : P.Parser (Route -> a) a
 parser =
     P.oneOf
-        [ P.map Timer <| P.map TimerParams <| P.top <?> dateParam "a" <?> boolParam "enableSession"
-        , P.map Timer <| P.map TimerParams <| P.s "timer" <?> dateParam "a" <?> boolParam "enableSession"
+        [ P.map Timer <|
+            P.map TimerParams <|
+                (P.oneOf [ P.top, P.s "timer" ])
+                    <?> dateParam "a"
+                    <?> P.stringParam "g"
+                    <?> boolParam "enableSession"
+                    <?> boolParam "enableGoals"
 
         -- , P.map HistoryRoot <| P.s "history"
         , P.map History <|
@@ -154,6 +159,8 @@ parser =
                     <?> P.stringParam "o"
                     <?> dateParam "a"
                     <?> dateParam "b"
+                    <?> P.stringParam "g"
+                    <?> boolParam "enableGoals"
 
         -- , P.map MapsRoot <| P.s "map"
         , P.map Maps <|
@@ -206,6 +213,7 @@ stringify route =
                     , ( "o", qs.sort )
                     , ( "a", Maybe.map dateToString qs.after )
                     , ( "b", Maybe.map dateToString qs.before )
+                    , ( "g", qs.goal )
                     ]
 
         MapsRoot ->
@@ -223,6 +231,7 @@ stringify route =
             "#/"
                 ++ encodeQS
                     [ ( "a", Maybe.map dateToString qs.after )
+                    , ( "g", qs.goal )
                     ]
 
         Changelog ->

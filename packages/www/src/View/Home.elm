@@ -41,17 +41,23 @@ formatDuration dur0 =
         dur =
             floor dur0
 
+        sign =
+            if dur >= 0 then
+                ""
+            else
+                "-"
+
         h =
-            dur // (truncate Time.hour)
+            abs <| dur // (truncate Time.hour)
 
         m =
-            dur % (truncate Time.hour) // (truncate Time.minute)
+            abs <| rem dur (truncate Time.hour) // (truncate Time.minute)
 
         s =
-            dur % (truncate Time.minute) // (truncate Time.second)
+            abs <| rem dur (truncate Time.minute) // (truncate Time.second)
 
         ms =
-            dur % (truncate Time.second)
+            abs <| rem dur (truncate Time.second)
 
         pad0 length num =
             num
@@ -66,7 +72,7 @@ formatDuration dur0 =
             )
     in
         -- String.join ":" <| [ pad0 2 h, pad0 2 m, pad0 2 s, pad0 4 ms ]
-        String.join ":" <| hpad ++ [ pad0 2 m, pad0 2 s ]
+        sign ++ String.join ":" (hpad ++ [ pad0 2 m, pad0 2 s ])
 
 
 viewParseError : Maybe LogLine.ParseError -> H.Html msg

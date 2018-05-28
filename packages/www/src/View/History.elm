@@ -1,4 +1,4 @@
-module View.History exposing (view, viewHistoryRun, viewDurationSet)
+module View.History exposing (view, viewHistoryRun, viewDurationSet, formatMaybeDuration, viewDurationDelta)
 
 import Html as H
 import Html.Attributes as A
@@ -18,7 +18,7 @@ import View.Setup
 import View.NotFound
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
 import View.Icon as Icon
-import View.Util exposing (roundToPlaces, viewSearch, pluralize)
+import View.Util exposing (roundToPlaces, viewSearch, pluralize, viewGoalForm)
 
 
 view : Route.HistoryParams -> Model -> H.Html Msg
@@ -101,9 +101,10 @@ viewMain params model =
                             |> HistorySearch
                     )
                     params.search
+                , viewGoalForm (\goal -> Model.RouteTo <| Route.History { params | goal = goal }) params
                 ]
             , viewStatsTable params model.now runs
-            , viewHistoryTable params runs
+            , viewHistoryTable params runs model
             ]
 
 
@@ -201,8 +202,8 @@ viewPaginator ({ page } as ps) numItems =
             ]
 
 
-viewHistoryTable : Route.HistoryParams -> List Run -> H.Html msg
-viewHistoryTable ({ page } as params) queryRuns =
+viewHistoryTable : Route.HistoryParams -> List Run -> Model -> H.Html msg
+viewHistoryTable ({ page } as params) queryRuns model =
     let
         paginator =
             viewPaginator params (List.length queryRuns)
@@ -211,6 +212,12 @@ viewHistoryTable ({ page } as params) queryRuns =
             queryRuns
                 |> List.drop (page * perPage)
                 |> List.take perPage
+
+        goal =
+            Run.parseGoalDuration params.goal
+
+        goalDuration =
+            Run.goalDuration goal { session = queryRuns, allTime = model.runs }
     in
         H.table [ A.class "history" ]
             [ H.thead []
@@ -218,7 +225,7 @@ viewHistoryTable ({ page } as params) queryRuns =
 
                 -- , viewHistoryHeader (Run.parseSort params.sort) params
                 ]
-            , H.tbody [] (pageRuns |> List.map (viewHistoryRun { showDate = True } params) |> List.concat)
+            , H.tbody [] (pageRuns |> List.map (viewHistoryRun { showDate = True } params goalDuration) |> List.concat)
             , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ] ]
             ]
 
@@ -273,15 +280,27 @@ type alias HistoryRowConfig =
     { showDate : Bool }
 
 
-viewHistoryRun : HistoryRowConfig -> Route.HistoryParams -> Run -> List (H.Html msg)
-viewHistoryRun config qs r =
-    viewHistoryMainRow config qs r :: (List.map (uncurry <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r))
+viewHistoryRun : HistoryRowConfig -> Route.HistoryParams -> (Run -> Maybe Time.Time) -> Run -> List (H.Html msg)
+viewHistoryRun config qs goals r =
+    viewHistoryMainRow config qs (goals r) r :: (List.map (uncurry <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r))
 
 
 viewDurationSet : Run.DurationSet -> List (H.Html msg)
 viewDurationSet d =
+    [ H.td [ A.class "dur total-dur" ] [ viewDuration d.all ] ] ++ viewDurationTail d
+
+
+viewGoalDurationSet : Maybe Time.Time -> Run.DurationSet -> List (H.Html msg)
+viewGoalDurationSet goal d =
     [ H.td [ A.class "dur total-dur" ] [ viewDuration d.all ]
-    , H.td [ A.class "dur" ] [ H.text " = " ]
+    , H.td [ A.class "dur delta-dur" ] [ viewDurationDelta (Just d.all) goal ]
+    ]
+        ++ viewDurationTail d
+
+
+viewDurationTail : Run.DurationSet -> List (H.Html msg)
+viewDurationTail d =
+    [ H.td [ A.class "dur" ] [ H.text " = " ]
     , H.td [ A.class "dur" ] [ viewDuration d.mainMap, H.text " in map " ]
     , H.td [ A.class "dur" ] [ H.text " + " ]
     , H.td [ A.class "dur" ] [ viewDuration d.town, H.text " in town " ]
@@ -299,8 +318,8 @@ viewDurationSet d =
            ]
 
 
-viewHistoryMainRow : HistoryRowConfig -> Route.HistoryParams -> Run -> H.Html msg
-viewHistoryMainRow { showDate } qs r =
+viewHistoryMainRow : HistoryRowConfig -> Route.HistoryParams -> Maybe Time.Time -> Run -> H.Html msg
+viewHistoryMainRow { showDate } qs goal r =
     let
         d =
             Run.durationSet r
@@ -313,7 +332,7 @@ viewHistoryMainRow { showDate } qs r =
              )
                 ++ [ H.td [ A.class "zone" ] [ viewInstance qs r.first.instance ]
                    ]
-                ++ viewDurationSet d
+                ++ viewGoalDurationSet goal d
             )
 
 
@@ -326,9 +345,34 @@ viewHistorySideAreaRow { showDate } qs instance d =
             []
          )
             ++ [ H.td [] []
-               , H.td [ A.class "zone", A.colspan 6 ] [ viewSideAreaName qs <| Just instance ]
+               , H.td [ A.class "zone", A.colspan 7 ] [ viewSideAreaName qs <| Just instance ]
                , H.td [ A.class "side-dur" ] [ viewDuration d ]
                , H.td [ A.class "portals" ] []
                , H.td [ A.class "town-pct" ] []
                ]
         )
+
+
+viewDurationDelta : Maybe Time.Time -> Maybe Time.Time -> H.Html msg
+viewDurationDelta cur goal =
+    case ( cur, goal ) of
+        ( Just cur, Just goal ) ->
+            let
+                dt =
+                    cur - goal
+
+                sign =
+                    if dt >= 0 then
+                        "+"
+                    else
+                        ""
+            in
+                H.span [] [ H.text <| " (" ++ sign ++ formatDuration dt ++ ")" ]
+
+        _ ->
+            H.span [] []
+
+
+formatMaybeDuration : Maybe Time.Time -> String
+formatMaybeDuration =
+    Maybe.Extra.unwrap "--:--" formatDuration

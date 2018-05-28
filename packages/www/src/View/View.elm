@@ -16,13 +16,13 @@ view : Model -> H.Html Msg
 view model =
     case model.route of
         HistoryRoot ->
-            View.History.view (Route.HistoryParams 0 Nothing Nothing Nothing Nothing) model
+            View.History.view Route.historyParams0 model
 
         History params ->
             View.History.view params model
 
         MapsRoot ->
-            View.Maps.view (Route.MapsParams Nothing Nothing Nothing) model
+            View.Maps.view Route.mapsParams0 model
 
         Maps params ->
             View.Maps.view params model

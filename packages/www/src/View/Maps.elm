@@ -79,7 +79,7 @@ viewMap qs map runs =
             Run.meanDurationSet runs
 
         best =
-            case Run.bestDuration runs of
+            case Run.bestDuration .mainMap runs of
                 Nothing ->
                     -- no runs - should be impossible, but not important enough to Debug.crash over it
                     "--:--"
@@ -104,4 +104,8 @@ viewMap qs map runs =
 
 viewMapName : Route.MapsParams -> MapList.Map -> H.Html msg
 viewMapName qs map =
-    H.a [ Route.href <| Route.History { page = 0, search = Just map.name, sort = Nothing, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank map.name, H.text map.name ]
+    let
+        hqs0 =
+            Route.historyParams0
+    in
+        H.a [ Route.href <| Route.History { hqs0 | search = Just map.name, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank map.name, H.text map.name ]

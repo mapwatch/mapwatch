@@ -11,7 +11,13 @@ import Date as Date exposing (Date)
 
 entries : List ( Date, List (List (H.Html msg)) )
 entries =
-    [ ( ymd "2018/05/25"
+    [ ( ymd "2018/05/28"
+      , [ [ H.text "Created an experimental time-goals/splitting feature. Hidden by default. Beta: may change/disappear. "
+          , H.a [ A.href "?enableGoals=1" ] [ H.text "Feel free to try it out." ]
+          ]
+        ]
+      )
+    , ( ymd "2018/05/25"
       , [ [ H.text "Created this changelog." ]
         , [ H.text "Broke existing urls for search. (It's soon enough that I don't expect it to bother anyone.)" ]
         , [ H.text "Created an experimental session-tracking feature. Hidden by default. Beta: may change/disappear. "

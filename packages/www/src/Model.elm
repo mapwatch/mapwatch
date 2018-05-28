@@ -65,6 +65,7 @@ type Msg
     | RecvLogLine String
     | RecvProgress Progress
     | Navigate Navigation.Location
+    | RouteTo Route
     | MapsSearch Route.MapsParams
     | HistorySearch Route.HistoryParams
 
@@ -170,7 +171,7 @@ update msg ({ config } as model) =
                 ( { model | now = applyTimeOffset model t }, Cmd.none )
 
         Navigate loc ->
-            ( { model | route = Route.parse loc |> Debug.log "navigate" }, Cmd.none )
+            ( { model | route = Route.parse loc }, Cmd.none )
 
         InputClientLogWithId id ->
             ( model, Ports.inputClientLogWithId { id = id, maxSize = config.maxSize } )
@@ -196,6 +197,14 @@ update msg ({ config } as model) =
             , Route.History ps
                 |> Route.stringify
                 -- |> Debug.log "history-search"
+                |> Navigation.modifyUrl
+            )
+
+        RouteTo route ->
+            ( model
+            , route
+                |> Route.stringify
+                -- |> Debug.log "route-to"
                 |> Navigation.modifyUrl
             )
 

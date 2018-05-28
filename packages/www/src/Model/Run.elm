@@ -12,6 +12,10 @@ module Model.Run
         , stateDuration
         , durationPerSideArea
         , bestDuration
+        , GoalDuration(..)
+        , parseGoalDuration
+        , stringifyGoalDuration
+        , goalDuration
         , search
         , SortField(..)
         , SortDir(..)
@@ -328,11 +332,21 @@ meanDurationSet runs =
         { all = d.all / n, town = d.town / n, notTown = d.notTown / n, mainMap = d.mainMap / n, sides = d.sides / n, portals = d.portals / n }
 
 
-bestDuration : List Run -> Maybe Time.Time
-bestDuration runs =
+bestDuration : (DurationSet -> Time.Time) -> List Run -> Maybe Time.Time
+bestDuration which runs =
     runs
-        |> List.map (durationSet >> .mainMap)
+        |> List.map (durationSet >> which)
         |> List.minimum
+
+
+meanDuration : (DurationSet -> Time.Time) -> List Run -> Maybe Time.Time
+meanDuration which runs =
+    case runs of
+        [] ->
+            Nothing
+
+        runs ->
+            runs |> meanDurationSet |> which |> Just
 
 
 filterToday : Date.Date -> List Run -> List Run
@@ -361,6 +375,151 @@ groupMapNames runs maps =
         maps
             |> List.map (\map -> Dict.get map.name dict |> Maybe.map ((,) map))
             |> Maybe.Extra.values
+
+
+type GoalDuration
+    = SessionBest
+    | AllTimeBest
+    | SessionMean
+    | AllTimeMean
+    | Fixed Time.Time
+    | NoGoal
+
+
+goalDuration : GoalDuration -> { session : List Run, allTime : List Run } -> Run -> Maybe Time.Time
+goalDuration goal runset =
+    let
+        foldRuns : (List Run -> Maybe Time.Time) -> List Run -> Dict.Dict String Time.Time
+        foldRuns foldFn =
+            byMap >> Dict.Extra.filterMap (always foldFn)
+
+        key run =
+            (instance run).zone
+    in
+        case goal of
+            SessionBest ->
+                let
+                    -- building the dict inline gives the same result, but this should be
+                    -- much more efficient: build it once, in a closure, instead of
+                    -- rebuilding every time we Dict.get. Inspecting Elm's generated JS
+                    -- verifies this (though, who knows what optimizations the browser does)
+                    dict =
+                        foldRuns (bestDuration .all) runset.session
+                in
+                    \run -> Dict.get (key run) dict
+
+            AllTimeBest ->
+                let
+                    dict =
+                        foldRuns (bestDuration .all) runset.allTime
+                in
+                    \run -> Dict.get (key run) dict
+
+            SessionMean ->
+                let
+                    dict =
+                        foldRuns (meanDuration .all) runset.session
+                in
+                    \run -> Dict.get (key run) dict
+
+            AllTimeMean ->
+                let
+                    dict =
+                        foldRuns (meanDuration .all) runset.allTime
+                in
+                    \run -> Dict.get (key run) dict
+
+            Fixed t ->
+                always <| Just t
+
+            NoGoal ->
+                always Nothing
+
+
+stringifyGoalDuration : GoalDuration -> Maybe String
+stringifyGoalDuration goal =
+    case goal of
+        SessionBest ->
+            Just "best-session"
+
+        AllTimeBest ->
+            Just "best"
+
+        SessionMean ->
+            Just "mean-session"
+
+        AllTimeMean ->
+            Just "mean"
+
+        Fixed t ->
+            Just <| toString t
+
+        NoGoal ->
+            Nothing
+
+
+parseFixedGoalDuration : String -> Maybe Float
+parseFixedGoalDuration str =
+    case String.split ":" str |> List.map (String.toFloat >> Result.toMaybe) of
+        (Just s) :: [] ->
+            -- First possible format: plain number of seconds; "300"
+            Just <| s * Time.second
+
+        (Just m) :: (Just s) :: [] ->
+            -- Second possible format: "5:00"
+            if s < 60 then
+                Just <| m * Time.minute + s * Time.second
+            else
+                Nothing
+
+        _ ->
+            -- third possible format: "5m 1s"; "5m"; "300s"
+            let
+                parsed =
+                    str
+                        |> Regex.find (Regex.AtMost 1) (Regex.regex "([0-9\\.]+m)?\\s*([0-9\\.]+s)?")
+                        |> List.head
+                        |> Maybe.Extra.unwrap [] .submatches
+                        |> List.map (Maybe.andThen <| String.slice 0 -1 >> String.toFloat >> Result.toMaybe)
+            in
+                case parsed of
+                    [ Nothing, Nothing ] ->
+                        Nothing
+
+                    [ m, s ] ->
+                        Just <| (Maybe.withDefault 0 m) * Time.minute + (Maybe.withDefault 0 s) * Time.second
+
+                    _ ->
+                        Nothing
+
+
+parseGoalDuration : Maybe String -> GoalDuration
+parseGoalDuration =
+    Maybe.Extra.unwrap NoGoal <|
+        \goal ->
+            case parseFixedGoalDuration goal of
+                Just t ->
+                    Fixed t
+
+                Nothing ->
+                    case goal of
+                        "best-session" ->
+                            SessionBest
+
+                        "best" ->
+                            AllTimeBest
+
+                        "mean-session" ->
+                            SessionMean
+
+                        "mean" ->
+                            AllTimeMean
+
+                        "none" ->
+                            NoGoal
+
+                        _ ->
+                            NoGoal
 
 
 durationPerSideArea : Run -> List ( Instance, Time.Time )

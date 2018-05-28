@@ -36,7 +36,7 @@ timerLink active =
                     ( activeCls, qs )
 
                 Just (History qs) ->
-                    ( inactiveCls, { timerParams0 | after = qs.after } )
+                    ( inactiveCls, { timerParams0 | after = qs.after, goal = qs.goal } )
 
                 Just (Maps qs) ->
                     ( inactiveCls, { timerParams0 | after = qs.after } )
@@ -51,7 +51,7 @@ historyLink : Maybe Route -> H.Html msg
 historyLink active =
     let
         qs0 =
-            Route.HistoryParams 0 Nothing Nothing Nothing Nothing
+            Route.historyParams0
 
         ( cls, qs ) =
             case active of
@@ -59,7 +59,7 @@ historyLink active =
                     ( activeCls, qs )
 
                 Just (Timer qs) ->
-                    ( inactiveCls, { qs0 | after = qs.after } )
+                    ( inactiveCls, { qs0 | after = qs.after, goal = qs.goal } )
 
                 Just (Maps qs) ->
                     ( inactiveCls, { qs0 | search = qs.search, after = qs.after, before = qs.before } )
@@ -74,7 +74,7 @@ mapsLink : Maybe Route -> H.Html msg
 mapsLink active =
     let
         qs0 =
-            Route.MapsParams Nothing Nothing Nothing
+            Route.mapsParams0
 
         ( cls, qs ) =
             case active of

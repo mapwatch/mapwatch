@@ -8,6 +8,7 @@ import Maybe.Extra
 import Model as Model exposing (Model, Msg)
 import Model.Run as Run
 import Model.Route as Route
+import View.Util exposing (viewGoalForm)
 import View.Nav
 import View.Setup
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
@@ -26,7 +27,7 @@ view qs model =
         ]
 
 
-viewBody : Route.TimerParams -> Model -> H.Html msg
+viewBody : Route.TimerParams -> Model -> H.Html Msg
 viewBody qs model =
     case model.progress of
         Nothing ->
@@ -37,7 +38,9 @@ viewBody qs model =
             H.div [] <|
                 (if Model.isProgressDone p then
                     -- all done!
-                    [ viewMain qs model ]
+                    [ viewGoalForm (\goal -> Model.RouteTo <| Route.Timer { qs | goal = goal }) qs
+                    , viewMain qs model
+                    ]
                  else
                     [ viewProgress p ]
                 )
@@ -54,51 +57,59 @@ viewMain qs model =
             H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Just model.now } ] [ Icon.fas "eye-slash", H.text " Hide earlier maps" ]
 
         hqs =
-            { search = Nothing, page = 0, sort = Nothing, after = Nothing, before = Nothing }
+            Route.historyParams0
 
         ( sessname, runs, sessionButtons ) =
             case qs.after of
                 Nothing ->
                     ( "today"
-                    , Maybe.Extra.toList run ++ Run.filterToday model.now model.runs
+                    , Run.filterToday model.now model.runs
                     , [ hideEarlierButton
                       ]
                     )
 
                 Just _ ->
                     ( "this session"
-                    , Maybe.Extra.toList run ++ Run.filterBetween { before = Nothing, after = qs.after } (model.runs)
+                    , Run.filterBetween { before = Nothing, after = qs.after } model.runs
                     , [ H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Nothing } ] [ Icon.fas "eye", H.text " Unhide all" ]
                       , hideEarlierButton
-                      , H.a [ A.class "button", Route.href <| Route.History { hqs | after = qs.after, before = Just model.now } ] [ Icon.fas "camera", H.text " Snapshot history" ]
+                      , H.a [ A.class "button", Route.href <| Route.History { hqs | after = qs.after, before = Just model.now, goal = qs.goal } ] [ Icon.fas "camera", H.text " Snapshot history" ]
                       ]
                     )
 
         history =
-            List.take 5 runs
+            List.take 5 <| Maybe.Extra.toList run ++ runs
+
+        goal =
+            Run.parseGoalDuration qs.goal
+
+        goalDuration =
+            Run.goalDuration goal { session = runs, allTime = model.runs }
 
         historyTable =
             H.table [ A.class "timer history" ]
-                [ H.tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False } hqs) <| history)
+                [ H.tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False } hqs goalDuration) <| history)
                 , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ H.a [ Route.href <| Route.History { hqs | after = qs.after } ] [ Icon.fas "history", H.text " History" ] ] ] ]
                 ]
 
-        ( timer, mappingNow ) =
+        ( timer, timerGoal, mappingNow ) =
             case run of
                 Just run ->
                     ( Just (Run.durationSet run).all
+                    , goalDuration run
                     , [ H.td [] [ H.text "Mapping in: " ], H.td [] [ viewInstance hqs run.first.instance ] ]
                     )
 
                 Nothing ->
                     ( Nothing
+                    , Nothing
                     , [ H.td [] [ H.text "Not mapping" ]
                       , H.td [] []
                       ]
                     )
     in
         H.div []
-            [ viewTimer timer
+            [ viewTimer timer timerGoal
             , H.table [ A.class "timer-details" ]
                 [ H.tbody []
                     [ H.tr [] mappingNow
@@ -116,16 +127,11 @@ viewMain qs model =
             ]
 
 
-viewTimer : Maybe Time.Time -> H.Html msg
-viewTimer d =
-    let
-        durStr =
-            case d of
-                Just d ->
-                    formatDuration d
-
-                Nothing ->
-                    "--:--"
-    in
-        H.div [ A.class "main-timer" ] <|
-            [ H.div [] [ H.text durStr ] ]
+viewTimer : Maybe Time.Time -> Maybe Time.Time -> H.Html msg
+viewTimer dur goal =
+    H.div []
+        [ H.div [ A.class "main-timer" ]
+            [ H.div [] [ H.text <| View.History.formatMaybeDuration dur ] ]
+        , H.div [ A.class "sub-timer" ]
+            [ H.div [] [ View.History.viewDurationDelta dur goal ] ]
+        ]
