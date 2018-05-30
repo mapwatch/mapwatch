@@ -12,9 +12,9 @@ const mapwatch = require('./dist/elm').Main.worker({
   isBrowserSupported: true,
   platform: 'library',
 })
-mapwatch.ports.mapRunEvent.subscribe(event => {
+mapwatch.ports.events.subscribe(event => {
   // for this demo, simply log each event. Real library users will do something more interesting here
-  console.log("new map run finished", event)
+  console.log("new event", event)
 })
 
 function readFileSlice(path_, start, end, onClose) {

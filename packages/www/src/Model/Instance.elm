@@ -39,6 +39,16 @@ init =
     { val = MainMenu, joinedAt = Nothing, next = Empty }
 
 
+unsafeJoinedAt : State -> Date.Date
+unsafeJoinedAt { joinedAt } =
+    case joinedAt of
+        Nothing ->
+            Debug.crash "instance.unsafeJoinedAt" joinedAt
+
+        Just d ->
+            d
+
+
 unwrap : a -> (Address -> a) -> Instance -> a
 unwrap default fn instance =
     case instance of

@@ -10,7 +10,7 @@ function parseQS(search) {
 }
 var qs = parseQS(document.location.search)
 var loadedAt = Date.now()
-var tickStart = qs.tickStart && new Date(Number.isNaN(parseInt(qs.tickStart)) ? qs.tickStart : parseInt(qs.tickStart))
+var tickStart = qs.tickStart && new Date(isNaN(parseInt(qs.tickStart)) ? qs.tickStart : parseInt(qs.tickStart))
 var tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
 if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
 var app = Elm.Main.fullscreen({
@@ -23,7 +23,8 @@ var app = Elm.Main.fullscreen({
 
 if (qs.example) {
   console.log("fetching example file: ", qs.example, qs)
-  var sendProgress = progressSender(loadedAt)(0, 0, loadedAt)
+  // show a progress spinner, even when we don't know the size yet
+  var sendProgress = progressSender(loadedAt, "history")(0, 0, loadedAt)
   fetch("./examples/"+qs.example)
   .then(function(res) {
     if (res.status < 200 || res.status >= 300) {
@@ -32,7 +33,7 @@ if (qs.example) {
     return res.blob()
   })
   .then(function(blob) {
-    processFile(blob, blob)
+    processFile(blob, blob, "history")
   })
   .catch(function(err) {
     console.error("Example-fetch error:", err)
@@ -105,9 +106,9 @@ function sendLine(line) {
     app.ports.logline.send(line)
   }
 }
-function progressSender(startedAt) {
+function progressSender(startedAt, name) {
   return function (val, max, updatedAt) {
-    app.ports.progress.send({val: val, max: max, startedAt: startedAt, updatedAt: updatedAt})
+    app.ports.progress.send({name: name, val: val, max: max, startedAt: startedAt, updatedAt: updatedAt})
   }
 }
 var watcher = null
@@ -124,17 +125,17 @@ function watchChanges(file) {
         if (watcher) clearInterval(watcher)
       }
       else {
-        processFile(file.slice(startSize), file)
+        processFile(file.slice(startSize), file, "watch")
       }
     }
   }, POLL_INTERVAL)
 }
-function processFile(fileSlice, watchedFile) {
+
+function processFile(fileSlice, watchedFile, progressName) {
   if (watcher) clearInterval(watcher)
-  var sendProgress = progressSender(Date.now())
+  var sendProgress = progressSender(Date.now(), progressName)
   // sendProgress(0, fileSlice.size, Date.now())
   readLines(fileSlice, {onLine: sendLine, onChunk: sendProgress, onDone: function(tail) {
-    // console.log("done processing file, watching changes")
     sendLine(tail)
     watchChanges(watchedFile)
   }})
@@ -143,6 +144,45 @@ app.ports.inputClientLogWithId.subscribe(function(config) {
   var files = document.getElementById(config.id).files
   var maxSize = (config.maxSize == null ? 20 : config.maxSize) * MB
   if (files.length > 0) {
-    processFile(files[0].slice(Math.max(0, files[0].size - maxSize)), files[0])
+    processFile(files[0].slice(Math.max(0, files[0].size - maxSize)), files[0], "history")
+  }
+})
+
+function gaEvent(action, props) {
+  // because I keep messing these two up, but analytics shouldn't break prod
+  if (props.category) console.warn('ports.gaEvent: category should be event_category. '+JSON.stringify(props))
+  if (props.label) console.warn('ports.gaEvent: label should be event_label. '+JSON.stringify(props))
+
+  console.log('gaEvent', action, props)
+  gtag('event', action, props)
+}
+var isWatching = false
+var historyStats = {instanceJoins: 0, mapRuns: 0}
+app.ports.events.subscribe(function(event) {
+  if (event.type === 'progressComplete') {
+    if (!isWatching && event.name === 'history') {
+      gaEvent('completed', {event_category: 'History'})
+      gaEvent('completed_stats', {event_category: 'History', event_label: 'instanceJoins', value: historyStats.instanceJoins})
+      gaEvent('completed_stats', {event_category: 'History', event_label: 'mapRuns', value: historyStats.mapRuns})
+      isWatching = true
+    }
+  }
+  else if (event.type === 'joinInstance') {
+    if (!isWatching) {
+      historyStats.instanceJoins += 1
+      if (event.lastMapRun) {
+        historyStats.mapRuns += 1
+      }
+    }
+    else {
+      gaEvent('join', {event_category: 'Instance', event_label: event.instance ? event.instance.zone : "MainMenu"})
+      if (event.lastMapRun) {
+        gaEvent('finish', {
+          event_category: 'MapRun',
+          event_label: event.lastMapRun.instance.zone,
+          value: Math.floor((event.lastMapRun.leftAt - event.lastMapRun.joinedAt)/1000),
+        })
+      }
+    }
   }
 })

@@ -50,3 +50,4 @@ app.ports.inputClientLogWithId.subscribe(config => {
     processFile(files[0].path, maxSize)
   }
 })
+// TODO: analytics

@@ -94,7 +94,7 @@ init flags loc =
     ( initModel flags (Route.parse loc), Cmd.none )
 
 
-updateLine : LogLine.Line -> Model -> ( Model, Maybe Run.Run )
+updateLine : LogLine.Line -> Model -> ( Model, Cmd Msg )
 updateLine line model =
     let
         instance =
@@ -113,6 +113,12 @@ updateLine line model =
 
                 Nothing ->
                     model.runs
+
+        cmd =
+            if instance.joinedAt == model.instance.joinedAt then
+                Cmd.none
+            else
+                Ports.sendJoinInstance (Instance.unsafeJoinedAt instance) instance.val visit lastRun
     in
         ( { model
             | instance = instance
@@ -121,7 +127,7 @@ updateLine line model =
             , runState = runState
             , runs = runs
           }
-        , lastRun
+        , cmd
         )
 
 
@@ -209,47 +215,33 @@ update msg ({ config } as model) =
             )
 
         RecvLogLine raw ->
-            let
-                ( m, lastRun ) =
-                    case LogLine.parse raw of
-                        Ok line ->
-                            model
-                                |> updateLine line
-                                |> Tuple.mapFirst (updateRawLine raw)
+            case LogLine.parse raw of
+                Ok line ->
+                    model
+                        |> updateLine line
+                        |> Tuple.mapFirst (updateRawLine raw)
 
-                        Err err ->
-                            ( { model | parseError = Just err }, Nothing )
-
-                cmd =
-                    Maybe.Extra.unwrap Cmd.none
-                        (\run ->
-                            Ports.mapRunEvent
-                                { instance = Run.instance run
-                                , startedAt = Date.toTime run.first.joinedAt
-                                , finishedAt = Date.toTime run.last.leftAt
-                                }
-                        )
-                        lastRun
-            in
-                ( m, cmd )
+                Err err ->
+                    ( { model | parseError = Just err }, Cmd.none )
 
         RecvProgress p ->
-            { model | progress = Just p }
-                |> (\m ->
-                        if isProgressDone p then
-                            -- man, I love elm, but conditional logging is so awkward
-                            let
-                                _ =
-                                    if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
-                                        Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.Extra.unwrap 0 Date.toTime m.instance.joinedAt)
-                                    else
-                                        ""
-                            in
-                                tick p.updatedAt m
-                        else
-                            m
-                   )
-                |> \m -> ( m, Cmd.none )
+            let
+                m =
+                    { model | progress = Just p }
+            in
+                if isProgressDone p then
+                    -- man, I love elm, but conditional logging is so awkward
+                    let
+                        _ =
+                            -- if this is the first completed progress, it's the history file - log something
+                            if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
+                                Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.Extra.unwrap 0 Date.toTime m.instance.joinedAt)
+                            else
+                                ""
+                    in
+                        ( tick p.updatedAt m, Ports.progressComplete { name = p.name } )
+                else
+                    ( m, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg

@@ -65,7 +65,9 @@ class MapWatcher {
     this.watcher = null
   }
   subscribeMapRuns(onEvent) {
-    this.elmApp.ports.mapRunEvent.subscribe(onEvent)
+    this.elmApp.ports.events.subscribe(event => {
+      if (event.type === 'joinInstance' && event.lastMapRun) onEvent(event.lastMapRun)
+    })
   }
   pushLogLine(line) {
     this.elmApp.ports.logline.send(line)
