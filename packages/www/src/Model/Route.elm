@@ -23,12 +23,16 @@ import Date as Date exposing (Date)
 import Maybe.Extra
 
 
+flags0 =
+    { session = True, goals = False }
+
+
 type alias HistoryParams =
     { page : Int, search : Maybe String, sort : Maybe String, after : Maybe Date, before : Maybe Date, goal : Maybe String, enableGoals : Bool }
 
 
 historyParams0 =
-    HistoryParams 0 Nothing Nothing Nothing Nothing Nothing False
+    HistoryParams 0 Nothing Nothing Nothing Nothing Nothing flags0.goals
 
 
 type alias MapsParams =
@@ -44,7 +48,7 @@ type alias TimerParams =
 
 
 timerParams0 =
-    TimerParams Nothing Nothing False False
+    TimerParams Nothing Nothing flags0.session flags0.goals
 
 
 type Route
@@ -129,14 +133,14 @@ dateParam name =
     P.customParam name <| Maybe.andThen dateFromString
 
 
-boolParam : String -> P.QueryParser (Bool -> a) a
-boolParam name =
+boolParam : Bool -> String -> P.QueryParser (Bool -> a) a
+boolParam default name =
     let
         parse : String -> Bool
         parse s =
             not <| s == "" || s == "0" || s == "no" || s == "n" || s == "False" || s == "false"
     in
-        P.customParam name (Maybe.Extra.unwrap False parse)
+        P.customParam name (Maybe.Extra.unwrap default parse)
 
 
 parser : P.Parser (Route -> a) a
@@ -147,8 +151,8 @@ parser =
                 (P.oneOf [ P.top, P.s "timer" ])
                     <?> dateParam "a"
                     <?> P.stringParam "g"
-                    <?> boolParam "enableSession"
-                    <?> boolParam "enableGoals"
+                    <?> boolParam flags0.session "enableSession"
+                    <?> boolParam flags0.goals "enableGoals"
 
         -- , P.map HistoryRoot <| P.s "history"
         , P.map History <|
@@ -160,7 +164,7 @@ parser =
                     <?> dateParam "a"
                     <?> dateParam "b"
                     <?> P.stringParam "g"
-                    <?> boolParam "enableGoals"
+                    <?> boolParam flags0.goals "enableGoals"
 
         -- , P.map MapsRoot <| P.s "map"
         , P.map Maps <|
