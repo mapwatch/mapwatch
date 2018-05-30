@@ -24,7 +24,7 @@ var app = Elm.Main.fullscreen({
 if (qs.example) {
   console.log("fetching example file: ", qs.example, qs)
   // show a progress spinner, even when we don't know the size yet
-  var sendProgress = progressSender(loadedAt, "history")(0, 0, loadedAt)
+  var sendProgress = progressSender(loadedAt, "history:example")(0, 0, loadedAt)
   fetch("./examples/"+qs.example)
   .then(function(res) {
     if (res.status < 200 || res.status >= 300) {
@@ -33,7 +33,7 @@ if (qs.example) {
     return res.blob()
   })
   .then(function(blob) {
-    processFile(blob, blob, "history")
+    processFile(blob, blob, "history:example")
   })
   .catch(function(err) {
     console.error("Example-fetch error:", err)
@@ -160,11 +160,13 @@ var isWatching = false
 var historyStats = {instanceJoins: 0, mapRuns: 0}
 app.ports.events.subscribe(function(event) {
   if (event.type === 'progressComplete') {
-    if (!isWatching && event.name === 'history') {
-      gaEvent('completed', {event_category: 'History'})
-      gaEvent('completed_stats', {event_category: 'History', event_label: 'instanceJoins', value: historyStats.instanceJoins})
-      gaEvent('completed_stats', {event_category: 'History', event_label: 'mapRuns', value: historyStats.mapRuns})
-      isWatching = true
+    if (!isWatching) {
+      if (event.name === 'history' || event.name === 'history:example') {
+        gaEvent('completed', {event_category: event.name})
+        gaEvent('completed_stats', {event_category: event.name, event_label: 'instanceJoins', value: historyStats.instanceJoins})
+        gaEvent('completed_stats', {event_category: event.name, event_label: 'mapRuns', value: historyStats.mapRuns})
+        isWatching = true
+      }
     }
   }
   else if (event.type === 'joinInstance') {
