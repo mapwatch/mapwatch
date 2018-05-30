@@ -3,7 +3,7 @@ module View.NotFound exposing (view)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Mapwatch.Route as Route
+import Route
 import View.Nav
 import View.Home
 

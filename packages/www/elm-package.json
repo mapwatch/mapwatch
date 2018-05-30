@@ -4,6 +4,7 @@
     "repository": "https://github.com/mapwatch/mapwatch.git",
     "license": "GPL-3.0",
     "source-directories": [
+        "../lib/src",
         "./src"
     ],
     "exposed-modules": [],

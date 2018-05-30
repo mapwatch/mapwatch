@@ -4,7 +4,7 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import Json.Decode as Decode
-import Mapwatch as Mapwatch exposing (Model, Msg(..))
+import Model as Model exposing (Model, Msg(..))
 import View.Icon as Icon
 
 
@@ -17,7 +17,7 @@ view : Model -> H.Html Msg
 view model =
     let
         display =
-            case model.progress of
+            case model.mapwatch.progress of
                 Nothing ->
                     ""
 

@@ -5,9 +5,10 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import Maybe.Extra
-import Mapwatch as Mapwatch exposing (Model, Msg)
+import Model as Model exposing (Model, Msg)
+import Mapwatch as Mapwatch
 import Mapwatch.Run as Run
-import Mapwatch.Route as Route
+import Route
 import View.Util exposing (viewGoalForm)
 import View.Nav
 import View.Setup
@@ -22,14 +23,14 @@ view qs model =
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model
-        , viewParseError model.parseError
+        , viewParseError model.mapwatch.parseError
         , viewBody qs model
         ]
 
 
 viewBody : Route.TimerParams -> Model -> H.Html Msg
 viewBody qs model =
-    case model.progress of
+    case model.mapwatch.progress of
         Nothing ->
             -- waiting for file input, nothing to show yet
             H.div [] []
@@ -38,7 +39,7 @@ viewBody qs model =
             H.div [] <|
                 (if Mapwatch.isProgressDone p then
                     -- all done!
-                    [ viewGoalForm (\goal -> Mapwatch.RouteTo <| Route.Timer { qs | goal = goal }) qs
+                    [ viewGoalForm (\goal -> Model.RouteTo <| Route.Timer { qs | goal = goal }) qs
                     , viewMain qs model
                     ]
                  else
@@ -50,7 +51,7 @@ viewMain : Route.TimerParams -> Model -> H.Html msg
 viewMain qs model =
     let
         run =
-            Run.current model.now model.instance model.runState
+            Run.current model.now model.mapwatch.instance model.mapwatch.runState
                 |> Maybe.Extra.filter (Run.isBetween { before = Nothing, after = qs.after })
 
         hideEarlierButton =
@@ -63,14 +64,14 @@ viewMain qs model =
             case qs.after of
                 Nothing ->
                     ( "today"
-                    , Run.filterToday model.now model.runs
+                    , Run.filterToday model.now model.mapwatch.runs
                     , [ hideEarlierButton
                       ]
                     )
 
                 Just _ ->
                     ( "this session"
-                    , Run.filterBetween { before = Nothing, after = qs.after } model.runs
+                    , Run.filterBetween { before = Nothing, after = qs.after } model.mapwatch.runs
                     , [ H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Nothing } ] [ Icon.fas "eye", H.text " Unhide all" ]
                       , hideEarlierButton
                       , H.a [ A.class "button", Route.href <| Route.History { hqs | after = qs.after, before = Just model.now, goal = qs.goal } ] [ Icon.fas "camera", H.text " Snapshot history" ]
@@ -84,7 +85,7 @@ viewMain qs model =
             Run.parseGoalDuration qs.goal
 
         goalDuration =
-            Run.goalDuration goal { session = runs, allTime = model.runs }
+            Run.goalDuration goal { session = runs, allTime = model.mapwatch.runs }
 
         historyTable =
             H.table [ A.class "timer history" ]
@@ -113,7 +114,7 @@ viewMain qs model =
             , H.table [ A.class "timer-details" ]
                 [ H.tbody []
                     [ H.tr [] mappingNow
-                    , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance hqs model.instance.val ] ]
+                    , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance hqs model.mapwatch.instance.val ] ]
                     , H.tr [] [ H.td [] [ H.text <| "Maps done " ++ sessname ++ ": " ], H.td [] [ H.text <| toString <| List.length runs ] ]
                     , H.tr [ A.class "session-buttons" ]
                         (if qs.enableSession then

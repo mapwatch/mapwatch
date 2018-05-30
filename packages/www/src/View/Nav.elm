@@ -3,7 +3,7 @@ module View.Nav exposing (view)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Mapwatch.Route as Route exposing (Route(..), HistoryParams, MapsParams, timerParams0, historyParams0, mapsParams0)
+import Route as Route exposing (Route(..), HistoryParams, MapsParams, timerParams0, historyParams0, mapsParams0)
 import View.Icon as Icon
 import Date as Date exposing (Date)
 

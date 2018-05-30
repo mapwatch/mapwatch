@@ -3,7 +3,7 @@ module View.DumpLines exposing (view)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Mapwatch as Mapwatch exposing (Model, Msg)
+import Model as Model exposing (Model, Msg)
 import View.Setup
 
 

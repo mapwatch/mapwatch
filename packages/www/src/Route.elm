@@ -1,4 +1,4 @@
-module Mapwatch.Route
+module Route
     exposing
         ( Route(..)
         , HistoryParams

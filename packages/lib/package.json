@@ -5,7 +5,6 @@
   "license": "GPL-3.0",
   "private": true,
   "dependencies": {
-    "@mapwatch/www": "1.0.0"
   },
   "devDependencies": {
     "elm": "^0.18.0"

@@ -1,6 +1,7 @@
 *.swp
 *.log
 /TODO
+/elm-stuff/
 /packages/*/elm-stuff/
 /node_modules
 /packages/*/node_modules/

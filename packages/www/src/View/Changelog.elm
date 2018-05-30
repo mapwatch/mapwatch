@@ -3,7 +3,7 @@ module View.Changelog exposing (..)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Mapwatch.Route as Route exposing (Route)
+import Route as Route exposing (Route)
 import View.Nav
 import View.Home exposing (viewHeader)
 import Date as Date exposing (Date)

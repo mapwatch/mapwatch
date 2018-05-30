@@ -7,11 +7,12 @@ import Time
 import Date
 import Dict
 import Regex
-import Mapwatch as Mapwatch exposing (Model, Msg(..))
+import Model as Model exposing (Model, Msg(..))
+import Mapwatch as Mapwatch
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.MapList as MapList
-import Mapwatch.Route as Route
+import Route
 import View.Nav
 import View.Setup
 import View.History
@@ -26,14 +27,14 @@ view params model =
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model
-        , viewParseError model.parseError
+        , viewParseError model.mapwatch.parseError
         , viewBody params model
         ]
 
 
 viewBody : Route.MapsParams -> Model -> H.Html Msg
 viewBody params model =
-    case model.progress of
+    case model.mapwatch.progress of
         Nothing ->
             -- waiting for file input, nothing to show yet
             H.div [] []
@@ -65,7 +66,7 @@ viewMain params model =
         [ viewSearch [ A.placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
         , MapList.mapList
             |> search params.search
-            |> Run.groupMapNames (Run.filterBetween params model.runs)
+            |> Run.groupMapNames (Run.filterBetween params model.mapwatch.runs)
             |> List.reverse
             |> List.map (uncurry <| viewMap params)
             |> \rows -> H.table [ A.class "by-map" ] [ H.body [] rows ]

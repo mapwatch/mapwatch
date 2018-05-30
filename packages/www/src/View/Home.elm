@@ -15,7 +15,7 @@ import Mapwatch.Visit as Visit
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Run as Run
 import Mapwatch.Zone as Zone
-import Mapwatch.Route as Route
+import Route
 import View.Setup
 import View.Nav
 import View.Icon as Icon

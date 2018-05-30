@@ -8,11 +8,12 @@ import Date
 import Dict
 import Regex
 import Maybe.Extra
-import Mapwatch as Mapwatch exposing (Model, Msg(..))
+import Model as Model exposing (Model, Msg(..))
+import Mapwatch as Mapwatch
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.Zone as Zone
-import Mapwatch.Route as Route
+import Route
 import View.Nav
 import View.Setup
 import View.NotFound
@@ -23,21 +24,21 @@ import View.Util exposing (roundToPlaces, viewSearch, pluralize, viewGoalForm)
 
 view : Route.HistoryParams -> Model -> H.Html Msg
 view params model =
-    if Mapwatch.isReady model && not (isValidPage params.page model) then
+    if Mapwatch.isReady model.mapwatch && not (isValidPage params.page model) then
         View.NotFound.view
     else
         H.div []
             [ viewHeader
             , View.Nav.view <| Just model.route
             , View.Setup.view model
-            , viewParseError model.parseError
+            , viewParseError model.mapwatch.parseError
             , viewBody params model
             ]
 
 
 viewBody : Route.HistoryParams -> Model -> H.Html Msg
 viewBody params model =
-    case model.progress of
+    case model.mapwatch.progress of
         Nothing ->
             -- waiting for file input, nothing to show yet
             H.div [] []
@@ -64,12 +65,12 @@ numPages numItems =
 
 isValidPage : Int -> Model -> Bool
 isValidPage page model =
-    case model.progress of
+    case model.mapwatch.progress of
         Nothing ->
             True
 
         Just _ ->
-            page == (clamp 0 (numPages (List.length model.runs) - 1) page)
+            page == (clamp 0 (numPages (List.length model.mapwatch.runs) - 1) page)
 
 
 viewMain : Route.HistoryParams -> Model -> H.Html Msg
@@ -78,10 +79,10 @@ viewMain params model =
         currentRun : Maybe Run
         currentRun =
             -- include the current run if we're viewing a snapshot
-            Maybe.andThen (\b -> Run.current b model.instance model.runState) params.before
+            Maybe.andThen (\b -> Run.current b model.mapwatch.instance model.mapwatch.runState) params.before
 
         runs =
-            model.runs
+            model.mapwatch.runs
                 |> (++) (Maybe.Extra.toList currentRun)
                 |> Maybe.Extra.unwrap identity Run.search params.search
                 |> Run.filterBetween params
@@ -101,7 +102,7 @@ viewMain params model =
                             |> HistorySearch
                     )
                     params.search
-                , viewGoalForm (\goal -> Mapwatch.RouteTo <| Route.History { params | goal = goal }) params
+                , viewGoalForm (\goal -> Model.RouteTo <| Route.History { params | goal = goal }) params
                 ]
             , viewStatsTable params model.now runs
             , viewHistoryTable params runs model
@@ -221,9 +222,9 @@ viewHistoryTable ({ page } as params) queryRuns model =
                             queryRuns
 
                         Nothing ->
-                            Run.filterToday model.now model.runs
+                            Run.filterToday model.now model.mapwatch.runs
                     )
-                , allTime = model.runs
+                , allTime = model.mapwatch.runs
                 }
     in
         H.table [ A.class "history" ]
