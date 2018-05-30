@@ -1,8 +1,8 @@
 module View.View exposing (view)
 
 import Html as H
-import Model as Model exposing (Model, Msg)
-import Model.Route as Route exposing (Route(..))
+import Mapwatch as Mapwatch exposing (Model, Msg)
+import Mapwatch.Route as Route exposing (Route(..))
 import View.History
 import View.Timer
 import View.DumpLines

@@ -1,4 +1,4 @@
-module Model.MapList exposing (Map, mapList, url, zoneAliases, zoneAliasesDict)
+module Mapwatch.MapList exposing (Map, mapList, url, zoneAliases, zoneAliasesDict)
 
 import Regex
 import Dict as Dict exposing (Dict)

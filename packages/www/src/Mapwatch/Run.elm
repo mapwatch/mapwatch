@@ -1,4 +1,4 @@
-module Model.Run
+module Mapwatch.Run
     exposing
         ( Run
         , State(..)
@@ -38,8 +38,8 @@ import Dict
 import Regex
 import Dict.Extra
 import Maybe.Extra
-import Model.Instance as Instance exposing (Instance)
-import Model.Visit as Visit exposing (Visit)
+import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.Visit as Visit exposing (Visit)
 
 
 type alias Run =

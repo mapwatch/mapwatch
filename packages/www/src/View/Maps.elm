@@ -7,11 +7,11 @@ import Time
 import Date
 import Dict
 import Regex
-import Model as Model exposing (Model, Msg(..))
-import Model.Instance as Instance exposing (Instance)
-import Model.Run as Run exposing (Run)
-import Model.MapList as MapList
-import Model.Route as Route
+import Mapwatch as Mapwatch exposing (Model, Msg(..))
+import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.Run as Run exposing (Run)
+import Mapwatch.MapList as MapList
+import Mapwatch.Route as Route
 import View.Nav
 import View.Setup
 import View.History
@@ -40,7 +40,7 @@ viewBody params model =
 
         Just p ->
             H.div [] <|
-                (if Model.isProgressDone p then
+                (if Mapwatch.isProgressDone p then
                     -- all done!
                     [ viewMain params model ]
                  else

@@ -9,13 +9,13 @@ import Html.Events as E
 import Time
 import Date
 import Dict
-import Model as Model exposing (Model, Msg(..))
-import Model.LogLine as LogLine
-import Model.Visit as Visit
-import Model.Instance as Instance exposing (Instance)
-import Model.Run as Run
-import Model.Zone as Zone
-import Model.Route as Route
+import Mapwatch as Mapwatch exposing (Model, Msg(..))
+import Mapwatch.LogLine as LogLine
+import Mapwatch.Visit as Visit
+import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.Run as Run
+import Mapwatch.Zone as Zone
+import Mapwatch.Route as Route
 import View.Setup
 import View.Nav
 import View.Icon as Icon
@@ -118,10 +118,10 @@ formatBytes b =
         places 2 val ++ unit
 
 
-viewProgress : Model.Progress -> H.Html msg
+viewProgress : Mapwatch.Progress -> H.Html msg
 viewProgress p =
-    if Model.isProgressDone p then
-        H.div [] [ H.br [] [], H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ toString (Model.progressDuration p / 1000) ++ "s" ]
+    if Mapwatch.isProgressDone p then
+        H.div [] [ H.br [] [], H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ toString (Mapwatch.progressDuration p / 1000) ++ "s" ]
     else if p.max <= 0 then
         H.div [] [ Icon.fasPulse "spinner" ]
     else
@@ -133,11 +133,11 @@ viewProgress p =
                         ++ " / "
                         ++ formatBytes p.max
                         ++ ": "
-                        ++ toString (floor <| Model.progressPercent p * 100)
+                        ++ toString (floor <| Mapwatch.progressPercent p * 100)
                         ++ "%"
 
                 -- ++ " in"
-                -- ++ toString (Model.progressDuration p / 1000)
+                -- ++ toString (Mapwatch.progressDuration p / 1000)
                 -- ++ "s"
                 ]
             ]

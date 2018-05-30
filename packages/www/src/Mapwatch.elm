@@ -1,4 +1,4 @@
-module Model
+module Mapwatch
     exposing
         ( Model
         , Msg(..)
@@ -20,12 +20,12 @@ import Maybe.Extra
 import AnimationFrame
 import Navigation
 import Ports
-import Model.LogLine as LogLine
-import Model.Zone as Zone
-import Model.Instance as Instance
-import Model.Visit as Visit
-import Model.Run as Run
-import Model.Route as Route exposing (Route)
+import Mapwatch.LogLine as LogLine
+import Mapwatch.Zone as Zone
+import Mapwatch.Instance as Instance
+import Mapwatch.Visit as Visit
+import Mapwatch.Run as Run
+import Mapwatch.Route as Route exposing (Route)
 
 
 type alias Flags =

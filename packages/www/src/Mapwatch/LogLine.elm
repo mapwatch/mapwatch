@@ -1,4 +1,4 @@
-module Model.LogLine exposing (ParseError, ParsedLine, Info(..), Line, parse)
+module Mapwatch.LogLine exposing (ParseError, ParsedLine, Info(..), Line, parse)
 
 import Date
 import Regex

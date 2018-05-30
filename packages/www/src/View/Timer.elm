@@ -5,9 +5,9 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import Maybe.Extra
-import Model as Model exposing (Model, Msg)
-import Model.Run as Run
-import Model.Route as Route
+import Mapwatch as Mapwatch exposing (Model, Msg)
+import Mapwatch.Run as Run
+import Mapwatch.Route as Route
 import View.Util exposing (viewGoalForm)
 import View.Nav
 import View.Setup
@@ -36,9 +36,9 @@ viewBody qs model =
 
         Just p ->
             H.div [] <|
-                (if Model.isProgressDone p then
+                (if Mapwatch.isProgressDone p then
                     -- all done!
-                    [ viewGoalForm (\goal -> Model.RouteTo <| Route.Timer { qs | goal = goal }) qs
+                    [ viewGoalForm (\goal -> Mapwatch.RouteTo <| Route.Timer { qs | goal = goal }) qs
                     , viewMain qs model
                     ]
                  else

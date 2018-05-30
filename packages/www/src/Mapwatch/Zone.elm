@@ -1,9 +1,9 @@
-module Model.Zone exposing (Type(..), SideZoneType(..), Master(..), zoneType, isTown, isMap, sideZoneType, maps)
+module Mapwatch.Zone exposing (Type(..), SideZoneType(..), Master(..), zoneType, isTown, isMap, sideZoneType, maps)
 
 import Set
 import Dict
 import Maybe.Extra
-import Model.MapList exposing (mapList, zoneAliases)
+import Mapwatch.MapList exposing (mapList, zoneAliases)
 
 
 type Type

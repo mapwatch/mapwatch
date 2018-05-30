@@ -4,7 +4,7 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import Json.Encode as Json
-import Model.MapList as MapList
+import Mapwatch.MapList as MapList
 
 
 fa : String -> String -> H.Html msg

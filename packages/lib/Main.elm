@@ -1,8 +1,8 @@
 module Main exposing (main)
 
 import Platform
-import Model exposing (initModel, update, subscriptions)
-import Model.Route as Route
+import Mapwatch exposing (initModel, update, subscriptions)
+import Mapwatch.Route as Route
 
 
 main =

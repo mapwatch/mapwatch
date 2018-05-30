@@ -1,4 +1,4 @@
-module Model.Visit
+module Mapwatch.Visit
     exposing
         ( Visit
         , tryInit
@@ -12,7 +12,7 @@ module Model.Visit
 
 import Date
 import Time
-import Model.Instance as Instance exposing (Instance)
+import Mapwatch.Instance as Instance exposing (Instance)
 
 
 type alias Visit =

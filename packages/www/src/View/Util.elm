@@ -4,7 +4,7 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import View.Icon as Icon
-import Model exposing (Model, Msg)
+import Mapwatch exposing (Model, Msg)
 import Regex
 
 

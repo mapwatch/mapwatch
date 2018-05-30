@@ -3,7 +3,7 @@ module View.MapIcons exposing (view)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Model.MapList exposing (Map, mapList)
+import Mapwatch.MapList exposing (Map, mapList)
 import View.Icon as Icon
 
 

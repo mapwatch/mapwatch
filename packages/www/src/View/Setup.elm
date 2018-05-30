@@ -4,7 +4,7 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import Json.Decode as Decode
-import Model as Model exposing (Model, Msg(..))
+import Mapwatch as Mapwatch exposing (Model, Msg(..))
 import View.Icon as Icon
 
 

@@ -8,11 +8,11 @@ import Date
 import Dict
 import Regex
 import Maybe.Extra
-import Model as Model exposing (Model, Msg(..))
-import Model.Instance as Instance exposing (Instance)
-import Model.Run as Run exposing (Run)
-import Model.Zone as Zone
-import Model.Route as Route
+import Mapwatch as Mapwatch exposing (Model, Msg(..))
+import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.Run as Run exposing (Run)
+import Mapwatch.Zone as Zone
+import Mapwatch.Route as Route
 import View.Nav
 import View.Setup
 import View.NotFound
@@ -23,7 +23,7 @@ import View.Util exposing (roundToPlaces, viewSearch, pluralize, viewGoalForm)
 
 view : Route.HistoryParams -> Model -> H.Html Msg
 view params model =
-    if Model.isReady model && not (isValidPage params.page model) then
+    if Mapwatch.isReady model && not (isValidPage params.page model) then
         View.NotFound.view
     else
         H.div []
@@ -44,7 +44,7 @@ viewBody params model =
 
         Just p ->
             H.div [] <|
-                (if Model.isProgressDone p then
+                (if Mapwatch.isProgressDone p then
                     -- all done!
                     [ viewMain params model ]
                  else
@@ -101,7 +101,7 @@ viewMain params model =
                             |> HistorySearch
                     )
                     params.search
-                , viewGoalForm (\goal -> Model.RouteTo <| Route.History { params | goal = goal }) params
+                , viewGoalForm (\goal -> Mapwatch.RouteTo <| Route.History { params | goal = goal }) params
                 ]
             , viewStatsTable params model.now runs
             , viewHistoryTable params runs model

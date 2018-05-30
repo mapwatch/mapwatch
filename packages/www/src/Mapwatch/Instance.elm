@@ -1,10 +1,10 @@
-module Model.Instance exposing (..)
+module Mapwatch.Instance exposing (..)
 
 import Time
 import Date
 import Maybe.Extra
-import Model.LogLine as LogLine
-import Model.Zone as Zone
+import Mapwatch.LogLine as LogLine
+import Mapwatch.Zone as Zone
 
 
 -- (Zone, instance-server-address) isn't really a unique id -

@@ -11,9 +11,9 @@ port module Ports
 import Time as Time exposing (Time)
 import Date as Date exposing (Date)
 import Maybe.Extra
-import Model.Instance as Instance exposing (Instance)
-import Model.Visit as Visit exposing (Visit)
-import Model.Run as Run exposing (Run)
+import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.Visit as Visit exposing (Visit)
+import Mapwatch.Run as Run exposing (Run)
 import Json.Encode as Encode
 
 

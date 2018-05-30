@@ -1,12 +1,12 @@
 module Main exposing (main)
 
 import View.View exposing (view)
-import Model exposing (init, update, subscriptions)
+import Mapwatch exposing (init, update, subscriptions)
 import Navigation
 
 
 main =
-    Navigation.programWithFlags Model.Navigate
+    Navigation.programWithFlags Mapwatch.Navigate
         { init = init
         , update = update
         , subscriptions = subscriptions
