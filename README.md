@@ -28,7 +28,7 @@ Mostly yes. Nothing in your `client.txt` ever leaves your computer. Once Mapwatc
 
 Mapwatch tells Google Analytics how long you've spend on the page and when you finish a map. The developer's goal here is to see averages of all Mapwatch users, and to gather debugging information - nothing evil.
 
-If Google Analytics tracking bothers you, [feel free to opt-out.](https://tools.google.com/dlpage/gaoptout)
+If Google Analytics tracking bothers you, [feel free to turn it off.](https://tools.google.com/dlpage/gaoptout)
 
 ### Why?
 
