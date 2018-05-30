@@ -16,7 +16,7 @@ import Model.Instance as Instance exposing (Instance)
 
 
 type alias Visit =
-    { instance : Maybe Instance, joinedAt : Date.Date, leftAt : Date.Date }
+    { instance : Instance, joinedAt : Date.Date, leftAt : Date.Date }
 
 
 duration : Visit -> Time.Time

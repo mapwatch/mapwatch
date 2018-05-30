@@ -1,7 +1,7 @@
 port module Ports exposing (..)
 
 import Time as Time exposing (Time)
-import Model.Instance as Instance exposing (Instance)
+import Model.Instance as Instance
 
 
 port inputClientLogWithId : { id : String, maxSize : Int } -> Cmd msg
@@ -22,4 +22,4 @@ port progress : (Progress -> msg) -> Sub msg
 -- It's for use as a library, by callers.
 
 
-port mapRunEvent : { startedAt : Time, finishedAt : Time, instance : Instance } -> Cmd msg
+port mapRunEvent : { startedAt : Time, finishedAt : Time, instance : Instance.Address } -> Cmd msg

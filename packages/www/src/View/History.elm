@@ -343,7 +343,7 @@ viewHistoryMainRow { showDate } qs goal r =
             )
 
 
-viewHistorySideAreaRow : HistoryRowConfig -> Route.HistoryParams -> Instance -> Time.Time -> H.Html msg
+viewHistorySideAreaRow : HistoryRowConfig -> Route.HistoryParams -> Instance.Address -> Time.Time -> H.Html msg
 viewHistorySideAreaRow { showDate } qs instance d =
     H.tr [ A.class "side-area" ]
         ((if showDate then
@@ -352,7 +352,7 @@ viewHistorySideAreaRow { showDate } qs instance d =
             []
          )
             ++ [ H.td [] []
-               , H.td [ A.class "zone", A.colspan 7 ] [ viewSideAreaName qs <| Just instance ]
+               , H.td [ A.class "zone", A.colspan 7 ] [ viewSideAreaName qs (Instance.Instance instance) ]
                , H.td [ A.class "side-dur" ] [ viewDuration d ]
                , H.td [ A.class "portals" ] []
                , H.td [ A.class "town-pct" ] []

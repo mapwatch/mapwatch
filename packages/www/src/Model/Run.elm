@@ -60,14 +60,14 @@ init visit =
         Just { first = visit, last = visit, visits = [ visit ], portals = 1 }
 
 
-instance : Run -> Instance
+instance : Run -> Instance.Address
 instance run =
     -- this is guaranteed because init checks for it
     case run.first.instance of
-        Nothing ->
+        Instance.MainMenu ->
             Debug.crash "null-instance run"
 
-        Just i ->
+        Instance.Instance i ->
             i
 
 
@@ -522,38 +522,31 @@ parseGoalDuration =
                             NoGoal
 
 
-durationPerSideArea : Run -> List ( Instance, Time.Time )
+durationPerSideArea : Run -> List ( Instance.Address, Time.Time )
 durationPerSideArea run =
     durationPerInstance run
         |> List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance))
         |> List.map
             (\( i, d ) ->
                 case i of
-                    Just i ->
+                    Instance.Instance i ->
                         ( i, d )
 
-                    Nothing ->
+                    Instance.MainMenu ->
                         Debug.crash "Instance.isTown should have filtered this one"
             )
 
 
-durationPerInstance : Run -> List ( Maybe Instance, Time.Time )
+durationPerInstance : Run -> List ( Instance, Time.Time )
 durationPerInstance { visits } =
     let
         instanceToZoneKey instance =
             case instance of
-                Just i ->
+                Instance.Instance i ->
                     i.zone
 
-                Nothing ->
+                Instance.MainMenu ->
                     "(none)"
-
-        zoneKeyToZone key =
-            -- really wish dictionaries had more flexible keys
-            if key == "(none)" then
-                Nothing
-            else
-                Just key
 
         update instance duration val0 =
             val0

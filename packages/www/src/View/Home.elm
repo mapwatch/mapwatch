@@ -21,17 +21,17 @@ import View.Nav
 import View.Icon as Icon
 
 
-viewInstance : Route.HistoryParams -> Maybe Instance -> H.Html msg
+viewInstance : Route.HistoryParams -> Instance -> H.Html msg
 viewInstance qs instance =
     case instance of
-        Just i ->
+        Instance.Instance i ->
             if Zone.isMap i.zone then
                 -- TODO preserve before/after
                 H.a [ Route.href <| Route.History { qs | search = Just i.zone }, A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
             else
                 H.span [ A.title i.addr ] [ H.text i.zone ]
 
-        Nothing ->
+        Instance.MainMenu ->
             H.span [] [ H.text "(none)" ]
 
 
@@ -149,9 +149,9 @@ viewDate d =
         [ H.text <| toString (Date.day d) ++ " " ++ toString (Date.month d) ]
 
 
-formatSideAreaType : Maybe Instance -> Maybe String
+formatSideAreaType : Instance -> Maybe String
 formatSideAreaType instance =
-    case Zone.sideZoneType (Maybe.map .zone instance) of
+    case Zone.sideZoneType <| Instance.unwrap Nothing (Just << .zone) instance of
         Zone.OtherSideZone ->
             Nothing
 
@@ -162,7 +162,7 @@ formatSideAreaType instance =
             Just <| "Elder Guardian: The " ++ toString guardian
 
 
-viewSideAreaName : Route.HistoryParams -> Maybe Instance -> H.Html msg
+viewSideAreaName : Route.HistoryParams -> Instance -> H.Html msg
 viewSideAreaName qs instance =
     case formatSideAreaType instance of
         Nothing ->

@@ -12,8 +12,13 @@ import Model.Zone as Zone
 -- same instance server. It's the best we've got, though.
 
 
-type alias Instance =
+type alias Address =
     { zone : String, addr : String }
+
+
+type Instance
+    = MainMenu
+    | Instance Address
 
 
 type Builder
@@ -22,7 +27,7 @@ type Builder
 
 
 type alias State =
-    { val : Maybe Instance -- Nothing if no loglines processed yet, OR upon reopening the game
+    { val : Instance
     , joinedAt : Maybe Date.Date -- Nothing if no loglines have been processed yet
     , next : Builder
     }
@@ -31,18 +36,28 @@ type alias State =
 init : State
 init =
     -- initial-date is awkward, only Nothing on init, but we need to be able to tell the difference
-    { val = Nothing, joinedAt = Nothing, next = Empty }
+    { val = MainMenu, joinedAt = Nothing, next = Empty }
 
 
-isTown : Maybe Instance -> Bool
+unwrap : a -> (Address -> a) -> Instance -> a
+unwrap default fn instance =
+    case instance of
+        MainMenu ->
+            default
+
+        Instance instance ->
+            fn instance
+
+
+isTown : Instance -> Bool
 isTown =
     -- No-zone counts as town, since you log back in to town
-    Maybe.Extra.unwrap True (Zone.isTown << .zone)
+    unwrap True (Zone.isTown << .zone)
 
 
-isMap : Maybe Instance -> Bool
+isMap : Instance -> Bool
 isMap =
-    Maybe.Extra.unwrap False (Zone.isMap << .zone)
+    unwrap False (Zone.isMap << .zone)
 
 
 duration : Date.Date -> State -> Maybe Time.Time
@@ -79,7 +94,7 @@ update line state =
 
         ( Connecting addr, LogLine.YouHaveEntered zone ) ->
             -- step 2
-            { val = Just { zone = zone, addr = addr }, joinedAt = Just line.date, next = Empty }
+            { val = Instance { zone = zone, addr = addr }, joinedAt = Just line.date, next = Empty }
 
         ( Connecting _, LogLine.ConnectingToInstanceServer addr ) ->
             -- two "connecting" messages - should never happen, but trust the most recent one
