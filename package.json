@@ -5,7 +5,7 @@
     "build:electron": "lerna run build --ignore @mapwatch/electron && cd ./packages/electron && yarn build:all",
     "dev:www": "cd ./packages/www && yarn dev",
     "build:www": "cd ./packages/www && yarn build",
-    "build": "lerna run build --stream"
+    "build": "lerna run build --stream --ignore @mapwatch/lib"
   },
   "license": "GPL-3.0",
   "private": true,
