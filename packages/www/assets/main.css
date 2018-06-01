@@ -153,10 +153,13 @@ table.timer-details .session-buttons .button {
   max-width: none;
 }
 
+.search-form {
+  margin-right: 1em;
+}
+
 .search-text {
   position: relative;
   /* height: 2em; */
-  margin-right: 1em;
 }
 .search-text .fas {
   position: absolute;
@@ -180,4 +183,11 @@ a:hover {
 a.button:hover {
   /* ...except this one */
   border-bottom: 1px solid #eb99a1;
+}
+.search-date .button {
+  font-size: 80%;
+  opacity: 0.5;
+}
+.search-goal {
+  white-space: nowrap;
 }

@@ -19,7 +19,7 @@ import View.Setup
 import View.NotFound
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
 import View.Icon as Icon
-import View.Util exposing (roundToPlaces, viewSearch, pluralize, viewGoalForm)
+import View.Util exposing (roundToPlaces, viewSearch, pluralize, viewGoalForm, viewDateSearch)
 
 
 view : Route.HistoryParams -> Model -> H.Html Msg
@@ -102,6 +102,7 @@ viewMain params model =
                             |> HistorySearch
                     )
                     params.search
+                , viewDateSearch (\qs1 -> Route.History { params | before = qs1.before, after = qs1.after }) params
                 , viewGoalForm (\goal -> Model.RouteTo <| Route.History { params | goal = goal }) params
                 ]
             , viewStatsTable params model.now runs

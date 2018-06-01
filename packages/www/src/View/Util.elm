@@ -4,8 +4,11 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import View.Icon as Icon
-import Mapwatch exposing (Model, Msg)
 import Regex
+import Time as Time exposing (Time)
+import Date as Date exposing (Date)
+import Mapwatch exposing (Model, Msg)
+import Route as Route exposing (Route)
 
 
 roundToPlaces : Float -> Float -> Float
@@ -15,7 +18,7 @@ roundToPlaces p n =
 
 viewSearch : List (H.Attribute msg) -> (String -> msg) -> Maybe String -> H.Html msg
 viewSearch attrs msg search =
-    H.span [ A.class "search-text" ]
+    H.span [ A.class "search-form search-text" ]
         [ H.input
             ([ A.value <| Maybe.withDefault "" search
              , A.type_ "text"
@@ -59,7 +62,7 @@ viewGoalForm onChange0 qs =
                     Just str
     in
         if qs.enableGoals then
-            H.span []
+            H.span [ A.class "search-form search-goal" ]
                 [ H.select [ E.onInput onChange ]
                     [ H.option [ A.selected <| qs.goal == Nothing || qs.goal == Just "none", A.value "none" ] [ H.text "No time goal" ]
                     , H.option [ A.selected <| qs.goal == Just "best-session", A.value "best-session" ] [ H.text <| "Goal: " ++ sessionName ++ " best" ]
@@ -80,3 +83,40 @@ pluralize one other n =
         one
     else
         other
+
+
+leagueName =
+    "Incursion"
+
+
+leagueDate =
+    case Date.fromString "2018-06-01T20:00:00.000Z" of
+        Ok date ->
+            date
+
+        Err err ->
+            Debug.crash "Couldn't decode a hardcoded date?" err
+
+
+hidePreLeagueButton : (Date -> Route) -> H.Html msg
+hidePreLeagueButton route =
+    H.a [ A.class "button", Route.href <| route leagueDate ] [ Icon.fas "calendar", H.text <| " Hide pre-" ++ leagueName ++ " maps" ]
+
+
+viewDateSearch : ({ after : Maybe Date, before : Maybe Date } -> Route) -> { a | before : Maybe Date, after : Maybe Date } -> H.Html msg
+viewDateSearch route qs =
+    let
+        href0 =
+            { after = Nothing, before = Nothing }
+
+        buttons =
+            case qs.after of
+                Nothing ->
+                    [ hidePreLeagueButton (\after -> route { href0 | after = Just after })
+                    ]
+
+                Just _ ->
+                    [ H.a [ A.class "button", Route.href <| route { href0 | after = Nothing } ] [ Icon.fas "eye", H.text " Unhide all" ]
+                    ]
+    in
+        H.span [ A.class "search-form search-date" ] buttons

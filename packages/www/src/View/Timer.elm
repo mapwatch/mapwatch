@@ -9,7 +9,7 @@ import Model as Model exposing (Model, Msg)
 import Mapwatch as Mapwatch
 import Mapwatch.Run as Run
 import Route
-import View.Util exposing (viewGoalForm)
+import View.Util exposing (viewGoalForm, hidePreLeagueButton)
 import View.Nav
 import View.Setup
 import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
@@ -66,6 +66,7 @@ viewMain qs model =
                     ( "today"
                     , Run.filterToday model.now model.mapwatch.runs
                     , [ hideEarlierButton
+                      , hidePreLeagueButton (\after -> Route.Timer { qs | after = Just after })
                       ]
                     )
 

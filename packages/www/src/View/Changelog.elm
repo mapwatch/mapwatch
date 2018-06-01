@@ -11,7 +11,12 @@ import Date as Date exposing (Date)
 
 entries : List ( Date, List (List (H.Html msg)) )
 entries =
-    [ ( ymd "2018/05/30"
+    [ ( ymd "2018/06/01"
+      , [ [ H.text "Added a \"hide pre-Incursion maps\" button."
+          ]
+        ]
+      )
+    , ( ymd "2018/05/30"
       , [ [ H.text "Session tracking's now available for everyone."
           ]
         ]
