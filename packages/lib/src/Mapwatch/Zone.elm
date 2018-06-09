@@ -178,3 +178,5 @@ maps =
         (List.map .name mapList)
             -- It's awkward to not track Zana dailies. This is the quickest fix.
             ++ [ "Crumbled Laboratory" ]
+            -- I'm curious about incursion temple times too
+            ++ [ "The Temple of Atzoatl" ]

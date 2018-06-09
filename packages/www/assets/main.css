@@ -152,6 +152,12 @@ table.timer-details .session-buttons .button {
   padding-right: 0.2em;
   max-width: none;
 }
+/* most map icons look great on a black background. For the ones that don't, draw a border. */
+/* https://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts */
+.map-icon-TheTempleofAtzoatl {
+  filter: drop-shadow(1px 1px 0 grey)
+          drop-shadow(-1px -1px 0 grey);
+}
 
 .search-form {
   margin-right: 1em;

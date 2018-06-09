@@ -5,6 +5,7 @@ import Html.Attributes as A
 import Html.Events as E
 import Json.Encode as Json
 import Mapwatch.MapList as MapList
+import Regex
 
 
 fa : String -> String -> H.Html msg
@@ -28,8 +29,12 @@ fasPulse =
 
 map : String -> Maybe (H.Html msg)
 map name =
-    MapList.url name
-        |> Maybe.map (\src -> H.img [ A.class "map-icon", A.src src ] [])
+    let
+        cls =
+            Regex.replace Regex.All (Regex.regex "\\W+") (always "") name
+    in
+        MapList.url name
+            |> Maybe.map (\src -> H.img [ A.class <| "map-icon map-icon-" ++ cls, A.src src ] [])
 
 
 mapOrBlank : String -> H.Html msg

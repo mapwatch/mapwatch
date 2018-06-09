@@ -102,10 +102,22 @@ specialUrlNames =
         -- TODO: oops, 3 maps are named "the beachhead" with different icons: white, yellow, red.
         -- Not worth changing how everything works just for this.
         , ( "The Beachhead", "//web.poecdn.com/image/Art/2DItems/Maps/HarbingerRed.png" )
+
+        -- temple isn't really a map, but let's show it with an icon anyway
+        , ( "The Temple of Atzoatl", "//web.poecdn.com/image/Art/2DItems/Effects/Portals/IncursionPortal.png" )
         ]
 
 
+specialMapList =
+    [ { name = "The Temple of Atzoatl", tier = 0, unique = False }
+    ]
+
+
 englishMapList =
+    specialMapList ++ extractedMapList
+
+
+extractedMapList =
     -- https://pathofexile.gamepedia.com/Map
     {- in the js console, run:
 

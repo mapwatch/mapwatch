@@ -11,7 +11,12 @@ import Date as Date exposing (Date)
 
 entries : List ( Date, List (List (H.Html msg)) )
 entries =
-    [ ( ymd "2018/06/01"
+    [ ( ymd "2018/06/09"
+      , [ [ H.text "Temple of Atzoatl time is now tracked."
+          ]
+        ]
+      )
+    , ( ymd "2018/06/01"
       , [ [ H.text "Added a \"hide pre-Incursion maps\" button."
           ]
         ]
