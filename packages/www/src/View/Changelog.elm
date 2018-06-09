@@ -12,7 +12,8 @@ import Date as Date exposing (Date)
 entries : List ( Date, List (List (H.Html msg)) )
 entries =
     [ ( ymd "2018/06/09"
-      , [ [ H.text "Temple of Atzoatl time is now tracked."
+      , [ [ H.text "The Temple of Atzoatl is now tracked when entered from your hideout."
+          , H.text "Zana dailies now have an icon."
           ]
         ]
       )

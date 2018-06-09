@@ -103,13 +103,15 @@ specialUrlNames =
         -- Not worth changing how everything works just for this.
         , ( "The Beachhead", "//web.poecdn.com/image/Art/2DItems/Maps/HarbingerRed.png" )
 
-        -- temple isn't really a map, but let's show it with an icon anyway
+        -- These aren't really maps, but let's show them with icons anyway
         , ( "The Temple of Atzoatl", "//web.poecdn.com/image/Art/2DItems/Effects/Portals/IncursionPortal.png" )
+        , ( "Crumbled Laboratory", "//web.poecdn.com/image/Art/2DItems/Hideout/Interactive/CartographyDevice.png" )
         ]
 
 
 specialMapList =
     [ { name = "The Temple of Atzoatl", tier = 0, unique = False }
+    , { name = "Crumbled Laboratory", tier = 0, unique = False }
     ]
 
 
