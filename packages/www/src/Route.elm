@@ -52,9 +52,7 @@ timerParams0 =
 
 
 type Route
-    = HistoryRoot
-    | History HistoryParams
-    | MapsRoot
+    = History HistoryParams
     | Maps MapsParams
     | Timer TimerParams
     | Changelog
@@ -153,8 +151,6 @@ parser =
                     <?> P.stringParam "g"
                     <?> boolParam flags0.session "enableSession"
                     <?> boolParam flags0.goals "enableGoals"
-
-        -- , P.map HistoryRoot <| P.s "history"
         , P.map History <|
             P.map (\p -> HistoryParams (Maybe.withDefault 0 p)) <|
                 P.s "history"
@@ -201,9 +197,6 @@ encodeQS pairs0 =
 stringify : Route -> String
 stringify route =
     case route of
-        HistoryRoot ->
-            "#/history"
-
         History qs ->
             "#/history"
                 ++ encodeQS
@@ -219,9 +212,6 @@ stringify route =
                     , ( "b", Maybe.map dateToString qs.before )
                     , ( "g", qs.goal )
                     ]
-
-        MapsRoot ->
-            "#/map"
 
         Maps qs ->
             "#/map"
