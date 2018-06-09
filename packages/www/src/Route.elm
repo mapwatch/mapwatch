@@ -7,6 +7,8 @@ module Route
         , mapsParams0
         , TimerParams
         , timerParams0
+        , OverlayParams
+        , overlayParams0
         , parse
         , stringify
         , href
@@ -245,7 +247,7 @@ stringify route =
                     ]
 
         Overlay qs ->
-            "#/"
+            "#/overlay"
                 ++ encodeQS
                     [ ( "a", Maybe.map dateToString qs.after )
                     , ( "g", qs.goal )

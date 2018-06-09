@@ -14,7 +14,7 @@ entries =
     [ ( ymd "2018/06/09"
       , [ [ H.text "The Temple of Atzoatl is now tracked when entered from your hideout." ]
         , [ H.text "Zana dailies now have an icon." ]
-        , [ H.text "Added a minimal overlay view. This aims to be better for streaming, or playing on only one monitor." ]
+        , [ H.text "Added an ", H.a [ Route.href (Route.Overlay Route.overlayParams0) ] [ H.text "experimental overlay view" ], H.text ". This minimal view aims to be better for streaming, or playing on only one monitor." ]
         ]
       )
     , ( ymd "2018/06/01"

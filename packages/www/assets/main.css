@@ -219,4 +219,6 @@ a.button:hover {
 }
 .overlay-main .main-timer {
   font-size: 300%;
+  margin:0;
+  padding:0;
 }
