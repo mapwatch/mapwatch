@@ -9,7 +9,7 @@ import View.Setup
 
 view : Model -> H.Html Msg
 view model =
-    H.div []
+    H.div [ A.class "main" ]
         [ View.Setup.view model
         , H.pre [] (List.map viewLine <| List.reverse model.lines)
         ]

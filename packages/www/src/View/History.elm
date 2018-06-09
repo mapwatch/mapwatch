@@ -27,7 +27,7 @@ view params model =
     if Mapwatch.isReady model.mapwatch && not (isValidPage params.page model) then
         View.NotFound.view
     else
-        H.div []
+        H.div [ A.class "main" ]
             [ viewHeader
             , View.Nav.view <| Just model.route
             , View.Setup.view model

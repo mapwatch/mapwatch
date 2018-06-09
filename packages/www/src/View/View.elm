@@ -6,6 +6,7 @@ import Mapwatch as Mapwatch
 import Route exposing (Route(..))
 import View.History
 import View.Timer
+import View.Overlay
 import View.DumpLines
 import View.MapIcons
 import View.NotFound
@@ -24,6 +25,9 @@ view model =
 
         Timer qs ->
             View.Timer.view qs model
+
+        Overlay qs ->
+            View.Overlay.view qs model
 
         Debug ->
             H.div [] [ H.text "TODO" ]

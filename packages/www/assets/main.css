@@ -1,5 +1,10 @@
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.main {
   margin: 1em;
+  padding: 13px;
 }
 h1.title {
   display: inline;
@@ -93,6 +98,9 @@ table.history-stats th.title {
   border-top: 1px solid grey;
 }
 
+nav {
+  white-space: nowrap;
+}
 nav > a {
   margin: 1em;
 }
@@ -116,10 +124,10 @@ nav .inactive {
   margin: 0.1em;
 }
 
-.main-timer {
+.main .main-timer {
   margin: 0.5em;
 }
-.main-timer div {
+.main .main-timer div {
   font-size: 800%;
   text-align: center;
   width: 100%;
@@ -197,4 +205,18 @@ a.button:hover {
 }
 .search-goal {
   white-space: nowrap;
+}
+
+.overlay-main {
+}
+.overlay-main .even {
+  background-color: #222;
+}
+.overlay-main .odd {
+}
+.overlay-main .timer {
+  text-align: right;
+}
+.overlay-main .main-timer {
+  font-size: 300%;
 }

@@ -12,9 +12,9 @@ import Date as Date exposing (Date)
 entries : List ( Date, List (List (H.Html msg)) )
 entries =
     [ ( ymd "2018/06/09"
-      , [ [ H.text "The Temple of Atzoatl is now tracked when entered from your hideout."
-          , H.text "Zana dailies now have an icon."
-          ]
+      , [ [ H.text "The Temple of Atzoatl is now tracked when entered from your hideout." ]
+        , [ H.text "Zana dailies now have an icon." ]
+        , [ H.text "Added a minimal overlay view. This aims to be better for streaming, or playing on only one monitor." ]
         ]
       )
     , ( ymd "2018/06/01"
@@ -57,7 +57,7 @@ entries =
 
 view : Route -> H.Html msg
 view route =
-    H.div []
+    H.div [ A.class "main" ]
         [ viewHeader
         , View.Nav.view <| Just route
         , H.div []

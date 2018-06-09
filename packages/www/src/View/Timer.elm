@@ -19,7 +19,7 @@ import View.Icon as Icon
 
 view : Route.TimerParams -> Model -> H.Html Msg
 view qs model =
-    H.div []
+    H.div [ A.class "main" ]
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model
@@ -57,8 +57,11 @@ viewMain qs model =
         hideEarlierButton =
             H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Just model.now } ] [ Icon.fas "eye-slash", H.text " Hide earlier maps" ]
 
-        hqs =
+        hqs0 =
             Route.historyParams0
+
+        hqs =
+            { hqs0 | after = qs.after, goal = qs.goal }
 
         ( sessname, runs, sessionButtons ) =
             case qs.after of
@@ -75,7 +78,7 @@ viewMain qs model =
                     , Run.filterBetween { before = Nothing, after = qs.after } model.mapwatch.runs
                     , [ H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Nothing } ] [ Icon.fas "eye", H.text " Unhide all" ]
                       , hideEarlierButton
-                      , H.a [ A.class "button", Route.href <| Route.History { hqs | after = qs.after, before = Just model.now, goal = qs.goal } ] [ Icon.fas "camera", H.text " Snapshot history" ]
+                      , H.a [ A.class "button", Route.href <| Route.History { hqs | before = Just model.now } ] [ Icon.fas "camera", H.text " Snapshot history" ]
                       ]
                     )
 
@@ -91,7 +94,7 @@ viewMain qs model =
         historyTable =
             H.table [ A.class "timer history" ]
                 [ H.tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False } hqs goalDuration) <| history)
-                , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ H.a [ Route.href <| Route.History { hqs | after = qs.after } ] [ Icon.fas "history", H.text " History" ] ] ] ]
+                , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ H.a [ Route.href <| Route.History hqs ] [ Icon.fas "history", H.text " History" ] ] ] ]
                 ]
 
         ( timer, timerGoal, mappingNow ) =

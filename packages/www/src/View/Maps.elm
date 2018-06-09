@@ -23,7 +23,7 @@ import View.Icon as Icon
 
 view : Route.MapsParams -> Model -> H.Html Msg
 view params model =
-    H.div []
+    H.div [ A.class "main" ]
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model

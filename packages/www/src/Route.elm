@@ -51,10 +51,19 @@ timerParams0 =
     TimerParams Nothing Nothing flags0.session flags0.goals
 
 
+type alias OverlayParams =
+    { after : Maybe Date, goal : Maybe String, enableSession : Bool, enableGoals : Bool }
+
+
+overlayParams0 =
+    OverlayParams Nothing Nothing flags0.session flags0.goals
+
+
 type Route
     = History HistoryParams
     | Maps MapsParams
     | Timer TimerParams
+    | Overlay OverlayParams
     | Changelog
     | Debug
     | DebugDumpLines
@@ -151,6 +160,13 @@ parser =
                     <?> P.stringParam "g"
                     <?> boolParam flags0.session "enableSession"
                     <?> boolParam flags0.goals "enableGoals"
+        , P.map Overlay <|
+            P.map OverlayParams <|
+                (P.oneOf [ P.top, P.s "overlay" ])
+                    <?> dateParam "a"
+                    <?> P.stringParam "g"
+                    <?> boolParam flags0.session "enableSession"
+                    <?> boolParam flags0.goals "enableGoals"
         , P.map History <|
             P.map (\p -> HistoryParams (Maybe.withDefault 0 p)) <|
                 P.s "history"
@@ -222,6 +238,13 @@ stringify route =
                     ]
 
         Timer qs ->
+            "#/"
+                ++ encodeQS
+                    [ ( "a", Maybe.map dateToString qs.after )
+                    , ( "g", qs.goal )
+                    ]
+
+        Overlay qs ->
             "#/"
                 ++ encodeQS
                     [ ( "a", Maybe.map dateToString qs.after )
