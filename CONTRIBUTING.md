@@ -16,3 +16,7 @@ Developing:
 * run the website locally: `yarn dev:www`. Most website code lives in `packages/www/src`
 * create a production build of the website: `yarn build:www`
 * create a production build everything: `yarn build`
+
+# Resources
+
+[Analytics: recent referral traffic (you probably don't have permissions)](https://analytics.google.com/analytics/web/#/report/trafficsources-referrals/a119582500w176920100p175689790/explorer-table.secSegmentId=analytics.fullReferrer&explorer-table.plotKeys=%5B%5D/)
