@@ -1,14 +1,12 @@
 module Main exposing (main)
 
 import Platform
-import Mapwatch exposing (initModel, update, subscriptions)
-import Mapwatch.Route as Route
+import Mapwatch exposing (init, update, subscriptions)
 
 
 main =
-    Platform.programWithFlags
-        -- Route is irrelevant since this isn't web
-        { init = \flags -> ( initModel flags Route.Debug, Cmd.none )
+    Platform.program
+        { init = init
         , update = update
         , subscriptions = subscriptions
         }

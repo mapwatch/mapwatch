@@ -26,6 +26,7 @@ install:
 
 script:
   - sysconfcpus -n 2 yarn build
+  - yarn test
 
 deploy:
   - provider: pages

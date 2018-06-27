@@ -6,12 +6,7 @@ const path = require('path')
 const readline = require('readline')
 const loadedAt = Date.now()
 // TODO move this to a separate package, to demonstrate how a real import looks
-const mapwatch = require('./dist/elm').Main.worker({
-  loadedAt,
-  tickOffset: 0,
-  isBrowserSupported: true,
-  platform: 'library',
-})
+const mapwatch = require('./dist/elm').Main.worker()
 mapwatch.ports.events.subscribe(event => {
   // for this demo, simply log each event. Real library users will do something more interesting here
   console.log("new event", event)
@@ -37,15 +32,17 @@ function watch(path_, lastSize) {
     })
   })
 }
-const path_ = path.join(__dirname,  "./node_modules/@mapwatch/www/assets/examples/stripped-client.txt")
+const path_ = path.join(__dirname,  "../www/assets/examples/stripped-client.txt")
 fs.stat(path_, (err, stats) => {
   // TODO real error handling
   if (err) return console.error(err)
 
   console.log('started reading client.txt history')
   // if you don't care about history and want to watch for new map runs, skip the readFileSlice() and skip to watch()
-  readFileSlice(path_, 0, stats.size, () => {
+  readFileSlice(path_, 0, process.env.NO_HISTORY ? 0 : stats.size, () => {
     console.log('started watching client.txt history')
-    const watcher = watch(path_, stats.size)
+    if (!process.env.NO_WATCH) {
+      const watcher = watch(path_, stats.size)
+    }
   })
 })

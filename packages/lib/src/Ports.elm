@@ -15,6 +15,7 @@ import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Visit as Visit exposing (Visit)
 import Mapwatch.Run as Run exposing (Run)
 import Json.Encode as Encode
+import Json.Decode as Decode
 
 
 port inputClientLogWithId : { id : String, maxSize : Int } -> Cmd msg

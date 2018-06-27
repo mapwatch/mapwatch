@@ -1,11 +1,15 @@
 {
   "scripts": {
-    "postinstall": "lerna bootstrap --stream",
+    "prepare": "lerna bootstrap --stream",
     "dev:electron": "lerna run build --ignore @mapwatch/electron && cd ./packages/electron && yarn start",
     "build:electron": "lerna run build --ignore @mapwatch/electron && cd ./packages/electron && yarn build:all",
     "dev:www": "cd ./packages/www && yarn dev",
     "build:www": "cd ./packages/www && yarn build",
-    "build": "lerna run build --stream --ignore @mapwatch/lib"
+    "lib:demo": "cd ./packages/lib && yarn demo",
+    "lib:demo-raw-elm": "cd ./packages/lib && yarn demo-raw-elm",
+    "//test": "TODO: these are just crude smoke tests. Write real unit tests. (They feel less necessary with elm's awesome type system, though.)",
+    "test": "NO_WATCH=1 sh -c 'yarn lib:demo && yarn lib:demo-raw-elm'",
+    "build": "lerna run build --stream"
   },
   "license": "GPL-3.0",
   "private": true,

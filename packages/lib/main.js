@@ -14,7 +14,7 @@ function readSlice(path_, opts) {
   if (opts.onClose) reader.on('close', event => opts.onClose(event, size))
   return reader
 }
-function watch(path_, opts) {
+function history(path_, opts) {
   let end = null
   // before we start watching, read initial history, determine initial size
   fs.stat(path_, (err, stats) => {
@@ -41,6 +41,10 @@ function watch(path_, opts) {
       }))
     }
   })
+  return end
+}
+function watch(path_, opts) {
+  const end = history(path_, opts)
   // start watching after we read history
   return fs.watch(path_, event => {
     if (lastSize == null) return  // we're still reading history
@@ -82,15 +86,23 @@ class MapWatcher {
     }))
     return this
   }
+  history(path_, opts={}) {
+    history(path_, Object.assign({}, opts, {
+      onLine: line => {
+        if (opts.onLine) opts.onLine(line)
+        this.pushLogLine(line)
+      }
+    }))
+    return this
+  }
 }
 MapWatcher.watch = function(path_, opts) {
-  return new MapWatcher(Elm.Main.worker({
-    loadedAt: Date.now(),
-    tickOffset: 0,
-    isBrowserSupported: true,
-    platform: 'library',
-  }))
+  return new MapWatcher(Elm.Main.worker())
   .watch(path_, opts)
 }
+MapWatcher.history = function(path_, opts) {
+  return new MapWatcher(Elm.Main.worker())
+  .history(path_, opts)
+}
 
-module.exports = {Elm, MapWatcher, watch}
+module.exports = {Elm, MapWatcher}

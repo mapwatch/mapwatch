@@ -5,7 +5,7 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "postinstall": "elm-package install --yes",
+    "prepare": "elm-package install --yes",
     "_build:assets": "mkdir -p dist && rsync -auv --quiet assets/ dist/",
     "//_build:elm": "not sure why rebuilding elm.js alone doesn't trigger livereload, but touching index.html is an easy workaround",
     "_build:elm": "elm-make src/Main.elm --output=dist/elm.js && touch dist/index.html",
