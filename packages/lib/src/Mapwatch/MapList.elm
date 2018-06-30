@@ -106,12 +106,20 @@ specialUrlNames =
         -- These aren't really maps, but let's show them with icons anyway
         , ( "The Temple of Atzoatl", "//web.poecdn.com/image/Art/2DItems/Effects/Portals/IncursionPortal.png" )
         , ( "Crumbled Laboratory", "//web.poecdn.com/image/Art/2DItems/Hideout/Interactive/CartographyDevice.png" )
+        , ( "The Apex of Sacrifice", "//web.poecdn.com/image/Art/2DItems/Maps/VaalComplete.png" )
+        , ( "The Alluring Abyss", "//web.poecdn.com/image/Art/2DItems/Maps/UberVaalComplete.png" )
+        , ( "The Pale Court", "//web.poecdn.com/image/Art/2DItems/Maps/PaleCourtComplete.png" )
+        , ( "The Shaper's Realm", "//web.poecdn.com/image/Art/2DItems/Maps/ShaperComplete.png" )
         ]
 
 
 specialMapList =
     [ { name = "The Temple of Atzoatl", tier = 0, unique = False }
     , { name = "Crumbled Laboratory", tier = 0, unique = False }
+    , { name = "The Apex of Sacrifice", tier = 0, unique = True }
+    , { name = "The Alluring Abyss", tier = 0, unique = True }
+    , { name = "The Pale Court", tier = 0, unique = True }
+    , { name = "The Shaper's Realm", tier = 17, unique = True }
     ]
 
 

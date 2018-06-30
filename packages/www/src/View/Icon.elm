@@ -31,7 +31,7 @@ map : String -> Maybe (H.Html msg)
 map name =
     let
         cls =
-            Regex.replace Regex.All (Regex.regex "\\W+") (always "") name
+            Regex.replace Regex.All (Regex.regex "[ \t,:']+") (always "") name
     in
         MapList.url name
             |> Maybe.map (\src -> H.img [ A.class <| "map-icon map-icon-" ++ cls, A.src src ] [])

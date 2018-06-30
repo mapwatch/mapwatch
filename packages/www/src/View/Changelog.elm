@@ -12,7 +12,8 @@ import Date as Date exposing (Date)
 entries : List ( Date, List (List (H.Html msg)) )
 entries =
     [ ( ymd "2018/06/30"
-      , [ [ H.text "Added an ", H.a [ A.href "?enableSpeech=1" ] [ H.text "experimental speech feature" ], H.text "." ]
+      , [ [ H.text "The Apex of Sacrifice, The Alluring Abyss, The Pale Court, and The Shaper's Realm are now tracked." ]
+        , [ H.text "Added an ", H.a [ A.href "?enableSpeech=1" ] [ H.text "experimental speech feature" ], H.text "." ]
         ]
       )
     , ( ymd "2018/06/09"
