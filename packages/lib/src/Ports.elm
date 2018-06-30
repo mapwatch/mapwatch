@@ -69,6 +69,7 @@ sendJoinInstance date instance visit run =
             , ( "instance", encodeInstance instance )
             , ( "lastVisit", Maybe.Extra.unwrap Encode.null encodeVisit visit )
             , ( "lastMapRun", Maybe.Extra.unwrap Encode.null encodeMapRun run )
+            , ( "say", Maybe.Extra.unwrap Encode.null (Encode.string << sayMapRun) run )
             ]
 
 
@@ -98,6 +99,21 @@ encodeMapRun r =
         , ( "joinedAt", encodeDate r.first.joinedAt )
         , ( "leftAt", encodeDate r.last.leftAt )
         ]
+
+
+sayMapRun : Run -> String
+sayMapRun r =
+    let
+        dur =
+            floor <| Run.duration r
+
+        m =
+            abs <| rem dur (truncate Time.hour) // (truncate Time.minute)
+
+        s =
+            abs <| rem dur (truncate Time.minute) // (truncate Time.second)
+    in
+        (Run.instance r).zone ++ " finished in " ++ toString m ++ "min " ++ toString s ++ "sec"
 
 
 encodeDate : Date -> Encode.Value

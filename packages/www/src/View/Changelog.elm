@@ -11,7 +11,11 @@ import Date as Date exposing (Date)
 
 entries : List ( Date, List (List (H.Html msg)) )
 entries =
-    [ ( ymd "2018/06/09"
+    [ ( ymd "2018/06/30"
+      , [ [ H.text "Added an ", H.a [ A.href "?enableSpeech=1" ] [ H.text "experimental speech feature" ], H.text "." ]
+        ]
+      )
+    , ( ymd "2018/06/09"
       , [ [ H.text "The Temple of Atzoatl is now tracked when entered from your hideout." ]
         , [ H.text "Zana dailies now have an icon." ]
         , [ H.text "Added an ", H.a [ Route.href (Route.Overlay Route.overlayParams0) ] [ H.text "experimental overlay view" ], H.text ". This minimal view aims to be better for streaming, or playing on only one monitor." ]

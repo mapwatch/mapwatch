@@ -12,6 +12,7 @@ var qs = parseQS(document.location.search)
 var loadedAt = Date.now()
 var tickStart = qs.tickStart && new Date(isNaN(parseInt(qs.tickStart)) ? qs.tickStart : parseInt(qs.tickStart))
 var tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
+var enableSpeech = !!qs.enableSpeech && !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
 if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
 var app = Elm.Main.fullscreen({
   loadedAt: loadedAt,
@@ -186,5 +187,22 @@ app.ports.events.subscribe(function(event) {
         })
       }
     }
+  }
+})
+
+function say(text) {
+  if (enableSpeech) {
+    // console.log(speechSynthesis.getVoices())
+    speechSynthesis.speak(new SpeechSynthesisUtterance(text))
+  }
+}
+var sayWatching = false
+app.ports.events.subscribe(function(event) {
+  if (event.type === 'progressComplete' && !sayWatching && (event.name === 'history' || event.name === 'history:example')) {
+    sayWatching = true
+    say('mapwatch started.')
+  }
+  if (event.type === 'joinInstance' && sayWatching && event.say) {
+    say(event.say)
   }
 })
