@@ -9,8 +9,9 @@
     "_build:assets": "mkdir -p dist && rsync -auv --quiet assets/ dist/",
     "//_build:elm": "not sure why rebuilding elm.js alone doesn't trigger livereload, but touching index.html is an easy workaround",
     "_build:elm": "elm-make src/Main.elm --output=dist/elm.js && touch dist/index.html",
-    "//dev": "I wish we could --follow-symlinks with chokidar instead of listing ../lib/src, but --follow-symlinks doesn't seem to work on dirs",
-    "dev": "yarn run build; concurrently --raw \"budo --port 8000 --dir dist --live --open\" \"chokidar 'assets/**/*' --debounce 50 -c 'yarn run _build:assets'\" \"chokidar 'src/**/*.elm' '../lib/src/**/*.elm' --debounce 50 -c 'yarn run _build:elm'\"",
+    "_build:dev": "mkdir -p ./.dev && rsync -auv --delete ./dist/ ./.dev/ && sed 's/default-src/default-src ws:/' ./dist/index.html > ./.dev/index.html",
+    "dev": "scripty",
+    "start": "yarn build && serve ./dist",
     "build": "rm -rf dist && yarn run _build:assets && yarn run _build:elm"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "budo": "^11.2.2",
     "chokidar-cli": "^1.2.0",
     "concurrently": "^3.5.1",
-    "elm": "^0.18.0"
+    "elm": "^0.18.0",
+    "scripty": "^1.7.2"
   }
 }

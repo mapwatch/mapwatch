@@ -4,6 +4,7 @@
     "dev:electron": "lerna run build --ignore @mapwatch/electron && cd ./packages/electron && yarn start",
     "build:electron": "lerna run build --ignore @mapwatch/electron && cd ./packages/electron && yarn build:all",
     "dev:www": "cd ./packages/www && yarn dev",
+    "start:www": "cd ./packages/www && yarn start",
     "build:www": "cd ./packages/www && yarn build",
     "lib:demo": "cd ./packages/lib && yarn demo",
     "lib:demo-raw-elm": "cd ./packages/lib && yarn demo-raw-elm",
