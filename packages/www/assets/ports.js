@@ -24,7 +24,20 @@ var app = Elm.Main.fullscreen({
 
 fetch('./CHANGELOG.md')
 .then(function(res) { return res.text() })
-.then(function(str) { app.ports.changelog.send(str) })
+.then(function(str) {
+  console.log('fetched changelog', str.length)
+  app.ports.changelog.send(str)
+})
+
+var gaDimensions = {
+  appVersion: 'dimension1',
+}
+fetch('./version.txt')
+.then(function(res) { return res.text() })
+.then(function(ver) {
+  console.log('version', ver)
+  gtag('set', gaDimensions.appVersion, ver);
+})
 
 if (qs.example) {
   console.log("fetching example file: ", qs.example, qs)
