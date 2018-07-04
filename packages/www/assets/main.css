@@ -236,3 +236,6 @@ a.button:hover {
 .changelog-entries ul {
   margin-top: 0;
 }
+.changelog-subscribe-buttons .button {
+  margin: 0.5em;
+}

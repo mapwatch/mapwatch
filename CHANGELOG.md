@@ -9,7 +9,7 @@ All substantial Mapwatch changes.
 
 ---
 ## 2018-07-03
-- Redesigned this changelog. You can now subscribe via [RSS](https://mapwatch.github.io/rss.xml).
+- Redesigned this changelog. You can now be notified of changes via [RSS](https://mapwatch.github.io/rss.xml) or [email](https://feedburner.google.com/fb/a/mailverify?uri=mapwatch).
 
 ## 2018-06-30
 - The Apex of Sacrifice, The Alluring Abyss, The Pale Court, and The Shaper's Realm are now tracked.

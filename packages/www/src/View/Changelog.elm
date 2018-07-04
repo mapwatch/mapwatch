@@ -24,7 +24,10 @@ view markdown =
             , H.a [ A.href "https://www.reddit.com/u/kawaritai", A.target "_blank" ] [ H.text "message the developer on Reddit" ]
             , H.text "."
             ]
-        , H.div [] [ H.a [ A.class "button", A.target "_blank", A.href "/rss.xml" ] [ Icon.fas "rss", H.text " RSS notifications" ] ]
+        , H.div [ A.class "changelog-subscribe-buttons" ]
+            [ H.a [ A.class "button", A.target "_blank", A.href "/rss.xml" ] [ Icon.fas "rss", H.text " RSS notifications" ]
+            , H.a [ A.class "button", A.target "_blank", A.href "https://feedburner.google.com/fb/a/mailverify?uri=mapwatch" ] [ Icon.fas "at", H.text " Email notifications" ]
+            ]
         , markdown
             |> Maybe.andThen (String.split "---" >> List.drop 1 >> List.head)
             |> Maybe.Extra.unwrap (H.text "error fetching changelog") (Markdown.toHtml [ A.class "changelog-entries" ])
