@@ -26,7 +26,7 @@ import Maybe.Extra
 
 
 flags0 =
-    { session = True, goals = False }
+    { session = True, goals = True }
 
 
 type alias HistoryParams =
