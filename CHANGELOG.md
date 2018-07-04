@@ -1,6 +1,6 @@
-# Mapwatch: changelog
+# PoE Mapwatch: updates
 
-Important Mapwatch changes.
+All substantial Mapwatch changes.
 
 ## [Unreleased]
 ### Beta/experimental
