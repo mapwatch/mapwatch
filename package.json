@@ -9,7 +9,7 @@
     "lib:demo": "cd ./packages/lib && yarn demo",
     "lib:demo-raw-elm": "cd ./packages/lib && yarn demo-raw-elm",
     "//test": "TODO: these are just crude smoke tests. Write real unit tests. (They feel less necessary with elm's awesome type system, though.)",
-    "test": "NO_WATCH=1 sh -c 'yarn lib:demo && yarn lib:demo-raw-elm'",
+    "test": "NO_WATCH=1 sh -c 'yarn lib:demo >/dev/null && yarn lib:demo-raw-elm >/dev/null'",
     "build": "lerna run build --stream"
   },
   "license": "GPL-3.0",
