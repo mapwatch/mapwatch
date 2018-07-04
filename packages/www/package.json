@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "prepare": "elm-package install --yes",
-    "_build:assets": "mkdir -p dist && rsync -auv --quiet assets/ dist/",
+    "_build:assets": "mkdir -p dist && rsync -auv --quiet assets/ dist/ && cp ../../CHANGELOG.md ./node_modules/@mapwatch/rss/dist/*.xml dist/",
     "//_build:elm": "not sure why rebuilding elm.js alone doesn't trigger livereload, but touching index.html is an easy workaround",
     "_build:elm": "elm-make src/Main.elm --output=dist/elm.js && touch dist/index.html",
     "_build:dev": "mkdir -p ./.dev && rsync -auv --delete ./dist/ ./.dev/ && sed 's/default-src/default-src ws:/' ./dist/index.html > ./.dev/index.html",
@@ -15,7 +15,8 @@
     "build": "rm -rf dist && yarn run _build:assets && yarn run _build:elm"
   },
   "dependencies": {
-    "@mapwatch/lib": "1.0.0"
+    "@mapwatch/lib": "1.0.0",
+    "@mapwatch/rss": "1.0.0"
   },
   "devDependencies": {
     "budo": "^11.2.2",

@@ -1,6 +1,7 @@
 port module Ports
     exposing
         ( inputClientLogWithId
+        , changelog
         , logline
         , Progress
         , progress
@@ -19,6 +20,9 @@ import Json.Decode as Decode
 
 
 port inputClientLogWithId : { id : String, maxSize : Int } -> Cmd msg
+
+
+port changelog : (String -> msg) -> Sub msg
 
 
 port logline : (String -> msg) -> Sub msg

@@ -226,3 +226,13 @@ a.button:hover {
   margin:0;
   padding:0;
 }
+
+.changelog-entries h2 {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: inherit;
+  margin-bottom: 0;
+}
+.changelog-entries ul {
+  margin-top: 0;
+}

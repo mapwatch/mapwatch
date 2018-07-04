@@ -44,6 +44,7 @@ type alias Model =
     { mapwatch : Mapwatch.Model
     , config : Config
     , flags : Flags
+    , changelog : Maybe String
     , loadedAt : Date.Date
     , route : Route
     , now : Date.Date
@@ -54,6 +55,7 @@ type alias Model =
 type Msg
     = M Mapwatch.Msg
     | Tick Time.Time
+    | Changelog String
     | InputClientLogWithId String
     | InputMaxSize String
     | Navigate Navigation.Location
@@ -71,6 +73,7 @@ initModel flags route =
         { mapwatch = Mapwatch.initModel
         , config = { maxSize = 20 }
         , flags = flags
+        , changelog = Nothing
         , loadedAt = loadedAt
         , route = route
         , now = loadedAt
@@ -123,6 +126,9 @@ update msg ({ config } as model) =
 
         Navigate loc ->
             ( { model | route = Route.parse loc }, Cmd.none )
+
+        Changelog markdown ->
+            ( { model | changelog = Just markdown }, Cmd.none )
 
         InputClientLogWithId id ->
             ( model, Ports.inputClientLogWithId { id = id, maxSize = config.maxSize } )
@@ -182,6 +188,7 @@ subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch
         [ Mapwatch.subscriptions model.mapwatch |> Sub.map M
+        , Ports.changelog Changelog
 
         -- Slow down animation, deliberately - don't eat poe's cpu
         -- , AnimationFrame.times Tick

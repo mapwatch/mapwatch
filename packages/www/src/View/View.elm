@@ -39,7 +39,7 @@ view model =
             View.MapIcons.view
 
         Changelog ->
-            View.Changelog.view model.route
+            View.Changelog.view model.changelog
 
         NotFound loc ->
             View.NotFound.view

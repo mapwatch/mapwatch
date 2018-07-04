@@ -22,6 +22,10 @@ var app = Elm.Main.fullscreen({
   platform: 'www',
 })
 
+fetch('./CHANGELOG.md')
+.then(function(res) { return res.text() })
+.then(function(str) { console.log('changelog', str); app.ports.changelog.send(str) })
+
 if (qs.example) {
   console.log("fetching example file: ", qs.example, qs)
   // show a progress spinner, even when we don't know the size yet
