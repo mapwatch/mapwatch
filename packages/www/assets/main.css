@@ -66,6 +66,10 @@ table.timer.history tfoot {
   text-align: center;
   border: 1px solid grey;
 }
+table.timer.history tfoot a {
+  display: inline-block;
+  width: 50%;
+}
 
 .paginator * {
   display: inline-block;
@@ -214,17 +218,26 @@ a.button:hover {
 .overlay-main {
 }
 .overlay-main .even {
-  background-color: #222;
 }
 .overlay-main .odd {
+  background-color: #222;
 }
-.overlay-main .timer {
+.overlay-main .timer,
+.overlay-main .goal {
   text-align: right;
+  width: 1em;
+  white-space: nowrap;
 }
-.overlay-main .main-timer {
+.overlay-main .last .timer {
   font-size: 300%;
-  margin:0;
-  padding:0;
+  line-height: 1;
+}
+.overlay-main .last {
+  vertical-align: top;
+}
+.overlay-main .overlay-back {
+  display: block;
+  opacity: 0.33;
 }
 
 .changelog-entries h2 {

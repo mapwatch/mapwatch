@@ -63,6 +63,12 @@ viewMain qs model =
         hqs =
             { hqs0 | after = qs.after, goal = qs.goal }
 
+        oqs0 =
+            Route.overlayParams0
+
+        oqs =
+            { oqs0 | after = qs.after, goal = qs.goal }
+
         ( sessname, runs, sessionButtons ) =
             case qs.after of
                 Nothing ->
@@ -94,7 +100,14 @@ viewMain qs model =
         historyTable =
             H.table [ A.class "timer history" ]
                 [ H.tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False } hqs goalDuration) <| history)
-                , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ H.a [ Route.href <| Route.History hqs ] [ Icon.fas "history", H.text " History" ] ] ] ]
+                , H.tfoot []
+                    [ H.tr []
+                        [ H.td [ A.colspan 11 ]
+                            [ H.a [ Route.href <| Route.History hqs ] [ Icon.fas "history", H.text " History" ]
+                            , H.a [ Route.href <| Route.Overlay oqs ] [ Icon.fas "align-justify", H.text " Overlay" ]
+                            ]
+                        ]
+                    ]
                 ]
 
         ( timer, timerGoal, mappingNow ) =

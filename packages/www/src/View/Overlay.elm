@@ -72,35 +72,55 @@ viewMain qs model =
         goalDuration =
             Run.goalDuration goal { session = runs, allTime = model.mapwatch.runs }
 
-        mappingNow =
-            case run of
-                Just run ->
-                    viewTimer (Just (Run.durationSet run).all) (goalDuration run)
-
-                Nothing ->
-                    viewTimer Nothing Nothing
+        viewIndexRun i run =
+            viewRow (List.length history) i qs hqs (goalDuration run) run
     in
-        H.table [ A.class "overlay-main" ]
-            ((List.indexedMap (\i -> \run -> viewRow i hqs (goalDuration run) run) (List.reverse history))
-                ++ [ H.tr [] [ H.td [ A.class "timer main-timer", A.colspan 2 ] [ mappingNow ] ] ]
+        H.div [ A.class "overlay-main" ]
+            [ H.table [] <|
+                List.indexedMap viewIndexRun <|
+                    List.reverse history
+            ]
+
+
+viewRow : Int -> Int -> Route.TimerParams -> Route.HistoryParams -> Maybe Time.Time -> Run.Run -> H.Html msg
+viewRow count i tqs hqs goalDuration run =
+    let
+        isLast =
+            i >= count - 1
+
+        dur =
+            Just (Run.durationSet run).all
+    in
+        H.tr
+            [ A.classList
+                [ ( "even", i % 2 == 0 )
+                , ( "odd", i % 2 /= 0 )
+                , ( "last", isLast )
+                ]
+            ]
+            ([ H.td [ A.class "instance" ]
+                ([ viewInstance hqs run.first.instance ]
+                    ++ if isLast then
+                        [ H.a [ A.class "overlay-back", Route.href <| Route.Timer tqs ] [ Icon.fas "cog" ] ]
+                       else
+                        []
+                )
+             , H.td [ A.class "timer" ] [ viewTimer dur ]
+             ]
+                ++ case goalDuration of
+                    Nothing ->
+                        []
+
+                    Just _ ->
+                        [ H.td [ A.class "goal" ] [ viewGoalTimer dur goalDuration ] ]
             )
 
 
-viewRow : Int -> Route.HistoryParams -> Maybe Time.Time -> Run.Run -> H.Html msg
-viewRow i hqs goalDuration run =
-    H.tr
-        [ A.class
-            (if i % 2 == 0 then
-                "even"
-             else
-                "odd"
-            )
-        ]
-        [ H.td [ A.class "instance" ] [ viewInstance hqs run.first.instance ]
-        , H.td [ A.class "timer" ] [ viewTimer (Just (Run.durationSet run).all) goalDuration ]
-        ]
-
-
-viewTimer : Maybe Time.Time -> Maybe Time.Time -> H.Html msg
-viewTimer dur goal =
+viewTimer : Maybe Time.Time -> H.Html msg
+viewTimer dur =
     H.text <| View.History.formatMaybeDuration dur
+
+
+viewGoalTimer : Maybe Time.Time -> Maybe Time.Time -> H.Html msg
+viewGoalTimer dur goal =
+    View.History.viewDurationDelta dur goal

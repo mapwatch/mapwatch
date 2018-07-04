@@ -5,9 +5,12 @@ All substantial Mapwatch changes.
 ## [Unreleased]
 ### Beta/experimental
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
-- [Overlay view](https://mapwatch.github.io/#/overlay)
+- [Goals](https://mapwatch.github.io?enableGoals=1)
 
 ---
+## 2018-07-04
+- The [overlay view](https://mapwatch.github.io/#/overlay) is no longer experimental, and is now linked from the timer.
+
 ## 2018-07-03
 - Redesigned this changelog. You can now be notified of changes via [RSS](https://mapwatch.github.io/rss.xml) or [email](https://feedburner.google.com/fb/a/mailverify?uri=mapwatch).
 
