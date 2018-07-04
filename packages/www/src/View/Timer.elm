@@ -133,12 +133,7 @@ viewMain qs model =
                     [ H.tr [] mappingNow
                     , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance hqs model.mapwatch.instance.val ] ]
                     , H.tr [] [ H.td [] [ H.text <| "Maps done " ++ sessname ++ ": " ], H.td [] [ H.text <| toString <| List.length runs ] ]
-                    , H.tr [ A.class "session-buttons" ]
-                        (if qs.enableSession then
-                            [ H.td [ A.colspan 2 ] sessionButtons ]
-                         else
-                            []
-                        )
+                    , H.tr [ A.class "session-buttons" ] [ H.td [ A.colspan 2 ] sessionButtons ]
                     ]
                 ]
             , historyTable

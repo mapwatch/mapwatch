@@ -26,7 +26,7 @@ import Maybe.Extra
 
 
 flags0 =
-    { session = True, goals = True }
+    { goals = True }
 
 
 type alias HistoryParams =
@@ -46,19 +46,19 @@ mapsParams0 =
 
 
 type alias TimerParams =
-    { after : Maybe Date, goal : Maybe String, enableSession : Bool, enableGoals : Bool }
+    { after : Maybe Date, goal : Maybe String, enableGoals : Bool }
 
 
 timerParams0 =
-    TimerParams Nothing Nothing flags0.session flags0.goals
+    TimerParams Nothing Nothing flags0.goals
 
 
 type alias OverlayParams =
-    { after : Maybe Date, goal : Maybe String, enableSession : Bool, enableGoals : Bool }
+    { after : Maybe Date, goal : Maybe String, enableGoals : Bool }
 
 
 overlayParams0 =
-    OverlayParams Nothing Nothing flags0.session flags0.goals
+    OverlayParams Nothing Nothing flags0.goals
 
 
 type Route
@@ -160,14 +160,12 @@ parser =
                 (P.oneOf [ P.top, P.s "timer" ])
                     <?> dateParam "a"
                     <?> P.stringParam "g"
-                    <?> boolParam flags0.session "enableSession"
                     <?> boolParam flags0.goals "enableGoals"
         , P.map Overlay <|
             P.map OverlayParams <|
                 (P.oneOf [ P.top, P.s "overlay" ])
                     <?> dateParam "a"
                     <?> P.stringParam "g"
-                    <?> boolParam flags0.session "enableSession"
                     <?> boolParam flags0.goals "enableGoals"
         , P.map History <|
             P.map (\p -> HistoryParams (Maybe.withDefault 0 p)) <|
