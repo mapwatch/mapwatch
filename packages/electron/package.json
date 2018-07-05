@@ -16,7 +16,7 @@
     "start-dist": "./dist/Mapwatch-*-linux.AppImage",
     "test": "yarn start --healthcheck",
     "test-dist": "yarn start-dist --healthcheck",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist *.log"
   },
   "build": {
     "appId": "org.erosson.mapwatch",

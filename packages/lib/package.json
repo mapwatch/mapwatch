@@ -9,7 +9,7 @@
     "demo-raw-elm": "yarn build && node ./demo-raw-elm.js",
     "demo": "yarn build && node ./demo.js",
     "build": "mkdir -p dist && elm-make src/Main.elm --output=dist/elm.js && cp main.js dist/",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist *.log"
   },
   "dependencies": {
   },

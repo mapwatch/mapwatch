@@ -14,7 +14,7 @@
     "build": "scripty",
     "dev": "scripty",
     "start": "yarn build && serve ./dist",
-    "clean": "rimraf ./dist ./.dev"
+    "clean": "rimraf ./dist ./.dev *.log"
   },
   "dependencies": {
     "@mapwatch/lib": "1.0.0",
