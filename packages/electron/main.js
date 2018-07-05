@@ -14,7 +14,6 @@ const debounce = (() => {
   return _.curry((opts, wait, fn) => _debounce(wait, fn, opts))
 })()
 let argv = require('minimist')(process.argv)
-console.log(process.argv, argv)
 // --dev is a shortcut for some other flags
 if (argv.dev) argv = {livereload: true, menu: true, ...argv}
 
@@ -25,7 +24,6 @@ else
 
 // --healthcheck verifies the app's built correctly without actually running it
 function healthcheck() {
-  console.log('healthcheck...')
   const fs = require('fs')
   const files = [
     'node_modules/@mapwatch/www/dist',
@@ -39,6 +37,7 @@ function healthcheck() {
   })
 }
 function main() {
+  if (!app) throw new Error("usage: `electron main.js` (not `node main.js`)")
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.
   let mainWindow

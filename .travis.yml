@@ -2,6 +2,12 @@ language: node_js
 node_js:
   - "8"
 
+# https://github.com/electron/electron/blob/master/docs/tutorial/testing-on-headless-ci.md
+addons:
+  apt:
+    packages:
+      - xvfb
+
 # https://8thlight.com/blog/rob-looby/2016/04/07/caching-elm-builds-on-travis-ci.html
 cache:
   directories:
@@ -11,6 +17,9 @@ cache:
     - sysconfcpus/
 
 install:
+  # https://github.com/electron/electron/blob/master/docs/tutorial/testing-on-headless-ci.md
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
   # https://github.com/elm/compiler/issues/1473
   - |
     if [ ! -d sysconfcpus/bin ];
