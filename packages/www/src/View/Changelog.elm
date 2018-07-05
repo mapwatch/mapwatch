@@ -12,8 +12,8 @@ import View.Icon as Icon
 import View.Home exposing (viewHeader)
 
 
-view : Maybe String -> H.Html msg
-view markdown =
+view : String -> Maybe String -> H.Html msg
+view hrefHostname markdown =
     H.div [ A.class "main" ]
         [ viewHeader
         , View.Nav.view <| Just Route.Changelog
@@ -27,7 +27,7 @@ view markdown =
             , H.text "."
             ]
         , H.div [ A.class "changelog-subscribe-buttons" ]
-            [ H.a [ A.class "button", A.target "_blank", A.href "/rss.xml" ] [ Icon.fas "rss", H.text " RSS notifications" ]
+            [ H.a [ A.class "button", A.target "_blank", A.href <| hrefHostname ++ "/rss.xml" ] [ Icon.fas "rss", H.text " RSS notifications" ]
             , H.a [ A.class "button", A.target "_blank", A.href "https://feedburner.google.com/fb/a/mailverify?uri=mapwatch" ] [ Icon.fas "at", H.text " Email notifications" ]
             ]
         , markdown

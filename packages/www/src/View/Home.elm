@@ -189,7 +189,7 @@ viewHeader =
             [ maskedText "["
 
             -- , H.a [ A.href "./" ] [ Icon.fas "tachometer-alt", H.text " Mapwatch" ]
-            , H.a [ A.href "./" ] [ H.text " Mapwatch" ]
+            , H.a [ A.href "#/" ] [ H.text " Mapwatch" ]
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , H.small []

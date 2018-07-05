@@ -20,6 +20,7 @@ var app = Elm.Main.fullscreen({
   isBrowserSupported: !!window.FileReader,
   // isBrowserSupported: false,
   platform: 'www',
+  hostname: document.location.protocol + '//' + document.location.hostname,
 })
 
 analytics.main(app)

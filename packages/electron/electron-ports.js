@@ -15,6 +15,7 @@ const app = Elm.Main.fullscreen({
   tickOffset: tickOffset,
   isBrowserSupported: !!window.FileReader,
   platform: 'electron',
+  hostname: 'https://mapwatch.github.io',
 })
 
 analytics.main(app)

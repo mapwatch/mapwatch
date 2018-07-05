@@ -52,6 +52,12 @@ function main() {
     if (!argv.menu) {
       mainWindow.setMenu(null)
     }
+    // https://stackoverflow.com/questions/32402327/how-can-i-force-external-links-from-browser-window-to-open-in-a-default-browser
+    mainWindow.webContents.on('new-window', (e, url) => {
+      console.log('new-window', url)
+      e.preventDefault()
+      require('electron').shell.openExternal(url)
+    })
 
     // and load the index.html of the app.
     const initUrl = url.format({
@@ -68,11 +74,12 @@ function main() {
     if (argv.livereload) {
       const child_process = require('child_process')
       const watch = {}
-      watch.yarn = child_process.execFile('yarn', ['build:watch'], {cwd: "../www"}, (err) => {
-        if (err) {
-          console.error('fail', err)
-          app.quit()
-        }
+      watch.yarn = child_process.spawn('yarn', ['build:watch'], {cwd: "../www"})
+      watch.yarn.stdout.on('data', data => process.stdout.write(data.toString()))
+      watch.yarn.stderr.on('data', data => process.stderr.write(data.toString()))
+      watch.yarn.stderr.on('exit', code => {
+        if (code) console.error('yarn build:watch failed ('+code+')')
+        app.quit()
       })
 
       const chokidar = require('chokidar')

@@ -29,6 +29,8 @@ type alias Flags =
     { loadedAt : Float
     , tickOffset : Float
     , isBrowserSupported : Bool
+    , platform : String
+    , hostname : String
     }
 
 

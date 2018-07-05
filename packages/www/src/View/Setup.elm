@@ -6,6 +6,7 @@ import Html.Events as E
 import Json.Decode as Decode
 import Model as Model exposing (Model, Msg(..))
 import View.Icon as Icon
+import AppPlatform
 
 
 onChange : msg -> H.Attribute msg
@@ -35,12 +36,12 @@ view model =
                 , H.text " file, and I'll give you some statistics about your recent mapping activity. "
                 ]
             , H.p []
-                [ H.text "Then, "
-                , H.a [ A.target "_blank", A.href "https://chrome.google.com" ] [ H.text "if you're using Google Chrome" ]
-                , H.text ", leave me open while you play - I'll keep watching, no need to upload again. "
-                ]
+                ([ H.text "Then, " ]
+                    ++ AppPlatform.ifElectron model [] [ H.a [ A.target "_blank", A.href "https://chrome.google.com" ] [ H.text "if you're using Google Chrome" ], H.text ", " ]
+                    ++ [ H.text "leave me open while you play - I'll keep watching, no need to upload again. " ]
+                )
             , H.p []
-                [ H.a [ A.target "_blank", A.href "?tickStart=1526941861000&example=stripped-client.txt#/" ] [ H.text "Run an example now!" ]
+                [ H.a ((AppPlatform.ifElectron model [] [ A.target "_blank" ]) ++ [ A.href "?tickStart=1526941861000&example=stripped-client.txt#/" ]) [ H.text "Run an example now!" ]
                 ]
             , H.hr [] []
             , H.p []

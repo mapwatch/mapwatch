@@ -4,6 +4,7 @@ import Html as H
 import Model as Model exposing (Model, Msg)
 import Mapwatch as Mapwatch
 import Route exposing (Route(..))
+import AppPlatform
 import View.History
 import View.Timer
 import View.Overlay
@@ -39,7 +40,7 @@ view model =
             View.MapIcons.view
 
         Changelog ->
-            View.Changelog.view model.changelog
+            View.Changelog.view (AppPlatform.hrefHostname model) model.changelog
 
         NotFound loc ->
             View.NotFound.view
