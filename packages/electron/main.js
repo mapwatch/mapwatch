@@ -7,13 +7,14 @@ const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
-const argv = require('minimist')(process.argv.slice(2))
 const {promisify} = require('util')
 const _ = require('lodash/fp')
 const debounce = (() => {
   const _debounce = _.debounce.convert({fixed: false})
   return _.curry((opts, wait, fn) => _debounce(wait, fn, opts))
 })()
+let argv = require('minimist')(process.argv.slice(2))
+if (argv.dev) argv = {livereload: true, menu: true, ...argv}
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -24,8 +25,11 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    icon: path.join(__dirname, 'node_modules/@mapwatch/www/dist/favicon.jpeg')
+    icon: path.join(__dirname, 'node_modules/@mapwatch/www/dist/favicon.jpeg'),
   })
+  if (!argv.menu) {
+    mainWindow.setMenu(null)
+  }
 
   // and load the index.html of the app.
   const initUrl = url.format({
@@ -33,6 +37,7 @@ function createWindow () {
     protocol: 'file:',
     slashes: true,
     query: {
+      ...(argv.example ? {example: 'stripped-client.txt', tickStart: '1526941861000'} : {}),
     },
   })
   console.log(initUrl)

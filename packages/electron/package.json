@@ -10,7 +10,7 @@
     "build:mac": "electron-builder --mac --publish=never",
     "build:all": "concurrently 'yarn build:linux' 'yarn build:win' 'yarn build:mac'",
     "build": "yarn build:linux     # TODO build:all",
-    "dev": "yarn start --livereload",
+    "dev": "yarn start --dev",
     "start": "electron ."
   },
   "build": {
