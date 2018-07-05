@@ -65,6 +65,8 @@ function main() {
       protocol: 'file:',
       slashes: true,
       query: {
+        ..._.pick(['path', 'clear'], argv),
+        ...(argv.pathSelect ? {pathSelect: 1} : {}),
         ...(argv.example ? {example: 'stripped-client.txt', tickStart: '1526941861000'} : {}),
       },
     })
