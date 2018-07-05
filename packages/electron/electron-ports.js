@@ -85,8 +85,8 @@ if (!qs.pathSelect) {
     processFile(path, maxSize)
   })
   .catch(err => console.warn("failed to autoload a log path", err))
-  //console.log("fetching preselected path: ", qs.path, qs)
 }
+// load a manually-selected log path
 app.ports.inputClientLogWithId.subscribe(config => {
   var files = document.getElementById(config.id).files
   var maxSize = (config.maxSize == null ? (qs.maxSize == null ? 20 : qs.maxSize) : config.maxSize) * MB
