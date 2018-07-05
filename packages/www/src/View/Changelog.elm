@@ -18,10 +18,12 @@ view markdown =
         [ viewHeader
         , View.Nav.view <| Just Route.Changelog
         , H.div []
-            [ H.text "Is something broken? "
-            , H.a [ A.href "https://github.com/mapwatch/mapwatch/issues", A.target "_blank" ] [ H.text "File an issue on GitHub" ]
-            , H.text " or "
-            , H.a [ A.href "https://www.reddit.com/u/kawaritai", A.target "_blank" ] [ H.text "message the developer on Reddit" ]
+            [ H.text "Is something broken? Contact the developer: "
+            , H.a [ A.href "https://keybase.io/erosson", A.target "_blank" ] [ H.text "Keybase chat" ]
+            , H.text ", "
+            , H.a [ A.href "https://github.com/mapwatch/mapwatch/issues/new", A.target "_blank" ] [ H.text "GitHub issue" ]
+            , H.text ", or "
+            , H.a [ A.href "https://www.reddit.com/u/kawaritai", A.target "_blank" ] [ H.text "Reddit" ]
             , H.text "."
             ]
         , H.div [ A.class "changelog-subscribe-buttons" ]
