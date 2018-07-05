@@ -1,5 +1,6 @@
 // Copied from electron quickstart.
 const electron = require('electron')
+const {autoUpdater} = require('electron-updater')
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -37,6 +38,9 @@ function healthcheck() {
   })
 }
 function main() {
+  autoUpdater.logger = require('electron-log')
+  autoUpdater.logger.transports.file.level = 'debug'
+  autoUpdater.checkForUpdatesAndNotify()
   if (!app) throw new Error("usage: `electron main.js` (not `node main.js`)")
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.

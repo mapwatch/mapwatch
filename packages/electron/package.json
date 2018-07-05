@@ -36,6 +36,13 @@
     "appImage": {
       "systemIntegration": "doNotAsk"
     },
+    "publish": [
+      {
+        "owner": "mapwatch",
+        "repo": "mapwatch",
+        "provider": "github"
+      }
+    ],
     "directories": {
       "output": "dist/"
     }
@@ -46,8 +53,10 @@
   "dependencies": {
     "@mapwatch/lib": "1.0.0",
     "@mapwatch/www": "1.0.0",
-    "lodash": "^4.17.10",
     "chokidar": "^2.0.4",
+    "electron-log": "^2.2.16",
+    "electron-updater": "^2.23.3",
+    "lodash": "^4.17.10",
     "minimist": "^1.2.0"
   },
   "devDependencies": {
