@@ -1,8 +1,8 @@
 window.dataLayer = window.dataLayer || [];
-function ga(){dataLayer.push(arguments);}
-ga('js', new Date());
-ga('set', 'transport', 'beacon');
-ga('config', 'UA-119582500-1', {'anonymize_ip': true});
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('set', 'transport', 'beacon');
+gtag('config', 'UA-119582500-1', {'anonymize_ip': true});
 
 function gaEvent(action, props) {
   // because I keep messing these two up, but analytics shouldn't break prod
@@ -10,17 +10,19 @@ function gaEvent(action, props) {
   if (props.label) console.warn('ports.gaEvent: label should be event_label. '+JSON.stringify(props))
 
   console.log('gaEvent', action, props)
-  ga('event', action, props)
+  gtag('event', action, props)
 }
 var gaDimensions = {
   appVersion: 'dimension1',
+  platform: 'dimension2',
 }
 var analytics = {}
 analytics.version = function analyticsVersion(ver) {
   console.log('version', ver)
-  ga('set', gaDimensions.appVersion, ver);
+  gtag('set', gaDimensions.appVersion, ver);
 }
-analytics.main = function analyticsMain(app) {
+analytics.main = function analyticsMain(app, platform) {
+  gtag('set', gaDimensions.platform, platform)
   var isWatching = false
   var historyStats = {instanceJoins: 0, mapRuns: 0}
   app.ports.events.subscribe(function(event) {

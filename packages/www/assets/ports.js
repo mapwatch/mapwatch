@@ -23,7 +23,7 @@ var app = Elm.Main.fullscreen({
   hostname: document.location.protocol + '//' + document.location.hostname,
 })
 
-analytics.main(app)
+analytics.main(app, 'www')
 fetch('./version.txt')
 .then(function(res) { return res.text() })
 .then(analytics.version)

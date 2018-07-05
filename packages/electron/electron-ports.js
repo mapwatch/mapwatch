@@ -18,7 +18,7 @@ const app = Elm.Main.fullscreen({
   hostname: 'https://mapwatch.github.io',
 })
 
-analytics.main(app)
+analytics.main(app, 'electron')
 fetch('./node_modules/@mapwatch/www/dist/version.txt')
 .then(function(res) { return res.text() })
 .then(analytics.version)
