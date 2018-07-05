@@ -41,7 +41,7 @@ function createWindow () {
   if (argv.livereload) {
     const child_process = require('child_process')
     const watch = {}
-    const watch.yarn = child_process.execFile('yarn', ['build:watch'], {cwd: "../www"}, (err) => {
+    watch.yarn = child_process.execFile('yarn', ['build:watch'], {cwd: "../www"}, (err) => {
       if (err) {
         console.error('fail', err)
         app.quit()
@@ -49,7 +49,7 @@ function createWindow () {
     })
 
     const chokidar = require('chokidar')
-    const watch.chok = chokidar.watch(['.', '../www/dist'], {
+    watch.chok = chokidar.watch(['.', '../www/dist'], {
       ignored: ['./node_modules'],
       ignoreInitial: true,
     })

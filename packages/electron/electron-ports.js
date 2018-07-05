@@ -17,6 +17,18 @@ const app = Elm.Main.fullscreen({
   platform: 'electron',
 })
 
+analytics.main(app)
+fetch('./node_modules/@mapwatch/www/dist/version.txt')
+.then(function(res) { return res.text() })
+.then(analytics.version)
+
+fetch('./node_modules/@mapwatch/www/dist/CHANGELOG.md')
+.then(function(res) { return res.text() })
+.then(function(str) {
+  console.log('fetched changelog', str.length)
+  app.ports.changelog.send(str)
+})
+
 function processFile(path_, historySize) {
   console.log('processfile', path_, historySize)
   const startedAt = Date.now()
@@ -25,15 +37,15 @@ function processFile(path_, historySize) {
     historySize,
     onHistoryOpen: size => {
       console.log('historyopen', size)
-      app.ports.progress.send({val: 0, max: size, startedAt, updatedAt: Date.now()})
+      app.ports.progress.send({name: 'history', val: 0, max: size, startedAt, updatedAt: Date.now()})
     },
     onOpen: size => {
       console.log('open', size)
-      app.ports.progress.send({val: 0, max: size, startedAt, updatedAt: Date.now()})
+      app.ports.progress.send({name: 'file', val: 0, max: size, startedAt, updatedAt: Date.now()})
     },
     onClose: (event, size) => {
       console.log('close', event, size)
-      app.ports.progress.send({val: size, max: size, startedAt, updatedAt: Date.now()})
+      app.ports.progress.send({name: 'file', val: size, max: size, startedAt, updatedAt: Date.now()})
     },
   })
 }
