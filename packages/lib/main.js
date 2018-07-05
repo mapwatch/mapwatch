@@ -63,6 +63,17 @@ function watch(path_, opts) {
   })
 }
 
+var filter = /Connecting to instance server|: You have entered|LOG FILE OPENING|你已進入：/
+// ignore chat messages, don't want people injecting commands.
+// #global, %party, @whisper, $trade, &guild
+// TODO: local has no prefix! `[A-Za-z_\-]+:` might work, needs more testing
+var blacklist = /] [#%@$&]/
+function sendLine(app, line) {
+  if (filter.test(line) && !blacklist.test(line)) {
+    // console.log('line: ', line)
+    app.ports.logline.send(line)
+  }
+}
 class MapWatcher {
   constructor(elmApp) {
     this.elmApp = elmApp
@@ -74,7 +85,7 @@ class MapWatcher {
     })
   }
   pushLogLine(line) {
-    this.elmApp.ports.logline.send(line)
+    sendLine(this.elmApp, line)
   }
   watch(path_, opts={}) {
     if (this.watcher) throw new Error('Already watching. Can only watch once per MapWatcher.')
