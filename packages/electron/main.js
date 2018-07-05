@@ -24,6 +24,7 @@ else
 
 // --healthcheck verifies the app's built correctly without actually running it
 function healthcheck() {
+  console.log('healthcheck...')
   const fs = require('fs')
   const files = [
     'node_modules/@mapwatch/www/dist',
