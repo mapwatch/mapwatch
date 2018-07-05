@@ -11,7 +11,6 @@ cache:
     - sysconfcpus/
 
 install:
-  - travis_retry yarn
   # https://github.com/elm/compiler/issues/1473
   - |
     if [ ! -d sysconfcpus/bin ];
@@ -23,6 +22,7 @@ install:
       cd ..;
     fi
   - export PATH=$PATH:$TRAVIS_BUILD_DIR/sysconfcpus/bin
+  - travis_retry sysconfcpus -n 2 yarn
 
 script:
   - sysconfcpus -n 2 yarn build
