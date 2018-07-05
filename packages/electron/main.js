@@ -7,6 +7,12 @@ const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
+const argv = require('minimist')(process.argv.slice(2))
+const _ = require('lodash/fp')
+const debounce = (() => {
+  const _debounce = _.debounce.convert({fixed: false})
+  return _.curry((opts, wait, fn) => _debounce(wait, fn, opts))
+})()
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -21,11 +27,23 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadURL(url.format({
+  const initUrl = url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
-    slashes: true
-  }))
+    slashes: true,
+    query: {
+    },
+  })
+  console.log(initUrl)
+  mainWindow.loadURL(initUrl)
+
+  if (argv.livereload) {
+    const chokidar = require('chokidar')
+    chokidar.watch(['.'], {ignoreInitial: true}).on('all', debounce({leading: true, trailing: true}, 250, (event, path) => {
+      console.log('livereload:', event, path)
+      mainWindow.loadURL(initUrl)
+    }, {leading: true, trailing: true}))
+  }
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

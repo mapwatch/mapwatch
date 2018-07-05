@@ -10,6 +10,7 @@
     "build:mac": "electron-builder --mac --publish=never",
     "build:all": "concurrently 'yarn build:linux' 'yarn build:win' 'yarn build:mac'",
     "build": "yarn build:linux     # TODO build:all",
+    "dev": "yarn start --livereload",
     "start": "electron ."
   },
   "build": {
@@ -36,7 +37,9 @@
   "license": "GPL-3.0",
   "dependencies": {
     "@mapwatch/lib": "1.0.0",
-    "@mapwatch/www": "1.0.0"
+    "@mapwatch/www": "1.0.0",
+    "chokidar": "^2.0.4",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",

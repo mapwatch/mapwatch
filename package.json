@@ -1,7 +1,7 @@
 {
   "scripts": {
     "prepare": "lerna bootstrap --stream",
-    "dev:electron": "lerna run build --ignore @mapwatch/electron && cd ./packages/electron && yarn start",
+    "dev:electron": "lerna run build --ignore @mapwatch/electron && cd ./packages/electron && yarn dev",
     "build:electron": "lerna run build --ignore @mapwatch/electron && cd ./packages/electron && yarn build:all",
     "dev:www": "cd ./packages/www && yarn dev",
     "start:www": "cd ./packages/www && yarn start",
