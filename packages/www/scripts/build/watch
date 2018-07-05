@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+# I wish we could --follow-symlinks with chokidar instead of listing ../lib/src below, but --follow-symlinks doesn't seem to work on dirs
+concurrently --raw \
+  "chokidar --debounce 50 'assets/**/*' -c 'yarn run _build:assets'" \
+  "chokidar --debounce 50 'src/**/*.elm' '../lib/src/**/*.elm' -c 'yarn run _build:elm'" \
+  "chokidar --debounce 50 '../../CHANGELOG.md' -c 'yarn run _build:version'" \
+  "chokidar --debounce 50 ./dist -c 'yarn run _build:dev'"

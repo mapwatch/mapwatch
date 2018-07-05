@@ -6,14 +6,14 @@
   "private": true,
   "scripts": {
     "prepare": "elm-package install --yes",
-    "_build:assets": "mkdir -p dist && rsync -auv --quiet assets/ dist/ && cp ../../CHANGELOG.md ./node_modules/@mapwatch/rss/dist/*.xml dist/ && yarn _build:version",
-    "_build:version": "echo `printf %06d $(git rev-list --count HEAD)`-`git describe --always --dirty` > dist/version.txt",
-    "//_build:elm": "not sure why rebuilding elm.js alone doesn't trigger livereload, but touching index.html is an easy workaround",
-    "_build:elm": "elm-make src/Main.elm --output=dist/elm.js && touch dist/index.html",
-    "_build:dev": "mkdir -p ./.dev && rsync -auv --delete ./dist/ ./.dev/ && sed 's/default-src/default-src ws:/' ./dist/index.html > ./.dev/index.html",
+    "_build:assets": "scripty",
+    "_build:version": "scripty",
+    "_build:elm": "scripty",
+    "_build:dev": "scripty",
+    "build:watch": "scripty",
+    "build": "scripty",
     "dev": "scripty",
-    "start": "yarn build && serve ./dist",
-    "build": "rm -rf dist && yarn run _build:assets && yarn run _build:elm"
+    "start": "yarn build && serve ./dist"
   },
   "dependencies": {
     "@mapwatch/lib": "1.0.0",

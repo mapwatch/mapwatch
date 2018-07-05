@@ -1,0 +1,4 @@
+#!/bin/sh -eux
+mkdir -p ./.dev
+rsync -auv --delete ./dist/ ./.dev/
+sed 's/default-src/default-src ws:/' ./dist/index.html > ./.dev/index.html

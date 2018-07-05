@@ -1,10 +1,7 @@
 #!/bin/sh -eux
 yarn run build
-# I wish we could --follow-symlinks with chokidar instead of listing ../lib/src, but --follow-symlinks doesn't seem to work on dirs
-rm -rf .dev
 yarn run _build:dev
+
 concurrently --raw \
-  "budo --port 8000 --dir .dev --live --open" \
-  "chokidar 'assets/**/*' --debounce 50 -c 'yarn run _build:assets'" \
-  "chokidar 'src/**/*.elm' '../lib/src/**/*.elm' --debounce 50 -c 'yarn run _build:elm'" \
-  "chokidar ./dist --debounce 50 -c 'yarn run _build:dev'"
+  "budo --port 8000 --dir ./.dev --live --open" \
+  "yarn build:watch"

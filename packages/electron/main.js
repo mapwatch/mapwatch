@@ -8,6 +8,7 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 const argv = require('minimist')(process.argv.slice(2))
+const {promisify} = require('util')
 const _ = require('lodash/fp')
 const debounce = (() => {
   const _debounce = _.debounce.convert({fixed: false})
@@ -38,11 +39,28 @@ function createWindow () {
   mainWindow.loadURL(initUrl)
 
   if (argv.livereload) {
+    const child_process = require('child_process')
+    const watch = {}
+    const watch.yarn = child_process.execFile('yarn', ['build:watch'], {cwd: "../www"}, (err) => {
+      if (err) {
+        console.error('fail', err)
+        app.quit()
+      }
+    })
+
     const chokidar = require('chokidar')
-    chokidar.watch(['.'], {ignoreInitial: true}).on('all', debounce({leading: true, trailing: true}, 250, (event, path) => {
+    const watch.chok = chokidar.watch(['.', '../www/dist'], {
+      ignored: ['./node_modules'],
+      ignoreInitial: true,
+    })
+    .on('all', debounce({leading: true, trailing: true}, 250, (event, path) => {
       console.log('livereload:', event, path)
       mainWindow.loadURL(initUrl)
-    }, {leading: true, trailing: true}))
+    }))
+    app.on('quit', () => {
+      watch.chok.close()
+      watch.yarn.kill()
+    })
   }
 
   // Open the DevTools.
