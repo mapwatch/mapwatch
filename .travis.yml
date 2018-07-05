@@ -57,4 +57,4 @@ deploy:
       #- packages/electron/dist/Mapwatch-*-mac.zip
     on:
       branch: master
-      tags: true
+      #tags: true
