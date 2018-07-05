@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "main": "src/rss.js",
   "license": "GPL-3.0",
+  "private": true,
   "scripts": {
     "prepare": "yarn build",
-    "build": "mkdir -p ./dist && node ./src/rss.js > ./dist/rss.xml"
+    "build": "mkdir -p ./dist && node ./src/rss.js > ./dist/rss.xml",
+    "clean": "rimraf ./dist"
   },
-  "private": true,
   "dependencies": {
     "lodash": "^4.17.10",
     "marked": "^0.4.0",
     "rss": "^1.2.2"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2"
   }
 }

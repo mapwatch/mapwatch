@@ -13,8 +13,25 @@ const debounce = (() => {
   const _debounce = _.debounce.convert({fixed: false})
   return _.curry((opts, wait, fn) => _debounce(wait, fn, opts))
 })()
-let argv = require('minimist')(process.argv.slice(2))
+let argv = require('minimist')(process.argv)
+// --dev is a shortcut for some other flags
 if (argv.dev) argv = {livereload: true, menu: true, ...argv}
+
+// verify the app's built correctly without actually running it
+if (argv.healthcheck) {
+  const fs = require('fs')
+  const files = [
+    'node_modules/@mapwatch/www/dist',
+    'node_modules/@mapwatch/lib/dist',
+  ]
+  Promise.all(files.map(f => promisify(fs.access)(f)))
+  .then(process.exit(0))
+  .catch(err => {
+    console.error(err)
+    process.exit(1)
+  })
+  return
+}
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.

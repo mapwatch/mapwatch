@@ -5,28 +5,36 @@
   "main": "main.js",
   "private": true,
   "scripts": {
+    "prepare": "(cd ../www && yarn build) && (cd ../lib && yarn build)",
     "build:linux": "electron-builder --linux --x64 --publish=never",
     "build:win": "electron-builder --win --x64 --publish=never",
     "build:mac": "electron-builder --mac --publish=never",
     "build:all": "concurrently 'yarn build:linux' 'yarn build:win' 'yarn build:mac'",
     "build": "yarn build:linux     # TODO build:all",
     "dev": "yarn start --dev",
-    "start": "electron ."
+    "start": "electron .",
+    "start-dist": "./dist/Mapwatch-*-linux.AppImage",
+    "test": "yarn start --healthcheck",
+    "test-dist": "yarn start-dist --healthcheck",
+    "clean": "rimraf ./dist"
   },
   "build": {
     "appId": "org.erosson.mapwatch",
     "productName": "Mapwatch",
     "artifactName": "${productName}-${version}-${os}.${ext}",
     "files": [
-      "node_modules/@mapwatch/www/dist/",
-      "node_modules/@mapwatch/www/package.json",
+      "node_modules/",
       "main.js",
       "index.html",
       "electron-ports.js",
       "package.json"
     ],
     "linux": {
-      "executableName": "mapwatch"
+      "executableName": "mapwatch",
+      "category": "Utility"
+    },
+    "appImage": {
+      "systemIntegration": "doNotAsk"
     },
     "directories": {
       "output": "dist/"
@@ -38,12 +46,14 @@
   "dependencies": {
     "@mapwatch/lib": "1.0.0",
     "@mapwatch/www": "1.0.0",
+    "lodash": "^4.17.10",
     "chokidar": "^2.0.4",
     "minimist": "^1.2.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
     "electron": "^2.0.0",
-    "electron-builder": "^20.14.7"
+    "electron-builder": "^20.14.7",
+    "rimraf": "^2.6.2"
   }
 }

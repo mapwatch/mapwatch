@@ -2,19 +2,26 @@
   "scripts": {
     "prepare": "lerna bootstrap --stream",
     "dev:electron": "cd ./packages/electron && yarn dev",
-    "build:electron": "cd ./packages/electron && yarn build",
+    "start:electron": "cd ./packages/electron && yarn start",
+    "start-dist:electron": "cd ./packages/electron && yarn start-dist",
+    "build:electron": "cd ./packages/electron && yarn build && yarn test-dist",
+    "test:electron": "cd ./packages/electron && yarn test",
+    "test-dist:electron": "cd ./packages/electron && yarn test-dist",
     "dev:www": "cd ./packages/www && yarn dev",
     "start:www": "cd ./packages/www && yarn start",
     "build:www": "cd ./packages/www && yarn build",
     "lib:demo": "cd ./packages/lib && yarn demo",
     "lib:demo-raw-elm": "cd ./packages/lib && yarn demo-raw-elm",
     "//test": "TODO: these are just crude smoke tests. Write real unit tests. (They feel less necessary with elm's awesome type system, though.)",
-    "test": "NO_WATCH=1 sh -c 'yarn lib:demo >/dev/null && yarn lib:demo-raw-elm >/dev/null'",
-    "build": "lerna run build --stream"
+    "test": "NO_WATCH=1 sh -c 'yarn lib:demo >/dev/null && yarn lib:demo-raw-elm >/dev/null' && yarn test:electron",
+    "build": "lerna run build --stream",
+    "clean": "lerna run clean --stream",
+    "clean:npm": "yarn clean && lerna exec 'rimraf ./node_modules' --stream && rimraf ./node_modules"
   },
   "license": "GPL-3.0",
   "private": true,
   "devDependencies": {
-    "lerna": "^2.5.1"
+    "lerna": "^2.5.1",
+    "rimraf": "^2.6.2"
   }
 }

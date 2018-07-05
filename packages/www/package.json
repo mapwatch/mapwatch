@@ -13,7 +13,8 @@
     "build:watch": "scripty",
     "build": "scripty",
     "dev": "scripty",
-    "start": "yarn build && serve ./dist"
+    "start": "yarn build && serve ./dist",
+    "clean": "rimraf ./dist ./.dev"
   },
   "dependencies": {
     "@mapwatch/lib": "1.0.0",
@@ -24,6 +25,7 @@
     "chokidar-cli": "^1.2.0",
     "concurrently": "^3.5.1",
     "elm": "^0.18.0",
+    "rimraf": "^2.6.2",
     "scripty": "^1.7.2"
   }
 }
