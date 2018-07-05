@@ -14,6 +14,7 @@ const debounce = (() => {
   return _.curry((opts, wait, fn) => _debounce(wait, fn, opts))
 })()
 let argv = require('minimist')(process.argv)
+console.log(process.argv, argv)
 // --dev is a shortcut for some other flags
 if (argv.dev) argv = {livereload: true, menu: true, ...argv}
 

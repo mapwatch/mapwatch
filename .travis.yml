@@ -25,7 +25,7 @@ install:
   - travis_retry sysconfcpus -n 2 yarn
 
 script:
-  - sysconfcpus -n 2 yarn build
+  # - sysconfcpus -n 2 yarn build
   - yarn test
 
 deploy:
