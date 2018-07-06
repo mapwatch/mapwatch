@@ -15,7 +15,7 @@
     "test": "NO_WATCH=1 sh -c 'yarn lib:demo >/dev/null && yarn lib:demo-raw-elm >/dev/null' && yarn test:electron",
     "build": "lerna run build --stream --ignore @mapwatch/electron",
     "build:electron": "cd ./packages/electron && yarn build",
-    "release:electron": "cd ./packages/electron && yarn release",
+    "release": "cd ./packages/electron && yarn release",
     "clean": "lerna run clean --stream && rimraf *.log",
     "clean:npm": "yarn clean && lerna exec 'rimraf ./node_modules' --stream && rimraf ./node_modules"
   },

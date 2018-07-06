@@ -34,10 +34,10 @@ install:
   - travis_retry sysconfcpus -n 2 yarn
 
 script:
-  - sysconfcpus -n 2 yarn build
   - yarn test
-  #- GH_TOKEN=$GITHUB_TOKEN yarn release
-  - yarn build:electron
+  # `yarn build` may also release the electron build, if there's a draft or a tag.
+  # https://www.electron.build/configuration/publish#recommended-github-releases-workflow
+  - GH_TOKEN=$GITHUB_TOKEN sysconfcpus -n 2 yarn build
 
 deploy:
   - provider: pages

@@ -6,16 +6,14 @@
   "private": true,
   "scripts": {
     "prepare": "(cd ../www && yarn build) && (cd ../lib && yarn build)",
-    "build:linux": "electron-builder --linux --x64 --publish=never",
-    "build:win": "electron-builder --win --x64 --publish=never",
-    "build:mac": "electron-builder --mac --publish=never",
-    "build:all": "concurrently 'yarn build:linux' 'yarn build:win' 'yarn build:mac'",
-    "build": "yarn build:linux     # TODO build:all",
-    "release:linux": "electron-builder --linux --x64 --publish=always",
-    "//release:win": "electron-builder --win --x64 --publish=always",
-    "//release:mac": "electron-builder --mac --publish=always",
-    "//release:all": "concurrently 'yarn release:linux' 'yarn release:win' 'yarn release:mac'",
-    "release": "yarn release:linux     # TODO release:all",
+    "build:linux": "electron-builder --linux --x64",
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac",
+    "build:all": "b() { concurrently \"yarn build:linux $*\" \"yarn build:win $*\" \"yarn build:mac $*\" ; } && b",
+    "build": "yarn build:all",
+    "//build": "yarn build:linux",
+    "build-only": "yarn build --publish never",
+    "release": "yarn build --publish always",
     "dev": "yarn start --dev",
     "start": "electron .",
     "start-dist": "./dist/Mapwatch-*-linux.AppImage",
@@ -36,10 +34,17 @@
     ],
     "linux": {
       "executableName": "mapwatch",
+      "target": "AppImage",
       "category": "Utility"
     },
     "appImage": {
       "systemIntegration": "doNotAsk"
+    },
+    "win": {
+      "icon": "node_modules/@mapwatch/www/dist/favicon.jpeg"
+    },
+    "mac": {
+      "target": "tar.gz"
     },
     "publish": [
       {
