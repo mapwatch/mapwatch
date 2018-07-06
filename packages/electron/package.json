@@ -42,7 +42,6 @@
       "systemIntegration": "doNotAsk"
     },
     "win": {
-      "target": "portable",
       "icon": "node_modules/@mapwatch/www/dist/favicon.jpeg"
     },
     "mac": {
