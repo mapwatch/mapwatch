@@ -1,0 +1,56 @@
+dist: xenial
+sudo: false
+language: node_js
+node_js:
+  - "8"
+
+# https://github.com/electron/electron/blob/master/docs/tutorial/testing-on-headless-ci.md
+addons:
+  apt:
+    packages:
+      - xvfb
+      - wine
+
+# https://8thlight.com/blog/rob-looby/2016/04/07/caching-elm-builds-on-travis-ci.html
+cache:
+  directories:
+    - packages/www/elm-stuff/build-artifacts
+    - packages/lib/elm-stuff/build-artifacts
+    - node_modules/
+    - sysconfcpus/
+
+install:
+  - which wine
+  - wine --version
+  # https://github.com/electron/electron/blob/master/docs/tutorial/testing-on-headless-ci.md
+  - export DISPLAY=':99.0'
+  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+  # https://github.com/elm/compiler/issues/1473
+  - |
+    if [ ! -d sysconfcpus/bin ];
+    then
+      git clone https://github.com/obmarg/libsysconfcpus.git;
+      cd libsysconfcpus;
+      ./configure --prefix=$TRAVIS_BUILD_DIR/sysconfcpus;
+      make && make install;
+      cd ..;
+    fi
+  - export PATH=$PATH:$TRAVIS_BUILD_DIR/sysconfcpus/bin
+  - travis_retry sysconfcpus -n 2 yarn
+
+script:
+  - yarn test
+  # `yarn build` may also release the electron build, if there's a draft or a tag.
+  # https://www.electron.build/configuration/publish#recommended-github-releases-workflow
+  - GH_TOKEN=$GITHUB_TOKEN sysconfcpus -n 2 yarn build
+
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    repo: mapwatch/mapwatch.github.io
+    target-branch: master # github-pages: user pages use the master branch, not gh-pages branch
+    local_dir: packages/www/dist/
+    github_token: $GITHUB_TOKEN
+    #keep_history: true
+    on:
+      branch: master
