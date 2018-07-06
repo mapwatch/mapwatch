@@ -9,7 +9,7 @@
     "build:linux": "electron-builder --linux --x64",
     "build:win": "electron-builder --win --x64",
     "build:mac": "electron-builder --mac",
-    "build:all": "b() { concurrently \"yarn build:linux $*\" \"yarn build:win $*\" \"yarn build:mac $*\" ; } && b",
+    "build:all": "electron-builder -mwl",
     "build": "yarn build:all",
     "//build": "yarn build:linux",
     "build-only": "yarn build --publish never",
@@ -70,7 +70,6 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "concurrently": "^3.5.1",
     "electron": "^2.0.0",
     "electron-builder": "^20.14.7",
     "rimraf": "^2.6.2"
