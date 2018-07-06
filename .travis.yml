@@ -1,15 +1,8 @@
-dist: xenial
+dist: trusty
 sudo: false
 language: node_js
 node_js:
   - "8"
-
-# https://github.com/electron/electron/blob/master/docs/tutorial/testing-on-headless-ci.md
-addons:
-  apt:
-    packages:
-      - xvfb
-      - wine
 
 # https://8thlight.com/blog/rob-looby/2016/04/07/caching-elm-builds-on-travis-ci.html
 cache:
@@ -20,7 +13,12 @@ cache:
     - sysconfcpus/
 
 install:
-  - which wine
+  # https://wiki.winehq.org/Ubuntu
+  - wget -nc https://dl.winehq.org/wine-builds/Release.key
+  - apt-key add Release.key
+  - apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+  - apt-get update
+  - apt-get install -y xvfb wine
   - wine --version
   # https://github.com/electron/electron/blob/master/docs/tutorial/testing-on-headless-ci.md
   - export DISPLAY=':99.0'

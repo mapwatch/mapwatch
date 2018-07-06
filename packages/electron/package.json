@@ -10,7 +10,7 @@
     "build:win": "electron-builder --win --x64",
     "build:mac": "electron-builder --mac",
     "//build:all": "electron-builder -lwm # travis is running a 4-year-old ubuntu dist. wine is too old for windows builds. ugh. TODO: move to circleci",
-    "build:all": "electron-builder -lm",
+    "build:all": "electron-builder -lwm",
     "build": "yarn build:all",
     "//build": "yarn build:linux",
     "build-only": "yarn build --publish never",
