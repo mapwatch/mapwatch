@@ -1,4 +1,5 @@
 dist: trusty
+# for apt-get. Sadly, we can't use travis's sudo-free apt setup, as wine needs a custom apt repo.
 sudo: true
 language: node_js
 node_js:
@@ -12,7 +13,7 @@ cache:
     - node_modules/
     - sysconfcpus/
 
-install:
+before_install:
   # https://wiki.winehq.org/Ubuntu
   - wget -nc https://dl.winehq.org/wine-builds/Release.key
   - sudo apt-key add Release.key
@@ -34,13 +35,16 @@ install:
       cd ..;
     fi
   - export PATH=$PATH:$TRAVIS_BUILD_DIR/sysconfcpus/bin
+
+install:
   - travis_retry sysconfcpus -n 2 yarn
 
 script:
   - yarn test
   # `yarn build` may also release the electron build, if there's a draft or a tag.
   # https://www.electron.build/configuration/publish#recommended-github-releases-workflow
-  - GH_TOKEN=$GITHUB_TOKEN sysconfcpus -n 2 yarn build
+  #- GH_TOKEN=$GITHUB_TOKEN sysconfcpus -n 2 yarn build
+  - GH_TOKEN=$GITHUB_TOKEN yarn build
 
 deploy:
   - provider: pages
