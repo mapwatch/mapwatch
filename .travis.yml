@@ -1,5 +1,5 @@
 dist: trusty
-sudo: false
+sudo: true
 language: node_js
 node_js:
   - "8"
@@ -15,10 +15,10 @@ cache:
 install:
   # https://wiki.winehq.org/Ubuntu
   - wget -nc https://dl.winehq.org/wine-builds/Release.key
-  - apt-key add Release.key
-  - apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
-  - apt-get update
-  - apt-get install -y xvfb wine
+  - sudo apt-key add Release.key
+  - sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+  - sudo apt-get update
+  - sudo apt-get install -y xvfb wine
   - wine --version
   # https://github.com/electron/electron/blob/master/docs/tutorial/testing-on-headless-ci.md
   - export DISPLAY=':99.0'
