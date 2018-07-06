@@ -1,6 +1,7 @@
 {
+  "name": "mapwatch",
   "scripts": {
-    "prepare": "lerna bootstrap --stream",
+    "prepare": "lerna run prepare --stream",
     "dev:electron": "cd ./packages/electron && yarn dev",
     "build:electron": "cd ./packages/electron && yarn build",
     "start:electron": "cd ./packages/electron && yarn start",
@@ -21,6 +22,11 @@
   },
   "license": "GPL-3.0",
   "private": true,
+  "workspaces": {
+    "//nohoist": "./packages/electron needs all production packages non-hoisted for its build step",
+    "nohoist": ["@mapwatch/electron/**"],
+    "packages": ["packages/*"]
+  },
   "devDependencies": {
     "lerna": "^2.5.1",
     "rimraf": "^2.6.2"

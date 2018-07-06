@@ -31,7 +31,7 @@ before_install:
   - export PATH=$PATH:$TRAVIS_BUILD_DIR/sysconfcpus/bin
 
 install:
-  - travis_retry sysconfcpus -n 2 yarn
+  - travis_retry sysconfcpus -n 2 yarn --frozen-lockfile
 
 script:
   - yarn test
