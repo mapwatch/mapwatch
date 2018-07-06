@@ -36,6 +36,8 @@ install:
 script:
   - sysconfcpus -n 2 yarn build
   - yarn test
+  #- GH_TOKEN=$GITHUB_TOKEN yarn release
+  - yarn build:electron
 
 deploy:
   - provider: pages
@@ -47,14 +49,3 @@ deploy:
     #keep_history: true
     on:
       branch: master
-  - provider: releases
-    skip_cleanup: true
-    api_key: $GITHUB_TOKEN
-    file_glob: true
-    file:
-      - packages/electron/dist/Mapwatch-*-linux.AppImage
-      #- packages/electron/dist/Mapwatch-*-win.exe # TODO: not until this thing's truly ready
-      #- packages/electron/dist/Mapwatch-*-mac.zip
-    on:
-      branch: master
-      #tags: true
