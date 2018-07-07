@@ -75,3 +75,12 @@ deploy:
     #keep_history: true
     on:
       branch: master
+  - provider: s3
+    skip_cleanup: true
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: mapwatch.erosson.org
+    region: us-east-1
+    local_dir: packages/www/dist/
+    on:
+      branch: master

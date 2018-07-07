@@ -2,6 +2,9 @@
   "name": "mapwatch",
   "scripts": {
     "prepare": "lerna run prepare --stream",
+    "tf:init": "terraform init",
+    "tf:plan": "terraform plan",
+    "tf:apply": "terraform apply -auto-approve",
     "dev:electron": "cd ./packages/electron && yarn dev",
     "build:electron": "cd ./packages/electron && yarn build",
     "start:electron": "cd ./packages/electron && yarn start",
@@ -24,10 +27,15 @@
   "private": true,
   "workspaces": {
     "//nohoist": "./packages/electron needs all production packages non-hoisted for its build step",
-    "nohoist": ["@mapwatch/electron/**"],
-    "packages": ["packages/*"]
+    "nohoist": [
+      "@mapwatch/electron/**"
+    ],
+    "packages": [
+      "packages/*"
+    ]
   },
   "devDependencies": {
+    "terraform-npm": "0.2.6",
     "lerna": "^2.5.1",
     "rimraf": "^2.6.2"
   }
