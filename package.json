@@ -34,8 +34,11 @@
       "packages/*"
     ]
   },
+  "//optionalDependencies": "because travis fails to install me, but doesn't actually need me",
+  "optionalDependencies": {
+    "terraform-npm": "0.2.6"
+  },
   "devDependencies": {
-    "terraform-npm": "0.2.6",
     "lerna": "^2.5.1",
     "rimraf": "^2.6.2"
   }
