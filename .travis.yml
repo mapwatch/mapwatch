@@ -26,7 +26,7 @@ cache:
     - $HOME/.cache/electron-builder
 
 before_install:
-  - alias yarn=/usr/bin/yarn   # use the updated version of yarn
+  - sudo rm /usr/local/bin/yarn   # an old version of yarn is preinstalled. alias didn't work, so let's be more thorough.
   - yarn --version
   - export GH_TOKEN=$GITHUB_TOKEN   # TODO rename me in travis settings
   # https://github.com/elm/compiler/issues/1473
