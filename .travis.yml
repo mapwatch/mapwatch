@@ -26,6 +26,9 @@ cache:
     - $HOME/.cache/electron-builder
 
 before_install:
+  - which yarn
+  - which -a yarn
+  - echo $PATH
   - yarn --version
   - export GH_TOKEN=$GITHUB_TOKEN   # TODO rename me in travis settings
   # https://github.com/elm/compiler/issues/1473
