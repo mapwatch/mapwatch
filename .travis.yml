@@ -6,6 +6,15 @@ language: node_js
 node_js:
   - "8"
 
+addons:
+  apt:
+    # an old version of yarn is preinstalled. update it.
+    sources:
+    - sourceline: 'deb https://dl.yarnpkg.com/debian/ stable main'
+      key_url: 'https://dl.yarnpkg.com/debian/pubkey.gpg'
+    packages:
+    - yarn
+
 # https://8thlight.com/blog/rob-looby/2016/04/07/caching-elm-builds-on-travis-ci.html
 cache:
   directories:
@@ -17,6 +26,7 @@ cache:
     - $HOME/.cache/electron-builder
 
 before_install:
+  - yarn --version
   - export GH_TOKEN=$GITHUB_TOKEN   # TODO rename me in travis settings
   # https://github.com/elm/compiler/issues/1473
   - |
@@ -29,6 +39,7 @@ before_install:
       cd ..;
     fi
   - export PATH=$PATH:$TRAVIS_BUILD_DIR/sysconfcpus/bin
+  - yarn config set workspaces-experimental true
 
 install:
   - travis_retry sysconfcpus -n 2 yarn --frozen-lockfile
