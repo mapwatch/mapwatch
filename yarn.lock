@@ -4779,7 +4779,7 @@ term-size@^1.2.0:
   dependencies:
     execa "^0.7.0"
 
-terraform-npm@^0.2.6:
+terraform-npm@0.2.6:
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/terraform-npm/-/terraform-npm-0.2.6.tgz#2b1ec5e84f18278de9f5359f43505364b0f06b31"
   dependencies:
