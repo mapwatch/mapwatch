@@ -117,7 +117,7 @@ sayMapRun r =
         s =
             abs <| rem dur (truncate Time.minute) // (truncate Time.second)
     in
-        (Run.instance r).zone ++ " finished in " ++ toString m ++ "min " ++ toString s ++ "sec"
+        (Run.instance r).zone ++ " finished in " ++ toString m ++ " minutes " ++ toString s ++ " seconds"
 
 
 encodeDate : Date -> Encode.Value
