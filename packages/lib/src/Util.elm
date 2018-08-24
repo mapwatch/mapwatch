@@ -1,12 +1,22 @@
-module Util exposing (..)
+module Util exposing (regexParseFirst, regexParseFirstRes)
 
-import Regex
+import Regex as Regex exposing (Regex)
+
+
+unsafeRegex : String -> Regex
+unsafeRegex string =
+    case Regex.fromString string of
+        Just regex ->
+            regex
+
+        Nothing ->
+            Debug.todo "invalid regex" string
 
 
 regexParseFirst : String -> String -> Maybe Regex.Match
 regexParseFirst regex txt =
     txt
-        |> Regex.find (Regex.AtMost 1) (Regex.regex regex)
+        |> Regex.findAtMost 1 (unsafeRegex regex)
         |> List.head
 
 

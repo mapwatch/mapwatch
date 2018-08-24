@@ -1,9 +1,9 @@
-module Mapwatch.Zone exposing (Type(..), SideZoneType(..), Master(..), zoneType, isTown, isMap, sideZoneType, maps)
+module Mapwatch.Zone exposing (Master(..), SideZoneType(..), Type(..), isMap, isTown, maps, sideZoneType, zoneType)
 
-import Set
 import Dict
-import Maybe.Extra
 import Mapwatch.MapList exposing (mapList, zoneAliases)
+import Maybe.Extra
+import Set
 
 
 type Type
@@ -13,14 +13,15 @@ type Type
 
 
 zoneType : Maybe String -> Type
-zoneType zone =
-    case zone of
+zoneType mzone =
+    case mzone of
         Nothing ->
             NotZone
 
         Just zone ->
             if Set.member zone towns then
                 Town
+
             else
                 NotTown
 
@@ -41,8 +42,8 @@ type SideZoneType
 
 
 sideZoneType : Maybe String -> SideZoneType
-sideZoneType zone =
-    case zone of
+sideZoneType mzone =
+    case mzone of
         Nothing ->
             OtherSideZone
 
@@ -164,6 +165,7 @@ towns =
             (\( nonenglish, english ) ->
                 if Set.member english englishTowns then
                     Just nonenglish
+
                 else
                     Nothing
             )
@@ -175,7 +177,7 @@ towns =
 maps : Set.Set String
 maps =
     Set.fromList <|
-        (List.map .name mapList)
+        List.map .name mapList
             -- It's awkward to not track Zana dailies. This is the quickest fix.
             ++ [ "Crumbled Laboratory" ]
             -- I'm curious about incursion temple times too

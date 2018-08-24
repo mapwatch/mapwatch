@@ -1,4 +1,4 @@
-module View.Icon exposing (..)
+module View.Icon exposing (fa, fas, fasPulse, map, mapOrBlank)
 
 import Html as H
 import Html.Attributes as A
@@ -33,8 +33,8 @@ map name =
         cls =
             Regex.replace Regex.All (Regex.regex "[ \t,:']+") (always "") name
     in
-        MapList.url name
-            |> Maybe.map (\src -> H.img [ A.class <| "map-icon map-icon-" ++ cls, A.src src ] [])
+    MapList.url name
+        |> Maybe.map (\src -> H.img [ A.class <| "map-icon map-icon-" ++ cls, A.src src ] [])
 
 
 mapOrBlank : String -> H.Html msg

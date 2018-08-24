@@ -5,16 +5,14 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "prepare": "elm-package install --yes",
     "demo-raw-elm": "yarn build && node ./demo-raw-elm.js",
     "demo": "yarn build && node ./demo.js",
-    "build": "mkdir -p dist && elm-make src/Main.elm --output=dist/elm.js && cp main.js dist/",
+    "build": "mkdir -p dist && elm make src/Main.elm --output=dist/elm.js && cp main.js dist/",
     "clean": "rimraf ./dist *.log"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "elm": "^0.18.0",
+    "elm": "^0.19.0-bugfix2",
     "rimraf": "^2.6.2"
   }
 }

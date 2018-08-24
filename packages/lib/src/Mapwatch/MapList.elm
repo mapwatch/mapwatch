@@ -1,8 +1,8 @@
 module Mapwatch.MapList exposing (Map, mapList, url, zoneAliases, zoneAliasesDict)
 
-import Regex
 import Dict as Dict exposing (Dict)
 import Maybe.Extra
+import Regex as Regex exposing (Regex)
 
 
 type alias Map =
@@ -26,7 +26,7 @@ mapList =
         buildAlias nonenglish english =
             Dict.get english englishMapsByName |> Maybe.map (\m -> { m | name = nonenglish })
     in
-        englishMapList ++ (List.map (uncurry buildAlias) zoneAliases |> Maybe.Extra.values)
+    englishMapList ++ (List.map (\( a, b ) -> buildAlias a b) zoneAliases |> Maybe.Extra.values)
 
 
 mapsByName : Dict String Map
@@ -45,7 +45,7 @@ urlNames =
         |> List.map
             (\( nonenglish, english ) ->
                 Dict.get english englishUrlNames
-                    |> Maybe.map ((,) nonenglish)
+                    |> Maybe.map (\b -> ( nonenglish, b ))
             )
         |> Maybe.Extra.values
         |> Dict.fromList
@@ -57,31 +57,29 @@ url name =
     let
         fixUrl : Map -> String -> String
         fixUrl map =
-            Regex.replace Regex.All
-                (Regex.regex "New/([a-zA-Z]+)\\d?\\.png")
+            Regex.replace
+                (Regex.fromString "New/([a-zA-Z]+)\\d?\\.png" |> Maybe.withDefault Regex.never)
                 (\match ->
                     case List.head <| List.take 1 match.submatches of
                         Nothing ->
-                            Debug.crash ("url parse failed. " ++ map.name)
+                            Debug.todo ("url parse failed. " ++ map.name)
 
-                        Just urlname ->
-                            case urlname of
-                                Nothing ->
-                                    Debug.crash ("url parse failed (2). " ++ map.name)
+                        Just Nothing ->
+                            Debug.todo ("url parse failed (2). " ++ map.name)
 
-                                Just urlname ->
-                                    let
-                                        colorTier =
-                                            -- 1 = white, 2 = yellow, 3 = red. Used in map urls.
-                                            clamp 1 3 <| ceiling <| toFloat map.tier / 5
-                                    in
-                                        urlname ++ toString colorTier ++ ".png?scale=1"
+                        Just (Just urlname) ->
+                            let
+                                colorTier =
+                                    -- 1 = white, 2 = yellow, 3 = red. Used in map urls.
+                                    clamp 1 3 <| ceiling <| toFloat map.tier / 5
+                            in
+                            urlname ++ String.fromInt colorTier ++ ".png?scale=1"
                 )
     in
-        Maybe.map2 fixUrl
-            (Dict.get name mapsByName)
-            (Dict.get name urlNames)
-            |> Maybe.map ((++) "https:")
+    Maybe.map2 fixUrl
+        (Dict.get name mapsByName)
+        (Dict.get name urlNames)
+        |> Maybe.map ((++) "https:")
 
 
 specialUrlNames =

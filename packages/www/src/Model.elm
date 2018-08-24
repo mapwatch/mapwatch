@@ -1,28 +1,24 @@
-module Model
-    exposing
-        ( Model
-        , Msg(..)
-        , Progress
-        , init
-        , initModel
-        , update
-        , subscriptions
-        )
+module Model exposing
+    ( Model
+    , Msg(..)
+    , Progress
+    , init
+    , initModel
+    , subscriptions
+    , update
+    )
 
-import Set
-import Date
-import Time
-import Maybe.Extra
-import AnimationFrame
-import Navigation
-import Ports
 import Mapwatch
-import Mapwatch.LogLine as LogLine
-import Mapwatch.Zone as Zone
 import Mapwatch.Instance as Instance
-import Mapwatch.Visit as Visit
+import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run
+import Mapwatch.Visit as Visit
+import Mapwatch.Zone as Zone
+import Maybe.Extra
+import Ports
 import Route exposing (Route)
+import Set
+import Time
 
 
 type alias Flags =
@@ -72,15 +68,15 @@ initModel flags route =
         loadedAt =
             Date.fromTime flags.loadedAt
     in
-        { mapwatch = Mapwatch.initModel
-        , config = { maxSize = 20 }
-        , flags = flags
-        , changelog = Nothing
-        , loadedAt = loadedAt
-        , route = route
-        , now = loadedAt
-        , lines = []
-        }
+    { mapwatch = Mapwatch.initModel
+    , config = { maxSize = 20 }
+    , flags = flags
+    , changelog = Nothing
+    , loadedAt = loadedAt
+    , route = route
+    , now = loadedAt
+    , lines = []
+    }
 
 
 init flags loc =
@@ -114,7 +110,7 @@ tick t0 model =
         t =
             applyTimeOffset model t0
     in
-        { model | mapwatch = Mapwatch.tick t model.mapwatch, now = Date.fromTime t }
+    { model | mapwatch = Mapwatch.tick t model.mapwatch, now = Date.fromTime t }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -123,6 +119,7 @@ update msg ({ config } as model) =
         Tick t ->
             if Maybe.Extra.unwrap False Mapwatch.isProgressDone model.mapwatch.progress then
                 ( tick t model, Cmd.none )
+
             else
                 ( { model | now = Date.fromTime <| applyTimeOffset model t }, Cmd.none )
 
@@ -183,7 +180,7 @@ updateMapwatch msg model =
         ( mapwatch, cmd ) =
             Mapwatch.update msg model.mapwatch
     in
-        ( { model | mapwatch = mapwatch }, Cmd.map M cmd )
+    ( { model | mapwatch = mapwatch }, Cmd.map M cmd )
 
 
 subscriptions : Model -> Sub Msg

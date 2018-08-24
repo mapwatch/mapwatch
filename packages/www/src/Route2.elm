@@ -1,4 +1,4 @@
-module Route exposing
+module Route2 exposing
     ( HistoryParams
     , MapsParams
     , OverlayParams
@@ -92,7 +92,7 @@ parse : Url -> Route
 parse loc =
     loc
         |> hashQS
-        |> P.parse parser
+        |> P.parseHash parser
         |> Maybe.withDefault (NotFound loc)
         |> Debug.log "navigate to"
 
@@ -108,34 +108,17 @@ hashQS loc =
             { loc | hash = hash, search = loc.search ++ "&" ++ qs }
 
         [] ->
-            Debug.todo "hashqs: empty"
+            Debug.crash "hashqs: empty"
 
         other ->
-            Debug.todo "hashqs: 3+"
-
-
-encodeUri : String -> String
-encodeUri =
-    -- 0.19 removed http.encodeUri/decodeUri? Really? Ugh. I think this is sufficient.
-    String.replace "%" "%25"
-        >> String.replace "&" "%26"
-        >> String.replace "=" "%3D"
-        >> String.replace "?" "%3F"
-
-
-decodeUri : String -> String
-decodeUri =
-    String.replace "%3F" "?"
-        >> String.replace "%26" "&"
-        >> String.replace "%3D" "="
-        >> String.replace "%25" "%"
+            Debug.crash "hashqs: 3+"
 
 
 decodeString : P.Parser (String -> a) a
 decodeString =
     P.map
         (\s ->
-            decodeUri s
+            Http.decodeUri s
                 -- |> Debug.log ("decode: " ++ s)
                 |> Maybe.withDefault s
         )
@@ -239,7 +222,7 @@ encodeQS pairs0 =
 
     else
         pairs
-            |> List.map (\( k, v ) -> encodeUri k ++ "=" ++ encodeUri v)
+            |> List.map (\( k, v ) -> Http.encodeUri k ++ "=" ++ Http.encodeUri v)
             |> String.join "&"
             |> (++) "?"
 

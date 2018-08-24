@@ -1,20 +1,20 @@
 module View.Timer exposing (view)
 
-import Time
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Maybe.Extra
-import Model as Model exposing (Model, Msg)
 import Mapwatch as Mapwatch
 import Mapwatch.Run as Run
+import Maybe.Extra
+import Model as Model exposing (Model, Msg)
 import Route
-import View.Util exposing (viewGoalForm, hidePreLeagueButton)
+import Time
+import View.History
+import View.Home exposing (formatDuration, formatSideAreaType, maskedText, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
+import View.Icon as Icon
 import View.Nav
 import View.Setup
-import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
-import View.History
-import View.Icon as Icon
+import View.Util exposing (hidePreLeagueButton, viewGoalForm)
 
 
 view : Route.TimerParams -> Model -> H.Html Msg
@@ -37,14 +37,14 @@ viewBody qs model =
 
         Just p ->
             H.div [] <|
-                (if Mapwatch.isProgressDone p then
+                if Mapwatch.isProgressDone p then
                     -- all done!
                     [ viewGoalForm (\goal -> Model.RouteTo <| Route.Timer { qs | goal = goal }) qs
                     , viewMain qs model
                     ]
-                 else
+
+                else
                     [ viewProgress p ]
-                )
 
 
 viewMain : Route.TimerParams -> Model -> H.Html msg
@@ -126,18 +126,18 @@ viewMain qs model =
                       ]
                     )
     in
-        H.div []
-            [ viewTimer timer timerGoal
-            , H.table [ A.class "timer-details" ]
-                [ H.tbody []
-                    [ H.tr [] mappingNow
-                    , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance hqs model.mapwatch.instance.val ] ]
-                    , H.tr [] [ H.td [] [ H.text <| "Maps done " ++ sessname ++ ": " ], H.td [] [ H.text <| toString <| List.length runs ] ]
-                    , H.tr [ A.class "session-buttons" ] [ H.td [ A.colspan 2 ] sessionButtons ]
-                    ]
+    H.div []
+        [ viewTimer timer timerGoal
+        , H.table [ A.class "timer-details" ]
+            [ H.tbody []
+                [ H.tr [] mappingNow
+                , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance hqs model.mapwatch.instance.val ] ]
+                , H.tr [] [ H.td [] [ H.text <| "Maps done " ++ sessname ++ ": " ], H.td [] [ H.text <| toString <| List.length runs ] ]
+                , H.tr [ A.class "session-buttons" ] [ H.td [ A.colspan 2 ] sessionButtons ]
                 ]
-            , historyTable
             ]
+        , historyTable
+        ]
 
 
 viewTimer : Maybe Time.Time -> Maybe Time.Time -> H.Html msg

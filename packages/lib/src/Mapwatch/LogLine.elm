@@ -1,8 +1,14 @@
-module Mapwatch.LogLine exposing (ParseError, ParsedLine, Info(..), Line, parse)
+module Mapwatch.LogLine exposing
+    ( Info(..)
+    , Line
+    , ParseError
+    , ParsedLine
+    , parse
+    )
 
-import Date
-import Regex
 import Maybe.Extra
+import Regex
+import Time
 import Util exposing (regexParseFirst, regexParseFirstRes)
 
 
@@ -22,7 +28,7 @@ type Info
 
 type alias Line =
     { raw : String
-    , date : Date.Date
+    , date : Time.Posix
     , info : Info
     }
 
@@ -54,37 +60,24 @@ parseLogInfo raw =
                 _ ->
                     Nothing
     in
-        [ parseOpening, parseEntered, parseConnecting ]
-            -- use the first matching parser
-            |> Maybe.Extra.values
-            |> List.head
+    [ parseOpening, parseEntered, parseConnecting ]
+        -- use the first matching parser
+        |> Maybe.Extra.values
+        |> List.head
 
 
-parse : String -> ParsedLine
-parse raw =
+parse : Time.Posix -> String -> ParsedLine
+parse date raw =
+    -- TODO this broke in elm 0.19: Date.fromString is gone. We don't really
+    -- have a good way to parse dates anymore. On top of that, we'll need to
+    -- apply the time zone somehow - but the new api doesn't easily let us map
+    -- from timezone to time-offset. Ugh.
     let
-        date : Result String Date.Date
-        date =
-            raw
-                -- rearrange the date so the built-in js parser likes it
-                |> regexParseFirstRes "\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}" "no date in logline"
-                |> Result.map (Regex.split Regex.All (Regex.regex "[/: ]") << .match)
-                |> Result.andThen
-                    (\strs ->
-                        case strs of
-                            [ yr, mo, d, h, mn, s ] ->
-                                -- no time zone designator - assume local time.
-                                -- This may act screwy around DST changes, but there's not much we can do -
-                                -- logged dates are local-time with no info about the timezone at the time of logging.
-                                Date.fromString <| (String.join "-" [ yr, mo, d ]) ++ "T" ++ (String.join ":" [ h, mn, s ])
-
-                            _ ->
-                                Err ("date parsed-count mismatch: " ++ toString strs)
-                    )
-
-        result d i =
+        -- we used to parse the date here, but elm 0.19 broke it, and we now get
+        -- the date via ports.
+        result i =
             { raw = raw
-            , date = d
+            , date = date
             , info = i
             }
 
@@ -95,5 +88,5 @@ parse raw =
         error err =
             { err = err, raw = raw }
     in
-        Result.map2 result date info
-            |> Result.mapError error
+    Result.map result info
+        |> Result.mapError error

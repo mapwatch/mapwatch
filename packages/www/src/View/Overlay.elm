@@ -1,20 +1,20 @@
 module View.Overlay exposing (view)
 
-import Time
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Maybe.Extra
-import Model as Model exposing (Model, Msg)
 import Mapwatch as Mapwatch
 import Mapwatch.Run as Run
+import Maybe.Extra
+import Model as Model exposing (Model, Msg)
 import Route
-import View.Util exposing (viewGoalForm, hidePreLeagueButton)
+import Time
+import View.History
+import View.Home exposing (formatDuration, formatSideAreaType, maskedText, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
+import View.Icon as Icon
 import View.Nav
 import View.Setup
-import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
-import View.History
-import View.Icon as Icon
+import View.Util exposing (hidePreLeagueButton, viewGoalForm)
 
 
 view : Route.TimerParams -> Model -> H.Html Msg
@@ -27,6 +27,7 @@ view qs model =
         Just p ->
             if Mapwatch.isProgressDone p then
                 viewMain qs model
+
             else
                 viewSetup model <| H.div [] []
 
@@ -75,11 +76,11 @@ viewMain qs model =
         viewIndexRun i run =
             viewRow (List.length history) i qs hqs (goalDuration run) run
     in
-        H.div [ A.class "overlay-main" ]
-            [ H.table [] <|
-                List.indexedMap viewIndexRun <|
-                    List.reverse history
-            ]
+    H.div [ A.class "overlay-main" ]
+        [ H.table [] <|
+            List.indexedMap viewIndexRun <|
+                List.reverse history
+        ]
 
 
 viewRow : Int -> Int -> Route.TimerParams -> Route.HistoryParams -> Maybe Time.Time -> Run.Run -> H.Html msg
@@ -91,29 +92,32 @@ viewRow count i tqs hqs goalDuration run =
         dur =
             Just (Run.durationSet run).all
     in
-        H.tr
-            [ A.classList
-                [ ( "even", i % 2 == 0 )
-                , ( "odd", i % 2 /= 0 )
-                , ( "last", isLast )
-                ]
+    H.tr
+        [ A.classList
+            [ ( "even", modBy 2 i == 0 )
+            , ( "odd", modBy 2 i /= 0 )
+            , ( "last", isLast )
             ]
-            ([ H.td [ A.class "instance" ]
-                ([ viewInstance hqs run.first.instance ]
-                    ++ if isLast then
+        ]
+        ([ H.td [ A.class "instance" ]
+            ([ viewInstance hqs run.first.instance ]
+                ++ (if isLast then
                         [ H.a [ A.class "overlay-back", Route.href <| Route.Timer tqs ] [ Icon.fas "cog" ] ]
-                       else
+
+                    else
                         []
-                )
-             , H.td [ A.class "timer" ] [ viewTimer dur ]
-             ]
-                ++ case goalDuration of
+                   )
+            )
+         , H.td [ A.class "timer" ] [ viewTimer dur ]
+         ]
+            ++ (case goalDuration of
                     Nothing ->
                         []
 
                     Just _ ->
                         [ H.td [ A.class "goal" ] [ viewGoalTimer dur goalDuration ] ]
-            )
+               )
+        )
 
 
 viewTimer : Maybe Time.Time -> H.Html msg

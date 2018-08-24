@@ -1,24 +1,23 @@
-module View.Home exposing (..)
+module View.Home exposing (formatBytes, formatDuration, formatSideAreaType, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
 
 -- TODO: This used to be its own page. Now it's a graveyard of functions that get
 -- called from other pages. I should really clean it up and find these a new home.
 
+import Dict
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Time
-import Date
-import Dict
 import Mapwatch as Mapwatch exposing (Model, Msg(..))
-import Mapwatch.LogLine as LogLine
-import Mapwatch.Visit as Visit
 import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run
+import Mapwatch.Visit as Visit
 import Mapwatch.Zone as Zone
 import Route
-import View.Setup
-import View.Nav
+import Time
 import View.Icon as Icon
+import View.Nav
+import View.Setup
 
 
 viewInstance : Route.HistoryParams -> Instance -> H.Html msg
@@ -28,6 +27,7 @@ viewInstance qs instance =
             if Zone.isMap i.zone then
                 -- TODO preserve before/after
                 H.a [ Route.href <| Route.History { qs | search = Just i.zone }, A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
+
             else
                 H.span [ A.title i.addr ] [ H.text i.zone ]
 
@@ -44,20 +44,21 @@ formatDuration dur0 =
         sign =
             if dur >= 0 then
                 ""
+
             else
                 "-"
 
         h =
-            abs <| dur // (truncate Time.hour)
+            abs <| dur // truncate Time.hour
 
         m =
-            abs <| rem dur (truncate Time.hour) // (truncate Time.minute)
+            abs <| remainderBy (truncate Time.hour) dur // truncate Time.minute
 
         s =
-            abs <| rem dur (truncate Time.minute) // (truncate Time.second)
+            abs <| remainderBy (truncate Time.minute) dur // truncate Time.second
 
         ms =
-            abs <| rem dur (truncate Time.second)
+            abs <| remainderBy (truncate Time.second) dur
 
         pad0 length num =
             num
@@ -65,14 +66,14 @@ formatDuration dur0 =
                 |> String.padLeft length '0'
 
         hpad =
-            (if h > 0 then
+            if h > 0 then
                 [ pad0 2 h ]
-             else
+
+            else
                 []
-            )
     in
-        -- String.join ":" <| [ pad0 2 h, pad0 2 m, pad0 2 s, pad0 4 ms ]
-        sign ++ String.join ":" (hpad ++ [ pad0 2 m, pad0 2 s ])
+    -- String.join ":" <| [ pad0 2 h, pad0 2 m, pad0 2 s, pad0 4 ms ]
+    sign ++ String.join ":" (hpad ++ [ pad0 2 m, pad0 2 s ])
 
 
 viewParseError : Maybe LogLine.ParseError -> H.Html msg
@@ -103,27 +104,33 @@ formatBytes b =
         ( val, unit ) =
             if t >= 1 then
                 ( t, " TB" )
+
             else if g >= 1 then
                 ( g, " GB" )
+
             else if m >= 1 then
                 ( m, " MB" )
+
             else if k >= 1 then
                 ( k, " KB" )
+
             else
                 ( toFloat b, " bytes" )
 
         places n val =
             toString <| (toFloat <| floor <| val * (10 ^ n)) / (10 ^ n)
     in
-        places 2 val ++ unit
+    places 2 val ++ unit
 
 
 viewProgress : Mapwatch.Progress -> H.Html msg
 viewProgress p =
     if Mapwatch.isProgressDone p then
         H.div [] [ H.br [] [], H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ toString (Mapwatch.progressDuration p / 1000) ++ "s" ]
+
     else if p.max <= 0 then
         H.div [] [ Icon.fasPulse "spinner" ]
+
     else
         H.div []
             [ H.progress [ A.value (toString p.val), A.max (toString p.max) ] []
@@ -175,7 +182,7 @@ viewSideAreaName qs instance =
 maskedText : String -> H.Html msg
 maskedText str =
     -- This text is hidden on the webpage, but can be copypasted. Useful for formatting shared text.
-    H.span [ A.style [ ( "opacity", "0" ), ( "font-size", "0" ), ( "white-space", "pre" ) ] ] [ H.text str ]
+    H.span [ A.style "opacity" "0", A.style "font-size" "0", A.style "white-space" "pre" ] [ H.text str ]
 
 
 selfUrl =

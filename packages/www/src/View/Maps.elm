@@ -1,24 +1,23 @@
 module View.Maps exposing (view)
 
+import Dict
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Time
-import Date
-import Dict
-import Regex
-import Model as Model exposing (Model, Msg(..))
 import Mapwatch as Mapwatch
 import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.MapList as MapList
+import Mapwatch.Run as Run exposing (Run)
+import Model as Model exposing (Model, Msg(..))
+import Regex
 import Route
+import Time
+import View.History
+import View.Home exposing (formatDuration, formatSideAreaType, maskedText, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
+import View.Icon as Icon
 import View.Nav
 import View.Setup
-import View.History
-import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
-import View.Util exposing (roundToPlaces, viewSearch, pluralize)
-import View.Icon as Icon
+import View.Util exposing (pluralize, roundToPlaces, viewSearch)
 
 
 view : Route.MapsParams -> Model -> H.Html Msg
@@ -44,6 +43,7 @@ viewBody params model =
                 (if Mapwatch.isProgressDone p then
                     -- all done!
                     [ viewMain params model ]
+
                  else
                     []
                 )
@@ -68,8 +68,8 @@ viewMain params model =
             |> search params.search
             |> Run.groupMapNames (Run.filterBetween params model.mapwatch.runs)
             |> List.reverse
-            |> List.map (uncurry <| viewMap params)
-            |> \rows -> H.table [ A.class "by-map" ] [ H.body [] rows ]
+            |> List.map ((\f ( a, b ) -> f a b) <| viewMap params)
+            |> (\rows -> H.table [ A.class "by-map" ] [ H.body [] rows ])
         ]
 
 
@@ -91,16 +91,16 @@ viewMap qs map runs =
         num =
             List.length runs
     in
-        H.tr []
-            ([ H.td [ A.class "zone" ] [ viewMapName qs map ]
-             , H.td [] [ H.text <| "(T" ++ toString map.tier ++ ")" ]
-             , H.td [] [ H.text <| formatDuration durs.mainMap ++ " per map" ]
-             , H.td [] [ H.text <| toString (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
-             , H.td [] [ H.text <| "×" ++ toString num ++ " runs." ]
-             , H.td [] [ H.text <| "Best: " ++ best ]
-             ]
-             -- ++ (View.History.viewDurationSet <| )
-            )
+    H.tr []
+        ([ H.td [ A.class "zone" ] [ viewMapName qs map ]
+         , H.td [] [ H.text <| "(T" ++ toString map.tier ++ ")" ]
+         , H.td [] [ H.text <| formatDuration durs.mainMap ++ " per map" ]
+         , H.td [] [ H.text <| toString (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
+         , H.td [] [ H.text <| "×" ++ toString num ++ " runs." ]
+         , H.td [] [ H.text <| "Best: " ++ best ]
+         ]
+         -- ++ (View.History.viewDurationSet <| )
+        )
 
 
 viewMapName : Route.MapsParams -> MapList.Map -> H.Html msg
@@ -109,4 +109,4 @@ viewMapName qs map =
         hqs0 =
             Route.historyParams0
     in
-        H.a [ Route.href <| Route.History { hqs0 | search = Just map.name, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank map.name, H.text map.name ]
+    H.a [ Route.href <| Route.History { hqs0 | search = Just map.name, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank map.name, H.text map.name ]

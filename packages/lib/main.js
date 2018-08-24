@@ -1,7 +1,7 @@
 // Node wrapper around Mapwatch's Elm brain, for easier usage by Node callers.
 // This won't work in a browser - I haven't written a nice wrapper for that. See ports.js.
 
-const Elm = require('./elm')
+const {Elm} = require('./elm')
 const fs = require('fs')
 const path = require('path')
 const readline = require('readline')
@@ -68,10 +68,21 @@ var filter = /Connecting to instance server|: You have entered|LOG FILE OPENING|
 // #global, %party, @whisper, $trade, &guild
 // TODO: local has no prefix! `[A-Za-z_\-]+:` might work, needs more testing
 var blacklist = /] [#%@$&]/
+function parseDate(line) {
+  // example: 2018/05/13 16:05:37
+  // we used to do this in elm, but as of 0.19 it's not possible
+  var match = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}/.exec(line)
+  if (!match) return null
+  var ymdhms = match[0].split(/[\/: ]/)
+  if (ymdhms.length !== 6) return null
+  var iso8601 = ymdhms.slice(0,3).join('-') + 'T' + ymdhms.slice(3,6).join(':')
+  // no Z suffix: use the default timezone
+  return new Date(iso8601).getTime()
+}
 function sendLine(app, line) {
   if (filter.test(line) && !blacklist.test(line)) {
     // console.log('line: ', line)
-    app.ports.logline.send(line)
+    app.ports.logline.send({line: line, date: parseDate(line)})
   }
 }
 class MapWatcher {
@@ -108,11 +119,11 @@ class MapWatcher {
   }
 }
 MapWatcher.watch = function(path_, opts) {
-  return new MapWatcher(Elm.Main.worker())
+  return new MapWatcher(Elm.Main.init())
   .watch(path_, opts)
 }
 MapWatcher.history = function(path_, opts) {
-  return new MapWatcher(Elm.Main.worker())
+  return new MapWatcher(Elm.Main.init())
   .history(path_, opts)
 }
 

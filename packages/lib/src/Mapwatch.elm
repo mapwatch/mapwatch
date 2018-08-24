@@ -1,32 +1,36 @@
-module Mapwatch
-    exposing
-        ( Model
-        , Msg(..)
-        , Progress
-        , init
-        , initModel
-        , tick
-        , update
-        , subscriptions
-        , progressPercent
-        , isProgressDone
-        , isReady
-        , progressDuration
-        )
+module Mapwatch exposing
+    ( Model
+    , Msg(..)
+    , Progress
+    , init
+    , initModel
+    , isProgressDone
+    , isReady
+    , progressDuration
+    , progressPercent
+    , subscriptions
+    , tick
+    , update
+    )
 
-import Date
-import Time
+import Duration exposing (Millis)
+import Mapwatch.Instance as Instance
+import Mapwatch.LogLine as LogLine
+import Mapwatch.Run as Run
+import Mapwatch.Visit as Visit
+import Mapwatch.Zone as Zone
 import Maybe.Extra
 import Ports
-import Mapwatch.LogLine as LogLine
-import Mapwatch.Zone as Zone
-import Mapwatch.Instance as Instance
-import Mapwatch.Visit as Visit
-import Mapwatch.Run as Run
+import Time
 
 
 type alias Progress =
-    Ports.Progress
+    { val : Int
+    , max : Int
+    , startedAt : Time.Posix
+    , updatedAt : Time.Posix
+    , name : String
+    }
 
 
 type alias Model =
@@ -39,8 +43,8 @@ type alias Model =
 
 
 type Msg
-    = RecvLogLine String
-    | RecvProgress Progress
+    = RecvLogLine { date : Int, line : String }
+    | RecvProgress Ports.Progress
 
 
 initModel : Model
@@ -53,6 +57,7 @@ initModel =
     }
 
 
+init : ( Model, Cmd Msg )
 init =
     ( initModel, Cmd.none )
 
@@ -71,8 +76,8 @@ updateLine line model =
 
         runs =
             case lastRun of
-                Just lastRun ->
-                    lastRun :: model.runs
+                Just lastRun_ ->
+                    lastRun_ :: model.runs
 
                 Nothing ->
                     model.runs
@@ -80,66 +85,77 @@ updateLine line model =
         cmd =
             if instance.joinedAt == model.instance.joinedAt then
                 Cmd.none
+
             else
                 Ports.sendJoinInstance (Instance.unsafeJoinedAt instance) instance.val visit lastRun
     in
-        ( { model
-            | instance = instance
+    ( { model
+        | instance = instance
 
-            -- , visits = Maybe.Extra.unwrap model.visits (\v -> v :: model.visits) visit
-            , runState = runState
-            , runs = runs
-          }
-        , cmd
-        )
+        -- , visits = Maybe.Extra.unwrap model.visits (\v -> v :: model.visits) visit
+        , runState = runState
+        , runs = runs
+      }
+    , cmd
+    )
 
 
-tick : Time.Time -> Model -> Model
+tick : Time.Posix -> Model -> Model
 tick t model =
     let
         ( runState, lastRun ) =
-            Run.tick (Date.fromTime t) model.instance model.runState
+            Run.tick t model.instance model.runState
 
         runs =
             case lastRun of
-                Just lastRun ->
-                    lastRun :: model.runs
+                Just lastRun_ ->
+                    lastRun_ :: model.runs
 
                 Nothing ->
                     model.runs
     in
-        { model | runState = runState, runs = runs }
+    { model | runState = runState, runs = runs }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         RecvLogLine raw ->
-            case LogLine.parse raw of
+            case LogLine.parse (Time.millisToPosix raw.date) raw.line of
                 Ok line ->
                     updateLine line model
 
                 Err err ->
                     ( { model | parseError = Just err }, Cmd.none )
 
-        RecvProgress p ->
+        RecvProgress p0 ->
             let
+                p =
+                    { val = p0.val
+                    , max = p0.max
+                    , name = p0.name
+                    , startedAt = Time.millisToPosix p0.startedAt
+                    , updatedAt = Time.millisToPosix p0.updatedAt
+                    }
+
                 m =
                     { model | progress = Just p }
             in
-                if isProgressDone p then
-                    -- man, I love elm, but conditional logging is so awkward
-                    let
-                        _ =
-                            -- if this is the first completed progress, it's the history file - log something
-                            if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
-                                Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.Extra.unwrap 0 Date.toTime m.instance.joinedAt)
-                            else
-                                ""
-                    in
-                        ( tick p.updatedAt m, Ports.progressComplete { name = p.name } )
-                else
-                    ( m, Cmd.none )
+            if isProgressDone p then
+                -- man, I love elm, but conditional logging is so awkward
+                let
+                    _ =
+                        -- if this is the first completed progress, it's the history file - log something
+                        if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
+                            Debug.log "start from last logline" <| "?tickStart=" ++ String.fromInt (Maybe.Extra.unwrap 0 Time.posixToMillis m.instance.joinedAt)
+
+                        else
+                            ""
+                in
+                ( tick p.updatedAt m, Ports.progressComplete { name = p.name } )
+
+            else
+                ( m, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
@@ -167,6 +183,6 @@ isReady =
     Maybe.Extra.unwrap False isProgressDone << .progress
 
 
-progressDuration : Progress -> Time.Time
+progressDuration : Progress -> Millis
 progressDuration p =
-    p.updatedAt - p.startedAt
+    Time.posixToMillis p.updatedAt - Time.posixToMillis p.startedAt

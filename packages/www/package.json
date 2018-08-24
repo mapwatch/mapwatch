@@ -5,7 +5,6 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "prepare": "elm-package install --yes",
     "_build:assets": "scripty",
     "_build:version": "scripty",
     "_build:elm": "scripty",
@@ -24,7 +23,7 @@
     "budo": "^11.2.2",
     "chokidar-cli": "^1.2.0",
     "concurrently": "^3.5.1",
-    "elm": "^0.18.0",
+    "elm": "^0.19.0-bugfix2",
     "rimraf": "^2.6.2",
     "scripty": "^1.7.2"
   }

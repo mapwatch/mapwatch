@@ -1,4 +1,4 @@
 #!/bin/sh -eux
-elm-make src/Main.elm --output=dist/elm.js
+elm make src/Main.elm --output=dist/elm.js
 # not sure why rebuilding elm.js alone doesn't trigger livereload, but touching index.html is an easy workaround
 touch dist/index.html

@@ -1,10 +1,26 @@
-module Mapwatch.Instance exposing (..)
+module Mapwatch.Instance exposing
+    ( Address
+    , Builder(..)
+    , Instance(..)
+    , State
+    , duration
+    , init
+    , isDurationOffline
+    , isMap
+    , isOffline
+    , isTown
+    , offlineThreshold
+    , unsafeJoinedAt
+    , unwrap
+    , update
+    )
 
-import Time
-import Date
-import Maybe.Extra
+import Duration exposing (Millis)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Zone as Zone
+import Maybe.Extra
+import Time
+
 
 
 -- (Zone, instance-server-address) isn't really a unique id -
@@ -28,7 +44,7 @@ type Builder
 
 type alias State =
     { val : Instance
-    , joinedAt : Maybe Date.Date -- Nothing if no loglines have been processed yet
+    , joinedAt : Maybe Time.Posix -- Nothing if no loglines have been processed yet
     , next : Builder
     }
 
@@ -39,19 +55,19 @@ init =
     { val = MainMenu, joinedAt = Nothing, next = Empty }
 
 
-unsafeJoinedAt : State -> Date.Date
+unsafeJoinedAt : State -> Time.Posix
 unsafeJoinedAt { joinedAt } =
     case joinedAt of
         Nothing ->
-            Debug.crash "instance.unsafeJoinedAt" joinedAt
+            Debug.todo "instance.unsafeJoinedAt" joinedAt
 
         Just d ->
             d
 
 
 unwrap : a -> (Address -> a) -> Instance -> a
-unwrap default fn instance =
-    case instance of
+unwrap default fn instance0 =
+    case instance0 of
         MainMenu ->
             default
 
@@ -70,23 +86,23 @@ isMap =
     unwrap False (Zone.isMap << .zone)
 
 
-duration : Date.Date -> State -> Maybe Time.Time
+duration : Time.Posix -> State -> Maybe Millis
 duration now state =
-    Maybe.map (\at -> Date.toTime now - Date.toTime at) state.joinedAt
+    Maybe.map (\at -> Time.posixToMillis now - Time.posixToMillis at) state.joinedAt
 
 
-offlineThreshold : Time.Time
+offlineThreshold : Millis
 offlineThreshold =
     -- TODO threshold should be configurable
-    30 * Time.minute
+    30 * Duration.minute
 
 
-isDurationOffline : Time.Time -> Bool
+isDurationOffline : Millis -> Bool
 isDurationOffline dur =
     dur >= offlineThreshold
 
 
-isOffline : Date.Date -> State -> Bool
+isOffline : Time.Posix -> State -> Bool
 isOffline now instance =
     isDurationOffline <| Maybe.withDefault 0 <| duration now instance
 

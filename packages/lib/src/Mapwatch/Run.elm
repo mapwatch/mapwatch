@@ -1,45 +1,44 @@
-module Mapwatch.Run
-    exposing
-        ( Run
-        , State(..)
-        , DurationSet
-        , init
-        , instance
-        , duration
-        , durationSet
-        , totalDurationSet
-        , meanDurationSet
-        , stateDuration
-        , durationPerSideArea
-        , bestDuration
-        , GoalDuration(..)
-        , parseGoalDuration
-        , stringifyGoalDuration
-        , goalDuration
-        , search
-        , SortField(..)
-        , SortDir(..)
-        , sort
-        , parseSort
-        , stringifySort
-        , reverseSort
-        , isBetween
-        , filterBetween
-        , groupMapNames
-        , filterToday
-        , current
-        , update
-        , tick
-        )
+module Mapwatch.Run exposing
+    ( DurationSet
+    , GoalDuration(..)
+    , Run
+    , SortDir(..)
+    , SortField(..)
+    , State(..)
+    , bestDuration
+    , current
+    , duration
+    , durationPerSideArea
+    , durationSet
+    , filterBetween
+    , filterToday
+    , goalDuration
+    , groupMapNames
+    , init
+    , instance
+    , isBetween
+    , meanDurationSet
+    , parseGoalDuration
+    , parseSort
+    , reverseSort
+    , search
+    , sort
+    , stateDuration
+    , stringifyGoalDuration
+    , stringifySort
+    , tick
+    , totalDurationSet
+    , update
+    )
 
-import Time
-import Date
 import Dict
-import Regex
 import Dict.Extra
-import Maybe.Extra
+import Duration exposing (Millis)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Visit as Visit exposing (Visit)
+import Maybe.Extra
+import Regex
+import Time
 
 
 type alias Run =
@@ -48,7 +47,7 @@ type alias Run =
 
 type State
     = Empty
-    | Started Date.Date
+    | Started Time.Posix
     | Running Run
 
 
@@ -56,6 +55,7 @@ init : Visit -> Maybe Run
 init visit =
     if Visit.isOffline visit || not (Visit.isMap visit) then
         Nothing
+
     else
         Just { first = visit, last = visit, visits = [ visit ], portals = 1 }
 
@@ -65,7 +65,7 @@ instance run =
     -- this is guaranteed because init checks for it
     case run.first.instance of
         Instance.MainMenu ->
-            Debug.crash "null-instance run"
+            Debug.todo "null-instance run"
 
         Instance.Instance i ->
             i
@@ -75,9 +75,13 @@ search : String -> List Run -> List Run
 search query =
     let
         pred run =
-            Regex.contains (Regex.regex query |> Regex.caseInsensitive) (instance run).zone
+            Regex.contains
+                (Regex.fromStringWith { caseInsensitive = True, multiline = False } query
+                    |> Maybe.withDefault Regex.never
+                )
+                (instance run).zone
     in
-        List.filter pred
+    List.filter pred
 
 
 type SortField
@@ -107,7 +111,7 @@ sort str =
             identity
 
         Just _ ->
-            parseSort str |> uncurry sortParsed
+            parseSort str |> (\( a, b ) -> sortParsed a b)
 
 
 stringifySortField : SortField -> String
@@ -161,14 +165,15 @@ parseSort str0 =
                 field =
                     parseSortField (Maybe.withDefault "" str0)
             in
-                ( field
-                  -- date sorts desc by default, but names feel better asc (a-z), and durations feel better asc (fastest-slowest)
-                  -- but durations and
-                , if field == SortDate then
-                    Desc
-                  else
-                    Asc
-                )
+            ( field
+              -- date sorts desc by default, but names feel better asc (a-z), and durations feel better asc (fastest-slowest)
+              -- but durations and
+            , if field == SortDate then
+                Desc
+
+              else
+                Asc
+            )
 
 
 reverseSort : SortDir -> SortDir
@@ -195,7 +200,7 @@ stringifySort field dir =
                 Just Desc ->
                     "-"
     in
-        d ++ stringifySortField field
+    d ++ stringifySortField field
 
 
 sortParsed : SortField -> SortDir -> List Run -> List Run
@@ -204,6 +209,7 @@ sortParsed field dir runs =
     -- Same result as letting the else-branch run, but no sort cpu needed.
     if field == SortDate && dir == Desc then
         runs
+
     else
         runs
             |> (case field of
@@ -232,50 +238,51 @@ sortParsed field dir runs =
                )
             |> (if dir == Desc then
                     List.reverse
+
                 else
                     identity
                )
 
 
-isBetween : { a | after : Maybe Date.Date, before : Maybe Date.Date } -> Run -> Bool
+isBetween : { a | after : Maybe Time.Posix, before : Maybe Time.Posix } -> Run -> Bool
 isBetween { after, before } run =
     let
         at =
             -- Date.toTime run.last.leftAt
-            Date.toTime run.first.joinedAt
+            Time.posixToMillis run.first.joinedAt
 
         isAfter =
-            Maybe.Extra.unwrap True (Date.toTime >> (>=) at) after
+            Maybe.Extra.unwrap True (Time.posixToMillis >> (>=) at) after
 
         isBefore =
-            Maybe.Extra.unwrap True (Date.toTime >> (<=) at) before
+            Maybe.Extra.unwrap True (Time.posixToMillis >> (<=) at) before
     in
-        isAfter && isBefore
+    isAfter && isBefore
 
 
 filterBetween qs =
     List.filter (isBetween qs)
 
 
-stateDuration : Date.Date -> State -> Maybe Time.Time
+stateDuration : Time.Posix -> State -> Maybe Millis
 stateDuration now state =
     case state of
         Empty ->
             Nothing
 
         Started at ->
-            Just <| max 0 <| Date.toTime now - Date.toTime at
+            Just <| max 0 <| Time.posixToMillis now - Time.posixToMillis at
 
         Running run ->
-            Just <| max 0 <| Date.toTime now - Date.toTime run.first.joinedAt
+            Just <| max 0 <| Time.posixToMillis now - Time.posixToMillis run.first.joinedAt
 
 
-duration : Run -> Time.Time
+duration : Run -> Millis
 duration v =
-    max 0 <| Date.toTime v.last.leftAt - Date.toTime v.first.joinedAt
+    max 0 <| Time.posixToMillis v.last.leftAt - Time.posixToMillis v.first.joinedAt
 
 
-filteredDuration : (Visit -> Bool) -> Run -> Time.Time
+filteredDuration : (Visit -> Bool) -> Run -> Millis
 filteredDuration pred run =
     run.visits
         |> List.filter pred
@@ -284,7 +291,7 @@ filteredDuration pred run =
 
 
 type alias DurationSet =
-    { all : Time.Time, town : Time.Time, mainMap : Time.Time, sides : Time.Time, notTown : Time.Time, portals : Float }
+    { all : Millis, town : Millis, mainMap : Millis, sides : Millis, notTown : Millis, portals : Float }
 
 
 durationSet : Run -> DurationSet
@@ -302,7 +309,7 @@ durationSet run =
         mainMap =
             filteredDuration (\v -> v.instance == run.first.instance) run
     in
-        { all = all, town = town, notTown = notTown, mainMap = mainMap, sides = notTown - mainMap, portals = toFloat run.portals }
+    { all = all, town = town, notTown = notTown, mainMap = mainMap, sides = notTown - mainMap, portals = toFloat run.portals }
 
 
 totalDurationSet : List Run -> DurationSet
@@ -314,7 +321,7 @@ totalDurationSet runs =
         sum get =
             durs |> List.map get |> List.sum
     in
-        { all = sum .all, town = sum .town, notTown = sum .notTown, mainMap = sum .mainMap, sides = sum .sides, portals = sum .portals }
+    { all = sum .all, town = sum .town, notTown = sum .notTown, mainMap = sum .mainMap, sides = sum .sides, portals = sum .portals }
 
 
 meanDurationSet : List Run -> DurationSet
@@ -327,38 +334,36 @@ meanDurationSet runs =
             List.length runs
                 -- nonzero, since we're dividing. Numerator will be zero, so result is zero, that's fine.
                 |> max 1
-                |> toFloat
     in
-        { all = d.all / n, town = d.town / n, notTown = d.notTown / n, mainMap = d.mainMap / n, sides = d.sides / n, portals = d.portals / n }
+    { all = d.all // n, town = d.town // n, notTown = d.notTown // n, mainMap = d.mainMap // n, sides = d.sides // n, portals = d.portals / toFloat n }
 
 
-bestDuration : (DurationSet -> Time.Time) -> List Run -> Maybe Time.Time
+bestDuration : (DurationSet -> Millis) -> List Run -> Maybe Millis
 bestDuration which runs =
     runs
         |> List.map (durationSet >> which)
         |> List.minimum
 
 
-meanDuration : (DurationSet -> Time.Time) -> List Run -> Maybe Time.Time
+meanDuration : (DurationSet -> Millis) -> List Run -> Maybe Millis
 meanDuration which runs =
-    case runs of
-        [] ->
-            Nothing
+    if runs == [] then
+        Nothing
 
-        runs ->
-            runs |> meanDurationSet |> which |> Just
+    else
+        runs |> meanDurationSet |> which |> Just
 
 
-filterToday : Date.Date -> List Run -> List Run
-filterToday date =
+filterToday : Time.Zone -> Time.Posix -> List Run -> List Run
+filterToday zone now =
     let
         ymd date =
-            ( Date.year date, Date.month date, Date.day date )
+            ( Time.toYear zone date, Time.toMonth zone date, Time.toDay zone date )
 
         pred run =
-            ymd date == ymd run.last.leftAt
+            ymd now == ymd run.last.leftAt
     in
-        List.filter pred
+    List.filter pred
 
 
 byMap : List Run -> Dict.Dict String (List Run)
@@ -372,9 +377,9 @@ groupMapNames runs maps =
         dict =
             byMap runs
     in
-        maps
-            |> List.map (\map -> Dict.get map.name dict |> Maybe.map ((,) map))
-            |> Maybe.Extra.values
+    maps
+        |> List.map (\map -> Dict.get map.name dict |> Maybe.map (\b -> ( map, b )))
+        |> Maybe.Extra.values
 
 
 type GoalDuration
@@ -382,58 +387,58 @@ type GoalDuration
     | AllTimeBest
     | SessionMean
     | AllTimeMean
-    | Fixed Time.Time
+    | Fixed Millis
     | NoGoal
 
 
-goalDuration : GoalDuration -> { session : List Run, allTime : List Run } -> Run -> Maybe Time.Time
+goalDuration : GoalDuration -> { session : List Run, allTime : List Run } -> Run -> Maybe Millis
 goalDuration goal runset =
     let
-        foldRuns : (List Run -> Maybe Time.Time) -> List Run -> Dict.Dict String Time.Time
+        foldRuns : (List Run -> Maybe Millis) -> List Run -> Dict.Dict String Millis
         foldRuns foldFn =
             byMap >> Dict.Extra.filterMap (always foldFn)
 
         key run =
             (instance run).zone
     in
-        case goal of
-            SessionBest ->
-                let
-                    -- building the dict inline gives the same result, but this should be
-                    -- much more efficient: build it once, in a closure, instead of
-                    -- rebuilding every time we Dict.get. Inspecting Elm's generated JS
-                    -- verifies this (though, who knows what optimizations the browser does)
-                    dict =
-                        foldRuns (bestDuration .all) runset.session
-                in
-                    \run -> Dict.get (key run) dict
+    case goal of
+        SessionBest ->
+            let
+                -- building the dict inline gives the same result, but this should be
+                -- much more efficient: build it once, in a closure, instead of
+                -- rebuilding every time we Dict.get. Inspecting Elm's generated JS
+                -- verifies this (though, who knows what optimizations the browser does)
+                dict =
+                    foldRuns (bestDuration .all) runset.session
+            in
+            \run -> Dict.get (key run) dict
 
-            AllTimeBest ->
-                let
-                    dict =
-                        foldRuns (bestDuration .all) runset.allTime
-                in
-                    \run -> Dict.get (key run) dict
+        AllTimeBest ->
+            let
+                dict =
+                    foldRuns (bestDuration .all) runset.allTime
+            in
+            \run -> Dict.get (key run) dict
 
-            SessionMean ->
-                let
-                    dict =
-                        foldRuns (meanDuration .all) runset.session
-                in
-                    \run -> Dict.get (key run) dict
+        SessionMean ->
+            let
+                dict =
+                    foldRuns (meanDuration .all) runset.session
+            in
+            \run -> Dict.get (key run) dict
 
-            AllTimeMean ->
-                let
-                    dict =
-                        foldRuns (meanDuration .all) runset.allTime
-                in
-                    \run -> Dict.get (key run) dict
+        AllTimeMean ->
+            let
+                dict =
+                    foldRuns (meanDuration .all) runset.allTime
+            in
+            \run -> Dict.get (key run) dict
 
-            Fixed t ->
-                always <| Just t
+        Fixed t ->
+            always <| Just t
 
-            NoGoal ->
-                always Nothing
+        NoGoal ->
+            always Nothing
 
 
 stringifyGoalDuration : GoalDuration -> Maybe String
@@ -451,24 +456,26 @@ stringifyGoalDuration goal =
         AllTimeMean ->
             Just "mean"
 
-        Fixed t ->
-            Just <| toString t
+        Fixed ms ->
+            Just <| String.fromInt ms
 
         NoGoal ->
             Nothing
 
 
-parseFixedGoalDuration : String -> Maybe Float
+parseFixedGoalDuration : String -> Maybe Millis
 parseFixedGoalDuration str =
-    case String.split ":" str |> List.map (String.toFloat >> Result.toMaybe) of
+    -- TODO rewrite me with elm/parser, as evancz recommends everywhere
+    case str |> String.split ":" |> List.map String.toInt of
         (Just s) :: [] ->
             -- First possible format: plain number of seconds; "300"
-            Just <| s * Time.second
+            Just <| s * Duration.second
 
         (Just m) :: (Just s) :: [] ->
             -- Second possible format: "5:00"
             if s < 60 then
-                Just <| m * Time.minute + s * Time.second
+                Just <| m * Duration.minute + s * Duration.second
+
             else
                 Nothing
 
@@ -477,20 +484,20 @@ parseFixedGoalDuration str =
             let
                 parsed =
                     str
-                        |> Regex.find (Regex.AtMost 1) (Regex.regex "([0-9\\.]+m)?\\s*([0-9\\.]+s)?")
+                        |> Regex.findAtMost 1 (Regex.fromString "([0-9\\.]+m)?\\s*([0-9\\.]+s)?" |> Maybe.withDefault Regex.never)
                         |> List.head
                         |> Maybe.Extra.unwrap [] .submatches
-                        |> List.map (Maybe.andThen <| String.slice 0 -1 >> String.toFloat >> Result.toMaybe)
+                        |> List.map (Maybe.andThen <| String.slice 0 -1 >> String.toInt)
             in
-                case parsed of
-                    [ Nothing, Nothing ] ->
-                        Nothing
+            case parsed of
+                [ Nothing, Nothing ] ->
+                    Nothing
 
-                    [ m, s ] ->
-                        Just <| (Maybe.withDefault 0 m) * Time.minute + (Maybe.withDefault 0 s) * Time.second
+                [ m, s ] ->
+                    Just <| Maybe.withDefault 0 m * Duration.minute + Maybe.withDefault 0 s * Duration.second
 
-                    _ ->
-                        Nothing
+                _ ->
+                    Nothing
 
 
 parseGoalDuration : Maybe String -> GoalDuration
@@ -522,93 +529,97 @@ parseGoalDuration =
                             NoGoal
 
 
-durationPerSideArea : Run -> List ( Instance.Address, Time.Time )
+durationPerSideArea : Run -> List ( Instance.Address, Millis )
 durationPerSideArea run =
     durationPerInstance run
         |> List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance))
         |> List.map
-            (\( i, d ) ->
-                case i of
+            (\( i_, d ) ->
+                case i_ of
                     Instance.Instance i ->
                         ( i, d )
 
                     Instance.MainMenu ->
-                        Debug.crash "Instance.isTown should have filtered this one"
+                        Debug.todo "Instance.isTown should have filtered this one"
             )
 
 
-durationPerInstance : Run -> List ( Instance, Time.Time )
+durationPerInstance : Run -> List ( Instance, Millis )
 durationPerInstance { visits } =
     let
-        instanceToZoneKey instance =
-            case instance of
+        instanceToZoneKey instance_ =
+            case instance_ of
                 Instance.Instance i ->
                     i.zone
 
                 Instance.MainMenu ->
                     "(none)"
 
-        update instance duration val0 =
+        updateDurDict instance_ duration_ val0 =
             val0
-                |> Maybe.withDefault ( instance, 0 )
-                |> Tuple.mapSecond ((+) duration)
+                |> Maybe.withDefault ( instance_, 0 )
+                |> Tuple.mapSecond ((+) duration_)
                 |> Just
 
-        foldDurs ( instance, duration ) dict =
-            Dict.update (instanceToZoneKey instance) (update instance duration) dict
+        foldDurs ( instance_, duration_ ) dict =
+            Dict.update (instanceToZoneKey instance_) (updateDurDict instance_ duration_) dict
     in
-        visits
-            |> List.map (\v -> ( v.instance, Visit.duration v ))
-            |> List.foldl foldDurs Dict.empty
-            |> Dict.values
+    visits
+        |> List.map (\v -> ( v.instance, Visit.duration v ))
+        |> List.foldl foldDurs Dict.empty
+        |> Dict.values
 
 
 push : Visit -> Run -> Maybe Run
 push visit run =
     if Visit.isOffline visit then
         Nothing
+
     else
         Just { run | last = visit, visits = visit :: run.visits }
 
 
-tick : Date.Date -> Instance.State -> State -> ( State, Maybe Run )
-tick now instance state =
+tick : Time.Posix -> Instance.State -> State -> ( State, Maybe Run )
+tick now instance_ state =
     -- go offline when time has passed since the last log entry.
     case state of
         Empty ->
             ( state, Nothing )
 
         Started at ->
-            if Instance.isOffline now instance then
+            if Instance.isOffline now instance_ then
                 -- we just went offline while in a map - end/discard the run
                 ( Empty, Nothing )
                     |> Debug.log "Run.tick: Started -> offline"
+
             else
                 -- no changes
                 ( state, Nothing )
 
         Running run ->
-            if Instance.isOffline now instance then
+            if Instance.isOffline now instance_ then
                 -- they went offline during a run. Start a new run.
-                if Instance.isTown instance.val then
+                if Instance.isTown instance_.val then
                     -- they went offline in town - end the run, discarding the time in town.
                     ( Empty, Just run )
                         |> Debug.log "Run.tick: Running<town> -> offline"
+
                 else
                     -- they went offline in the map or a side area.
                     -- we can't know how much time they actually spent running before disappearing - discard the run.
                     ( Empty, Nothing )
                         |> Debug.log "Run.tick: Running<not-town> -> offline"
+
             else
                 -- no changes
                 ( state, Nothing )
 
 
-current : Date.Date -> Instance.State -> State -> Maybe Run
-current now instance state =
+current : Time.Posix -> Instance.State -> State -> Maybe Run
+current now instance_ state =
     let
         visitResult v =
-            case update instance (Just v) state of
+            case update instance_ (Just v) state of
                 ( _, Just run ) ->
                     Just run
 
@@ -618,24 +629,24 @@ current now instance state =
                 _ ->
                     Nothing
     in
-        case state of
-            Empty ->
-                Nothing
+    case state of
+        Empty ->
+            Nothing
 
-            _ ->
-                Visit.initSince instance now
-                    |> visitResult
+        _ ->
+            Visit.initSince instance_ now
+                |> visitResult
 
 
 update : Instance.State -> Maybe Visit -> State -> ( State, Maybe Run )
-update instance visit state =
+update instance_ mvisit state =
     -- we just joined `instance`, and just left `visit.instance`.
     --
     -- instance may be Nothing (the game just reopened) - the visit is
     -- treated as if the player were online while the game was closed,
     -- and restarted instantly into no-instance.
     -- No-instance always transitions to town (the player starts there).
-    case visit of
+    case mvisit of
         Nothing ->
             -- no visit, no changes.
             ( state, Nothing )
@@ -643,62 +654,67 @@ update instance visit state =
         Just visit ->
             let
                 initRun =
-                    if Instance.isMap instance.val && Visit.isTown visit then
+                    if Instance.isMap instance_.val && Visit.isTown visit then
                         -- when not running, entering a map from town starts a run.
                         -- TODO: Non-town -> Map could be a Zana mission - skip for now, takes more special-casing
-                        case instance.joinedAt of
+                        case instance_.joinedAt of
                             Just at ->
                                 Started at
 
                             Nothing ->
                                 -- TODO change the Instance.State type to prevent this
-                                Debug.crash <| "instance.state has {val=notnull, joinedAt=null}: " ++ toString instance
+                                Debug.todo <| "instance.state has {val=notnull, joinedAt=null}: " ++ Debug.toString instance_
+
                     else
                         -- ...and *only* entering a map. Ignore non-maps while not running.
                         Empty
             in
-                case state of
-                    Empty ->
-                        ( initRun, Nothing )
+            case state of
+                Empty ->
+                    ( initRun, Nothing )
 
-                    Started _ ->
-                        -- first complete visit of the run!
-                        if Visit.isMap visit then
-                            case init visit of
-                                Nothing ->
-                                    -- we entered a map, then went offline. Discard the run+visit.
-                                    ( initRun, Nothing )
-
-                                Just run ->
-                                    -- normal visit, common case - really start the run.
-                                    ( Running run, Nothing )
-                        else
-                            Debug.crash <| "A run's first visit should be a Map-zone, but it wasn't: " ++ toString visit
-
-                    Running run ->
-                        case push visit run of
+                Started _ ->
+                    -- first complete visit of the run!
+                    if Visit.isMap visit then
+                        case init visit of
                             Nothing ->
-                                -- they went offline during a run. Start a new run.
-                                if Visit.isTown visit then
-                                    -- they went offline in town - end the run, discarding the time in town.
-                                    ( initRun, Just run )
-                                else
-                                    -- they went offline in the map or a side area.
-                                    -- we can't know how much time they actually spent running before disappearing - discard the run.
-                                    -- TODO handle offline in no-zone - imagine crashing in a map, immediately restarting the game, then quitting for the day
-                                    ( initRun, Nothing )
+                                -- we entered a map, then went offline. Discard the run+visit.
+                                ( initRun, Nothing )
 
                             Just run ->
-                                if (not <| Instance.isTown instance.val) && instance.val /= run.first.instance && Visit.isTown visit then
-                                    -- entering a new non-town zone, from town, finishes this run and might start a new one. This condition is complex:
-                                    -- * Reentering the same map does not! Ex: death, or portal-to-town to dump some gear.
-                                    -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.
-                                    -- * Even Non-Map -> Map does not! That's a Zana daily, or leaving an abyssal-depth/trial/other side-area.
-                                    -- * Town -> Non-Map does, though. Ex: map -> town -> uberlab.
-                                    ( initRun, Just run )
-                                else if instance.val == run.first.instance && Visit.isTown visit then
-                                    -- reentering the *same* map from town is a portal.
-                                    ( Running { run | portals = run.portals + 1 }, Nothing )
-                                else
-                                    -- the common case - just add the visit to the run
-                                    ( Running run, Nothing )
+                                -- normal visit, common case - really start the run.
+                                ( Running run, Nothing )
+
+                    else
+                        Debug.todo <| "A run's first visit should be a Map-zone, but it wasn't: " ++ Debug.toString visit
+
+                Running running ->
+                    case push visit running of
+                        Nothing ->
+                            -- they went offline during a run. Start a new run.
+                            if Visit.isTown visit then
+                                -- they went offline in town - end the run, discarding the time in town.
+                                ( initRun, Just running )
+
+                            else
+                                -- they went offline in the map or a side area.
+                                -- we can't know how much time they actually spent running before disappearing - discard the run.
+                                -- TODO handle offline in no-zone - imagine crashing in a map, immediately restarting the game, then quitting for the day
+                                ( initRun, Nothing )
+
+                        Just run ->
+                            if (not <| Instance.isTown instance_.val) && instance_.val /= run.first.instance && Visit.isTown visit then
+                                -- entering a new non-town zone, from town, finishes this run and might start a new one. This condition is complex:
+                                -- * Reentering the same map does not! Ex: death, or portal-to-town to dump some gear.
+                                -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.
+                                -- * Even Non-Map -> Map does not! That's a Zana daily, or leaving an abyssal-depth/trial/other side-area.
+                                -- * Town -> Non-Map does, though. Ex: map -> town -> uberlab.
+                                ( initRun, Just run )
+
+                            else if instance_.val == run.first.instance && Visit.isTown visit then
+                                -- reentering the *same* map from town is a portal.
+                                ( Running { run | portals = run.portals + 1 }, Nothing )
+
+                            else
+                                -- the common case - just add the visit to the run
+                                ( Running run, Nothing )

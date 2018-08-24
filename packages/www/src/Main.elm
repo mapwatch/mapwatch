@@ -1,8 +1,7 @@
 module Main exposing (main)
 
+import Model exposing (init, subscriptions, update)
 import View.View exposing (view)
-import Model exposing (init, update, subscriptions)
-import Navigation
 
 
 main =

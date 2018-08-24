@@ -1,12 +1,13 @@
 module Main exposing (main)
 
+import Mapwatch exposing (Model, Msg, init, subscriptions, update)
 import Platform
-import Mapwatch exposing (init, update, subscriptions)
 
 
+main : Program () Model Msg
 main =
-    Platform.program
-        { init = init
+    Platform.worker
+        { init = always init
         , update = update
         , subscriptions = subscriptions
         }

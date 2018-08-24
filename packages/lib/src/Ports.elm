@@ -1,22 +1,21 @@
-port module Ports
-    exposing
-        ( inputClientLogWithId
-        , changelog
-        , logline
-        , Progress
-        , progress
-        , progressComplete
-        , sendJoinInstance
-        )
+port module Ports exposing
+    ( Progress
+    , changelog
+    , inputClientLogWithId
+    , logline
+    , progress
+    , progressComplete
+    , sendJoinInstance
+    )
 
-import Time as Time exposing (Time)
-import Date as Date exposing (Date)
-import Maybe.Extra
-import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.Visit as Visit exposing (Visit)
-import Mapwatch.Run as Run exposing (Run)
-import Json.Encode as Encode
+import Duration exposing (Millis)
 import Json.Decode as Decode
+import Json.Encode as Encode
+import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.Run as Run exposing (Run)
+import Mapwatch.Visit as Visit exposing (Visit)
+import Maybe.Extra
+import Time
 
 
 port inputClientLogWithId : { id : String, maxSize : Int } -> Cmd msg
@@ -25,11 +24,20 @@ port inputClientLogWithId : { id : String, maxSize : Int } -> Cmd msg
 port changelog : (String -> msg) -> Sub msg
 
 
-port logline : (String -> msg) -> Sub msg
+{-| date is included in the line itself, but elm has trouble parsing it with the
+new 0.19 time api. I'm sure someone will come up with a library soon enough,
+but for now, let js do it.
+-}
+port logline : ({ line : String, date : Int } -> msg) -> Sub msg
 
 
 type alias Progress =
-    { val : Int, max : Int, startedAt : Time, updatedAt : Time, name : String }
+    { val : Int
+    , max : Int
+    , startedAt : Int
+    , updatedAt : Int
+    , name : String
+    }
 
 
 port progress : (Progress -> msg) -> Sub msg
@@ -40,11 +48,17 @@ type alias InstanceEvent =
 
 
 type alias VisitEvent =
-    { instance : InstanceEvent, joinedAt : Time, leftAt : Time }
+    { instance : InstanceEvent
+    , joinedAt : Time.Posix
+    , leftAt : Time.Posix
+    }
 
 
 type alias RunEvent =
-    { instance : Instance.Address, joinedAt : Time, leftAt : Time }
+    { instance : Instance.Address
+    , joinedAt : Time.Posix
+    , leftAt : Time.Posix
+    }
 
 
 
@@ -64,7 +78,7 @@ progressComplete e =
             ]
 
 
-sendJoinInstance : Date -> Instance -> Maybe Visit -> Maybe Run -> Cmd msg
+sendJoinInstance : Time.Posix -> Instance -> Maybe Visit -> Maybe Run -> Cmd msg
 sendJoinInstance date instance visit run =
     events <|
         Encode.object
@@ -109,17 +123,17 @@ sayMapRun : Run -> String
 sayMapRun r =
     let
         dur =
-            floor <| Run.duration r
+            Run.duration r
 
         m =
-            abs <| rem dur (truncate Time.hour) // (truncate Time.minute)
+            remainderBy Duration.hour dur // Duration.minute |> abs
 
         s =
-            abs <| rem dur (truncate Time.minute) // (truncate Time.second)
+            remainderBy Duration.minute dur // Duration.second |> abs
     in
-        (Run.instance r).zone ++ " finished in " ++ toString m ++ " minutes " ++ toString s ++ " seconds"
+    (Run.instance r).zone ++ " finished in " ++ String.fromInt m ++ " minutes " ++ String.fromInt s ++ " seconds"
 
 
-encodeDate : Date -> Encode.Value
+encodeDate : Time.Posix -> Encode.Value
 encodeDate =
-    Date.toTime >> Encode.float
+    Time.posixToMillis >> Encode.int
