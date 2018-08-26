@@ -71,6 +71,8 @@ deploy:
     repo: mapwatch/mapwatch.github.io
     target-branch: master # github-pages: user pages use the master branch, not gh-pages branch
     local_dir: packages/www/dist/
+    # Travis's github token is created/configured manually, not through terraform.
+    # One more reason to move off of github pages eventually.
     github_token: $GITHUB_TOKEN
     #keep_history: true
     on:
@@ -84,3 +86,13 @@ deploy:
     local_dir: packages/www/dist/
     on:
       branch: master
+after_deploy:
+  # clear cloudflare cache.
+  # https://api.cloudflare.com/#zone-purge-all-files
+  # zone identifier - 7c06b35c2392935ebb0653eaf94a3e70 - is on the cloudflare overview page for erosson.org
+  - |
+    curl -X POST "https://api.cloudflare.com/client/v4/zones/7c06b35c2392935ebb0653eaf94a3e70/purge_cache" \
+         -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
+         -H "X-Auth-Key: $CLOUDFLARE_TOKEN" \
+         -H "Content-Type: application/json" \
+         --data '{"purge_everything":true}'
