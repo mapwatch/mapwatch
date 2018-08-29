@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2018-08-29
+- Updated "hide pre-Incursion maps" button for Delve.
+
 ## 2018-07-04
 - The [overlay view](https://mapwatch.github.io/#/overlay) is no longer experimental, and is now linked from the timer.
 - Goals/time-differences are no longer experimental. Find them at the top of the timer and history pages.

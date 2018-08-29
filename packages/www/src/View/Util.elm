@@ -90,11 +90,11 @@ pluralize one other n =
 
 
 leagueName =
-    "Incursion"
+    "Delve"
 
 
 leagueDate =
-    case Date.fromString "2018-06-01T20:00:00.000Z" of
+    case Date.fromString "2018-08-31T20:00:00.000Z" of
         Ok date ->
             date
 
