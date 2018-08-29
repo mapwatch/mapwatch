@@ -1,28 +1,27 @@
-module Route
-    exposing
-        ( Route(..)
-        , HistoryParams
-        , historyParams0
-        , MapsParams
-        , mapsParams0
-        , TimerParams
-        , timerParams0
-        , OverlayParams
-        , overlayParams0
-        , parse
-        , stringify
-        , href
-        , dateToString
-        )
+module Route exposing
+    ( HistoryParams
+    , MapsParams
+    , OverlayParams
+    , Route(..)
+    , TimerParams
+    , dateToString
+    , historyParams0
+    , href
+    , mapsParams0
+    , overlayParams0
+    , parse
+    , stringify
+    , timerParams0
+    )
 
+import Date as Date exposing (Date)
 import Html as H
 import Html.Attributes as A
-import Navigation
-import UrlParser as P exposing ((</>), (<?>))
 import Http
-import Regex
-import Date as Date exposing (Date)
 import Maybe.Extra
+import Navigation
+import Regex
+import UrlParser as P exposing ((</>), (<?>))
 
 
 flags0 =
@@ -149,7 +148,7 @@ boolParam default name =
         parse s =
             not <| s == "" || s == "0" || s == "no" || s == "n" || s == "False" || s == "false"
     in
-        P.customParam name (Maybe.Extra.unwrap default parse)
+    P.customParam name (Maybe.Extra.unwrap default parse)
 
 
 parser : P.Parser (Route -> a) a
@@ -157,13 +156,13 @@ parser =
     P.oneOf
         [ P.map Timer <|
             P.map TimerParams <|
-                (P.oneOf [ P.top, P.s "timer" ])
+                P.oneOf [ P.top, P.s "timer" ]
                     <?> dateParam "a"
                     <?> P.stringParam "g"
                     <?> boolParam flags0.goals "enableGoals"
         , P.map Overlay <|
             P.map OverlayParams <|
-                (P.oneOf [ P.top, P.s "overlay" ])
+                P.oneOf [ P.top, P.s "overlay" ]
                     <?> dateParam "a"
                     <?> P.stringParam "g"
                     <?> boolParam flags0.goals "enableGoals"
@@ -202,13 +201,14 @@ encodeQS pairs0 =
                 |> List.map (\( k, v ) -> Maybe.map (\v -> ( k, v )) v)
                 |> Maybe.Extra.values
     in
-        if List.isEmpty pairs then
-            ""
-        else
-            pairs
-                |> List.map (\( k, v ) -> Http.encodeUri k ++ "=" ++ Http.encodeUri v)
-                |> String.join "&"
-                |> (++) "?"
+    if List.isEmpty pairs then
+        ""
+
+    else
+        pairs
+            |> List.map (\( k, v ) -> Http.encodeUri k ++ "=" ++ Http.encodeUri v)
+            |> String.join "&"
+            |> (++) "?"
 
 
 stringify : Route -> String
@@ -220,6 +220,7 @@ stringify route =
                     [ ( "p"
                       , if qs.page == 0 then
                             Nothing
+
                         else
                             Just <| toString qs.page
                       )

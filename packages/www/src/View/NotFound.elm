@@ -4,8 +4,8 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import Route
-import View.Nav
 import View.Home
+import View.Nav
 
 
 view : H.Html msg

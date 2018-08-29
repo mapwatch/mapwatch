@@ -1,18 +1,18 @@
-module Mapwatch.Visit
-    exposing
-        ( Visit
-        , tryInit
-        , initSince
-          -- selectors
-        , duration
-        , isTown
-        , isMap
-        , isOffline
-        )
+module Mapwatch.Visit exposing
+    ( Visit
+    , duration
+    ,  initSince
+       -- selectors
+
+    , isMap
+    , isOffline
+    , isTown
+    , tryInit
+    )
 
 import Date
-import Time
 import Mapwatch.Instance as Instance exposing (Instance)
+import Time
 
 
 type alias Visit =
@@ -53,6 +53,7 @@ tryInit : Instance.State -> Instance.State -> Maybe Visit
 tryInit before after =
     if before.val == after.val && before.joinedAt == after.joinedAt then
         Nothing
+
     else
         case after.joinedAt of
             Nothing ->

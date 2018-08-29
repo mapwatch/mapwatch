@@ -1,31 +1,32 @@
-module View.History exposing (view, viewHistoryRun, viewDurationSet, formatMaybeDuration, viewDurationDelta)
+module View.History exposing (formatMaybeDuration, view, viewDurationDelta, viewDurationSet, viewHistoryRun)
 
+import Date
+import Dict
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Time
-import Date
-import Dict
-import Regex
-import Maybe.Extra
-import Model as Model exposing (Model, Msg(..))
 import Mapwatch as Mapwatch
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.Zone as Zone
+import Maybe.Extra
+import Model as Model exposing (Model, Msg(..))
+import Regex
 import Route
-import View.Nav
-import View.Setup
-import View.NotFound
-import View.Home exposing (maskedText, viewHeader, viewParseError, viewProgress, viewInstance, viewDate, formatDuration, formatSideAreaType, viewSideAreaName)
+import Time
+import View.Home exposing (formatDuration, formatSideAreaType, maskedText, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
 import View.Icon as Icon
-import View.Util exposing (roundToPlaces, viewSearch, pluralize, viewGoalForm, viewDateSearch)
+import View.Nav
+import View.NotFound
+import View.Setup
+import View.Util exposing (pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
 
 
 view : Route.HistoryParams -> Model -> H.Html Msg
 view params model =
     if Mapwatch.isReady model.mapwatch && not (isValidPage params.page model) then
         View.NotFound.view
+
     else
         H.div [ A.class "main" ]
             [ viewHeader
@@ -48,6 +49,7 @@ viewBody params model =
                 (if Mapwatch.isProgressDone p then
                     -- all done!
                     [ viewMain params model ]
+
                  else
                     []
                 )
@@ -60,7 +62,7 @@ perPage =
 
 numPages : Int -> Int
 numPages numItems =
-    ceiling <| (toFloat numItems) / (toFloat perPage)
+    ceiling <| toFloat numItems / toFloat perPage
 
 
 isValidPage : Int -> Model -> Bool
@@ -70,7 +72,7 @@ isValidPage page model =
             True
 
         Just _ ->
-            page == (clamp 0 (numPages (List.length model.mapwatch.runs) - 1) page)
+            page == clamp 0 (numPages (List.length model.mapwatch.runs) - 1) page
 
 
 viewMain : Route.HistoryParams -> Model -> H.Html Msg
@@ -88,26 +90,27 @@ viewMain params model =
                 |> Run.filterBetween params
                 |> Run.sort params.sort
     in
-        H.div []
-            [ H.div []
-                [ viewSearch [ A.placeholder "area name" ]
-                    (\q ->
-                        { params
-                            | search =
-                                if q == "" then
-                                    Nothing
-                                else
-                                    Just q
-                        }
-                            |> HistorySearch
-                    )
-                    params.search
-                , viewDateSearch (\qs1 -> Route.History { params | before = qs1.before, after = qs1.after }) params
-                , viewGoalForm (\goal -> Model.RouteTo <| Route.History { params | goal = goal }) params
-                ]
-            , viewStatsTable params model.now runs
-            , viewHistoryTable params runs model
+    H.div []
+        [ H.div []
+            [ viewSearch [ A.placeholder "area name" ]
+                (\q ->
+                    { params
+                        | search =
+                            if q == "" then
+                                Nothing
+
+                            else
+                                Just q
+                    }
+                        |> HistorySearch
+                )
+                params.search
+            , viewDateSearch (\qs1 -> Route.History { params | before = qs1.before, after = qs1.after }) params
+            , viewGoalForm (\goal -> Model.RouteTo <| Route.History { params | goal = goal }) params
             ]
+        , viewStatsTable params model.now runs
+        , viewHistoryTable params runs model
+        ]
 
 
 viewStatsTable : Route.HistoryParams -> Date.Date -> List Run -> H.Html msg
@@ -186,22 +189,24 @@ viewPaginator ({ page } as ps) numItems =
         ( firstLink, prevLink ) =
             if page /= 0 then
                 ( H.a [ href 0 ], H.a [ href prev ] )
+
             else
                 ( H.span [], H.span [] )
 
         ( nextLink, lastLink ) =
             if page /= last then
                 ( H.a [ href next ], H.a [ href last ] )
+
             else
                 ( H.span [], H.span [] )
     in
-        H.div [ A.class "paginator" ]
-            [ firstLink [ Icon.fas "fast-backward", H.text " First" ]
-            , prevLink [ Icon.fas "step-backward", H.text " Prev" ]
-            , H.span [] [ H.text <| toString firstVisItem ++ " - " ++ toString lastVisItem ++ " of " ++ toString numItems ]
-            , nextLink [ H.text "Next ", Icon.fas "step-forward" ]
-            , lastLink [ H.text "Last ", Icon.fas "fast-forward" ]
-            ]
+    H.div [ A.class "paginator" ]
+        [ firstLink [ Icon.fas "fast-backward", H.text " First" ]
+        , prevLink [ Icon.fas "step-backward", H.text " Prev" ]
+        , H.span [] [ H.text <| toString firstVisItem ++ " - " ++ toString lastVisItem ++ " of " ++ toString numItems ]
+        , nextLink [ H.text "Next ", Icon.fas "step-forward" ]
+        , lastLink [ H.text "Last ", Icon.fas "fast-forward" ]
+        ]
 
 
 viewHistoryTable : Route.HistoryParams -> List Run -> Model -> H.Html msg
@@ -218,25 +223,24 @@ viewHistoryTable ({ page } as params) queryRuns model =
         goalDuration =
             Run.goalDuration (Run.parseGoalDuration params.goal)
                 { session =
-                    (case params.after of
+                    case params.after of
                         Just _ ->
                             queryRuns
 
                         Nothing ->
                             Run.filterToday model.now model.mapwatch.runs
-                    )
                 , allTime = model.mapwatch.runs
                 }
     in
-        H.table [ A.class "history" ]
-            [ H.thead []
-                [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ]
+    H.table [ A.class "history" ]
+        [ H.thead []
+            [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ]
 
-                -- , viewHistoryHeader (Run.parseSort params.sort) params
-                ]
-            , H.tbody [] (pageRuns |> List.map (viewHistoryRun { showDate = True } params goalDuration) |> List.concat)
-            , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ] ]
+            -- , viewHistoryHeader (Run.parseSort params.sort) params
             ]
+        , H.tbody [] (pageRuns |> List.map (viewHistoryRun { showDate = True } params goalDuration) |> List.concat)
+        , H.tfoot [] [ H.tr [] [ H.td [ A.colspan 11 ] [ paginator ] ] ]
+        ]
 
 
 viewSortLink : Run.SortField -> ( Run.SortField, Run.SortDir ) -> Route.HistoryParams -> H.Html msg
@@ -248,16 +252,18 @@ viewSortLink thisField ( sortedField, dir ) qs =
                 ( Icon.fas
                     (if dir == Run.Asc then
                         "sort-up"
+
                      else
                         "sort-down"
                     )
                 , Run.stringifySort thisField <| Just <| Run.reverseSort dir
                 )
+
             else
                 -- link sorts by this field with default direction
                 ( Icon.fas "sort", Run.stringifySort thisField Nothing )
     in
-        H.a [ Route.href <| Route.History { qs | sort = Just slug } ] [ icon ]
+    H.a [ Route.href <| Route.History { qs | sort = Just slug } ] [ icon ]
 
 
 viewHistoryHeader : ( Run.SortField, Run.SortDir ) -> Route.HistoryParams -> H.Html msg
@@ -266,19 +272,19 @@ viewHistoryHeader sort qs =
         link field =
             viewSortLink field sort qs
     in
-        H.tr []
-            [ H.th [] [ link Run.SortDate ]
-            , H.th [ A.class "zone" ] [ link Run.Name ]
-            , H.th [] [ link Run.TimeTotal ]
-            , H.th [] []
-            , H.th [] [ link Run.TimeMap ]
-            , H.th [] []
-            , H.th [] [ link Run.TimeTown ]
-            , H.th [] []
-            , H.th [] [ link Run.TimeSide ]
-            , H.th [] [ link Run.Portals ]
-            , H.th [] []
-            ]
+    H.tr []
+        [ H.th [] [ link Run.SortDate ]
+        , H.th [ A.class "zone" ] [ link Run.Name ]
+        , H.th [] [ link Run.TimeTotal ]
+        , H.th [] []
+        , H.th [] [ link Run.TimeMap ]
+        , H.th [] []
+        , H.th [] [ link Run.TimeTown ]
+        , H.th [] []
+        , H.th [] [ link Run.TimeSide ]
+        , H.th [] [ link Run.Portals ]
+        , H.th [] []
+        ]
 
 
 viewDuration =
@@ -291,7 +297,7 @@ type alias HistoryRowConfig =
 
 viewHistoryRun : HistoryRowConfig -> Route.HistoryParams -> (Run -> Maybe Time.Time) -> Run -> List (H.Html msg)
 viewHistoryRun config qs goals r =
-    viewHistoryMainRow config qs (goals r) r :: (List.map (uncurry <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r))
+    viewHistoryMainRow config qs (goals r) r :: List.map (uncurry <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r)
 
 
 viewDurationSet : Run.DurationSet -> List (H.Html msg)
@@ -318,12 +324,13 @@ viewDurationTail d =
                 [ H.td [ A.class "dur" ] [ H.text " + " ]
                 , H.td [ A.class "dur" ] [ viewDuration d.sides, H.text " in sides" ]
                 ]
+
             else
                 [ H.td [ A.class "dur" ] [], H.td [ A.class "dur" ] [] ]
            )
         ++ [ H.td [ A.class "portals" ] [ H.text <| toString (roundToPlaces 2 d.portals) ++ pluralize " portal" " portals" d.portals ]
            , H.td [ A.class "town-pct" ]
-                [ H.text <| toString (clamp 0 100 <| floor <| 100 * (d.town / (max 1 d.all))) ++ "% in town" ]
+                [ H.text <| toString (clamp 0 100 <| floor <| 100 * (d.town / max 1 d.all)) ++ "% in town" ]
            ]
 
 
@@ -333,16 +340,17 @@ viewHistoryMainRow { showDate } qs goal r =
         d =
             Run.durationSet r
     in
-        H.tr [ A.class "main-area" ]
-            ((if showDate then
-                [ H.td [ A.class "date" ] [ viewDate r.last.leftAt ] ]
-              else
-                []
-             )
-                ++ [ H.td [ A.class "zone" ] [ viewInstance qs r.first.instance ]
-                   ]
-                ++ viewGoalDurationSet goal d
-            )
+    H.tr [ A.class "main-area" ]
+        ((if showDate then
+            [ H.td [ A.class "date" ] [ viewDate r.last.leftAt ] ]
+
+          else
+            []
+         )
+            ++ [ H.td [ A.class "zone" ] [ viewInstance qs r.first.instance ]
+               ]
+            ++ viewGoalDurationSet goal d
+        )
 
 
 viewHistorySideAreaRow : HistoryRowConfig -> Route.HistoryParams -> Instance.Address -> Time.Time -> H.Html msg
@@ -350,6 +358,7 @@ viewHistorySideAreaRow { showDate } qs instance d =
     H.tr [ A.class "side-area" ]
         ((if showDate then
             [ H.td [ A.class "date" ] [] ]
+
           else
             []
          )
@@ -373,10 +382,11 @@ viewDurationDelta cur goal =
                 sign =
                     if dt >= 0 then
                         "+"
+
                     else
                         ""
             in
-                H.span [] [ H.text <| " (" ++ sign ++ formatDuration dt ++ ")" ]
+            H.span [] [ H.text <| " (" ++ sign ++ formatDuration dt ++ ")" ]
 
         _ ->
             H.span [] []

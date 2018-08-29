@@ -1,8 +1,8 @@
-module Mapwatch.LogLine exposing (ParseError, ParsedLine, Info(..), Line, parse)
+module Mapwatch.LogLine exposing (Info(..), Line, ParseError, ParsedLine, parse)
 
 import Date
-import Regex
 import Maybe.Extra
+import Regex
 import Util exposing (regexParseFirst, regexParseFirstRes)
 
 
@@ -54,10 +54,10 @@ parseLogInfo raw =
                 _ ->
                     Nothing
     in
-        [ parseOpening, parseEntered, parseConnecting ]
-            -- use the first matching parser
-            |> Maybe.Extra.values
-            |> List.head
+    [ parseOpening, parseEntered, parseConnecting ]
+        -- use the first matching parser
+        |> Maybe.Extra.values
+        |> List.head
 
 
 parse : String -> ParsedLine
@@ -76,7 +76,7 @@ parse raw =
                                 -- no time zone designator - assume local time.
                                 -- This may act screwy around DST changes, but there's not much we can do -
                                 -- logged dates are local-time with no info about the timezone at the time of logging.
-                                Date.fromString <| (String.join "-" [ yr, mo, d ]) ++ "T" ++ (String.join ":" [ h, mn, s ])
+                                Date.fromString <| String.join "-" [ yr, mo, d ] ++ "T" ++ String.join ":" [ h, mn, s ]
 
                             _ ->
                                 Err ("date parsed-count mismatch: " ++ toString strs)
@@ -95,5 +95,5 @@ parse raw =
         error err =
             { err = err, raw = raw }
     in
-        Result.map2 result date info
-            |> Result.mapError error
+    Result.map2 result date info
+        |> Result.mapError error

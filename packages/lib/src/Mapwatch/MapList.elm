@@ -1,8 +1,8 @@
 module Mapwatch.MapList exposing (Map, mapList, url, zoneAliases, zoneAliasesDict)
 
-import Regex
 import Dict as Dict exposing (Dict)
 import Maybe.Extra
+import Regex
 
 
 type alias Map =
@@ -26,7 +26,7 @@ mapList =
         buildAlias nonenglish english =
             Dict.get english englishMapsByName |> Maybe.map (\m -> { m | name = nonenglish })
     in
-        englishMapList ++ (List.map (uncurry buildAlias) zoneAliases |> Maybe.Extra.values)
+    englishMapList ++ (List.map (uncurry buildAlias) zoneAliases |> Maybe.Extra.values)
 
 
 mapsByName : Dict String Map
@@ -75,13 +75,13 @@ url name =
                                             -- 1 = white, 2 = yellow, 3 = red. Used in map urls.
                                             clamp 1 3 <| ceiling <| toFloat map.tier / 5
                                     in
-                                        urlname ++ toString colorTier ++ ".png?scale=1"
+                                    urlname ++ toString colorTier ++ ".png?scale=1"
                 )
     in
-        Maybe.map2 fixUrl
-            (Dict.get name mapsByName)
-            (Dict.get name urlNames)
-            |> Maybe.map ((++) "https:")
+    Maybe.map2 fixUrl
+        (Dict.get name mapsByName)
+        (Dict.get name urlNames)
+        |> Maybe.map ((++) "https:")
 
 
 specialUrlNames =

@@ -1,10 +1,11 @@
-module Mapwatch.Instance exposing (..)
+module Mapwatch.Instance exposing (Address, Builder(..), Instance(..), State, duration, init, isDurationOffline, isMap, isOffline, isTown, offlineThreshold, unsafeJoinedAt, unwrap, update)
 
-import Time
 import Date
-import Maybe.Extra
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Zone as Zone
+import Maybe.Extra
+import Time
+
 
 
 -- (Zone, instance-server-address) isn't really a unique id -

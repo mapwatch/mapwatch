@@ -1,28 +1,27 @@
-module Mapwatch
-    exposing
-        ( Model
-        , Msg(..)
-        , Progress
-        , init
-        , initModel
-        , tick
-        , update
-        , subscriptions
-        , progressPercent
-        , isProgressDone
-        , isReady
-        , progressDuration
-        )
+module Mapwatch exposing
+    ( Model
+    , Msg(..)
+    , Progress
+    , init
+    , initModel
+    , isProgressDone
+    , isReady
+    , progressDuration
+    , progressPercent
+    , subscriptions
+    , tick
+    , update
+    )
 
 import Date
-import Time
+import Mapwatch.Instance as Instance
+import Mapwatch.LogLine as LogLine
+import Mapwatch.Run as Run
+import Mapwatch.Visit as Visit
+import Mapwatch.Zone as Zone
 import Maybe.Extra
 import Ports
-import Mapwatch.LogLine as LogLine
-import Mapwatch.Zone as Zone
-import Mapwatch.Instance as Instance
-import Mapwatch.Visit as Visit
-import Mapwatch.Run as Run
+import Time
 
 
 type alias Progress =
@@ -80,18 +79,19 @@ updateLine line model =
         cmd =
             if instance.joinedAt == model.instance.joinedAt then
                 Cmd.none
+
             else
                 Ports.sendJoinInstance (Instance.unsafeJoinedAt instance) instance.val visit lastRun
     in
-        ( { model
-            | instance = instance
+    ( { model
+        | instance = instance
 
-            -- , visits = Maybe.Extra.unwrap model.visits (\v -> v :: model.visits) visit
-            , runState = runState
-            , runs = runs
-          }
-        , cmd
-        )
+        -- , visits = Maybe.Extra.unwrap model.visits (\v -> v :: model.visits) visit
+        , runState = runState
+        , runs = runs
+      }
+    , cmd
+    )
 
 
 tick : Time.Time -> Model -> Model
@@ -108,7 +108,7 @@ tick t model =
                 Nothing ->
                     model.runs
     in
-        { model | runState = runState, runs = runs }
+    { model | runState = runState, runs = runs }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -127,19 +127,21 @@ update msg model =
                 m =
                     { model | progress = Just p }
             in
-                if isProgressDone p then
-                    -- man, I love elm, but conditional logging is so awkward
-                    let
-                        _ =
-                            -- if this is the first completed progress, it's the history file - log something
-                            if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
-                                Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.Extra.unwrap 0 Date.toTime m.instance.joinedAt)
-                            else
-                                ""
-                    in
-                        ( tick p.updatedAt m, Ports.progressComplete { name = p.name } )
-                else
-                    ( m, Cmd.none )
+            if isProgressDone p then
+                -- man, I love elm, but conditional logging is so awkward
+                let
+                    _ =
+                        -- if this is the first completed progress, it's the history file - log something
+                        if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
+                            Debug.log "start from last logline" <| "?tickStart=" ++ toString (Maybe.Extra.unwrap 0 Date.toTime m.instance.joinedAt)
+
+                        else
+                            ""
+                in
+                ( tick p.updatedAt m, Ports.progressComplete { name = p.name } )
+
+            else
+                ( m, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg

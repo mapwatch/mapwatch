@@ -1,15 +1,15 @@
-module View.Changelog exposing (..)
+module View.Changelog exposing (view)
 
+import Date as Date exposing (Date)
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
-import Date as Date exposing (Date)
 import Markdown
 import Maybe.Extra
 import Route as Route exposing (Route)
-import View.Nav
-import View.Icon as Icon
 import View.Home exposing (viewHeader)
+import View.Icon as Icon
+import View.Nav
 
 
 view : String -> Maybe String -> H.Html msg

@@ -1,4 +1,4 @@
-module AppPlatform exposing (..)
+module AppPlatform exposing (AppModel, hrefHostname, ifElectron, isElectron, unlessElectron)
 
 
 type alias AppModel m f =
@@ -14,6 +14,7 @@ ifElectron : AppModel m f -> a -> a -> a
 ifElectron m yes no =
     if isElectron m then
         yes
+
     else
         no
 
@@ -22,6 +23,7 @@ unlessElectron : AppModel m f -> a -> a -> a
 unlessElectron m yes no =
     if not <| isElectron m then
         yes
+
     else
         no
 

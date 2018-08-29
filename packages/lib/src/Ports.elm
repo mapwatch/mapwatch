@@ -1,22 +1,21 @@
-port module Ports
-    exposing
-        ( inputClientLogWithId
-        , changelog
-        , logline
-        , Progress
-        , progress
-        , progressComplete
-        , sendJoinInstance
-        )
+port module Ports exposing
+    ( Progress
+    , changelog
+    , inputClientLogWithId
+    , logline
+    , progress
+    , progressComplete
+    , sendJoinInstance
+    )
 
-import Time as Time exposing (Time)
 import Date as Date exposing (Date)
-import Maybe.Extra
-import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.Visit as Visit exposing (Visit)
-import Mapwatch.Run as Run exposing (Run)
-import Json.Encode as Encode
 import Json.Decode as Decode
+import Json.Encode as Encode
+import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.Run as Run exposing (Run)
+import Mapwatch.Visit as Visit exposing (Visit)
+import Maybe.Extra
+import Time as Time exposing (Time)
 
 
 port inputClientLogWithId : { id : String, maxSize : Int } -> Cmd msg
@@ -112,12 +111,12 @@ sayMapRun r =
             floor <| Run.duration r
 
         m =
-            abs <| rem dur (truncate Time.hour) // (truncate Time.minute)
+            abs <| rem dur (truncate Time.hour) // truncate Time.minute
 
         s =
-            abs <| rem dur (truncate Time.minute) // (truncate Time.second)
+            abs <| rem dur (truncate Time.minute) // truncate Time.second
     in
-        (Run.instance r).zone ++ " finished in " ++ toString m ++ " minutes " ++ toString s ++ " seconds"
+    (Run.instance r).zone ++ " finished in " ++ toString m ++ " minutes " ++ toString s ++ " seconds"
 
 
 encodeDate : Date -> Encode.Value

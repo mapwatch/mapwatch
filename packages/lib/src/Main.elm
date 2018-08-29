@@ -1,7 +1,7 @@
 module Main exposing (main)
 
+import Mapwatch exposing (init, subscriptions, update)
 import Platform
-import Mapwatch exposing (init, update, subscriptions)
 
 
 main =
