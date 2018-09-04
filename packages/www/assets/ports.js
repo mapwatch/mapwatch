@@ -168,11 +168,12 @@ function say(text) {
     speechSynthesis.speak(new SpeechSynthesisUtterance(text))
   }
 }
+// var sayWatching = true // useful for testing. uncomment me, upload a file, and i'll say all lines in that file
 var sayWatching = false
 app.ports.events.subscribe(function(event) {
   if (event.type === 'progressComplete' && !sayWatching && (event.name === 'history' || event.name === 'history:example')) {
     sayWatching = true
-    say('mapwatch started.')
+    say('mapwatch now running.')
   }
   if (event.type === 'joinInstance' && sayWatching && event.say) {
     say(event.say)

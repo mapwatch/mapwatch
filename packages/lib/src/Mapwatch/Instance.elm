@@ -1,4 +1,20 @@
-module Mapwatch.Instance exposing (Address, Builder(..), Instance(..), State, duration, init, isDurationOffline, isMap, isOffline, isTown, offlineThreshold, unsafeJoinedAt, unwrap, update)
+module Mapwatch.Instance exposing
+    ( Address
+    , Builder(..)
+    , Instance(..)
+    , State
+    , duration
+    , init
+    , isDurationOffline
+    , isMap
+    , isOffline
+    , isTown
+    , offlineThreshold
+    , unsafeJoinedAt
+    , unwrap
+    , update
+    , zone
+    )
 
 import Date
 import Mapwatch.LogLine as LogLine
@@ -58,6 +74,11 @@ unwrap default fn instance =
 
         Instance instance ->
             fn instance
+
+
+zone : Instance -> Maybe String
+zone =
+    unwrap Nothing (Just << .zone)
 
 
 isTown : Instance -> Bool

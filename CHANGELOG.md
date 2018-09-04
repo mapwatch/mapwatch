@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2018-09-03
+- Improved speech lines.
+
 ## 2018-08-29
 - Updated "hide pre-Incursion maps" button for Delve.
 
