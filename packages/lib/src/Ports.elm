@@ -15,6 +15,7 @@ import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
+import Speech
 import Time
 
 
@@ -78,16 +79,16 @@ progressComplete e =
             ]
 
 
-sendJoinInstance : Time.Posix -> Instance -> Maybe Visit -> Maybe Run -> Cmd msg
-sendJoinInstance date instance visit run =
+sendJoinInstance : Time.Posix -> Instance -> Maybe Visit -> Run.State -> Maybe Run -> Cmd msg
+sendJoinInstance date instance visit runState lastRun =
     events <|
         Encode.object
             [ ( "type", Encode.string "joinInstance" )
             , ( "joinedAt", encodeDate date )
             , ( "instance", encodeInstance instance )
-            , ( "lastVisit", Maybe.Extra.unwrap Encode.null encodeVisit visit )
-            , ( "lastMapRun", Maybe.Extra.unwrap Encode.null encodeMapRun run )
-            , ( "say", Maybe.Extra.unwrap Encode.null (Encode.string << sayMapRun) run )
+            , ( "lastVisit", visit |> Maybe.Extra.unwrap Encode.null encodeVisit )
+            , ( "lastMapRun", lastRun |> Maybe.Extra.unwrap Encode.null encodeMapRun )
+            , ( "say", Speech.joinInstance runState lastRun instance |> Maybe.Extra.unwrap Encode.null Encode.string )
             ]
 
 
@@ -117,21 +118,6 @@ encodeMapRun r =
         , ( "joinedAt", encodeDate r.first.joinedAt )
         , ( "leftAt", encodeDate r.last.leftAt )
         ]
-
-
-sayMapRun : Run -> String
-sayMapRun r =
-    let
-        dur =
-            Run.duration r
-
-        m =
-            remainderBy Duration.hour dur // Duration.minute |> abs
-
-        s =
-            remainderBy Duration.minute dur // Duration.second |> abs
-    in
-    (Run.instance r).zone ++ " finished in " ++ String.fromInt m ++ " minutes " ++ String.fromInt s ++ " seconds"
 
 
 encodeDate : Time.Posix -> Encode.Value

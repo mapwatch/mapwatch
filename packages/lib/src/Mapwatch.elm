@@ -87,7 +87,7 @@ updateLine line model =
                 Cmd.none
 
             else
-                Ports.sendJoinInstance (Instance.unsafeJoinedAt instance) instance.val visit lastRun
+                Ports.sendJoinInstance (Instance.unsafeJoinedAt instance) instance.val visit runState lastRun
     in
     ( { model
         | instance = instance

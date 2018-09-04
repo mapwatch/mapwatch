@@ -13,6 +13,7 @@ module Mapwatch.Instance exposing
     , unsafeJoinedAt
     , unwrap
     , update
+    , zone
     )
 
 import Duration exposing (Millis)
@@ -75,6 +76,11 @@ unwrap default fn instance0 =
             fn instance
 
 
+zone : Instance -> Maybe String
+zone =
+    unwrap Nothing (Just << .zone)
+
+
 isTown : Instance -> Bool
 isTown =
     -- No-zone counts as town, since you log back in to town
@@ -118,9 +124,9 @@ update line state =
             -- step 1
             { state | next = Connecting addr }
 
-        ( Connecting addr, LogLine.YouHaveEntered zone ) ->
+        ( Connecting addr, LogLine.YouHaveEntered zone_ ) ->
             -- step 2
-            { val = Instance { zone = zone, addr = addr }, joinedAt = Just line.date, next = Empty }
+            { val = Instance { zone = zone_, addr = addr }, joinedAt = Just line.date, next = Empty }
 
         ( Connecting _, LogLine.ConnectingToInstanceServer addr ) ->
             -- two "connecting" messages - should never happen, but trust the most recent one

@@ -1,0 +1,39 @@
+# engineered this file to test speech - many others are too long. use with sayWatching=true in ports.js to speak the entire history.
+2018/05/21 17:52:13 157224625 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.125:6112
+2018/05/21 17:51:32 157183906 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 17:52:13 157224625 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.125:6112
+2018/05/21 17:52:23 157234265 9b0 [INFO Client 1012] : You have entered Toxic Sewer.
+2018/05/21 17:54:58 157389375 d8 [INFO Client 1012] Connecting to instance server at 169.47.57.199:6112
+2018/05/21 17:54:59 157390687 9b0 [INFO Client 1012] : You have entered Haunted Trench.
+2018/05/21 17:56:13 157464875 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.125:6112
+2018/05/21 17:56:14 157465421 9b0 [INFO Client 1012] : You have entered Toxic Sewer.
+2018/05/21 17:57:15 157523890 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 17:57:16 157525218 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 17:57:17 157523890 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 17:57:18 157525218 9b0 [INFO Client 1012] : You have entered some non-map zone inserted here by hand for testing.
+2018/05/21 17:57:19 157523890 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 17:57:20 157525218 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 17:59:15 157645984 d8 [INFO Client 1012] Connecting to instance server at 169.47.33.93:6112
+2018/05/21 17:59:23 157654000 9b0 [INFO Client 1012] : You have entered Conservatory.
+2018/05/21 17:59:51 157682234 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.121:6112
+2018/05/21 17:59:54 157685250 9b0 [INFO Client 1012] : You have entered Trial of Crippling Grief.
+2018/05/21 18:03:38 157909203 d8 [INFO Client 1012] Connecting to instance server at 169.47.33.93:6112
+2018/05/21 18:03:39 157910031 9b0 [INFO Client 1012] : You have entered Conservatory.
+2018/05/21 18:08:07 158178265 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 18:08:08 158179546 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 18:08:28 158199343 d8 [INFO Client 1012] Connecting to instance server at 169.47.33.93:6112
+2018/05/21 18:08:29 158200125 9b0 [INFO Client 1012] : You have entered Conservatory.
+2018/05/21 18:10:24 158315796 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 18:10:25 158316312 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 18:10:55 158346687 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.126:6112
+2018/05/21 18:11:00 158351593 9b0 [INFO Client 1012] : You have entered Relic Chambers.
+2018/05/21 18:16:39 158690671 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 18:16:40 158691171 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 18:16:53 158703968 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.126:6112
+2018/05/21 18:16:53 158704562 9b0 [INFO Client 1012] : You have entered Relic Chambers.
+2018/05/21 18:17:00 158711421 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.180:6112
+2018/05/21 18:17:08 158719515 9b0 [INFO Client 1012] : You have entered Gorge.
+2018/05/21 18:23:58 159129187 d8 [INFO Client 1012] Connecting to instance server at 158.85.40.126:6112
+2018/05/21 18:23:58 159129859 9b0 [INFO Client 1012] : You have entered Relic Chambers.
+2018/05/21 18:24:07 159138250 d8 [INFO Client 1012] Connecting to instance server at 169.63.70.163:6112
+2018/05/21 18:24:08 159139593 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
