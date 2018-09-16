@@ -3,10 +3,11 @@ module View.Util exposing (hidePreLeagueButton, leagueDate, leagueName, pluraliz
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
+import ISO8601
 import Mapwatch exposing (Model, Msg)
 import Regex
 import Route as Route exposing (Route)
-import Time as Time exposing (Time)
+import Time
 import View.Icon as Icon
 
 
@@ -46,7 +47,7 @@ viewGoalForm onChange0 qs =
             Maybe.withDefault ( [], [] ) <|
                 Maybe.andThen
                     (\dur ->
-                        if Regex.contains (Regex.regex "best|mean|none") dur then
+                        if Regex.contains ("best|mean|none" |> Regex.fromString |> Maybe.withDefault Regex.never) dur then
                             Nothing
 
                         else
@@ -92,21 +93,22 @@ leagueName =
     "Incursion"
 
 
+leagueDate : Time.Posix
 leagueDate =
-    case Date.fromString "2018-06-01T20:00:00.000Z" of
+    case "2018-06-01T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix of
         Ok date ->
             date
 
         Err err ->
-            Debug.crash "Couldn't decode a hardcoded date?" err
+            Debug.todo "Couldn't decode a hardcoded date?" err
 
 
-hidePreLeagueButton : (Date -> Route) -> H.Html msg
+hidePreLeagueButton : (Time.Posix -> Route) -> H.Html msg
 hidePreLeagueButton route =
     H.a [ A.class "button", Route.href <| route leagueDate ] [ Icon.fas "calendar", H.text <| " Hide pre-" ++ leagueName ++ " maps" ]
 
 
-viewDateSearch : ({ after : Maybe Date, before : Maybe Date } -> Route) -> { a | before : Maybe Date, after : Maybe Date } -> H.Html msg
+viewDateSearch : ({ after : Maybe Time.Posix, before : Maybe Time.Posix } -> Route) -> { a | before : Maybe Time.Posix, after : Maybe Time.Posix } -> H.Html msg
 viewDateSearch route qs =
     let
         href0 =

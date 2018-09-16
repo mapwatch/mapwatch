@@ -59,7 +59,7 @@ viewMain qs model =
         runs =
             case qs.after of
                 Nothing ->
-                    Run.filterToday model.now model.mapwatch.runs
+                    Run.filterToday model.tz model.now model.mapwatch.runs
 
                 Just _ ->
                     Run.filterBetween { before = Nothing, after = qs.after } model.mapwatch.runs
@@ -73,8 +73,8 @@ viewMain qs model =
         goalDuration =
             Run.goalDuration goal { session = runs, allTime = model.mapwatch.runs }
 
-        viewIndexRun i run =
-            viewRow (List.length history) i qs hqs (goalDuration run) run
+        viewIndexRun i run_ =
+            viewRow (List.length history) i qs hqs (goalDuration run_) run_
     in
     H.div [ A.class "overlay-main" ]
         [ H.table [] <|
@@ -83,7 +83,11 @@ viewMain qs model =
         ]
 
 
-viewRow : Int -> Int -> Route.TimerParams -> Route.HistoryParams -> Maybe Time.Time -> Run.Run -> H.Html msg
+type alias Duration =
+    Int
+
+
+viewRow : Int -> Int -> Route.TimerParams -> Route.HistoryParams -> Maybe Duration -> Run.Run -> H.Html msg
 viewRow count i tqs hqs goalDuration run =
     let
         isLast =
@@ -120,11 +124,11 @@ viewRow count i tqs hqs goalDuration run =
         )
 
 
-viewTimer : Maybe Time.Time -> H.Html msg
+viewTimer : Maybe Duration -> H.Html msg
 viewTimer dur =
     H.text <| View.History.formatMaybeDuration dur
 
 
-viewGoalTimer : Maybe Time.Time -> Maybe Time.Time -> H.Html msg
+viewGoalTimer : Maybe Duration -> Maybe Duration -> H.Html msg
 viewGoalTimer dur goal =
     View.History.viewDurationDelta dur goal

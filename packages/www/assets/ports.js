@@ -14,13 +14,16 @@ var tickStart = qs.tickStart && new Date(isNaN(parseInt(qs.tickStart)) ? qs.tick
 var tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
 var enableSpeech = !!qs.enableSpeech && !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
 if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
-var app = Elm.Main.fullscreen({
-  loadedAt: loadedAt,
-  tickOffset: tickOffset,
-  isBrowserSupported: !!window.FileReader,
-  // isBrowserSupported: false,
-  platform: 'www',
-  hostname: document.location.protocol + '//' + document.location.hostname,
+var app = Elm.Main.init({
+  node: document.documentElement,
+  flags: {
+    loadedAt: loadedAt,
+    tickOffset: tickOffset,
+    isBrowserSupported: !!window.FileReader,
+    // isBrowserSupported: false,
+    platform: 'www',
+    hostname: document.location.protocol + '//' + document.location.hostname,
+  }
 })
 
 analytics.main(app, 'www')

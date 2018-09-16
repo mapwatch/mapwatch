@@ -7,6 +7,7 @@ import Dict
 import Html as H
 import Html.Attributes as A
 import Html.Events as E
+import ISO8601
 import Mapwatch as Mapwatch exposing (Model, Msg(..))
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
@@ -35,12 +36,13 @@ viewInstance qs instance =
             H.span [] [ H.text "(none)" ]
 
 
-formatDuration : Float -> String
-formatDuration dur0 =
-    let
-        dur =
-            floor dur0
+time =
+    { second = 1000, minute = 1000 * 60, hour = 1000 * 60 * 60 }
 
+
+formatDuration : Int -> String
+formatDuration dur =
+    let
         sign =
             if dur >= 0 then
                 ""
@@ -49,21 +51,21 @@ formatDuration dur0 =
                 "-"
 
         h =
-            abs <| dur // truncate Time.hour
+            abs <| dur // truncate time.hour
 
         m =
-            abs <| remainderBy (truncate Time.hour) dur // truncate Time.minute
+            abs <| remainderBy (truncate time.hour) dur // truncate time.minute
 
         s =
-            abs <| remainderBy (truncate Time.minute) dur // truncate Time.second
+            abs <| remainderBy (truncate time.minute) dur // truncate time.second
 
         ms =
-            abs <| remainderBy (truncate Time.second) dur
+            abs <| remainderBy (truncate time.second) dur
 
-        pad0 length num =
-            num
-                |> toString
-                |> String.padLeft length '0'
+        pad0 : Int -> Int -> String
+        pad0 length =
+            String.fromInt
+                >> String.padLeft length '0'
 
         hpad =
             if h > 0 then
@@ -82,8 +84,8 @@ viewParseError err =
         Nothing ->
             H.div [] []
 
-        Just err ->
-            H.div [] [ H.text <| "Log parsing error: " ++ toString err ]
+        Just err_ ->
+            H.div [] [ H.text <| "Log parsing error: " ++ Debug.toString err_ ]
 
 
 formatBytes : Int -> String
@@ -117,8 +119,8 @@ formatBytes b =
             else
                 ( toFloat b, " bytes" )
 
-        places n val =
-            toString <| (toFloat <| floor <| val * (10 ^ n)) / (10 ^ n)
+        places n val_ =
+            String.fromFloat <| (toFloat <| floor <| val_ * (10 ^ n)) / (10 ^ n)
     in
     places 2 val ++ unit
 
@@ -126,34 +128,38 @@ formatBytes b =
 viewProgress : Mapwatch.Progress -> H.Html msg
 viewProgress p =
     if Mapwatch.isProgressDone p then
-        H.div [] [ H.br [] [], H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ toString (Mapwatch.progressDuration p / 1000) ++ "s" ]
+        H.div [] [ H.br [] [], H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ String.fromFloat (toFloat (Mapwatch.progressDuration p) / 1000) ++ "s" ]
 
     else if p.max <= 0 then
         H.div [] [ Icon.fasPulse "spinner" ]
 
     else
         H.div []
-            [ H.progress [ A.value (toString p.val), A.max (toString p.max) ] []
+            [ H.progress [ A.value (String.fromInt p.val), A.max (String.fromInt p.max) ] []
             , H.div []
                 [ H.text <|
                     formatBytes p.val
                         ++ " / "
                         ++ formatBytes p.max
                         ++ ": "
-                        ++ toString (floor <| Mapwatch.progressPercent p * 100)
+                        ++ (String.fromInt <| floor <| Mapwatch.progressPercent p * 100)
                         ++ "%"
 
                 -- ++ " in"
-                -- ++ toString (Mapwatch.progressDuration p / 1000)
+                -- ++ String.fromFloat (Mapwatch.progressDuration p / 1000)
                 -- ++ "s"
                 ]
             ]
 
 
-viewDate : Date.Date -> H.Html msg
+viewDate : Time.Posix -> H.Html msg
 viewDate d =
-    H.span [ A.title (toString d) ]
-        [ H.text <| toString (Date.day d) ++ " " ++ toString (Date.month d) ]
+    let
+        i =
+            d |> ISO8601.fromPosix
+    in
+    H.span [ A.title (ISO8601.toString i) ]
+        [ H.text <| String.fromInt (ISO8601.day i) ++ " " ++ String.fromInt (ISO8601.month i) ]
 
 
 formatSideAreaType : Instance -> Maybe String
@@ -163,10 +169,10 @@ formatSideAreaType instance =
             Nothing
 
         Zone.Mission master ->
-            Just <| toString master ++ " mission"
+            Just <| Zone.masterToString master ++ " mission"
 
         Zone.ElderGuardian guardian ->
-            Just <| "Elder Guardian: The " ++ toString guardian
+            Just <| "Elder Guardian: The " ++ Zone.guardianToString guardian
 
 
 viewSideAreaName : Route.HistoryParams -> Instance -> H.Html msg

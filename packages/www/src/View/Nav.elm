@@ -31,14 +31,14 @@ timerLink active =
     let
         ( cls, qs ) =
             case active of
-                Just (Timer qs) ->
-                    ( activeCls, qs )
+                Just (Timer qs_) ->
+                    ( activeCls, qs_ )
 
-                Just (History qs) ->
-                    ( inactiveCls, { timerParams0 | after = qs.after, goal = qs.goal } )
+                Just (History qs_) ->
+                    ( inactiveCls, { timerParams0 | after = qs_.after, goal = qs_.goal } )
 
-                Just (Maps qs) ->
-                    ( inactiveCls, { timerParams0 | after = qs.after } )
+                Just (Maps qs_) ->
+                    ( inactiveCls, { timerParams0 | after = qs_.after } )
 
                 _ ->
                     ( inactiveCls, { timerParams0 | after = Nothing } )
@@ -54,14 +54,14 @@ historyLink active =
 
         ( cls, qs ) =
             case active of
-                Just (History qs) ->
-                    ( activeCls, qs )
+                Just (History qs_) ->
+                    ( activeCls, qs_ )
 
-                Just (Timer qs) ->
-                    ( inactiveCls, { qs0 | after = qs.after, goal = qs.goal } )
+                Just (Timer qs_) ->
+                    ( inactiveCls, { qs0 | after = qs_.after, goal = qs_.goal } )
 
-                Just (Maps qs) ->
-                    ( inactiveCls, { qs0 | search = qs.search, after = qs.after, before = qs.before } )
+                Just (Maps qs_) ->
+                    ( inactiveCls, { qs0 | search = qs_.search, after = qs_.after, before = qs_.before } )
 
                 _ ->
                     ( inactiveCls, qs0 )
@@ -77,14 +77,14 @@ mapsLink active =
 
         ( cls, qs ) =
             case active of
-                Just (Maps qs) ->
-                    ( activeCls, qs )
+                Just (Maps qs_) ->
+                    ( activeCls, qs_ )
 
-                Just (History qs) ->
-                    ( inactiveCls, { qs0 | search = qs.search, after = qs.after, before = qs.before } )
+                Just (History qs_) ->
+                    ( inactiveCls, { qs0 | search = qs_.search, after = qs_.after, before = qs_.before } )
 
-                Just (Timer qs) ->
-                    ( inactiveCls, { qs0 | after = qs.after } )
+                Just (Timer qs_) ->
+                    ( inactiveCls, { qs0 | after = qs_.after } )
 
                 _ ->
                     ( inactiveCls, qs0 )

@@ -17,11 +17,13 @@ module Route exposing
 import Html as H
 import Html.Attributes as A
 import Http
+import ISO8601
 import Maybe.Extra
 import Regex
 import Time
 import Url exposing (Url)
 import Url.Parser as P exposing ((</>), (<?>))
+import Url.Parser.Query as Q
 
 
 flags0 =
@@ -91,97 +93,67 @@ type Route
 parse : Url -> Route
 parse loc =
     loc
-        |> hashQS
+        |> hashUrl
         |> P.parse parser
         |> Maybe.withDefault (NotFound loc)
         |> Debug.log "navigate to"
 
 
-hashQS : Url -> Url
-hashQS loc =
-    -- UrlParser doesn't do ?query=strings in the #fragment, so fake it using the non-hash querystring
-    case loc.fragment |> Maybe.withDefault "" |> Regex.splitAtMost 1 (Regex.fromString "\\?" |> Maybe.withDefault Regex.never) of
-        [ hash ] ->
-            { loc | search = loc.search }
+hashUrl : Url -> Url
+hashUrl url =
+    -- elm 0.19 removed parseHash; booo. This function fakes it by transforming
+    -- `https://example.com/?flag=1#/some/path?some=query` to
+    -- `https://example.com/some/path?flag=1&some=query` for the parser.
+    case url.fragment |> Maybe.withDefault "" |> String.split "?" of
+        path :: queries ->
+            let
+                query =
+                    queries |> String.join "?"
 
-        [ hash, qs ] ->
-            { loc | hash = hash, search = loc.search ++ "&" ++ qs }
+                urlQuery =
+                    url.query |> Maybe.Extra.unwrap "" (\s -> s ++ "&")
+            in
+            { url | path = path, query = urlQuery ++ query |> Just }
 
         [] ->
-            Debug.todo "hashqs: empty"
-
-        other ->
-            Debug.todo "hashqs: 3+"
-
-
-encodeUri : String -> String
-encodeUri =
-    -- 0.19 removed http.encodeUri/decodeUri? Really? Ugh. I think this is sufficient.
-    String.replace "%" "%25"
-        >> String.replace "&" "%26"
-        >> String.replace "=" "%3D"
-        >> String.replace "?" "%3F"
-
-
-decodeUri : String -> String
-decodeUri =
-    String.replace "%3F" "?"
-        >> String.replace "%26" "&"
-        >> String.replace "%3D" "="
-        >> String.replace "%25" "%"
+            { url | path = "", query = url.query }
 
 
 decodeString : P.Parser (String -> a) a
 decodeString =
     P.map
         (\s ->
-            decodeUri s
-                -- |> Debug.log ("decode: " ++ s)
+            s
+                |> Url.percentDecode
                 |> Maybe.withDefault s
         )
         P.string
 
 
-dateFromString : String -> Maybe Date
+dateFromString : String -> Maybe Time.Posix
 dateFromString =
-    Result.toMaybe << Date.fromString
+    ISO8601.fromString >> Result.toMaybe >> Maybe.map ISO8601.toPosix
 
 
-dateToString : Date -> String
-dateToString d =
+dateToString : Time.Posix -> String
+dateToString =
     -- compatible with dateFromString, identical to <input type="datetime-local">, and also reasonably short/user-readable
-    ""
-        -- autoformatter consistency
-        ++ (String.join "-" <|
-                List.map (\fn -> fn d)
-                    [ toString << Date.year
-                    , String.pad 2 '0' << toString << monthToInt << Date.month
-                    , String.pad 2 '0' << toString << Date.day
-                    ]
-           )
-        ++ "T"
-        ++ (String.join ":" <|
-                List.map (\fn -> String.pad 2 '0' <| toString <| fn d)
-                    [ Date.hour
-                    , Date.minute
-                    , Date.second
-                    ]
-           )
+    ISO8601.fromPosix >> ISO8601.toString
 
 
-dateParam : String -> P.QueryParser (Maybe Date -> a) a
+dateParam : String -> Q.Parser (Maybe Time.Posix)
 dateParam name =
-    P.customParam name <| Maybe.andThen dateFromString
+    Q.custom name (List.head >> Maybe.andThen dateFromString)
 
 
-boolParam : Bool -> String -> P.QueryParser (Bool -> a) a
+boolParam : Bool -> String -> Q.Parser Bool
 boolParam default name =
     let
-        parse : String -> Bool
-        parse s =
+        parse_ : String -> Bool
+        parse_ s =
             not <| s == "" || s == "0" || s == "no" || s == "n" || s == "False" || s == "false"
     in
-    P.customParam name (Maybe.Extra.unwrap default parse)
+    Q.custom name (List.head >> Maybe.Extra.unwrap default parse_)
 
 
 parser : P.Parser (Route -> a) a
@@ -191,30 +163,30 @@ parser =
             P.map TimerParams <|
                 P.oneOf [ P.top, P.s "timer" ]
                     <?> dateParam "a"
-                    <?> P.stringParam "g"
+                    <?> Q.string "g"
                     <?> boolParam flags0.goals "enableGoals"
         , P.map Overlay <|
             P.map OverlayParams <|
                 P.oneOf [ P.top, P.s "overlay" ]
                     <?> dateParam "a"
-                    <?> P.stringParam "g"
+                    <?> Q.string "g"
                     <?> boolParam flags0.goals "enableGoals"
         , P.map History <|
             P.map (\p -> HistoryParams (Maybe.withDefault 0 p)) <|
                 P.s "history"
-                    <?> P.intParam "p"
-                    <?> P.stringParam "q"
-                    <?> P.stringParam "o"
+                    <?> Q.int "p"
+                    <?> Q.string "q"
+                    <?> Q.string "o"
                     <?> dateParam "a"
                     <?> dateParam "b"
-                    <?> P.stringParam "g"
+                    <?> Q.string "g"
                     <?> boolParam flags0.goals "enableGoals"
 
         -- , P.map MapsRoot <| P.s "map"
         , P.map Maps <|
             P.map MapsParams <|
                 P.s "map"
-                    <?> P.stringParam "q"
+                    <?> Q.string "q"
                     <?> dateParam "a"
                     <?> dateParam "b"
         , P.map Changelog <| P.s "changelog"
@@ -231,7 +203,7 @@ encodeQS pairs0 =
         pairs : List ( String, String )
         pairs =
             pairs0
-                |> List.map (\( k, v ) -> Maybe.map (\v -> ( k, v )) v)
+                |> List.map (\( k, v ) -> Maybe.map (\vv -> ( k, vv )) v)
                 |> Maybe.Extra.values
     in
     if List.isEmpty pairs then
@@ -239,7 +211,9 @@ encodeQS pairs0 =
 
     else
         pairs
-            |> List.map (\( k, v ) -> encodeUri k ++ "=" ++ encodeUri v)
+            -- TODO should really rewrite to use elm-0.19's Url.Builder instead of Url.percentEncode;
+            -- I'm just too lazy to redesign this while migrating everything else to 0.19
+            |> List.map (\( k, v ) -> Url.percentEncode k ++ "=" ++ Url.percentEncode v)
             |> String.join "&"
             |> (++) "?"
 
@@ -255,7 +229,7 @@ stringify route =
                             Nothing
 
                         else
-                            Just <| toString qs.page
+                            qs.page |> String.fromInt |> Just
                       )
                     , ( "q", qs.search )
                     , ( "o", qs.sort )
@@ -299,49 +273,9 @@ stringify route =
             "#/debug/mapicons"
 
         NotFound loc ->
-            loc.hash
+            "#" ++ (loc.fragment |> Maybe.withDefault "")
 
 
 href : Route -> H.Attribute msg
 href =
     A.href << stringify
-
-
-monthToInt : Date.Month -> Int
-monthToInt m =
-    case m of
-        Date.Jan ->
-            1
-
-        Date.Feb ->
-            2
-
-        Date.Mar ->
-            3
-
-        Date.Apr ->
-            4
-
-        Date.May ->
-            5
-
-        Date.Jun ->
-            6
-
-        Date.Jul ->
-            7
-
-        Date.Aug ->
-            8
-
-        Date.Sep ->
-            9
-
-        Date.Oct ->
-            10
-
-        Date.Nov ->
-            11
-
-        Date.Dec ->
-            12

@@ -1,4 +1,4 @@
-module Mapwatch.Zone exposing (Master(..), SideZoneType(..), Type(..), isMap, isTown, maps, sideZoneType, zoneType)
+module Mapwatch.Zone exposing (Master(..), SideZoneType(..), Type(..), guardianToString, isMap, isTown, maps, masterToString, sideZoneType, zoneType)
 
 import Dict
 import Mapwatch.MapList exposing (mapList, zoneAliases)
@@ -33,6 +33,11 @@ type
     | Tora
     | Haku
     | Vagan
+
+
+masterToString : Master -> String
+masterToString =
+    Debug.toString
 
 
 type SideZoneType
@@ -70,6 +75,11 @@ type Guardian
     | Constrictor
     | Purifier
     | Enslaver
+
+
+guardianToString : Guardian -> String
+guardianToString =
+    Debug.toString
 
 
 valkeys : val -> List String -> Dict.Dict String val

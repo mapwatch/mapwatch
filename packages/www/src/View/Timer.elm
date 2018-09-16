@@ -73,7 +73,7 @@ viewMain qs model =
             case qs.after of
                 Nothing ->
                     ( "today"
-                    , Run.filterToday model.now model.mapwatch.runs
+                    , Run.filterToday model.tz model.now model.mapwatch.runs
                     , [ hideEarlierButton
                       , hidePreLeagueButton (\after -> Route.Timer { qs | after = Just after })
                       ]
@@ -112,10 +112,10 @@ viewMain qs model =
 
         ( timer, timerGoal, mappingNow ) =
             case run of
-                Just run ->
-                    ( Just (Run.durationSet run).all
-                    , goalDuration run
-                    , [ H.td [] [ H.text "Mapping in: " ], H.td [] [ viewInstance hqs run.first.instance ] ]
+                Just run_ ->
+                    ( Just (Run.durationSet run_).all
+                    , goalDuration run_
+                    , [ H.td [] [ H.text "Mapping in: " ], H.td [] [ viewInstance hqs run_.first.instance ] ]
                     )
 
                 Nothing ->
@@ -132,7 +132,7 @@ viewMain qs model =
             [ H.tbody []
                 [ H.tr [] mappingNow
                 , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance hqs model.mapwatch.instance.val ] ]
-                , H.tr [] [ H.td [] [ H.text <| "Maps done " ++ sessname ++ ": " ], H.td [] [ H.text <| toString <| List.length runs ] ]
+                , H.tr [] [ H.td [] [ H.text <| "Maps done " ++ sessname ++ ": " ], H.td [] [ H.text <| String.fromInt <| List.length runs ] ]
                 , H.tr [ A.class "session-buttons" ] [ H.td [ A.colspan 2 ] sessionButtons ]
                 ]
             ]
@@ -140,7 +140,11 @@ viewMain qs model =
         ]
 
 
-viewTimer : Maybe Time.Time -> Maybe Time.Time -> H.Html msg
+type alias Duration =
+    Int
+
+
+viewTimer : Maybe Duration -> Maybe Duration -> H.Html msg
 viewTimer dur goal =
     H.div []
         [ H.div [ A.class "main-timer" ]

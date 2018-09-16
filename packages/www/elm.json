@@ -16,7 +16,8 @@
             "elm/time": "1.0.0",
             "elm/url": "1.0.0",
             "elm-community/dict-extra": "2.3.1",
-            "elm-explorations/markdown": "1.0.0"
+            "elm-explorations/markdown": "1.0.0",
+            "jweir/elm-iso8601": "5.0.1"
         },
         "indirect": {
             "elm/virtual-dom": "1.0.0"

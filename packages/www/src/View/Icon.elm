@@ -22,16 +22,11 @@ fasPulse =
     fa "fa-spin fa-pulse fas"
 
 
-
--- fab =
--- fa "fab"
-
-
 map : String -> Maybe (H.Html msg)
 map name =
     let
         cls =
-            Regex.replace Regex.All (Regex.regex "[ \t,:']+") (always "") name
+            Regex.replace ("[ \t,:']+" |> Regex.fromString |> Maybe.withDefault Regex.never) (always "") name
     in
     MapList.url name
         |> Maybe.map (\src -> H.img [ A.class <| "map-icon map-icon-" ++ cls, A.src src ] [])

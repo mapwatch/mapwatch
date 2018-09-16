@@ -48,7 +48,7 @@ view model =
             [ H.text "Analyze only the last "
             , H.input
                 [ A.type_ "number"
-                , A.value <| toString model.config.maxSize
+                , A.value <| String.fromInt model.config.maxSize
                 , E.onInput InputMaxSize
                 , A.min "0"
                 , A.max "100"

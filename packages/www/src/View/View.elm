@@ -1,6 +1,7 @@
 module View.View exposing (view)
 
 import AppPlatform
+import Browser
 import Html as H
 import Mapwatch as Mapwatch
 import Model as Model exposing (Model, Msg)
@@ -15,8 +16,13 @@ import View.Overlay
 import View.Timer
 
 
-view : Model -> H.Html Msg
+view : Model -> Browser.Document Msg
 view model =
+    { title = "PoE Mapwatch", body = [ viewBody model ] }
+
+
+viewBody : Model -> H.Html Msg
+viewBody model =
     case model.route of
         History params ->
             View.History.view params model
