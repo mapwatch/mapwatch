@@ -8,6 +8,7 @@ All substantial Mapwatch changes.
 
 ---
 ## 2018-09-16
+- The Hall of Grandmasters should now be tracked correctly.
 - [Lots of internal code changes](https://github.com/mapwatch/mapwatch/issues/28). None of these changes should be visible to you, or make the site behave any differently - let me know if anything broke today!
 
 ## 2018-09-03

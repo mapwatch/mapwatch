@@ -671,4 +671,7 @@ zoneAliases =
     , ( "藏身處 - 戰場遺跡（大）", "Battle-scarred Hideout" )
     , ( "藏身處 - 貧民窟（大）", "Backstreet Hideout" )
     , ( "藏身處 - 日耀神殿（大）", "Immaculate Hideout" )
+
+    -- fix #32 - I messed up the map name the first time. Easier to add an alias than change it everywhere.
+    , ( "The Hall of Grandmasters", "Hall of Grandmasters" )
     ]

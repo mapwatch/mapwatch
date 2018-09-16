@@ -144,7 +144,7 @@ update msg ({ config } as model) =
             ( { model | route = url |> Route.parse }, Cmd.none )
 
         NavPath path ->
-            ( path |> Url.fromString |> Debug.log "navpath!!!!" |> Maybe.Extra.unwrap model (\url -> { model | route = url |> Route.parse })
+            ( path |> Url.fromString |> Maybe.Extra.unwrap model (\url -> { model | route = url |> Route.parse })
             , Cmd.none
             )
 
