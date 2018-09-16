@@ -8,7 +8,6 @@ module Model exposing
     )
 
 import Browser
-import Browser.Navigation as Nav
 import Mapwatch
 import Mapwatch.Instance as Instance
 import Mapwatch.LogLine as LogLine
@@ -16,6 +15,7 @@ import Mapwatch.Run as Run
 import Mapwatch.Visit as Visit
 import Mapwatch.Zone as Zone
 import Maybe.Extra
+import NavPorts as Nav
 import Ports
 import Route exposing (Route)
 import Set
@@ -30,6 +30,7 @@ type alias Flags =
     , isBrowserSupported : Bool
     , platform : String
     , hostname : String
+    , url : String
     }
 
 
@@ -42,8 +43,7 @@ type alias Config =
 
 
 type alias Model =
-    { urlKey : Nav.Key
-    , mapwatch : Mapwatch.Model
+    { mapwatch : Mapwatch.Model
     , config : Config
     , flags : Flags
     , changelog : Maybe String
@@ -62,25 +62,27 @@ type Msg
     | Changelog String
     | InputClientLogWithId String
     | InputMaxSize String
+    | NavPath String
     | NavLocation Url
-    | NavRequest Browser.UrlRequest
     | RouteTo Route
     | MapsSearch Route.MapsParams
     | HistorySearch Route.HistoryParams
 
 
-init : Flags -> Url -> Nav.Key -> ( Model, Cmd Msg )
-init flags loc urlKey =
+init : Flags -> ( Model, Cmd Msg )
+init flags =
     let
         route =
-            Route.parse loc
+            flags.url
+                |> Url.fromString
+                |> Maybe.map Route.parse
+                |> Maybe.withDefault (Route.Timer Route.timerParams0)
 
         loadedAt =
             Time.millisToPosix flags.loadedAt
 
         model =
-            { urlKey = urlKey
-            , mapwatch = Mapwatch.initModel
+            { mapwatch = Mapwatch.initModel
             , config = { maxSize = 20 }
             , flags = flags
             , changelog = Nothing
@@ -139,16 +141,12 @@ update msg ({ config } as model) =
             ( { model | tz = tz }, Cmd.none )
 
         NavLocation url ->
-            ( { model | route = Route.parse url }, Cmd.none )
+            ( { model | route = url |> Route.parse }, Cmd.none )
 
-        NavRequest req ->
-            -- https://package.elm-lang.org/packages/elm/browser/latest/Browser#UrlRequest
-            case req of
-                Browser.Internal url ->
-                    ( model, url |> Url.toString |> Nav.pushUrl model.urlKey )
-
-                Browser.External url ->
-                    ( model, url |> Nav.load )
+        NavPath path ->
+            ( path |> Url.fromString |> Debug.log "navpath!!!!" |> Maybe.Extra.unwrap model (\url -> { model | route = url |> Route.parse })
+            , Cmd.none
+            )
 
         Changelog markdown ->
             ( { model | changelog = Just markdown }, Cmd.none )
@@ -169,7 +167,7 @@ update msg ({ config } as model) =
             , Route.Maps ps
                 |> Route.stringify
                 -- |> Debug.log "maps-search"
-                |> Nav.replaceUrl model.urlKey
+                |> Nav.replaceUrl
             )
 
         HistorySearch ps ->
@@ -177,7 +175,7 @@ update msg ({ config } as model) =
             , Route.History ps
                 |> Route.stringify
                 -- |> Debug.log "history-search"
-                |> Nav.replaceUrl model.urlKey
+                |> Nav.replaceUrl
             )
 
         RouteTo route ->
@@ -185,7 +183,7 @@ update msg ({ config } as model) =
             , route
                 |> Route.stringify
                 -- |> Debug.log "route-to"
-                |> Nav.replaceUrl model.urlKey
+                |> Nav.replaceUrl
             )
 
         M msg_ ->
@@ -212,6 +210,7 @@ subscriptions model =
     Sub.batch
         [ Mapwatch.subscriptions model.mapwatch |> Sub.map M
         , Ports.changelog Changelog
+        , Nav.onUrlChange NavPath
 
         -- Slow down animation, deliberately - don't eat poe's cpu
         --, Browser.Events.onAnimationFrame Tick

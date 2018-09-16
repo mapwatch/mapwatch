@@ -22,8 +22,22 @@ var app = Elm.Main.init({
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: 'www',
-    hostname: document.location.protocol + '//' + document.location.hostname,
+    hostname: location.protocol + '//' + location.hostname,
+    url: location.href,
   }
+})
+
+// https://github.com/elm/browser/blob/1.0.0/notes/navigation-in-elements.md
+window.addEventListener('popstate', function() {
+  app.ports.onUrlChange.send(location.href)
+})
+//app.ports.pushUrl.subscribe(function(url) {
+//  history.pushState({}, '', url)
+//  app.ports.onUrlChange.send(location.href)
+//})
+app.ports.replaceUrl.subscribe(function(url) {
+  history.replaceState({}, '', url)
+  app.ports.onUrlChange.send(location.href)
 })
 
 analytics.main(app, 'www')

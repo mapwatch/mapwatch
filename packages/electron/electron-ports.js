@@ -2,7 +2,7 @@ const querystring = require('querystring')
 const fs = require('fs')
 const path = require('path')
 const readline = require('readline')
-const Elm = require('@mapwatch/www')
+const {Elm} = require('@mapwatch/www')
 const Lib = require('@mapwatch/lib')
 const _ = require('lodash/fp')
 const {promisify} = require('util')
@@ -12,12 +12,35 @@ const qs = querystring.parse(document.location.search.slice(1))
 const tickStart = qs.tickStart && new Date(Number.isNaN(parseInt(qs.tickStart)) ? qs.tickStart : parseInt(qs.tickStart))
 const tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
 console.log('tickOffset', tickOffset, qs)
-const app = Elm.Main.fullscreen({
-  loadedAt,
-  tickOffset: tickOffset,
-  isBrowserSupported: !!window.FileReader,
-  platform: 'electron',
-  hostname: 'https://mapwatch.github.io',
+function toElmUrl(url) {
+  return url.replace(/^file:\/\/\//, 'https://')
+}
+function fromElmUrl(url) {
+  return url.replace(/^https:\/\//, 'file:///')
+}
+const app = Elm.Main.init({
+  node: document.documentElement,
+  flags : {
+    loadedAt,
+    tickOffset: tickOffset,
+    isBrowserSupported: !!window.FileReader,
+    platform: 'electron',
+    hostname: 'https://mapwatch.github.io',
+    url: toElmUrl(location.href),
+  }
+})
+
+// https://github.com/elm/browser/blob/1.0.0/notes/navigation-in-elements.md
+window.addEventListener('popstate', function() {
+  app.ports.onUrlChange.send(toElmUrl(location.href))
+})
+//app.ports.pushUrl.subscribe(function(url) {
+//  history.pushState({}, '', url)
+//  app.ports.onUrlChange.send(location.href)
+//})
+app.ports.replaceUrl.subscribe(function(url) {
+  history.replaceState({}, '', fromElmUrl(url))
+  app.ports.onUrlChange.send(toElmUrl(location.href))
 })
 
 analytics.main(app, 'electron')
