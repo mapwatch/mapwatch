@@ -2,7 +2,7 @@ module Main exposing (main)
 
 import Browser
 import Model exposing (Msg(..), init, subscriptions, update)
-import View.View exposing (view)
+import View.View exposing (viewBody)
 
 
 {-| Browser.application would work fine for the web version of mapwatch, but
@@ -11,12 +11,15 @@ other than http/https. So instead, we use Browser.document and deal with
 urls via ports.
 -}
 main =
-    Browser.document
+    Browser.element
+        -- Browser.document
         -- Browser.application
         { init = init
         , update = update
         , subscriptions = subscriptions
-        , view = view
+
+        -- , view = view
+        , view = viewBody
 
         -- clicking a link
         -- , onUrlRequest = NavRequest

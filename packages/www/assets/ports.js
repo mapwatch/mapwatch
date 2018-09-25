@@ -15,7 +15,7 @@ var tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
 var enableSpeech = !!qs.enableSpeech && !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
 if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
 var app = Elm.Main.init({
-  node: document.documentElement,
+  node: document.getElementById('elm'),
   flags: {
     loadedAt: loadedAt,
     tickOffset: tickOffset,

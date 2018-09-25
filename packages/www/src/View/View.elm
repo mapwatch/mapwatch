@@ -1,4 +1,4 @@
-module View.View exposing (view)
+module View.View exposing (view, viewBody)
 
 import AppPlatform
 import Browser
