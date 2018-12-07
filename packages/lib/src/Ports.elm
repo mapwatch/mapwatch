@@ -6,6 +6,7 @@ port module Ports exposing
     , progress
     , progressComplete
     , sendJoinInstance
+    , sendVolume
     )
 
 import Duration exposing (Millis)
@@ -89,6 +90,15 @@ sendJoinInstance date instance visit runState lastRun =
             , ( "lastVisit", visit |> Maybe.Extra.unwrap Encode.null encodeVisit )
             , ( "lastMapRun", lastRun |> Maybe.Extra.unwrap Encode.null encodeMapRun )
             , ( "say", Speech.joinInstance runState lastRun instance |> Maybe.Extra.unwrap Encode.null Encode.string )
+            ]
+
+
+sendVolume : Int -> Cmd msg
+sendVolume volume =
+    events <|
+        Encode.object
+            [ ( "type", Encode.string "volume" )
+            , ( "volume", toFloat volume / 100 |> Encode.float )
             ]
 
 

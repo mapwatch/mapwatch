@@ -18,6 +18,7 @@ import View.Icon as Icon
 import View.Nav
 import View.Setup
 import View.Util exposing (pluralize, roundToPlaces, viewSearch)
+import View.Volume
 
 
 view : Route.MapsParams -> Model -> H.Html Msg
@@ -63,7 +64,8 @@ search q ms =
 viewMain : Route.MapsParams -> Model -> H.Html Msg
 viewMain params model =
     H.div []
-        [ viewSearch [ A.placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
+        [ View.Volume.view model
+        , viewSearch [ A.placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
         , MapList.mapList
             |> search params.search
             |> Run.groupMapNames (Run.filterBetween params model.mapwatch.runs)
