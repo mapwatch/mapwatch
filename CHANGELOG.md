@@ -7,6 +7,10 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2018-12-07
+- Updated "hide pre-Delve maps" button for Betrayal.
+- Updated [map names, map icons](https://www.pathofexile.com/forum/view-thread/2254801/page/1#p15971585), and [map tiers](https://www.pathofexile.com/forum/view-thread/2253540) for Betrayal. Thanks for the heads up, GGG!
+
 ## 2018-09-16
 - The Hall of Grandmasters should now be tracked correctly.
 - [Lots of internal code changes](https://github.com/mapwatch/mapwatch/issues/28). None of these changes should be visible to you, or make the site behave any differently - let me know if anything broke today!

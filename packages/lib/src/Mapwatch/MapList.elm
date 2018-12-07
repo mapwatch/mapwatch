@@ -56,25 +56,46 @@ url : String -> Maybe String
 url name =
     let
         fixUrl : Map -> String -> String
-        fixUrl map =
-            Regex.replace
-                (Regex.fromString "New/([a-zA-Z]+)\\d?\\.png" |> Maybe.withDefault Regex.never)
-                (\match ->
-                    case List.head <| List.take 1 match.submatches of
-                        Nothing ->
-                            Debug.todo ("url parse failed. " ++ map.name)
+        fixUrl map path =
+            let
+                -- build the query string - one parameter at a time, so I can document them
+                qs =
+                    -- how large is the map icon?
+                    [ "scale=1"
 
-                        Just Nothing ->
-                            Debug.todo ("url parse failed (2). " ++ map.name)
+                    -- what atlas version are we using? 0: atlas of worlds; 1: war for the atlas, 2: betrayal league
+                    -- best docs I've got for that: https://www.pathofexile.com/forum/view-thread/2254801/page/1#p15971585
+                    , "mn=2"
 
-                        Just (Just urlname) ->
-                            let
-                                colorTier =
-                                    -- 1 = white, 2 = yellow, 3 = red. Used in map urls.
-                                    clamp 1 3 <| ceiling <| toFloat map.tier / 5
-                            in
-                            urlname ++ String.fromInt colorTier ++ ".png?scale=1"
-                )
+                    -- don't draw the "shaped" circle on the map. mr=1 draws it.
+                    , "mr=0"
+
+                    -- map tier sets the white/yellow/red color
+                    , "mt=" ++ String.fromInt map.tier
+                    ]
+            in
+            path ++ "?" ++ String.join "&" qs
+
+        -- old approach to icon urls. Keep it here until I'm confident in the new approach (because git history digging is tedious).
+        -- Safe to delete if we haven't seen broken map images for a while.
+        --Regex.replace
+        --    (Regex.fromString "New/([a-zA-Z]+)\\d?\\.png" |> Maybe.withDefault Regex.never)
+        --    (\match ->
+        --        case List.head <| List.take 1 match.submatches of
+        --            Nothing ->
+        --                Debug.todo ("url parse failed. " ++ map.name)
+        --
+        --            Just Nothing ->
+        --                Debug.todo ("url parse failed (2). " ++ map.name)
+        --
+        --            Just (Just urlname) ->
+        --                let
+        --                    colorTier =
+        --                        -- 1 = white, 2 = yellow, 3 = red. Used in map urls.
+        --                        clamp 1 3 <| ceiling <| toFloat map.tier / 5
+        --                in
+        --                urlname ++ String.fromInt colorTier ++ ".png?scale=1"
+        --    )
     in
     Maybe.map2 fixUrl
         (Dict.get name mapsByName)
@@ -92,10 +113,6 @@ specialUrlNames =
         , ( "Mao Kun", "//web.poecdn.com/image/Art/2DItems/Maps/FairgravesMap01.png" )
         , ( "Untainted Paradise", "//web.poecdn.com/image/Art/2DItems/Maps/UniqueMap2.png" )
         , ( "Olmec's Sanctum", "//web.poecdn.com/image/Art/2DItems/Maps/olmec.png" )
-
-        -- Not sure what's going on with these
-        , ( "Lava Lake", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/Copse3.png" )
-        , ( "Arachnid Tomb", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/ArachnidTomb2.png" )
 
         -- TODO: oops, 3 maps are named "the beachhead" with different icons: white, yellow, red.
         -- Not worth changing how everything works just for this.
@@ -126,180 +143,174 @@ englishMapList =
 
 
 extractedMapList =
-    -- https://pathofexile.gamepedia.com/Map
-    {- in the js console, run:
-
-        "["+$('tr', $('tbody')[2])
-       .map(function() {var tds=$('td', this); return {
-         name: tds[0].innerText,
-         tier:parseInt(tds[2].innerText),
-         unique: {yes:true, no:false}[$('img', tds[3])[0].title]
-       }})
-       .filter(function(){return !!this.tier})
-       .map(function(){return "{name=\""+this.name.replace(/ Map$/, '')+"\",tier="+this.tier+",unique="+(this.unique ? "True" : "False")+"}\n"})
-       .toArray().join(',')+"]"
-
-    -}
-    [ { name = "Beach", tier = 1, unique = False }
-    , { name = "Dungeon", tier = 1, unique = False }
-    , { name = "Graveyard", tier = 1, unique = False }
-    , { name = "Lookout", tier = 1, unique = False }
-    , { name = "Alleyways", tier = 2, unique = False }
-    , { name = "Arid Lake", tier = 2, unique = False }
-    , { name = "Desert", tier = 2, unique = False }
-    , { name = "Flooded Mine", tier = 2, unique = False }
-    , { name = "Marshes", tier = 2, unique = False }
+    -- Built from copypasting https://www.pathofexile.com/forum/view-thread/2253540 plus some vim macros
+    [ { name = "Flooded Mine", tier = 1, unique = False }
+    , { name = "Channel", tier = 1, unique = False }
+    , { name = "Atoll", tier = 1, unique = False }
+    , { name = "Ramparts", tier = 1, unique = False }
+    , { name = "Dungeon", tier = 2, unique = False }
     , { name = "Pen", tier = 2, unique = False }
-    , { name = "Arcade", tier = 3, unique = False }
-    , { name = "Burial Chambers", tier = 3, unique = False }
+    , { name = "Arid Lake", tier = 2, unique = False }
+    , { name = "Iceberg", tier = 2, unique = False }
+    , { name = "Thicket", tier = 2, unique = False }
+    , { name = "Armoury", tier = 2, unique = False }
+    , { name = "Graveyard", tier = 3, unique = False }
+    , { name = "Desert", tier = 3, unique = False }
     , { name = "Cage", tier = 3, unique = False }
-    , { name = "Cells", tier = 3, unique = False }
+    , { name = "Fungal Hollow", tier = 3, unique = False }
     , { name = "Excavation", tier = 3, unique = False }
-    , { name = "Iceberg", tier = 3, unique = False }
-    , { name = "Leyline", tier = 3, unique = False }
     , { name = "Peninsula", tier = 3, unique = False }
-    , { name = "Port", tier = 3, unique = False }
-    , { name = "Springs", tier = 3, unique = False }
-    , { name = "Canyon", tier = 4, unique = False }
-    , { name = "Chateau", tier = 4, unique = False }
-    , { name = "City Square", tier = 4, unique = False }
-    , { name = "Courthouse", tier = 4, unique = False }
-    , { name = "Gorge", tier = 4, unique = False }
-    , { name = "Grotto", tier = 4, unique = False }
-    , { name = "Lighthouse", tier = 4, unique = False }
-    , { name = "Relic Chambers", tier = 4, unique = False }
+    , { name = "Grotto", tier = 3, unique = False }
+    , { name = "Bone Crypt", tier = 3, unique = False }
+    , { name = "Shipyard", tier = 3, unique = False }
+    , { name = "Cursed Crypt", tier = 3, unique = False }
+    , { name = "Lookout", tier = 4, unique = False }
+    , { name = "Beach", tier = 4, unique = False }
+    , { name = "Marshes", tier = 4, unique = False }
     , { name = "Strand", tier = 4, unique = False }
-    , { name = "Whakawairua Tuahu", tier = 4, unique = True }
-    , { name = "Volcano", tier = 4, unique = False }
-    , { name = "Ancient City", tier = 5, unique = False }
-    , { name = "Barrows", tier = 5, unique = False }
-    , { name = "Channel", tier = 5, unique = False }
-    , { name = "Conservatory", tier = 5, unique = False }
-    , { name = "Haunted Mansion", tier = 5, unique = False }
-    , { name = "Ivory Temple", tier = 5, unique = False }
+    , { name = "Glacier", tier = 4, unique = False }
+    , { name = "Lighthouse", tier = 4, unique = False }
+    , { name = "Spider Lair", tier = 4, unique = False }
+    , { name = "Barrows", tier = 4, unique = False }
+    , { name = "Crater", tier = 4, unique = False }
+    , { name = "Courtyard", tier = 4, unique = False }
+    , { name = "Alleyways", tier = 5, unique = False }
+    , { name = "Port", tier = 5, unique = False }
+    , { name = "City Square", tier = 5, unique = False }
     , { name = "Maze", tier = 5, unique = False }
-    , { name = "Spider Lair", tier = 5, unique = False }
-    , { name = "Sulphur Vents", tier = 5, unique = False }
-    , { name = "Toxic Sewer", tier = 5, unique = False }
-    , { name = "The Beachhead", tier = 5, unique = True }
+    , { name = "Mausoleum", tier = 5, unique = False }
+    , { name = "Jungle Valley", tier = 5, unique = False }
+    , { name = "Underground Sea", tier = 5, unique = False }
+    , { name = "Residence", tier = 5, unique = False }
+    , { name = "Gardens", tier = 5, unique = False }
+    , { name = "Vaal Pyramid", tier = 5, unique = False }
+    , { name = "Volcano", tier = 6, unique = False }
+    , { name = "Canyon", tier = 6, unique = False }
+    , { name = "Sulphur Vents", tier = 6, unique = False }
+    , { name = "Haunted Mansion", tier = 6, unique = False }
+    , { name = "Fields", tier = 6, unique = False }
+    , { name = "Phantasmagoria", tier = 6, unique = False }
     , { name = "Academy", tier = 6, unique = False }
-    , { name = "Atoll", tier = 6, unique = False }
-    , { name = "Maelström of Chaos", tier = 6, unique = True }
+    , { name = "Wharf", tier = 6, unique = False }
     , { name = "Ashen Wood", tier = 6, unique = False }
     , { name = "Cemetery", tier = 6, unique = False }
-    , { name = "Hallowed Ground", tier = 6, unique = True }
-    , { name = "Fields", tier = 6, unique = False }
-    , { name = "Jungle Valley", tier = 6, unique = False }
-    , { name = "Mausoleum", tier = 6, unique = False }
-    , { name = "Phantasmagoria", tier = 6, unique = False }
-    , { name = "Thicket", tier = 6, unique = False }
-    , { name = "Underground Sea", tier = 6, unique = False }
-    , { name = "Wharf", tier = 6, unique = False }
-    , { name = "Arachnid Nest", tier = 7, unique = False }
-    , { name = "Bazaar", tier = 7, unique = False }
-    , { name = "Bone Crypt", tier = 7, unique = False }
-    , { name = "Olmec's Sanctum", tier = 7, unique = True }
-    , { name = "Coral Ruins", tier = 7, unique = False }
-    , { name = "Dunes", tier = 7, unique = False }
-    , { name = "Pillars of Arun", tier = 7, unique = True }
-    , { name = "Gardens", tier = 7, unique = False }
+    , { name = "Precinct", tier = 6, unique = False }
+    , { name = "Cells", tier = 7, unique = False }
+    , { name = "Arcade", tier = 7, unique = False }
+    , { name = "Conservatory", tier = 7, unique = False }
+    , { name = "Toxic Sewer", tier = 7, unique = False }
     , { name = "Lava Chamber", tier = 7, unique = False }
-    , { name = "Ramparts", tier = 7, unique = False }
-    , { name = "Residence", tier = 7, unique = False }
-    , { name = "Tribunal", tier = 7, unique = False }
+    , { name = "Dunes", tier = 7, unique = False }
     , { name = "Underground River", tier = 7, unique = False }
-    , { name = "Caer Blaidd, Wolfpack's Den", tier = 7, unique = True }
-    , { name = "Armoury", tier = 8, unique = False }
-    , { name = "Courtyard", tier = 8, unique = False }
-    , { name = "The Vinktar Square", tier = 8, unique = True }
-    , { name = "Geode", tier = 8, unique = False }
-    , { name = "Infested Valley", tier = 8, unique = False }
+    , { name = "Bazaar", tier = 7, unique = False }
+    , { name = "Geode", tier = 7, unique = False }
+    , { name = "Primordial Pool", tier = 7, unique = False }
+    , { name = "Ghetto", tier = 7, unique = False }
+    , { name = "Arachnid Nest", tier = 8, unique = False }
     , { name = "Laboratory", tier = 8, unique = False }
-    , { name = "Mineral Pools", tier = 8, unique = False }
-    , { name = "Mud Geyser", tier = 8, unique = False }
+    , { name = "Infested Valley", tier = 8, unique = False }
     , { name = "Overgrown Ruin", tier = 8, unique = False }
+    , { name = "Mud Geyser", tier = 8, unique = False }
     , { name = "Shore", tier = 8, unique = False }
-    , { name = "Mao Kun", tier = 8, unique = True }
-    , { name = "Tropical Island", tier = 8, unique = False }
-    , { name = "Untainted Paradise", tier = 8, unique = True }
-    , { name = "Vaal Pyramid", tier = 8, unique = False }
-    , { name = "Vaults of Atziri", tier = 8, unique = True }
-    , { name = "Arena", tier = 9, unique = False }
-    , { name = "Estuary", tier = 9, unique = False }
+    , { name = "Mineral Pools", tier = 8, unique = False }
+    , { name = "Sepulchre", tier = 8, unique = False }
+    , { name = "Wasteland", tier = 8, unique = False }
+    , { name = "Orchard", tier = 8, unique = False }
+    , { name = "Promenade", tier = 8, unique = False }
+    , { name = "Relic Chambers", tier = 9, unique = False }
+    , { name = "Ancient City", tier = 9, unique = False }
+    , { name = "Tropical Island", tier = 9, unique = False }
     , { name = "Moon Temple", tier = 9, unique = False }
-    , { name = "The Twilight Temple", tier = 9, unique = True }
-    , { name = "Museum", tier = 9, unique = False }
-    , { name = "The Putrid Cloister", tier = 9, unique = True }
-    , { name = "Plateau", tier = 9, unique = False }
-    , { name = "Scriptorium", tier = 9, unique = False }
-    , { name = "Sepulchre", tier = 9, unique = False }
-    , { name = "Temple", tier = 9, unique = False }
-    , { name = "Poorjoy's Asylum", tier = 9, unique = True }
-    , { name = "Tower", tier = 9, unique = False }
-    , { name = "Vault", tier = 9, unique = False }
     , { name = "Waste Pool", tier = 9, unique = False }
-    , { name = "Arachnid Tomb", tier = 10, unique = False }
+    , { name = "Vault", tier = 9, unique = False }
+    , { name = "Temple", tier = 9, unique = False }
+    , { name = "Arena", tier = 9, unique = False }
+    , { name = "Museum", tier = 9, unique = False }
+    , { name = "Scriptorium", tier = 9, unique = False }
+    , { name = "Waterways", tier = 9, unique = False }
+    , { name = "Leyline", tier = 10, unique = False }
+    , { name = "Coral Ruins", tier = 10, unique = False }
+    , { name = "Plateau", tier = 10, unique = False }
+    , { name = "Estuary", tier = 10, unique = False }
     , { name = "Belfry", tier = 10, unique = False }
-    , { name = "Bog", tier = 10, unique = False }
-    , { name = "Cursed Crypt", tier = 10, unique = False }
-    , { name = "The Coward's Trial", tier = 10, unique = True }
-    , { name = "Orchard", tier = 10, unique = False }
     , { name = "Pier", tier = 10, unique = False }
-    , { name = "Precinct", tier = 10, unique = False }
-    , { name = "Shipyard", tier = 10, unique = False }
-    , { name = "Siege", tier = 10, unique = False }
-    , { name = "The Beachhead", tier = 10, unique = True }
-    , { name = "Wasteland", tier = 10, unique = False }
-    , { name = "Colonnade", tier = 11, unique = False }
-    , { name = "Coves", tier = 11, unique = False }
+    , { name = "Spider Forest", tier = 10, unique = False }
+    , { name = "Coves", tier = 10, unique = False }
+    , { name = "Pit", tier = 10, unique = False }
+    , { name = "Plaza", tier = 10, unique = False }
+    , { name = "Burial Chambers", tier = 11, unique = False }
+    , { name = "Chateau", tier = 11, unique = False }
+    , { name = "Siege", tier = 11, unique = False }
+    , { name = "Arachnid Tomb", tier = 11, unique = False }
+    , { name = "Bog", tier = 11, unique = False }
+    , { name = "Lair", tier = 11, unique = False }
     , { name = "Factory", tier = 11, unique = False }
     , { name = "Mesa", tier = 11, unique = False }
-    , { name = "Lair", tier = 11, unique = False }
-    , { name = "Pit", tier = 11, unique = False }
-    , { name = "Primordial Pool", tier = 11, unique = False }
-    , { name = "Promenade", tier = 11, unique = False }
-    , { name = "Hall of Grandmasters", tier = 11, unique = True }
-    , { name = "Spider Forest", tier = 11, unique = False }
-    , { name = "Waterways", tier = 11, unique = False }
-    , { name = "Castle Ruins", tier = 12, unique = False }
-    , { name = "Crystal Ore", tier = 12, unique = False }
+    , { name = "Crystal Ore", tier = 11, unique = False }
+    , { name = "Park", tier = 11, unique = False }
+    , { name = "Ivory Temple", tier = 12, unique = False }
+    , { name = "Colonnade", tier = 12, unique = False }
     , { name = "Defiled Cathedral", tier = 12, unique = False }
-    , { name = "Necropolis", tier = 12, unique = False }
-    , { name = "Death and Taxes", tier = 12, unique = True }
     , { name = "Overgrown Shrine", tier = 12, unique = False }
-    , { name = "Acton's Nightmare", tier = 12, unique = True }
-    , { name = "Racecourse", tier = 12, unique = False }
-    , { name = "Summit", tier = 12, unique = False }
-    , { name = "Torture Chamber", tier = 12, unique = False }
-    , { name = "Oba's Cursed Trove", tier = 12, unique = True }
+    , { name = "Castle Ruins", tier = 12, unique = False }
     , { name = "Villa", tier = 12, unique = False }
-    , { name = "Arsenal", tier = 13, unique = False }
+    , { name = "Necropolis", tier = 12, unique = False }
+    , { name = "Malformation", tier = 12, unique = False }
+    , { name = "Arsenal", tier = 12, unique = False }
+    , { name = "Racecourse", tier = 13, unique = False }
     , { name = "Caldera", tier = 13, unique = False }
-    , { name = "Core", tier = 13, unique = False }
-    , { name = "Desert Spring", tier = 13, unique = False }
-    , { name = "Ghetto", tier = 13, unique = False }
-    , { name = "Malformation", tier = 13, unique = False }
-    , { name = "Park", tier = 13, unique = False }
     , { name = "Shrine", tier = 13, unique = False }
-    , { name = "Terrace", tier = 13, unique = False }
-    , { name = "Acid Lakes", tier = 14, unique = False }
-    , { name = "Colosseum", tier = 14, unique = False }
-    , { name = "Crimson Temple", tier = 14, unique = False }
+    , { name = "Core", tier = 13, unique = False }
+    , { name = "Colosseum", tier = 13, unique = False }
+    , { name = "Acid Caverns", tier = 13, unique = False }
+    , { name = "Crimson Temple", tier = 13, unique = False }
+    , { name = "Dig", tier = 13, unique = False }
+    , { name = "Reef", tier = 13, unique = False }
+    , { name = "Courthouse", tier = 14, unique = False }
+    , { name = "Terrace", tier = 14, unique = False }
     , { name = "Dark Forest", tier = 14, unique = False }
-    , { name = "Dig", tier = 14, unique = False }
     , { name = "Palace", tier = 14, unique = False }
-    , { name = "Plaza", tier = 14, unique = False }
-    , { name = "Basilica", tier = 15, unique = False }
-    , { name = "Carcass", tier = 15, unique = False }
+    , { name = "Basilica", tier = 14, unique = False }
+    , { name = "Sunken City", tier = 14, unique = False }
+    , { name = "Carcass", tier = 14, unique = False }
+    , { name = "Tower", tier = 15, unique = False }
+    , { name = "Summit", tier = 15, unique = False }
+    , { name = "Primordial Blocks", tier = 15, unique = False }
+    , { name = "Desert Spring", tier = 15, unique = False }
     , { name = "Lava Lake", tier = 15, unique = False }
-    , { name = "Reef", tier = 15, unique = False }
-    , { name = "Sunken City", tier = 15, unique = False }
-    , { name = "The Beachhead", tier = 15, unique = True }
-    , { name = "Forge of the Phoenix", tier = 16, unique = False }
+    , { name = "Pit of the Chimera", tier = 16, unique = False }
     , { name = "Lair of the Hydra", tier = 16, unique = False }
     , { name = "Maze of the Minotaur", tier = 16, unique = False }
-    , { name = "Pit of the Chimera", tier = 16, unique = False }
+    , { name = "Forge of the Phoenix", tier = 16, unique = False }
     , { name = "Vaal Temple", tier = 16, unique = False }
+    ]
+        ++ uniqueMapList
+
+
+uniqueMapList =
+    [ { name = "Whakawairua Tuahu", tier = 4, unique = True }
+    , { name = "The Beachhead", tier = 5, unique = True }
+    , { name = "Maelström of Chaos", tier = 1, unique = True }
+    , { name = "Hallowed Ground", tier = 6, unique = True }
+    , { name = "Olmec's Sanctum", tier = 3, unique = True }
+    , { name = "Pillars of Arun", tier = 7, unique = True }
+    , { name = "Caer Blaidd, Wolfpack's Den", tier = 7, unique = True }
+    , { name = "The Vinktar Square", tier = 4, unique = True }
+    , { name = "Mao Kun", tier = 8, unique = True }
+    , { name = "Untainted Paradise", tier = 9, unique = True }
+    , { name = "Vaults of Atziri", tier = 5, unique = True }
+    , { name = "The Twilight Temple", tier = 9, unique = True }
+    , { name = "The Putrid Cloister", tier = 9, unique = True }
+    , { name = "Poorjoy's Asylum", tier = 9, unique = True }
+    , { name = "The Coward's Trial", tier = 3, unique = True }
+    , { name = "The Beachhead", tier = 10, unique = True }
+    , { name = "Hall of Grandmasters", tier = 11, unique = True }
+    , { name = "Death and Taxes", tier = 12, unique = True }
+    , { name = "Acton's Nightmare", tier = 12, unique = True }
+
+    -- moved to underground sea in betrayal?
+    , { name = "Oba's Cursed Trove", tier = 5, unique = True }
+    , { name = "The Beachhead", tier = 15, unique = True }
     ]
 
 
@@ -331,7 +342,7 @@ rawUrlNames =
         , ( "Marshes", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Marshes.png" )
         , ( "Iceberg", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Iceberg.png" )
         , ( "Cage", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Cage.png" )
-        , ( "Springs", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Springs.png" )
+        , ( "Fungal Hollow", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/FungalCaverns.png" )
         , ( "Excavation", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Excavation.png" )
         , ( "Leyline", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/SulphurWastes.png" )
         , ( "Peninsula", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/DryPeninsula.png" )
@@ -346,7 +357,7 @@ rawUrlNames =
         , ( "Whakawairua Tuahu", "//web.poecdn.com/image/Art/2DItems/Maps/UniqueMapEye.png" )
         , ( "Chateau", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Chateau.png" )
         , ( "Grotto", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Grotto.png" )
-        , ( "Gorge", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Gorge.png" )
+        , ( "Glacier", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Glacier.png" )
         , ( "Volcano", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Volcano.png" )
         , ( "Lighthouse", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Beacon.png" )
         , ( "Canyon", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Canyon.png" )
@@ -372,7 +383,7 @@ rawUrlNames =
         , ( "Maelström of Chaos", "//web.poecdn.com/image/Art/2DItems/Maps/MaelstromofChaos.png" )
         , ( "Cemetery", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Cemetery.png" )
         , ( "Underground Sea", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/UndergroundSea.png" )
-        , ( "Tribunal", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Tribunal.png" )
+        , ( "Crater", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Tribunal.png" )
         , ( "Coral Ruins", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/CorpseTrench.png" )
         , ( "Lava Chamber", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Crematorium.png" )
         , ( "Residence", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Residence.png" )
@@ -440,7 +451,7 @@ rawUrlNames =
         , ( "Castle Ruins", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/CastleRuins.png" )
         , ( "Crystal Ore", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/CrystalOre.png" )
         , ( "Villa", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Villa.png" )
-        , ( "Torture Chamber", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/TortureChamber.png" )
+        , ( "Primordial Blocks", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/PrimevalRuins.png" )
         , ( "Oba's Cursed Trove", "//web.poecdn.com/image/Art/2DItems/Maps/oba.png" )
         , ( "Necropolis", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Necropolis.png" )
         , ( "Death and Taxes", "//web.poecdn.com/image/Art/2DItems/Maps/DeathandTaxes.png" )
@@ -455,7 +466,7 @@ rawUrlNames =
         , ( "Desert Spring", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Oasis.png" )
         , ( "Core", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Core.png" )
         , ( "Colosseum", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Colosseum.png" )
-        , ( "Acid Lakes", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/AcidLakes.png" )
+        , ( "Acid Caverns", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/SulphurVents.png" )
         , ( "Dark Forest", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/DarkForest.png" )
         , ( "Crimson Temple", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Sanctuary.png" )
         , ( "Plaza", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Plaza.png" )
@@ -466,11 +477,13 @@ rawUrlNames =
         , ( "Sunken City", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/SunkenCity.png" )
         , ( "Reef", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Reef.png" )
         , ( "Carcass", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Carcass.png" )
-        , ( "Pit of the Chimera", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/Chimera.png" )
-        , ( "Lair of the Hydra", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/Hydra.png" )
-        , ( "Maze of the Minotaur", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/Minotaur.png" )
-        , ( "Forge of the Phoenix", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/Phoenix.png" )
-        , ( "Vaal Temple", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/VaalTemple3.png" )
+        , ( "Pit of the Chimera", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Chimera.png" )
+        , ( "Lair of the Hydra", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Hydra.png" )
+        , ( "Maze of the Minotaur", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Minotaur.png" )
+        , ( "Forge of the Phoenix", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Phoenix.png" )
+        , ( "Vaal Temple", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/VaalTempleBase.png" )
+        , ( "Arachnid Tomb", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Arachnid.png" )
+        , ( "Lava Lake", "//web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Corpse.png" )
         ]
 
 
@@ -489,7 +502,7 @@ zoneAliases =
     , ( "惡臭沼地", "Marshes" )
     , ( "極原冰帽", "Iceberg" )
     , ( "羈破牢籠", "Cage" )
-    , ( "奇術之泉", "Springs" )
+    , ( "奇術之泉", "Fungal Hollow" )
     , ( "挖掘場", "Excavation" )
     , ( "荒涼牧野", "Leyline" )
     , ( "乾潮林地", "Peninsula" )
@@ -504,7 +517,7 @@ zoneAliases =
     , ( "禁閉祭壇", "Whakawairua Tuahu" )
     , ( "古堡", "Chateau" )
     , ( "幽暗地穴", "Grotto" )
-    , ( "烈陽山丘", "Gorge" )
+    , ( "烈陽山丘", "Glacier" )
     , ( "火山炎域", "Volcano" )
     , ( "絕望燈塔", "Lighthouse" )
     , ( "炙陽峽谷", "Canyon" )
@@ -531,7 +544,7 @@ zoneAliases =
     , ( "晨曦墓地", "Cemetery" )
     , ( "萬聖之地", "Hallowed Ground" )
     , ( "濱海幽穴", "Underground Sea" )
-    , ( "喧囂判庭", "Tribunal" )
+    , ( "喧囂判庭", "Crater" )
     , ( "破碎堡礁", "Coral Ruins" )
     , ( "熔岩之室", "Lava Chamber" )
     , ( "神主居所", "Residence" )
@@ -602,7 +615,7 @@ zoneAliases =
     , ( "遺跡廢墟", "Castle Ruins" )
     , ( "紫晶礦山", "Crystal Ore" )
     , ( "魅影別墅", "Villa" )
-    , ( "古拷刑室", "Torture Chamber" )
+    , ( "古拷刑室", "Primordial Blocks" )
     , ( "歐霸的咒怨寶庫", "Oba's Cursed Trove" )
     , ( "魔影墓場", "Necropolis" )
     , ( "亡者之財", "Death and Taxes" )
@@ -617,7 +630,7 @@ zoneAliases =
     , ( "硫磺荒漠", "Desert Spring" )
     , ( "核心", "Core" )
     , ( "小決鬥場", "Colosseum" )
-    , ( "尖酸苛泊", "Acid Lakes" )
+    , ( "尖酸苛泊", "Acid Caverns" )
     , ( "夜語幽林", "Dark Forest" )
     , ( "緋紅神殿", "Crimson Temple" )
     , ( "廣場", "Plaza" )
