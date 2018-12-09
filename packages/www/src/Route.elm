@@ -8,6 +8,7 @@ module Route exposing
     , flags0
     , historyParams0
     , href
+    , isSpeechEnabled
     , mapsParams0
     , overlayParams0
     , parse
@@ -292,3 +293,24 @@ stringify route =
 href : Route -> H.Attribute msg
 href =
     A.href << stringify
+
+
+{-| Unlike most flags, we check this one from many possible routes, not just one
+-}
+isSpeechEnabled : Route -> Bool
+isSpeechEnabled route =
+    case route of
+        Timer { enableSpeech } ->
+            enableSpeech
+
+        History { enableSpeech } ->
+            enableSpeech
+
+        Maps { enableSpeech } ->
+            enableSpeech
+
+        Overlay { enableSpeech } ->
+            enableSpeech
+
+        _ ->
+            flags0.speech

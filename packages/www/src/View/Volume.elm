@@ -10,7 +10,7 @@ import View.Icon as Icon
 
 view : Model -> H.Html Msg
 view { volume, route } =
-    if isEnabled route then
+    if Route.isSpeechEnabled route then
         H.div []
             -- without a fixed width, the volume-off/low/high icons are all different widths
             [ H.span [ A.style "display" "inline-block", A.style "width" "1em" ] [ Icon.fas (viewIconName volume) ]
@@ -29,25 +29,6 @@ view { volume, route } =
 
     else
         H.div [] []
-
-
-isEnabled : Route -> Bool
-isEnabled route =
-    case route of
-        Route.Timer { enableSpeech } ->
-            enableSpeech
-
-        Route.History { enableSpeech } ->
-            enableSpeech
-
-        Route.Maps { enableSpeech } ->
-            enableSpeech
-
-        Route.Overlay { enableSpeech } ->
-            enableSpeech
-
-        _ ->
-            Route.flags0.speech
 
 
 viewIconName : Int -> String

@@ -93,12 +93,13 @@ sendJoinInstance date instance visit runState lastRun =
             ]
 
 
-sendVolume : Int -> Cmd msg
-sendVolume volume =
+sendVolume : Bool -> Int -> Cmd msg
+sendVolume enabled volume =
     events <|
         Encode.object
             [ ( "type", Encode.string "volume" )
             , ( "volume", toFloat volume / 100 |> Encode.float )
+            , ( "isSpeechEnabled", enabled |> Encode.bool )
             ]
 
 

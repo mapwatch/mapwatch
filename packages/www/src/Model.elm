@@ -99,9 +99,14 @@ init flags =
     ( model
     , Cmd.batch
         [ Task.perform SetTimezone Time.here
-        , Ports.sendVolume model.volume
+        , sendVolume model
         ]
     )
+
+
+sendVolume : Model -> Cmd msg
+sendVolume model =
+    Ports.sendVolume (Route.isSpeechEnabled model.route) model.volume
 
 
 updateRawLine : { date : Int, line : String } -> Model -> Model
@@ -149,12 +154,18 @@ update msg ({ config } as model) =
             ( { model | tz = tz }, Cmd.none )
 
         NavLocation url ->
-            ( { model | route = url |> Route.parse }, Cmd.none )
+            let
+                newModel =
+                    { model | route = url |> Route.parse }
+            in
+            ( newModel, sendVolume newModel )
 
         NavPath path ->
-            ( path |> Url.fromString |> Maybe.Extra.unwrap model (\url -> { model | route = url |> Route.parse })
-            , Cmd.none
-            )
+            let
+                newModel =
+                    path |> Url.fromString |> Maybe.Extra.unwrap model (\url -> { model | route = url |> Route.parse })
+            in
+            ( newModel, sendVolume newModel )
 
         Changelog markdown ->
             ( { model | changelog = Just markdown }, Cmd.none )
@@ -200,7 +211,11 @@ update msg ({ config } as model) =
                     ( model, Cmd.none )
 
                 Just volume ->
-                    ( { model | volume = volume }, Ports.sendVolume volume )
+                    let
+                        newModel =
+                            { model | volume = volume }
+                    in
+                    ( newModel, sendVolume newModel )
 
         M msg_ ->
             case msg_ of

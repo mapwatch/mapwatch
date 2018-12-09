@@ -12,7 +12,7 @@ var qs = parseQS(document.location.search)
 var loadedAt = Date.now()
 var tickStart = qs.tickStart && new Date(isNaN(parseInt(qs.tickStart)) ? qs.tickStart : parseInt(qs.tickStart))
 var tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
-var enableSpeech = !!qs.enableSpeech && !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
+var speechCapable = !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
 if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
 var app = Elm.Main.init({
   node: document.getElementById('elm'),
@@ -191,8 +191,8 @@ app.ports.inputClientLogWithId.subscribe(function(config) {
 })
 
 function say(args) {
-  console.log("speech", enableSpeech, args)
-  if (enableSpeech && args.volume > 0) {
+  console.log("speech", isSpeechEnabled, args)
+  if (isSpeechEnabled && args.volume > 0) {
     // console.log(speechSynthesis.getVoices())
     var utterance = new SpeechSynthesisUtterance(args.say)
     utterance.volume = args.volume;
@@ -201,11 +201,13 @@ function say(args) {
 }
 //var sayWatching = true // useful for testing. uncomment me, upload a file, and i'll say all lines in that file
 var sayWatching = false
+var isSpeechEnabled = false
 var volume = 0
 app.ports.events.subscribe(function(event) {
   if (event.type === 'volume') {
     volume = event.volume
-    console.log('volume event', volume)
+    isSpeechEnabled = event.isSpeechEnabled && speechCapable
+    console.log('volume event', {volume, isSpeechEnabled, speechCapable})
   }
   if (event.type === 'progressComplete' && !sayWatching && (event.name === 'history' || event.name === 'history:example')) {
     sayWatching = true
