@@ -148,10 +148,25 @@ vaganMissions =
 
 hideouts : Set.Set String
 hideouts =
-    -- https://pathofexile.gamepedia.com/Hideout
-    -- JSON.stringify($.map($('td:nth-of-type(2)', $('tbody')[0]), function(td){return td.innerText}))
+    -- from the in-game hideout selection screen
     Set.fromList
-        [ "Unearthed Hideout", "Enlightened Hideout", "Coastal Hideout", "Overgrown Hideout", "Lush Hideout", "Battle-scarred Hideout", "Backstreet Hideout", "Immaculate Hideout" ]
+        [ "Backstreet Hideout"
+        , "Baleful Hideout"
+        , "Battle-scarred Hideout"
+        , "Cartographer's Hideout"
+        , "Coastal Hideout"
+        , "Coral Hideout"
+        , "Desert Hideout"
+        , "Enlightened Hideout"
+        , "Excavated Hideout"
+        , "Immaculate Hideout"
+        , "Lush Hideout"
+        , "Luxurious Hideout"
+        , "Skeletal Hideout"
+        , "Stately Hideout"
+        , "Undercity Hideout"
+        , "Unearthed Hideout"
+        ]
 
 
 englishTowns : Set.Set String
