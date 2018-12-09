@@ -93,7 +93,7 @@ init flags =
             , now = loadedAt
             , tz = Time.utc
             , lines = []
-            , volume = 0
+            , volume = 50
             }
     in
     ( model
