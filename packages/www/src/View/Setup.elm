@@ -7,7 +7,6 @@ import Html.Events as E
 import Json.Decode as Decode
 import Model as Model exposing (Model, Msg(..))
 import View.Icon as Icon
-import View.Volume
 
 
 onChange : msg -> H.Attribute msg
@@ -78,7 +77,6 @@ view model =
                 , H.br [] []
                 , H.code [] [ H.text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
                 ]
-             , View.Volume.view model
              ]
             )
         , H.div []

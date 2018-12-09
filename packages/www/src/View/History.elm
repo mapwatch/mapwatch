@@ -20,7 +20,6 @@ import View.Nav
 import View.NotFound
 import View.Setup
 import View.Util exposing (pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
-import View.Volume
 
 
 view : Route.HistoryParams -> Model -> H.Html Msg
@@ -93,8 +92,7 @@ viewMain params model =
     in
     H.div []
         [ H.div []
-            [ View.Volume.view model
-            , viewSearch [ A.placeholder "area name" ]
+            [ viewSearch [ A.placeholder "area name" ]
                 (\q ->
                     { params
                         | search =

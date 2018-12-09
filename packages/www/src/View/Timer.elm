@@ -15,7 +15,6 @@ import View.Icon as Icon
 import View.Nav
 import View.Setup
 import View.Util exposing (hidePreLeagueButton, viewGoalForm)
-import View.Volume
 
 
 view : Route.TimerParams -> Model -> H.Html Msg
@@ -40,8 +39,7 @@ viewBody qs model =
             H.div [] <|
                 if Mapwatch.isProgressDone p then
                     -- all done!
-                    [ View.Volume.view model
-                    , viewGoalForm (\goal -> Model.RouteTo <| Route.Timer { qs | goal = goal }) qs
+                    [ viewGoalForm (\goal -> Model.RouteTo <| Route.Timer { qs | goal = goal }) qs
                     , viewMain qs model
                     ]
 
@@ -49,7 +47,7 @@ viewBody qs model =
                     [ viewProgress p ]
 
 
-viewMain : Route.TimerParams -> Model -> H.Html Msg
+viewMain : Route.TimerParams -> Model -> H.Html msg
 viewMain qs model =
     let
         run =

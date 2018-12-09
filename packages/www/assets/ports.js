@@ -190,28 +190,20 @@ app.ports.inputClientLogWithId.subscribe(function(config) {
   }
 })
 
-function say(args) {
-  console.log("speech", enableSpeech, args)
-  if (enableSpeech && args.volume > 0) {
+function say(text) {
+  if (enableSpeech) {
     // console.log(speechSynthesis.getVoices())
-    var utterance = new SpeechSynthesisUtterance(args.say)
-    utterance.volume = args.volume;
-    speechSynthesis.speak(utterance)
+    speechSynthesis.speak(new SpeechSynthesisUtterance(text))
   }
 }
 //var sayWatching = true // useful for testing. uncomment me, upload a file, and i'll say all lines in that file
 var sayWatching = false
-var volume = 0
 app.ports.events.subscribe(function(event) {
-  if (event.type === 'volume') {
-    volume = event.volume
-    console.log('volume event', volume)
-  }
   if (event.type === 'progressComplete' && !sayWatching && (event.name === 'history' || event.name === 'history:example')) {
     sayWatching = true
-    say({say: 'mapwatch now running.', volume})
+    say('mapwatch now running.')
   }
   if (event.type === 'joinInstance' && sayWatching && event.say) {
-    say({say: event.say, volume})
+    say(event.say)
   }
 })

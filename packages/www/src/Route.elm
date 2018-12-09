@@ -5,7 +5,6 @@ module Route exposing
     , Route(..)
     , TimerParams
     , dateToString
-    , flags0
     , historyParams0
     , href
     , mapsParams0
@@ -28,7 +27,7 @@ import Url.Parser.Query as Q
 
 
 flags0 =
-    { goals = True, speech = False }
+    { goals = True }
 
 
 type alias HistoryParams =
@@ -39,52 +38,44 @@ type alias HistoryParams =
     , before : Maybe Time.Posix
     , goal : Maybe String
     , enableGoals : Bool
-    , enableSpeech : Bool
     }
 
 
-historyParams0 : HistoryParams
 historyParams0 =
-    HistoryParams 0 Nothing Nothing Nothing Nothing Nothing flags0.goals flags0.speech
+    HistoryParams 0 Nothing Nothing Nothing Nothing Nothing flags0.goals
 
 
 type alias MapsParams =
     { search : Maybe String
     , after : Maybe Time.Posix
     , before : Maybe Time.Posix
-    , enableSpeech : Bool
     }
 
 
-mapsParams0 : MapsParams
 mapsParams0 =
-    MapsParams Nothing Nothing Nothing False
+    MapsParams Nothing Nothing Nothing
 
 
 type alias TimerParams =
     { after : Maybe Time.Posix
     , goal : Maybe String
     , enableGoals : Bool
-    , enableSpeech : Bool
     }
 
 
-timerParams0 : TimerParams
 timerParams0 =
-    TimerParams Nothing Nothing flags0.goals flags0.speech
+    TimerParams Nothing Nothing flags0.goals
 
 
 type alias OverlayParams =
     { after : Maybe Time.Posix
     , goal : Maybe String
     , enableGoals : Bool
-    , enableSpeech : Bool
     }
 
 
-overlayParams0 : OverlayParams
 overlayParams0 =
-    OverlayParams Nothing Nothing flags0.goals flags0.speech
+    OverlayParams Nothing Nothing flags0.goals
 
 
 type Route
@@ -174,14 +165,12 @@ parser =
                     <?> dateParam "a"
                     <?> Q.string "g"
                     <?> boolParam flags0.goals "enableGoals"
-                    <?> boolParam flags0.goals "enableSpeech"
         , P.map Overlay <|
             P.map OverlayParams <|
                 P.oneOf [ P.top, P.s "overlay" ]
                     <?> dateParam "a"
                     <?> Q.string "g"
                     <?> boolParam flags0.goals "enableGoals"
-                    <?> boolParam flags0.goals "enableSpeech"
         , P.map History <|
             P.map (\p -> HistoryParams (Maybe.withDefault 0 p)) <|
                 P.s "history"
@@ -192,7 +181,6 @@ parser =
                     <?> dateParam "b"
                     <?> Q.string "g"
                     <?> boolParam flags0.goals "enableGoals"
-                    <?> boolParam flags0.goals "enableSpeech"
 
         -- , P.map MapsRoot <| P.s "map"
         , P.map Maps <|
@@ -201,7 +189,6 @@ parser =
                     <?> Q.string "q"
                     <?> dateParam "a"
                     <?> dateParam "b"
-                    <?> boolParam flags0.goals "enableSpeech"
         , P.map Changelog <| P.s "changelog"
         , P.map (always Changelog) <| P.s "changelog" </> P.string
         , P.map Debug <| P.s "debug"
