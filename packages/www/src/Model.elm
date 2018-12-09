@@ -52,6 +52,7 @@ type alias Model =
     , now : Time.Posix
     , tz : Time.Zone
     , lines : List String
+    , volume : Int
     }
 
 
@@ -67,6 +68,7 @@ type Msg
     | RouteTo Route
     | MapsSearch Route.MapsParams
     | HistorySearch Route.HistoryParams
+    | InputVolume String
 
 
 init : Flags -> ( Model, Cmd Msg )
@@ -91,9 +93,15 @@ init flags =
             , now = loadedAt
             , tz = Time.utc
             , lines = []
+            , volume = 0
             }
     in
-    ( model, Cmd.batch [ Task.perform SetTimezone Time.here ] )
+    ( model
+    , Cmd.batch
+        [ Task.perform SetTimezone Time.here
+        , Ports.sendVolume model.volume
+        ]
+    )
 
 
 updateRawLine : { date : Int, line : String } -> Model -> Model
@@ -185,6 +193,14 @@ update msg ({ config } as model) =
                 -- |> Debug.log "route-to"
                 |> Nav.replaceUrl
             )
+
+        InputVolume str ->
+            case str |> String.toInt of
+                Nothing ->
+                    ( model, Cmd.none )
+
+                Just volume ->
+                    ( { model | volume = volume }, Ports.sendVolume volume )
 
         M msg_ ->
             case msg_ of
