@@ -58,7 +58,7 @@ type alias MapsParams =
 
 mapsParams0 : MapsParams
 mapsParams0 =
-    MapsParams Nothing Nothing Nothing False
+    MapsParams Nothing Nothing Nothing flags0.speech
 
 
 type alias TimerParams =
@@ -174,14 +174,14 @@ parser =
                     <?> dateParam "a"
                     <?> Q.string "g"
                     <?> boolParam flags0.goals "enableGoals"
-                    <?> boolParam flags0.goals "enableSpeech"
+                    <?> boolParam flags0.speech "enableSpeech"
         , P.map Overlay <|
             P.map OverlayParams <|
                 P.oneOf [ P.top, P.s "overlay" ]
                     <?> dateParam "a"
                     <?> Q.string "g"
                     <?> boolParam flags0.goals "enableGoals"
-                    <?> boolParam flags0.goals "enableSpeech"
+                    <?> boolParam flags0.speech "enableSpeech"
         , P.map History <|
             P.map (\p -> HistoryParams (Maybe.withDefault 0 p)) <|
                 P.s "history"
@@ -192,7 +192,7 @@ parser =
                     <?> dateParam "b"
                     <?> Q.string "g"
                     <?> boolParam flags0.goals "enableGoals"
-                    <?> boolParam flags0.goals "enableSpeech"
+                    <?> boolParam flags0.speech "enableSpeech"
 
         -- , P.map MapsRoot <| P.s "map"
         , P.map Maps <|
@@ -201,7 +201,7 @@ parser =
                     <?> Q.string "q"
                     <?> dateParam "a"
                     <?> dateParam "b"
-                    <?> boolParam flags0.goals "enableSpeech"
+                    <?> boolParam flags0.speech "enableSpeech"
         , P.map Changelog <| P.s "changelog"
         , P.map (always Changelog) <| P.s "changelog" </> P.string
         , P.map Debug <| P.s "debug"

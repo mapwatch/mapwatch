@@ -7,10 +7,13 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2018-12-08
+- The beta/experimental [speech feature](https://mapwatch.github.io?enableSpeech=1) now has a volume setting. Second try, oops - now it only appears when speech is enabled.
+
 ## 2018-12-07
 - Updated "hide pre-Delve maps" button for Betrayal.
 - Updated [map names, map icons](https://www.pathofexile.com/forum/view-thread/2254801/page/1#p15971585), and [map tiers](https://www.pathofexile.com/forum/view-thread/2253540) for Betrayal. Thanks for the heads up, GGG!
-- The beta/experimental [speech feature](https://mapwatch.github.io?enableSpeech=1) now has a volume setting.
+- ~~The beta/experimental [speech feature](https://mapwatch.github.io?enableSpeech=1) now has a volume setting.~~
 
 ## 2018-09-16
 - The Hall of Grandmasters should now be tracked correctly.
