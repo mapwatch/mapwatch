@@ -7,7 +7,7 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
-## 2018-12-08
+## 2018-12-09
 - The beta/experimental [speech feature](https://mapwatch.github.io?enableSpeech=1) now has a volume setting. Second try, oops - now it only appears when speech is enabled.
 
 ## 2018-12-07
