@@ -148,22 +148,30 @@ vaganMissions =
 
 hideouts : Set.Set String
 hideouts =
-    -- from the in-game hideout selection screen
+    -- https://poedb.tw/us/Hideouts
+    -- JSON.stringify($('td:nth-of-type(1)', $('tbody')[0]).map(function(){return this.innerText.split('[')[0]}).toArray())
+    -- the in-game hideout list is incomplete - https://github.com/mapwatch/mapwatch/issues/40
     Set.fromList
-        [ "Backstreet Hideout"
+        [ "Arboreal Hideout"
+        , "Backstreet Hideout"
         , "Baleful Hideout"
         , "Battle-scarred Hideout"
+        , "Brutal Hideout"
         , "Cartographer's Hideout"
         , "Coastal Hideout"
         , "Coral Hideout"
         , "Desert Hideout"
         , "Enlightened Hideout"
         , "Excavated Hideout"
+        , "Glacial Hideout"
         , "Immaculate Hideout"
         , "Lush Hideout"
         , "Luxurious Hideout"
+        , "Overgrown Hideout"
+        , "Robber's Trench Hideout"
         , "Skeletal Hideout"
         , "Stately Hideout"
+        , "Sunken Hideout"
         , "Undercity Hideout"
         , "Unearthed Hideout"
         ]

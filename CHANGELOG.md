@@ -7,8 +7,12 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2018-12-15
+- All new hideouts in PoEDB, even the secret ones, should now behave correctly.
+
 ## 2018-12-09
 - The beta/experimental [speech feature](https://mapwatch.github.io?enableSpeech=1) now has a volume setting. Second try, oops - now it only appears when speech is enabled.
+- The new hideouts from Helena's hideout list should now behave correctly.
 
 ## 2018-12-07
 - Updated "hide pre-Delve maps" button for Betrayal.
