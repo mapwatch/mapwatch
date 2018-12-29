@@ -38,8 +38,6 @@ Seeing how much time I spend in each map, and how much time I waste screwing aro
 
 They're treated as "side areas", like abyssal depths or trials, not a separate map run. A map with a Zana mission adds 1, not 2, to your maps-completed-today count.
 
-Exception: Zana's dailies are a side area of the "Crumbled Laboratory" map. Yes, that's not actually a map, kind of awkward. I'd like to improve this soon.
-
 ### Any similar tools?
 
 * [Path of Maps](http://pathofmaps.com/) allows you to track loot from each map. It's less automatic, it takes some extra interaction/time during each map, but it can track things that Mapwatch doesn't.
