@@ -7,6 +7,10 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2019-03-06
+- Updated "hide pre-Betrayal maps" button for Synthesis.
+- Updated map names/tiers for Synthesis league, based on [this post](https://www.reddit.com/r/pathofexile/comments/ax29hh/complete_synthesis_atlas_tiered_labeled_colored/).
+
 ## 2018-12-15
 - All new hideouts in PoEDB, even the secret ones, should now behave correctly.
 
