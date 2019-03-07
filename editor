@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+# Copy/symlink me to your project's directory, and .gitignore. Now `./editor` edits your project.
+#
+# Why doesn't tools/atom/elm/atom run the current dir by default?
+# Because I don't want to mess with atom's argument behavior in a script named `atom`. Too confusing.
+../../tools/atom/elm/atom . "$@"
+# Launch the project's screen env too, if one exists
+[ -f screenrc ] && screen -c screenrc || true

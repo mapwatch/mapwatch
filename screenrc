@@ -1,0 +1,17 @@
+#!/bin/sh -eux
+# Launch the project's dev environment with gnu screen.
+# Usage: `screen -c screenrc`
+
+# Use the user's settings. screen seems to happily ignore this if you have no user-screenrc
+source $HOME/.screenrc
+# show two verical panels
+split -v
+# left panel is the dev server (:0)
+screen yarn dev:www
+# right panel is the unit tests (:1) and a shell (:2).
+focus right
+screen yarn test --watch
+screen
+# right panel has unit tests selected by default, and quick-switches (ctrl+a a) to the shell
+select 2
+select 1
