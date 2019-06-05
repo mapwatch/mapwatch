@@ -106,6 +106,7 @@ url name =
 specialUrlNames =
     -- thanks, https://poecraft.com/atlas and #/debug/mapicons
     -- and https://poecraft.com/js/app/generated/atlasmaps.js?v=5dc7fdae
+    -- and http://poedb.tw/us/unique.php?cn=Map
     Dict.fromList
         -- these maps are in a separate poedb.tw section for some reason, filled in manually. http://poedb.tw/us/unique.php?cn=Map
         [ ( "Hallowed Ground", "//web.poecdn.com/image/Art/2DItems/Maps/HallowedGround.png" )
@@ -113,6 +114,8 @@ specialUrlNames =
         , ( "Mao Kun", "//web.poecdn.com/image/Art/2DItems/Maps/FairgravesMap01.png" )
         , ( "Untainted Paradise", "//web.poecdn.com/image/Art/2DItems/Maps/UniqueMap2.png" )
         , ( "Olmec's Sanctum", "//web.poecdn.com/image/Art/2DItems/Maps/olmec.png" )
+        , ( "Perandus Manor", "//web.poecdn.com/image/Art/2DItems/Maps/PerandusManor.png" )
+        , ( "Doryani's Machinarium", "//web.poecdn.com/image/Art/2DItems/Maps/Doryanis.png" )
 
         -- TODO: oops, 3 maps are named "the beachhead" with different icons: white, yellow, red.
         -- Not worth changing how everything works just for this.
@@ -145,171 +148,173 @@ englishMapList =
 {-| maps grouped by tier
 -}
 extractedMapList =
-    -- Built from reading https://www.reddit.com/r/pathofexile/comments/ax29hh/complete_synthesis_atlas_tiered_labeled_colored/
-    [ { tier = 1, unique = False, name = "Cursed Crypt" }
-    , { tier = 1, unique = False, name = "Fungal Hollow" }
-    , { tier = 1, unique = False, name = "Iceberg" }
-    , { tier = 1, unique = False, name = "Alleyways" }
-    , { tier = 2, unique = False, name = "Dungeon" }
-    , { tier = 2, unique = False, name = "Excavation" }
-    , { tier = 2, unique = False, name = "Haunted Mansion" }
-    , { tier = 2, unique = False, name = "Strand" }
-    , { tier = 2, unique = False, name = "Peninsula" }
-    , { tier = 2, unique = False, name = "Ramparts" }
-    , { tier = 3, unique = False, name = "Arid Lake" }
-    , { tier = 3, unique = False, name = "Leyline" }
-    , { tier = 3, unique = False, name = "Barrows" }
-    , { tier = 3, unique = False, name = "Channel" }
-    , { tier = 3, unique = False, name = "Spider Lair" }
-    , { tier = 3, unique = False, name = "Jungle Valley" }
-    , { tier = 3, unique = False, name = "Atoll" }
-    , { tier = 3, unique = False, name = "Ashen Wood" }
-    , { tier = 3, unique = False, name = "Desert" }
-    , { tier = 3, unique = False, name = "Maze" }
-    , { tier = 4, unique = False, name = "Beach" }
-    , { tier = 4, unique = False, name = "Port" }
-    , { tier = 4, unique = False, name = "Arcade" }
-    , { tier = 4, unique = False, name = "Mausoleum" }
-    , { tier = 4, unique = False, name = "Flooded Mine" }
-    , { tier = 4, unique = False, name = "City Square" }
-    , { tier = 4, unique = False, name = "Glacier" }
-    , { tier = 4, unique = False, name = "Armoury" }
-    , { tier = 4, unique = False, name = "Underground Sea" }
-    , { tier = 4, unique = False, name = "Lookout" }
-    , { tier = 5, unique = False, name = "Pen" }
-    , { tier = 5, unique = False, name = "Ancient City" }
-    , { tier = 5, unique = False, name = "Graveyard" }
-    , { tier = 5, unique = False, name = "Marshes" }
-    , { tier = 5, unique = False, name = "Thicket" }
-    , { tier = 5, unique = False, name = "Courtyard" }
-    , { tier = 5, unique = False, name = "Crater" }
-    , { tier = 5, unique = False, name = "Cage" }
-    , { tier = 5, unique = False, name = "Grotto" }
-    , { tier = 5, unique = False, name = "Sulphur Vents" }
-    , { tier = 6, unique = False, name = "Sepulchre" }
-    , { tier = 6, unique = False, name = "Lair" }
-    , { tier = 6, unique = False, name = "Vault" }
-    , { tier = 6, unique = False, name = "Burial Chambers" }
-    , { tier = 6, unique = False, name = "Necropolis" }
-    , { tier = 6, unique = False, name = "Overgrown Shrine" }
-    , { tier = 6, unique = False, name = "Primordial Pool" }
-    , { tier = 6, unique = False, name = "Pit" }
-    , { tier = 6, unique = False, name = "Promenade" }
-    , { tier = 6, unique = False, name = "Residence" }
-    , { tier = 6, unique = False, name = "Geode" }
-    , { tier = 7, unique = False, name = "Fields" }
-    , { tier = 7, unique = False, name = "Ghetto" }
-    , { tier = 7, unique = False, name = "Bone Crypt" }
-    , { tier = 7, unique = False, name = "Mineral Pools" }
-    , { tier = 7, unique = False, name = "Mud Geyser" }
-    , { tier = 7, unique = False, name = "Bazaar" }
-    , { tier = 7, unique = False, name = "Estuary" }
-    , { tier = 7, unique = False, name = "Spider Forest" }
-    , { tier = 7, unique = False, name = "Academy" }
-    , { tier = 7, unique = False, name = "Shore" }
-    , { tier = 7, unique = False, name = "Pier" }
-    , { tier = 8, unique = False, name = "Dunes" }
-    , { tier = 8, unique = False, name = "Lighthouse" }
-    , { tier = 8, unique = False, name = "Orchard" }
-    , { tier = 8, unique = False, name = "Conservatory" }
-    , { tier = 8, unique = False, name = "Phantasmagoria" }
-    , { tier = 8, unique = False, name = "Volcano" }
-    , { tier = 8, unique = False, name = "Cemetery" }
-    , { tier = 8, unique = False, name = "Lava Chamber" }
-    , { tier = 8, unique = False, name = "Waterways" }
-    , { tier = 8, unique = False, name = "Toxic Sewer" }
-    , { tier = 8, unique = False, name = "Arachnid Tomb" }
-    , { tier = 9, unique = False, name = "Underground River" }
-    , { tier = 9, unique = False, name = "Laboratory" }
-    , { tier = 9, unique = False, name = "Canyon" }
-    , { tier = 9, unique = False, name = "Vaal Pyramid" }
-    , { tier = 9, unique = False, name = "Tropical Island" }
-    , { tier = 9, unique = False, name = "Coral Ruins" }
-    , { tier = 9, unique = False, name = "Museum" }
-    , { tier = 9, unique = False, name = "Castle Ruins" }
-    , { tier = 9, unique = False, name = "Temple" }
-    , { tier = 9, unique = False, name = "Villa" }
-    , { tier = 9, unique = False, name = "Cells" }
-    , { tier = 10, unique = False, name = "Overgrown Ruin" }
-    , { tier = 10, unique = False, name = "Plateau" }
-    , { tier = 10, unique = False, name = "Moon Temple" }
-    , { tier = 10, unique = False, name = "Mesa" }
-    , { tier = 10, unique = False, name = "Scriptorium" }
-    , { tier = 10, unique = False, name = "Factory" }
-    , { tier = 10, unique = False, name = "Relic Chambers" }
-    , { tier = 10, unique = False, name = "Arachnid Nest" }
-    , { tier = 10, unique = False, name = "Chateau" }
-    , { tier = 10, unique = False, name = "Wharf" }
-    , { tier = 11, unique = False, name = "Desert Spring" }
-    , { tier = 11, unique = False, name = "Palace" }
-    , { tier = 11, unique = False, name = "Wasteland" }
-    , { tier = 11, unique = False, name = "Arsenal" }
-    , { tier = 11, unique = False, name = "Coves" }
-    , { tier = 11, unique = False, name = "Dig" }
-    , { tier = 11, unique = False, name = "Arena" }
-    , { tier = 11, unique = False, name = "Bog" }
-    , { tier = 11, unique = False, name = "Basilica" }
-    , { tier = 11, unique = False, name = "Infested Valley" }
-    , { tier = 12, unique = False, name = "Crystal Ore" }
-    , { tier = 12, unique = False, name = "Malformation" }
-    , { tier = 12, unique = False, name = "Reef" }
-    , { tier = 12, unique = False, name = "Courthouse" }
-    , { tier = 12, unique = False, name = "Terrace" }
-    , { tier = 12, unique = False, name = "Acid Caverns" }
-    , { tier = 12, unique = False, name = "Sunken City" }
-    , { tier = 12, unique = False, name = "Carcass" }
-    , { tier = 12, unique = False, name = "Precinct" }
-    , { tier = 13, unique = False, name = "Gardens" }
-    , { tier = 13, unique = False, name = "Siege" }
-    , { tier = 13, unique = False, name = "Tower" }
-    , { tier = 13, unique = False, name = "Colonnade" }
-    , { tier = 13, unique = False, name = "Summit" }
-    , { tier = 13, unique = False, name = "Crimson Temple" }
-    , { tier = 13, unique = False, name = "Park" }
-    , { tier = 13, unique = False, name = "Colosseum" }
-    , { tier = 13, unique = False, name = "Shipyard" }
-    , { tier = 14, unique = False, name = "Primordial Blocks" }
-    , { tier = 14, unique = False, name = "Racecourse" }
-    , { tier = 14, unique = False, name = "Plaza" }
-    , { tier = 14, unique = False, name = "Shrine" }
-    , { tier = 14, unique = False, name = "Belfry" }
-    , { tier = 14, unique = False, name = "Ivory Temple" }
-    , { tier = 14, unique = False, name = "Caldera" }
-    , { tier = 15, unique = False, name = "Defiled Cathedral" }
-    , { tier = 15, unique = False, name = "Lava Lake" }
-    , { tier = 15, unique = False, name = "Dark Forest" }
-    , { tier = 15, unique = False, name = "Core" }
-    , { tier = 15, unique = False, name = "Waste Pool" }
-    , { tier = 16, unique = False, name = "Pit of the Chimera" }
-    , { tier = 16, unique = False, name = "Lair of the Hydra" }
-    , { tier = 16, unique = False, name = "Maze of the Minotaur" }
-    , { tier = 16, unique = False, name = "Forge of the Phoenix" }
-    , { tier = 16, unique = False, name = "Vaal Temple" }
+    -- Built from reading https://www.reddit.com/r/pathofexile/comments/bwhiyi/heres_a_preview_of_the_atlas_of_worlds_in_path_of/epxlf0g/
+    [ { name = "Sulphur Vents", tier = 1, unique = False }
+    , { name = "Haunted Mansion", tier = 1, unique = False }
+    , { name = "Desert", tier = 1, unique = False }
+    , { name = "Ivory Temple", tier = 1, unique = False }
+    , { name = "Glacier", tier = 2, unique = False }
+    , { name = "Thicket", tier = 2, unique = False }
+    , { name = "Alleyways", tier = 2, unique = False }
+    , { name = "Lookout", tier = 2, unique = False }
+    , { name = "Barrows", tier = 2, unique = False }
+    , { name = "Armoury", tier = 2, unique = False }
+    , { name = "Leyline", tier = 3, unique = False }
+    , { name = "Mausoleum", tier = 3, unique = False }
+    , { name = "Ashen Wood", tier = 3, unique = False }
+    , { name = "Relic Chambers", tier = 3, unique = False }
+    , { name = "Pier", tier = 3, unique = False }
+    , { name = "Arid Lake", tier = 3, unique = False }
+    , { name = "Arachnid Tomb", tier = 3, unique = False }
+    , { name = "Flooded Mine", tier = 3, unique = False }
+    , { name = "Wharf", tier = 3, unique = False }
+    , { name = "Pen", tier = 3, unique = False }
+    , { name = "Excavation", tier = 4, unique = False }
+    , { name = "Crater", tier = 4, unique = False }
+    , { name = "City Square", tier = 4, unique = False }
+    , { name = "Fields", tier = 4, unique = False }
+    , { name = "Cage", tier = 4, unique = False }
+    , { name = "Grotto", tier = 4, unique = False }
+    , { name = "Cursed Crypt", tier = 4, unique = False }
+    , { name = "Strand", tier = 4, unique = False }
+    , { name = "Channel", tier = 4, unique = False }
+    , { name = "Beach", tier = 4, unique = False }
+    , { name = "Marshes", tier = 5, unique = False }
+    , { name = "Spider Lair", tier = 5, unique = False }
+    , { name = "Tropical Island", tier = 5, unique = False }
+    , { name = "Ramparts", tier = 5, unique = False }
+    , { name = "Burial Chambers", tier = 5, unique = False }
+    , { name = "Mesa", tier = 5, unique = False }
+    , { name = "Jungle Valley", tier = 5, unique = False }
+    , { name = "Peninsula", tier = 5, unique = False }
+    , { name = "Arcade", tier = 5, unique = False }
+    , { name = "Fungal Hollow", tier = 5, unique = False }
+    , { name = "Mud Geyser", tier = 6, unique = False }
+    , { name = "Courtyard", tier = 6, unique = False }
+    , { name = "Ancient City", tier = 6, unique = False }
+    , { name = "Atoll", tier = 6, unique = False }
+    , { name = "Maze", tier = 6, unique = False }
+    , { name = "Promenade", tier = 6, unique = False }
+    , { name = "Cells", tier = 6, unique = False }
+    , { name = "Phantasmagoria", tier = 6, unique = False }
+    , { name = "Waste Pool", tier = 6, unique = False }
+    , { name = "Overgrown Ruin", tier = 6, unique = False }
+    , { name = "Primordial Pool", tier = 6, unique = False }
+    , { name = "Residence", tier = 7, unique = False }
+    , { name = "Spider Forest", tier = 7, unique = False }
+    , { name = "Arena", tier = 7, unique = False }
+    , { name = "Dungeon", tier = 7, unique = False }
+    , { name = "Racecourse", tier = 7, unique = False }
+    , { name = "Graveyard", tier = 7, unique = False }
+    , { name = "Vault", tier = 7, unique = False }
+    , { name = "Waterways", tier = 7, unique = False }
+    , { name = "Conservatory", tier = 7, unique = False }
+    , { name = "Laboratory", tier = 7, unique = False }
+    , { name = "Overgrown Shrine", tier = 7, unique = False }
+    , { name = "Iceberg", tier = 8, unique = False }
+    , { name = "Pit", tier = 8, unique = False }
+    , { name = "Ghetto", tier = 8, unique = False }
+    , { name = "Bone Crypt", tier = 8, unique = False }
+    , { name = "Chateau", tier = 8, unique = False }
+    , { name = "Toxic Sewer", tier = 8, unique = False }
+    , { name = "Scriptorium", tier = 8, unique = False }
+    , { name = "Dunes", tier = 8, unique = False }
+    , { name = "Factory", tier = 8, unique = False }
+    , { name = "Necropolis", tier = 8, unique = False }
+    , { name = "Estuary", tier = 8, unique = False }
+    , { name = "Arachnid Nest", tier = 9, unique = False }
+    , { name = "Port", tier = 9, unique = False }
+    , { name = "Villa", tier = 9, unique = False }
+    , { name = "Mineral Pools", tier = 9, unique = False }
+    , { name = "Underground River", tier = 9, unique = False }
+    , { name = "Underground Sea", tier = 9, unique = False }
+    , { name = "Castle Ruins", tier = 9, unique = False }
+    , { name = "Shore", tier = 9, unique = False }
+    , { name = "Moon Temple", tier = 9, unique = False }
+    , { name = "Arsenal", tier = 9, unique = False }
+    , { name = "Lighthouse", tier = 9, unique = False }
+    , { name = "Sepulchre", tier = 10, unique = False }
+    , { name = "Coral Ruins", tier = 10, unique = False }
+    , { name = "Volcano", tier = 10, unique = False }
+    , { name = "Geode", tier = 10, unique = False }
+    , { name = "Bog", tier = 10, unique = False }
+    , { name = "Plateau", tier = 10, unique = False }
+    , { name = "Lava Chamber", tier = 10, unique = False }
+    , { name = "Bazaar", tier = 10, unique = False }
+    , { name = "Academy", tier = 10, unique = False }
+    , { name = "Temple", tier = 10, unique = False }
+    , { name = "Infested Valley", tier = 11, unique = False }
+    , { name = "Dig", tier = 11, unique = False }
+    , { name = "Lair", tier = 11, unique = False }
+    , { name = "Malformation", tier = 11, unique = False }
+    , { name = "Siege", tier = 11, unique = False }
+    , { name = "Gardens", tier = 11, unique = False }
+    , { name = "Crimson Temple", tier = 11, unique = False }
+    , { name = "Precinct", tier = 11, unique = False }
+    , { name = "Colonnade", tier = 11, unique = False }
+    , { name = "Museum", tier = 11, unique = False }
+    , { name = "Lava Lake", tier = 12, unique = False }
+    , { name = "Cemetery", tier = 12, unique = False }
+    , { name = "Vaal Pyramid", tier = 12, unique = False }
+    , { name = "Park", tier = 12, unique = False }
+    , { name = "Shipyard", tier = 12, unique = False }
+    , { name = "Core", tier = 12, unique = False }
+    , { name = "Carcass", tier = 12, unique = False }
+    , { name = "Canyon", tier = 12, unique = False }
+    , { name = "Colosseum", tier = 12, unique = False }
+    , { name = "Tower", tier = 13, unique = False }
+    , { name = "Sunken City", tier = 13, unique = False }
+    , { name = "Defiled Cathedral", tier = 13, unique = False }
+    , { name = "Belfry", tier = 13, unique = False }
+    , { name = "Coves", tier = 13, unique = False }
+    , { name = "Shrine", tier = 13, unique = False }
+    , { name = "Plaza", tier = 13, unique = False }
+    , { name = "Terrace", tier = 13, unique = False }
+    , { name = "Reef", tier = 13, unique = False }
+    , { name = "Primordial Blocks", tier = 14, unique = False }
+    , { name = "Orchard", tier = 14, unique = False }
+    , { name = "Wasteland", tier = 14, unique = False }
+    , { name = "Crystal Ore", tier = 14, unique = False }
+    , { name = "Courthouse", tier = 14, unique = False }
+    , { name = "Basilica", tier = 14, unique = False }
+    , { name = "Dark Forest", tier = 14, unique = False }
+    , { name = "Summit", tier = 15, unique = False }
+    , { name = "Caldera", tier = 15, unique = False }
+    , { name = "Acid Caverns", tier = 15, unique = False }
+    , { name = "Desert Spring", tier = 15, unique = False }
+    , { name = "Palace", tier = 15, unique = False }
+    , { name = "Vaal Temple", tier = 16, unique = False }
+    , { name = "Forge of the Phoenix", tier = 16, unique = False }
+    , { name = "Maze of the Minotaur", tier = 16, unique = False }
+    , { name = "Pit of the Chimera", tier = 16, unique = False }
+    , { name = "Lair of the Hydra", tier = 16, unique = False }
     ]
         ++ uniqueMapList
 
 
 uniqueMapList =
     [ { name = "Whakawairua Tuahu", tier = 4, unique = True }
-    , { name = "The Beachhead", tier = 5, unique = True }
-    , { name = "Maelström of Chaos", tier = 1, unique = True }
-    , { name = "Hallowed Ground", tier = 6, unique = True }
-    , { name = "Olmec's Sanctum", tier = 3, unique = True }
-    , { name = "Pillars of Arun", tier = 7, unique = True }
-    , { name = "Caer Blaidd, Wolfpack's Den", tier = 7, unique = True }
-    , { name = "The Vinktar Square", tier = 4, unique = True }
-    , { name = "Mao Kun", tier = 8, unique = True }
-    , { name = "Untainted Paradise", tier = 9, unique = True }
-    , { name = "Vaults of Atziri", tier = 5, unique = True }
+    , { name = "The Coward's Trial", tier = 4, unique = True }
+    , { name = "Untainted Paradise", tier = 5, unique = True }
+    , { name = "Hall of Grandmasters", tier = 6, unique = True }
+    , { name = "Maelström of Chaos", tier = 6, unique = True }
+    , { name = "The Vinktar Square", tier = 6, unique = True }
+    , { name = "Doryani's Machinarium", tier = 6, unique = True }
+    , { name = "Acton's Nightmare", tier = 7, unique = True }
+    , { name = "Olmec's Sanctum", tier = 8, unique = True }
+    , { name = "Perandus Manor", tier = 8, unique = True }
+    , { name = "Pillars of Arun", tier = 8, unique = True }
+    , { name = "Death and Taxes", tier = 8, unique = True }
+    , { name = "Mao Kun", tier = 9, unique = True }
     , { name = "The Twilight Temple", tier = 9, unique = True }
-    , { name = "The Putrid Cloister", tier = 9, unique = True }
-    , { name = "Poorjoy's Asylum", tier = 9, unique = True }
-    , { name = "The Coward's Trial", tier = 3, unique = True }
+    , { name = "Caer Blaidd, Wolfpack's Den", tier = 9, unique = True }
+    , { name = "Oba's Cursed Trove", tier = 9, unique = True }
+    , { name = "Poorjoy's Asylum", tier = 10, unique = True }
+    , { name = "The Putrid Cloister", tier = 11, unique = True }
+    , { name = "Hallowed Ground", tier = 12, unique = True }
+    , { name = "Vaults of Atziri", tier = 12, unique = True }
+    , { name = "The Beachhead", tier = 5, unique = True }
     , { name = "The Beachhead", tier = 10, unique = True }
-    , { name = "Hall of Grandmasters", tier = 11, unique = True }
-    , { name = "Death and Taxes", tier = 12, unique = True }
-    , { name = "Acton's Nightmare", tier = 12, unique = True }
-    , { name = "Oba's Cursed Trove", tier = 5, unique = True }
     , { name = "The Beachhead", tier = 15, unique = True }
     ]
 
