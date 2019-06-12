@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2019-06-12
+- The "hide pre-Legion maps" button should now work correctly.
+
 ## 2019-06-05
 - Updated "hide pre-Synthesis maps" button for Legion league.
 - Updated map names/tiers for Legion league, based on [this post](https://www.reddit.com/r/pathofexile/comments/bwhiyi/heres_a_preview_of_the_atlas_of_worlds_in_path_of/epxlf0g/).
