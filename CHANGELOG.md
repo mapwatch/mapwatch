@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2019-07-10
+- The Glimmerwood Hideout should now work correctly.
+
 ## 2019-06-12
 - The "hide pre-Legion maps" button should now work correctly.
 
