@@ -1,4 +1,4 @@
-module Mapwatch.Zone exposing (Master(..), SideZoneType(..), Type(..), guardianToString, isMap, isTown, maps, masterToString, sideZoneType, zoneType)
+module Mapwatch.Zone exposing (SideZoneType(..), Type(..), guardianToString, isMap, isTown, maps, sideZoneType, zoneType)
 
 import Dict
 import Mapwatch.MapList exposing (mapList, zoneAliases)
@@ -26,23 +26,9 @@ zoneType mzone =
                 NotTown
 
 
-type
-    Master
-    -- catarina/vorici/elreon don't have side areas in maps
-    = Zana
-    | Tora
-    | Haku
-    | Vagan
-
-
-masterToString : Master -> String
-masterToString =
-    Debug.toString
-
-
 type SideZoneType
     = OtherSideZone
-    | Mission Master
+    | ZanaMission
     | ElderGuardian Guardian
 
 
@@ -93,7 +79,7 @@ sideZoneDict =
     List.foldl Dict.union
         Dict.empty
         [ Dict.map (\_ -> ElderGuardian) elderGuardianZones
-        , valkeys (Mission Zana) (Set.toList maps)
+        , valkeys ZanaMission (Set.toList maps)
         ]
 
 

@@ -168,8 +168,8 @@ formatSideAreaType instance =
         Zone.OtherSideZone ->
             Nothing
 
-        Zone.Mission master ->
-            Just <| Zone.masterToString master ++ " mission"
+        Zone.ZanaMission ->
+            Just "Zana mission"
 
         Zone.ElderGuardian guardian ->
             Just <| "Elder Guardian: The " ++ Zone.guardianToString guardian
