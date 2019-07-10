@@ -93,9 +93,6 @@ sideZoneDict =
     List.foldl Dict.union
         Dict.empty
         [ Dict.map (\_ -> ElderGuardian) elderGuardianZones
-        , valkeys (Mission Tora) (Set.toList toraMissions)
-        , valkeys (Mission Haku) (Set.toList hakuMissions)
-        , valkeys (Mission Vagan) (Set.toList vaganMissions)
         , valkeys (Mission Zana) (Set.toList maps)
         ]
 
@@ -116,34 +113,6 @@ elderGuardianZones =
         -- https://pathofexile.gamepedia.com/The_Enslaver
         , valkeys Enslaver [ "River of Hysteria", "Desert of Dementia", "Wastes of Lunacy" ]
         ]
-
-
-hakuMissions : Set.Set String
-hakuMissions =
-    -- https://pathofexile.gamepedia.com/Mission_areas
-    -- JSON.stringify($('td:nth-of-type(4)', $('tbody')[0]).map(function(){return this.innerText}).filter(function(){return !!this.valueOf()}).toArray())
-    Set.fromList <|
-        [ "Haunted Cave", "Haunted Ruin", "Haunted Crypt", "Haunted Shrine", "Haunted Cell", "Haunted Mansion", "Haunted Trench", "Haunted Lair", "Haunted Abyss", "Haunted Descent", "Haunted Depth", "Haunted Tomb", "Haunted Shed" ]
-            -- TODO not sure why these are missing from the wiki... bet there's more
-            ++ [ "Haunted Pit" ]
-
-
-toraMissions : Set.Set String
-toraMissions =
-    -- https://pathofexile.gamepedia.com/Mission_areas
-    -- JSON.stringify($('td:nth-of-type(5)', $('tbody')[0]).map(function(){return this.innerText}).filter(function(){return !!this.valueOf()}).toArray())
-    Set.fromList <|
-        [ "Reeking Den", "Rotting Den", "Defiled Den, Desecrated Lair", "Musty Lair", "Suffocating Lair", "Putrid Lair", "Ruined Lair", "Rancid Lair", "Infested Lair", "Dank Den", "Musky Lair" ]
-            -- TODO not sure why these are missing from the wiki... bet there's more
-            ++ [ "Sooty Lair" ]
-
-
-vaganMissions : Set.Set String
-vaganMissions =
-    -- https://pathofexile.gamepedia.com/Mission_areas
-    -- JSON.stringify($('td:nth-of-type(6)', $('tbody')[0]).map(function(){return this.innerText}).filter(function(){return !!this.valueOf()}).toArray())
-    Set.fromList
-        [ "Rugged Pit", "Ruined Arena", "Austere Arena, Hallowed Arena", "Scholar's Arena", "Blood Pit", "Burnt Cage", "Court Arena", "Sewage Pit", "Webbed Arena", "Watery Pit", "Ageless Arena", "Ramshackle Arena" ]
 
 
 hideouts : Set.Set String
