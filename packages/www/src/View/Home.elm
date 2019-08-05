@@ -157,9 +157,22 @@ viewDate d =
     let
         i =
             d |> ISO8601.fromPosix
+
+        months =
+            [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
+
+        monthNum =
+            ISO8601.month i
+
+        m =
+            if monthNum < 1 then
+                String.fromInt monthNum
+
+            else
+                months |> List.drop (monthNum - 1) |> List.head |> Maybe.withDefault (String.fromInt monthNum)
     in
     H.span [ A.title (ISO8601.toString i) ]
-        [ H.text <| String.fromInt (ISO8601.day i) ++ " " ++ String.fromInt (ISO8601.month i) ]
+        [ H.text <| String.fromInt (ISO8601.day i) ++ "/" ++ m ]
 
 
 formatSideAreaType : Instance -> Maybe String
