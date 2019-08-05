@@ -10,7 +10,7 @@
     "clean": "rimraf ./dist *.log"
   },
   "dependencies": {
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.15",
     "marked": "^0.4.0",
     "rss": "^1.2.2"
   },
