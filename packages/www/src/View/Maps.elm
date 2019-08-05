@@ -8,6 +8,7 @@ import Mapwatch as Mapwatch
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.MapList as MapList
 import Mapwatch.Run as Run exposing (Run)
+import Maybe.Extra
 import Model as Model exposing (Model, Msg(..))
 import Regex
 import Route
@@ -61,45 +62,110 @@ search q ms =
             List.filter (.name >> Regex.contains (q_ |> Regex.fromStringWith { caseInsensitive = True, multiline = False } |> Maybe.withDefault Regex.never)) ms
 
 
+sort : Maybe String -> List ( MapList.Map, Run.Summary ) -> List ( MapList.Map, Run.Summary )
+sort o =
+    let
+        ( col, dir ) =
+            case Maybe.map (String.split "-") o of
+                Just [ c, "desc" ] ->
+                    ( Just c, List.reverse )
+
+                Just [ c, _ ] ->
+                    ( Just c, identity )
+
+                Just [ c ] ->
+                    ( Just c, identity )
+
+                _ ->
+                    ( Nothing, identity )
+    in
+    (case col of
+        Just "name" ->
+            List.sortBy (Tuple.first >> .name)
+
+        Just "tier" ->
+            List.sortBy (Tuple.first >> .tier)
+
+        Just "runs" ->
+            List.sortBy (Tuple.second >> .num)
+
+        Just "bestdur" ->
+            List.sortBy (Tuple.second >> .best >> Maybe.withDefault 0)
+
+        Just "meandur" ->
+            List.sortBy (Tuple.second >> .durs >> .all)
+
+        Just "portals" ->
+            List.sortBy (Tuple.second >> .durs >> .portals)
+
+        _ ->
+            List.reverse
+    )
+        >> dir
+
+
 viewMain : Route.MapsParams -> Model -> H.Html Msg
 viewMain params model =
+    let
+        rows =
+            MapList.mapList
+                |> search params.search
+                |> Run.groupMapNames (Run.filterBetween params model.mapwatch.runs)
+                |> List.map (Tuple.mapSecond Run.summarize)
+                |> sort params.sort
+                |> List.map ((\f ( a, b ) -> f a b) <| viewMap params)
+    in
     H.div []
         [ View.Volume.view model
         , viewSearch [ A.placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
-        , MapList.mapList
-            |> search params.search
-            |> Run.groupMapNames (Run.filterBetween params model.mapwatch.runs)
-            |> List.reverse
-            |> List.map ((\f ( a, b ) -> f a b) <| viewMap params)
-            |> (\rows -> H.table [ A.class "by-map" ] [ H.tbody [] rows ])
+        , H.table [ A.class "by-map" ]
+            [ H.thead [] [ header params ]
+            , H.tbody [] rows
+            ]
         ]
 
 
-viewMap : Route.MapsParams -> MapList.Map -> List Run -> H.Html msg
-viewMap qs map runs =
+header : Route.MapsParams -> H.Html msg
+header params =
     let
-        durs =
-            Run.meanDurationSet runs
-
-        best =
-            case Run.bestDuration .mainMap runs of
-                Nothing ->
-                    -- no runs - should be impossible, but not important enough to Debug.crash over it
-                    "--:--"
-
-                Just dur ->
-                    formatDuration dur
-
-        num =
-            List.length runs
+        cell : String -> String -> H.Html msg
+        cell col label =
+            H.th [] [ H.a [ headerHref col params ] [ H.text label ] ]
     in
+    H.tr []
+        [ cell "name" "Name"
+        , cell "tier" "Tier"
+        , cell "meandur" "Average"
+        , cell "portals" "Portals"
+        , cell "runs" "# Runs"
+        , cell "bestdur" "Best"
+        ]
+
+
+headerHref : String -> Route.MapsParams -> H.Attribute msg
+headerHref col params =
+    Route.href <|
+        Route.Maps
+            { params
+                | sort =
+                    Just <|
+                        if Just col == params.sort then
+                            col ++ "-desc"
+
+                        else
+                            col
+            }
+
+
+viewMap : Route.MapsParams -> MapList.Map -> Run.Summary -> H.Html msg
+viewMap qs map { durs, best, num } =
     H.tr []
         ([ H.td [ A.class "zone" ] [ viewMapName qs map ]
          , H.td [] [ H.text <| "(T" ++ String.fromInt map.tier ++ ")" ]
          , H.td [] [ H.text <| formatDuration durs.mainMap ++ " per map" ]
          , H.td [] [ H.text <| String.fromFloat (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
          , H.td [] [ H.text <| "×" ++ String.fromInt num ++ " runs." ]
-         , H.td [] [ H.text <| "Best: " ++ best ]
+         , H.td [] [ H.text <| Maybe.Extra.unwrap "--:--" formatDuration best ++ " per map" ]
          ]
          -- ++ (View.History.viewDurationSet <| )
         )

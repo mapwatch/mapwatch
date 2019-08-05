@@ -7,6 +7,10 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2019-08-04
+- Fixed Chinese translations.
+- The Maps page can now sort.
+
 ## 2019-07-10
 - The Glimmerwood Hideout should now work correctly.
 

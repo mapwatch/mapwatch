@@ -51,6 +51,7 @@ historyParams0 =
 
 type alias MapsParams =
     { search : Maybe String
+    , sort : Maybe String
     , after : Maybe Time.Posix
     , before : Maybe Time.Posix
     , enableSpeech : Bool
@@ -59,7 +60,7 @@ type alias MapsParams =
 
 mapsParams0 : MapsParams
 mapsParams0 =
-    MapsParams Nothing Nothing Nothing flags0.speech
+    MapsParams Nothing Nothing Nothing Nothing flags0.speech
 
 
 type alias TimerParams =
@@ -200,6 +201,7 @@ parser =
             P.map MapsParams <|
                 P.s "map"
                     <?> Q.string "q"
+                    <?> Q.string "o"
                     <?> dateParam "a"
                     <?> dateParam "b"
                     <?> boolParam flags0.speech "enableSpeech"
@@ -256,6 +258,7 @@ stringify route =
             "#/map"
                 ++ encodeQS
                     [ ( "q", qs.search )
+                    , ( "o", qs.sort )
                     , ( "a", Maybe.map dateToString qs.after )
                     , ( "b", Maybe.map dateToString qs.before )
                     ]

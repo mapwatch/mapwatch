@@ -5,6 +5,7 @@ module Mapwatch.Run exposing
     , SortDir(..)
     , SortField(..)
     , State(..)
+    , Summary
     , bestDuration
     , current
     , duration
@@ -26,6 +27,7 @@ module Mapwatch.Run exposing
     , stateDuration
     , stringifyGoalDuration
     , stringifySort
+    , summarize
     , tick
     , totalDurationSet
     , update
@@ -718,3 +720,18 @@ update instance_ mvisit state =
                             else
                                 -- the common case - just add the visit to the run
                                 ( Running run, Nothing )
+
+
+type alias Summary =
+    { durs : DurationSet
+    , best : Maybe Millis
+    , num : Int
+    }
+
+
+summarize : List Run -> Summary
+summarize runs =
+    { durs = meanDurationSet runs
+    , best = bestDuration .mainMap runs
+    , num = List.length runs
+    }
