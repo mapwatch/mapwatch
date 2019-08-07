@@ -25,6 +25,7 @@ module Mapwatch.Run exposing
     , search
     , sort
     , stateDuration
+    , stateLastUpdatedAt
     , stringifyGoalDuration
     , stringifySort
     , summarize
@@ -735,3 +736,16 @@ summarize runs =
     , best = bestDuration .mainMap runs
     , num = List.length runs
     }
+
+
+stateLastUpdatedAt : State -> Maybe Time.Posix
+stateLastUpdatedAt state =
+    case state of
+        Empty ->
+            Nothing
+
+        Started t ->
+            Just t
+
+        Running run ->
+            Just run.last.leftAt

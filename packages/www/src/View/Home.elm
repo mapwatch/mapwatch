@@ -37,7 +37,11 @@ viewInstance qs instance =
 
 
 time =
-    { second = 1000, minute = 1000 * 60, hour = 1000 * 60 * 60 }
+    { second = 1000
+    , minute = 1000 * 60
+    , hour = 1000 * 60 * 60
+    , day = 1000 * 60 * 60 * 24
+    }
 
 
 formatDuration : Int -> String
@@ -50,8 +54,11 @@ formatDuration dur =
             else
                 "-"
 
+        d =
+            abs <| dur // truncate time.day
+
         h =
-            abs <| dur // truncate time.hour
+            abs <| remainderBy (truncate time.day) dur // truncate time.hour
 
         m =
             abs <| remainderBy (truncate time.hour) dur // truncate time.minute
@@ -73,9 +80,16 @@ formatDuration dur =
 
             else
                 []
+
+        dpad =
+            if d > 0 then
+                [ String.fromInt d ]
+
+            else
+                []
     in
     -- String.join ":" <| [ pad0 2 h, pad0 2 m, pad0 2 s, pad0 4 ms ]
-    sign ++ String.join ":" (hpad ++ [ pad0 2 m, pad0 2 s ])
+    sign ++ String.join ":" (dpad ++ hpad ++ [ pad0 2 m, pad0 2 s ])
 
 
 viewParseError : Maybe LogLine.ParseError -> H.Html msg
@@ -152,15 +166,6 @@ viewProgress p =
             ]
 
 
-leftpad : Char -> Int -> String -> String
-leftpad char len str =
-    if String.length str >= len then
-        str
-
-    else
-        leftpad char len <| String.cons char str
-
-
 viewDate : Time.Posix -> H.Html msg
 viewDate d =
     let
@@ -183,10 +188,10 @@ viewDate d =
         timestamp =
             String.join " "
                 [ m
-                , ISO8601.day i |> String.fromInt |> leftpad '0' 2
+                , ISO8601.day i |> String.fromInt |> String.padLeft 2 '0'
                 , String.join ":"
-                    [ ISO8601.hour i |> String.fromInt |> leftpad '0' 2
-                    , ISO8601.minute i |> String.fromInt |> leftpad '0' 2
+                    [ ISO8601.hour i |> String.fromInt |> String.padLeft 2 '0'
+                    , ISO8601.minute i |> String.fromInt |> String.padLeft 2 '0'
                     ]
                 ]
     in

@@ -4,7 +4,7 @@ import Html as H
 import Html.Attributes as A
 import Html.Events as E
 import Mapwatch as Mapwatch
-import Mapwatch.Run as Run
+import Mapwatch.Run as Run exposing (Run)
 import Maybe.Extra
 import Model as Model exposing (Model, Msg)
 import Route
@@ -52,6 +52,7 @@ viewBody qs model =
 viewMain : Route.TimerParams -> Model -> H.Html Msg
 viewMain qs model =
     let
+        run : Maybe Run
         run =
             Run.current model.now model.mapwatch.instance model.mapwatch.runState
                 |> Maybe.Extra.filter (Run.isBetween { before = Nothing, after = qs.after })
@@ -127,13 +128,29 @@ viewMain qs model =
                       , H.td [] []
                       ]
                     )
+
+        sinceLastUpdated : Maybe Duration
+        sinceLastUpdated =
+            model.mapwatch
+                |> Mapwatch.lastUpdatedAt
+                |> Maybe.map (\t -> Time.posixToMillis model.now - Time.posixToMillis t)
     in
     H.div []
         [ viewTimer timer timerGoal
         , H.table [ A.class "timer-details" ]
             [ H.tbody []
                 [ H.tr [] mappingNow
-                , H.tr [] [ H.td [] [ H.text "Last entered: " ], H.td [] [ viewInstance hqs model.mapwatch.instance.val ] ]
+                , H.tr []
+                    [ H.td [] [ H.text "Last entered: " ]
+                    , H.td []
+                        [ viewInstance hqs model.mapwatch.instance.val
+                        , H.small [ A.style "opacity" "0.5" ]
+                            [ H.text " ("
+                            , H.text <| View.History.formatMaybeDuration sinceLastUpdated
+                            , H.text ")"
+                            ]
+                        ]
+                    ]
                 , H.tr [] [ H.td [] [ H.text <| "Maps done " ++ sessname ++ ": " ], H.td [] [ H.text <| String.fromInt <| List.length runs ] ]
                 , H.tr [ A.class "session-buttons" ] [ H.td [ A.colspan 2 ] sessionButtons ]
                 ]

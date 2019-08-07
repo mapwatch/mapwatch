@@ -9,6 +9,7 @@ All substantial Mapwatch changes.
 ---
 ## 2019-08-06
 - Better date/time formatting on the history page.
+- "Last entered" now shows how long ago it was updated. This will make things clearer if Mapwatch isn't seeing any updates to your PoE log file.
 
 ## 2019-08-04
 - Fixed Chinese translations.

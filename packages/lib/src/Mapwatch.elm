@@ -6,6 +6,7 @@ module Mapwatch exposing
     , initModel
     , isProgressDone
     , isReady
+    , lastUpdatedAt
     , progressDuration
     , progressPercent
     , subscriptions
@@ -186,3 +187,12 @@ isReady =
 progressDuration : Progress -> Millis
 progressDuration p =
     Time.posixToMillis p.updatedAt - Time.posixToMillis p.startedAt
+
+
+lastUpdatedAt : Model -> Maybe Time.Posix
+lastUpdatedAt model =
+    [ model.runState |> Run.stateLastUpdatedAt
+    , model.runs |> List.reverse |> List.head |> Maybe.map (\r -> r.last.leftAt)
+    ]
+        |> List.filterMap identity
+        |> List.head
