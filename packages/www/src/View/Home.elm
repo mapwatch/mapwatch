@@ -152,6 +152,15 @@ viewProgress p =
             ]
 
 
+leftpad : Char -> Int -> String -> String
+leftpad char len str =
+    if String.length str >= len then
+        str
+
+    else
+        leftpad char len <| String.cons char str
+
+
 viewDate : Time.Posix -> H.Html msg
 viewDate d =
     let
@@ -170,9 +179,19 @@ viewDate d =
 
             else
                 months |> List.drop (monthNum - 1) |> List.head |> Maybe.withDefault (String.fromInt monthNum)
+
+        timestamp =
+            String.join " "
+                [ m
+                , ISO8601.day i |> String.fromInt |> leftpad '0' 2
+                , String.join ":"
+                    [ ISO8601.hour i |> String.fromInt |> leftpad '0' 2
+                    , ISO8601.minute i |> String.fromInt |> leftpad '0' 2
+                    ]
+                ]
     in
     H.span [ A.title (ISO8601.toString i) ]
-        [ H.text <| String.fromInt (ISO8601.day i) ++ "/" ++ m ]
+        [ H.text timestamp ]
 
 
 formatSideAreaType : Instance -> Maybe String

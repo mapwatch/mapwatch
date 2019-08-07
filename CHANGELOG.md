@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2019-08-06
+- Better date/time formatting on the history page.
+
 ## 2019-08-04
 - Fixed Chinese translations.
 - The Maps page can now sort.
