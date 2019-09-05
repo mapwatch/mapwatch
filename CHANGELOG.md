@@ -9,7 +9,7 @@ All substantial Mapwatch changes.
 ---
 ## 2019-09-04
 - Updated "hide pre-Legion maps" button for Blight league.
-- Updated map names/tiers for Legion league, based on [this post](https://www.reddit.com/r/pathofexile/comments/cx82nl/heres_a_preview_of_the_atlas_of_worlds_in_path_of/).
+- Updated map names/tiers for Blight league, based on [this post](https://www.reddit.com/r/pathofexile/comments/cx82nl/heres_a_preview_of_the_atlas_of_worlds_in_path_of/).
 
 ## 2019-08-06
 - Better date/time formatting on the history page.
