@@ -7,6 +7,10 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2019-09-04
+- Updated "hide pre-Legion maps" button for Blight league.
+- Updated map names/tiers for Legion league, based on [this post](https://www.reddit.com/r/pathofexile/comments/cx82nl/heres_a_preview_of_the_atlas_of_worlds_in_path_of/).
+
 ## 2019-08-06
 - Better date/time formatting on the history page.
 - "Last entered" now shows how long ago it was updated. This will make things clearer if Mapwatch isn't seeing any updates to your PoE log file.

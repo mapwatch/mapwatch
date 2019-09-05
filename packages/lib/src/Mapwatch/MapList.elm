@@ -1,8 +1,9 @@
 module Mapwatch.MapList exposing (Map, mapList, url, zoneAliases, zoneAliasesDict)
 
-import Dict as Dict exposing (Dict)
+import Dict exposing (Dict)
 import Maybe.Extra
-import Regex as Regex exposing (Regex)
+import Regex exposing (Regex)
+import Set exposing (Set)
 
 
 type alias Map =
@@ -138,6 +139,9 @@ specialMapList =
     , { name = "The Alluring Abyss", tier = 0, unique = True }
     , { name = "The Pale Court", tier = 0, unique = True }
     , { name = "The Shaper's Realm", tier = 17, unique = True }
+    , { name = "The Beachhead", tier = 5, unique = True }
+    , { name = "The Beachhead", tier = 10, unique = True }
+    , { name = "The Beachhead", tier = 15, unique = True }
     ]
 
 
@@ -147,7 +151,268 @@ englishMapList =
 
 {-| maps grouped by tier
 -}
+extractedMapList : List Map
 extractedMapList =
+    let
+        build tier name =
+            { name = name
+            , tier = tier
+            , unique = Set.member name uniqueMapNames
+            }
+    in
+    blightMapList
+        |> List.map (\( tier, names ) -> names |> List.map (build tier))
+        |> List.concat
+        |> assertMapLists legionExtractedMapList
+
+
+assertMapLists : List Map -> List Map -> List Map
+assertMapLists expected actual =
+    let
+        nameuniq m =
+            -- bools aren't comparables? seriously, elm?
+            ( m.name
+            , if m.unique then
+                1
+
+              else
+                0
+            )
+
+        nameuniqs : List Map -> Set ( String, Int )
+        nameuniqs =
+            List.map nameuniq >> Set.fromList
+
+        diff =
+            nameuniqs actual |> Set.diff (nameuniqs expected)
+    in
+    if Set.isEmpty diff then
+        actual
+
+    else
+        Debug.todo <| "seasonal map names/uniques are different: " ++ Debug.toString diff
+
+
+blightMapList : List ( Int, List String )
+blightMapList =
+    [ -- special maps, not extracted from GGG's list
+      ( 5, [ "Untainted Paradise", "The Beachhead" ] )
+    , ( 10, [ "The Beachhead" ] )
+    , ( 15, [ "The Beachhead" ] )
+
+    -- Built from reading https://www.reddit.com/r/pathofexile/comments/cx82nl/heres_a_preview_of_the_atlas_of_worlds_in_path_of/
+    -- Previously we constructed `Map`s inline, but this way is easier to extract from GGG's list.
+    -- Tiers are explicitly listed because it's less prone to typos than list indexes.
+    , ( 1
+      , [ "Arcade"
+        , "Jungle Valley"
+        , "Wharf"
+        , "Pier"
+        ]
+      )
+    , ( 2
+      , [ "Alleyways"
+        , "Cage"
+        , "Excavation"
+        , "Sulphur Vents"
+        , "Armoury"
+        , "Mesa"
+        ]
+      )
+    , ( 3
+      , [ "Pen"
+        , "Desert"
+        , "Fungal Hollow"
+        , "Strand"
+        , "Ivory Temple"
+        , "Spider Lair"
+        , "Mausoleum"
+        , "Ashen Wood"
+        , "Ramparts"
+        , "Tropical Island"
+        , "Whakawairua Tuahu"
+        ]
+      )
+    , ( 4
+      , [ "Arid Lake"
+        , "Flooded Mine"
+        , "Leyline"
+        , "Burial Chambers"
+        , "Channel"
+        , "Barrows"
+        , "Fields"
+        , "Crater"
+        , "Arachnid Tomb"
+        , "Cursed Crypt"
+        , "The Coward's Trial"
+        ]
+      )
+    , ( 5
+      , [ "Lookout"
+        , "Beach"
+        , "Marshes"
+        , "Peninsula"
+        , "City Square"
+        , "Relic Chambers"
+        , "Grotto"
+        , "Glacier"
+        , "Haunted Mansion"
+        , "Thicket"
+        ]
+      )
+    , ( 6
+      , [ "Lighthouse"
+        , "Maze"
+        , "Residence"
+        , "Bone Crypt"
+        , "Geode"
+        , "Estuary"
+        , "Vault"
+        , "Overgrown Shrine"
+        , "Racecourse"
+        , "Ghetto"
+        , "Arsenal"
+        , "Doryani's Machinarium"
+        , "Olmec's Sanctum"
+        , "Acton's Nightmare"
+        ]
+      )
+    , ( 7
+      , [ "Port"
+        , "Chateau"
+        , "Conservatory"
+        , "Ancient City"
+        , "Underground Sea"
+        , "Bazaar"
+        , "Waste Pool"
+        , "Spider Forest"
+        , "Factory"
+        , "Villa"
+        , "Necropolis"
+        , "Perandus Manor"
+        , "Oba's Cursed Trove"
+        , "Death and Taxes"
+        ]
+      )
+    , ( 8
+      , [ "Graveyard"
+        , "Cells"
+        , "Volcano"
+        , "Phantasmagoria"
+        , "Atoll"
+        , "Underground River"
+        , "Arachnid Nest"
+        , "Shore"
+        , "Sepulchre"
+        , "Temple"
+        , "Pit"
+        , "Maelström of Chaos"
+        , "Caer Blaidd, Wolfpack's Den"
+        , "Mao Kun"
+        , "Poorjoy's Asylum"
+        ]
+      )
+    , ( 9
+      , [ "Dungeon"
+        , "Coral Ruins"
+        , "Laboratory"
+        , "Courtyard"
+        , "Mud Geyser"
+        , "Mineral Pools"
+        , "Arena"
+        , "Scriptorium"
+        , "Promenade"
+        , "Waterways"
+        , "Castle Ruins"
+        , "The Vinktar Square"
+        , "Hall of Grandmasters"
+        ]
+      )
+    , ( 10
+      , [ "Iceberg"
+        , "Toxic Sewer"
+        , "Academy"
+        , "Lava Chamber"
+        , "Dunes"
+        , "Overgrown Ruin"
+        , "Moon Temple"
+        , "Plateau"
+        , "Bog"
+        , "Primordial Pool"
+        , "Pillars of Arun"
+        , "The Twilight Temple"
+        ]
+      )
+    , ( 11
+      , [ "Gardens"
+        , "Vaal Pyramid"
+        , "Tower"
+        , "Lair"
+        , "Caldera"
+        , "Park"
+        , "Shrine"
+        , "Palace"
+        , "Sunken City"
+        , "Reef"
+        , "Vaults of Atziri"
+        ]
+      )
+    , ( 12
+      , [ "Courthouse"
+        , "Cemetery"
+        , "Shipyard"
+        , "Belfry"
+        , "Crystal Ore"
+        , "Malformation"
+        , "Desert Spring"
+        , "Plaza"
+        , "Dig"
+        , "Hallowed Ground"
+        ]
+      )
+    , ( 13
+      , [ "Infested Valley"
+        , "Museum"
+        , "Wasteland"
+        , "Precinct"
+        , "Orchard"
+        , "Acid Caverns"
+        , "Crimson Temple"
+        , "Basilica"
+        , "Carcass"
+        , "The Putrid Cloister"
+        ]
+      )
+    , ( 14
+      , [ "Defiled Cathedral"
+        , "Summit"
+        , "Primordial Blocks"
+        , "Terrace"
+        , "Core"
+        , "Colosseum"
+        , "Lava Lake"
+        ]
+      )
+    , ( 15
+      , [ "Canyon"
+        , "Siege"
+        , "Colonnade"
+        , "Coves"
+        , "Dark Forest"
+        ]
+      )
+    , ( 16
+      , [ "Pit of the Chimera"
+        , "Lair of the Hydra"
+        , "Maze of the Minotaur"
+        , "Forge of the Phoenix"
+        , "Vaal Temple"
+        ]
+      )
+    ]
+
+
+legionExtractedMapList =
     -- Built from reading https://www.reddit.com/r/pathofexile/comments/bwhiyi/heres_a_preview_of_the_atlas_of_worlds_in_path_of/epxlf0g/
     [ { name = "Sulphur Vents", tier = 1, unique = False }
     , { name = "Haunted Mansion", tier = 1, unique = False }
@@ -289,10 +554,11 @@ extractedMapList =
     , { name = "Pit of the Chimera", tier = 16, unique = False }
     , { name = "Lair of the Hydra", tier = 16, unique = False }
     ]
-        ++ uniqueMapList
+        ++ legionUniqueMapList
 
 
-uniqueMapList =
+legionUniqueMapList =
+    -- OLD - delete this soon
     [ { name = "Whakawairua Tuahu", tier = 4, unique = True }
     , { name = "The Coward's Trial", tier = 4, unique = True }
     , { name = "Untainted Paradise", tier = 5, unique = True }
@@ -313,10 +579,33 @@ uniqueMapList =
     , { name = "The Putrid Cloister", tier = 11, unique = True }
     , { name = "Hallowed Ground", tier = 12, unique = True }
     , { name = "Vaults of Atziri", tier = 12, unique = True }
-    , { name = "The Beachhead", tier = 5, unique = True }
-    , { name = "The Beachhead", tier = 10, unique = True }
-    , { name = "The Beachhead", tier = 15, unique = True }
     ]
+
+
+uniqueMapNames : Set String
+uniqueMapNames =
+    [ "Whakawairua Tuahu"
+    , "The Coward's Trial"
+    , "Untainted Paradise"
+    , "Hall of Grandmasters"
+    , "Maelström of Chaos"
+    , "The Vinktar Square"
+    , "Doryani's Machinarium"
+    , "Acton's Nightmare"
+    , "Olmec's Sanctum"
+    , "Perandus Manor"
+    , "Pillars of Arun"
+    , "Death and Taxes"
+    , "Mao Kun"
+    , "The Twilight Temple"
+    , "Caer Blaidd, Wolfpack's Den"
+    , "Oba's Cursed Trove"
+    , "Poorjoy's Asylum"
+    , "The Putrid Cloister"
+    , "Hallowed Ground"
+    , "Vaults of Atziri"
+    ]
+        |> Set.fromList
 
 
 rawUrlNames =

@@ -90,12 +90,12 @@ pluralize one other n =
 
 
 leagueName =
-    "Legion"
+    "Blight"
 
 
 leagueDate : Time.Posix
 leagueDate =
-    case "2019-06-07T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix of
+    case "2019-09-06T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix of
         Ok date ->
             date
 
