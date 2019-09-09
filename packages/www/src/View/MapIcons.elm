@@ -9,7 +9,12 @@ import View.Icon as Icon
 
 view : H.Html msg
 view =
-    H.ul [] (List.map viewMap mapList)
+    case mapList of
+        Err err ->
+            H.pre [] [ H.text err ]
+
+        Ok list ->
+            H.ul [] (List.map viewMap list)
 
 
 viewMap : Map -> H.Html msg

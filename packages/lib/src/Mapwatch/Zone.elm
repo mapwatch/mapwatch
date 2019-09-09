@@ -183,7 +183,7 @@ towns =
 maps : Set.Set String
 maps =
     Set.fromList <|
-        List.map .name mapList
+        List.map .name (Result.withDefault [] mapList)
             -- It's awkward to not track Zana dailies. This is the quickest fix.
             ++ [ "Crumbled Laboratory" ]
             -- I'm curious about incursion temple times too

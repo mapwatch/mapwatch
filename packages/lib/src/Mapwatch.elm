@@ -88,7 +88,12 @@ updateLine line model =
                 Cmd.none
 
             else
-                Ports.sendJoinInstance (Instance.unsafeJoinedAt instance) instance.val visit runState lastRun
+                case instance.joinedAt of
+                    Nothing ->
+                        Cmd.none
+
+                    Just joinedAt ->
+                        Ports.sendJoinInstance joinedAt instance.val visit runState lastRun
     in
     ( { model
         | instance = instance
@@ -144,15 +149,14 @@ update msg model =
             in
             if isProgressDone p then
                 -- man, I love elm, but conditional logging is so awkward
-                let
-                    _ =
-                        -- if this is the first completed progress, it's the history file - log something
-                        if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
-                            Debug.log "start from last logline" <| "?tickStart=" ++ String.fromInt (Maybe.Extra.unwrap 0 Time.posixToMillis m.instance.joinedAt)
-
-                        else
-                            ""
-                in
+                -- let
+                -- _ =
+                -- if this is the first completed progress, it's the history file - log something
+                -- if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
+                -- Debug.log "start from last logline" <| "?tickStart=" ++ String.fromInt (Maybe.Extra.unwrap 0 Time.posixToMillis m.instance.joinedAt)
+                -- else
+                -- ""
+                -- in
                 ( tick p.updatedAt m, Ports.progressComplete { name = p.name } )
 
             else

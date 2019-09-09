@@ -14,27 +14,32 @@ zoneAliasesDict =
     Dict.fromList zoneAliases
 
 
-englishMapsByName : Dict String Map
+englishMapsByName : Result String (Dict String Map)
 englishMapsByName =
     englishMapList
-        |> List.map (\m -> ( m.name, m ))
-        |> Dict.fromList
+        |> Result.map
+            (List.map (\m -> ( m.name, m ))
+                >> Dict.fromList
+            )
 
 
-mapList : List Map
+mapList : Result String (List Map)
 mapList =
-    let
-        buildAlias nonenglish english =
-            Dict.get english englishMapsByName |> Maybe.map (\m -> { m | name = nonenglish })
-    in
-    englishMapList ++ (List.map (\( a, b ) -> buildAlias a b) zoneAliases |> Maybe.Extra.values)
+    Result.map2
+        (\list byName ->
+            let
+                buildAlias nonenglish english =
+                    Dict.get english byName |> Maybe.map (\m -> { m | name = nonenglish })
+            in
+            list ++ (List.map (\( a, b ) -> buildAlias a b) zoneAliases |> Maybe.Extra.values)
+        )
+        englishMapList
+        englishMapsByName
 
 
-mapsByName : Dict String Map
+mapsByName : Result String (Dict String Map)
 mapsByName =
-    mapList
-        |> List.map (\m -> ( m.name, m ))
-        |> Dict.fromList
+    Result.map (List.map (\m -> ( m.name, m )) >> Dict.fromList) mapList
 
 
 englishUrlNames =
@@ -99,7 +104,7 @@ url name =
         --    )
     in
     Maybe.map2 fixUrl
-        (Dict.get name mapsByName)
+        (mapsByName |> Result.withDefault Dict.empty |> Dict.get name)
         (Dict.get name urlNames)
         |> Maybe.map ((++) "https:")
 
@@ -145,13 +150,14 @@ specialMapList =
     ]
 
 
+englishMapList : Result String (List Map)
 englishMapList =
-    specialMapList ++ extractedMapList
+    Result.map ((++) specialMapList) extractedMapList
 
 
 {-| maps grouped by tier
 -}
-extractedMapList : List Map
+extractedMapList : Result String (List Map)
 extractedMapList =
     let
         build tier name =
@@ -166,7 +172,7 @@ extractedMapList =
         |> assertMapLists legionExtractedMapList
 
 
-assertMapLists : List Map -> List Map -> List Map
+assertMapLists : List Map -> List Map -> Result String (List Map)
 assertMapLists expected actual =
     let
         nameuniq m =
@@ -187,10 +193,10 @@ assertMapLists expected actual =
             nameuniqs actual |> Set.diff (nameuniqs expected)
     in
     if Set.isEmpty diff then
-        actual
+        Ok actual
 
     else
-        Debug.todo <| "seasonal map names/uniques are different: " ++ Debug.toString diff
+        Err <| "seasonal map names/uniques are different: " ++ Debug.toString diff
 
 
 blightMapList : List ( Int, List String )

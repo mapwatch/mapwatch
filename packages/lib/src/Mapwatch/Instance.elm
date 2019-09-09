@@ -10,7 +10,6 @@ module Mapwatch.Instance exposing
     , isOffline
     , isTown
     , offlineThreshold
-    , unsafeJoinedAt
     , unwrap
     , update
     , zone
@@ -54,16 +53,6 @@ init : State
 init =
     -- initial-date is awkward, only Nothing on init, but we need to be able to tell the difference
     { val = MainMenu, joinedAt = Nothing, next = Empty }
-
-
-unsafeJoinedAt : State -> Time.Posix
-unsafeJoinedAt { joinedAt } =
-    case joinedAt of
-        Nothing ->
-            Debug.todo "instance.unsafeJoinedAt" joinedAt
-
-        Just d ->
-            d
 
 
 unwrap : a -> (Address -> a) -> Instance -> a

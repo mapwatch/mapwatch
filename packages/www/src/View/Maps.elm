@@ -106,23 +106,28 @@ sort o =
 
 viewMain : Route.MapsParams -> Model -> H.Html Msg
 viewMain params model =
-    let
-        rows =
-            MapList.mapList
-                |> search params.search
-                |> Run.groupMapNames (Run.filterBetween params model.mapwatch.runs)
-                |> List.map (Tuple.mapSecond Run.summarize)
-                |> sort params.sort
-                |> List.map ((\f ( a, b ) -> f a b) <| viewMap params)
-    in
-    H.div []
-        [ View.Volume.view model
-        , viewSearch [ A.placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
-        , H.table [ A.class "by-map" ]
-            [ H.thead [] [ header params ]
-            , H.tbody [] rows
-            ]
-        ]
+    case MapList.mapList of
+        Err err ->
+            H.pre [] [ H.text err ]
+
+        Ok mapList ->
+            let
+                rows =
+                    mapList
+                        |> search params.search
+                        |> Run.groupMapNames (Run.filterBetween params model.mapwatch.runs)
+                        |> List.map (Tuple.mapSecond Run.summarize)
+                        |> sort params.sort
+                        |> List.map ((\f ( a, b ) -> f a b) <| viewMap params)
+            in
+            H.div []
+                [ View.Volume.view model
+                , viewSearch [ A.placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
+                , H.table [ A.class "by-map" ]
+                    [ H.thead [] [ header params ]
+                    , H.tbody [] rows
+                    ]
+                ]
 
 
 header : Route.MapsParams -> H.Html msg
