@@ -196,7 +196,12 @@ assertMapLists expected actual =
         Ok actual
 
     else
-        Err <| "seasonal map names/uniques are different: " ++ Debug.toString diff
+        diff
+            |> Set.toList
+            |> List.map (\( name, uniq ) -> "(" ++ name ++ ", " ++ String.fromInt uniq ++ ")")
+            |> String.join ", "
+            |> (++) "seasonal map names/uniques are different: "
+            |> Err
 
 
 blightMapList : List ( Int, List String )

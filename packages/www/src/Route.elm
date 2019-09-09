@@ -107,7 +107,10 @@ parse loc =
         |> hashUrl
         |> P.parse parser
         |> Maybe.withDefault (NotFound loc)
-        |> Debug.log "navigate to"
+
+
+
+-- |> Debug.log "navigate to"
 
 
 hashUrl : Url -> Url

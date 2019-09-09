@@ -93,19 +93,19 @@ leagueName =
     "Blight"
 
 
-leagueDate : Time.Posix
+leagueDate : Result String Time.Posix
 leagueDate =
-    case "2019-09-06T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix of
-        Ok date ->
-            date
-
-        Err err ->
-            Debug.todo "Couldn't decode a hardcoded date?" err
+    "2019-09-06T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix
 
 
 hidePreLeagueButton : (Time.Posix -> Route) -> H.Html msg
 hidePreLeagueButton route =
-    H.a [ A.class "button", Route.href <| route leagueDate ] [ Icon.fas "calendar", H.text <| " Hide pre-" ++ leagueName ++ " maps" ]
+    case leagueDate of
+        Err err ->
+            H.pre [] [ H.text err ]
+
+        Ok date ->
+            H.a [ A.class "button", Route.href <| route date ] [ Icon.fas "calendar", H.text <| " Hide pre-" ++ leagueName ++ " maps" ]
 
 
 viewDateSearch : ({ after : Maybe Time.Posix, before : Maybe Time.Posix } -> Route) -> { a | before : Maybe Time.Posix, after : Maybe Time.Posix } -> H.Html msg

@@ -99,7 +99,7 @@ viewParseError err =
             H.div [] []
 
         Just err_ ->
-            H.div [] [ H.text <| "Log parsing error: " ++ Debug.toString err_ ]
+            H.div [] [ H.text <| "Log parsing error: " ++ LogLine.parseErrorToString err_ ]
 
 
 formatBytes : Int -> String

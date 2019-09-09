@@ -4,16 +4,23 @@ module Mapwatch.LogLine exposing
     , ParseError
     , ParsedLine
     , parse
+    , parseErrorToString
     )
 
 import Maybe.Extra
 import Regex
 import Time
-import Util exposing (regexParseFirst, regexParseFirstRes)
+import Util exposing (regexParseFirst)
 
 
 type alias ParseError =
     { raw : String, err : String }
+
+
+parseErrorToString : ParseError -> String
+parseErrorToString e =
+    -- Debug.toString e
+    "{ err: " ++ e.err ++ ", raw: " ++ e.raw ++ " }"
 
 
 type alias ParsedLine =
@@ -33,11 +40,25 @@ type alias Line =
     }
 
 
+regexes =
+    { opening = "LOG FILE OPENING" |> Regex.fromString
+    , entered = "You have entered (.*)\\.$|你已進入：(.*)。$" |> Regex.fromString
+    , connecting = "Connecting to instance server at (.*)$" |> Regex.fromString
+    }
+
+
+unsafeRegexes =
+    { opening = regexes.opening |> Maybe.withDefault Regex.never
+    , entered = regexes.entered |> Maybe.withDefault Regex.never
+    , connecting = regexes.connecting |> Maybe.withDefault Regex.never
+    }
+
+
 parseLogInfo : String -> Maybe Info
 parseLogInfo raw =
     let
         parseOpening =
-            case regexParseFirst "LOG FILE OPENING" raw of
+            case raw |> Regex.findAtMost 1 unsafeRegexes.opening |> List.head of
                 Just _ ->
                     Just Opening
 
@@ -45,7 +66,7 @@ parseLogInfo raw =
                     Nothing
 
         parseEntered =
-            case regexParseFirst "You have entered (.*)\\.$|你已進入：(.*)。$" raw |> Maybe.map (.submatches >> Maybe.Extra.values) of
+            case raw |> Regex.findAtMost 1 unsafeRegexes.entered |> List.head |> Maybe.map (.submatches >> Maybe.Extra.values) of
                 Just (zone :: _) ->
                     Just <| YouHaveEntered zone
 
@@ -53,7 +74,7 @@ parseLogInfo raw =
                     Nothing
 
         parseConnecting =
-            case regexParseFirst "Connecting to instance server at (.*)$" raw |> Maybe.map .submatches of
+            case raw |> Regex.findAtMost 1 unsafeRegexes.connecting |> List.head |> Maybe.map .submatches of
                 Just [ Just addr ] ->
                     Just <| ConnectingToInstanceServer addr
 
