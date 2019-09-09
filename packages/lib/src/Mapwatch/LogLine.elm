@@ -10,7 +10,6 @@ module Mapwatch.LogLine exposing
 import Maybe.Extra
 import Regex
 import Time
-import Util exposing (regexParseFirst)
 
 
 type alias ParseError =
