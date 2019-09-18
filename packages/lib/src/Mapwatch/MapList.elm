@@ -81,27 +81,6 @@ url name =
                     ]
             in
             path ++ "?" ++ String.join "&" qs
-
-        -- old approach to icon urls. Keep it here until I'm confident in the new approach (because git history digging is tedious).
-        -- Safe to delete if we haven't seen broken map images for a while.
-        --Regex.replace
-        --    (Regex.fromString "New/([a-zA-Z]+)\\d?\\.png" |> Maybe.withDefault Regex.never)
-        --    (\match ->
-        --        case List.head <| List.take 1 match.submatches of
-        --            Nothing ->
-        --                Debug.todo ("url parse failed. " ++ map.name)
-        --
-        --            Just Nothing ->
-        --                Debug.todo ("url parse failed (2). " ++ map.name)
-        --
-        --            Just (Just urlname) ->
-        --                let
-        --                    colorTier =
-        --                        -- 1 = white, 2 = yellow, 3 = red. Used in map urls.
-        --                        clamp 1 3 <| ceiling <| toFloat map.tier / 5
-        --                in
-        --                urlname ++ String.fromInt colorTier ++ ".png?scale=1"
-        --    )
     in
     Maybe.map2 fixUrl
         (mapsByName |> Result.withDefault Dict.empty |> Dict.get name)
