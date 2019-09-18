@@ -5,7 +5,8 @@ import { Elm } from './Main.elm';
 import registerServiceWorker from './registerServiceWorker';
 import * as analytics from './analytics'
 
-// redirect from old host to new host
+// redirect from old host to new host.
+// TODO this should really be a 301 redirect! Quick-and-dirty version: js redirect + `link rel=canonical`
 if (document.location.host === 'mapwatch.github.io') {
   document.location.host = 'mapwatch.erosson.org'
 }
