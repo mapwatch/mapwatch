@@ -1,17 +1,17 @@
 module View.Icon exposing (fa, fas, fasPulse, map, mapOrBlank)
 
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import Json.Encode as Json
 import Mapwatch.MapList as MapList
 import Regex
 
 
-fa : String -> String -> H.Html msg
+fa : String -> String -> Html msg
 fa icongroup icon =
     -- https://fontawesome.com/icons/
-    H.span [ A.class <| icongroup ++ " fa-" ++ icon, A.property "aria-hidden" (Json.bool True) ] []
+    span [ class <| icongroup ++ " fa-" ++ icon, property "aria-hidden" (Json.bool True) ] []
 
 
 fas =
@@ -22,17 +22,17 @@ fasPulse =
     fa "fa-spin fa-pulse fas"
 
 
-map : String -> Maybe (H.Html msg)
+map : String -> Maybe (Html msg)
 map name =
     let
         cls =
             Regex.replace ("[ \t,:']+" |> Regex.fromString |> Maybe.withDefault Regex.never) (always "") name
     in
     MapList.url name
-        |> Maybe.map (\src -> H.img [ A.class <| "map-icon map-icon-" ++ cls, A.src src ] [])
+        |> Maybe.map (\src_ -> img [ class <| "map-icon map-icon-" ++ cls, src src_ ] [])
 
 
-mapOrBlank : String -> H.Html msg
+mapOrBlank : String -> Html msg
 mapOrBlank name =
     map name
-        |> Maybe.withDefault (H.span [] [])
+        |> Maybe.withDefault (span [] [])

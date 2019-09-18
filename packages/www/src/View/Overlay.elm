@@ -1,8 +1,8 @@
 module View.Overlay exposing (view)
 
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import Mapwatch as Mapwatch
 import Mapwatch.Run as Run
 import Maybe.Extra
@@ -17,24 +17,24 @@ import View.Setup
 import View.Util exposing (hidePreLeagueButton, viewGoalForm)
 
 
-view : Route.TimerParams -> Model -> H.Html Msg
+view : Route.TimerParams -> Model -> Html Msg
 view qs model =
     case model.mapwatch.progress of
         Nothing ->
             -- waiting for file input, nothing to show yet
-            viewSetup model <| H.div [] []
+            viewSetup model <| div [] []
 
         Just p ->
             if Mapwatch.isProgressDone p then
                 viewMain qs model
 
             else
-                viewSetup model <| H.div [] []
+                viewSetup model <| div [] []
 
 
-viewSetup : Model -> H.Html Msg -> H.Html Msg
+viewSetup : Model -> Html Msg -> Html Msg
 viewSetup model body =
-    H.div [ A.class "main" ]
+    div [ class "main" ]
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model
@@ -43,7 +43,7 @@ viewSetup model body =
         ]
 
 
-viewMain : Route.TimerParams -> Model -> H.Html msg
+viewMain : Route.TimerParams -> Model -> Html msg
 viewMain qs model =
     let
         run =
@@ -76,8 +76,8 @@ viewMain qs model =
         viewIndexRun i run_ =
             viewRow (List.length history) i qs hqs (goalDuration run_) run_
     in
-    H.div [ A.class "overlay-main" ]
-        [ H.table [] <|
+    div [ class "overlay-main" ]
+        [ table [] <|
             List.indexedMap viewIndexRun <|
                 List.reverse history
         ]
@@ -87,7 +87,7 @@ type alias Duration =
     Int
 
 
-viewRow : Int -> Int -> Route.TimerParams -> Route.HistoryParams -> Maybe Duration -> Run.Run -> H.Html msg
+viewRow : Int -> Int -> Route.TimerParams -> Route.HistoryParams -> Maybe Duration -> Run.Run -> Html msg
 viewRow count i tqs hqs goalDuration run =
     let
         isLast =
@@ -96,39 +96,39 @@ viewRow count i tqs hqs goalDuration run =
         dur =
             Just (Run.durationSet run).all
     in
-    H.tr
-        [ A.classList
+    tr
+        [ classList
             [ ( "even", modBy 2 i == 0 )
             , ( "odd", modBy 2 i /= 0 )
             , ( "last", isLast )
             ]
         ]
-        ([ H.td [ A.class "instance" ]
+        ([ td [ class "instance" ]
             ([ viewInstance hqs run.first.instance ]
                 ++ (if isLast then
-                        [ H.a [ A.class "overlay-back", Route.href <| Route.Timer tqs ] [ Icon.fas "cog" ] ]
+                        [ a [ class "overlay-back", Route.href <| Route.Timer tqs ] [ Icon.fas "cog" ] ]
 
                     else
                         []
                    )
             )
-         , H.td [ A.class "timer" ] [ viewTimer dur ]
+         , td [ class "timer" ] [ viewTimer dur ]
          ]
             ++ (case goalDuration of
                     Nothing ->
                         []
 
                     Just _ ->
-                        [ H.td [ A.class "goal" ] [ viewGoalTimer dur goalDuration ] ]
+                        [ td [ class "goal" ] [ viewGoalTimer dur goalDuration ] ]
                )
         )
 
 
-viewTimer : Maybe Duration -> H.Html msg
+viewTimer : Maybe Duration -> Html msg
 viewTimer dur =
-    H.text <| View.History.formatMaybeDuration dur
+    text <| View.History.formatMaybeDuration dur
 
 
-viewGoalTimer : Maybe Duration -> Maybe Duration -> H.Html msg
+viewGoalTimer : Maybe Duration -> Maybe Duration -> Html msg
 viewGoalTimer dur goal =
     View.History.viewDurationDelta dur goal

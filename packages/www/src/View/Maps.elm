@@ -1,9 +1,9 @@
 module View.Maps exposing (view)
 
 import Dict
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import Mapwatch as Mapwatch
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.MapList as MapList
@@ -22,9 +22,9 @@ import View.Util exposing (pluralize, roundToPlaces, viewSearch)
 import View.Volume
 
 
-view : Route.MapsParams -> Model -> H.Html Msg
+view : Route.MapsParams -> Model -> Html Msg
 view params model =
-    H.div [ A.class "main" ]
+    div [ class "main" ]
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model
@@ -33,15 +33,15 @@ view params model =
         ]
 
 
-viewBody : Route.MapsParams -> Model -> H.Html Msg
+viewBody : Route.MapsParams -> Model -> Html Msg
 viewBody params model =
     case model.mapwatch.progress of
         Nothing ->
             -- waiting for file input, nothing to show yet
-            H.div [] []
+            div [] []
 
         Just p ->
-            H.div [] <|
+            div [] <|
                 (if Mapwatch.isProgressDone p then
                     -- all done!
                     [ viewMain params model ]
@@ -104,11 +104,11 @@ sort o =
         >> dir
 
 
-viewMain : Route.MapsParams -> Model -> H.Html Msg
+viewMain : Route.MapsParams -> Model -> Html Msg
 viewMain params model =
     case MapList.mapList of
         Err err ->
-            H.pre [] [ H.text err ]
+            pre [] [ text err ]
 
         Ok mapList ->
             let
@@ -120,24 +120,24 @@ viewMain params model =
                         |> sort params.sort
                         |> List.map ((\f ( a, b ) -> f a b) <| viewMap params)
             in
-            H.div []
+            div []
                 [ View.Volume.view model
-                , viewSearch [ A.placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
-                , H.table [ A.class "by-map" ]
-                    [ H.thead [] [ header params ]
-                    , H.tbody [] rows
+                , viewSearch [ placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
+                , table [ class "by-map" ]
+                    [ thead [] [ header params ]
+                    , tbody [] rows
                     ]
                 ]
 
 
-header : Route.MapsParams -> H.Html msg
+header : Route.MapsParams -> Html msg
 header params =
     let
-        cell : String -> String -> H.Html msg
+        cell : String -> String -> Html msg
         cell col label =
-            H.th [] [ H.a [ headerHref col params ] [ H.text label ] ]
+            th [] [ a [ headerHref col params ] [ text label ] ]
     in
-    H.tr []
+    tr []
         [ cell "name" "Name"
         , cell "tier" "Tier"
         , cell "meandur" "Average"
@@ -147,7 +147,7 @@ header params =
         ]
 
 
-headerHref : String -> Route.MapsParams -> H.Attribute msg
+headerHref : String -> Route.MapsParams -> Attribute msg
 headerHref col params =
     Route.href <|
         Route.Maps
@@ -162,24 +162,24 @@ headerHref col params =
             }
 
 
-viewMap : Route.MapsParams -> MapList.Map -> Run.Summary -> H.Html msg
+viewMap : Route.MapsParams -> MapList.Map -> Run.Summary -> Html msg
 viewMap qs map { durs, best, num } =
-    H.tr []
-        ([ H.td [ A.class "zone" ] [ viewMapName qs map ]
-         , H.td [] [ H.text <| "(T" ++ String.fromInt map.tier ++ ")" ]
-         , H.td [] [ H.text <| formatDuration durs.mainMap ++ " per map" ]
-         , H.td [] [ H.text <| String.fromFloat (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
-         , H.td [] [ H.text <| "×" ++ String.fromInt num ++ " runs." ]
-         , H.td [] [ H.text <| Maybe.Extra.unwrap "--:--" formatDuration best ++ " per map" ]
+    tr []
+        ([ td [ class "zone" ] [ viewMapName qs map ]
+         , td [] [ text <| "(T" ++ String.fromInt map.tier ++ ")" ]
+         , td [] [ text <| formatDuration durs.mainMap ++ " per map" ]
+         , td [] [ text <| String.fromFloat (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
+         , td [] [ text <| "×" ++ String.fromInt num ++ " runs." ]
+         , td [] [ text <| Maybe.Extra.unwrap "--:--" formatDuration best ++ " per map" ]
          ]
          -- ++ (View.History.viewDurationSet <| )
         )
 
 
-viewMapName : Route.MapsParams -> MapList.Map -> H.Html msg
+viewMapName : Route.MapsParams -> MapList.Map -> Html msg
 viewMapName qs map =
     let
         hqs0 =
             Route.historyParams0
     in
-    H.a [ Route.href <| Route.History { hqs0 | search = Just map.name, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank map.name, H.text map.name ]
+    a [ Route.href <| Route.History { hqs0 | search = Just map.name, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank map.name, text map.name ]

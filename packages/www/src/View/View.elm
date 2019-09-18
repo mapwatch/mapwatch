@@ -2,7 +2,7 @@ module View.View exposing (view, viewBody)
 
 import AppPlatform
 import Browser
-import Html as H
+import Html as H exposing (..)
 import Mapwatch as Mapwatch
 import Model as Model exposing (Model, Msg)
 import Route exposing (Route(..))
@@ -21,7 +21,7 @@ view model =
     { title = "PoE Mapwatch", body = [ viewBody model ] }
 
 
-viewBody : Model -> H.Html Msg
+viewBody : Model -> Html Msg
 viewBody model =
     case model.route of
         History params ->
@@ -37,7 +37,7 @@ viewBody model =
             View.Overlay.view qs model
 
         Debug ->
-            H.div [] [ H.text "TODO" ]
+            div [] [ text "TODO" ]
 
         DebugDumpLines ->
             View.DumpLines.view model

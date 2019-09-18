@@ -1,15 +1,15 @@
 module View.Nav exposing (view)
 
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import Route as Route exposing (HistoryParams, MapsParams, Route(..), historyParams0, mapsParams0, timerParams0)
 import View.Icon as Icon
 
 
-view : Maybe Route -> H.Html msg
+view : Maybe Route -> Html msg
 view active =
-    H.nav []
+    nav []
         [ timerLink active
         , historyLink active
         , mapsLink active
@@ -19,14 +19,14 @@ view active =
 
 
 inactiveCls =
-    A.class "inactive button"
+    class "inactive button"
 
 
 activeCls =
-    A.class "active button disabled"
+    class "active button disabled"
 
 
-timerLink : Maybe Route -> H.Html msg
+timerLink : Maybe Route -> Html msg
 timerLink active =
     let
         ( cls, qs ) =
@@ -43,10 +43,10 @@ timerLink active =
                 _ ->
                     ( inactiveCls, { timerParams0 | after = Nothing } )
     in
-    H.a [ cls, Route.href <| Timer qs ] [ Icon.fas "stopwatch", H.text " Timer" ]
+    a [ cls, Route.href <| Timer qs ] [ Icon.fas "stopwatch", text " Timer" ]
 
 
-historyLink : Maybe Route -> H.Html msg
+historyLink : Maybe Route -> Html msg
 historyLink active =
     let
         qs0 =
@@ -66,10 +66,10 @@ historyLink active =
                 _ ->
                     ( inactiveCls, qs0 )
     in
-    H.a [ cls, Route.href <| History qs ] [ Icon.fas "history", H.text " History" ]
+    a [ cls, Route.href <| History qs ] [ Icon.fas "history", text " History" ]
 
 
-mapsLink : Maybe Route -> H.Html msg
+mapsLink : Maybe Route -> Html msg
 mapsLink active =
     let
         qs0 =
@@ -89,7 +89,7 @@ mapsLink active =
                 _ ->
                     ( inactiveCls, qs0 )
     in
-    H.a [ cls, Route.href <| Maps qs ] [ Icon.fas "map", H.text " Maps" ]
+    a [ cls, Route.href <| Maps qs ] [ Icon.fas "map", text " Maps" ]
 
 
 changelogLink active =
@@ -102,9 +102,9 @@ changelogLink active =
                 _ ->
                     inactiveCls
     in
-    H.a [ cls, Route.href <| Changelog ] [ Icon.fas "newspaper", H.text " Changes" ]
+    a [ cls, Route.href <| Changelog ] [ Icon.fas "newspaper", text " Changes" ]
 
 
 sourceLink =
-    H.a [ A.target "_blank", A.href "https://www.github.com/mapwatch/mapwatch", inactiveCls ]
-        [ Icon.fas "code", H.text " Code" ]
+    a [ target "_blank", href "https://www.github.com/mapwatch/mapwatch", inactiveCls ]
+        [ Icon.fas "code", text " Code" ]

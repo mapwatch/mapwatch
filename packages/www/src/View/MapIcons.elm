@@ -1,22 +1,22 @@
 module View.MapIcons exposing (view)
 
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import Mapwatch.MapList exposing (Map, mapList)
 import View.Icon as Icon
 
 
-view : H.Html msg
+view : Html msg
 view =
     case mapList of
         Err err ->
-            H.pre [] [ H.text err ]
+            pre [] [ text err ]
 
         Ok list ->
-            H.ul [] (List.map viewMap list)
+            ul [] (List.map viewMap list)
 
 
-viewMap : Map -> H.Html msg
+viewMap : Map -> Html msg
 viewMap map =
-    H.li [] [ Icon.mapOrBlank map.name, H.text map.name ]
+    li [] [ Icon.mapOrBlank map.name, text map.name ]

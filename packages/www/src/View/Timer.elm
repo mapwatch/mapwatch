@@ -1,8 +1,8 @@
 module View.Timer exposing (view)
 
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import Mapwatch as Mapwatch
 import Mapwatch.Run as Run exposing (Run)
 import Maybe.Extra
@@ -18,9 +18,9 @@ import View.Util exposing (hidePreLeagueButton, viewGoalForm)
 import View.Volume
 
 
-view : Route.TimerParams -> Model -> H.Html Msg
+view : Route.TimerParams -> Model -> Html Msg
 view qs model =
-    H.div [ A.class "main" ]
+    div [ class "main" ]
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model
@@ -29,15 +29,15 @@ view qs model =
         ]
 
 
-viewBody : Route.TimerParams -> Model -> H.Html Msg
+viewBody : Route.TimerParams -> Model -> Html Msg
 viewBody qs model =
     case model.mapwatch.progress of
         Nothing ->
             -- waiting for file input, nothing to show yet
-            H.div [] []
+            div [] []
 
         Just p ->
-            H.div [] <|
+            div [] <|
                 if Mapwatch.isProgressDone p then
                     -- all done!
                     [ View.Volume.view model
@@ -49,7 +49,7 @@ viewBody qs model =
                     [ viewProgress p ]
 
 
-viewMain : Route.TimerParams -> Model -> H.Html Msg
+viewMain : Route.TimerParams -> Model -> Html Msg
 viewMain qs model =
     let
         run : Maybe Run
@@ -58,7 +58,7 @@ viewMain qs model =
                 |> Maybe.Extra.filter (Run.isBetween { before = Nothing, after = qs.after })
 
         hideEarlierButton =
-            H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Just model.now } ] [ Icon.fas "eye-slash", H.text " Hide earlier maps" ]
+            a [ class "button", Route.href <| Route.Timer { qs | after = Just model.now } ] [ Icon.fas "eye-slash", text " Hide earlier maps" ]
 
         hqs0 =
             Route.historyParams0
@@ -85,9 +85,9 @@ viewMain qs model =
                 Just _ ->
                     ( "this session"
                     , Run.filterBetween { before = Nothing, after = qs.after } model.mapwatch.runs
-                    , [ H.a [ A.class "button", Route.href <| Route.Timer { qs | after = Nothing } ] [ Icon.fas "eye", H.text " Unhide all" ]
+                    , [ a [ class "button", Route.href <| Route.Timer { qs | after = Nothing } ] [ Icon.fas "eye", text " Unhide all" ]
                       , hideEarlierButton
-                      , H.a [ A.class "button", Route.href <| Route.History { hqs | before = Just model.now } ] [ Icon.fas "camera", H.text " Snapshot history" ]
+                      , a [ class "button", Route.href <| Route.History { hqs | before = Just model.now } ] [ Icon.fas "camera", text " Snapshot history" ]
                       ]
                     )
 
@@ -101,13 +101,13 @@ viewMain qs model =
             Run.goalDuration goal { session = runs, allTime = model.mapwatch.runs }
 
         historyTable =
-            H.table [ A.class "timer history" ]
-                [ H.tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False } hqs goalDuration) <| history)
-                , H.tfoot []
-                    [ H.tr []
-                        [ H.td [ A.colspan 11 ]
-                            [ H.a [ Route.href <| Route.History hqs ] [ Icon.fas "history", H.text " History" ]
-                            , H.a [ Route.href <| Route.Overlay oqs ] [ Icon.fas "align-justify", H.text " Overlay" ]
+            table [ class "timer history" ]
+                [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False } hqs goalDuration) <| history)
+                , tfoot []
+                    [ tr []
+                        [ td [ colspan 11 ]
+                            [ a [ Route.href <| Route.History hqs ] [ Icon.fas "history", text " History" ]
+                            , a [ Route.href <| Route.Overlay oqs ] [ Icon.fas "align-justify", text " Overlay" ]
                             ]
                         ]
                     ]
@@ -118,14 +118,14 @@ viewMain qs model =
                 Just run_ ->
                     ( Just (Run.durationSet run_).all
                     , goalDuration run_
-                    , [ H.td [] [ H.text "Mapping in: " ], H.td [] [ viewInstance hqs run_.first.instance ] ]
+                    , [ td [] [ text "Mapping in: " ], td [] [ viewInstance hqs run_.first.instance ] ]
                     )
 
                 Nothing ->
                     ( Nothing
                     , Nothing
-                    , [ H.td [] [ H.text "Not mapping" ]
-                      , H.td [] []
+                    , [ td [] [ text "Not mapping" ]
+                      , td [] []
                       ]
                     )
 
@@ -135,24 +135,24 @@ viewMain qs model =
                 |> Mapwatch.lastUpdatedAt
                 |> Maybe.map (\t -> Time.posixToMillis model.now - Time.posixToMillis t)
     in
-    H.div []
+    div []
         [ viewTimer timer timerGoal
-        , H.table [ A.class "timer-details" ]
-            [ H.tbody []
-                [ H.tr [] mappingNow
-                , H.tr []
-                    [ H.td [] [ H.text "Last entered: " ]
-                    , H.td []
+        , table [ class "timer-details" ]
+            [ tbody []
+                [ tr [] mappingNow
+                , tr []
+                    [ td [] [ text "Last entered: " ]
+                    , td []
                         [ viewMaybeInstance hqs <| Maybe.map .val model.mapwatch.instance
-                        , H.small [ A.style "opacity" "0.5" ]
-                            [ H.text " ("
-                            , H.text <| View.History.formatMaybeDuration sinceLastUpdated
-                            , H.text ")"
+                        , small [ style "opacity" "0.5" ]
+                            [ text " ("
+                            , text <| View.History.formatMaybeDuration sinceLastUpdated
+                            , text ")"
                             ]
                         ]
                     ]
-                , H.tr [] [ H.td [] [ H.text <| "Maps done " ++ sessname ++ ": " ], H.td [] [ H.text <| String.fromInt <| List.length runs ] ]
-                , H.tr [ A.class "session-buttons" ] [ H.td [ A.colspan 2 ] sessionButtons ]
+                , tr [] [ td [] [ text <| "Maps done " ++ sessname ++ ": " ], td [] [ text <| String.fromInt <| List.length runs ] ]
+                , tr [ class "session-buttons" ] [ td [ colspan 2 ] sessionButtons ]
                 ]
             ]
         , historyTable
@@ -163,11 +163,11 @@ type alias Duration =
     Int
 
 
-viewTimer : Maybe Duration -> Maybe Duration -> H.Html msg
+viewTimer : Maybe Duration -> Maybe Duration -> Html msg
 viewTimer dur goal =
-    H.div []
-        [ H.div [ A.class "main-timer" ]
-            [ H.div [] [ H.text <| View.History.formatMaybeDuration dur ] ]
-        , H.div [ A.class "sub-timer" ]
-            [ H.div [] [ View.History.viewDurationDelta dur goal ] ]
+    div []
+        [ div [ class "main-timer" ]
+            [ div [] [ text <| View.History.formatMaybeDuration dur ] ]
+        , div [ class "sub-timer" ]
+            [ div [] [ View.History.viewDurationDelta dur goal ] ]
         ]

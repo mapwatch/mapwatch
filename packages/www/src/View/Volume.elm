@@ -1,34 +1,34 @@
 module View.Volume exposing (view)
 
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import Model as M exposing (Model, Msg)
 import Route as Route exposing (Route)
 import View.Icon as Icon
 
 
-view : Model -> H.Html Msg
+view : Model -> Html Msg
 view { volume, route } =
     if Route.isSpeechEnabled route then
-        H.div []
+        div []
             -- without a fixed width, the volume-off/low/high icons are all different widths
-            [ H.span [ A.style "display" "inline-block", A.style "width" "1em" ] [ Icon.fas (viewIconName volume) ]
-            , H.text " Speech volume: "
-            , H.input
-                [ A.name "volume"
-                , A.class "volume"
-                , A.type_ "range"
+            [ span [ style "display" "inline-block", style "width" "1em" ] [ Icon.fas (viewIconName volume) ]
+            , text " Speech volume: "
+            , input
+                [ name "volume"
+                , class "volume"
+                , type_ "range"
                 , A.min "0"
                 , A.max "100"
-                , A.value (String.fromInt volume)
-                , E.onInput M.InputVolume
+                , value (String.fromInt volume)
+                , onInput M.InputVolume
                 ]
                 []
             ]
 
     else
-        H.div [] []
+        div [] []
 
 
 viewIconName : Int -> String

@@ -16,8 +16,8 @@ module Route exposing
     , timerParams0
     )
 
-import Html as H
-import Html.Attributes as A
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
 import Http
 import ISO8601
 import Maybe.Extra
@@ -296,7 +296,7 @@ stringify route =
             "#" ++ (loc.fragment |> Maybe.withDefault "")
 
 
-href : Route -> H.Attribute msg
+href : Route -> Attribute msg
 href =
     A.href << stringify
 

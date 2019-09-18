@@ -4,9 +4,9 @@ module View.Home exposing (formatBytes, formatDuration, formatSideAreaType, mask
 -- called from other pages. I should really clean it up and find these a new home.
 
 import Dict
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import ISO8601
 import Mapwatch as Mapwatch exposing (Model, Msg(..))
 import Mapwatch.Instance as Instance exposing (Instance)
@@ -21,25 +21,25 @@ import View.Nav
 import View.Setup
 
 
-viewMaybeInstance : Route.HistoryParams -> Maybe Instance -> H.Html msg
+viewMaybeInstance : Route.HistoryParams -> Maybe Instance -> Html msg
 viewMaybeInstance qs instance =
     case instance of
         Just (Instance.Instance i) ->
             if Zone.isMap i.zone then
                 -- TODO preserve before/after
-                H.a [ Route.href <| Route.History { qs | search = Just i.zone }, A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
+                a [ Route.href <| Route.History { qs | search = Just i.zone }, title i.addr ] [ Icon.mapOrBlank i.zone, text i.zone ]
 
             else
-                H.span [ A.title i.addr ] [ H.text i.zone ]
+                span [ title i.addr ] [ text i.zone ]
 
         Just Instance.MainMenu ->
-            H.span [] [ H.text "(none)" ]
+            span [] [ text "(none)" ]
 
         Nothing ->
-            H.span [] [ H.text "(none)" ]
+            span [] [ text "(none)" ]
 
 
-viewInstance : Route.HistoryParams -> Instance -> H.Html msg
+viewInstance : Route.HistoryParams -> Instance -> Html msg
 viewInstance qs =
     Just >> viewMaybeInstance qs
 
@@ -100,14 +100,14 @@ formatDuration dur =
     sign ++ String.join ":" (dpad ++ hpad ++ [ pad0 2 m, pad0 2 s ])
 
 
-viewParseError : Maybe LogLine.ParseError -> H.Html msg
+viewParseError : Maybe LogLine.ParseError -> Html msg
 viewParseError err =
     case err of
         Nothing ->
-            H.div [] []
+            div [] []
 
         Just err_ ->
-            H.div [] [ H.text <| "Log parsing error: " ++ LogLine.parseErrorToString err_ ]
+            div [] [ text <| "Log parsing error: " ++ LogLine.parseErrorToString err_ ]
 
 
 formatBytes : Int -> String
@@ -147,19 +147,19 @@ formatBytes b =
     places 2 val ++ unit
 
 
-viewProgress : Mapwatch.Progress -> H.Html msg
+viewProgress : Mapwatch.Progress -> Html msg
 viewProgress p =
     if Mapwatch.isProgressDone p then
-        H.div [] [ H.br [] [], H.text <| "Processed " ++ formatBytes p.max ++ " in " ++ String.fromFloat (toFloat (Mapwatch.progressDuration p) / 1000) ++ "s" ]
+        div [] [ br [] [], text <| "Processed " ++ formatBytes p.max ++ " in " ++ String.fromFloat (toFloat (Mapwatch.progressDuration p) / 1000) ++ "s" ]
 
     else if p.max <= 0 then
-        H.div [] [ Icon.fasPulse "spinner" ]
+        div [] [ Icon.fasPulse "spinner" ]
 
     else
-        H.div []
-            [ H.progress [ A.value (String.fromInt p.val), A.max (String.fromInt p.max) ] []
-            , H.div []
-                [ H.text <|
+        div []
+            [ progress [ value (String.fromInt p.val), A.max (String.fromInt p.max) ] []
+            , div []
+                [ text <|
                     formatBytes p.val
                         ++ " / "
                         ++ formatBytes p.max
@@ -174,7 +174,7 @@ viewProgress p =
             ]
 
 
-viewDate : Time.Posix -> H.Html msg
+viewDate : Time.Posix -> Html msg
 viewDate d =
     let
         i =
@@ -203,8 +203,8 @@ viewDate d =
                     ]
                 ]
     in
-    H.span [ A.title (ISO8601.toString i) ]
-        [ H.text timestamp ]
+    span [ title (ISO8601.toString i) ]
+        [ text timestamp ]
 
 
 formatSideAreaType : Instance -> Maybe String
@@ -220,36 +220,36 @@ formatSideAreaType instance =
             Just <| "Elder Guardian: The " ++ Zone.guardianToString guardian
 
 
-viewSideAreaName : Route.HistoryParams -> Instance -> H.Html msg
+viewSideAreaName : Route.HistoryParams -> Instance -> Html msg
 viewSideAreaName qs instance =
     case formatSideAreaType instance of
         Nothing ->
             viewInstance qs instance
 
         Just str ->
-            H.span [] [ H.text <| str ++ " (", viewInstance qs instance, H.text ")" ]
+            span [] [ text <| str ++ " (", viewInstance qs instance, text ")" ]
 
 
-maskedText : String -> H.Html msg
+maskedText : String -> Html msg
 maskedText str =
     -- This text is hidden on the webpage, but can be copypasted. Useful for formatting shared text.
-    H.span [ A.style "opacity" "0", A.style "font-size" "0", A.style "white-space" "pre" ] [ H.text str ]
+    span [ style "opacity" "0", style "font-size" "0", style "white-space" "pre" ] [ text str ]
 
 
 selfUrl =
     "https://mapwatch.github.io"
 
 
-viewHeader : H.Html msg
+viewHeader : Html msg
 viewHeader =
-    H.div []
-        [ H.h1 [ A.class "title" ]
+    div []
+        [ h1 [ class "title" ]
             [ maskedText "["
 
-            -- , H.a [ A.href "./" ] [ Icon.fas "tachometer-alt", H.text " Mapwatch" ]
-            , H.a [ A.href "#/" ] [ H.text " Mapwatch" ]
+            -- , a [ href "./" ] [ Icon.fas "tachometer-alt", text " Mapwatch" ]
+            , a [ href "#/" ] [ text " Mapwatch" ]
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
-        , H.small []
-            [ H.text " - automatically time your Path of Exile map clears" ]
+        , small []
+            [ text " - automatically time your Path of Exile map clears" ]
         ]

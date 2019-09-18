@@ -1,8 +1,8 @@
 module View.Util exposing (hidePreLeagueButton, leagueDate, leagueName, pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
 
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import ISO8601
 import Mapwatch exposing (Model, Msg)
 import Regex
@@ -16,14 +16,14 @@ roundToPlaces p n =
     (n * (10 ^ p) |> round |> toFloat) / (10 ^ p)
 
 
-viewSearch : List (H.Attribute msg) -> (String -> msg) -> Maybe String -> H.Html msg
+viewSearch : List (Attribute msg) -> (String -> msg) -> Maybe String -> Html msg
 viewSearch attrs msg search =
-    H.span [ A.class "search-form search-text" ]
-        [ H.input
-            ([ A.value <| Maybe.withDefault "" search
-             , A.type_ "text"
-             , A.tabindex 1
-             , E.onInput msg
+    span [ class "search-form search-text" ]
+        [ input
+            ([ value <| Maybe.withDefault "" search
+             , type_ "text"
+             , tabindex 1
+             , onInput msg
              ]
                 ++ attrs
             )
@@ -32,7 +32,7 @@ viewSearch attrs msg search =
         ]
 
 
-viewGoalForm : (Maybe String -> msg) -> { a | goal : Maybe String, after : Maybe b, enableGoals : Bool } -> H.Html msg
+viewGoalForm : (Maybe String -> msg) -> { a | goal : Maybe String, after : Maybe b, enableGoals : Bool } -> Html msg
 viewGoalForm onChange0 qs =
     let
         sessionName =
@@ -51,7 +51,7 @@ viewGoalForm onChange0 qs =
                             Nothing
 
                         else
-                            Just ( [ A.selected True ], [ H.input [ A.type_ "text", E.onInput onChange, A.value dur, A.placeholder "\"5:00\" or \"300\" or \"5m 0s\"" ] [] ] )
+                            Just ( [ selected True ], [ input [ type_ "text", onInput onChange, value dur, placeholder "\"5:00\" or \"300\" or \"5m 0s\"" ] [] ] )
                     )
                     qs.goal
 
@@ -64,20 +64,20 @@ viewGoalForm onChange0 qs =
                     Just str
     in
     if qs.enableGoals then
-        H.span [ A.class "search-form search-goal" ]
-            [ H.select [ E.onInput onChange ]
-                [ H.option [ A.selected <| qs.goal == Nothing || qs.goal == Just "none", A.value "none" ] [ H.text "No time goal" ]
-                , H.option [ A.selected <| qs.goal == Just "best-session", A.value "best-session" ] [ H.text <| "Goal: " ++ sessionName ++ " best" ]
-                , H.option [ A.selected <| qs.goal == Just "best", A.value "best" ] [ H.text <| "Goal: all-time best" ]
-                , H.option [ A.selected <| qs.goal == Just "mean-session", A.value "mean-session" ] [ H.text <| "Goal: " ++ sessionName ++ " average" ]
-                , H.option [ A.selected <| qs.goal == Just "mean", A.value "mean" ] [ H.text <| "Goal: all-time average" ]
-                , H.option (optExactly ++ [ A.value "" ]) [ H.text "Goal: exactly..." ]
+        span [ class "search-form search-goal" ]
+            [ select [ onInput onChange ]
+                [ option [ selected <| qs.goal == Nothing || qs.goal == Just "none", value "none" ] [ text "No time goal" ]
+                , option [ selected <| qs.goal == Just "best-session", value "best-session" ] [ text <| "Goal: " ++ sessionName ++ " best" ]
+                , option [ selected <| qs.goal == Just "best", value "best" ] [ text <| "Goal: all-time best" ]
+                , option [ selected <| qs.goal == Just "mean-session", value "mean-session" ] [ text <| "Goal: " ++ sessionName ++ " average" ]
+                , option [ selected <| qs.goal == Just "mean", value "mean" ] [ text <| "Goal: all-time average" ]
+                , option (optExactly ++ [ value "" ]) [ text "Goal: exactly..." ]
                 ]
-            , H.span [] exactly
+            , span [] exactly
             ]
 
     else
-        H.span [] []
+        span [] []
 
 
 pluralize : String -> String -> number -> String
@@ -98,17 +98,17 @@ leagueDate =
     "2019-09-06T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix
 
 
-hidePreLeagueButton : (Time.Posix -> Route) -> H.Html msg
+hidePreLeagueButton : (Time.Posix -> Route) -> Html msg
 hidePreLeagueButton route =
     case leagueDate of
         Err err ->
-            H.pre [] [ H.text err ]
+            pre [] [ text err ]
 
         Ok date ->
-            H.a [ A.class "button", Route.href <| route date ] [ Icon.fas "calendar", H.text <| " Hide pre-" ++ leagueName ++ " maps" ]
+            a [ class "button", Route.href <| route date ] [ Icon.fas "calendar", text <| " Hide pre-" ++ leagueName ++ " maps" ]
 
 
-viewDateSearch : ({ after : Maybe Time.Posix, before : Maybe Time.Posix } -> Route) -> { a | before : Maybe Time.Posix, after : Maybe Time.Posix } -> H.Html msg
+viewDateSearch : ({ after : Maybe Time.Posix, before : Maybe Time.Posix } -> Route) -> { a | before : Maybe Time.Posix, after : Maybe Time.Posix } -> Html msg
 viewDateSearch route qs =
     let
         href0 =
@@ -121,7 +121,7 @@ viewDateSearch route qs =
                     ]
 
                 Just _ ->
-                    [ H.a [ A.class "button", Route.href <| route { href0 | after = Nothing } ] [ Icon.fas "eye", H.text " Unhide all" ]
+                    [ a [ class "button", Route.href <| route { href0 | after = Nothing } ] [ Icon.fas "eye", text " Unhide all" ]
                     ]
     in
-    H.span [ A.class "search-form search-date" ] buttons
+    span [ class "search-form search-date" ] buttons

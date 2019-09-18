@@ -1,17 +1,17 @@
 module View.NotFound exposing (view)
 
-import Html as H
-import Html.Attributes as A
-import Html.Events as E
+import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
+import Html.Events as E exposing (..)
 import Route
 import View.Home
 import View.Nav
 
 
-view : H.Html msg
+view : Html msg
 view =
-    H.div []
+    div []
         [ View.Home.viewHeader
         , View.Nav.view Nothing
-        , H.text "404"
+        , text "404"
         ]
