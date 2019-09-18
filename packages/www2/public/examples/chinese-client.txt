@@ -1,0 +1,20 @@
+# I wrote this one by hand. It's not a real client.txt. I also don't understand chinese, so included English notes here that mapwatch's parser will ignore.
+# http://localhost:8000/?tickStart=1526242394000&example=chinese-client.txt#/
+2018/05/13 16:05:38 ***** LOG FILE OPENING *****
+# oriath:
+2018/05/13 16:10:08 1795218 d8 [INFO Client 1636] Connecting to instance server at 169.63.67.235:6112
+2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] : 你已進入：奧瑞亞。
+# hideout 1:
+2018/05/13 16:11:08 1795218 d8 [INFO Client 1636] Connecting to instance server at 169.63.67.235:6112
+2018/05/13 16:11:14 1801062 9b0 [INFO Client 1636] : 你已進入：藏身處 - 海岸（小）。
+# lookout map 1:
+2018/05/13 16:11:08 1795218 d8 [INFO Client 1636] Connecting to instance server at 169.63.67.235:6112
+2018/05/13 16:11:14 1801062 9b0 [INFO Client 1636] : 你已進入：如履危牆。
+# hideout 2:
+2018/05/13 16:12:08 1795218 d8 [INFO Client 1636] Connecting to instance server at 169.63.67.236:6112
+2018/05/13 16:12:14 1801062 9b0 [INFO Client 1636] : 你已進入：藏身處 - 海岸（小）。
+# lookout map 2:
+2018/05/13 16:13:08 1795218 d8 [INFO Client 1636] Connecting to instance server at 169.63.67.236:6112
+2018/05/13 16:13:14 1801062 9b0 [INFO Client 1636] : 你已進入：如履危牆。
+# expected state is one map done, another map currently running.
+# TODO: this should be a unit test!
