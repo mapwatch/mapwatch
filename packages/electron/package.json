@@ -38,9 +38,7 @@
       "target": "AppImage",
       "category": "Utility"
     },
-    "appImage": {
-      "systemIntegration": "doNotAsk"
-    },
+    "appImage": {},
     "win": {
       "icon": "node_modules/@mapwatch/www/dist/favicon.jpeg"
     },
