@@ -41,32 +41,26 @@ isOffline v =
 
 initSince : Instance.State -> Time.Posix -> Visit
 initSince before leftAt =
-    case before.joinedAt of
+    { instance = before.val, joinedAt = before.joinedAt, leftAt = leftAt }
+
+
+tryInit : Maybe Instance.State -> Instance.State -> Maybe Visit
+tryInit mbefore after =
+    case mbefore of
         Nothing ->
-            Debug.todo <| "Visit.initSince: joinedAt should always be defined, but it's not." ++ Debug.toString { before = before, leftAt = leftAt }
+            Nothing
 
-        Just joinedAt ->
-            { instance = before.val, joinedAt = joinedAt, leftAt = leftAt }
+        Just before ->
+            if before.val == after.val && before.joinedAt == after.joinedAt then
+                Nothing
 
-
-tryInit : Instance.State -> Instance.State -> Maybe Visit
-tryInit before after =
-    if before.val == after.val && before.joinedAt == after.joinedAt then
-        Nothing
-
-    else
-        case after.joinedAt of
-            Nothing ->
-                Debug.todo <| "Visit.tryInit: leftAt should always be defined, but it's not." ++ Debug.toString { before = before, after = after }
-
-            Just leftAt ->
-                -- With no log-lines processed, the first instance has no joinedAt.
-                -- Don't create a Visit for that one.
-                before.joinedAt
-                    |> Maybe.map
-                        (\joinedAt ->
-                            { instance = before.val
-                            , joinedAt = joinedAt
-                            , leftAt = leftAt
-                            }
-                        )
+            else
+                let
+                    leftAt =
+                        after.joinedAt
+                in
+                Just
+                    { instance = before.val
+                    , joinedAt = before.joinedAt
+                    , leftAt = leftAt
+                    }

@@ -5,6 +5,7 @@ module Mapwatch.Instance exposing
     , State
     , duration
     , init
+    , initOrUpdate
     , isDurationOffline
     , isMap
     , isOffline
@@ -19,7 +20,7 @@ import Duration exposing (Millis)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Zone as Zone
 import Maybe.Extra
-import Time
+import Time exposing (Posix)
 
 
 
@@ -44,15 +45,15 @@ type Builder
 
 type alias State =
     { val : Instance
-    , joinedAt : Maybe Time.Posix -- Nothing if no loglines have been processed yet
+    , joinedAt : Time.Posix
     , next : Builder
     }
 
 
-init : State
-init =
+init : Posix -> State
+init t =
     -- initial-date is awkward, only Nothing on init, but we need to be able to tell the difference
-    { val = MainMenu, joinedAt = Nothing, next = Empty }
+    { val = MainMenu, joinedAt = t, next = Empty }
 
 
 unwrap : a -> (Address -> a) -> Instance -> a
@@ -81,9 +82,9 @@ isMap =
     unwrap False (Zone.isMap << .zone)
 
 
-duration : Time.Posix -> State -> Maybe Millis
+duration : Time.Posix -> State -> Millis
 duration now state =
-    Maybe.map (\at -> Time.posixToMillis now - Time.posixToMillis at) state.joinedAt
+    Time.posixToMillis now - Time.posixToMillis state.joinedAt
 
 
 offlineThreshold : Millis
@@ -99,7 +100,17 @@ isDurationOffline dur =
 
 isOffline : Time.Posix -> State -> Bool
 isOffline now instance =
-    isDurationOffline <| Maybe.withDefault 0 <| duration now instance
+    isDurationOffline <| duration now instance
+
+
+initOrUpdate : LogLine.Line -> Maybe State -> State
+initOrUpdate line instance =
+    case instance of
+        Just i ->
+            update line i
+
+        Nothing ->
+            init line.date |> update line
 
 
 update : LogLine.Line -> State -> State
@@ -115,7 +126,7 @@ update line state =
 
         ( Connecting addr, LogLine.YouHaveEntered zone_ ) ->
             -- step 2
-            { val = Instance { zone = zone_, addr = addr }, joinedAt = Just line.date, next = Empty }
+            { val = Instance { zone = zone_, addr = addr }, joinedAt = line.date, next = Empty }
 
         ( Connecting _, LogLine.ConnectingToInstanceServer addr ) ->
             -- two "connecting" messages - should never happen, but trust the most recent one
@@ -123,7 +134,7 @@ update line state =
 
         ( _, LogLine.Opening ) ->
             -- the game crashed and was just reopened, reset the instance
-            { init | joinedAt = Just line.date }
+            init line.date
 
         _ ->
             -- ignore everything else

@@ -37,7 +37,7 @@ type alias Progress =
 type alias Model =
     { progress : Maybe Progress
     , parseError : Maybe LogLine.ParseError
-    , instance : Instance.State
+    , instance : Maybe Instance.State
     , runState : Run.State
     , runs : List Run.Run
     }
@@ -52,7 +52,7 @@ initModel : Model
 initModel =
     { parseError = Nothing
     , progress = Nothing
-    , instance = Instance.init
+    , instance = Nothing
     , runState = Run.Empty
     , runs = []
     }
@@ -67,7 +67,7 @@ updateLine : LogLine.Line -> Model -> ( Model, Cmd Msg )
 updateLine line model =
     let
         instance =
-            Instance.update line model.instance
+            Instance.initOrUpdate line model.instance
 
         visit =
             Visit.tryInit model.instance instance
@@ -84,19 +84,19 @@ updateLine line model =
                     model.runs
 
         cmd =
-            if instance.joinedAt == model.instance.joinedAt then
-                Cmd.none
+            case model.instance of
+                Nothing ->
+                    Cmd.none
 
-            else
-                case instance.joinedAt of
-                    Nothing ->
+                Just i ->
+                    if instance.joinedAt == i.joinedAt then
                         Cmd.none
 
-                    Just joinedAt ->
-                        Ports.sendJoinInstance joinedAt instance.val visit runState lastRun
+                    else
+                        Ports.sendJoinInstance instance.joinedAt instance.val visit runState lastRun
     in
     ( { model
-        | instance = instance
+        | instance = Just instance
 
         -- , visits = Maybe.Extra.unwrap model.visits (\v -> v :: model.visits) visit
         , runState = runState
@@ -108,19 +108,25 @@ updateLine line model =
 
 tick : Time.Posix -> Model -> Model
 tick t model =
-    let
-        ( runState, lastRun ) =
-            Run.tick t model.instance model.runState
+    case model.instance of
+        Nothing ->
+            -- no loglines processed yet, no need to tick
+            model
 
-        runs =
-            case lastRun of
-                Just lastRun_ ->
-                    lastRun_ :: model.runs
+        Just instance ->
+            let
+                ( runState, lastRun ) =
+                    Run.tick t instance model.runState
 
-                Nothing ->
-                    model.runs
-    in
-    { model | runState = runState, runs = runs }
+                runs =
+                    case lastRun of
+                        Just lastRun_ ->
+                            lastRun_ :: model.runs
+
+                        Nothing ->
+                            model.runs
+            in
+            { model | runState = runState, runs = runs }
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )

@@ -10,7 +10,7 @@ import Model as Model exposing (Model, Msg)
 import Route
 import Time
 import View.History
-import View.Home exposing (formatDuration, formatSideAreaType, maskedText, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
+import View.Home exposing (formatDuration, formatSideAreaType, maskedText, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewParseError, viewProgress, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
 import View.Setup
@@ -143,7 +143,7 @@ viewMain qs model =
                 , H.tr []
                     [ H.td [] [ H.text "Last entered: " ]
                     , H.td []
-                        [ viewInstance hqs model.mapwatch.instance.val
+                        [ viewMaybeInstance hqs <| Maybe.map .val model.mapwatch.instance
                         , H.small [ A.style "opacity" "0.5" ]
                             [ H.text " ("
                             , H.text <| View.History.formatMaybeDuration sinceLastUpdated

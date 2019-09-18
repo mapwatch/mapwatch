@@ -620,27 +620,32 @@ tick now instance_ state =
                 ( state, Nothing )
 
 
-current : Time.Posix -> Instance.State -> State -> Maybe Run
-current now instance_ state =
-    let
-        visitResult v =
-            case update instance_ (Just v) state of
-                ( _, Just run ) ->
-                    Just run
-
-                ( Running run, _ ) ->
-                    Just run
-
-                _ ->
-                    Nothing
-    in
-    case state of
-        Empty ->
+current : Time.Posix -> Maybe Instance.State -> State -> Maybe Run
+current now minstance_ state =
+    case minstance_ of
+        Nothing ->
             Nothing
 
-        _ ->
-            Visit.initSince instance_ now
-                |> visitResult
+        Just instance_ ->
+            let
+                visitResult v =
+                    case update instance_ (Just v) state of
+                        ( _, Just run ) ->
+                            Just run
+
+                        ( Running run, _ ) ->
+                            Just run
+
+                        _ ->
+                            Nothing
+            in
+            case state of
+                Empty ->
+                    Nothing
+
+                _ ->
+                    Visit.initSince instance_ now
+                        |> visitResult
 
 
 update : Instance.State -> Maybe Visit -> State -> ( State, Maybe Run )
@@ -662,13 +667,7 @@ update instance_ mvisit state =
                     if Instance.isMap instance_.val && Visit.isTown visit then
                         -- when not running, entering a map from town starts a run.
                         -- TODO: Non-town -> Map could be a Zana mission - skip for now, takes more special-casing
-                        case instance_.joinedAt of
-                            Just at ->
-                                Started at
-
-                            Nothing ->
-                                -- TODO change the Instance.State type to prevent this
-                                Debug.todo <| "instance.state has {val=notnull, joinedAt=null}: " ++ Debug.toString instance_
+                        Started instance_.joinedAt
 
                     else
                         -- ...and *only* entering a map. Ignore non-maps while not running.
