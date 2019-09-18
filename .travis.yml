@@ -72,7 +72,7 @@ deploy:
     skip_cleanup: true
     repo: mapwatch/mapwatch.github.io
     target-branch: master # github-pages: user pages use the master branch, not gh-pages branch
-    local_dir: packages/www/dist/
+    local_dir: packages/www/build/
     github_token: $GITHUB_TOKEN
     #keep_history: true
     on:
@@ -83,7 +83,6 @@ deploy:
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: mapwatch.erosson.org
     region: us-east-1
-    local_dir: packages/www/dist/
+    local_dir: packages/www/build/
     on:
       branch: master
-
