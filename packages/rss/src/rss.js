@@ -3,7 +3,7 @@ const {promisify} = require('util')
 const fs = require('fs')
 const parseChangelog = require('./changelog-md')
 
-const hostname = 'https://mapwatch.github.io'
+const hostname = 'https://mapwatch.erosson.org'
 // promisify(fs.readFile)('./example-CHANGELOG.md')
 promisify(fs.readFile)('../../CHANGELOG.md')
 .then(parseChangelog({limit: 20}))

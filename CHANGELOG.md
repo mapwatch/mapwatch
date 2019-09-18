@@ -4,11 +4,12 @@ All substantial Mapwatch changes.
 
 ## [Unreleased]
 ### Beta/experimental
-- [Speech](https://mapwatch.github.io?enableSpeech=1)
+- [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
 ## 2019-09-18
-- Refactored and compressed website code. Should be no visible changes.
+- Website moved to [mapwatch.erosson.org](https://mapwatch.erosson.org). The old github.io site will automatically send you here.
+- Refactored and compressed website code. Things might run a little faster, but otherwise, this should cause no visible changes.
 
 ## 2019-09-04
 - Updated "hide pre-Legion maps" button for Blight league.
@@ -44,13 +45,13 @@ All substantial Mapwatch changes.
 - All new hideouts in PoEDB, even the secret ones, should now behave correctly.
 
 ## 2018-12-09
-- The beta/experimental [speech feature](https://mapwatch.github.io?enableSpeech=1) now has a volume setting. Second try, oops - now it only appears when speech is enabled.
+- The beta/experimental [speech feature](https://mapwatch.erosson.org?enableSpeech=1) now has a volume setting. Second try, oops - now it only appears when speech is enabled.
 - The new hideouts from Helena's hideout list should now behave correctly.
 
 ## 2018-12-07
 - Updated "hide pre-Delve maps" button for Betrayal.
 - Updated [map names, map icons](https://www.pathofexile.com/forum/view-thread/2254801/page/1#p15971585), and [map tiers](https://www.pathofexile.com/forum/view-thread/2253540) for Betrayal. Thanks for the heads up, GGG!
-- ~~The beta/experimental [speech feature](https://mapwatch.github.io?enableSpeech=1) now has a volume setting.~~
+- ~~The beta/experimental [speech feature](https://mapwatch.erosson.org?enableSpeech=1) now has a volume setting.~~
 
 ## 2018-09-16
 - The Hall of Grandmasters should now be tracked correctly.
@@ -63,20 +64,20 @@ All substantial Mapwatch changes.
 - Updated "hide pre-Incursion maps" button for Delve.
 
 ## 2018-07-04
-- The [overlay view](https://mapwatch.github.io/#/overlay) is no longer experimental, and is now linked from the timer.
+- The [overlay view](https://mapwatch.erosson.org/#/overlay) is no longer experimental, and is now linked from the timer.
 - Goals/time-differences are no longer experimental. Find them at the top of the timer and history pages.
 
 ## 2018-07-03
-- Redesigned this changelog. You can now be notified of changes via [RSS](https://mapwatch.github.io/rss.xml) or [email](https://feedburner.google.com/fb/a/mailverify?uri=mapwatch).
+- Redesigned this changelog. You can now be notified of changes via [RSS](https://mapwatch.erosson.org/rss.xml) or [email](https://feedburner.google.com/fb/a/mailverify?uri=mapwatch).
 
 ## 2018-06-30
 - The Apex of Sacrifice, The Alluring Abyss, The Pale Court, and The Shaper's Realm are now tracked.
-- Added an [experimental speech feature](https://mapwatch.github.io?enableSpeech=1).
+- Added an [experimental speech feature](https://mapwatch.erosson.org?enableSpeech=1).
 
 ## 2018-06-09
 - The Temple of Atzoatl is now tracked when entered from your hideout.
 - Zana dailies now have an icon.
-- Added an [experimental overlay view](https://mapwatch.github.io/#/overlay). This minimal view aims to be better for streaming, or playing on only one monitor.
+- Added an [experimental overlay view](https://mapwatch.erosson.org/#/overlay). This minimal view aims to be better for streaming, or playing on only one monitor.
 
 ## 2018-06-01
 - Added a "hide pre-Incursion maps" button.
@@ -85,13 +86,13 @@ All substantial Mapwatch changes.
 - Session tracking's now available for everyone.
 
 ## 2018-05-28
-- Created an experimental time-goals/splitting feature. Hidden by default. Beta: may change/disappear. [Feel free to try it out.](https://mapwatch.github.io?enableGoals=1)
+- Created an experimental time-goals/splitting feature. Hidden by default. Beta: may change/disappear. [Feel free to try it out.](https://mapwatch.erosson.org?enableGoals=1)
 
 ## 2018-05-25
 - Created this changelog.
 - Broke existing urls for search. (It's soon enough that I don't expect it to bother anyone.)
-- Created an experimental session-tracking feature. Hidden by default. Beta: may change/disappear. [Feel free to try it out.](https://mapwatch.github.io?enableSession=1)
-- Added basic support for [Chinese-language log files](https://mapwatch.github.io?tickStart=1526242394000&example=chinese-client.txt). [Want your language supported?](https://github.com/mapwatch/mapwatch/issues/12)
+- Created an experimental session-tracking feature. Hidden by default. Beta: may change/disappear. [Feel free to try it out.](https://mapwatch.erosson.org?enableSession=1)
+- Added basic support for [Chinese-language log files](https://mapwatch.erosson.org?tickStart=1526242394000&example=chinese-client.txt). [Want your language supported?](https://github.com/mapwatch/mapwatch/issues/12)
 
 ## 2018-05-23
 - Initial release and [announcement](https://www.reddit.com/r/pathofexile/comments/8lnctd/mapwatch_a_new_tool_to_automatically_time_your/).

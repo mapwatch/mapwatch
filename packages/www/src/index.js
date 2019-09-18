@@ -5,6 +5,11 @@ import { Elm } from './Main.elm';
 import registerServiceWorker from './registerServiceWorker';
 import * as analytics from './analytics'
 
+// redirect from old host to new host
+if (document.location.host === 'mapwatch.github.io') {
+  document.location.host = 'mapwatch.erosson.org'
+}
+
 function parseQS(search) {
   var qs = (search||'').split('?')[1]
   var pairs = (qs||'').split('&')

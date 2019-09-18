@@ -237,7 +237,7 @@ maskedText str =
 
 
 selfUrl =
-    "https://mapwatch.github.io"
+    "https://mapwatch.erosson.org"
 
 
 viewHeader : Html msg

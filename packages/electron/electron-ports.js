@@ -27,7 +27,7 @@ const app = Elm.Main.init({
     tickOffset: tickOffset,
     isBrowserSupported: !!window.FileReader,
     platform: 'electron',
-    hostname: 'https://mapwatch.github.io',
+    hostname: 'https://mapwatch.erosson.org',
     url: toElmUrl(location.href),
   }
 })

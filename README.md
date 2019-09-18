@@ -1,4 +1,4 @@
-# [Mapwatch](https://mapwatch.github.io)
+# [Mapwatch](https://mapwatch.erosson.org)
 
 [![Build Status](https://travis-ci.org/mapwatch/mapwatch.svg?branch=master)](https://travis-ci.org/mapwatch/mapwatch)
 
@@ -6,7 +6,7 @@ Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file,
 
 Then, [if you're using Google Chrome](https://chrome.google.com), leave me open while you play - I'll keep watching, no need to upload again.
 
-[Run an example now!](https://mapwatch.github.io?tickStart=1526941861000&example=stripped-client.txt#/)
+[Run an example now!](https://mapwatch.erosson.org?tickStart=1526941861000&example=stripped-client.txt#/)
 
 Or, screenshots (slightly outdated):
 
