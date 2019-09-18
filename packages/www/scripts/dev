@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-yarn run build
-yarn run _build:dev
-
-concurrently --raw \
-  "budo --port 8000 --dir ./.dev --live --open" \
-  "yarn build:watch"

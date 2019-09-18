@@ -1,30 +1,26 @@
 {
   "name": "@mapwatch/www",
   "version": "1.0.0",
-  "main": "dist/elm.js",
+  "main": "build/elm.js",
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "_build:assets": "scripty",
     "_build:version": "scripty",
-    "_build:elm": "scripty",
-    "_build:dev": "scripty",
-    "build:watch": "scripty",
-    "build": "scripty",
-    "dev": "scripty",
-    "start": "yarn build && serve ./dist",
-    "clean": "rimraf ./dist ./.dev *.log"
+    "_build:elm": "elm make src/Main.elm --optimize --output=build/elm.js",
+    "build": "yarn _build:version && elm-app build && yarn _build:elm",
+    "start": "yarn _build:version && ELM_DEBUGGER=false elm-app start",
+    "//test": "elm-app test",
+    "clean": "rm -rf build public/rss.xml public/CHANGELOG.md public/version.txt"
   },
   "dependencies": {
     "@mapwatch/lib": "1.0.0",
     "@mapwatch/rss": "1.0.0"
   },
   "devDependencies": {
-    "budo": "^11.6.3",
-    "chokidar-cli": "^1.2.0",
-    "concurrently": "^3.5.1",
-    "elm": "^0.19.0-bugfix2",
+    "@fortawesome/fontawesome-free": "^5.11.0",
+    "create-elm-app": "^3.0.3",
     "rimraf": "^2.6.2",
+    "sakura.css": "^1.0.0",
     "scripty": "^1.7.2"
   }
 }

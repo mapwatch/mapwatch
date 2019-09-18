@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-mkdir -p dist
-rsync -auv --quiet ./assets/ ./dist/

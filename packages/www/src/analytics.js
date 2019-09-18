@@ -16,11 +16,11 @@ var gaDimensions = {
   appVersion: 'dimension1',
   platform: 'dimension2',
 }
-export function version (ver) {
+module.exports.version = function version (ver) {
   console.log('version', ver)
   gtag('set', gaDimensions.appVersion, ver);
 }
-export function main (app, platform) {
+module.exports.main = function main (app, platform) {
   gtag('set', gaDimensions.platform, platform)
   var isWatching = false
   var historyStats = {instanceJoins: 0, mapRuns: 0}

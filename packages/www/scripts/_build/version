@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 (cd ../rss && yarn build)
-cp ../../CHANGELOG.md ../rss/dist/*.xml ./dist/
-echo `printf %06d $(git rev-list --count HEAD)`-`git describe --always --dirty` > dist/version.txt
+cp ../../CHANGELOG.md ../rss/dist/*.xml ./public/
+echo `printf %06d $(git rev-list --count HEAD)`-`git describe --always --dirty` > public/version.txt

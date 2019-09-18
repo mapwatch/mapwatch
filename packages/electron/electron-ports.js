@@ -6,6 +6,7 @@ const {Elm} = require('@mapwatch/www')
 const Lib = require('@mapwatch/lib')
 const _ = require('lodash/fp')
 const {promisify} = require('util')
+const analytics = require('@mapwatch/www/src/analytics.js')
 
 const loadedAt = Date.now()
 const qs = querystring.parse(document.location.search.slice(1))
@@ -19,7 +20,8 @@ function fromElmUrl(url) {
   return url.replace(/^https:\/\//, 'file:///')
 }
 const app = Elm.Main.init({
-  node: document.documentElement,
+  // node: document.documentElement,
+  node: document.getElementById('root'),
   flags : {
     loadedAt,
     tickOffset: tickOffset,
@@ -44,11 +46,11 @@ app.ports.replaceUrl.subscribe(function(url) {
 })
 
 analytics.main(app, 'electron')
-fetch('./node_modules/@mapwatch/www/dist/version.txt')
+fetch('./node_modules/@mapwatch/www/build/version.txt')
 .then(function(res) { return res.text() })
 .then(analytics.version)
 
-fetch('./node_modules/@mapwatch/www/dist/CHANGELOG.md')
+fetch('./node_modules/@mapwatch/www/build/CHANGELOG.md')
 .then(function(res) { return res.text() })
 .then(function(str) {
   console.log('fetched changelog', str.length)
@@ -83,7 +85,7 @@ if (qs.clear) {
 // load an example file
 if (qs.example) {
   console.log("fetching example file: ", qs.example, qs)
-  processFile(path.join(__dirname, './node_modules/@mapwatch/www/assets/examples', qs.example), 999 * MB)
+  processFile(path.join(__dirname, './node_modules/@mapwatch/www/public/examples', qs.example), 999 * MB)
 }
 // try to automatically load the log path, with no user interaction. Might fail.
 if (!qs.pathSelect) {

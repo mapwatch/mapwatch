@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-rm -rf ./dist
-yarn run _build:assets
-yarn run _build:version
-yarn run _build:elm

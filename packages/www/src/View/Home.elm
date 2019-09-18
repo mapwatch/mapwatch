@@ -1,4 +1,4 @@
-module View.Home exposing (formatBytes, formatDuration, formatSideAreaType, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
+module View.Home exposing (formatBytes, formatDuration, formatSideAreaType, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewParseError, viewProgress, viewSideAreaName)
 
 -- TODO: This used to be its own page. Now it's a graveyard of functions that get
 -- called from other pages. I should really clean it up and find these a new home.
@@ -21,10 +21,10 @@ import View.Nav
 import View.Setup
 
 
-viewInstance : Route.HistoryParams -> Instance -> H.Html msg
-viewInstance qs instance =
+viewMaybeInstance : Route.HistoryParams -> Maybe Instance -> H.Html msg
+viewMaybeInstance qs instance =
     case instance of
-        Instance.Instance i ->
+        Just (Instance.Instance i) ->
             if Zone.isMap i.zone then
                 -- TODO preserve before/after
                 H.a [ Route.href <| Route.History { qs | search = Just i.zone }, A.title i.addr ] [ Icon.mapOrBlank i.zone, H.text i.zone ]
@@ -32,8 +32,16 @@ viewInstance qs instance =
             else
                 H.span [ A.title i.addr ] [ H.text i.zone ]
 
-        Instance.MainMenu ->
+        Just Instance.MainMenu ->
             H.span [] [ H.text "(none)" ]
+
+        Nothing ->
+            H.span [] [ H.text "(none)" ]
+
+
+viewInstance : Route.HistoryParams -> Instance -> H.Html msg
+viewInstance qs =
+    Just >> viewMaybeInstance qs
 
 
 time =
