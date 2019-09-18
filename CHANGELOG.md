@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.github.io?enableSpeech=1)
 
 ---
+## 2019-09-18
+- Refactored and compressed website code. Should be no visible changes.
+
 ## 2019-09-04
 - Updated "hide pre-Legion maps" button for Blight league.
 - Updated map names/tiers for Blight league, based on [this post](https://www.reddit.com/r/pathofexile/comments/cx82nl/heres_a_preview_of_the_atlas_of_worlds_in_path_of/).
