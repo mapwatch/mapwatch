@@ -538,14 +538,15 @@ durationPerSideArea : Run -> List ( Instance.Address, Millis )
 durationPerSideArea run =
     durationPerInstance run
         |> List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance))
-        |> List.map
+        |> List.filterMap
             (\( i_, d ) ->
                 case i_ of
                     Instance.Instance i ->
-                        ( i, d )
+                        Just ( i, d )
 
                     Instance.MainMenu ->
-                        Debug.todo "Instance.isTown should have filtered this one"
+                        -- Debug.todo "Instance.isTown should have filtered this one"
+                        Nothing
             )
 
 
@@ -690,7 +691,8 @@ update instance_ mvisit state =
                                 ( Running run, Nothing )
 
                     else
-                        Debug.todo <| "A run's first visit should be a Map-zone, but it wasn't: " ++ Debug.toString visit
+                        -- Debug.todo <| "A run's first visit should be a Map-zone, but it wasn't: " ++ Debug.toString visit
+                        ( initRun, Nothing )
 
                 Running running ->
                     case push visit running of
