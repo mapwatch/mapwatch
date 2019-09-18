@@ -64,8 +64,20 @@ type Guardian
 
 
 guardianToString : Guardian -> String
-guardianToString =
-    Debug.toString
+guardianToString g =
+    -- Debug.toString g
+    case g of
+        Eradicator ->
+            "Eradicator"
+
+        Constrictor ->
+            "Constrictor"
+
+        Purifier ->
+            "Purifier"
+
+        Enslaver ->
+            "Enslaver"
 
 
 valkeys : val -> List String -> Dict.Dict String val

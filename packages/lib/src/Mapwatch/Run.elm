@@ -37,6 +37,7 @@ module Mapwatch.Run exposing
 import Dict
 import Dict.Extra
 import Duration exposing (Millis)
+import Mapwatch.Debug
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
@@ -45,7 +46,7 @@ import Time
 
 
 type alias Run =
-    { visits : List Visit, first : Visit, last : Visit, portals : Int }
+    { visits : List Visit, first : Visit, last : Visit, portals : Int, instance : Instance.Address }
 
 
 type State
@@ -60,18 +61,19 @@ init visit =
         Nothing
 
     else
-        Just { first = visit, last = visit, visits = [ visit ], portals = 1 }
+        case visit.instance of
+            Instance.MainMenu ->
+                -- this will never happen, because Visit.isMap would be false above
+                Nothing
+
+            Instance.Instance i ->
+                -- there's some redundancy in repeating instance here, but this guarantees it exists
+                Just { first = visit, last = visit, visits = [ visit ], portals = 1, instance = i }
 
 
 instance : Run -> Instance.Address
-instance run =
-    -- this is guaranteed because init checks for it
-    case run.first.instance of
-        Instance.MainMenu ->
-            Debug.todo "null-instance run"
-
-        Instance.Instance i ->
-            i
+instance =
+    .instance
 
 
 search : String -> List Run -> List Run
@@ -593,7 +595,7 @@ tick now instance_ state =
             if Instance.isOffline now instance_ then
                 -- we just went offline while in a map - end/discard the run
                 ( Empty, Nothing )
-                    |> Debug.log "Run.tick: Started -> offline"
+                    |> Mapwatch.Debug.log "Run.tick: Started -> offline"
 
             else
                 -- no changes
@@ -605,13 +607,13 @@ tick now instance_ state =
                 if Instance.isTown instance_.val then
                     -- they went offline in town - end the run, discarding the time in town.
                     ( Empty, Just run )
-                        |> Debug.log "Run.tick: Running<town> -> offline"
+                        |> Mapwatch.Debug.log "Run.tick: Running<town> -> offline"
 
                 else
                     -- they went offline in the map or a side area.
                     -- we can't know how much time they actually spent running before disappearing - discard the run.
                     ( Empty, Nothing )
-                        |> Debug.log "Run.tick: Running<not-town> -> offline"
+                        |> Mapwatch.Debug.log "Run.tick: Running<not-town> -> offline"
 
             else
                 -- no changes
