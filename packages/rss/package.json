@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "lodash": "^4.17.15",
-    "marked": "^0.4.0",
+    "marked": "^0.7.0",
     "rss": "^1.2.2"
   },
   "devDependencies": {
-    "rimraf": "^2.6.2"
+    "rimraf": "^3.0.0"
   }
 }

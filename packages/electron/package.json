@@ -64,15 +64,15 @@
   "dependencies": {
     "@mapwatch/lib": "1.0.0",
     "@mapwatch/www": "1.0.0",
-    "chokidar": "^2.0.4",
-    "electron-log": "^2.2.16",
-    "electron-updater": "^4.0.0",
+    "chokidar": "^3.1.0",
+    "electron-log": "^3.0.8",
+    "electron-updater": "^4.1.2",
     "lodash": "^4.17.15",
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "electron": "^2.0.0",
-    "electron-builder": "^20.28.2",
-    "rimraf": "^2.6.2"
+    "electron": "^6.0.9",
+    "electron-builder": "^21.2.0",
+    "rimraf": "^3.0.0"
   }
 }
