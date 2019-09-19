@@ -35,6 +35,10 @@ Developing:
 * create a production build of the website: `yarn build:www`
 * create a production build everything: `yarn build`
 
+# Using Mapwatch in your programs
+
+See #13 - if you'd like to see this, let's talk! Mapwatch is in Elm, so your program would need to run Javascript or Elm to embed Mapwatch.
+
 # Resources
 
 [Analytics: recent referral traffic (you probably don't have permissions)](https://analytics.google.com/analytics/web/#/report/trafficsources-referrals/a119582500w176920100p175689790/_u.dateOption=last7days&explorer-table.secSegmentId=analytics.fullReferrer&explorer-table.plotKeys=%5B%5D&explorer-graphOptions.primaryConcept=analytics.totalVisitors&explorer-graphOptions.compareConcept=analytics.newVisits&_.useg=builtin1/)
