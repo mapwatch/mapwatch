@@ -37,7 +37,7 @@ Developing:
 
 # Using Mapwatch in your programs
 
-See #13 - if you'd like to see this, let's talk! Mapwatch is in Elm, so your program would need to run Javascript or Elm to embed Mapwatch.
+See https://github.com/mapwatch/mapwatch/issues/13 - if you'd like to see this, let's talk! Mapwatch is in Elm, so your program would need to run Javascript or Elm to embed Mapwatch.
 
 # Resources
 
