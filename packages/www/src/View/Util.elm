@@ -90,12 +90,12 @@ pluralize one other n =
 
 
 leagueName =
-    "Blight"
+    "Metamorph"
 
 
 leagueDate : Result String Time.Posix
 leagueDate =
-    "2019-09-06T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix
+    "2019-12-13T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix
 
 
 hidePreLeagueButton : (Time.Posix -> Route) -> Html msg
