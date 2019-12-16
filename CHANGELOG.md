@@ -7,6 +7,10 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2019-12-13
+- Updated "hide pre-Blight maps" button for Metamorph league.
+- **Beware**: map names and tiers have *not* yet been updated. GGG didn't post them in advance this time, and I probably haven't unlocked the whole atlas yet; my play time's limited this time around. Mapwatch might be broken for a few days; sorry.
+
 ## 2019-09-18
 - Website moved to [mapwatch.erosson.org](https://mapwatch.erosson.org). The old github.io site will automatically send you here.
 - Refactored and compressed website code. Things might run a little faster, but otherwise, this should cause no visible changes.
