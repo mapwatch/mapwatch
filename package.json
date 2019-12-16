@@ -15,6 +15,7 @@
     "start:www": "yarn start",
     "start": "cd ./packages/www && yarn start",
     "build:www": "cd ./packages/www && yarn build",
+    "serve:www": "cd ./packages/www/build && serve",
     "lib:demo": "cd ./packages/lib && yarn demo",
     "lib:demo-raw-elm": "cd ./packages/lib && yarn demo-raw-elm",
     "//test": "TODO: these are just crude smoke tests. Write real unit tests. (They feel less necessary with elm's awesome type system, though.)",
