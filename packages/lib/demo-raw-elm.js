@@ -6,7 +6,8 @@ const path = require('path')
 const readline = require('readline')
 const loadedAt = Date.now()
 // TODO move this to a separate package, to demonstrate how a real import looks
-const mapwatch = require('./dist/elm').Main.worker()
+const mapwatch = require('./dist/elm').Elm.DemoMain.init()
+console.log(mapwatch)
 mapwatch.ports.events.subscribe(event => {
   // for this demo, simply log each event. Real library users will do something more interesting here
   console.log("new event", event)
@@ -16,9 +17,20 @@ function readFileSlice(path_, start, end, onClose) {
   const reader = readline.createInterface({input: fs.createReadStream(path_, {start, end})})
   reader.on('line', line => {
     // console.log('line', line)
-    mapwatch.ports.logline.send(line)
+    mapwatch.ports.logline.send({line: line, date: parseDate(line)})
   })
   if (onClose) reader.on('close', onClose)
+}
+function parseDate(line) {
+  // example: 2018/05/13 16:05:37
+  // we used to do this in elm, but as of 0.19 it's not possible
+  var match = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}/.exec(line)
+  if (!match) return null
+  var ymdhms = match[0].split(/[\/: ]/)
+  if (ymdhms.length !== 6) return null
+  var iso8601 = ymdhms.slice(0,3).join('-') + 'T' + ymdhms.slice(3,6).join(':')
+  // no Z suffix: use the default timezone
+  return new Date(iso8601).getTime()
 }
 function watch(path_, lastSize) {
   return fs.watch(path_, () => {
@@ -32,7 +44,7 @@ function watch(path_, lastSize) {
     })
   })
 }
-const path_ = path.join(__dirname,  "../www/assets/examples/stripped-client.txt")
+const path_ = path.join(__dirname,  "../www/public/examples/stripped-client.txt")
 fs.stat(path_, (err, stats) => {
   // TODO real error handling
   if (err) return console.error(err)
