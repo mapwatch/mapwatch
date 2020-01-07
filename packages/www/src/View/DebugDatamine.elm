@@ -19,18 +19,19 @@ view rdatamine =
                 [ tbody []
                     (datamine.worldAreas
                         |> Array.toList
-                        |> List.filter (\a -> a.isTown || a.isHideout || a.isMapArea || a.isUniqueMapArea)
+                        -- |> List.filter (\a -> a.isTown || a.isHideout || a.isMapArea || a.isUniqueMapArea)
                         |> List.map
                             (\w ->
                                 tr []
-                                    [ td []
+                                    [ td [ style "min-width" "1em", style "height" "1em" ]
                                         (case Mapwatch.Datamine.imgSrc w of
                                             Nothing ->
-                                                []
+                                                [ text "" ]
 
                                             Just path ->
-                                                [ img [ src path ] [] ]
+                                                [ img [ style "width" "100%", style "height" "100%", src path ] [] ]
                                         )
+                                    , td [] [ text w.id ]
                                     , td [] [ text w.name ]
                                     , td [] [ ifval w.isTown (text "Town") (text "") ]
                                     , td [] [ ifval w.isHideout (text "Hideout") (text "") ]

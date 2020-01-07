@@ -34,8 +34,11 @@ function transform(rawJson) {
     atlasNodes: _.keyBy(atlasNodes, 'WorldAreasKey'),
     uniqueMaps: _.keyBy(uniqueMaps, 'WorldAreasKey'),
   }))
-  // it looks like unique maps with no uniquemap.dat entry (that is, no visual identity/icon) are either duplicates or boss arenas
-  .filter(w => w.ItemVisualIdentity || !w.IsUniqueMapArea)
+  // I'm interested in maps, towns, and hideouts. other zones - usually campaign stuff - don't matter to mapwatch
+  .filter(w => w.IsMapArea || w.IsUniqueMapArea || w.IsTown || w.IsHideout)
+  // it looks like maps with no visuals are either duplicates or boss arenas. Either way, not interested
+  .filter(w => w.ItemVisualIdentity || !w.IsMapArea)
+
   // "You have entered" text can vary based on the user's language, so import it too
   const backendErrors = json["BackendErrors.dat"].data.filter(e => e.Id == 'EnteredArea')
   return _.mapValues({
