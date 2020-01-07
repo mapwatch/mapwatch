@@ -1,4 +1,4 @@
-module Main exposing (main)
+module DemoMain exposing (main)
 
 import Mapwatch exposing (Model, Msg, init, subscriptions, update)
 import Platform

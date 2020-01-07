@@ -119,11 +119,11 @@ class MapWatcher {
   }
 }
 MapWatcher.watch = function(path_, opts) {
-  return new MapWatcher(Elm.Main.init())
+  return new MapWatcher(Elm.DemoMain.init())
   .watch(path_, opts)
 }
 MapWatcher.history = function(path_, opts) {
-  return new MapWatcher(Elm.Main.init())
+  return new MapWatcher(Elm.DemoMain.init())
   .history(path_, opts)
 }
 

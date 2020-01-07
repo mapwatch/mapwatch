@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.0",
-    "create-elm-app": "^3.0.3",
+    "create-elm-app": "^4.1.2",
     "rimraf": "^3.0.0",
     "sakura.css": "^1.0.0",
     "scripty": "^1.7.2"
