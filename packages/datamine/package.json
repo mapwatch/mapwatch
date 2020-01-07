@@ -10,9 +10,8 @@
     "pypoe:install": "cd PyPoE && pip install -e .[full]",
     "ui": "pypoe_ui",
     "clean": "rm -rf dist",
-    "export": "bash -c \"mkdir -p dist && pypoe_exporter dat json dist/pypoe.json --files $(node src/exportFilenames.js)\"",
-    "export:all": "bash -c \"mkdir -p dist' && pypoe_exporter dat json dist/all.json\"",
-    "process": "node src/main.js < dist/pypoe.json > dist/mapwatch.json",
+    "export": "bash -c \"mkdir -p dist && pypoe_exporter dat json dist/all.json && date > dist/date\"",
+    "process": "node src/main.js < dist/all.json > dist/mapwatch.json",
     "build": "yarn export && yarn process"
   },
   "devDependencies": {
