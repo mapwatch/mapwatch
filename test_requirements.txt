@@ -1,0 +1,13 @@
+pytest
+sphinx
+colorama
+graphviz
+tqdm
+mwclient
+mwparserfromhell
+fuzzywuzzy
+sqlalchemy
+pymysql
+PyOpenGL
+pytest-cov
+python-coveralls
