@@ -7,6 +7,7 @@ import Mapwatch as Mapwatch
 import Model as Model exposing (Model, Msg)
 import Route exposing (Route(..))
 import View.Changelog
+import View.DebugDatamine
 import View.DumpLines
 import View.History
 import View.MapIcons
@@ -44,6 +45,9 @@ viewBody model =
 
         DebugMapIcons ->
             View.MapIcons.view
+
+        DebugDatamine ->
+            View.DebugDatamine.view model.datamine
 
         Changelog ->
             View.Changelog.view (AppPlatform.hrefHostname model) model.changelog

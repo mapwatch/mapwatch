@@ -1,0 +1,21 @@
+{
+  "name": "@mapwatch/datamine",
+  "version": "1.0.0",
+  "main": "dist/mapwatch.json",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "pypoe:pull": "cd ../.. && git subtree pull --squash --prefix=packages/datamine/PyPoE https://github.com/OmegaK2/PyPoE.git dev",
+    "//pypoe:install": "Install python first: https://www.python.org/downloads/",
+    "pypoe:install": "cd PyPoE && pip install -e .[full]",
+    "ui": "pypoe_ui",
+    "clean": "rm -rf dist",
+    "export": "bash -c \"mkdir -p dist && pypoe_exporter dat json dist/pypoe.json --files $(node src/exportFilenames.js)\"",
+    "export:all": "bash -c \"mkdir -p dist' && pypoe_exporter dat json dist/all.json\"",
+    "process": "node src/main.js < dist/pypoe.json > dist/mapwatch.json",
+    "build": "yarn export && yarn process"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.15"
+  }
+}

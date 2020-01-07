@@ -5,6 +5,9 @@ import { Elm } from './Main.elm';
 import registerServiceWorker from './registerServiceWorker';
 import * as analytics from './analytics'
 
+import {default as datamine} from '@mapwatch/datamine'
+console.log('datamine', datamine)
+
 // redirect from old host to new host.
 // TODO this should really be a 301 redirect! Quick-and-dirty version: js redirect + `link rel=canonical`
 if (document.location.host === 'mapwatch.github.io') {
@@ -30,13 +33,14 @@ if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStar
 var app = Elm.Main.init({
   node: document.getElementById('root'),
   flags: {
-    loadedAt: loadedAt,
-    tickOffset: tickOffset,
+    loadedAt,
+    tickOffset,
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: 'www',
     hostname: location.protocol + '//' + location.hostname,
     url: location.href,
+    datamine,
   }
 })
 

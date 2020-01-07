@@ -8,7 +8,9 @@ module Model exposing
     )
 
 import Browser
+import Json.Decode as D
 import Mapwatch
+import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Instance as Instance
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run
@@ -31,6 +33,7 @@ type alias Flags =
     , platform : String
     , hostname : String
     , url : String
+    , datamine : D.Value
     }
 
 
@@ -53,6 +56,7 @@ type alias Model =
     , tz : Time.Zone
     , lines : List String
     , volume : Int
+    , datamine : Result String Datamine
     }
 
 
@@ -94,6 +98,10 @@ init flags =
             , tz = Time.utc
             , lines = []
             , volume = 50
+            , datamine =
+                flags.datamine
+                    |> D.decodeValue Datamine.decoder
+                    |> Result.mapError D.errorToString
             }
     in
     ( model

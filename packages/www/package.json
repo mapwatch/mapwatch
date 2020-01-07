@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@mapwatch/lib": "1.0.0",
+    "@mapwatch/datamine": "1.0.0",
     "@mapwatch/rss": "1.0.0"
   },
   "devDependencies": {

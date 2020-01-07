@@ -98,6 +98,7 @@ type Route
     | Debug
     | DebugDumpLines
     | DebugMapIcons
+    | DebugDatamine
     | NotFound Url
 
 
@@ -213,6 +214,7 @@ parser =
         , P.map Debug <| P.s "debug"
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
         , P.map DebugMapIcons <| P.s "debug" </> P.s "mapicons"
+        , P.map DebugDatamine <| P.s "debug" </> P.s "datamine"
         ]
 
 
@@ -291,6 +293,9 @@ stringify route =
 
         DebugMapIcons ->
             "#/debug/mapicons"
+
+        DebugDatamine ->
+            "#/debug/datamine"
 
         NotFound loc ->
             "#" ++ (loc.fragment |> Maybe.withDefault "")

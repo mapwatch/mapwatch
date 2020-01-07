@@ -1,0 +1,31 @@
+{
+  "AtlasNode.dat": [
+    "WorldAreasKey",
+    "AtlasRegionsKey",
+    "Tier0",
+    "Tier1",
+    "Tier2",
+    "Tier3",
+    "Tier4",
+    "DDSFile",
+    "ItemVisualIdentityKey"
+  ],
+  "UniqueMaps.dat": [
+    "ItemVisualIdentityKey",
+    "WorldAreasKey"
+  ],
+  "AtlasRegions.dat": [
+    "Name"
+  ],
+  "WorldAreas.dat": [
+    "Id",
+    "Name",
+    "IsTown",
+    "IsHideout",
+    "IsMapArea"
+  ],
+  "BackendErrors.dat": [
+    "Id",
+    "Text"
+  ]
+}
