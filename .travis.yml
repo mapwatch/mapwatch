@@ -49,7 +49,7 @@ script:
   - yarn test
   # `yarn build` may also release the electron build, if there's a draft or a tag.
   # https://www.electron.build/configuration/publish#recommended-github-releases-workflow
-  - sysconfcpus -n 2 yarn build --ignore @mapwatch/electron
+  - sysconfcpus -n 2 yarn build --ignore @mapwatch/electron --ignore @mapwatch/datamine --ignore @mapwatch/electron2
   #- yarn build:electron
   # https://www.electron.build/multi-platform-build
   # https://github.com/develar/onshape-desktop-shell/blob/master/.travis.yml
