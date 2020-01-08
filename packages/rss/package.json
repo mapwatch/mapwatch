@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "prepare": "yarn build",
-    "build": "mkdir -p ./dist && node ./src/rss.js > ./dist/rss.xml",
+    "build": "bash -c \"mkdir -p ./dist && node ./src/rss.js > ./dist/rss.xml\"",
     "clean": "rimraf ./dist *.log"
   },
   "dependencies": {

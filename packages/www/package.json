@@ -5,10 +5,11 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "_build:version": "scripty",
+    "hello": "echo foo; echo bar; echo $SHELL; echo %SHELL%",
+    "_build:version": "bash scripts/_build/version",
     "_build:elm": "elm make src/Main.elm --optimize --output=build/elm.js",
     "build": "yarn _build:version && elm-app build && yarn _build:elm",
-    "start": "yarn _build:version && ELM_DEBUGGER=false elm-app start",
+    "start": "yarn _build:version && bash -c \"ELM_DEBUGGER=false elm-app start\"",
     "//test": "elm-app test",
     "clean": "rm -rf build public/rss.xml public/CHANGELOG.md public/version.txt"
   },
