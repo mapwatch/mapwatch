@@ -16,19 +16,35 @@ type alias WorldArea =
     }
 
 
+type alias Lang =
+    { worldAreas : Dict String String
+    , backendErrors : Dict String String
+    }
+
+
 imgSrc : WorldArea -> Maybe String
 imgSrc =
     .itemVisualId >> Maybe.map (String.replace ".dds" ".png" >> (\path -> "https://web.poecdn.com/image/" ++ path ++ "?w=1&h=1&scale=1&mn=6"))
 
 
 type alias Datamine =
-    { worldAreas : Array WorldArea }
+    { worldAreas : Array WorldArea
+    , lang : Dict String Lang
+    }
 
 
 decoder : D.Decoder Datamine
 decoder =
-    D.map Datamine
+    D.map2 Datamine
         (D.at [ "worldAreas", "data" ] worldAreasDecoder)
+        (D.at [ "lang" ] <| D.dict langDecoder)
+
+
+langDecoder : D.Decoder Lang
+langDecoder =
+    D.map2 Lang
+        (D.field "worldAreas" <| D.dict D.string)
+        (D.field "backendErrors" <| D.dict D.string)
 
 
 worldAreasDecoder : D.Decoder (Array WorldArea)

@@ -1,6 +1,7 @@
 module View.DebugDatamine exposing (view)
 
 import Array exposing (Array)
+import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
@@ -36,6 +37,11 @@ view rdatamine =
                                     , td [] [ ifval w.isHideout (text "Hideout") (text "") ]
                                     , td [] [ ifval w.isMapArea (text "Map") (text "") ]
                                     , td [] [ ifval w.isUniqueMapArea (text "UniqueMap") (text "") ]
+                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "en" datamine.lang ]
+                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "fr" datamine.lang ]
+                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "de" datamine.lang ]
+                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "ko" datamine.lang ]
+                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "ru" datamine.lang ]
                                     ]
                             )
                     )
