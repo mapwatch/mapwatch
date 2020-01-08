@@ -15,25 +15,26 @@ view rdatamine =
             pre [] [ text err ]
 
         Ok datamine ->
+            let
+                langs =
+                    Datamine.langs datamine
+            in
             -- pre [] [ text <| Debug.toString datamine ]
             table []
                 [ thead []
-                    [ th [] []
-                    , th [] [ text "Id" ]
-                    , th [] [ text "Tags" ]
-                    , th [] [ text "English" ]
-                    , th [] [ text "French" ]
-                    , th [] [ text "German" ]
-                    , th [] [ text "Korean" ]
-                    , th [] [ text "Russian" ]
-                    ]
+                    ([ th [] []
+                     , th [] [ text "Id" ]
+                     , th [] [ text "Tags" ]
+                     ]
+                        ++ List.map (\l -> th [] [ text l.name ]) langs
+                    )
                 , tbody []
                     (datamine.worldAreas
                         |> Array.toList
                         |> List.map
                             (\w ->
                                 tr []
-                                    [ td [ style "min-width" "1em", style "height" "1em" ]
+                                    ([ td [ style "min-width" "1em", style "height" "1em" ]
                                         (case Datamine.imgSrc w of
                                             Nothing ->
                                                 [ text "" ]
@@ -41,14 +42,11 @@ view rdatamine =
                                             Just path ->
                                                 [ img [ style "width" "100%", style "height" "100%", src path ] [] ]
                                         )
-                                    , td [] [ text w.id ]
-                                    , td [] [ text <| String.join ", " <| viewTags w ]
-                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "en" datamine.lang ]
-                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "fr" datamine.lang ]
-                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "de" datamine.lang ]
-                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "ko" datamine.lang ]
-                                    , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "ru" datamine.lang ]
-                                    ]
+                                     , td [] [ text w.id ]
+                                     , td [] [ text <| String.join ", " <| viewTags w ]
+                                     ]
+                                        ++ List.map (\l -> td [] [ text <| Maybe.withDefault "???" <| Dict.get w.id l.index.worldAreas ]) langs
+                                    )
                             )
                     )
                 ]

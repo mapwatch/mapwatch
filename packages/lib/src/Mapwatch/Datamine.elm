@@ -1,0 +1,127 @@
+module Mapwatch.Datamine exposing (Datamine, WorldArea, decoder, imgSrc, langs)
+
+import Array exposing (Array)
+import Dict exposing (Dict)
+import Dict.Extra
+import Json.Decode as D
+import Set exposing (Set)
+
+
+type alias Datamine =
+    { worldAreas : Array WorldArea
+    , lang : Dict String Lang
+    }
+
+
+type alias WorldArea =
+    { id : String
+    , isTown : Bool
+    , isHideout : Bool
+    , isMapArea : Bool
+    , isUniqueMapArea : Bool
+    , itemVisualId : Maybe String
+    }
+
+
+type alias Lang =
+    -- lang.index[id] -> text. How i18n output always works.
+    { index : LangIndex
+
+    -- lang.unindex[text] -> id. Parse logs from an arbitrary language into lang-independent ids.
+    , unindex : LangIndex
+    , name : String
+    }
+
+
+type alias LangIndex =
+    { worldAreas : Dict String String
+    , backendErrors : Dict String String
+    }
+
+
+langs : Datamine -> List Lang
+langs =
+    .lang
+        >> Dict.values
+        -- english first, for my own personal ease of reading/debugging
+        >> List.sortBy
+            (\l ->
+                ( if l.name == "en" then
+                    0
+
+                  else
+                    1
+                , l.name
+                )
+            )
+
+
+langUnindex : LangIndex -> LangIndex
+langUnindex index =
+    let
+        invert : Dict String String -> Dict String String
+        invert d =
+            -- TODO: if multiple ids map to the same text, this will fail. Detect that!
+            let
+                ud =
+                    d
+                        |> Dict.toList
+                        |> List.map (\( k, v ) -> ( v, k ))
+                        |> Dict.fromList
+            in
+            --if Dict.size ud == Dict.size d then
+            ud
+
+        --else
+        --    -- duplicates! which ones?
+        --    Debug.todo <|
+        --        "duplicate text values: "
+        --            ++ (d
+        --                    |> Dict.toList
+        --                    |> List.map (\( k, v ) -> ( v, k ))
+        --                    |> Dict.Extra.groupBy Tuple.first
+        --                    |> Dict.map (\_ -> List.map Tuple.second)
+        --                    |> Dict.filter (\_ v -> List.length v /= 1)
+        --                    |> Dict.toList
+        --                    |> List.map (\( k, v ) -> k ++ ": " ++ String.join "," v)
+        --                    |> String.join "\n"
+        --               )
+    in
+    { worldAreas = invert index.worldAreas
+    , backendErrors = invert index.backendErrors
+    }
+
+
+imgSrc : WorldArea -> Maybe String
+imgSrc =
+    .itemVisualId >> Maybe.map (String.replace ".dds" ".png" >> (\path -> "https://web.poecdn.com/image/" ++ path ++ "?w=1&h=1&scale=1&mn=6"))
+
+
+decoder : D.Decoder Datamine
+decoder =
+    D.map2 Datamine
+        (D.at [ "worldAreas", "data" ] worldAreasDecoder)
+        (D.at [ "lang" ] langDecoder)
+
+
+langDecoder : D.Decoder (Dict String Lang)
+langDecoder =
+    D.map2 LangIndex
+        (D.field "worldAreas" <| D.dict D.string)
+        (D.field "backendErrors" <| D.dict D.string)
+        |> D.map (\index -> Lang index (langUnindex index))
+        |> D.dict
+        |> D.map (Dict.map (\k v -> v k))
+
+
+worldAreasDecoder : D.Decoder (Array WorldArea)
+worldAreasDecoder =
+    D.map6 WorldArea
+        -- fields by index are awkward, but positional rows use so much less bandwidth than keyed rows, even when minimized
+        (D.index 0 D.string)
+        (D.index 1 D.bool)
+        (D.index 2 D.bool)
+        (D.index 3 D.bool)
+        (D.index 4 D.bool)
+        (D.index 5 (D.maybe D.string))
+        |> D.array
