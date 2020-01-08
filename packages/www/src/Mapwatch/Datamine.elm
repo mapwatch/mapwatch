@@ -8,7 +8,6 @@ import Set exposing (Set)
 
 type alias WorldArea =
     { id : String
-    , name : String
     , isTown : Bool
     , isHideout : Bool
     , isMapArea : Bool
@@ -34,15 +33,14 @@ decoder =
 
 worldAreasDecoder : D.Decoder (Array WorldArea)
 worldAreasDecoder =
-    D.map7 WorldArea
+    D.map6 WorldArea
         -- fields by index are awkward, but positional rows use so much less bandwidth than keyed rows, even when minimized
         (D.index 0 D.string)
-        (D.index 1 D.string)
+        (D.index 1 D.bool)
         (D.index 2 D.bool)
         (D.index 3 D.bool)
         (D.index 4 D.bool)
-        (D.index 5 D.bool)
-        (D.index 6 (D.maybe D.string))
+        (D.index 5 (D.maybe D.string))
         |> D.array
 
 

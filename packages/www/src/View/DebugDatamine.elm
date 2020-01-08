@@ -32,7 +32,6 @@ view rdatamine =
                                                 [ img [ style "width" "100%", style "height" "100%", src path ] [] ]
                                         )
                                     , td [] [ text w.id ]
-                                    , td [] [ text w.name ]
                                     , td [] [ ifval w.isTown (text "Town") (text "") ]
                                     , td [] [ ifval w.isHideout (text "Hideout") (text "") ]
                                     , td [] [ ifval w.isMapArea (text "Map") (text "") ]

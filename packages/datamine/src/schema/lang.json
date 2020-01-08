@@ -1,0 +1,10 @@
+{
+  "WorldAreas.dat": [
+    "Id",
+    "Name"
+  ],
+  "BackendErrors.dat": [
+    "Id",
+    "Text"
+  ]
+}
