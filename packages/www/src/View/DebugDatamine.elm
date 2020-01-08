@@ -5,7 +5,7 @@ import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
-import Mapwatch.Datamine exposing (Datamine)
+import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 
 
 view : Result String Datamine -> Html msg
@@ -17,15 +17,24 @@ view rdatamine =
         Ok datamine ->
             -- pre [] [ text <| Debug.toString datamine ]
             table []
-                [ tbody []
+                [ thead []
+                    [ th [] []
+                    , th [] [ text "Id" ]
+                    , th [] [ text "Tags" ]
+                    , th [] [ text "English" ]
+                    , th [] [ text "French" ]
+                    , th [] [ text "German" ]
+                    , th [] [ text "Korean" ]
+                    , th [] [ text "Russian" ]
+                    ]
+                , tbody []
                     (datamine.worldAreas
                         |> Array.toList
-                        -- |> List.filter (\a -> a.isTown || a.isHideout || a.isMapArea || a.isUniqueMapArea)
                         |> List.map
                             (\w ->
                                 tr []
                                     [ td [ style "min-width" "1em", style "height" "1em" ]
-                                        (case Mapwatch.Datamine.imgSrc w of
+                                        (case Datamine.imgSrc w of
                                             Nothing ->
                                                 [ text "" ]
 
@@ -33,10 +42,7 @@ view rdatamine =
                                                 [ img [ style "width" "100%", style "height" "100%", src path ] [] ]
                                         )
                                     , td [] [ text w.id ]
-                                    , td [] [ ifval w.isTown (text "Town") (text "") ]
-                                    , td [] [ ifval w.isHideout (text "Hideout") (text "") ]
-                                    , td [] [ ifval w.isMapArea (text "Map") (text "") ]
-                                    , td [] [ ifval w.isUniqueMapArea (text "UniqueMap") (text "") ]
+                                    , td [] [ text <| String.join ", " <| viewTags w ]
                                     , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "en" datamine.lang ]
                                     , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "fr" datamine.lang ]
                                     , td [] [ text <| Maybe.withDefault "???" <| Maybe.andThen (.worldAreas >> Dict.get w.id) <| Dict.get "de" datamine.lang ]
@@ -46,6 +52,21 @@ view rdatamine =
                             )
                     )
                 ]
+
+
+viewTags : WorldArea -> List String
+viewTags w =
+    [ ifMaybe w.isTown "Town"
+    , ifMaybe w.isHideout "Hideout"
+    , ifMaybe w.isMapArea "Map"
+    , ifMaybe w.isUniqueMapArea "UniqueMap"
+    ]
+        |> List.filterMap identity
+
+
+ifMaybe : Bool -> a -> Maybe a
+ifMaybe b t =
+    ifval b (Just t) Nothing
 
 
 ifval : Bool -> a -> a -> a
