@@ -1,6 +1,7 @@
 module Mapwatch exposing
     ( Model
     , Msg(..)
+    , OkModel
     , Progress
     , init
     , initModel
@@ -12,9 +13,12 @@ module Mapwatch exposing
     , subscriptions
     , tick
     , update
+    , updateOk
     )
 
 import Duration exposing (Millis)
+import Json.Decode as D
+import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Instance as Instance
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run
@@ -35,7 +39,12 @@ type alias Progress =
 
 
 type alias Model =
-    { progress : Maybe Progress
+    Result String OkModel
+
+
+type alias OkModel =
+    { datamine : Datamine
+    , progress : Maybe Progress
     , parseError : Maybe LogLine.ParseError
     , instance : Maybe Instance.State
     , runState : Run.State
@@ -48,9 +57,10 @@ type Msg
     | RecvProgress Ports.Progress
 
 
-initModel : Model
-initModel =
-    { parseError = Nothing
+createModel : Datamine -> OkModel
+createModel datamine =
+    { datamine = datamine
+    , parseError = Nothing
     , progress = Nothing
     , instance = Nothing
     , runState = Run.Empty
@@ -58,12 +68,19 @@ initModel =
     }
 
 
-init : ( Model, Cmd Msg )
-init =
-    ( initModel, Cmd.none )
+initModel : D.Value -> Model
+initModel =
+    D.decodeValue Datamine.decoder
+        >> Result.mapError D.errorToString
+        >> Result.map createModel
 
 
-updateLine : LogLine.Line -> Model -> ( Model, Cmd Msg )
+init : D.Value -> ( Model, Cmd Msg )
+init datamineJson =
+    ( initModel datamineJson, Cmd.none )
+
+
+updateLine : LogLine.Line -> OkModel -> ( OkModel, Cmd Msg )
 updateLine line model =
     let
         instance =
@@ -106,7 +123,7 @@ updateLine line model =
     )
 
 
-tick : Time.Posix -> Model -> Model
+tick : Time.Posix -> OkModel -> OkModel
 tick t model =
     case model.instance of
         Nothing ->
@@ -130,7 +147,18 @@ tick t model =
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
+update msg rmodel =
+    case rmodel of
+        Err err ->
+            ( rmodel, Cmd.none )
+
+        Ok model ->
+            updateOk msg model
+                |> Tuple.mapFirst Ok
+
+
+updateOk : Msg -> OkModel -> ( OkModel, Cmd Msg )
+updateOk msg model =
     case msg of
         RecvLogLine raw ->
             case LogLine.parse (Time.millisToPosix raw.date) raw.line of
@@ -189,9 +217,9 @@ isProgressDone p =
     progressPercent p >= 1
 
 
-isReady : Model -> Bool
+isReady : OkModel -> Bool
 isReady =
-    Maybe.Extra.unwrap False isProgressDone << .progress
+    .progress >> Maybe.Extra.unwrap False isProgressDone
 
 
 progressDuration : Progress -> Millis
@@ -199,7 +227,7 @@ progressDuration p =
     Time.posixToMillis p.updatedAt - Time.posixToMillis p.startedAt
 
 
-lastUpdatedAt : Model -> Maybe Time.Posix
+lastUpdatedAt : OkModel -> Maybe Time.Posix
 lastUpdatedAt model =
     [ model.runState |> Run.stateLastUpdatedAt
     , model.runs |> List.reverse |> List.head |> Maybe.map (\r -> r.last.leftAt)

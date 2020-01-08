@@ -8,48 +8,43 @@ import Html.Events as E exposing (..)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 
 
-view : Result String Datamine -> Html msg
-view rdatamine =
-    case rdatamine of
-        Err err ->
-            pre [] [ text err ]
+view : Datamine -> Html msg
+view datamine =
+    let
+        langs =
+            Datamine.langs datamine
+    in
+    -- pre [] [ text <| Debug.toString datamine ]
+    table []
+        [ thead []
+            ([ th [] []
+             , th [] [ text "Id" ]
+             , th [] [ text "Tags" ]
+             ]
+                ++ List.map (\l -> th [] [ text l.name ]) langs
+            )
+        , tbody []
+            (datamine.worldAreas
+                |> Array.toList
+                |> List.map
+                    (\w ->
+                        tr []
+                            ([ td [ style "min-width" "1em", style "height" "1em" ]
+                                (case Datamine.imgSrc w of
+                                    Nothing ->
+                                        [ text "" ]
 
-        Ok datamine ->
-            let
-                langs =
-                    Datamine.langs datamine
-            in
-            -- pre [] [ text <| Debug.toString datamine ]
-            table []
-                [ thead []
-                    ([ th [] []
-                     , th [] [ text "Id" ]
-                     , th [] [ text "Tags" ]
-                     ]
-                        ++ List.map (\l -> th [] [ text l.name ]) langs
-                    )
-                , tbody []
-                    (datamine.worldAreas
-                        |> Array.toList
-                        |> List.map
-                            (\w ->
-                                tr []
-                                    ([ td [ style "min-width" "1em", style "height" "1em" ]
-                                        (case Datamine.imgSrc w of
-                                            Nothing ->
-                                                [ text "" ]
-
-                                            Just path ->
-                                                [ img [ style "width" "100%", style "height" "100%", src path ] [] ]
-                                        )
-                                     , td [] [ text w.id ]
-                                     , td [] [ text <| String.join ", " <| viewTags w ]
-                                     ]
-                                        ++ List.map (\l -> td [] [ text <| Maybe.withDefault "???" <| Dict.get w.id l.index.worldAreas ]) langs
-                                    )
+                                    Just path ->
+                                        [ img [ style "width" "100%", style "height" "100%", src path ] [] ]
+                                )
+                             , td [] [ text w.id ]
+                             , td [] [ text <| String.join ", " <| viewTags w ]
+                             ]
+                                ++ List.map (\l -> td [] [ text <| Maybe.withDefault "???" <| Dict.get w.id l.index.worldAreas ]) langs
                             )
                     )
-                ]
+            )
+        ]
 
 
 viewTags : WorldArea -> List String

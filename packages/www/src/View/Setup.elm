@@ -5,7 +5,7 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Json.Decode as Decode
-import Model as Model exposing (Model, Msg(..))
+import Model as Model exposing (Msg(..), OkModel)
 import View.Icon as Icon
 import View.Volume
 
@@ -15,7 +15,7 @@ onChange msg =
     on "change" <| Decode.succeed msg
 
 
-view : Model -> Html Msg
+view : OkModel -> Html Msg
 view model =
     let
         display =

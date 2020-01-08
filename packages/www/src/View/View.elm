@@ -23,34 +23,39 @@ view model =
 
 
 viewBody : Model -> Html Msg
-viewBody model =
-    case model.route of
-        History params ->
-            View.History.view params model
+viewBody rmodel =
+    case rmodel of
+        Err err ->
+            pre [] [ text err ]
 
-        Maps params ->
-            View.Maps.view params model
+        Ok model ->
+            case model.route of
+                History params ->
+                    View.History.view params model
 
-        Timer qs ->
-            View.Timer.view qs model
+                Maps params ->
+                    View.Maps.view params model
 
-        Overlay qs ->
-            View.Overlay.view qs model
+                Timer qs ->
+                    View.Timer.view qs model
 
-        Debug ->
-            div [] [ text "TODO" ]
+                Overlay qs ->
+                    View.Overlay.view qs model
 
-        DebugDumpLines ->
-            View.DumpLines.view model
+                Debug ->
+                    div [] [ text "TODO" ]
 
-        DebugMapIcons ->
-            View.MapIcons.view
+                DebugDumpLines ->
+                    View.DumpLines.view model
 
-        DebugDatamine ->
-            View.DebugDatamine.view model.datamine
+                DebugMapIcons ->
+                    View.MapIcons.view
 
-        Changelog ->
-            View.Changelog.view (AppPlatform.hrefHostname model) model.changelog
+                DebugDatamine ->
+                    View.DebugDatamine.view model.mapwatch.datamine
 
-        NotFound loc ->
-            View.NotFound.view
+                Changelog ->
+                    View.Changelog.view (AppPlatform.hrefHostname model) model.changelog
+
+                NotFound loc ->
+                    View.NotFound.view

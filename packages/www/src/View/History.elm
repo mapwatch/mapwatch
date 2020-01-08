@@ -10,7 +10,7 @@ import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.Zone as Zone
 import Maybe.Extra
-import Model as Model exposing (Model, Msg(..))
+import Model as Model exposing (Msg(..), OkModel)
 import Regex
 import Route
 import Time
@@ -23,7 +23,7 @@ import View.Util exposing (pluralize, roundToPlaces, viewDateSearch, viewGoalFor
 import View.Volume
 
 
-view : Route.HistoryParams -> Model -> Html Msg
+view : Route.HistoryParams -> OkModel -> Html Msg
 view params model =
     if Mapwatch.isReady model.mapwatch && not (isValidPage params.page model) then
         View.NotFound.view
@@ -38,7 +38,7 @@ view params model =
             ]
 
 
-viewBody : Route.HistoryParams -> Model -> Html Msg
+viewBody : Route.HistoryParams -> OkModel -> Html Msg
 viewBody params model =
     case model.mapwatch.progress of
         Nothing ->
@@ -66,7 +66,7 @@ numPages numItems =
     ceiling <| toFloat numItems / toFloat perPage
 
 
-isValidPage : Int -> Model -> Bool
+isValidPage : Int -> OkModel -> Bool
 isValidPage page model =
     case model.mapwatch.progress of
         Nothing ->
@@ -76,7 +76,7 @@ isValidPage page model =
             page == clamp 0 (numPages (List.length model.mapwatch.runs) - 1) page
 
 
-viewMain : Route.HistoryParams -> Model -> Html Msg
+viewMain : Route.HistoryParams -> OkModel -> Html Msg
 viewMain params model =
     let
         currentRun : Maybe Run
@@ -197,7 +197,7 @@ viewPaginator ({ page } as ps) numItems =
         ]
 
 
-viewHistoryTable : Route.HistoryParams -> List Run -> Model -> Html msg
+viewHistoryTable : Route.HistoryParams -> List Run -> OkModel -> Html msg
 viewHistoryTable ({ page } as params) queryRuns model =
     let
         paginator =

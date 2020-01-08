@@ -9,7 +9,7 @@ import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.MapList as MapList
 import Mapwatch.Run as Run exposing (Run)
 import Maybe.Extra
-import Model as Model exposing (Model, Msg(..))
+import Model as Model exposing (Msg(..), OkModel)
 import Regex
 import Route
 import Time
@@ -22,7 +22,7 @@ import View.Util exposing (pluralize, roundToPlaces, viewSearch)
 import View.Volume
 
 
-view : Route.MapsParams -> Model -> Html Msg
+view : Route.MapsParams -> OkModel -> Html Msg
 view params model =
     div [ class "main" ]
         [ viewHeader
@@ -33,7 +33,7 @@ view params model =
         ]
 
 
-viewBody : Route.MapsParams -> Model -> Html Msg
+viewBody : Route.MapsParams -> OkModel -> Html Msg
 viewBody params model =
     case model.mapwatch.progress of
         Nothing ->
@@ -104,7 +104,7 @@ sort o =
         >> dir
 
 
-viewMain : Route.MapsParams -> Model -> Html Msg
+viewMain : Route.MapsParams -> OkModel -> Html Msg
 viewMain params model =
     case MapList.mapList of
         Err err ->

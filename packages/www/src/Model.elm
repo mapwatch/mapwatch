@@ -1,6 +1,7 @@
 module Model exposing
     ( Model
     , Msg(..)
+    , OkModel
     , Progress
     , init
     , subscriptions
@@ -46,7 +47,11 @@ type alias Config =
 
 
 type alias Model =
-    { mapwatch : Mapwatch.Model
+    Result String OkModel
+
+
+type alias OkModel =
+    { mapwatch : Mapwatch.OkModel
     , config : Config
     , flags : Flags
     , changelog : Maybe String
@@ -56,7 +61,6 @@ type alias Model =
     , tz : Time.Zone
     , lines : List String
     , volume : Int
-    , datamine : Result String Datamine
     }
 
 
@@ -87,8 +91,9 @@ init flags =
         loadedAt =
             Time.millisToPosix flags.loadedAt
 
-        model =
-            { mapwatch = Mapwatch.initModel
+        createModel : Mapwatch.OkModel -> OkModel
+        createModel mapwatch =
+            { mapwatch = mapwatch
             , config = { maxSize = 20 }
             , flags = flags
             , changelog = Nothing
@@ -98,26 +103,27 @@ init flags =
             , tz = Time.utc
             , lines = []
             , volume = 50
-            , datamine =
-                flags.datamine
-                    |> D.decodeValue Datamine.decoder
-                    |> Result.mapError D.errorToString
             }
+
+        model : Model
+        model =
+            Result.map createModel
+                (Mapwatch.initModel flags.datamine)
     in
     ( model
     , Cmd.batch
         [ Task.perform SetTimezone Time.here
-        , sendVolume model
+        , model |> Result.map sendVolume |> Result.withDefault Cmd.none
         ]
     )
 
 
-sendVolume : Model -> Cmd msg
+sendVolume : OkModel -> Cmd msg
 sendVolume model =
     Ports.sendVolume (Route.isSpeechEnabled model.route) model.volume
 
 
-updateRawLine : { date : Int, line : String } -> Model -> Model
+updateRawLine : { date : Int, line : String } -> OkModel -> OkModel
 updateRawLine raw model =
     -- *Only when debugging*, save all raw loglines.
     case model.route of
@@ -133,13 +139,13 @@ updateRawLine raw model =
             model
 
 
-applyTimeOffset : Model -> Time.Posix -> Time.Posix
+applyTimeOffset : OkModel -> Time.Posix -> Time.Posix
 applyTimeOffset model t0 =
     (Time.posixToMillis t0 - model.flags.tickOffset)
         |> Time.millisToPosix
 
 
-tick : Time.Posix -> Model -> Model
+tick : Time.Posix -> OkModel -> OkModel
 tick t0 model =
     let
         t =
@@ -149,7 +155,17 @@ tick t0 model =
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
-update msg ({ config } as model) =
+update msg rmodel =
+    case rmodel of
+        Err err ->
+            ( rmodel, Cmd.none )
+
+        Ok model ->
+            updateOk msg model |> Tuple.mapFirst Ok
+
+
+updateOk : Msg -> OkModel -> ( OkModel, Cmd Msg )
+updateOk msg ({ config } as model) =
     case msg of
         Tick t ->
             if Maybe.Extra.unwrap False Mapwatch.isProgressDone model.mapwatch.progress then
@@ -235,23 +251,28 @@ update msg ({ config } as model) =
                     updateMapwatch (Mapwatch.RecvProgress { p | updatedAt = p.updatedAt |> Time.millisToPosix |> applyTimeOffset model |> Time.posixToMillis }) model
 
 
-updateMapwatch : Mapwatch.Msg -> Model -> ( Model, Cmd Msg )
+updateMapwatch : Mapwatch.Msg -> OkModel -> ( OkModel, Cmd Msg )
 updateMapwatch msg model =
     let
         ( mapwatch, cmd ) =
-            Mapwatch.update msg model.mapwatch
+            Mapwatch.updateOk msg model.mapwatch
     in
     ( { model | mapwatch = mapwatch }, Cmd.map M cmd )
 
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
-    Sub.batch
-        [ Mapwatch.subscriptions model.mapwatch |> Sub.map M
-        , Ports.changelog Changelog
-        , Nav.onUrlChange NavPath
+subscriptions rmodel =
+    case rmodel of
+        Err err ->
+            Sub.none
 
-        -- Slow down animation, deliberately - don't eat poe's cpu
-        --, Browser.Events.onAnimationFrame Tick
-        , Time.every 1000 Tick
-        ]
+        Ok model ->
+            Sub.batch
+                [ Mapwatch.subscriptions (Ok model.mapwatch) |> Sub.map M
+                , Ports.changelog Changelog
+                , Nav.onUrlChange NavPath
+
+                -- Slow down animation, deliberately - don't eat poe's cpu
+                --, Browser.Events.onAnimationFrame Tick
+                , Time.every 1000 Tick
+                ]

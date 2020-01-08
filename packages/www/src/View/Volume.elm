@@ -3,12 +3,12 @@ module View.Volume exposing (view)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
-import Model as M exposing (Model, Msg)
+import Model as M exposing (Msg, OkModel)
 import Route as Route exposing (Route)
 import View.Icon as Icon
 
 
-view : Model -> Html Msg
+view : OkModel -> Html Msg
 view { volume, route } =
     if Route.isSpeechEnabled route then
         div []

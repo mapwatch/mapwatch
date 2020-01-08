@@ -6,7 +6,7 @@ import Html.Events as E exposing (..)
 import Mapwatch as Mapwatch
 import Mapwatch.Run as Run exposing (Run)
 import Maybe.Extra
-import Model as Model exposing (Model, Msg)
+import Model as Model exposing (Msg, OkModel)
 import Route
 import Time
 import View.History
@@ -18,7 +18,7 @@ import View.Util exposing (hidePreLeagueButton, viewGoalForm)
 import View.Volume
 
 
-view : Route.TimerParams -> Model -> Html Msg
+view : Route.TimerParams -> OkModel -> Html Msg
 view qs model =
     div [ class "main" ]
         [ viewHeader
@@ -29,7 +29,7 @@ view qs model =
         ]
 
 
-viewBody : Route.TimerParams -> Model -> Html Msg
+viewBody : Route.TimerParams -> OkModel -> Html Msg
 viewBody qs model =
     case model.mapwatch.progress of
         Nothing ->
@@ -49,7 +49,7 @@ viewBody qs model =
                     [ viewProgress p ]
 
 
-viewMain : Route.TimerParams -> Model -> Html Msg
+viewMain : Route.TimerParams -> OkModel -> Html Msg
 viewMain qs model =
     let
         run : Maybe Run
