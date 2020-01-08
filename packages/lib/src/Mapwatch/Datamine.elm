@@ -10,6 +10,7 @@ import Set exposing (Set)
 type alias Datamine =
     { worldAreas : Array WorldArea
     , lang : Dict String Lang
+    , unindex : LangIndex
     }
 
 
@@ -56,8 +57,8 @@ langs =
             )
 
 
-langUnindex : LangIndex -> LangIndex
-langUnindex index =
+langIndexReverse : LangIndex -> LangIndex
+langIndexReverse index =
     let
         invert : Dict String String -> Dict String String
         invert d =
@@ -92,14 +93,38 @@ langUnindex index =
     }
 
 
+langIndexEmpty : LangIndex
+langIndexEmpty =
+    LangIndex Dict.empty Dict.empty
+
+
+langIndexUnion : List LangIndex -> LangIndex
+langIndexUnion =
+    let
+        fold a b =
+            { worldAreas = Dict.union a.worldAreas b.worldAreas
+            , backendErrors = Dict.union a.backendErrors b.backendErrors
+            }
+    in
+    List.foldr fold langIndexEmpty
+
+
 imgSrc : WorldArea -> Maybe String
 imgSrc =
     .itemVisualId >> Maybe.map (String.replace ".dds" ".png" >> (\path -> "https://web.poecdn.com/image/" ++ path ++ "?w=1&h=1&scale=1&mn=6"))
 
 
+createDatamine ws ls =
+    let
+        init =
+            Datamine ws ls langIndexEmpty
+    in
+    { init | unindex = init |> langs |> List.map .unindex |> langIndexUnion }
+
+
 decoder : D.Decoder Datamine
 decoder =
-    D.map2 Datamine
+    D.map2 createDatamine
         (D.at [ "worldAreas", "data" ] worldAreasDecoder)
         (D.at [ "lang" ] langDecoder)
 
@@ -109,7 +134,7 @@ langDecoder =
     D.map2 LangIndex
         (D.field "worldAreas" <| D.dict D.string)
         (D.field "backendErrors" <| D.dict D.string)
-        |> D.map (\index -> Lang index (langUnindex index))
+        |> D.map (\index -> Lang index (langIndexReverse index))
         |> D.dict
         |> D.map (Dict.map (\k v -> v k))
 
