@@ -10,11 +10,49 @@ import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 
 view : Datamine -> Html msg
 view datamine =
+    div []
+        [ viewBackendErrors datamine
+        , viewWorldAreas datamine
+        ]
+
+
+viewBackendErrors : Datamine -> Html msg
+viewBackendErrors datamine =
+    let
+        langs =
+            Datamine.langs datamine
+
+        viewBackendError : String -> ( String, String ) -> Html msg
+        viewBackendError langName ( id, text_ ) =
+            [ langName, id, text_ ]
+                |> List.map (\s -> td [] [ text s ])
+                |> tr []
+    in
+    table []
+        [ thead []
+            [ th [] [ text "Lang" ]
+            , th [] [ text "Id" ]
+            , th [] [ text "Text" ]
+            ]
+        , tbody []
+            (datamine
+                |> Datamine.langs
+                |> List.concatMap
+                    (\lang ->
+                        lang.index.backendErrors
+                            |> Dict.toList
+                            |> List.map (viewBackendError lang.name)
+                    )
+            )
+        ]
+
+
+viewWorldAreas : Datamine -> Html msg
+viewWorldAreas datamine =
     let
         langs =
             Datamine.langs datamine
     in
-    -- pre [] [ text <| Debug.toString datamine ]
     table []
         [ thead []
             ([ th [] []
