@@ -1,7 +1,7 @@
 {
   "name": "mapwatch",
   "scripts": {
-    "prepare": "lerna run prepare --stream",
+    "prepare": "lerna run prepare --ignore @mapwatch/electron --stream",
     "tf:init": "terraform init",
     "tf:plan": "terraform plan",
     "tf:apply": "terraform apply -auto-approve",
