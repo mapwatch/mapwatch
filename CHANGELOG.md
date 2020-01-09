@@ -7,6 +7,10 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2020-01-08
+- Updated map names and tiers for Metamorph league.
+- Revamped how map names and tiers are defined. They're now datamined from game files, instead of manually listed and updated.
+
 ## 2019-12-13
 - Updated "hide pre-Blight maps" button for Metamorph league.
 - **Beware**: map names and tiers have *not* yet been updated. GGG didn't post them in advance this time, and I probably haven't unlocked the whole atlas yet; my play time's limited this time around. Mapwatch might be broken for a few days; sorry.
