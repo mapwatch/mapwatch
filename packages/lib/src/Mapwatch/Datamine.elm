@@ -5,6 +5,7 @@ module Mapwatch.Datamine exposing
     , imgSrc
     , isMap
     , langs
+    , tier
     , worldAreaFromName
     , worldAreaToString
     )
@@ -33,6 +34,7 @@ type alias WorldArea =
     , isMapArea : Bool
     , isUniqueMapArea : Bool
     , itemVisualId : Maybe String
+    , tiers : Maybe (List Int)
     }
 
 
@@ -52,10 +54,9 @@ type alias LangIndex =
     }
 
 
-tier : WorldArea -> Int
+tier : WorldArea -> Maybe Int
 tier =
-    -- TODO
-    always 1
+    .tiers >> Maybe.andThen (List.filter ((/=) 0) >> List.head)
 
 
 worldAreaToString : Datamine -> WorldArea -> String
@@ -142,8 +143,8 @@ langIndexUnion =
 
 
 imgSrc : WorldArea -> Maybe String
-imgSrc =
-    .itemVisualId >> Maybe.map (String.replace ".dds" ".png" >> (\path -> "https://web.poecdn.com/image/" ++ path ++ "?w=1&h=1&scale=1&mn=6"))
+imgSrc w =
+    w.itemVisualId |> Maybe.map (String.replace ".dds" ".png" >> (\path -> "https://web.poecdn.com/image/" ++ path ++ "?w=1&h=1&scale=1&mn=6&mt=" ++ String.fromInt (tier w |> Maybe.withDefault 0)))
 
 
 isMap : WorldArea -> Bool
@@ -186,7 +187,7 @@ langDecoder =
 
 worldAreasDecoder : D.Decoder (Array WorldArea)
 worldAreasDecoder =
-    D.map6 WorldArea
+    D.map7 WorldArea
         -- fields by index are awkward, but positional rows use so much less bandwidth than keyed rows, even when minimized
         (D.index 0 D.string)
         (D.index 1 D.bool)
@@ -194,4 +195,5 @@ worldAreasDecoder =
         (D.index 3 D.bool)
         (D.index 4 D.bool)
         (D.index 5 (D.maybe D.string))
+        (D.index 6 (D.maybe (D.list D.int)))
         |> D.array

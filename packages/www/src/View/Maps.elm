@@ -68,40 +68,38 @@ sort o =
         ( col, dir ) =
             case Maybe.map (String.split "-") o of
                 Just [ c, "desc" ] ->
-                    ( Just c, List.reverse )
+                    ( c, List.reverse )
 
                 Just [ c, _ ] ->
-                    ( Just c, identity )
+                    ( c, identity )
 
                 Just [ c ] ->
-                    ( Just c, identity )
+                    ( c, identity )
 
                 _ ->
-                    ( Nothing, identity )
+                    ( "tier", List.reverse )
     in
     (case col of
-        Just "name" ->
+        "name" ->
             List.sortBy .name
 
-        Just "tier" ->
-            --List.sortBy (Tuple.first >> .tier)
-            -- TODO
-            List.sortBy .name
+        "tier" ->
+            List.sortBy (.worldArea >> Datamine.tier >> Maybe.withDefault 0)
 
-        Just "runs" ->
+        "runs" ->
             List.sortBy (.runs >> .num)
 
-        Just "bestdur" ->
+        "bestdur" ->
             List.sortBy (.runs >> .best >> Maybe.withDefault 0)
 
-        Just "meandur" ->
+        "meandur" ->
             List.sortBy (.runs >> .durs >> .all)
 
-        Just "portals" ->
+        "portals" ->
             List.sortBy (.runs >> .durs >> .portals)
 
         _ ->
-            List.reverse
+            List.sortBy (.worldArea >> Datamine.tier >> Maybe.withDefault 0)
     )
         >> dir
 
@@ -156,8 +154,7 @@ header params =
     in
     tr []
         [ cell "name" "Name"
-
-        -- , cell "tier" "Tier"
+        , cell "tier" "Tier"
         , cell "meandur" "Average"
         , cell "portals" "Portals"
         , cell "runs" "# Runs"
@@ -188,8 +185,14 @@ viewMap qs { name, worldArea, runs } =
     in
     tr []
         ([ td [ class "zone" ] [ viewMapName qs name worldArea ]
+         , td []
+            (case Datamine.tier worldArea of
+                Nothing ->
+                    []
 
-         -- , td [] [ text <| "(T" ++ String.fromInt (Datamine.tier worldArea) ++ ")" ]
+                Just tier ->
+                    [ text <| "(T" ++ String.fromInt tier ++ ")" ]
+            )
          , td [] [ text <| formatDuration durs.mainMap ++ " per map" ]
          , td [] [ text <| String.fromFloat (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
          , td [] [ text <| "×" ++ String.fromInt num ++ " runs." ]

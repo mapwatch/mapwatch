@@ -89,7 +89,8 @@ function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes}) {
     IsHideout: raw.IsHideout,
     IsMapArea: raw.IsMapArea,
     IsUniqueMapArea: raw.IsUniqueMapArea,
-    ItemVisualIdentity: (uniqueMaps[index] || atlasNodes[index] || {ItemVisualIdentity: null}).ItemVisualIdentity,
+    ItemVisualIdentity: _.get(uniqueMaps[index] || atlasNodes[index], 'ItemVisualIdentity'),
+    Tiers: _.get(atlasNodes[index], 'Tiers'),
     RowID: index,
   }
 }

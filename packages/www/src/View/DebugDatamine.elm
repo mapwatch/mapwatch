@@ -58,6 +58,7 @@ viewWorldAreas datamine =
             ([ th [] []
              , th [] [ text "Id" ]
              , th [] [ text "Tags" ]
+             , th [] [ text "Tier" ]
              ]
                 ++ List.map (\l -> th [] [ text l.name ]) langs
             )
@@ -77,6 +78,7 @@ viewWorldAreas datamine =
                                 )
                              , td [] [ text w.id ]
                              , td [] [ text <| String.join ", " <| viewTags w ]
+                             , td [] [ w |> Datamine.tier |> Maybe.map String.fromInt |> Maybe.withDefault "" |> text ]
                              ]
                                 ++ List.map (\l -> td [] [ text <| Maybe.withDefault "???" <| Dict.get w.id l.index.worldAreas ]) langs
                             )
