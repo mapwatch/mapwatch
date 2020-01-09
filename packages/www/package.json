@@ -14,7 +14,6 @@
     "clean": "rm -rf build public/rss.xml public/CHANGELOG.md public/version.txt"
   },
   "dependencies": {
-    "@mapwatch/lib": "1.0.0",
     "@mapwatch/datamine": "1.0.0",
     "@mapwatch/rss": "1.0.0"
   },
