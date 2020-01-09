@@ -2,7 +2,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import 'sakura.css/css/sakura-vader.css';
 import './main.css';
 import { Elm } from './Main.elm';
-import registerServiceWorker from './registerServiceWorker';
+import * as registerServiceWorker from './registerServiceWorker';
 import * as analytics from './analytics'
 
 import {default as datamine} from '@mapwatch/datamine'
@@ -235,4 +235,4 @@ app.ports.events.subscribe(function(event) {
   }
 })
 
-registerServiceWorker();
+registerServiceWorker.unregister();
