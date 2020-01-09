@@ -14,7 +14,7 @@ module Mapwatch.Run exposing
     , filterBetween
     , filterToday
     , goalDuration
-    , groupMapNames
+    , groupByMap
     , init
     , instance
     , isBetween
@@ -371,20 +371,9 @@ filterToday zone now =
     List.filter pred
 
 
-byMap : List Run -> Dict.Dict String (List Run)
-byMap =
+groupByMap : List Run -> Dict.Dict String (List Run)
+groupByMap =
     Dict.Extra.groupBy (instance >> .zone)
-
-
-groupMapNames : List Run -> List { a | name : String } -> List ( { a | name : String }, List Run )
-groupMapNames runs maps =
-    let
-        dict =
-            byMap runs
-    in
-    maps
-        |> List.map (\map -> Dict.get map.name dict |> Maybe.map (\b -> ( map, b )))
-        |> Maybe.Extra.values
 
 
 type GoalDuration
@@ -401,7 +390,7 @@ goalDuration goal runset =
     let
         foldRuns : (List Run -> Maybe Millis) -> List Run -> Dict.Dict String Millis
         foldRuns foldFn =
-            byMap >> Dict.Extra.filterMap (always foldFn)
+            groupByMap >> Dict.Extra.filterMap (always foldFn)
 
         key run =
             (instance run).zone

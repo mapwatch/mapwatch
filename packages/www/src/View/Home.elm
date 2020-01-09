@@ -9,11 +9,11 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
 import Mapwatch as Mapwatch exposing (Model, Msg(..))
+import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run
 import Mapwatch.Visit as Visit
-import Mapwatch.Zone as Zone
 import Route
 import Time
 import View.Icon as Icon
@@ -24,13 +24,13 @@ import View.Setup
 viewMaybeInstance : Route.HistoryParams -> Maybe Instance -> Html msg
 viewMaybeInstance qs instance =
     case instance of
-        Just (Instance.Instance i) ->
-            if Zone.isMap i.zone then
+        Just ((Instance.Instance addr) as i) ->
+            if Instance.isMap i then
                 -- TODO preserve before/after
-                a [ Route.href <| Route.History { qs | search = Just i.zone }, title i.addr ] [ Icon.mapOrBlank i.zone, text i.zone ]
+                a [ Route.href <| Route.History { qs | search = Just addr.zone }, title addr.addr ] [ Icon.mapOrBlank addr.worldArea, text addr.zone ]
 
             else
-                span [ title i.addr ] [ text i.zone ]
+                span [ title addr.addr ] [ text addr.zone ]
 
         Just Instance.MainMenu ->
             span [] [ text "(none)" ]
@@ -209,15 +209,11 @@ viewDate d =
 
 formatSideAreaType : Instance -> Maybe String
 formatSideAreaType instance =
-    case Zone.sideZoneType <| Instance.unwrap Nothing (Just << .zone) instance of
-        Zone.OtherSideZone ->
-            Nothing
+    if Instance.isMap instance then
+        Just "Zana mission"
 
-        Zone.ZanaMission ->
-            Just "Zana mission"
-
-        Zone.ElderGuardian guardian ->
-            Just <| "Elder Guardian: The " ++ Zone.guardianToString guardian
+    else
+        Nothing
 
 
 viewSideAreaName : Route.HistoryParams -> Instance -> Html msg

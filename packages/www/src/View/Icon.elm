@@ -4,7 +4,7 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Json.Encode as Json
-import Mapwatch.MapList as MapList
+import Mapwatch.Datamine as Datamine exposing (WorldArea)
 import Regex
 
 
@@ -22,17 +22,16 @@ fasPulse =
     fa "fa-spin fa-pulse fas"
 
 
-map : String -> Maybe (Html msg)
-map name =
-    let
-        cls =
-            Regex.replace ("[ \t,:']+" |> Regex.fromString |> Maybe.withDefault Regex.never) (always "") name
-    in
-    MapList.url name
-        |> Maybe.map (\src_ -> img [ class <| "map-icon map-icon-" ++ cls, src src_ ] [])
+map : Maybe WorldArea -> Maybe (Html msg)
+map =
+    Maybe.andThen
+        (\world ->
+            world
+                |> Datamine.imgSrc
+                |> Maybe.map (\src_ -> img [ class <| "map-icon map-icon-" ++ world.id, src src_ ] [])
+        )
 
 
-mapOrBlank : String -> Html msg
-mapOrBlank name =
-    map name
-        |> Maybe.withDefault (span [] [])
+mapOrBlank : Maybe WorldArea -> Html msg
+mapOrBlank =
+    map >> Maybe.withDefault (span [] [])

@@ -30,7 +30,7 @@ joinInstance runState lastRun instance =
     let
         zone : String
         zone =
-            instance |> Instance.zone |> Maybe.withDefault "unknown"
+            instance |> Instance.zoneName |> Maybe.withDefault "unknown"
     in
     -- case ( lastRun |> Maybe.map mapRun, instance |> Instance.isMap ) of
     case ( lastRun |> Maybe.map mapRun, runState ) of

@@ -97,7 +97,6 @@ type Route
     | Changelog
     | Debug
     | DebugDumpLines
-    | DebugMapIcons
     | DebugDatamine
     | NotFound Url
 
@@ -213,7 +212,6 @@ parser =
         , P.map (always Changelog) <| P.s "changelog" </> P.string
         , P.map Debug <| P.s "debug"
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
-        , P.map DebugMapIcons <| P.s "debug" </> P.s "mapicons"
         , P.map DebugDatamine <| P.s "debug" </> P.s "datamine"
         ]
 
@@ -290,9 +288,6 @@ stringify route =
 
         DebugDumpLines ->
             "#/debug/dumplines"
-
-        DebugMapIcons ->
-            "#/debug/mapicons"
 
         DebugDatamine ->
             "#/debug/datamine"

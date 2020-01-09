@@ -13,24 +13,30 @@ module Mapwatch.Instance exposing
     , offlineThreshold
     , unwrap
     , update
-    , zone
+    , worldArea
+    , zoneName
     )
 
 import Duration exposing (Millis)
+import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.LogLine as LogLine
-import Mapwatch.Zone as Zone
 import Maybe.Extra
 import Time exposing (Posix)
 
 
+{-| (Zone, instance-server-address) isn't really a unique id -
+imagine running two Volcano maps that just so happen to be assigned to the
+same instance server. It's the best we've got, though.
 
--- (Zone, instance-server-address) isn't really a unique id -
--- imagine running two Volcano maps that just so happen to be assigned to the
--- same instance server. It's the best we've got, though.
+worldArea is derived from zone. We could pass Datamine around everywhere instead
+of duplicating information here, but that seems excessive
 
-
+-}
 type alias Address =
-    { zone : String, addr : String }
+    { zone : String
+    , addr : String
+    , worldArea : Maybe WorldArea
+    }
 
 
 type Instance
@@ -66,20 +72,26 @@ unwrap default fn instance0 =
             fn instance
 
 
-zone : Instance -> Maybe String
-zone =
-    unwrap Nothing (Just << .zone)
+worldArea : Datamine -> Instance -> Maybe WorldArea
+worldArea dm =
+    unwrap Nothing .worldArea
+
+
+zoneName : Instance -> Maybe String
+zoneName =
+    unwrap Nothing (.zone >> Just)
 
 
 isTown : Instance -> Bool
 isTown =
-    -- No-zone counts as town, since you log back in to town
-    unwrap True (Zone.isTown << .zone)
+    -- No-zone is a town, since you're probably logged out and will log back in to town.
+    -- Unknown-zone is *not* a town - towns are all known and accounted for, but non-map combat areas are excluded from my data.
+    unwrap True (.worldArea >> Maybe.map (\w -> w.isTown || w.isHideout) >> Maybe.withDefault False)
 
 
 isMap : Instance -> Bool
 isMap =
-    unwrap False (Zone.isMap << .zone)
+    unwrap False (.worldArea >> Maybe.map Datamine.isMap >> Maybe.withDefault False)
 
 
 duration : Time.Posix -> State -> Millis
@@ -103,18 +115,18 @@ isOffline now instance =
     isDurationOffline <| duration now instance
 
 
-initOrUpdate : LogLine.Line -> Maybe State -> State
-initOrUpdate line instance =
+initOrUpdate : Datamine -> LogLine.Line -> Maybe State -> State
+initOrUpdate datamine line instance =
     case instance of
         Just i ->
-            update line i
+            update datamine line i
 
         Nothing ->
-            init line.date |> update line
+            init line.date |> update datamine line
 
 
-update : LogLine.Line -> State -> State
-update line state =
+update : Datamine -> LogLine.Line -> State -> State
+update datamine line state =
     case ( state.next, line.info ) of
         -- it takes two loglines to build an instance:
         -- * "connecting to instance server (addr)"
@@ -126,7 +138,15 @@ update line state =
 
         ( Connecting addr, LogLine.YouHaveEntered zone_ ) ->
             -- step 2
-            { val = Instance { zone = zone_, addr = addr }, joinedAt = line.date, next = Empty }
+            { val =
+                Instance
+                    { zone = zone_
+                    , addr = addr
+                    , worldArea = Datamine.worldAreaFromName zone_ datamine
+                    }
+            , joinedAt = line.date
+            , next = Empty
+            }
 
         ( Connecting _, LogLine.ConnectingToInstanceServer addr ) ->
             -- two "connecting" messages - should never happen, but trust the most recent one

@@ -4,9 +4,9 @@ import Dict
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
-import Mapwatch as Mapwatch
+import Mapwatch
+import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.MapList as MapList
 import Mapwatch.Run as Run exposing (Run)
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
@@ -52,17 +52,17 @@ viewBody params model =
                     ++ [ viewProgress p ]
 
 
-search : Maybe String -> List MapList.Map -> List MapList.Map
-search q ms =
-    case q of
+search : Maybe String -> List Run -> List Run
+search mq =
+    case mq of
         Nothing ->
-            ms
+            identity
 
-        Just q_ ->
-            List.filter (.name >> Regex.contains (q_ |> Regex.fromStringWith { caseInsensitive = True, multiline = False } |> Maybe.withDefault Regex.never)) ms
+        Just q ->
+            Run.search q
 
 
-sort : Maybe String -> List ( MapList.Map, Run.Summary ) -> List ( MapList.Map, Run.Summary )
+sort : Maybe String -> List GroupedRuns -> List GroupedRuns
 sort o =
     let
         ( col, dir ) =
@@ -81,22 +81,24 @@ sort o =
     in
     (case col of
         Just "name" ->
-            List.sortBy (Tuple.first >> .name)
+            List.sortBy .name
 
         Just "tier" ->
-            List.sortBy (Tuple.first >> .tier)
+            --List.sortBy (Tuple.first >> .tier)
+            -- TODO
+            List.sortBy .name
 
         Just "runs" ->
-            List.sortBy (Tuple.second >> .num)
+            List.sortBy (.runs >> .num)
 
         Just "bestdur" ->
-            List.sortBy (Tuple.second >> .best >> Maybe.withDefault 0)
+            List.sortBy (.runs >> .best >> Maybe.withDefault 0)
 
         Just "meandur" ->
-            List.sortBy (Tuple.second >> .durs >> .all)
+            List.sortBy (.runs >> .durs >> .all)
 
         Just "portals" ->
-            List.sortBy (Tuple.second >> .durs >> .portals)
+            List.sortBy (.runs >> .durs >> .portals)
 
         _ ->
             List.reverse
@@ -104,30 +106,45 @@ sort o =
         >> dir
 
 
+type alias GroupedRuns =
+    { name : String, worldArea : WorldArea, runs : Run.Summary }
+
+
 viewMain : Route.MapsParams -> OkModel -> Html Msg
 viewMain params model =
-    case MapList.mapList of
-        Err err ->
-            pre [] [ text err ]
+    let
+        runs : List Run
+        runs =
+            model.mapwatch.runs
+                |> search params.search
+                |> Run.filterBetween params
 
-        Ok mapList ->
-            let
-                rows =
-                    mapList
-                        |> search params.search
-                        |> Run.groupMapNames (Run.filterBetween params model.mapwatch.runs)
-                        |> List.map (Tuple.mapSecond Run.summarize)
-                        |> sort params.sort
-                        |> List.map ((\f ( a, b ) -> f a b) <| viewMap params)
-            in
-            div []
-                [ View.Volume.view model
-                , viewSearch [ placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
-                , table [ class "by-map" ]
-                    [ thead [] [ header params ]
-                    , tbody [] rows
-                    ]
-                ]
+        groupedRuns : List GroupedRuns
+        groupedRuns =
+            runs
+                |> Run.groupByMap
+                |> Dict.toList
+                |> List.filterMap
+                    (\( name, runGroup ) ->
+                        model.mapwatch.datamine
+                            |> Datamine.worldAreaFromName name
+                            |> Maybe.map (\w -> { name = name, worldArea = w, runs = Run.summarize runGroup })
+                    )
+
+        rows : List (Html msg)
+        rows =
+            groupedRuns
+                |> sort params.sort
+                |> List.map (viewMap params)
+    in
+    div []
+        [ View.Volume.view model
+        , viewSearch [ placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
+        , table [ class "by-map" ]
+            [ thead [] [ header params ]
+            , tbody [] rows
+            ]
+        ]
 
 
 header : Route.MapsParams -> Html msg
@@ -139,7 +156,8 @@ header params =
     in
     tr []
         [ cell "name" "Name"
-        , cell "tier" "Tier"
+
+        -- , cell "tier" "Tier"
         , cell "meandur" "Average"
         , cell "portals" "Portals"
         , cell "runs" "# Runs"
@@ -162,11 +180,16 @@ headerHref col params =
             }
 
 
-viewMap : Route.MapsParams -> MapList.Map -> Run.Summary -> Html msg
-viewMap qs map { durs, best, num } =
+viewMap : Route.MapsParams -> GroupedRuns -> Html msg
+viewMap qs { name, worldArea, runs } =
+    let
+        { durs, best, num } =
+            runs
+    in
     tr []
-        ([ td [ class "zone" ] [ viewMapName qs map ]
-         , td [] [ text <| "(T" ++ String.fromInt map.tier ++ ")" ]
+        ([ td [ class "zone" ] [ viewMapName qs name worldArea ]
+
+         -- , td [] [ text <| "(T" ++ String.fromInt (Datamine.tier worldArea) ++ ")" ]
          , td [] [ text <| formatDuration durs.mainMap ++ " per map" ]
          , td [] [ text <| String.fromFloat (roundToPlaces 2 durs.portals) ++ pluralize " portal" " portals" durs.portals ]
          , td [] [ text <| "×" ++ String.fromInt num ++ " runs." ]
@@ -176,10 +199,10 @@ viewMap qs map { durs, best, num } =
         )
 
 
-viewMapName : Route.MapsParams -> MapList.Map -> Html msg
-viewMapName qs map =
+viewMapName : Route.MapsParams -> String -> WorldArea -> Html msg
+viewMapName qs name worldArea =
     let
         hqs0 =
             Route.historyParams0
     in
-    a [ Route.href <| Route.History { hqs0 | search = Just map.name, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank map.name, text map.name ]
+    a [ Route.href <| Route.History { hqs0 | search = Just name, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank (Just worldArea), text name ]

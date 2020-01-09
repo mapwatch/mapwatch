@@ -16,7 +16,6 @@ import Mapwatch.Instance as Instance
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run
 import Mapwatch.Visit as Visit
-import Mapwatch.Zone as Zone
 import Maybe.Extra
 import NavPorts as Nav
 import Ports

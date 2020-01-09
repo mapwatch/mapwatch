@@ -10,7 +10,6 @@ import View.Changelog
 import View.DebugDatamine
 import View.DumpLines
 import View.History
-import View.MapIcons
 import View.Maps
 import View.NotFound
 import View.Overlay
@@ -47,9 +46,6 @@ viewBody rmodel =
 
                 DebugDumpLines ->
                     View.DumpLines.view model
-
-                DebugMapIcons ->
-                    View.MapIcons.view
 
                 DebugDatamine ->
                     View.DebugDatamine.view model.mapwatch.datamine

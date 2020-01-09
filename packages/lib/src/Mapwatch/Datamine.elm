@@ -1,4 +1,13 @@
-module Mapwatch.Datamine exposing (Datamine, WorldArea, decoder, imgSrc, langs)
+module Mapwatch.Datamine exposing
+    ( Datamine
+    , WorldArea
+    , decoder
+    , imgSrc
+    , isMap
+    , langs
+    , worldAreaFromName
+    , worldAreaToString
+    )
 
 import Array exposing (Array)
 import Dict exposing (Dict)
@@ -10,6 +19,7 @@ import Set exposing (Set)
 type alias Datamine =
     { worldAreas : Array WorldArea
     , lang : Dict String Lang
+    , worldAreasById : Dict String WorldArea
     , unindex : LangIndex
     }
 
@@ -18,6 +28,8 @@ type alias WorldArea =
     { id : String
     , isTown : Bool
     , isHideout : Bool
+
+    -- use the `isMap` function instead! This is unreliable, ex. true for many boss zones and side areas
     , isMapArea : Bool
     , isUniqueMapArea : Bool
     , itemVisualId : Maybe String
@@ -38,6 +50,26 @@ type alias LangIndex =
     { worldAreas : Dict String String
     , backendErrors : Dict String String
     }
+
+
+tier : WorldArea -> Int
+tier =
+    -- TODO
+    always 1
+
+
+worldAreaToString : Datamine -> WorldArea -> String
+worldAreaToString dm world =
+    dm.lang
+        |> Dict.get "en"
+        |> Maybe.andThen (.index >> .worldAreas >> Dict.get world.id)
+        |> Maybe.withDefault world.id
+
+
+worldAreaFromName : String -> Datamine -> Maybe WorldArea
+worldAreaFromName name dm =
+    Dict.get name dm.unindex.worldAreas
+        |> Maybe.andThen (\id -> Dict.get id dm.worldAreasById)
 
 
 langs : Datamine -> List Lang
@@ -114,10 +146,23 @@ imgSrc =
     .itemVisualId >> Maybe.map (String.replace ".dds" ".png" >> (\path -> "https://web.poecdn.com/image/" ++ path ++ "?w=1&h=1&scale=1&mn=6"))
 
 
+isMap : WorldArea -> Bool
+isMap w =
+    case imgSrc w of
+        Nothing ->
+            False
+
+        Just _ ->
+            True
+
+
 createDatamine ws ls =
     let
+        worldAreasById =
+            ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
+
         init =
-            Datamine ws ls langIndexEmpty
+            Datamine ws ls worldAreasById langIndexEmpty
     in
     { init | unindex = init |> langs |> List.map .unindex |> langIndexUnion }
 

@@ -23,7 +23,6 @@ import Mapwatch.Instance as Instance
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run
 import Mapwatch.Visit as Visit
-import Mapwatch.Zone as Zone
 import Maybe.Extra
 import Ports
 import Time
@@ -80,11 +79,11 @@ init datamineJson =
     ( initModel datamineJson, Cmd.none )
 
 
-updateLine : LogLine.Line -> OkModel -> ( OkModel, Cmd Msg )
-updateLine line model =
+updateLine : Datamine -> LogLine.Line -> OkModel -> ( OkModel, Cmd Msg )
+updateLine datamine line model =
     let
         instance =
-            Instance.initOrUpdate line model.instance
+            Instance.initOrUpdate datamine line model.instance
 
         visit =
             Visit.tryInit model.instance instance
@@ -163,7 +162,7 @@ updateOk msg model =
         RecvLogLine raw ->
             case LogLine.parse (Time.millisToPosix raw.date) raw.line of
                 Ok line ->
-                    updateLine line model
+                    updateLine model.datamine line model
 
                 Err err ->
                     ( { model | parseError = Just err }, Cmd.none )

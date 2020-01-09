@@ -8,7 +8,6 @@ import ISO8601
 import Mapwatch as Mapwatch
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Run as Run exposing (Run)
-import Mapwatch.Zone as Zone
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
 import Regex
