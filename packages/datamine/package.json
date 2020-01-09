@@ -10,7 +10,7 @@
     "pypoe:install": "cd PyPoE && pip install -e .[full]",
     "ui": "pypoe_ui",
     "clean": "rm -rf dist",
-    "export": "bash -c \"yarn export:lang && yarn export:main\"",
+    "export:all": "bash -c \"yarn export:lang && yarn export:main\"",
     "export:main": "bash -c \"mkdir -p dist && pypoe_exporter config set ggpk_path \\\"`cat ggpk_paths/en`\\\" && pypoe_exporter dat json dist/all.json && date > dist/date\"",
     "export:lang": "bash -c \"yarn export:lang:en && yarn export:lang:fr && yarn export:lang:de && yarn export:lang:ko && yarn export:lang:pt && yarn export:lang:ru && yarn export:lang:es && yarn export:lang:th\"",
     "export:lang:en": "bash -c \"pypoe_exporter config set ggpk_path \\\"`cat ggpk_paths/en`\\\" && pypoe_exporter dat json dist/lang/en.json --files `node src/langFilenames.js`\"",
@@ -24,9 +24,9 @@
     "//export:lang:zh": "This one's tricky: Chinese is not included with the English PoE download. I have to aim it at a separately-downloaded content.ggpk.",
     "export:lang:zh": "bash -c \"pypoe_exporter config set ggpk_path \\\"`cat ggpk_paths/zh`\\\" && pypoe_exporter dat json dist/lang/zh.json --lang \\\"Simplified Chinese\\\" --files `node src/langFilenames.js`\"",
     "process": "node src/main.js > dist/mapwatch.json",
-    "build": "bash -c \"yarn export && yarn process\"",
-    "//build:zh": "Because downloading Chinese-PoE is a pain, I don't want to require it for the build. dist/lang/zh.json is git-committed (unlike other language exports), and `yarn build` won't rebuild it. `yarn build:zh` will. ",
-    "build:zh": "bash -c \"yarn export:lang:zh && yarn build\""
+    "export": "bash -c \"yarn export && yarn process\"",
+    "//export:zh": "Because downloading Chinese-PoE is a pain, I don't want to require it for the build. dist/lang/zh.json is git-committed (unlike other language exports), and `yarn export` won't rebuild it. `yarn export:zh` will. ",
+    "export:zh": "bash -c \"yarn export:lang:zh && yarn build\""
   },
   "devDependencies": {
     "lodash": "^4.17.15"
