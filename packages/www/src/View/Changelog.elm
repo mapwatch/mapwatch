@@ -11,8 +11,8 @@ import View.Icon as Icon
 import View.Nav
 
 
-view : String -> Maybe String -> Html msg
-view hrefHostname markdown =
+view : Maybe String -> Html msg
+view markdown =
     div [ class "main" ]
         [ viewHeader
         , View.Nav.view <| Just Route.Changelog
@@ -26,7 +26,7 @@ view hrefHostname markdown =
             , text "."
             ]
         , div [ class "changelog-subscribe-buttons" ]
-            [ a [ class "button", target "_blank", href <| hrefHostname ++ "/rss.xml" ] [ Icon.fas "rss", text " RSS notifications" ]
+            [ a [ class "button", target "_blank", href "/rss.xml" ] [ Icon.fas "rss", text " RSS notifications" ]
             , a [ class "button", target "_blank", href "https://feedburner.google.com/fb/a/mailverify?uri=mapwatch" ] [ Icon.fas "at", text " Email notifications" ]
             ]
         , markdown

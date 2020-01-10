@@ -1,8 +1,8 @@
-module AppPlatform exposing (AppModel, hrefHostname, ifElectron, isElectron, unlessElectron)
+module AppPlatform exposing (AppModel, ifElectron, isElectron, unlessElectron)
 
 
 type alias AppModel m f =
-    { m | flags : { f | platform : String, hostname : String } }
+    { m | flags : { f | platform : String } }
 
 
 isElectron : AppModel m f -> Bool
@@ -26,8 +26,3 @@ unlessElectron m yes no =
 
     else
         no
-
-
-hrefHostname : AppModel m f -> String
-hrefHostname m =
-    ifElectron m m.flags.hostname ""

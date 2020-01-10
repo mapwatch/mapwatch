@@ -16,6 +16,7 @@
     "start": "cd ./packages/www && yarn start",
     "build:www": "cd ./packages/www && yarn build",
     "serve:www": "cd ./packages/www/build && serve",
+    "start:electron2": "cd ./packages/electron2 && yarn start",
     "build": "lerna run build --stream",
     "test": "exit 0",
     "release": "cd ./packages/electron && yarn release",

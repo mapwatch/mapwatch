@@ -25,21 +25,8 @@ function main() {
 
   const qs = util.parseQS(document.location.search)
   const flags = createFlags(backend, qs)
-  const app = Elm.Main.init({flags, node: document.getElementById('root')})
+  const app = Elm.Main.init({flags})
   console.log('init', {backend, flags, datamine})
-
-  // https://github.com/elm/browser/blob/1.0.0/notes/navigation-in-elements.md
-  window.addEventListener('popstate', function() {
-    app.ports.onUrlChange.send(location.href)
-  })
-  //app.ports.pushUrl.subscribe(function(url) {
-  //  history.pushState({}, '', url)
-  //  app.ports.onUrlChange.send(location.href)
-  //})
-  app.ports.replaceUrl.subscribe(function(url) {
-    history.replaceState({}, '', url)
-    app.ports.onUrlChange.send(location.href)
-  })
 
   // fetch external files for elm
   analytics.main(app, 'www')
@@ -109,8 +96,6 @@ function createFlags(backend, qs) {
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: backend.platform,
-    hostname: location.protocol + '//' + location.hostname,
-    url: location.href,
     datamine,
   }
 }

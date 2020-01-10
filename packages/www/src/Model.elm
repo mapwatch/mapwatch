@@ -9,6 +9,7 @@ module Model exposing
     )
 
 import Browser
+import Browser.Navigation as Nav
 import Json.Decode as D
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine)
@@ -17,13 +18,12 @@ import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run
 import Mapwatch.Visit as Visit
 import Maybe.Extra
-import NavPorts as Nav
 import Ports
 import Route exposing (Route)
 import Set
 import Task
 import Time
-import Url as Url exposing (Url)
+import Url exposing (Url)
 
 
 type alias Flags =
@@ -31,8 +31,6 @@ type alias Flags =
     , tickOffset : Int
     , isBrowserSupported : Bool
     , platform : String
-    , hostname : String
-    , url : String
     , datamine : D.Value
     }
 
@@ -50,7 +48,8 @@ type alias Model =
 
 
 type alias OkModel =
-    { mapwatch : Mapwatch.OkModel
+    { nav : Nav.Key
+    , mapwatch : Mapwatch.OkModel
     , config : Config
     , flags : Flags
     , changelog : Maybe String
@@ -70,7 +69,7 @@ type Msg
     | Changelog String
     | InputClientLogWithId String
     | InputMaxSize String
-    | NavPath String
+    | NavRequest Browser.UrlRequest
     | NavLocation Url
     | RouteTo Route
     | MapsSearch Route.MapsParams
@@ -78,26 +77,21 @@ type Msg
     | InputVolume String
 
 
-init : Flags -> ( Model, Cmd Msg )
-init flags =
+init : Flags -> Url -> Nav.Key -> ( Model, Cmd Msg )
+init flags url nav =
     let
-        route =
-            flags.url
-                |> Url.fromString
-                |> Maybe.map Route.parse
-                |> Maybe.withDefault (Route.Timer Route.timerParams0)
-
         loadedAt =
             Time.millisToPosix flags.loadedAt
 
         createModel : Mapwatch.OkModel -> OkModel
         createModel mapwatch =
-            { mapwatch = mapwatch
+            { nav = nav
+            , mapwatch = mapwatch
             , config = { maxSize = 20 }
             , flags = flags
             , changelog = Nothing
             , loadedAt = loadedAt
-            , route = route
+            , route = Route.parse url
             , now = loadedAt
             , tz = Time.utc
             , lines = []
@@ -179,16 +173,15 @@ updateOk msg ({ config } as model) =
         NavLocation url ->
             let
                 newModel =
-                    { model | route = url |> Route.parse }
+                    { model | route = Route.parse url }
             in
             ( newModel, sendVolume newModel )
 
-        NavPath path ->
-            let
-                newModel =
-                    path |> Url.fromString |> Maybe.Extra.unwrap model (\url -> { model | route = url |> Route.parse })
-            in
-            ( newModel, sendVolume newModel )
+        NavRequest (Browser.Internal url) ->
+            ( model, url |> Url.toString |> Nav.pushUrl model.nav )
+
+        NavRequest (Browser.External urlstr) ->
+            ( model, urlstr |> Nav.load )
 
         Changelog markdown ->
             ( { model | changelog = Just markdown }, Cmd.none )
@@ -209,7 +202,7 @@ updateOk msg ({ config } as model) =
             , Route.Maps ps
                 |> Route.stringify
                 -- |> Debug.log "maps-search"
-                |> Nav.replaceUrl
+                |> Nav.replaceUrl model.nav
             )
 
         HistorySearch ps ->
@@ -217,7 +210,7 @@ updateOk msg ({ config } as model) =
             , Route.History ps
                 |> Route.stringify
                 -- |> Debug.log "history-search"
-                |> Nav.replaceUrl
+                |> Nav.replaceUrl model.nav
             )
 
         RouteTo route ->
@@ -225,7 +218,7 @@ updateOk msg ({ config } as model) =
             , route
                 |> Route.stringify
                 -- |> Debug.log "route-to"
-                |> Nav.replaceUrl
+                |> Nav.replaceUrl model.nav
             )
 
         InputVolume str ->
@@ -269,7 +262,6 @@ subscriptions rmodel =
             Sub.batch
                 [ Mapwatch.subscriptions (Ok model.mapwatch) |> Sub.map M
                 , Ports.changelog Changelog
-                , Nav.onUrlChange NavPath
 
                 -- Slow down animation, deliberately - don't eat poe's cpu
                 --, Browser.Events.onAnimationFrame Tick
