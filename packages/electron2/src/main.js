@@ -3,6 +3,7 @@ const path = require('path')
 const argv = require('minimist')(process.argv)
 const child_process = require('child_process')
 const os = require('os')
+const {autoUpdater} = require('electron-updater')
 
 function main() {
   const win = new electron.BrowserWindow({
@@ -46,6 +47,10 @@ function main() {
       kill(www)
     })
   }
+
+  // https://www.electron.build/auto-update
+  autoUpdater.checkForUpdatesAndNotify()
+
   // finally, load the app itself
   const url = argv.app_url || 'https://mapwatch.erosson.org'
   console.log({url})

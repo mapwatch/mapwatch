@@ -5,15 +5,43 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "start": "bash -c \"electron . --spawn_www --app_url=http://localhost:3000\""
+    "start": "bash -c \"electron . --spawn_www --app_url=http://localhost:3000\"",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "org.erosson.mapwatch",
+    "productName": "Mapwatch",
+    "//artifactName": "${productName}-${version}-${os}.${ext}",
+    "artifactName": "${productName}-${version}.${ext}",
+    "files": [
+      "node_modules/",
+      "src/",
+      "package.json"
+    ],
+    "appImage": {},
+    "win": {
+      "icon": "node_modules/@mapwatch/www/dist/favicon.jpeg"
+    },
+    "publish": [
+      {
+        "owner": "mapwatch",
+        "repo": "mapwatch",
+        "provider": "github"
+      }
+    ],
+    "directories": {
+      "output": "dist/"
+    }
   },
   "dependencies": {
-    "@mapwatch/www": "1.0.0",
     "chokidar": "^3.3.1",
+    "electron-updater": "^4.2.0",
     "lodash": "^4.17.15",
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "electron": "^7.1.7"
+    "@mapwatch/www": "1.0.0",
+    "electron": "7.1.8",
+    "electron-builder": "^21.2.0"
   }
 }
