@@ -19,7 +19,6 @@ addons:
 cache:
   directories:
     - packages/www/elm-stuff/build-artifacts
-    - packages/lib/elm-stuff/build-artifacts
     - node_modules/
     - sysconfcpus/
     - $HOME/.cache/electron
@@ -49,22 +48,21 @@ script:
   - yarn test
   # `yarn build` may also release the electron build, if there's a draft or a tag.
   # https://www.electron.build/configuration/publish#recommended-github-releases-workflow
-  - sysconfcpus -n 2 yarn build --ignore @mapwatch/electron --ignore @mapwatch/datamine --ignore @mapwatch/electron2
+  - sysconfcpus -n 2 yarn build --ignore @mapwatch/datamine --ignore @mapwatch/electron2
 
-  # Electron build disabled; I'm redesigning this shortly - see the electron2 package
-  #- yarn build:electron
+  #- yarn build:electron2
   # https://www.electron.build/multi-platform-build
   # https://github.com/develar/onshape-desktop-shell/blob/master/.travis.yml
-  #- ENVFILE=`mktemp`
-  #- env | grep -iE 'DEBUG|NODE_|ELECTRON_|YARN_|NPM_|CI|CIRCLE|TRAVIS|APPVEYOR_|CSC_|_TOKEN|_KEY|AWS_|STRIP|BUILD_' > $ENVFILE
-  #- |
-  #  docker run --rm \
-  #    --env-file $ENVFILE \
-  #    -v ${PWD}:/project \
-  #    -v ~/.cache/electron:/root/.cache/electron \
-  #    -v ~/.cache/electron-builder:/root/.cache/electron-builder \
-  #    electronuserland/builder:wine \
-  #    yarn build:electron
+  - ENVFILE=`mktemp`
+  - env | grep -iE 'DEBUG|NODE_|ELECTRON_|YARN_|NPM_|CI|CIRCLE|TRAVIS|APPVEYOR_|CSC_|_TOKEN|_KEY|AWS_|STRIP|BUILD_' > $ENVFILE
+  - |
+    docker run --rm \
+      --env-file $ENVFILE \
+      -v ${PWD}:/project \
+      -v ~/.cache/electron:/root/.cache/electron \
+      -v ~/.cache/electron-builder:/root/.cache/electron-builder \
+      electronuserland/builder:wine \
+      yarn build:electron2
 
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine

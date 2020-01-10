@@ -6,12 +6,12 @@
   "private": true,
   "scripts": {
     "start": "bash -c \"electron . --spawn_www --app_url=http://localhost:3000\"",
-    "dist": "electron-builder --win --x64"
+    "build": "electron-builder --win --x64",
+    "release": "yarn build --publish always"
   },
   "build": {
     "appId": "org.erosson.mapwatch",
     "productName": "Mapwatch",
-    "//artifactName": "${productName}-${version}-${os}.${ext}",
     "artifactName": "${productName}-${version}.${ext}",
     "files": [
       "node_modules/",
