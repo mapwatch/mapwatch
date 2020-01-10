@@ -28,6 +28,7 @@ function main() {
     const www = child_process.exec('elm-app start --no-browser', {
       // cwd: path.join(__dirname, "node_modules/@mapwatch/www"),
       cwd: "../www",
+      env: {...process.env, ELM_DEBUGGER: false},
     })
     // TODO: watch output for "You can now view www in the browser." before loading
     www.stdout.on('data', data => process.stdout.write(data.toString()))

@@ -7,6 +7,7 @@ import Mapwatch as Mapwatch
 import Model as Model exposing (Model, Msg)
 import Route exposing (Route(..))
 import View.Changelog
+import View.Debug
 import View.DebugDatamine
 import View.DumpLines
 import View.History
@@ -42,7 +43,7 @@ viewBody rmodel =
                     View.Overlay.view qs model
 
                 Debug ->
-                    div [] [ text "TODO" ]
+                    View.Debug.view model
 
                 DebugDumpLines ->
                     View.DumpLines.view model
