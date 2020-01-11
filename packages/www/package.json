@@ -5,10 +5,8 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "hello": "echo foo; echo bar; echo $SHELL; echo %SHELL%",
     "_build:version": "bash scripts/_build/version",
-    "_build:elm": "elm make src/Main.elm --optimize --output=build/elm.js",
-    "build": "yarn _build:version && elm-app build && yarn _build:elm",
+    "build": "yarn _build:version && elm-app build",
     "start": "yarn _build:version && bash -c \"ELM_DEBUGGER=false elm-app start\"",
     "//test": "elm-app test",
     "clean": "rm -rf build public/rss.xml public/CHANGELOG.md public/version.txt"
@@ -20,8 +18,10 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.0",
     "create-elm-app": "^4.1.2",
+    "raw-loader": "^4.0.0",
     "rimraf": "^3.0.0",
     "sakura.css": "^1.0.0",
+    "script-loader": "^0.7.2",
     "scripty": "^1.7.2"
   }
 }

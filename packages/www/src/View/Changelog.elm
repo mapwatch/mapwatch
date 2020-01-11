@@ -11,7 +11,7 @@ import View.Icon as Icon
 import View.Nav
 
 
-view : Maybe String -> Html msg
+view : String -> Html msg
 view markdown =
     div [ class "main" ]
         [ viewHeader
@@ -30,6 +30,9 @@ view markdown =
             , a [ class "button", target "_blank", href "https://feedburner.google.com/fb/a/mailverify?uri=mapwatch" ] [ Icon.fas "at", text " Email notifications" ]
             ]
         , markdown
-            |> Maybe.andThen (String.split "---" >> List.drop 1 >> List.head)
-            |> Maybe.Extra.unwrap (text "error fetching changelog") (Markdown.toHtml [ class "changelog-entries" ])
+            -- skip everything above the first "---"
+            |> String.split "---"
+            |> List.drop 1
+            |> String.join "---"
+            |> Markdown.toHtml [ class "changelog-entries" ]
         ]

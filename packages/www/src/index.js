@@ -9,6 +9,8 @@ import * as logReader from './logReader'
 import {BrowserBackend} from './browserBackend'
 import {MemoryBackend} from './memoryBackend'
 import {default as datamine} from '@mapwatch/datamine'
+import '!!file-loader?name=CHANGELOG.md!../../../CHANGELOG.md'
+import changelog from '!!raw-loader!../../../CHANGELOG.md'
 const MB = logReader.MB
 
 // redirect from old host to new host.
@@ -33,13 +35,6 @@ function main() {
   fetch('./version.txt')
   .then(function(res) { return res.text() })
   .then(analytics.version)
-
-  fetch('./CHANGELOG.md')
-  .then(function(res) { return res.text() })
-  .then(function(str) {
-    console.log('fetched changelog', str.length)
-    app.ports.changelog.send(str)
-  })
 
   app.ports.inputClientLogWithId.subscribe(config => {
     var files = document.getElementById(config.id).files
@@ -93,6 +88,7 @@ function createFlags(backend, qs) {
   return {
     loadedAt,
     tickOffset,
+    changelog,
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: backend.platform,

@@ -52,7 +52,7 @@ viewBody rmodel =
                     View.DebugDatamine.view model.mapwatch.datamine
 
                 Changelog ->
-                    View.Changelog.view model.changelog
+                    View.Changelog.view model.flags.changelog
 
                 NotFound loc ->
                     View.NotFound.view

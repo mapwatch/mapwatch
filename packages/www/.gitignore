@@ -13,6 +13,5 @@ node_modules
 # Desktop Services Store on macOS
 .DS_Store
 
-public/CHANGELOG.md
 public/version.txt
 public/rss.xml

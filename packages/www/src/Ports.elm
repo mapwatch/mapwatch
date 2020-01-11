@@ -1,6 +1,5 @@
 port module Ports exposing
     ( Progress
-    , changelog
     , inputClientLogWithId
     , logline
     , progress
@@ -21,9 +20,6 @@ import Time
 
 
 port inputClientLogWithId : { id : String, maxSize : Int } -> Cmd msg
-
-
-port changelog : (String -> msg) -> Sub msg
 
 
 {-| date is included in the line itself, but elm has trouble parsing it with the

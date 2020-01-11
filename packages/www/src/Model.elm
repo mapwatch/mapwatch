@@ -31,6 +31,7 @@ type alias Flags =
     , tickOffset : Int
     , isBrowserSupported : Bool
     , platform : String
+    , changelog : String
     , datamine : D.Value
     }
 
@@ -52,7 +53,6 @@ type alias OkModel =
     , mapwatch : Mapwatch.OkModel
     , config : Config
     , flags : Flags
-    , changelog : Maybe String
     , loadedAt : Time.Posix
     , route : Route
     , now : Time.Posix
@@ -66,7 +66,6 @@ type Msg
     = M Mapwatch.Msg
     | Tick Time.Posix
     | SetTimezone Time.Zone
-    | Changelog String
     | InputClientLogWithId String
     | InputMaxSize String
     | NavRequest Browser.UrlRequest
@@ -89,7 +88,6 @@ init flags url nav =
             , mapwatch = mapwatch
             , config = { maxSize = 20 }
             , flags = flags
-            , changelog = Nothing
             , loadedAt = loadedAt
             , route = Route.parse url
             , now = loadedAt
@@ -183,9 +181,6 @@ updateOk msg ({ config } as model) =
         NavRequest (Browser.External urlstr) ->
             ( model, urlstr |> Nav.load )
 
-        Changelog markdown ->
-            ( { model | changelog = Just markdown }, Cmd.none )
-
         InputClientLogWithId id ->
             ( model, Ports.inputClientLogWithId { id = id, maxSize = config.maxSize } )
 
@@ -261,7 +256,6 @@ subscriptions rmodel =
         Ok model ->
             Sub.batch
                 [ Mapwatch.subscriptions (Ok model.mapwatch) |> Sub.map M
-                , Ports.changelog Changelog
 
                 -- Slow down animation, deliberately - don't eat poe's cpu
                 --, Browser.Events.onAnimationFrame Tick

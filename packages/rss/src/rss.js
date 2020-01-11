@@ -1,11 +1,10 @@
 const RSS = require('rss')
-const {promisify} = require('util')
-const fs = require('fs')
+const fs = require('fs').promises
 const parseChangelog = require('./changelog-md')
 
 const hostname = 'https://mapwatch.erosson.org'
 // promisify(fs.readFile)('./example-CHANGELOG.md')
-promisify(fs.readFile)('../../CHANGELOG.md')
+fs.readFile('../../CHANGELOG.md')
 .then(parseChangelog({limit: 20}))
 .then(({header, entries}) => {
   const feed = new RSS({
