@@ -15,6 +15,7 @@
             "elm/time": "1.0.0",
             "elm/url": "1.0.0",
             "elm-community/dict-extra": "2.4.0",
+            "elm-community/maybe-extra": "5.1.0",
             "elm-community/result-extra": "2.3.0",
             "elm-explorations/markdown": "1.0.0",
             "jweir/elm-iso8601": "7.0.0"
