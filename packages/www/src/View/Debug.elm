@@ -16,4 +16,5 @@ view model =
             , li [] [ a [ Route.href Route.DebugDumpLines ] [ text "/debug/dumplines" ] ]
             ]
         , p [] [ text "Platform: ", code [] [ text model.flags.platform ] ]
+        , p [] [ text "Version: ", code [] [ text model.flags.version ] ]
         ]

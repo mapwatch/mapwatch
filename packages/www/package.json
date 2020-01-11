@@ -9,7 +9,7 @@
     "build": "yarn _build:version && elm-app build",
     "start": "yarn _build:version && bash -c \"ELM_DEBUGGER=false elm-app start\"",
     "//test": "elm-app test",
-    "clean": "rm -rf build public/rss.xml public/CHANGELOG.md public/version.txt"
+    "clean": "rm -rf build tmp"
   },
   "dependencies": {
     "@mapwatch/datamine": "1.0.0",
@@ -21,7 +21,6 @@
     "raw-loader": "^4.0.0",
     "rimraf": "^3.0.0",
     "sakura.css": "^1.0.0",
-    "script-loader": "^0.7.2",
     "scripty": "^1.7.2"
   }
 }

@@ -32,6 +32,7 @@ type alias Flags =
     , isBrowserSupported : Bool
     , platform : String
     , changelog : String
+    , version : String
     , datamine : D.Value
     }
 

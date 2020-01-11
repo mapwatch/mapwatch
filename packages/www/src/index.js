@@ -9,8 +9,16 @@ import * as logReader from './logReader'
 import {BrowserBackend} from './browserBackend'
 import {MemoryBackend} from './memoryBackend'
 import {default as datamine} from '@mapwatch/datamine'
-import '!!file-loader?name=CHANGELOG.md!../../../CHANGELOG.md'
 import changelog from '!!raw-loader!../../../CHANGELOG.md'
+// version.txt is created by by `yarn _build:version`
+import version from '!!raw-loader!../tmp/version.txt'
+// file-loader copies things into the website's static files; for example,
+// this makes https://erosson.mapwatch.org/CHANGELOG.md work. Sort of like how
+// `cp ... ./build/` in `yarn build` might work, but this also works in dev.
+import '!!file-loader?name=CHANGELOG.md!../../../CHANGELOG.md'
+import '!!file-loader?name=rss.xml!../../rss/dist/rss.xml'
+import '!!file-loader?name=version.txt!../tmp/version.txt'
+
 const MB = logReader.MB
 
 // redirect from old host to new host.
@@ -30,11 +38,7 @@ function main() {
   const app = Elm.Main.init({flags})
   console.log('init', {backend, flags, datamine})
 
-  // fetch external files for elm
-  analytics.main(app, 'www')
-  fetch('./version.txt')
-  .then(function(res) { return res.text() })
-  .then(analytics.version)
+  analytics.main(app, backend.platform, version)
 
   app.ports.inputClientLogWithId.subscribe(config => {
     var files = document.getElementById(config.id).files
@@ -89,6 +93,7 @@ function createFlags(backend, qs) {
     loadedAt,
     tickOffset,
     changelog,
+    version,
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: backend.platform,
@@ -125,3 +130,4 @@ function say(args) {
 }
 
 main()
+registerServiceWorker.unregister()

@@ -13,5 +13,5 @@ node_modules
 # Desktop Services Store on macOS
 .DS_Store
 
-public/version.txt
-public/rss.xml
+# Pre-build generated files
+tmp/
