@@ -2,17 +2,25 @@ module Mapwatch.LogLine exposing
     ( Info(..)
     , Line
     , ParseError
-    , ParsedLine
     , parse
     , parseErrorToString
     )
 
+{-| Parse log lines with regexes.
+
+Elm's parsers are nicer and more precise than regexes. They are also much slower,
+even when I avoid backtracking, so I'm stuck using these regexes.
+
+-}
+
 import Array exposing (Array)
+import Dict exposing (Dict)
+import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Maybe.Extra
-import Parser as P exposing ((|.), (|=), Parser)
-import Regex
+import Regex exposing (Regex)
 import Time exposing (Posix)
 import Time.Extra
+import Util.String
 
 
 type alias ParseError =
@@ -23,10 +31,6 @@ parseErrorToString : ParseError -> String
 parseErrorToString e =
     -- Debug.toString e
     "{ err: " ++ e.err ++ ", raw: " ++ e.raw ++ " }"
-
-
-type alias ParsedLine =
-    Result ParseError Line
 
 
 type Info
@@ -42,90 +46,87 @@ type alias Line =
     }
 
 
-regexes =
-    { opening = "LOG FILE OPENING" |> Regex.fromString
-    , entered = "You have entered (.*)\\.$|你已進入：(.*)。$" |> Regex.fromString
-    , connecting = "Connecting to instance server at (.*)$" |> Regex.fromString
-    }
+parse : Datamine -> Time.Zone -> String -> Result ParseError Line
+parse dm tz raw =
+    case parseInfo dm raw of
+        Nothing ->
+            Err { raw = raw, err = "logline not recognized" }
+
+        Just info ->
+            case parseDate tz raw of
+                Err err ->
+                    Err { raw = raw, err = "logline date invalid: " ++ err }
+
+                Ok date ->
+                    Ok { raw = raw, date = date, info = info }
 
 
-unsafeRegexes =
-    { opening = regexes.opening |> Maybe.withDefault Regex.never
-    , entered = regexes.entered |> Maybe.withDefault Regex.never
-    , connecting = regexes.connecting |> Maybe.withDefault Regex.never
-    }
-
-
-parseLogInfo : String -> Maybe Info
-parseLogInfo raw =
+parseInfo : Datamine -> String -> Maybe Info
+parseInfo dm raw =
     let
-        parseOpening =
-            case raw |> Regex.findAtMost 1 unsafeRegexes.opening |> List.head of
-                Just _ ->
-                    Just Opening
-
-                _ ->
-                    Nothing
-
-        parseEntered =
-            case raw |> Regex.findAtMost 1 unsafeRegexes.entered |> List.head |> Maybe.map (.submatches >> Maybe.Extra.values) of
-                Just (zone :: _) ->
-                    Just <| YouHaveEntered zone
-
-                _ ->
-                    Nothing
-
-        parseConnecting =
-            case raw |> Regex.findAtMost 1 unsafeRegexes.connecting |> List.head |> Maybe.map .submatches of
-                Just [ Just addr ] ->
-                    Just <| ConnectingToInstanceServer addr
-
-                _ ->
-                    Nothing
+        info =
+            String.dropLeft dateLength raw
     in
-    [ parseOpening, parseEntered, parseConnecting ]
-        -- use the first matching parser
-        |> Maybe.Extra.values
-        |> List.head
+    if info == "***** LOG FILE OPENING *****" then
+        Just Opening
+
+    else
+        case info |> String.indexes "] " |> List.head |> Maybe.map (\i -> String.dropLeft (i + 2) info) of
+            Nothing ->
+                Nothing
+
+            Just body ->
+                case Util.String.unwrap "Connecting to instance server at " "" body of
+                    Just addr ->
+                        Just (ConnectingToInstanceServer addr)
+
+                    Nothing ->
+                        parseInfoEntered dm body
+
+
+parseInfoEntered : Datamine -> String -> Maybe Info
+parseInfoEntered dm =
+    dm.youHaveEntered >> Maybe.map YouHaveEntered
+
+
+{-| like "2018/05/13 16:05:37"
+
+I don't like regexes. We could avoid this one with String.split shenanigans, but
+that's even uglier.
+
+-}
+dateRegex =
+    "^(\\d{4})/(\\d{2})/(\\d{2}) (\\d{2}):(\\d{2}):(\\d{2}) " |> Regex.fromString |> Maybe.withDefault Regex.never
+
+
+{-| it's the same length every time
+-}
+dateLength =
+    String.length "2018/05/13 16:05:37 "
 
 
 parseDate : Time.Zone -> String -> Result String Posix
 parseDate tz raw =
-    raw
-        |> P.run (dateParser tz)
-        -- |> Result.mapError P.deadEndsToString
-        |> Result.mapError (Tuple.pair raw >> Debug.toString)
-        -- |> Debug.log "parseDate"
-        |> identity
+    case Util.String.firstSubmatches dateRegex raw of
+        Just ((Just y) :: (Just m) :: (Just d) :: (Just h) :: (Just min) :: (Just s) :: []) ->
+            -- naturally, they stop at map5
+            Maybe.map3 Time.Extra.Parts
+                (String.toInt y)
+                (String.toInt m |> Maybe.andThen (\mm -> Array.get (mm - 1) months))
+                (String.toInt d)
+                |> Maybe.andThen
+                    (\parts ->
+                        Maybe.map4 parts
+                            (String.toInt h)
+                            (String.toInt min)
+                            (String.toInt s)
+                            (Just 0)
+                    )
+                |> Maybe.map (Time.Extra.partsToPosix tz)
+                |> Result.fromMaybe "invalid date parts"
 
-
-dateParser : Time.Zone -> P.Parser Posix
-dateParser tz =
-    P.succeed Time.Extra.Parts
-        -- example: `2020/01/08 16:12:56 ...`
-        |= P.int
-        |. P.symbol "/"
-        |= (leadingZeroInt |> P.andThen (\m -> Array.get (m - 1) months |> Maybe.Extra.unwrap (P.problem <| "invalid month: " ++ String.fromInt m) P.succeed))
-        |. P.symbol "/"
-        |= leadingZeroInt
-        |. P.spaces
-        |= leadingZeroInt
-        |. P.symbol ":"
-        |= leadingZeroInt
-        |. P.symbol ":"
-        |= leadingZeroInt
-        |. P.spaces
-        |> P.map (\parts -> parts 0 |> Time.Extra.partsToPosix tz)
-
-
-leadingZeroInt : P.Parser Int
-leadingZeroInt =
-    P.succeed identity
-        |. P.oneOf
-            [ P.symbol "0"
-            , P.succeed ()
-            ]
-        |= P.int
+        _ ->
+            Err "invalid date format"
 
 
 months : Array Time.Month
@@ -144,18 +145,3 @@ months =
         , Time.Nov
         , Time.Dec
         ]
-
-
-parse : Time.Zone -> String -> ParsedLine
-parse tz raw =
-    case parseLogInfo raw of
-        Nothing ->
-            Err { raw = raw, err = "logline not recognized" }
-
-        Just info ->
-            case parseDate tz raw of
-                Err err ->
-                    Err { raw = raw, err = "logline date invalid: " ++ err }
-
-                Ok date ->
-                    Ok { raw = raw, date = date, info = info }

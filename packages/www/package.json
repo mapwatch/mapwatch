@@ -8,7 +8,7 @@
     "_build:version": "bash scripts/_build/version",
     "build": "yarn _build:version && elm-app build",
     "start": "yarn _build:version && bash -c \"ELM_DEBUGGER=false elm-app start\"",
-    "//test": "elm-app test",
+    "test": "elm-app test",
     "clean": "rm -rf build tmp"
   },
   "dependencies": {

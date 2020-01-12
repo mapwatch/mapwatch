@@ -9,6 +9,9 @@ All substantial Mapwatch changes.
 ---
 ## 2020-01-11
 - Side areas now have icons.
+- Mapwatch now works even if you're not playing PoE in English: it understands log files in any language supported by PoE.
+  - The text within Mapwatch's interface/website is still only in English.
+  - Foreign logfiles aren't well-tested, since I only speak English. Please let me know if they work/don't work for you!
 - Vaal side areas and labyrinth trials now have labels.
 - Fixed several timezone bugs. In particular, the "run an example" link now works in all timezones.
 - The timer next to "last entered" now correctly shows how long it's been since you entered that area.

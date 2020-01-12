@@ -13,7 +13,7 @@
     "start:electron2": "cd ./packages/electron2 && yarn start",
     "build:electron2": "cd ./packages/electron2 && yarn build",
     "build": "lerna run build --stream",
-    "test": "exit 0",
+    "test": "lerna run test",
     "release": "cd ./packages/electron2 && yarn release",
     "clean": "lerna run clean --stream && rimraf *.log",
     "clean:npm": "yarn clean && lerna exec 'rimraf ./node_modules' --stream && rimraf ./node_modules"

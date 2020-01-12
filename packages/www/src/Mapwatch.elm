@@ -182,7 +182,7 @@ updateOk msg model =
 
                         ( model1, cmds ) =
                             lines
-                                |> List.filterMap (LogLine.parse (Maybe.withDefault Time.utc model.tz) >> Result.toMaybe)
+                                |> List.filterMap (LogLine.parse model.datamine (Maybe.withDefault Time.utc model.tz) >> Result.toMaybe)
                                 |> List.foldl updateLine ( model, [] )
                     in
                     case Readline.next readline.val of

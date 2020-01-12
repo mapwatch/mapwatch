@@ -1,6 +1,7 @@
 module Mapwatch.Datamine exposing
     ( Datamine
     , WorldArea
+    , createDatamine
     , decoder
     , imgCdn
     , imgSrc
@@ -15,7 +16,9 @@ import Array exposing (Array)
 import Dict exposing (Dict)
 import Dict.Extra
 import Json.Decode as D
+import Maybe.Extra
 import Set exposing (Set)
+import Util.String
 
 
 type alias Datamine =
@@ -23,6 +26,7 @@ type alias Datamine =
     , lang : Dict String Lang
     , worldAreasById : Dict String WorldArea
     , unindex : LangIndex
+    , youHaveEntered : String -> Maybe String
     }
 
 
@@ -166,15 +170,51 @@ isMap w =
             True
 
 
+createDatamine : Array WorldArea -> Dict String Lang -> Datamine
 createDatamine ws ls =
     let
         worldAreasById =
             ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
 
         init =
-            Datamine ws ls worldAreasById langIndexEmpty
+            Datamine ws ls worldAreasById langIndexEmpty (createYouHaveEntered ls)
     in
     { init | unindex = init |> langs |> List.map .unindex |> langIndexUnion }
+
+
+{-| Parse "You have entered %1%" messages for all languages.
+
+This never changes, and it turns out that caching it is a very real performance
+boost for LogLine parsing.
+
+Most other lang lookups are exact matches, easy to do quickly. This one's a
+special case because the area name is part of the message.
+
+-}
+createYouHaveEntered : Dict String Lang -> String -> Maybe String
+createYouHaveEntered lang =
+    let
+        strings : List String
+        strings =
+            lang
+                |> Dict.values
+                |> List.filterMap (\l -> Dict.get "EnteredArea" l.index.backendErrors)
+
+        unwrappers : List (String -> Maybe String)
+        unwrappers =
+            strings
+                |> List.filterMap
+                    (\s ->
+                        case String.split "%1%" s of
+                            pre :: suf :: [] ->
+                                Just (Util.String.unwrap (": " ++ pre) suf)
+
+                            _ ->
+                                Nothing
+                    )
+    in
+    \raw ->
+        unwrappers |> Util.String.mapFirst (\fn -> fn raw) Maybe.Extra.isJust |> Maybe.Extra.join
 
 
 decoder : D.Decoder Datamine
