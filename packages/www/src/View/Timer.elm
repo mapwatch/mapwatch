@@ -130,7 +130,7 @@ viewMain qs model =
         sinceLastUpdated =
             model.mapwatch
                 |> Mapwatch.lastUpdatedAt
-                |> Maybe.map (\t -> Time.posixToMillis model.now - Time.posixToMillis t)
+                |> Maybe.map (\t -> Time.posixToMillis model.now - Time.posixToMillis t |> Basics.max 0)
     in
     div []
         [ viewTimer timer timerGoal
