@@ -42,6 +42,11 @@ sideArea { name, url } =
     img [ class ("side-icon side-icon-" ++ name), src <| Datamine.imgCdn ++ url ] []
 
 
+
+-- old hardcoded map list, useful when searching for icon art:
+-- https://github.com/mapwatch/mapwatch/blob/8daf3a6c1562b707f040912a8e90206832d71c03/packages/lib/src/Mapwatch/MapList.elm
+
+
 vaal : Html msg
 vaal =
     -- sideArea { name = "vaal", url = "Art/2DItems/Maps/Vaal01.png" }
