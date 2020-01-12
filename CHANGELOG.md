@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2020-01-13
+- Conqueror encounters are now tracked.
+
 ## 2020-01-12
 - Side areas now have icons.
 - Vaal side areas and labyrinth trials now have labels.

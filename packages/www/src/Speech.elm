@@ -34,7 +34,7 @@ joinInstance runState lastRun instance =
     in
     -- case ( lastRun |> Maybe.map mapRun, instance |> Instance.isMap ) of
     case ( lastRun |> Maybe.map mapRun, runState ) of
-        ( Nothing, Run.Started _ ) ->
+        ( Nothing, Run.Started _ _ ) ->
             -- non-map -> map, or first run of the day
             "mapwatch now starting " ++ zone ++ ". " |> Just
 

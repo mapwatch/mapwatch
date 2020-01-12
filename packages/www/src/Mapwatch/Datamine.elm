@@ -16,7 +16,9 @@ import Array exposing (Array)
 import Dict exposing (Dict)
 import Dict.Extra
 import Json.Decode as D
+import Mapwatch.Datamine.NpcId as NpcId
 import Maybe.Extra
+import Result.Extra
 import Set exposing (Set)
 import Util.String
 
@@ -27,6 +29,7 @@ type alias Datamine =
     , worldAreasById : Dict String WorldArea
     , unindex : LangIndex
     , youHaveEntered : String -> Maybe String
+    , npcText : Dict String ( String, String )
     }
 
 
@@ -59,6 +62,8 @@ type alias Lang =
 type alias LangIndex =
     { worldAreas : Dict String String
     , backendErrors : Dict String String
+    , npcs : Dict String String
+    , npcTextAudio : Dict String String
     }
 
 
@@ -83,19 +88,22 @@ worldAreaFromName name dm =
 
 langs : Datamine -> List Lang
 langs =
-    .lang
-        >> Dict.values
-        -- english first, for my own personal ease of reading/debugging
-        >> List.sortBy
-            (\l ->
-                ( if l.name == "en" then
-                    0
+    .lang >> Dict.values >> sortLangs
 
-                  else
-                    1
-                , l.name
-                )
+
+sortLangs : List Lang -> List Lang
+sortLangs =
+    -- english first, for my own personal ease of reading/debugging
+    List.sortBy
+        (\l ->
+            ( if l.name == "en" then
+                0
+
+              else
+                1
+            , l.name
             )
+        )
 
 
 langIndexReverse : LangIndex -> LangIndex
@@ -131,12 +139,14 @@ langIndexReverse index =
     in
     { worldAreas = invert index.worldAreas
     , backendErrors = invert index.backendErrors
+    , npcs = invert index.npcs
+    , npcTextAudio = invert index.npcTextAudio
     }
 
 
 langIndexEmpty : LangIndex
 langIndexEmpty =
-    LangIndex Dict.empty Dict.empty
+    LangIndex Dict.empty Dict.empty Dict.empty Dict.empty
 
 
 langIndexUnion : List LangIndex -> LangIndex
@@ -145,6 +155,8 @@ langIndexUnion =
         fold a b =
             { worldAreas = Dict.union a.worldAreas b.worldAreas
             , backendErrors = Dict.union a.backendErrors b.backendErrors
+            , npcs = Dict.union a.npcs b.npcs
+            , npcTextAudio = Dict.union a.npcTextAudio b.npcTextAudio
             }
     in
     List.foldr fold langIndexEmpty
@@ -170,16 +182,25 @@ isMap w =
             True
 
 
-createDatamine : Array WorldArea -> Dict String Lang -> Datamine
+createDatamine : Array WorldArea -> Dict String Lang -> Result String Datamine
 createDatamine ws ls =
-    let
-        worldAreasById =
-            ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
+    Result.map
+        (\npcText ->
+            let
+                worldAreasById =
+                    ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
 
-        init =
-            Datamine ws ls worldAreasById langIndexEmpty (createYouHaveEntered ls)
-    in
-    { init | unindex = init |> langs |> List.map .unindex |> langIndexUnion }
+                init =
+                    Datamine ws
+                        ls
+                        worldAreasById
+                        langIndexEmpty
+                        (createYouHaveEntered ls)
+                        npcText
+            in
+            { init | unindex = init |> langs |> List.map .unindex |> langIndexUnion }
+        )
+        (createNPCText ls)
 
 
 {-| Parse "You have entered %1%" messages for all languages.
@@ -217,18 +238,82 @@ createYouHaveEntered lang =
         unwrappers |> Util.String.mapFirst (\fn -> fn raw) Maybe.Extra.isJust |> Maybe.Extra.join
 
 
+createNPCText : Dict String Lang -> Result String (Dict String ( String, String ))
+createNPCText lang =
+    lang
+        |> Dict.values
+        -- This sorting just makes debugging easier - shows English first - and
+        -- has no real impact on production
+        |> sortLangs
+        |> List.reverse
+        |> List.map createNPCText1
+        |> Result.Extra.combine
+        |> Result.map List.concat
+        |> Result.map Dict.fromList
+
+
+createNPCText1 : Lang -> Result String (List ( String, ( String, String ) ))
+createNPCText1 lang =
+    [ createNPCTextSet lang NpcId.baran (Tuple.first >> String.startsWith "Baran")
+    , createNPCTextSet lang NpcId.veritania (Tuple.first >> String.startsWith "Veritania")
+    , createNPCTextSet lang NpcId.alHezmin (Tuple.first >> String.startsWith "AlHezmin")
+    , createNPCTextSet lang NpcId.drox (Tuple.first >> String.startsWith "Drox")
+    ]
+        |> Result.Extra.combine
+        |> Result.map List.concat
+
+
+
+-- |> Debug.log ("npctextset-" ++ lang.name)
+
+
+createNPCTextSet : Lang -> String -> (( String, String ) -> Bool) -> Result String (List ( String, ( String, String ) ))
+createNPCTextSet lang npcId npcTextFilter =
+    -- TODO: some dialogue strings have `<if:MS>{...}<if:FS>{...}` syntax for
+    -- masculine/feminine versions. Currently, they simply don't work. Parse,
+    -- and make dict entries for both!
+    case Dict.get npcId lang.index.npcs of
+        Nothing ->
+            Err <| "no such npc: " ++ npcId
+
+        Just npcName ->
+            case lang.index.npcTextAudio |> Dict.toList |> List.filter npcTextFilter of
+                [] ->
+                    Err <| "no npcTextAudio for npc: " ++ npcId
+
+                npcTexts ->
+                    -- TODO we probably need to localize the ": " separator!
+                    npcTexts
+                        |> List.sort
+                        |> List.map (\( k, v ) -> ( npcName ++ ": " ++ v, ( npcId, k ) ))
+                        |> Ok
+
+
 decoder : D.Decoder Datamine
 decoder =
     D.map2 createDatamine
         (D.at [ "worldAreas", "data" ] worldAreasDecoder)
         (D.at [ "lang" ] langDecoder)
+        |> D.andThen resultToDecoder
+
+
+resultToDecoder : Result String a -> D.Decoder a
+resultToDecoder r =
+    case r of
+        Err err ->
+            D.fail err
+
+        Ok ok ->
+            D.succeed ok
 
 
 langDecoder : D.Decoder (Dict String Lang)
 langDecoder =
-    D.map2 LangIndex
+    D.map4 LangIndex
         (D.field "worldAreas" <| D.dict D.string)
         (D.field "backendErrors" <| D.dict D.string)
+        (D.field "npcs" <| D.dict D.string)
+        (D.field "npcTextAudio" <| D.dict D.string)
         |> D.map (\index -> Lang index (langIndexReverse index))
         |> D.dict
         |> D.map (Dict.map (\k v -> v k))

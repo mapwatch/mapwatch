@@ -13,6 +13,7 @@ view datamine =
     div []
         [ viewBackendErrors datamine
         , viewWorldAreas datamine
+        , viewNPCTexts datamine
         ]
 
 
@@ -95,6 +96,29 @@ viewTags w =
     , ifMaybe w.isUniqueMapArea "UniqueMap"
     ]
         |> List.filterMap identity
+
+
+viewNPCTexts : Datamine -> Html msg
+viewNPCTexts datamine =
+    table []
+        [ thead []
+            [ th [] [ text "NPC Id" ]
+            , th [] [ text "Text Id" ]
+            , th [] [ text "Full dialogue" ]
+            ]
+        , tbody []
+            (datamine.npcText
+                |> Dict.toList
+                |> List.map
+                    (\( dialogue, ( npcId, textId ) ) ->
+                        tr []
+                            [ td [] [ text npcId ]
+                            , td [] [ text textId ]
+                            , td [] [ text dialogue ]
+                            ]
+                    )
+            )
+        ]
 
 
 ifMaybe : Bool -> a -> Maybe a

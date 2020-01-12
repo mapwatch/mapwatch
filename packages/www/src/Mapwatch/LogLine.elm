@@ -1,6 +1,7 @@
 module Mapwatch.LogLine exposing
     ( Info(..)
     , Line
+    , NPCSaysData
     , ParseError
     , parse
     , parseErrorToString
@@ -37,6 +38,11 @@ type Info
     = Opening
     | ConnectingToInstanceServer String
     | YouHaveEntered String
+    | NPCSays NPCSaysData
+
+
+type alias NPCSaysData =
+    { raw : String, npcId : String, textId : String }
 
 
 type alias Line =
@@ -78,10 +84,17 @@ parseInfo dm raw =
             Just body ->
                 case Util.String.unwrap "Connecting to instance server at " "" body of
                     Just addr ->
-                        Just (ConnectingToInstanceServer addr)
+                        ConnectingToInstanceServer addr |> Just
 
                     Nothing ->
-                        parseInfoEntered dm body
+                        case Dict.get body dm.npcText of
+                            Just ( npcId, textId ) ->
+                                NPCSays { raw = body, npcId = npcId, textId = textId }
+                                    |> Just
+
+                            -- |> Debug.log "npcsays"
+                            Nothing ->
+                                parseInfoEntered dm body
 
 
 parseInfoEntered : Datamine -> String -> Maybe Info

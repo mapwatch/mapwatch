@@ -6,7 +6,9 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
 import Mapwatch as Mapwatch
+import Mapwatch.Datamine.NpcId as NpcId
 import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run exposing (Run)
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
@@ -285,7 +287,10 @@ type alias Duration =
 
 viewHistoryRun : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> (Run -> Maybe Duration) -> Run -> List (Html msg)
 viewHistoryRun tz config qs goals r =
-    viewHistoryMainRow tz config qs (goals r) r :: List.map ((\f ( a, b ) -> f a b) <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r)
+    viewHistoryMainRow tz config qs (goals r) r
+        :: (List.map ((\f ( a, b ) -> f a b) <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r)
+                ++ List.map (viewHistoryNPCTextRow config qs) r.npcSays
+           )
 
 
 viewDurationSet : Run.DurationSet -> List (Html msg)
@@ -357,6 +362,60 @@ viewHistorySideAreaRow { showDate } qs instance d =
                , td [ class "town-pct" ] []
                ]
         )
+
+
+viewHistoryNPCTextRow : HistoryRowConfig -> Route.HistoryParams -> LogLine.NPCSaysData -> Html msg
+viewHistoryNPCTextRow { showDate } qs { raw, npcId, textId } =
+    tr [ class "npctext-area" ]
+        ((if showDate then
+            [ td [ class "date" ] [] ]
+
+          else
+            []
+         )
+            ++ [ td [] []
+               , td [ colspan 7, title raw ] (viewNPCText npcId textId)
+               , td [ class "side-dur" ] []
+               , td [ class "portals" ] []
+               , td [ class "town-pct" ] []
+               ]
+        )
+
+
+viewNPCText : String -> String -> List (Html msg)
+viewNPCText npcId textId =
+    if npcId == NpcId.baran then
+        viewConquerorEncounter textId [ Icon.baran, text "Baran, the Crusader" ]
+
+    else if npcId == NpcId.veritania then
+        viewConquerorEncounter textId [ Icon.veritania, text "Veritania, the Redeemer" ]
+
+    else if npcId == NpcId.alHezmin then
+        viewConquerorEncounter textId [ Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
+
+    else if npcId == NpcId.drox then
+        viewConquerorEncounter textId [ Icon.drox, text "Drox, the Warlord" ]
+
+    else
+        []
+
+
+viewConquerorEncounter : String -> List (Html msg) -> List (Html msg)
+viewConquerorEncounter textId label =
+    if String.contains "StoneEncounter1" textId || String.contains "StoneEncounterOne" textId then
+        label ++ [ text ": Taunt 1" ]
+
+    else if String.contains "StoneEncounter2" textId || String.contains "StoneEncounterTwo" textId then
+        label ++ [ text ": Taunt 2" ]
+
+    else if String.contains "StoneEncounter3" textId || String.contains "StoneEncounterThree" textId then
+        label ++ [ text ": Taunt 3" ]
+
+    else if String.contains "Fight" textId then
+        label ++ [ text ": Fight" ]
+
+    else
+        []
 
 
 viewDurationDelta : Maybe Duration -> Maybe Duration -> Html msg

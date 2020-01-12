@@ -53,7 +53,8 @@ table.history td.delta-dur {
   margin: 0;
   padding: 0;
 }
-table.history tbody tr.side-area {
+table.history tbody tr.npc-text-area,
+, table.history tbody tr.side-area {
   font-size: 80%;
 }
 table.history tbody tr.side-area td.side-dur,

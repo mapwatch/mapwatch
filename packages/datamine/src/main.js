@@ -62,10 +62,26 @@ function transformLang(raw, {worldAreasById}) {
   const worldAreas = raw["WorldAreas.dat"].data.filter(w => !!worldAreasById[w.Id])
   // "You have entered" text can vary based on the user's language, so import it too
   const backendErrors = raw["BackendErrors.dat"].data.filter(e => e.Id == 'EnteredArea')
+  const npcs = raw["NPCs.dat"].data.filter(raw => !!exportedNPCs[raw.Id])
+  const npcTextAudio = raw["NPCTextAudio.dat"].data.filter(isNPCTextExported)
   return {
     backendErrors: _.mapValues(_.keyBy(backendErrors, 'Id'), 'Text'),
     worldAreas: _.mapValues(_.keyBy(worldAreas, 'Id'), 'Name'),
+    npcs: _.mapValues(_.keyBy(npcs, 'Id'), 'Name'),
+    npcTextAudio: _.mapValues(_.keyBy(npcTextAudio, 'Id'), 'Text'),
   }
+}
+const exportedNPCs = Object.assign({}, ...[
+  "Metadata/Monsters/AtlasExiles/AtlasExile1",
+  "Metadata/Monsters/AtlasExiles/AtlasExile2",
+  "Metadata/Monsters/AtlasExiles/AtlasExile3",
+  "Metadata/Monsters/AtlasExiles/AtlasExile4",
+].map(name => ({[name]: true})))
+function isNPCTextExported(raw) {
+  return /^AlHezmin.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
+      || /^Veritania.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
+      || /^Baran.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
+      || /^Drox.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
 }
 function transformAtlasNode(raw, {json}) {
   return {

@@ -86,6 +86,7 @@ updateLine line ( model, cmds0 ) =
 
         ( runState, lastRun ) =
             Run.update instance visit model.runState
+                |> Tuple.mapFirst (Run.updateNPCText line)
 
         runs =
             case lastRun of

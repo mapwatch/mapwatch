@@ -32,6 +32,7 @@ module Mapwatch.Run exposing
     , tick
     , totalDurationSet
     , update
+    , updateNPCText
     )
 
 import Dict
@@ -39,6 +40,7 @@ import Dict.Extra
 import Duration exposing (Millis)
 import Mapwatch.Debug
 import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.LogLine as LogLine
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
 import Regex
@@ -46,17 +48,17 @@ import Time
 
 
 type alias Run =
-    { visits : List Visit, first : Visit, last : Visit, portals : Int, instance : Instance.Address }
+    { visits : List Visit, first : Visit, last : Visit, portals : Int, instance : Instance.Address, npcSays : List LogLine.NPCSaysData }
 
 
 type State
     = Empty
-    | Started Time.Posix
+    | Started Time.Posix (List LogLine.NPCSaysData)
     | Running Run
 
 
-init : Visit -> Maybe Run
-init visit =
+init : List LogLine.NPCSaysData -> Visit -> Maybe Run
+init npcSays visit =
     if Visit.isOffline visit || not (Visit.isMap visit) then
         Nothing
 
@@ -68,7 +70,7 @@ init visit =
 
             Instance.Instance i ->
                 -- there's some redundancy in repeating instance here, but this guarantees it exists
-                Just { first = visit, last = visit, visits = [ visit ], portals = 1, instance = i }
+                Just { first = visit, last = visit, visits = [ visit ], portals = 1, instance = i, npcSays = npcSays }
 
 
 instance : Run -> Instance.Address
@@ -275,7 +277,7 @@ stateDuration now state =
         Empty ->
             Nothing
 
-        Started at ->
+        Started at _ ->
             Just <| max 0 <| Time.posixToMillis now - Time.posixToMillis at
 
         Running run ->
@@ -581,7 +583,7 @@ tick now instance_ state =
         Empty ->
             ( state, Nothing )
 
-        Started at ->
+        Started at _ ->
             if Instance.isOffline now instance_ then
                 -- we just went offline while in a map - end/discard the run
                 ( Empty, Nothing )
@@ -653,11 +655,11 @@ update instance_ mvisit state =
 
         Just visit ->
             let
-                initRun =
+                initRun npcSays =
                     if Instance.isMap instance_.val && Visit.isTown visit then
                         -- when not running, entering a map from town starts a run.
                         -- TODO: Non-town -> Map could be a Zana mission - skip for now, takes more special-casing
-                        Started instance_.joinedAt
+                        Started instance_.joinedAt npcSays
 
                     else
                         -- ...and *only* entering a map. Ignore non-maps while not running.
@@ -665,15 +667,15 @@ update instance_ mvisit state =
             in
             case state of
                 Empty ->
-                    ( initRun, Nothing )
+                    ( initRun [], Nothing )
 
-                Started _ ->
+                Started _ npcSays ->
                     -- first complete visit of the run!
                     if Visit.isMap visit then
-                        case init visit of
+                        case init npcSays visit of
                             Nothing ->
                                 -- we entered a map, then went offline. Discard the run+visit.
-                                ( initRun, Nothing )
+                                ( initRun npcSays, Nothing )
 
                             Just run ->
                                 -- normal visit, common case - really start the run.
@@ -681,7 +683,7 @@ update instance_ mvisit state =
 
                     else
                         -- Debug.todo <| "A run's first visit should be a Map-zone, but it wasn't: " ++ Debug.toString visit
-                        ( initRun, Nothing )
+                        ( initRun npcSays, Nothing )
 
                 Running running ->
                     case push visit running of
@@ -689,13 +691,13 @@ update instance_ mvisit state =
                             -- they went offline during a run. Start a new run.
                             if Visit.isTown visit then
                                 -- they went offline in town - end the run, discarding the time in town.
-                                ( initRun, Just running )
+                                ( initRun [], Just running )
 
                             else
                                 -- they went offline in the map or a side area.
                                 -- we can't know how much time they actually spent running before disappearing - discard the run.
                                 -- TODO handle offline in no-zone - imagine crashing in a map, immediately restarting the game, then quitting for the day
-                                ( initRun, Nothing )
+                                ( initRun [], Nothing )
 
                         Just run ->
                             if (not <| Instance.isTown instance_.val) && instance_.val /= run.first.instance && Visit.isTown visit then
@@ -704,7 +706,7 @@ update instance_ mvisit state =
                                 -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.
                                 -- * Even Non-Map -> Map does not! That's a Zana daily, or leaving an abyssal-depth/trial/other side-area.
                                 -- * Town -> Non-Map does, though. Ex: map -> town -> uberlab.
-                                ( initRun, Just run )
+                                ( initRun [], Just run )
 
                             else if instance_.val == run.first.instance && Visit.isTown visit then
                                 -- reentering the *same* map from town is a portal.
@@ -736,8 +738,26 @@ stateLastUpdatedAt state =
         Empty ->
             Nothing
 
-        Started t ->
+        Started t _ ->
             Just t
 
         Running run ->
             Just run.last.leftAt
+
+
+updateNPCText : LogLine.Line -> State -> State
+updateNPCText line state =
+    case line.info of
+        LogLine.NPCSays says ->
+            case state of
+                Empty ->
+                    state
+
+                Started t npcSays ->
+                    Started t (says :: npcSays)
+
+                Running run ->
+                    Running { run | npcSays = says :: run.npcSays }
+
+        _ ->
+            state

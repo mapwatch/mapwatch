@@ -1,4 +1,4 @@
-module View.Icon exposing (abyss, fa, fas, fasPulse, labTrial, map, mapOrBlank, vaal, zana)
+module View.Icon exposing (abyss, alHezmin, baran, drox, fa, fas, fasPulse, labTrial, map, mapOrBlank, vaal, veritania, zana)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
@@ -68,3 +68,23 @@ labTrial =
 abyss : Html msg
 abyss =
     sideArea { name = "abyss", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardAbyss.png" }
+
+
+baran : Html msg
+baran =
+    sideArea { name = "baran", url = "Art/2DItems/Currency/Strongholds/WatchstoneRed.png?scale=1" }
+
+
+veritania : Html msg
+veritania =
+    sideArea { name = "veritania", url = "Art/2DItems/Currency/Strongholds/WatchstoneBlue.png?scale=1" }
+
+
+alHezmin : Html msg
+alHezmin =
+    sideArea { name = "alHezmin", url = "Art/2DItems/Currency/Strongholds/WatchstoneGreen.png?scale=1" }
+
+
+drox : Html msg
+drox =
+    sideArea { name = "drox", url = "Art/2DItems/Currency/Strongholds/WatchstoneYellow.png?scale=1" }

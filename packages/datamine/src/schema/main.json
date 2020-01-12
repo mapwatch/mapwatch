@@ -27,5 +27,13 @@
     "IsHideout",
     "IsVaalArea",
     "IsMapArea"
+  ],
+  "NPCTextAudio.dat": [
+    "Id",
+    "Text"
+  ],
+  "NPCs.dat": [
+    "Id",
+    "Text"
   ]
 }
