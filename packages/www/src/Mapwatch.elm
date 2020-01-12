@@ -158,14 +158,6 @@ update msg rmodel =
 
 updateOk : Msg -> OkModel -> ( OkModel, Cmd Msg )
 updateOk msg model =
-    let
-        _ =
-            if False then
-                Ports.logSliceReq { position = 0, length = 0 }
-
-            else
-                Cmd.none
-    in
     case msg of
         LogOpened { date, size } ->
             case model.readline of
@@ -207,13 +199,20 @@ updateOk msg model =
                             , Ports.logSliceReq next
                             )
 
-        LogChanged { date, size, oldSize } ->
+        LogChanged { date, size } ->
             case model.readline of
                 Nothing ->
                     ( model, Cmd.none )
 
                 Just readline0 ->
-                    ( { model | readline = readline0 |> TimedReadline.resize (Time.millisToPosix date) size |> Result.toMaybe }, Cmd.none )
+                    case TimedReadline.resize (Time.millisToPosix date) size readline0 of
+                        Err err ->
+                            ( model, Cmd.none )
+
+                        Ok readline ->
+                            ( { model | readline = Just readline }
+                            , readline.val |> Readline.next |> Maybe.Extra.unwrap Cmd.none Ports.logSliceReq
+                            )
 
 
 subscriptions : Model -> Sub Msg
