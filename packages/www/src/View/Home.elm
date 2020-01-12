@@ -1,4 +1,4 @@
-module View.Home exposing (formatBytes, formatDuration, formatSideAreaType, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewParseError, viewProgress, viewSideAreaName)
+module View.Home exposing (formatBytes, formatDuration, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewParseError, viewProgress, viewSideAreaName)
 
 -- TODO: This used to be its own page. Now it's a graveyard of functions that get
 -- called from other pages. I should really clean it up and find these a new home.

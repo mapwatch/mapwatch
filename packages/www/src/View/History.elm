@@ -13,7 +13,7 @@ import Model as Model exposing (Msg(..), OkModel)
 import Regex
 import Route
 import Time
-import View.Home exposing (formatDuration, formatSideAreaType, maskedText, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
+import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
 import View.NotFound

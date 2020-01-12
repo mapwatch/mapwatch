@@ -10,7 +10,7 @@ import Model as Model exposing (Msg, OkModel)
 import Route
 import Time
 import View.History
-import View.Home exposing (formatDuration, formatSideAreaType, maskedText, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewParseError, viewProgress, viewSideAreaName)
+import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewParseError, viewProgress, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
 import View.Setup
