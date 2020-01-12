@@ -72,8 +72,8 @@ unwrap default fn instance0 =
             fn instance
 
 
-worldArea : Datamine -> Instance -> Maybe WorldArea
-worldArea dm =
+worldArea : Instance -> Maybe WorldArea
+worldArea =
     unwrap Nothing .worldArea
 
 

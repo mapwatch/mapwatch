@@ -45,7 +45,7 @@ function transform(rawJson, rawLangs) {
     uniqueMaps: _.keyBy(uniqueMaps, 'WorldAreasKey'),
   }))
   // I'm interested in maps, towns, and hideouts. other zones - usually campaign stuff - don't matter to mapwatch
-  .filter(w => w.IsMapArea || w.IsUniqueMapArea || w.IsTown || w.IsHideout)
+  .filter(w => w.IsMapArea || w.IsUniqueMapArea || w.IsTown || w.IsHideout || w.IsVaalArea || w._IsLabTrial || w._IsAbyssalDepths)
   // it looks like maps with no visuals are either duplicates or boss arenas. Either way, not interested
   .filter(w => w.ItemVisualIdentity || !w.IsMapArea)
 
@@ -89,6 +89,9 @@ function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes}) {
     IsHideout: raw.IsHideout,
     IsMapArea: raw.IsMapArea,
     IsUniqueMapArea: raw.IsUniqueMapArea,
+    IsVaalArea: raw.IsVaalArea,
+    _IsLabTrial: raw.Id.startsWith('EndGame_Labyrinth_trials_'),
+    _IsAbyssalDepths : raw.Id.startsWith('AbyssLeague'),
     ItemVisualIdentity: _.get(uniqueMaps[index] || atlasNodes[index], 'ItemVisualIdentity'),
     Tiers: _.get(atlasNodes[index], 'Tiers'),
     RowID: index,

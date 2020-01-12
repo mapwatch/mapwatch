@@ -1,4 +1,4 @@
-module View.Icon exposing (fa, fas, fasPulse, map, mapOrBlank)
+module View.Icon exposing (abyss, fa, fas, fasPulse, labTrial, map, mapOrBlank, vaal, zana)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
@@ -35,3 +35,31 @@ map =
 mapOrBlank : Maybe WorldArea -> Html msg
 mapOrBlank =
     map >> Maybe.withDefault (span [] [])
+
+
+sideArea : { name : String, url : String } -> Html msg
+sideArea { name, url } =
+    img [ class ("side-icon side-icon-" ++ name), src <| Datamine.imgCdn ++ url ] []
+
+
+vaal : Html msg
+vaal =
+    -- sideArea { name = "vaal", url = "Art/2DItems/Maps/Vaal01.png" }
+    sideArea { name = "vaal", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardFragments.png" }
+
+
+zana : Html msg
+zana =
+    -- sideArea { name = "zana", url = "Art/2DItems/Hideout/Interactive/CartographyDevice.png" }
+    sideArea { name = "zana", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardMaps.png" }
+
+
+labTrial : Html msg
+labTrial =
+    -- sideArea { name = "trial", url = "Art/2DItems/Maps/Labyrinth.png" }
+    sideArea { name = "trial", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardLabyrinth.png" }
+
+
+abyss : Html msg
+abyss =
+    sideArea { name = "abyss", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardAbyss.png" }

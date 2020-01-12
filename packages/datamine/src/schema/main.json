@@ -25,6 +25,7 @@
     "Id",
     "IsTown",
     "IsHideout",
+    "IsVaalArea",
     "IsMapArea"
   ]
 }

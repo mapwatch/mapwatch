@@ -205,23 +205,27 @@ viewDate d =
         [ text timestamp ]
 
 
-formatSideAreaType : Instance -> Maybe String
-formatSideAreaType instance =
-    if Instance.isMap instance then
-        Just "Zana mission"
-
-    else
-        Nothing
-
-
 viewSideAreaName : Route.HistoryParams -> Instance -> Html msg
 viewSideAreaName qs instance =
-    case formatSideAreaType instance of
+    case Instance.worldArea instance of
         Nothing ->
             viewInstance qs instance
 
-        Just str ->
-            span [] [ text <| str ++ " (", viewInstance qs instance, text ")" ]
+        Just w ->
+            if Datamine.isMap w then
+                span [] [ Icon.zana, text "Zana mission (", viewInstance qs instance, text ")" ]
+
+            else if w.isVaalArea then
+                span [] [ Icon.vaal, text "Vaal side area (", viewInstance qs instance, text ")" ]
+
+            else if w.isLabTrial then
+                span [] [ Icon.labTrial, text "Labyrinth trial (", viewInstance qs instance, text ")" ]
+
+            else if w.isAbyssalDepths then
+                span [] [ Icon.abyss, viewInstance qs instance ]
+
+            else
+                viewInstance qs instance
 
 
 maskedText : String -> Html msg

@@ -158,7 +158,7 @@ table.timer-details .session-buttons .button {
   margin-right: 1em;
 }
 
-.map-icon {
+.map-icon, .side-icon {
   height: 1em;
   width: 1em;
   padding-right: 0.2em;
@@ -166,16 +166,14 @@ table.timer-details .session-buttons .button {
 }
 /* most map icons look great on a black background. For the ones that don't, draw a border. */
 /* https://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts */
-/* Unused at the moment */
-/*.map-icon-TheApexofSacrifice, .map-icon-生贄之尖,
-.map-icon-TheAlluringAbyss, .map-icon-誘人的深淵,
-.map-icon-ThePaleCourt,
-.map-icon-TheShapersRealm, .map-icon-塑者之界,
-.map-icon-TheTempleofAtzoatl,
-.map-icon-CrumbledLaboratory {
+/* .side-icon-abyss, */
+/* .side-icon-trial, */
+/* .side-icon-zana, */
+/* .side-icon-vaal { */
+.side-icon-unused {
   filter: drop-shadow(1px 1px 0 #eb99a1)
           drop-shadow(-1px -1px 0 #eb99a1);
-}*/
+}
 
 .search-form {
   margin-right: 1em;

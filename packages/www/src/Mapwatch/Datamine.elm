@@ -2,6 +2,7 @@ module Mapwatch.Datamine exposing
     ( Datamine
     , WorldArea
     , decoder
+    , imgCdn
     , imgSrc
     , isMap
     , langs
@@ -33,6 +34,9 @@ type alias WorldArea =
     -- use the `isMap` function instead! This is unreliable, ex. true for many boss zones and side areas
     , isMapArea : Bool
     , isUniqueMapArea : Bool
+    , isVaalArea : Bool
+    , isLabTrial : Bool
+    , isAbyssalDepths : Bool
     , itemVisualId : Maybe String
     , tiers : Maybe (List Int)
     }
@@ -142,9 +146,14 @@ langIndexUnion =
     List.foldr fold langIndexEmpty
 
 
+imgCdn : String
+imgCdn =
+    "https://web.poecdn.com/image/"
+
+
 imgSrc : WorldArea -> Maybe String
 imgSrc w =
-    w.itemVisualId |> Maybe.map (String.replace ".dds" ".png" >> (\path -> "https://web.poecdn.com/image/" ++ path ++ "?w=1&h=1&scale=1&mn=6&mt=" ++ String.fromInt (tier w |> Maybe.withDefault 0)))
+    w.itemVisualId |> Maybe.map (String.replace ".dds" ".png" >> (\path -> imgCdn ++ path ++ "?w=1&h=1&scale=1&mn=6&mt=" ++ String.fromInt (tier w |> Maybe.withDefault 0)))
 
 
 isMap : WorldArea -> Bool
@@ -194,6 +203,13 @@ worldAreasDecoder =
         (D.index 2 D.bool)
         (D.index 3 D.bool)
         (D.index 4 D.bool)
-        (D.index 5 (D.maybe D.string))
-        (D.index 6 (D.maybe (D.list D.int)))
+        (D.index 5 D.bool)
+        (D.index 6 D.bool)
+        |> D.andThen
+            (\w ->
+                D.map3 w
+                    (D.index 7 D.bool)
+                    (D.index 8 (D.maybe D.string))
+                    (D.index 9 (D.maybe (D.list D.int)))
+            )
         |> D.array

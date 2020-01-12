@@ -8,8 +8,10 @@ All substantial Mapwatch changes.
 
 ---
 ## 2020-01-11
-- Fixed several timezone bugs. In particular, the "run an example" link now works in all timezones.
+- Side areas now have icons.
+- Vaal side areas and labyrinth trials now have labels.
 - Big log processing redesign. There should be no visible changes from this one, but watch out for new bugs.
+- Fixed several timezone bugs. In particular, the "run an example" link now works in all timezones.
 
 ## 2020-01-08
 - Updated map names and tiers for Metamorph league.
