@@ -35,21 +35,18 @@ view params model =
 
 viewBody : Route.MapsParams -> OkModel -> Html Msg
 viewBody params model =
-    case model.mapwatch.progress of
-        Nothing ->
-            -- waiting for file input, nothing to show yet
+    case Mapwatch.ready model.mapwatch of
+        Mapwatch.NotStarted ->
             div [] []
 
-        Just p ->
-            div [] <|
-                (if Mapwatch.isProgressDone p then
-                    -- all done!
-                    [ viewMain params model ]
+        Mapwatch.LoadingHistory p ->
+            viewProgress p
 
-                 else
-                    []
-                )
-                    ++ [ viewProgress p ]
+        Mapwatch.Ready p ->
+            div []
+                [ viewMain params model
+                , viewProgress p
+                ]
 
 
 search : Maybe String -> List Run -> List Run

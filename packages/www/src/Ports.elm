@@ -1,6 +1,10 @@
 port module Ports exposing
     ( Progress
-    , inputClientLogWithId
+    , logChanged
+    , logOpened
+    , logSelected
+    , logSlice
+    , logSliceReq
     , logline
     , progress
     , progressComplete
@@ -19,14 +23,42 @@ import Speech
 import Time
 
 
-port inputClientLogWithId : { id : String, maxSize : Int } -> Cmd msg
+{-| The user chose a file with the file selector on the front page.
+-}
+port logSelected : { id : String, maxSize : Int } -> Cmd msg
 
 
 {-| date is included in the line itself, but elm has trouble parsing it with the
 new 0.19 time api. I'm sure someone will come up with a library soon enough,
 but for now, let js do it.
+
+TODO remove me, this was for old js log splitting
+
 -}
 port logline : ({ line : String, date : Int } -> msg) -> Sub msg
+
+
+{-| Our JS backend opened a log file and reported its size
+-}
+port logOpened : ({ size : Int, date : Int } -> msg) -> Sub msg
+
+
+{-| Our JS backend detected a change in log file size
+-}
+port logChanged : ({ size : Int, oldSize : Int, date : Int } -> msg) -> Sub msg
+
+
+{-| We're done processing a chunk of logs - ask for more
+-}
+port logSliceReq : { position : Int, length : Int } -> Cmd msg
+
+
+{-| Our JS backend sent us a chunk of text from the logfile
+
+Usually a response to a logSliceReq
+
+-}
+port logSlice : ({ position : Int, length : Int, value : String, date : Int } -> msg) -> Sub msg
 
 
 type alias Progress =

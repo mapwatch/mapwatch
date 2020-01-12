@@ -22,7 +22,7 @@ import Ports
 import Route exposing (Route)
 import Set
 import Task
-import Time
+import Time exposing (Posix)
 import Url exposing (Url)
 
 
@@ -54,9 +54,9 @@ type alias OkModel =
     , mapwatch : Mapwatch.OkModel
     , config : Config
     , flags : Flags
-    , loadedAt : Time.Posix
+    , loadedAt : Posix
     , route : Route
-    , now : Time.Posix
+    , now : Posix
     , tz : Time.Zone
     , lines : List String
     , volume : Int
@@ -65,9 +65,9 @@ type alias OkModel =
 
 type Msg
     = M Mapwatch.Msg
-    | Tick Time.Posix
+    | Tick Posix
     | SetTimezone Time.Zone
-    | InputClientLogWithId String
+    | LogSelected String
     | InputMaxSize String
     | NavRequest Browser.UrlRequest
     | NavLocation Url
@@ -115,29 +115,30 @@ sendVolume model =
     Ports.sendVolume (Route.isSpeechEnabled model.route) model.volume
 
 
-updateRawLine : { date : Int, line : String } -> OkModel -> OkModel
-updateRawLine raw model =
-    -- *Only when debugging*, save all raw loglines.
-    case model.route of
-        Route.DebugDumpLines ->
-            case LogLine.parse (Time.millisToPosix raw.date) raw.line of
-                Ok _ ->
-                    { model | lines = raw.line :: model.lines }
 
-                Err _ ->
-                    model
+--updateRawLine : { date : Int, line : String } -> OkModel -> OkModel
+--updateRawLine raw model =
+--    -- *Only when debugging*, save all raw loglines.
+--    case model.route of
+--        Route.DebugDumpLines ->
+--            case LogLine.parse (Time.millisToPosix raw.date) raw.line of
+--                Ok _ ->
+--                    { model | lines = raw.line :: model.lines }
+--
+--                Err _ ->
+--                    model
+--
+--        _ ->
+--            model
 
-        _ ->
-            model
 
-
-applyTimeOffset : OkModel -> Time.Posix -> Time.Posix
+applyTimeOffset : OkModel -> Posix -> Posix
 applyTimeOffset model t0 =
     (Time.posixToMillis t0 - model.flags.tickOffset)
         |> Time.millisToPosix
 
 
-tick : Time.Posix -> OkModel -> OkModel
+tick : Posix -> OkModel -> OkModel
 tick t0 model =
     let
         t =
@@ -160,7 +161,7 @@ updateOk : Msg -> OkModel -> ( OkModel, Cmd Msg )
 updateOk msg ({ config } as model) =
     case msg of
         Tick t ->
-            if Maybe.Extra.unwrap False Mapwatch.isProgressDone model.mapwatch.progress then
+            if Mapwatch.isReady model.mapwatch then
                 ( tick t model, Cmd.none )
 
             else
@@ -182,8 +183,8 @@ updateOk msg ({ config } as model) =
         NavRequest (Browser.External urlstr) ->
             ( model, urlstr |> Nav.load )
 
-        InputClientLogWithId id ->
-            ( model, Ports.inputClientLogWithId { id = id, maxSize = config.maxSize } )
+        LogSelected id ->
+            ( model, Ports.logSelected { id = id, maxSize = config.maxSize } )
 
         InputMaxSize s ->
             case String.toInt s of
@@ -230,13 +231,7 @@ updateOk msg ({ config } as model) =
                     ( newModel, sendVolume newModel )
 
         M msg_ ->
-            case msg_ of
-                Mapwatch.RecvLogLine raw ->
-                    updateMapwatch msg_ model
-                        |> Tuple.mapFirst (updateRawLine raw)
-
-                Mapwatch.RecvProgress p ->
-                    updateMapwatch (Mapwatch.RecvProgress { p | updatedAt = p.updatedAt |> Time.millisToPosix |> applyTimeOffset model |> Time.posixToMillis }) model
+            updateMapwatch msg_ model
 
 
 updateMapwatch : Mapwatch.Msg -> OkModel -> ( OkModel, Cmd Msg )
@@ -246,6 +241,15 @@ updateMapwatch msg model =
             Mapwatch.updateOk msg model.mapwatch
     in
     ( { model | mapwatch = mapwatch }, Cmd.map M cmd )
+        |> Tuple.mapFirst
+            (\m ->
+                -- just after we finish processing history, send mapwatch the first tick so timeOffset is immediately applied
+                if not (Mapwatch.isReady model.mapwatch) && Mapwatch.isReady mapwatch then
+                    tick m.now m
+
+                else
+                    m
+            )
 
 
 subscriptions : Model -> Sub Msg

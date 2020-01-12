@@ -7,6 +7,7 @@ import Mapwatch as Mapwatch
 import Mapwatch.Run as Run
 import Maybe.Extra
 import Model as Model exposing (Msg, OkModel)
+import Readline exposing (Readline)
 import Route
 import Time
 import View.History
@@ -19,17 +20,15 @@ import View.Util exposing (hidePreLeagueButton, viewGoalForm)
 
 view : Route.TimerParams -> OkModel -> Html Msg
 view qs model =
-    case model.mapwatch.progress of
-        Nothing ->
-            -- waiting for file input, nothing to show yet
+    case Mapwatch.ready model.mapwatch of
+        Mapwatch.NotStarted ->
             viewSetup model <| div [] []
 
-        Just p ->
-            if Mapwatch.isProgressDone p then
-                viewMain qs model
+        Mapwatch.LoadingHistory _ ->
+            viewSetup model <| div [] []
 
-            else
-                viewSetup model <| div [] []
+        Mapwatch.Ready _ ->
+            viewMain qs model
 
 
 viewSetup : OkModel -> Html Msg -> Html Msg

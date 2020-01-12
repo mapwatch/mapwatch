@@ -16,6 +16,7 @@ import Mapwatch.Run as Run
 import Mapwatch.Visit as Visit
 import Route
 import Time
+import TimedReadline exposing (Progress)
 import View.Icon as Icon
 import View.Nav
 import View.Setup
@@ -147,24 +148,21 @@ formatBytes b =
     places 2 val ++ unit
 
 
-viewProgress : Mapwatch.Progress -> Html msg
+viewProgress : Progress -> Html msg
 viewProgress p =
-    if Mapwatch.isProgressDone p then
-        div [] [ br [] [], text <| "Processed " ++ formatBytes p.max ++ " in " ++ String.fromFloat (toFloat (Mapwatch.progressDuration p) / 1000) ++ "s" ]
-
-    else if p.max <= 0 then
-        div [] [ Icon.fasPulse "spinner" ]
+    if p.isDone then
+        div [] [ br [] [], text <| "Processed " ++ formatBytes p.max ++ " in " ++ String.fromFloat (toFloat p.durationMillis / 1000) ++ "s" ]
 
     else
         div []
-            [ progress [ value (String.fromInt p.val), A.max (String.fromInt p.max) ] []
+            [ progress [ value (String.fromInt p.value), A.max (String.fromInt p.max) ] []
             , div []
                 [ text <|
-                    formatBytes p.val
+                    formatBytes p.max
                         ++ " / "
                         ++ formatBytes p.max
                         ++ ": "
-                        ++ (String.fromInt <| floor <| Mapwatch.progressPercent p * 100)
+                        ++ (String.fromInt <| floor <| p.percent * 100)
                         ++ "%"
 
                 -- ++ " in"

@@ -5,7 +5,6 @@ import {Elm} from './Main.elm';
 import * as registerServiceWorker from './registerServiceWorker';
 import * as analytics from './analytics'
 import * as util from './util'
-import * as logReader from './logReader'
 import {BrowserBackend} from './browserBackend'
 import {MemoryBackend} from './memoryBackend'
 import {default as datamine} from '@mapwatch/datamine'
@@ -19,7 +18,10 @@ import '!!file-loader?name=CHANGELOG.md!../../../CHANGELOG.md'
 import '!!file-loader?name=rss.xml!../../rss/dist/rss.xml'
 import '!!file-loader?name=version.txt!../tmp/version.txt'
 
-const MB = logReader.MB
+// Be careful with timezones throughout this file. Use Date.now(), not new Date(),
+// for data sent to Elm: no risk of getting timezones involved that way.
+
+const MB = Math.pow(2,20)
 
 // redirect from old host to new host.
 // TODO this should really be a 301 redirect from the server!
@@ -40,28 +42,44 @@ function main() {
 
   analytics.main(app, backend.platform, version)
 
-  app.ports.inputClientLogWithId.subscribe(config => {
-    var files = document.getElementById(config.id).files
-    var maxSize = (config.maxSize == null ? 20 : config.maxSize) * MB
-    if (files.length > 0) {
-      console.log('files', files)
-      backend.open(files[0], maxSize)
-      .then(() => {
-        logReader.processFile(app, backend, "history")
-      })
-    }
-  })
+  let activeBackend = backend
   if (qs.example) {
-    handleExample({app, flags, qs})
+    fetchExample(qs)
+    .then(text => {
+      // logReader.processFile(app, MemoryBackend(text), "history:example")
+      activeBackend = MemoryBackend(text)
+      console.log('example', activeBackend)
+      app.ports.logOpened.send({date: Date.now(), size: activeBackend.size()})
+    })
   }
   else {
     backend.autoOpen(20 * MB)
     .then(opened => {
       if (opened) {
-        logReader.processFile(app, backend, "history")
+        // logReader.processFile(app, backend, "history")
+        app.ports.logOpened.send({date: Date.now(), size: backend.size()})
       }
     })
   }
+  app.ports.logSelected.subscribe(config => {
+    var files = document.getElementById(config.id).files
+    var maxSize = (config.maxSize == null ? 20 : config.maxSize) * MB
+    if (files.length > 0) {
+      console.log('files', files)
+      activeBackend = backend
+      backend.open(files[0], maxSize)
+      .then(() => {
+        // logReader.processFile(app, backend, "history")
+        app.ports.logOpened.send({date: Date.now(), size: backend.size()})
+      })
+    }
+  })
+  app.ports.logSliceReq.subscribe(({position, length}) => {
+    // console.log('logSliceReq', activeBackend)
+    activeBackend.slice(position, length)
+    .then(value => app.ports.logSlice.send({date: Date.now(), position, length, value}))
+  })
+  activeBackend.onChange(change => app.ports.logChanged.send({date: Date.now(), ...change}))
 
   const speechCapable = !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
   // let sayWatching = true // useful for testing. uncomment me, upload a file, and i'll say all lines in that file
@@ -86,9 +104,9 @@ function main() {
 
 function createFlags(backend, qs) {
   const loadedAt = Date.now()
-  const tickStart = qs.tickStart && new Date(isNaN(parseInt(qs.tickStart)) ? qs.tickStart : parseInt(qs.tickStart))
-  const tickOffset = qs.tickOffset || tickStart ? loadedAt - tickStart.getTime() : 0
-  if (tickOffset) console.log('tickOffset set:', {tickOffset: tickOffset, tickStart: tickStart})
+  const tickStart = qs.tickStart && isNaN(parseInt(qs.tickStart)) ? qs.tickStart : parseInt(qs.tickStart)
+  const tickOffset = tickStart ? loadedAt - tickStart : 0
+  if (tickOffset) console.log('tickOffset set:', {tickOffset, tickStart, tickStartDate: new Date(tickStart)})
   return {
     loadedAt,
     tickOffset,
@@ -100,11 +118,11 @@ function createFlags(backend, qs) {
     datamine,
   }
 }
-function handleExample({app, flags, qs}) {
+function fetchExample(qs) {
   console.log("fetching example file: ", qs.example, qs)
   // show a progress spinner, even when we don't know the size yet
-  var sendProgress = logReader.progressSender(app, flags.loadedAt, "history:example")(0, 0, flags.loadedAt)
-  fetch("./examples/"+qs.example)
+  // var sendProgress = logReader.progressSender(app, flags.loadedAt, "history:example")(0, 0, flags.loadedAt)
+  return fetch("./examples/"+qs.example)
   .then(res => {
     if (res.status < 200 || res.status >= 300) {
       return Promise.reject("non-200 status: "+res.status)
@@ -112,9 +130,6 @@ function handleExample({app, flags, qs}) {
     return res.blob()
   })
   .then(blob => blob.text())
-  .then(text => {
-    logReader.processFile(app, MemoryBackend(text), "history:example")
-  })
   .catch(function(err) {
     console.error("Error fetching example:", err)
   })

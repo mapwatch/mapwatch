@@ -7,9 +7,12 @@ module Mapwatch.LogLine exposing
     , parseErrorToString
     )
 
+import Array exposing (Array)
 import Maybe.Extra
+import Parser as P exposing ((|.), (|=), Parser)
 import Regex
-import Time
+import Time exposing (Posix)
+import Time.Extra
 
 
 type alias ParseError =
@@ -34,7 +37,7 @@ type Info
 
 type alias Line =
     { raw : String
-    , date : Time.Posix
+    , date : Posix
     , info : Info
     }
 
@@ -86,27 +89,78 @@ parseLogInfo raw =
         |> List.head
 
 
-parse : Time.Posix -> String -> ParsedLine
-parse date raw =
-    -- TODO this broke in elm 0.19: Date.fromString is gone. We don't really
-    -- have a good way to parse dates anymore. On top of that, we'll need to
-    -- apply the time zone somehow - but the new api doesn't easily let us map
-    -- from timezone to time-offset. Ugh.
-    let
-        -- we used to parse the date here, but elm 0.19 broke it, and we now get
-        -- the date via ports.
-        result i =
-            { raw = raw
-            , date = date
-            , info = i
-            }
+parseDate : String -> Result String Posix
+parseDate raw =
+    raw
+        |> P.run dateParser
+        -- |> Result.mapError P.deadEndsToString
+        |> Result.mapError (Tuple.pair raw >> Debug.toString)
+        -- |> Debug.log "parseDate"
+        |> identity
 
-        info =
-            parseLogInfo raw
-                |> Result.fromMaybe "logline not recognized"
 
-        error err =
-            { err = err, raw = raw }
-    in
-    Result.map result info
-        |> Result.mapError error
+dateParser : P.Parser Posix
+dateParser =
+    P.succeed Time.Extra.Parts
+        -- example: `2020/01/08 16:12:56 ...`
+        |= P.int
+        |. P.symbol "/"
+        |= (leadingZeroInt |> P.andThen (\m -> Array.get (m - 1) months |> Maybe.Extra.unwrap (P.problem <| "invalid month: " ++ String.fromInt m) P.succeed))
+        |. P.symbol "/"
+        |= leadingZeroInt
+        |. P.spaces
+        |= leadingZeroInt
+        |. P.symbol ":"
+        |= leadingZeroInt
+        |. P.symbol ":"
+        |= leadingZeroInt
+        |. P.spaces
+        -- There is no time zone information in the log!
+        -- We could pass the current time zone, but even if we assume their
+        -- system time is right, that's still not always right thanks to
+        -- daylight savings: ex. logged during DST, viewed during non-DST.
+        -- Best we can do is just assume everything everywhere is UTC.
+        |> P.map (\parts -> parts 0 |> Time.Extra.partsToPosix Time.utc)
+
+
+leadingZeroInt : P.Parser Int
+leadingZeroInt =
+    P.succeed identity
+        |. P.oneOf
+            [ P.symbol "0"
+            , P.succeed ()
+            ]
+        |= P.int
+
+
+months : Array Time.Month
+months =
+    Array.fromList
+        [ Time.Jan
+        , Time.Feb
+        , Time.Mar
+        , Time.Apr
+        , Time.May
+        , Time.Jun
+        , Time.Jul
+        , Time.Aug
+        , Time.Sep
+        , Time.Oct
+        , Time.Nov
+        , Time.Dec
+        ]
+
+
+parse : String -> ParsedLine
+parse raw =
+    case parseLogInfo raw of
+        Nothing ->
+            Err { raw = raw, err = "logline not recognized" }
+
+        Just info ->
+            case parseDate raw of
+                Err err ->
+                    Err { raw = raw, err = "logline date invalid: " ++ err }
+
+                Ok date ->
+                    Ok { raw = raw, date = date, info = info }

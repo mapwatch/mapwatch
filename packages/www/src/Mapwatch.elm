@@ -2,14 +2,12 @@ module Mapwatch exposing
     ( Model
     , Msg(..)
     , OkModel
-    , Progress
+    , ReadyState(..)
     , init
     , initModel
-    , isProgressDone
     , isReady
     , lastUpdatedAt
-    , progressDuration
-    , progressPercent
+    , ready
     , subscriptions
     , tick
     , update
@@ -25,16 +23,9 @@ import Mapwatch.Run as Run
 import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Ports
-import Time
-
-
-type alias Progress =
-    { val : Int
-    , max : Int
-    , startedAt : Time.Posix
-    , updatedAt : Time.Posix
-    , name : String
-    }
+import Readline
+import Time exposing (Posix)
+import TimedReadline exposing (TimedReadline)
 
 
 type alias Model =
@@ -43,26 +34,34 @@ type alias Model =
 
 type alias OkModel =
     { datamine : Datamine
-    , progress : Maybe Progress
+    , history : Maybe TimedReadline
     , parseError : Maybe LogLine.ParseError
     , instance : Maybe Instance.State
     , runState : Run.State
     , runs : List Run.Run
+    , readline : Maybe TimedReadline
     }
 
 
 type Msg
-    = RecvLogLine { date : Int, line : String }
-    | RecvProgress Ports.Progress
+    = LogSlice { date : Int, position : Int, length : Int, value : String }
+    | LogChanged { date : Int, size : Int, oldSize : Int }
+    | LogOpened { date : Int, size : Int }
+
+
+
+-- = RecvLogLine { date : Int, line : String }
+-- | RecvProgress Ports.Progress
 
 
 createModel : Datamine -> OkModel
 createModel datamine =
     { datamine = datamine
     , parseError = Nothing
-    , progress = Nothing
     , instance = Nothing
     , runState = Run.Empty
+    , readline = Nothing
+    , history = Nothing
     , runs = []
     }
 
@@ -79,11 +78,11 @@ init datamineJson =
     ( initModel datamineJson, Cmd.none )
 
 
-updateLine : Datamine -> LogLine.Line -> OkModel -> ( OkModel, Cmd Msg )
-updateLine datamine line model =
+updateLine : LogLine.Line -> ( OkModel, List (Cmd Msg) ) -> ( OkModel, List (Cmd Msg) )
+updateLine line ( model, cmds0 ) =
     let
         instance =
-            Instance.initOrUpdate datamine line model.instance
+            Instance.initOrUpdate model.datamine line model.instance
 
         visit =
             Visit.tryInit model.instance instance
@@ -99,17 +98,18 @@ updateLine datamine line model =
                 Nothing ->
                     model.runs
 
-        cmd =
+        cmds =
             case model.instance of
                 Nothing ->
-                    Cmd.none
+                    cmds0
 
                 Just i ->
                     if instance.joinedAt == i.joinedAt then
-                        Cmd.none
+                        cmds0
 
                     else
                         Ports.sendJoinInstance instance.joinedAt instance.val visit runState lastRun
+                            :: cmds0
     in
     ( { model
         | instance = Just instance
@@ -118,11 +118,11 @@ updateLine datamine line model =
         , runState = runState
         , runs = runs
       }
-    , cmd
+    , cmds
     )
 
 
-tick : Time.Posix -> OkModel -> OkModel
+tick : Posix -> OkModel -> OkModel
 tick t model =
     case model.instance of
         Nothing ->
@@ -158,78 +158,103 @@ update msg rmodel =
 
 updateOk : Msg -> OkModel -> ( OkModel, Cmd Msg )
 updateOk msg model =
-    case msg of
-        RecvLogLine raw ->
-            case LogLine.parse (Time.millisToPosix raw.date) raw.line of
-                Ok line ->
-                    updateLine model.datamine line model
-
-                Err err ->
-                    ( { model | parseError = Just err }, Cmd.none )
-
-        RecvProgress p0 ->
-            let
-                p =
-                    { val = p0.val
-                    , max = p0.max
-                    , name = p0.name
-                    , startedAt = Time.millisToPosix p0.startedAt
-                    , updatedAt = Time.millisToPosix p0.updatedAt
-                    }
-
-                m =
-                    { model | progress = Just p }
-            in
-            if isProgressDone p then
-                -- man, I love elm, but conditional logging is so awkward
-                -- let
-                -- _ =
-                -- if this is the first completed progress, it's the history file - log something
-                -- if Maybe.Extra.unwrap True (not << isProgressDone) model.progress then
-                -- Debug.log "start from last logline" <| "?tickStart=" ++ String.fromInt (Maybe.Extra.unwrap 0 Time.posixToMillis m.instance.joinedAt)
-                -- else
-                -- ""
-                -- in
-                ( tick p.updatedAt m, Ports.progressComplete { name = p.name } )
+    let
+        _ =
+            if False then
+                Ports.logSliceReq { position = 0, length = 0 }
 
             else
-                ( m, Cmd.none )
+                Cmd.none
+    in
+    case msg of
+        LogOpened { date, size } ->
+            case model.readline of
+                Just _ ->
+                    ( model, Cmd.none )
+
+                Nothing ->
+                    let
+                        readline =
+                            TimedReadline.create { now = Time.millisToPosix date, start = 0, end = size }
+                    in
+                    ( { model | readline = Just readline }
+                    , readline.val |> Readline.next |> Maybe.Extra.unwrap Cmd.none Ports.logSliceReq
+                    )
+
+        LogSlice { date, position, length, value } ->
+            case model.readline of
+                Nothing ->
+                    ( model, Cmd.none )
+
+                Just r ->
+                    let
+                        ( lines, readline ) =
+                            TimedReadline.read (Time.millisToPosix date) value r
+
+                        ( model1, cmds ) =
+                            lines
+                                |> List.filterMap (LogLine.parse >> Result.toMaybe)
+                                |> List.foldl updateLine ( model, [] )
+                    in
+                    case Readline.next readline.val of
+                        Nothing ->
+                            ( { model1 | readline = Just readline, history = model1.history |> Maybe.Extra.orElse (Just readline) }
+                            , Cmd.none
+                            )
+
+                        Just next ->
+                            ( { model1 | readline = Just readline }
+                            , Ports.logSliceReq next
+                            )
+
+        LogChanged { date, size, oldSize } ->
+            case model.readline of
+                Nothing ->
+                    ( model, Cmd.none )
+
+                Just readline0 ->
+                    ( { model | readline = readline0 |> TimedReadline.resize (Time.millisToPosix date) size |> Result.toMaybe }, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.batch
-        [ Ports.logline RecvLogLine
-        , Ports.progress RecvProgress
+        [ Ports.logSlice LogSlice
+        , Ports.logChanged LogChanged
+        , Ports.logOpened LogOpened
         ]
 
 
-progressPercent : Progress -> Float
-progressPercent { val, max } =
-    toFloat val
-        / toFloat (Basics.max 1 max)
-        |> clamp 0 1
+type ReadyState
+    = NotStarted
+    | LoadingHistory TimedReadline.Progress
+    | Ready TimedReadline.Progress
 
 
-isProgressDone : Progress -> Bool
-isProgressDone p =
-    progressPercent p >= 1
+ready : OkModel -> ReadyState
+ready m =
+    case m.history of
+        Just h ->
+            TimedReadline.progress h |> Ready
+
+        Nothing ->
+            case m.readline of
+                Nothing ->
+                    NotStarted
+
+                Just r ->
+                    TimedReadline.progress r |> LoadingHistory
 
 
 isReady : OkModel -> Bool
 isReady =
-    .progress >> Maybe.Extra.unwrap False isProgressDone
+    .history >> Maybe.Extra.isJust
 
 
-progressDuration : Progress -> Millis
-progressDuration p =
-    Time.posixToMillis p.updatedAt - Time.posixToMillis p.startedAt
-
-
-lastUpdatedAt : OkModel -> Maybe Time.Posix
+lastUpdatedAt : OkModel -> Maybe Posix
 lastUpdatedAt model =
     [ model.runState |> Run.stateLastUpdatedAt
-    , model.runs |> List.reverse |> List.head |> Maybe.map (\r -> r.last.leftAt)
+    , model.runs |> List.head |> Maybe.map (\r -> r.last.leftAt)
     ]
         |> List.filterMap identity
         |> List.head

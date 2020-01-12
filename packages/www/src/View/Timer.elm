@@ -31,22 +31,19 @@ view qs model =
 
 viewBody : Route.TimerParams -> OkModel -> Html Msg
 viewBody qs model =
-    case model.mapwatch.progress of
-        Nothing ->
-            -- waiting for file input, nothing to show yet
+    case Mapwatch.ready model.mapwatch of
+        Mapwatch.NotStarted ->
             div [] []
 
-        Just p ->
-            div [] <|
-                if Mapwatch.isProgressDone p then
-                    -- all done!
-                    [ View.Volume.view model
-                    , viewGoalForm (\goal -> Model.RouteTo <| Route.Timer { qs | goal = goal }) qs
-                    , viewMain qs model
-                    ]
+        Mapwatch.LoadingHistory p ->
+            viewProgress p
 
-                else
-                    [ viewProgress p ]
+        Mapwatch.Ready _ ->
+            div []
+                [ View.Volume.view model
+                , viewGoalForm (\goal -> Model.RouteTo <| Route.Timer { qs | goal = goal }) qs
+                , viewMain qs model
+                ]
 
 
 viewMain : Route.TimerParams -> OkModel -> Html Msg

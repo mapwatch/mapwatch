@@ -19,7 +19,7 @@ view : OkModel -> Html Msg
 view model =
     let
         display =
-            case model.mapwatch.progress of
+            case model.mapwatch.readline of
                 Nothing ->
                     ""
 
@@ -42,7 +42,7 @@ view model =
                 ++ [ text "leave me open while you play - I'll keep watching, no need to upload again. " ]
             )
         , p []
-            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href "?tickStart=1526941861000&example=stripped-client.txt#/" ]) [ text "Run an example now!" ]
+            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href "?tickStart=1526927461000&example=stripped-client.txt#/" ]) [ text "Run an example now!" ]
             ]
         , hr [] []
         , p []
@@ -67,7 +67,7 @@ view model =
              , input
                 [ type_ "file"
                 , id id_
-                , onChange (InputClientLogWithId id_)
+                , onChange (LogSelected id_)
                 , tabindex 2
                 ]
                 []

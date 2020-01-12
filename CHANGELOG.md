@@ -7,6 +7,10 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2020-01-11
+- Fixed several timezone bugs. In particular, the "run an example" link now works in all timezones.
+- Big log processing redesign. There should be no visible changes from this one, but watch out for new bugs.
+
 ## 2020-01-08
 - Updated map names and tiers for Metamorph league.
 - Revamped how map names and tiers are defined. They're now datamined from game files, instead of manually listed and updated.
