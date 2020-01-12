@@ -289,7 +289,7 @@ viewHistoryRun : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> (Run ->
 viewHistoryRun tz config qs goals r =
     viewHistoryMainRow tz config qs (goals r) r
         :: (List.map ((\f ( a, b ) -> f a b) <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r)
-                ++ List.map (viewHistoryNPCTextRow config qs) r.npcSays
+                ++ (r.npcSays |> Dict.toList |> List.filterMap (viewHistoryNPCTextRow config qs))
            )
 
 
@@ -364,54 +364,66 @@ viewHistorySideAreaRow { showDate } qs instance d =
         )
 
 
-viewHistoryNPCTextRow : HistoryRowConfig -> Route.HistoryParams -> LogLine.NPCSaysData -> Html msg
-viewHistoryNPCTextRow { showDate } qs { raw, npcId, textId } =
-    tr [ class "npctext-area" ]
-        ((if showDate then
-            [ td [ class "date" ] [] ]
+viewHistoryNPCTextRow : HistoryRowConfig -> Route.HistoryParams -> ( String, List LogLine.NPCSaysData ) -> Maybe (Html msg)
+viewHistoryNPCTextRow { showDate } qs ( npcId, encounters ) =
+    case viewNPCText npcId encounters of
+        [] ->
+            Nothing
 
-          else
-            []
-         )
-            ++ [ td [] []
-               , td [ colspan 7, title raw ] (viewNPCText npcId textId)
-               , td [ class "side-dur" ] []
-               , td [ class "portals" ] []
-               , td [ class "town-pct" ] []
-               ]
-        )
+        body ->
+            Just <|
+                tr [ class "npctext-area" ]
+                    ((if showDate then
+                        [ td [ class "date" ] [] ]
+
+                      else
+                        []
+                     )
+                        ++ [ td [] []
+                           , td [ colspan 7, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
+                           , td [ class "side-dur" ] []
+                           , td [ class "portals" ] []
+                           , td [ class "town-pct" ] []
+                           ]
+                    )
 
 
-viewNPCText : String -> String -> List (Html msg)
-viewNPCText npcId textId =
+viewNPCText : String -> List LogLine.NPCSaysData -> List (Html msg)
+viewNPCText npcId encounters =
+    let
+        textIds =
+            encounters |> List.map .textId
+    in
     if npcId == NpcId.baran then
-        viewConquerorEncounter textId [ Icon.baran, text "Baran, the Crusader" ]
+        viewConquerorEncounter textIds [ Icon.baran, text "Baran, the Crusader" ]
 
     else if npcId == NpcId.veritania then
-        viewConquerorEncounter textId [ Icon.veritania, text "Veritania, the Redeemer" ]
+        viewConquerorEncounter textIds [ Icon.veritania, text "Veritania, the Redeemer" ]
 
     else if npcId == NpcId.alHezmin then
-        viewConquerorEncounter textId [ Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
+        viewConquerorEncounter textIds [ Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
 
     else if npcId == NpcId.drox then
-        viewConquerorEncounter textId [ Icon.drox, text "Drox, the Warlord" ]
+        viewConquerorEncounter textIds [ Icon.drox, text "Drox, the Warlord" ]
 
     else
         []
 
 
-viewConquerorEncounter : String -> List (Html msg) -> List (Html msg)
-viewConquerorEncounter textId label =
-    if String.contains "StoneEncounter1" textId || String.contains "StoneEncounterOne" textId then
+viewConquerorEncounter : List String -> List (Html msg) -> List (Html msg)
+viewConquerorEncounter textIds label =
+    if List.any (String.contains "StoneEncounter1") textIds || List.any (String.contains "StoneEncounterOne") textIds then
         label ++ [ text ": Taunt 1" ]
 
-    else if String.contains "StoneEncounter2" textId || String.contains "StoneEncounterTwo" textId then
+    else if List.any (String.contains "StoneEncounter2") textIds || List.any (String.contains "StoneEncounterTwo") textIds then
         label ++ [ text ": Taunt 2" ]
 
-    else if String.contains "StoneEncounter3" textId || String.contains "StoneEncounterThree" textId then
+    else if List.any (String.contains "StoneEncounter3") textIds || List.any (String.contains "StoneEncounterThree") textIds then
         label ++ [ text ": Taunt 3" ]
+        -- else if List.any (String.contains "Death") textIds || List.any (String.contains "Flee") textIds then
+        -- label ++ [ text ": Defeated" ]
 
-    else if String.contains "Fight" textId then
+    else if List.any (String.contains "Fight") textIds then
         label ++ [ text ": Fight" ]
 
     else

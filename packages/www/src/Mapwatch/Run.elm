@@ -35,7 +35,7 @@ module Mapwatch.Run exposing
     , updateNPCText
     )
 
-import Dict
+import Dict exposing (Dict)
 import Dict.Extra
 import Duration exposing (Millis)
 import Mapwatch.Debug
@@ -47,17 +47,25 @@ import Regex
 import Time
 
 
+type alias NpcId =
+    String
+
+
+type alias NpcEncounters =
+    Dict NpcId (List LogLine.NPCSaysData)
+
+
 type alias Run =
-    { visits : List Visit, first : Visit, last : Visit, portals : Int, instance : Instance.Address, npcSays : List LogLine.NPCSaysData }
+    { visits : List Visit, first : Visit, last : Visit, portals : Int, instance : Instance.Address, npcSays : NpcEncounters }
 
 
 type State
     = Empty
-    | Started Time.Posix (List LogLine.NPCSaysData)
+    | Started Time.Posix NpcEncounters
     | Running Run
 
 
-init : List LogLine.NPCSaysData -> Visit -> Maybe Run
+init : NpcEncounters -> Visit -> Maybe Run
 init npcSays visit =
     if Visit.isOffline visit || not (Visit.isMap visit) then
         Nothing
@@ -667,7 +675,7 @@ update instance_ mvisit state =
             in
             case state of
                 Empty ->
-                    ( initRun [], Nothing )
+                    ( initRun Dict.empty, Nothing )
 
                 Started _ npcSays ->
                     -- first complete visit of the run!
@@ -691,13 +699,13 @@ update instance_ mvisit state =
                             -- they went offline during a run. Start a new run.
                             if Visit.isTown visit then
                                 -- they went offline in town - end the run, discarding the time in town.
-                                ( initRun [], Just running )
+                                ( initRun Dict.empty, Just running )
 
                             else
                                 -- they went offline in the map or a side area.
                                 -- we can't know how much time they actually spent running before disappearing - discard the run.
                                 -- TODO handle offline in no-zone - imagine crashing in a map, immediately restarting the game, then quitting for the day
-                                ( initRun [], Nothing )
+                                ( initRun Dict.empty, Nothing )
 
                         Just run ->
                             if (not <| Instance.isTown instance_.val) && instance_.val /= run.first.instance && Visit.isTown visit then
@@ -706,7 +714,7 @@ update instance_ mvisit state =
                                 -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.
                                 -- * Even Non-Map -> Map does not! That's a Zana daily, or leaving an abyssal-depth/trial/other side-area.
                                 -- * Town -> Non-Map does, though. Ex: map -> town -> uberlab.
-                                ( initRun [], Just run )
+                                ( initRun Dict.empty, Just run )
 
                             else if instance_.val == run.first.instance && Visit.isTown visit then
                                 -- reentering the *same* map from town is a portal.
@@ -754,10 +762,15 @@ updateNPCText line state =
                     state
 
                 Started t npcSays ->
-                    Started t (says :: npcSays)
+                    Started t (pushNpcEncounter says npcSays)
 
                 Running run ->
-                    Running { run | npcSays = says :: run.npcSays }
+                    Running { run | npcSays = pushNpcEncounter says run.npcSays }
 
         _ ->
             state
+
+
+pushNpcEncounter : LogLine.NPCSaysData -> NpcEncounters -> NpcEncounters
+pushNpcEncounter says =
+    Dict.update says.npcId (Maybe.withDefault [] >> (::) says >> Just)
