@@ -34,6 +34,7 @@ type alias Flags =
     , changelog : String
     , version : String
     , datamine : D.Value
+    , logtz : Maybe Float
     }
 
 
@@ -57,9 +58,9 @@ type alias OkModel =
     , loadedAt : Posix
     , route : Route
     , now : Posix
-    , tz : Time.Zone
     , lines : List String
     , volume : Int
+    , tz : Time.Zone
     }
 
 
@@ -83,6 +84,10 @@ init flags url nav =
         loadedAt =
             Time.millisToPosix flags.loadedAt
 
+        logtz : Maybe Time.Zone
+        logtz =
+            flags.logtz |> Maybe.map (\offset -> Time.customZone (60 * offset |> round) [])
+
         createModel : Mapwatch.OkModel -> OkModel
         createModel mapwatch =
             { nav = nav
@@ -92,15 +97,17 @@ init flags url nav =
             , loadedAt = loadedAt
             , route = Route.parse url
             , now = loadedAt
-            , tz = Time.utc
             , lines = []
             , volume = 50
+
+            -- Time.here and SetTimezone set this shortly
+            , tz = Time.utc
             }
 
         model : Model
         model =
             Result.map createModel
-                (Mapwatch.initModel flags.datamine)
+                (Mapwatch.initModel logtz flags.datamine)
     in
     ( model
     , Cmd.batch
@@ -158,7 +165,7 @@ update msg rmodel =
 
 
 updateOk : Msg -> OkModel -> ( OkModel, Cmd Msg )
-updateOk msg ({ config } as model) =
+updateOk msg ({ config, mapwatch } as model) =
     case msg of
         Tick t ->
             if Mapwatch.isReady model.mapwatch then
@@ -168,7 +175,26 @@ updateOk msg ({ config } as model) =
                 ( { model | now = applyTimeOffset model t }, Cmd.none )
 
         SetTimezone tz ->
-            ( { model | tz = tz }, Cmd.none )
+            ( { model
+                -- Why two timezone fields?
+                --
+                -- * model.tz is the timezone set in the browser. It's set
+                -- automatically by Time.here, and cannot be overridden -
+                -- it's pretty consistently what the user wants to see.
+                --
+                -- * model.mapwatch.tz is the timezone used for log parsing.
+                -- PoE logs do not include timezone information! Usually we'll
+                -- assume it matches the system timezone and set it here.
+                -- Usually that works. It doesn't work if the user changes
+                -- their timezone, for example while traveling (can't do much
+                -- about that). It also doesn't work for our example logs.
+                --
+                -- `?logtz=-4` overrides the backend log.
+                | mapwatch = { mapwatch | tz = mapwatch.tz |> Maybe.Extra.orElse (Just tz) }
+                , tz = tz
+              }
+            , Cmd.none
+            )
 
         NavLocation url ->
             let

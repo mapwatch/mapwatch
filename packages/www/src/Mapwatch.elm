@@ -40,6 +40,7 @@ type alias OkModel =
     , runState : Run.State
     , runs : List Run.Run
     , readline : Maybe TimedReadline
+    , tz : Maybe Time.Zone
     }
 
 
@@ -49,13 +50,8 @@ type Msg
     | LogOpened { date : Int, size : Int }
 
 
-
--- = RecvLogLine { date : Int, line : String }
--- | RecvProgress Ports.Progress
-
-
-createModel : Datamine -> OkModel
-createModel datamine =
+createModel : Maybe Time.Zone -> Datamine -> OkModel
+createModel tz datamine =
     { datamine = datamine
     , parseError = Nothing
     , instance = Nothing
@@ -63,19 +59,20 @@ createModel datamine =
     , readline = Nothing
     , history = Nothing
     , runs = []
+    , tz = tz
     }
 
 
-initModel : D.Value -> Model
-initModel =
+initModel : Maybe Time.Zone -> D.Value -> Model
+initModel tz =
     D.decodeValue Datamine.decoder
         >> Result.mapError D.errorToString
-        >> Result.map createModel
+        >> Result.map (createModel tz)
 
 
-init : D.Value -> ( Model, Cmd Msg )
-init datamineJson =
-    ( initModel datamineJson, Cmd.none )
+init : Maybe Time.Zone -> D.Value -> ( Model, Cmd Msg )
+init tz datamineJson =
+    ( initModel tz datamineJson, Cmd.none )
 
 
 updateLine : LogLine.Line -> ( OkModel, List (Cmd Msg) ) -> ( OkModel, List (Cmd Msg) )
@@ -185,7 +182,7 @@ updateOk msg model =
 
                         ( model1, cmds ) =
                             lines
-                                |> List.filterMap (LogLine.parse >> Result.toMaybe)
+                                |> List.filterMap (LogLine.parse (Maybe.withDefault Time.utc model.tz) >> Result.toMaybe)
                                 |> List.foldl updateLine ( model, [] )
                     in
                     case Readline.next readline.val of
@@ -252,7 +249,8 @@ isReady =
 
 lastUpdatedAt : OkModel -> Maybe Posix
 lastUpdatedAt model =
-    [ model.runState |> Run.stateLastUpdatedAt
+    [ model.instance |> Maybe.map .joinedAt
+    , model.runState |> Run.stateLastUpdatedAt
     , model.runs |> List.head |> Maybe.map (\r -> r.last.leftAt)
     ]
         |> List.filterMap identity

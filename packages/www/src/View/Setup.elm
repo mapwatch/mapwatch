@@ -42,7 +42,7 @@ view model =
                 ++ [ text "leave me open while you play - I'll keep watching, no need to upload again. " ]
             )
         , p []
-            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href "?tickStart=1526927461000&example=stripped-client.txt#/" ]) [ text "Run an example now!" ]
+            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href "?tickStart=1526927461000&logtz=0&example=stripped-client.txt#/" ]) [ text "Run an example now!" ]
             ]
         , hr [] []
         , p []

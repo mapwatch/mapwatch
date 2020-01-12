@@ -99,7 +99,7 @@ viewMain qs model =
 
         historyTable =
             table [ class "timer history" ]
-                [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun { showDate = False } hqs goalDuration) <| history)
+                [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun model.tz { showDate = False } hqs goalDuration) <| history)
                 , tfoot []
                     [ tr []
                         [ td [ colspan 11 ]

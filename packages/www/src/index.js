@@ -104,14 +104,16 @@ function main() {
 
 function createFlags(backend, qs) {
   const loadedAt = Date.now()
-  const tickStart = qs.tickStart && isNaN(parseInt(qs.tickStart)) ? qs.tickStart : parseInt(qs.tickStart)
+  const tickStart = isNaN(parseInt(qs.tickStart)) ? null : parseInt(qs.tickStart)
   const tickOffset = tickStart ? loadedAt - tickStart : 0
+  const logtz = isNaN(parseFloat(qs.logtz)) ? null : parseFloat(qs.logtz)
   if (tickOffset) console.log('tickOffset set:', {tickOffset, tickStart, tickStartDate: new Date(tickStart)})
   return {
     loadedAt,
     tickOffset,
     changelog,
     version,
+    logtz,
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: backend.platform,

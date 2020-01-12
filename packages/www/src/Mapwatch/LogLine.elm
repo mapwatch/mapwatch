@@ -89,18 +89,18 @@ parseLogInfo raw =
         |> List.head
 
 
-parseDate : String -> Result String Posix
-parseDate raw =
+parseDate : Time.Zone -> String -> Result String Posix
+parseDate tz raw =
     raw
-        |> P.run dateParser
+        |> P.run (dateParser tz)
         -- |> Result.mapError P.deadEndsToString
         |> Result.mapError (Tuple.pair raw >> Debug.toString)
         -- |> Debug.log "parseDate"
         |> identity
 
 
-dateParser : P.Parser Posix
-dateParser =
+dateParser : Time.Zone -> P.Parser Posix
+dateParser tz =
     P.succeed Time.Extra.Parts
         -- example: `2020/01/08 16:12:56 ...`
         |= P.int
@@ -115,12 +115,7 @@ dateParser =
         |. P.symbol ":"
         |= leadingZeroInt
         |. P.spaces
-        -- There is no time zone information in the log!
-        -- We could pass the current time zone, but even if we assume their
-        -- system time is right, that's still not always right thanks to
-        -- daylight savings: ex. logged during DST, viewed during non-DST.
-        -- Best we can do is just assume everything everywhere is UTC.
-        |> P.map (\parts -> parts 0 |> Time.Extra.partsToPosix Time.utc)
+        |> P.map (\parts -> parts 0 |> Time.Extra.partsToPosix tz)
 
 
 leadingZeroInt : P.Parser Int
@@ -151,14 +146,14 @@ months =
         ]
 
 
-parse : String -> ParsedLine
-parse raw =
+parse : Time.Zone -> String -> ParsedLine
+parse tz raw =
     case parseLogInfo raw of
         Nothing ->
             Err { raw = raw, err = "logline not recognized" }
 
         Just info ->
-            case parseDate raw of
+            case parseDate tz raw of
                 Err err ->
                     Err { raw = raw, err = "logline date invalid: " ++ err }
 

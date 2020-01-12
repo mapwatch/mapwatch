@@ -15,7 +15,7 @@ import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run
 import Mapwatch.Visit as Visit
 import Route
-import Time
+import Time exposing (Posix)
 import TimedReadline exposing (Progress)
 import View.Icon as Icon
 import View.Nav
@@ -172,37 +172,70 @@ viewProgress p =
             ]
 
 
-viewDate : Time.Posix -> Html msg
-viewDate d =
-    let
-        i =
-            d |> ISO8601.fromPosix
+viewDate : Time.Zone -> Posix -> Html msg
+viewDate tz d =
+    span [ title <| ISO8601.toString <| ISO8601.fromPosix d ]
+        [ text <| posixToString tz d ]
 
-        months =
-            [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ]
 
-        monthNum =
-            ISO8601.month i
+posixToString : Time.Zone -> Posix -> String
+posixToString tz d =
+    -- ([ Time.toYear tz d |> String.fromInt
+    ([ Time.toMonth tz d |> monthToString
+     , Time.toDay tz d |> String.fromInt |> String.padLeft 2 '0'
+     ]
+        -- |> String.join "/"
+        |> String.join " "
+    )
+        ++ " "
+        ++ ([ Time.toHour tz d
+            , Time.toMinute tz d
 
-        m =
-            if monthNum < 1 then
-                String.fromInt monthNum
+            -- , Time.toSecond tz d
+            ]
+                |> List.map (String.fromInt >> String.padLeft 2 '0')
+                |> String.join ":"
+           )
 
-            else
-                months |> List.drop (monthNum - 1) |> List.head |> Maybe.withDefault (String.fromInt monthNum)
 
-        timestamp =
-            String.join " "
-                [ m
-                , ISO8601.day i |> String.fromInt |> String.padLeft 2 '0'
-                , String.join ":"
-                    [ ISO8601.hour i |> String.fromInt |> String.padLeft 2 '0'
-                    , ISO8601.minute i |> String.fromInt |> String.padLeft 2 '0'
-                    ]
-                ]
-    in
-    span [ title (ISO8601.toString i) ]
-        [ text timestamp ]
+monthToString : Time.Month -> String
+monthToString m =
+    case m of
+        Time.Jan ->
+            "Jan"
+
+        Time.Feb ->
+            "Feb"
+
+        Time.Mar ->
+            "Mar"
+
+        Time.Apr ->
+            "Apr"
+
+        Time.May ->
+            "May"
+
+        Time.Jun ->
+            "Jun"
+
+        Time.Jul ->
+            "Jul"
+
+        Time.Aug ->
+            "Aug"
+
+        Time.Sep ->
+            "Sep"
+
+        Time.Oct ->
+            "Oct"
+
+        Time.Nov ->
+            "Nov"
+
+        Time.Dec ->
+            "Dec"
 
 
 viewSideAreaName : Route.HistoryParams -> Instance -> Html msg

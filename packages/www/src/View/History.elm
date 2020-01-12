@@ -222,7 +222,7 @@ viewHistoryTable ({ page } as params) queryRuns model =
 
             -- , viewHistoryHeader (Run.parseSort params.sort) params
             ]
-        , tbody [] (pageRuns |> List.map (viewHistoryRun { showDate = True } params goalDuration) |> List.concat)
+        , tbody [] (pageRuns |> List.map (viewHistoryRun model.tz { showDate = True } params goalDuration) |> List.concat)
         , tfoot [] [ tr [] [ td [ colspan 11 ] [ paginator ] ] ]
         ]
 
@@ -283,9 +283,9 @@ type alias Duration =
     Int
 
 
-viewHistoryRun : HistoryRowConfig -> Route.HistoryParams -> (Run -> Maybe Duration) -> Run -> List (Html msg)
-viewHistoryRun config qs goals r =
-    viewHistoryMainRow config qs (goals r) r :: List.map ((\f ( a, b ) -> f a b) <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r)
+viewHistoryRun : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> (Run -> Maybe Duration) -> Run -> List (Html msg)
+viewHistoryRun tz config qs goals r =
+    viewHistoryMainRow tz config qs (goals r) r :: List.map ((\f ( a, b ) -> f a b) <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r)
 
 
 viewDurationSet : Run.DurationSet -> List (Html msg)
@@ -322,15 +322,15 @@ viewDurationTail d =
            ]
 
 
-viewHistoryMainRow : HistoryRowConfig -> Route.HistoryParams -> Maybe Duration -> Run -> Html msg
-viewHistoryMainRow { showDate } qs goal r =
+viewHistoryMainRow : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> Maybe Duration -> Run -> Html msg
+viewHistoryMainRow tz { showDate } qs goal r =
     let
         d =
             Run.durationSet r
     in
     tr [ class "main-area" ]
         ((if showDate then
-            [ td [ class "date" ] [ viewDate r.last.leftAt ] ]
+            [ td [ class "date" ] [ viewDate tz r.last.leftAt ] ]
 
           else
             []
