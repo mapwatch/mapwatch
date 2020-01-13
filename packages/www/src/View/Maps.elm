@@ -74,7 +74,7 @@ sort o =
                     ( c, identity )
 
                 _ ->
-                    ( "tier", List.reverse )
+                    ( "runs", List.reverse )
     in
     (case col of
         "name" ->
