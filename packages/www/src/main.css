@@ -165,13 +165,26 @@ table.timer-details .session-buttons .button {
   padding-right: 0.2em;
   max-width: none;
 }
+.big-icon {
+  height: 2em;
+  width: 2em;
+  margin: -0.5em;
+  padding-right: 0.3em;
+}
+.med-icon {
+  height: 1.4em;
+  width: 1.4em;
+  margin: -0.2em;
+  padding-right: 0.25em;
+}
 /* most map icons look great on a black background. For the ones that don't, draw a border. */
 /* https://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts */
 /* .side-icon-abyss, */
 /* .side-icon-trial, */
 /* .side-icon-zana, */
 /* .side-icon-vaal { */
-.side-icon-unused {
+/* .side-icon-einhar, */
+.side-icon-alva {
   filter: drop-shadow(1px 1px 0 #eb99a1)
           drop-shadow(-1px -1px 0 #eb99a1);
 }

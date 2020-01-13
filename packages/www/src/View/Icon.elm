@@ -1,4 +1,4 @@
-module View.Icon exposing (abyss, alHezmin, baran, drox, fa, fas, fasPulse, labTrial, map, mapOrBlank, vaal, veritania, zana)
+module View.Icon exposing (..)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
@@ -50,24 +50,28 @@ sideArea { name, url } =
 vaal : Html msg
 vaal =
     -- sideArea { name = "vaal", url = "Art/2DItems/Maps/Vaal01.png" }
-    sideArea { name = "vaal", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardFragments.png" }
+    -- sideArea { name = "vaal", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardFragments.png" }
+    sideArea { name = "vaal big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedFragments.png?scale=1" }
 
 
 zana : Html msg
 zana =
     -- sideArea { name = "zana", url = "Art/2DItems/Hideout/Interactive/CartographyDevice.png" }
-    sideArea { name = "zana", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardMaps.png" }
+    -- sideArea { name = "zana", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardMaps.png" }
+    sideArea { name = "zana big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedMaps.png?scale=1" }
 
 
 labTrial : Html msg
 labTrial =
     -- sideArea { name = "trial", url = "Art/2DItems/Maps/Labyrinth.png" }
-    sideArea { name = "trial", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardLabyrinth.png" }
+    -- sideArea { name = "trial", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardLabyrinth.png" }
+    sideArea { name = "trial big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLabyrinth.png?scale=1" }
 
 
 abyss : Html msg
 abyss =
-    sideArea { name = "abyss", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardAbyss.png" }
+    -- sideArea { name = "abyss", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardAbyss.png" }
+    sideArea { name = "abyss big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedAbyss.png?scale=1" }
 
 
 baran : Html msg
@@ -88,3 +92,37 @@ alHezmin =
 drox : Html msg
 drox =
     sideArea { name = "drox", url = "Art/2DItems/Currency/Strongholds/WatchstoneYellow.png?scale=1" }
+
+
+einhar : Html msg
+einhar =
+    sideArea { name = "einhar med-icon", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardBestiary.png?scale=1" }
+
+
+alva : Html msg
+alva =
+    sideArea { name = "alva med-icon", url = "Art/2DItems/Effects/Portals/IncursionPortal.png" }
+
+
+niko : Html msg
+niko =
+    -- sideArea { name = "niko", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardFossils.png?scale=1" }
+    sideArea { name = "niko big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedFossils.png?scale=1" }
+
+
+jun : Html msg
+jun =
+    -- sideArea { name = "jun", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardScarabs.png?scale=1" }
+    sideArea { name = "jun big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png?scale=1" }
+
+
+cassia : Html msg
+cassia =
+    -- sideArea { name = "cassia", url = "Art/2DArt/UIImages/InGame/Blight/BuildButtonDefault.png?scale=1" }
+    -- sideArea { name = "cassia", url = "Art/2DItems/Currency/Oils/GoldenOil.png?scale=1" }
+    sideArea { name = "cassia big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedBlight.png?scale=1" }
+
+
+tane : Html msg
+tane =
+    sideArea { name = "tane big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedMetamorph.png?scale=1" }

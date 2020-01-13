@@ -5078,6 +5078,12 @@
         "pvpTown": "Sarn-Arena, Bühnenbereich"
       },
       "npcs": {
+        "Metadata/Monsters/Masters/Einhar": "Einhar, Meister der Bestien",
+        "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Meisterentdeckerin",
+        "Metadata/NPC/League/Delve/DelveMiner": "Niko, Meister der Tiefen",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Meisterin der Verhüllung",
+        "Metadata/Monsters/Masters/BlightBuilderWild": "Schwester Cassia",
+        "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran der Kreuzritter",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania die Erlöserin",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin der Jäger",
@@ -5521,6 +5527,12 @@
         "pvpTown": "Sarn Arena Staging Area"
       },
       "npcs": {
+        "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
+        "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Master Explorer",
+        "Metadata/NPC/League/Delve/DelveMiner": "Niko, Master of the Depths",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Veiled Master",
+        "Metadata/Monsters/Masters/BlightBuilderWild": "Sister Cassia",
+        "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, the Crusader",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, the Redeemer",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, the Hunter",
@@ -5964,6 +5976,12 @@
         "pvpTown": "Área de Preparación de la Arena de Sarn"
       },
       "npcs": {
+        "Metadata/Monsters/Masters/Einhar": "Einhar Frey, Maestro de Bestias",
+        "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Maestra Exploradora",
+        "Metadata/NPC/League/Delve/DelveMiner": "Niko, Maestro de las Profundidades",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Maestra de Encriptación",
+        "Metadata/Monsters/Masters/BlightBuilderWild": "Hermana Cassia",
+        "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, el Cruzado",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, la Redentora",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, el Cazador",
@@ -6407,6 +6425,12 @@
         "pvpTown": "Scène de l'arène de Sarn"
       },
       "npcs": {
+        "Metadata/Monsters/Masters/Einhar": "Einhar, Maître des Bêtes",
+        "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Maître-exploratrice",
+        "Metadata/NPC/League/Delve/DelveMiner": "Niko, Maître des Profondeurs",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Maître-cryptologue",
+        "Metadata/Monsters/Masters/BlightBuilderWild": "Sœur Cassia",
+        "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, le Croisé",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Véritania, la Rédemptrice",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, le Chasseur",
@@ -6850,6 +6874,12 @@
         "pvpTown": "사안 투기장"
       },
       "npcs": {
+        "Metadata/Monsters/Masters/Einhar": "야수의 대가 아인하르",
+        "Metadata/Monsters/LeagueIncursion/Alva": "탐험의 대가 알바",
+        "Metadata/NPC/League/Delve/DelveMiner": "지하의 대가 니코",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "장막의 대가 준",
+        "Metadata/Monsters/Masters/BlightBuilderWild": "수녀 카시아",
+        "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "테인 옥타비우스",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "십자군 바란",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "대속자 베리타니아",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "사냥꾼 알-헤즈민",
@@ -7293,6 +7323,12 @@
         "pvpTown": "Área de Testes da Arena de Sarn"
       },
       "npcs": {
+        "Metadata/Monsters/Masters/Einhar": "Einhar, Mestre das Bestas",
+        "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Mestre Exploradora",
+        "Metadata/NPC/League/Delve/DelveMiner": "Niko, Mestre das Profundezas",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Mestre Oculta",
+        "Metadata/Monsters/Masters/BlightBuilderWild": "Irmã Cassia",
+        "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, o Cruzado",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, a Redentora",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, o Caçador",
@@ -7736,6 +7772,12 @@
         "pvpTown": "Внутренние помещения арены Сарна"
       },
       "npcs": {
+        "Metadata/Monsters/Masters/Einhar": "Эйнар, Мастер зверей",
+        "Metadata/Monsters/LeagueIncursion/Alva": "Альва, Мастер исследований",
+        "Metadata/NPC/League/Delve/DelveMiner": "Нико, Мастер глубин",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Джун, Скрытый мастер",
+        "Metadata/Monsters/Masters/BlightBuilderWild": "Сестра Кассия",
+        "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Танэ Октавиус",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Бэран, Крестоносец",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Веритания, Избавительница",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Аль-Хезмин, Охотник",
@@ -8179,6 +8221,12 @@
         "pvpTown": "Sarn Arena Staging Area"
       },
       "npcs": {
+        "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
+        "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Master Explorer",
+        "Metadata/NPC/League/Delve/DelveMiner": "Niko, Master of the Depths",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Veiled Master",
+        "Metadata/Monsters/Masters/BlightBuilderWild": "แม่ชีแคสเซีย",
+        "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "ทาเน อ็อกเทเวียส",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, the Crusader",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, the Redeemer",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, the Hunter",
@@ -8622,6 +8670,12 @@
         "pvpTown": "萨恩竞技场 - 准备区域"
       },
       "npcs": {
+        "Metadata/Monsters/Masters/Einhar": "伊恩哈尔，魔兽大师",
+        "Metadata/Monsters/LeagueIncursion/Alva": "阿尔瓦，探索大师",
+        "Metadata/NPC/League/Delve/DelveMiner": "尼克，地心大师",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "影匿大师，琼",
+        "Metadata/Monsters/Masters/BlightBuilderWild": "卡西娅修女",
+        "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "丹恩·屋大维",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "圣战者巴兰",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "救赎者维利塔妮娅",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "猎人阿尔赫兹敏",

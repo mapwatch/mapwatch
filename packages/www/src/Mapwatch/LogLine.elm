@@ -17,8 +17,10 @@ even when I avoid backtracking, so I'm stuck using these regexes.
 import Array exposing (Array)
 import Dict exposing (Dict)
 import Mapwatch.Datamine as Datamine exposing (Datamine)
+import Mapwatch.Datamine.NpcId as NpcId
 import Maybe.Extra
 import Regex exposing (Regex)
+import Set exposing (Set)
 import Time exposing (Posix)
 import Time.Extra
 import Util.String
@@ -94,7 +96,28 @@ parseInfo dm raw =
 
                             -- |> Debug.log "npcsays"
                             Nothing ->
-                                parseInfoEntered dm body
+                                case parseInfoEntered dm body of
+                                    Nothing ->
+                                        -- NPCSays, but we don't have matching NPCText.
+                                        -- Usually this is because we don't care what they're saying,
+                                        -- just that they're saying anything.
+                                        case
+                                            body
+                                                |> String.split ":"
+                                                |> List.head
+                                                |> Maybe.andThen (\name -> Dict.get name dm.unindex.npcs)
+                                                -- conqueror dialogue must match exactly to be processed - speaker alone isn't enough
+                                                |> Maybe.Extra.filter (\name -> not <| Set.member name NpcId.conquerors)
+                                        of
+                                            Just npcId ->
+                                                -- TODO: textId="" instead of a maybe-type is a bit sketchy
+                                                NPCSays { raw = body, npcId = npcId, textId = "" } |> Just
+
+                                            Nothing ->
+                                                Nothing
+
+                                    entered ->
+                                        entered
 
 
 parseInfoEntered : Datamine -> String -> Maybe Info

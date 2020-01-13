@@ -8,7 +8,8 @@ All substantial Mapwatch changes.
 
 ---
 ## 2020-01-13
-- Conqueror encounters are now tracked.
+- Master encounters are now tracked.
+- Conqueror encounters and taunt-counts are now tracked.
 
 ## 2020-01-12
 - Side areas now have icons.

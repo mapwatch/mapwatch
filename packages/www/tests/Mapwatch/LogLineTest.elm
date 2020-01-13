@@ -3,25 +3,22 @@ module Mapwatch.LogLineTest exposing (..)
 import Array
 import Dict
 import Expect
-import Mapwatch.Datamine as Datamine exposing (Datamine)
+import Mapwatch.Datamine as Datamine exposing (Datamine, langIndexEmpty)
 import Mapwatch.LogLine as LogLine
 import Test exposing (..)
 import Time exposing (Posix)
 
 
-emptyLangIndex =
-    { worldAreas = Dict.empty, backendErrors = Dict.empty }
-
-
 datamine : Datamine
 datamine =
-    Datamine.createDatamine Array.empty
+    Datamine.createDatamine_ Array.empty
         (Dict.singleton "en"
             { name = "en"
-            , unindex = emptyLangIndex
-            , index = { emptyLangIndex | backendErrors = Dict.singleton "EnteredArea" "You have entered %1%." }
+            , unindex = langIndexEmpty
+            , index = { langIndexEmpty | backendErrors = Dict.singleton "EnteredArea" "You have entered %1%." }
             }
         )
+        Dict.empty
 
 
 expectParseEquals : String -> Result String ( Int, LogLine.Info ) -> Expect.Expectation

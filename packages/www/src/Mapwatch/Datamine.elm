@@ -1,11 +1,12 @@
 module Mapwatch.Datamine exposing
     ( Datamine
     , WorldArea
-    , createDatamine
+    , createDatamine_
     , decoder
     , imgCdn
     , imgSrc
     , isMap
+    , langIndexEmpty
     , langs
     , tier
     , worldAreaFromName
@@ -184,23 +185,24 @@ isMap w =
 
 createDatamine : Array WorldArea -> Dict String Lang -> Result String Datamine
 createDatamine ws ls =
-    Result.map
-        (\npcText ->
-            let
-                worldAreasById =
-                    ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
-
-                init =
-                    Datamine ws
-                        ls
-                        worldAreasById
-                        langIndexEmpty
-                        (createYouHaveEntered ls)
-                        npcText
-            in
-            { init | unindex = init |> langs |> List.map .unindex |> langIndexUnion }
-        )
+    Result.map (createDatamine_ ws ls)
         (createNPCText ls)
+
+
+createDatamine_ ws ls npcText =
+    let
+        worldAreasById =
+            ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
+
+        init =
+            Datamine ws
+                ls
+                worldAreasById
+                langIndexEmpty
+                (createYouHaveEntered ls)
+                npcText
+    in
+    { init | unindex = init |> langs |> List.map .unindex |> langIndexUnion }
 
 
 {-| Parse "You have entered %1%" messages for all languages.

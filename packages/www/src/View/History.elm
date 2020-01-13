@@ -406,6 +406,24 @@ viewNPCText npcId encounters =
     else if npcId == NpcId.drox then
         viewConquerorEncounter textIds [ Icon.drox, text "Drox, the Warlord" ]
 
+    else if npcId == NpcId.einhar then
+        [ Icon.einhar, text "Einhar, Beastmaster" ]
+
+    else if npcId == NpcId.alva then
+        [ Icon.alva, text "Alva, Master Explorer" ]
+
+    else if npcId == NpcId.niko then
+        [ Icon.niko, text "Niko, Master of the Depths" ]
+
+    else if npcId == NpcId.jun then
+        [ Icon.jun, text "Jun, Veiled Master" ]
+
+    else if npcId == NpcId.cassia then
+        [ Icon.cassia, text "Sister Cassia" ]
+        -- Don't show Tane during Metamorph league
+        -- else if npcId == NpcId.tane then
+        -- [ Icon.tane, text "Tane Octavius" ]
+
     else
         []
 

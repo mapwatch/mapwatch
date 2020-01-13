@@ -72,16 +72,38 @@ function transformLang(raw, {worldAreasById}) {
   }
 }
 const exportedNPCs = Object.assign({}, ...[
+  // conquerors
   "Metadata/Monsters/AtlasExiles/AtlasExile1",
   "Metadata/Monsters/AtlasExiles/AtlasExile2",
   "Metadata/Monsters/AtlasExiles/AtlasExile3",
   "Metadata/Monsters/AtlasExiles/AtlasExile4",
+  // masters. no Zana dialogue, she's already tracked by detecting maps within maps
+  "Metadata/Monsters/Masters/Einhar",
+  "Metadata/Monsters/LeagueIncursion/Alva",
+  "Metadata/NPC/League/Delve/DelveMiner",
+  "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop", // ninja-cop, lol
+  "Metadata/Monsters/Masters/BlightBuilderWild",
+  "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC",
 ].map(name => ({[name]: true})))
 function isNPCTextExported(raw) {
+  // conquerors
   return /^AlHezmin.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
       || /^Veritania.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
       || /^Baran.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
       || /^Drox.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
+      // masters
+      // Turns out for most of these, we don't care what they have to say.
+      // Saying anything at all is enough.
+      // || /^EinharArrives/.test(raw.Id)
+      // || /^AlvaWild/.test(raw.Id)
+      // || /^NikoClaim/.test(raw.Id)
+      // TODO: Jun and the syndicate are tricky. Their NPCText ids aren't named
+      // after Jun, but after each syndicate member; I'll need to list them all.
+      // /^<NAME>PrimaryDefenderStartsFight/ for all of them looks like it'd be enough.
+      // Alternately, could ignore exact dialogue and just check the speaker?
+      // || /^JunOrtoi/.test(raw.Id)
+      // || /^BlightBuilderWildAttention/.test(raw.Id)
+      // || /^TaneOctaviusWildGreeting|TaneOctaviusGreeting/.test(raw.Id)
 }
 function transformAtlasNode(raw, {json}) {
   return {
