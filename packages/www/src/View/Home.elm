@@ -246,7 +246,7 @@ viewSideAreaName qs instance =
 
         Just w ->
             if Datamine.isMap w then
-                span [] [ Icon.zana, text "Zana mission (", viewInstance qs instance, text ")" ]
+                span [] [ Icon.zana, text "Zana (", viewInstance qs instance, text ")" ]
 
             else if w.isVaalArea then
                 span [] [ Icon.vaal, text "Vaal side area (", viewInstance qs instance, text ")" ]

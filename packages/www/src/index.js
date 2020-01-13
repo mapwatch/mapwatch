@@ -86,7 +86,7 @@ function main() {
   let sayWatching = false
   let isSpeechEnabled = false
   let volume = 0
-  app.ports.events.subscribe(function(event) {
+  app.ports.events.subscribe(event => {
     if (event.type === 'volume') {
       volume = event.volume
       isSpeechEnabled = event.isSpeechEnabled && speechCapable

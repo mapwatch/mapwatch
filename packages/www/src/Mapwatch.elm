@@ -188,13 +188,18 @@ updateOk msg model =
                     in
                     case Readline.next readline.val of
                         Nothing ->
-                            ( { model1 | readline = Just readline, history = model1.history |> Maybe.Extra.orElse (Just readline) }
-                            , Cmd.none
-                            )
+                            case model1.history of
+                                Nothing ->
+                                    ( { model1 | readline = Just readline, history = Just readline }
+                                    , Cmd.batch <| Ports.progressComplete { name = "history" } :: cmds
+                                    )
+
+                                Just _ ->
+                                    ( { model1 | readline = Just readline }, Cmd.batch cmds )
 
                         Just next ->
                             ( { model1 | readline = Just readline }
-                            , Ports.logSliceReq next
+                            , Cmd.batch <| Ports.logSliceReq next :: cmds
                             )
 
         LogChanged { date, size } ->
