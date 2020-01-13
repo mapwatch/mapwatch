@@ -4850,6 +4850,19 @@
         null,
         null,
         1487
+      ],
+      [
+        "AtlasExilesBoss5",
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Currency/Strongholds/WatchstoneIridescent.png",
+        null,
+        1505
       ]
     ]
   },
@@ -5159,7 +5172,8 @@
         "HideoutDarkwood": "Düsterwald-Versteck",
         "HideoutArenaElder": "Leerenversteck",
         "HideoutChiyouSpring": "Chiyou Hideout",
-        "pvpTown": "Sarn-Arena, Bühnenbereich"
+        "pvpTown": "Sarn-Arena, Bühnenbereich",
+        "AtlasExilesBoss5": "Auge des Sturms"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Meister der Bestien",
@@ -5614,7 +5628,8 @@
         "HideoutDarkwood": "Glimmerwood Hideout",
         "HideoutArenaElder": "Void Hideout",
         "HideoutChiyouSpring": "Chiyou Hideout",
-        "pvpTown": "Sarn Arena Staging Area"
+        "pvpTown": "Sarn Arena Staging Area",
+        "AtlasExilesBoss5": "Eye of the Storm"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
@@ -6069,7 +6084,8 @@
         "HideoutDarkwood": "Guarida de Bosque Encantado",
         "HideoutArenaElder": "Guarida del vacío",
         "HideoutChiyouSpring": "Guarida Chi You",
-        "pvpTown": "Área de Preparación de la Arena de Sarn"
+        "pvpTown": "Área de Preparación de la Arena de Sarn",
+        "AtlasExilesBoss5": "El ojo de la tormenta"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar Frey, Maestro de Bestias",
@@ -6524,7 +6540,8 @@
         "HideoutDarkwood": "Repaire de Boiscintillant",
         "HideoutArenaElder": "Repaire du Néant",
         "HideoutChiyouSpring": "Repaire Chiyou",
-        "pvpTown": "Scène de l'arène de Sarn"
+        "pvpTown": "Scène de l'arène de Sarn",
+        "AtlasExilesBoss5": "L'Œil du cyclone"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Maître des Bêtes",
@@ -6979,7 +6996,8 @@
         "HideoutDarkwood": "미광의 숲 은신처",
         "HideoutArenaElder": "공허 은신처",
         "HideoutChiyouSpring": "치우 은신처",
-        "pvpTown": "사안 투기장"
+        "pvpTown": "사안 투기장",
+        "AtlasExilesBoss5": "태풍의 눈"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "야수의 대가 아인하르",
@@ -7434,7 +7452,8 @@
         "HideoutDarkwood": "Refúgio da Floresta Negra",
         "HideoutArenaElder": "Refúgio Vazio",
         "HideoutChiyouSpring": "Refúgio Chiyou",
-        "pvpTown": "Área de Testes da Arena de Sarn"
+        "pvpTown": "Área de Testes da Arena de Sarn",
+        "AtlasExilesBoss5": "Olho da Tempestade"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Mestre das Bestas",
@@ -7889,7 +7908,8 @@
         "HideoutDarkwood": "Убежище темного леса",
         "HideoutArenaElder": "Убежище пустоты",
         "HideoutChiyouSpring": "Chiyou Hideout",
-        "pvpTown": "Внутренние помещения арены Сарна"
+        "pvpTown": "Внутренние помещения арены Сарна",
+        "AtlasExilesBoss5": "Око Шторма"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Эйнар, Мастер зверей",
@@ -8344,7 +8364,8 @@
         "HideoutDarkwood": "ที่ซ่อน Glimmerwood",
         "HideoutArenaElder": "Void Hideout",
         "HideoutChiyouSpring": "Chiyou Hideout",
-        "pvpTown": "Sarn Arena Staging Area"
+        "pvpTown": "Sarn Arena Staging Area",
+        "AtlasExilesBoss5": "Eye of the Storm"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
@@ -8799,7 +8820,8 @@
         "HideoutDarkwood": "藏身处：幽暗森林",
         "HideoutArenaElder": "虚空藏身处",
         "HideoutChiyouSpring": "兵主蚩尤藏身处",
-        "pvpTown": "萨恩竞技场 - 准备区域"
+        "pvpTown": "萨恩竞技场 - 准备区域",
+        "AtlasExilesBoss5": "风暴之眼"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "伊恩哈尔，魔兽大师",

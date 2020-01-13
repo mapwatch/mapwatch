@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2020-01-14
+- The Sirus, Awakener of Worlds fight is now tracked.
+
 ## 2020-01-13
 - Master encounters are now tracked.
 - Conqueror encounters and taunt-counts are now tracked.

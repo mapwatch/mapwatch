@@ -57,7 +57,7 @@ function transform(rawJson, rawLangs) {
   // }, _.identity)
 }
 // Fragment maps don't seem to have a flag to easily distinguish them, nor do
-// they have a field that says how to visualize. List them manually.
+// they have a field that says how to visualize. List them manually. Sirus too.
 const fragmentMaps = {
   "3_ProphecyBoss": "Art/2DItems/Maps/PaleCourtComplete.png",
   "MapAtlasShapersRealm": "Art/2DItems/Maps/ShaperComplete.png",
@@ -65,6 +65,7 @@ const fragmentMaps = {
   "MapWorldsElderArenaUber": "Art/2DItems/Maps/UberElderComplete.png",
   "MapAtziri1": "Art/2DItems/Maps/VaalComplete.png",
   "MapAtziri2": "Art/2DItems/Maps/UberVaalComplete.png",
+  "AtlasExilesBoss5": "Art/2DItems/Currency/Strongholds/WatchstoneIridescent.png",
 }
 function transformLang(raw, {worldAreasById}) {
   // areas all have different names for different languages, map id -> name.
