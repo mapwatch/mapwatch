@@ -56,6 +56,16 @@ function transform(rawJson, rawLangs) {
   return ret
   // }, _.identity)
 }
+// Fragment maps don't seem to have a flag to easily distinguish them, nor do
+// they have a field that says how to visualize. List them manually.
+const fragmentMaps = {
+  "3_ProphecyBoss": "Art/2DItems/Maps/PaleCourtComplete.png",
+  "MapAtlasShapersRealm": "Art/2DItems/Maps/ShaperComplete.png",
+  "MapWorldsElderArena": "Art/2DItems/Maps/ElderComplete.png",
+  "MapWorldsElderArenaUber": "Art/2DItems/Maps/UberElderComplete.png",
+  "MapAtziri1": "Art/2DItems/Maps/VaalComplete.png",
+  "MapAtziri2": "Art/2DItems/Maps/UberVaalComplete.png",
+}
 function transformLang(raw, {worldAreasById}) {
   // areas all have different names for different languages, map id -> name.
   // mapwatch is usually more concerned with name -> id for log parsing, but it can deal.
@@ -130,7 +140,7 @@ function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes}) {
     IsVaalArea: raw.IsVaalArea,
     _IsLabTrial: raw.Id.startsWith('EndGame_Labyrinth_trials_'),
     _IsAbyssalDepths : raw.Id.startsWith('AbyssLeague'),
-    ItemVisualIdentity: _.get(uniqueMaps[index] || atlasNodes[index], 'ItemVisualIdentity'),
+    ItemVisualIdentity: fragmentMaps[raw.Id] || _.get(uniqueMaps[index] || atlasNodes[index], 'ItemVisualIdentity'),
     Tiers: _.get(atlasNodes[index], 'Tiers'),
     RowID: index,
   }

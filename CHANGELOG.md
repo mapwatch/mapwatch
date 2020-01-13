@@ -10,6 +10,8 @@ All substantial Mapwatch changes.
 ## 2020-01-13
 - Master encounters are now tracked.
 - Conqueror encounters and taunt-counts are now tracked.
+- Maps with fragments (Atziri, Pale Court, Shaper, Elder) are once again correctly tracked again.
+  - We might mess up Shaper vs. Uber Elder for now, since their arenas have the same name.
 
 ## 2020-01-12
 - Side areas now have icons.
