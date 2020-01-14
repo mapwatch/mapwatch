@@ -19,6 +19,7 @@ import Dict exposing (Dict)
 import Dict.Extra
 import Json.Decode as D
 import Mapwatch.Datamine.NpcId as NpcId
+import Mapwatch.Datamine.NpcText as NpcText
 import Maybe.Extra
 import Result.Extra
 import Set exposing (Set)
@@ -300,9 +301,6 @@ createNPCText1 lang =
 
 createNPCTextSet : Lang -> String -> (( String, String ) -> Bool) -> Result String (List ( String, NpcTextEntry ))
 createNPCTextSet lang npcId npcTextFilter =
-    -- TODO: some dialogue strings have `<if:MS>{...}<if:FS>{...}` syntax for
-    -- masculine/feminine versions. Currently, they simply don't work. Parse,
-    -- and make dict entries for both!
     case Dict.get npcId lang.index.npcs of
         Nothing ->
             Err <| "no such npc: " ++ npcId
@@ -315,14 +313,22 @@ createNPCTextSet lang npcId npcTextFilter =
                 npcTexts ->
                     -- TODO we probably need to localize the ": " separator!
                     npcTexts
-                        |> List.sort
                         |> List.map
                             (\( textId, text ) ->
-                                ( npcName ++ ": " ++ text
-                                , { npcId = npcId, textId = textId, npcName = npcName }
-                                )
+                                NpcText.parse text
+                                    |> Result.map (List.map (Tuple.pair textId))
                             )
-                        |> Ok
+                        |> Result.Extra.combine
+                        |> Result.map
+                            (List.concat
+                                >> List.sort
+                                >> List.map
+                                    (\( textId, text ) ->
+                                        ( npcName ++ ": " ++ text
+                                        , { npcId = npcId, textId = textId, npcName = npcName }
+                                        )
+                                    )
+                            )
 
 
 decoder : D.Decoder Datamine
