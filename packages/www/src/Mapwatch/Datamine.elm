@@ -1,5 +1,6 @@
 module Mapwatch.Datamine exposing
     ( Datamine
+    , MapIconArgs
     , WorldArea
     , createDatamine_
     , decoder
@@ -30,8 +31,12 @@ type alias Datamine =
     , worldAreasById : Dict String WorldArea
     , unindex : LangIndex
     , youHaveEntered : String -> Maybe String
-    , npcText : Dict String ( String, String )
+    , npcText : Dict String NpcTextEntry
     }
+
+
+type alias NpcTextEntry =
+    { npcId : String, textId : String, npcName : String }
 
 
 type alias WorldArea =
@@ -168,14 +173,37 @@ imgCdn =
     "https://web.poecdn.com/image/"
 
 
-imgSrc : WorldArea -> Maybe String
-imgSrc w =
-    w.itemVisualId |> Maybe.map (String.replace ".dds" ".png" >> (\path -> imgCdn ++ path ++ "?w=1&h=1&scale=1&mn=6&mt=" ++ String.fromInt (tier w |> Maybe.withDefault 0)))
+type alias MapIconArgs =
+    { blighted : Bool }
+
+
+imgSrc : MapIconArgs -> WorldArea -> Maybe String
+imgSrc args w =
+    w.itemVisualId
+        |> Maybe.map
+            (String.replace ".dds" ".png"
+                >> (\path ->
+                        imgCdn
+                            ++ path
+                            ++ "?w=1&h=1&scale=1&mn=6&mt="
+                            ++ String.fromInt (tier w |> Maybe.withDefault 0)
+                            ++ boolQuery "&mb" args.blighted
+                   )
+            )
+
+
+boolQuery : String -> Bool -> String
+boolQuery n b =
+    if b then
+        n ++ "=1"
+
+    else
+        ""
 
 
 isMap : WorldArea -> Bool
 isMap w =
-    case imgSrc w of
+    case imgSrc { blighted = False } w of
         Nothing ->
             False
 
@@ -240,7 +268,7 @@ createYouHaveEntered lang =
         unwrappers |> Util.String.mapFirst (\fn -> fn raw) Maybe.Extra.isJust |> Maybe.Extra.join
 
 
-createNPCText : Dict String Lang -> Result String (Dict String ( String, String ))
+createNPCText : Dict String Lang -> Result String (Dict String NpcTextEntry)
 createNPCText lang =
     lang
         |> Dict.values
@@ -254,12 +282,13 @@ createNPCText lang =
         |> Result.map Dict.fromList
 
 
-createNPCText1 : Lang -> Result String (List ( String, ( String, String ) ))
+createNPCText1 : Lang -> Result String (List ( String, NpcTextEntry ))
 createNPCText1 lang =
     [ createNPCTextSet lang NpcId.baran (Tuple.first >> String.startsWith "Baran")
     , createNPCTextSet lang NpcId.veritania (Tuple.first >> String.startsWith "Veritania")
     , createNPCTextSet lang NpcId.alHezmin (Tuple.first >> String.startsWith "AlHezmin")
     , createNPCTextSet lang NpcId.drox (Tuple.first >> String.startsWith "Drox")
+    , createNPCTextSet lang NpcId.cassia (Tuple.first >> String.startsWith "Cassia")
     ]
         |> Result.Extra.combine
         |> Result.map List.concat
@@ -269,7 +298,7 @@ createNPCText1 lang =
 -- |> Debug.log ("npctextset-" ++ lang.name)
 
 
-createNPCTextSet : Lang -> String -> (( String, String ) -> Bool) -> Result String (List ( String, ( String, String ) ))
+createNPCTextSet : Lang -> String -> (( String, String ) -> Bool) -> Result String (List ( String, NpcTextEntry ))
 createNPCTextSet lang npcId npcTextFilter =
     -- TODO: some dialogue strings have `<if:MS>{...}<if:FS>{...}` syntax for
     -- masculine/feminine versions. Currently, they simply don't work. Parse,
@@ -287,7 +316,12 @@ createNPCTextSet lang npcId npcTextFilter =
                     -- TODO we probably need to localize the ": " separator!
                     npcTexts
                         |> List.sort
-                        |> List.map (\( k, v ) -> ( npcName ++ ": " ++ v, ( npcId, k ) ))
+                        |> List.map
+                            (\( textId, text ) ->
+                                ( npcName ++ ": " ++ text
+                                , { npcId = npcId, textId = textId, npcName = npcName }
+                                )
+                            )
                         |> Ok
 
 

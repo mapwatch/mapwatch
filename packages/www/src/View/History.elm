@@ -15,7 +15,7 @@ import Model as Model exposing (Msg(..), OkModel)
 import Regex
 import Route
 import Time
-import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
+import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewParseError, viewProgress, viewRun, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
 import View.NotFound
@@ -340,7 +340,7 @@ viewHistoryMainRow tz { showDate } qs goal r =
           else
             []
          )
-            ++ [ td [ class "zone" ] [ viewInstance qs r.first.instance ]
+            ++ [ td [ class "zone" ] [ viewRun qs r ]
                ]
             ++ viewGoalDurationSet goal d
         )

@@ -114,21 +114,10 @@ viewMain params model =
                 |> search params.search
                 |> Run.filterBetween params
 
-        groupedRuns : List GroupedRuns
-        groupedRuns =
-            runs
-                |> Run.groupByMap
-                |> Dict.toList
-                |> List.filterMap
-                    (\( name, runGroup ) ->
-                        model.mapwatch.datamine
-                            |> Datamine.worldAreaFromName name
-                            |> Maybe.map (\w -> { name = name, worldArea = w, runs = Run.summarize runGroup })
-                    )
-
         rows : List (Html msg)
         rows =
-            groupedRuns
+            runs
+                |> groupRuns model.mapwatch.datamine
                 |> sort params.sort
                 |> List.map (viewMap params)
     in
@@ -140,6 +129,17 @@ viewMain params model =
             , tbody [] rows
             ]
         ]
+
+
+groupRuns : Datamine -> List Run -> List GroupedRuns
+groupRuns dm =
+    Run.groupByMap
+        >> Dict.toList
+        >> List.filterMap
+            (\( name, runGroup ) ->
+                Datamine.worldAreaFromName name dm
+                    |> Maybe.map (\w -> { name = name, worldArea = w, runs = Run.summarize runGroup })
+            )
 
 
 header : Route.MapsParams -> Html msg
@@ -205,4 +205,4 @@ viewMapName qs name worldArea =
         hqs0 =
             Route.historyParams0
     in
-    a [ Route.href <| Route.History { hqs0 | search = Just name, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank (Just worldArea), text name ]
+    a [ Route.href <| Route.History { hqs0 | search = Just name, after = qs.after, before = qs.before } ] [ Icon.mapOrBlank { blighted = False } (Just worldArea), text name ]

@@ -1,4 +1,4 @@
-module View.Home exposing (formatBytes, formatDuration, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewParseError, viewProgress, viewSideAreaName)
+module View.Home exposing (formatBytes, formatDuration, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewParseError, viewProgress, viewRun, viewSideAreaName)
 
 -- TODO: This used to be its own page. Now it's a graveyard of functions that get
 -- called from other pages. I should really clean it up and find these a new home.
@@ -12,8 +12,9 @@ import Mapwatch as Mapwatch exposing (Model, Msg(..))
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
-import Mapwatch.Run as Run
+import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.Visit as Visit
+import Maybe.Extra
 import Route
 import Time exposing (Posix)
 import TimedReadline exposing (Progress)
@@ -22,16 +23,29 @@ import View.Nav
 import View.Setup
 
 
+viewAddress : Route.HistoryParams -> Icon.MapIconArgs -> Instance.Address -> Html msg
+viewAddress qs args addr =
+    let
+        blighted =
+            if args.blighted then
+                "Blighted "
+
+            else
+                ""
+    in
+    if Maybe.Extra.unwrap False Datamine.isMap addr.worldArea then
+        -- TODO preserve before/after
+        a [ Route.href <| Route.History { qs | search = Just addr.zone }, title addr.addr ] [ Icon.mapOrBlank args addr.worldArea, text blighted, text addr.zone ]
+
+    else
+        span [ title addr.addr ] [ text addr.zone ]
+
+
 viewMaybeInstance : Route.HistoryParams -> Maybe Instance -> Html msg
 viewMaybeInstance qs instance =
     case instance of
-        Just ((Instance.Instance addr) as i) ->
-            if Instance.isMap i then
-                -- TODO preserve before/after
-                a [ Route.href <| Route.History { qs | search = Just addr.zone }, title addr.addr ] [ Icon.mapOrBlank addr.worldArea, text addr.zone ]
-
-            else
-                span [ title addr.addr ] [ text addr.zone ]
+        Just (Instance.Instance addr) ->
+            viewAddress qs { blighted = False } addr
 
         Just Instance.MainMenu ->
             span [] [ text "(none)" ]
@@ -43,6 +57,11 @@ viewMaybeInstance qs instance =
 viewInstance : Route.HistoryParams -> Instance -> Html msg
 viewInstance qs =
     Just >> viewMaybeInstance qs
+
+
+viewRun : Route.HistoryParams -> Run -> Html msg
+viewRun qs run =
+    viewAddress qs { blighted = Run.isBlightedMap run } run.instance
 
 
 time =
@@ -240,25 +259,29 @@ monthToString m =
 
 viewSideAreaName : Route.HistoryParams -> Instance -> Html msg
 viewSideAreaName qs instance =
+    let
+        label =
+            viewInstance qs instance
+    in
     case Instance.worldArea instance of
         Nothing ->
-            viewInstance qs instance
+            label
 
         Just w ->
             if Datamine.isMap w then
-                span [] [ Icon.zana, text "Zana (", viewInstance qs instance, text ")" ]
+                span [] [ Icon.zana, text "Zana (", label, text ")" ]
 
             else if w.isVaalArea then
-                span [] [ Icon.vaal, text "Vaal side area (", viewInstance qs instance, text ")" ]
+                span [] [ Icon.vaal, text "Vaal side area (", label, text ")" ]
 
             else if w.isLabTrial then
-                span [] [ Icon.labTrial, text "Labyrinth trial (", viewInstance qs instance, text ")" ]
+                span [] [ Icon.labTrial, text "Labyrinth trial (", label, text ")" ]
 
             else if w.isAbyssalDepths then
-                span [] [ Icon.abyss, viewInstance qs instance ]
+                span [] [ Icon.abyss, label ]
 
             else
-                viewInstance qs instance
+                label
 
 
 maskedText : String -> Html msg

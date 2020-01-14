@@ -70,7 +70,7 @@ viewWorldAreas datamine =
                     (\w ->
                         tr []
                             ([ td [ style "min-width" "1em", style "height" "1em" ]
-                                (case Datamine.imgSrc w of
+                                (case Datamine.imgSrc { blighted = False } w of
                                     Nothing ->
                                         [ text "" ]
 
@@ -110,9 +110,9 @@ viewNPCTexts datamine =
             (datamine.npcText
                 |> Dict.toList
                 |> List.map
-                    (\( dialogue, ( npcId, textId ) ) ->
+                    (\( dialogue, { npcName, npcId, textId } ) ->
                         tr []
-                            [ td [] [ text npcId ]
+                            [ td [] [ text <| npcName ++ " (" ++ npcId ++ ")" ]
                             , td [] [ text textId ]
                             , td [] [ text dialogue ]
                             ]

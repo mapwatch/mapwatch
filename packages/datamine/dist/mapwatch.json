@@ -5188,6 +5188,14 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox der Kriegsfürst"
       },
       "npcTextAudio": {
+        "CassiaNewLane1": "Es hat ein neues Myzel ausgebracht! ... Neue Wurzeln!",
+        "CassiaNewLane2": "Es hat ein neues Myzel ausgebracht! ... Neue Wurzeln!",
+        "CassiaNewLane3": "Es hat ein neues Myzel ausgebracht! ... Neue Wurzeln!",
+        "CassiaNewLane4": "Der Befall versucht sich weiter auszubreiten!",
+        "CassiaNewLane5": "Der Befall versucht sich weiter auszubreiten!",
+        "CassiaNewLane6": "Der Befall versucht sich weiter auszubreiten!",
+        "CassiaNewLane7": "<if:MS>{Er schlägt weitere Wurzeln, Verbannter!}<elif:FS>{Er schlägt weitere Wurzeln, Verbannte!}",
+        "CassiaNewLane8": "<if:MS>{Er schlägt weitere Wurzeln, Verbannter!}<elif:FS>{Er schlägt weitere Wurzeln, Verbannte!}",
         "DroxNoStoneEncounterOne": "Erste Warnung, weil Ihr Ländereien betreten habt, die Euch nicht gehören. Reist woanders hin, und das Gesetz wird Euch keine Steine in den Weg legen.",
         "DroxNoStoneEncounterTwo": "Zweite Warnung. Es gibt viele andere Ländereien in diesem Reich, in denen kein Gesetz gilt. Haltet Euch lieber dort auf.",
         "DroxNoStoneEncounterThree": "Ihr wurdet zweimal gewarnt. Das Gesetz erwartet Euren Kopf, Eindringling.",
@@ -5644,6 +5652,14 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, the Warlord"
       },
       "npcTextAudio": {
+        "CassiaNewLane1": "It's put out new mycelium! ... New roots!",
+        "CassiaNewLane2": "It's put out new mycelium! ... New roots!",
+        "CassiaNewLane3": "It's put out new mycelium! ... New roots!",
+        "CassiaNewLane4": "The Blight is trying to spread!",
+        "CassiaNewLane5": "The Blight is trying to spread!",
+        "CassiaNewLane6": "The Blight is trying to spread!",
+        "CassiaNewLane7": "It's branching, exile!",
+        "CassiaNewLane8": "It's branching, exile!",
         "DroxNoStoneEncounterOne": "First warning, for treading upon lands that do not belong to you. Travel elsewhere and the law will have no quarrel with you.",
         "DroxNoStoneEncounterTwo": "Second warning. There are many other territories in this realm that have no law. Tread upon them instead.",
         "DroxNoStoneEncounterThree": "You were twice warned. The law will have your head, trespasser.",
@@ -6100,6 +6116,14 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, el Jefe de guerra"
       },
       "npcTextAudio": {
+        "CassiaNewLane1": "¡Ha creado más micelio! ...¡Más raíces!",
+        "CassiaNewLane2": "¡Ha creado más micelio! ...¡Más raíces!",
+        "CassiaNewLane3": "¡Ha creado más micelio! ...¡Más raíces!",
+        "CassiaNewLane4": "¡La plaga está tratando de propagarse!",
+        "CassiaNewLane5": "¡La plaga está tratando de propagarse!",
+        "CassiaNewLane6": "¡La plaga está tratando de propagarse!",
+        "CassiaNewLane7": "<if:MS>{¡Se está ramificando, exiliado!}<elif:FS>{¡Se está ramificando, exiliada!}",
+        "CassiaNewLane8": "<if:MS>{¡Se está ramificando, exiliado!}<elif:FS>{¡Se está ramificando, exiliada!}",
         "DroxNoStoneEncounterOne": "Primera advertencia, por ingresar a tierras que no te pertenecen. Vete a otro lado y la ley no tendrá problemas contigo.",
         "DroxNoStoneEncounterTwo": "Segunda advertencia. Hay muchos otros territorios en este reino que no tienen ley. Ve a caminar allí.",
         "DroxNoStoneEncounterThree": "<if:MS>{Ya fuiste advertido dos veces. La ley tomará tu cabeza, invasor.}<elif:FS>{Ya fuiste advertida dos veces. La ley tomará tu cabeza, invasora.}",
@@ -6556,6 +6580,14 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, le Seigneur de guerre"
       },
       "npcTextAudio": {
+        "CassiaNewLane1": "Un nouveau mycélium vient de surgir ! … De nouvelles racines, quoi !",
+        "CassiaNewLane2": "Un nouveau mycélium vient de surgir ! … De nouvelles racines, quoi !",
+        "CassiaNewLane3": "Un nouveau mycélium vient de surgir ! … De nouvelles racines, quoi !",
+        "CassiaNewLane4": "L'Infestation tente de se propager !",
+        "CassiaNewLane5": "L'Infestation tente de se propager !",
+        "CassiaNewLane6": "L'Infestation tente de se propager !",
+        "CassiaNewLane7": "<if:MS>{Elle est en train de se ramifier, exilé !}<elif:FS>{Elle est en train de se ramifier, exilée !}",
+        "CassiaNewLane8": "<if:MS>{Elle est en train de se ramifier, exilé !}<elif:FS>{Elle est en train de se ramifier, exilée !}",
         "DroxNoStoneEncounterOne": "Premier avertissement pour avoir foulé des terres qui ne vous appartiennent pas. Conduisez vos expéditions ailleurs et la Loi n'aura rien à vous reprocher.",
         "DroxNoStoneEncounterTwo": "Deuxième avertissement. Il existe nombre de territoires en cet endroit qui ne sont régis par aucune Loi. Partez explorer ceux-là.",
         "DroxNoStoneEncounterThree": "<if:MS>{Vous avez été averti par deux fois. La Loi aura votre tête, intrus.}<elif:FS>{Vous avez été avertie par deux fois. La Loi aura votre tête, intruse.}",
@@ -7012,6 +7044,14 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile4": "전쟁군주 드록스"
       },
       "npcTextAudio": {
+        "CassiaNewLane1": "새로운 균사체로군! ...새로운 뿌리가!",
+        "CassiaNewLane2": "새로운 균사체로군! ...새로운 뿌리가!",
+        "CassiaNewLane3": "새로운 균사체로군! ...새로운 뿌리가!",
+        "CassiaNewLane4": "역병이 퍼지려 한다!",
+        "CassiaNewLane5": "역병이 퍼지려 한다!",
+        "CassiaNewLane6": "역병이 퍼지려 한다!",
+        "CassiaNewLane7": "유배자! 가지가 뻗는다!",
+        "CassiaNewLane8": "유배자! 가지가 뻗는다!",
         "DroxNoStoneEncounterOne": "처음으로 경고하니, 너는 네 것이 아닌 땅을 밟고 있다. 발길을 돌리면 법은 너를 적대하지 않으리라.",
         "DroxNoStoneEncounterTwo": "두 번째로 경고하니, 이곳엔 법이 없는 다른 영토가 널려 있다. 발길을 돌려라.",
         "DroxNoStoneEncounterThree": "두 번이나 경고하지 않았나. 침입자, 법이 너의 머리를 원하는구나.",
@@ -7468,6 +7508,14 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, o Senhor da Guerra"
       },
       "npcTextAudio": {
+        "CassiaNewLane1": "Cresceu um novo micélio... uma nova raiz!",
+        "CassiaNewLane2": "Cresceu um novo micélio... uma nova raiz!",
+        "CassiaNewLane3": "Cresceu um novo micélio... uma nova raiz!",
+        "CassiaNewLane4": "A Praga está tentando se espalhar!",
+        "CassiaNewLane5": "A Praga está tentando se espalhar!",
+        "CassiaNewLane6": "<if:MS>{A Praga está tentando se espalhar!}<elif:FS>{Está criando ramos, exilada!}",
+        "CassiaNewLane7": "<if:MS>{Está criando ramos, exilado!}<elif:FS>{Está criando ramos, exilada!}",
+        "CassiaNewLane8": "<if:MS>{Está criando ramos, exilado!}<elif:FS>{Está criando ramos, exilada!}",
         "DroxNoStoneEncounterOne": "Este é o primeiro aviso, por pisar em terras que não lhe pertencem. Viaje para outro lugar e a lei não terá problemas com você.\r\n",
         "DroxNoStoneEncounterTwo": "Segundo aviso. Há vários outros territórios sem lei neste reino. Vá pisar neles. ",
         "DroxNoStoneEncounterThree": "Você foi avisado duas vezes. A lei cortará sua cabeça, invasor. ",
@@ -7924,6 +7972,14 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile4": "Дрокс, Вождь"
       },
       "npcTextAudio": {
+        "CassiaNewLane1": "Он выпустил новый мицелий!.. Новые корни!",
+        "CassiaNewLane2": "Он выпустил новый мицелий!.. Новые корни!",
+        "CassiaNewLane3": "Он выпустил новый мицелий!.. Новые корни!",
+        "CassiaNewLane4": "Скверна пытается прогрессировать!",
+        "CassiaNewLane5": "Скверна пытается прогрессировать!",
+        "CassiaNewLane6": "Скверна пытается прогрессировать!",
+        "CassiaNewLane7": "<if:MS>{Изгнанник, она расползается!}<elif:FS>{Изгнанница, она расползается!}",
+        "CassiaNewLane8": "<if:MS>{Изгнанник, она расползается!}<elif:FS>{Изгнанница, она расползается!}",
         "DroxNoStoneEncounterOne": "Первое предупреждение за появление на земле, которая тебе не принадлежит. Странствуй в другом месте, дабы закон не покарал тебя.",
         "DroxNoStoneEncounterTwo": "Второе предупреждение. В этом мире есть множество других мест, где не правит закон. Ступай туда.",
         "DroxNoStoneEncounterThree": "Было два предупреждения. За нарушение закона ты ответишь головой.",
@@ -8380,6 +8436,14 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, the Warlord"
       },
       "npcTextAudio": {
+        "CassiaNewLane1": "มันแตกไมเซเลี่ยมใหม่! ... รากใหม่!",
+        "CassiaNewLane2": "มันแตกไมเซเลี่ยมใหม่! ... รากใหม่!",
+        "CassiaNewLane3": "มันแตกไมเซเลี่ยมใหม่! ... รากใหม่!",
+        "CassiaNewLane4": "เชื้อโรคร้ายกำลังกระจาย",
+        "CassiaNewLane5": "เชื้อโรคร้ายกำลังกระจาย",
+        "CassiaNewLane6": "เชื้อโรคร้ายกำลังกระจาย",
+        "CassiaNewLane7": "มันกำลังแต่แขนง เอ็กไซล์!",
+        "CassiaNewLane8": "มันกำลังแต่แขนง เอ็กไซล์!",
         "DroxNoStoneEncounterOne": "First warning, for treading upon lands that do not belong to you. Travel elsewhere and the law will have no quarrel with you.",
         "DroxNoStoneEncounterTwo": "Second warning. There are many other territories in this realm that have no law. Tread upon them instead.",
         "DroxNoStoneEncounterThree": "You were twice warned. The law will have your head, trespasser.",
@@ -8836,6 +8900,14 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile4": "督军狄洛克斯"
       },
       "npcTextAudio": {
+        "CassiaNewLane1": "它生出了新菌体！……新的根茎！",
+        "CassiaNewLane2": "它生出了新菌体！……新的根茎！",
+        "CassiaNewLane3": "它生出了新菌体！……新的根茎！",
+        "CassiaNewLane4": "枯疫正准备蔓延！",
+        "CassiaNewLane5": "枯疫正准备蔓延！",
+        "CassiaNewLane6": "枯疫正准备蔓延！",
+        "CassiaNewLane7": "它长出分叉了，流放者！",
+        "CassiaNewLane8": "它长出分叉了，流放者！",
         "DroxNoStoneEncounterOne": "第一次警告：这些土地不属于你。去找那些没有律法的化外之地吧。",
         "DroxNoStoneEncounterTwo": "第二次忠告：这个国度里有许多没有律法的化外之地。去那些地方吧。",
         "DroxNoStoneEncounterThree": "我警告过你两遍了。现在我要悬赏你的项上人头，入侵者。",

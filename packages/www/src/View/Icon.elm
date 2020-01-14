@@ -5,6 +5,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Json.Encode as Json
 import Mapwatch.Datamine as Datamine exposing (WorldArea)
+import Mapwatch.Run as Run exposing (Run)
 import Regex
 
 
@@ -22,19 +23,30 @@ fasPulse =
     fa "fa-spin fa-pulse fas"
 
 
-map : Maybe WorldArea -> Maybe (Html msg)
-map =
-    Maybe.andThen
-        (\world ->
-            world
-                |> Datamine.imgSrc
-                |> Maybe.map (\src_ -> img [ class <| "map-icon map-icon-" ++ world.id, src src_ ] [])
-        )
+type alias MapIconArgs =
+    Datamine.MapIconArgs
 
 
-mapOrBlank : Maybe WorldArea -> Html msg
-mapOrBlank =
-    map >> Maybe.withDefault (span [] [])
+runMap : Run -> Maybe (Html msg)
+runMap run =
+    map { blighted = Run.isBlightedMap run } run.instance.worldArea
+
+
+justMap : MapIconArgs -> WorldArea -> Maybe (Html msg)
+justMap args world =
+    world
+        |> Datamine.imgSrc args
+        |> Maybe.map (\src_ -> img [ class <| "map-icon map-icon-" ++ world.id, src src_ ] [])
+
+
+map : MapIconArgs -> Maybe WorldArea -> Maybe (Html msg)
+map args =
+    Maybe.andThen (justMap args)
+
+
+mapOrBlank : MapIconArgs -> Maybe WorldArea -> Html msg
+mapOrBlank args =
+    map args >> Maybe.withDefault (span [] [])
 
 
 sideArea : { name : String, url : String } -> Html msg

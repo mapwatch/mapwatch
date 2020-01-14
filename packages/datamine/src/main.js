@@ -115,6 +115,8 @@ function isNPCTextExported(raw) {
       // || /^JunOrtoi/.test(raw.Id)
       // || /^BlightBuilderWildAttention/.test(raw.Id)
       // || /^TaneOctaviusWildGreeting|TaneOctaviusGreeting/.test(raw.Id)
+      // We detect Blighted maps by counting 8 or more Cassia "it's branching"s
+      || /^CassiaNewLane\d*$/.test(raw.Id)
 }
 function transformAtlasNode(raw, {json}) {
   return {

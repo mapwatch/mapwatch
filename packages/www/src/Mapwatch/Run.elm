@@ -18,6 +18,7 @@ module Mapwatch.Run exposing
     , init
     , instance
     , isBetween
+    , isBlightedMap
     , meanDurationSet
     , parseGoalDuration
     , parseSort
@@ -38,12 +39,15 @@ module Mapwatch.Run exposing
 import Dict exposing (Dict)
 import Dict.Extra
 import Duration exposing (Millis)
+import Mapwatch.Datamine as Datamine exposing (Datamine)
+import Mapwatch.Datamine.NpcId as NpcId
 import Mapwatch.Debug
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
 import Regex
+import Set exposing (Set)
 import Time
 
 
@@ -56,7 +60,13 @@ type alias NpcEncounters =
 
 
 type alias Run =
-    { visits : List Visit, first : Visit, last : Visit, portals : Int, instance : Instance.Address, npcSays : NpcEncounters }
+    { visits : List Visit
+    , first : Visit
+    , last : Visit
+    , portals : Int
+    , instance : Instance.Address
+    , npcSays : NpcEncounters
+    }
 
 
 type State
@@ -94,9 +104,30 @@ search query =
                 (Regex.fromStringWith { caseInsensitive = True, multiline = False } query
                     |> Maybe.withDefault Regex.never
                 )
-                (instance run).zone
+                (searchString run)
     in
     List.filter pred
+
+
+searchString : Run -> String
+searchString r =
+    (if isBlightedMap r then
+        "Blighted"
+
+     else
+        ""
+    )
+        :: (instance r).zone
+        :: npcNames r
+        |> String.join " "
+
+
+npcNames : Run -> List String
+npcNames =
+    .npcSays
+        >> Dict.values
+        >> List.filterMap List.head
+        >> List.map .npcName
 
 
 type SortField
@@ -383,7 +414,8 @@ filterToday zone now =
 
 groupByMap : List Run -> Dict.Dict String (List Run)
 groupByMap =
-    Dict.Extra.groupBy (instance >> .zone)
+    List.filter (isBlightedMap >> not)
+        >> Dict.Extra.groupBy (instance >> .zone)
 
 
 type GoalDuration
@@ -774,3 +806,17 @@ updateNPCText line state =
 pushNpcEncounter : LogLine.NPCSaysData -> NpcEncounters -> NpcEncounters
 pushNpcEncounter says =
     Dict.update says.npcId (Maybe.withDefault [] >> (::) says >> Just)
+
+
+{-| If Cassia announces 8 new lanes and there are no other npcs, it must be a blighted map
+-}
+isBlightedMap : Run -> Bool
+isBlightedMap run =
+    let
+        newLanes =
+            run.npcSays
+                |> Dict.get NpcId.cassia
+                |> Maybe.withDefault []
+                |> List.filter (.textId >> String.startsWith "CassiaNewLane")
+    in
+    Dict.size run.npcSays == 1 && List.length newLanes >= 8

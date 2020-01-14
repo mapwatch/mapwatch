@@ -44,7 +44,11 @@ type Info
 
 
 type alias NPCSaysData =
-    { raw : String, npcId : String, textId : String }
+    { raw : String
+    , npcId : String
+    , npcName : String
+    , textId : String
+    }
 
 
 type alias Line =
@@ -90,8 +94,8 @@ parseInfo dm raw =
 
                     Nothing ->
                         case Dict.get body dm.npcText of
-                            Just ( npcId, textId ) ->
-                                NPCSays { raw = body, npcId = npcId, textId = textId }
+                            Just { npcName, npcId, textId } ->
+                                NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = textId }
                                     |> Just
 
                             -- |> Debug.log "npcsays"
@@ -105,13 +109,13 @@ parseInfo dm raw =
                                             body
                                                 |> String.split ":"
                                                 |> List.head
-                                                |> Maybe.andThen (\name -> Dict.get name dm.unindex.npcs)
+                                                |> Maybe.andThen (\name -> Dict.get name dm.unindex.npcs |> Maybe.map (Tuple.pair name))
                                                 -- conqueror dialogue must match exactly to be processed - speaker alone isn't enough
-                                                |> Maybe.Extra.filter (\name -> not <| Set.member name NpcId.conquerors)
+                                                |> Maybe.Extra.filter (\( _, npcId ) -> not <| Set.member npcId NpcId.conquerors)
                                         of
-                                            Just npcId ->
+                                            Just ( npcName, npcId ) ->
                                                 -- TODO: textId="" instead of a maybe-type is a bit sketchy
-                                                NPCSays { raw = body, npcId = npcId, textId = "" } |> Just
+                                                NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = "" } |> Just
 
                                             Nothing ->
                                                 Nothing

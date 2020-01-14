@@ -9,6 +9,9 @@ All substantial Mapwatch changes.
 ---
 ## 2020-01-14
 - The Sirus, Awakener of Worlds fight is now tracked.
+- Blighted maps are now tracked.
+  - We use Cassia's dialogue to detect if a map is blighted, which means we can't tell if it's blighted until it's partially complete.
+- You can now search for NPCs by name, or search for blighted maps.
 
 ## 2020-01-13
 - Master encounters are now tracked.
