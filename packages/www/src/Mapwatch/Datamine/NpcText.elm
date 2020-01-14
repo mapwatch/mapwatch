@@ -19,8 +19,8 @@ type Token
 parse : String -> Result String (List String)
 parse =
     P.run parser
-        -- >> Result.mapError P.deadEndsToString
-        >> Result.mapError Debug.toString
+        >> Result.mapError P.deadEndsToString
+        -- >> Result.mapError Debug.toString
         >> Result.map toString
 
 
