@@ -52,6 +52,7 @@ type alias WorldArea =
     , isLabTrial : Bool
     , isAbyssalDepths : Bool
     , itemVisualId : Maybe String
+    , atlasRegion : Maybe String
     , tiers : Maybe (List Int)
     }
 
@@ -374,9 +375,10 @@ worldAreasDecoder =
         (D.index 6 D.bool)
         |> D.andThen
             (\w ->
-                D.map3 w
+                D.map4 w
                     (D.index 7 D.bool)
                     (D.index 8 (D.maybe D.string))
-                    (D.index 9 (D.maybe (D.list D.int)))
+                    (D.index 9 (D.maybe D.string))
+                    (D.index 10 (D.maybe (D.list D.int)))
             )
         |> D.array

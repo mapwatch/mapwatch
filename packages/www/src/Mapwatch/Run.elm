@@ -111,15 +111,21 @@ search query =
 
 searchString : Run -> String
 searchString r =
-    (if isBlightedMap r then
+    let
+        addr =
+            instance r
+    in
+    ((if isBlightedMap r then
         "Blighted"
 
-     else
+      else
         ""
+     )
+        ++ addr.zone
     )
-        :: (instance r).zone
+        :: (addr.worldArea |> Maybe.andThen .atlasRegion |> Maybe.withDefault "")
         :: npcNames r
-        |> String.join " "
+        |> String.join "\n"
 
 
 npcNames : Run -> List String

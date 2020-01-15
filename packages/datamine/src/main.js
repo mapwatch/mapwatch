@@ -144,6 +144,7 @@ function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes}) {
     _IsLabTrial: raw.Id.startsWith('EndGame_Labyrinth_trials_'),
     _IsAbyssalDepths : raw.Id.startsWith('AbyssLeague'),
     ItemVisualIdentity: fragmentMaps[raw.Id] || _.get(uniqueMaps[index] || atlasNodes[index], 'ItemVisualIdentity'),
+    AtlasRegion: _.get(atlasNodes[index], 'AtlasRegion'),
     Tiers: _.get(atlasNodes[index], 'Tiers'),
     RowID: index,
   }
