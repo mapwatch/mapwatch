@@ -7,12 +7,15 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
-## 2020-01-14
-- The Sirus, Awakener of Worlds fight is now tracked.
+## 2020-01-15
+- The timer now displays how many times you've encountered each conqueror since you last fought Sirus.
 - Blighted maps are now tracked.
   - We use Cassia's dialogue to detect if a map is blighted, which means we can't tell if it's blighted until it's partially complete.
 - You can now search for NPCs by name, blighted maps, and atlas regions (ex. "valdo's rest").
 - Conqueror dialogue should now be correctly parsed for languages with grammatical genders.
+
+## 2020-01-14
+- The Sirus, Awakener of Worlds fight is now tracked.
 
 ## 2020-01-13
 - Master encounters are now tracked.

@@ -101,7 +101,8 @@ viewMain qs model =
             table [ class "timer history" ]
                 [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun model.tz { showDate = False } hqs goalDuration) <| history)
                 , tfoot []
-                    [ tr []
+                    [ tr [] [ td [ colspan 11 ] [ viewConquerorsState (Run.conquerorsState model.mapwatch.runs) ] ]
+                    , tr []
                         [ td [ colspan 11 ]
                             [ a [ Route.href <| Route.History hqs ] [ Icon.fas "history", text " History" ]
                             , a [ Route.href <| Route.Overlay oqs ] [ Icon.fas "align-justify", text " Overlay" ]
@@ -168,3 +169,31 @@ viewTimer dur goal =
         , div [ class "sub-timer" ]
             [ div [] [ View.History.viewDurationDelta dur goal ] ]
         ]
+
+
+viewConquerorsState : Run.ConquerorsState -> Html msg
+viewConquerorsState state =
+    let
+        _ =
+            Debug.log "conqs" state
+    in
+    ul [ class "conquerors-state" ]
+        [ viewConquerorsStateEntry state.baran Icon.baran "Baran"
+        , viewConquerorsStateEntry state.veritania Icon.veritania "Veritania"
+        , viewConquerorsStateEntry state.alHezmin Icon.alHezmin "Al-Hezmin"
+        , viewConquerorsStateEntry state.drox Icon.drox "Drox"
+        ]
+
+
+viewConquerorsStateEntry : Maybe Run.ConquerorEncounter -> Html msg -> String -> Html msg
+viewConquerorsStateEntry encounter icon name =
+    case encounter of
+        Nothing ->
+            li [ title <| name ++ ": Unmet" ] [ text "0×", icon, text name ]
+
+        Just (Run.ConquerorTaunt n) ->
+            li [ title <| name ++ ": " ++ String.fromInt n ++ " Taunts" ] [ text (String.fromInt n ++ "×"), icon, text name ]
+
+        Just Run.ConquerorFight ->
+            -- li [ title "Fought" ] (text "☑" :: label)
+            li [ title <| name ++ ": Fought" ] [ text "✔", icon, text name ]

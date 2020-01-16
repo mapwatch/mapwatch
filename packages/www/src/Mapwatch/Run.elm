@@ -1,5 +1,7 @@
 module Mapwatch.Run exposing
-    ( DurationSet
+    ( ConquerorEncounter(..)
+    , ConquerorsState
+    , DurationSet
     , GoalDuration(..)
     , Run
     , SortDir(..)
@@ -7,6 +9,8 @@ module Mapwatch.Run exposing
     , State(..)
     , Summary
     , bestDuration
+    , conquerorEncounter
+    , conquerorsState
     , current
     , duration
     , durationPerSideArea
@@ -775,6 +779,83 @@ summarize runs =
     { durs = meanDurationSet runs
     , best = bestDuration .mainMap runs
     , num = List.length runs
+    }
+
+
+type ConquerorEncounter
+    = ConquerorTaunt Int
+    | ConquerorFight
+
+
+conquerorEncounter : List String -> Maybe ConquerorEncounter
+conquerorEncounter textIds =
+    if List.any (String.contains "StoneEncounter1") textIds || List.any (String.contains "StoneEncounterOne") textIds then
+        Just (ConquerorTaunt 1)
+
+    else if List.any (String.contains "StoneEncounter2") textIds || List.any (String.contains "StoneEncounterTwo") textIds then
+        Just (ConquerorTaunt 2)
+
+    else if List.any (String.contains "StoneEncounter3") textIds || List.any (String.contains "StoneEncounterThree") textIds then
+        Just (ConquerorTaunt 3)
+        -- else if List.any (String.contains "Death") textIds || List.any (String.contains "Flee") textIds then
+        -- Just (ConquerorKilled)
+
+    else if List.any (String.contains "Fight") textIds then
+        Just ConquerorFight
+
+    else
+        Nothing
+
+
+type alias ConquerorsState =
+    { baran : Maybe ConquerorEncounter
+    , veritania : Maybe ConquerorEncounter
+    , alHezmin : Maybe ConquerorEncounter
+    , drox : Maybe ConquerorEncounter
+    }
+
+
+conquerorsState : List Run -> ConquerorsState
+conquerorsState runs0 =
+    let
+        fold npcId says encounters =
+            if Dict.member npcId encounters then
+                encounters
+
+            else
+                case List.map .textId says |> conquerorEncounter of
+                    Nothing ->
+                        encounters
+
+                    Just encounter ->
+                        Dict.insert npcId encounter encounters
+
+        loop : List Run -> Dict NpcId ConquerorEncounter -> Dict NpcId ConquerorEncounter
+        loop runs encounters =
+            case runs of
+                [] ->
+                    encounters
+
+                run :: tail ->
+                    case (instance run).worldArea |> Maybe.map .id of
+                        -- eye of the storm; sirus arena
+                        -- earlier maps don't matter, sirus resets the state - we're done
+                        Just "AtlasExilesBoss5" ->
+                            encounters
+
+                        _ ->
+                            run.npcSays
+                                |> Dict.filter (\npcId _ -> Set.member npcId NpcId.conquerors)
+                                |> Dict.foldl fold encounters
+                                |> loop tail
+
+        npcTexts =
+            loop runs0 Dict.empty
+    in
+    { baran = Dict.get NpcId.baran npcTexts
+    , veritania = Dict.get NpcId.veritania npcTexts
+    , alHezmin = Dict.get NpcId.alHezmin npcTexts
+    , drox = Dict.get NpcId.drox npcTexts
     }
 
 

@@ -270,3 +270,17 @@ input.volume {
   padding:0;
   margin:0;
 }
+
+ul.conquerors-state {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul.conquerors-state > li {
+  display: inline-block;
+  border: 1px solid grey;
+  padding: 0;
+  margin: 0;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
