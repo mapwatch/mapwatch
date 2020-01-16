@@ -173,10 +173,6 @@ viewTimer dur goal =
 
 viewConquerorsState : Run.ConquerorsState -> Html msg
 viewConquerorsState state =
-    let
-        _ =
-            Debug.log "conqs" state
-    in
     ul [ class "conquerors-state" ]
         [ viewConquerorsStateEntry state.baran Icon.baran "Baran"
         , viewConquerorsStateEntry state.veritania Icon.veritania "Veritania"
