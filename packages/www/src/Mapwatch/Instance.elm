@@ -51,7 +51,7 @@ type Builder
 
 type alias State =
     { val : Instance
-    , joinedAt : Time.Posix
+    , joinedAt : Posix
     , next : Builder
     }
 
@@ -94,7 +94,7 @@ isMap =
     unwrap False (.worldArea >> Maybe.map Datamine.isMap >> Maybe.withDefault False)
 
 
-duration : Time.Posix -> State -> Millis
+duration : Posix -> State -> Millis
 duration now state =
     Time.posixToMillis now - Time.posixToMillis state.joinedAt
 
@@ -110,7 +110,7 @@ isDurationOffline dur =
     dur >= offlineThreshold
 
 
-isOffline : Time.Posix -> State -> Bool
+isOffline : Posix -> State -> Bool
 isOffline now instance =
     isDurationOffline <| duration now instance
 

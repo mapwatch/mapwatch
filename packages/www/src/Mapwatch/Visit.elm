@@ -12,11 +12,11 @@ module Mapwatch.Visit exposing
 
 import Duration exposing (Millis)
 import Mapwatch.Instance as Instance exposing (Instance)
-import Time
+import Time exposing (Posix)
 
 
 type alias Visit =
-    { instance : Instance, joinedAt : Time.Posix, leftAt : Time.Posix }
+    { instance : Instance, joinedAt : Posix, leftAt : Posix }
 
 
 duration : Visit -> Millis
@@ -39,7 +39,7 @@ isOffline v =
     Instance.isDurationOffline <| duration v
 
 
-initSince : Instance.State -> Time.Posix -> Visit
+initSince : Instance.State -> Posix -> Visit
 initSince before leftAt =
     { instance = before.val, joinedAt = before.joinedAt, leftAt = leftAt }
 

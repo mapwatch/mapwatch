@@ -52,7 +52,7 @@ import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
 import Regex
 import Set exposing (Set)
-import Time
+import Time exposing (Posix)
 
 
 type alias NpcId =
@@ -75,7 +75,7 @@ type alias Run =
 
 type State
     = Empty
-    | Started Time.Posix NpcEncounters
+    | Started Posix NpcEncounters
     | Running Run
 
 
@@ -300,7 +300,7 @@ sortParsed field dir runs =
                )
 
 
-isBetween : { a | after : Maybe Time.Posix, before : Maybe Time.Posix } -> Run -> Bool
+isBetween : { a | after : Maybe Posix, before : Maybe Posix } -> Run -> Bool
 isBetween { after, before } run =
     let
         at =
@@ -320,7 +320,7 @@ filterBetween qs =
     List.filter (isBetween qs)
 
 
-stateDuration : Time.Posix -> State -> Maybe Millis
+stateDuration : Posix -> State -> Maybe Millis
 stateDuration now state =
     case state of
         Empty ->
@@ -410,7 +410,7 @@ meanDuration which runs =
         runs |> meanDurationSet |> which |> Just
 
 
-filterToday : Time.Zone -> Time.Posix -> List Run -> List Run
+filterToday : Time.Zone -> Posix -> List Run -> List Run
 filterToday zone now =
     let
         ymd date =
@@ -626,7 +626,7 @@ push visit run =
         Just { run | last = visit, visits = visit :: run.visits }
 
 
-tick : Time.Posix -> Instance.State -> State -> ( State, Maybe Run )
+tick : Posix -> Instance.State -> State -> ( State, Maybe Run )
 tick now instance_ state =
     -- go offline when time has passed since the last log entry.
     case state of
@@ -662,7 +662,7 @@ tick now instance_ state =
                 ( state, Nothing )
 
 
-current : Time.Posix -> Maybe Instance.State -> State -> Maybe Run
+current : Posix -> Maybe Instance.State -> State -> Maybe Run
 current now minstance_ state =
     case minstance_ of
         Nothing ->
@@ -882,7 +882,7 @@ conquerorsState currentRun runs0 =
     }
 
 
-stateLastUpdatedAt : State -> Maybe Time.Posix
+stateLastUpdatedAt : State -> Maybe Posix
 stateLastUpdatedAt state =
     case state of
         Empty ->

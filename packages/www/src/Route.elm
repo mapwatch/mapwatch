@@ -22,7 +22,7 @@ import Http
 import ISO8601
 import Maybe.Extra
 import Regex
-import Time
+import Time exposing (Posix)
 import Url exposing (Url)
 import Url.Parser as P exposing ((</>), (<?>))
 import Url.Parser.Query as Q
@@ -36,8 +36,8 @@ type alias HistoryParams =
     { page : Int
     , search : Maybe String
     , sort : Maybe String
-    , after : Maybe Time.Posix
-    , before : Maybe Time.Posix
+    , after : Maybe Posix
+    , before : Maybe Posix
     , goal : Maybe String
     , enableGoals : Bool
     , enableSpeech : Bool
@@ -52,8 +52,8 @@ historyParams0 =
 type alias MapsParams =
     { search : Maybe String
     , sort : Maybe String
-    , after : Maybe Time.Posix
-    , before : Maybe Time.Posix
+    , after : Maybe Posix
+    , before : Maybe Posix
     , enableSpeech : Bool
     }
 
@@ -64,7 +64,7 @@ mapsParams0 =
 
 
 type alias TimerParams =
-    { after : Maybe Time.Posix
+    { after : Maybe Posix
     , goal : Maybe String
     , enableGoals : Bool
     , enableSpeech : Bool
@@ -77,7 +77,7 @@ timerParams0 =
 
 
 type alias OverlayParams =
-    { after : Maybe Time.Posix
+    { after : Maybe Posix
     , goal : Maybe String
     , enableGoals : Bool
     , enableSpeech : Bool
@@ -144,18 +144,18 @@ decodeString =
         P.string
 
 
-dateFromString : String -> Maybe Time.Posix
+dateFromString : String -> Maybe Posix
 dateFromString =
     ISO8601.fromString >> Result.toMaybe >> Maybe.map ISO8601.toPosix
 
 
-dateToString : Time.Posix -> String
+dateToString : Posix -> String
 dateToString =
     -- compatible with dateFromString, identical to <input type="datetime-local">, and also reasonably short/user-readable
     ISO8601.fromPosix >> ISO8601.toString
 
 
-dateParam : String -> Q.Parser (Maybe Time.Posix)
+dateParam : String -> Q.Parser (Maybe Posix)
 dateParam name =
     Q.custom name (List.head >> Maybe.andThen dateFromString)
 

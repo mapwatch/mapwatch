@@ -20,7 +20,7 @@ import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
 import Speech
-import Time
+import Time exposing (Posix)
 
 
 {-| The user chose a file with the file selector on the front page.
@@ -79,15 +79,15 @@ type alias InstanceEvent =
 
 type alias VisitEvent =
     { instance : InstanceEvent
-    , joinedAt : Time.Posix
-    , leftAt : Time.Posix
+    , joinedAt : Posix
+    , leftAt : Posix
     }
 
 
 type alias RunEvent =
     { instance : Instance.Address
-    , joinedAt : Time.Posix
-    , leftAt : Time.Posix
+    , joinedAt : Posix
+    , leftAt : Posix
     }
 
 
@@ -108,7 +108,7 @@ progressComplete e =
             ]
 
 
-sendJoinInstance : Time.Posix -> Instance -> Maybe Visit -> Run.State -> Maybe Run -> Cmd msg
+sendJoinInstance : Posix -> Instance -> Maybe Visit -> Run.State -> Maybe Run -> Cmd msg
 sendJoinInstance date instance visit runState lastRun =
     events <|
         Encode.object
@@ -159,6 +159,6 @@ encodeMapRun r =
         ]
 
 
-encodeDate : Time.Posix -> Encode.Value
+encodeDate : Posix -> Encode.Value
 encodeDate =
     Time.posixToMillis >> Encode.int

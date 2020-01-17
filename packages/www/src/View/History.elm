@@ -14,7 +14,7 @@ import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
 import Regex
 import Route
-import Time
+import Time exposing (Posix)
 import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewProgress, viewRun, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
@@ -112,7 +112,7 @@ viewMain params model =
         ]
 
 
-viewStatsTable : Route.HistoryParams -> Time.Zone -> Time.Posix -> List Run -> Html msg
+viewStatsTable : Route.HistoryParams -> Time.Zone -> Posix -> List Run -> Html msg
 viewStatsTable qs tz now runs =
     table [ class "history-stats" ]
         [ tbody []

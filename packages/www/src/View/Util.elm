@@ -7,7 +7,7 @@ import ISO8601
 import Mapwatch exposing (Model, Msg)
 import Regex
 import Route as Route exposing (Route)
-import Time
+import Time exposing (Posix)
 import View.Icon as Icon
 
 
@@ -93,12 +93,12 @@ leagueName =
     "Metamorph"
 
 
-leagueDate : Result String Time.Posix
+leagueDate : Result String Posix
 leagueDate =
     "2019-12-13T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix
 
 
-hidePreLeagueButton : (Time.Posix -> Route) -> Html msg
+hidePreLeagueButton : (Posix -> Route) -> Html msg
 hidePreLeagueButton route =
     case leagueDate of
         Err err ->
@@ -108,7 +108,7 @@ hidePreLeagueButton route =
             a [ class "button", Route.href <| route date ] [ Icon.fas "calendar", text <| " Hide pre-" ++ leagueName ++ " maps" ]
 
 
-viewDateSearch : ({ after : Maybe Time.Posix, before : Maybe Time.Posix } -> Route) -> { a | before : Maybe Time.Posix, after : Maybe Time.Posix } -> Html msg
+viewDateSearch : ({ after : Maybe Posix, before : Maybe Posix } -> Route) -> { a | before : Maybe Posix, after : Maybe Posix } -> Html msg
 viewDateSearch route qs =
     let
         href0 =
