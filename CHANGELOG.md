@@ -8,6 +8,10 @@ All substantial Mapwatch changes.
 
 ---
 ## 2020-01-16
+- Added a settings screen.
+- You can now choose another client.txt file from the settings screen without reloading the page.
+
+## 2020-01-16
 - Fixed Veritania's encounter counting.
 - Conqueror counting now works immediately, before your current map is finished.
 
