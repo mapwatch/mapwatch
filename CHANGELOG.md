@@ -7,7 +7,7 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
-## 2020-01-16
+## 2020-01-17
 - Added a settings screen.
 - You can now choose another client.txt file from the settings screen without reloading the page.
 
