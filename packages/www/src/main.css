@@ -54,7 +54,7 @@ table.history td.delta-dur {
   padding: 0;
 }
 table.history tbody tr.npctext-area,
-, table.history tbody tr.side-area {
+table.history tbody tr.side-area {
   font-size: 80%;
 }
 table.history tbody tr.side-area td.side-dur,
