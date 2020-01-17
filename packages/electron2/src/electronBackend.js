@@ -35,11 +35,9 @@ function ElectronBackend() {
     .then(path => this.open({path}, maxSize))
   }
   function open({path}, maxSize) {
-    if (file || watcher) {
-      return Promise.reject("file already open")
-    }
+    return this.close()
     // TODO restrict filename?
-    return fs.open(path)
+    .then(() => fs.open(path))
     .then(fd => Promise.all([
       Promise.resolve(fd),
       fd.stat(),
@@ -62,16 +60,13 @@ function ElectronBackend() {
     }))
   }
   function close() {
-    if (file) {
-      fs.close(file)
-      file = null
-    }
-    if (watcher) {
-      const w = watcher
-      watcher = null
-      return w.close()
-    }
-    return Promise.resolve()
+    const ps = [
+      file ? file.close() : Promise.resolve(),
+      watcher ? watcher.close() : Promise.resolve(),
+    ]
+    file = null
+    watcher = null
+    return Promise.all(ps)
   }
   function slice(position, length) {
     if (!file) return Promise.reject("file not opened")
