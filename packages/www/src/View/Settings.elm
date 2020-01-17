@@ -18,6 +18,5 @@ view model =
         , View.Volume.view model
         , button [ onClick (Model.Reset (Just Route.root)) ] [ text "Analyze another Client.txt log file" ]
         , p [] [ text "Mapwatch is open source! ", a [ target "_blank", href "https://www.github.com/mapwatch/mapwatch" ] [ text "View the source code." ] ]
-
-        -- , div [ class "debug-link" ] [ a [ Route.href Route.Debug ] [ text "secret debugging tools" ] ]
+        , div [ class "debug-link" ] [ a [ Route.href Route.Debug ] [ text "secret debugging tools" ] ]
         ]
