@@ -21,6 +21,7 @@ import '!!file-loader?name=version.txt!../tmp/version.txt'
 // Be careful with timezones throughout this file. Use Date.now(), not new Date(),
 // for data sent to Elm: no risk of getting timezones involved that way.
 
+const SETTINGS_KEY = 'mapwatch'
 const MB = Math.pow(2,20)
 
 // redirect from old host to new host.
@@ -36,7 +37,8 @@ function main() {
   const backend = window.backend || new BrowserBackend()
 
   const qs = util.parseQS(document.location.search)
-  const flags = createFlags(backend, qs)
+  const settings = new Settings(SETTINGS_KEY, window.localStorage)
+  const flags = createFlags({backend, settings, qs})
   const app = Elm.Main.init({flags})
   console.log('init', {backend, flags, datamine})
 
@@ -84,25 +86,50 @@ function main() {
   const speechCapable = !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
   // let sayWatching = true // useful for testing. uncomment me, upload a file, and i'll say all lines in that file
   let sayWatching = false
-  let isSpeechEnabled = false
-  let volume = 0
+  let volume = null
+  app.ports.sendSettings.subscribe(s => {
+    volume = s.volume
+    settings.write(s)
+  })
   app.ports.events.subscribe(event => {
-    if (event.type === 'volume') {
-      volume = event.volume
-      isSpeechEnabled = event.isSpeechEnabled && speechCapable
-      console.log('volume event', {volume, isSpeechEnabled, speechCapable})
+    if (volume == null) {
+      console.error('speech is happening, but volume not initialized')
     }
     if (event.type === 'progressComplete' && !sayWatching && (event.name === 'history' || event.name === 'history:example')) {
       sayWatching = true
-      say({say: 'mapwatch now running.', volume: isSpeechEnabled ? volume : 0})
+      say({say: 'mapwatch now running.', volume})
     }
     if (event.type === 'joinInstance' && sayWatching && event.say) {
-      say({say: event.say, volume: isSpeechEnabled ? volume : 0})
+      say({say: event.say, volume})
     }
   })
 }
 
-function createFlags(backend, qs) {
+class Settings {
+  constructor(key, storage) {
+    this.key = key
+    this.storage = storage
+  }
+  read() {
+    return JSON.parse(this.storage.getItem(this.key))
+  }
+  readDefault(default_) {
+    try {
+      return this.read()
+    }
+    catch (e) {
+      console.warn(e)
+      return default_
+    }
+  }
+  write(json) {
+    this.storage.setItem(this.key, JSON.stringify(json))
+  }
+  clear() {
+    this.storage.removeItem(this.key)
+  }
+}
+function createFlags({backend, settings, qs}) {
   const loadedAt = Date.now()
   const tickStart = isNaN(parseInt(qs.tickStart)) ? null : parseInt(qs.tickStart)
   const tickOffset = tickStart ? loadedAt - tickStart : 0
@@ -114,6 +141,7 @@ function createFlags(backend, qs) {
     changelog,
     version,
     logtz,
+    settings: settings.readDefault({}),
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: backend.platform,

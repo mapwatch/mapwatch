@@ -9,7 +9,11 @@ import View.Icon as Icon
 
 
 view : OkModel -> Html Msg
-view { volume, route } =
+view { settings, route } =
+    let
+        { volume } =
+            settings
+    in
     if Route.isSpeechEnabled route then
         div []
             -- without a fixed width, the volume-off/low/high icons are all different widths

@@ -9,7 +9,7 @@ port module Ports exposing
     , progress
     , progressComplete
     , sendJoinInstance
-    , sendVolume
+    , sendSettings
     )
 
 import Duration exposing (Millis)
@@ -19,6 +19,7 @@ import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
+import Settings exposing (Settings)
 import Speech
 import Time exposing (Posix)
 
@@ -121,14 +122,7 @@ sendJoinInstance date instance visit runState lastRun =
             ]
 
 
-sendVolume : Bool -> Int -> Cmd msg
-sendVolume enabled volume =
-    events <|
-        Encode.object
-            [ ( "type", Encode.string "volume" )
-            , ( "volume", toFloat volume / 100 |> Encode.float )
-            , ( "isSpeechEnabled", enabled |> Encode.bool )
-            ]
+port sendSettings : Settings -> Cmd msg
 
 
 encodeAddress : Instance.Address -> Encode.Value

@@ -21,6 +21,7 @@ import Maybe.Extra
 import Ports
 import Route exposing (Route)
 import Set
+import Settings exposing (Settings)
 import Task
 import Time exposing (Posix)
 import Url exposing (Url)
@@ -35,6 +36,7 @@ type alias Flags =
     , version : String
     , datamine : D.Value
     , logtz : Maybe Float
+    , settings : D.Value
     }
 
 
@@ -59,7 +61,7 @@ type alias OkModel =
     , route : Route
     , now : Posix
     , lines : List String
-    , volume : Int
+    , settings : Settings
     , tz : Time.Zone
     }
 
@@ -88,6 +90,12 @@ init flags url nav =
         logtz =
             flags.logtz |> Maybe.map (\offset -> Time.customZone (60 * offset |> round) [])
 
+        settings : Settings
+        settings =
+            flags.settings
+                |> D.decodeValue Settings.decoder
+                |> Result.withDefault Settings.empty
+
         createModel : Mapwatch.OkModel -> OkModel
         createModel mapwatch =
             { nav = nav
@@ -98,7 +106,7 @@ init flags url nav =
             , route = Route.parse url
             , now = loadedAt
             , lines = []
-            , volume = 50
+            , settings = settings
 
             -- Time.here and SetTimezone set this shortly
             , tz = Time.utc
@@ -112,31 +120,14 @@ init flags url nav =
     ( model
     , Cmd.batch
         [ Task.perform SetTimezone Time.here
-        , model |> Result.map sendVolume |> Result.withDefault Cmd.none
+        , model |> Result.map sendSettings |> Result.withDefault Cmd.none
         ]
     )
 
 
-sendVolume : OkModel -> Cmd msg
-sendVolume model =
-    Ports.sendVolume (Route.isSpeechEnabled model.route) model.volume
-
-
-
---updateRawLine : { date : Int, line : String } -> OkModel -> OkModel
---updateRawLine raw model =
---    -- *Only when debugging*, save all raw loglines.
---    case model.route of
---        Route.DebugDumpLines ->
---            case LogLine.parse (Time.millisToPosix raw.date) raw.line of
---                Ok _ ->
---                    { model | lines = raw.line :: model.lines }
---
---                Err _ ->
---                    model
---
---        _ ->
---            model
+sendSettings : OkModel -> Cmd msg
+sendSettings model =
+    Ports.sendSettings model.settings
 
 
 applyTimeOffset : OkModel -> Posix -> Posix
@@ -165,7 +156,7 @@ update msg rmodel =
 
 
 updateOk : Msg -> OkModel -> ( OkModel, Cmd Msg )
-updateOk msg ({ config, mapwatch } as model) =
+updateOk msg ({ config, mapwatch, settings } as model) =
     case msg of
         Tick t ->
             if Mapwatch.isReady model.mapwatch then
@@ -201,7 +192,7 @@ updateOk msg ({ config, mapwatch } as model) =
                 newModel =
                     { model | route = Route.parse url }
             in
-            ( newModel, sendVolume newModel )
+            ( newModel, sendSettings newModel )
 
         NavRequest (Browser.Internal url) ->
             ( model, url |> Url.toString |> Nav.pushUrl model.nav )
@@ -252,9 +243,9 @@ updateOk msg ({ config, mapwatch } as model) =
                 Just volume ->
                     let
                         newModel =
-                            { model | volume = volume }
+                            { model | settings = { settings | volume = volume } }
                     in
-                    ( newModel, sendVolume newModel )
+                    ( newModel, sendSettings newModel )
 
         M msg_ ->
             updateMapwatch msg_ model
