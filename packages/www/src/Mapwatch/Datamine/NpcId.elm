@@ -3,6 +3,10 @@ module Mapwatch.Datamine.NpcId exposing (..)
 import Set exposing (Set)
 
 
+type alias NpcId =
+    String
+
+
 conquerors =
     Set.fromList [ baran, veritania, alHezmin, drox ]
 

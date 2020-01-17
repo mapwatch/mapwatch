@@ -101,7 +101,7 @@ viewMain qs model =
             table [ class "timer history" ]
                 [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun model.tz { showDate = False } hqs goalDuration) <| history)
                 , tfoot []
-                    [ tr [] [ td [ colspan 11 ] [ viewConquerorsState (Run.conquerorsState model.mapwatch.runs) ] ]
+                    [ tr [] [ td [ colspan 11 ] [ viewConquerorsState (Run.conquerorsState model.mapwatch.runState model.mapwatch.runs) ] ]
                     , tr []
                         [ td [ colspan 11 ]
                             [ a [ Route.href <| Route.History hqs ] [ Icon.fas "history", text " History" ]

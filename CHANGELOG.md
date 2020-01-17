@@ -9,6 +9,7 @@ All substantial Mapwatch changes.
 ---
 ## 2020-01-16
 - Fixed Veritania's encounter counting.
+- Conqueror counting now works immediately, before your current map is finished.
 
 ## 2020-01-15
 - The timer now displays how many times you've encountered each conqueror since you last fought Sirus.

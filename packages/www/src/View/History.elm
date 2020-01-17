@@ -6,7 +6,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
 import Mapwatch as Mapwatch
-import Mapwatch.Datamine.NpcId as NpcId
+import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run exposing (Run)
@@ -395,16 +395,16 @@ viewNPCText npcId encounters =
             encounters |> List.map .textId
     in
     if npcId == NpcId.baran then
-        viewConquerorEncounter textIds [ Icon.baran, text "Baran, the Crusader" ]
+        viewConquerorEncounter npcId textIds [ Icon.baran, text "Baran, the Crusader" ]
 
     else if npcId == NpcId.veritania then
-        viewConquerorEncounter textIds [ Icon.veritania, text "Veritania, the Redeemer" ]
+        viewConquerorEncounter npcId textIds [ Icon.veritania, text "Veritania, the Redeemer" ]
 
     else if npcId == NpcId.alHezmin then
-        viewConquerorEncounter textIds [ Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
+        viewConquerorEncounter npcId textIds [ Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
 
     else if npcId == NpcId.drox then
-        viewConquerorEncounter textIds [ Icon.drox, text "Drox, the Warlord" ]
+        viewConquerorEncounter npcId textIds [ Icon.drox, text "Drox, the Warlord" ]
 
     else if npcId == NpcId.einhar then
         [ Icon.einhar, text "Einhar, Beastmaster" ]
@@ -428,24 +428,17 @@ viewNPCText npcId encounters =
         []
 
 
-viewConquerorEncounter : List String -> List (Html msg) -> List (Html msg)
-viewConquerorEncounter textIds label =
-    if List.any (String.contains "StoneEncounter1") textIds || List.any (String.contains "StoneEncounterOne") textIds then
-        label ++ [ text ": Taunt 1" ]
+viewConquerorEncounter : NpcId -> List String -> List (Html msg) -> List (Html msg)
+viewConquerorEncounter npcId textIds label =
+    case Run.conquerorEncounter npcId textIds of
+        Just (Run.ConquerorTaunt n) ->
+            label ++ [ text <| ": Taunt " ++ String.fromInt n ]
 
-    else if List.any (String.contains "StoneEncounter2") textIds || List.any (String.contains "StoneEncounterTwo") textIds then
-        label ++ [ text ": Taunt 2" ]
+        Just Run.ConquerorFight ->
+            label ++ [ text ": Fight" ]
 
-    else if List.any (String.contains "StoneEncounter3") textIds || List.any (String.contains "StoneEncounterThree") textIds then
-        label ++ [ text ": Taunt 3" ]
-        -- else if List.any (String.contains "Death") textIds || List.any (String.contains "Flee") textIds then
-        -- label ++ [ text ": Defeated" ]
-
-    else if List.any (String.contains "Fight") textIds then
-        label ++ [ text ": Fight" ]
-
-    else
-        []
+        Nothing ->
+            []
 
 
 viewDurationDelta : Maybe Duration -> Maybe Duration -> Html msg

@@ -825,8 +825,8 @@ type alias ConquerorsState =
     }
 
 
-conquerorsState : List Run -> ConquerorsState
-conquerorsState runs0 =
+conquerorsState : State -> List Run -> ConquerorsState
+conquerorsState currentRun runs0 =
     let
         fold npcId says encounters =
             if Dict.member npcId encounters then
@@ -840,27 +840,40 @@ conquerorsState runs0 =
                     Just encounter ->
                         Dict.insert npcId encounter encounters
 
-        loop : List Run -> Dict NpcId ConquerorEncounter -> Dict NpcId ConquerorEncounter
+        applySays npcSays encounters =
+            npcSays
+                |> Dict.filter (\npcId _ -> Set.member npcId NpcId.conquerors)
+                |> Dict.foldl fold encounters
+
+        -- loop : List Run -> Dict NpcId ConquerorEncounter -> Dict NpcId ConquerorEncounter
         loop runs encounters =
             case runs of
                 [] ->
                     encounters
 
                 run :: tail ->
-                    case (instance run).worldArea |> Maybe.map .id of
+                    case run.instance.worldArea |> Maybe.map .id of
                         -- eye of the storm; sirus arena
                         -- earlier maps don't matter, sirus resets the state - we're done
                         Just "AtlasExilesBoss5" ->
                             encounters
 
                         _ ->
-                            run.npcSays
-                                |> Dict.filter (\npcId _ -> Set.member npcId NpcId.conquerors)
-                                |> Dict.foldl fold encounters
-                                |> loop tail
+                            encounters |> applySays run.npcSays |> loop tail
+
+        npcTexts0 =
+            case currentRun of
+                Empty ->
+                    Dict.empty
+
+                Started _ says ->
+                    applySays says Dict.empty
+
+                Running r ->
+                    applySays r.npcSays Dict.empty
 
         npcTexts =
-            loop runs0 Dict.empty
+            loop runs0 npcTexts0
     in
     { baran = Dict.get NpcId.baran npcTexts
     , veritania = Dict.get NpcId.veritania npcTexts
