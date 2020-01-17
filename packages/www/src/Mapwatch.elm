@@ -24,6 +24,7 @@ import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Ports
 import Readline
+import Settings exposing (Settings)
 import Time exposing (Posix)
 import TimedReadline exposing (TimedReadline)
 
@@ -73,8 +74,8 @@ init tz datamineJson =
     ( initModel tz datamineJson, Cmd.none )
 
 
-updateLine : LogLine.Line -> ( OkModel, List (Cmd Msg) ) -> ( OkModel, List (Cmd Msg) )
-updateLine line ( model, cmds0 ) =
+updateLine : Settings -> LogLine.Line -> ( OkModel, List (Cmd Msg) ) -> ( OkModel, List (Cmd Msg) )
+updateLine settings line ( model, cmds0 ) =
     let
         instance =
             Instance.initOrUpdate model.datamine line model.instance
@@ -104,7 +105,7 @@ updateLine line ( model, cmds0 ) =
                         cmds0
 
                     else
-                        Ports.sendJoinInstance instance.joinedAt instance.val visit runState lastRun
+                        Ports.sendJoinInstance settings (Maybe.Extra.isJust model.history) instance.joinedAt instance.val visit runState lastRun
                             :: cmds0
     in
     ( { model
@@ -141,19 +142,19 @@ tick t model =
             { model | runState = runState, runs = runs }
 
 
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg rmodel =
+update : Settings -> Msg -> Model -> ( Model, Cmd Msg )
+update settings msg rmodel =
     case rmodel of
         Err err ->
             ( rmodel, Cmd.none )
 
         Ok model ->
-            updateOk msg model
+            updateOk settings msg model
                 |> Tuple.mapFirst Ok
 
 
-updateOk : Msg -> OkModel -> ( OkModel, Cmd Msg )
-updateOk msg model =
+updateOk : Settings -> Msg -> OkModel -> ( OkModel, Cmd Msg )
+updateOk settings msg model =
     case msg of
         LogOpened { date, size } ->
             case model.readline of
@@ -183,14 +184,14 @@ updateOk msg model =
                             -- Log-parsing errors are ignored: lines we don't use, like chat or asset-loading, are incredibly common
                             lines
                                 |> List.filterMap (LogLine.parse model.datamine (Maybe.withDefault Time.utc model.tz) >> Result.toMaybe)
-                                |> List.foldl updateLine ( model, [] )
+                                |> List.foldl (updateLine settings) ( model, [] )
                     in
                     case Readline.next readline.val of
                         Nothing ->
                             case model1.history of
                                 Nothing ->
                                     ( { model1 | readline = Just readline, history = Just readline }
-                                    , Cmd.batch <| Ports.progressComplete { name = "history" } :: cmds
+                                    , Cmd.batch <| Ports.progressComplete settings { name = "history" } :: cmds
                                     )
 
                                 Just _ ->

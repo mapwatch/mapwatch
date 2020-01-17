@@ -16,7 +16,8 @@ view markdown =
     div [ class "main" ]
         [ viewHeader
         , View.Nav.view <| Just Route.Changelog
-        , div []
+        , p [] [ text "Mapwatch is open source! ", a [ target "_blank", href "https://www.github.com/mapwatch/mapwatch" ] [ text "View the source code." ] ]
+        , p []
             [ text "Is something broken? Contact the developer: "
             , a [ href "https://keybase.io/erosson", target "_blank" ] [ text "Keybase chat" ]
             , text ", "

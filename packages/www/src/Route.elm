@@ -12,6 +12,7 @@ module Route exposing
     , mapsParams0
     , overlayParams0
     , parse
+    , root
     , stringify
     , timerParams0
     )
@@ -29,7 +30,9 @@ import Url.Parser.Query as Q
 
 
 flags0 =
-    { goals = True, speech = False }
+    { goals = True
+    , speech = False
+    }
 
 
 type alias HistoryParams =
@@ -95,6 +98,7 @@ type Route
     | Timer TimerParams
     | Overlay OverlayParams
     | Changelog
+    | Settings
     | Debug
     | DebugDumpLines
     | DebugDatamine
@@ -210,6 +214,7 @@ parser =
                     <?> boolParam flags0.speech "enableSpeech"
         , P.map Changelog <| P.s "changelog"
         , P.map (always Changelog) <| P.s "changelog" </> P.string
+        , P.map Settings <| P.s "settings"
         , P.map Debug <| P.s "debug"
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
         , P.map DebugDatamine <| P.s "debug" </> P.s "datamine"
@@ -283,6 +288,9 @@ stringify route =
         Changelog ->
             "#/changelog"
 
+        Settings ->
+            "#/settings"
+
         Debug ->
             "#/debug"
 
@@ -294,6 +302,11 @@ stringify route =
 
         NotFound loc ->
             "#" ++ (loc.fragment |> Maybe.withDefault "")
+
+
+root : Route
+root =
+    Timer timerParams0
 
 
 href : Route -> Attribute msg

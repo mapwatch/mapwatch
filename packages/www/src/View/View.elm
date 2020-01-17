@@ -14,6 +14,7 @@ import View.History
 import View.Maps
 import View.NotFound
 import View.Overlay
+import View.Settings
 import View.Timer
 
 
@@ -53,6 +54,9 @@ viewBody rmodel =
 
                 Changelog ->
                     View.Changelog.view model.flags.changelog
+
+                Settings ->
+                    View.Settings.view model
 
                 NotFound loc ->
                     View.NotFound.view

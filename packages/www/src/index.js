@@ -84,23 +84,12 @@ function main() {
   activeBackend.onChange(change => app.ports.logChanged.send({date: Date.now(), ...change}))
 
   const speechCapable = !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
-  // let sayWatching = true // useful for testing. uncomment me, upload a file, and i'll say all lines in that file
-  let sayWatching = false
-  let volume = null
   app.ports.sendSettings.subscribe(s => {
-    volume = s.volume
     settings.write(s)
   })
   app.ports.events.subscribe(event => {
-    if (volume == null) {
-      console.error('speech is happening, but volume not initialized')
-    }
-    if (event.type === 'progressComplete' && !sayWatching && (event.name === 'history' || event.name === 'history:example')) {
-      sayWatching = true
-      say({say: 'mapwatch now running.', volume})
-    }
-    if (event.type === 'joinInstance' && sayWatching && event.say) {
-      say({say: event.say, volume})
+    if (event && event.say) {
+      say(event.say)
     }
   })
 }
@@ -167,10 +156,11 @@ function fetchExample(qs) {
 
 function say(args) {
   if (args.volume > 0) {
-    // console.log(speechSynthesis.getVoices())
-    var utterance = new SpeechSynthesisUtterance(args.say)
-    utterance.volume = args.volume;
-    speechSynthesis.speak(utterance)
+    console.log('say', args)
+    // console.log(window.speechSynthesis.getVoices())
+    var u = new window.SpeechSynthesisUtterance(args.text)
+    u.volume = Math.max(0, Math.min(1, args.volume))
+    window.speechSynthesis.speak(u)
   }
 }
 

@@ -10,7 +10,7 @@ import View.Nav
 
 view : Html msg
 view =
-    div []
+    div [ class "main" ]
         [ View.Home.viewHeader
         , View.Nav.view Nothing
         , text "404"

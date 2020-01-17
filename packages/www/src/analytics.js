@@ -9,7 +9,7 @@ function gaEvent(action, props) {
   if (props.category) console.warn('ports.gaEvent: category should be event_category. '+JSON.stringify(props))
   if (props.label) console.warn('ports.gaEvent: label should be event_label. '+JSON.stringify(props))
 
-  console.log('gaEvent', action, props)
+  // console.log('gaEvent', action, props)
   gtag('event', action, props)
 }
 var gaDimensions = {

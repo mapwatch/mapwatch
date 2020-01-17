@@ -14,7 +14,7 @@ view active =
         , historyLink active
         , mapsLink active
         , changelogLink active
-        , sourceLink
+        , settingsLink active
         ]
 
 
@@ -105,6 +105,14 @@ changelogLink active =
     a [ cls, Route.href <| Changelog ] [ Icon.fas "newspaper", text " Changes" ]
 
 
-sourceLink =
-    a [ target "_blank", href "https://www.github.com/mapwatch/mapwatch", inactiveCls ]
-        [ Icon.fas "code", text " Code" ]
+settingsLink active =
+    let
+        cls =
+            case active of
+                Just Settings ->
+                    activeCls
+
+                _ ->
+                    inactiveCls
+    in
+    a [ cls, Route.href <| Settings ] [ Icon.fas "cog", text " Settings" ]

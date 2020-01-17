@@ -284,3 +284,11 @@ ul.conquerors-state > li {
   padding-left: 0.25em;
   padding-right: 0.25em;
 }
+/* .debug-link {
+  float: right;
+  opacity: 0;
+  text-decoration: underline;
+}
+.debug-link:hover {
+  opacity: 0.4;
+} */

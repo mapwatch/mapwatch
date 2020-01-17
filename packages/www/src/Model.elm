@@ -78,10 +78,34 @@ type Msg
     | MapsSearch Route.MapsParams
     | HistorySearch Route.HistoryParams
     | InputVolume String
+    | Reset (Maybe Route)
 
 
 init : Flags -> Url -> Nav.Key -> ( Model, Cmd Msg )
 init flags url nav =
+    let
+        model =
+            reset flags
+                nav
+                (Route.parse url)
+                (flags.settings
+                    |> D.decodeValue Settings.decoder
+                    |> Result.withDefault Settings.empty
+                )
+                -- placeholder; Time.here and SetTimezone set this shortly
+                -- TODO Maybe type?
+                Time.utc
+    in
+    ( model
+    , Cmd.batch
+        [ Task.perform SetTimezone Time.here
+        , model |> Result.map sendSettings |> Result.withDefault Cmd.none
+        ]
+    )
+
+
+reset : Flags -> Nav.Key -> Route -> Settings -> Time.Zone -> Model
+reset flags nav route settings tz =
     let
         loadedAt =
             Time.millisToPosix flags.loadedAt
@@ -90,12 +114,6 @@ init flags url nav =
         logtz =
             flags.logtz |> Maybe.map (\offset -> Time.customZone (60 * offset |> round) [])
 
-        settings : Settings
-        settings =
-            flags.settings
-                |> D.decodeValue Settings.decoder
-                |> Result.withDefault Settings.empty
-
         createModel : Mapwatch.OkModel -> OkModel
         createModel mapwatch =
             { nav = nav
@@ -103,26 +121,15 @@ init flags url nav =
             , config = { maxSize = 20 }
             , flags = flags
             , loadedAt = loadedAt
-            , route = Route.parse url
+            , route = route
             , now = loadedAt
             , lines = []
             , settings = settings
-
-            -- Time.here and SetTimezone set this shortly
-            , tz = Time.utc
+            , tz = tz
             }
-
-        model : Model
-        model =
-            Result.map createModel
-                (Mapwatch.initModel logtz flags.datamine)
     in
-    ( model
-    , Cmd.batch
-        [ Task.perform SetTimezone Time.here
-        , model |> Result.map sendSettings |> Result.withDefault Cmd.none
-        ]
-    )
+    Result.map createModel
+        (Mapwatch.initModel logtz flags.datamine)
 
 
 sendSettings : OkModel -> Cmd msg
@@ -247,6 +254,12 @@ updateOk msg ({ config, mapwatch, settings } as model) =
                     in
                     ( newModel, sendSettings newModel )
 
+        Reset redirect ->
+            ( reset model.flags model.nav model.route model.settings model.tz
+                |> Result.withDefault model
+            , redirect |> Maybe.Extra.unwrap Cmd.none (Route.stringify >> Nav.pushUrl model.nav)
+            )
+
         M msg_ ->
             updateMapwatch msg_ model
 
@@ -255,7 +268,7 @@ updateMapwatch : Mapwatch.Msg -> OkModel -> ( OkModel, Cmd Msg )
 updateMapwatch msg model =
     let
         ( mapwatch, cmd ) =
-            Mapwatch.updateOk msg model.mapwatch
+            Mapwatch.updateOk model.settings msg model.mapwatch
     in
     ( { model | mapwatch = mapwatch }, Cmd.map M cmd )
         |> Tuple.mapFirst

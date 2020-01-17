@@ -20,7 +20,7 @@ import Mapwatch.Run as Run exposing (Run)
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
 import Settings exposing (Settings)
-import Speech
+import Speech exposing (Speech)
 import Time exposing (Posix)
 
 
@@ -100,17 +100,18 @@ type alias RunEvent =
 port events : Encode.Value -> Cmd msg
 
 
-progressComplete : { name : String } -> Cmd msg
-progressComplete e =
+progressComplete : Settings -> { name : String } -> Cmd msg
+progressComplete settings e =
     events <|
         Encode.object
             [ ( "type", Encode.string "progressComplete" )
             , ( "name", Encode.string e.name )
+            , ( "say", Speech.progressComplete settings e.name |> Maybe.Extra.unwrap Encode.null Speech.encoder )
             ]
 
 
-sendJoinInstance : Posix -> Instance -> Maybe Visit -> Run.State -> Maybe Run -> Cmd msg
-sendJoinInstance date instance visit runState lastRun =
+sendJoinInstance : Settings -> Bool -> Posix -> Instance -> Maybe Visit -> Run.State -> Maybe Run -> Cmd msg
+sendJoinInstance settings isHistoryDone date instance visit runState lastRun =
     events <|
         Encode.object
             [ ( "type", Encode.string "joinInstance" )
@@ -118,7 +119,7 @@ sendJoinInstance date instance visit runState lastRun =
             , ( "instance", encodeInstance instance )
             , ( "lastVisit", visit |> Maybe.Extra.unwrap Encode.null encodeVisit )
             , ( "lastMapRun", lastRun |> Maybe.Extra.unwrap Encode.null encodeMapRun )
-            , ( "say", Speech.joinInstance runState lastRun instance |> Maybe.Extra.unwrap Encode.null Encode.string )
+            , ( "say", Speech.joinInstance settings isHistoryDone runState lastRun instance |> Maybe.Extra.unwrap Encode.null Speech.encoder )
             ]
 
 
