@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2020-01-16
+- Fixed Veritania's encounter counting.
+
 ## 2020-01-15
 - The timer now displays how many times you've encountered each conqueror since you last fought Sirus.
 - Blighted maps are now tracked.

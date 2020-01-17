@@ -787,16 +787,26 @@ type ConquerorEncounter
     | ConquerorFight
 
 
-conquerorEncounter : List String -> Maybe ConquerorEncounter
-conquerorEncounter textIds =
+conquerorEncounter : NpcId -> List String -> Maybe ConquerorEncounter
+conquerorEncounter npcId textIds =
     if List.any (String.contains "StoneEncounter1") textIds || List.any (String.contains "StoneEncounterOne") textIds then
         Just (ConquerorTaunt 1)
 
     else if List.any (String.contains "StoneEncounter2") textIds || List.any (String.contains "StoneEncounterTwo") textIds then
-        Just (ConquerorTaunt 2)
+        -- see https://github.com/mapwatch/mapwatch/issues/57 - poe is using this order, and we have to match it
+        if npcId == NpcId.veritania then
+            Just (ConquerorTaunt 3)
+
+        else
+            Just (ConquerorTaunt 2)
 
     else if List.any (String.contains "StoneEncounter3") textIds || List.any (String.contains "StoneEncounterThree") textIds then
-        Just (ConquerorTaunt 3)
+        -- see https://github.com/mapwatch/mapwatch/issues/57 - poe is using this order, and we have to match it
+        if npcId == NpcId.veritania then
+            Just (ConquerorTaunt 2)
+
+        else
+            Just (ConquerorTaunt 3)
         -- else if List.any (String.contains "Death") textIds || List.any (String.contains "Flee") textIds then
         -- Just (ConquerorKilled)
 
@@ -823,7 +833,7 @@ conquerorsState runs0 =
                 encounters
 
             else
-                case List.map .textId says |> conquerorEncounter of
+                case List.map .textId says |> conquerorEncounter npcId of
                     Nothing ->
                         encounters
 
