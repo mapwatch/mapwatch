@@ -35,7 +35,6 @@ type alias Model =
 type alias OkModel =
     { datamine : Datamine
     , history : Maybe TimedReadline
-    , parseError : Maybe LogLine.ParseError
     , instance : Maybe Instance.State
     , runState : Run.State
     , runs : List Run.Run
@@ -53,7 +52,6 @@ type Msg
 createModel : Maybe Time.Zone -> Datamine -> OkModel
 createModel tz datamine =
     { datamine = datamine
-    , parseError = Nothing
     , instance = Nothing
     , runState = Run.Empty
     , readline = Nothing
@@ -182,6 +180,7 @@ updateOk msg model =
                             TimedReadline.read (Time.millisToPosix date) value r
 
                         ( model1, cmds ) =
+                            -- Log-parsing errors are ignored: lines we don't use, like chat or asset-loading, are incredibly common
                             lines
                                 |> List.filterMap (LogLine.parse model.datamine (Maybe.withDefault Time.utc model.tz) >> Result.toMaybe)
                                 |> List.foldl updateLine ( model, [] )

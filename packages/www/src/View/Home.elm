@@ -1,4 +1,4 @@
-module View.Home exposing (formatBytes, formatDuration, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewParseError, viewProgress, viewRun, viewSideAreaName)
+module View.Home exposing (formatBytes, formatDuration, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewProgress, viewRun, viewSideAreaName)
 
 -- TODO: This used to be its own page. Now it's a graveyard of functions that get
 -- called from other pages. I should really clean it up and find these a new home.
@@ -118,16 +118,6 @@ formatDuration dur =
     in
     -- String.join ":" <| [ pad0 2 h, pad0 2 m, pad0 2 s, pad0 4 ms ]
     sign ++ String.join ":" (dpad ++ hpad ++ [ pad0 2 m, pad0 2 s ])
-
-
-viewParseError : Maybe LogLine.ParseError -> Html msg
-viewParseError err =
-    case err of
-        Nothing ->
-            div [] []
-
-        Just err_ ->
-            div [] [ text <| "Log parsing error: " ++ LogLine.parseErrorToString err_ ]
 
 
 formatBytes : Int -> String

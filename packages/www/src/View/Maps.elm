@@ -14,7 +14,7 @@ import Regex
 import Route
 import Time
 import View.History
-import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewParseError, viewProgress, viewSideAreaName)
+import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewProgress, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
 import View.Setup
@@ -28,7 +28,6 @@ view params model =
         [ viewHeader
         , View.Nav.view <| Just model.route
         , View.Setup.view model
-        , viewParseError model.mapwatch.parseError
         , viewBody params model
         ]
 
