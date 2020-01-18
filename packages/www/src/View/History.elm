@@ -15,7 +15,7 @@ import Model as Model exposing (Msg(..), OkModel)
 import Regex
 import Route
 import Time exposing (Posix)
-import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewProgress, viewRun, viewSideAreaName)
+import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewProgress, viewRegion, viewRun, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
 import View.NotFound
@@ -219,12 +219,12 @@ viewHistoryTable ({ page } as params) queryRuns model =
     in
     table [ class "history" ]
         [ thead []
-            [ tr [] [ td [ colspan 11 ] [ paginator ] ]
+            [ tr [] [ td [ colspan 12 ] [ paginator ] ]
 
             -- , viewHistoryHeader (Run.parseSort params.sort) params
             ]
         , tbody [] (pageRuns |> List.map (viewHistoryRun model.tz { showDate = True } params goalDuration) |> List.concat)
-        , tfoot [] [ tr [] [ td [ colspan 11 ] [ paginator ] ] ]
+        , tfoot [] [ tr [] [ td [ colspan 12 ] [ paginator ] ] ]
         ]
 
 
@@ -260,6 +260,7 @@ viewHistoryHeader sort qs =
     tr []
         [ th [] [ link Run.SortDate ]
         , th [ class "zone" ] [ link Run.Name ]
+        , th [] [ link Run.Region ]
         , th [] [ link Run.TimeTotal ]
         , th [] []
         , th [] [ link Run.TimeMap ]
@@ -340,6 +341,7 @@ viewHistoryMainRow tz { showDate } qs goal r =
             []
          )
             ++ [ td [ class "zone" ] [ viewRun qs r ]
+               , td [] [ viewRegion qs r.instance.worldArea ]
                ]
             ++ viewGoalDurationSet goal d
         )
@@ -355,7 +357,7 @@ viewHistorySideAreaRow { showDate } qs instance d =
             []
          )
             ++ [ td [] []
-               , td [ class "zone", colspan 7 ] [ viewSideAreaName qs (Instance.Instance instance) ]
+               , td [ class "zone", colspan 8 ] [ viewSideAreaName qs (Instance.Instance instance) ]
                , td [ class "side-dur" ] [ viewDuration d ]
                , td [ class "portals" ] []
                , td [ class "town-pct" ] []
@@ -379,7 +381,7 @@ viewHistoryNPCTextRow { showDate } qs ( npcId, encounters ) =
                         []
                      )
                         ++ [ td [] []
-                           , td [ colspan 7, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
+                           , td [ colspan 8, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
                            , td [ class "side-dur" ] []
                            , td [ class "portals" ] []
                            , td [ class "town-pct" ] []

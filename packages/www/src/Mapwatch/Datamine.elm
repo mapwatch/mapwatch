@@ -4,6 +4,7 @@ module Mapwatch.Datamine exposing
     , WorldArea
     , createDatamine_
     , decoder
+    , defaultAtlasRegion
     , imgCdn
     , imgSrc
     , isMap
@@ -73,6 +74,11 @@ type alias LangIndex =
     , npcs : Dict String String
     , npcTextAudio : Dict String String
     }
+
+
+defaultAtlasRegion : String
+defaultAtlasRegion =
+    "---"
 
 
 tier : WorldArea -> Maybe Int

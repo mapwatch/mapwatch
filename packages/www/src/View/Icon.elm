@@ -7,6 +7,7 @@ import Json.Encode as Json
 import Mapwatch.Datamine as Datamine exposing (WorldArea)
 import Mapwatch.Run as Run exposing (Run)
 import Regex
+import View.Icon.Svg
 
 
 fa : String -> String -> Html msg
@@ -138,3 +139,34 @@ cassia =
 tane : Html msg
 tane =
     sideArea { name = "tane big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedMetamorph.png?scale=1" }
+
+
+region : Maybe WorldArea -> Html msg
+region w =
+    case w |> Maybe.andThen .atlasRegion |> Maybe.withDefault Datamine.defaultAtlasRegion of
+        "Haewark Hamlet" ->
+            View.Icon.Svg.region View.Icon.Svg.RegionTopLeftOutside
+
+        "Tirn's End" ->
+            View.Icon.Svg.region View.Icon.Svg.RegionTopLeftInside
+
+        "Lex Ejoris" ->
+            View.Icon.Svg.region View.Icon.Svg.RegionTopRightOutside
+
+        "Lex Proxima" ->
+            View.Icon.Svg.region View.Icon.Svg.RegionTopRightInside
+
+        "New Vastir" ->
+            View.Icon.Svg.region View.Icon.Svg.RegionBottomLeftOutside
+
+        "Glennach Cairns" ->
+            View.Icon.Svg.region View.Icon.Svg.RegionBottomLeftInside
+
+        "Lira Arthain" ->
+            View.Icon.Svg.region View.Icon.Svg.RegionBottomRightOutside
+
+        "Valdo's Rest" ->
+            View.Icon.Svg.region View.Icon.Svg.RegionBottomRightInside
+
+        _ ->
+            View.Icon.Svg.emptyRegion

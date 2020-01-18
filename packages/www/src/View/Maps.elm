@@ -14,7 +14,7 @@ import Regex
 import Route
 import Time
 import View.History
-import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewProgress, viewSideAreaName)
+import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewProgress, viewRegion, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
 import View.Setup
@@ -78,6 +78,9 @@ sort o =
     (case col of
         "name" ->
             List.sortBy .name
+
+        "region" ->
+            List.sortBy (.worldArea >> .atlasRegion >> Maybe.withDefault Datamine.defaultAtlasRegion)
 
         "tier" ->
             List.sortBy (.worldArea >> Datamine.tier >> Maybe.withDefault 0)
@@ -150,6 +153,7 @@ header params =
     in
     tr []
         [ cell "name" "Name"
+        , cell "region" "Region"
         , cell "tier" "Tier"
         , cell "meandur" "Average"
         , cell "portals" "Portals"
@@ -181,6 +185,7 @@ viewMap qs { name, worldArea, runs } =
     in
     tr []
         ([ td [ class "zone" ] [ viewMapName qs name worldArea ]
+         , td [] [ viewRegionName qs worldArea ]
          , td []
             (case Datamine.tier worldArea of
                 Nothing ->
@@ -196,6 +201,18 @@ viewMap qs { name, worldArea, runs } =
          ]
          -- ++ (View.History.viewDurationSet <| )
         )
+
+
+viewRegionName : Route.MapsParams -> WorldArea -> Html msg
+viewRegionName qs w =
+    let
+        hqs0 =
+            Route.historyParams0
+
+        name =
+            w.atlasRegion |> Maybe.withDefault Datamine.defaultAtlasRegion
+    in
+    viewRegion { hqs0 | search = Just name, after = qs.after, before = qs.before } (Just w)
 
 
 viewMapName : Route.MapsParams -> String -> WorldArea -> Html msg

@@ -1,4 +1,17 @@
-module View.Home exposing (formatBytes, formatDuration, maskedText, selfUrl, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewProgress, viewRun, viewSideAreaName)
+module View.Home exposing
+    ( formatBytes
+    , formatDuration
+    , maskedText
+    , selfUrl
+    , viewDate
+    , viewHeader
+    , viewInstance
+    , viewMaybeInstance
+    , viewProgress
+    , viewRegion
+    , viewRun
+    , viewSideAreaName
+    )
 
 -- TODO: This used to be its own page. Now it's a graveyard of functions that get
 -- called from other pages. I should really clean it up and find these a new home.
@@ -9,7 +22,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
 import Mapwatch as Mapwatch exposing (Model, Msg(..))
-import Mapwatch.Datamine as Datamine exposing (Datamine)
+import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Run as Run exposing (Run)
@@ -62,6 +75,16 @@ viewInstance qs =
 viewRun : Route.HistoryParams -> Run -> Html msg
 viewRun qs run =
     viewAddress qs { blighted = Run.isBlightedMap run } run.instance
+
+
+viewRegion : Route.HistoryParams -> Maybe WorldArea -> Html msg
+viewRegion qs w =
+    let
+        name =
+            w |> Maybe.andThen .atlasRegion |> Maybe.withDefault Datamine.defaultAtlasRegion
+    in
+    -- TODO icon
+    a [ Route.href <| Route.History { qs | search = Just name } ] [ Icon.region w, text name ]
 
 
 time =

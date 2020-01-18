@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2020-01-18
+- Atlas regions are now displayed for each map.
+
 ## 2020-01-17
 - Added a settings screen.
 - You can now choose another client.txt file from the settings screen without reloading the page.

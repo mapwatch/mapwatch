@@ -127,7 +127,7 @@ searchString r =
      )
         ++ addr.zone
     )
-        :: (addr.worldArea |> Maybe.andThen .atlasRegion |> Maybe.withDefault "")
+        :: (addr.worldArea |> Maybe.andThen .atlasRegion |> Maybe.withDefault Datamine.defaultAtlasRegion)
         :: npcNames r
         |> String.join "\n"
 
@@ -143,6 +143,7 @@ npcNames =
 type SortField
     = SortDate
     | Name
+    | Region
     | TimeTotal
     | TimeMap
     | TimeTown
@@ -151,7 +152,7 @@ type SortField
 
 
 sortFields =
-    [ Name, TimeTotal, TimeMap, TimeTown, TimeSide, Portals, SortDate ]
+    [ Name, Region, TimeTotal, TimeMap, TimeTown, TimeSide, Portals, SortDate ]
 
 
 type SortDir
@@ -174,6 +175,9 @@ stringifySortField : SortField -> String
 stringifySortField field =
     case field of
         Name ->
+            "name"
+
+        Region ->
             "name"
 
         TimeTotal ->
@@ -276,6 +280,9 @@ sortParsed field dir runs =
 
                     Name ->
                         instance >> .zone |> List.sortBy
+
+                    Region ->
+                        instance >> .worldArea >> Maybe.andThen .atlasRegion >> Maybe.withDefault Datamine.defaultAtlasRegion |> List.sortBy
 
                     TimeTotal ->
                         duration |> List.sortBy

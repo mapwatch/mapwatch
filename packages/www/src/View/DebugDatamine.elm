@@ -6,6 +6,7 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
+import View.Icon
 
 
 view : Datamine -> Html msg
@@ -80,7 +81,7 @@ viewWorldAreas datamine =
                                 )
                              , td [] [ text w.id ]
                              , td [] [ text <| String.join ", " <| viewTags w ]
-                             , td [] [ text <| Maybe.withDefault "" w.atlasRegion ]
+                             , td [] [ View.Icon.region (Just w), text <| Maybe.withDefault Datamine.defaultAtlasRegion w.atlasRegion ]
                              , td [] [ w |> Datamine.tier |> Maybe.map String.fromInt |> Maybe.withDefault "" |> text ]
                              ]
                                 ++ List.map (\l -> td [] [ text <| Maybe.withDefault "???" <| Dict.get w.id l.index.worldAreas ]) langs
