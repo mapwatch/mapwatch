@@ -11,7 +11,7 @@ import Readline exposing (Readline)
 import Route
 import Time
 import View.History
-import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewProgress, viewSideAreaName)
+import View.Home exposing (formatDuration, maskedText, viewAddress, viewDate, viewHeader, viewProgress, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
 import View.Setup
@@ -102,7 +102,7 @@ viewRow count i tqs hqs goalDuration run =
             ]
         ]
         ([ td [ class "instance" ]
-            ([ viewInstance hqs run.first.instance ]
+            ([ viewAddress hqs { blighted = False } run.address ]
                 ++ (if isLast then
                         [ a [ class "overlay-back", Route.href <| Route.Timer tqs ] [ Icon.fas "cog" ] ]
 

@@ -3,6 +3,7 @@ module View.Home exposing
     , formatDuration
     , maskedText
     , selfUrl
+    , viewAddress
     , viewDate
     , viewHeader
     , viewInstance
@@ -74,7 +75,7 @@ viewInstance qs =
 
 viewRun : Route.HistoryParams -> Run -> Html msg
 viewRun qs run =
-    viewAddress qs { blighted = Run.isBlightedMap run } run.instance
+    viewAddress qs { blighted = Run.isBlightedMap run } run.address
 
 
 viewRegion : Route.HistoryParams -> Maybe WorldArea -> Html msg

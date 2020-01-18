@@ -54,7 +54,7 @@ createModel : Maybe Time.Zone -> Datamine -> OkModel
 createModel tz datamine =
     { datamine = datamine
     , instance = Nothing
-    , runState = Run.Empty
+    , runState = Nothing
     , readline = Nothing
     , history = Nothing
     , runs = []
@@ -256,8 +256,8 @@ isReady =
 lastUpdatedAt : OkModel -> Maybe Posix
 lastUpdatedAt model =
     [ model.instance |> Maybe.map .joinedAt
-    , model.runState |> Run.stateLastUpdatedAt
-    , model.runs |> List.head |> Maybe.map (\r -> r.last.leftAt)
+    , model.runState |> Maybe.map Run.lastUpdatedAt
+    , model.runs |> List.head |> Maybe.map Run.lastUpdatedAt
     ]
         |> List.filterMap identity
         |> List.head

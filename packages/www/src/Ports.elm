@@ -149,8 +149,8 @@ encodeMapRun : Run -> Encode.Value
 encodeMapRun r =
     Encode.object
         [ ( "instance", encodeAddress <| Run.instance r )
-        , ( "joinedAt", encodeDate r.first.joinedAt )
-        , ( "leftAt", encodeDate r.last.leftAt )
+        , ( "joinedAt", encodeDate r.startedAt )
+        , ( "leftAt", encodeDate (Run.lastUpdatedAt r) )
         ]
 
 

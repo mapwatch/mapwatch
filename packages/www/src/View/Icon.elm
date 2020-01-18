@@ -30,7 +30,7 @@ type alias MapIconArgs =
 
 runMap : Run -> Maybe (Html msg)
 runMap run =
-    map { blighted = Run.isBlightedMap run } run.instance.worldArea
+    map { blighted = Run.isBlightedMap run } run.address.worldArea
 
 
 justMap : MapIconArgs -> WorldArea -> Maybe (Html msg)

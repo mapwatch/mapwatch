@@ -335,13 +335,13 @@ viewHistoryMainRow tz { showDate } qs goal r =
     in
     tr [ class "main-area" ]
         ((if showDate then
-            [ td [ class "date" ] [ viewDate tz r.last.leftAt ] ]
+            [ td [ class "date" ] [ viewDate tz (Run.lastUpdatedAt r) ] ]
 
           else
             []
          )
             ++ [ td [ class "zone" ] [ viewRun qs r ]
-               , td [] [ viewRegion qs r.instance.worldArea ]
+               , td [] [ viewRegion qs r.address.worldArea ]
                ]
             ++ viewGoalDurationSet goal d
         )

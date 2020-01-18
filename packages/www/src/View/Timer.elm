@@ -10,7 +10,7 @@ import Model as Model exposing (Msg, OkModel)
 import Route
 import Time
 import View.History
-import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewMaybeInstance, viewProgress, viewSideAreaName)
+import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewMaybeInstance, viewProgress, viewRun, viewSideAreaName)
 import View.Icon as Icon
 import View.Nav
 import View.Setup
@@ -115,7 +115,7 @@ viewMain qs model =
                 Just run_ ->
                     ( Just (Run.durationSet run_).all
                     , goalDuration run_
-                    , [ td [] [ text "Mapping in: " ], td [] [ viewInstance hqs run_.first.instance ] ]
+                    , [ td [] [ text "Mapping in: " ], td [] [ viewRun hqs run_ ] ]
                     )
 
                 Nothing ->

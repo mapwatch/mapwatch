@@ -56,7 +56,7 @@ joinInstance settings isHistoryDone runState lastRun instance =
             text : Maybe String
             text =
                 case ( lastRun |> Maybe.map mapRun, runState ) of
-                    ( Nothing, Run.Started _ _ ) ->
+                    ( Nothing, Just _ ) ->
                         -- non-map -> map, or first run of the day
                         "mapwatch now starting " ++ zone ++ ". " |> Just
 
@@ -64,7 +64,7 @@ joinInstance settings isHistoryDone runState lastRun instance =
                         -- non-map -> non-map, or a run is still happening, or we're in a non-map zone
                         Nothing
 
-                    ( Just finish, Run.Empty ) ->
+                    ( Just finish, Nothing ) ->
                         -- map -> non-map
                         "mapwatch " ++ finish ++ " timer stopped. " |> Just
 

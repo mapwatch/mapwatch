@@ -6,7 +6,7 @@ module Mapwatch.Run exposing
     , Run
     , SortDir(..)
     , SortField(..)
-    , State(..)
+    , State
     , Summary
     , bestDuration
     , conquerorEncounter
@@ -19,18 +19,16 @@ module Mapwatch.Run exposing
     , filterToday
     , goalDuration
     , groupByMap
-    , init
     , instance
     , isBetween
     , isBlightedMap
+    , lastUpdatedAt
     , meanDurationSet
     , parseGoalDuration
     , parseSort
     , reverseSort
     , search
     , sort
-    , stateDuration
-    , stateLastUpdatedAt
     , stringifyGoalDuration
     , stringifySort
     , summarize
@@ -55,6 +53,29 @@ import Set exposing (Set)
 import Time exposing (Posix)
 
 
+type alias Run =
+    { address : Instance.Address
+    , startedAt : Posix
+    , portals : Int
+    , npcSays : Dict NpcId (List LogLine.NPCSaysData)
+    , visits : List Visit
+    }
+
+
+type alias DurationSet =
+    { all : Millis
+    , town : Millis
+    , mainMap : Millis
+    , sides : Millis
+    , notTown : Millis
+    , portals : Float
+    }
+
+
+type alias InstanceId =
+    String
+
+
 type alias NpcId =
     String
 
@@ -63,41 +84,28 @@ type alias NpcEncounters =
     Dict NpcId (List LogLine.NPCSaysData)
 
 
-type alias Run =
-    { visits : List Visit
-    , first : Visit
-    , last : Visit
-    , portals : Int
-    , instance : Instance.Address
-    , npcSays : NpcEncounters
-    }
+type alias State =
+    Maybe Run
 
 
-type State
-    = Empty
-    | Started Posix NpcEncounters
-    | Running Run
-
-
-init : NpcEncounters -> Visit -> Maybe Run
-init npcSays visit =
-    if Visit.isOffline visit || not (Visit.isMap visit) then
-        Nothing
+create : Instance.Address -> Posix -> NpcEncounters -> Maybe Run
+create addr startedAt npcSays =
+    if Instance.isMap (Instance.Instance addr) then
+        Just
+            { address = addr
+            , startedAt = startedAt
+            , npcSays = npcSays
+            , visits = []
+            , portals = 1
+            }
 
     else
-        case visit.instance of
-            Instance.MainMenu ->
-                -- this will never happen, because Visit.isMap would be false above
-                Nothing
-
-            Instance.Instance i ->
-                -- there's some redundancy in repeating instance here, but this guarantees it exists
-                Just { first = visit, last = visit, visits = [ visit ], portals = 1, instance = i, npcSays = npcSays }
+        Nothing
 
 
 instance : Run -> Instance.Address
 instance =
-    .instance
+    .address
 
 
 search : String -> List Run -> List Run
@@ -307,12 +315,27 @@ sortParsed field dir runs =
                )
 
 
+duration : Run -> Millis
+duration r =
+    Time.posixToMillis (lastUpdatedAt r) - Time.posixToMillis r.startedAt |> max 0
+
+
+lastUpdatedAt : Run -> Posix
+lastUpdatedAt r =
+    case List.head r.visits of
+        Just last ->
+            last.leftAt
+
+        Nothing ->
+            r.startedAt
+
+
 isBetween : { a | after : Maybe Posix, before : Maybe Posix } -> Run -> Bool
 isBetween { after, before } run =
     let
         at =
             -- Date.toTime run.last.leftAt
-            Time.posixToMillis run.first.joinedAt
+            Time.posixToMillis run.startedAt
 
         isAfter =
             Maybe.Extra.unwrap True (Time.posixToMillis >> (>=) at) after
@@ -327,34 +350,12 @@ filterBetween qs =
     List.filter (isBetween qs)
 
 
-stateDuration : Posix -> State -> Maybe Millis
-stateDuration now state =
-    case state of
-        Empty ->
-            Nothing
-
-        Started at _ ->
-            Just <| max 0 <| Time.posixToMillis now - Time.posixToMillis at
-
-        Running run ->
-            Just <| max 0 <| Time.posixToMillis now - Time.posixToMillis run.first.joinedAt
-
-
-duration : Run -> Millis
-duration v =
-    max 0 <| Time.posixToMillis v.last.leftAt - Time.posixToMillis v.first.joinedAt
-
-
 filteredDuration : (Visit -> Bool) -> Run -> Millis
 filteredDuration pred run =
     run.visits
         |> List.filter pred
         |> List.map Visit.duration
         |> List.sum
-
-
-type alias DurationSet =
-    { all : Millis, town : Millis, mainMap : Millis, sides : Millis, notTown : Millis, portals : Float }
 
 
 durationSet : Run -> DurationSet
@@ -370,7 +371,7 @@ durationSet run =
             filteredDuration (not << Visit.isTown) run
 
         mainMap =
-            filteredDuration (\v -> v.instance == run.first.instance) run
+            filteredDuration (\v -> v.instance == Instance.Instance run.address) run
     in
     { all = all, town = town, notTown = notTown, mainMap = mainMap, sides = notTown - mainMap, portals = toFloat run.portals }
 
@@ -424,7 +425,7 @@ filterToday zone now =
             ( Time.toYear zone date, Time.toMonth zone date, Time.toDay zone date )
 
         pred run =
-            ymd now == ymd run.last.leftAt
+            ymd now == ymd (lastUpdatedAt run)
     in
     List.filter pred
 
@@ -585,7 +586,7 @@ parseGoalDuration =
 durationPerSideArea : Run -> List ( Instance.Address, Millis )
 durationPerSideArea run =
     durationPerInstance run
-        |> List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= run.first.instance))
+        |> List.filter (\( i, _ ) -> (not <| Instance.isTown i) && (i /= Instance.Instance run.address))
         |> List.filterMap
             (\( i_, d ) ->
                 case i_ of
@@ -630,38 +631,28 @@ push visit run =
         Nothing
 
     else
-        Just { run | last = visit, visits = visit :: run.visits }
+        Just { run | visits = visit :: run.visits }
 
 
 tick : Posix -> Instance.State -> State -> ( State, Maybe Run )
 tick now instance_ state =
     -- go offline when time has passed since the last log entry.
     case state of
-        Empty ->
-            ( state, Nothing )
+        Nothing ->
+            ( Nothing, Nothing )
 
-        Started at _ ->
-            if Instance.isOffline now instance_ then
-                -- we just went offline while in a map - end/discard the run
-                ( Empty, Nothing )
-                    |> Mapwatch.Debug.log "Run.tick: Started -> offline"
-
-            else
-                -- no changes
-                ( state, Nothing )
-
-        Running run ->
+        Just run ->
             if Instance.isOffline now instance_ then
                 -- they went offline during a run. Start a new run.
                 if Instance.isTown instance_.val then
                     -- they went offline in town - end the run, discarding the time in town.
-                    ( Empty, Just run )
+                    ( Nothing, Just run )
                         |> Mapwatch.Debug.log "Run.tick: Running<town> -> offline"
 
                 else
                     -- they went offline in the map or a side area.
                     -- we can't know how much time they actually spent running before disappearing - discard the run.
-                    ( Empty, Nothing )
+                    ( Nothing, Nothing )
                         |> Mapwatch.Debug.log "Run.tick: Running<not-town> -> offline"
 
             else
@@ -682,14 +673,14 @@ current now minstance_ state =
                         ( _, Just run ) ->
                             Just run
 
-                        ( Running run, _ ) ->
+                        ( Just run, _ ) ->
                             Just run
 
                         _ ->
                             Nothing
             in
             case state of
-                Empty ->
+                Nothing ->
                     Nothing
 
                 _ ->
@@ -712,43 +703,32 @@ update instance_ mvisit state =
 
         Just visit ->
             let
+                initRun : NpcEncounters -> Maybe Run
                 initRun npcSays =
                     if Instance.isMap instance_.val && Visit.isTown visit then
                         -- when not running, entering a map from town starts a run.
-                        -- TODO: Non-town -> Map could be a Zana mission - skip for now, takes more special-casing
-                        Started instance_.joinedAt npcSays
+                        Instance.unwrap Nothing
+                            (\addr -> create addr instance_.joinedAt npcSays)
+                            instance_.val
 
                     else
-                        -- ...and *only* entering a map. Ignore non-maps while not running.
-                        Empty
+                        Nothing
             in
             case state of
-                Empty ->
+                Nothing ->
                     ( initRun Dict.empty, Nothing )
 
-                Started _ npcSays ->
-                    -- first complete visit of the run!
-                    if Visit.isMap visit then
-                        case init npcSays visit of
-                            Nothing ->
-                                -- we entered a map, then went offline. Discard the run+visit.
-                                ( initRun npcSays, Nothing )
-
-                            Just run ->
-                                -- normal visit, common case - really start the run.
-                                ( Running run, Nothing )
-
-                    else
-                        -- Debug.todo <| "A run's first visit should be a Map-zone, but it wasn't: " ++ Debug.toString visit
-                        ( initRun npcSays, Nothing )
-
-                Running running ->
+                Just running ->
                     case push visit running of
                         Nothing ->
                             -- they went offline during a run. Start a new run.
                             if Visit.isTown visit then
                                 -- they went offline in town - end the run, discarding the time in town.
-                                ( initRun Dict.empty, Just running )
+                                if duration running == 0 then
+                                    ( initRun Dict.empty, Nothing )
+
+                                else
+                                    ( initRun Dict.empty, Just running )
 
                             else
                                 -- they went offline in the map or a side area.
@@ -757,7 +737,7 @@ update instance_ mvisit state =
                                 ( initRun Dict.empty, Nothing )
 
                         Just run ->
-                            if (not <| Instance.isTown instance_.val) && instance_.val /= run.first.instance && Visit.isTown visit then
+                            if (not <| Instance.isTown instance_.val) && instance_.val /= Instance.Instance run.address && Visit.isTown visit then
                                 -- entering a new non-town zone, from town, finishes this run and might start a new one. This condition is complex:
                                 -- * Reentering the same map does not! Ex: death, or portal-to-town to dump some gear.
                                 -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.
@@ -765,13 +745,13 @@ update instance_ mvisit state =
                                 -- * Town -> Non-Map does, though. Ex: map -> town -> uberlab.
                                 ( initRun Dict.empty, Just run )
 
-                            else if instance_.val == run.first.instance && Visit.isTown visit then
+                            else if instance_.val == Instance.Instance run.address && Visit.isTown visit then
                                 -- reentering the *same* map from town is a portal.
-                                ( Running { run | portals = run.portals + 1 }, Nothing )
+                                ( Just { run | portals = run.portals + 1 }, Nothing )
 
                             else
                                 -- the common case - just add the visit to the run
-                                ( Running run, Nothing )
+                                ( Just run, Nothing )
 
 
 type alias Summary =
@@ -852,14 +832,14 @@ conquerorsState currentRun runs0 =
                 |> Dict.filter (\npcId _ -> Set.member npcId NpcId.conquerors)
                 |> Dict.foldl fold encounters
 
-        -- loop : List Run -> Dict NpcId ConquerorEncounter -> Dict NpcId ConquerorEncounter
+        loop : List Run -> Dict NpcId ConquerorEncounter -> Dict NpcId ConquerorEncounter
         loop runs encounters =
             case runs of
                 [] ->
                     encounters
 
                 run :: tail ->
-                    case run.instance.worldArea |> Maybe.map .id of
+                    case run.address.worldArea |> Maybe.map .id of
                         -- eye of the storm; sirus arena
                         -- earlier maps don't matter, sirus resets the state - we're done
                         Just "AtlasExilesBoss5" ->
@@ -868,19 +848,11 @@ conquerorsState currentRun runs0 =
                         _ ->
                             encounters |> applySays run.npcSays |> loop tail
 
-        npcTexts0 =
-            case currentRun of
-                Empty ->
-                    Dict.empty
-
-                Started _ says ->
-                    applySays says Dict.empty
-
-                Running r ->
-                    applySays r.npcSays Dict.empty
-
         npcTexts =
-            loop runs0 npcTexts0
+            currentRun
+                |> Maybe.map (\r -> applySays r.npcSays Dict.empty)
+                |> Maybe.withDefault Dict.empty
+                |> loop runs0
     in
     { baran = Dict.get NpcId.baran npcTexts
     , veritania = Dict.get NpcId.veritania npcTexts
@@ -889,32 +861,11 @@ conquerorsState currentRun runs0 =
     }
 
 
-stateLastUpdatedAt : State -> Maybe Posix
-stateLastUpdatedAt state =
-    case state of
-        Empty ->
-            Nothing
-
-        Started t _ ->
-            Just t
-
-        Running run ->
-            Just run.last.leftAt
-
-
 updateNPCText : LogLine.Line -> State -> State
 updateNPCText line state =
     case line.info of
         LogLine.NPCSays says ->
-            case state of
-                Empty ->
-                    state
-
-                Started t npcSays ->
-                    Started t (pushNpcEncounter says npcSays)
-
-                Running run ->
-                    Running { run | npcSays = pushNpcEncounter says run.npcSays }
+            state |> Maybe.map (\run -> { run | npcSays = run.npcSays |> pushNpcEncounter says })
 
         _ ->
             state
