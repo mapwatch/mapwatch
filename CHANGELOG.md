@@ -8,7 +8,7 @@ All substantial Mapwatch changes.
 
 ---
 ## 2020-01-18
-- Atlas regions are now displayed for each map.
+- Atlas regions are now displayed for each map. [/u/Kadoich inspired the icons; thank you!](https://www.reddit.com/r/pathofexile/comments/emmvln/a_map_stash_tab_qol_featuring_region_highlighting/)
 
 ## 2020-01-17
 - Added a settings screen.
