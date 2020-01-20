@@ -143,16 +143,16 @@ createState runs0 =
                                     Just ( id, encounter_ ) ->
                                         case id of
                                             Baran ->
-                                                { state | baran = state.baran |> Maybe.Extra.or (Just encounter_) }
+                                                { state | baran = state.baran |> Maybe.Extra.orElse (Just encounter_) }
 
                                             Veritania ->
-                                                { state | veritania = state.veritania |> Maybe.Extra.or (Just encounter_) }
+                                                { state | veritania = state.veritania |> Maybe.Extra.orElse (Just encounter_) }
 
                                             AlHezmin ->
-                                                { state | alHezmin = state.alHezmin |> Maybe.Extra.or (Just encounter_) }
+                                                { state | alHezmin = state.alHezmin |> Maybe.Extra.orElse (Just encounter_) }
 
                                             Drox ->
-                                                { state | drox = state.drox |> Maybe.Extra.or (Just encounter_) }
+                                                { state | drox = state.drox |> Maybe.Extra.orElse (Just encounter_) }
     in
     loop runs0
         { baran = Nothing
