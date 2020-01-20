@@ -1,4 +1,4 @@
-module Mapwatch.Run2.Sort exposing
+module Mapwatch.MapRun.Sort exposing
     ( GoalDuration(..)
     , SortDir(..)
     , SortField(..)
@@ -21,15 +21,15 @@ import Dict.Extra
 import Duration exposing (Millis)
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
-import Mapwatch.Run2 as Run2 exposing (Run2)
-import Mapwatch.Run2.Conqueror as Conqueror
+import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.MapRun.Conqueror as Conqueror
 import Maybe.Extra
 import Regex exposing (Regex)
 import Set exposing (Set)
 import Time exposing (Posix)
 
 
-isBetween : { a | after : Maybe Posix, before : Maybe Posix } -> Run2 -> Bool
+isBetween : { a | after : Maybe Posix, before : Maybe Posix } -> MapRun -> Bool
 isBetween { after, before } run =
     let
         at =
@@ -49,7 +49,7 @@ filterBetween qs =
     List.filter (isBetween qs)
 
 
-search : Datamine -> String -> List Run2 -> List Run2
+search : Datamine -> String -> List MapRun -> List MapRun
 search dm query =
     let
         pred run =
@@ -82,7 +82,7 @@ type SortDir
     | Desc
 
 
-sort : Maybe String -> List Run2 -> List Run2
+sort : Maybe String -> List MapRun -> List MapRun
 sort str =
     case str of
         Nothing ->
@@ -185,7 +185,7 @@ stringifySort field dir =
     d ++ stringifySortField field
 
 
-sortParsed : SortField -> SortDir -> List Run2 -> List Run2
+sortParsed : SortField -> SortDir -> List MapRun -> List MapRun
 sortParsed field dir runs =
     -- optimize the common, default case, which conveniently is the default list order.
     -- Same result as letting the else-branch run, but no sort cpu needed.
@@ -235,7 +235,7 @@ sortParsed field dir runs =
 
 
 
---filteredDuration : (Visit -> Bool) -> Run2 -> Millis
+--filteredDuration : (Visit -> Bool) -> MapRun -> Millis
 --filteredDuration pred run =
 --    run.visits
 --        |> List.filter pred
@@ -243,12 +243,12 @@ sortParsed field dir runs =
 --        |> List.sum
 
 
-bestDuration : (Run2 -> Millis) -> List Run2 -> Maybe Millis
+bestDuration : (MapRun -> Millis) -> List MapRun -> Maybe Millis
 bestDuration which =
     List.map which >> List.minimum
 
 
-filterToday : Time.Zone -> Posix -> List Run2 -> List Run2
+filterToday : Time.Zone -> Posix -> List MapRun -> List MapRun
 filterToday zone now =
     let
         ymd date =
@@ -260,7 +260,7 @@ filterToday zone now =
     List.filter pred
 
 
-groupByMap : List Run2 -> Dict.Dict String (List Run2)
+groupByMap : List MapRun -> Dict.Dict String (List MapRun)
 groupByMap =
     List.filter (.isBlightedMap >> not)
         >> Dict.Extra.groupBy (.address >> .zone)
@@ -277,12 +277,12 @@ type GoalDuration
 
 {-| Determine your time goal for a run, based on other runs of the same map
 -}
-goalDuration : GoalDuration -> { session : List Run2, allTime : List Run2 } -> Run2 -> Maybe Millis
+goalDuration : GoalDuration -> { session : List MapRun, allTime : List MapRun } -> MapRun -> Maybe Millis
 goalDuration goal { session, allTime } run =
     let
-        aggregate : List Run2 -> Run2.Aggregate
+        aggregate : List MapRun -> MapRun.Aggregate
         aggregate =
-            List.filter (\r -> r.address.zone == run.address.zone) >> Run2.aggregate
+            List.filter (\r -> r.address.zone == run.address.zone) >> MapRun.aggregate
     in
     case goal of
         SessionBest ->
@@ -398,7 +398,7 @@ npcName id dm =
         |> Maybe.andThen (\l -> Dict.get id l.index.npcs)
 
 
-searchString : Datamine -> Run2 -> String
+searchString : Datamine -> MapRun -> String
 searchString dm r =
     [ Just r.address.zone
     , if r.isBlightedMap then

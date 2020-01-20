@@ -1,14 +1,14 @@
-module Mapwatch.Run2 exposing
+module Mapwatch.MapRun exposing
     ( Aggregate
     , Durations
-    , Run2
+    , MapRun
     , aggregate
     , fromRaw
     )
 
 {-| Run data optimized for display, analysis, and (later) serialization.
 
-Frozen; cannot be modified. Lots of redundancy. Use RawRun for updates and log processing.
+Frozen; cannot be modified. Lots of redundancy. Use RawMapRun for updates and log processing.
 
 -}
 
@@ -16,15 +16,15 @@ import Dict exposing (Dict)
 import Duration exposing (Millis)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
-import Mapwatch.RawRun as RawRun exposing (RawRun)
-import Mapwatch.Run2.Conqueror as Conqueror
+import Mapwatch.MapRun.Conqueror as Conqueror
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
 import Set exposing (Set)
 import Time exposing (Posix)
 
 
-type alias Run2 =
+type alias MapRun =
     { address : Address
     , startedAt : Posix
     , updatedAt : Posix
@@ -62,7 +62,7 @@ type alias Aggregate =
     }
 
 
-aggregate : List Run2 -> Aggregate
+aggregate : List MapRun -> Aggregate
 aggregate runs =
     let
         durations =
@@ -107,7 +107,7 @@ aggregate runs =
     }
 
 
-fromRaw : RawRun -> Run2
+fromRaw : RawMapRun -> MapRun
 fromRaw raw =
     let
         -- durations by instance. includes time spent with the game closed.
@@ -146,12 +146,12 @@ fromRaw raw =
     in
     { address = raw.address
     , startedAt = raw.startedAt
-    , updatedAt = RawRun.updatedAt raw
+    , updatedAt = RawMapRun.updatedAt raw
     , portals = raw.portals
     , isBlightedMap = isBlightedMap raw
     , conqueror = conquerorEncounterFromNpcs raw.npcSays
 
-    -- List.reverse: RawRun prepends the newest runs to the list, because that's
+    -- List.reverse: RawMapRun prepends the newest runs to the list, because that's
     -- how linked lists work. We want to view oldest-first, not newest-first.
     , npcSays = raw.npcSays |> Dict.map (\npcId -> List.map .raw >> List.reverse)
     , sideAreas =
@@ -168,7 +168,7 @@ fromRaw raw =
     }
 
 
-conquerorEncounterFromNpcs : RawRun.NpcEncounters -> Maybe ( Conqueror.Id, Conqueror.Encounter )
+conquerorEncounterFromNpcs : RawMapRun.NpcEncounters -> Maybe ( Conqueror.Id, Conqueror.Encounter )
 conquerorEncounterFromNpcs npcSays =
     Conqueror.ids
         |> List.filterMap
@@ -182,7 +182,7 @@ conquerorEncounterFromNpcs npcSays =
 
 {-| If Cassia announces 8 new lanes and there are no other npcs, it must be a blighted map
 -}
-isBlightedMap : RawRun -> Bool
+isBlightedMap : RawMapRun -> Bool
 isBlightedMap run =
     let
         newLanes =
@@ -194,7 +194,7 @@ isBlightedMap run =
     Dict.size run.npcSays == 1 && List.length newLanes >= 8
 
 
-durationPerInstance : RawRun -> List ( Instance, Millis )
+durationPerInstance : RawMapRun -> List ( Instance, Millis )
 durationPerInstance { visits } =
     let
         instanceToZoneKey instance_ =
@@ -220,7 +220,7 @@ durationPerInstance { visits } =
         |> Dict.values
 
 
-isSideArea : RawRun -> Address -> Bool
+isSideArea : RawMapRun -> Address -> Bool
 isSideArea raw addr =
     raw.address /= addr && not (Instance.isTown (Instance.Instance addr))
 

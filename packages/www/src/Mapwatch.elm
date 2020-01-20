@@ -19,8 +19,8 @@ import Json.Decode as D
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Instance as Instance
 import Mapwatch.LogLine as LogLine
-import Mapwatch.RawRun as RawRun exposing (RawRun)
-import Mapwatch.Run2 as Run2 exposing (Run2)
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
+import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Ports
@@ -38,8 +38,8 @@ type alias OkModel =
     { datamine : Datamine
     , history : Maybe TimedReadline
     , instance : Maybe Instance.State
-    , runState : RawRun.State
-    , runs : List Run2
+    , runState : RawMapRun.State
+    , runs : List MapRun
     , readline : Maybe TimedReadline
     , tz : Maybe Time.Zone
     }
@@ -85,10 +85,10 @@ updateLine settings line ( model, cmds0 ) =
             Visit.tryInit model.instance instance
 
         ( runState, lastRun ) =
-            RawRun.update instance visit model.runState
-                |> Tuple.mapBoth (RawRun.updateNPCText line) (Maybe.map Run2.fromRaw)
+            RawMapRun.update instance visit model.runState
+                |> Tuple.mapBoth (RawMapRun.updateNPCText line) (Maybe.map MapRun.fromRaw)
 
-        runs : List Run2
+        runs : List MapRun
         runs =
             Maybe.Extra.unwrap model.runs (\r -> r :: model.runs) lastRun
 
@@ -126,8 +126,8 @@ tick t model =
         Just instance ->
             let
                 ( runState, lastRun ) =
-                    RawRun.tick t instance model.runState
-                        |> Tuple.mapSecond (Maybe.map Run2.fromRaw)
+                    RawMapRun.tick t instance model.runState
+                        |> Tuple.mapSecond (Maybe.map MapRun.fromRaw)
 
                 runs =
                     Maybe.Extra.unwrap model.runs (\r -> r :: model.runs) lastRun
@@ -249,7 +249,7 @@ isReady =
 lastUpdatedAt : OkModel -> Maybe Posix
 lastUpdatedAt model =
     [ model.instance |> Maybe.map .joinedAt
-    , model.runState |> Maybe.map RawRun.updatedAt
+    , model.runState |> Maybe.map RawMapRun.updatedAt
     , model.runs |> List.head |> Maybe.map .updatedAt
     ]
         |> List.filterMap identity

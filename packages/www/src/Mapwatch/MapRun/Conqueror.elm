@@ -1,4 +1,4 @@
-module Mapwatch.Run2.Conqueror exposing
+module Mapwatch.MapRun.Conqueror exposing
     ( Encounter(..)
     , Id(..)
     , State

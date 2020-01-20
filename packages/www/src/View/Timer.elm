@@ -4,10 +4,10 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Mapwatch as Mapwatch
-import Mapwatch.RawRun as RawRun exposing (RawRun)
-import Mapwatch.Run2 as Run2 exposing (Run2)
-import Mapwatch.Run2.Conqueror as Conqueror
-import Mapwatch.Run2.Sort as RunSort
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
+import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.MapRun.Conqueror as Conqueror
+import Mapwatch.MapRun.Sort as RunSort
 import Maybe.Extra
 import Model as Model exposing (Msg, OkModel)
 import Route
@@ -51,10 +51,10 @@ viewBody qs model =
 viewMain : Route.TimerParams -> OkModel -> Html Msg
 viewMain qs model =
     let
-        run : Maybe Run2
+        run : Maybe MapRun
         run =
-            RawRun.current model.now model.mapwatch.instance model.mapwatch.runState
-                |> Maybe.map Run2.fromRaw
+            RawMapRun.current model.now model.mapwatch.instance model.mapwatch.runState
+                |> Maybe.map MapRun.fromRaw
                 |> Maybe.Extra.filter (RunSort.isBetween { before = Nothing, after = qs.after })
 
         hideEarlierButton =

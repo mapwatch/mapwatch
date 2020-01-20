@@ -26,7 +26,7 @@ import Mapwatch as Mapwatch exposing (Model, Msg(..))
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
-import Mapwatch.Run2 as Run2 exposing (Run2)
+import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Route
@@ -73,7 +73,7 @@ viewInstance qs =
     Just >> viewMaybeInstance qs
 
 
-viewRun : Route.HistoryParams -> Run2 -> Html msg
+viewRun : Route.HistoryParams -> MapRun -> Html msg
 viewRun qs run =
     viewAddress qs run run.address
 

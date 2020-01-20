@@ -9,10 +9,10 @@ import Mapwatch as Mapwatch
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
-import Mapwatch.RawRun as RawRun exposing (RawRun)
-import Mapwatch.Run2 as Run2 exposing (Run2)
-import Mapwatch.Run2.Conqueror as Conqueror
-import Mapwatch.Run2.Sort as RunSort
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
+import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.MapRun.Conqueror as Conqueror
+import Mapwatch.MapRun.Sort as RunSort
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
 import Regex
@@ -79,17 +79,17 @@ isValidPage page model =
 viewMain : Route.HistoryParams -> OkModel -> Html Msg
 viewMain params model =
     let
-        currentRun : Maybe Run2
+        currentRun : Maybe MapRun
         currentRun =
             -- include the current run if we're viewing a snapshot
-            Maybe.andThen (\b -> model.mapwatch.runState |> RawRun.current b model.mapwatch.instance) params.before
-                |> Maybe.map Run2.fromRaw
+            Maybe.andThen (\b -> model.mapwatch.runState |> RawMapRun.current b model.mapwatch.instance) params.before
+                |> Maybe.map MapRun.fromRaw
 
-        searchFilter : List Run2 -> List Run2
+        searchFilter : List MapRun -> List MapRun
         searchFilter =
             Maybe.Extra.unwrap identity (RunSort.search model.mapwatch.datamine) params.search
 
-        runs : List Run2
+        runs : List MapRun
         runs =
             Maybe.Extra.unwrap model.mapwatch.runs (\r -> r :: model.mapwatch.runs) currentRun
                 |> searchFilter
@@ -120,24 +120,24 @@ viewMain params model =
         ]
 
 
-viewStatsTable : Route.HistoryParams -> Time.Zone -> Posix -> List Run2 -> Html msg
+viewStatsTable : Route.HistoryParams -> Time.Zone -> Posix -> List MapRun -> Html msg
 viewStatsTable qs tz now runs =
     table [ class "history-stats" ]
         [ tbody []
             (case ( qs.after, qs.before ) of
                 ( Nothing, Nothing ) ->
                     List.concat
-                        [ viewStatsRows (text "Today") (runs |> RunSort.filterToday tz now |> Run2.aggregate)
-                        , viewStatsRows (text "All-time") (runs |> Run2.aggregate)
+                        [ viewStatsRows (text "Today") (runs |> RunSort.filterToday tz now |> MapRun.aggregate)
+                        , viewStatsRows (text "All-time") (runs |> MapRun.aggregate)
                         ]
 
                 _ ->
-                    viewStatsRows (text "This session") (runs |> RunSort.filterBetween qs |> Run2.aggregate)
+                    viewStatsRows (text "This session") (runs |> RunSort.filterBetween qs |> MapRun.aggregate)
             )
         ]
 
 
-viewStatsRows : Html msg -> Run2.Aggregate -> List (Html msg)
+viewStatsRows : Html msg -> MapRun.Aggregate -> List (Html msg)
 viewStatsRows title runs =
     [ tr []
         [ th [ class "title" ] [ title ]
@@ -202,7 +202,7 @@ viewPaginator ({ page } as ps) numItems =
         ]
 
 
-viewHistoryTable : Route.HistoryParams -> List Run2 -> OkModel -> Html msg
+viewHistoryTable : Route.HistoryParams -> List MapRun -> OkModel -> Html msg
 viewHistoryTable ({ page } as params) queryRuns model =
     let
         paginator =
@@ -293,7 +293,7 @@ type alias Duration =
     Int
 
 
-viewHistoryRun : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> (Run2 -> Maybe Duration) -> Run2 -> List (Html msg)
+viewHistoryRun : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> (MapRun -> Maybe Duration) -> MapRun -> List (Html msg)
 viewHistoryRun tz config qs goals r =
     viewHistoryMainRow tz config qs (goals r) r
         :: List.concat
@@ -309,13 +309,13 @@ viewHistoryRun tz config qs goals r =
             ]
 
 
-viewDurationAggregate : { a | portals : Float, duration : Run2.Durations } -> List (Html msg)
+viewDurationAggregate : { a | portals : Float, duration : MapRun.Durations } -> List (Html msg)
 viewDurationAggregate a =
     [ td [ class "dur total-dur" ] [ viewDuration a.duration.all ] ]
         ++ viewDurationTail a
 
 
-viewRunDurations : Maybe Duration -> Run2 -> List (Html msg)
+viewRunDurations : Maybe Duration -> MapRun -> List (Html msg)
 viewRunDurations goal run =
     [ td [ class "dur total-dur" ] [ viewDuration run.duration.all ]
     , td [ class "dur delta-dur" ] [ viewDurationDelta (Just run.duration.all) goal ]
@@ -323,7 +323,7 @@ viewRunDurations goal run =
         ++ viewDurationTail { portals = toFloat run.portals, duration = run.duration }
 
 
-viewDurationTail : { a | portals : Float, duration : Run2.Durations } -> List (Html msg)
+viewDurationTail : { a | portals : Float, duration : MapRun.Durations } -> List (Html msg)
 viewDurationTail { portals, duration } =
     [ td [ class "dur" ] [ text " = " ]
     , td [ class "dur" ] [ viewDuration duration.mainMap, text " in map " ]
@@ -344,7 +344,7 @@ viewDurationTail { portals, duration } =
            ]
 
 
-viewHistoryMainRow : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> Maybe Duration -> Run2 -> Html msg
+viewHistoryMainRow : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> Maybe Duration -> MapRun -> Html msg
 viewHistoryMainRow tz { showDate } qs goal r =
     tr [ class "main-area" ]
         ((if showDate then

@@ -2,8 +2,8 @@ module Speech exposing (Speech, encoder, joinInstance, progressComplete)
 
 import Json.Encode as E
 import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.RawRun as RawRun exposing (RawRun)
-import Mapwatch.Run2 as Run2 exposing (Run2)
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
+import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Maybe.Extra
 import Settings exposing (Settings)
 import Time
@@ -22,7 +22,7 @@ time =
     { second = 1000, minute = 1000 * 60, hour = 1000 * 60 * 60 }
 
 
-mapRun : Run2 -> String
+mapRun : MapRun -> String
 mapRun r =
     let
         m =
@@ -43,7 +43,7 @@ progressComplete settings name =
         Nothing
 
 
-joinInstance : Settings -> Bool -> RawRun.State -> Maybe Run2 -> Instance -> Maybe Speech
+joinInstance : Settings -> Bool -> RawMapRun.State -> Maybe MapRun -> Instance -> Maybe Speech
 joinInstance settings isHistoryDone runState lastRun instance =
     if isHistoryDone then
         let

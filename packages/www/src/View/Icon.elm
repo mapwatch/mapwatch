@@ -5,7 +5,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Json.Encode as Json
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
-import Mapwatch.Run2 as Run2 exposing (Run2)
+import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Regex
 import View.Icon.Svg
 
@@ -28,7 +28,7 @@ fasPulse =
     fa "fa-spin fa-pulse fas"
 
 
-runMap : Run2 -> Maybe (Html msg)
+runMap : MapRun -> Maybe (Html msg)
 runMap run =
     map run run.address.worldArea
 

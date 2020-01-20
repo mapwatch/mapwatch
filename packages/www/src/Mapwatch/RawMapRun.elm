@@ -1,6 +1,6 @@
-module Mapwatch.RawRun exposing
+module Mapwatch.RawMapRun exposing
     ( NpcEncounters
-    , RawRun
+    , RawMapRun
     , State
     , current
     , duration
@@ -13,7 +13,7 @@ module Mapwatch.RawRun exposing
 {-| Run data optimized for log processing, run-splitting, and other updates.
 
 Not useful for display or detailed interpretation of the data;
-needlessly detailed for historical data. Use Run2 for those.
+needlessly detailed for historical data. Use MapRun for those.
 
 -}
 
@@ -27,7 +27,7 @@ import Mapwatch.Visit as Visit exposing (Visit)
 import Time exposing (Posix)
 
 
-type alias RawRun =
+type alias RawMapRun =
     { address : Instance.Address
     , startedAt : Posix
     , portals : Int
@@ -37,14 +37,14 @@ type alias RawRun =
 
 
 type alias State =
-    Maybe RawRun
+    Maybe RawMapRun
 
 
 type alias NpcEncounters =
     Dict NpcId (List LogLine.NPCSaysData)
 
 
-create : Instance.Address -> Posix -> NpcEncounters -> Maybe RawRun
+create : Instance.Address -> Posix -> NpcEncounters -> Maybe RawMapRun
 create addr startedAt npcSays =
     if Instance.isMap (Instance.Instance addr) then
         Just
@@ -59,12 +59,12 @@ create addr startedAt npcSays =
         Nothing
 
 
-duration : RawRun -> Millis
+duration : RawMapRun -> Millis
 duration r =
     Time.posixToMillis (updatedAt r) - Time.posixToMillis r.startedAt |> max 0
 
 
-updatedAt : RawRun -> Posix
+updatedAt : RawMapRun -> Posix
 updatedAt r =
     case List.head r.visits of
         Just last ->
@@ -74,7 +74,7 @@ updatedAt r =
             r.startedAt
 
 
-push : Visit -> RawRun -> Maybe RawRun
+push : Visit -> RawMapRun -> Maybe RawMapRun
 push visit run =
     if Visit.isOffline visit then
         Nothing
@@ -83,7 +83,7 @@ push visit run =
         Just { run | visits = visit :: run.visits }
 
 
-tick : Posix -> Instance.State -> State -> ( State, Maybe RawRun )
+tick : Posix -> Instance.State -> State -> ( State, Maybe RawMapRun )
 tick now instance_ state =
     -- go offline when time has passed since the last log entry.
     case state of
@@ -109,7 +109,7 @@ tick now instance_ state =
                 ( state, Nothing )
 
 
-current : Posix -> Maybe Instance.State -> State -> Maybe RawRun
+current : Posix -> Maybe Instance.State -> State -> Maybe RawMapRun
 current now minstance_ state =
     case minstance_ of
         Nothing ->
@@ -137,7 +137,7 @@ current now minstance_ state =
                         |> visitResult
 
 
-update : Instance.State -> Maybe Visit -> State -> ( State, Maybe RawRun )
+update : Instance.State -> Maybe Visit -> State -> ( State, Maybe RawMapRun )
 update instance_ mvisit state =
     -- we just joined `instance`, and just left `visit.instance`.
     --
@@ -152,7 +152,7 @@ update instance_ mvisit state =
 
         Just visit ->
             let
-                initRun : NpcEncounters -> Maybe RawRun
+                initRun : NpcEncounters -> Maybe RawMapRun
                 initRun npcSays =
                     if Instance.isMap instance_.val && Visit.isTown visit then
                         -- when not running, entering a map from town starts a run.

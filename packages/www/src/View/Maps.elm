@@ -7,8 +7,8 @@ import Html.Events as E exposing (..)
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.Run2 as Run2 exposing (Run2)
-import Mapwatch.Run2.Sort as RunSort
+import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.MapRun.Sort as RunSort
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
 import Regex
@@ -49,7 +49,7 @@ viewBody params model =
                 ]
 
 
-search : Datamine -> Maybe String -> List Run2 -> List Run2
+search : Datamine -> Maybe String -> List MapRun -> List MapRun
 search dm mq =
     case mq of
         Nothing ->
@@ -107,13 +107,13 @@ sort o =
 
 
 type alias GroupedRuns =
-    { name : String, worldArea : WorldArea, runs : Run2.Aggregate }
+    { name : String, worldArea : WorldArea, runs : MapRun.Aggregate }
 
 
 viewMain : Route.MapsParams -> OkModel -> Html Msg
 viewMain params model =
     let
-        runs : List Run2
+        runs : List MapRun
         runs =
             model.mapwatch.runs
                 |> search model.mapwatch.datamine params.search
@@ -136,14 +136,14 @@ viewMain params model =
         ]
 
 
-groupRuns : Datamine -> List Run2 -> List GroupedRuns
+groupRuns : Datamine -> List MapRun -> List GroupedRuns
 groupRuns dm =
     RunSort.groupByMap
         >> Dict.toList
         >> List.filterMap
             (\( name, runGroup ) ->
                 Datamine.worldAreaFromName name dm
-                    |> Maybe.map (\w -> { name = name, worldArea = w, runs = Run2.aggregate runGroup })
+                    |> Maybe.map (\w -> { name = name, worldArea = w, runs = MapRun.aggregate runGroup })
             )
 
 
