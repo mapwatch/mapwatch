@@ -1,4 +1,4 @@
-module View.History exposing (formatMaybeDuration, view, viewDurationDelta, viewDurationSet, viewHistoryRun)
+module View.History exposing (formatMaybeDuration, view, viewDurationDelta, viewHistoryRun)
 
 import Dict
 import Html as H exposing (..)
@@ -9,11 +9,15 @@ import Mapwatch as Mapwatch
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
-import Mapwatch.Run as Run exposing (Run)
+import Mapwatch.RawRun as RawRun exposing (RawRun)
+import Mapwatch.Run2 as Run2 exposing (Run2)
+import Mapwatch.Run2.Conqueror as Conqueror
+import Mapwatch.Run2.Sort as RunSort
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
 import Regex
 import Route
+import Set exposing (Set)
 import Time exposing (Posix)
 import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewProgress, viewRegion, viewRun, viewSideAreaName)
 import View.Icon as Icon
@@ -76,17 +80,22 @@ isValidPage page model =
 viewMain : Route.HistoryParams -> OkModel -> Html Msg
 viewMain params model =
     let
-        currentRun : Maybe Run
+        currentRun : Maybe Run2
         currentRun =
             -- include the current run if we're viewing a snapshot
-            Maybe.andThen (\b -> Run.current b model.mapwatch.instance model.mapwatch.runState) params.before
+            Maybe.andThen (\b -> model.mapwatch.runState |> RawRun.current b model.mapwatch.instance) params.before
+                |> Maybe.map Run2.fromRaw
 
+        searchFilter : List Run2 -> List Run2
+        searchFilter =
+            Maybe.Extra.unwrap identity (RunSort.search model.mapwatch.datamine) params.search
+
+        runs : List Run2
         runs =
-            model.mapwatch.runs
-                |> (++) (Maybe.Extra.toList currentRun)
-                |> Maybe.Extra.unwrap identity Run.search params.search
-                |> Run.filterBetween params
-                |> Run.sort params.sort
+            Maybe.Extra.unwrap model.mapwatch.runs (\r -> r :: model.mapwatch.runs) currentRun
+                |> searchFilter
+                |> RunSort.filterBetween params
+                |> RunSort.sort params.sort
     in
     div []
         [ div []
@@ -112,40 +121,40 @@ viewMain params model =
         ]
 
 
-viewStatsTable : Route.HistoryParams -> Time.Zone -> Posix -> List Run -> Html msg
+viewStatsTable : Route.HistoryParams -> Time.Zone -> Posix -> List Run2 -> Html msg
 viewStatsTable qs tz now runs =
     table [ class "history-stats" ]
         [ tbody []
             (case ( qs.after, qs.before ) of
                 ( Nothing, Nothing ) ->
                     List.concat
-                        [ viewStatsRows (text "Today") (Run.filterToday tz now runs)
-                        , viewStatsRows (text "All-time") runs
+                        [ viewStatsRows (text "Today") (runs |> RunSort.filterToday tz now |> Run2.aggregate)
+                        , viewStatsRows (text "All-time") (runs |> Run2.aggregate)
                         ]
 
                 _ ->
-                    viewStatsRows (text "This session") (Run.filterBetween qs runs)
+                    viewStatsRows (text "This session") (runs |> RunSort.filterBetween qs |> Run2.aggregate)
             )
         ]
 
 
-viewStatsRows : Html msg -> List Run -> List (Html msg)
+viewStatsRows : Html msg -> Run2.Aggregate -> List (Html msg)
 viewStatsRows title runs =
     [ tr []
         [ th [ class "title" ] [ title ]
-        , td [ colspan 10, class "maps-completed" ] [ text <| String.fromInt (List.length runs) ++ pluralize " map" " maps" (List.length runs) ++ " completed" ]
+        , td [ colspan 10, class "maps-completed" ] [ text <| String.fromInt runs.num ++ pluralize " map" " maps" runs.num ++ " completed" ]
         ]
     , tr []
         ([ td [] []
          , td [] [ text "Average time per map" ]
          ]
-            ++ viewDurationSet (Run.meanDurationSet runs)
+            ++ viewDurationAggregate runs.mean
         )
     , tr []
         ([ td [] []
          , td [] [ text "Total time" ]
          ]
-            ++ viewDurationSet (Run.totalDurationSet runs)
+            ++ viewDurationAggregate { portals = toFloat runs.total.portals, duration = runs.total.duration }
         )
     ]
 
@@ -194,7 +203,7 @@ viewPaginator ({ page } as ps) numItems =
         ]
 
 
-viewHistoryTable : Route.HistoryParams -> List Run -> OkModel -> Html msg
+viewHistoryTable : Route.HistoryParams -> List Run2 -> OkModel -> Html msg
 viewHistoryTable ({ page } as params) queryRuns model =
     let
         paginator =
@@ -206,14 +215,14 @@ viewHistoryTable ({ page } as params) queryRuns model =
                 |> List.take perPage
 
         goalDuration =
-            Run.goalDuration (Run.parseGoalDuration params.goal)
+            RunSort.goalDuration (RunSort.parseGoalDuration params.goal)
                 { session =
                     case params.after of
                         Just _ ->
                             queryRuns
 
                         Nothing ->
-                            Run.filterToday model.tz model.now model.mapwatch.runs
+                            RunSort.filterToday model.tz model.now model.mapwatch.runs
                 , allTime = model.mapwatch.runs
                 }
     in
@@ -228,47 +237,47 @@ viewHistoryTable ({ page } as params) queryRuns model =
         ]
 
 
-viewSortLink : Run.SortField -> ( Run.SortField, Run.SortDir ) -> Route.HistoryParams -> Html msg
+viewSortLink : RunSort.SortField -> ( RunSort.SortField, RunSort.SortDir ) -> Route.HistoryParams -> Html msg
 viewSortLink thisField ( sortedField, dir ) qs =
     let
         ( icon, slug ) =
             if thisField == sortedField then
                 -- already sorted on this field, link changes direction
                 ( Icon.fas
-                    (if dir == Run.Asc then
+                    (if dir == RunSort.Asc then
                         "sort-up"
 
                      else
                         "sort-down"
                     )
-                , Run.stringifySort thisField <| Just <| Run.reverseSort dir
+                , RunSort.stringifySort thisField <| Just <| RunSort.reverseSort dir
                 )
 
             else
                 -- link sorts by this field with default direction
-                ( Icon.fas "sort", Run.stringifySort thisField Nothing )
+                ( Icon.fas "sort", RunSort.stringifySort thisField Nothing )
     in
     a [ Route.href <| Route.History { qs | sort = Just slug } ] [ icon ]
 
 
-viewHistoryHeader : ( Run.SortField, Run.SortDir ) -> Route.HistoryParams -> Html msg
+viewHistoryHeader : ( RunSort.SortField, RunSort.SortDir ) -> Route.HistoryParams -> Html msg
 viewHistoryHeader sort qs =
     let
         link field =
             viewSortLink field sort qs
     in
     tr []
-        [ th [] [ link Run.SortDate ]
-        , th [ class "zone" ] [ link Run.Name ]
-        , th [] [ link Run.Region ]
-        , th [] [ link Run.TimeTotal ]
+        [ th [] [ link RunSort.SortDate ]
+        , th [ class "zone" ] [ link RunSort.Name ]
+        , th [] [ link RunSort.Region ]
+        , th [] [ link RunSort.TimeTotal ]
         , th [] []
-        , th [] [ link Run.TimeMap ]
+        , th [] [ link RunSort.TimeMap ]
         , th [] []
-        , th [] [ link Run.TimeTown ]
+        , th [] [ link RunSort.TimeTown ]
         , th [] []
-        , th [] [ link Run.TimeSide ]
-        , th [] [ link Run.Portals ]
+        , th [] [ link RunSort.TimeSide ]
+        , th [] [ link RunSort.Portals ]
         , th [] []
         ]
 
@@ -285,57 +294,62 @@ type alias Duration =
     Int
 
 
-viewHistoryRun : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> (Run -> Maybe Duration) -> Run -> List (Html msg)
+viewHistoryRun : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> (Run2 -> Maybe Duration) -> Run2 -> List (Html msg)
 viewHistoryRun tz config qs goals r =
     viewHistoryMainRow tz config qs (goals r) r
-        :: (List.map ((\f ( a, b ) -> f a b) <| viewHistorySideAreaRow config qs) (Run.durationPerSideArea r)
-                ++ (r.npcSays |> Dict.toList |> List.filterMap (viewHistoryNPCTextRow config qs))
-           )
+        :: List.concat
+            [ r.sideAreas
+                |> Dict.values
+                |> List.map (viewHistorySideAreaRow config qs)
+            , r.conqueror
+                |> Maybe.map (viewConquerorRow config)
+                |> Maybe.Extra.toList
+            , r.npcs
+                |> Set.toList
+                |> List.filterMap (viewHistoryNpcTextRow config qs)
+            ]
 
 
-viewDurationSet : Run.DurationSet -> List (Html msg)
-viewDurationSet d =
-    [ td [ class "dur total-dur" ] [ viewDuration d.all ] ] ++ viewDurationTail d
+viewDurationAggregate : { a | portals : Float, duration : Run2.Durations } -> List (Html msg)
+viewDurationAggregate a =
+    [ td [ class "dur total-dur" ] [ viewDuration a.duration.all ] ]
+        ++ viewDurationTail a
 
 
-viewGoalDurationSet : Maybe Duration -> Run.DurationSet -> List (Html msg)
-viewGoalDurationSet goal d =
-    [ td [ class "dur total-dur" ] [ viewDuration d.all ]
-    , td [ class "dur delta-dur" ] [ viewDurationDelta (Just d.all) goal ]
+viewRunDurations : Maybe Duration -> Run2 -> List (Html msg)
+viewRunDurations goal run =
+    [ td [ class "dur total-dur" ] [ viewDuration run.duration.all ]
+    , td [ class "dur delta-dur" ] [ viewDurationDelta (Just run.duration.all) goal ]
     ]
-        ++ viewDurationTail d
+        ++ viewDurationTail { portals = toFloat run.portals, duration = run.duration }
 
 
-viewDurationTail : Run.DurationSet -> List (Html msg)
-viewDurationTail d =
+viewDurationTail : { a | portals : Float, duration : Run2.Durations } -> List (Html msg)
+viewDurationTail { portals, duration } =
     [ td [ class "dur" ] [ text " = " ]
-    , td [ class "dur" ] [ viewDuration d.mainMap, text " in map " ]
+    , td [ class "dur" ] [ viewDuration duration.mainMap, text " in map " ]
     , td [ class "dur" ] [ text " + " ]
-    , td [ class "dur" ] [ viewDuration d.town, text " in town " ]
+    , td [ class "dur" ] [ viewDuration duration.town, text " in town " ]
     ]
-        ++ (if d.sides > 0 then
+        ++ (if duration.sides > 0 then
                 [ td [ class "dur" ] [ text " + " ]
-                , td [ class "dur" ] [ viewDuration d.sides, text " in sides" ]
+                , td [ class "dur" ] [ viewDuration duration.sides, text " in sides" ]
                 ]
 
             else
                 [ td [ class "dur" ] [], td [ class "dur" ] [] ]
            )
-        ++ [ td [ class "portals" ] [ text <| String.fromFloat (roundToPlaces 2 d.portals) ++ pluralize " portal" " portals" d.portals ]
+        ++ [ td [ class "portals" ] [ text <| String.fromFloat (roundToPlaces 2 portals) ++ pluralize " portal" " portals" portals ]
            , td [ class "town-pct" ]
-                [ text <| String.fromInt (clamp 0 100 <| floor <| 100 * (toFloat d.town / Basics.max 1 (toFloat d.all))) ++ "% in town" ]
+                [ text <| String.fromInt (clamp 0 100 <| floor <| 100 * (toFloat duration.town / Basics.max 1 (toFloat duration.all))) ++ "% in town" ]
            ]
 
 
-viewHistoryMainRow : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> Maybe Duration -> Run -> Html msg
+viewHistoryMainRow : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> Maybe Duration -> Run2 -> Html msg
 viewHistoryMainRow tz { showDate } qs goal r =
-    let
-        d =
-            Run.durationSet r
-    in
     tr [ class "main-area" ]
         ((if showDate then
-            [ td [ class "date" ] [ viewDate tz (Run.lastUpdatedAt r) ] ]
+            [ td [ class "date" ] [ viewDate tz r.updatedAt ] ]
 
           else
             []
@@ -343,12 +357,12 @@ viewHistoryMainRow tz { showDate } qs goal r =
             ++ [ td [ class "zone" ] [ viewRun qs r ]
                , td [] [ viewRegion qs r.address.worldArea ]
                ]
-            ++ viewGoalDurationSet goal d
+            ++ viewRunDurations goal r
         )
 
 
-viewHistorySideAreaRow : HistoryRowConfig -> Route.HistoryParams -> Instance.Address -> Duration -> Html msg
-viewHistorySideAreaRow { showDate } qs instance d =
+viewHistorySideAreaRow : HistoryRowConfig -> Route.HistoryParams -> ( Instance.Address, Duration ) -> Html msg
+viewHistorySideAreaRow { showDate } qs ( instance, d ) =
     tr [ class "side-area" ]
         ((if showDate then
             [ td [ class "date" ] [] ]
@@ -365,9 +379,9 @@ viewHistorySideAreaRow { showDate } qs instance d =
         )
 
 
-viewHistoryNPCTextRow : HistoryRowConfig -> Route.HistoryParams -> ( String, List LogLine.NPCSaysData ) -> Maybe (Html msg)
-viewHistoryNPCTextRow { showDate } qs ( npcId, encounters ) =
-    case viewNPCText npcId encounters of
+viewHistoryNpcTextRow : HistoryRowConfig -> Route.HistoryParams -> NpcId -> Maybe (Html msg)
+viewHistoryNpcTextRow { showDate } qs npcId =
+    case viewNpcText npcId of
         [] ->
             Nothing
 
@@ -381,7 +395,9 @@ viewHistoryNPCTextRow { showDate } qs ( npcId, encounters ) =
                         []
                      )
                         ++ [ td [] []
-                           , td [ colspan 8, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
+
+                           -- , td [ colspan 8, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
+                           , td [ colspan 8 ] body
                            , td [ class "side-dur" ] []
                            , td [ class "portals" ] []
                            , td [ class "town-pct" ] []
@@ -389,25 +405,9 @@ viewHistoryNPCTextRow { showDate } qs ( npcId, encounters ) =
                     )
 
 
-viewNPCText : String -> List LogLine.NPCSaysData -> List (Html msg)
-viewNPCText npcId encounters =
-    let
-        textIds =
-            encounters |> List.map .textId
-    in
-    if npcId == NpcId.baran then
-        viewConquerorEncounter npcId textIds [ Icon.baran, text "Baran, the Crusader" ]
-
-    else if npcId == NpcId.veritania then
-        viewConquerorEncounter npcId textIds [ Icon.veritania, text "Veritania, the Redeemer" ]
-
-    else if npcId == NpcId.alHezmin then
-        viewConquerorEncounter npcId textIds [ Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
-
-    else if npcId == NpcId.drox then
-        viewConquerorEncounter npcId textIds [ Icon.drox, text "Drox, the Warlord" ]
-
-    else if npcId == NpcId.einhar then
+viewNpcText : String -> List (Html msg)
+viewNpcText npcId =
+    if npcId == NpcId.einhar then
         [ Icon.einhar, text "Einhar, Beastmaster" ]
 
     else if npcId == NpcId.alva then
@@ -429,17 +429,47 @@ viewNPCText npcId encounters =
         []
 
 
-viewConquerorEncounter : NpcId -> List String -> List (Html msg) -> List (Html msg)
-viewConquerorEncounter npcId textIds label =
-    case Run.conquerorEncounter npcId textIds of
-        Just (Run.ConquerorTaunt n) ->
-            label ++ [ text <| ": Taunt " ++ String.fromInt n ]
+viewConquerorRow : HistoryRowConfig -> ( Conqueror.Id, Conqueror.Encounter ) -> Html msg
+viewConquerorRow { showDate } ( id, encounter ) =
+    let
+        label : List (Html msg)
+        label =
+            case id of
+                Conqueror.Baran ->
+                    [ Icon.baran, text "Baran, the Crusader" ]
 
-        Just Run.ConquerorFight ->
-            label ++ [ text ": Fight" ]
+                Conqueror.Veritania ->
+                    [ Icon.veritania, text "Veritania, the Redeemer" ]
 
-        Nothing ->
+                Conqueror.AlHezmin ->
+                    [ Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
+
+                Conqueror.Drox ->
+                    [ Icon.drox, text "Drox, the Warlord" ]
+
+        body : List (Html msg)
+        body =
+            case encounter of
+                Conqueror.Taunt n ->
+                    label ++ [ text <| ": Taunt " ++ String.fromInt n ]
+
+                Conqueror.Fight ->
+                    label ++ [ text ": Fight" ]
+    in
+    tr [ class "npctext-area" ]
+        ((if showDate then
+            [ td [ class "date" ] [] ]
+
+          else
             []
+         )
+            ++ [ td [] []
+               , td [ colspan 8 ] body
+               , td [ class "side-dur" ] []
+               , td [ class "portals" ] []
+               , td [ class "town-pct" ] []
+               ]
+        )
 
 
 viewDurationDelta : Maybe Duration -> Maybe Duration -> Html msg

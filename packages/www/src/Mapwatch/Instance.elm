@@ -1,8 +1,10 @@
 module Mapwatch.Instance exposing
     ( Address
+    , AddressId
     , Builder(..)
     , Instance(..)
     , State
+    , addressId
     , duration
     , init
     , initOrUpdate
@@ -24,9 +26,11 @@ import Maybe.Extra
 import Time exposing (Posix)
 
 
-{-| (Zone, instance-server-address) isn't really a unique id -
-imagine running two Volcano maps that just so happen to be assigned to the
-same instance server. It's the best we've got, though.
+{-| "Uniquely" identify a PoE zone instance.
+
+(Zone, instance-server-address) isn't really a unique id - imagine running two
+Volcano maps that just so happen to be assigned to the same instance server.
+It's the best we've got though, and it works pretty well in practice.
 
 worldArea is derived from zone. We could pass Datamine around everywhere instead
 of duplicating information here, but that seems excessive
@@ -37,6 +41,15 @@ type alias Address =
     , addr : String
     , worldArea : Maybe WorldArea
     }
+
+
+type alias AddressId =
+    String
+
+
+addressId : Address -> AddressId
+addressId a =
+    a.zone ++ "@" ++ a.addr
 
 
 type Instance

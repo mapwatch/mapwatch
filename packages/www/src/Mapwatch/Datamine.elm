@@ -181,11 +181,11 @@ imgCdn =
     "https://web.poecdn.com/image/"
 
 
-type alias MapIconArgs =
-    { blighted : Bool }
+type alias MapIconArgs a =
+    { a | isBlightedMap : Bool }
 
 
-imgSrc : MapIconArgs -> WorldArea -> Maybe String
+imgSrc : MapIconArgs a -> WorldArea -> Maybe String
 imgSrc args w =
     w.itemVisualId
         |> Maybe.map
@@ -195,7 +195,7 @@ imgSrc args w =
                             ++ path
                             ++ "?w=1&h=1&scale=1&mn=6&mt="
                             ++ String.fromInt (tier w |> Maybe.withDefault 0)
-                            ++ boolQuery "&mb" args.blighted
+                            ++ boolQuery "&mb" args.isBlightedMap
                    )
             )
 
@@ -211,7 +211,7 @@ boolQuery n b =
 
 isMap : WorldArea -> Bool
 isMap w =
-    case imgSrc { blighted = False } w of
+    case imgSrc { isBlightedMap = False } w of
         Nothing ->
             False
 

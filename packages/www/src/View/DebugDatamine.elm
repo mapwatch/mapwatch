@@ -72,7 +72,7 @@ viewWorldAreas datamine =
                     (\w ->
                         tr []
                             ([ td [ style "min-width" "1em", style "height" "1em" ]
-                                (case Datamine.imgSrc { blighted = False } w of
+                                (case Datamine.imgSrc { isBlightedMap = False } w of
                                     Nothing ->
                                         [ text "" ]
 

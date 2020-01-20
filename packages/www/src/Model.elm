@@ -15,7 +15,7 @@ import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Instance as Instance
 import Mapwatch.LogLine as LogLine
-import Mapwatch.Run as Run
+import Mapwatch.Run2 as Run2 exposing (Run2)
 import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Ports

@@ -4,7 +4,10 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Mapwatch as Mapwatch
-import Mapwatch.Run as Run exposing (Run)
+import Mapwatch.RawRun as RawRun exposing (RawRun)
+import Mapwatch.Run2 as Run2 exposing (Run2)
+import Mapwatch.Run2.Conqueror as Conqueror
+import Mapwatch.Run2.Sort as RunSort
 import Maybe.Extra
 import Model as Model exposing (Msg, OkModel)
 import Route
@@ -48,10 +51,11 @@ viewBody qs model =
 viewMain : Route.TimerParams -> OkModel -> Html Msg
 viewMain qs model =
     let
-        run : Maybe Run
+        run : Maybe Run2
         run =
-            Run.current model.now model.mapwatch.instance model.mapwatch.runState
-                |> Maybe.Extra.filter (Run.isBetween { before = Nothing, after = qs.after })
+            RawRun.current model.now model.mapwatch.instance model.mapwatch.runState
+                |> Maybe.map Run2.fromRaw
+                |> Maybe.Extra.filter (RunSort.isBetween { before = Nothing, after = qs.after })
 
         hideEarlierButton =
             a [ class "button", Route.href <| Route.Timer { qs | after = Just model.now } ] [ Icon.fas "eye-slash", text " Hide earlier maps" ]
@@ -72,7 +76,7 @@ viewMain qs model =
             case qs.after of
                 Nothing ->
                     ( "today"
-                    , Run.filterToday model.tz model.now model.mapwatch.runs
+                    , RunSort.filterToday model.tz model.now model.mapwatch.runs
                     , [ hideEarlierButton
                       , hidePreLeagueButton (\after -> Route.Timer { qs | after = Just after })
                       ]
@@ -80,7 +84,7 @@ viewMain qs model =
 
                 Just _ ->
                     ( "this session"
-                    , Run.filterBetween { before = Nothing, after = qs.after } model.mapwatch.runs
+                    , RunSort.filterBetween { before = Nothing, after = qs.after } model.mapwatch.runs
                     , [ a [ class "button", Route.href <| Route.Timer { qs | after = Nothing } ] [ Icon.fas "eye", text " Unhide all" ]
                       , hideEarlierButton
                       , a [ class "button", Route.href <| Route.History { hqs | before = Just model.now } ] [ Icon.fas "camera", text " Snapshot history" ]
@@ -91,16 +95,16 @@ viewMain qs model =
             List.take 5 <| Maybe.Extra.toList run ++ runs
 
         goal =
-            Run.parseGoalDuration qs.goal
+            RunSort.parseGoalDuration qs.goal
 
         goalDuration =
-            Run.goalDuration goal { session = runs, allTime = model.mapwatch.runs }
+            RunSort.goalDuration goal { session = runs, allTime = model.mapwatch.runs }
 
         historyTable =
             table [ class "timer history" ]
                 [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun model.tz { showDate = False } hqs goalDuration) <| history)
                 , tfoot []
-                    [ tr [] [ td [ colspan 12 ] [ viewConquerorsState (Run.conquerorsState model.mapwatch.runState model.mapwatch.runs) ] ]
+                    [ tr [] [ td [ colspan 12 ] [ viewConquerorsState (Conqueror.createState (Maybe.Extra.toList run ++ model.mapwatch.runs)) ] ]
                     , tr []
                         [ td [ colspan 12 ]
                             [ a [ Route.href <| Route.History hqs ] [ Icon.fas "history", text " History" ]
@@ -113,7 +117,7 @@ viewMain qs model =
         ( timer, timerGoal, mappingNow ) =
             case run of
                 Just run_ ->
-                    ( Just (Run.durationSet run_).all
+                    ( Just run_.duration.all
                     , goalDuration run_
                     , [ td [] [ text "Mapping in: " ], td [] [ viewRun hqs run_ ] ]
                     )
@@ -170,7 +174,7 @@ viewTimer dur goal =
         ]
 
 
-viewConquerorsState : Run.ConquerorsState -> Html msg
+viewConquerorsState : Conqueror.State -> Html msg
 viewConquerorsState state =
     ul [ class "conquerors-state" ]
         [ viewConquerorsStateEntry state.baran Icon.baran "Baran"
@@ -180,15 +184,15 @@ viewConquerorsState state =
         ]
 
 
-viewConquerorsStateEntry : Maybe Run.ConquerorEncounter -> Html msg -> String -> Html msg
+viewConquerorsStateEntry : Maybe Conqueror.Encounter -> Html msg -> String -> Html msg
 viewConquerorsStateEntry encounter icon name =
     case encounter of
         Nothing ->
             li [ title <| name ++ ": Unmet" ] [ text "0×", icon, text name ]
 
-        Just (Run.ConquerorTaunt n) ->
+        Just (Conqueror.Taunt n) ->
             li [ title <| name ++ ": " ++ String.fromInt n ++ " Taunts" ] [ text (String.fromInt n ++ "×"), icon, text name ]
 
-        Just Run.ConquerorFight ->
+        Just Conqueror.Fight ->
             -- li [ title "Fought" ] (text "☑" :: label)
             li [ title <| name ++ ": Fought" ] [ text "✔", icon, text name ]

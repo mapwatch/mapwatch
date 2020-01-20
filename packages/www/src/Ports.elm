@@ -16,7 +16,8 @@ import Duration exposing (Millis)
 import Json.Decode as Decode
 import Json.Encode as Encode
 import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.Run as Run exposing (Run)
+import Mapwatch.RawRun as RawRun exposing (RawRun)
+import Mapwatch.Run2 as Run2 exposing (Run2)
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
 import Settings exposing (Settings)
@@ -110,7 +111,7 @@ progressComplete settings e =
             ]
 
 
-sendJoinInstance : Settings -> Bool -> Posix -> Instance -> Maybe Visit -> Run.State -> Maybe Run -> Cmd msg
+sendJoinInstance : Settings -> Bool -> Posix -> Instance -> Maybe Visit -> RawRun.State -> Maybe Run2 -> Cmd msg
 sendJoinInstance settings isHistoryDone date instance visit runState lastRun =
     events <|
         Encode.object
@@ -145,12 +146,12 @@ encodeVisit v =
         ]
 
 
-encodeMapRun : Run -> Encode.Value
+encodeMapRun : Run2 -> Encode.Value
 encodeMapRun r =
     Encode.object
-        [ ( "instance", encodeAddress <| Run.instance r )
+        [ ( "instance", encodeAddress r.address )
         , ( "joinedAt", encodeDate r.startedAt )
-        , ( "leftAt", encodeDate (Run.lastUpdatedAt r) )
+        , ( "leftAt", encodeDate r.updatedAt )
         ]
 
 

@@ -26,7 +26,7 @@ import Mapwatch as Mapwatch exposing (Model, Msg(..))
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
-import Mapwatch.Run as Run exposing (Run)
+import Mapwatch.Run2 as Run2 exposing (Run2)
 import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Route
@@ -37,11 +37,11 @@ import View.Nav
 import View.Setup
 
 
-viewAddress : Route.HistoryParams -> Icon.MapIconArgs -> Instance.Address -> Html msg
+viewAddress : Route.HistoryParams -> Icon.MapIconArgs a -> Instance.Address -> Html msg
 viewAddress qs args addr =
     let
         blighted =
-            if args.blighted then
+            if args.isBlightedMap then
                 "Blighted "
 
             else
@@ -59,7 +59,7 @@ viewMaybeInstance : Route.HistoryParams -> Maybe Instance -> Html msg
 viewMaybeInstance qs instance =
     case instance of
         Just (Instance.Instance addr) ->
-            viewAddress qs { blighted = False } addr
+            viewAddress qs { isBlightedMap = False } addr
 
         Just Instance.MainMenu ->
             span [] [ text "(none)" ]
@@ -73,9 +73,9 @@ viewInstance qs =
     Just >> viewMaybeInstance qs
 
 
-viewRun : Route.HistoryParams -> Run -> Html msg
+viewRun : Route.HistoryParams -> Run2 -> Html msg
 viewRun qs run =
-    viewAddress qs { blighted = Run.isBlightedMap run } run.address
+    viewAddress qs run run.address
 
 
 viewRegion : Route.HistoryParams -> Maybe WorldArea -> Html msg
