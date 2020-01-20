@@ -16,8 +16,8 @@ import Duration exposing (Millis)
 import Json.Decode as Decode
 import Json.Encode as Encode
 import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Mapwatch.Visit as Visit exposing (Visit)
 import Maybe.Extra
 import Settings exposing (Settings)
@@ -120,7 +120,7 @@ sendJoinInstance settings isHistoryDone date instance visit runState lastRun =
             , ( "instance", encodeInstance instance )
             , ( "lastVisit", visit |> Maybe.Extra.unwrap Encode.null encodeVisit )
             , ( "lastMapRun", lastRun |> Maybe.Extra.unwrap Encode.null encodeMapRun )
-            , ( "say", Speech.joinInstance settings isHistoryDone runState lastRun instance |> Maybe.Extra.unwrap Encode.null Speech.encoder )
+            , ( "say", Speech.joinInstance settings isHistoryDone runState lastRun |> Maybe.Extra.unwrap Encode.null Speech.encoder )
             ]
 
 

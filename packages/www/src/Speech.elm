@@ -2,8 +2,8 @@ module Speech exposing (Speech, encoder, joinInstance, progressComplete)
 
 import Json.Encode as E
 import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
 import Settings exposing (Settings)
 import Time
@@ -43,32 +43,34 @@ progressComplete settings name =
         Nothing
 
 
-joinInstance : Settings -> Bool -> RawMapRun.State -> Maybe MapRun -> Instance -> Maybe Speech
-joinInstance settings isHistoryDone runState lastRun instance =
+joinInstance : Settings -> Bool -> RawMapRun.State -> Maybe MapRun -> Maybe Speech
+joinInstance settings isHistoryDone runState lastRun =
     if isHistoryDone then
         let
-            zone : String
-            zone =
-                instance |> Instance.zoneName |> Maybe.withDefault "unknown"
-
             text : Maybe String
             text =
                 case ( lastRun |> Maybe.map mapRun, runState ) of
-                    ( Nothing, Just _ ) ->
-                        -- non-map -> map, or first run of the day
-                        "mapwatch now starting " ++ zone ++ ". " |> Just
+                    ( Nothing, Just r ) ->
+                        case r.visits of
+                            [] ->
+                                -- non-map -> new map, or first run of the day
+                                "mapwatch now starting " ++ r.address.zone ++ ". " |> Just
+
+                            _ ->
+                                -- a run is still happening
+                                Nothing
 
                     ( Nothing, _ ) ->
-                        -- non-map -> non-map, or a run is still happening, or we're in a non-map zone
+                        -- non-map -> non-map, or we're in a non-map zone
                         Nothing
 
                     ( Just finish, Nothing ) ->
                         -- map -> non-map
                         "mapwatch " ++ finish ++ " timer stopped. " |> Just
 
-                    ( Just finish, _ ) ->
+                    ( Just finish, Just r ) ->
                         -- map -> (different) map
-                        "mapwatch " ++ finish ++ " now starting " ++ zone ++ ". " |> Just
+                        "mapwatch " ++ finish ++ " now starting " ++ r.address.zone ++ ". " |> Just
         in
         text |> Maybe.map (createSpeech settings)
 
