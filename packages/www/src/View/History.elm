@@ -1,6 +1,6 @@
 module View.History exposing (formatMaybeDuration, view, viewDurationDelta, viewHistoryRun)
 
-import Dict
+import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
@@ -17,7 +17,6 @@ import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
 import Regex
 import Route
-import Set exposing (Set)
 import Time exposing (Posix)
 import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewProgress, viewRegion, viewRun, viewSideAreaName)
 import View.Icon as Icon
@@ -302,10 +301,10 @@ viewHistoryRun tz config qs goals r =
                 |> Dict.values
                 |> List.map (viewHistorySideAreaRow config qs)
             , r.conqueror
-                |> Maybe.map (viewConquerorRow config)
+                |> Maybe.map (viewConquerorRow config r.npcSays)
                 |> Maybe.Extra.toList
-            , r.npcs
-                |> Set.toList
+            , r.npcSays
+                |> Dict.toList
                 |> List.filterMap (viewHistoryNpcTextRow config qs)
             ]
 
@@ -379,8 +378,8 @@ viewHistorySideAreaRow { showDate } qs ( instance, d ) =
         )
 
 
-viewHistoryNpcTextRow : HistoryRowConfig -> Route.HistoryParams -> NpcId -> Maybe (Html msg)
-viewHistoryNpcTextRow { showDate } qs npcId =
+viewHistoryNpcTextRow : HistoryRowConfig -> Route.HistoryParams -> ( NpcId, List String ) -> Maybe (Html msg)
+viewHistoryNpcTextRow { showDate } qs ( npcId, texts ) =
     case viewNpcText npcId of
         [] ->
             Nothing
@@ -397,7 +396,7 @@ viewHistoryNpcTextRow { showDate } qs npcId =
                         ++ [ td [] []
 
                            -- , td [ colspan 8, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
-                           , td [ colspan 8 ] body
+                           , td [ colspan 8, title <| String.join "\n\n" texts ] body
                            , td [ class "side-dur" ] []
                            , td [ class "portals" ] []
                            , td [ class "town-pct" ] []
@@ -424,14 +423,19 @@ viewNpcText npcId =
         -- Don't show Tane during Metamorph league
         -- else if npcId == NpcId.tane then
         -- [ Icon.tane, text "Tane Octavius" ]
+        -- Don't show conquerors, they have their own special function
 
     else
         []
 
 
-viewConquerorRow : HistoryRowConfig -> ( Conqueror.Id, Conqueror.Encounter ) -> Html msg
-viewConquerorRow { showDate } ( id, encounter ) =
+viewConquerorRow : HistoryRowConfig -> Dict NpcId (List String) -> ( Conqueror.Id, Conqueror.Encounter ) -> Html msg
+viewConquerorRow { showDate } npcSays ( id, encounter ) =
     let
+        says : List String
+        says =
+            Dict.get (Conqueror.npcFromId id) npcSays |> Maybe.withDefault []
+
         label : List (Html msg)
         label =
             case id of
@@ -464,7 +468,7 @@ viewConquerorRow { showDate } ( id, encounter ) =
             []
          )
             ++ [ td [] []
-               , td [ colspan 8 ] body
+               , td [ colspan 8, title <| String.join "\n\n" says ] body
                , td [ class "side-dur" ] []
                , td [ class "portals" ] []
                , td [ class "town-pct" ] []

@@ -408,8 +408,7 @@ searchString dm r =
         Nothing
     , r.address.worldArea
         |> Maybe.Extra.unwrap (Just Datamine.defaultAtlasRegion) .atlasRegion
-    , r.conqueror |> Maybe.andThen (\( cid, _ ) -> npcName (Conqueror.npcFromId cid) dm)
     ]
-        ++ (r.npcs |> Set.toList |> List.map (\id -> npcName id dm))
+        ++ (r.npcSays |> Dict.keys |> List.map (\id -> npcName id dm))
         |> List.filterMap identity
         |> String.join "\n"

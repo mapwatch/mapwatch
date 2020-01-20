@@ -37,7 +37,7 @@ type alias Run2 =
     -- npc interactions
     , isBlightedMap : Bool
     , conqueror : Maybe ( Conqueror.Id, Conqueror.Encounter )
-    , npcs : Set NpcId
+    , npcSays : Dict NpcId (List String)
     }
 
 
@@ -150,11 +150,10 @@ fromRaw raw =
     , portals = raw.portals
     , isBlightedMap = isBlightedMap raw
     , conqueror = conquerorEncounterFromNpcs raw.npcSays
-    , npcs =
-        raw.npcSays
-            |> Dict.keys
-            |> List.filter (\id -> not <| Set.member id NpcId.conquerors)
-            |> Set.fromList
+
+    -- List.reverse: RawRun prepends the newest runs to the list, because that's
+    -- how linked lists work. We want to view oldest-first, not newest-first.
+    , npcSays = raw.npcSays |> Dict.map (\npcId -> List.map .raw >> List.reverse)
     , sideAreas =
         sideDurs
             |> List.map (\( a, d ) -> ( Instance.addressId a, ( a, d ) ))
