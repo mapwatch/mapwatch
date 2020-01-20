@@ -43,6 +43,7 @@ function transform(rawJson, rawLangs) {
     json,
     atlasNodes: _.keyBy(atlasNodes, 'WorldAreasKey'),
     uniqueMaps: _.keyBy(uniqueMaps, 'WorldAreasKey'),
+    itemVisualIdentity: _.keyBy(json["ItemVisualIdentity.dat"].data, 'Id')
   }))
   // I'm interested in maps, towns, and hideouts. other zones - usually campaign stuff - don't matter to mapwatch
   .filter(w => w.IsMapArea || w.IsUniqueMapArea || w.IsTown || w.IsHideout || w.IsVaalArea || w._IsLabTrial || w._IsAbyssalDepths)
@@ -58,14 +59,19 @@ function transform(rawJson, rawLangs) {
 }
 // Fragment maps don't seem to have a flag to easily distinguish them, nor do
 // they have a field that says how to visualize. List them manually. Sirus too.
-const fragmentMaps = {
+const nonAtlasMaps = {
   "3_ProphecyBoss": "Art/2DItems/Maps/PaleCourtComplete.png",
-  "MapAtlasShapersRealm": "Art/2DItems/Maps/ShaperComplete.png",
+  "MapWorldsShapersRealm": "Art/2DItems/Maps/ShaperComplete.png",
   "MapWorldsElderArena": "Art/2DItems/Maps/ElderComplete.png",
   "MapWorldsElderArenaUber": "Art/2DItems/Maps/UberElderComplete.png",
   "MapAtziri1": "Art/2DItems/Maps/VaalComplete.png",
   "MapAtziri2": "Art/2DItems/Maps/UberVaalComplete.png",
   "AtlasExilesBoss5": "Art/2DItems/Currency/Strongholds/WatchstoneIridescent.png",
+  "BreachBossFire": "Art/2DItems/Currency/Breach/BreachFragmentsFire.png",
+  "BreachBossCold": "Art/2DItems/Currency/Breach/BreachFragmentsCold.png",
+  "BreachBossLightning": "Art/2DItems/Currency/Breach/BreachFragmentsLightning.png",
+  "BreachBossPhysical": "Art/2DItems/Currency/Breach/BreachFragmentsPhysical.png",
+  "BreachBossChaos": "Art/2DItems/Currency/Breach/BreachFragmentsChaos.png",
 }
 function transformLang(raw, {worldAreasById}) {
   // areas all have different names for different languages, map id -> name.
@@ -133,7 +139,7 @@ function transformUniqueMap(raw, {json}) {
     ItemVisualIdentity: truthy(json["ItemVisualIdentity.dat"].data[raw.ItemVisualIdentityKey].DDSFile, raw),
   }
 }
-function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes}) {
+function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes, itemVisualIdentity}) {
   return {
     Id: raw.Id,
     IsTown: raw.IsTown,
@@ -143,7 +149,9 @@ function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes}) {
     IsVaalArea: raw.IsVaalArea,
     _IsLabTrial: raw.Id.startsWith('EndGame_Labyrinth_trials_'),
     _IsAbyssalDepths : raw.Id.startsWith('AbyssLeague'),
-    ItemVisualIdentity: fragmentMaps[raw.Id] || _.get(uniqueMaps[index] || atlasNodes[index], 'ItemVisualIdentity'),
+    ItemVisualIdentity: nonAtlasMaps[raw.Id] ||
+      _.get(uniqueMaps[index] || atlasNodes[index], 'ItemVisualIdentity') ||
+      (raw.Id.startsWith('MapWorlds') ? _.get(itemVisualIdentity[raw.Id], 'DDSFile') : null),
     AtlasRegion: _.get(atlasNodes[index], 'AtlasRegion'),
     Tiers: _.get(atlasNodes[index], 'Tiers'),
     RowID: index,

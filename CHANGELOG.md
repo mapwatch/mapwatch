@@ -7,6 +7,11 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2020-01-19
+- Breachlord domains and Shaper guardian maps are now correctly tracked.
+- Fixed a bug that caused [speech](https://mapwatch.erosson.org?enableSpeech=1) to happen more often than intended.
+- Fixed a short-lived conqueror-counting bug.
+
 ## 2020-01-18
 - Atlas regions are now displayed for each map. [/u/Kadoich inspired the icons; thank you!](https://www.reddit.com/r/pathofexile/comments/emmvln/a_map_stash_tab_qol_featuring_region_highlighting/)
 
