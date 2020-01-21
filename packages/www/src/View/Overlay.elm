@@ -1,27 +1,29 @@
 module View.Overlay exposing (view)
 
+import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Mapwatch as Mapwatch
-import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Sort as RunSort
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
 import Model as Model exposing (Msg, OkModel)
 import Readline exposing (Readline)
-import Route
-import Time
+import Route exposing (Route)
+import Route.QueryDict as QueryDict exposing (QueryDict)
+import Time exposing (Posix)
 import View.History
-import View.Home exposing (formatDuration, maskedText, viewAddress, viewDate, viewHeader, viewProgress, viewSideAreaName)
-import View.Icon as Icon
+import View.Home
+import View.Icon
 import View.Nav
 import View.Setup
-import View.Util exposing (hidePreLeagueButton, viewGoalForm)
+import View.Util
 
 
-view : Route.TimerParams -> OkModel -> Html Msg
-view qs model =
+view : OkModel -> Html Msg
+view model =
     case Mapwatch.ready model.mapwatch of
         Mapwatch.NotStarted ->
             viewSetup model <| div [] []
@@ -30,52 +32,49 @@ view qs model =
             viewSetup model <| div [] []
 
         Mapwatch.Ready _ ->
-            viewMain qs model
+            viewMain model
 
 
 viewSetup : OkModel -> Html Msg -> Html Msg
 viewSetup model body =
     div [ class "main" ]
-        [ viewHeader
-        , View.Nav.view <| Just model.route
+        [ View.Home.viewHeader
+        , View.Nav.view model
         , View.Setup.view model
         , body
         ]
 
 
-viewMain : Route.TimerParams -> OkModel -> Html msg
-viewMain qs model =
+viewMain : OkModel -> Html msg
+viewMain model =
     let
-        run =
-            RawMapRun.current model.now model.mapwatch.instance model.mapwatch.runState
-                |> Maybe.map MapRun.fromRaw
-                |> Maybe.Extra.filter (RunSort.isBetween { before = Nothing, after = qs.after })
-
-        hqs0 =
-            Route.historyParams0
-
-        hqs =
-            { hqs0 | after = qs.after, goal = qs.goal }
-
-        runs =
-            case qs.after of
-                Nothing ->
-                    RunSort.filterToday model.tz model.now model.mapwatch.runs
-
-                Just _ ->
-                    RunSort.filterBetween { before = Nothing, after = qs.after } model.mapwatch.runs
-
-        history =
-            List.take 5 <| Maybe.Extra.toList run ++ runs
+        after =
+            QueryDict.getPosix Route.keys.after model.query
 
         goal =
-            RunSort.parseGoalDuration qs.goal
+            Dict.get Route.keys.goal model.query |> RunSort.parseGoalDuration
 
         goalDuration =
             RunSort.goalDuration goal { session = runs, allTime = model.mapwatch.runs }
 
+        run =
+            RawMapRun.current model.now model.mapwatch.instance model.mapwatch.runState
+                |> Maybe.map MapRun.fromRaw
+                |> Maybe.Extra.filter (RunSort.isBetween { before = Nothing, after = after })
+
+        runs =
+            case after of
+                Nothing ->
+                    RunSort.filterToday model.tz model.now model.mapwatch.runs
+
+                Just _ ->
+                    RunSort.filterBetween { before = Nothing, after = after } model.mapwatch.runs
+
+        history =
+            List.take 5 <| Maybe.Extra.toList run ++ runs
+
         viewIndexRun i run_ =
-            viewRow (List.length history) i qs hqs (goalDuration run_) run_
+            viewRow model.query (List.length history) i (goalDuration run_) run_
     in
     div [ class "overlay-main" ]
         [ table [] <|
@@ -88,8 +87,8 @@ type alias Duration =
     Int
 
 
-viewRow : Int -> Int -> Route.TimerParams -> Route.HistoryParams -> Maybe Duration -> MapRun -> Html msg
-viewRow count i tqs hqs goalDuration run =
+viewRow : QueryDict -> Int -> Int -> Maybe Duration -> MapRun -> Html msg
+viewRow query count i goalDuration run =
     let
         isLast =
             i >= count - 1
@@ -102,9 +101,9 @@ viewRow count i tqs hqs goalDuration run =
             ]
         ]
         ([ td [ class "instance" ]
-            ([ viewAddress hqs { isBlightedMap = False } run.address ]
+            ([ View.Home.viewAddress query { isBlightedMap = False } run.address ]
                 ++ (if isLast then
-                        [ a [ class "overlay-back", Route.href <| Route.Timer tqs ] [ Icon.fas "cog" ] ]
+                        [ a [ class "overlay-back", Route.href query Route.Timer ] [ View.Icon.fas "cog" ] ]
 
                     else
                         []

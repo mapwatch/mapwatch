@@ -20,6 +20,7 @@ import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Ports
 import Route exposing (Route)
+import Route.QueryDict as QueryDict exposing (QueryDict)
 import Set
 import Settings exposing (Settings)
 import Task
@@ -59,6 +60,7 @@ type alias OkModel =
     , flags : Flags
     , loadedAt : Posix
     , route : Route
+    , query : QueryDict
     , now : Posix
     , lines : List String
     , settings : Settings
@@ -75,8 +77,7 @@ type Msg
     | NavRequest Browser.UrlRequest
     | NavLocation Url
     | RouteTo Route
-    | MapsSearch Route.MapsParams
-    | HistorySearch Route.HistoryParams
+    | Search QueryDict
     | InputVolume String
     | Reset (Maybe Route)
 
@@ -84,10 +85,14 @@ type Msg
 init : Flags -> Url -> Nav.Key -> ( Model, Cmd Msg )
 init flags url nav =
     let
+        ( route, query ) =
+            Route.parse url
+
         model =
             reset flags
                 nav
-                (Route.parse url)
+                query
+                route
                 (flags.settings
                     |> D.decodeValue Settings.decoder
                     |> Result.withDefault Settings.empty
@@ -104,8 +109,8 @@ init flags url nav =
     )
 
 
-reset : Flags -> Nav.Key -> Route -> Settings -> Time.Zone -> Model
-reset flags nav route settings tz =
+reset : Flags -> Nav.Key -> QueryDict -> Route -> Settings -> Time.Zone -> Model
+reset flags nav query route settings tz =
     let
         loadedAt =
             Time.millisToPosix flags.loadedAt
@@ -122,6 +127,7 @@ reset flags nav route settings tz =
             , flags = flags
             , loadedAt = loadedAt
             , route = route
+            , query = query
             , now = loadedAt
             , lines = []
             , settings = settings
@@ -196,8 +202,11 @@ updateOk msg ({ config, mapwatch, settings } as model) =
 
         NavLocation url ->
             let
+                ( route, query ) =
+                    Route.parse url
+
                 newModel =
-                    { model | route = Route.parse url }
+                    { model | route = route, query = query }
             in
             ( newModel, sendSettings newModel )
 
@@ -218,28 +227,14 @@ updateOk msg ({ config, mapwatch, settings } as model) =
                 Nothing ->
                     ( model, Cmd.none )
 
-        MapsSearch ps ->
+        Search query ->
             ( model
-            , Route.Maps ps
-                |> Route.stringify
-                -- |> Debug.log "maps-search"
-                |> Nav.replaceUrl model.nav
-            )
-
-        HistorySearch ps ->
-            ( model
-            , Route.History ps
-                |> Route.stringify
-                -- |> Debug.log "history-search"
-                |> Nav.replaceUrl model.nav
+            , Route.replaceUrl model.nav query model.route
             )
 
         RouteTo route ->
             ( model
-            , route
-                |> Route.stringify
-                -- |> Debug.log "route-to"
-                |> Nav.replaceUrl model.nav
+            , Route.replaceUrl model.nav model.query route
             )
 
         InputVolume str ->
@@ -255,9 +250,9 @@ updateOk msg ({ config, mapwatch, settings } as model) =
                     ( newModel, sendSettings newModel )
 
         Reset redirect ->
-            ( reset model.flags model.nav model.route model.settings model.tz
+            ( reset model.flags model.nav model.query model.route model.settings model.tz
                 |> Result.withDefault model
-            , redirect |> Maybe.Extra.unwrap Cmd.none (Route.stringify >> Nav.pushUrl model.nav)
+            , Maybe.Extra.unwrap Cmd.none (Route.pushUrl model.nav model.query) redirect
             )
 
         M msg_ ->

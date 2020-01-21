@@ -9,51 +9,52 @@ import Mapwatch as Mapwatch
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
-import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Mapwatch.MapRun.Sort as RunSort
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
 import Regex
-import Route
+import Route exposing (Route)
+import Route.QueryDict as QueryDict exposing (QueryDict)
 import Time exposing (Posix)
-import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewProgress, viewRegion, viewRun, viewSideAreaName)
-import View.Icon as Icon
+import View.Home
+import View.Icon
 import View.Nav
 import View.NotFound
 import View.Setup
-import View.Util exposing (pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
+import View.Util
 import View.Volume
 
 
-view : Route.HistoryParams -> OkModel -> Html Msg
-view params model =
-    if Mapwatch.isReady model.mapwatch && not (isValidPage params.page model) then
-        View.NotFound.view
+view : OkModel -> Html Msg
+view model =
+    if Mapwatch.isReady model.mapwatch && not (isValidPage (QueryDict.getInt Route.keys.page model.query |> Maybe.withDefault 0) model) then
+        View.NotFound.view model
 
     else
         div [ class "main" ]
-            [ viewHeader
-            , View.Nav.view <| Just model.route
+            [ View.Home.viewHeader
+            , View.Nav.view model
             , View.Setup.view model
-            , viewBody params model
+            , viewBody model
             ]
 
 
-viewBody : Route.HistoryParams -> OkModel -> Html Msg
-viewBody params model =
+viewBody : OkModel -> Html Msg
+viewBody model =
     case Mapwatch.ready model.mapwatch of
         Mapwatch.NotStarted ->
             div [] []
 
         Mapwatch.LoadingHistory p ->
-            viewProgress p
+            View.Home.viewProgress p
 
         Mapwatch.Ready p ->
             div []
-                [ viewMain params model
-                , viewProgress p
+                [ viewMain model
+                , View.Home.viewProgress p
                 ]
 
 
@@ -76,63 +77,64 @@ isValidPage page model =
             page == clamp 0 (numPages (List.length model.mapwatch.runs) - 1) page
 
 
-viewMain : Route.HistoryParams -> OkModel -> Html Msg
-viewMain params model =
+viewMain : OkModel -> Html Msg
+viewMain model =
     let
+        before =
+            QueryDict.getPosix Route.keys.before model.query
+
+        after =
+            QueryDict.getPosix Route.keys.after model.query
+
+        search =
+            Dict.get Route.keys.search model.query
+
+        sort =
+            Dict.get Route.keys.sort model.query
+
         currentRun : Maybe MapRun
         currentRun =
             -- include the current run if we're viewing a snapshot
-            Maybe.andThen (\b -> model.mapwatch.runState |> RawMapRun.current b model.mapwatch.instance) params.before
+            before
+                |> Maybe.andThen (\b -> model.mapwatch.runState |> RawMapRun.current b model.mapwatch.instance)
                 |> Maybe.map MapRun.fromRaw
 
         searchFilter : List MapRun -> List MapRun
         searchFilter =
-            Maybe.Extra.unwrap identity (RunSort.search model.mapwatch.datamine) params.search
+            search |> Maybe.Extra.unwrap identity (RunSort.search model.mapwatch.datamine)
 
         runs : List MapRun
         runs =
             Maybe.Extra.unwrap model.mapwatch.runs (\r -> r :: model.mapwatch.runs) currentRun
                 |> searchFilter
-                |> RunSort.filterBetween params
-                |> RunSort.sort params.sort
+                |> RunSort.filterBetween { before = before, after = after }
+                |> RunSort.sort sort
     in
     div []
         [ div []
             [ View.Volume.view model
-            , viewSearch [ placeholder "area name" ]
-                (\q ->
-                    { params
-                        | search =
-                            if q == "" then
-                                Nothing
-
-                            else
-                                Just q
-                    }
-                        |> HistorySearch
-                )
-                params.search
-            , viewDateSearch (\qs1 -> Route.History { params | before = qs1.before, after = qs1.after }) params
-            , viewGoalForm (\goal -> Model.RouteTo <| Route.History { params | goal = goal }) params
+            , View.Util.viewSearch [ placeholder "area name" ] model.query
+            , View.Util.viewDateSearch model.query model.route
+            , View.Util.viewGoalForm model.query
             ]
-        , viewStatsTable params model.tz model.now runs
-        , viewHistoryTable params runs model
+        , viewStatsTable model.query model.tz model.now runs
+        , viewHistoryTable runs model
         ]
 
 
-viewStatsTable : Route.HistoryParams -> Time.Zone -> Posix -> List MapRun -> Html msg
-viewStatsTable qs tz now runs =
+viewStatsTable : QueryDict -> Time.Zone -> Posix -> List MapRun -> Html msg
+viewStatsTable query tz now runs =
     table [ class "history-stats" ]
         [ tbody []
-            (case ( qs.after, qs.before ) of
+            (case ( QueryDict.getPosix Route.keys.after query, QueryDict.getPosix Route.keys.before query ) of
                 ( Nothing, Nothing ) ->
                     List.concat
                         [ viewStatsRows (text "Today") (runs |> RunSort.filterToday tz now |> MapRun.aggregate)
                         , viewStatsRows (text "All-time") (runs |> MapRun.aggregate)
                         ]
 
-                _ ->
-                    viewStatsRows (text "This session") (runs |> RunSort.filterBetween qs |> MapRun.aggregate)
+                ( b, a ) ->
+                    viewStatsRows (text "This session") (runs |> RunSort.filterBetween { before = b, after = a } |> MapRun.aggregate)
             )
         ]
 
@@ -141,7 +143,7 @@ viewStatsRows : Html msg -> MapRun.Aggregate -> List (Html msg)
 viewStatsRows title runs =
     [ tr []
         [ th [ class "title" ] [ title ]
-        , td [ colspan 10, class "maps-completed" ] [ text <| String.fromInt runs.num ++ pluralize " map" " maps" runs.num ++ " completed" ]
+        , td [ colspan 10, class "maps-completed" ] [ text <| String.fromInt runs.num ++ View.Util.pluralize " map" " maps" runs.num ++ " completed" ]
         ]
     , tr []
         ([ td [] []
@@ -158,9 +160,12 @@ viewStatsRows title runs =
     ]
 
 
-viewPaginator : Route.HistoryParams -> Int -> Html msg
-viewPaginator ({ page } as ps) numItems =
+viewPaginator : QueryDict -> Int -> Html msg
+viewPaginator query numItems =
     let
+        page =
+            QueryDict.getInt Route.keys.page query |> Maybe.withDefault 0
+
         firstVisItem =
             clamp 1 numItems <| (page * perPage) + 1
 
@@ -177,7 +182,15 @@ viewPaginator ({ page } as ps) numItems =
             numPages numItems - 1
 
         href i =
-            Route.href <| Route.History { ps | page = i }
+            let
+                q =
+                    if i == 0 then
+                        Dict.remove Route.keys.page query
+
+                    else
+                        QueryDict.insertInt Route.keys.page i query
+            in
+            Route.href q Route.History
 
         ( firstLink, prevLink ) =
             if page /= 0 then
@@ -194,19 +207,22 @@ viewPaginator ({ page } as ps) numItems =
                 ( span [], span [] )
     in
     div [ class "paginator" ]
-        [ firstLink [ Icon.fas "fast-backward", text " First" ]
-        , prevLink [ Icon.fas "step-backward", text " Prev" ]
+        [ firstLink [ View.Icon.fas "fast-backward", text " First" ]
+        , prevLink [ View.Icon.fas "step-backward", text " Prev" ]
         , span [] [ text <| String.fromInt firstVisItem ++ " - " ++ String.fromInt lastVisItem ++ " of " ++ String.fromInt numItems ]
-        , nextLink [ text "Next ", Icon.fas "step-forward" ]
-        , lastLink [ text "Last ", Icon.fas "fast-forward" ]
+        , nextLink [ text "Next ", View.Icon.fas "step-forward" ]
+        , lastLink [ text "Last ", View.Icon.fas "fast-forward" ]
         ]
 
 
-viewHistoryTable : Route.HistoryParams -> List MapRun -> OkModel -> Html msg
-viewHistoryTable ({ page } as params) queryRuns model =
+viewHistoryTable : List MapRun -> OkModel -> Html msg
+viewHistoryTable queryRuns model =
     let
+        page =
+            QueryDict.getInt Route.keys.page model.query |> Maybe.withDefault 0
+
         paginator =
-            viewPaginator params (List.length queryRuns)
+            viewPaginator model.query (List.length queryRuns)
 
         pageRuns =
             queryRuns
@@ -214,9 +230,9 @@ viewHistoryTable ({ page } as params) queryRuns model =
                 |> List.take perPage
 
         goalDuration =
-            RunSort.goalDuration (RunSort.parseGoalDuration params.goal)
+            RunSort.goalDuration (RunSort.parseGoalDuration <| Dict.get Route.keys.goal model.query)
                 { session =
-                    case params.after of
+                    case QueryDict.getPosix Route.keys.after model.query of
                         Just _ ->
                             queryRuns
 
@@ -231,18 +247,18 @@ viewHistoryTable ({ page } as params) queryRuns model =
 
             -- , viewHistoryHeader (Run.parseSort params.sort) params
             ]
-        , tbody [] (pageRuns |> List.map (viewHistoryRun model.tz { showDate = True } params goalDuration) |> List.concat)
+        , tbody [] (pageRuns |> List.map (viewHistoryRun model { showDate = True } goalDuration) |> List.concat)
         , tfoot [] [ tr [] [ td [ colspan 12 ] [ paginator ] ] ]
         ]
 
 
-viewSortLink : RunSort.SortField -> ( RunSort.SortField, RunSort.SortDir ) -> Route.HistoryParams -> Html msg
-viewSortLink thisField ( sortedField, dir ) qs =
+viewSortLink : QueryDict -> RunSort.SortField -> ( RunSort.SortField, RunSort.SortDir ) -> Html msg
+viewSortLink query thisField ( sortedField, dir ) =
     let
         ( icon, slug ) =
             if thisField == sortedField then
                 -- already sorted on this field, link changes direction
-                ( Icon.fas
+                ( View.Icon.fas
                     (if dir == RunSort.Asc then
                         "sort-up"
 
@@ -254,16 +270,16 @@ viewSortLink thisField ( sortedField, dir ) qs =
 
             else
                 -- link sorts by this field with default direction
-                ( Icon.fas "sort", RunSort.stringifySort thisField Nothing )
+                ( View.Icon.fas "sort", RunSort.stringifySort thisField Nothing )
     in
-    a [ Route.href <| Route.History { qs | sort = Just slug } ] [ icon ]
+    a [ Route.href (Dict.insert Route.keys.sort slug query) Route.History ] [ icon ]
 
 
-viewHistoryHeader : ( RunSort.SortField, RunSort.SortDir ) -> Route.HistoryParams -> Html msg
-viewHistoryHeader sort qs =
+viewHistoryHeader : QueryDict -> ( RunSort.SortField, RunSort.SortDir ) -> Html msg
+viewHistoryHeader query sort =
     let
         link field =
-            viewSortLink field sort qs
+            viewSortLink query field sort
     in
     tr []
         [ th [] [ link RunSort.SortDate ]
@@ -282,7 +298,7 @@ viewHistoryHeader sort qs =
 
 
 viewDuration =
-    text << formatDuration
+    text << View.Home.formatDuration
 
 
 type alias HistoryRowConfig =
@@ -293,19 +309,19 @@ type alias Duration =
     Int
 
 
-viewHistoryRun : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> (MapRun -> Maybe Duration) -> MapRun -> List (Html msg)
-viewHistoryRun tz config qs goals r =
-    viewHistoryMainRow tz config qs (goals r) r
+viewHistoryRun : { m | query : QueryDict, tz : Time.Zone } -> HistoryRowConfig -> (MapRun -> Maybe Duration) -> MapRun -> List (Html msg)
+viewHistoryRun ({ query, tz } as m) config goals r =
+    viewHistoryMainRow m config (goals r) r
         :: List.concat
             [ r.sideAreas
                 |> Dict.values
-                |> List.map (viewHistorySideAreaRow config qs)
+                |> List.map (viewHistorySideAreaRow query config)
             , r.conqueror
                 |> Maybe.map (viewConquerorRow config r.npcSays)
                 |> Maybe.Extra.toList
             , r.npcSays
                 |> Dict.toList
-                |> List.filterMap (viewHistoryNpcTextRow config qs)
+                |> List.filterMap (viewHistoryNpcTextRow config)
             ]
 
 
@@ -338,30 +354,30 @@ viewDurationTail { portals, duration } =
             else
                 [ td [ class "dur" ] [], td [ class "dur" ] [] ]
            )
-        ++ [ td [ class "portals" ] [ text <| String.fromFloat (roundToPlaces 2 portals) ++ pluralize " portal" " portals" portals ]
+        ++ [ td [ class "portals" ] [ text <| String.fromFloat (View.Util.roundToPlaces 2 portals) ++ View.Util.pluralize " portal" " portals" portals ]
            , td [ class "town-pct" ]
                 [ text <| String.fromInt (clamp 0 100 <| floor <| 100 * (toFloat duration.town / Basics.max 1 (toFloat duration.all))) ++ "% in town" ]
            ]
 
 
-viewHistoryMainRow : Time.Zone -> HistoryRowConfig -> Route.HistoryParams -> Maybe Duration -> MapRun -> Html msg
-viewHistoryMainRow tz { showDate } qs goal r =
+viewHistoryMainRow : { m | query : QueryDict, tz : Time.Zone } -> HistoryRowConfig -> Maybe Duration -> MapRun -> Html msg
+viewHistoryMainRow { tz, query } { showDate } goal r =
     tr [ class "main-area" ]
         ((if showDate then
-            [ td [ class "date" ] [ viewDate tz r.updatedAt ] ]
+            [ td [ class "date" ] [ View.Home.viewDate tz r.updatedAt ] ]
 
           else
             []
          )
-            ++ [ td [ class "zone" ] [ viewRun qs r ]
-               , td [] [ viewRegion qs r.address.worldArea ]
+            ++ [ td [ class "zone" ] [ View.Home.viewRun query r ]
+               , td [] [ View.Home.viewRegion query r.address.worldArea ]
                ]
             ++ viewRunDurations goal r
         )
 
 
-viewHistorySideAreaRow : HistoryRowConfig -> Route.HistoryParams -> ( Instance.Address, Duration ) -> Html msg
-viewHistorySideAreaRow { showDate } qs ( instance, d ) =
+viewHistorySideAreaRow : QueryDict -> HistoryRowConfig -> ( Instance.Address, Duration ) -> Html msg
+viewHistorySideAreaRow query { showDate } ( instance, d ) =
     tr [ class "side-area" ]
         ((if showDate then
             [ td [ class "date" ] [] ]
@@ -370,7 +386,7 @@ viewHistorySideAreaRow { showDate } qs ( instance, d ) =
             []
          )
             ++ [ td [] []
-               , td [ class "zone", colspan 8 ] [ viewSideAreaName qs (Instance.Instance instance) ]
+               , td [ class "zone", colspan 8 ] [ View.Home.viewSideAreaName query (Instance.Instance instance) ]
                , td [ class "side-dur" ] [ viewDuration d ]
                , td [ class "portals" ] []
                , td [ class "town-pct" ] []
@@ -378,8 +394,8 @@ viewHistorySideAreaRow { showDate } qs ( instance, d ) =
         )
 
 
-viewHistoryNpcTextRow : HistoryRowConfig -> Route.HistoryParams -> ( NpcId, List String ) -> Maybe (Html msg)
-viewHistoryNpcTextRow { showDate } qs ( npcId, texts ) =
+viewHistoryNpcTextRow : HistoryRowConfig -> ( NpcId, List String ) -> Maybe (Html msg)
+viewHistoryNpcTextRow { showDate } ( npcId, texts ) =
     case viewNpcText npcId of
         [] ->
             Nothing
@@ -407,22 +423,22 @@ viewHistoryNpcTextRow { showDate } qs ( npcId, texts ) =
 viewNpcText : String -> List (Html msg)
 viewNpcText npcId =
     if npcId == NpcId.einhar then
-        [ Icon.einhar, text "Einhar, Beastmaster" ]
+        [ View.Icon.einhar, text "Einhar, Beastmaster" ]
 
     else if npcId == NpcId.alva then
-        [ Icon.alva, text "Alva, Master Explorer" ]
+        [ View.Icon.alva, text "Alva, Master Explorer" ]
 
     else if npcId == NpcId.niko then
-        [ Icon.niko, text "Niko, Master of the Depths" ]
+        [ View.Icon.niko, text "Niko, Master of the Depths" ]
 
     else if npcId == NpcId.jun then
-        [ Icon.jun, text "Jun, Veiled Master" ]
+        [ View.Icon.jun, text "Jun, Veiled Master" ]
 
     else if npcId == NpcId.cassia then
-        [ Icon.cassia, text "Sister Cassia" ]
+        [ View.Icon.cassia, text "Sister Cassia" ]
         -- Don't show Tane during Metamorph league
         -- else if npcId == NpcId.tane then
-        -- [ Icon.tane, text "Tane Octavius" ]
+        -- [ View.Icon.tane, text "Tane Octavius" ]
         -- Don't show conquerors, they have their own special function
 
     else
@@ -440,16 +456,16 @@ viewConquerorRow { showDate } npcSays ( id, encounter ) =
         label =
             case id of
                 Conqueror.Baran ->
-                    [ Icon.baran, text "Baran, the Crusader" ]
+                    [ View.Icon.baran, text "Baran, the Crusader" ]
 
                 Conqueror.Veritania ->
-                    [ Icon.veritania, text "Veritania, the Redeemer" ]
+                    [ View.Icon.veritania, text "Veritania, the Redeemer" ]
 
                 Conqueror.AlHezmin ->
-                    [ Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
+                    [ View.Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
 
                 Conqueror.Drox ->
-                    [ Icon.drox, text "Drox, the Warlord" ]
+                    [ View.Icon.drox, text "Drox, the Warlord" ]
 
         body : List (Html msg)
         body =
@@ -491,7 +507,7 @@ viewDurationDelta mcur mgoal =
                     else
                         ""
             in
-            span [] [ text <| " (" ++ sign ++ formatDuration dt ++ ")" ]
+            span [] [ text <| " (" ++ sign ++ View.Home.formatDuration dt ++ ")" ]
 
         _ ->
             span [] []
@@ -499,4 +515,4 @@ viewDurationDelta mcur mgoal =
 
 formatMaybeDuration : Maybe Duration -> String
 formatMaybeDuration =
-    Maybe.Extra.unwrap "--:--" formatDuration
+    Maybe.Extra.unwrap "--:--" View.Home.formatDuration

@@ -4,17 +4,18 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Model as M exposing (Msg, OkModel)
-import Route as Route exposing (Route)
+import Route exposing (Route)
+import Route.Feature as Feature exposing (Feature)
 import View.Icon as Icon
 
 
 view : OkModel -> Html Msg
-view { settings, route } =
+view { settings, route, query } =
     let
         { volume } =
             settings
     in
-    if Route.isSpeechEnabled route then
+    if Feature.isActive Feature.Speech query then
         div []
             -- without a fixed width, the volume-off/low/high icons are all different widths
             [ span [ style "display" "inline-block", style "width" "1em" ] [ Icon.fas (viewIconName volume) ]

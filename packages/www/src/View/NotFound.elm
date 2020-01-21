@@ -3,15 +3,16 @@ module View.NotFound exposing (view)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import Model exposing (OkModel)
 import Route
 import View.Home
 import View.Nav
 
 
-view : Html msg
-view =
+view : OkModel -> Html msg
+view model =
     div [ class "main" ]
         [ View.Home.viewHeader
-        , View.Nav.view Nothing
+        , View.Nav.view model
         , text "404"
         ]

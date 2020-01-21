@@ -31,17 +31,17 @@ viewBody rmodel =
 
         Ok model ->
             case model.route of
-                History params ->
-                    View.History.view params model
+                History ->
+                    View.History.view model
 
-                Maps params ->
-                    View.Maps.view params model
+                Maps ->
+                    View.Maps.view model
 
-                Timer qs ->
-                    View.Timer.view qs model
+                Timer ->
+                    View.Timer.view model
 
-                Overlay qs ->
-                    View.Overlay.view qs model
+                Overlay ->
+                    View.Overlay.view model
 
                 Debug ->
                     View.Debug.view model
@@ -53,10 +53,10 @@ viewBody rmodel =
                     View.DebugDatamine.view model.mapwatch.datamine
 
                 Changelog ->
-                    View.Changelog.view model.flags.changelog
+                    View.Changelog.view model
 
                 Settings ->
                     View.Settings.view model
 
                 NotFound loc ->
-                    View.NotFound.view
+                    View.NotFound.view model

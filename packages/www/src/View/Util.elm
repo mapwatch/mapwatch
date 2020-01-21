@@ -1,12 +1,16 @@
 module View.Util exposing (hidePreLeagueButton, leagueDate, leagueName, pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
 
+import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
 import Mapwatch exposing (Model, Msg)
+import Model exposing (Msg)
 import Regex
-import Route as Route exposing (Route)
+import Route exposing (Route)
+import Route.Feature as Feature exposing (Feature)
+import Route.QueryDict as QueryDict exposing (QueryDict)
 import Time exposing (Posix)
 import View.Icon as Icon
 
@@ -16,8 +20,15 @@ roundToPlaces p n =
     (n * (10 ^ p) |> round |> toFloat) / (10 ^ p)
 
 
-viewSearch : List (Attribute msg) -> (String -> msg) -> Maybe String -> Html msg
-viewSearch attrs msg search =
+viewSearch : List (Attribute Msg) -> QueryDict -> Html Msg
+viewSearch attrs query =
+    let
+        search =
+            Dict.get Route.keys.search query
+
+        msg s =
+            Dict.insert Route.keys.search s query |> Model.Search
+    in
     span [ class "search-form search-text" ]
         [ input
             ([ value <| Maybe.withDefault "" search
@@ -32,45 +43,48 @@ viewSearch attrs msg search =
         ]
 
 
-viewGoalForm : (Maybe String -> msg) -> { a | goal : Maybe String, after : Maybe b, enableGoals : Bool } -> Html msg
-viewGoalForm onChange0 qs =
-    let
-        sessionName =
-            case qs.after of
-                Just _ ->
-                    "session"
+viewGoalForm : QueryDict -> Html Msg
+viewGoalForm query =
+    if Feature.isActive Feature.Goals query then
+        let
+            goal =
+                Dict.get Route.keys.goal query
 
-                Nothing ->
-                    "today's"
+            sessionName =
+                case QueryDict.getPosix Route.keys.after query of
+                    Just _ ->
+                        "session"
 
-        ( optExactly, exactly ) =
-            Maybe.withDefault ( [], [] ) <|
-                Maybe.andThen
-                    (\dur ->
-                        if Regex.contains ("best|mean|none" |> Regex.fromString |> Maybe.withDefault Regex.never) dur then
-                            Nothing
+                    Nothing ->
+                        "today's"
 
-                        else
-                            Just ( [ selected True ], [ input [ type_ "text", onInput onChange, value dur, placeholder "\"5:00\" or \"300\" or \"5m 0s\"" ] [] ] )
-                    )
-                    qs.goal
+            ( optExactly, exactly ) =
+                goal
+                    |> Maybe.andThen
+                        (\dur ->
+                            if Regex.contains ("best|mean|none" |> Regex.fromString |> Maybe.withDefault Regex.never) dur then
+                                Nothing
 
-        onChange str =
-            onChange0 <|
-                if str == "none" then
-                    Nothing
+                            else
+                                Just ( [ selected True ], [ input [ type_ "text", onInput msg, value dur, placeholder "\"5:00\" or \"300\" or \"5m 0s\"" ] [] ] )
+                        )
+                    |> Maybe.withDefault ( [], [] )
 
-                else
-                    Just str
-    in
-    if qs.enableGoals then
+            msg s =
+                Model.Search <|
+                    if s == "none" then
+                        Dict.remove Route.keys.goal query
+
+                    else
+                        Dict.insert Route.keys.goal s query
+        in
         span [ class "search-form search-goal" ]
-            [ select [ onInput onChange ]
-                [ option [ selected <| qs.goal == Nothing || qs.goal == Just "none", value "none" ] [ text "No time goal" ]
-                , option [ selected <| qs.goal == Just "best-session", value "best-session" ] [ text <| "Goal: " ++ sessionName ++ " best" ]
-                , option [ selected <| qs.goal == Just "best", value "best" ] [ text <| "Goal: all-time best" ]
-                , option [ selected <| qs.goal == Just "mean-session", value "mean-session" ] [ text <| "Goal: " ++ sessionName ++ " average" ]
-                , option [ selected <| qs.goal == Just "mean", value "mean" ] [ text <| "Goal: all-time average" ]
+            [ select [ onInput msg ]
+                [ option [ selected <| goal == Nothing || goal == Just "none", value "none" ] [ text "No time goal" ]
+                , option [ selected <| goal == Just "best-session", value "best-session" ] [ text <| "Goal: " ++ sessionName ++ " best" ]
+                , option [ selected <| goal == Just "best", value "best" ] [ text <| "Goal: all-time best" ]
+                , option [ selected <| goal == Just "mean-session", value "mean-session" ] [ text <| "Goal: " ++ sessionName ++ " average" ]
+                , option [ selected <| goal == Just "mean", value "mean" ] [ text <| "Goal: all-time average" ]
                 , option (optExactly ++ [ value "" ]) [ text "Goal: exactly..." ]
                 ]
             , span [] exactly
@@ -98,30 +112,27 @@ leagueDate =
     "2019-12-13T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix
 
 
-hidePreLeagueButton : (Posix -> Route) -> Html msg
-hidePreLeagueButton route =
-    case leagueDate of
+hidePreLeagueButton : QueryDict -> Route -> Html msg
+hidePreLeagueButton query route =
+    case leagueDate |> Result.map (ISO8601.fromPosix >> ISO8601.toString) of
         Err err ->
             pre [] [ text err ]
 
         Ok date ->
-            a [ class "button", Route.href <| route date ] [ Icon.fas "calendar", text <| " Hide pre-" ++ leagueName ++ " maps" ]
+            a [ class "button", Route.href (Dict.insert Route.keys.after date query) route ] [ Icon.fas "calendar", text <| " Hide pre-" ++ leagueName ++ " maps" ]
 
 
-viewDateSearch : ({ after : Maybe Posix, before : Maybe Posix } -> Route) -> { a | before : Maybe Posix, after : Maybe Posix } -> Html msg
-viewDateSearch route qs =
+viewDateSearch : QueryDict -> Route -> Html msg
+viewDateSearch query route =
     let
-        href0 =
-            { after = Nothing, before = Nothing }
-
         buttons =
-            case qs.after of
+            case QueryDict.getPosix Route.keys.after query of
                 Nothing ->
-                    [ hidePreLeagueButton (\after -> route { href0 | after = Just after })
+                    [ hidePreLeagueButton query route
                     ]
 
                 Just _ ->
-                    [ a [ class "button", Route.href <| route { href0 | after = Nothing } ] [ Icon.fas "eye", text " Unhide all" ]
+                    [ a [ class "button", Route.href (Dict.remove Route.keys.after query) route ] [ Icon.fas "eye", text " Unhide all" ]
                     ]
     in
     span [ class "search-form search-date" ] buttons

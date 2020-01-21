@@ -29,7 +29,8 @@ import Mapwatch.LogLine as LogLine
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.Visit as Visit
 import Maybe.Extra
-import Route
+import Route exposing (Route)
+import Route.QueryDict as QueryDict exposing (QueryDict)
 import Time exposing (Posix)
 import TimedReadline exposing (Progress)
 import View.Icon as Icon
@@ -37,8 +38,8 @@ import View.Nav
 import View.Setup
 
 
-viewAddress : Route.HistoryParams -> Icon.MapIconArgs a -> Instance.Address -> Html msg
-viewAddress qs args addr =
+viewAddress : QueryDict -> Icon.MapIconArgs a -> Instance.Address -> Html msg
+viewAddress query args addr =
     let
         blighted =
             if args.isBlightedMap then
@@ -48,18 +49,17 @@ viewAddress qs args addr =
                 ""
     in
     if Maybe.Extra.unwrap False Datamine.isMap addr.worldArea then
-        -- TODO preserve before/after
-        a [ Route.href <| Route.History { qs | search = Just addr.zone }, title addr.addr ] [ Icon.mapOrBlank args addr.worldArea, text blighted, text addr.zone ]
+        a [ Route.href (Dict.insert Route.keys.search addr.zone query) Route.History, title addr.addr ] [ Icon.mapOrBlank args addr.worldArea, text blighted, text addr.zone ]
 
     else
         span [ title addr.addr ] [ text addr.zone ]
 
 
-viewMaybeInstance : Route.HistoryParams -> Maybe Instance -> Html msg
-viewMaybeInstance qs instance =
+viewMaybeInstance : QueryDict -> Maybe Instance -> Html msg
+viewMaybeInstance query instance =
     case instance of
         Just (Instance.Instance addr) ->
-            viewAddress qs { isBlightedMap = False } addr
+            viewAddress query { isBlightedMap = False } addr
 
         Just Instance.MainMenu ->
             span [] [ text "(none)" ]
@@ -68,24 +68,23 @@ viewMaybeInstance qs instance =
             span [] [ text "(none)" ]
 
 
-viewInstance : Route.HistoryParams -> Instance -> Html msg
-viewInstance qs =
-    Just >> viewMaybeInstance qs
+viewInstance : QueryDict -> Instance -> Html msg
+viewInstance query =
+    Just >> viewMaybeInstance query
 
 
-viewRun : Route.HistoryParams -> MapRun -> Html msg
-viewRun qs run =
-    viewAddress qs run run.address
+viewRun : QueryDict -> MapRun -> Html msg
+viewRun query run =
+    viewAddress query run run.address
 
 
-viewRegion : Route.HistoryParams -> Maybe WorldArea -> Html msg
-viewRegion qs w =
+viewRegion : QueryDict -> Maybe WorldArea -> Html msg
+viewRegion query w =
     let
         name =
             w |> Maybe.andThen .atlasRegion |> Maybe.withDefault Datamine.defaultAtlasRegion
     in
-    -- TODO icon
-    a [ Route.href <| Route.History { qs | search = Just name } ] [ Icon.region w, text name ]
+    a [ Route.href (Dict.insert Route.keys.search name query) Route.History ] [ Icon.region w, text name ]
 
 
 time =
@@ -271,11 +270,11 @@ monthToString m =
             "Dec"
 
 
-viewSideAreaName : Route.HistoryParams -> Instance -> Html msg
-viewSideAreaName qs instance =
+viewSideAreaName : QueryDict -> Instance -> Html msg
+viewSideAreaName query instance =
     let
         label =
-            viewInstance qs instance
+            viewInstance query instance
     in
     case Instance.worldArea instance of
         Nothing ->

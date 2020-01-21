@@ -1,6 +1,6 @@
 module View.Maps exposing (view)
 
-import Dict
+import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
@@ -11,46 +11,46 @@ import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Sort as RunSort
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
-import Regex
-import Route
-import Time
+import Route exposing (Route)
+import Route.QueryDict as QueryDict exposing (QueryDict)
+import Time exposing (Posix)
 import View.History
-import View.Home exposing (formatDuration, maskedText, viewDate, viewHeader, viewInstance, viewProgress, viewRegion, viewSideAreaName)
-import View.Icon as Icon
+import View.Home
+import View.Icon
 import View.Nav
 import View.Setup
-import View.Util exposing (pluralize, roundToPlaces, viewSearch)
+import View.Util
 import View.Volume
 
 
-view : Route.MapsParams -> OkModel -> Html Msg
-view params model =
+view : OkModel -> Html Msg
+view model =
     div [ class "main" ]
-        [ viewHeader
-        , View.Nav.view <| Just model.route
+        [ View.Home.viewHeader
+        , View.Nav.view model
         , View.Setup.view model
-        , viewBody params model
+        , viewBody model
         ]
 
 
-viewBody : Route.MapsParams -> OkModel -> Html Msg
-viewBody params model =
+viewBody : OkModel -> Html Msg
+viewBody model =
     case Mapwatch.ready model.mapwatch of
         Mapwatch.NotStarted ->
             div [] []
 
         Mapwatch.LoadingHistory p ->
-            viewProgress p
+            View.Home.viewProgress p
 
         Mapwatch.Ready p ->
             div []
-                [ viewMain params model
-                , viewProgress p
+                [ viewMain model
+                , View.Home.viewProgress p
                 ]
 
 
-search : Datamine -> Maybe String -> List MapRun -> List MapRun
-search dm mq =
+applySearch : Datamine -> Maybe String -> List MapRun -> List MapRun
+applySearch dm mq =
     case mq of
         Nothing ->
             identity
@@ -61,8 +61,8 @@ search dm mq =
 
 {-| parse and apply the "?o=..." querytring parameter
 -}
-sort : Maybe String -> List GroupedRuns -> List GroupedRuns
-sort o =
+applySort : Maybe String -> List GroupedRuns -> List GroupedRuns
+applySort o =
     let
         ( col, dir ) =
             case Maybe.map (String.split "-") o of
@@ -110,27 +110,36 @@ type alias GroupedRuns =
     { name : String, worldArea : WorldArea, runs : MapRun.Aggregate }
 
 
-viewMain : Route.MapsParams -> OkModel -> Html Msg
-viewMain params model =
+viewMain : OkModel -> Html Msg
+viewMain model =
     let
+        before =
+            QueryDict.getPosix Route.keys.before model.query
+
+        after =
+            QueryDict.getPosix Route.keys.after model.query
+
+        search =
+            Dict.get Route.keys.search model.query
+
         runs : List MapRun
         runs =
             model.mapwatch.runs
-                |> search model.mapwatch.datamine params.search
-                |> RunSort.filterBetween params
+                |> applySearch model.mapwatch.datamine search
+                |> RunSort.filterBetween { before = before, after = after }
 
         rows : List (Html msg)
         rows =
             runs
                 |> groupRuns model.mapwatch.datamine
-                |> sort params.sort
-                |> List.map (viewMap params)
+                |> applySort (Dict.get Route.keys.sort model.query)
+                |> List.map (viewMap model.query)
     in
     div []
         [ View.Volume.view model
-        , viewSearch [ placeholder "map name" ] (\q -> MapsSearch { params | search = Just q }) params.search
+        , View.Util.viewSearch [ placeholder "map name" ] model.query
         , table [ class "by-map" ]
-            [ thead [] [ header params ]
+            [ thead [] [ header model.query ]
             , tbody [] rows
             ]
         ]
@@ -147,12 +156,12 @@ groupRuns dm =
             )
 
 
-header : Route.MapsParams -> Html msg
-header params =
+header : QueryDict -> Html msg
+header query =
     let
         cell : String -> String -> Html msg
         cell col label =
-            th [] [ a [ headerHref col params ] [ text label ] ]
+            th [] [ a [ headerHref query col ] [ text label ] ]
     in
     tr []
         [ cell "name" "Name"
@@ -165,30 +174,28 @@ header params =
         ]
 
 
-headerHref : String -> Route.MapsParams -> Attribute msg
-headerHref col params =
-    Route.href <|
-        Route.Maps
-            { params
-                | sort =
-                    Just <|
-                        if Just col == params.sort then
-                            col ++ "-desc"
+headerHref : QueryDict -> String -> Attribute msg
+headerHref query col =
+    let
+        sort =
+            if Just col == Dict.get Route.keys.sort query then
+                col ++ "-desc"
 
-                        else
-                            col
-            }
+            else
+                col
+    in
+    Route.href (Dict.insert Route.keys.sort sort query) Route.Maps
 
 
-viewMap : Route.MapsParams -> GroupedRuns -> Html msg
-viewMap qs { name, worldArea, runs } =
+viewMap : QueryDict -> GroupedRuns -> Html msg
+viewMap query { name, worldArea, runs } =
     let
         { mean, best, num } =
             runs
     in
     tr []
-        [ td [ class "zone" ] [ viewMapName qs name worldArea ]
-        , td [] [ viewRegionName qs worldArea ]
+        [ td [ class "zone" ] [ viewMapName query name worldArea ]
+        , td [] [ viewRegionName query worldArea ]
         , td []
             (case Datamine.tier worldArea of
                 Nothing ->
@@ -197,30 +204,23 @@ viewMap qs { name, worldArea, runs } =
                 Just tier ->
                     [ text <| "(T" ++ String.fromInt tier ++ ")" ]
             )
-        , td [] [ text <| formatDuration mean.duration.mainMap ++ " per map" ]
-        , td [] [ text <| String.fromFloat (roundToPlaces 2 mean.portals) ++ pluralize " portal" " portals" mean.portals ]
+        , td [] [ text <| View.Home.formatDuration mean.duration.mainMap ++ " per map" ]
+        , td [] [ text <| String.fromFloat (View.Util.roundToPlaces 2 mean.portals) ++ View.Util.pluralize " portal" " portals" mean.portals ]
         , td [] [ text <| "×" ++ String.fromInt num ++ " runs." ]
-        , td [] [ text <| Maybe.Extra.unwrap "--:--" formatDuration best.mainMap ++ " per map" ]
+        , td [] [ text <| Maybe.Extra.unwrap "--:--" View.Home.formatDuration best.mainMap ++ " per map" ]
         ]
 
 
-viewRegionName : Route.MapsParams -> WorldArea -> Html msg
-viewRegionName qs w =
+viewRegionName : QueryDict -> WorldArea -> Html msg
+viewRegionName query w =
     let
-        hqs0 =
-            Route.historyParams0
-
         name =
             w.atlasRegion |> Maybe.withDefault Datamine.defaultAtlasRegion
     in
-    viewRegion { hqs0 | search = Just name, after = qs.after, before = qs.before } (Just w)
+    View.Home.viewRegion (Dict.insert Route.keys.search name query) (Just w)
 
 
-viewMapName : Route.MapsParams -> String -> WorldArea -> Html msg
-viewMapName qs name worldArea =
-    let
-        hqs0 =
-            Route.historyParams0
-    in
-    a [ Route.href <| Route.History { hqs0 | search = Just name, after = qs.after, before = qs.before } ]
-        [ Icon.mapOrBlank { isBlightedMap = False } (Just worldArea), text name ]
+viewMapName : QueryDict -> String -> WorldArea -> Html msg
+viewMapName query name worldArea =
+    a [ Route.href (Dict.insert Route.keys.search name query) Route.History ]
+        [ View.Icon.mapOrBlank { isBlightedMap = False } (Just worldArea), text name ]
