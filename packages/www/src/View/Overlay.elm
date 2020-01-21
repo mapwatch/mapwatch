@@ -38,7 +38,7 @@ view model =
 viewSetup : OkModel -> Html Msg -> Html Msg
 viewSetup model body =
     div [ class "main" ]
-        [ View.Home.viewHeader
+        [ View.Home.viewHeader model
         , View.Nav.view model
         , View.Setup.view model
         , body

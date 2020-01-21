@@ -315,3 +315,10 @@ svg.icon-region .focus {
   stroke: goldenrod;
   stroke-width: 0.1;
 }
+
+.electron-download {
+  text-align: center;
+  border: 0.2em solid #eb99a1;
+  border-radius: 1em;
+  padding: 1em;
+}

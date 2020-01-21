@@ -7,15 +7,15 @@ import Markdown
 import Maybe.Extra
 import Model exposing (OkModel)
 import Route as Route exposing (Route)
-import View.Home exposing (viewHeader)
-import View.Icon as Icon
+import View.Home
+import View.Icon
 import View.Nav
 
 
 view : OkModel -> Html msg
 view model =
     div [ class "main" ]
-        [ viewHeader
+        [ View.Home.viewHeader model
         , View.Nav.view model
         , p [] [ text "Mapwatch is open source! ", a [ target "_blank", href "https://www.github.com/mapwatch/mapwatch" ] [ text "View the source code." ] ]
         , p []
@@ -28,8 +28,8 @@ view model =
             , text "."
             ]
         , div [ class "changelog-subscribe-buttons" ]
-            [ a [ class "button", target "_blank", href "/rss.xml" ] [ Icon.fas "rss", text " RSS notifications" ]
-            , a [ class "button", target "_blank", href "https://feedburner.google.com/fb/a/mailverify?uri=mapwatch" ] [ Icon.fas "at", text " Email notifications" ]
+            [ a [ class "button", target "_blank", href "/rss.xml" ] [ View.Icon.fas "rss", text " RSS notifications" ]
+            , a [ class "button", target "_blank", href "https://feedburner.google.com/fb/a/mailverify?uri=mapwatch" ] [ View.Icon.fas "at", text " Email notifications" ]
             ]
         , model.flags.changelog
             -- skip everything above the first "---"

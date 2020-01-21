@@ -31,6 +31,7 @@ type alias FeatureConfig =
 type Feature
     = Goals
     | Speech
+    | DownloadLink
 
 
 type alias QueryString =
@@ -41,6 +42,7 @@ list : List Feature
 list =
     [ Goals
     , Speech
+    , DownloadLink
     ]
 
 
@@ -57,6 +59,9 @@ config feature =
 
         Speech ->
             FeatureConfig feature "enableSpeech" False
+
+        DownloadLink ->
+            FeatureConfig feature "downloadLink" False
 
 
 byString : Dict String FeatureConfig
@@ -86,9 +91,7 @@ stringToBool s =
 
 isActive : Feature -> QueryString -> Bool
 isActive feature =
-    case feature of
-        _ ->
-            Dict.get (string feature) >> Maybe.Extra.unwrap (defaultValue feature) stringToBool
+    Dict.get (string feature) >> Maybe.Extra.unwrap (defaultValue feature) stringToBool
 
 
 activate : Feature -> QueryString -> QueryString

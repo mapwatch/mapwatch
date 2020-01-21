@@ -12,7 +12,7 @@ import View.Nav
 view : OkModel -> Html msg
 view model =
     div [ class "main" ]
-        [ View.Home.viewHeader
+        [ View.Home.viewHeader model
         , View.Nav.view model
         , text "404"
         ]

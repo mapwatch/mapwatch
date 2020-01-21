@@ -5,7 +5,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Model exposing (Msg, OkModel)
 import Route exposing (Route)
-import View.Home exposing (viewHeader)
+import View.Home
 import View.Nav
 import View.Volume
 
@@ -13,7 +13,7 @@ import View.Volume
 view : OkModel -> Html Msg
 view model =
     div [ class "main" ]
-        [ viewHeader
+        [ View.Home.viewHeader model
         , View.Nav.view model
         , View.Volume.view model
         , button [ onClick (Model.Reset (Just Route.Timer)) ] [ text "Analyze another Client.txt log file" ]

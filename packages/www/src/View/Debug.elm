@@ -6,14 +6,14 @@ import Html.Events as E exposing (..)
 import Model exposing (OkModel)
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
-import View.Home exposing (viewHeader)
+import View.Home
 import View.Nav
 
 
 view : OkModel -> Html msg
 view model =
     div [ class "main" ]
-        [ viewHeader
+        [ View.Home.viewHeader model
         , View.Nav.view model
         , h5 [] [ text "secret debugging tools" ]
         , p [] [ text "Platform: ", code [] [ text model.flags.platform ] ]

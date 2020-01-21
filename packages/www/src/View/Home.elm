@@ -29,6 +29,7 @@ import Mapwatch.LogLine as LogLine
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.Visit as Visit
 import Maybe.Extra
+import Model exposing (OkModel)
 import Route exposing (Route)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Time exposing (Posix)
@@ -307,14 +308,14 @@ selfUrl =
     "https://mapwatch.erosson.org"
 
 
-viewHeader : Html msg
-viewHeader =
+viewHeader : OkModel -> Html msg
+viewHeader model =
     div []
         [ h1 [ class "title" ]
             [ maskedText "["
 
             -- , a [ href "./" ] [ Icon.fas "tachometer-alt", text " Mapwatch" ]
-            , a [ href "#/" ] [ text " Mapwatch" ]
+            , a [ Route.href model.query Route.Timer ] [ text " Mapwatch" ]
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , small []

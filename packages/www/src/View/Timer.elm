@@ -26,7 +26,7 @@ import View.Volume
 view : OkModel -> Html Msg
 view model =
     div [ class "main" ]
-        [ View.Home.viewHeader
+        [ View.Home.viewHeader model
         , View.Nav.view model
         , View.Setup.view model
         , viewBody model

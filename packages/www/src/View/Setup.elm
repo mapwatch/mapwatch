@@ -6,13 +6,41 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Json.Decode as Decode
 import Model as Model exposing (Msg(..), OkModel)
-import View.Icon as Icon
+import Route exposing (Route)
+import Route.Feature as Feature exposing (Feature)
+import Route.QueryDict as QueryDict exposing (QueryDict)
+import View.Icon
 import View.Volume
 
 
 onChange : msg -> Attribute msg
 onChange msg =
     on "change" <| Decode.succeed msg
+
+
+viewDownloadLink : OkModel -> Html msg
+viewDownloadLink model =
+    if Feature.isActive Feature.DownloadLink model.query && not (AppPlatform.isElectron model) then
+        div [ class "electron-download" ] <|
+            -- [ span [] [ View.Icon.fas "exclamation-triangle" ]
+            [ div []
+                [ text "New: "
+                , a [ Route.downloadMapwatchHref ]
+                    [ text "download Mapwatch" ]
+                , text " to watch your client.txt while you play!"
+                ]
+            , div []
+                [ text " (Sadly, this will soon be "
+
+                -- TODO better explanation link. readme?
+                , a [ target "_blank", href "https://github.com/mapwatch/mapwatch/issues/11" ]
+                    [ text "impossible" ]
+                , text " in web browsers.) "
+                ]
+            ]
+
+    else
+        div [] []
 
 
 view : OkModel -> Html Msg
@@ -38,12 +66,25 @@ view model =
             ]
         , p []
             ([ text "Then, " ]
-                ++ AppPlatform.ifElectron model [] [ a [ target "_blank", href "https://chrome.google.com" ] [ text "if you're using Google Chrome" ], text ", " ]
+                ++ (case ( AppPlatform.isElectron model, Feature.isActive Feature.DownloadLink model.query ) of
+                        ( True, _ ) ->
+                            -- electron - no link necessary, electron always live-updates
+                            []
+
+                        ( False, True ) ->
+                            -- www, download-link - link to the mapwatch app
+                            [ a [ Route.downloadMapwatchHref ] [ text "if you're using the Mapwatch app" ], text ", " ]
+
+                        ( False, False ) ->
+                            -- www, no-download-link - chrome still works for now
+                            [ a [ target "_blank", href "https://chrome.google.com" ] [ text "if you're using Google Chrome" ], text ", " ]
+                   )
                 ++ [ text "leave me open while you play - I'll keep watching, no need to upload again. " ]
             )
         , p []
             [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href "?tickStart=1526927461000&logtz=0&example=stripped-client.txt#/" ]) [ text "Run an example now!" ]
             ]
+        , viewDownloadLink model
         , hr [] []
         , p []
             [ text "Analyze only the last "
@@ -90,5 +131,5 @@ view model =
             )
 
         -- uncomment and screenshot for a favicon.
-        -- , div [ class "favicon-source" ] [ Icon.fas "stopwatch" ]
+        -- , div [ class "favicon-source" ] [ View.Icon.fas "stopwatch" ]
         ]

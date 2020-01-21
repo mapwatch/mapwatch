@@ -1,5 +1,6 @@
 module Route exposing
     ( Route(..)
+    , downloadMapwatchHref
     , href
     , keys
     , parse
@@ -177,3 +178,8 @@ pushUrl nav query =
 replaceUrl : Nav.Key -> QueryDict -> Route -> Cmd msg
 replaceUrl nav query =
     toString query >> Nav.replaceUrl nav
+
+
+downloadMapwatchHref : Attribute msg
+downloadMapwatchHref =
+    A.href "#TODO"

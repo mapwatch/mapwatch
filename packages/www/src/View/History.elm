@@ -35,7 +35,7 @@ view model =
 
     else
         div [ class "main" ]
-            [ View.Home.viewHeader
+            [ View.Home.viewHeader model
             , View.Nav.view model
             , View.Setup.view model
             , viewBody model
