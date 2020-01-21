@@ -20,6 +20,7 @@ import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Ports
 import Route exposing (Route)
+import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Set
 import Settings exposing (Settings)
@@ -96,6 +97,13 @@ init flags url nav =
                 (flags.settings
                     |> D.decodeValue Settings.decoder
                     |> Result.withDefault Settings.empty
+                    |> (\s ->
+                            if Feature.isActive Feature.Speech query then
+                                s
+
+                            else
+                                { s | volume = 0 }
+                       )
                 )
                 -- placeholder; Time.here and SetTimezone set this shortly
                 -- TODO Maybe type?
