@@ -386,7 +386,8 @@ viewHistorySideAreaRow query { showDate } ( instance, d ) =
             []
          )
             ++ [ td [] []
-               , td [ class "zone", colspan 8 ] [ View.Home.viewSideAreaName query (Instance.Instance instance) ]
+               , td [] []
+               , td [ class "zone", colspan 7 ] [ View.Home.viewSideAreaName query (Instance.Instance instance) ]
                , td [ class "side-dur" ] [ viewDuration d ]
                , td [ class "portals" ] []
                , td [ class "town-pct" ] []
@@ -410,9 +411,10 @@ viewHistoryNpcTextRow { showDate } ( npcId, texts ) =
                         []
                      )
                         ++ [ td [] []
+                           , td [] []
 
-                           -- , td [ colspan 8, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
-                           , td [ colspan 8, title <| String.join "\n\n" texts ] body
+                           -- , td [ colspan 7, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
+                           , td [ colspan 7, title <| String.join "\n\n" texts ] body
                            , td [ class "side-dur" ] []
                            , td [ class "portals" ] []
                            , td [ class "town-pct" ] []
@@ -484,7 +486,8 @@ viewConquerorRow { showDate } npcSays ( id, encounter ) =
             []
          )
             ++ [ td [] []
-               , td [ colspan 8, title <| String.join "\n\n" says ] body
+               , td [] []
+               , td [ colspan 7, title <| String.join "\n\n" says ] body
                , td [ class "side-dur" ] []
                , td [ class "portals" ] []
                , td [ class "town-pct" ] []
