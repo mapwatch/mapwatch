@@ -67,7 +67,7 @@ table.timer.history tfoot {
   text-align: center;
   border: 1px solid grey;
 }
-table.timer.history tfoot a {
+table.timer.history tfoot .timer-links a {
   display: inline-block;
   width: 50%;
 }

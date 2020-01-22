@@ -103,9 +103,9 @@ viewMain model =
             table [ class "timer history" ]
                 [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun model { showDate = False } goalDuration) <| history)
                 , tfoot []
-                    [ tr [] [ td [ colspan 12 ] [ viewConquerorsState (Conqueror.createState (Maybe.Extra.toList run ++ model.mapwatch.runs)) ] ]
+                    [ tr [] [ td [ colspan 12 ] [ viewConquerorsState model.query (Conqueror.createState (Maybe.Extra.toList run ++ model.mapwatch.runs)) ] ]
                     , tr []
-                        [ td [ colspan 12 ]
+                        [ td [ colspan 12, class "timer-links" ]
                             [ a [ Route.href model.query Route.History ] [ View.Icon.fas "history", text " History" ]
                             , a [ Route.href model.query Route.Overlay ] [ View.Icon.fas "align-justify", text " Overlay" ]
                             ]
@@ -173,25 +173,38 @@ viewTimer dur goal =
         ]
 
 
-viewConquerorsState : Conqueror.State -> Html msg
-viewConquerorsState state =
+viewConquerorsState : QueryDict -> Conqueror.State -> Html msg
+viewConquerorsState query state =
     ul [ class "conquerors-state" ]
-        [ viewConquerorsStateEntry state.baran View.Icon.baran "Baran"
-        , viewConquerorsStateEntry state.veritania View.Icon.veritania "Veritania"
-        , viewConquerorsStateEntry state.alHezmin View.Icon.alHezmin "Al-Hezmin"
-        , viewConquerorsStateEntry state.drox View.Icon.drox "Drox"
+        [ viewConquerorsStateEntry query state.baran View.Icon.baran "Baran"
+        , viewConquerorsStateEntry query state.veritania View.Icon.veritania "Veritania"
+        , viewConquerorsStateEntry query state.alHezmin View.Icon.alHezmin "Al-Hezmin"
+        , viewConquerorsStateEntry query state.drox View.Icon.drox "Drox"
         ]
 
 
-viewConquerorsStateEntry : Maybe Conqueror.Encounter -> Html msg -> String -> Html msg
-viewConquerorsStateEntry encounter icon name =
+viewConquerorsStateEntry : QueryDict -> Maybe Conqueror.Encounter -> Html msg -> String -> Html msg
+viewConquerorsStateEntry query encounter icon name =
+    let
+        href =
+            Route.href (Dict.insert Route.keys.search "eye of the storm|baran|veritania|al-hezmin|drox" query) Route.History
+    in
     case encounter of
         Nothing ->
-            li [ title <| name ++ ": Unmet" ] [ text "0×", icon, text name ]
+            li [ title <| name ++ ": Unmet" ]
+                [ a [ href ]
+                    [ text "0×", icon, text name ]
+                ]
 
         Just (Conqueror.Taunt n) ->
-            li [ title <| name ++ ": " ++ String.fromInt n ++ " Taunts" ] [ text (String.fromInt n ++ "×"), icon, text name ]
+            li [ title <| name ++ ": " ++ String.fromInt n ++ " Taunts" ]
+                [ a [ href ]
+                    [ text (String.fromInt n ++ "×"), icon, text name ]
+                ]
 
         Just Conqueror.Fight ->
             -- li [ title "Fought" ] (text "☑" :: label)
-            li [ title <| name ++ ": Fought" ] [ text "✔", icon, text name ]
+            li [ title <| name ++ ": Fought" ]
+                [ a [ href ]
+                    [ text "✔", icon, text name ]
+                ]

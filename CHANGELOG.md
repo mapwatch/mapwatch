@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2020-01-22
+- Conqueror-status now has a link to all maps with conquerors.
+
 ## 2020-01-19
 - Breachlord domains and Shaper guardian maps are now correctly tracked.
 - Fixed a bug that caused [speech](https://mapwatch.erosson.org?enableSpeech=1) to happen more often than intended.
