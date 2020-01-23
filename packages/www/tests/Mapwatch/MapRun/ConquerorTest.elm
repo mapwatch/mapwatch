@@ -2,13 +2,9 @@ module Mapwatch.MapRun.ConquerorTest exposing (..)
 
 import Expect
 import Mapwatch.Instance as Instance exposing (Address)
-import Mapwatch.MapRun.Conqueror as Conqueror
+import Mapwatch.MapRun.Conqueror as Conqueror exposing (emptyState)
+import Set exposing (Set)
 import Test exposing (..)
-
-
-emptyState : Conqueror.State
-emptyState =
-    Conqueror.State Nothing Nothing Nothing Nothing
 
 
 emptyAddr : Address
@@ -41,6 +37,11 @@ emptyRun =
     { address = emptyAddr, conqueror = Nothing }
 
 
+encounterState : Conqueror.Encounter -> Conqueror.State1
+encounterState e =
+    Conqueror.State1 (Just e) Nothing Set.empty
+
+
 all : Test
 all =
     describe "Mapwatch.MapRun.Conqueror"
@@ -55,7 +56,7 @@ all =
         , test "taunt" <|
             \_ ->
                 Conqueror.createState [ { emptyRun | conqueror = Just ( Conqueror.Baran, Conqueror.Taunt 1 ) } ]
-                    |> Expect.equal { emptyState | baran = Just (Conqueror.Taunt 1) }
+                    |> Expect.equal { emptyState | baran = encounterState (Conqueror.Taunt 1) }
         , test "4" <|
             \_ ->
                 Conqueror.createState
@@ -66,10 +67,10 @@ all =
                     ]
                     |> Expect.equal
                         { emptyState
-                            | baran = Just (Conqueror.Taunt 1)
-                            , veritania = Just (Conqueror.Taunt 2)
-                            , alHezmin = Just (Conqueror.Taunt 3)
-                            , drox = Just Conqueror.Fight
+                            | baran = encounterState (Conqueror.Taunt 1)
+                            , veritania = encounterState (Conqueror.Taunt 2)
+                            , alHezmin = encounterState (Conqueror.Taunt 3)
+                            , drox = encounterState Conqueror.Fight
                         }
         , test "taunt x2" <|
             \_ ->
@@ -78,7 +79,7 @@ all =
                     , { emptyRun | conqueror = Just ( Conqueror.Baran, Conqueror.Taunt 3 ) }
                     , { emptyRun | conqueror = Just ( Conqueror.Baran, Conqueror.Taunt 1 ) }
                     ]
-                    |> Expect.equal { emptyState | baran = Just (Conqueror.Taunt 2) }
+                    |> Expect.equal { emptyState | baran = encounterState (Conqueror.Taunt 2) }
         , test "sirus resets" <|
             \_ ->
                 Conqueror.createState
@@ -86,5 +87,5 @@ all =
                     , { emptyRun | address = sirusAddr }
                     , { emptyRun | conqueror = Just ( Conqueror.Baran, Conqueror.Taunt 2 ) }
                     ]
-                    |> Expect.equal { emptyState | drox = Just (Conqueror.Taunt 3) }
+                    |> Expect.equal { emptyState | drox = encounterState (Conqueror.Taunt 3) }
         ]

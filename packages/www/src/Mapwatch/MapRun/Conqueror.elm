@@ -2,7 +2,9 @@ module Mapwatch.MapRun.Conqueror exposing
     ( Encounter(..)
     , Id(..)
     , State
+    , State1
     , createState
+    , emptyState
     , encounter
     , idFromNpc
     , ids
@@ -13,6 +15,7 @@ import Dict exposing (Dict)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Maybe.Extra
+import Set exposing (Set)
 
 
 type Id
@@ -28,15 +31,36 @@ type Encounter
 
 
 type alias State =
-    { baran : Maybe Encounter
-    , veritania : Maybe Encounter
-    , alHezmin : Maybe Encounter
-    , drox : Maybe Encounter
+    { baran : State1
+    , veritania : State1
+    , alHezmin : State1
+    , drox : State1
     }
+
+
+type alias State1 =
+    { encounter : Maybe Encounter
+    , region : Maybe Region
+    , sightings : Set Region
+    }
+
+
+type alias Region =
+    String
 
 
 ids =
     [ Baran, Veritania, AlHezmin, Drox ]
+
+
+emptyState : State
+emptyState =
+    State emptyState1 emptyState1 emptyState1 emptyState1
+
+
+emptyState1 : State1
+emptyState1 =
+    State1 Nothing Nothing Set.empty
 
 
 encounter : Id -> List String -> Maybe Encounter
@@ -121,8 +145,8 @@ type alias Runlike a =
 createState : List (Runlike a) -> State
 createState runs0 =
     let
-        loop : List (Runlike a) -> State -> State
-        loop runs state =
+        loop : List (Runlike a) -> Bool -> State -> State
+        loop runs encountersLocked state =
             case runs of
                 [] ->
                     state
@@ -132,10 +156,10 @@ createState runs0 =
                         -- eye of the storm; sirus arena
                         -- earlier maps don't matter, sirus resets the state - we're done
                         Just "AtlasExilesBoss5" ->
-                            state
+                            loop tail True state
 
                         _ ->
-                            loop tail <|
+                            loop tail encountersLocked <|
                                 case run.conqueror of
                                     Nothing ->
                                         state
@@ -143,20 +167,40 @@ createState runs0 =
                                     Just ( id, encounter_ ) ->
                                         case id of
                                             Baran ->
-                                                { state | baran = state.baran |> Maybe.Extra.orElse (Just encounter_) }
+                                                { state | baran = state.baran |> applyEncounter run encountersLocked encounter_ }
 
                                             Veritania ->
-                                                { state | veritania = state.veritania |> Maybe.Extra.orElse (Just encounter_) }
+                                                { state | veritania = state.veritania |> applyEncounter run encountersLocked encounter_ }
 
                                             AlHezmin ->
-                                                { state | alHezmin = state.alHezmin |> Maybe.Extra.orElse (Just encounter_) }
+                                                { state | alHezmin = state.alHezmin |> applyEncounter run encountersLocked encounter_ }
 
                                             Drox ->
-                                                { state | drox = state.drox |> Maybe.Extra.orElse (Just encounter_) }
+                                                { state | drox = state.drox |> applyEncounter run encountersLocked encounter_ }
     in
-    loop runs0
-        { baran = Nothing
-        , veritania = Nothing
-        , alHezmin = Nothing
-        , drox = Nothing
+    loop runs0 False emptyState
+
+
+applyEncounter : Runlike a -> Bool -> Encounter -> State1 -> State1
+applyEncounter mapRun encountersLocked encounter_ state0 =
+    let
+        region : Maybe String
+        region =
+            mapRun.address.worldArea |> Maybe.andThen .atlasRegion
+
+        state =
+            case region of
+                Nothing ->
+                    state0
+
+                Just r ->
+                    { state0 | sightings = state0.sightings |> Set.insert r }
+    in
+    if encountersLocked then
+        state
+
+    else
+        { state
+            | encounter = state.encounter |> Maybe.Extra.orElse (Just encounter_)
+            , region = state.region |> Maybe.Extra.orElse region
         }

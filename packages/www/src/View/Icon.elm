@@ -6,7 +6,10 @@ import Html.Events as E exposing (..)
 import Json.Encode as Json
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.MapRun.Conqueror as Conqueror
+import Maybe.Extra
 import Regex
+import Set exposing (Set)
 import View.Icon.Svg
 
 
@@ -143,30 +146,48 @@ tane =
 
 region : Maybe WorldArea -> Html msg
 region w =
-    case w |> Maybe.andThen .atlasRegion |> Maybe.withDefault Datamine.defaultAtlasRegion of
-        "Haewark Hamlet" ->
-            View.Icon.Svg.region View.Icon.Svg.RegionTopLeftOutside
+    w
+        |> Maybe.andThen .atlasRegion
+        |> Maybe.Extra.unwrap View.Icon.Svg.empty
+            (\r -> View.Icon.Svg.applyRegionName r (Just View.Icon.Svg.Selected) View.Icon.Svg.empty)
+        |> View.Icon.Svg.regions
 
-        "Tirn's End" ->
-            View.Icon.Svg.region View.Icon.Svg.RegionTopLeftInside
 
-        "Lex Ejoris" ->
-            View.Icon.Svg.region View.Icon.Svg.RegionTopRightOutside
+conquerorRegions : Conqueror.Id -> Conqueror.State1 -> Html msg
+conquerorRegions id state =
+    let
+        conq : View.Icon.Svg.RegionStatus
+        conq =
+            case id of
+                Conqueror.Baran ->
+                    View.Icon.Svg.Baran
 
-        "Lex Proxima" ->
-            View.Icon.Svg.region View.Icon.Svg.RegionTopRightInside
+                Conqueror.Veritania ->
+                    View.Icon.Svg.Veritania
 
-        "New Vastir" ->
-            View.Icon.Svg.region View.Icon.Svg.RegionBottomLeftOutside
+                Conqueror.AlHezmin ->
+                    View.Icon.Svg.AlHezmin
 
-        "Glennach Cairns" ->
-            View.Icon.Svg.region View.Icon.Svg.RegionBottomLeftInside
+                Conqueror.Drox ->
+                    View.Icon.Svg.Drox
 
-        "Lira Arthain" ->
-            View.Icon.Svg.region View.Icon.Svg.RegionBottomRightOutside
+        empty : View.Icon.Svg.Regions
+        empty =
+            View.Icon.Svg.init (Just View.Icon.Svg.Unsighted)
 
-        "Valdo's Rest" ->
-            View.Icon.Svg.region View.Icon.Svg.RegionBottomRightInside
+        sightings : View.Icon.Svg.Regions
+        sightings =
+            Set.foldl (\r -> View.Icon.Svg.applyRegionName r (Just View.Icon.Svg.Sighted)) empty state.sightings
 
-        _ ->
-            View.Icon.Svg.emptyRegion
+        regions : View.Icon.Svg.Regions
+        regions =
+            sightings
+                |> (case state.region of
+                        Nothing ->
+                            identity
+
+                        Just r ->
+                            View.Icon.Svg.applyRegionName r (Just conq)
+                   )
+    in
+    View.Icon.Svg.regions regions

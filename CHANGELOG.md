@@ -9,6 +9,7 @@ All substantial Mapwatch changes.
 ---
 ## 2020-01-23
 - Fixed a bug that broke the summary at the top of the history page when before/after times were set.
+- Conqueror status now shows an icon with the region of your last conqueror encounter and regions of all past conqueror encounters.
 
 ## 2020-01-22
 - You can now export your map data as tab-separated values, for easy use in spreadsheets. Look for the link at the bottom of the history page.

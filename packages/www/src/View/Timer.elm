@@ -13,6 +13,7 @@ import Maybe.Extra
 import Model as Model exposing (Msg, OkModel)
 import Route
 import Route.QueryDict as QueryDict exposing (QueryDict)
+import Set exposing (Set)
 import Time exposing (Posix)
 import View.History
 import View.Home
@@ -176,35 +177,67 @@ viewTimer dur goal =
 viewConquerorsState : QueryDict -> Conqueror.State -> Html msg
 viewConquerorsState query state =
     ul [ class "conquerors-state" ]
-        [ viewConquerorsStateEntry query state.baran View.Icon.baran "Baran"
-        , viewConquerorsStateEntry query state.veritania View.Icon.veritania "Veritania"
-        , viewConquerorsStateEntry query state.alHezmin View.Icon.alHezmin "Al-Hezmin"
-        , viewConquerorsStateEntry query state.drox View.Icon.drox "Drox"
+        [ viewConquerorsStateEntry query state.baran Conqueror.Baran
+        , viewConquerorsStateEntry query state.veritania Conqueror.Veritania
+        , viewConquerorsStateEntry query state.alHezmin Conqueror.AlHezmin
+        , viewConquerorsStateEntry query state.drox Conqueror.Drox
         ]
 
 
-viewConquerorsStateEntry : QueryDict -> Maybe Conqueror.Encounter -> Html msg -> String -> Html msg
-viewConquerorsStateEntry query encounter icon name =
+viewConquerorsStateEntry : QueryDict -> Conqueror.State1 -> Conqueror.Id -> Html msg
+viewConquerorsStateEntry query state id =
     let
         href =
             Route.href (Dict.insert Route.keys.search "eye of the storm|baran|veritania|al-hezmin|drox" query) Route.History
+
+        ( icon, name ) =
+            case id of
+                Conqueror.Baran ->
+                    ( View.Icon.baran, "Baran" )
+
+                Conqueror.Veritania ->
+                    ( View.Icon.veritania, "Veritania" )
+
+                Conqueror.AlHezmin ->
+                    ( View.Icon.alHezmin, "Al-Hezmin" )
+
+                Conqueror.Drox ->
+                    ( View.Icon.drox, "Drox" )
+
+        sightings : String
+        sightings =
+            (case state.region of
+                Nothing ->
+                    "\n\n"
+
+                Just r ->
+                    " in "
+                        ++ r
+                        ++ "\n\n"
+            )
+                ++ (if state.sightings == Set.empty then
+                        "Past sightings: none"
+
+                    else
+                        "Past sightings: " ++ (state.sightings |> Set.toList |> String.join ", ")
+                   )
     in
-    case encounter of
+    case state.encounter of
         Nothing ->
-            li [ title <| name ++ ": Unmet" ]
+            li [ title <| name ++ ": Unmet" ++ sightings ]
                 [ a [ href ]
-                    [ text "0×", icon, text name ]
+                    [ View.Icon.conquerorRegions id state, icon, text "0×", text name ]
                 ]
 
         Just (Conqueror.Taunt n) ->
-            li [ title <| name ++ ": " ++ String.fromInt n ++ " Taunts" ]
+            li [ title <| name ++ ": " ++ String.fromInt n ++ View.Util.pluralize " taunt" " taunts" n ++ sightings ]
                 [ a [ href ]
-                    [ text (String.fromInt n ++ "×"), icon, text name ]
+                    [ View.Icon.conquerorRegions id state, icon, text (String.fromInt n ++ "×"), text name ]
                 ]
 
         Just Conqueror.Fight ->
-            -- li [ title "Fought" ] (text "☑" :: label)
-            li [ title <| name ++ ": Fought" ]
+            -- ☑
+            li [ title <| name ++ ": Fought" ++ sightings ]
                 [ a [ href ]
-                    [ text "✔", icon, text name ]
+                    [ View.Icon.conquerorRegions id state, icon, text "✔ ", text name ]
                 ]
