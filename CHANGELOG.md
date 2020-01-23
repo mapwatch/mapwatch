@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2020-01-23
+- Fixed a bug that broke the summary at the top of the history page when before/after times were set.
+
 ## 2020-01-22
 - You can now export your map data as tab-separated values, for easy use in spreadsheets. Look for the link at the bottom of the history page.
 - Conqueror-status now has a link to all maps with conquerors.

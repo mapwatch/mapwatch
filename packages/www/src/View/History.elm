@@ -141,7 +141,7 @@ viewStatsTable query tz now runs =
                         , viewStatsRows (text "All-time") (runs |> MapRun.aggregate)
                         ]
 
-                ( b, a ) ->
+                ( a, b ) ->
                     viewStatsRows (text "This session") (runs |> RunSort.filterBetween { before = b, after = a } |> MapRun.aggregate)
             )
         ]
