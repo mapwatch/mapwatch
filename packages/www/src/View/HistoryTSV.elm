@@ -73,7 +73,8 @@ viewHeader : List String
 viewHeader =
     [ "Row"
     , "Date"
-    , "Zone"
+    , "Icon"
+    , "Map"
     , "Region"
     , "Duration"
     , "Map"
@@ -104,6 +105,7 @@ viewRow : OkModel -> Int -> MapRun -> List String
 viewRow model i run =
     [ String.fromInt (i + 1)
     , View.Home.posixToString model.tz run.updatedAt
+    , run.address.worldArea |> Maybe.andThen (Datamine.imgSrc run) |> Maybe.Extra.unwrap "" (\img -> "=IMAGE(\"" ++ img ++ "\")")
     , run.address.zone
     , run.address.worldArea |> Maybe.andThen .atlasRegion |> Maybe.withDefault "---"
     , "'" ++ View.Home.formatDuration run.duration.all
