@@ -2,6 +2,7 @@ module View.Home exposing
     ( formatBytes
     , formatDuration
     , maskedText
+    , posixToString
     , selfUrl
     , viewAddress
     , viewDate

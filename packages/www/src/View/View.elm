@@ -11,6 +11,7 @@ import View.Debug
 import View.DebugDatamine
 import View.DumpLines
 import View.History
+import View.HistoryTSV
 import View.Maps
 import View.NotFound
 import View.Overlay
@@ -33,6 +34,9 @@ viewBody rmodel =
             case model.route of
                 History ->
                     View.History.view model
+
+                HistoryTSV ->
+                    View.HistoryTSV.view model
 
                 Maps ->
                     View.Maps.view model

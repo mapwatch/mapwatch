@@ -28,6 +28,7 @@ import Url.Parser.Query as Q
 
 type Route
     = History
+    | HistoryTSV
     | Maps
     | Timer
     | Overlay
@@ -89,6 +90,7 @@ parser =
         [ P.map Timer <| P.oneOf [ P.top, P.s "timer" ]
         , P.map Overlay <| P.s "overlay"
         , P.map History <| P.s "history"
+        , P.map HistoryTSV <| P.s "history" </> P.s "tsv"
         , P.map Maps <| P.s "map"
         , P.map Changelog <| P.s "changelog"
         , P.map Settings <| P.s "settings"
@@ -110,6 +112,7 @@ keys =
 
 pageKeys =
     { history = [ "p", "q", "o", "a", "b", "g" ] |> Set.fromList |> Set.union Feature.set
+    , historyTSV = [ "q", "o", "a", "b" ] |> Set.fromList |> Set.union Feature.set
     , map = [ "q", "o", "a", "b" ] |> Set.fromList |> Set.union Feature.set
     , timer = [ "a", "g" ] |> Set.fromList |> Set.union Feature.set
     , overlay = [ "a" ] |> Set.fromList |> Set.union Feature.set
@@ -122,6 +125,9 @@ routeParts r =
     case r of
         History ->
             ( "/history", pageKeys.history )
+
+        HistoryTSV ->
+            ( "/history/tsv", pageKeys.historyTSV )
 
         Maps ->
             ( "/map", pageKeys.map )

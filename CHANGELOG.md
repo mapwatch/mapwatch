@@ -8,6 +8,7 @@ All substantial Mapwatch changes.
 
 ---
 ## 2020-01-22
+- You can now export your map data as tab-separated values, for easy use in spreadsheets. Look for the link at the bottom of the history page.
 - Conqueror-status now has a link to all maps with conquerors.
 
 ## 2020-01-19

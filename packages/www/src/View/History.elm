@@ -1,11 +1,11 @@
-module View.History exposing (formatMaybeDuration, view, viewDurationDelta, viewHistoryRun)
+module View.History exposing (formatMaybeDuration, listRuns, view, viewDurationDelta, viewHistoryRun)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
-import Mapwatch as Mapwatch
+import Mapwatch
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
@@ -14,7 +14,7 @@ import Mapwatch.MapRun.Conqueror as Conqueror
 import Mapwatch.MapRun.Sort as RunSort
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
-import Model as Model exposing (Msg(..), OkModel)
+import Model exposing (Msg(..), OkModel)
 import Regex
 import Route exposing (Route)
 import Route.QueryDict as QueryDict exposing (QueryDict)
@@ -77,8 +77,8 @@ isValidPage page model =
             page == clamp 0 (numPages (List.length model.mapwatch.runs) - 1) page
 
 
-viewMain : OkModel -> Html Msg
-viewMain model =
+listRuns : OkModel -> List MapRun
+listRuns model =
     let
         before =
             QueryDict.getPosix Route.keys.before model.query
@@ -102,13 +102,18 @@ viewMain model =
         searchFilter : List MapRun -> List MapRun
         searchFilter =
             search |> Maybe.Extra.unwrap identity (RunSort.search model.mapwatch.datamine)
+    in
+    Maybe.Extra.unwrap model.mapwatch.runs (\r -> r :: model.mapwatch.runs) currentRun
+        |> searchFilter
+        |> RunSort.filterBetween { before = before, after = after }
+        |> RunSort.sort sort
 
-        runs : List MapRun
+
+viewMain : OkModel -> Html Msg
+viewMain model =
+    let
         runs =
-            Maybe.Extra.unwrap model.mapwatch.runs (\r -> r :: model.mapwatch.runs) currentRun
-                |> searchFilter
-                |> RunSort.filterBetween { before = before, after = after }
-                |> RunSort.sort sort
+            listRuns model
     in
     div []
         [ div []
@@ -119,6 +124,9 @@ viewMain model =
             ]
         , viewStatsTable model.query model.tz model.now runs
         , viewHistoryTable runs model
+        , div []
+            [ a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " Export as TSV" ]
+            ]
         ]
 
 
