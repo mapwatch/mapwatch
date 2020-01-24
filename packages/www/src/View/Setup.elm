@@ -30,7 +30,7 @@ viewDownloadLink model =
                 , text " to watch your client.txt while you play!"
                 ]
             , div []
-                [ text " (Sadly, this will soon be "
+                [ text " (Sadly, watching client.txt will soon be "
 
                 -- TODO better explanation link. readme?
                 , a [ target "_blank", href "https://github.com/mapwatch/mapwatch/issues/11" ]

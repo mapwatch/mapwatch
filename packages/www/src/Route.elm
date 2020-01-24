@@ -188,4 +188,4 @@ replaceUrl nav query =
 
 downloadMapwatchHref : Attribute msg
 downloadMapwatchHref =
-    A.href "#TODO"
+    A.href "https://github.com/mapwatch/mapwatch/releases"
