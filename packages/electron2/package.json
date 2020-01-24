@@ -20,7 +20,7 @@
     ],
     "appImage": {},
     "win": {
-      "icon": "node_modules/@mapwatch/www/dist/favicon.jpeg"
+      "icon": "../www/public/favicon.jpeg"
     },
     "publish": [
       {
