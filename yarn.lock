@@ -4080,6 +4080,11 @@ electron-builder@^21.2.0:
     update-notifier "^3.0.1"
     yargs "^13.3.0"
 
+electron-log@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-4.0.4.tgz#a80daefa2f9adbfe5ac88806cfc5270c03ab55d2"
+  integrity sha512-u9nW6XSuvtvrsz3IJYvOjLryyeO4SIodX4TMnRGqPckoKyiPsnDxH9wHXigeUSmYDAg1Dwu8VowumUdkslssUQ==
+
 electron-publish@21.2.0:
   version "21.2.0"
   resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-21.2.0.tgz#cc225cb46aa62e74b899f2f7299b396c9802387d"
@@ -8473,11 +8478,6 @@ raw-loader@^4.0.0:
     loader-utils "^1.2.3"
     schema-utils "^2.5.0"
 
-raw-loader@~0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
-  integrity sha1-DD0L6u2KAclm2Xh793goElKpeao=
-
 rc@^1.2.8:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -9136,13 +9136,6 @@ schema-utils@^2.5.0, schema-utils@^2.6.0:
   dependencies:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
-
-script-loader@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/script-loader/-/script-loader-0.7.2.tgz#2016db6f86f25f5cf56da38915d83378bb166ba7"
-  integrity sha512-UMNLEvgOAQuzK8ji8qIscM3GIrRCWN6MmMXGD4SD5l6cSycgGsCo0tX5xRnfQcoghqct0tjHjcykgI1PyBE2aA==
-  dependencies:
-    raw-loader "~0.5.1"
 
 scripty@^1.7.2:
   version "1.9.1"

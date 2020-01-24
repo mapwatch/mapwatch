@@ -4,6 +4,8 @@ const argv = require('minimist')(process.argv)
 const child_process = require('child_process')
 const os = require('os')
 const {autoUpdater} = require('electron-updater')
+const log = require('electron-log')
+log.transports.file.level = 'debug'
 
 function main() {
   const win = new electron.BrowserWindow({
@@ -49,6 +51,7 @@ function main() {
   }
 
   // https://www.electron.build/auto-update
+  autoUpdater.logger = log
   autoUpdater.checkForUpdatesAndNotify()
 
   // finally, load the app itself
