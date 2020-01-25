@@ -122,11 +122,11 @@ viewMain model =
             , View.Util.viewDateSearch model.query model.route
             , View.Util.viewGoalForm model.query
             ]
+        , div []
+            [ a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " Export as TSV spreadsheet" ]
+            ]
         , viewStatsTable model.query model.tz model.now runs
         , viewHistoryTable runs model
-        , div []
-            [ a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " Export as TSV" ]
-            ]
         ]
 
 
