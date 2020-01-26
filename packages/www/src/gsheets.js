@@ -43,15 +43,15 @@ module.exports.main = function main(app) {
   app.ports.gsheetsLogout.subscribe(() => {
     window.gapi.auth2.getAuthInstance().signOut()
   })
-  app.ports.gsheetsWrite.subscribe(({spreadsheetId, headers, rows}) => new Promise((resolve, reject) => {
-    createOrUpdateSpreadsheet({spreadsheetId})
+  app.ports.gsheetsWrite.subscribe(({spreadsheetId, title, content}) => new Promise((resolve, reject) => {
+    createOrUpdateSpreadsheet({spreadsheetId, title})
     .then(thenLog('gsheetsWrite:create'))
-    .then(resetSheets)
-    .then(res => updateCells({res, headers, rows}))
+    .then(res => updateCells({res, content}))
+    .then(thenLog('gsheetsWrite:updateCells'))
     .then(res => {
       const {spreadsheetUrl, sheets} = res
       const sheetsByTitle = _.keyBy(sheets, 'properties.title')
-      const sheet = sheetsByTitle[MAIN_SHEET]
+      const sheet = sheetsByTitle[content[0].title]
       res.spreadsheetUrl = sheet
         ? spreadsheetUrl + '#gid=' + sheet.properties.sheetId
         : spreadsheetUrl
@@ -69,10 +69,8 @@ module.exports.main = function main(app) {
     })
   }))
 }
-const MAIN_SHEET = "Mapwatch: Data"
-const SHEET_NAMES = [MAIN_SHEET]
 
-function createOrUpdateSpreadsheet({spreadsheetId}) {
+function createOrUpdateSpreadsheet({spreadsheetId, title}) {
   if (!!spreadsheetId) {
     return window.gapi.client.sheets.spreadsheets.get({spreadsheetId})
     // .then(thenLog("spreadsheets.create:get"))
@@ -81,7 +79,7 @@ function createOrUpdateSpreadsheet({spreadsheetId}) {
   else {
     return window.gapi.client.sheets.spreadsheets.create({
       properties: {
-        title: "Mapwatch",
+        title,
       },
     })
     // .then(thenLog("spreadsheets.create"))
@@ -89,62 +87,59 @@ function createOrUpdateSpreadsheet({spreadsheetId}) {
   }
 }
 
-function resetSheets(res) {
+function updateCells({res, content}) {
   const {spreadsheetId, sheets} = res
   const sheetsByTitle = _.keyBy(sheets, 'properties.title')
-  // .then(thenLog("spreadsheets.update:get"))
-  // https://developers.google.com/sheets/api/samples/sheet
   return window.gapi.client.sheets.spreadsheets.batchUpdate({
     spreadsheetId,
     resource: {
-      requests: SHEET_NAMES.map(title => {
+      requests: content.map(({title, headers, rows}, i) => {
         const sheet = sheetsByTitle[title]
-        if (!!sheet) {
-          return {
-            updateCells: {
-              range: {
-                sheetId: sheet.properties.sheetId,
+        const sheetId = sheet
+          ? sheet.properties.sheetId
+          // guess a new id that's probably not taken
+          // TODO: could guarantee this by doing a separate batch update and letting sheets assign ids
+          : 69420 + i
+        const resetSheet = sheet
+          ? {
+              // sheet with this name exists - clear all cells
+              updateCells: {
+                range: {sheetId},
+                fields: "userEnteredValue",
               },
-              fields: "userEnteredValue",
-            },
-          }
-        }
-        else {
-          return {
-            addSheet: {
-              properties: {
-                title,
+            }
+          : {
+              addSheet: {
+                properties: {sheetId, title},
               },
-            },
-          }
-        }
-      }),
-    },
-  })
-  .then(thenLog('resetSheets'))
-  .then(() => res)
-}
-function updateCells({res, headers, rows}) {
-  const {spreadsheetId} = res
-  return window.gapi.client.sheets.spreadsheets.values.update({
-    spreadsheetId,
-    range: "'"+MAIN_SHEET+"'!A1:ZZ99999",
-    valueInputOption: 'USER_ENTERED',
-  }, {
-    values: [headers].concat(rows),
-  })
-  // .then(thenLog('updateCells'))
-  .then(() => window.gapi.client.sheets.spreadsheets.get({spreadsheetId}))
-  .then(thenLog('updateCells:get'))
-  // style: autoresize columns, set a fixed header row
-  .then(res =>
-    window.gapi.client.sheets.spreadsheets.batchUpdate({
-      spreadsheetId,
-      resource: {
-        requests: res.result.sheets.filter(s => SHEET_NAMES.includes(s.properties.title)).map(sheet => [{
+            }
+        return [resetSheet, {
+          updateCells: {
+            range: {sheetId},
+            fields: "userEnteredValue",
+            rows: headers.map(hs => ({values: hs.map(h => ({userEnteredValue: {stringValue: h}}))}))
+            .concat(rows.map(cs => ({values: cs.map(c => {
+              // batchUpdate.updateCells refuses to guess datatypes, so I'm guessing for it
+              // TODO: specify the datatype along with the data in elm? this works okayish for now
+              if (c.startsWith("'")) {
+                return {userEnteredValue: {stringValue: c.substr(1)}}
+              }
+              if (c.startsWith('=')) {
+                return {userEnteredValue: {formulaValue: c}}
+              }
+              if (c == 'TRUE') {
+                return {userEnteredValue: {boolValue: c}}
+              }
+              if (!isNaN(parseFloat(c))) {
+                return {userEnteredValue: {numberValue: parseFloat(c)}}
+              }
+              return {userEnteredValue: {stringValue: c}}
+            })}))),
+          },
+        },{
           autoResizeDimensions: {
             dimensions: {
-              sheetId: sheet.properties.sheetId,
+              sheetId,
               dimension: "COLUMNS",
               startIndex: 0,
               endIndex: 999,
@@ -154,15 +149,16 @@ function updateCells({res, headers, rows}) {
           updateSheetProperties: {
             fields: "gridProperties.frozenRowCount",
             properties: {
-              sheetId: sheet.properties.sheetId,
-              gridProperties: {frozenRowCount: 1},
+              sheetId,
+              gridProperties: {frozenRowCount: headers.length},
             },
           },
-        }]).flat(),
-      },
-    })
-    .then(() => res.result)
-  )
+
+        }]
+      }).flat(),
+    },
+  })
+  .then(() => res)
 }
 
 const thenLog = (...prefix) => val => {

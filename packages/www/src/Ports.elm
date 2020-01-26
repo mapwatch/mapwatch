@@ -176,8 +176,13 @@ port gsheetsLogout : () -> Cmd msg
 
 port gsheetsWrite :
     { spreadsheetId : Maybe String
-    , headers : List String
-    , rows : List (List String)
+    , title : String
+    , content :
+        List
+            { title : String
+            , headers : List (List String)
+            , rows : List (List String)
+            }
     }
     -> Cmd msg
 

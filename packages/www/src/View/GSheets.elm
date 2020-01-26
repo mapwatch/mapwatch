@@ -124,10 +124,15 @@ gsheetsWrite : OkModel -> List MapRun -> Maybe String -> Msg
 gsheetsWrite model runs spreadsheetId =
     Model.GSheetsWrite
         { spreadsheetId = spreadsheetId
-        , headers = View.HistoryTSV.viewHeader
-        , rows =
-            runs
-                |> List.reverse
-                |> List.indexedMap (View.HistoryTSV.viewRow model)
-                |> List.reverse
+        , title = "Mapwatch"
+        , content =
+            [ { title = "Mapwatch: Data"
+              , headers = [ View.HistoryTSV.viewHeader ]
+              , rows =
+                    runs
+                        |> List.reverse
+                        |> List.indexedMap (View.HistoryTSV.viewRow model)
+                        |> List.reverse
+              }
+            ]
         }
