@@ -4,6 +4,7 @@ import Dict exposing (Dict)
 import Expect
 import Mapwatch.Instance as Instance exposing (Address)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Settings exposing (Settings)
 import Speech exposing (Speech)
 import Test exposing (..)
 import Time exposing (Posix)
@@ -14,8 +15,13 @@ emptyAddr =
     { zone = "nowhere", addr = "127.0.0.1:6112", worldArea = Nothing }
 
 
+emptySettings : Settings
 emptySettings =
-    { volume = 100 }
+    let
+        s =
+            Settings.empty
+    in
+    { s | volume = 100 }
 
 
 emptyRaw =
