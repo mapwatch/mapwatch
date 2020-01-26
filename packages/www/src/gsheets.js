@@ -1,6 +1,11 @@
 // https://developers.google.com/sheets/api/quickstart/js
 const _ = require('lodash')
 
+// Oh no, an api key in code! Is this okay? Yes, I think so:
+//
+// * the api key must be somewhere on the client, even Google's quickstart agrees, so it's already public
+// * I don't need a separate dev api key yet, so there's no need to refactor
+// * This key is restricted to google sheets for users on my domain, so it's not much use to an attacker (I think)
 const API_KEY = "AIzaSyDHXZvdqZF7QsrVtjOtV7TgjTkUfxmdIO0"
 const CLIENT_ID = "274178280847-9ejt5ti8lms9eh48h61dd0eeomi25gra.apps.googleusercontent.com"
 
