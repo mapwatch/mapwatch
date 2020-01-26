@@ -1,4 +1,4 @@
-module View.HistoryTSV exposing (view)
+module View.HistoryTSV exposing (view, viewHeader, viewRow)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)

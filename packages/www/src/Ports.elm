@@ -1,5 +1,10 @@
 port module Ports exposing
     ( Progress
+    , gsheetsLogin
+    , gsheetsLoginUpdate
+    , gsheetsLogout
+    , gsheetsWrite
+    , gsheetsWritten
     , logChanged
     , logOpened
     , logSelected
@@ -158,3 +163,29 @@ encodeMapRun r =
 encodeDate : Posix -> Encode.Value
 encodeDate =
     Time.posixToMillis >> Encode.int
+
+
+port gsheetsLogin : () -> Cmd msg
+
+
+port gsheetsLoginUpdate : ({ login : Maybe Bool, error : Maybe String } -> msg) -> Sub msg
+
+
+port gsheetsLogout : () -> Cmd msg
+
+
+port gsheetsWrite :
+    { spreadsheetId : Maybe String
+    , headers : List String
+    , rows : List (List String)
+    }
+    -> Cmd msg
+
+
+port gsheetsWritten :
+    ({ res : Maybe { spreadsheetId : String, spreadsheetUrl : String }
+     , error : Maybe String
+     }
+     -> msg
+    )
+    -> Sub msg

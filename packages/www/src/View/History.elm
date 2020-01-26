@@ -17,6 +17,7 @@ import Maybe.Extra
 import Model exposing (Msg(..), OkModel)
 import Regex
 import Route exposing (Route)
+import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Time exposing (Posix)
 import View.Home
@@ -123,8 +124,16 @@ viewMain model =
             , View.Util.viewGoalForm model.query
             ]
         , div []
-            [ a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " Export as TSV spreadsheet" ]
-            ]
+            (if Feature.isActive Feature.GSheets model.query then
+                [ text "Export as: "
+                , a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " TSV spreadsheet" ]
+                , text " | "
+                , a [ Route.href model.query Route.GSheets ] [ View.Icon.fab "google-drive", text " Google spreadsheet" ]
+                ]
+
+             else
+                [ a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " Export as TSV spreadsheet" ] ]
+            )
         , viewStatsTable model.query model.tz model.now runs
         , viewHistoryTable runs model
         ]

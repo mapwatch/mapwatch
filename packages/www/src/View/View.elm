@@ -10,6 +10,7 @@ import View.Changelog
 import View.Debug
 import View.DebugDatamine
 import View.DumpLines
+import View.GSheets
 import View.History
 import View.HistoryTSV
 import View.Maps
@@ -37,6 +38,9 @@ viewBody rmodel =
 
                 HistoryTSV ->
                     View.HistoryTSV.view model
+
+                GSheets ->
+                    View.GSheets.view model
 
                 Maps ->
                     View.Maps.view model

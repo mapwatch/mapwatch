@@ -29,6 +29,7 @@ import Url.Parser.Query as Q
 type Route
     = History
     | HistoryTSV
+    | GSheets
     | Maps
     | Timer
     | Overlay
@@ -91,6 +92,7 @@ parser =
         , P.map Overlay <| P.s "overlay"
         , P.map History <| P.s "history"
         , P.map HistoryTSV <| P.s "history" </> P.s "tsv"
+        , P.map GSheets <| P.s "gsheets"
         , P.map Maps <| P.s "map"
         , P.map Changelog <| P.s "changelog"
         , P.map Settings <| P.s "settings"
@@ -128,6 +130,9 @@ routeParts r =
 
         HistoryTSV ->
             ( "/history/tsv", pageKeys.historyTSV )
+
+        GSheets ->
+            ( "/gsheets", pageKeys.other )
 
         Maps ->
             ( "/map", pageKeys.map )

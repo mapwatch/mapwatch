@@ -4,6 +4,7 @@ import './main.css';
 import {Elm} from './Main.elm';
 import * as registerServiceWorker from './registerServiceWorker';
 import * as analytics from './analytics'
+import * as gsheets from './gsheets'
 import * as util from './util'
 import {BrowserBackend} from './browserBackend'
 import {MemoryBackend} from './memoryBackend'
@@ -43,6 +44,7 @@ function main() {
   console.log('init', {backend, flags, datamine})
 
   analytics.main(app, backend.platform, version)
+  gsheets.main(app, backend.platform, version)
 
   let activeBackend = backend
   if (qs.example) {

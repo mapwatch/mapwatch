@@ -32,6 +32,7 @@ type Feature
     = Goals
     | Speech
     | DownloadLink
+    | GSheets
 
 
 type alias QueryString =
@@ -43,6 +44,7 @@ list =
     [ Goals
     , Speech
     , DownloadLink
+    , GSheets
     ]
 
 
@@ -62,6 +64,9 @@ config feature =
 
         DownloadLink ->
             FeatureConfig feature "downloadLink" False
+
+        GSheets ->
+            FeatureConfig feature "gsheets" False
 
 
 byString : Dict String FeatureConfig

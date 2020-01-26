@@ -21,7 +21,8 @@
             "elm-community/result-extra": "2.3.0",
             "elm-explorations/markdown": "1.0.0",
             "justinmimbs/time-extra": "1.1.0",
-            "jweir/elm-iso8601": "7.0.0"
+            "jweir/elm-iso8601": "7.0.0",
+            "krisajenkins/remotedata": "6.0.1"
         },
         "indirect": {
             "elm/bytes": "1.0.8",

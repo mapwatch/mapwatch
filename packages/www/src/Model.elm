@@ -19,6 +19,7 @@ import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Ports
+import RemoteData exposing (RemoteData)
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
@@ -66,7 +67,12 @@ type alias OkModel =
     , lines : List String
     , settings : Settings
     , tz : Time.Zone
+    , gsheets : RemoteData String GSheetsSession
     }
+
+
+type alias GSheetsSession =
+    { url : RemoteData String String }
 
 
 type Msg
@@ -80,7 +86,13 @@ type Msg
     | RouteTo Route
     | Search QueryDict
     | InputVolume String
+    | InputSpreadsheetId String
     | Reset (Maybe Route)
+    | GSheetsLoginUpdate { login : Maybe Bool, error : Maybe String }
+    | GSheetsLogin
+    | GSheetsLogout
+    | GSheetsWrite { spreadsheetId : Maybe String, headers : List String, rows : List (List String) }
+    | GSheetsWritten { res : Maybe { spreadsheetUrl : String, spreadsheetId : String }, error : Maybe String }
 
 
 init : Flags -> Url -> Nav.Key -> ( Model, Cmd Msg )
@@ -108,6 +120,7 @@ init flags url nav =
                 -- placeholder; Time.here and SetTimezone set this shortly
                 -- TODO Maybe type?
                 Time.utc
+                RemoteData.NotAsked
     in
     ( model
     , Cmd.batch
@@ -117,8 +130,8 @@ init flags url nav =
     )
 
 
-reset : Flags -> Nav.Key -> QueryDict -> Route -> Settings -> Time.Zone -> Model
-reset flags nav query route settings tz =
+reset : Flags -> Nav.Key -> QueryDict -> Route -> Settings -> Time.Zone -> RemoteData String GSheetsSession -> Model
+reset flags nav query route settings tz gsheets =
     let
         loadedAt =
             Time.millisToPosix flags.loadedAt
@@ -140,6 +153,7 @@ reset flags nav query route settings tz =
             , lines = []
             , settings = settings
             , tz = tz
+            , gsheets = gsheets
             }
     in
     Result.map createModel
@@ -257,8 +271,92 @@ updateOk msg ({ config, mapwatch, settings } as model) =
                     in
                     ( newModel, sendSettings newModel )
 
+        InputSpreadsheetId str ->
+            let
+                newModel =
+                    { model
+                        | settings =
+                            { settings
+                                | spreadsheetId =
+                                    if str == "" then
+                                        Nothing
+
+                                    else
+                                        Just str
+                            }
+                    }
+            in
+            ( newModel, sendSettings newModel )
+
+        GSheetsLogin ->
+            ( { model | gsheets = RemoteData.Loading }, Ports.gsheetsLogin () )
+
+        GSheetsLogout ->
+            ( { model | gsheets = RemoteData.Loading }, Ports.gsheetsLogout () )
+
+        GSheetsLoginUpdate res ->
+            ( { model
+                | gsheets =
+                    case ( res.error, res.login ) of
+                        ( Just error, _ ) ->
+                            RemoteData.Failure error
+
+                        ( Nothing, Just True ) ->
+                            RemoteData.Success { url = RemoteData.NotAsked }
+
+                        ( Nothing, Just False ) ->
+                            RemoteData.NotAsked
+
+                        ( Nothing, Nothing ) ->
+                            RemoteData.Failure "empty login response"
+              }
+            , Cmd.none
+            )
+
+        GSheetsWrite args ->
+            case model.gsheets of
+                RemoteData.Success gsheets ->
+                    ( { model | gsheets = RemoteData.Success { gsheets | url = RemoteData.Loading } }, Ports.gsheetsWrite args )
+
+                _ ->
+                    ( model, Cmd.none )
+
+        GSheetsWritten result ->
+            case model.gsheets of
+                RemoteData.Success gsheets ->
+                    let
+                        m =
+                            { model
+                                | gsheets =
+                                    RemoteData.Success
+                                        { gsheets
+                                            | url =
+                                                case ( result.res |> Maybe.map .spreadsheetUrl, result.error ) of
+                                                    ( _, Just error ) ->
+                                                        RemoteData.Failure error
+
+                                                    ( Just url, Nothing ) ->
+                                                        RemoteData.Success url
+
+                                                    ( Nothing, Nothing ) ->
+                                                        RemoteData.Failure "empty spreadsheet.create response"
+                                        }
+                                , settings =
+                                    case result.res |> Maybe.map .spreadsheetId of
+                                        Nothing ->
+                                            settings
+
+                                        Just id ->
+                                            { settings | spreadsheetId = Just id }
+                            }
+                    in
+                    ( m, Ports.sendSettings m.settings )
+
+                _ ->
+                    ( model, Cmd.none )
+
         Reset redirect ->
-            ( reset model.flags model.nav model.query model.route model.settings model.tz
+            ( reset model.flags model.nav model.query model.route model.settings model.tz model.gsheets
                 |> Result.withDefault model
             , Maybe.Extra.unwrap Cmd.none (Route.pushUrl model.nav model.query) redirect
             )
@@ -294,6 +392,8 @@ subscriptions rmodel =
         Ok model ->
             Sub.batch
                 [ Mapwatch.subscriptions (Ok model.mapwatch) |> Sub.map M
+                , Ports.gsheetsLoginUpdate GSheetsLoginUpdate
+                , Ports.gsheetsWritten GSheetsWritten
 
                 -- Slow down animation, deliberately - don't eat poe's cpu
                 --, Browser.Events.onAnimationFrame Tick
