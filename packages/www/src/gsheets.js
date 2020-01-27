@@ -118,23 +118,10 @@ function updateCells({res, content}) {
             range: {sheetId},
             fields: "userEnteredValue",
             rows: headers.map(hs => ({values: hs.map(h => ({userEnteredValue: {stringValue: h}}))}))
-            .concat(rows.map(cs => ({values: cs.map(c => {
-              // batchUpdate.updateCells refuses to guess datatypes, so I'm guessing for it
-              // TODO: specify the datatype along with the data in elm? this works okayish for now
-              if (c.startsWith("'")) {
-                return {userEnteredValue: {stringValue: c.substr(1)}}
-              }
-              if (c.startsWith('=')) {
-                return {userEnteredValue: {formulaValue: c}}
-              }
-              if (c == 'TRUE') {
-                return {userEnteredValue: {boolValue: c}}
-              }
-              if (!isNaN(parseFloat(c))) {
-                return {userEnteredValue: {numberValue: parseFloat(c)}}
-              }
-              return {userEnteredValue: {stringValue: c}}
-            })}))),
+            // cell values are rendered by Elm as {userEnteredValue: {stringValue: x}}, for example.
+            // This ties them to gsheets, but allows full control over formatting.
+            // https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/other#ExtendedValue
+            .concat(rows.map(cs => ({values: cs}))),
           },
         },{
           autoResizeDimensions: {

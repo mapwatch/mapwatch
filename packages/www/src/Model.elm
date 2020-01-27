@@ -3,6 +3,7 @@ module Model exposing
     , Msg(..)
     , OkModel
     , Progress
+    , Sheet
     , init
     , subscriptions
     , update
@@ -91,8 +92,12 @@ type Msg
     | GSheetsLoginUpdate { login : Maybe Bool, error : Maybe String }
     | GSheetsLogin
     | GSheetsLogout
-    | GSheetsWrite { spreadsheetId : Maybe String, title : String, content : List { title : String, headers : List (List String), rows : List (List String) } }
+    | GSheetsWrite { spreadsheetId : Maybe String, title : String, content : List Sheet }
     | GSheetsWritten { res : Maybe { spreadsheetUrl : String, spreadsheetId : String }, error : Maybe String }
+
+
+type alias Sheet =
+    Ports.Sheet
 
 
 init : Flags -> Url -> Nav.Key -> ( Model, Cmd Msg )

@@ -1,26 +1,24 @@
 module View.GSheets exposing (view)
 
-import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import ISO8601
+import Json.Encode as E
 import Mapwatch
-import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
-import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
-import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
-import Mapwatch.MapRun.Conqueror as Conqueror
 import Maybe.Extra
 import Model exposing (Msg, OkModel)
 import RemoteData exposing (RemoteData)
 import Route.Feature as Feature exposing (Feature)
+import Time exposing (Posix)
 import View.History
-import View.HistoryTSV
 import View.Home
 import View.Icon
 import View.Nav
 import View.NotFound
 import View.Setup
+import View.Spreadsheet as Spreadsheet
 
 
 view : OkModel -> Html Msg
@@ -126,13 +124,86 @@ gsheetsWrite model runs spreadsheetId =
         { spreadsheetId = spreadsheetId
         , title = "Mapwatch"
         , content =
-            [ { title = "Mapwatch: Data"
-              , headers = [ View.HistoryTSV.viewHeader ]
-              , rows =
-                    runs
-                        |> List.reverse
-                        |> List.indexedMap (View.HistoryTSV.viewRow model)
-                        |> List.reverse
-              }
+            [ Spreadsheet.viewData model runs
             ]
+                |> List.map encodeSheet
         }
+
+
+encodeSheet : Spreadsheet.Sheet -> Model.Sheet
+encodeSheet s =
+    { title = s.title
+    , headers = s.headers
+    , rows = s.rows |> List.map (List.map encodeCell)
+    }
+
+
+encodeCell : Spreadsheet.Cell -> E.Value
+encodeCell c =
+    -- https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/other#ExtendedValue
+    case c of
+        Spreadsheet.CellEmpty ->
+            stringValue ""
+
+        Spreadsheet.CellString s ->
+            stringValue s
+
+        Spreadsheet.CellDuration d ->
+            stringValue <| View.Home.formatDuration d
+
+        Spreadsheet.CellPosix tz d ->
+            posixValue tz d
+
+        Spreadsheet.CellBool b ->
+            boolValue b
+
+        Spreadsheet.CellInt n ->
+            numberValue <| toFloat n
+
+        Spreadsheet.CellFloat n ->
+            numberValue n
+
+        Spreadsheet.CellIcon src ->
+            formulaValue <| "=IMAGE(\"" ++ src ++ "\")"
+
+
+cellValue : String -> E.Value -> E.Value
+cellValue k v =
+    E.object [ ( "userEnteredValue", E.object [ ( k, v ) ] ) ]
+
+
+posixValue : Time.Zone -> Posix -> E.Value
+posixValue tz d =
+    let
+        t =
+            Spreadsheet.posixToString tz d
+    in
+    E.object
+        -- [ ( "userEnteredValue", E.object [ ( "formulaValue", E.string <| "=TO_DATE(DATEVALUE(\"" ++ t ++ "\") + TIMEVALUE(\"" ++ t ++ "\"))" ) ] )
+        [ ( "userEnteredValue", E.object [ ( "stringValue", E.string t ) ] )
+        , ( "userEnteredFormat", E.object [ ( "numberFormat", E.object [ ( "type", E.string "DATE_TIME" ) ] ) ] )
+        ]
+
+
+stringValue : String -> E.Value
+stringValue s =
+    cellValue "stringValue" <| E.string s
+
+
+boolValue : Bool -> E.Value
+boolValue b =
+    if b then
+        cellValue "boolValue" <| E.bool b
+
+    else
+        stringValue ""
+
+
+numberValue : Float -> E.Value
+numberValue n =
+    cellValue "numberValue" <| E.float n
+
+
+formulaValue : String -> E.Value
+formulaValue f =
+    cellValue "formulaValue" <| E.string f

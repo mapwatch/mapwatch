@@ -1,5 +1,6 @@
 port module Ports exposing
     ( Progress
+    , Sheet
     , gsheetsLogin
     , gsheetsLoginUpdate
     , gsheetsLogout
@@ -174,15 +175,17 @@ port gsheetsLoginUpdate : ({ login : Maybe Bool, error : Maybe String } -> msg) 
 port gsheetsLogout : () -> Cmd msg
 
 
+type alias Sheet =
+    { title : String
+    , headers : List (List String)
+    , rows : List (List Decode.Value)
+    }
+
+
 port gsheetsWrite :
     { spreadsheetId : Maybe String
     , title : String
-    , content :
-        List
-            { title : String
-            , headers : List (List String)
-            , rows : List (List String)
-            }
+    , content : List Sheet
     }
     -> Cmd msg
 
