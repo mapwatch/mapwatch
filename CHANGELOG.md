@@ -2,16 +2,14 @@
 
 All substantial Mapwatch changes.
 
-## [Unreleased]
-### Beta/experimental
-- [Speech](https://mapwatch.erosson.org?enableSpeech=1)
-
 ---
-## 2019-09-04
+## 2020-03-12
 - Updated "hide pre-Metamorph maps" button for Delirium league.
+- Enabled speech: audio announcements upon map completion. Muted by default, but there's a volume control at the start page and settings page.
+  - If speech causes problems, [you can turn it off for now](https://mapwatch.erosson.org?enableSpeech=0).
 - Added a [privacy policy](#privacy).
 
-## 2020-01-23
+## 2020-01[-](# "Happy birthday to me~")23
 - Fixed a bug that broke the summary at the top of the history page when before/after times were set.
 - Conqueror status now shows an icon with the region of your last conqueror encounter and regions of all past conqueror encounters.
 

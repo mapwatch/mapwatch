@@ -60,7 +60,7 @@ config feature =
             FeatureConfig feature "enableGoals" True
 
         Speech ->
-            FeatureConfig feature "enableSpeech" False
+            FeatureConfig feature "enableSpeech" True
 
         DownloadLink ->
             FeatureConfig feature "downloadLink" False
