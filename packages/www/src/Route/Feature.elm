@@ -33,6 +33,7 @@ type Feature
     | Speech
     | DownloadLink
     | GSheets
+    | ConquerorStatus
 
 
 type alias QueryString =
@@ -45,6 +46,7 @@ list =
     , Speech
     , DownloadLink
     , GSheets
+    , ConquerorStatus
     ]
 
 
@@ -67,6 +69,9 @@ config feature =
 
         GSheets ->
             FeatureConfig feature "gsheets" False
+
+        ConquerorStatus ->
+            FeatureConfig feature "conquerorStatus" False
 
 
 byString : Dict String FeatureConfig

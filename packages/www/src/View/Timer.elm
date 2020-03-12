@@ -12,6 +12,7 @@ import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
 import Model as Model exposing (Msg, OkModel)
 import Route
+import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Set exposing (Set)
 import Time exposing (Posix)
@@ -104,7 +105,15 @@ viewMain model =
             table [ class "timer history" ]
                 [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun model { showDate = False } goalDuration) <| history)
                 , tfoot []
-                    [ tr [] [ td [ colspan 12 ] [ viewConquerorsState model.query (Conqueror.createState (Maybe.Extra.toList run ++ model.mapwatch.runs)) ] ]
+                    [ tr []
+                        [ td [ colspan 12 ]
+                            (if Feature.isActive Feature.ConquerorStatus model.query then
+                                [ viewConquerorsState model.query (Conqueror.createState (Maybe.Extra.toList run ++ model.mapwatch.runs)) ]
+
+                             else
+                                []
+                            )
+                        ]
                     , tr []
                         [ td [ colspan 12, class "timer-links" ]
                             [ a [ Route.href model.query Route.History ] [ View.Icon.fas "history", text " History" ]

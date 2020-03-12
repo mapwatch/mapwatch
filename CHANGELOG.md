@@ -8,6 +8,8 @@ All substantial Mapwatch changes.
 - Enabled speech: audio announcements upon map completion. Muted by default, but there's a volume control at the start page and settings page.
   - If speech causes problems, [you can turn it off for now](https://mapwatch.erosson.org?enableSpeech=0).
 - Added a [privacy policy](#privacy).
+- Removed conqueror tracking from the timer.
+  - With the improvements to in-game conqueror tracking, I don't think this is necessary anymore. If you disagree, [you can re-enable it for now.](https://mapwatch.erosson.org?conquerorStatus=1)
 
 ## 2020-01[-](# "Happy birthday to me~")23
 - Fixed a bug that broke the summary at the top of the history page when before/after times were set.
