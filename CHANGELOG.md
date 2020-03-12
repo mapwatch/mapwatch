@@ -7,6 +7,9 @@ All substantial Mapwatch changes.
 - [Speech](https://mapwatch.erosson.org?enableSpeech=1)
 
 ---
+## 2019-09-04
+- Updated "hide pre-Metamorph maps" button for Delirium league.
+
 ## 2020-01-23
 - Fixed a bug that broke the summary at the top of the history page when before/after times were set.
 - Conqueror status now shows an icon with the region of your last conqueror encounter and regions of all past conqueror encounters.
