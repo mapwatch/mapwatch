@@ -16,6 +16,7 @@ import View.HistoryTSV
 import View.Maps
 import View.NotFound
 import View.Overlay
+import View.Privacy
 import View.Settings
 import View.Timer
 
@@ -62,6 +63,9 @@ viewBody rmodel =
 
                 Changelog ->
                     View.Changelog.view model
+
+                Privacy ->
+                    View.Privacy.view model
 
                 Settings ->
                     View.Settings.view model

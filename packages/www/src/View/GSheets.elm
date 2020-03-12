@@ -10,6 +10,7 @@ import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Maybe.Extra
 import Model exposing (Msg, OkModel)
 import RemoteData exposing (RemoteData)
+import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
 import Time exposing (Posix)
 import View.History
@@ -55,17 +56,20 @@ viewMain model =
             div []
                 [ p [] [ text "Login to your Google account below to create a spreadsheet with your Mapwatch data." ]
                 , button [ onClick Model.GSheetsLogin ] [ text "Login to Google Sheets" ]
+                , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
                 ]
 
         RemoteData.Loading ->
             div []
                 [ button [ disabled True ] [ View.Icon.fasPulse "spinner", text " Login to Google Sheets" ]
+                , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
                 ]
 
         RemoteData.Failure err ->
             div []
                 [ button [ onClick Model.GSheetsLogin ] [ text "Login to Google Sheets" ]
                 , pre [] [ text err ]
+                , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
                 ]
 
         RemoteData.Success gsheets ->
@@ -115,6 +119,7 @@ viewMain model =
                                 , a [ target "_blank", href url ] [ text "View your spreadsheet." ]
                                 ]
                             ]
+                , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
                 ]
 
 

@@ -34,6 +34,7 @@ type Route
     | Timer
     | Overlay
     | Changelog
+    | Privacy
     | Settings
     | Debug
     | DebugDumpLines
@@ -95,6 +96,7 @@ parser =
         , P.map GSheets <| P.s "gsheets"
         , P.map Maps <| P.s "map"
         , P.map Changelog <| P.s "changelog"
+        , P.map Privacy <| P.s "privacy"
         , P.map Settings <| P.s "settings"
         , P.map Debug <| P.s "debug"
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
@@ -145,6 +147,9 @@ routeParts r =
 
         Changelog ->
             ( "/changelog", pageKeys.other )
+
+        Privacy ->
+            ( "/privacy", pageKeys.other )
 
         Settings ->
             ( "/settings", pageKeys.other )

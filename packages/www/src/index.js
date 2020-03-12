@@ -10,12 +10,14 @@ import {BrowserBackend} from './browserBackend'
 import {MemoryBackend} from './memoryBackend'
 import {default as datamine} from '@mapwatch/datamine'
 import changelog from '!!raw-loader!../../../CHANGELOG.md'
+import privacy from '!!raw-loader!../../../PRIVACY.md'
 // version.txt is created by by `yarn _build:version`
 import version from '!!raw-loader!../tmp/version.txt'
 // file-loader copies things into the website's static files; for example,
 // this makes https://erosson.mapwatch.org/CHANGELOG.md work. Sort of like how
 // `cp ... ./build/` in `yarn build` might work, but this also works in dev.
 import '!!file-loader?name=CHANGELOG.md!../../../CHANGELOG.md'
+import '!!file-loader?name=PRIVACY.md!../../../PRIVACY.md'
 import '!!file-loader?name=rss.xml!../../rss/dist/rss.xml'
 import '!!file-loader?name=version.txt!../tmp/version.txt'
 
@@ -130,6 +132,7 @@ function createFlags({backend, settings, qs}) {
     loadedAt,
     tickOffset,
     changelog,
+    privacy,
     version,
     logtz,
     settings: settings.readDefault({}),

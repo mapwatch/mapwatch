@@ -9,6 +9,7 @@ All substantial Mapwatch changes.
 ---
 ## 2019-09-04
 - Updated "hide pre-Metamorph maps" button for Delirium league.
+- Added a [privacy policy](#privacy).
 
 ## 2020-01-23
 - Fixed a bug that broke the summary at the top of the history page when before/after times were set.
