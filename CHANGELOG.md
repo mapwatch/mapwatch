@@ -3,6 +3,10 @@
 All substantial Mapwatch changes.
 
 ---
+## 2020-03-19
+- The Simulacrum is now tracked.
+- Delirium encounters can now be tracked. This is off by default - seeing delirium in every map is not useful - but if you like, [you can turn it on](https://mapwatch.erosson.org?deliriumEncounter=1).
+
 ## 2020-03-12
 - Updated "hide pre-Metamorph maps" button for Delirium league.
 - Enabled speech: audio announcements upon map completion. Muted by default, but there's a volume control at the start page and settings page.

@@ -73,6 +73,9 @@ const nonAtlasMaps = {
   "BreachBossPhysical": "Art/2DItems/Currency/Breach/BreachFragmentsPhysical.png",
   "BreachBossChaos": "Art/2DItems/Currency/Breach/BreachFragmentsChaos.png",
 }
+for (let i=0; i <= 10; i++) {
+  nonAtlasMaps["AfflictionTown" + i] = "Art/2DItems/Maps/DeliriumFragment.png"
+}
 function transformLang(raw, {worldAreasById}) {
   // areas all have different names for different languages, map id -> name.
   // mapwatch is usually more concerned with name -> id for log parsing, but it can deal.
@@ -101,6 +104,7 @@ const exportedNPCs = Object.assign({}, ...[
   "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop", // ninja-cop, lol
   "Metadata/Monsters/Masters/BlightBuilderWild",
   "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC",
+  "Metadata/NPC/League/Affliction/StrangeVoice",
 ].map(name => ({[name]: true})))
 function isNPCTextExported(raw) {
   // conquerors

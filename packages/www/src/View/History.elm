@@ -338,7 +338,7 @@ viewHistoryRun ({ query, tz } as m) config goals r =
                 |> Maybe.Extra.toList
             , r.npcSays
                 |> Dict.toList
-                |> List.filterMap (viewHistoryNpcTextRow config)
+                |> List.filterMap (viewHistoryNpcTextRow query config)
             ]
 
 
@@ -412,9 +412,9 @@ viewHistorySideAreaRow query { showDate } ( instance, d ) =
         )
 
 
-viewHistoryNpcTextRow : HistoryRowConfig -> ( NpcId, List String ) -> Maybe (Html msg)
-viewHistoryNpcTextRow { showDate } ( npcId, texts ) =
-    case viewNpcText npcId of
+viewHistoryNpcTextRow : QueryDict -> HistoryRowConfig -> ( NpcId, List String ) -> Maybe (Html msg)
+viewHistoryNpcTextRow query { showDate } ( npcId, texts ) =
+    case viewNpcText query npcId of
         [] ->
             Nothing
 
@@ -439,8 +439,8 @@ viewHistoryNpcTextRow { showDate } ( npcId, texts ) =
                     )
 
 
-viewNpcText : String -> List (Html msg)
-viewNpcText npcId =
+viewNpcText : QueryDict -> String -> List (Html msg)
+viewNpcText query npcId =
     if npcId == NpcId.einhar then
         [ View.Icon.einhar, text "Einhar, Beastmaster" ]
 
@@ -456,9 +456,13 @@ viewNpcText npcId =
     else if npcId == NpcId.cassia then
         [ View.Icon.cassia, text "Sister Cassia" ]
         -- Don't show Tane during Metamorph league
+        -- Actually, his voicing is so inconsistent that we can't show him after metamorph league either!
         -- else if npcId == NpcId.tane then
         -- [ View.Icon.tane, text "Tane Octavius" ]
         -- Don't show conquerors, they have their own special function
+
+    else if npcId == NpcId.delirium && Feature.isActive Feature.DeliriumEncounter query then
+        [ View.Icon.delirium, text "Delirium Mirror" ]
 
     else
         []

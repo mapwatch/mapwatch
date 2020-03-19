@@ -49,3 +49,7 @@ cassia =
 
 tane =
     "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC"
+
+
+delirium =
+    "Metadata/NPC/League/Affliction/StrangeVoice"

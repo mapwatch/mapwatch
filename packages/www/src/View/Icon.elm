@@ -148,6 +148,11 @@ tane =
     sideArea { name = "tane big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedMetamorph.png?scale=1" }
 
 
+delirium : Html msg
+delirium =
+    sideArea { name = "delirium big-icon", url = "Art/2DItems/Maps/DeliriumSplinter.png?scale=1" }
+
+
 region : Maybe WorldArea -> Html msg
 region w =
     w

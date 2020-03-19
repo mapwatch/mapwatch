@@ -34,6 +34,7 @@ type Feature
     | DownloadLink
     | GSheets
     | ConquerorStatus
+    | DeliriumEncounter
 
 
 type alias QueryString =
@@ -47,6 +48,7 @@ list =
     , DownloadLink
     , GSheets
     , ConquerorStatus
+    , DeliriumEncounter
     ]
 
 
@@ -72,6 +74,9 @@ config feature =
 
         ConquerorStatus ->
             FeatureConfig feature "conquerorStatus" False
+
+        DeliriumEncounter ->
+            FeatureConfig feature "deliriumEncounter" False
 
 
 byString : Dict String FeatureConfig

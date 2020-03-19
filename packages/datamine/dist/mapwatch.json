@@ -6146,6 +6146,76 @@
         null,
         null,
         1574
+      ],
+      [
+        "AfflictionTown6",
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/DeliriumFragment.png",
+        null,
+        null,
+        1575
+      ],
+      [
+        "AfflictionTown4",
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/DeliriumFragment.png",
+        null,
+        null,
+        1576
+      ],
+      [
+        "AfflictionTown7",
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/DeliriumFragment.png",
+        null,
+        null,
+        1577
+      ],
+      [
+        "AfflictionTown8",
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/DeliriumFragment.png",
+        null,
+        null,
+        1578
+      ],
+      [
+        "AfflictionTown10",
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/DeliriumFragment.png",
+        null,
+        null,
+        1579
       ]
     ]
   },
@@ -6526,7 +6596,12 @@
         "HideoutBlankSea": "Verstecktes Meer",
         "HideoutBlankSnow": "Versteckte Schneelandschaft",
         "pvpTown": "Sarn-Arena, Bühnenbereich",
-        "AtlasExilesBoss5": "Auge des Sturms"
+        "AtlasExilesBoss5": "Auge des Sturms",
+        "AfflictionTown6": "Löwenauges Wahn",
+        "AfflictionTown4": "Hohnpforte",
+        "AfflictionTown7": "Das Verrücktenlager",
+        "AfflictionTown8": "Das Lager von Insania",
+        "AfflictionTown10": "Oriaths Illusion"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Meister der Bestien",
@@ -6538,7 +6613,8 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran der Kreuzritter",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania die Erlöserin",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin der Jäger",
-        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox der Kriegsfürst"
+        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox der Kriegsfürst",
+        "Metadata/NPC/League/Affliction/StrangeVoice": "Fremde Stimme"
       },
       "npcTextAudio": {
         "CassiaNewLane1": "Es hat ein neues Myzel ausgebracht! ... Neue Wurzeln!",
@@ -7060,7 +7136,12 @@
         "HideoutBlankSea": "All at Sea Hideout",
         "HideoutBlankSnow": "Glacial Expanse Hideout",
         "pvpTown": "Sarn Arena Staging Area",
-        "AtlasExilesBoss5": "Eye of the Storm"
+        "AtlasExilesBoss5": "Eye of the Storm",
+        "AfflictionTown6": "Lunacy's Watch",
+        "AfflictionTown4": "Hysteriagate",
+        "AfflictionTown7": "The Bridge Enraptured",
+        "AfflictionTown8": "The Syndrome Encampment",
+        "AfflictionTown10": "Oriath Delusion"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
@@ -7072,7 +7153,8 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, the Crusader",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, the Redeemer",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, the Hunter",
-        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, the Warlord"
+        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, the Warlord",
+        "Metadata/NPC/League/Affliction/StrangeVoice": "Strange Voice"
       },
       "npcTextAudio": {
         "CassiaNewLane1": "It's put out new mycelium! ... New roots!",
@@ -7594,7 +7676,12 @@
         "HideoutBlankSea": "Guarida del Mar",
         "HideoutBlankSnow": "Guarida de Extensión glacial",
         "pvpTown": "Área de Preparación de la Arena de Sarn",
-        "AtlasExilesBoss5": "El ojo de la tormenta"
+        "AtlasExilesBoss5": "El ojo de la tormenta",
+        "AfflictionTown6": "Vigilia de la locura",
+        "AfflictionTown4": "Puerta de la histeria",
+        "AfflictionTown7": "El puente embelesado",
+        "AfflictionTown8": "El campamento del síndrome",
+        "AfflictionTown10": "Alucinación de Oriath"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar Frey, Maestro de Bestias",
@@ -7606,7 +7693,8 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, el Cruzado",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, la Redentora",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, el Cazador",
-        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, el Jefe de guerra"
+        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, el Jefe de guerra",
+        "Metadata/NPC/League/Affliction/StrangeVoice": "Voz extraña"
       },
       "npcTextAudio": {
         "CassiaNewLane1": "¡Ha creado más micelio! ...¡Más raíces!",
@@ -8128,7 +8216,12 @@
         "HideoutBlankSea": "Repaire en haute mer",
         "HideoutBlankSnow": "Repaire de l'étendue glaciale",
         "pvpTown": "Scène de l'arène de Sarn",
-        "AtlasExilesBoss5": "L'Œil du cyclone"
+        "AtlasExilesBoss5": "L'Œil du cyclone",
+        "AfflictionTown6": "Le Guet de l'Œil accusateur",
+        "AfflictionTown4": "Hantevoie",
+        "AfflictionTown7": "Le Décampement du pont",
+        "AfflictionTown8": "Le Campement du Syndrome",
+        "AfflictionTown10": "Illusion d'Oriath"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Maître des Bêtes",
@@ -8140,7 +8233,8 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, le Croisé",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Véritania, la Rédemptrice",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, le Chasseur",
-        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, le Seigneur de guerre"
+        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, le Seigneur de guerre",
+        "Metadata/NPC/League/Affliction/StrangeVoice": "Voix étrange"
       },
       "npcTextAudio": {
         "CassiaNewLane1": "Un nouveau mycélium vient de surgir ! … De nouvelles racines, quoi !",
@@ -8662,7 +8756,12 @@
         "HideoutBlankSea": "아득한 바다 은신처",
         "HideoutBlankSnow": "드넓은 빙하 은신처",
         "pvpTown": "사안 투기장",
-        "AtlasExilesBoss5": "태풍의 눈"
+        "AtlasExilesBoss5": "태풍의 눈",
+        "AfflictionTown6": "광기의 초소",
+        "AfflictionTown4": "발작의 관문",
+        "AfflictionTown7": "황홀한 다리",
+        "AfflictionTown8": "증후군 야영지",
+        "AfflictionTown10": "오리아스의 망상"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "야수의 대가 아인하르",
@@ -8674,7 +8773,8 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "십자군 바란",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "대속자 베리타니아",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "사냥꾼 알-헤즈민",
-        "Metadata/Monsters/AtlasExiles/AtlasExile4": "전쟁군주 드록스"
+        "Metadata/Monsters/AtlasExiles/AtlasExile4": "전쟁군주 드록스",
+        "Metadata/NPC/League/Affliction/StrangeVoice": "이상한 목소리"
       },
       "npcTextAudio": {
         "CassiaNewLane1": "새로운 균사체로군! ...새로운 뿌리가!",
@@ -9196,7 +9296,12 @@
         "HideoutBlankSea": "Refúgio Marítimo",
         "HideoutBlankSnow": "Refúgio Expansão Glacial",
         "pvpTown": "Área de Testes da Arena de Sarn",
-        "AtlasExilesBoss5": "Olho da Tempestade"
+        "AtlasExilesBoss5": "Olho da Tempestade",
+        "AfflictionTown6": "Vigia da Loucura",
+        "AfflictionTown4": "Portão da Histeria",
+        "AfflictionTown7": "A Ponte Arrebatada",
+        "AfflictionTown8": "O Acampamento da Síndrome",
+        "AfflictionTown10": "Ilusão de Oriath"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Mestre das Bestas",
@@ -9208,7 +9313,8 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, o Cruzado",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, a Redentora",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, o Caçador",
-        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, o Senhor da Guerra"
+        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, o Senhor da Guerra",
+        "Metadata/NPC/League/Affliction/StrangeVoice": "Voz Estranha"
       },
       "npcTextAudio": {
         "CassiaNewLane1": "Cresceu um novo micélio... uma nova raiz!",
@@ -9730,7 +9836,12 @@
         "HideoutBlankSea": "Убежище широкого моря",
         "HideoutBlankSnow": "Убежище ледниковой тверди",
         "pvpTown": "Внутренние помещения арены Сарна",
-        "AtlasExilesBoss5": "Око Шторма"
+        "AtlasExilesBoss5": "Око Шторма",
+        "AfflictionTown6": "Застава безумия",
+        "AfflictionTown4": "Врата истерии",
+        "AfflictionTown7": "Упоённый мост",
+        "AfflictionTown8": "Лагерь Синдрома",
+        "AfflictionTown10": "Наваждение Ориата"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Эйнар, Мастер зверей",
@@ -9742,7 +9853,8 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Бэран, Крестоносец",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Веритания, Избавительница",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Аль-Хезмин, Охотник",
-        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Дрокс, Вождь"
+        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Дрокс, Вождь",
+        "Metadata/NPC/League/Affliction/StrangeVoice": "Странный голос"
       },
       "npcTextAudio": {
         "CassiaNewLane1": "Он выпустил новый мицелий!.. Новые корни!",
@@ -10264,7 +10376,12 @@
         "HideoutBlankSea": "All at Sea Hideout",
         "HideoutBlankSnow": "Glacial Expanse Hideout",
         "pvpTown": "Sarn Arena Staging Area",
-        "AtlasExilesBoss5": "Eye of the Storm"
+        "AtlasExilesBoss5": "Eye of the Storm",
+        "AfflictionTown6": "Lunacy's Watch",
+        "AfflictionTown4": "Hysteriagate",
+        "AfflictionTown7": "The Bridge Enraptured",
+        "AfflictionTown8": "The Syndrome Encampment",
+        "AfflictionTown10": "Oriath Delusion"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
@@ -10276,7 +10393,8 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, the Crusader",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, the Redeemer",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, the Hunter",
-        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, the Warlord"
+        "Metadata/Monsters/AtlasExiles/AtlasExile4": "Drox, the Warlord",
+        "Metadata/NPC/League/Affliction/StrangeVoice": "เสียงประหลาด"
       },
       "npcTextAudio": {
         "CassiaNewLane1": "มันแตกไมเซเลี่ยมใหม่! ... รากใหม่!",
