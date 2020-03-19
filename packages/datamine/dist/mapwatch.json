@@ -660,7 +660,7 @@
         197
       ],
       [
-        "1_Sidearea5_4",
+        "1_SideArea5_4",
         false,
         false,
         false,
@@ -674,7 +674,7 @@
         198
       ],
       [
-        "1_Sidearea5_4b",
+        "1_SideArea5_4b",
         false,
         false,
         false,
@@ -688,7 +688,7 @@
         199
       ],
       [
-        "1_Sidearea5_5",
+        "1_SideArea5_5",
         false,
         false,
         false,
@@ -702,7 +702,7 @@
         200
       ],
       [
-        "1_Sidearea5_6",
+        "1_SideArea5_6",
         false,
         false,
         false,
@@ -716,7 +716,7 @@
         201
       ],
       [
-        "1_Sidearea5_7",
+        "1_SideArea5_7",
         false,
         false,
         false,
@@ -730,7 +730,7 @@
         202
       ],
       [
-        "1_Sidearea5_8",
+        "1_SideArea5_8",
         false,
         false,
         false,
@@ -744,7 +744,7 @@
         203
       ],
       [
-        "1_Sidearea6_4",
+        "1_SideArea6_4",
         false,
         false,
         false,
@@ -772,7 +772,7 @@
         205
       ],
       [
-        "1_Sidearea7_4",
+        "1_SideArea7_4",
         false,
         false,
         false,
@@ -786,7 +786,7 @@
         206
       ],
       [
-        "1_Sidearea7_10",
+        "1_SideArea7_10",
         false,
         false,
         false,
@@ -800,7 +800,7 @@
         207
       ],
       [
-        "1_Sidearea7_12",
+        "1_SideArea7_12",
         false,
         false,
         false,
@@ -814,7 +814,7 @@
         208
       ],
       [
-        "1_Sidearea8_3",
+        "1_SideArea8_3",
         false,
         false,
         false,
@@ -828,7 +828,7 @@
         209
       ],
       [
-        "1_Sidearea8_5",
+        "1_SideArea8_5",
         false,
         false,
         false,
@@ -842,7 +842,7 @@
         210
       ],
       [
-        "1_Sidearea8_7",
+        "1_SideArea8_7",
         false,
         false,
         false,
@@ -856,7 +856,7 @@
         211
       ],
       [
-        "1_Sidearea9_3",
+        "1_SideArea9_3",
         false,
         false,
         false,
@@ -870,7 +870,7 @@
         212
       ],
       [
-        "1_Sidearea9_5",
+        "1_SideArea9_5",
         false,
         false,
         false,
@@ -884,7 +884,7 @@
         213
       ],
       [
-        "1_Sidearea9_6",
+        "1_SideArea9_6",
         false,
         false,
         false,
@@ -898,7 +898,7 @@
         214
       ],
       [
-        "1_Sidearea9_9",
+        "1_SideArea9_9",
         false,
         false,
         false,
@@ -912,7 +912,7 @@
         215
       ],
       [
-        "1_Sidearea10_3",
+        "1_SideArea10_3",
         false,
         false,
         false,
@@ -926,6 +926,748 @@
         216
       ],
       [
+        "MapSideArea1_1",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        217
+      ],
+      [
+        "MapSideArea1_2",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        218
+      ],
+      [
+        "MapSideArea1_3",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        219
+      ],
+      [
+        "MapSideArea1_4",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        220
+      ],
+      [
+        "MapSideArea1_5",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        221
+      ],
+      [
+        "MapSideArea1_6",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        222
+      ],
+      [
+        "MapSideArea2_1",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        223
+      ],
+      [
+        "MapSideArea2_2",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        224
+      ],
+      [
+        "MapSideArea2_3",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        225
+      ],
+      [
+        "MapSideArea2_4",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        226
+      ],
+      [
+        "MapSideArea2_5",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        227
+      ],
+      [
+        "MapSideArea2_6",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        228
+      ],
+      [
+        "MapSideArea2_7",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        229
+      ],
+      [
+        "MapSideArea2_8",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        230
+      ],
+      [
+        "MapSideArea3_1",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        231
+      ],
+      [
+        "MapSideArea3_2",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        232
+      ],
+      [
+        "MapSideArea3_3",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        233
+      ],
+      [
+        "MapSideArea3_4",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        234
+      ],
+      [
+        "MapSideArea3_5",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        235
+      ],
+      [
+        "MapSideArea3_6",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        236
+      ],
+      [
+        "MapSideArea3_7",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        237
+      ],
+      [
+        "MapSideArea3_8",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        238
+      ],
+      [
+        "MapSideArea3_9",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        239
+      ],
+      [
+        "MapSideArea3_10",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        240
+      ],
+      [
+        "MapSideArea3_11",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        241
+      ],
+      [
+        "MapSideArea3_12",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        242
+      ],
+      [
+        "MapSideArea4_1",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        243
+      ],
+      [
+        "MapSideArea4_2",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        244
+      ],
+      [
+        "MapSideArea4_3",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        245
+      ],
+      [
+        "MapSideArea4_4",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        246
+      ],
+      [
+        "MapSideArea4_7",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        247
+      ],
+      [
+        "MapSideArea5_2",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        248
+      ],
+      [
+        "MapSideArea5_3_1",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        249
+      ],
+      [
+        "MapSideArea5_3_2",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        250
+      ],
+      [
+        "MapSideArea5_4",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        251
+      ],
+      [
+        "MapSideArea5_4b",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        252
+      ],
+      [
+        "MapSideArea5_5",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        253
+      ],
+      [
+        "MapSideArea5_6",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        254
+      ],
+      [
+        "MapSideArea5_7",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        255
+      ],
+      [
+        "MapSideArea5_8",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        256
+      ],
+      [
+        "MapSideArea6_4",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        257
+      ],
+      [
+        "MapSideArea6_6",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        258
+      ],
+      [
+        "MapSideArea7_4",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        259
+      ],
+      [
+        "MapSideArea7_10",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        260
+      ],
+      [
+        "MapSideArea7_12",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        261
+      ],
+      [
+        "MapSideArea8_3",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        262
+      ],
+      [
+        "MapSideArea8_5",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        263
+      ],
+      [
+        "MapSideArea8_7",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        264
+      ],
+      [
+        "MapSideArea9_3",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        265
+      ],
+      [
+        "MapSideArea9_5",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        266
+      ],
+      [
+        "MapSideArea9_6",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        267
+      ],
+      [
+        "MapSideArea9_9",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        268
+      ],
+      [
+        "MapSideArea10_3",
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        null,
+        null,
+        null,
+        269
+      ],
+      [
         "3_ProphecyBoss",
         false,
         false,
@@ -937,7 +1679,7 @@
         "Art/2DItems/Maps/PaleCourtComplete.png",
         null,
         null,
-        218
+        273
       ],
       [
         "Synthesis_MapBoss",
@@ -951,7 +1693,7 @@
         "Art/2DItems/Maps/SynthesisBossGuardianMap.dds",
         null,
         null,
-        384
+        439
       ],
       [
         "Synthesis_MapGuardian1",
@@ -965,7 +1707,7 @@
         "Art/2DItems/Maps/SynthesisColdGuardianMap.dds",
         null,
         null,
-        385
+        440
       ],
       [
         "Synthesis_MapGuardian2",
@@ -979,7 +1721,7 @@
         "Art/2DItems/Maps/SynthesisFireGuardianMap.dds",
         null,
         null,
-        386
+        441
       ],
       [
         "Synthesis_MapGuardian3",
@@ -993,7 +1735,7 @@
         "Art/2DItems/Maps/SynthesisLightningGuardianMap.dds",
         null,
         null,
-        387
+        442
       ],
       [
         "Synthesis_MapGuardian4",
@@ -1007,7 +1749,7 @@
         "Art/2DItems/Maps/SynthesisGolemGuardianMap.dds",
         null,
         null,
-        388
+        443
       ],
       [
         "EndGame_Labyrinth_trials_sawblades_#",
@@ -1021,7 +1763,7 @@
         null,
         null,
         null,
-        681
+        736
       ],
       [
         "EndGame_Labyrinth_trials_lava_#",
@@ -1035,7 +1777,7 @@
         null,
         null,
         null,
-        682
+        737
       ],
       [
         "EndGame_Labyrinth_trials_spinners",
@@ -1049,7 +1791,7 @@
         null,
         null,
         null,
-        683
+        738
       ],
       [
         "EndGame_Labyrinth_trials_spikes",
@@ -1063,7 +1805,7 @@
         null,
         null,
         null,
-        684
+        739
       ],
       [
         "EndGame_Labyrinth_trials_arrows",
@@ -1077,7 +1819,7 @@
         null,
         null,
         null,
-        685
+        740
       ],
       [
         "EndGame_Labyrinth_trials_roombas",
@@ -1091,7 +1833,7 @@
         null,
         null,
         null,
-        686
+        741
       ],
       [
         "MapAtziri1",
@@ -1105,7 +1847,7 @@
         "Art/2DItems/Maps/VaalComplete.png",
         null,
         null,
-        687
+        742
       ],
       [
         "MapAtziri2",
@@ -1119,7 +1861,7 @@
         "Art/2DItems/Maps/UberVaalComplete.png",
         null,
         null,
-        688
+        743
       ],
       [
         "BreachBossPhysical",
@@ -1133,7 +1875,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsPhysical.png",
         null,
         null,
-        992
+        1047
       ],
       [
         "BreachBossChaos",
@@ -1147,7 +1889,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsChaos.png",
         null,
         null,
-        993
+        1048
       ],
       [
         "BreachBossFire",
@@ -1161,7 +1903,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsFire.png",
         null,
         null,
-        994
+        1049
       ],
       [
         "BreachBossCold",
@@ -1175,7 +1917,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsCold.png",
         null,
         null,
-        995
+        1050
       ],
       [
         "BreachBossLightning",
@@ -1189,7 +1931,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsLightning.png",
         null,
         null,
-        996
+        1051
       ],
       [
         "MapWorldsLookout",
@@ -1209,7 +1951,7 @@
           11,
           14
         ],
-        1016
+        1071
       ],
       [
         "MapWorldsBeach",
@@ -1229,7 +1971,7 @@
           10,
           14
         ],
-        1017
+        1072
       ],
       [
         "MapWorldsGraveyard",
@@ -1249,7 +1991,7 @@
           11,
           14
         ],
-        1018
+        1073
       ],
       [
         "MapWorldsDungeon",
@@ -1269,7 +2011,7 @@
           11,
           14
         ],
-        1019
+        1074
       ],
       [
         "MapWorldsAlleyways",
@@ -1289,7 +2031,7 @@
           11,
           14
         ],
-        1020
+        1075
       ],
       [
         "MapWorldsPen",
@@ -1309,7 +2051,7 @@
           12,
           14
         ],
-        1021
+        1076
       ],
       [
         "MapWorldsDesert",
@@ -1329,7 +2071,7 @@
           11,
           14
         ],
-        1022
+        1077
       ],
       [
         "MapWorldsAridLake",
@@ -1349,7 +2091,7 @@
           11,
           14
         ],
-        1023
+        1078
       ],
       [
         "MapWorldsFloodedMine",
@@ -1369,7 +2111,7 @@
           12,
           14
         ],
-        1024
+        1079
       ],
       [
         "MapWorldsMarshes",
@@ -1389,7 +2131,7 @@
           11,
           14
         ],
-        1025
+        1080
       ],
       [
         "MapWorldsIceberg",
@@ -1409,7 +2151,7 @@
           11,
           14
         ],
-        1026
+        1081
       ],
       [
         "MapWorldsCage",
@@ -1429,7 +2171,7 @@
           12,
           14
         ],
-        1027
+        1082
       ],
       [
         "MapWorldsSprings",
@@ -1449,7 +2191,7 @@
           11,
           14
         ],
-        1028
+        1083
       ],
       [
         "MapWorldsExcavation",
@@ -1469,7 +2211,7 @@
           12,
           14
         ],
-        1029
+        1084
       ],
       [
         "MapWorldsLeyline",
@@ -1489,7 +2231,7 @@
           12,
           14
         ],
-        1030
+        1085
       ],
       [
         "MapWorldsPeninsula",
@@ -1509,7 +2251,7 @@
           11,
           14
         ],
-        1031
+        1086
       ],
       [
         "MapWorldsPort",
@@ -1529,7 +2271,7 @@
           12,
           15
         ],
-        1032
+        1087
       ],
       [
         "MapWorldsBurialChambers",
@@ -1544,12 +2286,12 @@
         "Valdo's Rest",
         [
           0,
-          6,
+          7,
           9,
           11,
           14
         ],
-        1033
+        1088
       ],
       [
         "MapWorldsCells",
@@ -1569,7 +2311,7 @@
           13,
           15
         ],
-        1034
+        1089
       ],
       [
         "MapWorldsArcade",
@@ -1589,7 +2331,7 @@
           11,
           14
         ],
-        1035
+        1090
       ],
       [
         "MapWorldsCitySquare",
@@ -1609,7 +2351,7 @@
           11,
           14
         ],
-        1036
+        1091
       ],
       [
         "MapWorldsRelicChambers",
@@ -1629,7 +2371,7 @@
           11,
           14
         ],
-        1037
+        1092
       ],
       [
         "MapWorldsCourthouse",
@@ -1649,7 +2391,7 @@
           13,
           15
         ],
-        1038
+        1093
       ],
       [
         "MapWorldsStrand",
@@ -1669,7 +2411,7 @@
           11,
           14
         ],
-        1039
+        1094
       ],
       [
         "MapWorldsStrandUnique",
@@ -1689,7 +2431,7 @@
           11,
           14
         ],
-        1040
+        1095
       ],
       [
         "MapWorldsChateau",
@@ -1709,7 +2451,7 @@
           14,
           16
         ],
-        1041
+        1096
       ],
       [
         "MapWorldsChateauUnique",
@@ -1729,7 +2471,7 @@
           14,
           16
         ],
-        1042
+        1097
       ],
       [
         "MapWorldsGrotto",
@@ -1749,7 +2491,7 @@
           0,
           15
         ],
-        1043
+        1098
       ],
       [
         "MapWorldsGorge",
@@ -1769,7 +2511,7 @@
           11,
           14
         ],
-        1044
+        1099
       ],
       [
         "MapWorldsVolcano",
@@ -1789,7 +2531,7 @@
           12,
           14
         ],
-        1045
+        1100
       ],
       [
         "MapWorldsLighthouse",
@@ -1809,7 +2551,7 @@
           12,
           15
         ],
-        1046
+        1101
       ],
       [
         "MapWorldsCanyon",
@@ -1829,7 +2571,7 @@
           14,
           16
         ],
-        1047
+        1102
       ],
       [
         "MapWorldsConservatory",
@@ -1849,7 +2591,7 @@
           12,
           14
         ],
-        1048
+        1103
       ],
       [
         "MapWorldsSulphurVents",
@@ -1869,7 +2611,7 @@
           11,
           14
         ],
-        1049
+        1104
       ],
       [
         "MapWorldsHauntedMansion",
@@ -1889,7 +2631,7 @@
           11,
           14
         ],
-        1050
+        1105
       ],
       [
         "MapWorldsMaze",
@@ -1909,7 +2651,7 @@
           11,
           14
         ],
-        1051
+        1106
       ],
       [
         "MapWorldsMazeUnique",
@@ -1929,7 +2671,7 @@
           11,
           14
         ],
-        1052
+        1107
       ],
       [
         "MapWorldsChannel",
@@ -1949,7 +2691,7 @@
           13,
           15
         ],
-        1053
+        1108
       ],
       [
         "MapWorldsToxicSewer",
@@ -1969,7 +2711,7 @@
           12,
           15
         ],
-        1054
+        1109
       ],
       [
         "MapWorldsAncientCity",
@@ -1989,7 +2731,7 @@
           12,
           14
         ],
-        1055
+        1110
       ],
       [
         "MapWorldsIvoryTemple",
@@ -2009,7 +2751,7 @@
           0,
           14
         ],
-        1056
+        1111
       ],
       [
         "MapWorldsSpiderLair",
@@ -2029,7 +2771,7 @@
           0,
           14
         ],
-        1057
+        1112
       ],
       [
         "MapWorldsBarrows",
@@ -2049,7 +2791,7 @@
           12,
           14
         ],
-        1058
+        1113
       ],
       [
         "MapWorldsMausoleum",
@@ -2069,7 +2811,7 @@
           11,
           14
         ],
-        1059
+        1114
       ],
       [
         "MapWorldsFields",
@@ -2089,7 +2831,7 @@
           11,
           14
         ],
-        1060
+        1115
       ],
       [
         "MapWorldsJungleValley",
@@ -2109,7 +2851,7 @@
           10,
           14
         ],
-        1061
+        1116
       ],
       [
         "MapWorldsPhantasmagoria",
@@ -2129,7 +2871,7 @@
           13,
           15
         ],
-        1062
+        1117
       ],
       [
         "MapWorldsAcademy",
@@ -2149,7 +2891,7 @@
           12,
           14
         ],
-        1063
+        1118
       ],
       [
         "MapWorldsThicket",
@@ -2169,7 +2911,7 @@
           12,
           15
         ],
-        1064
+        1119
       ],
       [
         "MapWorldsWharf",
@@ -2189,7 +2931,7 @@
           10,
           14
         ],
-        1065
+        1120
       ],
       [
         "MapWorldsAshenWood",
@@ -2209,7 +2951,7 @@
           11,
           14
         ],
-        1066
+        1121
       ],
       [
         "MapWorldsAtoll",
@@ -2229,7 +2971,7 @@
           11,
           14
         ],
-        1067
+        1122
       ],
       [
         "MapWorldsAtollUnique",
@@ -2249,7 +2991,7 @@
           11,
           14
         ],
-        1068
+        1123
       ],
       [
         "MapWorldsCemetery",
@@ -2269,7 +3011,7 @@
           11,
           14
         ],
-        1069
+        1124
       ],
       [
         "MapWorldsCemeteryUnique",
@@ -2289,7 +3031,7 @@
           11,
           14
         ],
-        1070
+        1125
       ],
       [
         "MapWorldsUndergroundSea",
@@ -2309,7 +3051,7 @@
           11,
           14
         ],
-        1071
+        1126
       ],
       [
         "MapWorldsTribunal",
@@ -2329,7 +3071,7 @@
           11,
           14
         ],
-        1072
+        1127
       ],
       [
         "MapWorldsCoralRuins",
@@ -2349,7 +3091,7 @@
           0,
           15
         ],
-        1073
+        1128
       ],
       [
         "MapWorldsLavaChamber",
@@ -2369,7 +3111,7 @@
           14,
           16
         ],
-        1074
+        1129
       ],
       [
         "MapWorldsResidence",
@@ -2389,7 +3131,7 @@
           12,
           14
         ],
-        1075
+        1130
       ],
       [
         "MapWorldsRamparts",
@@ -2409,7 +3151,7 @@
           11,
           14
         ],
-        1076
+        1131
       ],
       [
         "MapWorldsDunes",
@@ -2429,7 +3171,7 @@
           11,
           14
         ],
-        1077
+        1132
       ],
       [
         "MapWorldsDunesUnique",
@@ -2449,7 +3191,7 @@
           11,
           14
         ],
-        1078
+        1133
       ],
       [
         "MapWorldsBoneCrypt",
@@ -2469,7 +3211,7 @@
           12,
           15
         ],
-        1079
+        1134
       ],
       [
         "MapWorldsBoneCryptUnique",
@@ -2489,7 +3231,7 @@
           12,
           15
         ],
-        1080
+        1135
       ],
       [
         "MapWorldsUndergroundRiver",
@@ -2509,7 +3251,7 @@
           13,
           16
         ],
-        1081
+        1136
       ],
       [
         "MapWorldsUndergroundRiverUnique",
@@ -2529,7 +3271,7 @@
           13,
           16
         ],
-        1082
+        1137
       ],
       [
         "MapWorldsGardens",
@@ -2549,7 +3291,7 @@
           13,
           16
         ],
-        1083
+        1138
       ],
       [
         "MapWorldsArachnidNest",
@@ -2569,7 +3311,7 @@
           12,
           14
         ],
-        1084
+        1139
       ],
       [
         "MapWorldsBazaar",
@@ -2589,7 +3331,7 @@
           12,
           15
         ],
-        1085
+        1140
       ],
       [
         "MapWorldsLaboratory",
@@ -2609,7 +3351,7 @@
           11,
           14
         ],
-        1086
+        1141
       ],
       [
         "MapWorldsInfestedValley",
@@ -2629,7 +3371,7 @@
           0,
           14
         ],
-        1087
+        1142
       ],
       [
         "MapWorldsOvergrownRuin",
@@ -2649,7 +3391,7 @@
           12,
           15
         ],
-        1088
+        1143
       ],
       [
         "MapWorldsVaalPyramid",
@@ -2669,7 +3411,7 @@
           12,
           14
         ],
-        1089
+        1144
       ],
       [
         "MapWorldsVaalPyramidUnique",
@@ -2689,7 +3431,7 @@
           12,
           14
         ],
-        1090
+        1145
       ],
       [
         "MapWorldsGeode",
@@ -2709,7 +3451,7 @@
           13,
           15
         ],
-        1091
+        1146
       ],
       [
         "MapWorldsArmoury",
@@ -2729,7 +3471,7 @@
           11,
           14
         ],
-        1092
+        1147
       ],
       [
         "MapWorldsCourtyard",
@@ -2749,7 +3491,7 @@
           13,
           15
         ],
-        1093
+        1148
       ],
       [
         "MapWorldsCourtyardUnique",
@@ -2769,7 +3511,7 @@
           13,
           15
         ],
-        1094
+        1149
       ],
       [
         "MapWorldsMudGeyser",
@@ -2789,7 +3531,7 @@
           11,
           14
         ],
-        1095
+        1150
       ],
       [
         "MapWorldsShore",
@@ -2809,7 +3551,7 @@
           13,
           15
         ],
-        1096
+        1151
       ],
       [
         "MapWorldsShoreUnique",
@@ -2829,7 +3571,7 @@
           13,
           15
         ],
-        1097
+        1152
       ],
       [
         "MapWorldsTropicalIsland",
@@ -2849,7 +3591,7 @@
           11,
           14
         ],
-        1098
+        1153
       ],
       [
         "MapWorldsTropicalIslandUnique",
@@ -2863,7 +3605,7 @@
         "Art/2DItems/Maps/UniqueMap2.dds",
         null,
         null,
-        1099
+        1154
       ],
       [
         "MapWorldsMineralPools",
@@ -2883,7 +3625,7 @@
           0,
           14
         ],
-        1100
+        1155
       ],
       [
         "MapWorldsMoonTemple",
@@ -2903,7 +3645,7 @@
           12,
           14
         ],
-        1101
+        1156
       ],
       [
         "MapWorldsMoonTempleUnique",
@@ -2923,7 +3665,7 @@
           12,
           14
         ],
-        1102
+        1157
       ],
       [
         "MapWorldsSepulchre",
@@ -2943,7 +3685,7 @@
           13,
           15
         ],
-        1103
+        1158
       ],
       [
         "MapWorldsTower",
@@ -2963,7 +3705,7 @@
           14,
           16
         ],
-        1104
+        1159
       ],
       [
         "MapWorldsWastePool",
@@ -2983,7 +3725,7 @@
           13,
           15
         ],
-        1105
+        1160
       ],
       [
         "MapWorldsPlateau",
@@ -3003,7 +3745,7 @@
           13,
           16
         ],
-        1106
+        1161
       ],
       [
         "MapWorldsEstuary",
@@ -3023,7 +3765,7 @@
           12,
           15
         ],
-        1107
+        1162
       ],
       [
         "MapWorldsVault",
@@ -3043,7 +3785,7 @@
           11,
           14
         ],
-        1108
+        1163
       ],
       [
         "MapWorldsTemple",
@@ -3063,7 +3805,7 @@
           12,
           14
         ],
-        1109
+        1164
       ],
       [
         "MapWorldsTempleUnique",
@@ -3083,7 +3825,7 @@
           12,
           14
         ],
-        1110
+        1165
       ],
       [
         "MapWorldsArena",
@@ -3103,7 +3845,7 @@
           12,
           14
         ],
-        1111
+        1166
       ],
       [
         "MapWorldsMuseum",
@@ -3123,7 +3865,7 @@
           12,
           14
         ],
-        1112
+        1167
       ],
       [
         "MapWorldsMuseumUnique",
@@ -3143,7 +3885,7 @@
           12,
           14
         ],
-        1113
+        1168
       ],
       [
         "MapWorldsScriptorium",
@@ -3163,7 +3905,7 @@
           11,
           14
         ],
-        1114
+        1169
       ],
       [
         "MapWorldsSiege",
@@ -3183,7 +3925,7 @@
           13,
           15
         ],
-        1115
+        1170
       ],
       [
         "MapWorldsShipyard",
@@ -3203,7 +3945,7 @@
           14,
           16
         ],
-        1116
+        1171
       ],
       [
         "MapWorldsBelfry",
@@ -3223,7 +3965,7 @@
           12,
           14
         ],
-        1117
+        1172
       ],
       [
         "MapWorldsArachnidTomb",
@@ -3243,7 +3985,7 @@
           13,
           15
         ],
-        1118
+        1173
       ],
       [
         "MapWorldsWasteland",
@@ -3259,11 +4001,11 @@
         [
           3,
           6,
-          10,
+          9,
           11,
           14
         ],
-        1119
+        1174
       ],
       [
         "MapWorldsPrecinct",
@@ -3283,7 +4025,7 @@
           14,
           15
         ],
-        1120
+        1175
       ],
       [
         "MapWorldsBog",
@@ -3303,7 +4045,7 @@
           11,
           14
         ],
-        1121
+        1176
       ],
       [
         "MapWorldsPier",
@@ -3323,7 +4065,7 @@
           10,
           14
         ],
-        1122
+        1177
       ],
       [
         "MapWorldsCursedCrypt",
@@ -3343,7 +4085,7 @@
           11,
           14
         ],
-        1123
+        1178
       ],
       [
         "MapWorldsCursedCryptUnique",
@@ -3363,7 +4105,7 @@
           11,
           14
         ],
-        1124
+        1179
       ],
       [
         "MapWorldsOrchard",
@@ -3383,7 +4125,7 @@
           11,
           14
         ],
-        1125
+        1180
       ],
       [
         "MapWorldsPromenade",
@@ -3403,7 +4145,7 @@
           0,
           16
         ],
-        1126
+        1181
       ],
       [
         "MapWorldsPromenadeUnique",
@@ -3423,7 +4165,7 @@
           0,
           16
         ],
-        1127
+        1182
       ],
       [
         "MapWorldsLair",
@@ -3443,7 +4185,7 @@
           13,
           15
         ],
-        1128
+        1183
       ],
       [
         "MapWorldsColonnade",
@@ -3463,7 +4205,7 @@
           13,
           16
         ],
-        1129
+        1184
       ],
       [
         "MapWorldsPrimordialPool",
@@ -3483,7 +4225,7 @@
           12,
           15
         ],
-        1130
+        1185
       ],
       [
         "MapWorldsSpiderForest",
@@ -3503,7 +4245,7 @@
           0,
           14
         ],
-        1131
+        1186
       ],
       [
         "MapWorldsCoves",
@@ -3523,7 +4265,7 @@
           12,
           15
         ],
-        1132
+        1187
       ],
       [
         "MapWorldsWaterways",
@@ -3543,7 +4285,7 @@
           13,
           16
         ],
-        1133
+        1188
       ],
       [
         "MapWorldsFactory",
@@ -3563,7 +4305,7 @@
           11,
           14
         ],
-        1134
+        1189
       ],
       [
         "MapWorldsMesa",
@@ -3578,12 +4320,12 @@
         "Valdo's Rest",
         [
           3,
-          6,
+          7,
           10,
           11,
           14
         ],
-        1135
+        1190
       ],
       [
         "MapWorldsPit",
@@ -3603,7 +4345,7 @@
           12,
           14
         ],
-        1136
+        1191
       ],
       [
         "MapWorldsDefiledCathedral",
@@ -3623,7 +4365,7 @@
           12,
           14
         ],
-        1138
+        1193
       ],
       [
         "MapWorldsSummit",
@@ -3643,7 +4385,7 @@
           0,
           16
         ],
-        1139
+        1194
       ],
       [
         "MapWorldsOvergrownShrine",
@@ -3663,7 +4405,7 @@
           13,
           16
         ],
-        1140
+        1195
       ],
       [
         "MapWorldsOvergrownShrineUnique",
@@ -3683,7 +4425,7 @@
           13,
           16
         ],
-        1141
+        1196
       ],
       [
         "MapWorldsCastleRuins",
@@ -3703,7 +4445,7 @@
           13,
           15
         ],
-        1142
+        1197
       ],
       [
         "MapWorldsCrystalOre",
@@ -3723,7 +4465,7 @@
           13,
           16
         ],
-        1143
+        1198
       ],
       [
         "MapWorldsVilla",
@@ -3743,7 +4485,7 @@
           11,
           14
         ],
-        1144
+        1199
       ],
       [
         "MapWorldsTortureChamber",
@@ -3763,7 +4505,7 @@
           14,
           16
         ],
-        1145
+        1200
       ],
       [
         "MapWorldsTortureChamberUnique",
@@ -3783,7 +4525,7 @@
           11,
           14
         ],
-        1146
+        1201
       ],
       [
         "MapWorldsNecropolis",
@@ -3803,7 +4545,7 @@
           0,
           15
         ],
-        1147
+        1202
       ],
       [
         "MapWorldsNecropolisUnique",
@@ -3823,7 +4565,7 @@
           0,
           15
         ],
-        1148
+        1203
       ],
       [
         "MapWorldsRacecourse_",
@@ -3843,7 +4585,7 @@
           11,
           14
         ],
-        1149
+        1204
       ],
       [
         "MapWorldsCaldera",
@@ -3863,7 +4605,7 @@
           12,
           15
         ],
-        1150
+        1205
       ],
       [
         "MapWorldsGhetto",
@@ -3883,7 +4625,7 @@
           12,
           14
         ],
-        1151
+        1206
       ],
       [
         "MapWorldsPark",
@@ -3903,7 +4645,7 @@
           12,
           15
         ],
-        1152
+        1207
       ],
       [
         "MapWorldsMalformation",
@@ -3923,7 +4665,7 @@
           14,
           16
         ],
-        1153
+        1208
       ],
       [
         "MapWorldsTerrace",
@@ -3943,7 +4685,7 @@
           0,
           15
         ],
-        1154
+        1209
       ],
       [
         "MapWorldsShrine",
@@ -3963,7 +4705,7 @@
           14,
           16
         ],
-        1155
+        1210
       ],
       [
         "MapWorldsArsenal",
@@ -3983,7 +4725,7 @@
           11,
           14
         ],
-        1156
+        1211
       ],
       [
         "MapWorldsDesertSpring",
@@ -4003,7 +4745,7 @@
           0,
           15
         ],
-        1157
+        1212
       ],
       [
         "MapWorldsCore",
@@ -4023,7 +4765,7 @@
           13,
           15
         ],
-        1158
+        1213
       ],
       [
         "MapWorldsColosseum",
@@ -4043,7 +4785,7 @@
           14,
           16
         ],
-        1159
+        1214
       ],
       [
         "MapWorldsAcidLakes",
@@ -4063,7 +4805,7 @@
           0,
           15
         ],
-        1160
+        1215
       ],
       [
         "MapWorldsDarkForest",
@@ -4083,7 +4825,7 @@
           14,
           16
         ],
-        1161
+        1216
       ],
       [
         "MapWorldsCrimsonTemple",
@@ -4103,7 +4845,7 @@
           14,
           16
         ],
-        1162
+        1217
       ],
       [
         "MapWorldsPlaza",
@@ -4123,7 +4865,7 @@
           14,
           16
         ],
-        1163
+        1218
       ],
       [
         "MapWorldsDig",
@@ -4143,7 +4885,7 @@
           13,
           15
         ],
-        1164
+        1219
       ],
       [
         "MapWorldsPalace",
@@ -4163,7 +4905,7 @@
           0,
           15
         ],
-        1165
+        1220
       ],
       [
         "MapWorldsLavaLake",
@@ -4183,7 +4925,7 @@
           0,
           15
         ],
-        1166
+        1221
       ],
       [
         "MapWorldsBasilica",
@@ -4203,7 +4945,7 @@
           14,
           16
         ],
-        1167
+        1222
       ],
       [
         "MapWorldsSunkenCity",
@@ -4223,7 +4965,7 @@
           14,
           16
         ],
-        1168
+        1223
       ],
       [
         "MapWorldsReef",
@@ -4243,7 +4985,7 @@
           13,
           15
         ],
-        1169
+        1224
       ],
       [
         "MapWorldsCarcass",
@@ -4263,7 +5005,7 @@
           0,
           16
         ],
-        1170
+        1225
       ],
       [
         "MapWorldsChimera",
@@ -4277,7 +5019,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Chimera.dds",
         null,
         null,
-        1171
+        1226
       ],
       [
         "MapWorldsHydra",
@@ -4291,7 +5033,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Hydra.dds",
         null,
         null,
-        1172
+        1227
       ],
       [
         "MapWorldsPhoenix",
@@ -4305,7 +5047,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Phoenix.dds",
         null,
         null,
-        1173
+        1228
       ],
       [
         "MapWorldsMinotaur",
@@ -4319,7 +5061,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Minotaur.dds",
         null,
         null,
-        1174
+        1229
       ],
       [
         "MapWorldsShapersRealm",
@@ -4333,7 +5075,7 @@
         "Art/2DItems/Maps/ShaperComplete.png",
         null,
         null,
-        1175
+        1230
       ],
       [
         "MapWorldsVaalTemple",
@@ -4353,7 +5095,7 @@
           0,
           16
         ],
-        1176
+        1231
       ],
       [
         "MapWorldsHarbingerLow",
@@ -4367,7 +5109,7 @@
         "Art/2DItems/Maps/HarbingerWhite.dds",
         null,
         null,
-        1178
+        1233
       ],
       [
         "MapWorldsHarbingerMid",
@@ -4381,7 +5123,7 @@
         "Art/2DItems/Maps/HarbingerYellow.dds",
         null,
         null,
-        1179
+        1234
       ],
       [
         "MapWorldsHarbingerHigh",
@@ -4395,7 +5137,7 @@
         "Art/2DItems/Maps/HarbingerRed.dds",
         null,
         null,
-        1180
+        1235
       ],
       [
         "MapWorldsElderArena",
@@ -4409,7 +5151,7 @@
         "Art/2DItems/Maps/ElderComplete.png",
         null,
         null,
-        1193
+        1252
       ],
       [
         "MapWorldsElderArenaUber",
@@ -4423,7 +5165,7 @@
         "Art/2DItems/Maps/UberElderComplete.png",
         null,
         null,
-        1194
+        1253
       ],
       [
         "AbyssLeague",
@@ -4437,7 +5179,7 @@
         null,
         null,
         null,
-        1195
+        1254
       ],
       [
         "AbyssLeague2",
@@ -4451,7 +5193,7 @@
         null,
         null,
         null,
-        1196
+        1255
       ],
       [
         "AbyssLeagueBoss",
@@ -4465,7 +5207,7 @@
         null,
         null,
         null,
-        1197
+        1256
       ],
       [
         "AbyssLeagueBoss2",
@@ -4479,7 +5221,7 @@
         null,
         null,
         null,
-        1198
+        1257
       ],
       [
         "AbyssLeagueBoss3",
@@ -4493,7 +5235,7 @@
         null,
         null,
         null,
-        1199
+        1258
       ],
       [
         "Hideout4_3",
@@ -4507,7 +5249,7 @@
         null,
         null,
         null,
-        1407
+        1468
       ],
       [
         "Hideout5_3",
@@ -4521,7 +5263,7 @@
         null,
         null,
         null,
-        1408
+        1469
       ],
       [
         "Hideout11_3",
@@ -4535,7 +5277,7 @@
         null,
         null,
         null,
-        1409
+        1470
       ],
       [
         "Hideout12_3",
@@ -4549,7 +5291,7 @@
         null,
         null,
         null,
-        1410
+        1471
       ],
       [
         "Hideout13_3",
@@ -4563,7 +5305,7 @@
         null,
         null,
         null,
-        1411
+        1472
       ],
       [
         "Hideout16_3",
@@ -4577,7 +5319,7 @@
         null,
         null,
         null,
-        1412
+        1473
       ],
       [
         "Hideout17_3",
@@ -4591,7 +5333,7 @@
         null,
         null,
         null,
-        1413
+        1474
       ],
       [
         "Hideout24_1",
@@ -4605,7 +5347,7 @@
         null,
         null,
         null,
-        1414
+        1475
       ],
       [
         "Hideout61_3",
@@ -4619,7 +5361,7 @@
         null,
         null,
         null,
-        1415
+        1476
       ],
       [
         "HideoutArch",
@@ -4633,7 +5375,7 @@
         null,
         null,
         null,
-        1416
+        1477
       ],
       [
         "HideoutCoral",
@@ -4647,7 +5389,7 @@
         null,
         null,
         null,
-        1419
+        1480
       ],
       [
         "HideoutShapersRealm",
@@ -4661,7 +5403,7 @@
         null,
         null,
         null,
-        1420
+        1481
       ],
       [
         "HideoutCave",
@@ -4675,7 +5417,7 @@
         null,
         null,
         null,
-        1421
+        1482
       ],
       [
         "HideoutPrisonTower",
@@ -4689,7 +5431,7 @@
         null,
         null,
         null,
-        1422
+        1483
       ],
       [
         "HideoutBaths",
@@ -4703,7 +5445,7 @@
         null,
         null,
         null,
-        1424
+        1485
       ],
       [
         "HideoutOssuary",
@@ -4717,7 +5459,7 @@
         null,
         null,
         null,
-        1426
+        1487
       ],
       [
         "HideoutCourts",
@@ -4731,7 +5473,7 @@
         null,
         null,
         null,
-        1428
+        1489
       ],
       [
         "HideoutCauseway",
@@ -4745,7 +5487,7 @@
         null,
         null,
         null,
-        1430
+        1491
       ],
       [
         "HideoutHighGardens",
@@ -4759,7 +5501,7 @@
         null,
         null,
         null,
-        1432
+        1493
       ],
       [
         "HideoutShipgraveyard",
@@ -4773,7 +5515,7 @@
         null,
         null,
         null,
-        1434
+        1495
       ],
       [
         "HideoutForest",
@@ -4787,7 +5529,7 @@
         null,
         null,
         null,
-        1436
+        1497
       ],
       [
         "HideoutSewer",
@@ -4801,7 +5543,7 @@
         null,
         null,
         null,
-        1438
+        1499
       ],
       [
         "HideoutSpace",
@@ -4815,7 +5557,7 @@
         null,
         null,
         null,
-        1439
+        1500
       ],
       [
         "HideoutArenaGraveyardTrio",
@@ -4829,7 +5571,7 @@
         null,
         null,
         null,
-        1440
+        1501
       ],
       [
         "HideoutMine",
@@ -4843,7 +5585,7 @@
         null,
         null,
         null,
-        1442
+        1503
       ],
       [
         "HideoutRuinedTemple",
@@ -4857,7 +5599,7 @@
         null,
         null,
         null,
-        1444
+        1505
       ],
       [
         "HideoutOasis",
@@ -4871,7 +5613,7 @@
         null,
         null,
         null,
-        1446
+        1507
       ],
       [
         "HideoutPillarsOfArun",
@@ -4885,7 +5627,7 @@
         null,
         null,
         null,
-        1447
+        1508
       ],
       [
         "HideoutAtziriArena",
@@ -4899,7 +5641,7 @@
         null,
         null,
         null,
-        1448
+        1509
       ],
       [
         "HideoutInnocenceArena",
@@ -4913,7 +5655,7 @@
         null,
         null,
         null,
-        1449
+        1510
       ],
       [
         "HideoutShaperArena",
@@ -4927,7 +5669,7 @@
         null,
         null,
         null,
-        1450
+        1511
       ],
       [
         "HideoutKaomArena",
@@ -4941,7 +5683,7 @@
         null,
         null,
         null,
-        1451
+        1512
       ],
       [
         "HideoutDaressoArena",
@@ -4955,7 +5697,7 @@
         null,
         null,
         null,
-        1452
+        1513
       ],
       [
         "HideoutDominusArena",
@@ -4969,7 +5711,7 @@
         null,
         null,
         null,
-        1453
+        1514
       ],
       [
         "HideoutPietyArena",
@@ -4983,7 +5725,7 @@
         null,
         null,
         null,
-        1454
+        1515
       ],
       [
         "HideoutLunarisSolarisArena",
@@ -4997,7 +5739,7 @@
         null,
         null,
         null,
-        1455
+        1516
       ],
       [
         "HideoutKitavaArenaAct10",
@@ -5011,7 +5753,7 @@
         null,
         null,
         null,
-        1456
+        1517
       ],
       [
         "HideoutTemplarLab",
@@ -5025,7 +5767,7 @@
         null,
         null,
         null,
-        1457
+        1518
       ],
       [
         "HideoutSlum",
@@ -5039,7 +5781,7 @@
         null,
         null,
         null,
-        1458
+        1519
       ],
       [
         "HideoutBeach",
@@ -5053,7 +5795,7 @@
         null,
         null,
         null,
-        1460
+        1521
       ],
       [
         "HideoutFellshrine",
@@ -5067,7 +5809,7 @@
         null,
         null,
         null,
-        1462
+        1523
       ],
       [
         "HideoutBattleground",
@@ -5081,7 +5823,7 @@
         null,
         null,
         null,
-        1464
+        1525
       ],
       [
         "HideoutLibrary",
@@ -5095,7 +5837,7 @@
         null,
         null,
         null,
-        1466
+        1527
       ],
       [
         "HideoutSolaris",
@@ -5109,7 +5851,7 @@
         null,
         null,
         null,
-        1468
+        1529
       ],
       [
         "HideoutGardens",
@@ -5123,7 +5865,7 @@
         null,
         null,
         null,
-        1470
+        1531
       ],
       [
         "HideoutIceberg",
@@ -5137,7 +5879,7 @@
         null,
         null,
         null,
-        1472
+        1533
       ],
       [
         "HideoutCrimsonTemple",
@@ -5151,7 +5893,7 @@
         null,
         null,
         null,
-        1474
+        1535
       ],
       [
         "HideoutTwilightTemple",
@@ -5165,7 +5907,7 @@
         null,
         null,
         null,
-        1476
+        1537
       ],
       [
         "HideoutMountain",
@@ -5179,7 +5921,7 @@
         null,
         null,
         null,
-        1478
+        1539
       ],
       [
         "HideoutHaunted",
@@ -5193,7 +5935,7 @@
         null,
         null,
         null,
-        1480
+        1541
       ],
       [
         "HideoutDoomguard",
@@ -5207,7 +5949,7 @@
         null,
         null,
         null,
-        1482
+        1543
       ],
       [
         "HideoutSunspire",
@@ -5221,7 +5963,7 @@
         null,
         null,
         null,
-        1483
+        1544
       ],
       [
         "HideoutDarkwood",
@@ -5235,7 +5977,7 @@
         null,
         null,
         null,
-        1484
+        1545
       ],
       [
         "HideoutArenaElder",
@@ -5249,7 +5991,7 @@
         null,
         null,
         null,
-        1485
+        1546
       ],
       [
         "HideoutChiyouSpring",
@@ -5263,7 +6005,119 @@
         null,
         null,
         null,
-        1486
+        1547
+      ],
+      [
+        "HideoutBlankAbyss",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1548
+      ],
+      [
+        "HideoutBlankCity",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1549
+      ],
+      [
+        "HideoutBlankClouds",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1550
+      ],
+      [
+        "HideoutBlankDesert",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1551
+      ],
+      [
+        "HideoutBlankDirt",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1552
+      ],
+      [
+        "HideoutBlankGrass",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1553
+      ],
+      [
+        "HideoutBlankSea",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1554
+      ],
+      [
+        "HideoutBlankSnow",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1555
       ],
       [
         "pvpTown",
@@ -5277,7 +6131,7 @@
         null,
         null,
         null,
-        1487
+        1556
       ],
       [
         "AtlasExilesBoss5",
@@ -5291,7 +6145,7 @@
         "Art/2DItems/Currency/Strongholds/WatchstoneIridescent.png",
         null,
         null,
-        1505
+        1574
       ]
     ]
   },
@@ -5313,7 +6167,7 @@
         "2_10_town": "Die Docks von Oriath",
         "2_11_town": "Oriath",
         "2_11_endgame_town": "Karui-Ufer",
-        "1_SideArea1_1": "Seltsamer Krater",
+        "1_SideArea1_1": "Seltsamer Schlund",
         "1_SideArea1_2": "Verborgener Hohlraum",
         "1_SideArea1_3": "Versunkener Kiesstrand",
         "1_SideArea1_4_": "Verhüllter Bergrücken",
@@ -5347,25 +6201,78 @@
         "1_SideArea5_2": "Rückeroberte Kasernen",
         "1_SideArea5_3_1": "Verschlossener Keller",
         "1_SideArea5_3_2": "Abgelegener Kanal",
-        "1_Sidearea5_4": "Verbotenes Archiv",
-        "1_Sidearea5_4b": "Eingeäschertes Archiv",
-        "1_Sidearea5_5": "Verwinkeltes Inquisitorium",
-        "1_Sidearea5_6": "Tödliche Kammern",
-        "1_Sidearea5_7": "Unzugängliche Sammlung",
-        "1_Sidearea5_8": "Seitenkapelle",
-        "1_Sidearea6_4": "Strahlende Teiche",
+        "1_SideArea5_4": "Verbotenes Archiv",
+        "1_SideArea5_4b": "Eingeäschertes Archiv",
+        "1_SideArea5_5": "Verwinkeltes Inquisitorium",
+        "1_SideArea5_6": "Tödliche Kammern",
+        "1_SideArea5_7": "Unzugängliche Sammlung",
+        "1_SideArea5_8": "Seitenkapelle",
+        "1_SideArea6_4": "Strahlende Teiche",
         "1_SideArea6_6": "Verhüllter Felsvorsprung",
-        "1_Sidearea7_4": "Versiegeltes Repositorium",
-        "1_Sidearea7_10": "Überflutete Anlage",
-        "1_Sidearea7_12": "Verbotener Schrein",
-        "1_Sidearea8_3": "Geräumte Quartiere",
-        "1_Sidearea8_5": "Verborgenes Dampfbad",
-        "1_Sidearea8_7": "Mondscheinkammern",
-        "1_Sidearea9_3": "Treibsand",
-        "1_Sidearea9_5": "Vergessene Schlucht",
-        "1_Sidearea9_6": "Einsames Eiland",
-        "1_Sidearea9_9": "Staubige Klippe",
-        "1_Sidearea10_3": "Eingeäschertes Archiv",
+        "1_SideArea7_4": "Versiegeltes Repositorium",
+        "1_SideArea7_10": "Überflutete Anlage",
+        "1_SideArea7_12": "Verbotener Schrein",
+        "1_SideArea8_3": "Geräumte Quartiere",
+        "1_SideArea8_5": "Verborgenes Dampfbad",
+        "1_SideArea8_7": "Mondscheinkammern",
+        "1_SideArea9_3": "Treibsand",
+        "1_SideArea9_5": "Vergessene Schlucht",
+        "1_SideArea9_6": "Einsames Eiland",
+        "1_SideArea9_9": "Staubige Klippe",
+        "1_SideArea10_3": "Eingeäschertes Archiv",
+        "MapSideArea1_1": "Seltsamer Schlund",
+        "MapSideArea1_2": "Verborgener Hohlraum",
+        "MapSideArea1_3": "Versunkener Kiesstrand",
+        "MapSideArea1_4": "Verhüllter Bergrücken",
+        "MapSideArea1_5": "Vergessenes Verlies",
+        "MapSideArea1_6": "Abgelegene Bergschlucht",
+        "MapSideArea2_1": "Enge Schlucht",
+        "MapSideArea2_2": "Geheimnisvolle Lichtung",
+        "MapSideArea2_3": "Verborgener Hohlraum",
+        "MapSideArea2_4": "Verborgenes Land",
+        "MapSideArea2_5": "Verschüttete Nische",
+        "MapSideArea2_6": "Geheimes Laboratorium",
+        "MapSideArea2_7": "Abgeschiedenes Dickicht",
+        "MapSideArea2_8": "Verbotene Kammer",
+        "MapSideArea3_1": "Quarantäneviertel",
+        "MapSideArea3_2": "Ausgedienter Ofen",
+        "MapSideArea3_3": "Sackgasse",
+        "MapSideArea3_4": "Verschüttete Kammer",
+        "MapSideArea3_5": "Heilige Kammern",
+        "MapSideArea3_6": "Stiller Kanal",
+        "MapSideArea3_7": "Versiegelte Kanäle",
+        "MapSideArea3_8": "Verwahrloster Keller",
+        "MapSideArea3_9": "Arkane Kammern",
+        "MapSideArea3_10": "Innenanlagen",
+        "MapSideArea3_11": "Versiegelte Korridore",
+        "MapSideArea3_12": "Gesperrte Galerie",
+        "MapSideArea4_1": "Vergessener Kanal",
+        "MapSideArea4_2": "Uralte Katakombe",
+        "MapSideArea4_3": "Verfluchter Minenschacht",
+        "MapSideArea4_4": "Stillgelegter Damm",
+        "MapSideArea4_7": "Trostloser Pfad",
+        "MapSideArea5_2": "Rückeroberte Kasernen",
+        "MapSideArea5_3_1": "Verschlossener Keller",
+        "MapSideArea5_3_2": "Abgelegener Kanal",
+        "MapSideArea5_4": "Verbotenes Archiv",
+        "MapSideArea5_4b": "Eingeäschertes Archiv",
+        "MapSideArea5_5": "Verwinkeltes Inquisitorium",
+        "MapSideArea5_6": "Tödliche Kammern",
+        "MapSideArea5_7": "Unzugängliche Sammlung",
+        "MapSideArea5_8": "Seitenkapelle",
+        "MapSideArea6_4": "Strahlende Teiche",
+        "MapSideArea6_6": "Verhüllter Felsvorsprung",
+        "MapSideArea7_4": "Versiegeltes Repositorium",
+        "MapSideArea7_10": "Überflutete Anlage",
+        "MapSideArea7_12": "Verbotener Schrein",
+        "MapSideArea8_3": "Geräumte Quartiere",
+        "MapSideArea8_5": "Verborgenes Dampfbad",
+        "MapSideArea8_7": "Mondscheinkammern",
+        "MapSideArea9_3": "Treibsand",
+        "MapSideArea9_5": "Vergessene Schlucht",
+        "MapSideArea9_6": "Einsames Eiland",
+        "MapSideArea9_9": "Staubige Klippe",
+        "MapSideArea10_3": "Eingeäschertes Archiv",
         "3_ProphecyBoss": "Das bleiche Gericht",
         "Synthesis_MapBoss": "Cortex",
         "Synthesis_MapGuardian1": "Veränderte entfernte Erinnerung",
@@ -5610,6 +6517,14 @@
         "HideoutDarkwood": "Düsterwald-Versteck",
         "HideoutArenaElder": "Leerenversteck",
         "HideoutChiyouSpring": "Chiyou Hideout",
+        "HideoutBlankAbyss": "Versteckter Abgrund",
+        "HideoutBlankCity": "Versteckte Stadt",
+        "HideoutBlankClouds": "Versteckte Wolken",
+        "HideoutBlankDesert": "Versteckte Wüste",
+        "HideoutBlankDirt": "Verstecktes Ödland",
+        "HideoutBlankGrass": "Versteckte Ebenen",
+        "HideoutBlankSea": "Verstecktes Meer",
+        "HideoutBlankSnow": "Versteckte Schneelandschaft",
         "pvpTown": "Sarn-Arena, Bühnenbereich",
         "AtlasExilesBoss5": "Auge des Sturms"
       },
@@ -5662,7 +6577,7 @@
         "DroxFourStoneFightb": "Euch zu töten wird absolut befriedigend sein.",
         "DroxFourStoneFightc": "Ihr habt uns beide zu gesetzlosen Kriminellen gemacht. Lasst mich Euch zeigen, was ich gelernt habe.",
         "DroxFourStoneFightd": "Ich habe so viel Zeit damit verschwendet, das Gesetz durchzusetzen. Diese Regeln waren nichts anderes als ein Käfig.",
-        "DroxFourStoneFighte": "<if:MS>{Ich habe Tausende auf dem Gewissen. Was ist da schon einer mehr?}<elif:FS>{Ich habe Tausende auf dem Gewissen. Was ist da schon eine mehr?}",
+        "DroxFourStoneFighte": "Ich habe Tausende getötet. Was ist da schon einer mehr?",
         "DroxFourStoneDeatha": "Eure Stärke ... ist das Gesetz ...",
         "DroxFourStoneDeathb": "Mein Königreich ist Eures ... wenn Ihr es halten könnt ...",
         "DroxFourStoneDeathc": "Die Zeit holt selbst die größten aller Männer ...",
@@ -5820,25 +6735,78 @@
         "1_SideArea5_2": "Reclaimed Barracks",
         "1_SideArea5_3_1": "Sealed Basement",
         "1_SideArea5_3_2": "Secluded Canal",
-        "1_Sidearea5_4": "Forbidden Archives",
-        "1_Sidearea5_4b": "Cremated Archives",
-        "1_Sidearea5_5": "Twisted Inquisitorium",
-        "1_Sidearea5_6": "Deathly Chambers",
-        "1_Sidearea5_7": "Restricted Collection",
-        "1_Sidearea5_8": "Side Chapel",
-        "1_Sidearea6_4": "Radiant Pools",
+        "1_SideArea5_4": "Forbidden Archives",
+        "1_SideArea5_4b": "Cremated Archives",
+        "1_SideArea5_5": "Twisted Inquisitorium",
+        "1_SideArea5_6": "Deathly Chambers",
+        "1_SideArea5_7": "Restricted Collection",
+        "1_SideArea5_8": "Side Chapel",
+        "1_SideArea6_4": "Radiant Pools",
         "1_SideArea6_6": "Clouded Ledge",
-        "1_Sidearea7_4": "Sealed Repository",
-        "1_Sidearea7_10": "Flooded Complex",
-        "1_Sidearea7_12": "Forbidden Shrine",
-        "1_Sidearea8_3": "Evacuated Quarter",
-        "1_Sidearea8_5": "Concealed Caldarium",
-        "1_Sidearea8_7": "Moonlit Chambers",
-        "1_Sidearea9_3": "Shifting Sands",
-        "1_Sidearea9_5": "Forgotten Gulch",
-        "1_Sidearea9_6": "Desolate Isle",
-        "1_Sidearea9_9": "Dusty Bluff",
-        "1_Sidearea10_3": "Cremated Archives",
+        "1_SideArea7_4": "Sealed Repository",
+        "1_SideArea7_10": "Flooded Complex",
+        "1_SideArea7_12": "Forbidden Shrine",
+        "1_SideArea8_3": "Evacuated Quarter",
+        "1_SideArea8_5": "Concealed Caldarium",
+        "1_SideArea8_7": "Moonlit Chambers",
+        "1_SideArea9_3": "Shifting Sands",
+        "1_SideArea9_5": "Forgotten Gulch",
+        "1_SideArea9_6": "Desolate Isle",
+        "1_SideArea9_9": "Dusty Bluff",
+        "1_SideArea10_3": "Cremated Archives",
+        "MapSideArea1_1": "Strange Sinkhole",
+        "MapSideArea1_2": "Concealed Cavity",
+        "MapSideArea1_3": "Sunken Shingle",
+        "MapSideArea1_4": "Clouded Ridge",
+        "MapSideArea1_5": "Forgotten Oubliette",
+        "MapSideArea1_6": "Remote Gulch",
+        "MapSideArea2_1": "Narrow Ravine",
+        "MapSideArea2_2": "Mystical Clearing",
+        "MapSideArea2_3": "Covered-up Hollow",
+        "MapSideArea2_4": "Hidden Patch",
+        "MapSideArea2_5": "Entombed Alcove",
+        "MapSideArea2_6": "Secret Laboratory",
+        "MapSideArea2_7": "Secluded Copse",
+        "MapSideArea2_8": "Forbidden Chamber",
+        "MapSideArea3_1": "Quarantined Quarters",
+        "MapSideArea3_2": "Disused Furnace",
+        "MapSideArea3_3": "Blind Alley",
+        "MapSideArea3_4": "Entombed Chamber",
+        "MapSideArea3_5": "Sacred Chambers",
+        "MapSideArea3_6": "Stagnant Canal",
+        "MapSideArea3_7": "Walled-off Ducts",
+        "MapSideArea3_8": "Neglected Cellar",
+        "MapSideArea3_9": "Arcane Chambers",
+        "MapSideArea3_10": "Inner Grounds",
+        "MapSideArea3_11": "Sealed Corridors",
+        "MapSideArea3_12": "Restricted Gallery",
+        "MapSideArea4_1": "Forgotten Conduit",
+        "MapSideArea4_2": "Ancient Catacomb",
+        "MapSideArea4_3": "Haunted Mineshaft",
+        "MapSideArea4_4": "Abandoned Dam",
+        "MapSideArea4_7": "Desolate Track",
+        "MapSideArea5_2": "Reclaimed Barracks",
+        "MapSideArea5_3_1": "Sealed Basement",
+        "MapSideArea5_3_2": "Secluded Canal",
+        "MapSideArea5_4": "Forbidden Archives",
+        "MapSideArea5_4b": "Cremated Archives",
+        "MapSideArea5_5": "Twisted Inquisitorium",
+        "MapSideArea5_6": "Deathly Chambers",
+        "MapSideArea5_7": "Restricted Collection",
+        "MapSideArea5_8": "Side Chapel",
+        "MapSideArea6_4": "Radiant Pools",
+        "MapSideArea6_6": "Clouded Ledge",
+        "MapSideArea7_4": "Sealed Repository",
+        "MapSideArea7_10": "Flooded Complex",
+        "MapSideArea7_12": "Forbidden Shrine",
+        "MapSideArea8_3": "Evacuated Quarter",
+        "MapSideArea8_5": "Concealed Caldarium",
+        "MapSideArea8_7": "Moonlit Chambers",
+        "MapSideArea9_3": "Shifting Sands",
+        "MapSideArea9_5": "Forgotten Gulch",
+        "MapSideArea9_6": "Desolate Isle",
+        "MapSideArea9_9": "Dusty Bluff",
+        "MapSideArea10_3": "Cremated Archives",
         "3_ProphecyBoss": "The Pale Court",
         "Synthesis_MapBoss": "Cortex",
         "Synthesis_MapGuardian1": "Altered Distant Memory",
@@ -6083,6 +7051,14 @@
         "HideoutDarkwood": "Glimmerwood Hideout",
         "HideoutArenaElder": "Void Hideout",
         "HideoutChiyouSpring": "Chiyou Hideout",
+        "HideoutBlankAbyss": "Infinite Abyss Hideout",
+        "HideoutBlankCity": "Urban Sprawl Hideout",
+        "HideoutBlankClouds": "Boundless Skies Hideout",
+        "HideoutBlankDesert": "Endless Sands Hideout",
+        "HideoutBlankDirt": "Eternal Wasteland Hideout",
+        "HideoutBlankGrass": "Vast Plains Hideout",
+        "HideoutBlankSea": "All at Sea Hideout",
+        "HideoutBlankSnow": "Glacial Expanse Hideout",
         "pvpTown": "Sarn Arena Staging Area",
         "AtlasExilesBoss5": "Eye of the Storm"
       },
@@ -6259,7 +7235,7 @@
         "2_10_town": "Las Dársenas de Oriath",
         "2_11_town": "Oriath",
         "2_11_endgame_town": "Costas karui",
-        "1_SideArea1_1": "Cenote Extraño",
+        "1_SideArea1_1": "Sumidero extraño",
         "1_SideArea1_2": "Cavidad Oculta",
         "1_SideArea1_3": "Guijarros Hundidos",
         "1_SideArea1_4_": "Cresta Nublada",
@@ -6293,25 +7269,78 @@
         "1_SideArea5_2": "Barracónes Reclamados",
         "1_SideArea5_3_1": "Sótano Sellado",
         "1_SideArea5_3_2": "Canal Recóndito",
-        "1_Sidearea5_4": "Archivos Prohibidos",
-        "1_Sidearea5_4b": "Archivos Incinerados",
-        "1_Sidearea5_5": "Inquisitorio Retorcido",
-        "1_Sidearea5_6": "Aposentos Sepulcrales",
-        "1_Sidearea5_7": "Colección Restringida",
-        "1_Sidearea5_8": "Capilla Secundaria",
-        "1_Sidearea6_4": "Charcas Radiantes",
+        "1_SideArea5_4": "Archivos Prohibidos",
+        "1_SideArea5_4b": "Archivos Incinerados",
+        "1_SideArea5_5": "Inquisitorio Retorcido",
+        "1_SideArea5_6": "Aposentos Sepulcrales",
+        "1_SideArea5_7": "Colección Restringida",
+        "1_SideArea5_8": "Capilla Secundaria",
+        "1_SideArea6_4": "Charcas Radiantes",
         "1_SideArea6_6": "Saliente Nublado",
-        "1_Sidearea7_4": "Depósito Sellado",
-        "1_Sidearea7_10": "Complejo Inundado",
-        "1_Sidearea7_12": "Santuario Prohibido",
-        "1_Sidearea8_3": "Cuartel Evacuado",
-        "1_Sidearea8_5": "El Caldarium Oculto",
-        "1_Sidearea8_7": "Cámaras de Luz de Luna",
-        "1_Sidearea9_3": "Arenas Cambiantes",
-        "1_Sidearea9_5": "Quebrada Olvidada",
-        "1_Sidearea9_6": "Isla Desolada",
-        "1_Sidearea9_9": "Risco Polvoriento",
-        "1_Sidearea10_3": "Archivos Incendiados",
+        "1_SideArea7_4": "Depósito Sellado",
+        "1_SideArea7_10": "Complejo Inundado",
+        "1_SideArea7_12": "Santuario Prohibido",
+        "1_SideArea8_3": "Cuartel Evacuado",
+        "1_SideArea8_5": "El Caldarium Oculto",
+        "1_SideArea8_7": "Cámaras de Luz de Luna",
+        "1_SideArea9_3": "Arenas Cambiantes",
+        "1_SideArea9_5": "Quebrada Olvidada",
+        "1_SideArea9_6": "Isla Desolada",
+        "1_SideArea9_9": "Risco Polvoriento",
+        "1_SideArea10_3": "Archivos Incendiados",
+        "MapSideArea1_1": "Sumidero extraño",
+        "MapSideArea1_2": "Cavidad Oculta",
+        "MapSideArea1_3": "Guijarros Hundidos",
+        "MapSideArea1_4": "Cresta Nublada",
+        "MapSideArea1_5": "Calabozo Olvidado",
+        "MapSideArea1_6": "Quebrada Remota",
+        "MapSideArea2_1": "Barranco Estrecho",
+        "MapSideArea2_2": "Claro Místico",
+        "MapSideArea2_3": "Hoyo Cubierto",
+        "MapSideArea2_4": "Terreno Escondido",
+        "MapSideArea2_5": "Recoveco Sepultado",
+        "MapSideArea2_6": "Laboratorio Secreto",
+        "MapSideArea2_7": "Bosquecillo Recóndito",
+        "MapSideArea2_8": "Aposento Prohibido",
+        "MapSideArea3_1": "Cuarteles de Cuarentena",
+        "MapSideArea3_2": "Horno Abandonado",
+        "MapSideArea3_3": "Callejón sin Salida",
+        "MapSideArea3_4": "Aposento Sepultado",
+        "MapSideArea3_5": "Aposentos Sagrados",
+        "MapSideArea3_6": "Canal Estancado",
+        "MapSideArea3_7": "Conductos Amurallados",
+        "MapSideArea3_8": "Sótano Abandonado",
+        "MapSideArea3_9": "Aposentos Arcanos",
+        "MapSideArea3_10": "Terreno Interior",
+        "MapSideArea3_11": "Corredores Sellados",
+        "MapSideArea3_12": "Galería Restringida",
+        "MapSideArea4_1": "Conducto Olvidado",
+        "MapSideArea4_2": "Catacumba Antigua",
+        "MapSideArea4_3": "Mina Embrujada",
+        "MapSideArea4_4": "Presa Abandonada",
+        "MapSideArea4_7": "Sendero Desolado",
+        "MapSideArea5_2": "Barracónes Reclamados",
+        "MapSideArea5_3_1": "Sótano Sellado",
+        "MapSideArea5_3_2": "Canal Recóndito",
+        "MapSideArea5_4": "Archivos Prohibidos",
+        "MapSideArea5_4b": "Archivos Incinerados",
+        "MapSideArea5_5": "Inquisitorio Retorcido",
+        "MapSideArea5_6": "Aposentos Sepulcrales",
+        "MapSideArea5_7": "Colección Restringida",
+        "MapSideArea5_8": "Capilla Secundaria",
+        "MapSideArea6_4": "Charcas Radiantes",
+        "MapSideArea6_6": "Saliente Nublado",
+        "MapSideArea7_4": "Depósito Sellado",
+        "MapSideArea7_10": "Complejo Inundado",
+        "MapSideArea7_12": "Santuario Prohibido",
+        "MapSideArea8_3": "Cuartel Evacuado",
+        "MapSideArea8_5": "El Caldarium Oculto",
+        "MapSideArea8_7": "Cámaras de Luz de Luna",
+        "MapSideArea9_3": "Arenas Cambiantes",
+        "MapSideArea9_5": "Quebrada Olvidada",
+        "MapSideArea9_6": "Isla Desolada",
+        "MapSideArea9_9": "Risco Polvoriento",
+        "MapSideArea10_3": "Archivos Incendiados",
         "3_ProphecyBoss": "La Corte Pálida",
         "Synthesis_MapBoss": "Córtex",
         "Synthesis_MapGuardian1": "Memoria distante alterada",
@@ -6556,6 +7585,14 @@
         "HideoutDarkwood": "Guarida de Bosque Encantado",
         "HideoutArenaElder": "Guarida del vacío",
         "HideoutChiyouSpring": "Guarida Chi You",
+        "HideoutBlankAbyss": "Guarida de Abismo infinito",
+        "HideoutBlankCity": "Guarida de Expansión urbana",
+        "HideoutBlankClouds": "Guarida de Cielo infinito",
+        "HideoutBlankDesert": "Guarida de Arenas interminables",
+        "HideoutBlankDirt": "Guarida de Páramo eterno",
+        "HideoutBlankGrass": "Guarida de Planicies inmensas",
+        "HideoutBlankSea": "Guarida del Mar",
+        "HideoutBlankSnow": "Guarida de Extensión glacial",
         "pvpTown": "Área de Preparación de la Arena de Sarn",
         "AtlasExilesBoss5": "El ojo de la tormenta"
       },
@@ -6732,7 +7769,7 @@
         "2_10_town": "Les Docks d'Oriath",
         "2_11_town": "Oriath",
         "2_11_endgame_town": "Le Rivage karui",
-        "1_SideArea1_1": "Gouffre étrange",
+        "1_SideArea1_1": "Doline étrange",
         "1_SideArea1_2": "Cavité dissimulée",
         "1_SideArea1_3": "Rivage immergé",
         "1_SideArea1_4_": "Crête nuageuse",
@@ -6766,27 +7803,80 @@
         "1_SideArea5_2": "Caserne reconquise",
         "1_SideArea5_3_1": "Sous-sol scellé",
         "1_SideArea5_3_2": "Canal isolé",
-        "1_Sidearea5_4": "Archives interdites",
-        "1_Sidearea5_4b": "Archives incinérées",
-        "1_Sidearea5_5": "Inquisitorium malsain",
-        "1_Sidearea5_6": "Chambres mortuaires",
-        "1_Sidearea5_7": "Cabinet interdit",
-        "1_Sidearea5_8": "Chapelle latérale",
-        "1_Sidearea6_4": "Bassins radieux",
+        "1_SideArea5_4": "Archives interdites",
+        "1_SideArea5_4b": "Archives incinérées",
+        "1_SideArea5_5": "Inquisitorium malsain",
+        "1_SideArea5_6": "Chambres mortuaires",
+        "1_SideArea5_7": "Cabinet interdit",
+        "1_SideArea5_8": "Chapelle latérale",
+        "1_SideArea6_4": "Bassins radieux",
         "1_SideArea6_6": "Corniche nuageuse",
-        "1_Sidearea7_4": "Dépôt scellé",
-        "1_Sidearea7_10": "Lotissement inondé",
-        "1_Sidearea7_12": "Sanctuaire interdit",
-        "1_Sidearea8_3": "Quartier évacué",
-        "1_Sidearea8_5": "Caldarium dissimulé",
-        "1_Sidearea8_7": "Chambres au clair de lune",
-        "1_Sidearea9_3": "Sables mouvants",
-        "1_Sidearea9_5": "Goulet oublié",
-        "1_Sidearea9_6": "Île désolée",
-        "1_Sidearea9_9": "Piton poussiéreux",
-        "1_Sidearea10_3": "Archives incinérées",
+        "1_SideArea7_4": "Dépôt scellé",
+        "1_SideArea7_10": "Lotissement inondé",
+        "1_SideArea7_12": "Sanctuaire interdit",
+        "1_SideArea8_3": "Quartier évacué",
+        "1_SideArea8_5": "Caldarium dissimulé",
+        "1_SideArea8_7": "Chambres au clair de lune",
+        "1_SideArea9_3": "Sables mouvants",
+        "1_SideArea9_5": "Goulet oublié",
+        "1_SideArea9_6": "Île désolée",
+        "1_SideArea9_9": "Piton poussiéreux",
+        "1_SideArea10_3": "Archives incinérées",
+        "MapSideArea1_1": "Doline étrange",
+        "MapSideArea1_2": "Cavité dissimulée",
+        "MapSideArea1_3": "Rivage immergé",
+        "MapSideArea1_4": "Crête nuageuse",
+        "MapSideArea1_5": "Oubliettes abandonnées",
+        "MapSideArea1_6": "Ravin retiré",
+        "MapSideArea2_1": "Ravine étroite",
+        "MapSideArea2_2": "Clairière mystique",
+        "MapSideArea2_3": "Cavité dérobée",
+        "MapSideArea2_4": "Parcelle cachée",
+        "MapSideArea2_5": "Alcôve enfouie",
+        "MapSideArea2_6": "Laboratoire secret",
+        "MapSideArea2_7": "Taillis isolé",
+        "MapSideArea2_8": "Chambre interdite",
+        "MapSideArea3_1": "Quartiers en quarantaine",
+        "MapSideArea3_2": "Fourneaux désaffectés",
+        "MapSideArea3_3": "Rue en impasse",
+        "MapSideArea3_4": "Chambre inhumée",
+        "MapSideArea3_5": "Chambres sacrées",
+        "MapSideArea3_6": "Canal stagnant",
+        "MapSideArea3_7": "Canalisations murées",
+        "MapSideArea3_8": "Cave délaissée",
+        "MapSideArea3_9": "Chambres arcaniques",
+        "MapSideArea3_10": "Domaine intérieur",
+        "MapSideArea3_11": "Couloirs scellés",
+        "MapSideArea3_12": "Galerie interdite",
+        "MapSideArea4_1": "Canalisation oubliée",
+        "MapSideArea4_2": "Catacombes anciennes",
+        "MapSideArea4_3": "Puits de mine hantée",
+        "MapSideArea4_4": "Barrage abandonné",
+        "MapSideArea4_7": "Sentier désolé",
+        "MapSideArea5_2": "Caserne reconquise",
+        "MapSideArea5_3_1": "Sous-sol scellé",
+        "MapSideArea5_3_2": "Canal isolé",
+        "MapSideArea5_4": "Archives interdites",
+        "MapSideArea5_4b": "Archives incinérées",
+        "MapSideArea5_5": "Inquisitorium malsain",
+        "MapSideArea5_6": "Chambres mortuaires",
+        "MapSideArea5_7": "Cabinet interdit",
+        "MapSideArea5_8": "Chapelle latérale",
+        "MapSideArea6_4": "Bassins radieux",
+        "MapSideArea6_6": "Corniche nuageuse",
+        "MapSideArea7_4": "Dépôt scellé",
+        "MapSideArea7_10": "Lotissement inondé",
+        "MapSideArea7_12": "Sanctuaire interdit",
+        "MapSideArea8_3": "Quartier évacué",
+        "MapSideArea8_5": "Caldarium dissimulé",
+        "MapSideArea8_7": "Chambres au clair de lune",
+        "MapSideArea9_3": "Sables mouvants",
+        "MapSideArea9_5": "Goulet oublié",
+        "MapSideArea9_6": "Île désolée",
+        "MapSideArea9_9": "Piton poussiéreux",
+        "MapSideArea10_3": "Archives incinérées",
         "3_ProphecyBoss": "La Cour pâle",
-        "Synthesis_MapBoss": "Cortex",
+        "Synthesis_MapBoss": "Le Cortex",
         "Synthesis_MapGuardian1": "Souvenir lointain altéré",
         "Synthesis_MapGuardian2": "Souvenir lointain exacerbé",
         "Synthesis_MapGuardian3": "Souvenir lointain déformé",
@@ -6830,7 +7920,7 @@
         "MapWorldsStrand": "Rivage",
         "MapWorldsStrandUnique": "Whakawairua Tuahu",
         "MapWorldsChateau": "Grand château",
-        "MapWorldsChateauUnique": "Manoir des Pérandus",
+        "MapWorldsChateauUnique": "Le Manoir des Pérandus",
         "MapWorldsGrotto": "Grotte",
         "MapWorldsGorge": "Glacier",
         "MapWorldsVolcano": "Volcan",
@@ -6840,7 +7930,7 @@
         "MapWorldsSulphurVents": "Geysers de soufre",
         "MapWorldsHauntedMansion": "Manoir hanté",
         "MapWorldsMaze": "Dédale",
-        "MapWorldsMazeUnique": "Machinarium de Doryani",
+        "MapWorldsMazeUnique": "Le Machinarium de Doryani",
         "MapWorldsChannel": "Canal",
         "MapWorldsToxicSewer": "Égouts toxiques",
         "MapWorldsAncientCity": "Cité antique",
@@ -6856,7 +7946,7 @@
         "MapWorldsWharf": "Embarcadère",
         "MapWorldsAshenWood": "Bois cendreux",
         "MapWorldsAtoll": "Atoll",
-        "MapWorldsAtollUnique": "Maelström du chaos",
+        "MapWorldsAtollUnique": "Le Maelström du chaos",
         "MapWorldsCemetery": "Cimetière",
         "MapWorldsCemeteryUnique": "Terreurs nocturnes",
         "MapWorldsUndergroundSea": "Mer souterraine",
@@ -6866,11 +7956,11 @@
         "MapWorldsResidence": "Résidence",
         "MapWorldsRamparts": "Remparts",
         "MapWorldsDunes": "Dunes",
-        "MapWorldsDunesUnique": "Piliers d'Arun",
+        "MapWorldsDunesUnique": "Les Piliers d'Arun",
         "MapWorldsBoneCrypt": "Crypte à ossements",
-        "MapWorldsBoneCryptUnique": "Sanctuaire d'Olmec",
+        "MapWorldsBoneCryptUnique": "Le Sanctuaire d'Olmec",
         "MapWorldsUndergroundRiver": "Rivière souterraine",
-        "MapWorldsUndergroundRiverUnique": "Caer Blaidd, Tanière de la meute",
+        "MapWorldsUndergroundRiverUnique": "Caer Blaidd, la Tanière de la meute",
         "MapWorldsGardens": "Jardins",
         "MapWorldsArachnidNest": "Nid d'arachnides",
         "MapWorldsBazaar": "Bazar",
@@ -6898,7 +7988,7 @@
         "MapWorldsEstuary": "Estuaire",
         "MapWorldsVault": "Chambre forte",
         "MapWorldsTemple": "Temple",
-        "MapWorldsTempleUnique": "Asile de Poorjoy",
+        "MapWorldsTempleUnique": "L'Asile de Poorjoy",
         "MapWorldsArena": "Arène",
         "MapWorldsMuseum": "Musée",
         "MapWorldsMuseumUnique": "Le Cloître putride",
@@ -6928,7 +8018,7 @@
         "MapWorldsDefiledCathedral": "Cathédrale profanée",
         "MapWorldsSummit": "Sommet",
         "MapWorldsOvergrownShrine": "Sanctuaire abandonné",
-        "MapWorldsOvergrownShrineUnique": "Cauchemar d'Acton",
+        "MapWorldsOvergrownShrineUnique": "Le Cauchemar d'Acton",
         "MapWorldsCastleRuins": "Château en ruines",
         "MapWorldsCrystalOre": "Gisement de cristal",
         "MapWorldsVilla": "Villa",
@@ -7008,7 +8098,7 @@
         "HideoutKaomArena": "Repaire volcanique",
         "HideoutDaressoArena": "Repaire du champion",
         "HideoutDominusArena": "Repaire inexpugnable",
-        "HideoutPietyArena": "Repaire malsain",
+        "HideoutPietyArena": "Repaire morbide",
         "HideoutLunarisSolarisArena": "Repaire éclipsé",
         "HideoutKitavaArenaAct10": "Repaire vorace",
         "HideoutTemplarLab": "Repaire du cartographe",
@@ -7029,6 +8119,14 @@
         "HideoutDarkwood": "Repaire de Boiscintillant",
         "HideoutArenaElder": "Repaire du Néant",
         "HideoutChiyouSpring": "Repaire Chiyou",
+        "HideoutBlankAbyss": "Repaire de l'abîme insondable",
+        "HideoutBlankCity": "Repaire de l'expansion urbaine",
+        "HideoutBlankClouds": "Repaire des cieux infinis",
+        "HideoutBlankDesert": "Repaire du désert à perte de vue",
+        "HideoutBlankDirt": "Repaire des terres désolées éternelles",
+        "HideoutBlankGrass": "Repaire des vastes plaines",
+        "HideoutBlankSea": "Repaire en haute mer",
+        "HideoutBlankSnow": "Repaire de l'étendue glaciale",
         "pvpTown": "Scène de l'arène de Sarn",
         "AtlasExilesBoss5": "L'Œil du cyclone"
       },
@@ -7239,25 +8337,78 @@
         "1_SideArea5_2": "되찾은 주둔지",
         "1_SideArea5_3_1": "봉인된 지하실",
         "1_SideArea5_3_2": "외딴 운하",
-        "1_Sidearea5_4": "금단의 문서 보관실",
-        "1_Sidearea5_4b": "소각된 문서 보관실",
-        "1_Sidearea5_5": "뒤틀린 이단심문실",
-        "1_Sidearea5_6": "죽음의 방",
-        "1_Sidearea5_7": "막힌 전시관",
-        "1_Sidearea5_8": "부설 예배당",
-        "1_Sidearea6_4": "찬란한 웅덩이",
+        "1_SideArea5_4": "금단의 문서 보관실",
+        "1_SideArea5_4b": "소각된 문서 보관실",
+        "1_SideArea5_5": "뒤틀린 이단심문실",
+        "1_SideArea5_6": "죽음의 방",
+        "1_SideArea5_7": "막힌 전시관",
+        "1_SideArea5_8": "부설 예배당",
+        "1_SideArea6_4": "찬란한 웅덩이",
         "1_SideArea6_6": "흐릿한 바위 턱",
-        "1_Sidearea7_4": "봉인된 보고",
-        "1_Sidearea7_10": "물에 잠긴 단지",
-        "1_Sidearea7_12": "금단의 성소",
-        "1_Sidearea8_3": "비워진 구역",
-        "1_Sidearea8_5": "감춰진 목욕실",
-        "1_Sidearea8_7": "달이 비치는 방",
-        "1_Sidearea9_3": "변화하는 모래밭",
-        "1_Sidearea9_5": "잊혀진 협곡",
-        "1_Sidearea9_6": "황량한 섬",
-        "1_Sidearea9_9": "먼지 쌓인 절벽",
-        "1_Sidearea10_3": "소각된 문서 보관실",
+        "1_SideArea7_4": "봉인된 보고",
+        "1_SideArea7_10": "물에 잠긴 단지",
+        "1_SideArea7_12": "금단의 성소",
+        "1_SideArea8_3": "비워진 구역",
+        "1_SideArea8_5": "감춰진 목욕실",
+        "1_SideArea8_7": "달이 비치는 방",
+        "1_SideArea9_3": "변화하는 모래밭",
+        "1_SideArea9_5": "잊혀진 협곡",
+        "1_SideArea9_6": "황량한 섬",
+        "1_SideArea9_9": "먼지 쌓인 절벽",
+        "1_SideArea10_3": "소각된 문서 보관실",
+        "MapSideArea1_1": "이상한 낙수혈",
+        "MapSideArea1_2": "감춰진 공동",
+        "MapSideArea1_3": "물에 잠긴 널빤지",
+        "MapSideArea1_4": "흐릿한 산마루",
+        "MapSideArea1_5": "잊혀진 지하 감옥",
+        "MapSideArea1_6": "외딴 협곡",
+        "MapSideArea2_1": "좁은 심곡",
+        "MapSideArea2_2": "불가사의한 빈터",
+        "MapSideArea2_3": "감춰진 동혈",
+        "MapSideArea2_4": "숨겨진 밭",
+        "MapSideArea2_5": "매장된 쪽방",
+        "MapSideArea2_6": "비밀 실험실",
+        "MapSideArea2_7": "외딴 잡목림",
+        "MapSideArea2_8": "금단의 방",
+        "MapSideArea3_1": "격리 구역",
+        "MapSideArea3_2": "버려진 용광로",
+        "MapSideArea3_3": "막다른 골목",
+        "MapSideArea3_4": "매장된 방",
+        "MapSideArea3_5": "신성한 방",
+        "MapSideArea3_6": "고인 운하",
+        "MapSideArea3_7": "벽으로 막힌 도관",
+        "MapSideArea3_8": "방치된 저장실",
+        "MapSideArea3_9": "비전의 방",
+        "MapSideArea3_10": "깊은 곳의 대지",
+        "MapSideArea3_11": "봉인된 복도",
+        "MapSideArea3_12": "막힌 회랑",
+        "MapSideArea4_1": "잊혀진 도관",
+        "MapSideArea4_2": "고대의 지하 묘지",
+        "MapSideArea4_3": "으스스한 갱도",
+        "MapSideArea4_4": "버려진 댐",
+        "MapSideArea4_7": "황량한 통로",
+        "MapSideArea5_2": "되찾은 주둔지",
+        "MapSideArea5_3_1": "봉인된 지하실",
+        "MapSideArea5_3_2": "외딴 운하",
+        "MapSideArea5_4": "금단의 문서 보관실",
+        "MapSideArea5_4b": "소각된 문서 보관실",
+        "MapSideArea5_5": "뒤틀린 이단심문실",
+        "MapSideArea5_6": "죽음의 방",
+        "MapSideArea5_7": "막힌 전시관",
+        "MapSideArea5_8": "부설 예배당",
+        "MapSideArea6_4": "찬란한 웅덩이",
+        "MapSideArea6_6": "흐릿한 바위 턱",
+        "MapSideArea7_4": "봉인된 보고",
+        "MapSideArea7_10": "물에 잠긴 단지",
+        "MapSideArea7_12": "금단의 성소",
+        "MapSideArea8_3": "비워진 구역",
+        "MapSideArea8_5": "감춰진 목욕실",
+        "MapSideArea8_7": "달이 비치는 방",
+        "MapSideArea9_3": "변화하는 모래밭",
+        "MapSideArea9_5": "잊혀진 협곡",
+        "MapSideArea9_6": "황량한 섬",
+        "MapSideArea9_9": "먼지 쌓인 절벽",
+        "MapSideArea10_3": "소각된 문서 보관실",
         "3_ProphecyBoss": "창백한 궁정(The Pale Court)",
         "Synthesis_MapBoss": "코텍스",
         "Synthesis_MapGuardian1": "뒤바뀐 희미한 기억",
@@ -7502,6 +8653,14 @@
         "HideoutDarkwood": "미광의 숲 은신처",
         "HideoutArenaElder": "공허 은신처",
         "HideoutChiyouSpring": "치우 은신처",
+        "HideoutBlankAbyss": "무한한 심연 은신처",
+        "HideoutBlankCity": "확산된 도심 은신처",
+        "HideoutBlankClouds": "광대한 창공 은신처",
+        "HideoutBlankDesert": "끝없는 사막 은신처",
+        "HideoutBlankDirt": "영원의 황무지 은신처",
+        "HideoutBlankGrass": "광활한 초원 은신처",
+        "HideoutBlankSea": "아득한 바다 은신처",
+        "HideoutBlankSnow": "드넓은 빙하 은신처",
         "pvpTown": "사안 투기장",
         "AtlasExilesBoss5": "태풍의 눈"
       },
@@ -7562,7 +8721,7 @@
         "AlHezminNoStoneEncounterOne": "지켜보고 있다. 아무리 네가 약속을 했다지만 아무나 내 땅을 돌아다니도록 놔두진 않아.",
         "AlHezminNoStoneEncounterTwo": "자꾸 이런 식으로 침범하면 춤판을 벌이는 수밖에 없겠는걸.",
         "AlHezminNoStoneEncounterThree": "이거 재밌어지겠는데... 우리 중 한쪽에는 말이야.",
-        "AlHezminNoStoneFleeing": "그 쪽에게... 재미있는 일인가...",
+        "AlHezminNoStoneFleeing": "네녀석에게... 재미있는 일이었군...",
         "AlHezminOneStoneEncounterOne": "유배자, 또 붙으러 왔나? 새로운 기술을 배워왔으니 지난번과는 다를 거야.",
         "AlHezminOneStoneEncounterTwo": "하! 고집하고는. 어디 또 덤벼 보시지. 배짱은 인정해 주마.",
         "AlHezminOneStoneEncounterThree": "이제 흔해 빠진 사냥꾼은 내 상대가 아니다!",
@@ -7678,7 +8837,7 @@
         "2_10_town": "Docas de Oriath",
         "2_11_town": "Oriath",
         "2_11_endgame_town": "Litoral Karui",
-        "1_SideArea1_1": "Sumidouro Estranho",
+        "1_SideArea1_1": "Buraco Estranho",
         "1_SideArea1_2": "Cavidade Escondida",
         "1_SideArea1_3": "Pedregulho Afundado",
         "1_SideArea1_4_": "Cume Enevoado",
@@ -7712,25 +8871,78 @@
         "1_SideArea5_2": "Quartel Reivindicado",
         "1_SideArea5_3_1": "Porão Selado",
         "1_SideArea5_3_2": "Canal Isolado",
-        "1_Sidearea5_4": "Arquivos Proibidos",
-        "1_Sidearea5_4b": "Arquivos Cremados",
-        "1_Sidearea5_5": "Inquisitorium Maligno",
-        "1_Sidearea5_6": "Câmaras Mortais",
-        "1_Sidearea5_7": "Coleção Restrita",
-        "1_Sidearea5_8": "Capela Lateral",
-        "1_Sidearea6_4": "Fontes Radiantes",
+        "1_SideArea5_4": "Arquivos Proibidos",
+        "1_SideArea5_4b": "Arquivos Cremados",
+        "1_SideArea5_5": "Inquisitorium Maligno",
+        "1_SideArea5_6": "Câmaras Mortais",
+        "1_SideArea5_7": "Coleção Restrita",
+        "1_SideArea5_8": "Capela Lateral",
+        "1_SideArea6_4": "Fontes Radiantes",
         "1_SideArea6_6": "Desfiladeiro Obscurecido",
-        "1_Sidearea7_4": "Repositório Selado",
-        "1_Sidearea7_10": "Complexo Inundado",
-        "1_Sidearea7_12": "Altar Proibido",
-        "1_Sidearea8_3": "Alojamento Evacuado",
-        "1_Sidearea8_5": "Caldário Oculto",
-        "1_Sidearea8_7": "Câmaras da Luz do Luar",
-        "1_Sidearea9_3": "Areia Movediça",
-        "1_Sidearea9_5": "Grota Esquecida",
-        "1_Sidearea9_6": "Ilha Desolada",
-        "1_Sidearea9_9": "Ribanceira Empoeirada",
-        "1_Sidearea10_3": "Arquivos Cremados",
+        "1_SideArea7_4": "Repositório Selado",
+        "1_SideArea7_10": "Complexo Inundado",
+        "1_SideArea7_12": "Altar Proibido",
+        "1_SideArea8_3": "Alojamento Evacuado",
+        "1_SideArea8_5": "Caldário Oculto",
+        "1_SideArea8_7": "Câmaras da Luz do Luar",
+        "1_SideArea9_3": "Areia Movediça",
+        "1_SideArea9_5": "Grota Esquecida",
+        "1_SideArea9_6": "Ilha Desolada",
+        "1_SideArea9_9": "Ribanceira Empoeirada",
+        "1_SideArea10_3": "Arquivos Cremados",
+        "MapSideArea1_1": "Buraco Estranho",
+        "MapSideArea1_2": "Cavidade Escondida",
+        "MapSideArea1_3": "Pedregulho Afundado",
+        "MapSideArea1_4": "Cume Enevoado",
+        "MapSideArea1_5": "Alçapão Esquecido",
+        "MapSideArea1_6": "Ravina Remota",
+        "MapSideArea2_1": "Ravina Estreita",
+        "MapSideArea2_2": "Limpeza Mística",
+        "MapSideArea2_3": "Buraco Coberto",
+        "MapSideArea2_4": "Remendo Oculto",
+        "MapSideArea2_5": "Alcova Sepultada",
+        "MapSideArea2_6": "Laboratório Secreto",
+        "MapSideArea2_7": "Cadáver Secluso",
+        "MapSideArea2_8": "Câmara Proibida",
+        "MapSideArea3_1": "Quartel em Quarentena",
+        "MapSideArea3_2": "Fornalha Desativada",
+        "MapSideArea3_3": "Beco Cego",
+        "MapSideArea3_4": "Câmara Sepultada",
+        "MapSideArea3_5": "Câmaras Sagradas",
+        "MapSideArea3_6": "Canal Estagnado",
+        "MapSideArea3_7": "Dutos Emparedados",
+        "MapSideArea3_8": "Cela Negligenciada",
+        "MapSideArea3_9": "Câmaras Arcanas",
+        "MapSideArea3_10": "Terreno Interior",
+        "MapSideArea3_11": "Corredores Selados",
+        "MapSideArea3_12": "Galeria Restrita",
+        "MapSideArea4_1": "Conduíte Esquecido",
+        "MapSideArea4_2": "Catacumba Antiga",
+        "MapSideArea4_3": "Mina Assombrada",
+        "MapSideArea4_4": "Represa Abandonada",
+        "MapSideArea4_7": "Trajetória Desolada",
+        "MapSideArea5_2": "Quartel Reivindicado",
+        "MapSideArea5_3_1": "Porão Selado",
+        "MapSideArea5_3_2": "Canal Isolado",
+        "MapSideArea5_4": "Arquivos Proibidos",
+        "MapSideArea5_4b": "Arquivos Cremados",
+        "MapSideArea5_5": "Inquisitorium Maligno",
+        "MapSideArea5_6": "Câmaras Mortais",
+        "MapSideArea5_7": "Coleção Restrita",
+        "MapSideArea5_8": "Capela Lateral",
+        "MapSideArea6_4": "Fontes Radiantes",
+        "MapSideArea6_6": "Desfiladeiro Obscurecido",
+        "MapSideArea7_4": "Repositório Selado",
+        "MapSideArea7_10": "Complexo Inundado",
+        "MapSideArea7_12": "Altar Proibido",
+        "MapSideArea8_3": "Alojamento Evacuado",
+        "MapSideArea8_5": "Caldário Oculto",
+        "MapSideArea8_7": "Câmaras da Luz do Luar",
+        "MapSideArea9_3": "Areia Movediça",
+        "MapSideArea9_5": "Grota Esquecida",
+        "MapSideArea9_6": "Ilha Desolada",
+        "MapSideArea9_9": "Ribanceira Empoeirada",
+        "MapSideArea10_3": "Arquivos Cremados",
         "3_ProphecyBoss": "A Corte Pálida",
         "Synthesis_MapBoss": "Córtex",
         "Synthesis_MapGuardian1": "Memória Distante Alterada",
@@ -7975,6 +9187,14 @@
         "HideoutDarkwood": "Refúgio da Floresta Negra",
         "HideoutArenaElder": "Refúgio Vazio",
         "HideoutChiyouSpring": "Refúgio Chiyou",
+        "HideoutBlankAbyss": "Refúgio Abismo Infinito",
+        "HideoutBlankCity": "Refúgio Expansão Urbana",
+        "HideoutBlankClouds": "Refúgio Firmamento Ilimitado",
+        "HideoutBlankDesert": "Refúgio Areias Infinitas",
+        "HideoutBlankDirt": "Refúgio Devastação Eterna",
+        "HideoutBlankGrass": "Refúgio Planícies Vastas",
+        "HideoutBlankSea": "Refúgio Marítimo",
+        "HideoutBlankSnow": "Refúgio Expansão Glacial",
         "pvpTown": "Área de Testes da Arena de Sarn",
         "AtlasExilesBoss5": "Olho da Tempestade"
       },
@@ -8151,7 +9371,7 @@
         "2_10_town": "Доки Ориата",
         "2_11_town": "Ориат",
         "2_11_endgame_town": "Берега Каруи",
-        "1_SideArea1_1": "Неведомый провал",
+        "1_SideArea1_1": "Странный провал",
         "1_SideArea1_2": "Скрытая впадина",
         "1_SideArea1_3": "Пологий берег",
         "1_SideArea1_4_": "Облачный кряж",
@@ -8185,25 +9405,78 @@
         "1_SideArea5_2": "Восстановленные казармы",
         "1_SideArea5_3_1": "Запечатанное подземелье",
         "1_SideArea5_3_2": "Уединенный канал",
-        "1_Sidearea5_4": "Запретные архивы",
-        "1_Sidearea5_4b": "Пылающие архивы",
-        "1_Sidearea5_5": "Искажённый инквизиторий",
-        "1_Sidearea5_6": "Смертельные покои",
-        "1_Sidearea5_7": "Засекреченное хранилище",
-        "1_Sidearea5_8": "Боковая часовня",
-        "1_Sidearea6_4": "Сияющие пруды",
+        "1_SideArea5_4": "Запретные архивы",
+        "1_SideArea5_4b": "Пылающие архивы",
+        "1_SideArea5_5": "Искажённый инквизиторий",
+        "1_SideArea5_6": "Смертельные покои",
+        "1_SideArea5_7": "Засекреченное хранилище",
+        "1_SideArea5_8": "Боковая часовня",
+        "1_SideArea6_4": "Сияющие пруды",
         "1_SideArea6_6": "Облачный утес",
-        "1_Sidearea7_4": "Запечатанное хранилище",
-        "1_Sidearea7_10": "Затопленный лабиринт",
-        "1_Sidearea7_12": "Заповедная святыня",
-        "1_Sidearea8_3": "Освобождённый квартал",
-        "1_Sidearea8_5": "Потайной кальдарий",
-        "1_Sidearea8_7": "Лунная обитель",
-        "1_Sidearea9_3": "Зыбучие пески",
-        "1_Sidearea9_5": "Забытое ущелье",
-        "1_Sidearea9_6": "Заброшенный остров",
-        "1_Sidearea9_9": "Запыленный обрыв",
-        "1_Sidearea10_3": "Сожжённые архивы",
+        "1_SideArea7_4": "Запечатанное хранилище",
+        "1_SideArea7_10": "Затопленный лабиринт",
+        "1_SideArea7_12": "Заповедная святыня",
+        "1_SideArea8_3": "Освобождённый квартал",
+        "1_SideArea8_5": "Потайной кальдарий",
+        "1_SideArea8_7": "Лунная обитель",
+        "1_SideArea9_3": "Зыбучие пески",
+        "1_SideArea9_5": "Забытое ущелье",
+        "1_SideArea9_6": "Заброшенный остров",
+        "1_SideArea9_9": "Запыленный обрыв",
+        "1_SideArea10_3": "Сожжённые архивы",
+        "MapSideArea1_1": "Странный провал",
+        "MapSideArea1_2": "Скрытая впадина",
+        "MapSideArea1_3": "Пологий берег",
+        "MapSideArea1_4": "Облачный кряж",
+        "MapSideArea1_5": "Заброшенная темница",
+        "MapSideArea1_6": "Далекое ущелье",
+        "MapSideArea2_1": "Узкая ложбина",
+        "MapSideArea2_2": "Таинственная поляна",
+        "MapSideArea2_3": "Скрытая лощина",
+        "MapSideArea2_4": "Тайная прогалина",
+        "MapSideArea2_5": "Укрытая ниша",
+        "MapSideArea2_6": "Тайная лаборатория",
+        "MapSideArea2_7": "Укромная роща",
+        "MapSideArea2_8": "Запретные покои",
+        "MapSideArea3_1": "Огражденные помещения",
+        "MapSideArea3_2": "Заброшенная печь",
+        "MapSideArea3_3": "Глухой переулок",
+        "MapSideArea3_4": "Укрытые покои",
+        "MapSideArea3_5": "Священные покои",
+        "MapSideArea3_6": "Заболоченный канал",
+        "MapSideArea3_7": "Отгороженные протоки",
+        "MapSideArea3_8": "Запущенный подвал",
+        "MapSideArea3_9": "Загадочные покои",
+        "MapSideArea3_10": "Внутренние земли",
+        "MapSideArea3_11": "Запечатанные коридоры",
+        "MapSideArea3_12": "Запретная галерея",
+        "MapSideArea4_1": "Заброшенный канал",
+        "MapSideArea4_2": "Древние катакомбы",
+        "MapSideArea4_3": "Ужасающая шахта",
+        "MapSideArea4_4": "Заброшенная плотина",
+        "MapSideArea4_7": "Заброшенный путь",
+        "MapSideArea5_2": "Восстановленные казармы",
+        "MapSideArea5_3_1": "Запечатанное подземелье",
+        "MapSideArea5_3_2": "Уединенный канал",
+        "MapSideArea5_4": "Запретные архивы",
+        "MapSideArea5_4b": "Пылающие архивы",
+        "MapSideArea5_5": "Искажённый инквизиторий",
+        "MapSideArea5_6": "Смертельные покои",
+        "MapSideArea5_7": "Засекреченное хранилище",
+        "MapSideArea5_8": "Боковая часовня",
+        "MapSideArea6_4": "Сияющие пруды",
+        "MapSideArea6_6": "Облачный утес",
+        "MapSideArea7_4": "Запечатанное хранилище",
+        "MapSideArea7_10": "Затопленный лабиринт",
+        "MapSideArea7_12": "Заповедная святыня",
+        "MapSideArea8_3": "Освобождённый квартал",
+        "MapSideArea8_5": "Потайной кальдарий",
+        "MapSideArea8_7": "Лунная обитель",
+        "MapSideArea9_3": "Зыбучие пески",
+        "MapSideArea9_5": "Забытое ущелье",
+        "MapSideArea9_6": "Заброшенный остров",
+        "MapSideArea9_9": "Запыленный обрыв",
+        "MapSideArea10_3": "Сожжённые архивы",
         "3_ProphecyBoss": "Бледный суд",
         "Synthesis_MapBoss": "Кора",
         "Synthesis_MapGuardian1": "Измененное отдаленное воспоминание",
@@ -8448,6 +9721,14 @@
         "HideoutDarkwood": "Убежище темного леса",
         "HideoutArenaElder": "Убежище пустоты",
         "HideoutChiyouSpring": "Chiyou Hideout",
+        "HideoutBlankAbyss": "Убежище бесконечной бездны",
+        "HideoutBlankCity": "Убежище городских просторов",
+        "HideoutBlankClouds": "Убежище необъятных небес",
+        "HideoutBlankDesert": "Убежище бескрайних песков",
+        "HideoutBlankDirt": "Убежище вечной пустоши",
+        "HideoutBlankGrass": "Убежище привольных равнин",
+        "HideoutBlankSea": "Убежище широкого моря",
+        "HideoutBlankSnow": "Убежище ледниковой тверди",
         "pvpTown": "Внутренние помещения арены Сарна",
         "AtlasExilesBoss5": "Око Шторма"
       },
@@ -8658,25 +9939,78 @@
         "1_SideArea5_2": "Reclaimed Barracks",
         "1_SideArea5_3_1": "Sealed Basement",
         "1_SideArea5_3_2": "Secluded Canal",
-        "1_Sidearea5_4": "Forbidden Archives",
-        "1_Sidearea5_4b": "Cremated Archives",
-        "1_Sidearea5_5": "Twisted Inquisitorium",
-        "1_Sidearea5_6": "Deathly Chambers",
-        "1_Sidearea5_7": "Restricted Collection",
-        "1_Sidearea5_8": "Side Chapel",
-        "1_Sidearea6_4": "Radiant Pools",
+        "1_SideArea5_4": "Forbidden Archives",
+        "1_SideArea5_4b": "Cremated Archives",
+        "1_SideArea5_5": "Twisted Inquisitorium",
+        "1_SideArea5_6": "Deathly Chambers",
+        "1_SideArea5_7": "Restricted Collection",
+        "1_SideArea5_8": "Side Chapel",
+        "1_SideArea6_4": "Radiant Pools",
         "1_SideArea6_6": "Clouded Ledge",
-        "1_Sidearea7_4": "Sealed Repository",
-        "1_Sidearea7_10": "Flooded Complex",
-        "1_Sidearea7_12": "Forbidden Shrine",
-        "1_Sidearea8_3": "Evacuated Quarter",
-        "1_Sidearea8_5": "Concealed Caldarium",
-        "1_Sidearea8_7": "Moonlit Chambers",
-        "1_Sidearea9_3": "Shifting Sands",
-        "1_Sidearea9_5": "Forgotten Gulch",
-        "1_Sidearea9_6": "Desolate Isle",
-        "1_Sidearea9_9": "Dusty Bluff",
-        "1_Sidearea10_3": "Cremated Archives",
+        "1_SideArea7_4": "Sealed Repository",
+        "1_SideArea7_10": "Flooded Complex",
+        "1_SideArea7_12": "Forbidden Shrine",
+        "1_SideArea8_3": "Evacuated Quarter",
+        "1_SideArea8_5": "Concealed Caldarium",
+        "1_SideArea8_7": "Moonlit Chambers",
+        "1_SideArea9_3": "Shifting Sands",
+        "1_SideArea9_5": "Forgotten Gulch",
+        "1_SideArea9_6": "Desolate Isle",
+        "1_SideArea9_9": "Dusty Bluff",
+        "1_SideArea10_3": "Cremated Archives",
+        "MapSideArea1_1": "Strange Sinkhole",
+        "MapSideArea1_2": "Concealed Cavity",
+        "MapSideArea1_3": "Sunken Shingle",
+        "MapSideArea1_4": "Clouded Ridge",
+        "MapSideArea1_5": "Forgotten Oubliette",
+        "MapSideArea1_6": "Remote Gulch",
+        "MapSideArea2_1": "Narrow Ravine",
+        "MapSideArea2_2": "Mystical Clearing",
+        "MapSideArea2_3": "Covered-up Hollow",
+        "MapSideArea2_4": "Hidden Patch",
+        "MapSideArea2_5": "Entombed Alcove",
+        "MapSideArea2_6": "Secret Laboratory",
+        "MapSideArea2_7": "Secluded Copse",
+        "MapSideArea2_8": "Forbidden Chamber",
+        "MapSideArea3_1": "Quarantined Quarters",
+        "MapSideArea3_2": "Disused Furnace",
+        "MapSideArea3_3": "Blind Alley",
+        "MapSideArea3_4": "Entombed Chamber",
+        "MapSideArea3_5": "Sacred Chambers",
+        "MapSideArea3_6": "Stagnant Canal",
+        "MapSideArea3_7": "Walled-off Ducts",
+        "MapSideArea3_8": "Neglected Cellar",
+        "MapSideArea3_9": "Arcane Chambers",
+        "MapSideArea3_10": "Inner Grounds",
+        "MapSideArea3_11": "Sealed Corridors",
+        "MapSideArea3_12": "Restricted Gallery",
+        "MapSideArea4_1": "Forgotten Conduit",
+        "MapSideArea4_2": "Ancient Catacomb",
+        "MapSideArea4_3": "Haunted Mineshaft",
+        "MapSideArea4_4": "Abandoned Dam",
+        "MapSideArea4_7": "Desolate Track",
+        "MapSideArea5_2": "Reclaimed Barracks",
+        "MapSideArea5_3_1": "Sealed Basement",
+        "MapSideArea5_3_2": "Secluded Canal",
+        "MapSideArea5_4": "Forbidden Archives",
+        "MapSideArea5_4b": "Cremated Archives",
+        "MapSideArea5_5": "Twisted Inquisitorium",
+        "MapSideArea5_6": "Deathly Chambers",
+        "MapSideArea5_7": "Restricted Collection",
+        "MapSideArea5_8": "Side Chapel",
+        "MapSideArea6_4": "Radiant Pools",
+        "MapSideArea6_6": "Clouded Ledge",
+        "MapSideArea7_4": "Sealed Repository",
+        "MapSideArea7_10": "Flooded Complex",
+        "MapSideArea7_12": "Forbidden Shrine",
+        "MapSideArea8_3": "Evacuated Quarter",
+        "MapSideArea8_5": "Concealed Caldarium",
+        "MapSideArea8_7": "Moonlit Chambers",
+        "MapSideArea9_3": "Shifting Sands",
+        "MapSideArea9_5": "Forgotten Gulch",
+        "MapSideArea9_6": "Desolate Isle",
+        "MapSideArea9_9": "Dusty Bluff",
+        "MapSideArea10_3": "Cremated Archives",
         "3_ProphecyBoss": "The Pale Court",
         "Synthesis_MapBoss": "แกนความทรงจำ",
         "Synthesis_MapGuardian1": "ความทรงจำที่ห่างไกลที่ถูกแก้ไข",
@@ -8921,6 +10255,14 @@
         "HideoutDarkwood": "ที่ซ่อน Glimmerwood",
         "HideoutArenaElder": "Void Hideout",
         "HideoutChiyouSpring": "Chiyou Hideout",
+        "HideoutBlankAbyss": "Infinite Abyss Hideout",
+        "HideoutBlankCity": "Urban Sprawl Hideout",
+        "HideoutBlankClouds": "Boundless Skies Hideout",
+        "HideoutBlankDesert": "Endless Sands Hideout",
+        "HideoutBlankDirt": "Eternal Wasteland Hideout",
+        "HideoutBlankGrass": "Vast Plains Hideout",
+        "HideoutBlankSea": "All at Sea Hideout",
+        "HideoutBlankSnow": "Glacial Expanse Hideout",
         "pvpTown": "Sarn Arena Staging Area",
         "AtlasExilesBoss5": "Eye of the Storm"
       },
@@ -9131,25 +10473,7 @@
         "1_SideArea5_2": "老旧兵营",
         "1_SideArea5_3_1": "封闭地库",
         "1_SideArea5_3_2": "幽寂船道",
-        "1_Sidearea5_4": "禁阅档案",
-        "1_Sidearea5_4b": "火化档案",
-        "1_Sidearea5_5": "扭曲审判所",
-        "1_Sidearea5_6": "致命密室",
-        "1_Sidearea5_7": "受限收藏",
-        "1_Sidearea5_8": "小礼拜堂",
-        "1_Sidearea6_4": "光耀池塘",
         "1_SideArea6_6": "乌云海崖",
-        "1_Sidearea7_4": "被封印的贮藏室",
-        "1_Sidearea7_10": "淹水建筑",
-        "1_Sidearea7_12": "禁地神龛",
-        "1_Sidearea8_3": "疏散区",
-        "1_Sidearea8_5": "隐蔽高温浴室",
-        "1_Sidearea8_7": "月耀幽室",
-        "1_Sidearea9_3": "流沙之地",
-        "1_Sidearea9_5": "遗忘隔路",
-        "1_Sidearea9_6": "荒芜小岛",
-        "1_Sidearea9_9": "扬尘之崖",
-        "1_Sidearea10_3": "火葬档案室",
         "3_ProphecyBoss": "苍白议会",
         "Synthesis_MapBoss": "脑层",
         "Synthesis_MapGuardian1": "改变的遥远回忆",

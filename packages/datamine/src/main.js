@@ -126,16 +126,16 @@ function isNPCTextExported(raw) {
 }
 function transformAtlasNode(raw, {json}) {
   return {
-    WorldAreasKey: truthy(raw.WorldAreasKey),
+    WorldAreasKey: truthy(raw.WorldAreasKey, 'atlas.worldAreasKey'),
     ItemVisualIdentity: truthy(json["ItemVisualIdentity.dat"].data[raw.ItemVisualIdentityKey].DDSFile, raw),
-    DDSFile: truthy(raw.DDSFile),
+    // DDSFile: truthy(raw.DDSFile, 'atlas.ddsfile'),
     AtlasRegion: truthy(json["AtlasRegions.dat"].data[raw.AtlasRegionsKey].Name, raw),
-    Tiers: truthy([raw.Tier0, raw.Tier1, raw.Tier2, raw.Tier3, raw.Tier4]),
+    Tiers: [raw.Tier0, raw.Tier1, raw.Tier2, raw.Tier3, raw.Tier4],
   }
 }
 function transformUniqueMap(raw, {json}) {
   return {
-    WorldAreasKey: truthy(raw.WorldAreasKey),
+    WorldAreasKey: truthy(raw.WorldAreasKey, 'uniquemap.worldAreaskey'),
     ItemVisualIdentity: truthy(json["ItemVisualIdentity.dat"].data[raw.ItemVisualIdentityKey].DDSFile, raw),
   }
 }
