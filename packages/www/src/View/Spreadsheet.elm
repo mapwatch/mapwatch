@@ -82,6 +82,9 @@ viewDataHeaders model =
            , "Lab Trial"
            , "Abyssal Depths"
            , "Abandoned Map Run"
+
+           -- this one goes last
+           , "https://mapwatch.erosson.org"
            ]
 
 
