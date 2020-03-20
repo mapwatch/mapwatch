@@ -81,6 +81,7 @@ viewDataHeaders model =
            , "Vaal"
            , "Lab Trial"
            , "Abyssal Depths"
+           , "Abandoned Map Run"
            ]
 
 
@@ -91,7 +92,11 @@ viewDataRow model i run =
     , run.address.worldArea |> Maybe.andThen (Datamine.imgSrc run) |> Maybe.Extra.unwrap CellEmpty CellIcon
     , run.address.zone |> CellString
     , run.address.worldArea |> Maybe.andThen .atlasRegion |> Maybe.withDefault "---" |> CellString
-    , run.duration.all |> CellDuration
+    , if run.isAbandoned then
+        "???" |> CellString
+
+      else
+        run.duration.all |> CellDuration
     , run.duration.mainMap |> CellDuration
     , run.duration.town |> CellDuration
     , run.duration.sides |> CellDuration
@@ -117,6 +122,7 @@ viewDataRow model i run =
            , run |> viewSideArea .isVaalArea
            , run |> viewSideArea .isLabTrial
            , run |> viewSideArea .isAbyssalDepths |> (/=) CellEmpty |> CellBool
+           , CellBool run.isAbandoned
            ]
 
 

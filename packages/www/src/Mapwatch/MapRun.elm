@@ -33,6 +33,7 @@ type alias MapRun =
     -- durations
     , sideAreas : Dict AddressId ( Address, Millis )
     , duration : Durations
+    , isAbandoned : Bool
 
     -- npc interactions
     , isBlightedMap : Bool
@@ -63,8 +64,11 @@ type alias Aggregate =
 
 
 aggregate : List MapRun -> Aggregate
-aggregate runs =
+aggregate runs0 =
     let
+        runs =
+            runs0 |> List.filter (\r -> not r.isAbandoned)
+
         durations =
             List.map .duration runs
 
@@ -148,6 +152,7 @@ fromRaw raw =
     , startedAt = raw.startedAt
     , updatedAt = RawMapRun.updatedAt raw
     , portals = raw.portals
+    , isAbandoned = raw.isAbandoned
     , isBlightedMap = isBlightedMap raw
     , conqueror = conquerorEncounterFromNpcs raw.npcSays
 

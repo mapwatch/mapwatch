@@ -125,6 +125,7 @@ viewMain model =
         runs : List MapRun
         runs =
             model.mapwatch.runs
+                |> List.filter (\r -> not r.isAbandoned)
                 |> applySearch model.mapwatch.datamine search
                 |> RunSort.filterBetween { before = before, after = after }
 

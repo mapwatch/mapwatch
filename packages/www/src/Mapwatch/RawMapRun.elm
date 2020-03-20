@@ -33,6 +33,7 @@ type alias RawMapRun =
     , portals : Int
     , npcSays : NpcEncounters
     , visits : List Visit
+    , isAbandoned : Bool
     }
 
 
@@ -53,6 +54,7 @@ create addr startedAt npcSays =
             , npcSays = npcSays
             , visits = []
             , portals = 1
+            , isAbandoned = False
             }
 
     else
@@ -77,7 +79,13 @@ updatedAt r =
 push : Visit -> RawMapRun -> Maybe RawMapRun
 push visit run =
     if Visit.isOffline visit then
-        Nothing
+        if Visit.isTown visit then
+            -- offline in town: run's over
+            Nothing
+
+        else
+            -- offline, out of town: run's abandoned. We don't know how long it was!
+            Just { run | isAbandoned = True }
 
     else
         Just { run | visits = visit :: run.visits }
@@ -100,8 +108,8 @@ tick now instance_ state =
 
                 else
                     -- they went offline in the map or a side area.
-                    -- we can't know how much time they actually spent running before disappearing - discard the run.
-                    ( Nothing, Nothing )
+                    -- abandon the run: we can't know how much time they actually spent running before disappearing.
+                    ( Nothing, Just { run | isAbandoned = True } )
                         |> Mapwatch.Debug.log "Run.tick: Running<not-town> -> offline"
 
             else
@@ -170,23 +178,22 @@ update instance_ mvisit state =
                 Just running ->
                     case push visit running of
                         Nothing ->
-                            -- they went offline during a run. Start a new run.
-                            if Visit.isTown visit then
-                                -- they went offline in town - end the run, discarding the time in town.
-                                if duration running == 0 then
-                                    ( initRun Dict.empty, Nothing )
+                            -- they went offline in town - end the run, discarding the time in town.
+                            ( initRun Dict.empty
+                            , if duration running == 0 then
+                                Nothing
 
-                                else
-                                    ( initRun Dict.empty, Just running )
-
-                            else
-                                -- they went offline in the map or a side area.
-                                -- we can't know how much time they actually spent running before disappearing - discard the run.
-                                -- TODO handle offline in no-zone - imagine crashing in a map, immediately restarting the game, then quitting for the day
-                                ( initRun Dict.empty, Nothing )
+                              else
+                                Just running
+                            )
 
                         Just run ->
-                            if (not <| Instance.isTown instance_.val) && instance_.val /= Instance.Instance run.address && Visit.isTown visit then
+                            if run.isAbandoned then
+                                -- they went offline without returning to town first - we don't know how long the run was.
+                                -- End the run (we'll have a special display for this case later).
+                                ( initRun Dict.empty, Just run )
+
+                            else if (not <| Instance.isTown instance_.val) && instance_.val /= Instance.Instance run.address && Visit.isTown visit then
                                 -- entering a new non-town zone, from town, finishes this run and might start a new one. This condition is complex:
                                 -- * Reentering the same map does not! Ex: death, or portal-to-town to dump some gear.
                                 -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.

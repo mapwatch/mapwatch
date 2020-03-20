@@ -351,7 +351,17 @@ viewDurationAggregate a =
 
 viewRunDurations : Maybe Duration -> MapRun -> List (Html msg)
 viewRunDurations goal run =
-    [ td [ class "dur total-dur" ] [ viewDuration run.duration.all ]
+    [ td [ class "dur total-dur" ]
+        [ if run.isAbandoned then
+            span
+                [ class "abandoned-run-duration"
+                , title "Map run abandoned - you went offline without returning to town first!\n\nSadly, when you go offline without returning to town, Mapwatch cannot know how long you spent in the map. Times shown here will be wrong.\n\nSee also https://github.com/mapwatch/mapwatch/issues/66"
+                ]
+                [ text "???" ]
+
+          else
+            viewDuration run.duration.all
+        ]
     , td [ class "dur delta-dur" ] [ viewDurationDelta (Just run.duration.all) goal ]
     ]
         ++ viewDurationTail { portals = toFloat run.portals, duration = run.duration }

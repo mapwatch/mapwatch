@@ -344,3 +344,6 @@ svg.icon-region .focus.focus-drox {
   border-radius: 1em;
   padding: 1em;
 }
+.abandoned-run-duration {
+  font-style: italic;
+}

@@ -11,6 +11,9 @@ All substantial Mapwatch changes.
 - Betrayal encounters are now tracked using dialogue from all Syndicate members, not just Jun.
   - Fixed tracking for Betrayal encounters where Jun herself happens to be quiet.
   - Dialogue for all Syndicate members is shown when mousing over a Betrayal encounter, not just Jun's dialogue.
+- Maps runs where you go offline without returning to town are now tracked.
+  - It's impossible to know how long you spent in a map when this happens. Still, Mapwatch tries its best.
+  - Even without durations, it's helpful to show these maps for [conqueror tracking](https://github.com/mapwatch/mapwatch/issues/66).
 
 ## 2020-03-12
 - Updated "hide pre-Metamorph maps" button for Delirium league.
