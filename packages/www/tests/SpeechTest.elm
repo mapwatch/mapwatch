@@ -30,6 +30,7 @@ emptyRaw =
     , portals = 0
     , npcSays = Dict.empty
     , visits = []
+    , isAbandoned = False
     }
 
 
