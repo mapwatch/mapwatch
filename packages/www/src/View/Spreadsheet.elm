@@ -8,6 +8,7 @@ import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Maybe.Extra
 import Model exposing (Msg, OkModel)
+import Route.Feature as Feature exposing (Feature)
 import Time exposing (Posix)
 import View.Home exposing (monthToString)
 
@@ -34,7 +35,7 @@ type alias Sheet =
 viewData : OkModel -> List MapRun -> Sheet
 viewData model runs =
     { title = "Mapwatch: Data"
-    , headers = [ viewDataHeaders ]
+    , headers = [ viewDataHeaders model ]
     , rows =
         runs
             |> List.reverse
@@ -43,8 +44,8 @@ viewData model runs =
     }
 
 
-viewDataHeaders : List String
-viewDataHeaders =
+viewDataHeaders : OkModel -> List String
+viewDataHeaders model =
     [ "Row"
     , "Date"
     , "Icon"
@@ -68,11 +69,19 @@ viewDataHeaders =
     , "Niko"
     , "Jun"
     , "Cassia"
-    , "Zana"
-    , "Vaal"
-    , "Lab Trial"
-    , "Abyssal Depths"
+    , "Legion General"
     ]
+        ++ (if Feature.isActive Feature.DeliriumEncounter model.query then
+                [ "Delirium" ]
+
+            else
+                []
+           )
+        ++ [ "Zana"
+           , "Vaal"
+           , "Lab Trial"
+           , "Abyssal Depths"
+           ]
 
 
 viewDataRow : OkModel -> Int -> MapRun -> List Cell
@@ -94,13 +103,21 @@ viewDataRow model i run =
     , run |> viewNpc NpcId.einhar
     , run |> viewNpc NpcId.alva
     , run |> viewNpc NpcId.niko
-    , run |> viewNpc NpcId.jun
+    , run |> viewNpc NpcId.betrayalGroup
     , run |> viewNpc NpcId.cassia
-    , run |> viewSideArea Datamine.isMap
-    , run |> viewSideArea .isVaalArea
-    , run |> viewSideArea .isLabTrial
-    , run |> viewSideArea .isAbyssalDepths |> (/=) CellEmpty |> CellBool
+    , run |> viewNpc NpcId.legionGeneralGroup
     ]
+        ++ (if Feature.isActive Feature.DeliriumEncounter model.query then
+                [ run |> viewNpc NpcId.delirium ]
+
+            else
+                []
+           )
+        ++ [ run |> viewSideArea Datamine.isMap
+           , run |> viewSideArea .isVaalArea
+           , run |> viewSideArea .isLabTrial
+           , run |> viewSideArea .isAbyssalDepths |> (/=) CellEmpty |> CellBool
+           ]
 
 
 viewSideArea : (WorldArea -> Bool) -> MapRun -> Cell

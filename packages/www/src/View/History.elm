@@ -19,6 +19,7 @@ import Regex
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
+import Set exposing (Set)
 import Time exposing (Posix)
 import View.Home
 import View.Icon
@@ -450,7 +451,8 @@ viewNpcText query npcId =
     else if npcId == NpcId.niko then
         [ View.Icon.niko, text "Niko, Master of the Depths" ]
 
-    else if npcId == NpcId.jun then
+    else if npcId == NpcId.betrayalGroup then
+        -- else if npcId == NpcId.jun then
         [ View.Icon.jun, text "Jun, Veiled Master" ]
 
     else if npcId == NpcId.cassia then
@@ -463,6 +465,9 @@ viewNpcText query npcId =
 
     else if npcId == NpcId.delirium && Feature.isActive Feature.DeliriumEncounter query then
         [ View.Icon.delirium, text "Delirium Mirror" ]
+
+    else if npcId == NpcId.legionGeneralGroup then
+        [ View.Icon.legion, text "Legion General" ]
 
     else
         []

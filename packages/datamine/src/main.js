@@ -82,7 +82,7 @@ function transformLang(raw, {worldAreasById}) {
   const worldAreas = raw["WorldAreas.dat"].data.filter(w => !!worldAreasById[w.Id])
   // "You have entered" text can vary based on the user's language, so import it too
   const backendErrors = raw["BackendErrors.dat"].data.filter(e => e.Id == 'EnteredArea')
-  const npcs = raw["NPCs.dat"].data.filter(raw => !!exportedNPCs[raw.Id])
+  const npcs = raw["NPCs.dat"].data.filter(isNPCIdExported)
   const npcTextAudio = raw["NPCTextAudio.dat"].data.filter(isNPCTextExported)
   return {
     backendErrors: _.mapValues(_.keyBy(backendErrors, 'Id'), 'Text'),
@@ -105,7 +105,16 @@ const exportedNPCs = Object.assign({}, ...[
   "Metadata/Monsters/Masters/BlightBuilderWild",
   "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC",
   "Metadata/NPC/League/Affliction/StrangeVoice",
+  "Metadata/Monsters/LegionLeague/LegionKaruiGeneral",
+  "Metadata/Monsters/LegionLeague/LegionEternalEmpireGeneral",
+  "Metadata/Monsters/LegionLeague/LegionMarakethGeneral",
+  "Metadata/Monsters/LegionLeague/LegionMarakethGeneralDismounted",
+  "Metadata/Monsters/LegionLeague/LegionTemplarGeneral",
+  "Metadata/Monsters/LegionLeague/LegionVaalGeneral",
 ].map(name => ({[name]: true})))
+function isNPCIdExported(raw) {
+  return !!exportedNPCs[raw.Id] || raw.Id.startsWith("Metadata/Monsters/LeagueBetrayal/Betrayal")
+}
 function isNPCTextExported(raw) {
   // conquerors
   return /^AlHezmin.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)

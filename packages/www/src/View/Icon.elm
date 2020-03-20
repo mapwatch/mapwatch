@@ -148,6 +148,11 @@ tane =
     sideArea { name = "tane big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedMetamorph.png?scale=1" }
 
 
+legion : Html msg
+legion =
+    sideArea { name = "legion big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLegion.png?scale=1" }
+
+
 delirium : Html msg
 delirium =
     sideArea { name = "delirium big-icon", url = "Art/2DItems/Maps/DeliriumSplinter.png?scale=1" }

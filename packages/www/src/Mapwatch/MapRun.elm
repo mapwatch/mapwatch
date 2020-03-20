@@ -14,7 +14,7 @@ Frozen; cannot be modified. Lots of redundancy. Use RawMapRun for updates and lo
 
 import Dict exposing (Dict)
 import Duration exposing (Millis)
-import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
+import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
@@ -37,7 +37,7 @@ type alias MapRun =
     -- npc interactions
     , isBlightedMap : Bool
     , conqueror : Maybe ( Conqueror.Id, Conqueror.Encounter )
-    , npcSays : Dict NpcId (List String)
+    , npcSays : Dict NpcGroup (List String)
     }
 
 

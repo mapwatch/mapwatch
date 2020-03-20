@@ -6,6 +6,11 @@ All substantial Mapwatch changes.
 ## 2020-03-19
 - The Simulacrum is now tracked.
 - Delirium encounters can now be tracked. This is off by default - seeing delirium in every map is not useful - but if you like, [you can turn it on](https://mapwatch.erosson.org?deliriumEncounter=1).
+- Legion encounters *with a general* are now tracked.
+  - It's not possible to track Legion encounters *without a general*, since tracking is based on NPC dialogue. Metamorph tracking is also not possible, since Tane is usually quiet. Sorry!
+- Betrayal encounters are now tracked using dialogue from all Syndicate members, not just Jun.
+  - Fixed tracking for Betrayal encounters where Jun herself happens to be quiet.
+  - Dialogue for all Syndicate members is shown when mousing over a Betrayal encounter, not just Jun's dialogue.
 
 ## 2020-03-12
 - Updated "hide pre-Metamorph maps" button for Delirium league.

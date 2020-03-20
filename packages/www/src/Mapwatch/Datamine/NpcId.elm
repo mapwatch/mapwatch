@@ -7,6 +7,30 @@ type alias NpcId =
     String
 
 
+type alias NpcGroup =
+    String
+
+
+toNpcGroup : NpcId -> NpcGroup
+toNpcGroup id =
+    if Set.member id legionGenerals then
+        legionGeneralGroup
+
+    else if id == jun || String.startsWith "Metadata/Monsters/LeagueBetrayal/Betrayal" id then
+        betrayalGroup
+
+    else
+        id
+
+
+legionGeneralGroup =
+    "__mapwatch:legion-general__"
+
+
+betrayalGroup =
+    "__mapwatch:betrayal__"
+
+
 conquerors =
     Set.fromList [ baran, veritania, alHezmin, drox ]
 
@@ -53,3 +77,14 @@ tane =
 
 delirium =
     "Metadata/NPC/League/Affliction/StrangeVoice"
+
+
+legionGenerals =
+    Set.fromList
+        [ "Metadata/Monsters/LegionLeague/LegionKaruiGeneral"
+        , "Metadata/Monsters/LegionLeague/LegionEternalEmpireGeneral"
+        , "Metadata/Monsters/LegionLeague/LegionMarakethGeneral"
+        , "Metadata/Monsters/LegionLeague/LegionMarakethGeneralDismounted"
+        , "Metadata/Monsters/LegionLeague/LegionTemplarGeneral"
+        , "Metadata/Monsters/LegionLeague/LegionVaalGeneral"
+        ]

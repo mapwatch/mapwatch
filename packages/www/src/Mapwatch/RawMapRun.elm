@@ -19,7 +19,7 @@ needlessly detailed for historical data. Use MapRun for those.
 
 import Dict exposing (Dict)
 import Duration exposing (Millis)
-import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
+import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Debug
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
@@ -31,7 +31,7 @@ type alias RawMapRun =
     { address : Instance.Address
     , startedAt : Posix
     , portals : Int
-    , npcSays : Dict NpcId (List LogLine.NPCSaysData)
+    , npcSays : NpcEncounters
     , visits : List Visit
     }
 
@@ -41,7 +41,7 @@ type alias State =
 
 
 type alias NpcEncounters =
-    Dict NpcId (List LogLine.NPCSaysData)
+    Dict NpcGroup (List LogLine.NPCSaysData)
 
 
 create : Instance.Address -> Posix -> NpcEncounters -> Maybe RawMapRun
@@ -215,4 +215,4 @@ updateNPCText line state =
 
 pushNpcEncounter : LogLine.NPCSaysData -> NpcEncounters -> NpcEncounters
 pushNpcEncounter says =
-    Dict.update says.npcId (Maybe.withDefault [] >> (::) says >> Just)
+    Dict.update (NpcId.toNpcGroup says.npcId) (Maybe.withDefault [] >> (::) says >> Just)
