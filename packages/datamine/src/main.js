@@ -57,8 +57,9 @@ function transform(rawJson, rawLangs) {
   return ret
   // }, _.identity)
 }
-// Fragment maps don't seem to have a flag to easily distinguish them, nor do
-// they have a field that says how to visualize. List them manually. Sirus too.
+// Fragment maps, league boss areas, and Sirus don't seem to have a flag to
+// easily distinguish them, nor do they have a field that says how to visualize.
+// List them manually.
 const nonAtlasMaps = {
   "3_ProphecyBoss": "Art/2DItems/Maps/PaleCourtComplete.png",
   "MapWorldsShapersRealm": "Art/2DItems/Maps/ShaperComplete.png",
@@ -66,15 +67,30 @@ const nonAtlasMaps = {
   "MapWorldsElderArenaUber": "Art/2DItems/Maps/UberElderComplete.png",
   "MapAtziri1": "Art/2DItems/Maps/VaalComplete.png",
   "MapAtziri2": "Art/2DItems/Maps/UberVaalComplete.png",
+  // sirus
   "AtlasExilesBoss5": "Art/2DItems/Currency/Strongholds/WatchstoneIridescent.png",
+  // breachstones
   "BreachBossFire": "Art/2DItems/Currency/Breach/BreachFragmentsFire.png",
   "BreachBossCold": "Art/2DItems/Currency/Breach/BreachFragmentsCold.png",
   "BreachBossLightning": "Art/2DItems/Currency/Breach/BreachFragmentsLightning.png",
   "BreachBossPhysical": "Art/2DItems/Currency/Breach/BreachFragmentsPhysical.png",
   "BreachBossChaos": "Art/2DItems/Currency/Breach/BreachFragmentsChaos.png",
 }
-for (let i=0; i <= 10; i++) {
-  nonAtlasMaps["AfflictionTown" + i] = "Art/2DItems/Maps/DeliriumFragment.png"
+function nonAtlasMapIcon(id) {
+  if (nonAtlasMaps[id]) {
+    return nonAtlasMaps[id]
+  }
+  // delirium sanitarium - ids are AfflictionTown[1-10]
+  if (id.startsWith("AfflictionTown")) {
+    return "Art/2DItems/Maps/DeliriumFragment.png"
+  }
+  // incursion temple - ids are Incursion_Temple[1-10],
+  // sometimes with a trailing underscore just to mess us up.
+  // No idea why it needs multiple ids, but it makes no difference
+  if (id.startsWith("Incursion_Temple")) {
+    return "Art/2DItems/Effects/Portals/IncursionPortal.png"
+  }
+  return null
 }
 function transformLang(raw, {worldAreasById}) {
   // areas all have different names for different languages, map id -> name.
@@ -162,7 +178,7 @@ function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes, itemVisua
     IsVaalArea: raw.IsVaalArea,
     _IsLabTrial: raw.Id.startsWith('EndGame_Labyrinth_trials_'),
     _IsAbyssalDepths : raw.Id.startsWith('AbyssLeague'),
-    ItemVisualIdentity: nonAtlasMaps[raw.Id] ||
+    ItemVisualIdentity: nonAtlasMapIcon(raw.Id) ||
       _.get(uniqueMaps[index] || atlasNodes[index], 'ItemVisualIdentity') ||
       (raw.Id.startsWith('MapWorlds') ? _.get(itemVisualIdentity[raw.Id], 'DDSFile') : null),
     AtlasRegion: _.get(atlasNodes[index], 'AtlasRegion'),

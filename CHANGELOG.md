@@ -3,6 +3,9 @@
 All substantial Mapwatch changes.
 
 ---
+## 2020-03-30
+- Fixed a bug preventing Temple of Atzoatl tracking.
+
 ## 2020-03-19
 - The Simulacrum is now tracked.
 - Delirium encounters can now be tracked. This is off by default - seeing delirium in every map is not useful - but if you like, [you can turn it on](https://mapwatch.erosson.org?deliriumEncounter=1).

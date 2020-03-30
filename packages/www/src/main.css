@@ -184,7 +184,9 @@ table.timer-details .session-buttons .button {
 /* .side-icon-zana, */
 /* .side-icon-vaal { */
 /* .side-icon-einhar, */
-.side-icon-alva {
+/* .map-icon-Incursion_Temple1, */
+/* .side-icon-alva, */
+[src$="IncursionPortal.png"] {
   filter: drop-shadow(1px 1px 0 #eb99a1)
           drop-shadow(-1px -1px 0 #eb99a1);
 }
