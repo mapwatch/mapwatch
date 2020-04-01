@@ -118,14 +118,32 @@ offlineThreshold =
     30 * Duration.minute
 
 
-isDurationOffline : Millis -> Bool
-isDurationOffline dur =
-    dur >= offlineThreshold
+simulacrumOfflineThreshold : Millis
+simulacrumOfflineThreshold =
+    60 * Duration.minute
+
+
+isSimulacrum : Instance -> Bool
+isSimulacrum =
+    worldArea >> Maybe.Extra.unwrap False (.id >> String.startsWith "AfflictionTown")
+
+
+isDurationOffline : Millis -> Instance -> Bool
+isDurationOffline dur instance =
+    let
+        threshold =
+            if isSimulacrum instance then
+                simulacrumOfflineThreshold
+
+            else
+                offlineThreshold
+    in
+    dur >= threshold
 
 
 isOffline : Posix -> State -> Bool
 isOffline now instance =
-    isDurationOffline <| duration now instance
+    isDurationOffline (duration now instance) instance.val
 
 
 initOrUpdate : Datamine -> LogLine.Line -> Maybe State -> State

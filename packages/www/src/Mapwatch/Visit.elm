@@ -36,7 +36,7 @@ isMap =
 
 isOffline : Visit -> Bool
 isOffline v =
-    Instance.isDurationOffline <| duration v
+    Instance.isDurationOffline (duration v) v.instance
 
 
 initSince : Instance.State -> Posix -> Visit
