@@ -65,24 +65,26 @@ emptyState1 =
 
 encounter : Id -> List String -> Maybe Encounter
 encounter cid textIds =
-    if List.any (String.contains "StoneEncounter1") textIds || List.any (String.contains "StoneEncounterOne") textIds then
+    -- see https://github.com/mapwatch/mapwatch/issues/57, https://github.com/mapwatch/mapwatch/issues/69
+    -- veritania's 4-stone taunt order does not match her dialogue ids, like other taunts. special-case them.
+    if List.any (String.startsWith "VeritaniaFourStoneEncounter2") textIds then
+        Just (Taunt 3)
+
+    else if List.any (String.startsWith "VeritaniaFourStoneEncounter3") textIds then
+        Just (Taunt 2)
+
+    else
+    -- all other taunts (including veritania [0-3]-stones)
+    if
+        List.any (String.contains "StoneEncounter1") textIds || List.any (String.contains "StoneEncounterOne") textIds
+    then
         Just (Taunt 1)
 
     else if List.any (String.contains "StoneEncounter2") textIds || List.any (String.contains "StoneEncounterTwo") textIds then
-        -- see https://github.com/mapwatch/mapwatch/issues/57 - poe is using this order, and we have to match it
-        if cid == Veritania then
-            Just (Taunt 3)
-
-        else
-            Just (Taunt 2)
+        Just (Taunt 2)
 
     else if List.any (String.contains "StoneEncounter3") textIds || List.any (String.contains "StoneEncounterThree") textIds then
-        -- see https://github.com/mapwatch/mapwatch/issues/57 - poe is using this order, and we have to match it
-        if cid == Veritania then
-            Just (Taunt 2)
-
-        else
-            Just (Taunt 3)
+        Just (Taunt 3)
         -- else if List.any (String.contains "Death") textIds || List.any (String.contains "Flee") textIds then
         -- Just (ConquerorKilled)
 

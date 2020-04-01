@@ -6,6 +6,7 @@ All substantial Mapwatch changes.
 
 ## 2020-03-31
 - The Simulacrum now stops tracking after 60 minutes. Other maps are unchanged, still stopping after 30 minutes.
+- Fixed Veritania's encounter counting (for real this time).
 
 ## 2020-03-30
 - Fixed a bug preventing Temple of Atzoatl tracking.
