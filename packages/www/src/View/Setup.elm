@@ -20,7 +20,7 @@ onChange msg =
 
 viewDownloadLink : OkModel -> Html msg
 viewDownloadLink model =
-    if Feature.isActive Feature.DownloadLink model.query && not (AppPlatform.isElectron model) then
+    if Feature.isActive Feature.DownloadLink model.query && not (AppPlatform.isElectron model || Feature.getBackendName model.query == Just "www-nativefs") then
         div [ class "electron-download" ] <|
             -- [ span [] [ View.Icon.fas "exclamation-triangle" ]
             [ div []
@@ -34,8 +34,8 @@ viewDownloadLink model =
             , div []
                 [ small []
                     [ text " (Sadly, updates while you play will soon be "
-                    , a [ target "_blank", href "https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md" ]
-                        [ text "impossible" ]
+                    , a [ target "_blank", Route.fileWatchingHref ]
+                        [ text "unavailable" ]
                     , text " in all web browsers.) "
                     ]
                 ]
@@ -119,12 +119,33 @@ view model =
 viewFileSelector : OkModel -> List (Html Msg)
 viewFileSelector model =
     if Feature.getBackendName model.query == Just "www-nativefs" then
-        [ text "nativefs"
+        [ text "Client.txt: "
         , button
             [ type_ "button"
             , onClick FileSelector
             ]
             [ text "Choose File" ]
+        , div []
+            [ text "Hint - "
+            , a [ target "_blank", Route.fileWatchingHref ] [ text "read this first!" ]
+            , text " This "
+            , code [] [ text "nativefs" ]
+            , text " version of Mapwatch needs some extra work."
+            ]
+        , div []
+            [ text "If you've set things up properly, the file I need is here, near your item filters:"
+            , br [] []
+            , code [] [ text "C:\\Users\\%USERNAME%\\Documents\\My Games\\Path of Exile\\mapwatch.erosson.org---Client.txt" ]
+            ]
+        , div []
+            [ text "Alternately, "
+            , a [ href "https://mapwatch.erosson.org" ] [ text "use the original web version of Mapwatch" ]
+            , text " (with no updates while you play), or "
+            , a [ target "_blank", Route.downloadMapwatchHref ] [ text "download Mapwatch" ]
+            , text "."
+            ]
+        , br [] []
+        , br [] []
         ]
 
     else
