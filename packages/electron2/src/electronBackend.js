@@ -10,9 +10,11 @@ const chokidar = require('chokidar')
 function ElectronBackend() {
   // Native file access: this absolutely must be private; class fields aren't
   // good enough. Use a closure instead.
+  const POLL_INTERVAL = 1000
   let file = null
   let size = null
   let watcher = null
+  let poller = null
   let fileStart = 0
   const onChanges = []
 
@@ -46,20 +48,30 @@ function ElectronBackend() {
       file = fd
       size = stat.size
       fileStart = Math.max(0, stat.size - maxSize)
-      watcher = chokidar.watch(path, {disableGlobbing: true})
-      watcher.on('change', (path, changed) => {
-        if (size !== changed.size) {
-          const oldSize = size
-          size = changed.size
-          for (let fn of onChanges) {
-            fn({oldSize: oldSize - fileStart, size: size - fileStart})
-          }
-        }
-      })
+      // Chokidar doesn't seem to be working. TODO: why? For now, poll like browserBackend.
+      // watcher = chokidar.watch(path, {disableGlobbing: true})
+      // watcher.on('change', (path, changed) => _onChange(changed))
+      poller = window.setInterval(_pollChanges, POLL_INTERVAL)
       return {size: stat.size}
     }))
   }
+  function _pollChanges() {
+    return file.stat().then(_onChange)
+  }
+  function _onChange(changed) {
+    if (size !== changed.size) {
+      const oldSize = size
+      size = changed.size
+      // console.log('changed', {oldSize, size, changed})
+      for (let fn of onChanges) {
+        fn({oldSize: oldSize - fileStart, size: size - fileStart})
+      }
+    }
+  }
   function close() {
+    if (poller) {
+      window.clearInterval(poller)
+    }
     const ps = [
       file ? file.close() : Promise.resolve(),
       watcher ? watcher.close() : Promise.resolve(),

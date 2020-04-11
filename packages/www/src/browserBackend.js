@@ -16,8 +16,8 @@ function BrowserBackend() {
     watcher = window.setInterval(_pollChanges, POLL_INTERVAL)
     return Promise.resolve({size: size - fileStart})
   }
-  // The browser will not notify us if the file changes - but in Chrome,
-  // it will change if the underlying filesystem changes! Poll for it.
+  // The browser will not notify us if the file changes - but in old versions of
+  // Chrome, it will change if the underlying filesystem changes! Poll for it.
   function _pollChanges() {
     if (size !== file.size) {
       const oldSize = size
