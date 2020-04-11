@@ -6,8 +6,6 @@ If you've used Mapwatch in the past, you'll remember the website used to update 
 
 For one-time analysis of your mapping history, the Mapwatch website still works well. It won't be going away.
 
----
-
 Related Mapwatch issues: [#11](https://github.com/mapwatch/mapwatch/issues/11), [#51](https://github.com/mapwatch/mapwatch/issues/51), [#70](https://github.com/mapwatch/mapwatch/issues/70)
 
 ### You said "not *easily* available in any web browser". I don't want to download/execute your app, I want updates while I play, and I have some technical skills.
