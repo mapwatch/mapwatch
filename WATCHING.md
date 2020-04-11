@@ -14,7 +14,7 @@ Are you sure? [Downloading Mapwatch](https://github.com/mapwatch/mapwatch/releas
 
 ---
 
-If you're really sure: I approve of your refusal to trust strange executables. [The `nativefs` web version of Mapwatch might work for you](https://mapwatch.erosson.org#?backend=www-nativefs), but you'll need to do a little extra work first.
+If you're really sure: I admire your refusal to trust strange executables. [The `nativefs` web version of Mapwatch might work for you](https://mapwatch.erosson.org#?backend=www-nativefs), but you'll need to do a little extra work first.
 
 Run the following in your command prompt:
 
