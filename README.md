@@ -1,12 +1,12 @@
 # [Mapwatch](https://mapwatch.erosson.org)
 
-[Download Mapwatch](https://github.com/mapwatch/mapwatch/releases), or [try the web version](https://mapwatch.erosson.org).
+[Download Mapwatch](https://github.com/mapwatch/mapwatch/releases/latest), or [try the web version](https://mapwatch.erosson.org).
 
 [![Build Status](https://travis-ci.org/mapwatch/mapwatch.svg?branch=master)](https://travis-ci.org/mapwatch/mapwatch)
 
 Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file, and I'll give you some statistics about your recent mapping activity.
 
-Then, [if you're using the Mapwatch app](https://github.com/mapwatch/mapwatch/releases), leave me open while you play - I'll keep watching, no need to upload again.
+Then, [if you're using the Mapwatch app](https://github.com/mapwatch/mapwatch/releases/latest), leave me open while you play - I'll keep watching, no need to upload again.
 
 [Run an example now!](https://mapwatch.erosson.org?tickStart=1526927461000&logtz=0&example=stripped-client.txt#/)
 
@@ -18,7 +18,7 @@ Or, screenshots (slightly outdated):
 
 ### It's not updating while I play - I have to re-upload client.txt to see changes.
 
-You must now [download Mapwatch](https://github.com/mapwatch/mapwatch/releases) to see updates while you play. [More information](https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md).
+You must now [download Mapwatch](https://github.com/mapwatch/mapwatch/releases/latest) to see updates while you play. [More information](https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md).
 
 ### Is this legal?
 
