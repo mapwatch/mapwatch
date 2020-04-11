@@ -28,7 +28,7 @@ You must now [download Mapwatch](https://github.com/mapwatch/mapwatch/releases/l
 
 The web version of Mapwatch is safe; you can analyze your mapping history with no downloads or executables.
 
-[Sadly, Mapwatch updating while you play is no longer easily available in any web browser.](https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md)
+[Sadly, Mapwatch updating while you play is no longer easily available in any web browser.](https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md) You'll need to [download Mapwatch](https://github.com/mapwatch/mapwatch/releases/latest) for that feature.
 
 ### Is this private?
 
