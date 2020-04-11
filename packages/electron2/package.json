@@ -20,7 +20,7 @@
     ],
     "appImage": {},
     "win": {
-      "icon": "../www/public/favicon.jpeg"
+      "icon": "src/favicon.png"
     },
     "publish": [
       {
@@ -41,7 +41,6 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "@mapwatch/www": "1.0.0",
     "electron": "7.1.8",
     "electron-builder": "^21.2.0"
   }

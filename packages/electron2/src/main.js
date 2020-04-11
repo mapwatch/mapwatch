@@ -11,15 +11,18 @@ function main() {
   const win = new electron.BrowserWindow({
     width: 800,
     height: 600,
-    icon: path.join(__dirname, 'node_modules/@mapwatch/www/dist/favicon.jpeg'),
+    icon: path.join(__dirname, '../src/favicon.png'),
+    // autoHideMenuBar: true,
     webPreferences: {
       // https://cameronnokes.com/blog/how-to-create-a-hybrid-electron-app/
       preload: path.join(__dirname, "preload.js"),
       // https://electronjs.org/docs/tutorial/security
       enableRemoteModule: false,
       nodeIntegration: false,
+      // contextIsolation: true,
     }
   })
+  win.setMenuBarVisibility(false)
   // https://stackoverflow.com/questions/32402327/how-can-i-force-external-links-from-browser-window-to-open-in-a-default-browser
   win.webContents.on('new-window', (e, url) => {
     console.log('new-window', url)
