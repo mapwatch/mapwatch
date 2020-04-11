@@ -1,6 +1,6 @@
 {
   "name": "@mapwatch/electron2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/main.js",
   "license": "GPL-3.0",
   "private": true,
