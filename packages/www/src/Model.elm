@@ -81,6 +81,7 @@ type Msg
     = M Mapwatch.Msg
     | Tick Posix
     | SetTimezone Time.Zone
+    | FileSelector
     | LogSelected String
     | InputMaxSize String
     | NavRequest Browser.UrlRequest
@@ -243,6 +244,9 @@ updateOk msg ({ config, mapwatch, settings } as model) =
 
         NavRequest (Browser.External urlstr) ->
             ( model, urlstr |> Nav.load )
+
+        FileSelector ->
+            ( model, Ports.fileSelector { maxSize = config.maxSize } )
 
         LogSelected id ->
             ( model, Ports.logSelected { id = id, maxSize = config.maxSize } )

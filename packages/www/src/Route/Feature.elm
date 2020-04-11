@@ -5,6 +5,7 @@ module Route.Feature exposing
     , deactivate
     , filterDefaults
     , fromString
+    , getBackendName
     , insert
     , isActive
     , list
@@ -35,6 +36,7 @@ type Feature
     | GSheets
     | ConquerorStatus
     | DeliriumEncounter
+    | Backend
 
 
 type alias QueryString =
@@ -49,6 +51,7 @@ list =
     , GSheets
     , ConquerorStatus
     , DeliriumEncounter
+    , Backend
     ]
 
 
@@ -77,6 +80,9 @@ config feature =
 
         DeliriumEncounter ->
             FeatureConfig feature "deliriumEncounter" False
+
+        Backend ->
+            FeatureConfig feature "backend" False
 
 
 byString : Dict String FeatureConfig
@@ -163,3 +169,10 @@ filterDefaults query =
                 q
     in
     List.foldl fold query list
+
+
+{-| "Backend" is not a boolean feature, but this is a quick hacky way to get the behavior we want
+-}
+getBackendName : QueryString -> Maybe String
+getBackendName =
+    Dict.get "backend"

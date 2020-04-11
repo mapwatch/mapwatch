@@ -7,6 +7,7 @@ import * as analytics from './analytics'
 import * as gsheets from './gsheets'
 import * as util from './util'
 import {BrowserBackend} from './browserBackend'
+import {BrowserNativeFSBackend} from './browserNativeFSBackend'
 import {MemoryBackend} from './memoryBackend'
 import {default as datamine} from '@mapwatch/datamine'
 import changelog from '!!raw-loader!../../../CHANGELOG.md'
@@ -35,15 +36,12 @@ if (document.location.host === 'mapwatch.github.io') {
 }
 
 function main() {
-  // The Electron preload script sets window.backend. This is the only way we
-  // distinguish the Electron version from the browser version.
-  const backend = window.backend || new BrowserBackend()
-
-  const qs = util.parseQS(document.location.search)
+  const qs = util.parseQS(document.location)
+  const backend = createBackend(qs)
   const settings = new Settings(SETTINGS_KEY, window.localStorage)
   const flags = createFlags({backend, settings, qs})
   const app = Elm.Main.init({flags})
-  console.log('init', {backend, flags, datamine})
+  console.log('init', {backend, flags, datamine, qs})
 
   analytics.main(app, backend.platform, version)
   gsheets.main(app, backend.platform, version)
@@ -67,19 +65,27 @@ function main() {
       }
     })
   }
+  app.ports.fileSelector.subscribe(config => {
+    console.log('selector', backend)
+    backend.select().then(fileSelected(config))
+  })
   app.ports.logSelected.subscribe(config => {
-    var files = document.getElementById(config.id).files
-    var maxSize = (config.maxSize == null ? 20 : config.maxSize) * MB
+    const files = document.getElementById(config.id).files
     if (files.length > 0) {
-      console.log('files', files)
+      fileSelected(config)(files[0])
+    }
+  })
+  function fileSelected(config) {
+    const maxSize = (config.maxSize == null ? 20 : config.maxSize) * MB
+    return file => {
       activeBackend = backend
-      backend.open(files[0], maxSize)
+      backend.open(file, maxSize)
       .then(() => {
         // logReader.processFile(app, backend, "history")
         app.ports.logOpened.send({date: Date.now(), size: backend.size()})
       })
     }
-  })
+  }
   app.ports.logSliceReq.subscribe(({position, length}) => {
     // console.log('logSliceReq', activeBackend)
     activeBackend.slice(position, length)
@@ -98,6 +104,17 @@ function main() {
   })
 }
 
+function createBackend(qs) {
+  // The Electron preload script sets window.backend. This is the only way we
+  // distinguish the Electron version from the browser version.
+  if (window.backend) {
+    return window.backend
+  }
+  if (qs.backend === 'www-nativefs') {
+    return new BrowserNativeFSBackend()
+  }
+  return new BrowserBackend()
+}
 class Settings {
   constructor(key, storage) {
     this.key = key

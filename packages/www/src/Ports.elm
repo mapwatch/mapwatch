@@ -1,6 +1,7 @@
 port module Ports exposing
     ( Progress
     , Sheet
+    , fileSelector
     , gsheetsLogin
     , gsheetsLoginUpdate
     , gsheetsLogout
@@ -29,6 +30,9 @@ import Maybe.Extra
 import Settings exposing (Settings)
 import Speech exposing (Speech)
 import Time exposing (Posix)
+
+
+port fileSelector : { maxSize : Int } -> Cmd msg
 
 
 {-| The user chose a file with the file selector on the front page.

@@ -101,29 +101,8 @@ view model =
                 []
             , text " MB of history"
             ]
-        , div []
-            (let
-                id_ =
-                    "clientTxt"
-             in
-             [ text "Client.txt: "
-             , input
-                [ type_ "file"
-                , id id_
-                , onChange (LogSelected id_)
-                , tabindex 2
-                ]
-                []
-             , div []
-                [ text "Hint - the file I need is usually in one of these places:"
-                , br [] []
-                , code [] [ text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
-                , br [] []
-                , code [] [ text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
-                ]
-             , View.Volume.view model
-             ]
-            )
+        , div [] <| viewFileSelector model
+        , View.Volume.view model
         , div []
             (if model.flags.isBrowserSupported then
                 []
@@ -134,4 +113,38 @@ view model =
 
         -- uncomment and screenshot for a favicon.
         -- , div [ class "favicon-source" ] [ View.Icon.fas "stopwatch" ]
+        ]
+
+
+viewFileSelector : OkModel -> List (Html Msg)
+viewFileSelector model =
+    if Feature.getBackendName model.query == Just "www-nativefs" then
+        [ text "nativefs"
+        , button
+            [ type_ "button"
+            , onClick FileSelector
+            ]
+            [ text "Choose File" ]
+        ]
+
+    else
+        let
+            id_ =
+                "clientTxt"
+        in
+        [ text "Client.txt: "
+        , input
+            [ type_ "file"
+            , id id_
+            , onChange (LogSelected id_)
+            , tabindex 2
+            ]
+            []
+        , div []
+            [ text "Hint - the file I need is usually in one of these places:"
+            , br [] []
+            , code [] [ text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
+            , br [] []
+            , code [] [ text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
+            ]
         ]
