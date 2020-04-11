@@ -48,6 +48,7 @@ viewBody model =
             div []
                 [ View.Volume.view model
                 , View.Util.viewGoalForm model.query
+                , View.Setup.viewDownloadLink model
                 , viewMain model
                 ]
 

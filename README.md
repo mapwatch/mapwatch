@@ -1,10 +1,12 @@
 # [Mapwatch](https://mapwatch.erosson.org)
 
+[Download Mapwatch](https://github.com/mapwatch/mapwatch/releases), or [try the web version](https://mapwatch.erosson.org).
+
 [![Build Status](https://travis-ci.org/mapwatch/mapwatch.svg?branch=master)](https://travis-ci.org/mapwatch/mapwatch)
 
 Give me your [Path of Exile](https://www.pathofexile.com) `Client.txt` log file, and I'll give you some statistics about your recent mapping activity.
 
-Then, [if you're using Google Chrome](https://chrome.google.com), leave me open while you play - I'll keep watching, no need to upload again.
+Then, [if you're using the Mapwatch app](https://github.com/mapwatch/mapwatch/releases), leave me open while you play - I'll keep watching, no need to upload again.
 
 [Run an example now!](https://mapwatch.erosson.org?tickStart=1526927461000&logtz=0&example=stripped-client.txt#/)
 
@@ -13,6 +15,10 @@ Or, screenshots (slightly outdated):
 [![Screenshot 1](https://i.imgur.com/PPRbLlZ.png)](https://imgur.com/a/VhFtZbU)
 
 [![Screenshot 2](https://i.imgur.com/DrMCKZD.png)](https://imgur.com/a/VhFtZbU)
+
+### It's not updating while I play - I have to re-upload client.txt to see changes.
+
+You must now [download Mapwatch](https://github.com/mapwatch/mapwatch/releases) to see updates while you play. [More information](https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md).
 
 ### Is this legal?
 
@@ -42,17 +48,14 @@ They're treated as "side areas", like abyssal depths or trials, not a separate m
 
 * [Path of Maps](http://pathofmaps.com/) allows you to track loot from each map. It's less automatic, it takes some extra interaction/time during each map, but it can track things that Mapwatch doesn't.
 * [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component) times acts 1-10 and the Labyrinth with no extra interaction, much like Mapwatch. I don't think Livesplit times your maps.
+* [Exilence](https://github.com/viktorgullmark/exilence) and [Exile Diary](https://github.com/briansd9/exile-diary) automatically track not just maps, but loot and other statistics.
+  * They're both great tools, and might be more useful for you than Mapwatch. Try them out!
+  * These tools must always be open while playing PoE to analyze your maps - if you run a map while these tools are closed, it's not tracked; Mapwatch can always fully analyze your mapping history, whether or not it was running at the time. Also, Mapwatch existed before both of these tools.
 * Any others out there I'm not aware of?
 
 ### Does this track the labyrinth or acts 1-10?
 
 No. [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component)'s already good at those.
-
-### It's not updating while I play - I have to re-upload client.txt to see changes.
-
-The live-updating part only works in Chrome. Firefox/IE/others have no way to do this, as far as I know.
-
-I could create a downloadable version where this feature would be more reliable, if there's enough interest (or if Chrome ever breaks this). I'd rather not have to.
 
 ### The map I just finished isn't included in today's statistics yet.
 

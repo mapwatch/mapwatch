@@ -1,4 +1,4 @@
-module View.Setup exposing (view)
+module View.Setup exposing (view, viewDownloadLink)
 
 import AppPlatform
 import Html as H exposing (..)
@@ -25,17 +25,19 @@ viewDownloadLink model =
             -- [ span [] [ View.Icon.fas "exclamation-triangle" ]
             [ div []
                 [ text "New: "
-                , a [ Route.downloadMapwatchHref ]
-                    [ text "download Mapwatch" ]
-                , text " to watch your client.txt while you play!"
+                , b []
+                    [ a [ Route.downloadMapwatchHref ]
+                        [ text "download Mapwatch" ]
+                    ]
+                , text " to see your maps updated while you play!"
                 ]
             , div []
-                [ text " (Sadly, watching client.txt will soon be "
-
-                -- TODO better explanation link. readme?
-                , a [ target "_blank", href "https://github.com/mapwatch/mapwatch/issues/11" ]
-                    [ text "impossible" ]
-                , text " in web browsers.) "
+                [ small []
+                    [ text " (Sadly, updates while you play will soon be "
+                    , a [ target "_blank", href "https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md" ]
+                        [ text "impossible" ]
+                    , text " in all web browsers.) "
+                    ]
                 ]
             ]
 

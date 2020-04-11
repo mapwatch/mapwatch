@@ -67,7 +67,7 @@ config feature =
             FeatureConfig feature "enableSpeech" True
 
         DownloadLink ->
-            FeatureConfig feature "downloadLink" False
+            FeatureConfig feature "downloadLink" True
 
         GSheets ->
             FeatureConfig feature "gsheets" False
