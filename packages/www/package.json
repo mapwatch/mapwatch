@@ -16,9 +16,9 @@
     "@mapwatch/rss": "1.0.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.0",
-    "create-elm-app": "^4.1.2",
-    "raw-loader": "^4.0.0",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "create-elm-app": "^4.2.7",
+    "raw-loader": "^4.0.1",
     "rimraf": "^3.0.0",
     "sakura.css": "^1.0.0",
     "scripty": "^1.7.2"
