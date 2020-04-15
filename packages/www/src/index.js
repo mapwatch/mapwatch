@@ -48,10 +48,16 @@ function main() {
   const electronFlags = window.electronFlags || null
   const flags = createFlags({backend, settings, qs, electronFlags})
   const app = Elm.Main.init({flags})
-  console.log('init', {backend, flags, datamine, qs})
 
-  analytics.main(app, backend.platform, version)
+  const analyticsFlags = {
+    backend: backend.platform,
+    websiteVersion: version,
+    electronVersion: (window.electronFlags || {}).version || null,
+  }
+  analytics.main(app, analyticsFlags)
   gsheets.main(app, backend.platform, version)
+
+  console.log('init', {backend, flags, electronFlags, analyticsFlags, datamine, qs})
 
   let activeBackend = backend
   if (qs.example) {

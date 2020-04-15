@@ -13,12 +13,15 @@ function gaEvent(action, props) {
   gtag('event', action, props)
 }
 var gaDimensions = {
-  appVersion: 'dimension1',
-  platform: 'dimension2',
+  // https://support.google.com/analytics/answer/2709829?hl=en#
+  websiteVersion: 'dimension1',
+  backend: 'dimension2',
+  electronVersion: 'dimension3',
 }
-module.exports.main = function main (app, platform, version) {
-  gtag('set', gaDimensions.platform, platform)
-  gtag('set', gaDimensions.appVersion, version);
+module.exports.main = function main (app, args) {
+  gtag('set', gaDimensions.websiteVersion, args.websiteVersion);
+  gtag('set', gaDimensions.backend, args.backend)
+  gtag('set', gaDimensions.electronVersion, args.electronVersion);
   var isWatching = false
   var historyStats = {instanceJoins: 0, mapRuns: 0}
   app.ports.events.subscribe(function(event) {
