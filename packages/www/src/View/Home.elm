@@ -321,5 +321,12 @@ viewHeader model =
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , small []
-            [ text " - automatically time your Path of Exile map clears" ]
+            [ text " - automatically time your Path of Exile map clears"
+            , case model.flags.electronFlags |> Maybe.map .version of
+                Nothing ->
+                    text ""
+
+                Just version ->
+                    text <| " - v" ++ version
+            ]
         ]

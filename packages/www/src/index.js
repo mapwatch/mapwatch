@@ -36,10 +36,17 @@ if (document.location.host === 'mapwatch.github.io') {
 }
 
 function main() {
+  if (window.electronPreloadError) {
+    console.error(window.electronPreloadError)
+    document.write(window.electronPreloadError)
+    return
+  }
+
   const qs = util.parseQS(document.location)
   const backend = createBackend(qs)
   const settings = new Settings(SETTINGS_KEY, window.localStorage)
-  const flags = createFlags({backend, settings, qs})
+  const electronFlags = window.electronFlags || null
+  const flags = createFlags({backend, settings, qs, electronFlags})
   const app = Elm.Main.init({flags})
   console.log('init', {backend, flags, datamine, qs})
 
@@ -139,7 +146,7 @@ class Settings {
     this.storage.removeItem(this.key)
   }
 }
-function createFlags({backend, settings, qs}) {
+function createFlags({backend, settings, qs, electronFlags}) {
   const loadedAt = Date.now()
   const tickStart = isNaN(parseInt(qs.tickStart)) ? null : parseInt(qs.tickStart)
   const tickOffset = tickStart ? loadedAt - tickStart : 0
@@ -157,6 +164,7 @@ function createFlags({backend, settings, qs}) {
     // isBrowserSupported: false,
     platform: backend.platform,
     datamine,
+    electronFlags,
   }
 }
 function fetchExample(qs) {

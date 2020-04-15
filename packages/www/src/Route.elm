@@ -1,5 +1,6 @@
 module Route exposing
     ( Route(..)
+    , appReleasesHref
     , downloadMapwatchHref
     , fileWatchingHref
     , href
@@ -200,6 +201,11 @@ replaceUrl nav query =
 downloadMapwatchHref : Attribute msg
 downloadMapwatchHref =
     A.href "https://github.com/mapwatch/mapwatch/releases/latest"
+
+
+appReleasesHref : Attribute msg
+appReleasesHref =
+    A.href "https://github.com/mapwatch/mapwatch/releases"
 
 
 fileWatchingHref : Attribute msg

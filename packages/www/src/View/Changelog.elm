@@ -27,6 +27,10 @@ view model =
             , a [ href "https://www.reddit.com/u/kawaritai", target "_blank" ] [ text "Reddit" ]
             , text "."
             ]
+        , p []
+            [ text "Changes listed below affect both the Mapwatch website and the Mapwatch app. "
+            , a [ Route.appReleasesHref, target "_blank" ] [ text "The app sometimes has additional changes, listed on its releases page." ]
+            ]
         , div [ class "changelog-subscribe-buttons" ]
             [ a [ class "button", target "_blank", href "/rss.xml" ] [ View.Icon.fas "rss", text " RSS notifications" ]
             , a [ class "button", target "_blank", href "https://feedburner.google.com/fb/a/mailverify?uri=mapwatch" ] [ View.Icon.fas "at", text " Email notifications" ]

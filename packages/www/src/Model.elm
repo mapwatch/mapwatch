@@ -42,6 +42,7 @@ type alias Flags =
     , datamine : D.Value
     , logtz : Maybe Float
     , settings : D.Value
+    , electronFlags : Maybe { version : String }
     }
 
 

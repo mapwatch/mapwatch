@@ -20,6 +20,7 @@ function main() {
       enableRemoteModule: false,
       nodeIntegration: false,
       // contextIsolation: true,
+      additionalArguments: [JSON.stringify({version: electron.app.getVersion()})],
     }
   })
   win.setMenuBarVisibility(false)
