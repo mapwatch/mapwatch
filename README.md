@@ -24,9 +24,11 @@ You must now [download Mapwatch](https://github.com/mapwatch/mapwatch/releases/l
 
 [Yes, says GGG.](https://imgur.com/44uuaiz)
 
-### Is this safe?
+### Is this safe/secure? I don't want to download/run strange executables.
 
-Yes. There's no executable to download and run - it's just a web page, far less virus potential.
+The web version of Mapwatch is safe; you can analyze your mapping history with no downloads or executables.
+
+[Sadly, Mapwatch updating while you play is no longer easily available in any web browser.](https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md) You'll need to [download Mapwatch](https://github.com/mapwatch/mapwatch/releases/latest) for that feature.
 
 ### Is this private?
 

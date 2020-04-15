@@ -6,8 +6,6 @@ If you've used Mapwatch in the past, you'll remember the website used to update 
 
 For one-time analysis of your mapping history, the Mapwatch website still works well. It won't be going away.
 
----
-
 Related Mapwatch issues: [#11](https://github.com/mapwatch/mapwatch/issues/11), [#51](https://github.com/mapwatch/mapwatch/issues/51), [#70](https://github.com/mapwatch/mapwatch/issues/70)
 
 ### You said "not *easily* available in any web browser". I don't want to download/execute your app, I want updates while I play, and I have some technical skills.
@@ -16,7 +14,7 @@ Are you sure? [Downloading Mapwatch](https://github.com/mapwatch/mapwatch/releas
 
 ---
 
-If you're really sure: I approve of your refusal to trust strange executables. [The `nativefs` web version of Mapwatch might work for you](https://mapwatch.erosson.org#?backend=www-nativefs), but you'll need to do a little extra work first.
+If you're really sure: I admire your refusal to trust strange executables. [The `nativefs` web version of Mapwatch might work for you](https://mapwatch.erosson.org#?backend=www-nativefs), but you'll need to do a little extra work first.
 
 Run the following in your command prompt:
 
