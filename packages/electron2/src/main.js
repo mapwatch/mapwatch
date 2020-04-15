@@ -54,9 +54,17 @@ function main() {
     })
   }
 
+  // allow showing windows notifications (ex. for updates)
+  // https://github.com/electron/electron/blob/master/docs/tutorial/notifications.md#windows
+  // https://github.com/electron-userland/electron-builder/issues/2700
+  electron.app.setAppUserModelId('org.erosson.mapwatch')
   // https://www.electron.build/auto-update
   autoUpdater.logger = log
   autoUpdater.checkForUpdatesAndNotify()
+  autoUpdater.on('update-downloaded', () => {
+    // give the user 48 hours to restart the app and update. after that, force it
+    setTimeout(() => autoUpdater.quitAndInstall(), 48 * 60 * 60 * 1000)
+  })
 
   // finally, load the app itself
   const url = argv.app_url || 'https://mapwatch.erosson.org'
