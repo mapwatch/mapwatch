@@ -72,7 +72,7 @@ deploy:
     skip_cleanup: true
     repo: mapwatch/mapwatch.github.io
     target-branch: master # github-pages: user pages use the master branch, not gh-pages branch
-    local_dir: packages/www/build/
+    local_dir: packages/mapwatch.github.io/
     github_token: $GITHUB_TOKEN
     #keep_history: true
     on:

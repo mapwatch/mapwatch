@@ -28,13 +28,6 @@ import '!!file-loader?name=version.txt!../tmp/version.txt'
 const SETTINGS_KEY = 'mapwatch'
 const MB = Math.pow(2,20)
 
-// redirect from old host to new host.
-// TODO this should really be a 301 redirect from the server!
-// Quick-and-dirty version: js redirect + `link rel=canonical`
-if (document.location.host === 'mapwatch.github.io') {
-  document.location.host = 'mapwatch.erosson.org'
-}
-
 function main() {
   if (window.electronPreloadError) {
     console.error(window.electronPreloadError)
