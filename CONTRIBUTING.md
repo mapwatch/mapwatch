@@ -17,6 +17,16 @@ Developing:
 * create a production build of the website: `yarn build:www`
 * create a production build everything: `yarn build`
 
+# Release
+
+The website is automatically built and deployed on release by [Travis-CI](https://travis-ci.org/github/mapwatch/mapwatch). [CI configuration](https://github.com/mapwatch/mapwatch/blob/master/.travis.yml).
+
+The downloadable Electron app is a little more complex, and is not automated: https://www.electron.build/configuration/publish#recommended-github-releases-workflow
+
+* [Create a *draft* release](https://github.com/mapwatch/mapwatch/releases). No tag. Name it after the next version number.
+* Commit some stuff. CI will add its files to the draft release created above.
+* When ready, click "publish" on your draft release. Can't change it afterward.
+
 # Resources
 
 [Analytics: recent referral traffic (you probably don't have permissions)](https://analytics.google.com/analytics/web/#/report/trafficsources-referrals/a119582500w176920100p175689790/_u.dateOption=last7days&explorer-table.secSegmentId=analytics.fullReferrer&explorer-table.plotKeys=%5B%5D&explorer-graphOptions.primaryConcept=analytics.totalVisitors&explorer-graphOptions.compareConcept=analytics.newVisits&_.useg=builtin1/)
