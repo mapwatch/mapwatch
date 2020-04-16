@@ -5,9 +5,34 @@ const child_process = require('child_process')
 const os = require('os')
 const {autoUpdater} = require('electron-updater')
 const log = require('electron-log')
+const {URL} = require('url')
 log.transports.file.level = 'debug'
 
 function main() {
+  electron.app.on('web-contents-created', (event0, contents) => {
+    // url restriction, for security
+    // https://www.electronjs.org/docs/tutorial/security#12-disable-or-limit-navigation
+    const appUrlOrigin = argv.app_url
+      ? new URL(argv.app_url).origin
+      : null
+    if (appUrlOrigin) {
+      console.log('will allow navigation to app_url origin', appUrlOrigin)
+    }
+    contents.on('will-navigate', (event, targetUrl) => {
+      const url = new URL(targetUrl)
+      if (!(url.origin === 'https://mapwatch.erosson.org' || url.origin === appUrlOrigin)) {
+        console.log('navigation blocked to non-mapwatch url', targetUrl)
+        event.preventDefault()
+      }
+    })
+    // https://stackoverflow.com/questions/32402327/how-can-i-force-external-links-from-browser-window-to-open-in-a-default-browser
+    contents.on('new-window', (e, url) => {
+      console.log('new-window', url)
+      e.preventDefault()
+      electron.shell.openExternal(url)
+    })
+  })
+
   const win = new electron.BrowserWindow({
     width: 800,
     height: 600,
@@ -24,12 +49,6 @@ function main() {
     }
   })
   win.setMenuBarVisibility(false)
-  // https://stackoverflow.com/questions/32402327/how-can-i-force-external-links-from-browser-window-to-open-in-a-default-browser
-  win.webContents.on('new-window', (e, url) => {
-    console.log('new-window', url)
-    e.preventDefault()
-    electron.shell.openExternal(url)
-  })
 
   if (argv.spawn_www) {
     const www = child_process.exec('elm-app start --no-browser', {
