@@ -19,13 +19,16 @@ Developing:
 
 # Release
 
-The website is automatically built and deployed on release by [Travis-CI](https://travis-ci.org/github/mapwatch/mapwatch). [CI configuration](https://github.com/mapwatch/mapwatch/blob/master/.travis.yml).
+Each git-push to the master branch is automatically built and deployed by [Travis-CI](https://travis-ci.org/github/mapwatch/mapwatch). [CI configuration](https://github.com/mapwatch/mapwatch/blob/master/.travis.yml).
 
-The downloadable Electron app is a little more complex, and is not automated: https://www.electron.build/configuration/publish#recommended-github-releases-workflow
+The downloadable Electron app is a little more complex, and is less automated: https://www.electron.build/configuration/publish#recommended-github-releases-workflow
 
-* [Create a *draft* release](https://github.com/mapwatch/mapwatch/releases). No tag. Name it after the next version number.
-* Commit some stuff. CI will add its files to the draft release created above.
-* When ready, click "publish" on your draft release. Can't change it afterward.
+There should always be a *draft release* in progress, invisible to the public, on [the releases page](https://github.com/mapwatch/mapwatch/releases). CI keeps it updated with an executable from the latest build.
+
+* When the draft release looks ready, click "publish". It becomes user-visible and the executable can't be changed anymore.
+* Draft the next release, so CI can post previews of the next version: 
+  * Bump the version number in [electron's package.json](https://github.com/mapwatch/mapwatch/blob/master/packages/electron2/package.json), probably with `npm version patch`. Commit and push.
+  * [Create a draft release on the releases page](https://github.com/mapwatch/mapwatch/releases). Name and tag should match the above package.json version, with a leading `v` - `v1.0.2`, for example.
 
 # Resources
 
