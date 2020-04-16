@@ -64,7 +64,7 @@ No. [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component)'s alread
 Mapwatch probably doesn't know you're done with the map yet. Mapwatch thinks a map is done when you:
 
 * Leave town. Either enter a new map, or enter a non-map zone like the Aspirants' Plaza.
-* Or, wait 30 minutes. When you don't enter any new zones for a while, Mapwatch will assume you're done playing.
+* Or, wait 30 minutes. When you don't enter any new zones for a while, Mapwatch will assume you're done playing. (Exception: The Simulacrum (Delirium) takes 60 minutes, instead of 30.)
 
 Returning to town does not end a run - maybe you died or you're dropping off loot, but you aren't done with the map yet.
 
