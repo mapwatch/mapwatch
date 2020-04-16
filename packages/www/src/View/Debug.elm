@@ -32,11 +32,8 @@ view model =
             )
         , div []
             [ button [ onClick <| Model.DebugNotification debugNotification ] [ text "Send test notification" ]
-            , div []
-                [ small []
-                    [ text "The downloadable app uses these notifications when a version update is auto-installed. This won't work on the website because we don't request notification permissions."
-                    ]
-                ]
+            , div [] [ small [] [ text "The downloadable app uses these notifications when a version update is auto-installed." ] ]
+            , div [] [ small [] [ text "This test button won't work on the website: no notification permissions (we don't use them anywhere else)" ] ]
             ]
         , b [] [ text "Pages:" ]
         , ul []
