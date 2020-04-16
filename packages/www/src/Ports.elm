@@ -1,6 +1,7 @@
 port module Ports exposing
     ( Progress
     , Sheet
+    , debugNotification
     , fileSelector
     , gsheetsLogin
     , gsheetsLoginUpdate
@@ -201,3 +202,6 @@ port gsheetsWritten :
      -> msg
     )
     -> Sub msg
+
+
+port debugNotification : Decode.Value -> Cmd msg

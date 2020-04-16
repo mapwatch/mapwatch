@@ -108,6 +108,12 @@ function main() {
       say(event.say)
     }
   })
+  app.ports.debugNotification.subscribe(args => {
+    // Notification.requestPermission().then(() => {
+    const n = new Notification(...args)
+    console.log('debugNotification', args, n)
+    // })
+  })
 }
 
 function createBackend(qs) {

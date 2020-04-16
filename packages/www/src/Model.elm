@@ -97,6 +97,7 @@ type Msg
     | GSheetsLogout
     | GSheetsWrite { spreadsheetId : Maybe String, title : String, content : List Sheet }
     | GSheetsWritten { res : Maybe { spreadsheetUrl : String, spreadsheetId : String }, error : Maybe String }
+    | DebugNotification D.Value
 
 
 type alias Sheet =
@@ -371,6 +372,9 @@ updateOk msg ({ config, mapwatch, settings } as model) =
                 |> Result.withDefault model
             , Maybe.Extra.unwrap Cmd.none (Route.pushUrl model.nav model.query) redirect
             )
+
+        DebugNotification json ->
+            ( model, Ports.debugNotification json )
 
         M msg_ ->
             updateMapwatch msg_ model

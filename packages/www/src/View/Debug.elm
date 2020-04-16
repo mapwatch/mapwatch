@@ -3,14 +3,15 @@ module View.Debug exposing (view)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
-import Model exposing (OkModel)
+import Json.Encode as E
+import Model exposing (Msg, OkModel)
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
 import View.Home
 import View.Nav
 
 
-view : OkModel -> Html msg
+view : OkModel -> Html Msg
 view model =
     div [ class "main" ]
         [ View.Home.viewHeader model
@@ -29,9 +30,27 @@ view model =
                             ]
                     )
             )
+        , div []
+            [ button [ onClick <| Model.DebugNotification debugNotification ] [ text "Send test notification" ]
+            , div []
+                [ small []
+                    [ text "The downloadable app uses these notifications when a version update is auto-installed. This won't work on the website because we don't request notification permissions."
+                    ]
+                ]
+            ]
         , b [] [ text "Pages:" ]
         , ul []
             [ li [] [ a [ Route.href model.query Route.DebugDatamine ] [ text "/debug/datamine" ] ]
             , li [] [ a [ Route.href model.query Route.DebugDumpLines ] [ text "/debug/dumplines (broken)" ] ]
+            ]
+        ]
+
+
+debugNotification : E.Value
+debugNotification =
+    E.list identity
+        [ E.string "mapwatch debug notification"
+        , E.object
+            [ ( "body", E.string "hello from the mapwatch debug screen" )
             ]
         ]
