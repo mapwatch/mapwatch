@@ -20,16 +20,19 @@ function main() {
     }
     contents.on('will-navigate', (event, targetUrl) => {
       const url = new URL(targetUrl)
-      if (!(url.origin === 'https://mapwatch.erosson.org' || url.origin === appUrlOrigin)) {
+      if (!(url.origin === 'https://mapwatch.erosson.org' || url.origin === appUrlOrigin || url.origin === 'https://accounts.google.com')) {
         console.log('navigation blocked to non-mapwatch url', targetUrl)
         event.preventDefault()
       }
     })
     // https://stackoverflow.com/questions/32402327/how-can-i-force-external-links-from-browser-window-to-open-in-a-default-browser
-    contents.on('new-window', (e, url) => {
-      console.log('new-window', url)
-      e.preventDefault()
-      electron.shell.openExternal(url)
+    contents.on('new-window', (e, targetUrl) => {
+      const url = new URL(targetUrl)
+      if (!(url.origin === 'https://accounts.google.com')) {
+        console.log('external new-window', targetUrl)
+        e.preventDefault()
+        electron.shell.openExternal(targetUrl)
+      }
     })
   })
 
