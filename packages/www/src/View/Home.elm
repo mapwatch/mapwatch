@@ -328,6 +328,6 @@ viewHeader model =
                     text ""
 
                 Just version ->
-                    text <| " - v" ++ version
+                    span [] [ text " - ", a [ target "_blank", Route.appReleasesHref ] [ text "v", text version ] ]
             ]
         ]
