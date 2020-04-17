@@ -1,7 +1,9 @@
 module SpeechTest exposing (..)
 
+import Array
 import Dict exposing (Dict)
 import Expect
+import Mapwatch.Datamine as Datamine exposing (Datamine, langIndexEmpty)
 import Mapwatch.Instance as Instance exposing (Address)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Settings exposing (Settings)
@@ -41,8 +43,15 @@ emptyVisit =
     }
 
 
+datamine : Datamine
+datamine =
+    Datamine.createDatamine_ Array.empty
+        Dict.empty
+        Dict.empty
+
+
 emptyRun =
-    MapRun.fromRaw emptyRaw
+    MapRun.fromRaw datamine emptyRaw
 
 
 all : Test
