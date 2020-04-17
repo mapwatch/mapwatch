@@ -14,7 +14,8 @@ view ({ query, route } as model) =
         [ a (linkAttrs model Route.Timer) [ Icon.fas "stopwatch", text " Timer" ]
         , a (linkAttrs model Route.History) [ Icon.fas "history", text " History" ]
         , a (linkAttrs model Route.Maps) [ Icon.fas "map", text " Maps" ]
-        , a (linkAttrs model Route.Changelog) [ Icon.fas "newspaper", text " Changes" ]
+        , a (linkAttrs model Route.Encounters) [ Icon.fas "directions", text " Encounters" ]
+        , a (linkAttrs model Route.Changelog) [ Icon.fas "newspaper", text " Changelog" ]
         , a (linkAttrs model Route.Settings) [ Icon.fas "cog", text " Settings" ]
         ]
 

@@ -33,6 +33,7 @@ type Route
     | HistoryTSV
     | GSheets
     | Maps
+    | Encounters
     | Timer
     | Overlay
     | Changelog
@@ -97,6 +98,7 @@ parser =
         , P.map HistoryTSV <| P.s "history" </> P.s "tsv"
         , P.map GSheets <| P.s "gsheets"
         , P.map Maps <| P.s "map"
+        , P.map Encounters <| P.s "encounter"
         , P.map Changelog <| P.s "changelog"
         , P.map Privacy <| P.s "privacy"
         , P.map Settings <| P.s "settings"
@@ -120,6 +122,7 @@ pageKeys =
     { history = [ "p", "q", "o", "a", "b", "g" ] |> Set.fromList |> Set.union Feature.set
     , historyTSV = [ "q", "o", "a", "b" ] |> Set.fromList |> Set.union Feature.set
     , map = [ "q", "o", "a", "b" ] |> Set.fromList |> Set.union Feature.set
+    , encounter = [ "q", "a", "b" ] |> Set.fromList |> Set.union Feature.set
     , timer = [ "a", "g" ] |> Set.fromList |> Set.union Feature.set
     , overlay = [ "a" ] |> Set.fromList |> Set.union Feature.set
     , other = Feature.set
@@ -140,6 +143,9 @@ routeParts r =
 
         Maps ->
             ( "/map", pageKeys.map )
+
+        Encounters ->
+            ( "/encounter", pageKeys.encounter )
 
         Timer ->
             ( "", pageKeys.timer )

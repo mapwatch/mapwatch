@@ -114,6 +114,16 @@ drox =
     sideArea { name = "drox", url = "Art/2DItems/Currency/Strongholds/WatchstoneYellow.png?scale=1" }
 
 
+sirus : Html msg
+sirus =
+    sideArea { name = "sirus", url = "Art/2DItems/Currency/Strongholds/WatchstoneIridescent.png?scale=1" }
+
+
+uniqueMap : Html msg
+uniqueMap =
+    sideArea { name = "uniqueMap", url = "Art/2DItems/Maps/MaelstromofChaos.png?scale=1" }
+
+
 einhar : Html msg
 einhar =
     sideArea { name = "einhar med-icon", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardBestiary.png?scale=1" }

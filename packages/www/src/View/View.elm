@@ -10,6 +10,7 @@ import View.Changelog
 import View.Debug
 import View.DebugDatamine
 import View.DumpLines
+import View.Encounters
 import View.GSheets
 import View.History
 import View.HistoryTSV
@@ -45,6 +46,9 @@ viewBody rmodel =
 
                 Maps ->
                     View.Maps.view model
+
+                Encounters ->
+                    View.Encounters.view model
 
                 Timer ->
                     View.Timer.view model

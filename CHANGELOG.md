@@ -1,8 +1,17 @@
 # PoE Mapwatch: updates
 
-All substantial Mapwatch changes.
+All substantial Mapwatch website changes.
 
 ---
+
+## 2020-04-16
+- Created an [encounters page](https://mapwatch.erosson.org/#/encounter) with statistics for side areas and NPCs.
+
+## 2020-04-10
+- [Released a downloadable version of Mapwatch](https://github.com/mapwatch/mapwatch/releases/latest).
+  - Sadly, map-updates while you play will soon be [unavailable](https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md) in all web browsers. Only the Mapwatch app will support this feature.
+  - The Mapwatch website is not going away.
+  - Changes to the Mapwatch website (ie. anything in this changelog) immediately affect the Mapwatch app too. [Changes that only affect the Mapwatch app will be on its releases page](https://github.com/mapwatch/mapwatch/releases).
 
 ## 2020-03-31
 - The Simulacrum now stops tracking after 60 minutes. Other maps are unchanged, still stopping after 30 minutes.
