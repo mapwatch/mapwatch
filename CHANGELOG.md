@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2020-04-17
+- [Spreadsheet export](https://mapwatch.erosson.org/#/history/tsv) now includes data from the Maps and Encounters pages.
+
 ## 2020-04-16
 - Created an [encounters page](https://mapwatch.erosson.org/#/encounter) with statistics for side areas and NPCs.
 - Improved map search: you can now search for side areas, unique maps, and specific conqueror encounters, among other changes.

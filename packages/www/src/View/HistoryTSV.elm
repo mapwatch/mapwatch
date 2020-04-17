@@ -38,8 +38,8 @@ viewBody model =
 viewMain : OkModel -> Html Msg
 viewMain model =
     let
-        sheet =
-            Spreadsheet.viewData model (View.History.listRuns model)
+        runs =
+            View.History.listRuns model
     in
     div []
         [ p []
@@ -47,12 +47,12 @@ viewMain model =
             , b [] [ text "Tab-Separated Values" ]
             , text " below into your favorite spreadsheet application."
             ]
-        , textarea [ readonly True, rows 40, cols 100 ]
-            [ model
-                |> View.History.listRuns
-                |> Spreadsheet.viewData model
-                |> viewSheet
-            ]
+        , div [] [ text "History: " ]
+        , textarea [ readonly True, rows 40, cols 100 ] [ viewSheet <| Spreadsheet.viewHistory model runs ]
+        , div [] [ text "Maps: " ]
+        , textarea [ readonly True, rows 40, cols 100 ] [ viewSheet <| Spreadsheet.viewMaps model runs ]
+        , div [] [ text "Encounters: " ]
+        , textarea [ readonly True, rows 40, cols 100 ] [ viewSheet <| Spreadsheet.viewEncounters model runs ]
         ]
 
 
@@ -93,6 +93,9 @@ viewCell c =
 
             Spreadsheet.CellFloat n ->
                 String.fromFloat n
+
+            Spreadsheet.CellPercent n ->
+                (100 * n |> String.fromFloat |> String.left 5) ++ "%"
 
             Spreadsheet.CellIcon src ->
                 "=IMAGE(\"" ++ src ++ "\")"

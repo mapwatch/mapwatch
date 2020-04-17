@@ -1,9 +1,17 @@
-module View.Spreadsheet exposing (Cell(..), Sheet, posixToString, viewData)
+module View.Spreadsheet exposing
+    ( Cell(..)
+    , Sheet
+    , posixToString
+    , viewEncounters
+    , viewHistory
+    , viewMaps
+    )
 
 import Dict exposing (Dict)
 import Duration exposing (Millis)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
+import Mapwatch.EncounterTally as EncounterTally exposing (EncounterTally)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Maybe.Extra
@@ -11,6 +19,7 @@ import Model exposing (Msg, OkModel)
 import Route.Feature as Feature exposing (Feature)
 import Time exposing (Posix)
 import View.Home exposing (monthToString)
+import View.Maps
 
 
 type Cell
@@ -21,8 +30,19 @@ type Cell
     | CellBool Bool
     | CellInt Int
     | CellFloat Float
+    | CellPercent Float
     | CellIcon String
     | CellEmpty
+
+
+cellPercentInt : Int -> Int -> Cell
+cellPercentInt n d =
+    cellPercentFloat (toFloat n) (toFloat d)
+
+
+cellPercentFloat : Float -> Float -> Cell
+cellPercentFloat n d =
+    n / d |> CellPercent
 
 
 type alias Sheet =
@@ -32,20 +52,124 @@ type alias Sheet =
     }
 
 
-viewData : OkModel -> List MapRun -> Sheet
-viewData model runs =
-    { title = "Mapwatch: Data"
-    , headers = [ viewDataHeaders model ]
+viewMaps : OkModel -> List MapRun -> Sheet
+viewMaps model runs =
+    let
+        rows =
+            runs
+                |> View.Maps.groupRuns model.mapwatch.datamine
+                |> List.sortBy (.runs >> .num)
+                |> List.reverse
+    in
+    { title = "Mapwatch: Maps"
+    , headers = [ viewMapsHeaders ]
+    , rows = rows |> List.indexedMap viewMapsRow
+    }
+
+
+viewMapsHeaders : List String
+viewMapsHeaders =
+    [ "Row"
+    , "Icon"
+    , "Name"
+    , "Region"
+    , "Tier"
+    , "# Runs"
+    , "Average"
+    , "Best"
+    , "Total"
+    , "Avg Portals"
+
+    -- this one goes last
+    , "https://mapwatch.erosson.org"
+    ]
+
+
+viewMapsRow : Int -> View.Maps.GroupedRuns -> List Cell
+viewMapsRow i row =
+    [ i + 1 |> CellInt
+    , row.worldArea
+        |> Datamine.imgSrc { isBlightedMap = False }
+        |> Maybe.Extra.unwrap CellEmpty CellIcon
+    , row.name |> CellString
+    , row.worldArea.atlasRegion |> Maybe.withDefault "---" |> CellString
+    , Datamine.tier row.worldArea
+        |> Maybe.Extra.unwrap CellEmpty CellInt
+    , row.runs.num |> CellInt
+    , row.runs.mean.duration.mainMap |> CellDuration
+    , row.runs.best.mainMap |> Maybe.Extra.unwrap CellEmpty CellDuration
+    , row.runs.total.duration.mainMap |> CellDuration
+    , row.runs.mean.portals |> CellFloat
+    ]
+
+
+viewEncounters : OkModel -> List MapRun -> Sheet
+viewEncounters model runs =
+    let
+        tally =
+            EncounterTally.fromMapRuns runs
+    in
+    { title = "Mapwatch: Encounters"
+    , headers = [ viewEncountersHeaders tally ]
+    , rows = viewEncountersRows tally
+    }
+
+
+viewEncountersHeaders : EncounterTally -> List String
+viewEncountersHeaders tally =
+    [ "Row"
+    , "Encounter"
+    , "#"
+    , "%"
+
+    -- this one goes last
+    , "https://mapwatch.erosson.org"
+    ]
+
+
+viewEncountersRows : EncounterTally -> List (List Cell)
+viewEncountersRows tally =
+    [ { count = tally.count, label = "All maps" }
+    , { count = tally.abyssalDepths, label = "Abyssal Depths" }
+    , { count = tally.vaalAreas, label = "Vaal side areas" }
+    , { count = tally.uniqueMaps, label = "Unique Maps" }
+    , { count = tally.labTrialsTotal, label = "(" ++ (String.fromInt <| List.length tally.labTrials) ++ "/6) Labyrinth Trials" }
+    , { count = tally.blightedMaps, label = "Blighted Maps" }
+    , { count = tally.conquerors, label = "Conqueror Fights" }
+    , { count = tally.zana, label = "Zana" }
+    , { count = tally.einhar, label = "Einhar" }
+    , { count = tally.alva, label = "Alva" }
+    , { count = tally.niko, label = "Niko" }
+    , { count = tally.jun, label = "Jun" }
+    , { count = tally.cassia, label = "Cassia" }
+    ]
+        |> List.sortBy .count
+        |> List.reverse
+        |> List.indexedMap Tuple.pair
+        |> List.map
+            (\( i, row ) ->
+                [ CellInt i
+                , CellString row.label
+                , CellInt row.count
+                , cellPercentInt row.count tally.count
+                ]
+            )
+
+
+viewHistory : OkModel -> List MapRun -> Sheet
+viewHistory model runs =
+    { title = "Mapwatch: History"
+    , headers = [ viewHistoryHeaders model ]
     , rows =
         runs
             |> List.reverse
-            |> List.indexedMap (viewDataRow model)
+            |> List.indexedMap (viewHistoryRow model)
             |> List.reverse
     }
 
 
-viewDataHeaders : OkModel -> List String
-viewDataHeaders model =
+viewHistoryHeaders : OkModel -> List String
+viewHistoryHeaders model =
     [ "Row"
     , "Date"
     , "Icon"
@@ -88,8 +212,8 @@ viewDataHeaders model =
            ]
 
 
-viewDataRow : OkModel -> Int -> MapRun -> List Cell
-viewDataRow model i run =
+viewHistoryRow : OkModel -> Int -> MapRun -> List Cell
+viewHistoryRow model i run =
     [ i + 1 |> CellInt
     , run.updatedAt |> CellPosix model.tz
     , run.address.worldArea |> Maybe.andThen (Datamine.imgSrc run) |> Maybe.Extra.unwrap CellEmpty CellIcon

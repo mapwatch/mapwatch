@@ -129,7 +129,9 @@ gsheetsWrite model runs spreadsheetId =
         { spreadsheetId = spreadsheetId
         , title = "Mapwatch"
         , content =
-            [ Spreadsheet.viewData model runs
+            [ Spreadsheet.viewHistory model runs
+            , Spreadsheet.viewMaps model runs
+            , Spreadsheet.viewEncounters model runs
             ]
                 |> List.map encodeSheet
         }
@@ -168,6 +170,9 @@ encodeCell c =
         Spreadsheet.CellFloat n ->
             numberValue n
 
+        Spreadsheet.CellPercent n ->
+            percentValue n
+
         Spreadsheet.CellIcon src ->
             formulaValue <| "=IMAGE(\"" ++ src ++ "\")"
 
@@ -202,6 +207,11 @@ boolValue b =
 
     else
         stringValue ""
+
+
+percentValue : Float -> E.Value
+percentValue n =
+    formulaValue <| "=TO_PERCENT(" ++ String.fromFloat n ++ ")"
 
 
 numberValue : Float -> E.Value

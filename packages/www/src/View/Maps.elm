@@ -1,4 +1,4 @@
-module View.Maps exposing (view)
+module View.Maps exposing (GroupedRuns, applySort, groupRuns, view)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
