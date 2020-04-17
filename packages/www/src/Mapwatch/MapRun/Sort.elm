@@ -265,7 +265,12 @@ filterToday zone now =
 groupByMap : List MapRun -> Dict.Dict String (List MapRun)
 groupByMap =
     List.filter (.isBlightedMap >> not)
-        >> Dict.Extra.groupBy (.address >> .zone)
+        >> Dict.Extra.groupBy
+            (\i ->
+                i.address.worldArea
+                    |> Maybe.map .id
+                    |> Maybe.withDefault ""
+            )
 
 
 type GoalDuration

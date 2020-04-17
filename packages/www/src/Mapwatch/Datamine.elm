@@ -297,6 +297,7 @@ createNPCText1 lang =
     , createNPCTextSet lang NpcId.alHezmin (Tuple.first >> String.startsWith "AlHezmin")
     , createNPCTextSet lang NpcId.drox (Tuple.first >> String.startsWith "Drox")
     , createNPCTextSet lang NpcId.cassia (Tuple.first >> String.startsWith "Cassia")
+    , createNPCTextSet lang NpcId.shaper (Tuple.first >> String.startsWith "Shaper")
     ]
         |> Result.Extra.combine
         |> Result.map List.concat

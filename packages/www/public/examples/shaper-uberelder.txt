@@ -1,0 +1,18 @@
+# "The Shaper's Realm" can be two maps, distinguished only by their npctext. https://github.com/mapwatch/mapwatch/issues/55
+# https://mapwatch.erosson.org/?example=shaper-uberelder.txt#/history
+
+2018/05/21 15:32:00 157909203 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.1:6112
+2018/05/21 15:32:01 157910031 9b0 [INFO Client 1012] : You have entered The Shaper's Realm.
+2018/05/21 15:32:02 157910031 9b0 [INFO Client 1012] The Shaper: I see you, little mouse... you don't belong here. Run along!
+2018/05/21 15:32:03 157910031 9b0 [INFO Client 1012] The Shaper: does fake dialogue show up in npctext? let's find out weeee
+2018/05/21 15:33:00 157909203 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.0:6112
+2018/05/21 15:33:01 158179546 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+
+2018/05/21 15:34:00 157909203 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.2:6112
+2018/05/21 15:34:01 157910031 9b0 [INFO Client 1012] : You have entered The Shaper's Realm.
+2018/05/21 15:34:02 157910031 9b0 [INFO Client 1012] The Shaper: Putrefy, rot, spoil and fester!
+2018/05/21 15:35:00 157909203 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.0:6112
+2018/05/21 15:35:01 159552531 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2018/05/21 15:36:00 157909203 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.2:6112
+
+2018/05/21 15:36:01 157910031 9b0 [INFO Client 1012] : You have entered some not-town-zone just end the map plz thx.

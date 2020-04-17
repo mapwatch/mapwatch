@@ -19,8 +19,8 @@ import Json.Decode as D
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Instance as Instance
 import Mapwatch.LogLine as LogLine
-import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Ports
@@ -86,7 +86,7 @@ updateLine settings line ( model, cmds0 ) =
 
         ( runState, lastRun ) =
             RawMapRun.update instance visit model.runState
-                |> Tuple.mapBoth (RawMapRun.updateNPCText line) (Maybe.map MapRun.fromRaw)
+                |> Tuple.mapBoth (RawMapRun.updateNPCText line) (Maybe.map (MapRun.fromRaw model.datamine))
 
         runs : List MapRun
         runs =
@@ -127,7 +127,7 @@ tick t model =
             let
                 ( runState, lastRun ) =
                     RawMapRun.tick t instance model.runState
-                        |> Tuple.mapSecond (Maybe.map MapRun.fromRaw)
+                        |> Tuple.mapSecond (Maybe.map (MapRun.fromRaw model.datamine))
 
                 runs =
                     Maybe.Extra.unwrap model.runs (\r -> r :: model.runs) lastRun

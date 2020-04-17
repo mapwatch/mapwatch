@@ -99,7 +99,7 @@ listRuns model =
             -- include the current run if we're viewing a snapshot
             before
                 |> Maybe.andThen (\b -> model.mapwatch.runState |> RawMapRun.current b model.mapwatch.instance)
-                |> Maybe.map MapRun.fromRaw
+                |> Maybe.map (MapRun.fromRaw model.mapwatch.datamine)
 
         searchFilter : List MapRun -> List MapRun
         searchFilter =

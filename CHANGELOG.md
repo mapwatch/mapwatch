@@ -10,6 +10,8 @@ All substantial Mapwatch website changes.
   - Text used for search is now visible when hovering over its atlas region on the history screen.
 - Speech volume is now only on the setup and settings pages; removed from all other pages.
 - Minor tweaks to the search form at the top of most pages.
+- Uber Elder is now correctly tracked, and is no longer combined with the Shaper map.
+  - Both zones are named "The Shaper's Realm"; we use the Shaper's voicelines to tell them apart.
 
 ## 2020-04-10
 - [Released a downloadable version of Mapwatch](https://github.com/mapwatch/mapwatch/releases/latest).

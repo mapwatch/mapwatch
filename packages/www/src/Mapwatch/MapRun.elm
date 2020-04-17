@@ -14,6 +14,7 @@ Frozen; cannot be modified. Lots of redundancy. Use RawMapRun for updates and lo
 
 import Dict exposing (Dict)
 import Duration exposing (Millis)
+import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.MapRun.Conqueror as Conqueror
@@ -111,8 +112,8 @@ aggregate runs0 =
     }
 
 
-fromRaw : RawMapRun -> MapRun
-fromRaw raw =
+fromRaw : Datamine -> RawMapRun -> MapRun
+fromRaw dm ({ address } as raw) =
     let
         -- durations by instance. includes time spent with the game closed.
         idurs : List ( Instance, Millis )
@@ -147,8 +148,44 @@ fromRaw raw =
                 |> List.filter (Tuple.first >> (==) raw.address)
                 |> List.map Tuple.second
                 |> List.sum
+
+        addr : Address
+        addr =
+            address.worldArea
+                |> Maybe.map
+                    (\w ->
+                        -- The overwhelming majority of the time, the worldarea is based solely on its name, unchanged.
+                        -- One special case: Shaper and Uber-Elder maps are both named "The Shaper's Realm", ambiguous.
+                        -- Use the shaper's voice lines to distinguish them.
+                        -- https://github.com/mapwatch/mapwatch/issues/55
+                        if w.id == "MapWorldsShapersRealm" || w.id == "MapWorldsElderArenaUber" then
+                            let
+                                shaperSays =
+                                    Dict.get NpcId.shaper raw.npcSays
+                                        |> Maybe.withDefault []
+                                        |> List.map .textId
+                                        |> List.filter ((/=) "")
+                            in
+                            if List.any ((==) "ShaperMapShapersRealm") shaperSays then
+                                { address | worldArea = Dict.get "MapWorldsShapersRealm" dm.worldAreasById }
+
+                            else if List.any ((==) "ShaperUberElderIntro") shaperSays then
+                                { address
+                                    | worldArea = Dict.get "MapWorldsElderArenaUber" dm.worldAreasById
+
+                                    -- Distinguish the display name so users can easily tell them apart
+                                    , zone = address.zone ++ ": Uber Elder"
+                                }
+
+                            else
+                                address
+
+                        else
+                            address
+                    )
+                |> Maybe.withDefault address
     in
-    { address = raw.address
+    { address = addr
     , startedAt = raw.startedAt
     , updatedAt = RawMapRun.updatedAt raw
     , portals = raw.portals

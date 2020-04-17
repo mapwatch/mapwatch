@@ -127,6 +127,7 @@ const exportedNPCs = Object.assign({}, ...[
   "Metadata/Monsters/LegionLeague/LegionMarakethGeneralDismounted",
   "Metadata/Monsters/LegionLeague/LegionTemplarGeneral",
   "Metadata/Monsters/LegionLeague/LegionVaalGeneral",
+  "Metadata/NPC/Shaper",
 ].map(name => ({[name]: true})))
 function isNPCIdExported(raw) {
   return !!exportedNPCs[raw.Id] || raw.Id.startsWith("Metadata/Monsters/LeagueBetrayal/Betrayal")
@@ -152,6 +153,9 @@ function isNPCTextExported(raw) {
       // || /^TaneOctaviusWildGreeting|TaneOctaviusGreeting/.test(raw.Id)
       // We detect Blighted maps by counting 8 or more Cassia "it's branching"s
       || /^CassiaNewLane\d*$/.test(raw.Id)
+      // Shaper voicelines distinguish shaper-map vs. uber-elder-map, since they have the same zone name. https://github.com/mapwatch/mapwatch/issues/55
+      || 'ShaperMapShapersRealm' === raw.Id
+      || 'ShaperUberElderIntro' === raw.Id
 }
 function transformAtlasNode(raw, {json}) {
   return {

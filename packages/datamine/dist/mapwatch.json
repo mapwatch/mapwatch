@@ -6755,6 +6755,7 @@
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Meister der Bestien",
+        "Metadata/NPC/Shaper": "Der Schöpfer",
         "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Meisterentdeckerin",
         "Metadata/NPC/League/Delve/DelveMiner": "Niko, Meister der Tiefen",
         "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Meisterin der Verhüllung",
@@ -6792,6 +6793,8 @@
         "Metadata/NPC/League/Affliction/StrangeVoice": "Fremde Stimme"
       },
       "npcTextAudio": {
+        "ShaperMapShapersRealm": "Ich sehe dich, kleines Ungeziefer ... du hast hier nichts verloren. Scher dich fort!",
+        "ShaperUberElderIntro": "Verwest, verfault, verderbt und geht zu Grunde!",
         "CassiaNewLane1": "Es hat ein neues Myzel ausgebracht! ... Neue Wurzeln!",
         "CassiaNewLane2": "Es hat ein neues Myzel ausgebracht! ... Neue Wurzeln!",
         "CassiaNewLane3": "Es hat ein neues Myzel ausgebracht! ... Neue Wurzeln!",
@@ -7330,6 +7333,7 @@
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
+        "Metadata/NPC/Shaper": "The Shaper",
         "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Master Explorer",
         "Metadata/NPC/League/Delve/DelveMiner": "Niko, Master of the Depths",
         "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Veiled Master",
@@ -7367,6 +7371,8 @@
         "Metadata/NPC/League/Affliction/StrangeVoice": "Strange Voice"
       },
       "npcTextAudio": {
+        "ShaperMapShapersRealm": "I see you, little mouse... you don't belong here. Run along!",
+        "ShaperUberElderIntro": "Putrefy, rot, spoil and fester!",
         "CassiaNewLane1": "It's put out new mycelium! ... New roots!",
         "CassiaNewLane2": "It's put out new mycelium! ... New roots!",
         "CassiaNewLane3": "It's put out new mycelium! ... New roots!",
@@ -7905,6 +7911,7 @@
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar Frey, Maestro de Bestias",
+        "Metadata/NPC/Shaper": "El Creador",
         "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Maestra Exploradora",
         "Metadata/NPC/League/Delve/DelveMiner": "Niko, Maestro de las Profundidades",
         "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Maestra de Encriptación",
@@ -7942,6 +7949,8 @@
         "Metadata/NPC/League/Affliction/StrangeVoice": "Voz extraña"
       },
       "npcTextAudio": {
+        "ShaperMapShapersRealm": "<if:MS>{Te veo, ratoncito... no perteneces aquí. ¡Sigue tu camino!}<elif:FS>{Te veo, ratoncita... no perteneces aquí. ¡Sigue tu camino!}",
+        "ShaperUberElderIntro": "¡Inféctate, corrómpete, corróete y púdrete!",
         "CassiaNewLane1": "¡Ha creado más micelio! ...¡Más raíces!",
         "CassiaNewLane2": "¡Ha creado más micelio! ...¡Más raíces!",
         "CassiaNewLane3": "¡Ha creado más micelio! ...¡Más raíces!",
@@ -8480,6 +8489,7 @@
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Maître des Bêtes",
+        "Metadata/NPC/Shaper": "Le Façonneur",
         "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Maître-exploratrice",
         "Metadata/NPC/League/Delve/DelveMiner": "Niko, Maître des Profondeurs",
         "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Maître-cryptologue",
@@ -8517,6 +8527,8 @@
         "Metadata/NPC/League/Affliction/StrangeVoice": "Voix étrange"
       },
       "npcTextAudio": {
+        "ShaperMapShapersRealm": "Je te vois, petite souris… tu n'as rien à faire ici. Du balais !",
+        "ShaperUberElderIntro": "Putréfie-toi, pourris, avarie-toi et suppure !",
         "CassiaNewLane1": "Un nouveau mycélium vient de surgir ! … De nouvelles racines, quoi !",
         "CassiaNewLane2": "Un nouveau mycélium vient de surgir ! … De nouvelles racines, quoi !",
         "CassiaNewLane3": "Un nouveau mycélium vient de surgir ! … De nouvelles racines, quoi !",
@@ -9055,6 +9067,7 @@
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "야수의 대가 아인하르",
+        "Metadata/NPC/Shaper": "쉐이퍼",
         "Metadata/Monsters/LeagueIncursion/Alva": "탐험의 대가 알바",
         "Metadata/NPC/League/Delve/DelveMiner": "지하의 대가 니코",
         "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "장막의 대가 준",
@@ -9092,6 +9105,8 @@
         "Metadata/NPC/League/Affliction/StrangeVoice": "이상한 목소리"
       },
       "npcTextAudio": {
+        "ShaperMapShapersRealm": "네가 보이는구나, 생쥐. 이 세상에 속하지 않은 자여, 썩 물러가거라!",
+        "ShaperUberElderIntro": "부패하라, 썩어라! 곪아서 터져버려라!",
         "CassiaNewLane1": "새로운 균사체로군! ...새로운 뿌리가!",
         "CassiaNewLane2": "새로운 균사체로군! ...새로운 뿌리가!",
         "CassiaNewLane3": "새로운 균사체로군! ...새로운 뿌리가!",
@@ -9630,6 +9645,7 @@
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Mestre das Bestas",
+        "Metadata/NPC/Shaper": "O Criador",
         "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Mestre Exploradora",
         "Metadata/NPC/League/Delve/DelveMiner": "Niko, Mestre das Profundezas",
         "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Mestre Oculta",
@@ -9667,6 +9683,8 @@
         "Metadata/NPC/League/Affliction/StrangeVoice": "Voz Estranha"
       },
       "npcTextAudio": {
+        "ShaperMapShapersRealm": "<if:MS>{Bem-vindo ao crisol da criação. A bigorna em qual os mundos foram forjados.}<elif:FS>{Bem-vinda ao crisol da criação. A bigorna em qual os mundos foram forjados.}",
+        "ShaperUberElderIntro": "Apodreça, corroa, feda e encha-se de vermes!",
         "CassiaNewLane1": "Cresceu um novo micélio... uma nova raiz!",
         "CassiaNewLane2": "Cresceu um novo micélio... uma nova raiz!",
         "CassiaNewLane3": "Cresceu um novo micélio... uma nova raiz!",
@@ -10205,6 +10223,7 @@
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Эйнар, Мастер зверей",
+        "Metadata/NPC/Shaper": "Создатель",
         "Metadata/Monsters/LeagueIncursion/Alva": "Альва, Мастер исследований",
         "Metadata/NPC/League/Delve/DelveMiner": "Нико, Мастер глубин",
         "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Джун, Скрытый мастер",
@@ -10242,6 +10261,8 @@
         "Metadata/NPC/League/Affliction/StrangeVoice": "Странный голос"
       },
       "npcTextAudio": {
+        "ShaperMapShapersRealm": "Я тебя вижу, мышонок... Тебе здесь не место. Убирайся!",
+        "ShaperUberElderIntro": "Разложись, истлей! Гноись и тухни!",
         "CassiaNewLane1": "Он выпустил новый мицелий!.. Новые корни!",
         "CassiaNewLane2": "Он выпустил новый мицелий!.. Новые корни!",
         "CassiaNewLane3": "Он выпустил новый мицелий!.. Новые корни!",
@@ -10780,6 +10801,7 @@
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
+        "Metadata/NPC/Shaper": "The Shaper",
         "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Master Explorer",
         "Metadata/NPC/League/Delve/DelveMiner": "Niko, Master of the Depths",
         "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Veiled Master",
@@ -10817,6 +10839,8 @@
         "Metadata/NPC/League/Affliction/StrangeVoice": "เสียงประหลาด"
       },
       "npcTextAudio": {
+        "ShaperMapShapersRealm": "ข้าเห็นเจ้าแล้วเจ้าหนูน้อย เจ้าไม่ใช่คนที่นี่ ไปซะไป!",
+        "ShaperUberElderIntro": "เหือดแห้ง เน่าเปื่อย ผุพังและสลายไป!",
         "CassiaNewLane1": "มันแตกไมเซเลี่ยมใหม่! ... รากใหม่!",
         "CassiaNewLane2": "มันแตกไมเซเลี่ยมใหม่! ... รากใหม่!",
         "CassiaNewLane3": "มันแตกไมเซเลี่ยมใหม่! ... รากใหม่!",
@@ -11355,6 +11379,7 @@
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "伊恩哈尔，魔兽大师",
+        "Metadata/NPC/Shaper": "塑界者",
         "Metadata/Monsters/LeagueIncursion/Alva": "阿尔瓦，探索大师",
         "Metadata/NPC/League/Delve/DelveMiner": "尼克，地心大师",
         "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "影匿大师，琼",
@@ -11392,6 +11417,8 @@
         "Metadata/NPC/League/Affliction/StrangeVoice": "奇怪的声音"
       },
       "npcTextAudio": {
+        "ShaperMapShapersRealm": "我看到你了，小老鼠……你不该来这儿的。快给我滚！",
+        "ShaperUberElderIntro": "腐朽、糜烂、败坏、凋零！",
         "CassiaNewLane1": "它生出了新菌体！……新的根茎！",
         "CassiaNewLane2": "它生出了新菌体！……新的根茎！",
         "CassiaNewLane3": "它生出了新菌体！……新的根茎！",

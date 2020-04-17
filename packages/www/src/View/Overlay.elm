@@ -59,7 +59,7 @@ viewMain model =
 
         run =
             RawMapRun.current model.now model.mapwatch.instance model.mapwatch.runState
-                |> Maybe.map MapRun.fromRaw
+                |> Maybe.map (MapRun.fromRaw model.mapwatch.datamine)
                 |> Maybe.Extra.filter (RunSort.isBetween { before = Nothing, after = after })
 
         runs =

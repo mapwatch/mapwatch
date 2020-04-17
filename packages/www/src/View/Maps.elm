@@ -150,9 +150,20 @@ groupRuns dm =
     RunSort.groupByMap
         >> Dict.toList
         >> List.filterMap
-            (\( name, runGroup ) ->
-                Datamine.worldAreaFromName name dm
-                    |> Maybe.map (\w -> { name = name, worldArea = w, runs = MapRun.aggregate runGroup })
+            (\( id, runGroup ) ->
+                case runGroup of
+                    [] ->
+                        Nothing
+
+                    firstMap :: _ ->
+                        firstMap.address.worldArea
+                            |> Maybe.map
+                                (\w ->
+                                    { name = firstMap.address.zone
+                                    , worldArea = w
+                                    , runs = MapRun.aggregate runGroup
+                                    }
+                                )
             )
 
 

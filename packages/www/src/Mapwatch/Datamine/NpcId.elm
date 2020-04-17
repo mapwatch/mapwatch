@@ -88,3 +88,7 @@ legionGenerals =
         , "Metadata/Monsters/LegionLeague/LegionTemplarGeneral"
         , "Metadata/Monsters/LegionLeague/LegionVaalGeneral"
         ]
+
+
+shaper =
+    "Metadata/NPC/Shaper"
