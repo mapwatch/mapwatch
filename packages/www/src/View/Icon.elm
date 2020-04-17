@@ -124,6 +124,11 @@ uniqueMap =
     sideArea { name = "uniqueMap", url = "Art/2DItems/Maps/MaelstromofChaos.png?scale=1" }
 
 
+blightedMap : Html msg
+blightedMap =
+    sideArea { name = "blightedMap", url = "Art/2DItems/Maps/Atlas2Maps/New/Beach.png?w=1&h=1&scale=1&mn=6&mt=1&mb=1" }
+
+
 einhar : Html msg
 einhar =
     sideArea { name = "einhar med-icon", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardBestiary.png?scale=1" }

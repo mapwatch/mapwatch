@@ -127,7 +127,7 @@ listEncounterTally query tally =
     , ( tally.vaalAreas, "", [ View.Icon.vaal, text "Vaal side areas" ] )
     , ( tally.uniqueMaps, "", [ View.Icon.uniqueMap, text "Unique Maps" ] )
     , ( tally.labTrialsTotal, "", [ View.Icon.labTrial, text "(", text <| String.fromInt <| List.length tally.labTrials, text "/6) Labyrinth Trials" ] )
-    , ( tally.blightedMaps, "blighted", [ View.Icon.cassia, text "Blighted Maps" ] )
+    , ( tally.blightedMaps, "blighted", [ View.Icon.blightedMap, text "Blighted Maps" ] )
     , ( tally.conquerors, "baran|veritania|hezmin|drox", [ span [ title "excluding Sirus" ] [ View.Icon.sirus, text "Conqueror Fights" ] ] )
     , ( tally.zana, "", [ View.Icon.zana, text "Zana" ] )
     , ( tally.einhar, "einhar", [ View.Icon.einhar, text "Einhar" ] )
