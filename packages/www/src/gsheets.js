@@ -38,10 +38,19 @@ module.exports.main = function main(app) {
   })
 
   app.ports.gsheetsLogin.subscribe(() => {
-    window.gapi.auth2.getAuthInstance().signIn()
+    if (window.electronFlags) {
+      // Force electron to show the account chooser
+      window.gapi.auth2.getAuthInstance().signIn({prompt: 'select_account'})
+    }
+    else {
+      window.gapi.auth2.getAuthInstance().signIn()
+    }
   })
   app.ports.gsheetsLogout.subscribe(() => {
     window.gapi.auth2.getAuthInstance().signOut()
+  })
+  app.ports.gsheetsDisconnect.subscribe(() => {
+    window.gapi.auth2.getAuthInstance().disconnect()
   })
   app.ports.gsheetsWrite.subscribe(({spreadsheetId, title, content}) => new Promise((resolve, reject) => {
     createOrUpdateSpreadsheet({spreadsheetId, title})

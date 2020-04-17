@@ -85,10 +85,6 @@ viewMain model =
                     View.History.listRuns model
             in
             [ div []
-                [ button [ onClick Model.GSheetsLogout ]
-                    [ text "Logout of Google Sheets" ]
-                ]
-            , div []
                 [ case ( gsheets.url, model.settings.spreadsheetId ) of
                     ( RemoteData.Loading, _ ) ->
                         button [ disabled True ]
@@ -110,21 +106,28 @@ viewMain model =
                 ]
             , case gsheets.url of
                 RemoteData.NotAsked ->
-                    div [] []
+                    p [] []
 
                 RemoteData.Loading ->
-                    div [] [ View.Icon.fasPulse "spinner" ]
+                    p [] [ View.Icon.fasPulse "spinner" ]
 
                 RemoteData.Failure err ->
-                    div [] [ pre [] [ text err ] ]
+                    p [] [ pre [] [ text err ] ]
 
                 RemoteData.Success url ->
-                    div []
-                        [ p []
-                            [ text "Export successful! "
-                            , a [ target "_blank", href url ] [ text "View your spreadsheet." ]
-                            ]
+                    p []
+                        [ text "Export successful! "
+                        , a [ target "_blank", href url ] [ text "View your spreadsheet." ]
                         ]
+            , p []
+                [ button [ onClick Model.GSheetsLogout ]
+                    [ text "Logout of Google Sheets" ]
+                ]
+            , p []
+                [ button [ onClick Model.GSheetsDisconnect ]
+                    [ text "Disconnect Google Sheets" ]
+                , div [] [ small [] [ text " Log out everywhere, and remove Mapwatch from your Google account." ] ]
+                ]
             , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
             ]
 

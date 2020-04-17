@@ -3,6 +3,7 @@ port module Ports exposing
     , Sheet
     , debugNotification
     , fileSelector
+    , gsheetsDisconnect
     , gsheetsLogin
     , gsheetsLoginUpdate
     , gsheetsLogout
@@ -178,6 +179,9 @@ port gsheetsLoginUpdate : ({ login : Maybe Bool, error : Maybe String } -> msg) 
 
 
 port gsheetsLogout : () -> Cmd msg
+
+
+port gsheetsDisconnect : () -> Cmd msg
 
 
 type alias Sheet =

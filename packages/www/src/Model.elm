@@ -95,6 +95,7 @@ type Msg
     | GSheetsLoginUpdate { login : Maybe Bool, error : Maybe String }
     | GSheetsLogin
     | GSheetsLogout
+    | GSheetsDisconnect
     | GSheetsWrite { spreadsheetId : Maybe String, title : String, content : List Sheet }
     | GSheetsWritten { res : Maybe { spreadsheetUrl : String, spreadsheetId : String }, error : Maybe String }
     | DebugNotification D.Value
@@ -304,7 +305,10 @@ updateOk msg ({ config, mapwatch, settings } as model) =
             ( { model | gsheets = RemoteData.Loading }, Ports.gsheetsLogin () )
 
         GSheetsLogout ->
-            ( { model | gsheets = RemoteData.Loading }, Ports.gsheetsLogout () )
+            ( { model | gsheets = RemoteData.NotAsked }, Ports.gsheetsLogout () )
+
+        GSheetsDisconnect ->
+            ( { model | gsheets = RemoteData.NotAsked }, Ports.gsheetsDisconnect () )
 
         GSheetsLoginUpdate res ->
             ( { model
