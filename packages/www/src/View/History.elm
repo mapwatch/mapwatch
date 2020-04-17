@@ -6,6 +6,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
 import Mapwatch
+import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.LogLine as LogLine
@@ -325,7 +326,7 @@ type alias Duration =
     Int
 
 
-viewHistoryRun : { m | query : QueryDict, tz : Time.Zone } -> HistoryRowConfig -> (MapRun -> Maybe Duration) -> MapRun -> List (Html msg)
+viewHistoryRun : { m | query : QueryDict, tz : Time.Zone, mapwatch : { mm | datamine : Datamine } } -> HistoryRowConfig -> (MapRun -> Maybe Duration) -> MapRun -> List (Html msg)
 viewHistoryRun ({ query, tz } as m) config goals r =
     viewHistoryMainRow m config (goals r) r
         :: List.concat
@@ -386,8 +387,8 @@ viewDurationTail { portals, duration } =
            ]
 
 
-viewHistoryMainRow : { m | query : QueryDict, tz : Time.Zone } -> HistoryRowConfig -> Maybe Duration -> MapRun -> Html msg
-viewHistoryMainRow { tz, query } { showDate } goal r =
+viewHistoryMainRow : { m | query : QueryDict, tz : Time.Zone, mapwatch : { mm | datamine : Datamine } } -> HistoryRowConfig -> Maybe Duration -> MapRun -> Html msg
+viewHistoryMainRow ({ tz, query } as m) { showDate } goal r =
     tr [ class "main-area" ]
         ((if showDate then
             [ td [ class "date" ] [ View.Home.viewDate tz r.updatedAt ] ]
@@ -396,7 +397,8 @@ viewHistoryMainRow { tz, query } { showDate } goal r =
             []
          )
             ++ [ td [ class "zone" ] [ View.Home.viewRun query r ]
-               , td [] [ View.Home.viewRegion query r.address.worldArea ]
+               , td [ title <| "Searchable text for this run: \n\n" ++ RunSort.searchString m.mapwatch.datamine r ]
+                    [ View.Home.viewRegion query r.address.worldArea ]
                ]
             ++ viewRunDurations goal r
         )

@@ -92,7 +92,11 @@ viewEncounterTally query tally =
         [ thead []
             [ th [ style "text-align" "right" ] [ text "Encounter" ]
             , th [] [ text "#" ]
-            , th [] [ text "%" ]
+            , th []
+                [ text "% of "
+                , text <| String.fromInt tally.count
+                , text " maps"
+                ]
             ]
         , tbody []
             (tally
@@ -123,21 +127,21 @@ viewEncounterTally query tally =
 
 listEncounterTally : QueryDict -> EncounterTally -> List { label : List (Html msg), count : Int, pct : Float, search : Maybe String }
 listEncounterTally query tally =
-    [ ( tally.abyssalDepths, "", [ View.Icon.abyss, text "Abyssal Depths" ] )
-    , ( tally.vaalAreas, "", [ View.Icon.vaal, text "Vaal side areas" ] )
-    , ( tally.uniqueMaps, "", [ View.Icon.uniqueMap, text "Unique Maps" ] )
-    , ( tally.labTrialsTotal, "", [ View.Icon.labTrial, text "(", text <| String.fromInt <| List.length tally.labTrials, text "/6) Labyrinth Trials" ] )
+    [ ( tally.abyssalDepths, "side:abyssal depths", [ View.Icon.abyss, text "Abyssal Depths" ] )
+    , ( tally.vaalAreas, "vaal-side:", [ View.Icon.vaal, text "Vaal side areas" ] )
+    , ( tally.uniqueMaps, "unique-map:", [ View.Icon.uniqueMap, text "Unique Maps" ] )
+    , ( tally.labTrialsTotal, "lab-trial-side:", [ View.Icon.labTrial, text "(", text <| String.fromInt <| List.length tally.labTrials, text "/6) Labyrinth Trials" ] )
     , ( tally.blightedMaps, "blighted", [ View.Icon.blightedMap, text "Blighted Maps" ] )
-    , ( tally.conquerors, "baran|veritania|hezmin|drox", [ span [ title "excluding Sirus" ] [ View.Icon.sirus, text "Conqueror Fights" ] ] )
-    , ( tally.zana, "", [ View.Icon.zana, text "Zana" ] )
-    , ( tally.einhar, "einhar", [ View.Icon.einhar, text "Einhar" ] )
-    , ( tally.alva, "alva", [ View.Icon.alva, text "Alva" ] )
-    , ( tally.niko, "niko", [ View.Icon.niko, text "Niko" ] )
-    , ( tally.jun, "", [ View.Icon.jun, text "Jun" ] )
-    , ( tally.cassia, "cassia", [ View.Icon.cassia, text "Cassia" ] )
+    , ( tally.conquerors, "conqueror:", [ span [ title "excluding Sirus" ] [ View.Icon.sirus, text "Conqueror Fights" ] ] )
+    , ( tally.zana, "npc:zana", [ View.Icon.zana, text "Zana" ] )
+    , ( tally.einhar, "npc:einhar", [ View.Icon.einhar, text "Einhar" ] )
+    , ( tally.alva, "npc:alva", [ View.Icon.alva, text "Alva" ] )
+    , ( tally.niko, "npc:niko", [ View.Icon.niko, text "Niko" ] )
+    , ( tally.jun, "npc:jun", [ View.Icon.jun, text "Jun" ] )
+    , ( tally.cassia, "npc:cassia", [ View.Icon.cassia, text "Cassia" ] )
     ]
         ++ (if Feature.isActive Feature.DeliriumEncounter query then
-                [ ( tally.delirium, "delirium", [ View.Icon.delirium, text "Delirium" ] ) ]
+                [ ( tally.delirium, "npc:strange voice", [ View.Icon.delirium, text "Delirium" ] ) ]
 
             else
                 []

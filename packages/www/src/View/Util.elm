@@ -29,7 +29,7 @@ viewSearch attrs query =
         msg s =
             Dict.insert Route.keys.search s query |> Model.Search
     in
-    span [ class "search-form search-text" ]
+    span [ class "search-form search-text", title "To see searchable text for a map-run, hover over its region on the history screen.\nSearch accepts regular expressions." ]
         [ input
             ([ value <| Maybe.withDefault "" search
              , type_ "text"

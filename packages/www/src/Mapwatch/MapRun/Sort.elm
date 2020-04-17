@@ -11,6 +11,7 @@ module Mapwatch.MapRun.Sort exposing
     , parseSort
     , reverseSort
     , search
+    , searchString
     , sort
     , stringifyGoalDuration
     , stringifySort
@@ -21,6 +22,7 @@ import Dict.Extra
 import Duration exposing (Millis)
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
+import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Maybe.Extra
@@ -396,19 +398,61 @@ npcName : NpcId -> Datamine -> Maybe String
 npcName id dm =
     Dict.get "en" dm.lang
         |> Maybe.andThen (\l -> Dict.get id l.index.npcs)
+        |> Maybe.Extra.orElse
+            (if id == NpcId.betrayalGroup then
+                Just "jun"
+
+             else
+                Nothing
+            )
+        |> Maybe.map ((++) "npc:")
 
 
 searchString : Datamine -> MapRun -> String
 searchString dm r =
-    [ Just r.address.zone
-    , if r.isBlightedMap then
+    [ if r.isBlightedMap then
         Just "Blighted"
 
       else
         Nothing
+    , Just <|
+        if r.address.worldArea |> Maybe.Extra.unwrap False .isUniqueMapArea then
+            "unique-map:" ++ r.address.zone
+
+        else
+            "map:" ++ r.address.zone
     , r.address.worldArea
-        |> Maybe.Extra.unwrap (Just Datamine.defaultAtlasRegion) .atlasRegion
+        |> Maybe.andThen .atlasRegion
+        |> Maybe.withDefault Datamine.defaultAtlasRegion
+        |> (++) "region:"
+        |> Just
+    , r.conqueror |> Maybe.map Conqueror.searchString
     ]
         ++ (r.npcSays |> Dict.keys |> List.map (\id -> npcName id dm))
+        ++ (r.sideAreas |> Dict.values |> List.map (Tuple.first >> sideAreaSearchString dm >> Just))
         |> List.filterMap identity
         |> String.join "\n"
+
+
+sideAreaSearchString : Datamine -> Address -> String
+sideAreaSearchString dm a =
+    String.join "" <|
+        case a.worldArea of
+            Nothing ->
+                [ "side:", a.zone ]
+
+            Just w ->
+                [ if w.isVaalArea then
+                    "vaal-"
+
+                  else if w.isMapArea then
+                    "npc:zana-"
+
+                  else if w.isLabTrial then
+                    "lab-trial-"
+
+                  else
+                    ""
+                , "side:"
+                , a.zone
+                ]

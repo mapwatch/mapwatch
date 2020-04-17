@@ -9,6 +9,7 @@ module Mapwatch.MapRun.Conqueror exposing
     , idFromNpc
     , ids
     , npcFromId
+    , searchString
     )
 
 import Dict exposing (Dict)
@@ -206,3 +207,17 @@ applyEncounter mapRun encountersLocked encounter_ state0 =
             | encounter = state.encounter |> Maybe.Extra.orElse (Just encounter_)
             , region = state.region |> Maybe.Extra.orElse region
         }
+
+
+searchString : ( Id, Encounter ) -> String
+searchString ( id, enc ) =
+    "conqueror:"
+        ++ (case enc of
+                Taunt n ->
+                    "taunt" ++ String.fromInt n
+
+                Fight ->
+                    "fight"
+           )
+        ++ ":"
+        ++ toString id

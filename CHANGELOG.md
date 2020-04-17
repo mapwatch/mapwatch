@@ -6,6 +6,8 @@ All substantial Mapwatch website changes.
 
 ## 2020-04-16
 - Created an [encounters page](https://mapwatch.erosson.org/#/encounter) with statistics for side areas and NPCs.
+- Improved map search: you can now search for side areas, unique maps, and specific conqueror encounters, among other changes.
+  - Text used for search is now visible when hovering over its atlas region on the history screen.
 - Speech volume is now only on the setup and settings pages; removed from all other pages.
 - Minor tweaks to the search form at the top of most pages.
 
