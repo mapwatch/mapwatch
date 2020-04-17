@@ -133,7 +133,7 @@ listEncounterTally query tally =
     , ( tally.einhar, "einhar", [ View.Icon.einhar, text "Einhar" ] )
     , ( tally.alva, "alva", [ View.Icon.alva, text "Alva" ] )
     , ( tally.niko, "niko", [ View.Icon.niko, text "Niko" ] )
-    , ( tally.jun, "jun", [ View.Icon.jun, text "Jun" ] )
+    , ( tally.jun, "", [ View.Icon.jun, text "Jun" ] )
     , ( tally.cassia, "cassia", [ View.Icon.cassia, text "Cassia" ] )
     ]
         ++ (if Feature.isActive Feature.DeliriumEncounter query then

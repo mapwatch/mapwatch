@@ -85,7 +85,7 @@ tallyNpcs npcs tally =
         | einhar = Dict.get NpcId.einhar counts |> Maybe.withDefault 0
         , alva = Dict.get NpcId.alva counts |> Maybe.withDefault 0
         , niko = Dict.get NpcId.niko counts |> Maybe.withDefault 0
-        , jun = Dict.get NpcId.jun counts |> Maybe.withDefault 0
+        , jun = Dict.get NpcId.betrayalGroup counts |> Maybe.withDefault 0
         , cassia = Dict.get NpcId.cassia counts |> Maybe.withDefault 0
         , delirium = Dict.get NpcId.delirium counts |> Maybe.withDefault 0
     }
