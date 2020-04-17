@@ -132,7 +132,7 @@ viewDateSearch query route =
                     ]
 
                 Just _ ->
-                    [ a [ class "button", Route.href (Dict.remove Route.keys.after query) route ] [ Icon.fas "eye", text " Unhide all" ]
+                    [ a [ class "button", Route.href (Dict.remove Route.keys.after query) route ] [ Icon.fas "eye", text " Unhide all maps" ]
                     ]
     in
     span [ class "search-form search-date" ] buttons

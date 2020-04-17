@@ -27,7 +27,6 @@ import View.Nav
 import View.NotFound
 import View.Setup
 import View.Util
-import View.Volume
 
 
 view : OkModel -> Html Msg
@@ -119,8 +118,7 @@ viewMain model =
     in
     div []
         [ div []
-            [ View.Volume.view model
-            , View.Util.viewSearch [ placeholder "area name" ] model.query
+            [ View.Util.viewSearch [ placeholder "area name" ] model.query
             , View.Util.viewDateSearch model.query model.route
             , View.Util.viewGoalForm model.query
             ]

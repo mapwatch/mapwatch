@@ -22,7 +22,6 @@ import View.Icon
 import View.Nav
 import View.Setup
 import View.Util
-import View.Volume
 
 
 view : OkModel -> Html Msg
@@ -81,8 +80,8 @@ viewMain model =
                 |> RunSort.filterBetween { before = before, after = after }
     in
     div []
-        [ View.Volume.view model
-        , View.Util.viewSearch [ placeholder "map name" ] model.query
+        [ View.Util.viewSearch [ placeholder "map name" ] model.query
+        , View.Util.viewDateSearch model.query model.route
         , div [] <| viewEncounterTally model.query <| EncounterTally.fromMapRuns runs
         ]
 

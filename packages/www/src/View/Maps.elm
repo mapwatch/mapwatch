@@ -20,7 +20,6 @@ import View.Icon
 import View.Nav
 import View.Setup
 import View.Util
-import View.Volume
 
 
 view : OkModel -> Html Msg
@@ -137,8 +136,8 @@ viewMain model =
                 |> List.map (viewMap model.query)
     in
     div []
-        [ View.Volume.view model
-        , View.Util.viewSearch [ placeholder "map name" ] model.query
+        [ View.Util.viewSearch [ placeholder "map name" ] model.query
+        , View.Util.viewDateSearch model.query model.route
         , table [ class "by-map" ]
             [ thead [] [ header model.query ]
             , tbody [] rows

@@ -6,6 +6,8 @@ All substantial Mapwatch website changes.
 
 ## 2020-04-16
 - Created an [encounters page](https://mapwatch.erosson.org/#/encounter) with statistics for side areas and NPCs.
+- Speech volume is now only on the setup and settings pages; removed from all other pages.
+- Minor tweaks to the search form at the top of most pages.
 
 ## 2020-04-10
 - [Released a downloadable version of Mapwatch](https://github.com/mapwatch/mapwatch/releases/latest).

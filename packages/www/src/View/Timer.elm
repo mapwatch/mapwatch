@@ -22,7 +22,6 @@ import View.Icon
 import View.Nav
 import View.Setup
 import View.Util
-import View.Volume
 
 
 view : OkModel -> Html Msg
@@ -46,8 +45,7 @@ viewBody model =
 
         Mapwatch.Ready _ ->
             div []
-                [ View.Volume.view model
-                , View.Util.viewGoalForm model.query
+                [ View.Util.viewGoalForm model.query
                 , View.Setup.viewDownloadLink model
                 , viewMain model
                 ]
