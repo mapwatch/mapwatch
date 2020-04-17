@@ -105,6 +105,7 @@ table.history-stats th.title {
 
 nav {
   white-space: nowrap;
+  font-size: 85%;
 }
 nav > a {
   margin: 1em;
