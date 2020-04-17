@@ -39,6 +39,7 @@ import TimedReadline exposing (Progress)
 import View.Icon as Icon
 import View.Nav
 import View.Setup
+import View.Util
 
 
 viewAddress : QueryDict -> Icon.MapIconArgs a -> Instance.Address -> Html msg
@@ -52,7 +53,7 @@ viewAddress query args addr =
                 ""
     in
     if Maybe.Extra.unwrap False Datamine.isMap addr.worldArea then
-        a [ Route.href (Dict.insert Route.keys.search addr.zone query) Route.History, title addr.addr ] [ Icon.mapOrBlank args addr.worldArea, text blighted, text addr.zone ]
+        a [ Route.href (View.Util.insertSearch addr.zone query) Route.History, title addr.addr ] [ Icon.mapOrBlank args addr.worldArea, text blighted, text addr.zone ]
 
     else
         span [ title addr.addr ] [ text addr.zone ]
@@ -87,7 +88,7 @@ viewRegion query w =
         name =
             w |> Maybe.andThen .atlasRegion |> Maybe.withDefault Datamine.defaultAtlasRegion
     in
-    a [ Route.href (Dict.insert Route.keys.search name query) Route.History ] [ Icon.region w, text name ]
+    a [ Route.href (View.Util.insertSearch name query) Route.History ] [ Icon.region w, text name ]
 
 
 time =

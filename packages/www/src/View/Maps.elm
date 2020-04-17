@@ -195,7 +195,7 @@ headerHref query col =
             else
                 col
     in
-    Route.href (Dict.insert Route.keys.sort sort query) Route.Maps
+    Route.href (View.Util.insertSearch sort query) Route.Maps
 
 
 viewMap : QueryDict -> GroupedRuns -> Html msg
@@ -228,10 +228,10 @@ viewRegionName query w =
         name =
             w.atlasRegion |> Maybe.withDefault Datamine.defaultAtlasRegion
     in
-    View.Home.viewRegion (Dict.insert Route.keys.search name query) (Just w)
+    View.Home.viewRegion (View.Util.insertSearch name query) (Just w)
 
 
 viewMapName : QueryDict -> String -> WorldArea -> Html msg
 viewMapName query name worldArea =
-    a [ Route.href (Dict.insert Route.keys.search name query) Route.History ]
+    a [ Route.href (View.Util.insertSearch name query) Route.History ]
         [ View.Icon.mapOrBlank { isBlightedMap = False } (Just worldArea), text name ]

@@ -1,4 +1,4 @@
-module View.Util exposing (hidePreLeagueButton, leagueDate, leagueName, pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
+module View.Util exposing (escapeSearch, hidePreLeagueButton, insertSearch, leagueDate, leagueName, pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
@@ -136,3 +136,17 @@ viewDateSearch query route =
                     ]
     in
     span [ class "search-form search-date" ] buttons
+
+
+insertSearch : String -> QueryDict -> QueryDict
+insertSearch search =
+    Dict.insert Route.keys.search (escapeSearch search)
+
+
+escapeSearch : String -> String
+escapeSearch =
+    Regex.replace escapeSearchRegex (\m -> "\\" ++ m.match)
+
+
+escapeSearchRegex =
+    Regex.fromString "[.*+?^${}()|[\\]\\\\]" |> Maybe.withDefault Regex.never

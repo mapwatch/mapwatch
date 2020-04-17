@@ -12,6 +12,7 @@ All substantial Mapwatch website changes.
 - Minor tweaks to the search form at the top of most pages.
 - Uber Elder is now correctly tracked, and is no longer combined with the Shaper map.
   - Both zones are named "The Shaper's Realm"; we use the Shaper's voicelines to tell them apart.
+- Search links for map names with parentheses and other special characters should now work.
 
 ## 2020-04-10
 - [Released a downloadable version of Mapwatch](https://github.com/mapwatch/mapwatch/releases/latest).
