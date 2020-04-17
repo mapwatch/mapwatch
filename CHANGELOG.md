@@ -6,6 +6,8 @@ All substantial Mapwatch website changes.
 
 ## 2020-04-17
 - [Spreadsheet export](https://mapwatch.erosson.org/#/history/tsv) now includes data from the Maps and Encounters pages.
+- In addition to copy-pasting TSV spreadsheets, [you can now export your map data to Google Sheets](https://mapwatch.erosson.org/#/gsheets?gsheets=1).
+  - Google Sheets export is still new, likely has bugs, and is turned off by default. You can try beta-testing it by clicking the link above.
 
 ## 2020-04-16
 - Created an [encounters page](https://mapwatch.erosson.org/#/encounter) with statistics for side areas and NPCs.

@@ -128,7 +128,7 @@ viewMain model =
                 [ text "Export as: "
                 , a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " TSV spreadsheet" ]
                 , text " | "
-                , a [ Route.href model.query Route.GSheets ] [ View.Icon.fab "google-drive", text " Google spreadsheet" ]
+                , a [ Route.href model.query Route.GSheets ] [ View.Icon.fab "google-drive", text " Google Sheets (BETA)" ]
                 ]
 
              else

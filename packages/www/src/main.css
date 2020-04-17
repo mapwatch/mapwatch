@@ -341,7 +341,8 @@ svg.icon-region .focus.focus-drox {
   fill: yellow;
 }
 
-.electron-download {
+.electron-download,
+.beta-alert {
   text-align: center;
   border: 0.2em solid #eb99a1;
   border-radius: 1em;
