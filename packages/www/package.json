@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@mapwatch/datamine": "1.0.0",
-    "@mapwatch/rss": "1.0.0"
+    "@mapwatch/rss": "1.0.0",
+    "@wolfadex/fluent-web": "^2.0.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",

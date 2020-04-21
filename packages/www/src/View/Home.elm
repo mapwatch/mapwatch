@@ -6,14 +6,12 @@ module View.Home exposing
     , posixToString
     , selfUrl
     , viewAddress
-    , viewDate
     , viewHeader
     , viewInstance
     , viewMaybeInstance
     , viewProgress
     , viewRegion
     , viewRun
-    , viewSideAreaName
     )
 
 -- TODO: This used to be its own page. Now it's a graveyard of functions that get
@@ -24,6 +22,7 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
+import Localized
 import Mapwatch as Mapwatch exposing (Model, Msg(..))
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Instance as Instance exposing (Instance)
@@ -208,12 +207,6 @@ viewProgress p =
             ]
 
 
-viewDate : Time.Zone -> Posix -> Html msg
-viewDate tz d =
-    span [ title <| ISO8601.toString <| ISO8601.fromPosix d ]
-        [ text <| posixToString tz d ]
-
-
 posixToString : Time.Zone -> Posix -> String
 posixToString tz d =
     -- ([ Time.toYear tz d |> String.fromInt
@@ -274,33 +267,6 @@ monthToString m =
             "Dec"
 
 
-viewSideAreaName : QueryDict -> Instance -> Html msg
-viewSideAreaName query instance =
-    let
-        label =
-            viewInstance query instance
-    in
-    case Instance.worldArea instance of
-        Nothing ->
-            label
-
-        Just w ->
-            if Datamine.isMap w then
-                span [] [ Icon.zana, text "Zana (", label, text ")" ]
-
-            else if w.isVaalArea then
-                span [] [ Icon.vaal, text "Vaal side area (", label, text ")" ]
-
-            else if w.isLabTrial then
-                span [] [ Icon.labTrial, text "Labyrinth trial (", label, text ")" ]
-
-            else if w.isAbyssalDepths then
-                span [] [ Icon.abyss, label ]
-
-            else
-                label
-
-
 maskedText : String -> Html msg
 maskedText str =
     -- This text is hidden on the webpage, but can be copypasted. Useful for formatting shared text.
@@ -318,11 +284,12 @@ viewHeader model =
             [ maskedText "["
 
             -- , a [ href "./" ] [ Icon.fas "tachometer-alt", text " Mapwatch" ]
-            , a [ Route.href model.query Route.Timer ] [ text " Mapwatch" ]
+            , a [ Route.href model.query Route.Timer ] [ text " ", Localized.title ]
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , small []
-            [ text " - automatically time your Path of Exile map clears"
+            [ text " "
+            , Localized.subtitle
             , case model.flags.electronFlags |> Maybe.map .version of
                 Nothing ->
                     text ""

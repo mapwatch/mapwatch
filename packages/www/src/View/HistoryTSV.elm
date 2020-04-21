@@ -3,6 +3,7 @@ module View.HistoryTSV exposing (view)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import Localized
 import Mapwatch
 import Model exposing (Msg, OkModel)
 import View.History
@@ -42,16 +43,12 @@ viewMain model =
             View.History.listRuns model
     in
     div []
-        [ p []
-            [ text "Copy and paste the "
-            , b [] [ text "Tab-Separated Values" ]
-            , text " below into your favorite spreadsheet application."
-            ]
-        , div [] [ text "History: " ]
+        [ p [] [ Localized.text0 "export-tsv-help" ]
+        , div [] [ Localized.text0 "export-tsv-header-history" ]
         , textarea [ readonly True, rows 40, cols 100 ] [ viewSheet <| Spreadsheet.viewHistory model runs ]
-        , div [] [ text "Maps: " ]
+        , div [] [ Localized.text0 "export-tsv-header-maps" ]
         , textarea [ readonly True, rows 40, cols 100 ] [ viewSheet <| Spreadsheet.viewMaps model runs ]
-        , div [] [ text "Encounters: " ]
+        , div [] [ Localized.text0 "export-tsv-header-encounters" ]
         , textarea [ readonly True, rows 40, cols 100 ] [ viewSheet <| Spreadsheet.viewEncounters model runs ]
         ]
 

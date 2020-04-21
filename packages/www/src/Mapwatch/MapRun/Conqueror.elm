@@ -10,6 +10,7 @@ module Mapwatch.MapRun.Conqueror exposing
     , ids
     , npcFromId
     , searchString
+    , toString
     )
 
 import Dict exposing (Dict)

@@ -13,6 +13,7 @@ import View.Nav
 
 view : OkModel -> Html Msg
 view model =
+    -- debug tools are deliberately not translated, I only support them for myself
     div [ class "main" ]
         [ View.Home.viewHeader model
         , View.Nav.view model

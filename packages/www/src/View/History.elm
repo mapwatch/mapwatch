@@ -5,6 +5,8 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
+import Json.Encode as Json
+import Localized
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
@@ -119,20 +121,20 @@ viewMain model =
     in
     div []
         [ div []
-            [ View.Util.viewSearch [ placeholder "area name" ] model.query
+            [ View.Util.viewSearch [] model.query
             , View.Util.viewDateSearch model.query model.route
             , View.Util.viewGoalForm model.query
             ]
         , div []
             (if Feature.isActive Feature.GSheets model.query then
-                [ text "Export as: "
-                , a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " TSV spreadsheet" ]
+                [ Localized.text0 "history-export-header"
+                , a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " ", Localized.text0 "history-export-tsv" ]
                 , text " | "
-                , a [ Route.href model.query Route.GSheets ] [ View.Icon.fab "google-drive", text " Google Sheets (BETA)" ]
+                , a [ Route.href model.query Route.GSheets ] [ View.Icon.fab "google-drive", text " ", Localized.text0 "history-export-gsheets" ]
                 ]
 
              else
-                [ a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " Export as TSV spreadsheet" ] ]
+                [ a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " ", Localized.text0 "history-export-onlytsv" ] ]
             )
         , viewStatsTable model.query model.tz model.now runs
         , viewHistoryTable runs model
@@ -146,12 +148,12 @@ viewStatsTable query tz now runs =
             (case ( QueryDict.getPosix Route.keys.after query, QueryDict.getPosix Route.keys.before query ) of
                 ( Nothing, Nothing ) ->
                     List.concat
-                        [ viewStatsRows (text "Today") (runs |> RunSort.filterToday tz now |> MapRun.aggregate)
-                        , viewStatsRows (text "All-time") (runs |> MapRun.aggregate)
+                        [ viewStatsRows (Localized.text0 "history-summary-today") (runs |> RunSort.filterToday tz now |> MapRun.aggregate)
+                        , viewStatsRows (Localized.text0 "history-summary-alltime") (runs |> MapRun.aggregate)
                         ]
 
                 ( a, b ) ->
-                    viewStatsRows (text "This session") (runs |> RunSort.filterBetween { before = b, after = a } |> MapRun.aggregate)
+                    viewStatsRows (Localized.text0 "history-summary-session") (runs |> RunSort.filterBetween { before = b, after = a } |> MapRun.aggregate)
             )
         ]
 
@@ -160,17 +162,19 @@ viewStatsRows : Html msg -> MapRun.Aggregate -> List (Html msg)
 viewStatsRows title runs =
     [ tr []
         [ th [ class "title" ] [ title ]
-        , td [ colspan 10, class "maps-completed" ] [ text <| String.fromInt runs.num ++ View.Util.pluralize " map" " maps" runs.num ++ " completed" ]
+        , td [ colspan 10, class "maps-completed" ]
+            [ Localized.text "history-summary-completed" [ ( "count", Json.int runs.num ) ]
+            ]
         ]
     , tr []
         ([ td [] []
-         , td [] [ text "Average time per map" ]
+         , td [] [ Localized.text0 "history-summary-meandur" ]
          ]
             ++ viewDurationAggregate runs.mean
         )
     , tr []
         ([ td [] []
-         , td [] [ text "Total time" ]
+         , td [] [ Localized.text0 "history-summary-totaldur" ]
          ]
             ++ viewDurationAggregate { portals = toFloat runs.total.portals, duration = runs.total.duration }
         )
@@ -224,11 +228,17 @@ viewPaginator query numItems =
                 ( span [], span [] )
     in
     div [ class "paginator" ]
-        [ firstLink [ View.Icon.fas "fast-backward", text " First" ]
-        , prevLink [ View.Icon.fas "step-backward", text " Prev" ]
-        , span [] [ text <| String.fromInt firstVisItem ++ " - " ++ String.fromInt lastVisItem ++ " of " ++ String.fromInt numItems ]
-        , nextLink [ text "Next ", View.Icon.fas "step-forward" ]
-        , lastLink [ text "Last ", View.Icon.fas "fast-forward" ]
+        [ firstLink [ View.Icon.fas "fast-backward", text " ", Localized.text0 "history-page-first" ]
+        , prevLink [ View.Icon.fas "step-backward", text " ", Localized.text0 "history-page-prev" ]
+        , span []
+            [ Localized.text "history-page-count"
+                [ ( "pageStart", Json.int firstVisItem )
+                , ( "pageEnd", Json.int lastVisItem )
+                , ( "total", Json.int numItems )
+                ]
+            ]
+        , nextLink [ Localized.text0 "history-page-next", text " ", View.Icon.fas "step-forward" ]
+        , lastLink [ Localized.text0 "history-page-last", text " ", View.Icon.fas "fast-forward" ]
         ]
 
 
@@ -352,11 +362,8 @@ viewRunDurations : Maybe Duration -> MapRun -> List (Html msg)
 viewRunDurations goal run =
     [ td [ class "dur total-dur" ]
         [ if run.isAbandoned then
-            span
-                [ class "abandoned-run-duration"
-                , title "Map run abandoned - you went offline without returning to town first!\n\nSadly, when you go offline without returning to town, Mapwatch cannot know how long you spent in the map. Times shown here will be wrong.\n\nSee also https://github.com/mapwatch/mapwatch/issues/66"
-                ]
-                [ text "???" ]
+            Localized.element "history-row-totaldur-abandoned" [ "title" ] [] <|
+                span [ class "abandoned-run-duration" ] []
 
           else
             viewDuration run.duration.all
@@ -369,21 +376,20 @@ viewRunDurations goal run =
 viewDurationTail : { a | portals : Float, duration : MapRun.Durations } -> List (Html msg)
 viewDurationTail { portals, duration } =
     [ td [ class "dur" ] [ text " = " ]
-    , td [ class "dur" ] [ viewDuration duration.mainMap, text " in map " ]
+    , td [ class "dur" ] [ Localized.text "history-row-duration-map" [ ( "duration", Json.string <| View.Home.formatDuration duration.mainMap ) ] ]
     , td [ class "dur" ] [ text " + " ]
-    , td [ class "dur" ] [ viewDuration duration.town, text " in town " ]
+    , td [ class "dur" ] [ Localized.text "history-row-duration-town" [ ( "duration", Json.string <| View.Home.formatDuration duration.town ) ] ]
     ]
         ++ (if duration.sides > 0 then
                 [ td [ class "dur" ] [ text " + " ]
-                , td [ class "dur" ] [ viewDuration duration.sides, text " in sides" ]
+                , td [ class "dur" ] [ Localized.text "history-row-duration-sides" [ ( "duration", Json.string <| View.Home.formatDuration duration.sides ) ] ]
                 ]
 
             else
                 [ td [ class "dur" ] [], td [ class "dur" ] [] ]
            )
-        ++ [ td [ class "portals" ] [ text <| String.fromFloat (View.Util.roundToPlaces 2 portals) ++ View.Util.pluralize " portal" " portals" portals ]
-           , td [ class "town-pct" ]
-                [ text <| String.fromInt (clamp 0 100 <| floor <| 100 * (toFloat duration.town / Basics.max 1 (toFloat duration.all))) ++ "% in town" ]
+        ++ [ td [ class "portals" ] [ Localized.text "history-row-portals" [ ( "count", Json.float portals ) ] ]
+           , td [ class "town-pct" ] [ Localized.text "history-row-townpct" [ ( "percent", Json.float <| clamp 0.0 1.0 <| toFloat duration.town / Basics.max 1 (toFloat duration.all) ) ] ]
            ]
 
 
@@ -391,14 +397,18 @@ viewHistoryMainRow : { m | query : QueryDict, tz : Time.Zone, mapwatch : { mm | 
 viewHistoryMainRow ({ tz, query } as m) { showDate } goal r =
     tr [ class "main-area" ]
         ((if showDate then
-            [ td [ class "date" ] [ View.Home.viewDate tz r.updatedAt ] ]
+            [ td [ class "date", title <| ISO8601.toString <| ISO8601.fromPosix r.updatedAt ]
+                [ Localized.text "history-row-date" [ ( "date", Json.int <| Time.posixToMillis r.updatedAt ) ] ]
+            ]
 
           else
             []
          )
             ++ [ td [ class "zone" ] [ View.Home.viewRun query r ]
-               , td [ title <| "Searchable text for this run: \n\n" ++ RunSort.searchString m.mapwatch.datamine r ]
-                    [ View.Home.viewRegion query r.address.worldArea ]
+               , td []
+                    [ Localized.element "history-row-region" [ "title" ] [ ( "body", Json.string <| RunSort.searchString m.mapwatch.datamine r ) ] <|
+                        View.Home.viewRegion query r.address.worldArea
+                    ]
                ]
             ++ viewRunDurations goal r
         )
@@ -415,12 +425,39 @@ viewHistorySideAreaRow query { showDate } ( instance, d ) =
          )
             ++ [ td [] []
                , td [] []
-               , td [ class "zone", colspan 7 ] [ View.Home.viewSideAreaName query (Instance.Instance instance) ]
+               , td [ class "zone", colspan 7 ] [ viewSideAreaName query (Instance.Instance instance) ]
                , td [ class "side-dur" ] [ viewDuration d ]
                , td [ class "portals" ] []
                , td [ class "town-pct" ] []
                ]
         )
+
+
+viewSideAreaName : QueryDict -> Instance -> Html msg
+viewSideAreaName query instance =
+    let
+        label =
+            View.Home.viewInstance query instance
+    in
+    case Instance.worldArea instance of
+        Nothing ->
+            label
+
+        Just w ->
+            if Datamine.isMap w then
+                span [] [ View.Icon.zana, Localized.text0 "history-side-zana", text " (", label, text ")" ]
+
+            else if w.isVaalArea then
+                span [] [ View.Icon.vaal, Localized.text0 "history-side-vaalarea", text " (", label, text ")" ]
+
+            else if w.isLabTrial then
+                span [] [ View.Icon.labTrial, Localized.text0 "history-side-labtrial", text " (", label, text ")" ]
+
+            else if w.isAbyssalDepths then
+                span [] [ View.Icon.abyss, label ]
+
+            else
+                label
 
 
 viewHistoryNpcTextRow : QueryDict -> HistoryRowConfig -> ( NpcId, List String ) -> Maybe (Html msg)
@@ -453,31 +490,31 @@ viewHistoryNpcTextRow query { showDate } ( npcId, texts ) =
 viewNpcText : QueryDict -> String -> List (Html msg)
 viewNpcText query npcId =
     if npcId == NpcId.einhar then
-        [ View.Icon.einhar, text "Einhar, Beastmaster" ]
+        [ View.Icon.einhar, Localized.text0 "history-npc-einhar" ]
 
     else if npcId == NpcId.alva then
-        [ View.Icon.alva, text "Alva, Master Explorer" ]
+        [ View.Icon.alva, Localized.text0 "history-npc-alva" ]
 
     else if npcId == NpcId.niko then
-        [ View.Icon.niko, text "Niko, Master of the Depths" ]
+        [ View.Icon.niko, Localized.text0 "history-npc-niko" ]
 
     else if npcId == NpcId.betrayalGroup then
         -- else if npcId == NpcId.jun then
-        [ View.Icon.jun, text "Jun, Veiled Master" ]
+        [ View.Icon.jun, Localized.text0 "history-npc-jun" ]
 
     else if npcId == NpcId.cassia then
-        [ View.Icon.cassia, text "Sister Cassia" ]
+        [ View.Icon.cassia, Localized.text0 "history-npc-cassia" ]
         -- Don't show Tane during Metamorph league
         -- Actually, his voicing is so inconsistent that we can't show him after metamorph league either!
         -- else if npcId == NpcId.tane then
-        -- [ View.Icon.tane, text "Tane Octavius" ]
+        -- [ View.Icon.tane, Localized.text0 "history-npc-tane" ]
         -- Don't show conquerors, they have their own special function
 
     else if npcId == NpcId.delirium && Feature.isActive Feature.DeliriumEncounter query then
-        [ View.Icon.delirium, text "Delirium Mirror" ]
+        [ View.Icon.delirium, Localized.text0 "history-npc-delirium" ]
 
     else if npcId == NpcId.legionGeneralGroup then
-        [ View.Icon.legion, text "Legion General" ]
+        [ View.Icon.legion, Localized.text0 "history-npc-legion" ]
 
     else
         []
@@ -490,29 +527,38 @@ viewConquerorRow { showDate } npcSays ( id, encounter ) =
         says =
             Dict.get (Conqueror.npcFromId id) npcSays |> Maybe.withDefault []
 
-        label : List (Html msg)
-        label =
+        icon : Html msg
+        icon =
             case id of
                 Conqueror.Baran ->
-                    [ View.Icon.baran, text "Baran, the Crusader" ]
+                    View.Icon.baran
 
                 Conqueror.Veritania ->
-                    [ View.Icon.veritania, text "Veritania, the Redeemer" ]
+                    View.Icon.veritania
 
                 Conqueror.AlHezmin ->
-                    [ View.Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
+                    View.Icon.alHezmin
 
                 Conqueror.Drox ->
-                    [ View.Icon.drox, text "Drox, the Warlord" ]
+                    View.Icon.drox
 
         body : List (Html msg)
         body =
             case encounter of
                 Conqueror.Taunt n ->
-                    label ++ [ text <| ": Taunt " ++ String.fromInt n ]
+                    [ icon
+                    , Localized.text "history-conqueror-taunt"
+                        [ ( "conqueror", Json.string <| Conqueror.toString id )
+                        , ( "taunt", Json.int n )
+                        ]
+                    ]
 
                 Conqueror.Fight ->
-                    label ++ [ text ": Fight" ]
+                    [ icon
+                    , Localized.text "history-conqueror-fight"
+                        [ ( "conqueror", Json.string <| Conqueror.toString id )
+                        ]
+                    ]
     in
     tr [ class "npctext-area" ]
         ((if showDate then

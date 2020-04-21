@@ -4,6 +4,7 @@ import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import Localized
 import Mapwatch as Mapwatch
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
@@ -74,12 +75,12 @@ viewMain model =
 
         hideEarlierButton =
             a [ class "button", Route.href (QueryDict.insertPosix Route.keys.after model.now model.query) Route.Timer ]
-                [ View.Icon.fas "eye-slash", text " Hide earlier maps" ]
+                [ View.Icon.fas "eye-slash", text " ", Localized.text0 "timer-filter-earlier" ]
 
-        ( sessname, runs, sessionButtons ) =
+        ( mapsDoneLabel, runs, sessionButtons ) =
             case after of
                 Nothing ->
-                    ( "today"
+                    ( Localized.text0 "timer-donetoday"
                     , RunSort.filterToday model.tz model.now model.mapwatch.runs
                     , [ hideEarlierButton
                       , View.Util.hidePreLeagueButton model.query model.route
@@ -87,13 +88,13 @@ viewMain model =
                     )
 
                 Just _ ->
-                    ( "this session"
+                    ( Localized.text0 "timer-donesession"
                     , RunSort.filterBetween { before = Nothing, after = after } model.mapwatch.runs
                     , [ a [ class "button", Route.href (Dict.remove Route.keys.after model.query) Route.Timer ]
-                            [ View.Icon.fas "eye", text " Unhide all" ]
+                            [ View.Icon.fas "eye", text " ", Localized.text0 "util-filter-none" ]
                       , hideEarlierButton
                       , a [ class "button", Route.href (QueryDict.insertPosix Route.keys.before model.now model.query) Route.History ]
-                            [ View.Icon.fas "camera", text " Snapshot history" ]
+                            [ View.Icon.fas "camera", text " ", Localized.text0 "timer-filter-snapshot" ]
                       ]
                     )
 
@@ -115,8 +116,8 @@ viewMain model =
                         ]
                     , tr []
                         [ td [ colspan 12, class "timer-links" ]
-                            [ a [ Route.href model.query Route.History ] [ View.Icon.fas "history", text " History" ]
-                            , a [ Route.href model.query Route.Overlay ] [ View.Icon.fas "align-justify", text " Overlay" ]
+                            [ a [ Route.href model.query Route.History ] [ View.Icon.fas "history", text " ", Localized.text0 "timer-link-history" ]
+                            , a [ Route.href model.query Route.Overlay ] [ View.Icon.fas "align-justify", text " ", Localized.text0 "timer-link-overlay" ]
                             ]
                         ]
                     ]
@@ -127,13 +128,13 @@ viewMain model =
                 Just run_ ->
                     ( Just run_.duration.all
                     , goalDuration run_
-                    , [ td [] [ text "Mapping in: " ], td [] [ View.Home.viewRun model.query run_ ] ]
+                    , [ td [] [ Localized.text0 "timer-currentmap" ], td [] [ View.Home.viewRun model.query run_ ] ]
                     )
 
                 Nothing ->
                     ( Nothing
                     , Nothing
-                    , [ td [] [ text "Not mapping" ]
+                    , [ td [] [ Localized.text0 "timer-currentmap-none" ]
                       , td [] []
                       ]
                     )
@@ -150,7 +151,7 @@ viewMain model =
             [ tbody []
                 [ tr [] mappingNow
                 , tr []
-                    [ td [] [ text "Last entered: " ]
+                    [ td [] [ Localized.text0 "timer-lastentered" ]
                     , td []
                         [ View.Home.viewMaybeInstance model.query <| Maybe.map .val model.mapwatch.instance
                         , small [ style "opacity" "0.5" ]
@@ -160,7 +161,7 @@ viewMain model =
                             ]
                         ]
                     ]
-                , tr [] [ td [] [ text <| "Maps done " ++ sessname ++ ": " ], td [] [ text <| String.fromInt <| List.length runs ] ]
+                , tr [] [ td [] [ mapsDoneLabel ], td [] [ text <| String.fromInt <| List.length runs ] ]
                 , tr [ class "session-buttons" ] [ td [ colspan 2 ] sessionButtons ]
                 ]
             ]

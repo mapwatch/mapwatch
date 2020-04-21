@@ -5,6 +5,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
 import Json.Encode as E
+import Localized
 import Mapwatch
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Maybe.Extra
@@ -49,34 +50,29 @@ viewBody model =
             div [] <|
                 [ div [ class "beta-alert" ]
                     [ View.Icon.fas "exclamation-triangle"
-                    , text " Beware: Mapwatch's Google Sheets export is new "
-                    , br [] []
-                    , text "and still only "
-                    , code [] [ text "BETA" ]
-                    , text " quality. Expect bugs."
+                    , text " "
+                    , Localized.text0 "export-gsheets-beta"
                     ]
                 ]
                     ++ viewMain model
+                    ++ [ H.p [] [ a [ Route.href model.query Route.Privacy ] [ Localized.text0 "settings-privacy" ] ] ]
 
 
 viewMain : OkModel -> List (Html Msg)
 viewMain model =
     case model.gsheets of
         RemoteData.NotAsked ->
-            [ p [] [ text "Login to your Google account below to create a spreadsheet with your Mapwatch data." ]
-            , button [ onClick Model.GSheetsLogin ] [ text "Login to Google Sheets" ]
-            , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
+            [ p [] [ Localized.text0 "export-gsheets-login-help" ]
+            , button [ onClick Model.GSheetsLogin ] [ Localized.text0 "export-gsheets-login" ]
             ]
 
         RemoteData.Loading ->
-            [ button [ disabled True ] [ View.Icon.fasPulse "spinner", text " Login to Google Sheets" ]
-            , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
+            [ button [ disabled True ] [ View.Icon.fasPulse "spinner", text " ", Localized.text0 "export-gsheets-login" ]
             ]
 
         RemoteData.Failure err ->
-            [ button [ onClick Model.GSheetsLogin ] [ text "Login to Google Sheets" ]
+            [ button [ onClick Model.GSheetsLogin ] [ Localized.text0 "export-gsheets-login" ]
             , pre [] [ text err ]
-            , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
             ]
 
         RemoteData.Success gsheets ->
@@ -85,18 +81,26 @@ viewMain model =
                     View.History.listRuns model
             in
             [ div []
-                [ case ( gsheets.url, model.settings.spreadsheetId ) of
-                    ( RemoteData.Loading, _ ) ->
+                [ let
+                    labelId =
+                        case model.settings.spreadsheetId of
+                            Nothing ->
+                                "export-gsheets-new"
+
+                            Just _ ->
+                                "export-gsheets-update"
+
+                    label =
+                        Localized.text labelId [ ( "count", E.int <| List.length runs ) ]
+                  in
+                  case gsheets.url of
+                    RemoteData.Loading ->
                         button [ disabled True ]
-                            [ View.Icon.fasPulse "spinner", text <| " Write " ++ String.fromInt (List.length runs) ++ " maps to spreadsheet id: " ]
+                            [ View.Icon.fasPulse "spinner", text " ", label ]
 
-                    ( _, Nothing ) ->
+                    _ ->
                         button [ onClick <| gsheetsWrite model runs Nothing ]
-                            [ text <| "Write " ++ String.fromInt (List.length runs) ++ " maps to a new spreadsheet" ]
-
-                    ( _, Just id ) ->
-                        button [ onClick <| gsheetsWrite model runs (Just id) ]
-                            [ text <| "Write " ++ String.fromInt (List.length runs) ++ " maps to spreadsheet id: " ]
+                            [ label ]
                 , input
                     [ type_ "text"
                     , value <| Maybe.withDefault "" model.settings.spreadsheetId
@@ -116,19 +120,20 @@ viewMain model =
 
                 RemoteData.Success url ->
                     p []
-                        [ text "Export successful! "
-                        , a [ target "_blank", href url ] [ text "View your spreadsheet." ]
+                        [ Localized.text0 "export-gsheets-success"
+                        , text " "
+                        , a [ target "_blank", href url ]
+                            [ Localized.text0 "export-gsheets-success-link" ]
                         ]
             , p []
                 [ button [ onClick Model.GSheetsLogout ]
-                    [ text "Logout of Google Sheets" ]
+                    [ Localized.text0 "export-gsheets-logout" ]
                 ]
             , p []
                 [ button [ onClick Model.GSheetsDisconnect ]
-                    [ text "Disconnect Google Sheets" ]
-                , div [] [ small [] [ text " Log out everywhere, and remove Mapwatch from your Google account." ] ]
+                    [ Localized.text0 "export-gsheets-disconnect" ]
+                , div [] [ small [] [ Localized.text0 "export-gsheets-disconnect-help" ] ]
                 ]
-            , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
             ]
 
 

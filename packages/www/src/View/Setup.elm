@@ -5,6 +5,7 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Json.Decode as Decode
+import Localized
 import Model as Model exposing (Msg(..), OkModel)
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
@@ -23,22 +24,8 @@ viewDownloadLink model =
     if Feature.isActive Feature.DownloadLink model.query && not (AppPlatform.isElectron model || Feature.getBackendName model.query == Just "www-nativefs") then
         div [ class "electron-download" ] <|
             -- [ span [] [ View.Icon.fas "exclamation-triangle" ]
-            [ div []
-                [ text "New: "
-                , b []
-                    [ a [ Route.downloadMapwatchHref ]
-                        [ text "download Mapwatch" ]
-                    ]
-                , text " to see your maps updated while you play!"
-                ]
-            , div []
-                [ small []
-                    [ text " (Sadly, updates while you play will soon be "
-                    , a [ target "_blank", Route.fileWatchingHref ]
-                        [ text "unavailable" ]
-                    , text " in all web browsers.) "
-                    ]
-                ]
+            [ div [] [ Localized.text0 "setup-download-link" ]
+            , div [] [ small [] [ Localized.text0 "setup-download-why" ] ]
             ]
 
     else
@@ -59,37 +46,30 @@ view model =
     -- H.form [ onSubmit StartWatching ]
     H.form
         [ style "display" display ]
-        [ p []
-            [ text "Give me your "
-            , a [ target "_blank", href "https://www.pathofexile.com" ] [ text "Path of Exile" ]
-            , text " "
-            , code [] [ text "Client.txt" ]
-            , text " file, and I'll give you some statistics about your recent mapping activity. "
-            ]
+        [ p [] [ Localized.text0 "setup-intro1" ]
         , p []
-            ([ text "Then, " ]
-                ++ (case ( AppPlatform.isElectron model, Feature.isActive Feature.DownloadLink model.query ) of
-                        ( True, _ ) ->
-                            -- electron - no link necessary, electron always live-updates
-                            []
+            (case ( AppPlatform.isElectron model, Feature.isActive Feature.DownloadLink model.query ) of
+                ( True, _ ) ->
+                    -- electron - no link necessary, electron always live-updates
+                    [ Localized.text0 "setup-electron-intro2" ]
 
-                        ( False, True ) ->
-                            -- www, download-link - link to the mapwatch app
-                            [ a [ Route.downloadMapwatchHref ] [ text "if you're using the Mapwatch app" ], text ", " ]
+                ( False, True ) ->
+                    -- www, download-link - link to the mapwatch app
+                    [ Localized.text0 "setup-www-download-intro2" ]
 
-                        ( False, False ) ->
-                            -- www, no-download-link - chrome still works for now
-                            [ a [ target "_blank", href "https://chrome.google.com" ] [ text "if you're using Google Chrome" ], text ", " ]
-                   )
-                ++ [ text "leave me open while you play - I'll keep watching, no need to upload again. " ]
+                ( False, False ) ->
+                    -- www, no-download-link - chrome still works for now
+                    [ Localized.text0 "setup-www-nodownload-intro2" ]
             )
         , p []
-            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href "?tickStart=1526927461000&logtz=0&example=stripped-client.txt#/" ]) [ text "Run an example now!" ]
+            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href "?tickStart=1526927461000&logtz=0&example=stripped-client.txt#/" ]) [ Localized.text0 "setup-example" ]
             ]
         , viewDownloadLink model
         , hr [] []
         , p []
-            [ text "Analyze only the last "
+            -- TODO: splitting this up into 2 messages is super lame; this should be parameterizable
+            [ Localized.text0 "setup-size-pre"
+            , text " "
             , input
                 [ type_ "number"
                 , value <| String.fromInt model.config.maxSize
@@ -99,7 +79,8 @@ view model =
                 , tabindex 1
                 ]
                 []
-            , text " MB of history"
+            , text " "
+            , Localized.text0 "setup-size-post"
             ]
         , div [] <| viewFileSelector model
         , View.Volume.view model
@@ -108,7 +89,7 @@ view model =
                 []
 
              else
-                [ text <| "Warning: we don't support your web browser. If you have trouble, try ", a [ href "https://www.google.com/chrome/" ] [ text "Chrome" ], text "." ]
+                [ Localized.text0 "setup-badbrowser" ]
             )
 
         -- uncomment and screenshot for a favicon.
@@ -119,32 +100,16 @@ view model =
 viewFileSelector : OkModel -> List (Html Msg)
 viewFileSelector model =
     if Feature.getBackendName model.query == Just "www-nativefs" then
-        [ text "Client.txt: "
+        [ Localized.text0 "setup-filepicker"
+        , text " "
         , button
             [ type_ "button"
             , onClick FileSelector
             ]
-            [ text "Choose File" ]
-        , div []
-            [ text "Hint - "
-            , a [ target "_blank", Route.fileWatchingHref ] [ text "read this first!" ]
-            , text " This "
-            , code [] [ text "nativefs" ]
-            , text " version of Mapwatch needs some extra work."
-            ]
-        , div []
-            [ text "If you've set things up properly, the file I need is here, near your item filters:"
-            , br [] []
-            , code [] [ text "C:\\Users\\%USERNAME%\\Documents\\My Games\\Path of Exile\\mapwatch.erosson.org---Client.txt" ]
-            ]
-        , div []
-            [ text "Alternately, "
-            , a [ href "https://mapwatch.erosson.org" ] [ text "use the original web version of Mapwatch" ]
-            , text " (with no updates while you play), or "
-            , a [ target "_blank", Route.downloadMapwatchHref ] [ text "download Mapwatch" ]
-            , text "."
-            ]
-        , br [] []
+            [ Localized.text0 "setup-filepicker-native-button" ]
+        , div [] [ Localized.text0 "setup-filepicker-native-help1" ]
+        , div [] [ Localized.text0 "setup-filepicker-native-help2" ]
+        , div [] [ Localized.text0 "setup-filepicker-native-help3" ]
         , br [] []
         ]
 
@@ -153,7 +118,8 @@ viewFileSelector model =
             id_ =
                 "clientTxt"
         in
-        [ text "Client.txt: "
+        [ Localized.text0 "setup-filepicker"
+        , text " "
         , input
             [ type_ "file"
             , id id_
@@ -161,11 +127,5 @@ viewFileSelector model =
             , tabindex 2
             ]
             []
-        , div []
-            [ text "Hint - the file I need is usually in one of these places:"
-            , br [] []
-            , code [] [ text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
-            , br [] []
-            , code [] [ text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
-            ]
+        , div [] [ Localized.text0 "setup-filepicker-help" ]
         ]

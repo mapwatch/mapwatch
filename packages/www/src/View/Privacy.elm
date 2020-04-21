@@ -17,5 +17,7 @@ view model =
     div [ class "main" ]
         [ View.Home.viewHeader model
         , View.Nav.view model
+
+        -- Privacy policy is deliberately not translated, I'm not hiring bilingual lawyers for this project, sorry
         , model.flags.privacy |> Markdown.toHtml []
         ]

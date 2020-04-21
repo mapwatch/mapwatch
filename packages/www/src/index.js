@@ -21,6 +21,8 @@ import '!!file-loader?name=CHANGELOG.md!../../../CHANGELOG.md'
 import '!!file-loader?name=PRIVACY.md!../../../PRIVACY.md'
 import '!!file-loader?name=rss.xml!../../rss/dist/rss.xml'
 import '!!file-loader?name=version.txt!../tmp/version.txt'
+import '@wolfadex/fluent-web/commonjs/index.js'
+import messages from './lang/messages'
 
 // Be careful with timezones throughout this file. Use Date.now(), not new Date(),
 // for data sent to Elm: no risk of getting timezones involved that way.
@@ -28,6 +30,12 @@ import '!!file-loader?name=version.txt!../tmp/version.txt'
 const SETTINGS_KEY = 'mapwatch'
 const MB = Math.pow(2,20)
 
+window.addEventListener('fluent-web-error', event => {
+  console.error('fluent-web-error:',
+    event && event.detail && event.detail.messageId,
+    ...((event && event.detail && event.detail.errors) || []),
+    event)
+})
 function main() {
   if (window.electronPreloadError) {
     console.error(window.electronPreloadError)
@@ -170,6 +178,7 @@ function createFlags({backend, settings, qs, electronFlags}) {
     platform: backend.platform,
     datamine,
     electronFlags,
+    messages,
   }
 }
 function fetchExample(qs) {

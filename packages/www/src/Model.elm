@@ -43,6 +43,7 @@ type alias Flags =
     , logtz : Maybe Float
     , settings : D.Value
     , electronFlags : Maybe { version : String }
+    , messages : D.Value
     }
 
 

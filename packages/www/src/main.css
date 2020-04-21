@@ -351,3 +351,6 @@ svg.icon-region .focus.focus-drox {
 .abandoned-run-duration {
   font-style: italic;
 }
+
+/* show translatable text during development */
+/* fluent-text, fluent-element { background: green; color: white;} */

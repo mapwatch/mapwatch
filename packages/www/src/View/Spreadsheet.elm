@@ -7,6 +7,12 @@ module View.Spreadsheet exposing
     , viewMaps
     )
 
+-- TODO: how do we localize this?
+-- Our other Elm localization depends on webcomponents, but spreadsheets cannot
+-- work that way.
+-- TSVs are string processing, GSheets is JSON processing + port HTTP requests.
+-- We probably have to move this to JS + ports for proper localization :(
+
 import Dict exposing (Dict)
 import Duration exposing (Millis)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)

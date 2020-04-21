@@ -4,6 +4,8 @@ import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import Json.Encode as Json
+import Localized
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.EncounterTally as EncounterTally exposing (EncounterTally)
@@ -80,7 +82,7 @@ viewMain model =
                 |> RunSort.filterBetween { before = before, after = after }
     in
     div []
-        [ View.Util.viewSearch [ placeholder "map name" ] model.query
+        [ View.Util.viewSearch [] model.query
         , View.Util.viewDateSearch model.query model.route
         , div [] <| viewEncounterTally model.query <| EncounterTally.fromMapRuns runs
         ]
@@ -90,13 +92,9 @@ viewEncounterTally : QueryDict -> EncounterTally -> List (Html msg)
 viewEncounterTally query tally =
     [ table []
         [ thead []
-            [ th [ style "text-align" "right" ] [ text "Encounter" ]
-            , th [] [ text "#" ]
-            , th []
-                [ text "% of "
-                , text <| String.fromInt tally.count
-                , text " maps"
-                ]
+            [ th [ style "text-align" "right" ] [ Localized.text0 "encounters-header-name" ]
+            , th [] [ Localized.text0 "encounters-header-count" ]
+            , th [] [ Localized.text "encounters-header-percent" [ ( "count", Json.int tally.count ) ] ]
             ]
         , tbody []
             (tally
@@ -116,8 +114,8 @@ viewEncounterTally query tally =
                                         in
                                         [ a [ Route.href q Route.Encounters ] row.label ]
                                 )
-                            , td [] [ text "×", text <| String.fromInt row.count ]
-                            , td [] [ row.pct * 100 |> String.fromFloat |> String.left 5 |> text, text "%" ]
+                            , td [] [ Localized.text "encounters-row-count" [ ( "count", Json.int row.count ) ] ]
+                            , td [] [ Localized.text "encounters-row-percent" [ ( "percent", Json.float row.pct ) ] ]
                             ]
                     )
             )
@@ -127,21 +125,32 @@ viewEncounterTally query tally =
 
 listEncounterTally : QueryDict -> EncounterTally -> List { label : List (Html msg), count : Int, pct : Float, search : Maybe String }
 listEncounterTally query tally =
-    [ ( tally.abyssalDepths, "side:abyssal depths", [ View.Icon.abyss, text "Abyssal Depths" ] )
-    , ( tally.vaalAreas, "vaal-side:", [ View.Icon.vaal, text "Vaal side areas" ] )
-    , ( tally.uniqueMaps, "unique-map:", [ View.Icon.uniqueMap, text "Unique Maps" ] )
-    , ( tally.labTrialsTotal, "lab-trial-side:", [ View.Icon.labTrial, text "(", text <| String.fromInt <| List.length tally.labTrials, text "/6) Labyrinth Trials" ] )
-    , ( tally.blightedMaps, "blighted", [ View.Icon.blightedMap, text "Blighted Maps" ] )
-    , ( tally.conquerors, "conqueror:", [ span [ title "excluding Sirus" ] [ View.Icon.sirus, text "Conqueror Fights" ] ] )
-    , ( tally.zana, "npc:zana", [ View.Icon.zana, text "Zana" ] )
-    , ( tally.einhar, "npc:einhar", [ View.Icon.einhar, text "Einhar" ] )
-    , ( tally.alva, "npc:alva", [ View.Icon.alva, text "Alva" ] )
-    , ( tally.niko, "npc:niko", [ View.Icon.niko, text "Niko" ] )
-    , ( tally.jun, "npc:jun", [ View.Icon.jun, text "Jun" ] )
-    , ( tally.cassia, "npc:cassia", [ View.Icon.cassia, text "Cassia" ] )
+    [ ( tally.abyssalDepths, "side:abyssal depths", [ View.Icon.abyss, Localized.text0 "encounters-name-abyssaldepths" ] )
+    , ( tally.vaalAreas, "vaal-side:", [ View.Icon.vaal, Localized.text0 "encounters-name-vaalarea" ] )
+    , ( tally.uniqueMaps, "unique-map:", [ View.Icon.uniqueMap, Localized.text0 "encounters-name-uniquemaps" ] )
+    , ( tally.labTrialsTotal
+      , "lab-trial-side:"
+      , [ View.Icon.labTrial
+        , Localized.text "encounters-name-labtrials" [ ( "count", Json.int <| List.length tally.labTrials ) ]
+        ]
+      )
+    , ( tally.conquerors
+      , "conqueror:"
+      , [ Localized.element "encounters-name-conquerors-title" [ "title" ] [] <|
+            span [] [ View.Icon.sirus, Localized.text0 "encounters-name-conquerors" ]
+        ]
+      )
+    , ( tally.blightedMaps, "blighted", [ View.Icon.blightedMap, Localized.text0 "encounters-name-blightedmaps" ] )
+    , ( tally.zana, "npc:zana", [ View.Icon.zana, Localized.text0 "encounters-name-zana" ] )
+    , ( tally.einhar, "npc:einhar", [ View.Icon.einhar, Localized.text0 "encounters-name-einhar" ] )
+    , ( tally.alva, "npc:alva", [ View.Icon.alva, Localized.text0 "encounters-name-alva" ] )
+    , ( tally.niko, "npc:niko", [ View.Icon.niko, Localized.text0 "encounters-name-niko" ] )
+    , ( tally.jun, "npc:jun", [ View.Icon.jun, Localized.text0 "encounters-name-jun" ] )
+    , ( tally.cassia, "npc:cassia", [ View.Icon.cassia, Localized.text0 "encounters-name-cassia" ] )
     ]
         ++ (if Feature.isActive Feature.DeliriumEncounter query then
-                [ ( tally.delirium, "npc:strange voice", [ View.Icon.delirium, text "Delirium" ] ) ]
+                [ ( tally.delirium, "npc:strange voice", [ View.Icon.delirium, Localized.text0 "encounters-name-delirium" ] )
+                ]
 
             else
                 []

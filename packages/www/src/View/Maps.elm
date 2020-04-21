@@ -4,6 +4,8 @@ import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import Json.Encode as Json
+import Localized
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Instance as Instance exposing (Instance)
@@ -136,7 +138,7 @@ viewMain model =
                 |> List.map (viewMap model.query)
     in
     div []
-        [ View.Util.viewSearch [ placeholder "map name" ] model.query
+        [ View.Util.viewSearch [] model.query
         , View.Util.viewDateSearch model.query model.route
         , table [ class "by-map" ]
             [ thead [] [ header model.query ]
@@ -170,18 +172,18 @@ groupRuns dm =
 header : QueryDict -> Html msg
 header query =
     let
-        cell : String -> String -> Html msg
+        cell : String -> Html msg -> Html msg
         cell col label =
-            th [] [ a [ headerHref query col ] [ text label ] ]
+            th [] [ a [ headerHref query col ] [ label ] ]
     in
     tr []
-        [ cell "name" "Name"
-        , cell "region" "Region"
-        , cell "tier" "Tier"
-        , cell "meandur" "Average"
-        , cell "portals" "Portals"
-        , cell "runs" "# Runs"
-        , cell "bestdur" "Best"
+        [ cell "name" <| Localized.text0 "maps-header-name"
+        , cell "region" <| Localized.text0 "maps-header-region"
+        , cell "tier" <| Localized.text0 "maps-header-tier"
+        , cell "meandur" <| Localized.text0 "maps-header-meandur"
+        , cell "portals" <| Localized.text0 "maps-header-portals"
+        , cell "runs" <| Localized.text0 "maps-header-count"
+        , cell "bestdur" <| Localized.text0 "maps-header-bestdur"
         ]
 
 
@@ -213,12 +215,12 @@ viewMap query { name, worldArea, runs } =
                     []
 
                 Just tier ->
-                    [ text <| "(T" ++ String.fromInt tier ++ ")" ]
+                    [ Localized.text "maps-row-tier" [ ( "tier", Json.int tier ) ] ]
             )
-        , td [] [ text <| View.Home.formatDuration mean.duration.mainMap ++ " per map" ]
-        , td [] [ text <| String.fromFloat (View.Util.roundToPlaces 2 mean.portals) ++ View.Util.pluralize " portal" " portals" mean.portals ]
-        , td [] [ text <| "×" ++ String.fromInt num ++ " runs." ]
-        , td [] [ text <| Maybe.Extra.unwrap "--:--" View.Home.formatDuration best.mainMap ++ " per map" ]
+        , td [] [ Localized.text "maps-row-meandur" [ ( "duration", Json.string <| View.Home.formatDuration mean.duration.mainMap ) ] ]
+        , td [] [ Localized.text "maps-row-portals" [ ( "count", Json.float mean.portals ) ] ]
+        , td [] [ Localized.text "maps-row-count" [ ( "count", Json.int num ) ] ]
+        , td [] [ Localized.text "maps-row-bestdur" [ ( "duration", Json.string <| Maybe.Extra.unwrap "--:--" View.Home.formatDuration best.mainMap ) ] ]
         ]
 
 

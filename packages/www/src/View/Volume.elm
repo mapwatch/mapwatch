@@ -3,6 +3,7 @@ module View.Volume exposing (view)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import Localized
 import Model as M exposing (Msg, OkModel)
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
@@ -19,7 +20,7 @@ view { settings, route, query } =
         div []
             -- without a fixed width, the volume-off/low/high icons are all different widths
             [ span [ style "display" "inline-block", style "width" "1em" ] [ Icon.fas (viewIconName volume) ]
-            , text " Speech volume: "
+            , Localized.text0 "settings-volume"
             , input
                 [ name "volume"
                 , class "volume"
