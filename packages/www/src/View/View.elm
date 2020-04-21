@@ -3,10 +3,12 @@ module View.View exposing (view, viewBody)
 import AppPlatform
 import Browser
 import Html as H exposing (..)
+import Html.Attributes as A exposing (..)
 import Localized
 import Mapwatch as Mapwatch
 import Model as Model exposing (Model, Msg)
 import Route exposing (Route(..))
+import Route.Feature as Feature exposing (Feature)
 import View.Changelog
 import View.Debug
 import View.DebugDatamine
@@ -38,46 +40,48 @@ viewBody rmodel =
 
         Ok model ->
             Localized.provider (Just model.flags.messages)
-                [ case model.route of
-                    History ->
-                        View.History.view model
+                [ div [ classList [ ( "debug-localized", Feature.isActive Feature.DebugLocalized model.query ) ] ]
+                    [ case model.route of
+                        History ->
+                            View.History.view model
 
-                    HistoryTSV ->
-                        View.HistoryTSV.view model
+                        HistoryTSV ->
+                            View.HistoryTSV.view model
 
-                    GSheets ->
-                        View.GSheets.view model
+                        GSheets ->
+                            View.GSheets.view model
 
-                    Maps ->
-                        View.Maps.view model
+                        Maps ->
+                            View.Maps.view model
 
-                    Encounters ->
-                        View.Encounters.view model
+                        Encounters ->
+                            View.Encounters.view model
 
-                    Timer ->
-                        View.Timer.view model
+                        Timer ->
+                            View.Timer.view model
 
-                    Overlay ->
-                        View.Overlay.view model
+                        Overlay ->
+                            View.Overlay.view model
 
-                    Debug ->
-                        View.Debug.view model
+                        Debug ->
+                            View.Debug.view model
 
-                    DebugDumpLines ->
-                        View.DumpLines.view model
+                        DebugDumpLines ->
+                            View.DumpLines.view model
 
-                    DebugDatamine ->
-                        View.DebugDatamine.view model.mapwatch.datamine
+                        DebugDatamine ->
+                            View.DebugDatamine.view model.mapwatch.datamine
 
-                    Changelog ->
-                        View.Changelog.view model
+                        Changelog ->
+                            View.Changelog.view model
 
-                    Privacy ->
-                        View.Privacy.view model
+                        Privacy ->
+                            View.Privacy.view model
 
-                    Settings ->
-                        View.Settings.view model
+                        Settings ->
+                            View.Settings.view model
 
-                    NotFound loc ->
-                        View.NotFound.view model
+                        NotFound loc ->
+                            View.NotFound.view model
+                    ]
                 ]

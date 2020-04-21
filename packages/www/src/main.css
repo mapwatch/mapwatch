@@ -353,4 +353,8 @@ svg.icon-region .focus.focus-drox {
 }
 
 /* show translatable text during development */
-/* fluent-text, fluent-element { background: green; color: white;} */
+.debug-localized fluent-text,
+.debug-localized fluent-element {
+  background: green;
+  color: white;
+}

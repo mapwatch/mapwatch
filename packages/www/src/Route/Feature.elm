@@ -37,6 +37,7 @@ type Feature
     | ConquerorStatus
     | DeliriumEncounter
     | Backend
+    | DebugLocalized
 
 
 type alias QueryString =
@@ -52,6 +53,7 @@ list =
     , ConquerorStatus
     , DeliriumEncounter
     , Backend
+    , DebugLocalized
     ]
 
 
@@ -83,6 +85,9 @@ config feature =
 
         Backend ->
             FeatureConfig feature "backend" False
+
+        DebugLocalized ->
+            FeatureConfig feature "debugLocalized" False
 
 
 byString : Dict String FeatureConfig
