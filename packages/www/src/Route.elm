@@ -9,6 +9,7 @@ module Route exposing
     , pushUrl
     , replaceUrl
     , toString
+    , translatorUrl
     )
 
 import Browser.Navigation as Nav
@@ -217,3 +218,8 @@ appReleasesHref =
 fileWatchingHref : Attribute msg
 fileWatchingHref =
     A.href "https://github.com/mapwatch/mapwatch/blob/master/WATCHING.md"
+
+
+translatorUrl : String
+translatorUrl =
+    "https://github.com/mapwatch/mapwatch/blob/master/TRANSLATING.md"

@@ -1,14 +1,34 @@
 module Localized exposing (..)
 
+import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Json.Encode as Json
+import Model exposing (OkModel)
 import Time exposing (Posix)
 
 
 type alias Messages =
     Json.Value
+
+
+bundles : OkModel -> Json.Value
+bundles model =
+    let
+        defaultLocales =
+            model.flags.messages.defaultLocales
+
+        selectedLocales =
+            List.filterMap identity [ model.settings.locale ]
+                ++ defaultLocales
+
+        selectedBundles : List Messages
+        selectedBundles =
+            selectedLocales
+                |> List.filterMap (\l -> Dict.get l model.bundles)
+    in
+    Json.list identity selectedBundles
 
 
 joinName : List String -> String

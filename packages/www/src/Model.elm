@@ -11,6 +11,7 @@ module Model exposing
 
 import Browser
 import Browser.Navigation as Nav
+import Dict exposing (Dict)
 import Json.Decode as D
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine)
@@ -43,7 +44,10 @@ type alias Flags =
     , logtz : Maybe Float
     , settings : D.Value
     , electronFlags : Maybe { version : String }
-    , messages : D.Value
+    , messages :
+        { defaultLocales : List String
+        , bundles : List ( String, D.Value )
+        }
     }
 
 
@@ -72,6 +76,7 @@ type alias OkModel =
     , settings : Settings
     , tz : Time.Zone
     , gsheets : RemoteData String GSheetsSession
+    , bundles : Dict String D.Value
     }
 
 
@@ -91,6 +96,7 @@ type Msg
     | RouteTo Route
     | Search QueryDict
     | InputVolume String
+    | InputLocale String
     | InputSpreadsheetId String
     | Reset (Maybe Route)
     | GSheetsLoginUpdate { login : Maybe Bool, error : Maybe String }
@@ -165,6 +171,7 @@ reset flags nav query route settings tz gsheets =
             , settings = settings
             , tz = tz
             , gsheets = gsheets
+            , bundles = flags.messages.bundles |> Dict.fromList
             }
     in
     Result.map createModel
@@ -284,6 +291,20 @@ updateOk msg ({ config, mapwatch, settings } as model) =
                             { model | settings = { settings | volume = volume } }
                     in
                     ( newModel, sendSettings newModel )
+
+        InputLocale locale0 ->
+            let
+                locale =
+                    if locale0 == "" then
+                        Nothing
+
+                    else
+                        Just locale0
+
+                newModel =
+                    { model | settings = { settings | locale = locale } }
+            in
+            ( newModel, sendSettings newModel )
 
         InputSpreadsheetId str ->
             let

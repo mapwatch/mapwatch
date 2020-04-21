@@ -37,6 +37,7 @@ type Feature
     | ConquerorStatus
     | DeliriumEncounter
     | Backend
+    | Localization
     | DebugLocalized
 
 
@@ -53,6 +54,7 @@ list =
     , ConquerorStatus
     , DeliriumEncounter
     , Backend
+    , Localization
     , DebugLocalized
     ]
 
@@ -85,6 +87,9 @@ config feature =
 
         Backend ->
             FeatureConfig feature "backend" False
+
+        Localization ->
+            FeatureConfig feature "localization" False
 
         DebugLocalized ->
             FeatureConfig feature "debugLocalized" False

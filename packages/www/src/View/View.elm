@@ -39,7 +39,7 @@ viewBody rmodel =
                 ]
 
         Ok model ->
-            Localized.provider (Just model.flags.messages)
+            Localized.provider (Just <| Localized.bundles model)
                 [ div [ classList [ ( "debug-localized", Feature.isActive Feature.DebugLocalized model.query ) ] ]
                     [ case model.route of
                         History ->

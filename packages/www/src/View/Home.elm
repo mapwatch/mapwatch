@@ -37,7 +37,6 @@ import Time exposing (Posix)
 import TimedReadline exposing (Progress)
 import View.Icon as Icon
 import View.Nav
-import View.Setup
 import View.Util
 
 

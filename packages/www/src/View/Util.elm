@@ -134,7 +134,7 @@ hidePreLeagueButton query route =
             pre [] [ text err ]
 
         Ok date ->
-            a [ class "button", Route.href (Dict.insert Route.keys.after date query) route ] [ Icon.fas "calendar", Localized.text0 "util-filter-league" ]
+            a [ class "button", Route.href (Dict.insert Route.keys.after date query) route ] [ Icon.fas "calendar", text " ", Localized.text0 "util-filter-league" ]
 
 
 viewDateSearch : QueryDict -> Route -> Html msg

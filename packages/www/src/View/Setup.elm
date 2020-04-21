@@ -11,6 +11,7 @@ import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import View.Icon
+import View.Settings
 import View.Volume
 
 
@@ -83,7 +84,9 @@ view model =
             , Localized.text0 "setup-size-post"
             ]
         , div [] <| viewFileSelector model
+        , br [] []
         , View.Volume.view model
+        , View.Settings.viewLocaleSelector model
         , div []
             (if model.flags.isBrowserSupported then
                 []
