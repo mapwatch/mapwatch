@@ -27,6 +27,7 @@ bundles model =
         selectedBundles =
             selectedLocales
                 |> List.filterMap (\l -> Dict.get l model.bundles)
+                |> (++) (List.filterMap identity [ model.liveTranslationBundle ])
     in
     Json.list identity selectedBundles
 

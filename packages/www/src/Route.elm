@@ -43,6 +43,7 @@ type Route
     | Debug
     | DebugDumpLines
     | DebugDatamine
+    | DebugTranslator
     | NotFound Url
 
 
@@ -105,6 +106,7 @@ parser =
         , P.map Settings <| P.s "settings"
         , P.map Debug <| P.s "debug"
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
+        , P.map DebugTranslator <| P.s "debug" </> P.s "translator"
         , P.map DebugDatamine <| P.s "debug" </> P.s "datamine"
         ]
 
@@ -171,6 +173,9 @@ routeParts r =
 
         DebugDatamine ->
             ( "/debug/datamine", pageKeys.other )
+
+        DebugTranslator ->
+            ( "/debug/translator", pageKeys.other )
 
         NotFound loc ->
             ( Maybe.withDefault "" loc.fragment, pageKeys.other )

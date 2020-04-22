@@ -40,6 +40,7 @@ view model =
         , ul []
             [ li [] [ a [ Route.href model.query Route.DebugDatamine ] [ text "/debug/datamine" ] ]
             , li [] [ a [ Route.href model.query Route.DebugDumpLines ] [ text "/debug/dumplines (broken)" ] ]
+            , li [] [ a [ Route.href model.query Route.DebugTranslator ] [ text "/debug/translator" ] ]
             ]
         ]
 

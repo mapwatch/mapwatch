@@ -22,7 +22,7 @@ import '!!file-loader?name=PRIVACY.md!../../../PRIVACY.md'
 import '!!file-loader?name=rss.xml!../../rss/dist/rss.xml'
 import '!!file-loader?name=version.txt!../tmp/version.txt'
 import '@wolfadex/fluent-web/commonjs/index.js'
-import messages from './lang/messages'
+import * as messages from './lang/messages'
 
 // Be careful with timezones throughout this file. Use Date.now(), not new Date(),
 // for data sent to Elm: no risk of getting timezones involved that way.
@@ -57,8 +57,9 @@ function main() {
   }
   analytics.main(app, analyticsFlags)
   gsheets.main(app, backend.platform, version)
+  messages.main(app, settings)
 
-  console.log('init', {backend, flags, electronFlags, analyticsFlags, datamine, qs})
+  console.log('init', {backend, flags, electronFlags, analyticsFlags, datamine, qs, defaultLocales: messages.defaultLocales})
 
   let activeBackend = backend
   if (qs.example) {

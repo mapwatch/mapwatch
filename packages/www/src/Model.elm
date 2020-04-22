@@ -77,6 +77,7 @@ type alias OkModel =
     , tz : Time.Zone
     , gsheets : RemoteData String GSheetsSession
     , bundles : Dict String D.Value
+    , liveTranslationBundle : Maybe D.Value
     }
 
 
@@ -97,6 +98,7 @@ type Msg
     | Search QueryDict
     | InputVolume String
     | InputLocale String
+    | InputLiveTranslation String
     | InputSpreadsheetId String
     | Reset (Maybe Route)
     | GSheetsLoginUpdate { login : Maybe Bool, error : Maybe String }
@@ -106,6 +108,7 @@ type Msg
     | GSheetsWrite { spreadsheetId : Maybe String, title : String, content : List Sheet }
     | GSheetsWritten { res : Maybe { spreadsheetUrl : String, spreadsheetId : String }, error : Maybe String }
     | DebugNotification D.Value
+    | DebugApplyLiveTranslation (Maybe D.Value)
 
 
 type alias Sheet =
@@ -138,6 +141,7 @@ init flags url nav =
                 -- TODO Maybe type?
                 Time.utc
                 RemoteData.NotAsked
+                Nothing
     in
     ( model
     , Cmd.batch
@@ -147,8 +151,8 @@ init flags url nav =
     )
 
 
-reset : Flags -> Nav.Key -> QueryDict -> Route -> Settings -> Time.Zone -> RemoteData String GSheetsSession -> Model
-reset flags nav query route settings tz gsheets =
+reset : Flags -> Nav.Key -> QueryDict -> Route -> Settings -> Time.Zone -> RemoteData String GSheetsSession -> Maybe D.Value -> Model
+reset flags nav query route settings tz gsheets live =
     let
         loadedAt =
             Time.millisToPosix flags.loadedAt
@@ -172,6 +176,7 @@ reset flags nav query route settings tz gsheets =
             , tz = tz
             , gsheets = gsheets
             , bundles = flags.messages.bundles |> Dict.fromList
+            , liveTranslationBundle = live
             }
     in
     Result.map createModel
@@ -306,6 +311,20 @@ updateOk msg ({ config, mapwatch, settings } as model) =
             in
             ( newModel, sendSettings newModel )
 
+        InputLiveTranslation live0 ->
+            let
+                live =
+                    if live0 == "" then
+                        Nothing
+
+                    else
+                        Just live0
+
+                newModel =
+                    { model | settings = { settings | liveTranslation = live } }
+            in
+            ( newModel, sendSettings newModel )
+
         InputSpreadsheetId str ->
             let
                 newModel =
@@ -394,13 +413,16 @@ updateOk msg ({ config, mapwatch, settings } as model) =
                     ( model, Cmd.none )
 
         Reset redirect ->
-            ( reset model.flags model.nav model.query model.route model.settings model.tz model.gsheets
+            ( reset model.flags model.nav model.query model.route model.settings model.tz model.gsheets model.liveTranslationBundle
                 |> Result.withDefault model
             , Maybe.Extra.unwrap Cmd.none (Route.pushUrl model.nav model.query) redirect
             )
 
         DebugNotification json ->
             ( model, Ports.debugNotification json )
+
+        DebugApplyLiveTranslation mbundle ->
+            ( { model | liveTranslationBundle = mbundle }, Cmd.none )
 
         M msg_ ->
             updateMapwatch msg_ model
@@ -435,6 +457,7 @@ subscriptions rmodel =
                 [ Mapwatch.subscriptions (Ok model.mapwatch) |> Sub.map M
                 , Ports.gsheetsLoginUpdate GSheetsLoginUpdate
                 , Ports.gsheetsWritten GSheetsWritten
+                , Ports.debugApplyLiveTranslation DebugApplyLiveTranslation
 
                 -- Slow down animation, deliberately - don't eat poe's cpu
                 --, Browser.Events.onAnimationFrame Tick

@@ -12,6 +12,7 @@ import Route.Feature as Feature exposing (Feature)
 import View.Changelog
 import View.Debug
 import View.DebugDatamine
+import View.DebugTranslator
 import View.DumpLines
 import View.Encounters
 import View.GSheets
@@ -80,6 +81,9 @@ viewBody rmodel =
 
                         Settings ->
                             View.Settings.view model
+
+                        DebugTranslator ->
+                            View.DebugTranslator.view model
 
                         NotFound loc ->
                             View.NotFound.view model
