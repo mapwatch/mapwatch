@@ -2,11 +2,12 @@ module View.View exposing (view, viewBody)
 
 import AppPlatform
 import Browser
+import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Localized
 import Mapwatch as Mapwatch
-import Model as Model exposing (Model, Msg)
+import Model as Model exposing (Model, Msg, OkModel)
 import Route exposing (Route(..))
 import Route.Feature as Feature exposing (Feature)
 import View.Changelog
@@ -31,16 +32,31 @@ view model =
     { title = "PoE Mapwatch", body = [ viewBody model ] }
 
 
+localizedBundles : OkModel -> List Localized.Bundle
+localizedBundles model =
+    let
+        defaultLocales =
+            model.flags.messages.defaultLocales
+
+        selectedLocales =
+            List.filterMap identity [ model.settings.locale ]
+                ++ defaultLocales
+    in
+    selectedLocales
+        |> List.filterMap (\l -> Dict.get l model.bundles)
+        |> (++) (List.filterMap identity [ model.liveTranslationBundle ])
+
+
 viewBody : Model -> Html Msg
 viewBody rmodel =
     case rmodel of
         Err err ->
-            Localized.provider Nothing
+            Localized.provider []
                 [ pre [] [ text err ]
                 ]
 
         Ok model ->
-            Localized.provider (Just <| Localized.bundles model)
+            Localized.provider (localizedBundles model)
                 [ div [ classList [ ( "debug-localized", Feature.isActive Feature.DebugLocalized model.query ) ] ]
                     [ case model.route of
                         History ->

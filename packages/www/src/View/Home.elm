@@ -283,12 +283,12 @@ viewHeader model =
             [ maskedText "["
 
             -- , a [ href "./" ] [ Icon.fas "tachometer-alt", text " Mapwatch" ]
-            , a [ Route.href model.query Route.Timer ] [ text " ", Localized.title ]
+            , a [ Route.href model.query Route.Timer ] [ text " ", Localized.text0 "title" ]
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , small []
             [ text " "
-            , Localized.subtitle
+            , Localized.text0 "subtitle"
             , case model.flags.electronFlags |> Maybe.map .version of
                 Nothing ->
                     text ""

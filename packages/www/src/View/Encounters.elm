@@ -94,7 +94,7 @@ viewEncounterTally query tally =
         [ thead []
             [ th [ style "text-align" "right" ] [ Localized.text0 "encounters-header-name" ]
             , th [] [ Localized.text0 "encounters-header-count" ]
-            , th [] [ Localized.text "encounters-header-percent" [ ( "count", Json.int tally.count ) ] ]
+            , th [] [ Localized.text "encounters-header-percent" [ Localized.int "count" tally.count ] ]
             ]
         , tbody []
             (tally
@@ -114,8 +114,8 @@ viewEncounterTally query tally =
                                         in
                                         [ a [ Route.href q Route.Encounters ] row.label ]
                                 )
-                            , td [] [ Localized.text "encounters-row-count" [ ( "count", Json.int row.count ) ] ]
-                            , td [] [ Localized.text "encounters-row-percent" [ ( "percent", Json.float row.pct ) ] ]
+                            , td [] [ Localized.text "encounters-row-count" [ Localized.int "count" row.count ] ]
+                            , td [] [ Localized.text "encounters-row-percent" [ Localized.float "percent" row.pct ] ]
                             ]
                     )
             )
@@ -131,7 +131,7 @@ listEncounterTally query tally =
     , ( tally.labTrialsTotal
       , "lab-trial-side:"
       , [ View.Icon.labTrial
-        , Localized.text "encounters-name-labtrials" [ ( "count", Json.int <| List.length tally.labTrials ) ]
+        , Localized.text "encounters-name-labtrials" [ Localized.int "count" <| List.length tally.labTrials ]
         ]
       )
     , ( tally.conquerors

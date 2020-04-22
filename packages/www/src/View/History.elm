@@ -163,7 +163,7 @@ viewStatsRows title runs =
     [ tr []
         [ th [ class "title" ] [ title ]
         , td [ colspan 10, class "maps-completed" ]
-            [ Localized.text "history-summary-completed" [ ( "count", Json.int runs.num ) ]
+            [ Localized.text "history-summary-completed" [ Localized.int "count" runs.num ]
             ]
         ]
     , tr []
@@ -232,9 +232,9 @@ viewPaginator query numItems =
         , prevLink [ View.Icon.fas "step-backward", text " ", Localized.text0 "history-page-prev" ]
         , span []
             [ Localized.text "history-page-count"
-                [ ( "pageStart", Json.int firstVisItem )
-                , ( "pageEnd", Json.int lastVisItem )
-                , ( "total", Json.int numItems )
+                [ Localized.int "pageStart" firstVisItem
+                , Localized.int "pageEnd" lastVisItem
+                , Localized.int "total" numItems
                 ]
             ]
         , nextLink [ Localized.text0 "history-page-next", text " ", View.Icon.fas "step-forward" ]
@@ -376,20 +376,20 @@ viewRunDurations goal run =
 viewDurationTail : { a | portals : Float, duration : MapRun.Durations } -> List (Html msg)
 viewDurationTail { portals, duration } =
     [ td [ class "dur" ] [ text " = " ]
-    , td [ class "dur" ] [ Localized.text "history-row-duration-map" [ ( "duration", Json.string <| View.Home.formatDuration duration.mainMap ) ] ]
+    , td [ class "dur" ] [ Localized.text "history-row-duration-map" [ Localized.string "duration" <| View.Home.formatDuration duration.mainMap ] ]
     , td [ class "dur" ] [ text " + " ]
-    , td [ class "dur" ] [ Localized.text "history-row-duration-town" [ ( "duration", Json.string <| View.Home.formatDuration duration.town ) ] ]
+    , td [ class "dur" ] [ Localized.text "history-row-duration-town" [ Localized.string "duration" <| View.Home.formatDuration duration.town ] ]
     ]
         ++ (if duration.sides > 0 then
                 [ td [ class "dur" ] [ text " + " ]
-                , td [ class "dur" ] [ Localized.text "history-row-duration-sides" [ ( "duration", Json.string <| View.Home.formatDuration duration.sides ) ] ]
+                , td [ class "dur" ] [ Localized.text "history-row-duration-sides" [ Localized.string "duration" <| View.Home.formatDuration duration.sides ] ]
                 ]
 
             else
                 [ td [ class "dur" ] [], td [ class "dur" ] [] ]
            )
-        ++ [ td [ class "portals" ] [ Localized.text "history-row-portals" [ ( "count", Json.float portals ) ] ]
-           , td [ class "town-pct" ] [ Localized.text "history-row-townpct" [ ( "percent", Json.float <| clamp 0.0 1.0 <| toFloat duration.town / Basics.max 1 (toFloat duration.all) ) ] ]
+        ++ [ td [ class "portals" ] [ Localized.text "history-row-portals" [ Localized.float "count" portals ] ]
+           , td [ class "town-pct" ] [ Localized.text "history-row-townpct" [ Localized.float "percent" <| clamp 0.0 1.0 <| toFloat duration.town / Basics.max 1 (toFloat duration.all) ] ]
            ]
 
 
@@ -398,7 +398,7 @@ viewHistoryMainRow ({ tz, query } as m) { showDate } goal r =
     tr [ class "main-area" ]
         ((if showDate then
             [ td [ class "date", title <| ISO8601.toString <| ISO8601.fromPosix r.updatedAt ]
-                [ Localized.text "history-row-date" [ ( "date", Json.int <| Time.posixToMillis r.updatedAt ) ] ]
+                [ Localized.text "history-row-date" [ Localized.int "date" <| Time.posixToMillis r.updatedAt ] ]
             ]
 
           else
@@ -406,7 +406,7 @@ viewHistoryMainRow ({ tz, query } as m) { showDate } goal r =
          )
             ++ [ td [ class "zone" ] [ View.Home.viewRun query r ]
                , td []
-                    [ Localized.element "history-row-region" [ "title" ] [ ( "body", Json.string <| RunSort.searchString m.mapwatch.datamine r ) ] <|
+                    [ Localized.element "history-row-region" [ "title" ] [ Localized.string "body" <| RunSort.searchString m.mapwatch.datamine r ] <|
                         View.Home.viewRegion query r.address.worldArea
                     ]
                ]
@@ -548,15 +548,15 @@ viewConquerorRow { showDate } npcSays ( id, encounter ) =
                 Conqueror.Taunt n ->
                     [ icon
                     , Localized.text "history-conqueror-taunt"
-                        [ ( "conqueror", Json.string <| Conqueror.toString id )
-                        , ( "taunt", Json.int n )
+                        [ Localized.string "conqueror" <| Conqueror.toString id
+                        , Localized.int "taunt" n
                         ]
                     ]
 
                 Conqueror.Fight ->
                     [ icon
                     , Localized.text "history-conqueror-fight"
-                        [ ( "conqueror", Json.string <| Conqueror.toString id )
+                        [ Localized.string "conqueror" <| Conqueror.toString id
                         ]
                     ]
     in

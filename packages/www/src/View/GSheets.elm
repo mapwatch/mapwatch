@@ -91,7 +91,7 @@ viewMain model =
                                 "export-gsheets-update"
 
                     label =
-                        Localized.text labelId [ ( "count", E.int <| List.length runs ) ]
+                        Localized.text labelId [ Localized.int "count" <| List.length runs ]
                   in
                   case gsheets.url of
                     RemoteData.Loading ->

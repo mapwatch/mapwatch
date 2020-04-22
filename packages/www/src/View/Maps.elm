@@ -215,12 +215,12 @@ viewMap query { name, worldArea, runs } =
                     []
 
                 Just tier ->
-                    [ Localized.text "maps-row-tier" [ ( "tier", Json.int tier ) ] ]
+                    [ Localized.text "maps-row-tier" [ Localized.int "tier" tier ] ]
             )
-        , td [] [ Localized.text "maps-row-meandur" [ ( "duration", Json.string <| View.Home.formatDuration mean.duration.mainMap ) ] ]
-        , td [] [ Localized.text "maps-row-portals" [ ( "count", Json.float mean.portals ) ] ]
-        , td [] [ Localized.text "maps-row-count" [ ( "count", Json.int num ) ] ]
-        , td [] [ Localized.text "maps-row-bestdur" [ ( "duration", Json.string <| Maybe.Extra.unwrap "--:--" View.Home.formatDuration best.mainMap ) ] ]
+        , td [] [ Localized.text "maps-row-meandur" [ Localized.string "duration" <| View.Home.formatDuration mean.duration.mainMap ] ]
+        , td [] [ Localized.text "maps-row-portals" [ Localized.float "count" mean.portals ] ]
+        , td [] [ Localized.text "maps-row-count" [ Localized.int "count" num ] ]
+        , td [] [ Localized.text "maps-row-bestdur" [ Localized.string "duration" <| Maybe.Extra.unwrap "--:--" View.Home.formatDuration best.mainMap ] ]
         ]
 
 
