@@ -5,6 +5,8 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
+    "//prepare": "npm packages run `yarn build` before publishing; my github fork does not. manually build during install for now; remove this once @wolfadex/fluent-web below is no longer a fork",
+    "prepare": "cd ../../node_modules/@wolfadex/fluent-web && yarn && yarn build",
     "_build:version": "bash scripts/_build/version",
     "build": "yarn _build:version && elm-app build",
     "start": "yarn _build:version && bash -c \"ELM_DEBUGGER=false elm-app start\"",
@@ -14,7 +16,7 @@
   "dependencies": {
     "@mapwatch/datamine": "1.0.0",
     "@mapwatch/rss": "1.0.0",
-    "@wolfadex/fluent-web": "^2.0.0"
+    "@wolfadex/fluent-web": "erosson/fluent-web#a1bc9bedef2da023ff2fac41c9e42e6e6d6bed5d"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
