@@ -16,7 +16,7 @@
   "dependencies": {
     "@mapwatch/datamine": "1.0.0",
     "@mapwatch/rss": "1.0.0",
-    "@wolfadex/fluent-web": "erosson/fluent-web#a1bc9bedef2da023ff2fac41c9e42e6e6d6bed5d"
+    "@wolfadex/fluent-web": "erosson/fluent-web#cc99ac678bf3578e2d83c36fbf55fad648354d23"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",

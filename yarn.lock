@@ -1851,9 +1851,9 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@wolfadex/fluent-web@erosson/fluent-web#a1bc9bedef2da023ff2fac41c9e42e6e6d6bed5d":
+"@wolfadex/fluent-web@erosson/fluent-web#cc99ac678bf3578e2d83c36fbf55fad648354d23":
   version "2.1.0"
-  resolved "https://codeload.github.com/erosson/fluent-web/tar.gz/a1bc9bedef2da023ff2fac41c9e42e6e6d6bed5d"
+  resolved "https://codeload.github.com/erosson/fluent-web/tar.gz/cc99ac678bf3578e2d83c36fbf55fad648354d23"
   dependencies:
     "@fluent/bundle" "^0.15.1"
     "@fluent/langneg" "^0.4.0"
