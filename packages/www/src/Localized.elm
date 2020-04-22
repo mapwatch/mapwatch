@@ -76,6 +76,8 @@ bool =
     safeArg Json.bool
 
 
+{-| Escaped string; never interpreted as HTML. Suitable for user input.
+-}
 string : String -> String -> Arg
 string =
     safeArg Json.string
@@ -96,6 +98,8 @@ maybe encoder name mval =
             encoder name val
 
 
+{-| Unescaped string; interpreted as HTML. Do not call this with user input.
+-}
 unsafeString : String -> String -> Arg
 unsafeString name val =
     ( name, UnsafeArg val )
@@ -161,6 +165,8 @@ encodeArgs =
 -- nodes
 
 
+{-| `<fluent-text>`
+-}
 text : String -> List Arg -> Html msg
 text id_ args =
     H.node "fluent-text"
@@ -168,13 +174,15 @@ text id_ args =
         []
 
 
-{-| A text argument with zero args. very common
+{-| A `text` node with zero args. very common
 -}
 text0 : String -> Html msg
 text0 id_ =
     text id_ []
 
 
+{-| `<fluent-element>` applied to an element of your choice
+-}
 element : String -> List String -> List Arg -> Html msg -> Html msg
 element id_ attrs args el =
     H.node "fluent-element"
@@ -186,6 +194,8 @@ element id_ attrs args el =
         [ el ]
 
 
+{-| `<fluent-element>` applied to a div
+-}
 node : String -> List String -> List Arg -> Html msg
 node id_ attrs args =
     element id_ attrs args (H.div [] [])
