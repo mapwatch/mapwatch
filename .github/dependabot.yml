@@ -1,27 +1,30 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/packages/www"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: npm
-  directory: "/packages/rss"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: npm
-  directory: "/packages/datamine"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: elm
-  directory: "/packages/www"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-- package-ecosystem: npm
-  directory: "/packages/electron2"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/packages/www"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    ignored_updates:
+      - match:
+          dependency_name: "@mapwatch/*"
+  - package-ecosystem: npm
+    directory: "/packages/rss"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/packages/datamine"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+  - package-ecosystem: elm
+    directory: "/packages/www"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/packages/electron2"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
