@@ -9,7 +9,7 @@ import * as util from './util'
 import {BrowserBackend} from './browserBackend'
 import {BrowserNativeFSBackend} from './browserNativeFSBackend'
 import {MemoryBackend} from './memoryBackend'
-import {default as datamine} from '@mapwatch/datamine'
+import {default as datamine} from '../../datamine'
 import changelog from '!!raw-loader!../../../CHANGELOG.md'
 import privacy from '!!raw-loader!../../../PRIVACY.md'
 // version.txt is created by by `yarn _build:version`
