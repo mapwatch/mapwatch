@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2020-06-17
+- Updated "hide pre-Delirium maps" button for Harvest league.
+
 ## 2020-04-17
 - [Spreadsheet export](https://mapwatch.erosson.org/#/history/tsv) now includes data from the Maps and Encounters pages.
 - In addition to copy-pasting TSV spreadsheets, [you can now export your map data to Google Sheets](https://mapwatch.erosson.org/#/gsheets?gsheets=1).

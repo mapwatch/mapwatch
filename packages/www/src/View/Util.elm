@@ -104,12 +104,12 @@ pluralize one other n =
 
 
 leagueName =
-    "Delirium"
+    "Harvest"
 
 
 leagueDate : Result String Posix
 leagueDate =
-    "2020-03-13T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix
+    "2020-06-19T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix
 
 
 hidePreLeagueButton : QueryDict -> Route -> Html msg
