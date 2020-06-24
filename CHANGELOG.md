@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2020-06-24
+- Delirium encounters are now tracked.
+
 ## 2020-06-17
 - Updated "hide pre-Delirium maps" button for Harvest league.
 

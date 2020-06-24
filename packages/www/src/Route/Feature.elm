@@ -79,7 +79,7 @@ config feature =
             FeatureConfig feature "conquerorStatus" False
 
         DeliriumEncounter ->
-            FeatureConfig feature "deliriumEncounter" False
+            FeatureConfig feature "deliriumEncounter" True
 
         Backend ->
             FeatureConfig feature "backend" False
