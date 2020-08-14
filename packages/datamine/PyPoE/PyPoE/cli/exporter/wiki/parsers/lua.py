@@ -34,13 +34,15 @@ See PyPoE/LICENSE
 # Python
 import warnings
 from collections import OrderedDict, defaultdict
+from functools import partial
 
 # Self
 from PyPoE.poe.constants import RARITY
+from PyPoE.poe.text import parse_description_tags
 from PyPoE.cli.core import console, Msg
 from PyPoE.cli.exporter import config
 from PyPoE.cli.exporter.wiki.handler import ExporterHandler, ExporterResult
-from PyPoE.cli.exporter.wiki.parser import BaseParser
+from PyPoE.cli.exporter.wiki.parser import BaseParser, TagHandler
 
 # =============================================================================
 # Globals
@@ -61,32 +63,74 @@ def lua_format_value(key, value):
     return f % (key, value)
 
 
-def lua_formatter(outdata, key_order=None):
-    out = []
-    out.append('local data = {\n')
-    for data in outdata:
-        out.append('\t{\n')
-        for key, value in data.items():
-            if isinstance(value, (int, float)):
-                if isinstance(value, bool):
-                    value = str(value).lower()
-                out.append('\t\t%s=%s,\n' % (key, value))
-            elif isinstance(value, (tuple, set, list)):
-                values = []
-                for v in value:
-                    k = '%s' if isinstance(v, (int, float)) else '"%s"'
-                    values.append(k % v)
+class LuaFormatter:
+    def __init__(self):
+        pass
 
-                    values.append
-                out.append('\t\t%s={%s},\n' % (key, ', '.join(values)))
+    @classmethod
+    def format_module(self, data, indent=0, newline=True):
+        out = []
+        out.append('local data = %s' % self.format_value(
+            data, indent=indent+1, newline=newline)
+        )
+        out.append('\n')
+        out.append('return data')
+
+        return ''.join(out)
+
+    @classmethod
+    def format_key(self, key):
+        if not isinstance(key, str):
+            key = str(key)
+
+        if ' ' in key:
+            key = '[%s]' % key
+
+        return key
+
+    @classmethod
+    def format_value(self, value, indent=2, newline=True):
+        if isinstance(value, (int, float)):
+            if isinstance(value, bool):
+                return str(value).lower()
+            return str(value)
+        elif isinstance(value, (tuple, set, list)):
+            values = []
+            for v in value:
+                values.append(
+                    self.format_value(v, indent=indent+1, newline=newline)
+                )
+            if newline:
+                join = ',\n'
             else:
-                out.append('\t\t%s="%s",\n' % (key, value.replace('"', '\\"')))
-        out.append('\t},\n')
-    out.append('\n}')
-    out.append('\n')
-    out.append('return data')
+                join = ', '
+            return '{%s}' % (join.join(values))
+        elif isinstance(value, dict):
+            values = []
+            if newline:
+                fmt = '%s%%s = %%s, ' % ('\t' * indent)
+            else:
+                fmt = '%s = %s'
+            for k, v in value.items():
+                values.append(fmt % (
+                    self.format_key(k),
+                    self.format_value(v, indent=indent+1, newline=newline)
+                ))
 
-    return ''.join(out)
+            if newline:
+                fmt = '%(indent)s{\n%%s\n%(indent)s}' % {
+                    'indent': '\t' * (indent-1),
+                }
+                join = '\n'
+            else:
+                fmt = '{%s}'
+                join = ''
+
+            return fmt % join.join(values)
+        elif isinstance(value, str):
+            return '"%s"' % value.replace('"', '\\"').replace('\n', '<br>').replace('\r', '')
+        else:
+            return '"%s"' % value
 
 # =============================================================================
 # Classes
@@ -197,6 +241,16 @@ class LuaHandler(ExporterHandler):
         )
 
         parser = lua_sub.add_parser(
+            'harvest',
+            help='Extract harvest information (not covered by items)',
+        )
+        self.add_default_parsers(
+            parser=parser,
+            cls=HarvestParser,
+            func=HarvestParser.main,
+        )
+
+        parser = lua_sub.add_parser(
             'monster',
             help='Extract monster information',
         )
@@ -226,6 +280,117 @@ class LuaHandler(ExporterHandler):
             func=SynthesisParser.main,
         )
 
+        parser = lua_sub.add_parser(
+            'ot',
+            help='Extract .ot file information',
+        )
+        self.add_default_parsers(
+            parser=parser,
+            cls=OTStatsParser,
+            func=OTStatsParser.main,
+        )
+
+        parser = lua_sub.add_parser(
+            'minimap',
+            help='Extract minimap icon information',
+        )
+        self.add_default_parsers(
+            parser=parser,
+            cls=MinimapIconsParser,
+            func=MinimapIconsParser.main,
+        )
+
+
+class MinimapIconsParser(GenericLuaParser):
+    _files = [
+        'MinimapIcons.dat',
+    ]
+
+    _COPY_KEYS_MINIMAP_ICONS = (
+        ('Id', {
+            'key': 'id',
+        }),
+    )
+
+    def main(self, parsed_args):
+        minimap_icons = []
+        minimap_icons_lookup = OrderedDict()
+
+        for row in self.rr['MinimapIcons.dat']:
+            self._copy_from_keys(row, self._COPY_KEYS_MINIMAP_ICONS,
+                                 minimap_icons)
+
+            # Lua starts offsets at 1
+            minimap_icons_lookup[row['Id']] = row.rowid + 1
+
+        r = ExporterResult()
+        for k in ('minimap_icons', 'minimap_icons_lookup'):
+            r.add_result(
+                text=LuaFormatter.format_module(locals()[k]),
+                out_file='%s.lua' % k,
+                wiki_page=[{
+                    'page': 'Module:Minimap/%s' % k,
+                    'condition': None,
+                }]
+            )
+
+        return r
+
+
+class OTStatsParser(GenericLuaParser):
+    _DATA = (
+        {
+            'src': 'Metadata/Characters/Character.ot',
+            'fn': 'Character',
+        },
+        {
+            'src': 'Metadata/Monsters/Monster.ot',
+            'fn': 'Monster',
+        },
+    )
+
+    _TC_KWARGS = {
+        'merge_with_custom_file': True,
+    }
+
+    def main(self, parsed_args):
+        r = ExporterResult()
+        for data in self._DATA:
+            stats = []
+
+            ot = self.ot[data['src']]
+
+            for stat, value in ot['Stats'].items():
+                # Stats that are zero effectively do not exist, so might as well
+                # skip them
+                if value == 0:
+                    continue
+
+                txt = self._format_tr(
+                    self.tc['stat_descriptions.txt'].get_translation(
+                        tags=[stat, ],
+                        values=[value, ],
+                        full_result=True
+                    )
+                )
+
+                stats.append(OrderedDict((
+                    ('name', data['fn']),
+                    ('id', stat),
+                    ('value', value),
+                    ('stat_text', txt or ''),
+                )))
+
+            r.add_result(
+                text=LuaFormatter.format_module(stats),
+                out_file='%s_stats.lua' % data['fn'],
+                wiki_page=[{
+                    'page': 'Module:Data tables/%s_stats' % data['fn'],
+                    'condition': None,
+                }]
+            )
+
+        return r
 
 class AtlasParser(GenericLuaParser):
     _files = [
@@ -274,7 +439,7 @@ class AtlasParser(GenericLuaParser):
         r = ExporterResult()
         for k in ('atlas_regions', 'atlas_base_item_types'):
             r.add_result(
-                text=lua_formatter(locals()[k]),
+                text=LuaFormatter.format_module(locals()[k]),
                 out_file='%s.lua' % k,
                 wiki_page=[{
                     'page': 'Module:Atlas/%s' % k,
@@ -367,7 +532,7 @@ class BestiaryParser(GenericLuaParser):
         r = ExporterResult()
         for k in ('recipes', 'components', 'recipe_components'):
             r.add_result(
-                text=lua_formatter(locals()[k]),
+                text=LuaFormatter.format_module(locals()[k]),
                 out_file='bestiary_%s.lua' % k,
                 wiki_page=[{
                     'page': 'Module:Bestiary/%s' % k,
@@ -412,7 +577,6 @@ class BlightParser(GenericLuaParser):
         }),
         ('Description', {
             'key': 'description',
-            'value': lambda v: v.replace('\n', '<br>').replace('\r', ''),
         }),
         ('Tier', {
             'key': 'tier',
@@ -460,7 +624,7 @@ class BlightParser(GenericLuaParser):
         r = ExporterResult()
         for k in ('crafting_recipes', 'crafting_recipes_items', 'towers'):
             r.add_result(
-                text=lua_formatter(locals()['blight_' + k]),
+                text=LuaFormatter.format_module(locals()['blight_' + k]),
                 out_file='blight_%s.lua' % k,
                 wiki_page=[{
                     'page': 'Module:Blight/blight_%s' % k,
@@ -616,10 +780,69 @@ class DelveParser(GenericLuaParser):
                   'delve_upgrades', 'delve_upgrade_stats', 'fossils',
                   'fossil_weights'):
             r.add_result(
-                text=lua_formatter(locals()[ k]),
+                text=LuaFormatter.format_module(locals()[ k]),
                 out_file='%s.lua' % k,
                 wiki_page=[{
                     'page': 'Module:Delve/%s' % k,
+                    'condition': None,
+                }]
+            )
+
+        return r
+
+
+class HarvestTagHandler(TagHandler):
+    tag_handlers = {
+        'white': partial(TagHandler._basic_handler, tid='white'),
+
+
+        'fuchsia': partial(TagHandler._basic_handler, tid='magenta'),
+        'yellow': partial(TagHandler._basic_handler, tid='yellow'),
+        'aqua': partial(TagHandler._basic_handler, tid='cyan'),
+    }
+
+
+class HarvestParser(GenericLuaParser):
+    _files = [
+        'HarvestCraftOptions.dat',
+    ]
+
+    _COPY_KEYS_HARVEST_CRAFT_OPTIONS = (
+        ('Id', {
+            'key': 'id',
+        }),
+        ('Text', {
+            'key': 'text',
+        }),
+        ('HarvestObjectsKey', {
+            'key': 'harvest_object',
+            'value': lambda v: v['BaseItemTypesKey']['Id']
+        }),
+        ('HarvestCraftTiersKey', {
+            'key': 'tier',
+            'value': lambda v: v.rowid,
+        }),
+    )
+
+    def main(self, parsed_args):
+        tag_handler = HarvestTagHandler(rr=self.rr)
+        harvest_craft_options = []
+
+        for row in self.rr['HarvestCraftOptions.dat']:
+            self._copy_from_keys(row, self._COPY_KEYS_HARVEST_CRAFT_OPTIONS,
+                                 harvest_craft_options)
+            harvest_craft_options[-1]['text'] = parse_description_tags(
+                harvest_craft_options[-1]['text']).handle_tags(
+                tag_handler.tag_handlers)
+
+
+        r = ExporterResult()
+        for k in ('harvest_craft_options', ):
+            r.add_result(
+                text=LuaFormatter.format_module(locals()[k]),
+                out_file='%s.lua' % k,
+                wiki_page=[{
+                    'page': 'Module:Harvest/%s' % k,
                     'condition': None,
                 }]
             )
@@ -675,13 +898,14 @@ class PantheonParser(GenericLuaParser):
                     continue
                 stats = [s['Id'] for s in row['Effect%s_StatsKeys' % i]]
                 tr = self.tc['stat_descriptions.txt'].get_translation(
-                    tags=stats, values=values, full_result=True)
+                    tags=stats, values=values, lang=self.lang, full_result=True
+                )
 
                 od = OrderedDict()
                 od['id'] = row['Id']
                 od['ordinal'] = i
                 od['name'] = row['GodName%s' % i]
-                od['stat_text'] = '<br>'.join(tr.lines).replace('\n', '<br>')
+                od['stat_text'] = self._format_tr(tr)
 
                 # The first entry is the god itself
                 if i > 1:
@@ -705,7 +929,7 @@ class PantheonParser(GenericLuaParser):
         r = ExporterResult()
         for k in ('', '_souls', '_stats'):
             r.add_result(
-                text=lua_formatter(locals()['pantheon' + k]),
+                text=LuaFormatter.format_module(locals()['pantheon' + k]),
                 out_file='pantheon%s.lua' % k,
                 wiki_page=[{
                     'page': 'Module:Pantheon/pantheon%s' % k,
@@ -825,7 +1049,7 @@ class QuestRewardReader(BaseParser):
 
         r = ExporterResult()
         r.add_result(
-            text=lua_formatter(outdata),
+            text=LuaFormatter.format_module(outdata),
             out_file='%s_rewards.txt' % data_type,
             wiki_page=[{
                 'page': 'Module:Quest reward/data/%s_rewards' % data_type,
@@ -985,7 +1209,7 @@ class QuestRewardReader(BaseParser):
                             [cls['Name'] for cls in classes]
                         )
 
-                    key = quest['Id'] + item['Id']
+                    key = quest['Id'] + item['Id'] + data['npc']
                     if key in compress:
                         if 'classes' in data:
                             compress[key]['classes'] += self._UNIT_SEP + \
@@ -1103,19 +1327,20 @@ class SynthesisParser(GenericLuaParser):
                 )
 
         for row in data['synthesis_mods']:
-            row['stat_text'] = \
-                '<br>'.join(self.tc['stat_descriptions.txt'].get_translation(
+            row['stat_text'] = self._format_tr(
+                self.tc['stat_descriptions.txt'].get_translation(
                     tags=(row['stat_id'], ),
                     values=(row['stat_value'], ),
                     lang=self.lang,
-                )).replace('\n', '')
-
+                    full_result=True
+                )
+            )
 
         r = ExporterResult()
         for definition in self._DATA:
             key = definition['key']
             r.add_result(
-                text=lua_formatter(data[key]),
+                text=LuaFormatter.format_module(data[key]),
                 out_file='%s.lua' % key,
                 wiki_page=[{
                     'page': 'Module:Synthesis/%s' % key,
@@ -1314,7 +1539,7 @@ class MonsterParser(GenericLuaParser):
         r = ExporterResult()
         for key, v in data.items():
             r.add_result(
-                text=lua_formatter(v),
+                text=LuaFormatter.format_module(v),
                 out_file='%s.lua' % key,
                 wiki_page=[{
                     'page': 'Module:Monster/%s' % key,
@@ -1424,7 +1649,7 @@ class CraftingBenchParser(GenericLuaParser):
         r = ExporterResult()
         for key, data in data.items():
             r.add_result(
-                text=lua_formatter(data),
+                text=LuaFormatter.format_module(data),
                 out_file='%s.lua' % key,
                 wiki_page=[{
                     'page': 'Module:Crafting bench/%s' % key,

@@ -96,72 +96,6 @@ DEFAULT_INDENT = 32
 _inter_wiki_map = {
     'English': (
         #
-        # Attibutes
-        #
-        ('Dexterity', {'link': 'Dexterity'}),
-        ('Intelligence', {'link': 'Intelligence'}),
-        ('Strength', {'link': 'Strength'}),
-        #
-        # Offense stats
-        #
-        ('Accuracy Rating', {'link': 'Accuracy Rating'}),
-        ('Accuracy', {'link': 'Accuracy'}),
-        ('Attack Speed', {'link': 'Attack Speed'}),
-        ('Cast Speed', {'link': 'Cast Speed'}),
-        ('Critical Strike Chance', {'link': 'Critical Strike Chance'}),
-        ('Critical Strike Multiplier', {'link': 'Critical Strike Multiplier'}),
-        ('Critical Strike', {'link': 'Critical Strike'}),
-        ('Movement Speed', {'link': 'Movement Speed'}),
-        ('Leech', {'link': 'Leech'}), # Life Leech, Mana Leech
-        ('Low Life', {'link': 'Low Life'}),
-        ('Full Life', {'link': 'Full Life'}),
-        ('Life', {'link': 'Life'}),
-        ('Mana Reservation', {'link': 'Mana Reservation'}),
-        ('Low Mana', {'link': 'Low Mana'}),
-        ('Full Mana', {'link': 'Full Mana'}),
-        ('Mana', {'link': 'Mana'}),
-        # Just damage
-        #('Damage', {'link': 'Damage'}),
-        #
-        # Defenses
-        #
-        ('Armour Rating', {'link': 'Armour Rating'}),
-        ('Armour', {'link': 'Armour'}),
-        ('Energy Shield', {'link': 'Energy Shield'}),
-        ('Evasion Rating', {'link': 'Evasion Rating'}),
-        ('Evasion', {'link': 'Evasion'}),
-        ('Spell Block', {'link': 'Spell Block'}),
-        ('Block', {'link': 'Block'}),
-        ('Spell Dodge', {'link': 'Spell Dodge'}),
-        ('Dodge', {'link': 'Dodge'}),
-        #
-        ('Chaos Resistance(?:|s)', {'link': 'Chaos Resistance'}),
-        ('Cold Resistance(?:|s)', {'link': 'Cold Resistance'}),
-        ('Fire Resistance(?:|s)', {'link': 'Fire Resistance'}),
-        ('Lightning Resistance(?:|s)', {'link': 'Lightning Resistance'}),
-        ('Elemental Resistance(?:|s)', {'link': 'Elemental Resistance'}),
-        #
-        # Buffs
-        #
-
-        # Charges
-        ('Endurance Charge(?:|s)', {'link': 'Endurance Charge'}),
-        ('Frenzy Charge(?:|s)', {'link': 'Frenzy Charge'}),
-        ('Power Charge(?:|s)', {'link': 'Power Charge'}),
-
-        # Friendly
-        ('Rampage', {'link': 'Rampage'}),
-
-        # Hostile
-        ('Corrupted Blood', {'link': 'Corrupted Blood'}),
-
-        #
-        # Misc stats
-        #
-
-        ('Character Size', {'link': 'Character Size'}),
-
-        #
         # Skills
         #
         ('Abyssal Cry', {'link': 'Abyssal Cry'}),
@@ -234,7 +168,7 @@ _inter_wiki_map = {
         ('Flicker Strike', {'link': 'Flicker Strike'}),
         ('Freeze Mine', {'link': 'Freeze Mine'}),
         ('Freezing Pulse', {'link': 'Freezing Pulse'}),
-        ('Frenzy', {'link': 'Frenzy'}),
+        ('Frenzy(?! Charge)', {'link': 'Frenzy'}),
         ('Frostbolt', {'link': 'Frostbolt'}),
         ('Frost Blades', {'link': 'Frost Blades'}),
         ('Frost Bomb', {'link': 'Frost Bomb'}),
@@ -344,6 +278,9 @@ _inter_wiki_map = {
         ('Vaal Heavy Strike', {'link': 'Vaal Heavy Strike'}),
         ('Vaal Ice Nova', {'link': 'Vaal Ice Nova'}),
         ('Vaal Immortal Call', {'link': 'Vaal Immortal Call'}),
+        ('Vaal Impurity of Fire', {'link': 'Vaal Impurity of Fire'}),
+        ('Vaal Impurity of Ice', {'link': 'Vaal Impurity of Ice'}),
+        ('Vaal Impurity of Lightning', {'link': 'Vaal Impurity of Lightning'}),
         ('Vaal Lightning Strike', {'link': 'Vaal Lightning Strike'}),
         ('Vaal Lightning Trap', {'link': 'Vaal Lightning Trap'}),
         ('Vaal Lightning Warp', {'link': 'Vaal Lightning Warp'}),
@@ -585,6 +522,73 @@ _inter_wiki_map = {
         ('(?:level [0-9]+) Void Manipulation', {
             'link': 'Void Manipulation Support'}),
         #
+        # Attibutes
+        #
+        ('Dexterity', {'link': 'Dexterity'}),
+        ('Intelligence', {'link': 'Intelligence'}),
+        ('Strength', {'link': 'Strength'}),
+        #
+        # Offense stats
+        #
+        ('Accuracy Rating', {'link': 'Accuracy Rating'}),
+        ('Accuracy', {'link': 'Accuracy'}),
+        ('Attack Speed', {'link': 'Attack Speed'}),
+        ('Cast Speed', {'link': 'Cast Speed'}),
+        ('Critical Strike Chance', {'link': 'Critical Strike Chance'}),
+        ('Critical Strike Multiplier', {'link': 'Critical Strike Multiplier'}),
+        ('Critical Strike', {'link': 'Critical Strike'}),
+        ('Movement Speed', {'link': 'Movement Speed'}),
+        ('Leech', {'link': 'Leech'}),  # Life Leech, Mana Leech
+        ('Low Life', {'link': 'Low Life'}),
+        ('Full Life', {'link': 'Full Life'}),
+        ('Life', {'link': 'Life'}),
+        ('Mana Reservation', {'link': 'Mana Reservation'}),
+        ('Low Mana', {'link': 'Low Mana'}),
+        ('Full Mana', {'link': 'Full Mana'}),
+        ('Mana', {'link': 'Mana'}),
+        # Just damage
+        # ('Damage', {'link': 'Damage'}),
+        #
+        # Defenses
+        #
+        ('Armour Rating', {'link': 'Armour Rating'}),
+        ('Armour', {'link': 'Armour'}),
+        ('Energy Shield', {'link': 'Energy Shield'}),
+        ('Evasion Rating', {'link': 'Evasion Rating'}),
+        ('Evasion', {'link': 'Evasion'}),
+        ('Spell Block', {'link': 'Spell Block'}),
+        ('Block', {'link': 'Block'}),
+        ('Spell Dodge', {'link': 'Spell Dodge'}),
+        ('Dodge', {'link': 'Dodge'}),
+        #
+        ('Chaos Resistance(?:|s)', {'link': 'Chaos Resistance'}),
+        ('Cold Resistance(?:|s)', {'link': 'Cold Resistance'}),
+        ('Fire Resistance(?:|s)', {'link': 'Fire Resistance'}),
+        ('Lightning Resistance(?:|s)', {'link': 'Lightning Resistance'}),
+        ('Elemental Resistance(?:|s)', {'link': 'Elemental Resistance'}),
+        #
+        # Buffs
+        #
+
+        # Charges
+        ('Endurance Charge(?:|s)', {'link': 'Endurance Charge'}),
+        ('Frenzy Charge(?:|s)', {'link': 'Frenzy Charge'}),
+        ('Power Charge(?:|s)', {'link': 'Power Charge'}),
+
+        # Friendly
+        ('Rampage', {'link': 'Rampage'}),
+
+        # Hostile
+        ('Corrupted Blood', {'link': 'Corrupted Blood'}),
+
+        #
+        # Misc stats
+        #
+
+        ('Character Size', {'link': 'Character Size'}),
+
+
+        #
         # Groups
         #
         ('Physical(?:Skill|Gem)', {'link': 'Physical Skills'}),
@@ -666,78 +670,6 @@ _inter_wiki_map = {
     ),
     'Russian': (
         #
-        # Attibutes
-        #
-        ('ловкост(?:|ь|и)', {'link': 'Ловкость'}),
-        ('интеллект(?:|а|у)', {'link': 'Интеллект'}),
-        ('сил(?:|а|е|ы)', {'link': 'Сила'}),
-        ('характеристик(?:|ам)', {'link': 'Характеристики'}),
-        #
-        # Offense stats
-        #
-        ('меткост(?:|ь|и)', {'link': 'Меткость (механика)'}),
-        ('скорост(?:|ь|и) атак(?:|и)', {'link': 'Скорость атаки'}),
-        ('скорост(?:|ь|и) сотворения чар', {'link': 'Скорость сотворения чар'}),
-        ('сотворения чар', {'link': 'Скорость сотворения чар'}),
-        (
-        'шанс(?:|а|у) критического удара', {'link': 'Шанс критического удара'}),
-        ('множител(?:|ь|ю|я) критического удара',
-         {'link': 'Множитель критического удара'}),
-        ('критическ(?:|ий|им|ими|их) удар(?:|ом|ами|ов)',
-         {'link': 'Критический удар'}),
-        ('скорост(?:|ь|и) передвижения', {'link': 'Скорость передвижения'}),
-        ('похищ(?:|ение|ения|ается|ать|енного|ают)', {'link': 'Похищение'}),
-        # Life Leech, Mana Leech
-        ('мало(?:|е|м|го) количеств(?:|о|е|а) здоровья|мало здоровья',
-         {'link': 'Малое количество здоровья'}),
-        ('полн(?:|ое|ом|ым) здоровье(?:|м)', {'link': 'Полное здоровье'}),
-        ('здоровь(?:|е|я)', {'link': 'Здоровье'}),
-        ('удерж(?:|анной|ивают) ман(?:|ы|у)', {'link': 'Удержание маны'}),
-        ('малом количестве маны|мана не на низком уровне',
-         {'link': 'Малое количество маны'}),
-        ('полн(?:|ая|ой) ман(?:|а|е)', {'link': 'Полная мана'}),
-        ('ман(?:|а|у|ы)', {'link': 'Мана'}),
-        ('полном энергетическом щите', {'link': 'Полный энергетический щит'}),
-        # Just damage
-        # ('урон(?:|а)', {'link': 'Урон'}),
-        #
-        # Defenses
-        #
-        ('брон(?:|я|е|и|ю|ей)', {'link': 'Броня'}),
-        ('энергетическ(?:|ий|ого|ом) щит(?:|а|е)',
-         {'link': 'Энергетический щит'}),
-        ('уклонени(?:|е|ю|я)', {'link': 'Уклонение'}),
-        ('(?:за|)блок(?:|а|е|ировать|ировали|ированный)', {'link': 'Блок'}),
-        ('увернуться|уворот(?:|а)', {'link': 'Уворот'}),
-        #
-        ('сопротивлени(?:|е|ю|я|ем) хаосу', {'link': 'Сопротивление хаосу'}),
-        ('сопротивлени(?:|е|ю|я|ем) холоду', {'link': 'Сопротивление холоду'}),
-        ('сопротивлени(?:|е|ю|я|ем) огню', {'link': 'Сопротивление огню'}),
-        ('сопротивлени(?:|е|ю|я|ем) молнии', {'link': 'Сопротивление молнии'}),
-        ('сопротивлени(?:|е|ю|я|ем) все(?:|м|х) стихи(?:|й|ям)',
-         {'link': 'Сопротивление стихиям'}),
-        #
-        # Buffs
-        #
-
-        # Charges
-        ('заряд(?:|а|ы|ов) выносливости', {'link': 'Заряд выносливости'}),
-        ('заряд(?:|а|ы|ов) ярости', {'link': 'Заряд ярости'}),
-        ('заряд(?:|а|ы|ов) энергии', {'link': 'Заряд энергии'}),
-
-        # Friendly
-        ('буйств(?:|о|е|а)', {'link': 'Буйство'}),
-
-        # Hostile
-        ('оскверненной крови', {'link': 'Оскверненная кровь'}),
-
-        #
-        # Misc stats
-        #
-
-        ('размер(?:|а) персонажа', {'link': 'Размер персонажа'}),
-
-        #
         # Skills
         #
         ('Клич(?:|а) бездны', {'link': 'Клич бездны'}),
@@ -745,7 +677,7 @@ _inter_wiki_map = {
         ('Вожд(?:|ь|я) предков', {'link': 'Вождь предков'}),
         ('Жгуч(?:|ая|ей) злоб(?:|а|ы|ой)', {'link': 'Жгучая злоба'}),
         ('Аниматрон(?:|а|ы)', {'link': 'Аниматрон'}),
-        ('Живо(?:|е|го)|оживл(?:|е|ё)нно(?:|е|го) оружи(?:|е|я)',
+        ('(?:Живо(?:|е|го)|оживл(?:|е|ё)нно(?:|е|го)) оружи(?:|е|я)',
          {'link': 'Живое оружие'}),
         ('Цеп(?:|ь|и) молний', {'link': 'Цепь молний'}),
         ('Северн(?:|ая|ой) брон(?:|я|и|ёй)', {'link': 'Северная броня'}),
@@ -767,6 +699,7 @@ _inter_wiki_map = {
         ('Подношени(?:|е|я) костей', {'link': 'Подношение костей'}),
         ('Горящ(?:|ая|ей) стрел(?:|а|ы)', {'link': 'Горящая стрела'}),
         ('Едк(?:|ая|ой) стрел(?:|а|е|ы)', {'link': 'Едкая стрела'}),
+        ('Рыв(?:|ок|ка)', {'link': 'Рывок'}),
         ('Заряженн(?:|ый|ого) рыв(?:|ок|ка)', {'link': 'Заряженный рывок'}),
         ('Ясност(?:|ь|и|ью) ума', {'link': 'Ясность ума'}),
         ('Рассечени(?:|е|я)', {'link': 'Рассечение'}),
@@ -965,6 +898,33 @@ _inter_wiki_map = {
         ('Шальн(?:|ой|ого) удар(?:|а)', {'link': 'Шальной удар'}),
         ('Увядани(?:|е|я)', {'link': 'Увядание'}),
         ('Грозн(?:|ый|ым|ого) гнев(?:|а|ом)', {'link': 'Грозный гнев'}),
+        ('Круг(?:|а) яда', {'link': 'Круг яда'}),
+        ('Брос(?:|ок|ка) призрачного щита', {'link': 'Бросок призрачного щита'}),
+        ('Взрывная ловушка', {'link': 'Взрывная ловушка'}),
+        ('Губительн(?:|ый|ого) шаг(?:|а)', {'link': 'Губительный шаг'}),
+        ('Дробящая сталь', {'link': 'Дробящая сталь'}),
+        ('Кремаци(?:|и|я)', {'link': 'Кремация'}),
+        ('Ловушка-огнемёт', {'link': 'Ловушка-огнемёт'}),
+        ('Моров(?:|ой|ого) удар(?:|а)', {'link': 'Моровой удар'}),
+        ('Нестабильн(?:|ый|ого) труп(?:|а)', {'link': 'Нестабильный труп'}),
+        ('Носител(?:|ь|я) чумы', {'link': 'Носитель чумы'}),
+        ('Осколочн(?:|ая|ой) баллист(?:|а|ы)', {'link': 'Осколочная баллиста'}),
+        ('Пронзающ(?:|ая|ей) стал(?:|и|ь)', {'link': 'Пронзающая сталь'}),
+        ('Сейсмическая ловушка', {'link': 'Сейсмическая ловушка'}),
+        ('Стрел(?:|а|ы) ловчего', {'link': 'Стрела ловчего'}),
+        ('Стрела скверны', {'link': 'Стрела скверны'}),
+        ('Токсичный дождь', {'link': 'Токсичный дождь'}),
+        ('Точност(?:|и|ь|ью)', {'link': 'Точность'}),
+        ('Эксгумаци(?:|и|я)', {'link': 'Эксгумация'}),
+        ('Божественн(?:|ый|ого) гнев(?:|а)', {'link': 'Божественный гнев'}),
+        ('Возврат клейм', {'link': 'Возврат клейм'}),
+        ('Волн(?:|а|ы|ой) осуждения', {'link': 'Волна осуждения'}),
+        ('Зимн(?:|ей|яя) сфер(?:|а|ы)', {'link': 'Зимняя сфера'}),
+        ('Злорадств(?:|а|о|ом)', {'link': 'Злорадство'}),
+        ('Клейм(?:|а|о) Армагеддона', {'link': 'Клеймо Армагеддона'}),
+        ('Клейм(?:|а|о) бури', {'link': 'Клеймо бури'}),
+        ('Ледян(?:|ой|ого) скач(?:|а|ок)', {'link': 'Ледяной скачок'}),
+        ('Ловушк(?:|а|и) переливания', {'link': 'Ловушка переливания'}),
         #
         # Enchantment skills
         #
@@ -1186,7 +1146,7 @@ _inter_wiki_map = {
         ('Быстрой сборкой (?:[0-9]+ уровня)', {'link': 'Быстрая сборка'}),
         ('Зовом предков (?:[0-9]+ уровня)', {'link': 'Зов предков'}),
         ('Кольцом стрел (?:[0-9]+ уровня)', {'link': 'Кольцо стрел'}),
-        ('Очередью (?:[0-9]+ уровня)', {'link': 'Очередь'}),
+        ('(?:Очередью|Стрельбой очередями) (?:[0-9]+ уровня)', {'link': 'Стрельба очередями'}),
         ('Ударной волной (?:[0-9]+ уровня)', {'link': 'Ударная волна'}),
         ('Леденящим охлаждением (?:[0-9]+ уровня)',
          {'link': 'Леденящее охлаждение'}),
@@ -1246,6 +1206,79 @@ _inter_wiki_map = {
          {'link': 'Пробужденный: Много дополнительных снарядов'}),
         ('пробуждённой Расширенной областью действия (?:[0-9]+ уровня)',
          {'link': 'Пробужденный: Расширенная область действия'}),
+
+        #
+        # Attibutes
+        #
+        ('ловкост(?:|ь|и)', {'link': 'Ловкость'}),
+        ('интеллект(?:|а|у)', {'link': 'Интеллект'}),
+        ('сил(?:|а|е|ы)', {'link': 'Сила'}),
+        ('характеристик(?:|ам)', {'link': 'Характеристики'}),
+        #
+        # Offense stats
+        #
+        ('меткост(?:|ь|и)', {'link': 'Меткость (механика)'}),
+        ('скорост(?:|ь|и) атак(?:|и)', {'link': 'Скорость атаки'}),
+        ('скорост(?:|ь|и) сотворения чар', {'link': 'Скорость сотворения чар'}),
+        ('сотворения чар', {'link': 'Скорость сотворения чар'}),
+        (
+        'шанс(?:|а|у) критического удара', {'link': 'Шанс критического удара'}),
+        ('множител(?:|ь|ю|я) критического удара',
+         {'link': 'Множитель критического удара'}),
+        ('критическ(?:|ий|им|ими|их) удар(?:|ом|ами|ов)',
+         {'link': 'Критический удар'}),
+        ('скорост(?:|ь|и) передвижения', {'link': 'Скорость передвижения'}),
+        ('похищ(?:|ение|ения|ается|ать|енного|ают)', {'link': 'Похищение'}),
+        # Life Leech, Mana Leech
+        ('мало(?:|е|м|го) количеств(?:|о|е|а) здоровья|мало здоровья',
+         {'link': 'Малое количество здоровья'}),
+        ('полн(?:|ое|ом|ым) здоровье(?:|м)', {'link': 'Полное здоровье'}),
+        ('здоровь(?:|е|я)', {'link': 'Здоровье'}),
+        ('удерж(?:|анной|ивают) ман(?:|ы|у)', {'link': 'Удержание маны'}),
+        ('малом количестве маны|мана не на низком уровне',
+         {'link': 'Малое количество маны'}),
+        ('полн(?:|ая|ой) ман(?:|а|е)', {'link': 'Полная мана'}),
+        ('ман(?:|а|у|ы)', {'link': 'Мана'}),
+        ('полном энергетическом щите', {'link': 'Полный энергетический щит'}),
+        # Just damage
+        # ('урон(?:|а)', {'link': 'Урон'}),
+        #
+        # Defenses
+        #
+        ('брон(?:|я|е|и|ю|ей)', {'link': 'Броня'}),
+        ('энергетическ(?:|ий|ого|ом) щит(?:|а|е)',
+         {'link': 'Энергетический щит'}),
+        ('уклонени(?:|е|ю|я)', {'link': 'Уклонение'}),
+        ('(?:за|)блок(?:|а|е|ировать|ировали|ированный)', {'link': 'Блок'}),
+        ('увернуться|уворот(?:|а)', {'link': 'Уворот'}),
+        #
+        ('сопротивлени(?:|е|ю|я|ем) хаосу', {'link': 'Сопротивление хаосу'}),
+        ('сопротивлени(?:|е|ю|я|ем) холоду', {'link': 'Сопротивление холоду'}),
+        ('сопротивлени(?:|е|ю|я|ем) огню', {'link': 'Сопротивление огню'}),
+        ('сопротивлени(?:|е|ю|я|ем) молнии', {'link': 'Сопротивление молнии'}),
+        ('сопротивлени(?:|е|ю|я|ем) все(?:|м|х) стихи(?:|й|ям)',
+         {'link': 'Сопротивление стихиям'}),
+        #
+        # Buffs
+        #
+
+        # Charges
+        ('заряд(?:|а|ы|ов) выносливости', {'link': 'Заряд выносливости'}),
+        ('заряд(?:|а|ы|ов) ярости', {'link': 'Заряд ярости'}),
+        ('заряд(?:|а|ы|ов) энергии', {'link': 'Заряд энергии'}),
+
+        # Friendly
+        ('буйств(?:|о|е|а)', {'link': 'Буйство'}),
+
+        # Hostile
+        ('оскверненной крови', {'link': 'Оскверненная кровь'}),
+
+        #
+        # Misc stats
+        #
+
+        ('размер(?:|а) персонажа', {'link': 'Размер персонажа'}),
+
         #
         # Groups
         #
@@ -1334,6 +1367,7 @@ _inter_wiki_map = {
         ('гн(?:|е|ё)зд(?:|а|о|ах)', {'link': 'Гнездо предмета'}),
         ('недавно', {'link': 'Недавно'}),
         ('умени(?:|е|й|я|ем)', {'link': 'Умения'}),
+        ('чар(?:|ы|ами) колец', {'link': 'Чары колец'}),
         ('чар(?:|ы|ами)', {'link': 'Чары'}),
         ('атак(?:|а|и)', {'link': 'Атака'}),
         ('приспешник(?:|а|и|ам|ах|ов|ами)', {'link': 'Приспешник'}),
@@ -1351,7 +1385,7 @@ _inter_wiki_map = {
         ('неудач(?:|а|лив|ливы)', {'link': 'Неудача'}),
         ('двойной урон', {'link': 'Двойной урон'}),
         ('снаряды кольцом', {'link': 'Кольцо снарядов'}),
-        ('чар(?:|ы) колец', {'link': 'Чары колец'}),
+        ('област(?:|и|ь) действия', {'link': 'Область действия'}),
     ),
 }
 
@@ -1409,6 +1443,8 @@ class BaseParser:
     }
     _MISSING_MSG = 'Several arguments have not been found:\n%s'
 
+    _TC_KWARGS = {}
+
     _files = []
     _translations = []
 
@@ -1434,7 +1470,8 @@ class BaseParser:
             language=config.get_option('language'),
         )
         install_data_dependant_quantifiers(self.rr)
-        self.tc = TranslationFileCache(path_or_ggpk=base_path)
+        self.tc = TranslationFileCache(path_or_ggpk=base_path,
+                                       **self._TC_KWARGS)
         for file_name in self._translations:
             self.tc[file_name]
 
@@ -1472,6 +1509,9 @@ class BaseParser:
             )
 
         return rows
+
+    def _format_tr(self, tr):
+        return make_inter_wiki_links(self._format_lines(tr.lines))
 
     def _format_lines(self, lines):
         return '<br>'.join(lines).replace('\n', '<br>')
@@ -1682,7 +1722,7 @@ class TagHandler:
         self.rr['Words.dat'].build_index('Text')
 
         self.tag_handlers = {}
-        for key, func in TagHandler.tag_handlers.items():
+        for key, func in self.__class__.tag_handlers.items():
             self.tag_handlers[key] = partial(func, self)
 
     def _check_link(self, string):
@@ -1695,6 +1735,9 @@ class TagHandler:
             else:
                 string = self._IL_FORMAT % string
         return string
+
+    def _basic_handler(self, hstr, parameter, tid):
+        return self._C_FORMAT % (tid, hstr)
 
     def _default_handler(self, hstr, parameter, tid):
         return self._C_FORMAT % (tid, self._check_link(hstr))
