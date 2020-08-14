@@ -295,6 +295,13 @@ class ItemsHandler(ExporterHandler):
                 dest='item_class',
             )
 
+            parser.add_argument(
+                '-ft-cid', '--filter-class-id',
+                help='Filter by item class id(s). Case sensitive.',
+                nargs='*',
+                dest='item_class_id',
+            )
+
             self.add_image_arguments(parser)
         elif type == 'prophecy':
             parser.add_argument(
@@ -402,7 +409,7 @@ class ProphecyParser(parser.BaseParser):
     )
 
     def __init__(self, *args, **kwargs):
-        super().__init__(self, *args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.lang = config.get_option('language')
 
     def by_rowid(self, parsed_args):
@@ -524,6 +531,7 @@ class ItemsParser(SkillParserShared):
         'Blight': '3.8.0',
         'Metamorphosis': '3.9.0',
         'Delirium': '3.10.0',
+        'Harvest': '3.11.0',
     }
 
     _IGNORE_DROP_LEVEL_CLASSES = (
@@ -819,6 +827,8 @@ class ItemsParser(SkillParserShared):
                 ' (предмет убежища)',
             'Metadata/Items/Hideout/HideoutCharredSkeleton':
                 ' (предмет убежища)',
+            'Metadata/Items/HideoutInteractables/DexIntCraftingBench':
+                ' (предмет убежища)',
             # =================================================================
             # Piece
             # =================================================================
@@ -936,6 +946,70 @@ class ItemsParser(SkillParserShared):
                 ' (предмет)',
             'Metadata/Items/QuestItems/Act9/StormSword':
                 ' (предмет)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade1_1':
+                ' (1 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade1_2':
+                ' (2 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade1_3':
+                ' (3 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade1_4':
+                ' (4 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade1_5':
+                ' (5 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade1_6':
+                ' (6 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade1_7':
+                ' (7 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade1_8':
+                ' (8 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade2_1':
+                ' (1 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade2_2':
+                ' (2 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade2_3':
+                ' (3 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade2_4':
+                ' (4 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade2_5':
+                ' (5 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade2_6':
+                ' (6 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade2_7':
+                ' (7 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade2_8':
+                ' (8 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade3_1':
+                ' (1 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade3_2':
+                ' (2 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade3_3':
+                ' (3 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade3_4':
+                ' (4 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade3_5':
+                ' (5 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade3_6':
+                ' (6 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade3_7':
+                ' (7 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade3_8':
+                ' (8 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade4_1':
+                ' (1 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade4_2':
+                ' (2 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade4_3':
+                ' (3 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade4_4':
+                ' (4 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade4_5':
+                ' (5 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade4_6':
+                ' (6 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade4_7':
+                ' (7 из 8)',
+            'Metadata/Items/AtlasUpgrades/AtlasRegionUpgrade4_8':
+                ' (8 из 8)',
         },
         'German': {
             # =================================================================
@@ -1123,6 +1197,7 @@ class ItemsParser(SkillParserShared):
             'Low': 'Low Tier',
             'Mid': 'Mid Tier',
             'High': 'High Tier',
+            'Uber': 'Max Tier',
             'decoration': '%s (%s %s decoration)',
             'decoration_wounded': '%s (%s %s decoration, Wounded)',
             'of': '%s of %s',
@@ -1132,6 +1207,7 @@ class ItemsParser(SkillParserShared):
             'Low': 'Niedrige Stufe',
             'Mid': 'Mittlere Stufe',
             'High': 'Hohe Stufe',
+            'Uber': 'Maximale Stufe',
             'decoration': '%s (%s %s Dekoration)',
             'decoration_wounded': '%s (%s %s Dekoration, verletzt)',
             'of': '%s von %s',
@@ -1141,6 +1217,7 @@ class ItemsParser(SkillParserShared):
             'Low': 'низкий уровень',
             'Mid': 'средний уровень',
             'High': 'высокий уровень',
+            'Uber': 'максимальный уровень',
             'decoration': '%s (%s %s предмет убежища)',
             'decoration_wounded': '%s (%s %s предмет убежища, Раненый)',
             'of': '%s из %s',
@@ -1533,13 +1610,103 @@ class ItemsParser(SkillParserShared):
         max_level = len(exp_total)-1
         ge = skill_gem['GrantedEffectsKey']
 
-        self._skill(ge=ge, infobox=infobox, parsed_args=self._parsed_args,
+        primary = OrderedDict()
+        self._skill(ge=ge, infobox=primary, parsed_args=self._parsed_args,
                     msg_name=base_item_type['Name'], max_level=max_level)
+
+        # Some skills have a secondary skill effect.
+        #
+        # Currently there is no great way of handling this in the wiki, so the
+        # secondary effects are just added. Skills that have their own entry
+        # are excluded so we don't get vaal skill gems here.
+        second = False
+        if skill_gem['GrantedEffectsKey2']:
+            index = None
+            try:
+                index = self.rr['SkillGems.dat'].index['GrantedEffectsKey']
+            except KeyError:
+                self.rr['SkillGems.dat'].build_index('GrantedEffectsKey')
+                index = self.rr['SkillGems.dat'].index['GrantedEffectsKey']
+
+            if not index[skill_gem['GrantedEffectsKey2']]:
+                # If there is no skill granting this it's probably fine to
+                # include.
+                second = True
+
+        if second:
+            secondary = OrderedDict()
+            self._skill(
+                ge=skill_gem['GrantedEffectsKey2'],
+                infobox=secondary,
+                parsed_args=self._parsed_args,
+                msg_name=base_item_type['Name'],
+                max_level=max_level
+            )
+
+            for k, v in list(primary.items()) + list(secondary.items()):
+                # Just override the stuff if needs be.
+                if 'stat' not in k:
+                    infobox[k] = v
+
+            for k in ('stat_text', 'quality_stat_text'):
+                infobox[k] = '<br>'.join(
+                    [x for x in (primary[k], secondary[k]) if x]
+                )
+
+            # Stat merging...
+            def get_stat(i, prefix, data):
+                return (data['%s_stat%s_id' % (prefix, i)],
+                        data['%s_stat%s_value' % (prefix, i)])
+
+            def set_stat(i, prefix, sid, sv):
+                infobox['%s_stat%s_id' % (prefix, i)] = sid
+                infobox['%s_stat%s_value' % (prefix, i)] = sv
+
+            def cp_stats(prefix):
+                i = 1
+                while True:
+                    try:
+                        sid, sv = get_stat(i, prefix, primary)
+                    except KeyError:
+                        break
+                    set_stat(i, prefix, sid, sv)
+                    i += 1
+
+                j = 1
+                while True:
+                    try:
+                        sid, sv = get_stat(j, prefix, secondary)
+                    except KeyError:
+                        break
+                    set_stat(j + i - 1, prefix, sid, sv)
+                    j += 1
+
+            cp_stats('static')
+            lv = 1
+            while True:
+                prefix = 'level%s' % lv
+                try:
+                    primary[prefix]
+                except KeyError:
+                    break
+
+                for k in ('_stat_text', ):
+                    k = prefix + k
+                    infobox[k] = '<br>'.join(
+                        [x[k] for x in (primary, secondary) if k in x]
+                    )
+                cp_stats(prefix)
+
+                lv += 1
+        else:
+            for k, v in primary.items():
+                infobox[k] = v
 
         # some descriptions come from active skills which are parsed in above
         # function
         if 'gem_description' not in infobox:
-            infobox['gem_description'] = skill_gem['Description']
+            infobox['gem_description'] = skill_gem['Description'].replace(
+                '\n', '<br>')
 
         #
         # Output handling for progression
@@ -2044,6 +2211,104 @@ class ItemsParser(SkillParserShared):
         row_index=True
     )
 
+    def _harvest_seed_extra(self, infobox, base_item_type, harvest_object):
+
+        if not self.rr['HarvestSeedTypes.dat'].index.get('HarvestObjectsKey'):
+            self.rr['HarvestSeedTypes.dat'].build_index('HarvestObjectsKey')
+
+        harvest_seed = self.rr['HarvestSeedTypes.dat'].index[
+            'HarvestObjectsKey'][harvest_object.rowid]
+
+        _apply_column_map(infobox, (
+                ('Text', {
+                    'template': 'seed_effect',
+                }),
+                ('Tier', {
+                    'template': 'seed_tier',
+                }),
+                ('GrowthCycles', {
+                    'template': 'seed_growth_cycles',
+                }),
+                ('RequiredNearbySeed_Tier', {
+                    'template': 'seed_required_nearby_seed_tier',
+                    'condition': lambda v: v > 0,
+                }),
+                ('RequiredNearbySeed_Amount', {
+                    'template': 'seed_required_nearby_seed_amount',
+                    'condition': lambda v: v > 0,
+                }),
+                ('WildLifeforceConsumedPercentage', {
+                    'template': 'seed_consumed_wild_lifeforce_percentage',
+                    'condition': lambda v: v > 0,
+                }),
+                ('VividLifeforceConsumedPercentage', {
+                    'template': 'seed_consumed_vivid_lifeforce_percentage',
+                    'condition': lambda v: v > 0,
+                }),
+                ('PrimalLifeforceConsumedPercentage', {
+                    'template': 'seed_consumed_primal_lifeforce_percentage',
+                    'condition': lambda v: v > 0,
+                }),
+                ('HarvestCraftOptionsKeys', {
+                    'template': 'seed_granted_craft_option_ids',
+                    'format': lambda v: ','.join([k['Id'] for k in v]),
+                    'condition': lambda v: v,
+                }),
+            ), harvest_seed)
+
+        return True
+
+    _type_harvest_seed =_type_factory(
+        data_file='HarvestObjects.dat',
+        data_mapping=(
+            ('ObjectType', {
+                'template': 'seed_type_id',
+                'format': lambda v: v.name.lower(),
+            }),
+        ),
+        function=_harvest_seed_extra,
+        #fail_condition=True,
+        row_index=True,
+    )
+
+    def _harvest_plant_booster_extra(self, infobox, base_item_type,
+                                     harvest_object):
+
+        if not self.rr['HarvestSeedTypes.dat'].index.get('HarvestObjectsKey'):
+            self.rr['HarvestSeedTypes.dat'].build_index('HarvestObjectsKey')
+
+        harvest_plant_booster = self.rr['HarvestPlantBoosters.dat'].index[
+            'HarvestObjectsKey'][harvest_object.rowid]
+
+        _apply_column_map(infobox, (
+                ('Radius', {
+                    'template': 'plant_booster_radius',
+                }),
+                ('Lifeforce', {
+                    'template': 'plant_booster_lifeforce',
+                    'condition': lambda v: v > 0,
+                }),
+                ('AdditionalCraftingOptionsChance', {
+                    'template': 'plant_booster_additional_crafting_options',
+                    'condition': lambda v: v > 0,
+                }),
+                ('RareExtraChances', {
+                    'template': 'plant_booster_extra_chances',
+                    'condition': lambda v: v > 0,
+                }),
+            ), harvest_plant_booster)
+
+        return True
+
+    _type_harvest_plant_booster =_type_factory(
+        data_file='HarvestObjects.dat',
+        data_mapping=(
+        ),
+        function=_harvest_plant_booster_extra,
+        #fail_condition=True,
+        row_index=True,
+    )
+
     _cls_map = {
         # Jewellery
         'Amulet': (_type_amulet, ),
@@ -2092,6 +2357,8 @@ class ItemsParser(SkillParserShared):
         'Microtransaction': (_type_currency, ),
         'DivinationCard': (_type_currency, ),
         'Incubator': (_type_currency, _type_incubator),
+        'HarvestSeed': (_type_currency, _type_harvest_seed),
+        'HarvestPlantBooster': (_type_currency, _type_harvest_plant_booster),
         # Labyrinth stuff
         #'LabyrinthItem': (),
         'LabyrinthTrinket': (_type_labyrinth_trinket, ),
@@ -2197,23 +2464,13 @@ class ItemsParser(SkillParserShared):
     def _conflict_maps(self, infobox, base_item_type, rr, language):
         id = base_item_type['Id'].replace('Metadata/Items/Maps/', '')
         # Legacy maps
-        map_version = None
+        map_series = None
         for row in rr['MapSeries.dat']:
             if not id.startswith(row['Id']):
                 continue
-            map_version = row['Name']
+            map_series = row
 
-        if 'Harbinger' in id:
-            name = '%s (%s) (%s)' % (
-                base_item_type['Name'],
-                self._LANG[language][re.sub(r'^.*Harbinger', '', id)],
-                map_version,
-            )
-        else:
-            name = '%s (%s)' % (
-                base_item_type['Name'],
-                map_version
-            )
+        name = self._format_map_name(base_item_type, map_series)
 
         # Each iteration of maps has it's own art
         infobox['inventory_icon'] = name
@@ -2267,8 +2524,11 @@ class ItemsParser(SkillParserShared):
     }
 
     def _parse_class_filter(self, parsed_args):
-        self.rr['ItemClasses.dat'].build_index('Name')
-        if parsed_args.item_class:
+        if parsed_args.item_class_id:
+            return [self.rr['ItemClasses.dat'].index['Id'][cls]['Name']
+                    for cls in parsed_args.item_class_id]
+        elif parsed_args.item_class:
+            self.rr['ItemClasses.dat'].build_index('Name')
             return [self.rr['ItemClasses.dat'].index['Name'][cls][0]['Name']
                    for cls in parsed_args.item_class]
         else:
@@ -2539,6 +2799,21 @@ class ItemsParser(SkillParserShared):
 
         return r
 
+    def _format_map_name(self, base_item_type, map_series, language=None):
+        if language is None:
+            language = self._language
+        if 'Harbinger' in base_item_type['Id']:
+            return '%s (%s) (%s)' % (
+                base_item_type['Name'],
+                self._LANG[language][re.sub(r'^.*Harbinger', '', base_item_type['Id'])],
+                map_series['Name']
+            )
+        else:
+            return '%s (%s)' % (
+                base_item_type['Name'],
+                map_series['Name']
+            )
+
     def _get_map_series(self, parsed_args):
         self.rr['MapSeries.dat'].build_index('Id')
         self.rr['MapSeries.dat'].build_index('Name')
@@ -2653,8 +2928,9 @@ class ItemsParser(SkillParserShared):
                         'IsAtlasOfWorldsMapIcon']:
                     break
             else:
-                # Safeguard in case all entries are unique for some reason (???)
-                continue
+                # Maps that are no longer on the atlas such as guardian maps
+                # or harbinger
+                atlas_node = None
             if names and maps['BaseItemTypesKey']['Name'] in names or \
                     not names:
                 map_series_tiers[row] = atlas_node
@@ -2686,7 +2962,10 @@ class ItemsParser(SkillParserShared):
         for row, atlas_node in map_series_tiers.items():
             maps = row['MapsKey']
             base_item_type = maps['BaseItemTypesKey']
-            name = '%s (%s)' % (base_item_type['Name'], map_series['Name'])
+            name = self._format_map_name(
+                base_item_type,
+                map_series
+            )
             tier = row['%sTier' % map_series['Id']]
 
             # Base info
@@ -2706,59 +2985,61 @@ class ItemsParser(SkillParserShared):
             infobox['inventory_icon'] = name
 
             if self._language != 'English' and parsed_args.english_file_link:
-                infobox['inventory_icon'] = '%s (%s)' % (
-                    self.rr2['BaseItemTypes.dat'][base_item_type.rowid]['Name'],
-                    self.rr2['MapSeries.dat'][map_series.rowid]['Name']
+                infobox['inventory_icon'] = self._format_map_name(
+                    self.rr2['BaseItemTypes.dat'][base_item_type.rowid],
+                    self.rr2['MapSeries.dat'][map_series.rowid],
+                    'English',
                 )
             else:
                 infobox['inventory_icon'] = name
 
-            if latest:
-                infobox['atlas_x'] = atlas_node['X']
-                infobox['atlas_y'] = atlas_node['Y']
-                infobox['atlas_region_id'] = atlas_node['AtlasRegionsKey']['Id']
+            if atlas_node:
+                if latest:
+                    infobox['atlas_x'] = atlas_node['X']
+                    infobox['atlas_y'] = atlas_node['Y']
+                    infobox['atlas_region_id'] = atlas_node['AtlasRegionsKey'][
+                        'Id']
 
-                minimum = 0
-                connections = defaultdict(
-                    lambda: ['False' for i in range(0, 5)])
-                for i in range(0, 5):
-                    tier = atlas_node['Tier%s' % i]
-                    infobox['atlas_x%s' % i] = atlas_node['X%s' % i]
-                    infobox['atlas_y%s' % i] = atlas_node['Y%s' % i]
-                    infobox['atlas_map_tier%s' % i] = tier
-                    if tier:
-                        if minimum == 0:
-                            minimum = i
+                    minimum = 0
+                    connections = defaultdict(
+                        lambda: ['False' for i in range(0, 5)])
+                    for i in range(0, 5):
+                        tier = atlas_node['Tier%s' % i]
+                        infobox['atlas_x%s' % i] = atlas_node['X%s' % i]
+                        infobox['atlas_y%s' % i] = atlas_node['Y%s' % i]
+                        infobox['atlas_map_tier%s' % i] = tier
+                        if tier:
+                            if minimum == 0:
+                                minimum = i
 
-                    for atlas_node2 in atlas_node['AtlasNodeKeys%s' % i]:
-                        ivi = atlas_node2['ItemVisualIdentityKey']
-                        if ivi['IsAtlasOfWorldsMapIcon']:
-                            key = '%s (%s)' % (
-                                atlas_node2['MapsKey']['BaseItemTypesKey'][
-                                    'Name'],
-                                map_series['Name']
-                            )
-                        else:
-                            key = '%s (%s)' % (
-                                self.rr['UniqueMaps.dat'].index[
-                                    'ItemVisualIdentityKey'][ivi]['WordsKey'][
-                                    'Text'],
-                                map_series['Name']
-                            )
-                        connections[key][i] = 'True'
+                        for atlas_node2 in atlas_node['AtlasNodeKeys%s' % i]:
+                            ivi = atlas_node2['ItemVisualIdentityKey']
+                            if ivi['IsAtlasOfWorldsMapIcon']:
+                                key = self._format_map_name(
+                                    atlas_node2['MapsKey']['BaseItemTypesKey'],
+                                    map_series,
+                                )
+                            else:
+                                key = '%s (%s)' % (
+                                    self.rr['UniqueMaps.dat'].index[
+                                        'ItemVisualIdentityKey'][ivi][
+                                        'WordsKey']['Text'],
+                                    map_series['Name']
+                                )
+                            connections[key][i] = 'True'
 
-                infobox['atlas_region_minimum'] = minimum
-                for i, (k, v) in enumerate(connections.items(), start=1):
-                    infobox['atlas_connection%s_target' % i] = k
-                    infobox['atlas_connection%s_tier' % i] = ', '.join(v)
+                    infobox['atlas_region_minimum'] = minimum
+                    for i, (k, v) in enumerate(connections.items(), start=1):
+                        infobox['atlas_connection%s_target' % i] = k
+                        infobox['atlas_connection%s_tier' % i] = ', '.join(v)
 
-            infobox['flavour_text'] = \
-                atlas_node['FlavourTextKey']['Text'].replace('\n', '<br>')\
-                .replace('\r', '')
+                infobox['flavour_text'] = \
+                    atlas_node['FlavourTextKey']['Text'].replace('\n', '<br>')\
+                    .replace('\r', '')
 
-            if tier < 17:
+            if 0 < tier < 17:
                 self._process_purchase_costs(
-                    self.rr['MapPurchaseCosts.dat'].index['Tier'][maps['Tier']],
+                    self.rr['MapPurchaseCosts.dat'].index['Tier'][tier],
                     infobox
                 )
 
@@ -2793,7 +3074,8 @@ class ItemsParser(SkillParserShared):
             )
 
             if parsed_args.store_images and self.ggpk:
-                if not atlas_node['ItemVisualIdentityKey']['DDSFile']:
+                if atlas_node is None or \
+                        not atlas_node['ItemVisualIdentityKey']['DDSFile']:
                     warnings.warn(
                         'Missing 2d art inventory icon for item "%s"' %
                         base_item_type['Name']
