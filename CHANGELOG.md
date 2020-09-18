@@ -4,9 +4,12 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2020-09-18
+- Updated "hide pre-Harvest maps" button for Heist league.
+
 ## 2020-08-14
 - Updated map regions for Harvest league.
-- The Thaumaturgical Hideout now works correctly. 
+- The Thaumaturgical Hideout now works correctly.
 
 ## 2020-06-24
 - Delirium encounters are now tracked.
