@@ -1,6 +1,7 @@
 /**
  * https://github.com/mapwatch/mapwatch/issues/51
- * https://web.dev/native-file-system/
+ * https://web.dev/native-file-system/ (outdated)
+ * https://web.dev/browser-nativefs/
  */
 function BrowserNativeFSBackend() {
   const POLL_INTERVAL = 1000
@@ -11,10 +12,10 @@ function BrowserNativeFSBackend() {
   const onChanges = []
 
   function select() {
-    return window.chooseFileSystemEntries()
+    return window.showOpenFilePicker()
   }
   function open(userFile, maxSize) {
-    nativeFile = userFile
+    [nativeFile] = userFile
     return nativeFile.getFile().then(file => {
       size = file.size
       fileStart = Math.max(0, size - maxSize)
