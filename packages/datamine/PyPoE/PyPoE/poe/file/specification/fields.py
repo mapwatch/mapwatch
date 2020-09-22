@@ -192,6 +192,7 @@ Documentation
 
 # Python
 from collections import OrderedDict
+from typing import Tuple
 
 # 3rd-party
 
@@ -212,7 +213,7 @@ __all__ = ['Specification', 'File', 'Field', 'VirtualField']
 
 
 class _Common:
-    def as_dict(self):
+    def as_dict(self) -> dict:
         """
         Returns
         -------
@@ -342,7 +343,7 @@ class Specification(dict):
                             }
                         )
 
-    def as_dict(self):
+    def as_dict(self) -> dict:
         """
         Returns
         -------
@@ -388,22 +389,29 @@ class File:
         'columns_zip',
     ]
 
-    def __init__(self, fields=None, virtual_fields=None):
+    def __init__(self,
+                 fields: Tuple['Field', ...] = None,
+                 virtual_fields: Tuple['VirtualField', ...] = None
+                 ):
         """
         Parameters
         ----------
-        fields : OrderedDict
+        fields
             OrderedDict containing the field name as key and a :class:`Field`
             instance as value
-        virtual_fields : OrderedDict
+        virtual_fields
             OrderedDict containing the field name as key and a
             :class:`VirtualField` instance as value
         """
         if fields is None:
             fields = OrderedDict()
+        else:
+            fields = OrderedDict(((field.name, field) for field in fields))
         self.fields = fields
         if virtual_fields is None:
             virtual_fields = OrderedDict()
+        else:
+            virtual_fields = OrderedDict(((field.name, field) for field in virtual_fields))
         self.virtual_fields = virtual_fields
 
         # Set utility columns from the given data
@@ -445,7 +453,7 @@ class File:
     def __getitem__(self, item):
         return getattr(self, item)
 
-    def as_dict(self):
+    def as_dict(self) -> dict:
         """
         Returns
         -------
@@ -518,50 +526,60 @@ class Field(_Common, ReprMixin):
         'file_ext', 'display', 'display_type', 'description'
     ]
 
-    def __init__(self, type, key=None, key_id=None, key_offset=0, enum=None,
-                 unique=False, file_path=False, file_ext=None, display=None,
-                 display_type=None, description=None, name=None):
+    def __init__(self,
+                 type: str,
+                 key: str = None,
+                 key_id: str = None,
+                 key_offset: int = 0,
+                 enum: str = None,
+                 unique: bool = False,
+                 file_path: bool = False,
+                 file_ext: str = None,
+                 display: str = None,
+                 display_type: str = None,
+                 description: str = None,
+                 name: str = None):
         """
         All parameters except type are optional.
 
         Parameters
         ----------
-        type : str
+        type
             Required. The type. See Type Syntax above
-        key : str
+        key
             Name of the .dat file that is reference. Must exist in the
             specification.
-        key_id : str
+        key_id
             Name of the column in the other dat file that is referenced.
 
             This should be specified together with key, alone it does nothing.
 
             If the column is indexed (i.e. unique), this is fast.
-        key_offset : int
+        key_offset
             Offset at which the key of the other file starts.
             This generally useful when it's a key_id value, but the keys are
             numbered rowid+1 for example (so offset would be 1).
 
             This should be specified together with key, alone it does nothing.
-        enum : str
+        enum
             Enum from :py:mod:`PyPoE.poe.constants` to use for this field
-        unique : bool
+        unique
             Whether each value contained in this file is unique.
-        file_path : bool
+        file_path
             Whether the entry is a file path. Please note this should also be
             set if there is no file extension.
-        file_ext : str
+        file_ext
             The extension of the file, if any.
 
             Most of the time this should be set together with file_path, unless
             there is no path given.
-        display : str
+        display
             String to show instead of the field id when displaying this
-        display_type : str
+        display_type
             Python formatter syntax for outputting the value
-        description : str
+        description
             Description of what this field does
-        name : str
+        name
             Name of the field
         """
         self.type = type
@@ -594,21 +612,27 @@ class VirtualField(_Common):
     Virtual fields are based off other Field instances and provide additional
     convenience options such as grouping certain fields together.
     """
-    __slots__ = ['fields', 'zip']
+    __slots__ = ['name', 'fields', 'zip']
 
-    def __init__(self, fields, zip=False):
+    def __init__(self,
+                 name: str,
+                 fields: Tuple[str, ...],
+                 zip: bool = False):
         """
 
         Parameters
         ----------
-        fields : list[str]
+        name
+
+        fields
             List of fields to coerce into one field.
             All fields must be exist, but they can be either a regular or
             virtual field or combination of.
-        zip : bool
+        zip
              Whether to zip the fields together.
              This option requires each of the referenced fields to be a list.
         """
+        self.name = name
         self.fields = fields
         self.zip = zip
 
