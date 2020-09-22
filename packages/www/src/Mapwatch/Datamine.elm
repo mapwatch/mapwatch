@@ -241,13 +241,15 @@ createDatamine_ ws ls npcText =
     { init | unindex = init |> langs |> List.map .unindex |> langIndexUnion }
 
 
-{-| Parse "You have entered %1%" messages for all languages.
+{-| Parse "You have entered {0}" messages for all languages.
 
 This never changes, and it turns out that caching it is a very real performance
 boost for LogLine parsing.
 
 Most other lang lookups are exact matches, easy to do quickly. This one's a
 special case because the area name is part of the message.
+
+Prior to Poe 3.11.2 (ggpk bundles), this was "You have entered %1%".
 
 -}
 createYouHaveEntered : Dict String Lang -> String -> Maybe String
@@ -264,7 +266,7 @@ createYouHaveEntered lang =
             strings
                 |> List.filterMap
                     (\s ->
-                        case String.split "%1%" s of
+                        case String.split "{0}" s of
                             pre :: suf :: [] ->
                                 Just (Util.String.unwrap (": " ++ pre) suf)
 

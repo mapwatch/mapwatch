@@ -101,7 +101,7 @@ infoEnteredParser dm =
                 |> List.filterMap (\l -> Dict.get "EnteredArea" l.index.backendErrors)
                 |> List.filterMap
                     (\s ->
-                        case String.split "%1%" s of
+                        case String.split "{0}" s of
                             pre :: suf :: [] ->
                                 Just ( pre, suf )
 

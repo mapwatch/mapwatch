@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2020-09-22
+- Updated map regions for Heist league.
+
 ## 2020-09-18
 - Updated "hide pre-Harvest maps" button for Heist league.
 

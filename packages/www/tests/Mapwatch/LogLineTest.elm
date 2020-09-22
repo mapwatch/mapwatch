@@ -15,7 +15,7 @@ datamine =
         (Dict.singleton "en"
             { name = "en"
             , unindex = langIndexEmpty
-            , index = { langIndexEmpty | backendErrors = Dict.singleton "EnteredArea" "You have entered %1%." }
+            , index = { langIndexEmpty | backendErrors = Dict.singleton "EnteredArea" "You have entered {0}." }
             }
         )
         Dict.empty
