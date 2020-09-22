@@ -27,9 +27,12 @@
     "process": "node src/main.js > dist/mapwatch.json",
     "export": "bash -c \"yarn export:all && yarn process\"",
     "//export:zh": "Because downloading Chinese-PoE is a pain, I don't want to require it for the build. dist/lang/zh.json is git-committed (unlike other language exports), and `yarn export` won't rebuild it. `yarn export:zh` will. ",
-    "export:zh": "bash -c \"yarn export:lang:zh && yarn build\""
+    "export:zh": "bash -c \"yarn export:lang:zh && yarn build\"",
+    "spreadsheet": "bash -c \"node src/spreadsheet.js\""
   },
   "devDependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "open": "^7.2.1",
+    "xlsx": "^0.16.7"
   }
 }

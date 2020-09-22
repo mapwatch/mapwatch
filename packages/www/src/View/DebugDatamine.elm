@@ -94,9 +94,11 @@ viewWorldAreas datamine =
 viewTags : WorldArea -> List String
 viewTags w =
     [ ifMaybe w.isTown "Town"
+    , ifMaybe (Datamine.isHeistTown w) "HeistTown"
     , ifMaybe w.isHideout "Hideout"
     , ifMaybe w.isMapArea "Map"
     , ifMaybe w.isUniqueMapArea "UniqueMap"
+    , ifMaybe (Datamine.isHeistMap w) "HeistMap"
     ]
         |> List.filterMap identity
 

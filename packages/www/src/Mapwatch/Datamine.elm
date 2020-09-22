@@ -7,7 +7,10 @@ module Mapwatch.Datamine exposing
     , defaultAtlasRegion
     , imgCdn
     , imgSrc
+    , isHeistMap
+    , isHeistTown
     , isMap
+    , isTown
     , langIndexEmpty
     , langs
     , tier
@@ -209,14 +212,34 @@ boolQuery n b =
         ""
 
 
+isTown : WorldArea -> Bool
+isTown w =
+    w.isTown || isHeistTown w
+
+
 isMap : WorldArea -> Bool
 isMap w =
-    case imgSrc { isBlightedMap = False } w of
-        Nothing ->
-            False
+    if isTown w then
+        False
 
-        Just _ ->
-            True
+    else
+        case imgSrc { isBlightedMap = False } w of
+            Nothing ->
+                isHeistMap w
+
+            Just _ ->
+                True
+
+
+isHeistTown : WorldArea -> Bool
+isHeistTown w =
+    w.id == "HeistHub"
+
+
+isHeistMap : WorldArea -> Bool
+isHeistMap w =
+    -- TODO: "The Den" is both a heist boss and a campaign zone!
+    String.startsWith "Heist" w.id && not (isHeistTown w) && w.id /= "HeistBoss_Twins"
 
 
 createDatamine : Array WorldArea -> Dict String Lang -> Result String Datamine

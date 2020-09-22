@@ -46,7 +46,7 @@ function transform(rawJson, rawLangs) {
     itemVisualIdentity: _.keyBy(json["ItemVisualIdentity.dat"].data, 'Id')
   }))
   // I'm interested in maps, towns, and hideouts. other zones - usually campaign stuff - don't matter to mapwatch
-  .filter(w => w.IsMapArea || w.IsUniqueMapArea || w.IsTown || w.IsHideout || w.IsVaalArea || w._IsLabTrial || w._IsAbyssalDepths)
+  .filter(w => w.IsMapArea || w.IsUniqueMapArea || w.IsTown || w.IsHideout || w.IsVaalArea || w._IsLabTrial || w._IsAbyssalDepths || w.Id.startsWith('Heist'))
   // it looks like maps with no visuals are either duplicates or boss arenas. Either way, not interested
   .filter(w => w.ItemVisualIdentity || !w.IsMapArea)
 
@@ -89,6 +89,55 @@ function nonAtlasMapIcon(id) {
   // No idea why it needs multiple ids, but it makes no difference
   if (id.startsWith("Incursion_Temple")) {
     return "Art/2DItems/Effects/Portals/IncursionPortal.png"
+  }
+  // Heist contracts. I can't find a way to associate heist zones to their item icon, so we'll do it by hand
+  if (id.startsWith("HeistBunker")) {
+    return "Art/2DItems/Currency/Heist/ContractItem.png"
+  }
+  if (id.startsWith("HeistMines")) {
+    return "Art/2DItems/Currency/Heist/ContractItem2.png"
+  }
+  if (id.startsWith("HeistDungeon")) {
+    return "Art/2DItems/Currency/Heist/ContractItem3.png"
+  }
+  if (id.startsWith("HeistReliquary")) {
+    return "Art/2DItems/Currency/Heist/ContractItem4.png"
+  }
+  if (id.startsWith("HeistLibrary")) {
+    return "Art/2DItems/Currency/Heist/ContractItem5.png"
+  }
+  if (id.startsWith("HeistRobotTunnels")) {
+    return "Art/2DItems/Currency/Heist/ContractItem6.png"
+  }
+  if (id.startsWith("HeistSewers")) {
+    return "Art/2DItems/Currency/Heist/ContractItem7.png"
+  }
+  if (id.startsWith("HeistCourts")) {
+    return "Art/2DItems/Currency/Heist/ContractItem8.png"
+  }
+  if (id.startsWith("HeistMansion")) {
+    return "Art/2DItems/Currency/Heist/ContractItem9.png"
+  }
+  if (id === "HeistBoss_AdmiralDarnaw") {
+    return "Art/2DItems/Currency/Heist/AdmiralDarnawFightContract.dds"
+  }
+  if (id === "HeistBoss_FreidrichTarollo") {
+    // TODO is this icon right? It's a guess, could be mixed up with another heist boss with this comment
+    return "Art/2DItems/Currency/Heist/SlaveMerchantFightContract.dds"
+  }
+  if (id === "HeistBoss_Jamanra") {
+    return "Art/2DItems/Currency/Heist/JamanraFightContract.dds"
+  }
+  if (id === "HeistBoss_Nashta") {
+    // TODO is this icon right? It's a guess, could be mixed up with another heist boss with this comment
+    return "Art/2DItems/Currency/Heist/UsurperFightContract.dds"
+  }
+  if (id === "HeistBoss_Twins") {
+    // TODO is this icon right? It's a guess, could be mixed up with another heist boss with this comment
+    return "Art/2DItems/Currency/Heist/VoxFamilyFightContract.dds"
+  }
+  if (id === "HeistBoss_TheUnbreakable") {
+    return "Art/2DItems/Currency/Heist/UnbreakableFightContract.dds"
   }
   return null
 }

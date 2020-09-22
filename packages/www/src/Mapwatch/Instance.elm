@@ -99,7 +99,7 @@ isTown : Instance -> Bool
 isTown =
     -- No-zone is a town, since you're probably logged out and will log back in to town.
     -- Unknown-zone is *not* a town - towns are all known and accounted for, but non-map combat areas are excluded from my data.
-    unwrap True (.worldArea >> Maybe.map (\w -> w.isTown || w.isHideout) >> Maybe.withDefault False)
+    unwrap True (.worldArea >> Maybe.map (\w -> Datamine.isTown w || w.isHideout) >> Maybe.withDefault False)
 
 
 isMap : Instance -> Bool
