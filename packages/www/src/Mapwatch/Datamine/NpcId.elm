@@ -92,3 +92,58 @@ legionGenerals =
 
 shaper =
     "Metadata/NPC/Shaper"
+
+
+
+-- heist
+
+
+karst =
+    "Metadata/NPC/League/Heist/Lockpick1"
+
+
+niles =
+    "Metadata/NPC/League/Heist/Interrogator1"
+
+
+huck =
+    "Metadata/NPC/League/Heist/Soldier1"
+
+
+tibbs =
+    "Metadata/NPC/League/Heist/HeavyLifter1"
+
+
+nenet =
+    "Metadata/NPC/League/Heist/Detector1"
+
+
+vinderi =
+    "Metadata/NPC/League/Heist/Demolitionist1"
+
+
+tortilla =
+    -- https://www.reddit.com/r/pathofexile/comments/iwbvt2/got_it_good/
+    "Metadata/NPC/League/Heist/CatBurglar1"
+
+
+gianna =
+    "Metadata/NPC/League/Heist/Illusionist1"
+
+
+isla =
+    "Metadata/NPC/League/Heist/Engineer1"
+
+
+heistNpcs =
+    Set.fromList
+        [ karst
+        , niles
+        , huck
+        , tibbs
+        , nenet
+        , vinderi
+        , tortilla
+        , gianna
+        , isla
+        ]

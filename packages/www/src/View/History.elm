@@ -16,6 +16,7 @@ import Mapwatch.MapRun.Sort as RunSort
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
 import Model exposing (Msg(..), OkModel)
+import Random exposing (Generator)
 import Regex
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
@@ -264,7 +265,7 @@ viewHistoryTable queryRuns model =
 
             -- , viewHistoryHeader (Run.parseSort params.sort) params
             ]
-        , tbody [] (pageRuns |> List.map (viewHistoryRun model { showDate = True } goalDuration) |> List.concat)
+        , tbody [] (pageRuns |> List.map (viewHistoryRun model { showDate = True, loadedAt = model.loadedAt } goalDuration) |> List.concat)
         , tfoot [] [ tr [] [ td [ colspan 12 ] [ paginator ] ] ]
         ]
 
@@ -319,7 +320,9 @@ viewDuration =
 
 
 type alias HistoryRowConfig =
-    { showDate : Bool }
+    { showDate : Bool
+    , loadedAt : Posix
+    }
 
 
 type alias Duration =
@@ -424,34 +427,45 @@ viewHistorySideAreaRow query { showDate } ( instance, d ) =
 
 
 viewHistoryNpcTextRow : QueryDict -> HistoryRowConfig -> ( NpcId, List String ) -> Maybe (Html msg)
-viewHistoryNpcTextRow query { showDate } ( npcId, texts ) =
-    case viewNpcText query npcId of
+viewHistoryNpcTextRow query { showDate, loadedAt } ( npcId, texts ) =
+    case viewNpcText query loadedAt npcId of
         [] ->
             Nothing
 
         body ->
-            Just <|
-                tr [ class "npctext-area" ]
-                    ((if showDate then
-                        [ td [ class "date" ] [] ]
+            if
+                Set.member npcId NpcId.heistNpcs
+                    && (not (Feature.isActive Feature.HeistNpcs query)
+                            -- Crude hacky way to filter unselected in-town heist voicelines.
+                            -- TODO: this is horrible, remove it before heistNpcs release
+                            || (List.length texts < 5)
+                       )
+            then
+                Nothing
 
-                      else
-                        []
-                     )
-                        ++ [ td [] []
-                           , td [] []
+            else
+                Just <|
+                    tr [ class "npctext-area" ]
+                        ((if showDate then
+                            [ td [ class "date" ] [] ]
 
-                           -- , td [ colspan 7, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
-                           , td [ colspan 7, title <| String.join "\n\n" texts ] body
-                           , td [ class "side-dur" ] []
-                           , td [ class "portals" ] []
-                           , td [ class "town-pct" ] []
-                           ]
-                    )
+                          else
+                            []
+                         )
+                            ++ [ td [] []
+                               , td [] []
+
+                               -- , td [ colspan 7, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
+                               , td [ colspan 7, title <| String.join "\n\n" texts ] body
+                               , td [ class "side-dur" ] []
+                               , td [ class "portals" ] []
+                               , td [ class "town-pct" ] []
+                               ]
+                        )
 
 
-viewNpcText : QueryDict -> String -> List (Html msg)
-viewNpcText query npcId =
+viewNpcText : QueryDict -> Posix -> String -> List (Html msg)
+viewNpcText query loadedAt npcId =
     if npcId == NpcId.einhar then
         [ View.Icon.einhar, text "Einhar, Beastmaster" ]
 
@@ -478,6 +492,64 @@ viewNpcText query npcId =
 
     else if npcId == NpcId.legionGeneralGroup then
         [ View.Icon.legion, text "Legion General" ]
+
+    else if npcId == NpcId.karst then
+        [ View.Icon.karst, text "Karst, the Lockpick" ]
+
+    else if npcId == NpcId.niles then
+        [ View.Icon.niles, text "Niles, the Interrogator" ]
+
+    else if npcId == NpcId.huck then
+        [ View.Icon.huck, text "Huck, the Soldier" ]
+
+    else if npcId == NpcId.tibbs then
+        [ View.Icon.tibbs, text "Tibbs, the Giant" ]
+
+    else if npcId == NpcId.nenet then
+        [ View.Icon.nenet, text "Nenet, the Scout" ]
+
+    else if npcId == NpcId.vinderi then
+        [ View.Icon.vinderi, text "Vinderi, the Dismantler" ]
+
+    else if npcId == NpcId.tortilla then
+        -- https://www.reddit.com/r/pathofexile/comments/iwbvt2/got_it_good/
+        -- memes are serious business
+        let
+            gen : Generator (Generator String)
+            gen =
+                Random.weighted
+                    ( 65, Random.constant "Tullina" )
+                    [ ( 35
+                      , Random.uniform
+                            "Tutu"
+                            [ "Tina"
+                            , "Teeny"
+                            , "Thimblina"
+                            , "Tulololina"
+                            , "Tumblrina"
+                            , "Tortilla"
+                            , "Lee"
+                            , "Tukohama"
+                            , "Leelee"
+                            , "Tony"
+                            ]
+                      )
+                    ]
+
+            name : String
+            name =
+                Random.initialSeed (Time.posixToMillis loadedAt)
+                    |> Random.step gen
+                    |> (\( gen1, seed ) -> Random.step gen1 seed)
+                    |> Tuple.first
+        in
+        [ View.Icon.tortilla, text (name ++ ", the Catburglar") ]
+
+    else if npcId == NpcId.gianna then
+        [ View.Icon.gianna, text "Gianna, the Master of Disguise" ]
+
+    else if npcId == NpcId.isla then
+        [ View.Icon.isla, text "Isla, the Engineer" ]
 
     else
         []

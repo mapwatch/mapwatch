@@ -179,7 +179,9 @@ const exportedNPCs = Object.assign({}, ...[
   "Metadata/NPC/Shaper",
 ].map(name => ({[name]: true})))
 function isNPCIdExported(raw) {
-  return !!exportedNPCs[raw.Id] || raw.Id.startsWith("Metadata/Monsters/LeagueBetrayal/Betrayal")
+  return !!exportedNPCs[raw.Id]
+      || raw.Id.startsWith("Metadata/Monsters/LeagueBetrayal/Betrayal")
+      || raw.Id.startsWith("Metadata/NPC/League/Heist/")
 }
 function isNPCTextExported(raw) {
   // conquerors

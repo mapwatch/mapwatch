@@ -37,6 +37,7 @@ type Feature
     | ConquerorStatus
     | DeliriumEncounter
     | Backend
+    | HeistNpcs
 
 
 type alias QueryString =
@@ -52,6 +53,7 @@ list =
     , ConquerorStatus
     , DeliriumEncounter
     , Backend
+    , HeistNpcs
     ]
 
 
@@ -83,6 +85,9 @@ config feature =
 
         Backend ->
             FeatureConfig feature "backend" False
+
+        HeistNpcs ->
+            FeatureConfig feature "heistNpcs" False
 
 
 byString : Dict String FeatureConfig

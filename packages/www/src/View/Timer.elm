@@ -102,7 +102,7 @@ viewMain model =
 
         historyTable =
             table [ class "timer history" ]
-                [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun model { showDate = False } goalDuration) <| history)
+                [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun model { showDate = False, loadedAt = model.loadedAt } goalDuration) <| history)
                 , tfoot []
                     [ tr []
                         [ td [ colspan 12 ]
