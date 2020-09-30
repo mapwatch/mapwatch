@@ -92,7 +92,7 @@ config feature =
             FeatureConfig feature "heistNpcs" False
 
         Drops ->
-            FeatureConfig feature "drops" False
+            FeatureConfig feature "drops" True
 
 
 byString : Dict String FeatureConfig
