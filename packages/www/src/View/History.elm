@@ -123,6 +123,7 @@ viewMain model =
             [ View.Util.viewSearch [ placeholder "area name" ] model.query
             , View.Util.viewDateSearch model.query model.route
             , View.Util.viewGoalForm model.query
+            , viewExactSearchResult model.mapwatch.datamine model.query
             ]
         , div []
             (if Feature.isActive Feature.GSheets model.query then
@@ -138,6 +139,33 @@ viewMain model =
         , viewStatsTable model.query model.tz model.now runs
         , viewHistoryTable runs model
         ]
+
+
+viewExactSearchResult : Datamine -> QueryDict -> Html msg
+viewExactSearchResult dm query =
+    case Dict.get "q" query of
+        Nothing ->
+            div [] []
+
+        Just q ->
+            case Dict.get q dm.unindex.worldAreas |> Maybe.andThen (\id -> Dict.get id dm.worldAreasById) of
+                Nothing ->
+                    div [] []
+
+                Just w ->
+                    -- div [] [ text w.id ]
+                    div []
+                        [ span [ class "zone" ]
+                            [ View.Icon.mapOrBlank { isBlightedMap = False } (Just w)
+                            , text " "
+                            , text q
+                            ]
+                        , span []
+                            [ text " ("
+                            , a [ target "_blank", href <| Datamine.wikiUrl dm w ] [ text "wiki" ]
+                            , text ")"
+                            ]
+                        ]
 
 
 viewStatsTable : QueryDict -> Time.Zone -> Posix -> List MapRun -> Html msg

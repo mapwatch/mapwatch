@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2020-09-29
+- Added links to the Path of Exile wiki for the current map, and on the history page when searching for/linking to a single specific map.
+
 ## 2020-09-22
 - Updated map regions for Heist league.
 - Heist contracts and bosses are now tracked.

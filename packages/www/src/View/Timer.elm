@@ -4,13 +4,14 @@ import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
-import Mapwatch as Mapwatch
+import Mapwatch
+import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Mapwatch.MapRun.Sort as RunSort
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
-import Model as Model exposing (Msg, OkModel)
+import Model exposing (Msg, OkModel)
 import Route
 import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
@@ -127,7 +128,21 @@ viewMain model =
                 Just run_ ->
                     ( Just run_.duration.all
                     , goalDuration run_
-                    , [ td [] [ text "Mapping in: " ], td [] [ View.Home.viewRun model.query run_ ] ]
+                    , [ td [] [ text "Mapping in: " ]
+                      , td []
+                            [ View.Home.viewRun model.query run_
+                            , case run_.address.worldArea of
+                                Nothing ->
+                                    span [] []
+
+                                Just w ->
+                                    span []
+                                        [ text " ("
+                                        , a [ target "_blank", href <| Datamine.wikiUrl model.mapwatch.datamine w ] [ text "wiki" ]
+                                        , text ")"
+                                        ]
+                            ]
+                      ]
                     )
 
                 Nothing ->

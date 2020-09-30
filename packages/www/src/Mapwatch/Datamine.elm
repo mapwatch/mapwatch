@@ -14,6 +14,8 @@ module Mapwatch.Datamine exposing
     , langIndexEmpty
     , langs
     , tier
+    , wikiPath
+    , wikiUrl
     , worldAreaFromName
     , worldAreaToString
     )
@@ -240,6 +242,31 @@ isHeistMap : WorldArea -> Bool
 isHeistMap w =
     -- TODO: "The Den" is both a heist boss and a campaign zone!
     String.startsWith "Heist" w.id && not (isHeistTown w) && w.id /= "HeistBoss_Twins"
+
+
+wikiPath : Datamine -> WorldArea -> String
+wikiPath dm w =
+    dm.lang
+        |> Dict.get "en"
+        |> Maybe.andThen (.index >> .worldAreas >> Dict.get w.id)
+        |> Maybe.map
+            (\name ->
+                if w.isMapArea && not w.isUniqueMapArea then
+                    name ++ " Map"
+
+                else
+                    name
+            )
+        |> Maybe.withDefault ("Area:" ++ w.id)
+
+
+wikiUrl : Datamine -> WorldArea -> String
+wikiUrl dm w =
+    "https://pathofexile.gamepedia.com/" ++ wikiPath dm w
+
+
+
+-- Parsing
 
 
 createDatamine : Array WorldArea -> Dict String Lang -> Result String Datamine

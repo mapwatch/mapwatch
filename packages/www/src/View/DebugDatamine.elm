@@ -59,6 +59,7 @@ viewWorldAreas datamine =
         [ thead []
             ([ th [] []
              , th [] [ text "Id" ]
+             , th [] [ text "Wiki" ]
              , th [] [ text "Tags" ]
              , th [] [ text "Region" ]
              , th [] [ text "Tier" ]
@@ -80,6 +81,7 @@ viewWorldAreas datamine =
                                         [ img [ style "width" "100%", style "height" "100%", src path ] [] ]
                                 )
                              , td [] [ text w.id ]
+                             , td [] [ a [ target "_blank", href <| Datamine.wikiUrl datamine w ] [ text <| Datamine.wikiPath datamine w ] ]
                              , td [] [ text <| String.join ", " <| viewTags w ]
                              , td [] [ View.Icon.region (Just w), text <| Maybe.withDefault Datamine.defaultAtlasRegion w.atlasRegion ]
                              , td [] [ w |> Datamine.tier |> Maybe.map String.fromInt |> Maybe.withDefault "" |> text ]
