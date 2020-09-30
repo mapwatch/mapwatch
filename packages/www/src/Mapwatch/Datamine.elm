@@ -26,6 +26,7 @@ import Array exposing (Array)
 import Dict exposing (Dict)
 import Dict.Extra
 import Json.Decode as D
+import List.Extra
 import Mapwatch.Datamine.NpcId as NpcId
 import Mapwatch.Datamine.NpcText as NpcText
 import Maybe.Extra
@@ -443,7 +444,7 @@ atlasBaseDecoder : D.Decoder (Dict String (List String))
 atlasBaseDecoder =
     D.map2 Tuple.pair
         (D.field "region" D.string)
-        (D.at [ "loot", "red" ] <| D.list D.string)
+        (D.at [ "loot", "red" ] <| D.map List.Extra.unique <| D.list D.string)
         |> D.list
         |> D.map Dict.fromList
         |> identity
