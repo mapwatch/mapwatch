@@ -63,7 +63,7 @@ viewBody rmodel =
                     View.DumpLines.view model
 
                 DebugDatamine ->
-                    View.DebugDatamine.view model.mapwatch.datamine
+                    View.DebugDatamine.view model.query model.mapwatch.datamine
 
                 Changelog ->
                     View.Changelog.view model

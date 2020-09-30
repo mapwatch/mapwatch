@@ -6,14 +6,16 @@ import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
+import Route.QueryDict as QueryDict exposing (QueryDict)
+import View.Drops
 import View.Icon
 
 
-view : Datamine -> Html msg
-view datamine =
+view : QueryDict -> Datamine -> Html msg
+view query datamine =
     div []
         [ viewBackendErrors datamine
-        , viewWorldAreas datamine
+        , viewWorldAreas query datamine
         , viewNPCTexts datamine
         ]
 
@@ -49,8 +51,8 @@ viewBackendErrors datamine =
         ]
 
 
-viewWorldAreas : Datamine -> Html msg
-viewWorldAreas datamine =
+viewWorldAreas : QueryDict -> Datamine -> Html msg
+viewWorldAreas query datamine =
     let
         langs =
             Datamine.langs datamine
@@ -63,6 +65,7 @@ viewWorldAreas datamine =
              , th [] [ text "Tags" ]
              , th [] [ text "Region" ]
              , th [] [ text "Tier" ]
+             , th [] [ text "Drops" ]
              ]
                 ++ List.map (\l -> th [] [ text l.name ]) langs
             )
@@ -85,6 +88,7 @@ viewWorldAreas datamine =
                              , td [] [ text <| String.join ", " <| viewTags w ]
                              , td [] [ View.Icon.region (Just w), text <| Maybe.withDefault Datamine.defaultAtlasRegion w.atlasRegion ]
                              , td [] [ w |> Datamine.tier |> Maybe.map String.fromInt |> Maybe.withDefault "" |> text ]
+                             , td [] [ View.Drops.view query datamine w ]
                              ]
                                 ++ List.map (\l -> td [] [ text <| Maybe.withDefault "???" <| Dict.get w.id l.index.worldAreas ]) langs
                             )

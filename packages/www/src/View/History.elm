@@ -23,6 +23,7 @@ import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Set exposing (Set)
 import Time exposing (Posix)
+import View.Drops
 import View.Home
 import View.Icon
 import View.Nav
@@ -145,26 +146,29 @@ viewExactSearchResult : Datamine -> QueryDict -> Html msg
 viewExactSearchResult dm query =
     case Dict.get "q" query of
         Nothing ->
-            div [] []
+            div [] [ div [] [], View.Drops.empty ]
 
         Just q ->
             case Dict.get q dm.unindex.worldAreas |> Maybe.andThen (\id -> Dict.get id dm.worldAreasById) of
                 Nothing ->
-                    div [] []
+                    div [] [ div [] [], View.Drops.empty ]
 
                 Just w ->
                     -- div [] [ text w.id ]
                     div []
-                        [ span [ class "zone" ]
-                            [ View.Icon.mapOrBlank { isBlightedMap = False } (Just w)
-                            , text " "
-                            , text q
+                        [ div []
+                            [ span [ class "zone" ]
+                                [ View.Icon.mapOrBlank { isBlightedMap = False } (Just w)
+                                , text " "
+                                , text q
+                                ]
+                            , span []
+                                [ text " ("
+                                , a [ target "_blank", href <| Datamine.wikiUrl dm w ] [ text "wiki" ]
+                                , text ")"
+                                ]
                             ]
-                        , span []
-                            [ text " ("
-                            , a [ target "_blank", href <| Datamine.wikiUrl dm w ] [ text "wiki" ]
-                            , text ")"
-                            ]
+                        , View.Drops.view query dm w
                         ]
 
 

@@ -19,6 +19,8 @@ datamine =
             }
         )
         Dict.empty
+        []
+        Dict.empty
 
 
 expectParseEquals : String -> Result String ( Int, LogLine.Info ) -> Expect.Expectation

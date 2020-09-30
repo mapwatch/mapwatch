@@ -352,3 +352,8 @@ svg.icon-region .focus.focus-drox {
 .abandoned-run-duration {
   font-style: italic;
 }
+.world-area-drops {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

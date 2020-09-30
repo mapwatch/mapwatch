@@ -38,6 +38,7 @@ type Feature
     | DeliriumEncounter
     | Backend
     | HeistNpcs
+    | Drops
 
 
 type alias QueryString =
@@ -54,6 +55,7 @@ list =
     , DeliriumEncounter
     , Backend
     , HeistNpcs
+    , Drops
     ]
 
 
@@ -88,6 +90,9 @@ config feature =
 
         HeistNpcs ->
             FeatureConfig feature "heistNpcs" False
+
+        Drops ->
+            FeatureConfig feature "drops" False
 
 
 byString : Dict String FeatureConfig

@@ -265,3 +265,8 @@ gianna =
 isla : Html msg
 isla =
     sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Isla.png?scale=1" }
+
+
+divCard : Html msg
+divCard =
+    img [ class "side-icon", src "https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?scale=1" ] []

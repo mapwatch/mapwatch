@@ -2,9 +2,11 @@ module Mapwatch.Datamine exposing
     ( Datamine
     , MapIconArgs
     , WorldArea
+    , atlasBases
     , createDatamine_
     , decoder
     , defaultAtlasRegion
+    , divCards
     , imgCdn
     , imgSrc
     , isHeistMap
@@ -38,8 +40,15 @@ type alias Datamine =
     , worldAreasById : Dict String WorldArea
     , unindex : LangIndex
     , youHaveEntered : String -> Maybe String
+    , atlasbase : Dict String (List String)
+    , divcards : List DivCard
+    , divcardsByMapName : Dict String (List DivCard)
     , npcText : Dict String NpcTextEntry
     }
+
+
+type alias DivCard =
+    { name : String, maps : List String, loot : String }
 
 
 type alias NpcTextEntry =
@@ -265,17 +274,36 @@ wikiUrl dm w =
     "https://pathofexile.gamepedia.com/" ++ wikiPath dm w
 
 
+atlasBases : Datamine -> WorldArea -> List String
+atlasBases dm w =
+    w.atlasRegion
+        |> Maybe.andThen (\r -> Dict.get r dm.atlasbase)
+        |> Maybe.withDefault []
+
+
+divCards : Datamine -> WorldArea -> List DivCard
+divCards dm w =
+    case dm.lang |> Dict.get "en" |> Maybe.andThen (.index >> .worldAreas >> Dict.get w.id) of
+        Nothing ->
+            []
+
+        Just name ->
+            Dict.get name dm.divcardsByMapName
+                |> Maybe.Extra.orElse (Dict.get (name ++ " Map") dm.divcardsByMapName)
+                |> Maybe.withDefault []
+
+
 
 -- Parsing
 
 
-createDatamine : Array WorldArea -> Dict String Lang -> Result String Datamine
-createDatamine ws ls =
-    Result.map (createDatamine_ ws ls)
+createDatamine : Array WorldArea -> Dict String Lang -> Dict String (List String) -> List DivCard -> Result String Datamine
+createDatamine ws ls atlasBase divCards_ =
+    Result.map (createDatamine_ ws ls atlasBase divCards_)
         (createNPCText ls)
 
 
-createDatamine_ ws ls npcText =
+createDatamine_ ws ls atlasBase divCards_ npcText =
     let
         worldAreasById =
             ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
@@ -286,9 +314,19 @@ createDatamine_ ws ls npcText =
                 worldAreasById
                 langIndexEmpty
                 (createYouHaveEntered ls)
+                atlasBase
+                divCards_
+                -- div cards by map name
+                (divCards_
+                    |> List.concatMap (\c -> c.maps |> List.map (\m -> ( m, c )))
+                    |> Dict.Extra.groupBy Tuple.first
+                    |> Dict.map (\k -> List.map Tuple.second)
+                )
                 npcText
     in
-    { init | unindex = init |> langs |> List.map .unindex |> langIndexUnion }
+    { init
+        | unindex = init |> langs |> List.map .unindex |> langIndexUnion
+    }
 
 
 {-| Parse "You have entered {0}" messages for all languages.
@@ -393,10 +431,31 @@ createNPCTextSet lang npcId npcTextFilter =
 
 decoder : D.Decoder Datamine
 decoder =
-    D.map2 createDatamine
-        (D.at [ "worldAreas", "data" ] worldAreasDecoder)
-        (D.at [ "lang" ] langDecoder)
+    D.map4 createDatamine
+        (D.at [ "datamine", "worldAreas", "data" ] worldAreasDecoder)
+        (D.at [ "datamine", "lang" ] langDecoder)
+        (D.at [ "wiki", "atlasbase", "data" ] atlasBaseDecoder)
+        (D.at [ "wiki", "divcards", "data" ] divCardsDecoder)
         |> D.andThen resultToDecoder
+
+
+atlasBaseDecoder : D.Decoder (Dict String (List String))
+atlasBaseDecoder =
+    D.map2 Tuple.pair
+        (D.field "region" D.string)
+        (D.at [ "loot", "red" ] <| D.list D.string)
+        |> D.list
+        |> D.map Dict.fromList
+        |> identity
+
+
+divCardsDecoder : D.Decoder (List DivCard)
+divCardsDecoder =
+    D.map3 DivCard
+        (D.field "card" D.string)
+        (D.field "maps" <| D.list D.string)
+        (D.at [ "loot", "text" ] D.string)
+        |> D.list
 
 
 resultToDecoder : Result String a -> D.Decoder a

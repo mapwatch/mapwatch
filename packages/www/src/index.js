@@ -10,6 +10,8 @@ import {BrowserBackend} from './browserBackend'
 import {BrowserNativeFSBackend} from './browserNativeFSBackend'
 import {MemoryBackend} from './memoryBackend'
 import {default as datamine} from '../../datamine'
+import {default as atlasbase} from '../../datamine/wiki/atlasbase.json'
+import {default as divcards} from '../../datamine/wiki/divcards.json'
 import changelog from '!!raw-loader!../../../CHANGELOG.md'
 import privacy from '!!raw-loader!../../../PRIVACY.md'
 // version.txt is created by by `yarn _build:version`
@@ -168,7 +170,7 @@ function createFlags({backend, settings, qs, electronFlags}) {
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: backend.platform,
-    datamine,
+    datamine: {datamine, wiki: {atlasbase, divcards}},
     electronFlags,
   }
 }

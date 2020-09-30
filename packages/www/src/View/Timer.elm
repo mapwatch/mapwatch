@@ -17,6 +17,7 @@ import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Set exposing (Set)
 import Time exposing (Posix)
+import View.Drops
 import View.History
 import View.Home
 import View.Icon
@@ -128,20 +129,24 @@ viewMain model =
                 Just run_ ->
                     ( Just run_.duration.all
                     , goalDuration run_
-                    , [ td [] [ text "Mapping in: " ]
-                      , td []
-                            [ View.Home.viewRun model.query run_
-                            , case run_.address.worldArea of
+                    , [ td [ style "vertical-align" "top" ] [ text "Mapping in: " ]
+                      , td [] <|
+                            case run_.address.worldArea of
                                 Nothing ->
-                                    span [] []
+                                    [ View.Home.viewRun model.query run_
+                                    , span [] []
+                                    , View.Drops.empty
+                                    ]
 
                                 Just w ->
-                                    span []
+                                    [ View.Home.viewRun model.query run_
+                                    , span []
                                         [ text " ("
                                         , a [ target "_blank", href <| Datamine.wikiUrl model.mapwatch.datamine w ] [ text "wiki" ]
                                         , text ")"
                                         ]
-                            ]
+                                    , View.Drops.view model.query model.mapwatch.datamine w
+                                    ]
                       ]
                     )
 
