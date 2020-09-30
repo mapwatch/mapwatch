@@ -31,7 +31,7 @@ view query dm w =
                 details []
                     [ summary []
                         [ text <| String.fromInt <| List.length ab
-                        , text " bases, "
+                        , text " regional items, "
                         , text <| String.fromInt <| List.length divs
                         , text " cards"
                         ]
