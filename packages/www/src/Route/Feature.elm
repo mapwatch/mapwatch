@@ -89,7 +89,7 @@ config feature =
             FeatureConfig feature "backend" False
 
         HeistNpcs ->
-            FeatureConfig feature "heistNpcs" False
+            FeatureConfig feature "heistNpcs" True
 
         Drops ->
             FeatureConfig feature "drops" True

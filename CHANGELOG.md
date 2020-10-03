@@ -4,6 +4,11 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2020-10-03
+- Heist NPCs are now tracked.
+- Heist contracts are now distinguished from grand heists.
+- You can now search for `heist-contract` or `grand-heist`, or exclude heists by searching for `map:`.
+
 ## 2020-09-29
 - Added links to the Path of Exile wiki for the current map, and on the history page when searching for/linking to a single specific map.
 - Added divination card and regional item drops for the current map, and on the history page when searching for/linking to a single specific map.
