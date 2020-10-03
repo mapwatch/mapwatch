@@ -40,6 +40,7 @@ type alias MapRun =
     , isBlightedMap : Bool
     , conqueror : Maybe ( Conqueror.Id, Conqueror.Encounter )
     , npcSays : Dict NpcGroup (List String)
+    , heistNpcs : Set NpcId
     }
 
 
@@ -191,6 +192,7 @@ fromRaw dm ({ address } as raw) =
     , portals = raw.portals
     , isAbandoned = raw.isAbandoned
     , isBlightedMap = isBlightedMap raw
+    , heistNpcs = heistNpcs raw
     , conqueror = conquerorEncounterFromNpcs raw.npcSays
 
     -- List.reverse: RawMapRun prepends the newest runs to the list, because that's
@@ -234,6 +236,21 @@ isBlightedMap run =
                 |> List.filter (.textId >> String.startsWith "CassiaNewLane")
     in
     Dict.size run.npcSays == 1 && List.length newLanes >= 8
+
+
+{-| Ignore Heist rogues that don't use any skills.
+
+This happens with in-town chatter before they're hired.
+
+-}
+heistNpcs : RawMapRun -> Set NpcId
+heistNpcs =
+    .npcSays
+        >> Dict.filter (\k _ -> Set.member k NpcId.heistNpcs)
+        >> Dict.map (\_ -> List.filter (\t -> t.textId /= ""))
+        >> Dict.filter (\_ -> List.isEmpty >> not)
+        >> Dict.keys
+        >> Set.fromList
 
 
 durationPerInstance : RawMapRun -> List ( Instance, Millis )

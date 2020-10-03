@@ -207,6 +207,19 @@ function isNPCTextExported(raw) {
       // Shaper voicelines distinguish shaper-map vs. uber-elder-map, since they have the same zone name. https://github.com/mapwatch/mapwatch/issues/55
       || 'ShaperMapShapersRealm' === raw.Id
       || 'ShaperUberElderIntro' === raw.Id
+      // Heist skill use voicelines. We rely on voicelines to distinguish
+      // contracts from grand heists, and have to exclude all pre-mission
+      // chatter in town. The names are wonderfully inconsistent.
+      || /^Karst(LockPick|Perception|Vaultcracking)/.test(raw.Id)
+      || /^Niles(Thaumaturgy|Deception)/.test(raw.Id)
+      || /^Huck(Lockpicking|Bruteforce|Demolition)/.test(raw.Id)
+      || /^Tibbs(ForcingObstacle|Demolition)/.test(raw.Id)
+      || /^Nenet(Perception|Vault|Thaumaturgy)/.test(raw.Id)
+      || /^Vinderi(VaultBreaking|Engineering|DismantleTrap|Demolition)/.test(raw.Id)
+      || /^Tullina(Agility|DisarmTrap|TrapDisarm|Lockpick)/.test(raw.Id)
+      || /^Gianna(Perception|Deception|Smuggler|Cultist|Engineer)/.test(raw.Id)
+      || /^EngineeringGianna/.test(raw.Id)
+      || /^Isla(Engineering|DisarmTrap|CounterThaumaturgy)/.test(raw.Id)
 }
 function transformAtlasNode(raw, {json}) {
   return {

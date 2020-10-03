@@ -389,6 +389,17 @@ createNPCText1 lang =
     , createNPCTextSet lang NpcId.drox (Tuple.first >> String.startsWith "Drox")
     , createNPCTextSet lang NpcId.cassia (Tuple.first >> String.startsWith "Cassia")
     , createNPCTextSet lang NpcId.shaper (Tuple.first >> String.startsWith "Shaper")
+
+    -- heist
+    , createNPCTextSet lang NpcId.karst (Tuple.first >> String.startsWith "Karst")
+    , createNPCTextSet lang NpcId.niles (Tuple.first >> String.startsWith "Niles")
+    , createNPCTextSet lang NpcId.huck (Tuple.first >> String.startsWith "Huck")
+    , createNPCTextSet lang NpcId.tibbs (Tuple.first >> String.startsWith "Tibbs")
+    , createNPCTextSet lang NpcId.nenet (Tuple.first >> String.startsWith "Nenet")
+    , createNPCTextSet lang NpcId.vinderi (Tuple.first >> String.startsWith "Vinderi")
+    , createNPCTextSet lang NpcId.tortilla (Tuple.first >> String.startsWith "Tullina")
+    , createNPCTextSet lang NpcId.gianna (Tuple.first >> (\s -> String.startsWith "Gianna" s || String.endsWith "Gianna" s))
+    , createNPCTextSet lang NpcId.isla (Tuple.first >> String.startsWith "Isla")
     ]
         |> Result.Extra.combine
         |> Result.map List.concat
@@ -402,7 +413,8 @@ createNPCTextSet : Lang -> String -> (( String, String ) -> Bool) -> Result Stri
 createNPCTextSet lang npcId npcTextFilter =
     case Dict.get npcId lang.index.npcs of
         Nothing ->
-            Err <| "no such npc: " ++ npcId
+            -- Err <| "no such npc: " ++ npcId
+            Ok []
 
         Just npcName ->
             case lang.index.npcTextAudio |> Dict.toList |> List.filter npcTextFilter of

@@ -372,6 +372,8 @@ viewHistoryRun ({ query, tz } as m) config goals r =
                 |> Maybe.map (viewConquerorRow config r.npcSays)
                 |> Maybe.Extra.toList
             , r.npcSays
+                -- Ignore heist npcs who didn't use any skills
+                |> Dict.filter (\npcId _ -> not (Set.member npcId NpcId.heistNpcs) || Set.member npcId r.heistNpcs)
                 |> Dict.toList
                 |> List.filterMap (viewHistoryNpcTextRow query config)
             ]
@@ -465,14 +467,7 @@ viewHistoryNpcTextRow query { showDate, loadedAt } ( npcId, texts ) =
             Nothing
 
         body ->
-            if
-                Set.member npcId NpcId.heistNpcs
-                    && (not (Feature.isActive Feature.HeistNpcs query)
-                            -- Crude hacky way to filter unselected in-town heist voicelines.
-                            -- TODO: this is horrible, remove it before heistNpcs release
-                            || (List.length texts < 5)
-                       )
-            then
+            if Set.member npcId NpcId.heistNpcs && not (Feature.isActive Feature.HeistNpcs query) then
                 Nothing
 
             else

@@ -135,15 +135,18 @@ isla =
     "Metadata/NPC/League/Heist/Engineer1"
 
 
+heistNpcsList =
+    [ karst
+    , niles
+    , huck
+    , tibbs
+    , nenet
+    , vinderi
+    , tortilla
+    , gianna
+    , isla
+    ]
+
+
 heistNpcs =
-    Set.fromList
-        [ karst
-        , niles
-        , huck
-        , tibbs
-        , nenet
-        , vinderi
-        , tortilla
-        , gianna
-        , isla
-        ]
+    Set.fromList heistNpcsList
