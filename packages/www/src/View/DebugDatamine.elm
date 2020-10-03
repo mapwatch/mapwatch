@@ -7,6 +7,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Route.QueryDict as QueryDict exposing (QueryDict)
+import Set exposing (Set)
 import View.Drops
 import View.Icon
 
@@ -76,7 +77,7 @@ viewWorldAreas query datamine =
                     (\w ->
                         tr []
                             ([ td [ style "min-width" "1em", style "height" "1em" ]
-                                (case Datamine.imgSrc { isBlightedMap = False } w of
+                                (case Datamine.imgSrc { isBlightedMap = False, heistNpcs = Set.empty } w of
                                     Nothing ->
                                         [ text "" ]
 

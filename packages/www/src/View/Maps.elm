@@ -13,6 +13,7 @@ import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
 import Route exposing (Route)
 import Route.QueryDict as QueryDict exposing (QueryDict)
+import Set exposing (Set)
 import Time exposing (Posix)
 import View.History
 import View.Home
@@ -234,4 +235,4 @@ viewRegionName query w =
 viewMapName : QueryDict -> String -> WorldArea -> Html msg
 viewMapName query name worldArea =
     a [ Route.href (View.Util.insertSearch name query) Route.History ]
-        [ View.Icon.mapOrBlank { isBlightedMap = False } (Just worldArea), text name ]
+        [ View.Icon.mapOrBlank { isBlightedMap = False, heistNpcs = Set.empty } (Just worldArea), text name ]

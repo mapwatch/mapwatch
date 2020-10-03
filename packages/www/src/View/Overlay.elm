@@ -13,6 +13,7 @@ import Model as Model exposing (Msg, OkModel)
 import Readline exposing (Readline)
 import Route exposing (Route)
 import Route.QueryDict as QueryDict exposing (QueryDict)
+import Set exposing (Set)
 import Time exposing (Posix)
 import View.History
 import View.Home
@@ -101,7 +102,7 @@ viewRow query count i goalDuration run =
             ]
         ]
         ([ td [ class "instance" ]
-            ([ View.Home.viewAddress query { isBlightedMap = False } run.address ]
+            ([ View.Home.viewAddress query { isBlightedMap = False, heistNpcs = Set.empty } run.address ]
                 ++ (if isLast then
                         [ a [ class "overlay-back", Route.href query Route.Timer ] [ View.Icon.fas "cog" ] ]
 

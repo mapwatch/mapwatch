@@ -17,6 +17,7 @@ import Mapwatch.MapRun.Conqueror as Conqueror
 import Maybe.Extra
 import Model exposing (Msg, OkModel)
 import Route.Feature as Feature exposing (Feature)
+import Set exposing (Set)
 import Time exposing (Posix)
 import View.Home exposing (monthToString)
 import View.Maps
@@ -89,7 +90,7 @@ viewMapsRow : Int -> View.Maps.GroupedRuns -> List Cell
 viewMapsRow i row =
     [ i + 1 |> CellInt
     , row.worldArea
-        |> Datamine.imgSrc { isBlightedMap = False }
+        |> Datamine.imgSrc { isBlightedMap = False, heistNpcs = Set.empty }
         |> Maybe.Extra.unwrap CellEmpty CellIcon
     , row.name |> CellString
     , row.worldArea.atlasRegion |> Maybe.withDefault "---" |> CellString

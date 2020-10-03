@@ -34,6 +34,7 @@ import Maybe.Extra
 import Model exposing (OkModel)
 import Route exposing (Route)
 import Route.QueryDict as QueryDict exposing (QueryDict)
+import Set exposing (Set)
 import Time exposing (Posix)
 import TimedReadline exposing (Progress)
 import View.Icon as Icon
@@ -63,7 +64,7 @@ viewMaybeInstance : QueryDict -> Maybe Instance -> Html msg
 viewMaybeInstance query instance =
     case instance of
         Just (Instance.Instance addr) ->
-            viewAddress query { isBlightedMap = False } addr
+            viewAddress query { isBlightedMap = False, heistNpcs = Set.empty } addr
 
         Just Instance.MainMenu ->
             span [] [ text "(none)" ]
