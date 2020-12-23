@@ -29,8 +29,8 @@
     "//export:zh": "Because downloading Chinese-PoE is a pain, I don't want to require it for the build. dist/lang/zh.json is git-committed (unlike other language exports), and `yarn export` won't rebuild it. `yarn export:zh` will. ",
     "export:zh": "bash -c \"yarn export:lang:zh && yarn build\"",
     "spreadsheet": "bash -c \"node src/spreadsheet.js\"",
-    "wiki:atlasbase": "bash -c \"node src/atlasbase.js > wiki/atlasbase.json\"",
-    "wiki:divcards": "bash -c \"node src/divcards.js > wiki/divcards.json\"",
+    "wiki:atlasbase": "bash -c \"node src/atlasbase.js > dist/atlasbase.json\"",
+    "wiki:divcards": "bash -c \"node src/divcards.js > dist/divcards.json\"",
     "wiki:leagues": "bash -c \"node src/leagues.js > dist/leagues.json\"",
     "wiki": "yarn wiki:atlasbase && yarn wiki:divcards && yarn wiki:leagues"
   },
