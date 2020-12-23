@@ -1,5 +1,6 @@
 module Mapwatch.Datamine exposing
     ( Datamine
+    , League
     , MapIconArgs
     , WorldArea
     , atlasBases
@@ -25,6 +26,7 @@ module Mapwatch.Datamine exposing
 import Array exposing (Array)
 import Dict exposing (Dict)
 import Dict.Extra
+import ISO8601
 import Json.Decode as D
 import List.Extra
 import Mapwatch.Datamine.NpcId as NpcId
@@ -32,6 +34,7 @@ import Mapwatch.Datamine.NpcText as NpcText
 import Maybe.Extra
 import Result.Extra
 import Set exposing (Set)
+import Time exposing (Posix)
 import Util.String
 
 
@@ -41,11 +44,16 @@ type alias Datamine =
     , worldAreasById : Dict String WorldArea
     , unindex : LangIndex
     , youHaveEntered : String -> Maybe String
+    , leagues : List League
     , atlasbase : Dict String (List String)
     , divcards : List DivCard
     , divcardsByMapName : Dict String (List DivCard)
     , npcText : Dict String NpcTextEntry
     }
+
+
+type alias League =
+    { id : String, startAt : Posix }
 
 
 type alias DivCard =
@@ -305,13 +313,13 @@ divCards dm w =
 -- Parsing
 
 
-createDatamine : Array WorldArea -> Dict String Lang -> Dict String (List String) -> List DivCard -> Result String Datamine
-createDatamine ws ls atlasBase divCards_ =
-    Result.map (createDatamine_ ws ls atlasBase divCards_)
+createDatamine : Array WorldArea -> Dict String Lang -> List League -> Dict String (List String) -> List DivCard -> Result String Datamine
+createDatamine ws ls leagues atlasBase divCards_ =
+    Result.map (createDatamine_ ws ls leagues atlasBase divCards_)
         (createNPCText ls)
 
 
-createDatamine_ ws ls atlasBase divCards_ npcText =
+createDatamine_ ws ls leagues atlasBase divCards_ npcText =
     let
         worldAreasById =
             ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
@@ -322,6 +330,7 @@ createDatamine_ ws ls atlasBase divCards_ npcText =
                 worldAreasById
                 langIndexEmpty
                 (createYouHaveEntered ls)
+                leagues
                 atlasBase
                 divCards_
                 -- div cards by map name
@@ -451,12 +460,21 @@ createNPCTextSet lang npcId npcTextFilter =
 
 decoder : D.Decoder Datamine
 decoder =
-    D.map4 createDatamine
+    D.map5 createDatamine
         (D.at [ "datamine", "worldAreas", "data" ] worldAreasDecoder)
         (D.at [ "datamine", "lang" ] langDecoder)
+        (D.at [ "leagues", "data" ] leaguesDecoder)
         (D.at [ "wiki", "atlasbase", "data" ] atlasBaseDecoder)
         (D.at [ "wiki", "divcards", "data" ] divCardsDecoder)
         |> D.andThen resultToDecoder
+
+
+leaguesDecoder : D.Decoder (List League)
+leaguesDecoder =
+    D.map2 League
+        (D.field "id" D.string)
+        (D.field "registerAt" <| D.andThen (resultToDecoder << Result.map ISO8601.toPosix << ISO8601.fromString) D.string)
+        |> D.list
 
 
 atlasBaseDecoder : D.Decoder (Dict String (List String))

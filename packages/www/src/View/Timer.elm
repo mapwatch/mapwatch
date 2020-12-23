@@ -83,9 +83,8 @@ viewMain model =
                 Nothing ->
                     ( "today"
                     , RunSort.filterToday model.tz model.now model.mapwatch.runs
-                    , [ hideEarlierButton
-                      , View.Util.hidePreLeagueButton model.query model.route
-                      ]
+                    , hideEarlierButton
+                        :: View.Util.hidePreLeagueButtons model.mapwatch.datamine.leagues model.query model.route
                     )
 
                 Just _ ->

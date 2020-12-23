@@ -138,7 +138,7 @@ viewMain model =
     in
     div []
         [ View.Util.viewSearch [ placeholder "map name" ] model.query
-        , View.Util.viewDateSearch model.query model.route
+        , View.Util.viewDateSearch model.mapwatch.datamine.leagues model.query model.route
         , table [ class "by-map" ]
             [ thead [] [ header model.query ]
             , tbody [] rows

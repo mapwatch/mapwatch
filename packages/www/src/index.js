@@ -171,7 +171,7 @@ function createFlags({backend, settings, qs, electronFlags}) {
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: backend.platform,
-    datamine: {datamine, wiki: {atlasbase, divcards}},
+    datamine: {datamine, leagues, wiki: {atlasbase, divcards}},
     electronFlags,
   }
 }

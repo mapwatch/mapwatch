@@ -81,7 +81,7 @@ viewMain model =
     in
     div []
         [ View.Util.viewSearch [ placeholder "map name" ] model.query
-        , View.Util.viewDateSearch model.query model.route
+        , View.Util.viewDateSearch model.mapwatch.datamine.leagues model.query model.route
         , div [] <| viewEncounterTally model.query <| EncounterTally.fromMapRuns runs
         ]
 

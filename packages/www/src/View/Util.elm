@@ -1,11 +1,14 @@
-module View.Util exposing (escapeSearch, hidePreLeagueButton, insertSearch, leagueDate, leagueName, pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
+module View.Util exposing (escapeSearch, hidePreLeagueButtons, insertSearch, pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
 
 import Dict exposing (Dict)
+import Dict.Extra
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
+import List.Extra
 import Mapwatch exposing (Model, Msg)
+import Mapwatch.Datamine exposing (League)
 import Model exposing (Msg)
 import Regex
 import Route exposing (Route)
@@ -103,33 +106,37 @@ pluralize one other n =
         other
 
 
-leagueName =
-    "Heist"
+filterLeagueButtons : List League -> List League
+filterLeagueButtons =
+    -- combine leagues with the same start time (hc/ssf variants)
+    -- the winner is the one with the shortest name
+    Dict.Extra.groupBy (.startAt >> Time.posixToMillis)
+        >> Dict.values
+        >> List.filterMap (List.Extra.minimumBy (.id >> String.length))
+        >> List.filter (\l -> l.id /= "Standard")
 
 
-leagueDate : Result String Posix
-leagueDate =
-    "2020-09-18T20:00:00.000Z" |> ISO8601.fromString |> Result.map ISO8601.toPosix
+hidePreLeagueButtons : List League -> QueryDict -> Route -> List (Html msg)
+hidePreLeagueButtons leagues query route =
+    leagues
+        |> filterLeagueButtons
+        |> List.map
+            (\l ->
+                a
+                    [ class "button"
+                    , Route.href (Dict.insert Route.keys.after (l.startAt |> ISO8601.fromPosix |> ISO8601.toString) query) route
+                    ]
+                    [ Icon.fas "calendar", text <| " Hide pre-" ++ l.id ++ " maps" ]
+            )
 
 
-hidePreLeagueButton : QueryDict -> Route -> Html msg
-hidePreLeagueButton query route =
-    case leagueDate |> Result.map (ISO8601.fromPosix >> ISO8601.toString) of
-        Err err ->
-            pre [] [ text err ]
-
-        Ok date ->
-            a [ class "button", Route.href (Dict.insert Route.keys.after date query) route ] [ Icon.fas "calendar", text <| " Hide pre-" ++ leagueName ++ " maps" ]
-
-
-viewDateSearch : QueryDict -> Route -> Html msg
-viewDateSearch query route =
+viewDateSearch : List League -> QueryDict -> Route -> Html msg
+viewDateSearch leagues query route =
     let
         buttons =
             case QueryDict.getPosix Route.keys.after query of
                 Nothing ->
-                    [ hidePreLeagueButton query route
-                    ]
+                    hidePreLeagueButtons leagues query route
 
                 Just _ ->
                     [ a [ class "button", Route.href (Dict.remove Route.keys.after query) route ] [ Icon.fas "eye", text " Unhide all maps" ]
