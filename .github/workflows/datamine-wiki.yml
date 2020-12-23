@@ -19,7 +19,10 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Running the wiki dataminer
-        run: cd packages/datamine && yarn wiki
+        run: |
+          yarn
+          cd packages/datamine
+          yarn wiki
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
         with:
