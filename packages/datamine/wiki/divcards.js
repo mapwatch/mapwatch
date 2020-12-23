@@ -2,7 +2,7 @@
 // in the js console of https://pathofexile.gamepedia.com/List_of_divination_cards , run:
 function wikiTableCells(table) {
   return {
-    updated: new Date().toString(),
+    // updated: new Date().toString(),
     data: Array.from($('tr:not(:first-child)', table)).map(tr => process(Array.from(tr.children))),
   }
 }

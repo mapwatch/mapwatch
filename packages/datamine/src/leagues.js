@@ -7,7 +7,8 @@ async function main() {
     throw new Error("non-200 status code: "+res.status)
   }
   const data = await res.json()
-  const body = {updated: new Date().toString(), data}
+  // const body = {updated: new Date().toString(), data}
+  const body = {data}
   return JSON.stringify(body, null, 2)
 }
 main().then(console.log).catch(console.error)
