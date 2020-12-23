@@ -1,0 +1,206 @@
+{
+  "updated": "Wed Dec 23 2020 16:23:33 GMT-0500 (Eastern Standard Time)",
+  "data": [
+    {
+      "id": "Standard",
+      "realm": "pc",
+      "description": "The default game mode.",
+      "registerAt": "2019-09-06T19:00:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/71278",
+      "startAt": "2013-01-23T21:00:00Z",
+      "endAt": null,
+      "delveEvent": true,
+      "rules": []
+    },
+    {
+      "id": "Hardcore",
+      "realm": "pc",
+      "description": "A character killed in the Hardcore league is moved to the Standard league.",
+      "registerAt": "2019-09-06T19:00:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/71276",
+      "startAt": "2013-01-23T21:00:00Z",
+      "endAt": null,
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        }
+      ]
+    },
+    {
+      "id": "SSF Standard",
+      "realm": "pc",
+      "description": "SSF Standard",
+      "registerAt": "2019-09-06T19:00:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/1841357",
+      "startAt": "2013-01-23T21:00:00Z",
+      "endAt": null,
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    },
+    {
+      "id": "SSF Hardcore",
+      "realm": "pc",
+      "description": "SSF Hardcore",
+      "registerAt": "2019-09-06T19:00:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/1841353",
+      "startAt": "2013-01-23T21:00:00Z",
+      "endAt": null,
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        },
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    },
+    {
+      "id": "Heist",
+      "realm": "pc",
+      "description": "Hire a crew of thieves then plan and execute elaborate Heists to steal valuable rewards.\n\nThis is the default Path of Exile league.",
+      "registerAt": "2020-09-18T17:30:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/2936817",
+      "startAt": "2020-12-07T21:32:44Z",
+      "endAt": "2021-01-10T21:00:00Z",
+      "delveEvent": true,
+      "rules": []
+    },
+    {
+      "id": "Hardcore Heist",
+      "realm": "pc",
+      "description": "Hire a crew of thieves then plan and execute elaborate Heists to steal valuable rewards.\n\nA character killed in Hardcore Heist becomes a Standard character.",
+      "registerAt": "2020-09-18T17:30:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/2936824",
+      "startAt": "2020-12-07T21:32:44Z",
+      "endAt": "2021-01-10T21:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        }
+      ]
+    },
+    {
+      "id": "SSF Heist",
+      "realm": "pc",
+      "description": "SSF Heist",
+      "registerAt": "2020-09-18T17:30:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/2936831",
+      "startAt": "2020-12-07T21:32:44Z",
+      "endAt": "2021-01-10T21:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    },
+    {
+      "id": "SSF Heist HC",
+      "realm": "pc",
+      "description": "SSF HC Heist",
+      "registerAt": "2020-09-18T17:30:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/2936838",
+      "startAt": "2020-12-07T21:32:44Z",
+      "endAt": "2021-01-10T21:00:00Z",
+      "delveEvent": true,
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        },
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    },
+    {
+      "id": "Flashback (DRE007)",
+      "realm": "pc",
+      "description": "Please check the Event Forums for more details.",
+      "registerAt": "2020-12-18T19:30:00Z",
+      "event": true,
+      "url": "https://www.pathofexile.com/forum/view-thread/2999730",
+      "startAt": "2020-12-18T20:00:00Z",
+      "endAt": "2021-01-04T18:00:00Z",
+      "rules": []
+    },
+    {
+      "id": "Flashback HC (DRE008)",
+      "realm": "pc",
+      "description": "Please check the Event Forums for more details.",
+      "registerAt": "2020-12-18T19:30:00Z",
+      "event": true,
+      "url": "https://www.pathofexile.com/forum/view-thread/2999731",
+      "startAt": "2020-12-18T20:00:00Z",
+      "endAt": "2021-01-04T18:00:00Z",
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        }
+      ]
+    },
+    {
+      "id": "Flashback SSF (DRE009)",
+      "realm": "pc",
+      "description": "Please check the Event Forums for more details.",
+      "registerAt": "2020-12-18T19:30:00Z",
+      "event": true,
+      "url": "https://www.pathofexile.com/forum/view-thread/2999732",
+      "startAt": "2020-12-18T20:00:00Z",
+      "endAt": "2021-01-04T18:00:00Z",
+      "rules": [
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    },
+    {
+      "id": "Flashback HC SSF (DRE010)",
+      "realm": "pc",
+      "description": "Please check the Event Forums for more details.",
+      "registerAt": "2020-12-18T19:30:00Z",
+      "event": true,
+      "url": "https://www.pathofexile.com/forum/view-thread/2999733",
+      "startAt": "2020-12-18T20:00:00Z",
+      "endAt": "2021-01-04T18:00:00Z",
+      "rules": [
+        {
+          "id": "Hardcore",
+          "name": "Hardcore",
+          "description": "A character killed in Hardcore is moved to its parent league."
+        },
+        {
+          "id": "NoParties",
+          "name": "Solo",
+          "description": "You may not party in this league."
+        }
+      ]
+    }
+  ]
+}

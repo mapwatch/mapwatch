@@ -1,12 +1,5 @@
 {
-  "updated": "Tue Sep 29 2020 23:39:51 GMT-0400 (Eastern Daylight Time)",
-  "headers": [
-    "Item",
-    "Stack\nSize",
-    "Effect(s)",
-    "Drop Areas",
-    "Additional\nDrop Restrictions"
-  ],
+  "updated": "Wed Dec 23 2020 16:23:33 GMT-0500 (Eastern Standard Time)",
   "data": [
     {
       "card": "A Dab of Ink",
@@ -40,6 +33,7 @@
     {
       "card": "A Note in the Wind",
       "maps": [
+        "The Oasis",
         "Desert Spring Map"
       ],
       "loot": {
@@ -54,7 +48,7 @@
         "Mao Kun"
       ],
       "loot": {
-        "text": "3x \nExalted Orb"
+        "text": "3x Exalted Orb"
       }
     },
     {
@@ -71,7 +65,7 @@
         "The Alluring Abyss"
       ],
       "loot": {
-        "text": "10x \nExalted Orb"
+        "text": "10x Exalted Orb"
       }
     },
     {
@@ -85,7 +79,7 @@
       "card": "Anarchy's Price",
       "maps": [],
       "loot": {
-        "text": "Voltaxic Rift\n\nCorrupted"
+        "text": "Voltaxic Rift\nCorrupted"
       }
     },
     {
@@ -95,7 +89,7 @@
         "Sunken City Map"
       ],
       "loot": {
-        "text": "Item\nTwo-Implicit\nCorrupted"
+        "text": "Item\n Two-Implicit\n Corrupted"
       }
     },
     {
@@ -128,7 +122,7 @@
         "The Apex of Sacrifice"
       ],
       "loot": {
-        "text": "Doryani's Fist\n\nCorrupted"
+        "text": "Doryani's Fist\nCorrupted"
       }
     },
     {
@@ -137,7 +131,7 @@
         "Relic Chambers Map"
       ],
       "loot": {
-        "text": "Prismatic Jewel\n\nCorrupted"
+        "text": "Prismatic Jewel\nCorrupted"
       }
     },
     {
@@ -218,7 +212,7 @@
       "card": "Brother's Stash",
       "maps": [],
       "loot": {
-        "text": "5x \nExalted Orb"
+        "text": "5x Exalted Orb"
       }
     },
     {
@@ -241,7 +235,7 @@
         "Forge of the Phoenix Map"
       ],
       "loot": {
-        "text": "Xoph's Blood\n\nCorrupted"
+        "text": "Xoph's Blood\nCorrupted"
       }
     },
     {
@@ -277,7 +271,7 @@
         "Poorjoy's Asylum"
       ],
       "loot": {
-        "text": "5x \nChaos Orb"
+        "text": "5x Chaos Orb"
       }
     },
     {
@@ -298,7 +292,7 @@
         "Bone Crypt Map"
       ],
       "loot": {
-        "text": "5x \nRegal Orb"
+        "text": "5x Regal Orb"
       }
     },
     {
@@ -314,7 +308,7 @@
       "card": "Dark Dreams",
       "maps": [],
       "loot": {
-        "text": "Bone Helmet\n\nElder Item"
+        "text": "Bone Helmet\nElder Item"
       }
     },
     {
@@ -417,7 +411,7 @@
         "Overgrown Shrine Map"
       ],
       "loot": {
-        "text": "Fidelitas' Spike\n\nTwo-Implicit\nCorrupted"
+        "text": "Fidelitas' Spike\n Two-Implicit\n Corrupted"
       }
     },
     {
@@ -451,21 +445,21 @@
       "card": "Etched in Blood",
       "maps": [],
       "loot": {
-        "text": "Rigwald's Quills\n\nTwo-Implicit\nCorrupted"
+        "text": "Rigwald's Quills\nTwo-Implicit\nCorrupted"
       }
     },
     {
       "card": "Forbidden Power",
       "maps": [],
       "loot": {
-        "text": "Balefire\n\nCorrupted"
+        "text": "Balefire\nCorrupted"
       }
     },
     {
       "card": "Friendship",
       "maps": [],
       "loot": {
-        "text": "A Master Seeks Help\n (Niko)"
+        "text": "A Master Seeks Help (Niko)"
       }
     },
     {
@@ -484,7 +478,7 @@
       "card": "Gift of Asenath",
       "maps": [],
       "loot": {
-        "text": "Asenath's Gentle Touch\n\nTwo-Implicit\nCorrupted"
+        "text": "Asenath's Gentle Touch\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -522,14 +516,12 @@
         "Cursed Crypt Map"
       ],
       "loot": {
-        "text": "Summon Raging Spirit\n\nQuality: +20%"
+        "text": "Summon Raging Spirit\nQuality: +20%"
       }
     },
     {
       "card": "Harmony of Souls",
-      "maps": [
-        "The Rotting Core"
-      ],
+      "maps": [],
       "loot": {
         "text": "9x Shrieking Essence"
       }
@@ -537,57 +529,145 @@
     {
       "card": "Her Mask",
       "maps": [
+        "Academy Map",
         "Alleyways Map",
         "Ancient City Map",
         "Arachnid Tomb Map",
         "Arcade Map",
+        "Arena Map",
         "Arid Lake Map",
         "Armoury Map",
+        "Arsenal Map",
         "Ashen Wood Map",
         "Atoll Map",
+        "Maelström of Chaos",
         "Barrows Map",
+        "Basilica Map",
+        "Bazaar Map",
         "Beach Map",
+        "Belfry Map",
+        "Bog Map",
+        "Bone Crypt Map",
+        "Olmec's Sanctum",
         "Burial Chambers Map",
         "Cage Map",
+        "Caldera Map",
+        "Canyon Map",
+        "Castle Ruins Map",
         "Cells Map",
+        "Cemetery Map",
+        "Hallowed Ground",
         "Channel Map",
+        "Chateau Map",
+        "Perandus Manor",
         "City Square Map",
+        "Colonnade Map",
+        "Colosseum Map",
+        "Conservatory Map",
+        "Coral Ruins Map",
+        "Courthouse Map",
         "Courtyard Map",
+        "The Vinktar Square",
+        "Coves Map",
+        "Crystal Ore Map",
         "Cursed Crypt Map",
+        "The Coward's Trial",
+        "Dark Forest Map",
+        "Defiled Cathedral Map",
         "Desert Map",
+        "Desert Spring Map",
+        "Dig Map",
+        "Dunes Map",
+        "Dungeon Map",
+        "Estuary Map",
         "Excavation Map",
         "Fields Map",
         "Flooded Mine Map",
+        "Gardens Map",
+        "Geode Map",
+        "Ghetto Map",
         "Glacier Map",
+        "Graveyard Map",
         "Grotto Map",
+        "The Beachhead (High Tier)",
+        "Harbinger Map",
         "Haunted Mansion Map",
+        "Iceberg Map",
+        "Infested Valley Map",
         "Ivory Temple Map",
         "Jungle Valley Map",
+        "Laboratory Map",
+        "Lair Map",
+        "Lava Chamber Map",
         "Leyline Map",
+        "Lighthouse Map",
         "Lookout Map",
         "Marshes Map",
         "Mausoleum Map",
         "Maze Map",
+        "Doryani's Machinarium",
         "Mesa Map",
+        "Moon Temple Map",
         "Mud Geyser Map",
+        "Museum Map",
+        "Necropolis Map",
+        "Orchard Map",
         "Overgrown Ruin Map",
+        "Overgrown Shrine Map",
+        "Park Map",
         "Pen Map",
         "Peninsula Map",
         "Phantasmagoria Map",
         "Pier Map",
+        "Pit Map",
+        "Plateau Map",
+        "Plaza Map",
+        "Port Map",
+        "Precinct Map",
         "Primordial Pool Map",
         "Promenade Map",
+        "The Hall of Grandmasters",
+        "Racecourse Map",
         "Ramparts Map",
+        "Reef Map",
         "Relic Chambers Map",
+        "Residence Map",
+        "Scriptorium Map",
+        "Sepulchre Map",
+        "Shipyard Map",
+        "Shore Map",
+        "Siege Map",
         "Spider Lair Map",
         "Fungal Hollow Map",
         "Strand Map",
+        "Whakawairua Tuahu",
         "Sulphur Vents Map",
+        "Summit Map",
+        "Sunken City Map",
+        "Temple Map",
+        "Poorjoy's Asylum",
+        "Terrace Map",
         "Thicket Map",
+        "Primordial Blocks Map",
+        "Tower Map",
+        "Toxic Sewer Map",
         "Crater Map",
         "Tropical Island Map",
+        "Untainted Paradise",
+        "Underground River Map",
+        "Underground Sea Map",
+        "Vaal Pyramid Map",
+        "Vaults of Atziri",
+        "Vault Map",
+        "Villa Map",
+        "Volcano Map",
+        "Wasteland Map",
         "Waste Pool Map",
-        "Wharf Map"
+        "Waterways Map",
+        "Wharf Map",
+        "Augmented Distant Memory",
+        "Twisted Distant Memory",
+        "Rewritten Distant Memory"
       ],
       "loot": {
         "text": "Sacrifice Fragment"
@@ -612,7 +692,7 @@
         "Lookout Map"
       ],
       "loot": {
-        "text": "Prismatic Ring\n\nCorrupted"
+        "text": "Prismatic Ring\nCorrupted"
       }
     },
     {
@@ -689,7 +769,7 @@
         "Pillars of Arun"
       ],
       "loot": {
-        "text": "Six-Link \nImperial Bow\n\nItem Level: 100"
+        "text": "Six-Link Imperial Bow\nItem Level: 100"
       }
     },
     {
@@ -824,7 +904,7 @@
         "Villa Map"
       ],
       "loot": {
-        "text": "Vaal Temple Map\n\nItem Level: 83\nCorrupted"
+        "text": "Vaal Temple Map\nItem Level: 83\nCorrupted"
       }
     },
     {
@@ -843,7 +923,7 @@
         "Lair Map"
       ],
       "loot": {
-        "text": "3x \nOrb of Fusing"
+        "text": "3x Orb of Fusing"
       }
     },
     {
@@ -857,7 +937,7 @@
         "Wharf Map"
       ],
       "loot": {
-        "text": "20x \nOrb of Fusing"
+        "text": "20x Orb of Fusing"
       }
     },
     {
@@ -867,7 +947,7 @@
         "Mao Kun"
       ],
       "loot": {
-        "text": "10x \nStacked Deck"
+        "text": "10x Stacked Deck"
       }
     },
     {
@@ -878,7 +958,7 @@
         "Underground Sea Map"
       ],
       "loot": {
-        "text": "Agate Amulet\n\nCorrupted"
+        "text": "Agate Amulet\nCorrupted"
       }
     },
     {
@@ -966,14 +1046,14 @@
         "Sepulchre Map"
       ],
       "loot": {
-        "text": "30x \nOrb of Scouring"
+        "text": "30x Orb of Scouring"
       }
     },
     {
       "card": "Nook's Crown",
       "maps": [],
       "loot": {
-        "text": "Bone Helmet\n\nItem Level: 100\nElder Item"
+        "text": "Bone Helmet\nItem Level: 100\nElder Item"
       }
     },
     {
@@ -1008,7 +1088,7 @@
         "Volcano Map"
       ],
       "loot": {
-        "text": "Kaom's Heart\n\nCorrupted"
+        "text": "Kaom's Heart\nCorrupted"
       }
     },
     {
@@ -1056,7 +1136,7 @@
         "Grotto Map"
       ],
       "loot": {
-        "text": "Strand Map\n\nItem Level: 73"
+        "text": "Strand Map\nItem Level: 73"
       }
     },
     {
@@ -1084,8 +1164,10 @@
         "The Broken Bridge (Act 7)",
         "The Crypt (Act 7)",
         "The Ashen Fields",
+        "The Bath House",
         "The Blood Aqueduct",
         "The Vastiri Desert",
+        "The Oasis",
         "The Foothills",
         "The Quarry"
       ],
@@ -1143,7 +1225,7 @@
       "card": "Squandered Prosperity",
       "maps": [],
       "loot": {
-        "text": "Perandus Manor\n\nWatchstone Count: 4\nCorrupted"
+        "text": "Perandus Manor\nWatchstone Count: 4\nCorrupted"
       }
     },
     {
@@ -1208,7 +1290,7 @@
       "card": "The Archmage's Right Hand",
       "maps": [],
       "loot": {
-        "text": "Glyphic \nProphecy Wand\n\nItem Level: 100"
+        "text": "Glyphic Prophecy Wand\nItem Level: 100"
       }
     },
     {
@@ -1241,7 +1323,7 @@
         "Primordial Blocks Map"
       ],
       "loot": {
-        "text": "Mjölner\n\nCorrupted"
+        "text": "Mjölner\nCorrupted"
       }
     },
     {
@@ -1332,7 +1414,7 @@
       "card": "The Bones",
       "maps": [],
       "loot": {
-        "text": "Level 21 \nVaal Summon Skeletons\n\nCorrupted"
+        "text": "Level 21 Vaal Summon Skeletons\nCorrupted"
       }
     },
     {
@@ -1349,7 +1431,7 @@
         "Wasteland Map"
       ],
       "loot": {
-        "text": "Voll's Devotion\n\nCorrupted"
+        "text": "Voll's Devotion\nCorrupted"
       }
     },
     {
@@ -1408,7 +1490,7 @@
       "card": "The Cartographer",
       "maps": [],
       "loot": {
-        "text": "10x \nCartographer's Chisel"
+        "text": "10x Cartographer's Chisel"
       }
     },
     {
@@ -1507,7 +1589,7 @@
         "Terrace Map"
       ],
       "loot": {
-        "text": "Opal Ring\n\nItem Level: 100\nShaper Item"
+        "text": "Opal Ring\nItem Level: 100\nShaper Item"
       }
     },
     {
@@ -1533,7 +1615,7 @@
       "card": "The Chosen",
       "maps": [],
       "loot": {
-        "text": "Skin of the Lords\n\nCorrupted"
+        "text": "Skin of the Lords\nCorrupted"
       }
     },
     {
@@ -1553,17 +1635,16 @@
     },
     {
       "card": "The Conduit",
-      "maps": [
-        "The Upper Sceptre of God",
-        "Villa Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Doryani's Fist"
       }
     },
     {
       "card": "The Craving",
-      "maps": [],
+      "maps": [
+        "Bone Crypt Map"
+      ],
       "loot": {
         "text": "Unending Hunger"
       }
@@ -1614,7 +1695,7 @@
         "Whakawairua Tuahu"
       ],
       "loot": {
-        "text": "Severed in Sleep\n\nCorrupted"
+        "text": "Severed in Sleep\nCorrupted"
       }
     },
     {
@@ -1632,7 +1713,7 @@
         "Colosseum Map"
       ],
       "loot": {
-        "text": "Belt of the Deceiver\n\nCorrupted"
+        "text": "Belt of the Deceiver\nCorrupted"
       }
     },
     {
@@ -1650,7 +1731,7 @@
       "card": "The Demon",
       "maps": [],
       "loot": {
-        "text": "Headhunter\n\nTwo-Implicit\nCorrupted"
+        "text": "Headhunter\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -1733,7 +1814,7 @@
         "Gardens Map"
       ],
       "loot": {
-        "text": "Terrace Map\n\nModifiers: 8\nCorrupted"
+        "text": "Terrace Map\nModifiers: 8\nCorrupted"
       }
     },
     {
@@ -1810,8 +1891,8 @@
         "Gardens Map",
         "Geode Map",
         "Ghetto Map",
-        "Harbinger Map",
-        "Harbinger Map",
+        "The Beachhead (High Tier)",
+        "The Beachhead (Mid Tier)",
         "Lair of the Hydra Map",
         "Infested Valley Map",
         "Jungle Valley Map",
@@ -1891,9 +1972,9 @@
     {
       "card": "The Endless Darkness",
       "maps": [
+        "The Beachhead (High Tier)",
         "Harbinger Map",
-        "Harbinger Map",
-        "Harbinger Map"
+        "The Beachhead (Mid Tier)"
       ],
       "loot": {
         "text": "Voidforge"
@@ -2001,7 +2082,7 @@
         "Waste Pool Map"
       ],
       "loot": {
-        "text": "Romira's Banquet\n\nCorrupted"
+        "text": "Romira's Banquet\nCorrupted"
       }
     },
     {
@@ -2011,7 +2092,7 @@
         "Shrine Map"
       ],
       "loot": {
-        "text": "Headhunter\n\nCorrupted"
+        "text": "Headhunter\nCorrupted"
       }
     },
     {
@@ -2023,12 +2104,9 @@
     },
     {
       "card": "The Fletcher",
-      "maps": [
-        "The Climb",
-        "The Riverways (Act 6)"
-      ],
+      "maps": [],
       "loot": {
-        "text": "Drillneck\n\nCorrupted"
+        "text": "Drillneck\nCorrupted"
       }
     },
     {
@@ -2046,7 +2124,7 @@
       "card": "The Fool",
       "maps": [],
       "loot": {
-        "text": "20x \nOrb of Chance"
+        "text": "20x Orb of Chance"
       }
     },
     {
@@ -2179,9 +2257,9 @@
         "Graveyard Map",
         "Grotto Map",
         "Harbinger's Isle",
+        "The Beachhead (High Tier)",
         "Harbinger Map",
-        "Harbinger Map",
-        "Harbinger Map",
+        "The Beachhead (Mid Tier)",
         "Haunted Mansion Map",
         "Lair of the Hydra Map",
         "Iceberg Map",
@@ -2329,21 +2407,21 @@
         "Ivory Temple Map"
       ],
       "loot": {
-        "text": "Flaring \nEclipse Staff\n\nItem Level: 100"
+        "text": "Flaring Eclipse Staff\nItem Level: 100"
       }
     },
     {
       "card": "The Greatest Intentions",
       "maps": [],
       "loot": {
-        "text": "The Saviour\n\nTwo-Implicit\nCorrupted"
+        "text": "The Saviour\nTwo-Implicit\nCorrupted"
       }
     },
     {
       "card": "The Gulf",
       "maps": [],
       "loot": {
-        "text": "Thread of Hope\n\nTwo-Implicit\nCorrupted"
+        "text": "Thread of Hope\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -2380,7 +2458,7 @@
       "card": "The Heroic Shot",
       "maps": [],
       "loot": {
-        "text": "17x \nChromatic Orb"
+        "text": "17x Chromatic Orb"
       }
     },
     {
@@ -2389,7 +2467,7 @@
         "Vaal Pyramid Map"
       ],
       "loot": {
-        "text": "Machina Mitts\n\nTwo-Implicit\nCorrupted"
+        "text": "Machina Mitts\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -2448,7 +2526,7 @@
         "Basilica Map"
       ],
       "loot": {
-        "text": "40x \nOrb of Regret"
+        "text": "40x Orb of Regret"
       }
     },
     {
@@ -2468,7 +2546,7 @@
         "Carcass Map"
       ],
       "loot": {
-        "text": "The Harvest\n\nCorrupted"
+        "text": "The Harvest\nCorrupted"
       }
     },
     {
@@ -2482,7 +2560,7 @@
         "Vaal Temple Map"
       ],
       "loot": {
-        "text": "10x \nVaal Orb"
+        "text": "10x Vaal Orb"
       }
     },
     {
@@ -2557,7 +2635,7 @@
         "Whakawairua Tuahu"
       ],
       "loot": {
-        "text": "The Beachhead\n\nMap Tier: 15\nCorrupted"
+        "text": "The Beachhead\nMap Tier: 15\nCorrupted"
       }
     },
     {
@@ -2576,7 +2654,7 @@
         "Bone Crypt Map"
       ],
       "loot": {
-        "text": "Midnight Bargain\n\nCorrupted"
+        "text": "Midnight Bargain\nCorrupted"
       }
     },
     {
@@ -2678,7 +2756,7 @@
         "Ivory Temple Map"
       ],
       "loot": {
-        "text": "The Perandus Manor\n\nWatchstone Count: 4"
+        "text": "The Perandus Manor\nWatchstone Count: 4"
       }
     },
     {
@@ -2773,7 +2851,7 @@
       "card": "The Old Man",
       "maps": [],
       "loot": {
-        "text": "Fishing Rod\n\nTwo-Implicit\nCorrupted"
+        "text": "Fishing Rod\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -2783,7 +2861,7 @@
         "Oba's Cursed Trove"
       ],
       "loot": {
-        "text": "Le Heup of All\n\nCorrupted"
+        "text": "Le Heup of All\nCorrupted"
       }
     },
     {
@@ -2847,7 +2925,7 @@
         "Arcade Map"
       ],
       "loot": {
-        "text": "Blood of Corruption\n\nCorrupted"
+        "text": "Blood of Corruption\nCorrupted"
       }
     },
     {
@@ -2878,14 +2956,14 @@
       "card": "The Price of Loyalty",
       "maps": [],
       "loot": {
-        "text": "Skin of the Loyal\n\nItem Level: 25\nTwo-Implicit\nCorrupted"
+        "text": "Skin of the Loyal\nItem Level: 25\nTwo-Implicit\nCorrupted"
       }
     },
     {
       "card": "The Price of Protection",
       "maps": [],
       "loot": {
-        "text": "Chateau Map\n\nWatchstone Count: 4"
+        "text": "Chateau Map\nWatchstone Count: 4"
       }
     },
     {
@@ -2949,7 +3027,7 @@
       "card": "The Realm",
       "maps": [],
       "loot": {
-        "text": "Superior \nPortal"
+        "text": "Superior Portal"
       }
     },
     {
@@ -2994,7 +3072,7 @@
         "Summit Map"
       ],
       "loot": {
-        "text": "Meginord's Girdle\n\nCorrupted"
+        "text": "Meginord's Girdle\nCorrupted"
       }
     },
     {
@@ -3003,7 +3081,7 @@
         "The Temple of Atzoatl"
       ],
       "loot": {
-        "text": "Six-Link \nSacrificial Garb\n\nItem Level: 100"
+        "text": "Six-Link Sacrificial Garb\nItem Level: 100"
       }
     },
     {
@@ -3015,14 +3093,13 @@
         "The Grain Gate",
         "Alleyways Map",
         "Arcade Map",
-        "Arsenal Map",
         "Bazaar Map",
         "Ghetto Map",
         "Port Map",
         "Precinct Map"
       ],
       "loot": {
-        "text": "2x \nExalted Orb"
+        "text": "2x Exalted Orb"
       }
     },
     {
@@ -3066,7 +3143,7 @@
         "Scriptorium Map"
       ],
       "loot": {
-        "text": "40x \nScroll of Wisdom"
+        "text": "40x Scroll of Wisdom"
       }
     },
     {
@@ -3075,7 +3152,7 @@
         "The Temple of Atzoatl"
       ],
       "loot": {
-        "text": "3x \nOrb of Annulment"
+        "text": "3x Orb of Annulment"
       }
     },
     {
@@ -3085,7 +3162,7 @@
         "Palace Map"
       ],
       "loot": {
-        "text": "10x \nDivine Orb"
+        "text": "10x Divine Orb"
       }
     },
     {
@@ -3115,14 +3192,14 @@
         "Underground Sea Map"
       ],
       "loot": {
-        "text": "The Whispering Ice\n\nCorrupted"
+        "text": "The Whispering Ice\nCorrupted"
       }
     },
     {
       "card": "The Skeleton",
       "maps": [],
       "loot": {
-        "text": "Level 1 \nSummon Skeletons\n\nQuality: +23%\nCorrupted"
+        "text": "Level 1 Summon Skeletons\nQuality: +23%\nCorrupted"
       }
     },
     {
@@ -3183,7 +3260,7 @@
       "card": "The Strategist",
       "maps": [],
       "loot": {
-        "text": "Inspired Learning\n\nCorrupted"
+        "text": "Inspired Learning\nCorrupted"
       }
     },
     {
@@ -3258,14 +3335,14 @@
         "Underground Sea Map"
       ],
       "loot": {
-        "text": "7x \nOrb of Alchemy"
+        "text": "7x Orb of Alchemy"
       }
     },
     {
       "card": "The Sustenance",
       "maps": [],
       "loot": {
-        "text": "Energy From Within\n\nTwo-Implicit\nCorrupted"
+        "text": "Energy From Within\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -3283,7 +3360,7 @@
         "Shrine Map"
       ],
       "loot": {
-        "text": "Shavronne's Revelation\n\nCorrupted"
+        "text": "Shavronne's Revelation\nCorrupted"
       }
     },
     {
@@ -3294,7 +3371,7 @@
         "Waste Pool Map"
       ],
       "loot": {
-        "text": "Kaom's Roots\n\nCorrupted"
+        "text": "Kaom's Roots\nCorrupted"
       }
     },
     {
@@ -3358,7 +3435,7 @@
         "Factory Map",
         "Gardens Map",
         "Geode Map",
-        "Harbinger Map",
+        "The Beachhead (Mid Tier)",
         "Infested Valley Map",
         "Laboratory Map",
         "Lair Map",
@@ -3453,7 +3530,7 @@
       "card": "The Undisputed",
       "maps": [],
       "loot": {
-        "text": "Merciless \nVaal Axe\n\nItem Level: 100\nElder Item"
+        "text": "Merciless Vaal Axe\nItem Level: 100\nElder Item"
       }
     },
     {
@@ -3472,7 +3549,7 @@
         "Graveyard Map"
       ],
       "loot": {
-        "text": "10x \nGemcutter's Prism"
+        "text": "10x Gemcutter's Prism"
       }
     },
     {
@@ -3492,7 +3569,8 @@
     {
       "card": "The Vast",
       "maps": [
-        "Coral Ruins Map"
+        "Coral Ruins Map",
+        "Reef Map"
       ],
       "loot": {
         "text": "Song of the Sirens"
@@ -3572,7 +3650,7 @@
         "Trial of Stinging Doubt"
       ],
       "loot": {
-        "text": "Six-Link \nAstral Plate\n\nItem Level: 100\nCrusader Item"
+        "text": "Six-Link Astral Plate\nItem Level: 100\nCrusader Item"
       }
     },
     {
@@ -3670,7 +3748,7 @@
         "Lava Lake Map"
       ],
       "loot": {
-        "text": "10x \nChaos Orb"
+        "text": "10x Chaos Orb"
       }
     },
     {
@@ -3715,7 +3793,7 @@
         "Factory Map"
       ],
       "loot": {
-        "text": "3x \nChaos Orb"
+        "text": "3x Chaos Orb"
       }
     },
     {
@@ -3775,7 +3853,7 @@
         "Underground Sea Map"
       ],
       "loot": {
-        "text": "Vaults of Atziri\n\nCorrupted"
+        "text": "Vaults of Atziri\nCorrupted"
       }
     },
     {
@@ -3791,35 +3869,35 @@
         "The Library"
       ],
       "loot": {
-        "text": "Pacifism\n\nCorrupted"
+        "text": "Pacifism\nCorrupted"
       }
     },
     {
       "card": "Unchained",
       "maps": [],
       "loot": {
-        "text": "Facebreaker\n\nTwo-Implicit\nCorrupted"
+        "text": "Facebreaker\nTwo-Implicit\nCorrupted"
       }
     },
     {
       "card": "Underground Forest",
       "maps": [],
       "loot": {
-        "text": "10x \nAwakened Sextant"
+        "text": "10x Awakened Sextant"
       }
     },
     {
       "card": "Unrequited Love",
       "maps": [],
       "loot": {
-        "text": "19x \nMirror Shard"
+        "text": "19x Mirror Shard"
       }
     },
     {
       "card": "Vanity",
       "maps": [],
       "loot": {
-        "text": "Tabula Rasa\n\nCorrupted"
+        "text": "Tabula Rasa\nCorrupted"
       }
     },
     {
@@ -3842,14 +3920,14 @@
         "Shrine Map"
       ],
       "loot": {
-        "text": "10x \nOrb of Regret"
+        "text": "10x Orb of Regret"
       }
     },
     {
       "card": "Void of the Elements",
       "maps": [],
       "loot": {
-        "text": "Overpowering \nOpal Ring\n\nItem Level: 100\nElder Item"
+        "text": "Overpowering Opal Ring\nItem Level: 100\nElder Item"
       }
     },
     {
