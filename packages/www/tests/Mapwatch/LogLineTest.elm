@@ -18,6 +18,7 @@ datamine =
             , index = { langIndexEmpty | backendErrors = Dict.singleton "EnteredArea" "You have entered {0}." }
             }
         )
+        []
         Dict.empty
         []
         Dict.empty
