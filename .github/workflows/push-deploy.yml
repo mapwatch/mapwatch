@@ -1,11 +1,11 @@
-name: www-ci-deploy
+name: push-deploy
 on:
   push:
     branches: [master]
   workflow_dispatch:
 
 jobs:
-  deploy:
+  deploy-www:
     runs-on: ubuntu-latest
 
     steps:
@@ -38,3 +38,26 @@ jobs:
           AWS_S3_BUCKET: mapwatch.erosson.org
           AWS_REGION: us-east-1
           SOURCE_DIR: packages/www/build/
+  deploy-electron:
+    # https://github.com/marketplace/actions/electron-builder-action
+    runs-on: windows-latest
+    needs: deploy-www
+    steps:
+      - uses: actions/checkout@v2
+      # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          - name: Electron Builder Action
+      - run: yarn --frozen-lockfile
+      - run: yarn test
+      - uses: samuelmeuli/action-electron-builder@v1.6.0
+        with:
+          build_script_name: build:electron2
+          # GitHub token, automatically provided to the action
+          # (No need to define this secret in the repo settings)
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+          # If the commit is tagged with a version (e.g. "v1.0.0"),
+          # release the app after building
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
