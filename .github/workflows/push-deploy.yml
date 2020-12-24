@@ -43,7 +43,7 @@ jobs:
   deploy-electron:
     # https://github.com/marketplace/actions/electron-builder-action
     runs-on: windows-latest
-    needs: deploy-www
+    # needs: deploy-www
     steps:
       - uses: actions/checkout@v2
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
@@ -52,10 +52,12 @@ jobs:
           node-version: 12.x
       - run: yarn --frozen-lockfile
       - run: yarn test
+      - run: yarn build --ignore @mapwatch/electron2
       - name: Electron Builder Action
         uses: samuelmeuli/action-electron-builder@v1.6.0
         with:
-          build_script_name: build:electron2
+          package_root: packages/electron2
+          skip_build: true  # I already built it above; just monorepo things
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
           github_token: ${{ secrets.GITHUB_TOKEN }}
