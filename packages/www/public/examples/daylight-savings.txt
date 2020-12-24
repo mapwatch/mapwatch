@@ -1,0 +1,20 @@
+# engineered this file to test dst. #135
+# timestamp is 18:43:00ish
+# http://localhost:3000/?tickStart=1603996952265&logtz=0&example=daylight-savings.txt#/history
+2020/10/29 18:33:00 157224625 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.1:6112
+2020/10/29 18:33:00 157183906 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2020/10/29 18:33:01 157224625 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.101:6112
+2020/10/29 18:33:01 157234265 9b0 [INFO Client 1012] : You have entered Toxic Sewer.
+2020/10/29 18:33:02 157523890 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.1:6112
+2020/10/29 18:33:02 157525218 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+2020/10/29 18:53:01 157224625 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.102:6112
+2020/10/29 18:53:01 157234265 9b0 [INFO Client 1012] : You have entered Toxic Sewer.
+2020/10/29 18:53:02 157523890 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.1:6112
+2020/10/29 18:53:02 157525218 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
+#
+# the clock ticks backwards here, just like in dst
+#
+2020/10/29 18:33:01 157224625 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.103:6112
+2020/10/29 18:33:01 157234265 9b0 [INFO Client 1012] : You have entered Toxic Sewer.
+2020/10/29 18:33:02 157523890 d8 [INFO Client 1012] Connecting to instance server at 0.0.0.1:6112
+2020/10/29 18:33:02 157525218 9b0 [INFO Client 1012] : You have entered Enlightened Hideout.
