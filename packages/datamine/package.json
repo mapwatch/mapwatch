@@ -33,8 +33,10 @@
     "wiki:divcards": "bash -c \"node src/divcards.js > dist/divcards.json\"",
     "wiki:leagues": "bash -c \"node src/leagues.js > dist/leagues.json\"",
     "wiki": "bash -c \"yarn wiki:atlasbase && yarn wiki:divcards && yarn wiki:leagues\"",
-    "ggpk:fetch": "bash -c \"mkdir -p ggpk && cd ggpk && steamctl depot download --app 238960 --depot 238961\"",
-    "ggpk:diff": "bash -c \"steamctl depot diff --app 238960 --depot 238961 ggpk\""
+    "ggpk:info": "bash -c \"steamctl depot info --app 238960 --depot 238961\"",
+    "ggpk:fetch-is-outdated": "bash -c \"diff ggpk/info.txt <(yarn --silent ggpk:info) && echo \\\"ggpk is up to date.\\\"\"",
+    "ggpk:fetch": "bash -c \"yarn ggpk:fetch-is-outdated || yarn ggpk:fetch-or-verify\"",
+    "ggpk:fetch-or-verify": "bash -c \"mkdir -p ggpk && cd ggpk && yarn --silent ggpk:info > info.txt && steamctl depot download --app 238960 --depot 238961\""
   },
   "devDependencies": {
     "jquery": "^3.5.1",
