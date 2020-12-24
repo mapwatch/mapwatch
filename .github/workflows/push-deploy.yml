@@ -17,6 +17,7 @@ jobs:
       - run: yarn --frozen-lockfile
       - run: yarn test
       - run: yarn build --ignore @mapwatch/electron2
+      - run: find packages/www/build
 
       # https://github.com/marketplace/actions/deploy-to-github-pages
       - name: Deploy to GitHub Pages
@@ -48,10 +49,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
-          - name: Electron Builder Action
       - run: yarn --frozen-lockfile
       - run: yarn test
-      - uses: samuelmeuli/action-electron-builder@v1.6.0
+      - name: Electron Builder Action
+        uses: samuelmeuli/action-electron-builder@v1.6.0
         with:
           build_script_name: build:electron2
           # GitHub token, automatically provided to the action
