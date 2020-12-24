@@ -1,0 +1,40 @@
+name: www-ci-deploy
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: yarn --frozen-lockfile
+      - run: yarn test
+      - run: yarn build --ignore @mapwatch/electron2
+
+      # https://github.com/marketplace/actions/deploy-to-github-pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY_NAME: mapwatch/mapwatch.github.io
+          BRANCH: master
+          FOLDER: packages/mapwatch.github.io/
+
+      # https://github.com/marketplace/actions/s3-sync?version=v0.5.1
+      - name: S3 Sync
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_S3_BUCKET: mapwatch.erosson.org
+          AWS_REGION: us-east-1
+          SOURCE_DIR: packages/www/build/
