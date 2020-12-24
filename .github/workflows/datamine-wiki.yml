@@ -21,7 +21,7 @@ jobs:
       - name: yarn install
         run: yarn --frozen-lockfile
       - name: Running the wiki dataminer
-        run: cd packages/datamine && yarn wiki
+        run: cd packages/datamine-wiki && yarn dist
       # https://peterevans.dev/posts/github-actions-how-to-create-pull-requests-automatically/
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
