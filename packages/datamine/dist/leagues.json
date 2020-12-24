@@ -1,5 +1,4 @@
 {
-  "__test__": "let's see if github actions auto-creates a pr when it sees this diff - verifying #145",
   "data": [
     {
       "id": "Standard",
