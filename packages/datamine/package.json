@@ -32,7 +32,9 @@
     "wiki:atlasbase": "bash -c \"node src/atlasbase.js > dist/atlasbase.json\"",
     "wiki:divcards": "bash -c \"node src/divcards.js > dist/divcards.json\"",
     "wiki:leagues": "bash -c \"node src/leagues.js > dist/leagues.json\"",
-    "wiki": "yarn wiki:atlasbase && yarn wiki:divcards && yarn wiki:leagues"
+    "wiki": "bash -c \"yarn wiki:atlasbase && yarn wiki:divcards && yarn wiki:leagues\"",
+    "ggpk:fetch": "bash -c \"mkdir -p ggpk && cd ggpk && steamctl depot download --app 238960 --depot 238961\"",
+    "ggpk:diff": "bash -c \"steamctl depot diff --app 238960 --depot 238961 ggpk\""
   },
   "devDependencies": {
     "jquery": "^3.5.1",
