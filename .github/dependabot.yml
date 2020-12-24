@@ -3,25 +3,30 @@ updates:
   - package-ecosystem: npm
     directory: "/packages/www"
     schedule:
-      interval: daily
+      interval: weekly
     open-pull-requests-limit: 10
   - package-ecosystem: npm
     directory: "/packages/rss"
     schedule:
-      interval: daily
+      interval: weekly
     open-pull-requests-limit: 10
   - package-ecosystem: npm
     directory: "/packages/datamine"
     schedule:
-      interval: daily
+      interval: weekly
+    open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/packages/datamine-wiki"
+    schedule:
+      interval: weekly
     open-pull-requests-limit: 10
   - package-ecosystem: elm
     directory: "/packages/www"
     schedule:
-      interval: daily
+      interval: weekly
     open-pull-requests-limit: 10
   - package-ecosystem: npm
     directory: "/packages/electron2"
     schedule:
-      interval: daily
+      interval: weekly
     open-pull-requests-limit: 10
