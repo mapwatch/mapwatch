@@ -1,0 +1,27 @@
+# CI build instructions for AWS.
+#
+# We periodically download poe and build the datmined updates. Github's free CI
+# machines don't have the disk space for that, and wipe their disk every run -
+# unacceptable for a 30GB clean download. Even free build cache is pretty slow.
+# AWS is slightly worse than free, but we can save the download across builds
+# and only download the diffs.
+#
+# The mapwatch aws dashboard:
+# https://console.aws.amazon.com/codesuite/codebuild/859469699167/projects/mapwatch-dataminer
+#
+# buildspec.yml docs:
+# https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
+
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+      python: latest
+    commands:
+      - pip install steamctl
+      - yarn --frozen-lockfile
+  build:
+    commands:
+      - echo "did we make it this far?"
