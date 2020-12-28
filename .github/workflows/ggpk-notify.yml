@@ -40,7 +40,7 @@ jobs:
           cat packages/datamine/steam-depot-info.txt
       - run: |
           echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV
-          diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt || true >> $GITHUB_ENV
+          diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt >> $GITHUB_ENV
           echo '__EOF__' >> $GITHUB_ENV
           diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt || true
           cat $GITHUB_ENV
