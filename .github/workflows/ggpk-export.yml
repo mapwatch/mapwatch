@@ -20,14 +20,14 @@ jobs:
         with:
           node-version: 12.x
 
-      - run: yarn --frozen-lockfile
-      # https://github.com/marketplace/actions/setup-python
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install steamctl pexpect
       - working-directory: ./packages/datamine
         run: yarn pypoe:install
+      - run: pip install steamctl pexpect
+      - run: yarn --frozen-lockfile
+      # https://github.com/marketplace/actions/setup-python
 
       - working-directory: ./packages/datamine-dl
         env:
