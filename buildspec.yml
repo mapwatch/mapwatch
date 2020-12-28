@@ -22,9 +22,9 @@ version: 0.2
 
 env:
   parameter-store:
-    STEAMCTL_USER: mapwatch-dataminer/STEAMCTL_USER
-    STEAMCTL_PASSWD: mapwatch-dataminer/STEAMCTL_PASSWD
-    STEAMCTL_SECRET: mapwatch-dataminer/STEAMCTL_SECRET
+    STEAMCTL_USER: mapwatch-dataminer-STEAMCTL_USER
+    STEAMCTL_PASSWD: mapwatch-dataminer-STEAMCTL_PASSWD
+    STEAMCTL_SECRET: mapwatch-dataminer-STEAMCTL_SECRET
 
 phases:
   install:
