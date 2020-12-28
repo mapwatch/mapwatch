@@ -4,7 +4,7 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "info.txt": "TZ=\"Etc/UTC\" bash -c \"steamctl depot info --app 238960 --depot 238961 | tail --lines=+2 | tee steam-depot-info-new.txt\"",
+    "info.txt": "bash -c \"TZ='Etc/UTC' steamctl depot info --app 238960 --depot 238961 | tail --lines=+2 | tee steam-depot-info-new.txt\"",
     "info.txt:mv": "mv steam-depot-info-new.txt steam-depot-info.txt",
     "fetch": "bash -c \"yarn fetch:query || (yarn fetch:force && yarn info.txt:mv)\"",
     "fetch:query": "bash -c \"yarn info.txt && diff steam-depot-info.txt steam-depot-info-new.txt && echo \\\"ggpk is up to date.\\\"\"",

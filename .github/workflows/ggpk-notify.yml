@@ -23,24 +23,28 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install steamctl pexpect
-      - run: python steamctl-auth.py
+      - working-directory: ./packages/datamine-dl
         env:
           STEAMCTL_USER: ${{ secrets.STEAMCTL_USER }}
           STEAMCTL_PASSWD: ${{ secrets.STEAMCTL_PASSWD }}
           STEAMCTL_SECRET: ${{ secrets.STEAMCTL_SECRET }}
+        run: python steamctl-auth.py
       # skip the first line's gibberish
-      - run: steamctl depot info -a 238960 -d 238961 | tail --lines=+2 > steam-depot-info-new.txt
+      - working-directory: ./packages/datamine-dl
         env:
           TZ: "Etc/UTC"
+        run: yarn info.txt
       # https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
-      - run: |
+      - working-directory: ./packages/datamine-dl
+        run: |
           echo 'STEAM_DEPOT_INFO_NEW<<__EOF__' >> $GITHUB_ENV
-          cat packages/datamine/steam-depot-info.txt >> $GITHUB_ENV
+          cat steam-depot-info.txt >> $GITHUB_ENV
           echo '__EOF__' >> $GITHUB_ENV
-          cat packages/datamine/steam-depot-info.txt
-      - run: |
+          cat $GITHUB_ENV
+      - working-directory: ./packages/datamine-dl
+        run: |
           echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV
-          (diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt || true) >> $GITHUB_ENV
+          (diff steam-depot-info.txt steam-depot-info-new.txt || true) >> $GITHUB_ENV
           echo '__EOF__' >> $GITHUB_ENV
           cat $GITHUB_ENV
       - if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}
