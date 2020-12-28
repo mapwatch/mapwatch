@@ -1,0 +1,25 @@
+#!/bin/bash
+set -euxo pipefail
+cd "`dirname "$0"`/../.."
+
+GGPK_PATH_DEFAULT="$(cd .. && pwd)/datamine-dl/dist"
+GGPK_PATH="${GGPK_PATH:-$GGPK_PATH_DEFAULT}"
+LANG_FILES="`node src/langFilenames.js`"
+ls $GGPK_PATH > /dev/null
+pypoe_exporter config set ggpk_path $GGPK_PATH
+
+rm -rf dist
+mkdir -p dist/lang
+
+pypoe_exporter dat json dist/all.json --files `node src/mainFilenames.js`
+
+pypoe_exporter dat json dist/lang/en.json --files $LANG_FILES
+pypoe_exporter dat json dist/lang/fr.json --lang French --files $LANG_FILES
+pypoe_exporter dat json dist/lang/de.json --lang German --files $LANG_FILES
+pypoe_exporter dat json dist/lang/ko.json --lang Korean --files $LANG_FILES
+pypoe_exporter dat json dist/lang/pt.json --lang Portuguese --files $LANG_FILES
+pypoe_exporter dat json dist/lang/ru.json --lang Russian --files $LANG_FILES
+pypoe_exporter dat json dist/lang/es.json --lang Spanish --files $LANG_FILES
+pypoe_exporter dat json dist/lang/th.json --lang Thai --files $LANG_FILES
+
+date > dist/date
