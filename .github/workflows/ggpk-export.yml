@@ -42,6 +42,7 @@ jobs:
           retention-days: 1
   export:
     runs-on: windows-latest
+    steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
         with:
