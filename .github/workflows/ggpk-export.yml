@@ -59,7 +59,7 @@ jobs:
       STEAM_DEPOT_INFO_DIFF: ${{ env.STEAM_DEPOT_INFO_DIFF }}
   export:
     needs: fetch
-    if: ${{ jobs.fetch.outputs.STEAM_DEPOT_INFO_DIFF != '' }}
+    if: ${{ needs.fetch.outputs.STEAM_DEPOT_INFO_DIFF != '' }}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
