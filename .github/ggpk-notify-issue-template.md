@@ -13,7 +13,7 @@ Current data:
 
 Differences:
 ```diff
-{{ env.STEAM_DEPOT_INFO_NEW }}
+{{ env.STEAM_DEPOT_INFO_DIFF }}
 ```
 
 </details>
