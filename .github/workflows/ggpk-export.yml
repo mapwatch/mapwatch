@@ -43,7 +43,7 @@ jobs:
       - working-directory: ./packages/datamine-dl
         run: |
           echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV
-          (diff steam-depot-info.txt steam-depot-info-new.txt || true) >> $GITHUB_ENV
+          (diff steam-depot-info-old.txt steam-depot-info.txt || true) >> $GITHUB_ENV
           echo '__EOF__' >> $GITHUB_ENV
           cat $GITHUB_ENV
       # Stop running if there's no info.txt differences
@@ -52,6 +52,12 @@ jobs:
         with:
           name: datamine-dl
           path: packages/datamine-dl/dist/**/*
+          retention-days: 1
+      - if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: datamine-info
+          path: packages/datamine-dl/steam-depot-info.txt
           retention-days: 1
     # let the next job know if there are info.txt differences
     outputs:
@@ -67,6 +73,10 @@ jobs:
         with:
           name: datamine-dl
           path: packages/datamine-dl/dist
+      - uses: actions/download-artifact@v2
+        with:
+          name: datamine-info
+          path: packages/datamine-dl/steam-depot-info.txt
       - run: ls packages/datamine-dl/dist/*
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
       - uses: actions/setup-node@v1
