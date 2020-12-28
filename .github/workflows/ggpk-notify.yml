@@ -42,9 +42,7 @@ jobs:
           echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV
           (diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt || true) >> $GITHUB_ENV
           echo '__EOF__' >> $GITHUB_ENV
-          diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt || true
           cat $GITHUB_ENV
-      - run: echo "${{ env.STEAM_DEPOT_INFO_DIFF }}"
       - if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}
         uses: JasonEtco/create-an-issue@v2
         env:
