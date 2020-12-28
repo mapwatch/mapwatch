@@ -48,7 +48,7 @@ jobs:
           retention-days: 1
   export:
     needs: fetch
-    if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}
+    if: ${{ jobs.fetch.env.STEAM_DEPOT_INFO_DIFF != '' }}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
