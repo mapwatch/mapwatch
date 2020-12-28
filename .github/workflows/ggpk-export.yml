@@ -21,8 +21,6 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - working-directory: ./packages/datamine
-        run: yarn pypoe:install:ci
       - run: pip install steamctl pexpect
 
       - working-directory: ./packages/datamine-dl
@@ -49,11 +47,17 @@ jobs:
         with:
           name: datamine-dl
           path: packages/datamine-dl/dist
-      - run: ls packages/datamine-dl/dist
+      - run: find packages/datamine-dl/dist
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - working-directory: ./packages/datamine
+        run: yarn pypoe:install:ci
       - run: yarn --frozen-lockfile
 
       - working-directory: ./packages/datamine
