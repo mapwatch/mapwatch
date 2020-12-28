@@ -34,8 +34,10 @@ phases:
     commands:
       - pip install steamctl pexpect
       - yarn --frozen-lockfile
-      - env
-  build:
+      # - env
+  pre_build:
     commands:
       - python steamctl-auth.py
+  build:
+    commands:
       - steamctl depot info -a 440
