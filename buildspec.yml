@@ -6,13 +6,25 @@
 # AWS is slightly worse than free, but we can save the download across builds
 # and only download the diffs.
 #
+# Not done yet, but we'll probably start it from a github action:
+# https://github.com/aws-actions/aws-codebuild-run-build
+#
 # The mapwatch aws dashboard:
 # https://console.aws.amazon.com/codesuite/codebuild/859469699167/projects/mapwatch-dataminer
+#
+# Secrets management:
+# https://console.aws.amazon.com/systems-manager/parameters/?region=us-east-1&tab=Table
 #
 # buildspec.yml docs:
 # https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html
 
 version: 0.2
+
+env:
+  parameter-store:
+    STEAMCTL_USER: STEAMCTL_USER
+    STEAMCTL_PASSWD: STEAMCTL_PASSWD
+    STEAMCTL_SECRET: STEAMCTL_SECRET
 
 phases:
   install:
@@ -20,8 +32,10 @@ phases:
       nodejs: latest
       python: latest
     commands:
-      - pip install steamctl
+      - pip install steamctl pexpect
       - yarn --frozen-lockfile
+      - env
   build:
     commands:
-      - echo "did we make it this far?"
+      - python steamctl_auth.py
+      - steamctl depot info -a 440
