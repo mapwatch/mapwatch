@@ -36,7 +36,7 @@ def authenticator_add(steamctl, user, passwd, secret):
     index = child.expect(["Enter password for .*:", pexpect.EOF])
     print("\nauth_add expected", index)
     if index == 0:
-        child.send(passwd+"\n")
+        child.sendline(passwd)
     child.expect("Authenticator added successfully")
     child.read()
     child.close()
@@ -56,23 +56,25 @@ def login_with_2fa(steamctl, user, passwd):
     child.logfile_read = sys.stdout.buffer
     index = child.expect(["Password:", pexpect.EOF])
     if index == 0:
-        child.send(passwd+"\n")
+        child.sendline(passwd)
         index = child.expect(["Enter 2FA code:", pexpect.EOF])
+        # I don't understand why waitnoecho() is necessary - but without it,
+        # 2fa codes that match my phone's are consistently rejected
+        child.waitnoecho()
         if index == 0:
-            time.sleep(5)
             code = authenticator_code(steamctl=steamctl, user=user)
             print("authenticator code 1:", str(code), flush=True)
-            time.sleep(3)
-            child.send(code+"\n")
+            child.sendline(code)
             # retry once
             index = child.expect(["Incorrect code. Enter 2FA code:", pexpect.EOF])
+            child.waitnoecho()
             if index == 0:
-                time.sleep(10)
+                time.sleep(5)
                 code = authenticator_code(steamctl=steamctl, user=user)
                 print("authenticator code 2:", str(code), flush=True)
                 time.sleep(3)
                 # retry
-                child.send(code+"\n")
+                child.sendline(code)
                 child.expect(pexpect.EOF)
     child.read()
     child.close()
