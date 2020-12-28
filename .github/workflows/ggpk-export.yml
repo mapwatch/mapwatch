@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: 3.x
       - working-directory: ./packages/datamine
-        run: yarn pypoe:install
+        run: yarn pypoe:install:ci
       - run: pip install steamctl pexpect
       - run: yarn --frozen-lockfile
       # https://github.com/marketplace/actions/setup-python
