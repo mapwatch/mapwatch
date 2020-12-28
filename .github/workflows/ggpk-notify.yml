@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn --frozen-lockfile
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
       #- uses: actions/setup-node@v1
       #  with:
@@ -20,6 +19,7 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install steamctl pexpect
+      - run: env
       - run: python steamctl-auth.py
       # skip the first line's gibberish
       - run: steamctl depot info -a 238960 -d 238961 | tail --lines=+2 > steam-depot-info-new.txt
