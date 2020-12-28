@@ -5,9 +5,17 @@ Looks like they patched Path of Exile! It's time to run `cd packages/datamine &&
 
 [The ggpk-notify robot][bot] saw that `steamctl depot info -a 238960 -d 238961` no longer matches [`steam-depot-info.txt`][info.txt].
 <details><summary>What's changed?</summary>
-<code>
+
+Current data:
+```yaml
 {{ env.STEAM_DEPOT_INFO_NEW }}
-</code>
+```
+
+Differences:
+```diff
+{{ env.STEAM_DEPOT_INFO_NEW }}
+```
+
 </details>
 
 [bot]: https://github.com/mapwatch/mapwatch/blob/master/.github/workflows/ggpk-notify.yml
