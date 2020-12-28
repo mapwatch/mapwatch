@@ -131,6 +131,8 @@ class WikiCondition(parser.WikiCondition):
         'drop_text',
         'drop_monsters',
         'upgraded_from_disabled',
+        'is_drop_restricted',
+        'influences',
 
         # Item flags
         'is_corrupted',
@@ -533,6 +535,7 @@ class ItemsParser(SkillParserShared):
         'Metamorphosis': '3.9.0',
         'Delirium': '3.10.0',
         'Harvest': '3.11.0',
+        'Heist': '3.12.0',
     }
 
     _IGNORE_DROP_LEVEL_CLASSES = (
@@ -711,6 +714,8 @@ class ItemsParser(SkillParserShared):
             'Metadata/Items/MicrotransactionItemEffects/Microtransaction'
             'ScholarBoots': ' (microtransaction)',
             'Metadata/Items/Pets/DemonLion': ' (Pet)',
+            'Metadata/Items/MicrotransactionItemEffects/MicrotransactionHooded'
+            'Cloak': ' (microtransaction)',
             # =================================================================
             # Quest items
             # =================================================================
@@ -738,6 +743,10 @@ class ItemsParser(SkillParserShared):
                 ' (2 of 3)',
             'Metadata/Items/QuestItems/MapUpgrades/MapUpgradeTier10_3':
                 ' (3 of 3)',
+            # =================================================================
+            # Misc
+            # =================================================================
+            'Metadata/Items/Heist/HeistEquipmentCloak3': '',
         },
         'Russian': {
             # =================================================================
@@ -1508,6 +1517,12 @@ class ItemsParser(SkillParserShared):
         'Metadata/Items/Hideout/HideoutTotemPole13Test',
         'Metadata/Items/Hideout/HideoutTotemPole14Test',
         'Metadata/Items/Hideout/HideoutTotemPole15Test',
+        'Metadata/Items/Hideout/HideoutTotemPole16Test',
+        'Metadata/Items/Hideout/HideoutTotemPole17Test',
+        'Metadata/Items/Hideout/HideoutTotemPole18Test',
+        'Metadata/Items/Hideout/HideoutTotemPole19Test',
+        'Metadata/Items/Hideout/HideoutTotemPole20Test',
+        'Metadata/Items/Hideout/HideoutTotemPole21Test',
 
         #
         # Stackable currency
@@ -1545,6 +1560,14 @@ class ItemsParser(SkillParserShared):
         'Metadata/Items/MapFragments/BreachFragmentPhysical',
         'Metadata/Items/MapFragments/BreachFragmentChaos',
         'Metadata/Items/Labyrinth/OfferingToTheGoddess',
+
+        #
+        # Misc
+        #
+        'Metadata/Items/Heist/HeistEquipmentToolTest',
+        'Metadata/Items/Heist/HeistEquipmentWeaponTest',
+        'Metadata/Items/Heist/HeistEquipmentUtilityTest',
+        'Metadata/Items/Heist/HeistEquipmentRewardTest',
     }
 
     _attribute_map = OrderedDict((
@@ -1559,7 +1582,7 @@ class ItemsParser(SkillParserShared):
         self._language = config.get_option('language')
         if self._language != 'English':
             self.rr2 = RelationalReader(
-                path_or_ggpk=self.base_path,
+                path_or_file_system=self.file_system,
                 files=['BaseItemTypes.dat', 'Prophecies.dat'],
                 read_options={
                     'use_dat_value': False,
@@ -1649,10 +1672,9 @@ class ItemsParser(SkillParserShared):
                 if 'stat' not in k:
                     infobox[k] = v
 
-            for k in ('stat_text', 'quality_stat_text'):
-                infobox[k] = '<br>'.join(
-                    [x for x in (primary[k], secondary[k]) if x]
-                )
+            infobox['stat_text'] = '<br>'.join(
+                [x for x in (primary['stat_text'], secondary['stat_text']) if x]
+            )
 
             # Stat merging...
             def get_stat(i, prefix, data):
@@ -2098,7 +2120,7 @@ class ItemsParser(SkillParserShared):
             out.append(
                 self.rr['ClientStrings.dat'].index['Id'][
                     'EssenceModLevelRestriction']['Text'].replace(
-                    '%1%', str(essence['ItemLevelRestriction']))
+                    '{0}', str(essence['ItemLevelRestriction']))
             )
             out[-1] += '<br />'
 
@@ -2131,12 +2153,12 @@ class ItemsParser(SkillParserShared):
             if category_mod is not None and category_mod != item_mod:
                 text = get_str(category)
                 if cur != len(out):
-                    text = get_str('Other').replace('%1%', text)
+                    text = get_str('Other').replace('{0}', text)
                 add_line(text, category_mod)
 
         if item_mod:
             # TODO: Can't find items in clientstrings
-            add_line(get_str('Other').replace('%1%', 'Items'), item_mod)
+            add_line(get_str('Other').replace('{0}', 'Items'), item_mod)
 
         infobox['description'] +='<br />' +  '<br />'.join(out)
 
@@ -2310,6 +2332,33 @@ class ItemsParser(SkillParserShared):
         row_index=True,
     )
 
+    _type_heist_contract = _type_factory(
+        data_file='HeistContracts.dat',
+        data_mapping=(
+            ('HeistAreasKey', {
+                'template': 'heist_area_id',
+                'format': lambda v: v['Id'],
+            }),
+        ),
+        row_index=True,
+    )
+
+    _type_heist_equipment = _type_factory(
+        data_file='HeistEquipment.dat',
+        data_mapping=(
+            ('RequiredJob_HeistJobsKey', {
+                'template': 'heist_required_job_id',
+                'format': lambda v: v['Id'],
+                'condition': lambda v: v,
+            }),
+            ('RequiredLevel', {
+                'template': 'heist_required_job_level',
+                'condition': lambda v: v > 0,
+            }),
+        ),
+        row_index=True,
+    )
+
     _cls_map = {
         # Jewellery
         'Amulet': (_type_amulet, ),
@@ -2370,6 +2419,15 @@ class ItemsParser(SkillParserShared):
         'QuestItem': (),
         'AtlasRegionUpgradeItem': (),
         'MetamorphosisDNA': (),
+        # heist league
+        'HeistContract': (_type_heist_contract, ),
+        'HeistEquipmentWeapon': (_type_heist_equipment, ),
+        'HeistEquipmentTool': (_type_heist_equipment, ),
+        'HeistEquipmentUtility': (_type_heist_equipment, ),
+        'HeistEquipmentReward': (_type_heist_equipment, ),
+        'HeistBlueprint': (),
+        'Trinket': (),
+        'HeistObjective': (),
     }
 
     _conflict_active_skill_gems_map = {
@@ -2608,9 +2666,8 @@ class ItemsParser(SkillParserShared):
                     m_id not in self._IGNORE_DROP_LEVEL_ITEMS_BY_ID:
                 infobox['drop_level'] = base_item_type['DropLevel']
 
-            base_ot = OTFile(parent_or_base_dir_or_ggpk=self.base_path)
-            base_ot.read(
-                self.base_path + '/' + base_item_type['InheritsFrom'] + '.ot')
+            base_ot = OTFile(parent_or_file_system=self.file_system)
+            base_ot.read(self.file_system.get_file(base_item_type['InheritsFrom'] + '.ot'))
             try:
                 ot = self.ot[m_id + '.ot']
             except FileNotFoundError:
@@ -2763,6 +2820,10 @@ class ItemsParser(SkillParserShared):
             if m_id in self._DROP_DISABLED_ITEMS_BY_ID:
                 infobox['drop_enabled'] = False
 
+            inventory_icon = infobox.get('inventory_icon') or page
+            if ':' in inventory_icon:
+                infobox['inventory_icon'] = inventory_icon.replace(':', '')
+
             cond = ItemWikiCondition(
                 data=infobox,
                 cmdargs=parsed_args,
@@ -2780,7 +2841,7 @@ class ItemsParser(SkillParserShared):
                 wiki_message='Item exporter',
             )
 
-            if parsed_args.store_images and self.ggpk:
+            if parsed_args.store_images:
                 if not base_item_type['ItemVisualIdentityKey']['DDSFile']:
                     warnings.warn(
                         'Missing 2d art inventory icon for item "%s"' %
@@ -2789,8 +2850,8 @@ class ItemsParser(SkillParserShared):
                     continue
 
                 self._write_dds(
-                    data=self.ggpk[base_item_type['ItemVisualIdentityKey'][
-                        'DDSFile']].record.extract().read(),
+                    data=self.file_system.get_file(
+                        base_item_type['ItemVisualIdentityKey']['DDSFile']),
                     out_path=os.path.join(self._img_path, (
                         infobox.get('inventory_icon') or page) +
                         ' inventory icon.dds',
@@ -2865,7 +2926,7 @@ class ItemsParser(SkillParserShared):
         base_ico = os.path.join(self._img_path, 'Base.dds')
 
         self._write_dds(
-            data=self.ggpk[map_series['BaseIcon_DDSFile']].record.extract().read(),
+            data=self.file_system.get_file(map_series['BaseIcon_DDSFile']),
             out_path=base_ico,
             parsed_args=parsed_args,
         )
@@ -2883,8 +2944,8 @@ class ItemsParser(SkillParserShared):
             ico = os.path.join(self._img_path, name + '.dds')
 
             self._write_dds(
-                data=self.ggpk[atlas_node['ItemVisualIdentityKey'][
-                    'DDSFile']].record.extract().read(),
+                data=self.file_system.get_file(
+                    atlas_node['ItemVisualIdentityKey']['DDSFile']),
                 out_path=ico,
                 parsed_args=parsed_args,
             )
@@ -2948,7 +3009,7 @@ class ItemsParser(SkillParserShared):
             base_ico = os.path.join(self._img_path, 'Map base icon.dds')
 
             self._write_dds(
-                data=self.ggpk[map_series['BaseIcon_DDSFile']].record.extract().read(),
+                data=self.file_system.get_file(map_series['BaseIcon_DDSFile']),
                 out_path=base_ico,
                 parsed_args=parsed_args,
             )
@@ -3074,7 +3135,7 @@ class ItemsParser(SkillParserShared):
                 wiki_message='Map exporter',
             )
 
-            if parsed_args.store_images and self.ggpk:
+            if parsed_args.store_images:
                 if atlas_node is None or \
                         not atlas_node['ItemVisualIdentityKey']['DDSFile']:
                     warnings.warn(
@@ -3086,8 +3147,8 @@ class ItemsParser(SkillParserShared):
                 ico = os.path.join(self._img_path, name + ' inventory icon.dds')
 
                 self._write_dds(
-                    data=self.ggpk[atlas_node['ItemVisualIdentityKey'][
-                        'DDSFile']].record.extract().read(),
+                    data=self.file_system.get_file(
+                        atlas_node['ItemVisualIdentityKey']['DDSFile']),
                     out_path=ico,
                     parsed_args=parsed_args,
                 )

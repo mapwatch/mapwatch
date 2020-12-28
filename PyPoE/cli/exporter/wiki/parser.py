@@ -62,7 +62,7 @@ from functools import partial
 # self
 from PyPoE.cli.core import console, Msg
 from PyPoE.cli.exporter import config
-from PyPoE.cli.exporter.util import get_content_ggpk_path
+from PyPoE.cli.exporter.util import get_content_path, fix_path
 from PyPoE.poe.constants import MOD_DOMAIN, WORDLISTS, MOD_STATS_RANGE
 from PyPoE.poe.text import parse_description_tags
 from PyPoE.poe.file.dat import RelationalReader, set_default_spec
@@ -72,7 +72,7 @@ from PyPoE.poe.file.translations import (
     get_custom_translation_file,
     install_data_dependant_quantifiers,
 )
-from PyPoE.poe.file.ggpk import GGPKFile, extract_dds
+from PyPoE.poe.file.file_system import FileSystem
 from PyPoE.poe.file.ot import OTFileCache
 from PyPoE.poe.sim.mods import get_translation_file_from_domain
 
@@ -204,6 +204,7 @@ _inter_wiki_map = {
         ('Lightning Trap', {'link': 'Lightning Trap'}),
         ('Lightning Warp', {'link': 'Lightning Warp'}),
         ('Magma Orb', {'link': 'Magma Orb'}),
+        ('Meat Shield', {'link': 'Meat Shield'}),
         ('Mirror Arrow', {'link': 'Mirror Arrow'}),
         ('Molten Shell', {'link': 'Molten Shell'}),
         ('Molten Strike', {'link': 'Molten Strike'}),
@@ -1454,6 +1455,7 @@ class BaseParser:
         set_default_spec(version=config.get_option('version'))
 
         self.base_path = base_path
+        self.file_system = FileSystem(root_path=get_content_path())
 
         opt = {
             'use_dat_value': False,
@@ -1463,30 +1465,26 @@ class BaseParser:
         # Load rr and translations which will be undoubtedly be needed for
         # parsing
         self.rr = RelationalReader(
-            path_or_ggpk=base_path,
+            path_or_file_system=self.file_system,
             files=self._files,
             read_options=opt,
             raise_error_on_missing_relation=False,
             language=config.get_option('language'),
-            load_index=False,
         )
         install_data_dependant_quantifiers(self.rr)
         self.tc = TranslationFileCache(
-            path_or_ggpk=base_path,
-            load_index=False,
+            path_or_file_system=self.file_system,
             **self._TC_KWARGS
         )
         for file_name in self._translations:
             self.tc[file_name]
 
         self.ot = OTFileCache(
-            path_or_ggpk=base_path,
-            load_index=False,
+            path_or_file_system=self.file_system,
         )
 
         self.custom = get_custom_translation_file()
 
-        self.ggpk = None
         self._img_path = None
         self.lang = config.get_option('language')
 
@@ -1536,11 +1534,9 @@ class BaseParser:
         )
 
     def _write_dds(self, data, out_path, parsed_args):
+        out_path = fix_path(out_path)
         with open(out_path, 'wb') as f:
-            f.write(extract_dds(
-                data,
-                path_or_ggpk=self.ggpk,
-            ))
+            f.write(self.file_system.extract_dds(data))
 
             console('Wrote "%s"' % out_path)
 
@@ -1554,21 +1550,8 @@ class BaseParser:
 
         console('Converted "%s" to png' % out_path)
 
-    def _load_ggpk(self):
-        if self.ggpk is None:
-            self.ggpk = GGPKFile()
-            self.ggpk.read(get_content_ggpk_path())
-            self.ggpk.directory_build()
-            console('content.ggpk has been loaded.')
-
     def _image_init(self, parsed_args):
         if parsed_args.store_images:
-            console(
-                'Images are flagged for extraction. Loading content.ggpk '
-                '...'
-            )
-            self._load_ggpk()
-
             self._img_path = os.path.join(self.base_path, 'img')
             if not os.path.exists(self._img_path):
                 os.makedirs(self._img_path)
@@ -1623,8 +1606,8 @@ class BaseParser:
                     if tr.ids != tr2.ids:
                         continue
 
-                    r1 = tr.get_language(self.lang).get_string(default.values[i])
-                    r2 = tr2.get_language(self.lang).get_string(result.values[j])
+                    r1 = tr.get_language(self.lang).format_string(default.values[i])
+                    r2 = tr2.get_language(self.lang).format_string(result.values[j])
                     if r1 and r2 and r1[0] != r2[0]:
                         temp_trans.append(self._format_detailed(r1[0], r2[0]))
                     elif r2 and r2[0]:
@@ -1640,8 +1623,7 @@ class BaseParser:
                 if not is_missing:
                     continue
 
-                r1 = tr.get_language(self.lang).\
-                    get_string(default.values[i])
+                r1 = tr.get_language(self.lang).format_string(default.values[i])
                 if r1 and r1[0]:
                     temp_trans.append(self._format_hidden(r1[0]))
                     temp_ids.append(tr.ids)
@@ -1661,8 +1643,8 @@ class BaseParser:
                 except ValueError:
                     temp_ids.insert(index, tr.ids)
                     temp_trans.insert(index, make_inter_wiki_links(
-                        tr.get_language(self.lang).\
-                            get_string(result.values[i])[0]
+                        tr.get_language(self.lang).format_string(
+                            result.values[i])[0]
                     ))
                 else:
                     pass
