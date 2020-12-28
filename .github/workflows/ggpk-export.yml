@@ -41,6 +41,7 @@ jobs:
           path: packages/datamine-dl/dist/**/*
           retention-days: 1
   export:
+    needs: fetch
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
