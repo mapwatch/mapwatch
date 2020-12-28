@@ -28,11 +28,7 @@
     "export": "bash -c \"yarn export:all && yarn process\"",
     "//export:zh": "Because downloading Chinese-PoE is a pain, I don't want to require it for the build. dist/lang/zh.json is git-committed (unlike other language exports), and `yarn export` won't rebuild it. `yarn export:zh` will. ",
     "export:zh": "bash -c \"yarn export:lang:zh && yarn build\"",
-    "spreadsheet": "bash -c \"node src/spreadsheet.js\"",
-    "ggpk:info": "bash -c \"steamctl depot info --app 238960 --depot 238961\"",
-    "ggpk:fetch-is-outdated": "bash -c \"diff ${GGPK_FETCH_DIR:-ggpk}/info.txt <(yarn --silent ggpk:info) && echo \\\"ggpk is up to date.\\\"\"",
-    "ggpk:fetch": "bash -c \"yarn ggpk:fetch-is-outdated || yarn ggpk:fetch-or-verify\"",
-    "ggpk:fetch-or-verify": "bash -c \"mkdir -p ${GGPK_FETCH_DIR:-ggpk} && cd ${GGPK_FETCH_DIR:-ggpk} && yarn --silent ggpk:info > info.txt && steamctl depot download --app 238960 --depot 238961\""
+    "spreadsheet": "bash -c \"node src/spreadsheet.js\""
   },
   "devDependencies": {
     "jquery": "^3.5.1",
