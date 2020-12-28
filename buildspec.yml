@@ -40,4 +40,5 @@ phases:
       - python steamctl-auth.py
   build:
     commands:
-      - steamctl depot info -a 440
+      # info for the poe-content/ggpk depot
+      - steamctl depot info -a 238960 -d 238961
