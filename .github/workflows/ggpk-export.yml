@@ -30,25 +30,36 @@ jobs:
           STEAMCTL_SECRET: ${{ secrets.STEAMCTL_SECRET }}
         run: python steamctl-auth.py
 
+      # fetch if and only if there are info.txt differences
       - working-directory: ./packages/datamine-dl
         run: yarn fetch
 
-      # stop the build now if steam-depot-info.txt didn't change
+      - working-directory: ./packages/datamine-dl
+        run: |
+          echo 'STEAM_DEPOT_INFO_NEW<<__EOF__' >> $GITHUB_ENV
+          cat steam-depot-info.txt >> $GITHUB_ENV
+          echo '__EOF__' >> $GITHUB_ENV
+          cat $GITHUB_ENV
       - working-directory: ./packages/datamine-dl
         run: |
           echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV
           (diff steam-depot-info.txt steam-depot-info-new.txt || true) >> $GITHUB_ENV
           echo '__EOF__' >> $GITHUB_ENV
           cat $GITHUB_ENV
+      # Stop running if there's no info.txt differences
       - if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}
         uses: actions/upload-artifact@v2
         with:
           name: datamine-dl
           path: packages/datamine-dl/dist/**/*
           retention-days: 1
+    # let the next job know if there are info.txt differences
+    outputs:
+      STEAM_DEPOT_INFO_NEW: ${{ env.STEAM_DEPOT_INFO_NEW }}
+      STEAM_DEPOT_INFO_DIFF: ${{ env.STEAM_DEPOT_INFO_DIFF }}
   export:
     needs: fetch
-    if: ${{ jobs.fetch.env.STEAM_DEPOT_INFO_DIFF != '' }}
+    if: ${{ jobs.fetch.outputs.STEAM_DEPOT_INFO_DIFF != '' }}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
