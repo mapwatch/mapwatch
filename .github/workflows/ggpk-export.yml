@@ -32,14 +32,23 @@ jobs:
 
       - working-directory: ./packages/datamine-dl
         run: yarn fetch
-      # TODO: stop the build if steam-depot-info.txt didn't change
-      - uses: actions/upload-artifact@v2
+
+      # stop the build now if steam-depot-info.txt didn't change
+      - working-directory: ./packages/datamine-dl
+        run: |
+          echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV
+          (diff steam-depot-info.txt steam-depot-info-new.txt || true) >> $GITHUB_ENV
+          echo '__EOF__' >> $GITHUB_ENV
+          cat $GITHUB_ENV
+      - if: env.STEAM_DEPOT_INFO_DIFF != ''
+        uses: actions/upload-artifact@v2
         with:
           name: datamine-dl
           path: packages/datamine-dl/dist/**/*
           retention-days: 1
   export:
     needs: fetch
+    if: env.STEAM_DEPOT_INFO_DIFF != ''
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
@@ -47,7 +56,7 @@ jobs:
         with:
           name: datamine-dl
           path: packages/datamine-dl/dist
-      - run: find packages/datamine-dl/dist
+      - run: ls packages/datamine-dl/dist/*
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
       - uses: actions/setup-node@v1
         with:
