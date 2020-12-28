@@ -34,6 +34,7 @@ phases:
     commands:
       - pip install steamctl pexpect
       - yarn --frozen-lockfile
+      - ( cd packages/datamine && yarn pypoe:install )
       # - env
   pre_build:
     commands:

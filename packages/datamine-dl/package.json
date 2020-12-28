@@ -8,6 +8,6 @@
     "info.txt:mv": "mv steam-depot-info-new.txt steam-depot-info.txt",
     "fetch": "bash -c \"yarn fetch:query || (yarn fetch:force && yarn info.txt:mv)\"",
     "fetch:query": "bash -c \"yarn info.txt && diff steam-depot-info.txt steam-depot-info-new.txt && echo \\\"ggpk is up to date.\\\"\"",
-    "fetch:force": "bash -c \"mkdir -p ${GGPK_FETCH_DIR:-dist} && cd ${GGPK_FETCH_DIR:-dist} && steamctl depot download --app 238960 --depot 238961 \""
+    "fetch:force": "bash -c \"mkdir -p ${GGPK_FETCH_DIR:-dist} && cd ${GGPK_FETCH_DIR:-dist} && steamctl depot download --app 238960 --depot 238961 --regex 'Bundles2\\\\\\\\(Data|Metadata|_\\.index|_Preload|_Startup|_Tiny)' \""
   }
 }
