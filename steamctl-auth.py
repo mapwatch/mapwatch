@@ -70,10 +70,10 @@ def main():
     #steamctl = "./.local/bin/steamctl"
     steamctl = os.environ.get('STEAMCTL_PATH', "steamctl")
 
-    #authenticator_remove(steamctl=steamctl, user=user)
-    #authenticator_add(steamctl=steamctl, user=user, passwd=passwd, secret=secret)
-    #authenticator_code(steamctl=steamctl, user=user)
-    #login_with_2fa(steamctl=steamctl, user=user, passwd=passwd)
+    authenticator_remove(steamctl=steamctl, user=user)
+    authenticator_add(steamctl=steamctl, user=user, passwd=passwd, secret=secret)
+    authenticator_code(steamctl=steamctl, user=user)
+    login_with_2fa(steamctl=steamctl, user=user, passwd=passwd)
     verify_auth_remembered(steamctl=steamctl)
 
 if __name__=="__main__":
