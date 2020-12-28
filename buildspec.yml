@@ -37,7 +37,7 @@ phases:
       # - env
   pre_build:
     commands:
-      - ( cd packages/datamine-dl && python packages/datamine-dl/steamctl-auth.py )
+      - ( cd packages/datamine-dl && python steamctl-auth.py )
   build:
     commands:
       # info for the poe-content/ggpk depot. Not really necessary here...
@@ -47,6 +47,6 @@ phases:
       - ( cd packages/datamine && yarn export )
 
 artifacts:
-  name: datamine-$(date +%Y-%m-%d) 
+  name: datamine-$(date +%Y-%m-%d)
   files:
     - "packages/datamine/dist/**/*"
