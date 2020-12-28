@@ -1,5 +1,5 @@
 ---
-title: [ggpk-notify] GGPK data has changed - datamine is out of date
+title: "[ggpk-notify] GGPK data has changed - datamine is out of date"
 ---
 Looks like they patched Path of Exile! It's time to run `cd packages/datamine && TODO:yarn-one-command-to-fetch-and-export`.
 

@@ -28,10 +28,10 @@ jobs:
       # skip the first line's gibberish
       - run: steamctl depot info -a 238960 -d 238961 | tail --lines=+2 > steam-depot-info-new.txt
       # https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
-      - run: echo 'STEAM_DEPOT_INFO_NEW="'$(cat steam-depot-info.txt | sed -z 's/\n/\\n/g')'"' >> $GITHUB_ENV
-      - run: echo 'STEAM_DEPOT_INFO_DIFF="'$(diff steam-depot-info.txt steam-depot-info-new.txt | sed -z 's/\n/\\n/g')'"' >> $GITHUB_ENV
+      - run: echo 'STEAM_DEPOT_INFO_NEW="'$(cat packages/datamine/steam-depot-info.txt | sed -z 's/\n/\\n/g')'"' >> $GITHUB_ENV
+      - run: echo 'STEAM_DEPOT_INFO_DIFF="'$(diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt | sed -z 's/\n/\\n/g')'"' >> $GITHUB_ENV
       # diff has exitcode 1 (failure) if there are differences
-      - run: diff steam-depot-info.txt steam-depot-info-new.txt
+      - run: diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt
       - if: ${{ failure() }}
         uses: JasonEtco/create-an-issue@v2
         env:
