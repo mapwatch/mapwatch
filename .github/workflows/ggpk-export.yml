@@ -40,7 +40,7 @@ jobs:
           (diff steam-depot-info.txt steam-depot-info-new.txt || true) >> $GITHUB_ENV
           echo '__EOF__' >> $GITHUB_ENV
           cat $GITHUB_ENV
-      - if: env.STEAM_DEPOT_INFO_DIFF != ''
+      - if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}
         uses: actions/upload-artifact@v2
         with:
           name: datamine-dl
@@ -48,7 +48,7 @@ jobs:
           retention-days: 1
   export:
     needs: fetch
-    if: env.STEAM_DEPOT_INFO_DIFF != ''
+    if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
