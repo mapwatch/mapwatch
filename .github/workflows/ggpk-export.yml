@@ -76,8 +76,9 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: datamine-info
-          path: packages/datamine-dl/steam-depot-info.txt
-      - run: ls packages/datamine-dl/dist/*
+          path: steam-depot-info.txt
+      - run: ls steam-depot-info.txt packages/datamine-dl/dist/*
+      - run: mv steam-depot-info.txt packages/datamine-dl/steam-depot-info.txt
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
       - uses: actions/setup-node@v1
         with:
