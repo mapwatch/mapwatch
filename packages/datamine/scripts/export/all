@@ -4,11 +4,11 @@ cd "`dirname "$0"`/../.."
 
 GGPK_PATH_DEFAULT="$(cd .. && pwd)/datamine-dl/dist"
 GGPK_PATH="${GGPK_PATH:-$GGPK_PATH_DEFAULT}"
-LANG_FILES="`node src/langFilenames.js`"
 ls $GGPK_PATH > /dev/null
+LANG_FILES="`node src/langFilenames.js`"
 pypoe_exporter config set ggpk_path $GGPK_PATH
 
-rm -rf dist
+# rm -rf dist
 mkdir -p dist/lang
 
 pypoe_exporter dat json dist/all.json --files `node src/mainFilenames.js`

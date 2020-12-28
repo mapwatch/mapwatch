@@ -40,5 +40,13 @@ phases:
       - ( cd packages/datamine-dl && python packages/datamine-dl/steamctl-auth.py )
   build:
     commands:
-      # info for the poe-content/ggpk depot
+      # info for the poe-content/ggpk depot. Not really necessary here...
       - ( cd packages/datamine-dl && yarn info.txt )
+      # ...because our caller already decided a build is necessary
+      - ( cd packages/datamine-dl && yarn fetch:force )
+      - ( cd packages/datamine && yarn export )
+
+artifacts:
+  name: datamine-$(date +%Y-%m-%d) 
+  files:
+    - "packages/datamine/dist/**/*"
