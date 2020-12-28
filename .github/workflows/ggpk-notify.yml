@@ -21,6 +21,10 @@ jobs:
       - run: pip install steamctl pexpect
       - run: env
       - run: python steamctl-auth.py
+        env:
+          STEAMCTL_USER: ${{ secrets.STEAMCTL_USER }}
+          STEAMCTL_PASSWD: ${{ secrets.STEAMCTL_PASSWD }}
+          STEAMCTL_SECRET: ${{ secrets.STEAMCTL_SECRET }}
       # skip the first line's gibberish
       - run: steamctl depot info -a 238960 -d 238961 | tail --lines=+2 > steam-depot-info-new.txt
       # https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
