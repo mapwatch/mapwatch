@@ -1833,7 +1833,7 @@
         "Art/2DItems/Maps/SynthesisBossGuardianMap.dds",
         null,
         null,
-        439
+        440
       ],
       [
         "Synthesis_MapGuardian1",
@@ -1847,7 +1847,7 @@
         "Art/2DItems/Maps/SynthesisColdGuardianMap.dds",
         null,
         null,
-        440
+        441
       ],
       [
         "Synthesis_MapGuardian2",
@@ -1861,7 +1861,7 @@
         "Art/2DItems/Maps/SynthesisFireGuardianMap.dds",
         null,
         null,
-        441
+        442
       ],
       [
         "Synthesis_MapGuardian3",
@@ -1875,7 +1875,7 @@
         "Art/2DItems/Maps/SynthesisLightningGuardianMap.dds",
         null,
         null,
-        442
+        443
       ],
       [
         "Synthesis_MapGuardian4",
@@ -1889,7 +1889,7 @@
         "Art/2DItems/Maps/SynthesisGolemGuardianMap.dds",
         null,
         null,
-        443
+        444
       ],
       [
         "EndGame_Labyrinth_trials_sawblades_#",
@@ -1903,7 +1903,7 @@
         null,
         null,
         null,
-        736
+        737
       ],
       [
         "EndGame_Labyrinth_trials_lava_#",
@@ -1917,7 +1917,7 @@
         null,
         null,
         null,
-        737
+        738
       ],
       [
         "EndGame_Labyrinth_trials_spinners",
@@ -1931,7 +1931,7 @@
         null,
         null,
         null,
-        738
+        739
       ],
       [
         "EndGame_Labyrinth_trials_spikes",
@@ -1945,7 +1945,7 @@
         null,
         null,
         null,
-        739
+        740
       ],
       [
         "EndGame_Labyrinth_trials_arrows",
@@ -1959,7 +1959,7 @@
         null,
         null,
         null,
-        740
+        741
       ],
       [
         "EndGame_Labyrinth_trials_roombas",
@@ -1973,7 +1973,7 @@
         null,
         null,
         null,
-        741
+        742
       ],
       [
         "MapAtziri1",
@@ -1987,7 +1987,7 @@
         "Art/2DItems/Maps/VaalComplete.png",
         null,
         null,
-        742
+        743
       ],
       [
         "MapAtziri2",
@@ -2001,7 +2001,7 @@
         "Art/2DItems/Maps/UberVaalComplete.png",
         null,
         null,
-        743
+        744
       ],
       [
         "BreachBossPhysical",
@@ -2015,7 +2015,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsPhysical.png",
         null,
         null,
-        1047
+        1048
       ],
       [
         "BreachBossChaos",
@@ -2029,7 +2029,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsChaos.png",
         null,
         null,
-        1048
+        1049
       ],
       [
         "BreachBossFire",
@@ -2043,7 +2043,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsFire.png",
         null,
         null,
-        1049
+        1050
       ],
       [
         "BreachBossCold",
@@ -2057,7 +2057,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsCold.png",
         null,
         null,
-        1050
+        1051
       ],
       [
         "BreachBossLightning",
@@ -2071,7 +2071,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsLightning.png",
         null,
         null,
-        1051
+        1052
       ],
       [
         "MapWorldsLookout",
@@ -2091,7 +2091,7 @@
           11,
           14
         ],
-        1071
+        1072
       ],
       [
         "MapWorldsBeach",
@@ -2111,7 +2111,7 @@
           11,
           14
         ],
-        1072
+        1073
       ],
       [
         "MapWorldsGraveyard",
@@ -2131,7 +2131,7 @@
           11,
           14
         ],
-        1073
+        1074
       ],
       [
         "MapWorldsDungeon",
@@ -2151,7 +2151,7 @@
           11,
           14
         ],
-        1074
+        1075
       ],
       [
         "MapWorldsAlleyways",
@@ -2171,7 +2171,7 @@
           12,
           15
         ],
-        1075
+        1076
       ],
       [
         "MapWorldsPen",
@@ -2191,7 +2191,7 @@
           12,
           14
         ],
-        1076
+        1077
       ],
       [
         "MapWorldsDesert",
@@ -2211,7 +2211,7 @@
           11,
           14
         ],
-        1077
+        1078
       ],
       [
         "MapWorldsAridLake",
@@ -2231,7 +2231,7 @@
           11,
           14
         ],
-        1078
+        1079
       ],
       [
         "MapWorldsFloodedMine",
@@ -2251,7 +2251,7 @@
           11,
           14
         ],
-        1079
+        1080
       ],
       [
         "MapWorldsMarshes",
@@ -2271,7 +2271,7 @@
           13,
           15
         ],
-        1080
+        1081
       ],
       [
         "MapWorldsIceberg",
@@ -2291,7 +2291,7 @@
           11,
           14
         ],
-        1081
+        1082
       ],
       [
         "MapWorldsCage",
@@ -2311,7 +2311,7 @@
           11,
           14
         ],
-        1082
+        1083
       ],
       [
         "MapWorldsSprings",
@@ -2331,7 +2331,7 @@
           0,
           14
         ],
-        1083
+        1084
       ],
       [
         "MapWorldsExcavation",
@@ -2351,7 +2351,7 @@
           12,
           14
         ],
-        1084
+        1085
       ],
       [
         "MapWorldsLeyline",
@@ -2371,7 +2371,7 @@
           14,
           16
         ],
-        1085
+        1086
       ],
       [
         "MapWorldsPeninsula",
@@ -2391,7 +2391,7 @@
           14,
           16
         ],
-        1086
+        1087
       ],
       [
         "MapWorldsPort",
@@ -2411,7 +2411,7 @@
           13,
           15
         ],
-        1087
+        1088
       ],
       [
         "MapWorldsBurialChambers",
@@ -2431,7 +2431,7 @@
           0,
           15
         ],
-        1088
+        1089
       ],
       [
         "MapWorldsCells",
@@ -2451,7 +2451,7 @@
           13,
           15
         ],
-        1089
+        1090
       ],
       [
         "MapWorldsArcade",
@@ -2471,7 +2471,7 @@
           13,
           15
         ],
-        1090
+        1091
       ],
       [
         "MapWorldsCitySquare",
@@ -2491,7 +2491,7 @@
           14,
           15
         ],
-        1091
+        1092
       ],
       [
         "MapWorldsRelicChambers",
@@ -2511,7 +2511,7 @@
           11,
           14
         ],
-        1092
+        1093
       ],
       [
         "MapWorldsCourthouse",
@@ -2531,7 +2531,7 @@
           12,
           15
         ],
-        1093
+        1094
       ],
       [
         "MapWorldsStrand",
@@ -2551,7 +2551,7 @@
           12,
           14
         ],
-        1094
+        1095
       ],
       [
         "MapWorldsStrandUnique",
@@ -2571,7 +2571,7 @@
           12,
           14
         ],
-        1095
+        1096
       ],
       [
         "MapWorldsChateau",
@@ -2591,7 +2591,7 @@
           11,
           14
         ],
-        1096
+        1097
       ],
       [
         "MapWorldsChateauUnique",
@@ -2611,7 +2611,7 @@
           11,
           14
         ],
-        1097
+        1098
       ],
       [
         "MapWorldsGrotto",
@@ -2631,7 +2631,7 @@
           13,
           16
         ],
-        1098
+        1099
       ],
       [
         "MapWorldsGorge",
@@ -2651,7 +2651,7 @@
           11,
           14
         ],
-        1099
+        1100
       ],
       [
         "MapWorldsVolcano",
@@ -2671,7 +2671,7 @@
           10,
           14
         ],
-        1100
+        1101
       ],
       [
         "MapWorldsLighthouse",
@@ -2691,7 +2691,7 @@
           11,
           14
         ],
-        1101
+        1102
       ],
       [
         "MapWorldsCanyon",
@@ -2711,7 +2711,7 @@
           14,
           16
         ],
-        1102
+        1103
       ],
       [
         "MapWorldsConservatory",
@@ -2731,7 +2731,7 @@
           11,
           14
         ],
-        1103
+        1104
       ],
       [
         "MapWorldsSulphurVents",
@@ -2751,7 +2751,7 @@
           14,
           16
         ],
-        1104
+        1105
       ],
       [
         "MapWorldsHauntedMansion",
@@ -2771,7 +2771,7 @@
           11,
           14
         ],
-        1105
+        1106
       ],
       [
         "MapWorldsMaze",
@@ -2791,7 +2791,7 @@
           13,
           16
         ],
-        1106
+        1107
       ],
       [
         "MapWorldsMazeUnique",
@@ -2811,7 +2811,7 @@
           13,
           16
         ],
-        1107
+        1108
       ],
       [
         "MapWorldsChannel",
@@ -2831,7 +2831,7 @@
           13,
           15
         ],
-        1108
+        1109
       ],
       [
         "MapWorldsToxicSewer",
@@ -2851,7 +2851,7 @@
           12,
           15
         ],
-        1109
+        1110
       ],
       [
         "MapWorldsAncientCity",
@@ -2871,7 +2871,7 @@
           13,
           15
         ],
-        1110
+        1111
       ],
       [
         "MapWorldsIvoryTemple",
@@ -2891,7 +2891,7 @@
           12,
           15
         ],
-        1111
+        1112
       ],
       [
         "MapWorldsSpiderLair",
@@ -2911,7 +2911,7 @@
           0,
           14
         ],
-        1112
+        1113
       ],
       [
         "MapWorldsBarrows",
@@ -2931,7 +2931,7 @@
           13,
           15
         ],
-        1113
+        1114
       ],
       [
         "MapWorldsMausoleum",
@@ -2951,7 +2951,7 @@
           10,
           14
         ],
-        1114
+        1115
       ],
       [
         "MapWorldsFields",
@@ -2971,7 +2971,7 @@
           11,
           14
         ],
-        1115
+        1116
       ],
       [
         "MapWorldsJungleValley",
@@ -2991,7 +2991,7 @@
           14,
           16
         ],
-        1116
+        1117
       ],
       [
         "MapWorldsPhantasmagoria",
@@ -3011,7 +3011,7 @@
           11,
           14
         ],
-        1117
+        1118
       ],
       [
         "MapWorldsAcademy",
@@ -3031,7 +3031,7 @@
           12,
           14
         ],
-        1118
+        1119
       ],
       [
         "MapWorldsThicket",
@@ -3051,7 +3051,7 @@
           11,
           14
         ],
-        1119
+        1120
       ],
       [
         "MapWorldsWharf",
@@ -3071,7 +3071,7 @@
           11,
           14
         ],
-        1120
+        1121
       ],
       [
         "MapWorldsAshenWood",
@@ -3091,7 +3091,7 @@
           0,
           15
         ],
-        1121
+        1122
       ],
       [
         "MapWorldsAtoll",
@@ -3111,7 +3111,7 @@
           14,
           16
         ],
-        1122
+        1123
       ],
       [
         "MapWorldsAtollUnique",
@@ -3131,7 +3131,7 @@
           14,
           16
         ],
-        1123
+        1124
       ],
       [
         "MapWorldsCemetery",
@@ -3151,7 +3151,7 @@
           12,
           14
         ],
-        1124
+        1125
       ],
       [
         "MapWorldsCemeteryUnique",
@@ -3171,7 +3171,7 @@
           12,
           14
         ],
-        1125
+        1126
       ],
       [
         "MapWorldsUndergroundSea",
@@ -3191,7 +3191,7 @@
           11,
           14
         ],
-        1126
+        1127
       ],
       [
         "MapWorldsTribunal",
@@ -3211,7 +3211,7 @@
           12,
           15
         ],
-        1127
+        1128
       ],
       [
         "MapWorldsCoralRuins",
@@ -3231,7 +3231,7 @@
           11,
           14
         ],
-        1128
+        1129
       ],
       [
         "MapWorldsLavaChamber",
@@ -3251,7 +3251,7 @@
           11,
           14
         ],
-        1129
+        1130
       ],
       [
         "MapWorldsResidence",
@@ -3271,7 +3271,7 @@
           11,
           14
         ],
-        1130
+        1131
       ],
       [
         "MapWorldsRamparts",
@@ -3291,7 +3291,7 @@
           13,
           16
         ],
-        1131
+        1132
       ],
       [
         "MapWorldsDunes",
@@ -3311,7 +3311,7 @@
           13,
           15
         ],
-        1132
+        1133
       ],
       [
         "MapWorldsDunesUnique",
@@ -3331,7 +3331,7 @@
           13,
           15
         ],
-        1133
+        1134
       ],
       [
         "MapWorldsBoneCrypt",
@@ -3351,7 +3351,7 @@
           12,
           15
         ],
-        1134
+        1135
       ],
       [
         "MapWorldsBoneCryptUnique",
@@ -3371,7 +3371,7 @@
           12,
           15
         ],
-        1135
+        1136
       ],
       [
         "MapWorldsUndergroundRiver",
@@ -3391,7 +3391,7 @@
           11,
           14
         ],
-        1136
+        1137
       ],
       [
         "MapWorldsUndergroundRiverUnique",
@@ -3411,7 +3411,7 @@
           11,
           14
         ],
-        1137
+        1138
       ],
       [
         "MapWorldsGardens",
@@ -3431,7 +3431,7 @@
           12,
           15
         ],
-        1138
+        1139
       ],
       [
         "MapWorldsArachnidNest",
@@ -3451,7 +3451,7 @@
           12,
           14
         ],
-        1139
+        1140
       ],
       [
         "MapWorldsBazaar",
@@ -3471,7 +3471,7 @@
           12,
           15
         ],
-        1140
+        1141
       ],
       [
         "MapWorldsLaboratory",
@@ -3491,7 +3491,7 @@
           14,
           16
         ],
-        1141
+        1142
       ],
       [
         "MapWorldsInfestedValley",
@@ -3511,7 +3511,7 @@
           14,
           16
         ],
-        1142
+        1143
       ],
       [
         "MapWorldsOvergrownRuin",
@@ -3531,7 +3531,7 @@
           0,
           15
         ],
-        1143
+        1144
       ],
       [
         "MapWorldsVaalPyramid",
@@ -3551,7 +3551,7 @@
           11,
           14
         ],
-        1144
+        1145
       ],
       [
         "MapWorldsVaalPyramidUnique",
@@ -3571,7 +3571,7 @@
           11,
           14
         ],
-        1145
+        1146
       ],
       [
         "MapWorldsGeode",
@@ -3591,7 +3591,7 @@
           13,
           16
         ],
-        1146
+        1147
       ],
       [
         "MapWorldsArmoury",
@@ -3611,7 +3611,7 @@
           11,
           14
         ],
-        1147
+        1148
       ],
       [
         "MapWorldsCourtyard",
@@ -3631,7 +3631,7 @@
           11,
           14
         ],
-        1148
+        1149
       ],
       [
         "MapWorldsCourtyardUnique",
@@ -3651,7 +3651,7 @@
           11,
           14
         ],
-        1149
+        1150
       ],
       [
         "MapWorldsMudGeyser",
@@ -3671,7 +3671,7 @@
           11,
           14
         ],
-        1150
+        1151
       ],
       [
         "MapWorldsShore",
@@ -3691,7 +3691,7 @@
           12,
           14
         ],
-        1151
+        1152
       ],
       [
         "MapWorldsShoreUnique",
@@ -3711,7 +3711,7 @@
           12,
           14
         ],
-        1152
+        1153
       ],
       [
         "MapWorldsTropicalIsland",
@@ -3731,7 +3731,7 @@
           14,
           16
         ],
-        1153
+        1154
       ],
       [
         "MapWorldsTropicalIslandUnique",
@@ -3745,7 +3745,7 @@
         "Art/2DItems/Maps/UniqueMap2.dds",
         null,
         null,
-        1154
+        1155
       ],
       [
         "MapWorldsMineralPools",
@@ -3765,7 +3765,7 @@
           12,
           14
         ],
-        1155
+        1156
       ],
       [
         "MapWorldsMoonTemple",
@@ -3785,7 +3785,7 @@
           11,
           14
         ],
-        1156
+        1157
       ],
       [
         "MapWorldsMoonTempleUnique",
@@ -3805,7 +3805,7 @@
           11,
           14
         ],
-        1157
+        1158
       ],
       [
         "MapWorldsSepulchre",
@@ -3825,7 +3825,7 @@
           12,
           15
         ],
-        1158
+        1159
       ],
       [
         "MapWorldsTower",
@@ -3845,7 +3845,7 @@
           10,
           14
         ],
-        1159
+        1160
       ],
       [
         "MapWorldsWastePool",
@@ -3865,7 +3865,7 @@
           14,
           16
         ],
-        1160
+        1161
       ],
       [
         "MapWorldsPlateau",
@@ -3885,7 +3885,7 @@
           12,
           14
         ],
-        1161
+        1162
       ],
       [
         "MapWorldsEstuary",
@@ -3905,7 +3905,7 @@
           11,
           14
         ],
-        1162
+        1163
       ],
       [
         "MapWorldsVault",
@@ -3925,7 +3925,7 @@
           0,
           15
         ],
-        1163
+        1164
       ],
       [
         "MapWorldsTemple",
@@ -3945,7 +3945,7 @@
           12,
           14
         ],
-        1164
+        1165
       ],
       [
         "MapWorldsTempleUnique",
@@ -3965,7 +3965,7 @@
           12,
           14
         ],
-        1165
+        1166
       ],
       [
         "MapWorldsArena",
@@ -3985,7 +3985,7 @@
           11,
           14
         ],
-        1166
+        1167
       ],
       [
         "MapWorldsMuseum",
@@ -4005,7 +4005,7 @@
           13,
           15
         ],
-        1167
+        1168
       ],
       [
         "MapWorldsMuseumUnique",
@@ -4025,7 +4025,7 @@
           13,
           15
         ],
-        1168
+        1169
       ],
       [
         "MapWorldsScriptorium",
@@ -4045,7 +4045,7 @@
           12,
           14
         ],
-        1169
+        1170
       ],
       [
         "MapWorldsSiege",
@@ -4065,7 +4065,7 @@
           12,
           14
         ],
-        1170
+        1171
       ],
       [
         "MapWorldsShipyard",
@@ -4085,7 +4085,7 @@
           12,
           15
         ],
-        1171
+        1172
       ],
       [
         "MapWorldsBelfry",
@@ -4105,7 +4105,7 @@
           0,
           14
         ],
-        1172
+        1173
       ],
       [
         "MapWorldsArachnidTomb",
@@ -4125,7 +4125,7 @@
           0,
           16
         ],
-        1173
+        1174
       ],
       [
         "MapWorldsWasteland",
@@ -4145,7 +4145,7 @@
           11,
           14
         ],
-        1174
+        1175
       ],
       [
         "MapWorldsPrecinct",
@@ -4165,7 +4165,7 @@
           13,
           15
         ],
-        1175
+        1176
       ],
       [
         "MapWorldsBog",
@@ -4185,7 +4185,7 @@
           12,
           14
         ],
-        1176
+        1177
       ],
       [
         "MapWorldsPier",
@@ -4205,7 +4205,7 @@
           11,
           14
         ],
-        1177
+        1178
       ],
       [
         "MapWorldsCursedCrypt",
@@ -4225,7 +4225,7 @@
           13,
           16
         ],
-        1178
+        1179
       ],
       [
         "MapWorldsCursedCryptUnique",
@@ -4245,7 +4245,7 @@
           13,
           16
         ],
-        1179
+        1180
       ],
       [
         "MapWorldsOrchard",
@@ -4265,7 +4265,7 @@
           12,
           15
         ],
-        1180
+        1181
       ],
       [
         "MapWorldsPromenade",
@@ -4285,7 +4285,7 @@
           0,
           15
         ],
-        1181
+        1182
       ],
       [
         "MapWorldsPromenadeUnique",
@@ -4305,7 +4305,7 @@
           0,
           15
         ],
-        1182
+        1183
       ],
       [
         "MapWorldsLair",
@@ -4325,7 +4325,7 @@
           13,
           16
         ],
-        1183
+        1184
       ],
       [
         "MapWorldsColonnade",
@@ -4345,7 +4345,7 @@
           11,
           14
         ],
-        1184
+        1185
       ],
       [
         "MapWorldsPrimordialPool",
@@ -4365,7 +4365,7 @@
           14,
           16
         ],
-        1185
+        1186
       ],
       [
         "MapWorldsSpiderForest",
@@ -4385,7 +4385,7 @@
           12,
           14
         ],
-        1186
+        1187
       ],
       [
         "MapWorldsCoves",
@@ -4405,7 +4405,7 @@
           11,
           14
         ],
-        1187
+        1188
       ],
       [
         "MapWorldsWaterways",
@@ -4425,7 +4425,7 @@
           0,
           14
         ],
-        1188
+        1189
       ],
       [
         "MapWorldsFactory",
@@ -4445,7 +4445,7 @@
           11,
           14
         ],
-        1189
+        1190
       ],
       [
         "MapWorldsMesa",
@@ -4465,7 +4465,7 @@
           11,
           14
         ],
-        1190
+        1191
       ],
       [
         "MapWorldsPit",
@@ -4485,7 +4485,7 @@
           0,
           15
         ],
-        1191
+        1192
       ],
       [
         "MapWorldsDefiledCathedral",
@@ -4505,7 +4505,7 @@
           12,
           14
         ],
-        1193
+        1194
       ],
       [
         "MapWorldsSummit",
@@ -4525,7 +4525,7 @@
           0,
           16
         ],
-        1194
+        1195
       ],
       [
         "MapWorldsOvergrownShrine",
@@ -4545,7 +4545,7 @@
           11,
           14
         ],
-        1195
+        1196
       ],
       [
         "MapWorldsOvergrownShrineUnique",
@@ -4565,7 +4565,7 @@
           11,
           14
         ],
-        1196
+        1197
       ],
       [
         "MapWorldsCastleRuins",
@@ -4585,7 +4585,7 @@
           13,
           15
         ],
-        1197
+        1198
       ],
       [
         "MapWorldsCrystalOre",
@@ -4605,7 +4605,7 @@
           14,
           16
         ],
-        1198
+        1199
       ],
       [
         "MapWorldsVilla",
@@ -4625,7 +4625,7 @@
           12,
           14
         ],
-        1199
+        1200
       ],
       [
         "MapWorldsTortureChamber",
@@ -4645,7 +4645,7 @@
           12,
           14
         ],
-        1200
+        1201
       ],
       [
         "MapWorldsTortureChamberUnique",
@@ -4665,7 +4665,7 @@
           11,
           14
         ],
-        1201
+        1202
       ],
       [
         "MapWorldsNecropolis",
@@ -4685,7 +4685,7 @@
           0,
           16
         ],
-        1202
+        1203
       ],
       [
         "MapWorldsNecropolisUnique",
@@ -4705,7 +4705,7 @@
           0,
           16
         ],
-        1203
+        1204
       ],
       [
         "MapWorldsRacecourse_",
@@ -4725,7 +4725,7 @@
           11,
           14
         ],
-        1204
+        1205
       ],
       [
         "MapWorldsCaldera",
@@ -4745,7 +4745,7 @@
           11,
           14
         ],
-        1205
+        1206
       ],
       [
         "MapWorldsGhetto",
@@ -4765,7 +4765,7 @@
           12,
           14
         ],
-        1206
+        1207
       ],
       [
         "MapWorldsPark",
@@ -4785,7 +4785,7 @@
           10,
           14
         ],
-        1207
+        1208
       ],
       [
         "MapWorldsMalformation",
@@ -4805,7 +4805,7 @@
           13,
           15
         ],
-        1208
+        1209
       ],
       [
         "MapWorldsTerrace",
@@ -4825,7 +4825,7 @@
           13,
           16
         ],
-        1209
+        1210
       ],
       [
         "MapWorldsShrine",
@@ -4845,7 +4845,7 @@
           13,
           15
         ],
-        1210
+        1211
       ],
       [
         "MapWorldsArsenal",
@@ -4865,7 +4865,7 @@
           11,
           14
         ],
-        1211
+        1212
       ],
       [
         "MapWorldsDesertSpring",
@@ -4885,7 +4885,7 @@
           11,
           14
         ],
-        1212
+        1213
       ],
       [
         "MapWorldsCore",
@@ -4905,7 +4905,7 @@
           13,
           15
         ],
-        1213
+        1214
       ],
       [
         "MapWorldsColosseum",
@@ -4925,7 +4925,7 @@
           12,
           14
         ],
-        1214
+        1215
       ],
       [
         "MapWorldsAcidLakes",
@@ -4945,7 +4945,7 @@
           12,
           14
         ],
-        1215
+        1216
       ],
       [
         "MapWorldsDarkForest",
@@ -4965,7 +4965,7 @@
           12,
           15
         ],
-        1216
+        1217
       ],
       [
         "MapWorldsCrimsonTemple",
@@ -4985,7 +4985,7 @@
           13,
           15
         ],
-        1217
+        1218
       ],
       [
         "MapWorldsPlaza",
@@ -5005,7 +5005,7 @@
           11,
           14
         ],
-        1218
+        1219
       ],
       [
         "MapWorldsDig",
@@ -5025,7 +5025,7 @@
           12,
           14
         ],
-        1219
+        1220
       ],
       [
         "MapWorldsPalace",
@@ -5045,7 +5045,7 @@
           0,
           15
         ],
-        1220
+        1221
       ],
       [
         "MapWorldsLavaLake",
@@ -5065,7 +5065,7 @@
           0,
           15
         ],
-        1221
+        1222
       ],
       [
         "MapWorldsBasilica",
@@ -5085,7 +5085,7 @@
           14,
           16
         ],
-        1222
+        1223
       ],
       [
         "MapWorldsSunkenCity",
@@ -5105,7 +5105,7 @@
           14,
           16
         ],
-        1223
+        1224
       ],
       [
         "MapWorldsReef",
@@ -5125,7 +5125,7 @@
           13,
           15
         ],
-        1224
+        1225
       ],
       [
         "MapWorldsCarcass",
@@ -5145,7 +5145,7 @@
           0,
           14
         ],
-        1225
+        1226
       ],
       [
         "MapWorldsChimera",
@@ -5159,7 +5159,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Chimera.dds",
         null,
         null,
-        1226
+        1227
       ],
       [
         "MapWorldsHydra",
@@ -5173,7 +5173,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Hydra.dds",
         null,
         null,
-        1227
+        1228
       ],
       [
         "MapWorldsPhoenix",
@@ -5187,7 +5187,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Phoenix.dds",
         null,
         null,
-        1228
+        1229
       ],
       [
         "MapWorldsMinotaur",
@@ -5201,7 +5201,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Minotaur.dds",
         null,
         null,
-        1229
+        1230
       ],
       [
         "MapWorldsShapersRealm",
@@ -5215,7 +5215,7 @@
         "Art/2DItems/Maps/ShaperComplete.png",
         null,
         null,
-        1230
+        1231
       ],
       [
         "MapWorldsVaalTemple",
@@ -5227,7 +5227,7 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/VaalTempleBase.dds",
-        "Valdo's Rest",
+        "Lex Proxima",
         [
           0,
           0,
@@ -5235,7 +5235,7 @@
           0,
           16
         ],
-        1231
+        1232
       ],
       [
         "MapWorldsHarbingerLow",
@@ -5249,7 +5249,7 @@
         "Art/2DItems/Maps/HarbingerWhite.dds",
         null,
         null,
-        1233
+        1234
       ],
       [
         "MapWorldsHarbingerMid",
@@ -5263,7 +5263,7 @@
         "Art/2DItems/Maps/HarbingerYellow.dds",
         null,
         null,
-        1234
+        1235
       ],
       [
         "MapWorldsHarbingerHigh",
@@ -5277,7 +5277,7 @@
         "Art/2DItems/Maps/HarbingerRed.dds",
         null,
         null,
-        1235
+        1236
       ],
       [
         "MapWorldsHarbingerUber",
@@ -5291,7 +5291,7 @@
         "Art/2DItems/Maps/HarbingerUber.dds",
         null,
         null,
-        1236
+        1237
       ],
       [
         "MapWorldsElderArena",
@@ -5305,7 +5305,7 @@
         "Art/2DItems/Maps/ElderComplete.png",
         null,
         null,
-        1249
+        1250
       ],
       [
         "MapWorldsElderArenaUber",
@@ -5319,7 +5319,7 @@
         "Art/2DItems/Maps/UberElderComplete.png",
         null,
         null,
-        1250
+        1251
       ],
       [
         "AbyssLeague",
@@ -5333,7 +5333,7 @@
         null,
         null,
         null,
-        1251
+        1252
       ],
       [
         "AbyssLeague2",
@@ -5347,7 +5347,7 @@
         null,
         null,
         null,
-        1252
+        1253
       ],
       [
         "AbyssLeagueBoss",
@@ -5361,7 +5361,7 @@
         null,
         null,
         null,
-        1253
+        1254
       ],
       [
         "AbyssLeagueBoss2",
@@ -5375,7 +5375,7 @@
         null,
         null,
         null,
-        1254
+        1255
       ],
       [
         "AbyssLeagueBoss3",
@@ -5389,7 +5389,7 @@
         null,
         null,
         null,
-        1255
+        1256
       ],
       [
         "Hideout4_3",
@@ -5403,7 +5403,7 @@
         null,
         null,
         null,
-        1466
+        1467
       ],
       [
         "Hideout5_3",
@@ -5417,7 +5417,7 @@
         null,
         null,
         null,
-        1467
+        1468
       ],
       [
         "Hideout11_3",
@@ -5431,7 +5431,7 @@
         null,
         null,
         null,
-        1468
+        1469
       ],
       [
         "Hideout12_3",
@@ -5445,7 +5445,7 @@
         null,
         null,
         null,
-        1469
+        1470
       ],
       [
         "Hideout13_3",
@@ -5459,7 +5459,7 @@
         null,
         null,
         null,
-        1470
+        1471
       ],
       [
         "Hideout16_3",
@@ -5473,7 +5473,7 @@
         null,
         null,
         null,
-        1471
+        1472
       ],
       [
         "Hideout17_3",
@@ -5487,7 +5487,7 @@
         null,
         null,
         null,
-        1472
+        1473
       ],
       [
         "Hideout24_1",
@@ -5501,7 +5501,7 @@
         null,
         null,
         null,
-        1473
+        1474
       ],
       [
         "Hideout61_3",
@@ -5515,7 +5515,7 @@
         null,
         null,
         null,
-        1474
+        1475
       ],
       [
         "HideoutArch",
@@ -5529,7 +5529,7 @@
         null,
         null,
         null,
-        1475
+        1476
       ],
       [
         "HideoutCoral",
@@ -5543,7 +5543,7 @@
         null,
         null,
         null,
-        1478
+        1479
       ],
       [
         "HideoutShapersRealm",
@@ -5557,7 +5557,7 @@
         null,
         null,
         null,
-        1479
+        1480
       ],
       [
         "HideoutCave",
@@ -5571,7 +5571,7 @@
         null,
         null,
         null,
-        1480
+        1481
       ],
       [
         "HideoutPrisonTower",
@@ -5585,7 +5585,7 @@
         null,
         null,
         null,
-        1481
+        1482
       ],
       [
         "HideoutBaths",
@@ -5599,7 +5599,7 @@
         null,
         null,
         null,
-        1483
+        1484
       ],
       [
         "HideoutOssuary",
@@ -5613,7 +5613,7 @@
         null,
         null,
         null,
-        1485
+        1486
       ],
       [
         "HideoutCourts",
@@ -5627,7 +5627,7 @@
         null,
         null,
         null,
-        1487
+        1488
       ],
       [
         "HideoutCauseway",
@@ -5641,7 +5641,7 @@
         null,
         null,
         null,
-        1489
+        1490
       ],
       [
         "HideoutHighGardens",
@@ -5655,7 +5655,7 @@
         null,
         null,
         null,
-        1491
+        1492
       ],
       [
         "HideoutShipgraveyard",
@@ -5669,7 +5669,7 @@
         null,
         null,
         null,
-        1493
+        1494
       ],
       [
         "HideoutForest",
@@ -5683,7 +5683,7 @@
         null,
         null,
         null,
-        1495
+        1496
       ],
       [
         "HideoutSewer",
@@ -5697,7 +5697,7 @@
         null,
         null,
         null,
-        1497
+        1498
       ],
       [
         "HideoutSpace",
@@ -5711,7 +5711,7 @@
         null,
         null,
         null,
-        1498
+        1499
       ],
       [
         "HideoutArenaGraveyardTrio",
@@ -5725,7 +5725,7 @@
         null,
         null,
         null,
-        1499
+        1500
       ],
       [
         "HideoutMine",
@@ -5739,7 +5739,7 @@
         null,
         null,
         null,
-        1501
+        1502
       ],
       [
         "HideoutRuinedTemple",
@@ -5753,7 +5753,7 @@
         null,
         null,
         null,
-        1503
+        1504
       ],
       [
         "HideoutOasis",
@@ -5767,7 +5767,7 @@
         null,
         null,
         null,
-        1505
+        1506
       ],
       [
         "HideoutPillarsOfArun",
@@ -5781,7 +5781,7 @@
         null,
         null,
         null,
-        1506
+        1507
       ],
       [
         "HideoutAtziriArena",
@@ -5795,7 +5795,7 @@
         null,
         null,
         null,
-        1507
+        1508
       ],
       [
         "HideoutInnocenceArena",
@@ -5809,7 +5809,7 @@
         null,
         null,
         null,
-        1508
+        1509
       ],
       [
         "HideoutShaperArena",
@@ -5823,7 +5823,7 @@
         null,
         null,
         null,
-        1509
+        1510
       ],
       [
         "HideoutKaomArena",
@@ -5837,7 +5837,7 @@
         null,
         null,
         null,
-        1510
+        1511
       ],
       [
         "HideoutDaressoArena",
@@ -5851,7 +5851,7 @@
         null,
         null,
         null,
-        1511
+        1512
       ],
       [
         "HideoutDominusArena",
@@ -5865,7 +5865,7 @@
         null,
         null,
         null,
-        1512
+        1513
       ],
       [
         "HideoutPietyArena",
@@ -5879,7 +5879,7 @@
         null,
         null,
         null,
-        1513
+        1514
       ],
       [
         "HideoutLunarisSolarisArena",
@@ -5893,7 +5893,7 @@
         null,
         null,
         null,
-        1514
+        1515
       ],
       [
         "HideoutKitavaArenaAct10",
@@ -5907,7 +5907,7 @@
         null,
         null,
         null,
-        1515
+        1516
       ],
       [
         "HideoutTemplarLab",
@@ -5921,7 +5921,7 @@
         null,
         null,
         null,
-        1516
+        1517
       ],
       [
         "HideoutSlum",
@@ -5935,7 +5935,7 @@
         null,
         null,
         null,
-        1517
+        1518
       ],
       [
         "HideoutBeach",
@@ -5949,7 +5949,7 @@
         null,
         null,
         null,
-        1519
+        1520
       ],
       [
         "HideoutFellshrine",
@@ -5963,7 +5963,7 @@
         null,
         null,
         null,
-        1521
+        1522
       ],
       [
         "HideoutBattleground",
@@ -5977,7 +5977,7 @@
         null,
         null,
         null,
-        1523
+        1524
       ],
       [
         "HideoutLibrary",
@@ -5991,7 +5991,7 @@
         null,
         null,
         null,
-        1525
+        1526
       ],
       [
         "HideoutSolaris",
@@ -6005,7 +6005,7 @@
         null,
         null,
         null,
-        1527
+        1528
       ],
       [
         "HideoutGardens",
@@ -6019,7 +6019,7 @@
         null,
         null,
         null,
-        1529
+        1530
       ],
       [
         "HideoutIceberg",
@@ -6033,7 +6033,7 @@
         null,
         null,
         null,
-        1531
+        1532
       ],
       [
         "HideoutCrimsonTemple",
@@ -6047,7 +6047,7 @@
         null,
         null,
         null,
-        1533
+        1534
       ],
       [
         "HideoutTwilightTemple",
@@ -6061,7 +6061,7 @@
         null,
         null,
         null,
-        1535
+        1536
       ],
       [
         "HideoutMountain",
@@ -6075,7 +6075,7 @@
         null,
         null,
         null,
-        1537
+        1538
       ],
       [
         "HideoutHaunted",
@@ -6089,7 +6089,7 @@
         null,
         null,
         null,
-        1539
+        1540
       ],
       [
         "HideoutDoomguard",
@@ -6103,7 +6103,7 @@
         null,
         null,
         null,
-        1541
+        1542
       ],
       [
         "HideoutSunspire",
@@ -6117,7 +6117,7 @@
         null,
         null,
         null,
-        1542
+        1543
       ],
       [
         "HideoutDarkwood",
@@ -6131,7 +6131,7 @@
         null,
         null,
         null,
-        1543
+        1544
       ],
       [
         "HideoutArenaElder",
@@ -6145,7 +6145,7 @@
         null,
         null,
         null,
-        1544
+        1545
       ],
       [
         "HideoutChiyouSpring",
@@ -6159,7 +6159,7 @@
         null,
         null,
         null,
-        1545
+        1546
       ],
       [
         "HideoutBlankAbyss",
@@ -6173,7 +6173,7 @@
         null,
         null,
         null,
-        1546
+        1547
       ],
       [
         "HideoutBlankCity",
@@ -6187,7 +6187,7 @@
         null,
         null,
         null,
-        1547
+        1548
       ],
       [
         "HideoutBlankClouds",
@@ -6201,7 +6201,7 @@
         null,
         null,
         null,
-        1548
+        1549
       ],
       [
         "HideoutBlankDesert",
@@ -6215,7 +6215,7 @@
         null,
         null,
         null,
-        1549
+        1550
       ],
       [
         "HideoutBlankDirt",
@@ -6229,7 +6229,7 @@
         null,
         null,
         null,
-        1550
+        1551
       ],
       [
         "HideoutBlankGrass",
@@ -6243,7 +6243,7 @@
         null,
         null,
         null,
-        1551
+        1552
       ],
       [
         "HideoutBlankSea",
@@ -6257,7 +6257,7 @@
         null,
         null,
         null,
-        1552
+        1553
       ],
       [
         "HideoutBlankSnow",
@@ -6271,7 +6271,7 @@
         null,
         null,
         null,
-        1553
+        1554
       ],
       [
         "HideoutThaumaturgy",
@@ -6285,7 +6285,7 @@
         null,
         null,
         null,
-        1554
+        1555
       ],
       [
         "HideoutYaochi",
@@ -6299,7 +6299,7 @@
         null,
         null,
         null,
-        1555
+        1556
       ],
       [
         "HideoutHumanoidPet",
@@ -6313,7 +6313,7 @@
         null,
         null,
         null,
-        1556
+        1557
       ],
       [
         "pvpTown",
@@ -6327,7 +6327,7 @@
         null,
         null,
         null,
-        1557
+        1558
       ],
       [
         "AtlasExilesBoss5",
@@ -6341,7 +6341,7 @@
         "Art/2DItems/Currency/Strongholds/WatchstoneIridescent.png",
         null,
         null,
-        1575
+        1576
       ],
       [
         "AfflictionTown6",
@@ -6355,7 +6355,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1576
+        1577
       ],
       [
         "AfflictionTown4",
@@ -6369,7 +6369,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1577
+        1578
       ],
       [
         "AfflictionTown7",
@@ -6383,7 +6383,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1578
+        1579
       ],
       [
         "AfflictionTown8",
@@ -6397,7 +6397,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1579
+        1580
       ],
       [
         "AfflictionTown10",
@@ -6411,7 +6411,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1580
+        1581
       ],
       [
         "HeistCinematic",
@@ -6425,7 +6425,7 @@
         null,
         null,
         null,
-        1581
+        1582
       ],
       [
         "HeistHub",
@@ -6439,7 +6439,7 @@
         null,
         null,
         null,
-        1582
+        1583
       ],
       [
         "HeistBunker1",
@@ -6453,7 +6453,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1583
+        1584
       ],
       [
         "HeistBunker2",
@@ -6467,7 +6467,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1584
+        1585
       ],
       [
         "HeistBunker3",
@@ -6481,7 +6481,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1585
+        1586
       ],
       [
         "HeistBunker4",
@@ -6495,7 +6495,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1586
+        1587
       ],
       [
         "HeistBunker5",
@@ -6509,7 +6509,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1587
+        1588
       ],
       [
         "HeistBunker6",
@@ -6523,7 +6523,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1588
+        1589
       ],
       [
         "HeistBunker7",
@@ -6537,7 +6537,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1589
+        1590
       ],
       [
         "HeistBunker8",
@@ -6551,7 +6551,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1590
+        1591
       ],
       [
         "HeistBunker9",
@@ -6565,7 +6565,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1591
+        1592
       ],
       [
         "HeistMines1",
@@ -6579,7 +6579,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1592
+        1593
       ],
       [
         "HeistMines2",
@@ -6593,7 +6593,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1593
+        1594
       ],
       [
         "HeistMines3",
@@ -6607,7 +6607,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1594
+        1595
       ],
       [
         "HeistMines4",
@@ -6621,7 +6621,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1595
+        1596
       ],
       [
         "HeistMines5",
@@ -6635,7 +6635,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1596
+        1597
       ],
       [
         "HeistMines6",
@@ -6649,7 +6649,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1597
+        1598
       ],
       [
         "HeistMines7",
@@ -6663,7 +6663,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1598
+        1599
       ],
       [
         "HeistMines8",
@@ -6677,7 +6677,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1599
+        1600
       ],
       [
         "HeistMines9",
@@ -6691,7 +6691,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1600
+        1601
       ],
       [
         "HeistDungeon1",
@@ -6705,7 +6705,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1601
+        1602
       ],
       [
         "HeistDungeon2",
@@ -6719,7 +6719,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1602
+        1603
       ],
       [
         "HeistDungeon3",
@@ -6733,7 +6733,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1603
+        1604
       ],
       [
         "HeistDungeon4",
@@ -6747,7 +6747,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1604
+        1605
       ],
       [
         "HeistDungeon5",
@@ -6761,7 +6761,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1605
+        1606
       ],
       [
         "HeistDungeon6",
@@ -6775,7 +6775,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1606
+        1607
       ],
       [
         "HeistDungeon7",
@@ -6789,7 +6789,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1607
+        1608
       ],
       [
         "HeistDungeon8",
@@ -6803,7 +6803,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1608
+        1609
       ],
       [
         "HeistDungeon9",
@@ -6817,7 +6817,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1609
+        1610
       ],
       [
         "HeistReliquary1",
@@ -6831,7 +6831,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1610
+        1611
       ],
       [
         "HeistReliquary2",
@@ -6845,7 +6845,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1611
+        1612
       ],
       [
         "HeistReliquary3",
@@ -6859,7 +6859,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1612
+        1613
       ],
       [
         "HeistReliquary4",
@@ -6873,7 +6873,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1613
+        1614
       ],
       [
         "HeistReliquary5",
@@ -6887,7 +6887,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1614
+        1615
       ],
       [
         "HeistReliquary6",
@@ -6901,7 +6901,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1615
+        1616
       ],
       [
         "HeistReliquary7",
@@ -6915,7 +6915,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1616
+        1617
       ],
       [
         "HeistReliquary8",
@@ -6929,7 +6929,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1617
+        1618
       ],
       [
         "HeistReliquary9",
@@ -6943,7 +6943,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1618
+        1619
       ],
       [
         "HeistLibrary1",
@@ -6957,7 +6957,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1619
+        1620
       ],
       [
         "HeistLibrary2",
@@ -6971,7 +6971,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1620
+        1621
       ],
       [
         "HeistLibrary3",
@@ -6985,7 +6985,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1621
+        1622
       ],
       [
         "HeistLibrary4_",
@@ -6999,7 +6999,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1622
+        1623
       ],
       [
         "HeistLibrary5",
@@ -7013,7 +7013,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1623
+        1624
       ],
       [
         "HeistLibrary6",
@@ -7027,7 +7027,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1624
+        1625
       ],
       [
         "HeistLibrary7",
@@ -7041,7 +7041,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1625
+        1626
       ],
       [
         "HeistLibrary8_",
@@ -7055,7 +7055,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1626
+        1627
       ],
       [
         "HeistLibrary9",
@@ -7069,7 +7069,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1627
+        1628
       ],
       [
         "HeistRobotTunnels1",
@@ -7083,7 +7083,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1628
+        1629
       ],
       [
         "HeistRobotTunnels2",
@@ -7097,7 +7097,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1629
+        1630
       ],
       [
         "HeistRobotTunnels3",
@@ -7111,7 +7111,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1630
+        1631
       ],
       [
         "HeistRobotTunnels4",
@@ -7125,7 +7125,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1631
+        1632
       ],
       [
         "HeistRobotTunnels5",
@@ -7139,7 +7139,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1632
+        1633
       ],
       [
         "HeistRobotTunnels6",
@@ -7153,7 +7153,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1633
+        1634
       ],
       [
         "HeistRobotTunnels7",
@@ -7167,7 +7167,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1634
+        1635
       ],
       [
         "HeistRobotTunnels8",
@@ -7181,7 +7181,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1635
+        1636
       ],
       [
         "HeistRobotTunnels9",
@@ -7195,7 +7195,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1636
+        1637
       ],
       [
         "HeistSewers1",
@@ -7209,7 +7209,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1637
+        1638
       ],
       [
         "HeistSewers2",
@@ -7223,7 +7223,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1638
+        1639
       ],
       [
         "HeistSewers3",
@@ -7237,7 +7237,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1639
+        1640
       ],
       [
         "HeistSewers4",
@@ -7251,7 +7251,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1640
+        1641
       ],
       [
         "HeistSewers5",
@@ -7265,7 +7265,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1641
+        1642
       ],
       [
         "HeistSewers6",
@@ -7279,7 +7279,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1642
+        1643
       ],
       [
         "HeistSewers7",
@@ -7293,7 +7293,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1643
+        1644
       ],
       [
         "HeistSewers8",
@@ -7307,7 +7307,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1644
+        1645
       ],
       [
         "HeistSewers9",
@@ -7321,7 +7321,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1645
+        1646
       ],
       [
         "HeistCourts1",
@@ -7335,7 +7335,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1646
+        1647
       ],
       [
         "HeistCourts2",
@@ -7349,7 +7349,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1647
+        1648
       ],
       [
         "HeistCourts3",
@@ -7363,7 +7363,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1648
+        1649
       ],
       [
         "HeistCourts4",
@@ -7377,7 +7377,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1649
+        1650
       ],
       [
         "HeistCourts5",
@@ -7391,7 +7391,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1650
+        1651
       ],
       [
         "HeistCourts6",
@@ -7405,7 +7405,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1651
+        1652
       ],
       [
         "HeistCourts7",
@@ -7419,7 +7419,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1652
+        1653
       ],
       [
         "HeistCourts8",
@@ -7433,7 +7433,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1653
+        1654
       ],
       [
         "HeistCourts9_",
@@ -7447,7 +7447,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1654
+        1655
       ],
       [
         "HeistMansion1",
@@ -7461,7 +7461,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1655
+        1656
       ],
       [
         "HeistMansion2",
@@ -7475,7 +7475,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1656
+        1657
       ],
       [
         "HeistMansion3",
@@ -7489,7 +7489,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1657
+        1658
       ],
       [
         "HeistMansion4",
@@ -7503,7 +7503,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1658
+        1659
       ],
       [
         "HeistMansion5",
@@ -7517,7 +7517,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1659
+        1660
       ],
       [
         "HeistMansion6",
@@ -7531,7 +7531,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1660
+        1661
       ],
       [
         "HeistMansion7",
@@ -7545,7 +7545,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1661
+        1662
       ],
       [
         "HeistMansion8",
@@ -7559,7 +7559,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1662
+        1663
       ],
       [
         "HeistMansion9",
@@ -7573,7 +7573,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1663
+        1664
       ],
       [
         "HeistBoss_AdmiralDarnaw",
@@ -7587,7 +7587,7 @@
         "Art/2DItems/Currency/Heist/AdmiralDarnawFightContract.dds",
         null,
         null,
-        1664
+        1665
       ],
       [
         "HeistBoss_FreidrichTarollo",
@@ -7601,7 +7601,7 @@
         "Art/2DItems/Currency/Heist/SlaveMerchantFightContract.dds",
         null,
         null,
-        1665
+        1666
       ],
       [
         "HeistBoss_Jamanra",
@@ -7615,7 +7615,7 @@
         "Art/2DItems/Currency/Heist/JamanraFightContract.dds",
         null,
         null,
-        1666
+        1667
       ],
       [
         "HeistBoss_Nashta",
@@ -7629,7 +7629,7 @@
         "Art/2DItems/Currency/Heist/UsurperFightContract.dds",
         null,
         null,
-        1667
+        1668
       ],
       [
         "HeistBoss_Twins",
@@ -7643,7 +7643,7 @@
         "Art/2DItems/Currency/Heist/VoxFamilyFightContract.dds",
         null,
         null,
-        1668
+        1669
       ],
       [
         "HeistBoss_TheUnbreakable",
@@ -7657,7 +7657,7 @@
         "Art/2DItems/Currency/Heist/UnbreakableFightContract.dds",
         null,
         null,
-        1669
+        1670
       ]
     ]
   },
@@ -8348,7 +8348,7 @@
         "TullinaAgilityOne": "Schön sachte ...",
         "TullinaAgilityTwo": "Keine große Herausforderung ...",
         "TullinaAgilityThree": "Ich kümmere mich darum.",
-        "TullinaAgilityFour": "Ich verlange zu wenig von Euch.",
+        "TullinaAgilityFour": "Ich verlange zu wenig von dir.",
         "TullinaAgilityFive": "Okay, Tullina, genau so, wie du es geübt hast.",
         "TullinaAgilitySix": "Vorsichtig ... vorsichtig.",
         "TullinaDisarmTrapOne": "So ist das also aufgebaut ...",
@@ -8368,7 +8368,7 @@
         "TullinaAgilityLoudThree": "Weiter so, Tullina!",
         "TullinaAgilityLoudFour": "Jetzt? Wie unprofessionell!",
         "TullinaAgilityLoudFive": "Dafür hast du trainiert!",
-        "TullinaAgilityLoudSix": "Gut, aber Ihr solltet wissen, dass ich nachtragend bin!",
+        "TullinaAgilityLoudSix": "Gut, aber ihr solltet wissen, dass ich nachtragend bin!",
         "TullinaTrapDisarmLoudOne": "Also, was ist die schnellste .... Ah!",
         "TullinaTrapDisarmLoudTwo": "Zum Glück ist es ziemlich unkompliziert!",
         "TullinaTrapDisarmLoudThree": "Ich glaube ich weiß, wie das funktioniert!",
@@ -8380,10 +8380,10 @@
         "TullinaLockpickLoudThree": "Ich bin dran!",
         "TullinaLockpickLoudFour": "Das wird etwas dauern!",
         "TullinaLockpickLoudFive": "Haltet mir einfach den Rücken frei, während ich arbeite!",
-        "TullinaLockpickLoudSix": "Stellt bloß sicher, dass wir beide noch leben, sobald ich fertig bin.",
+        "TullinaLockpickLoudSix": "Stellt bloß sicher, dass wir alle noch leben, sobald ich fertig bin.",
         "TibbsForcingObstacleOne": "Gut.",
         "TibbsForcingObstacleTwo": "Bin dran, Boss.",
-        "TibbsForcingObstacleThree": "Ruhig.",
+        "TibbsForcingObstacleThree": "Einfach.",
         "TibbsForcingObstacleFour": "Lass' mich das mal eben aus dem Weg räumen.",
         "TibbsForcingObstacleFive": "Nur 'ne Sekunde.",
         "TibbsForcingObstacleSix": "Oh, das wird morgen Muskelkater geben.",
@@ -8432,7 +8432,7 @@
         "KarstVaultcrackingLoudOne": "Vorsicht ist der Weg zum Ziel!",
         "KarstVaultcrackingLoudTwo": "Nichts ist so motivierend wie ein kleines bisschen Druck!",
         "KarstVaultcrackingLoudThree": "Willst du, dass wir alle draufgehen!?",
-        "KarstVaultcrackingLoudFour": "Es wäre besser, wenn das hier zu nem Notaustieg führt!",
+        "KarstVaultcrackingLoudFour": "Es wäre besser, wenn das hier zu nem Notausstieg führt!",
         "KarstVaultcrackingLoudFive": "Ist einfacher, wenn wir keine Wachen am Hals haben!",
         "KarstVaultcrackingLoudSix": "Das macht eigentlich Spaß!",
         "IslaEngineeringOne": "Eine einfache Lösung!",
@@ -8461,7 +8461,7 @@
         "IslaDisarmTrapLoudThree": "Vorsichtig und schnell!",
         "IslaDisarmTrapLoudFour": "Ich werde einfach mit einem Schraubenschlüssel draufhauen.",
         "IslaDisarmTrapLoudFive": "Schlechte Teile, schlechte Handwerkskunst!",
-        "IslaDisarmTrapLoudSix": "Ich kann noch nichtmal mich selbst denken hören!",
+        "IslaDisarmTrapLoudSix": "Ich kann noch nicht mal mich selbst denken hören!",
         "IslaCounterThaumaturgyOne": "Öffne deinen Verstand...",
         "IslaCounterThaumaturgyTwo": "Was für ein Hohlkopf.",
         "IslaCounterThaumaturgyThree": "Gehirn-Gerät, einschalten!",
@@ -8519,13 +8519,13 @@
         "GiannaSmugglerOneCopy": "Wir holen sie uns hier drin, Leute!",
         "GiannaSmugglerTwoCopy": "Wartet, die gehören doch zu uns!? Nicht wahr!?",
         "GiannaSmugglerThreeCopy": "So kommen wir da nicht ran! Mach schon auf!",
-        "GiannaSmugglerFourCopy": "Wenn wir sie durchlassen, dann sind sie zu verwirrt zum kämpfen!",
+        "GiannaSmugglerFourCopy": "Wenn wir sie durchlassen, dann sind sie zu verwirrt zum Kämpfen!",
         "GiannaSmugglerFiveCopy": "Ey, der Boss will, dass wir die Tür aufmachen!",
         "GiannaSmugglerSixCopy": "Ich hab nicht die Hosen voll, Kumpel! Ich mache sie auf!",
         "GiannaCultistOneCopy": "Lasst uns passieren! Wir werden uns ihre Sekrete aneignen!",
         "GiannaCultistTwoCopy": "Sie betteln darum, den Opfertod zu sterben! Ich sage, wir gewähren ihnen diesen Wunsch!",
         "GiannaCultistThreeCopy": "Ihr Fleisch verlangt den Übergang! Wir müssen gehorchen!",
-        "GiannaCultistFourCopy": "Wir müssen uns vereinigen! Offnet das Tor!",
+        "GiannaCultistFourCopy": "Wir müssen uns vereinigen! Öffnet das Tor!",
         "GiannaCultistFiveCopy": "Trennung ist Täuschung! Macht auf!",
         "GiannaCultistSixCopy": "Sie stellen unseren Glauben auf die Probe! Lasst den Glauben euer Schild sein!",
         "GiannaEngineerLoudOne": "Brücke kommt!",
@@ -8539,13 +8539,13 @@
         "VinderiVaultBreakingThree": "Dann lasst uns das Ding mal öffnen.",
         "VinderiVaultBreakingFour": "Hmm, knifflig, aber nicht unmöglich.",
         "VinderiVaultBreakingFive": "Dieses Fabrikat ist mir noch nicht untergekommen. Tja, dann wollen wir es mal versuchen.",
-        "VinderiVaultBreakingSix": "Ooh. Solide Arbeit. Öffne dich mir. Es ist okay, sei verletztlich.",
+        "VinderiVaultBreakingSix": "Ooh. Solide Arbeit. Öffne dich mir. Es ist okay, sei verletzlich.",
         "VinderiEngineeringOne": "Wie benutzte ich dieses Ding nochmal?",
         "VinderiEngineeringTwo": "Verflucht dämliche Geräte.",
         "VinderiEngineeringThree": "Ihr erwartet doch nicht, dass ich springe, oder?",
         "VinderiEngineeringFour": "Ich habe irgendwo genau das richtige Ding dafür...",
         "VinderiEngineeringFive": "Ich hab das Ding doch dabei. Habe ich? Ich dachte, ich hätte es...",
-        "VinderiEngineeringSix": "Ich hatte gehofft, mich nicht daran erinnern zu müssen, wie man dieses vefluchte Ding benutzt.",
+        "VinderiEngineeringSix": "Ich hatte gehofft, mich nicht daran erinnern zu müssen, wie man dieses verfluchte Ding benutzt.",
         "VinderiDismantleTrapOne": "Ah, clever. Nicht clever genug, aber immerhin.",
         "VinderiDismantleTrapTwo": "Nicht die schlechteste Falle. Nicht die beste, aber nicht die schlechteste.",
         "VinderiDismantleTrapThree": "Einfach diese Feder lösen und...",
@@ -8594,7 +8594,7 @@
         "NenetPerceptionLongAlarmOne": "Ich versuche, mich zu konzentrieren!",
         "NenetPerceptionLongAlarmTwo": "Lasst mich lauschen!",
         "NenetPerceptionLongAlarmThree": "Schnell!",
-        "NenetVaultShortOne": "Kein Schloß kann mich aufhalten.",
+        "NenetVaultShortOne": "Kein Schloss kann mich aufhalten.",
         "NenetVaultShortTwo": "Ihre Dinge sind unsere Dinge.",
         "NenetVaultShortThree": "Kein Problem.",
         "NenetVaultLongOne": "Das hätten sie gar nicht erst abschließen müssen.",
@@ -8612,13 +8612,13 @@
         "NenetThaumaturgyLongOne": "Ich werde ihren Verstand knacken wie Rhoa-Eier.",
         "NenetThaumaturgyLongTwo": "Ich kann beinahe ihre Gedanken hören...",
         "NenetThaumaturgyLongThree": "Isla sagt, der Verstand ist nur eine weitere Maschine.",
-        "NenetThaumaturgyShortLoudOne": "Ich konzentiere mich!",
+        "NenetThaumaturgyShortLoudOne": "Ich konzentriere mich!",
         "NenetThaumaturgyShortLoudTwo": "Ich will es versuchen.",
         "NenetThaumaturgyShortLoudThree": "Ich hoffe, das funktioniert.",
         "NenetThaumaturgyLongLoudOne": "Meine Trostlosigkeit soll die ihre werden.",
         "NenetThaumaturgyLongLoudTwo": "Leere Köpfe, einfache Marionetten!",
         "NenetThaumaturgyLongLoudThree": "Ich erforsche ihre Gedanken!",
-        "HuckLockpickingOne": "Ein Standardschloß. Sollte nicht allzu schwer sein.",
+        "HuckLockpickingOne": "Ein Standardschloss. Sollte nicht allzu schwer sein.",
         "HuckLockpickingTwo": "Wurde an genau diesem Modell ausgebildet.",
         "HuckLockpickingThree": "Jawohl.",
         "HuckLockpickingFour": "Schwierig, aber machbar.",
@@ -8652,32 +8652,32 @@
         "HuckDemolitionLoudTwo": "Ja!",
         "HuckDemolitionLoudThree": "Zurück!",
         "HuckDemolitionLoudFour": "Nach hinten!",
-        "HuckDemolitionLoudFive": "Ordinance going down!",
+        "HuckDemolitionLoudFive": "Die Gefechtsordnung bricht zusammen!",
         "HuckDemolitionLoudSix": "Bleibt zurück! Bleibt zurück!",
-        "NilesThaumaturgyShortOne": "I shall make it so.",
-        "NilesThaumaturgyShortTwo": "Of course.",
-        "NilesThaumaturgyShortThree": "Focusing...",
-        "NilesThaumaturgyLongOne": "My mind shall dwarf theirs.",
-        "NilesThaumaturgyLongTwo": "I am a mental giant.",
-        "NilesThaumaturgyLongThree": "Allow me to focus...",
-        "NilesThaumaturgyShortAlarmOne": "Right away!",
-        "NilesThaumaturgyShortAlarmTwo": "I'll try to be quick!",
-        "NilesThaumaturgyShortAlarmThree": "Of course!",
-        "NilesThaumaturgyLongAlarmOne": "Mind control is a delicate art!",
-        "NilesThaumaturgyLongAlarmTwo": "I'll be as quick as I can!",
-        "NilesThaumaturgyLongAlarmThree": "Uggggh, if I must.",
-        "NilesDeceptionShortOne": "Easily fooled.",
-        "NilesDeceptionShortTwo": "Practiced lies, deceived eyes.",
-        "NilesDeceptionShortThree": "Watch and learn.",
-        "NilesDeceptionLongOne": "They'll never even suspect.",
-        "NilesDeceptionLongTwo": "This should be easy. Should be.",
-        "NilesDeceptionLongThree": "Just another form of mind control.",
-        "NilesDeceptionShortAlarmOne": "I'll try!",
-        "NilesDeceptionShortAlarmTwo": "Fine!",
-        "NilesDeceptionShortAlarmThree": "Alright!",
-        "NilesDeceptionLongAlarmOne": "This is a mess!",
-        "NilesDeceptionLongAlarmTwo": "This might still work!",
-        "NilesDeceptionLongAlarmThree": "Not a problem!"
+        "NilesThaumaturgyShortOne": "Dafür werde ich sorgen.",
+        "NilesThaumaturgyShortTwo": "Natürlich.",
+        "NilesThaumaturgyShortThree": "Konzentration...",
+        "NilesThaumaturgyLongOne": "Mein Verstand wird den ihren in den Schatten stellen.",
+        "NilesThaumaturgyLongTwo": "Ich bin ein mentaler Riese.",
+        "NilesThaumaturgyLongThree": "Erlaubt mir, mich zu konzentrieren...",
+        "NilesThaumaturgyShortAlarmOne": "Sofort!",
+        "NilesThaumaturgyShortAlarmTwo": "Ich versuche, mich zu beeilen!",
+        "NilesThaumaturgyShortAlarmThree": "Aber klar!",
+        "NilesThaumaturgyLongAlarmOne": "Gedankenkontrolle ist eine filigrane Kunst!",
+        "NilesThaumaturgyLongAlarmTwo": "Ich werde so schnell sein, wie ich kann.",
+        "NilesThaumaturgyLongAlarmThree": "Ufff, wenn es sein muss.",
+        "NilesDeceptionShortOne": "Leicht zu übertölpeln.",
+        "NilesDeceptionShortTwo": "Geübte Lügen, getäuschte Augen.",
+        "NilesDeceptionShortThree": "Sehe zu und lerne.",
+        "NilesDeceptionLongOne": "Sie werden noch nicht mal Verdacht schöpfen.",
+        "NilesDeceptionLongTwo": "Das sollte einfach sein. Sollte.",
+        "NilesDeceptionLongThree": "Nur eine andere Art der Gedankenkontrolle.",
+        "NilesDeceptionShortAlarmOne": "Ich werde es versuchen!",
+        "NilesDeceptionShortAlarmTwo": "Na schön!",
+        "NilesDeceptionShortAlarmThree": "In Ordnung!",
+        "NilesDeceptionLongAlarmOne": "Das ist ein Chaos!",
+        "NilesDeceptionLongAlarmTwo": "Das könnte immer noch funktionieren!",
+        "NilesDeceptionLongAlarmThree": "Kein Problem!"
       }
     },
     "en": {
@@ -9398,7 +9398,7 @@
         "TullinaLockpickLoudThree": "On it! ",
         "TullinaLockpickLoudFour": "This is going to take some time!",
         "TullinaLockpickLoudFive": "Just keep us safe while I work!",
-        "TullinaLockpickLoudSix": "You just make sure we're all still alive when I'm done",
+        "TullinaLockpickLoudSix": "You just make sure we're all still alive when I'm done.",
         "TibbsForcingObstacleOne": "Right. ",
         "TibbsForcingObstacleTwo": "On it, boss.",
         "TibbsForcingObstacleThree": "Easy.",
@@ -9949,7 +9949,7 @@
         "MapWorldsMuseum": "Museo",
         "MapWorldsMuseumUnique": "El Claustro Pútrido",
         "MapWorldsScriptorium": "Sala del Escriba",
-        "MapWorldsSiege": "Capital",
+        "MapWorldsSiege": "Asedio",
         "MapWorldsShipyard": "Astillero",
         "MapWorldsBelfry": "Campanario",
         "MapWorldsArachnidTomb": "Tumba Arácnida",
@@ -11406,9 +11406,9 @@
         "TullinaAgilityFive": "Allez, Tullina, comme à l'entraînement.",
         "TullinaAgilitySix": "Doucement… doucement…",
         "TullinaDisarmTrapOne": "Je vois l'embrouille…",
-        "TullinaDisarmTrapTwo": "Pff. Qui serait assez bête pour se faire avoir par ça ?",
-        "TullinaDisarmTrapThree": "Huh. Ah. Je vois.",
-        "TullinaDisarmTrapFour": "Hmm. Oui. Sournois, très sournois.",
+        "TullinaDisarmTrapTwo": "Pff ! Qui serait assez bête pour se faire avoir par ça ?",
+        "TullinaDisarmTrapThree": "Hum ! Ah. Je vois.",
+        "TullinaDisarmTrapFour": "Hmm. Oui. C'est sournois… Très sournois.",
         "TullinaDisarmTrapFive": "Quel ingénieux petit stratagème.",
         "TullinaDisarmTrapSix": "Malin. Presque… trop malin. Presque.",
         "TullinaLockpickOne": "Je vais nous faire entrer.",
@@ -11417,18 +11417,18 @@
         "TullinaLockpickFour": "Ça peut prendre un peu de temps, d'accord ?",
         "TullinaLockpickFive": "Je peux le faire, mais pas rapidement.",
         "TullinaLockpickSix": "<if:MS>{Pas de soucis. Il faut juste que tu sois patient.}<elif:FS>{Pas de soucis. Il faut juste que tu sois patiente.}",
-        "TullinaAgilityLoudOne": "Fais-le, ne réfléchis pas.",
+        "TullinaAgilityLoudOne": "C'est bon, j'suis dessus.",
         "TullinaAgilityLoudTwo": "Je m'en occupe !",
         "TullinaAgilityLoudThree": "Accroche-toi, Tullina !",
-        "TullinaAgilityLoudFour": "Maintenant ? Quel manque de professionnalisme !",
-        "TullinaAgilityLoudFive": "Tu t'es entraînée pour ce moment-là !",
-        "TullinaAgilityLoudSix": "Très bien, mais tu dois savoir que je suis rancunière !",
-        "TullinaTrapDisarmLoudOne": "Voyons voir, quelle est la manière la plus rapide de… Ah !",
-        "TullinaTrapDisarmLoudTwo": "On a de la chance que ce soit aussi simple !",
-        "TullinaTrapDisarmLoudThree": "Je pense avoir compris comment marche celui-là !",
+        "TullinaAgilityLoudFour": "Là, maintenant ? Quel manque de professionnalisme !",
+        "TullinaAgilityLoudFive": "Allez ! Repense à ton entraînement !",
+        "TullinaAgilityLoudSix": "Très bien, mais sache que je suis rancunière !",
+        "TullinaTrapDisarmLoudOne": "Voyons voir, comment est-ce que je pourrais… Ah !",
+        "TullinaTrapDisarmLoudTwo": "Heureusement que c'est aussi simple !",
+        "TullinaTrapDisarmLoudThree": "Je pense avoir compris comment ça marche !",
         "TullinaTrapDisarmLoudFour": "Même sans tout ce boucan ça m'aurait pris un bail… !",
-        "TullinaTrapDisarmLoudFive": "Je serai aussi rapide que possible, mais ça ne sera pas rapide pour autant.",
-        "TullinaTrapDisarmLoudSix": "J'aurais aimé qu'on s’occupe de ça avant d'avoir à courir !",
+        "TullinaTrapDisarmLoudFive": "Je serai aussi rapide que possible, mais ça risque de ne pas être suffisant.",
+        "TullinaTrapDisarmLoudSix": "J'aurais aimé qu'on s'occupe de ça avant d'avoir à cavaler !",
         "TullinaLockpickLoudOne": "D'accord. D'accord !",
         "TullinaLockpickLoudTwo": "Je m'en occupe !",
         "TullinaLockpickLoudThree": "Je suis dessus !",
@@ -11495,7 +11495,7 @@
         "IslaEngineeringFour": "Et les engrenages tournent et retournent...",
         "IslaEngineeringFive": "Mettre l'essieu, puis enlever le roulement à billes...",
         "IslaEngineeringSix": "Parfois, il existe une solution élégante. Parfois.",
-        "IslaEngineeringSeven": "J'ai justement l'engin pour ça !",
+        "IslaEngineeringSeven": "J'ai justement le bidule pour me charger de ça !",
         "IslaEngineeringEight": "Laissez votre ingénieur d'en occuper.",
         "IslaEngineeringLoudOne": "D'accord, d'accord !",
         "IslaEngineeringLoudTwo": "… Puis, je retiens sept…",
@@ -12527,13 +12527,13 @@
         "IslaDisarmTrapThree": "내 차례네!",
         "IslaDisarmTrapFour": "제작, 해체... 결국은 그게 그거야.",
         "IslaDisarmTrapFive": "아름다운 구조물이네. 내 손으로 망가뜨려야 하다니 아쉬운걸.",
-        "IslaDisarmTrapSix": "덫은 기술에서도 최악이야. 장인 정신이라곤 없지.",
+        "IslaDisarmTrapSix": "덫은 기술이라고 볼 수조차 없어. 장인 정신이 없잖아.",
         "IslaDisarmTrapLoudOne": "신난다!",
         "IslaDisarmTrapLoudTwo": "재미있는 부분이네!",
-        "IslaDisarmTrapLoudThree": "조심스럽게, 또 빨리!",
+        "IslaDisarmTrapLoudThree": "신중하고 빠르게!",
         "IslaDisarmTrapLoudFour": "그냥 스패너로 후려칠까 보다!",
         "IslaDisarmTrapLoudFive": " 부품은 조악하고 만듦새는 허접하네!",
-        "IslaDisarmTrapLoudSix": "너무 시끄러워서 내 생각조차 들리지가 않아!",
+        "IslaDisarmTrapLoudSix": "생각조차 할 수 없잖아!",
         "IslaCounterThaumaturgyOne": "마음을 열어 봐...",
         "IslaCounterThaumaturgyTwo": "저건 머리가 비었네.",
         "IslaCounterThaumaturgyThree": "내 정신 기계야, 작동해라!",
@@ -12564,12 +12564,12 @@
         "GiannaSmugglerFour": "네가 취해서 그래, 친구. 잘 봐. 아무도 없을 테니.",
         "GiannaSmugglerFive": "쥐 소리겠지. 쥐가 무서워? 어디 보자!",
         "GiannaSmugglerSix": "아니, 네가 이상한 거야. 여기 뭐가 있겠어?",
-        "GiannaCultistOne": "묘약 좀 그만 마시게. 아무것도 없잖나. 이것 보게.",
-        "GiannaCultistTwo": "증기 때문에 판단력이 흐려진 걸세. 내가 보여주지.",
+        "GiannaCultistOne": "묘약 좀 그만 마셔. 아무것도 없잖아. 잘 보라고.",
+        "GiannaCultistTwo": "증기 때문에 판단력이 흐려진 거야. 내가 증명할게.",
         "GiannaCultistThree": "단순한 환영이겠지만, 확실히 보여주지.",
-        "GiannaCultistFour": "자네는 쉬는 게 좋겠어. 내가 확인할 테니.",
-        "GiannaCultistFive": "환각 현상이군. 자네가 보는 게 모두 환각일세.",
-        "GiannaCultistSix": "환청은 정상적인 부작용이네만, 그래도 확인해 보세...",
+        "GiannaCultistFour": "너는 쉬는 게 좋겠어. 내가 확인할 테니.",
+        "GiannaCultistFive": "환각 현상이군. 네가 보는 거 모두 환각이야.",
+        "GiannaCultistSix": "환청은 정상적인 부작용이지만, 그래도 확실히 해두는 편이…",
         "EngineeringGiannaOne": "무대 담당자가 가르쳐 준 거랑 똑같네.",
         "EngineeringGiannaTwo": "이게 버틸 수 있길 바라자고.",
         "EngineeringGiannaThree": "이 정도면... 충분할 거야.",
@@ -12581,25 +12581,25 @@
         "GiannaPerceptionLoudThree": "뭔가 숨기려 했어!",
         "GiannaPerceptionLoudFour": "여긴 뭔가 잘못됐어. 시간이 좀 필요해!",
         "GiannaPerceptionLoudFive": "이곳에 뭔가를 숨기느라 꽤 고생했는걸!",
-        "GiannaPerceptionLoudSix": "아주 정교한 가짜야! 뭘 숨겨 둔 걸까!?",
+        "GiannaPerceptionLoudSix": "아주 정교하지만 가짜야! 뭘 숨겨 둔 걸까!?",
         "GiannaDeceptionLoudOne": "열어라! 들여보내! 어휴, 내가 하지!",
         "GiannaDeceptionLoudTwo": "물러서라! 내가 한 손으로 처리해 줄 테니!",
         "GiannaDeceptionLoudThree": "길을 비켜라! 지원군을 들여보내야 한다!",
         "GiannaDeceptionLoudFour": "길을 터라! 내게 계획이 있다!",
         "GiannaDeceptionLoudFive": "우리 편이다!",
-        "GiannaDeceptionLoudSix": "내가 길을 열 테니, 네가 생포해라!",
+        "GiannaDeceptionLoudSix": "내가 길을 열 테니, 넌 저들을 생포해라!",
         "GiannaSmugglerOneCopy": "여기서 잡아 버리자고, 얘들아!",
         "GiannaSmugglerTwoCopy": "잠깐, 쟤들 우리 편 아니야!? 우리 애들 맞지!?",
         "GiannaSmugglerThreeCopy": "이쪽에선 못 잡지! 열어 봐!",
         "GiannaSmugglerFourCopy": "들여보내 주면 정신이 사나워서 못 싸울 거야!",
-        "GiannaSmugglerFiveCopy": "야, 두목이 문을 열라고 했어!",
+        "GiannaSmugglerFiveCopy": "야, 두목이 문을 열라고 하신다!",
         "GiannaSmugglerSixCopy": "난 안 무서워, 친구! 문 연다!",
-        "GiannaCultistOneCopy": "길을 내주게! 저자들의 영액을 빼앗을 테니!",
+        "GiannaCultistOneCopy": "길을 내거라! 저자들의 영액을 빼앗을 테니!",
         "GiannaCultistTwoCopy": "희생을 자처하고 있군! 올 테면 오라지!",
-        "GiannaCultistThreeCopy": "그들의 육체가 길을 갈구하네! 그렇다면 따를 수밖에!",
-        "GiannaCultistFourCopy": "합세해야 하네! 문을 열게!",
-        "GiannaCultistFiveCopy": "분리돼선 안 되네! 길을 열게!",
-        "GiannaCultistSixCopy": "우리의 신념을 시험하는군! 신념이 보호해 줄 걸세!",
+        "GiannaCultistThreeCopy": "저들의 살점이 길을 갈구한다면! 우리는 따를 수밖에!",
+        "GiannaCultistFourCopy": "합류해야 해! 문을 열어라!",
+        "GiannaCultistFiveCopy": "나눠지면 안 돼! 길을 열어라!",
+        "GiannaCultistSixCopy": "우리의 신념을 시험하는군! 신념이 방패가 되어주리라!",
         "GiannaEngineerLoudOne": "다리를 올리고 있어!",
         "GiannaEngineerLoudTwo": "건널 다리를 만들게!",
         "GiannaEngineerLoudThree": "틈을 연결할 거야!",
@@ -12609,17 +12609,17 @@
         "VinderiVaultBreakingOne": "허. 별로 어렵지 않네.",
         "VinderiVaultBreakingTwo": "어차피 싸구려였어. ",
         "VinderiVaultBreakingThree": "이 자식을 열어 볼까.",
-        "VinderiVaultBreakingFour": "흠. 어렵지만, 불가능하진 않아.",
+        "VinderiVaultBreakingFour": "흠. 까다롭겠지만, 불가능하진 않아.",
         "VinderiVaultBreakingFive": "이런 건 처음인데. 뭐, 해 보자.",
-        "VinderiVaultBreakingSix": "오오. 견고한데. 열려라. 속을 보여줘도 괜찮아.",
-        "VinderiEngineeringOne": "이걸 어떻게 작동하더라?",
+        "VinderiVaultBreakingSix": "오오. 견고하군. 하지만 나한텐 약한 모습 보여도 괜찮아.",
+        "VinderiEngineeringOne": "이걸 어떻게 작동시키더라?",
         "VinderiEngineeringTwo": "망할 최신형 장치군. ",
         "VinderiEngineeringThree": "나더러 뛰라는 건 아니지?",
         "VinderiEngineeringFour": "여기 맞는 물건이 있는데...",
-        "VinderiEngineeringFive": "확실히 가져왔는데. 아닌가? 가져온 줄 알았어...",
+        "VinderiEngineeringFive": "가져오고 말고! 아닌가? 가져온 줄 알았는데…",
         "VinderiEngineeringSix": "이 망할 것을 조작하게 될 줄은 몰랐는데.",
-        "VinderiDismantleTrapOne": "아, 교묘하군. 나한텐 못 미치지만, 대단해.",
-        "VinderiDismantleTrapTwo": "싸구려 덫은 아니군. 최상품도 아니지만, 싸구려는 아니야.",
+        "VinderiDismantleTrapOne": "아, 교묘하군. 훌륭하진 않지만, 대단해.",
+        "VinderiDismantleTrapTwo": "싸구려 덫은 아니군. 최상품까지는 아니라도 싸구려는 아니야.",
         "VinderiDismantleTrapThree": "이 용수철을 빼서...",
         "VinderiDismantleTrapFour": "아, 똑똑한 녀석들. 흠. 흐으으음.",
         "VinderiDismantleTrapFive": "이거야 쉽--... 아. 이런. 어? 아.",
@@ -12627,7 +12627,7 @@
         "VinderiDemolitionOne": "히히히히히!",
         "VinderiDemolitionTwo": "신난다, 신나!",
         "VinderiDemolitionThree": "조심들 해!",
-        "VinderiDemolitionFour": "이건 큰 녀석이 필요하겠어.",
+        "VinderiDemolitionFour": "여기에는 큰 녀석이 필요하겠어.",
         "VinderiDemolitionFive": "그래, 그래... 여기 딱 맞는 게 있지!",
         "VinderiDemolitionSix": "널 위해 이걸 아껴 뒀단다.",
         "VinderiVaultBreakingLoudOne": "확실해?! 알았어...!",
@@ -12635,34 +12635,34 @@
         "VinderiVaultBreakingLoudThree": "이런, 진심이군...!",
         "VinderiVaultBreakingLoudFour": "\"빈데리, 달아나느라 바쁘지 않은가 보군?!\" ",
         "VinderiVaultBreakingLoudFive": "미쳤군. 본인도 알고 있지?!",
-        "VinderiVaultBreakingLoudSix": "난 압박 받으면 일 못 해!",
+        "VinderiVaultBreakingLoudSix": "이렇게 밀어붙이면 일 못 해!",
         "VinderiEngineeringLoudOne": "이 망할 것이 어디 있는 거야!?",
         "VinderiEngineeringLoudTwo": "도대체--... 아! 찾았다!",
         "VinderiEngineeringLoudThree": "어서, 이 멍청한-...!",
-        "VinderiEngineeringLoudFour": "네가 갖고 있어!? 잠깐, 내가 갖고 있어!",
+        "VinderiEngineeringLoudFour": "너한테 있어? 잠깐, 나한테 있어!",
         "VinderiEngineeringLoudFive": "아! 여기 맞는 물건이 있지! 간다-- 잠깐, 이게 아닌데. 아! 이거다!",
-        "VinderiEngineeringLoudSix": "틈이 있군! 딱 좋은 도구가 있지. 어딘가에. 떨어뜨렸나? 하! 손에 있었군! 이럴 때 짜증 나지 않아?!",
+        "VinderiEngineeringLoudSix": "길이 끊겼군!  딱 좋은 도구가 있지. 어디에 있더라. 떨어뜨렸나? 하! 들고 있었네! 이럴 때 짜증 나지 않아?!",
         "VinderiDismantleTrapLoudOne": "이건 정밀한 작업이라고!",
         "VinderiDismantleTrapLoudTwo": "여기 전체가 거대한 덫이야!",
         "VinderiDismantleTrapLoudThree": "잠깐! 여기 걸리면 죽겠어!",
-        "VinderiDismantleTrapLoudFour": "세상에! 너 여기 걸릴 뻔했잖아! ",
+        "VinderiDismantleTrapLoudFour": "세상에! 너 여기 걸리려고 작정을 했지!",
         "VinderiDismantleTrapLoudFive": "덫! 덫이다! 멈춰! 덫이라고! 덫!",
-        "VinderiDismantleTrapLoudSix": "바로 이런 걸 아까 처리했어야 하는데!",
+        "VinderiDismantleTrapLoudSix": "이런 거야 말로 미리 처리했어야 한다고!",
         "VinderiDemolitionLoudOne": "헉헉",
         "VinderiDemolitionLoudTwo": "즐길 시간도 없네!",
         "VinderiDemolitionLoudThree": "전부 다 짜증 나!",
-        "VinderiDemolitionLoudFour": "내가 죽으면 너도 폭파되길 바란다!",
-        "VinderiDemolitionLoudFive": "윽, 폭발성 물질을 다루기 힘든 상황이군!",
-        "VinderiDemolitionLoudSix": "이건 특별한 순간을 위해 아껴 두고 싶었는데. 네가 새 폭탄 사 줘!",
-        "NenetPerceptionShortOne": "보인다.",
-        "NenetPerceptionShortTwo": "내게는 명확하다.",
+        "VinderiDemolitionLoudFour": "내가 죽으면 이게 너도 날려버릴 거다!",
+        "VinderiDemolitionLoudFive": "세상에, 이런 상황에서 어떻게 폭발물을 다루라는 거야!",
+        "VinderiDemolitionLoudSix": "이건 특별한 순간을 위해 아껴 두려던 거라고. 나중에 새 폭탄 사줘야 해!",
+        "NenetPerceptionShortOne": "알겠다.",
+        "NenetPerceptionShortTwo": "명백한 것 같군.",
         "NenetPerceptionShortThree": "물론이다.",
         "NenetPerceptionLongOne": "잠시 집중할 시간이 필요하다...",
-        "NenetPerceptionLongTwo": "시각만으론 볼 수 없을 때도 있다.",
-        "NenetPerceptionLongThree": "조용히 해라. 듣는 중이니...",
-        "NenetPerceptionShortAlarmOne": "그렇다!",
+        "NenetPerceptionLongTwo": "눈으로는 볼 수 없는 것도 있다.",
+        "NenetPerceptionLongThree": "조용히, 듣고 있...",
+        "NenetPerceptionShortAlarmOne": "이런!",
         "NenetPerceptionShortAlarmTwo": "서둘러라, 그래!",
-        "NenetPerceptionShortAlarmThree": "보고한다!",
+        "NenetPerceptionShortAlarmThree": "보고!",
         "NenetPerceptionLongAlarmOne": "집중하고 있다!",
         "NenetPerceptionLongAlarmTwo": "소리를 들어야 한다!",
         "NenetPerceptionLongAlarmThree": "어서!",
@@ -12670,26 +12670,26 @@
         "NenetVaultShortTwo": "그들의 것은 우리의 것이다.",
         "NenetVaultShortThree": "문제없다.",
         "NenetVaultLongOne": "활짝 열어 둔 것이나 마찬가지다.",
-        "NenetVaultLongTwo": "감추려 노력하긴 한 건가?",
-        "NenetVaultLongThree": "내가 금고를 부술 수 있다. 문제없다.",
+        "NenetVaultLongTwo": "감추려 노력하긴 한 것인가?",
+        "NenetVaultLongThree": "이 금고는 내가 부술 수 있다, 문제없지.",
         "NenetVaultShortAlarmOne": "서두르고 있다!",
-        "NenetVaultShortAlarmTwo": "부수고 가로채!",
+        "NenetVaultShortAlarmTwo": "부수고 챙겨라!",
         "NenetVaultShortAlarmThree": "하고 있다!",
-        "NenetVaultLongAlarmOne": "넌 할 수 있어, 네넷...",
-        "NenetVaultLongAlarmTwo": "최선을 다할게!",
-        "NenetVaultLongAlarmThree": "할 수 있어!",
+        "NenetVaultLongAlarmOne": "할 수 있다, 네넷...",
+        "NenetVaultLongAlarmTwo": "최선을 다하겠다!",
+        "NenetVaultLongAlarmThree": "내가 할 수 있다!",
         "NenetThaumaturgyShortOne": "내가 실현하겠다.",
         "NenetThaumaturgyShortTwo": "내 의지가 그들의 명이다.",
-        "NenetThaumaturgyShortThree": "마음을 열어 봐...",
+        "NenetThaumaturgyShortThree": "마음을 열어라...",
         "NenetThaumaturgyLongOne": "내가 저들의 정신을 로아 알처럼 깨뜨려 버리겠다.",
         "NenetThaumaturgyLongTwo": "저들의 생각이 들리는 것 같군...",
         "NenetThaumaturgyLongThree": "아이슬라는 정신 또한 또 하나의 톱니바퀴 장치일 뿐이라고 말한다...",
-        "NenetThaumaturgyShortLoudOne": "집중한다!",
-        "NenetThaumaturgyShortLoudTwo": "노력해 보지.",
+        "NenetThaumaturgyShortLoudOne": "집중해라!",
+        "NenetThaumaturgyShortLoudTwo": "노력해 보겠다.",
         "NenetThaumaturgyShortLoudThree": "효과가 있으면 좋겠군.",
         "NenetThaumaturgyLongLoudOne": "이제 절망은 저들의 몫이다!",
         "NenetThaumaturgyLongLoudTwo": "머리가 비어 있으면 손쉬운 꼭두각시일 뿐!",
-        "NenetThaumaturgyLongLoudThree": "적의 생각을 들여다보는 중이다!",
+        "NenetThaumaturgyLongLoudThree": "저들의 마음을 들여다보는 중이다!",
         "HuckLockpickingOne": "표준 자물쇠군. 어려울 것 없어.",
         "HuckLockpickingTwo": "딱 이런 종류로 훈련을 했었지.",
         "HuckLockpickingThree": "알았어.",
@@ -12709,25 +12709,25 @@
         "HuckDemolitionFive": "안전하게 거리를 벌려.",
         "HuckDemolitionSix": "조심해. 날려 버려야 하니까.",
         "HuckLockpickingLoudOne": "문제없어!",
-        "HuckLockpickingLoudTwo": "예, 알겠습니다!",
-        "HuckLockpickingLoudThree": "하고 있다!",
+        "HuckLockpickingLoudTwo": "네, 알겠습니다!",
+        "HuckLockpickingLoudThree": "내게 맡겨!",
         "HuckLockpickingLoudFour": "시간 좀 벌어줘!",
         "HuckLockpickingLoudFive": "최선을 다할게!",
         "HuckLockpickingLoudSix": "알았어! 내가 맡을게!",
         "HuckBruteforceLoudOne": "알았어!",
         "HuckBruteforceLoudTwo": "네, 알겠습니다!",
-        "HuckBruteforceLoudThree": "챙겼어!",
-        "HuckBruteforceLoudFour": "이런, 내가 처리할 수 있을 것 같아.",
-        "HuckBruteforceLoudFive": "준비운동이라도 할 걸 그랬지!",
-        "HuckBruteforceLoudSix": "어서 해, 병사! 어서 하라고!",
+        "HuckBruteforceLoudThree": "알겠어!",
+        "HuckBruteforceLoudFour": "이런, 내가 처리해 볼게!",
+        "HuckBruteforceLoudFive": "준비운동이라도 해 둘 걸!",
+        "HuckBruteforceLoudSix": "어서, 제군! 어서 해!",
         "HuckDemolitionLoudOne": "네, 알겠습니다!",
-        "HuckDemolitionLoudTwo": "맞아!",
+        "HuckDemolitionLoudTwo": "좋아!",
         "HuckDemolitionLoudThree": "비켜!",
         "HuckDemolitionLoudFour": "물러서!",
-        "HuckDemolitionLoudFive": "대포가 파괴된다!",
-        "HuckDemolitionLoudSix": "물러나 있어! 물러나 있으라고!",
+        "HuckDemolitionLoudFive": "대포가 터진다!",
+        "HuckDemolitionLoudSix": "물러나 있어! 물러나라고!",
         "NilesThaumaturgyShortOne": "내가 그렇게 해 줄게.",
-        "NilesThaumaturgyShortTwo": "그렇겠지.",
+        "NilesThaumaturgyShortTwo": "당연하지.",
         "NilesThaumaturgyShortThree": "집중하는 중이야...",
         "NilesThaumaturgyLongOne": "내 정신에 비하면 저 녀석들은 난쟁이지.",
         "NilesThaumaturgyLongTwo": "나는 정신적 거인이라고.",
@@ -13151,86 +13151,86 @@
         "HeistCinematic": "[DNT] Cinematic",
         "HeistHub": "O Porto dos Renegados",
         "HeistBunker1": "Abrigo",
-        "HeistBunker2": "Bunker",
-        "HeistBunker3": "Bunker",
-        "HeistBunker4": "Bunker",
-        "HeistBunker5": "Bunker",
-        "HeistBunker6": "Bunker",
-        "HeistBunker7": "Bunker",
-        "HeistBunker8": "Bunker",
-        "HeistBunker9": "Bunker",
+        "HeistBunker2": "Abrigo",
+        "HeistBunker3": "Abrigo",
+        "HeistBunker4": "Abrigo",
+        "HeistBunker5": "Abrigo",
+        "HeistBunker6": "Abrigo",
+        "HeistBunker7": "Abrigo",
+        "HeistBunker8": "Abrigo",
+        "HeistBunker9": "Abrigo",
         "HeistMines1": "Covil do Contrabandista",
-        "HeistMines2": "Smuggler's Den",
-        "HeistMines3": "Smuggler's Den",
-        "HeistMines4": "Smuggler's Den",
-        "HeistMines5": "Smuggler's Den",
-        "HeistMines6": "Smuggler's Den",
-        "HeistMines7": "Smuggler's Den",
-        "HeistMines8": "Smuggler's Den",
-        "HeistMines9": "Smuggler's Den",
+        "HeistMines2": "Covil do Contrabandista",
+        "HeistMines3": "Covil do Contrabandista",
+        "HeistMines4": "Covil do Contrabandista",
+        "HeistMines5": "Covil do Contrabandista",
+        "HeistMines6": "Covil do Contrabandista",
+        "HeistMines7": "Covil do Contrabandista",
+        "HeistMines8": "Covil do Contrabandista",
+        "HeistMines9": "Covil do Contrabandista",
         "HeistDungeon1": "Laboratório",
-        "HeistDungeon2": "Laboratory",
-        "HeistDungeon3": "Laboratory",
-        "HeistDungeon4": "Laboratory",
-        "HeistDungeon5": "Laboratory",
-        "HeistDungeon6": "Laboratory",
-        "HeistDungeon7": "Laboratory",
-        "HeistDungeon8": "Laboratory",
-        "HeistDungeon9": "Laboratory",
+        "HeistDungeon2": "Laboratório",
+        "HeistDungeon3": "Laboratório",
+        "HeistDungeon4": "Laboratório",
+        "HeistDungeon5": "Laboratório",
+        "HeistDungeon6": "Laboratório",
+        "HeistDungeon7": "Laboratório",
+        "HeistDungeon8": "Laboratório",
+        "HeistDungeon9": "Laboratório",
         "HeistReliquary1": "Repositório",
-        "HeistReliquary2": "Repository",
-        "HeistReliquary3": "Repository",
-        "HeistReliquary4": "Repository",
-        "HeistReliquary5": "Repository",
-        "HeistReliquary6": "Repository",
-        "HeistReliquary7": "Repository",
-        "HeistReliquary8": "Repository",
-        "HeistReliquary9": "Repository",
+        "HeistReliquary2": "Repositório",
+        "HeistReliquary3": "Repositório",
+        "HeistReliquary4": "Repositório",
+        "HeistReliquary5": "Repositório",
+        "HeistReliquary6": "Repositório",
+        "HeistReliquary7": "Repositório",
+        "HeistReliquary8": "Repositório",
+        "HeistReliquary9": "Repositório",
         "HeistLibrary1": "Biblioteca Proibida",
-        "HeistLibrary2": "Prohibited Library",
-        "HeistLibrary3": "Prohibited Library",
-        "HeistLibrary4_": "Prohibited Library",
-        "HeistLibrary5": "Prohibited Library",
-        "HeistLibrary6": "Prohibited Library",
-        "HeistLibrary7": "Prohibited Library",
-        "HeistLibrary8_": "Prohibited Library",
-        "HeistLibrary9": "Prohibited Library",
+        "HeistLibrary2": "Biblioteca Proibida",
+        "HeistLibrary3": "Biblioteca Proibida",
+        "HeistLibrary4_": "Biblioteca Proibida",
+        "HeistLibrary5": "Biblioteca Proibida",
+        "HeistLibrary6": "Biblioteca Proibida",
+        "HeistLibrary7": "Biblioteca Proibida",
+        "HeistLibrary8_": "Biblioteca Proibida",
+        "HeistLibrary9": "Biblioteca Proibida",
         "HeistRobotTunnels1": "Túneis",
-        "HeistRobotTunnels2": "Tunnels",
-        "HeistRobotTunnels3": "Tunnels",
-        "HeistRobotTunnels4": "Tunnels",
-        "HeistRobotTunnels5": "Tunnels",
-        "HeistRobotTunnels6": "Tunnels",
-        "HeistRobotTunnels7": "Tunnels",
-        "HeistRobotTunnels8": "Tunnels",
-        "HeistRobotTunnels9": "Tunnels",
+        "HeistRobotTunnels2": "Túneis",
+        "HeistRobotTunnels3": "Túneis",
+        "HeistRobotTunnels4": "Túneis",
+        "HeistRobotTunnels5": "Túneis",
+        "HeistRobotTunnels6": "Túneis",
+        "HeistRobotTunnels7": "Túneis",
+        "HeistRobotTunnels8": "Túneis",
+        "HeistRobotTunnels9": "Túneis",
         "HeistSewers1": "Entranhas",
-        "HeistSewers2": "Underbelly",
-        "HeistSewers3": "Underbelly",
-        "HeistSewers4": "Underbelly",
-        "HeistSewers5": "Underbelly",
-        "HeistSewers6": "Underbelly",
-        "HeistSewers7": "Underbelly",
-        "HeistSewers8": "Underbelly",
-        "HeistSewers9": "Underbelly",
+        "HeistSewers2": "Entranhas",
+        "HeistSewers3": "Entranhas",
+        "HeistSewers4": "Entranhas",
+        "HeistSewers5": "Entranhas",
+        "HeistSewers6": "Entranhas",
+        "HeistSewers7": "Entranhas",
+        "HeistSewers8": "Entranhas",
+        "HeistSewers9": "Entranhas",
         "HeistCourts1": "Escritório de Arquivos",
-        "HeistCourts2": "Records Office",
-        "HeistCourts3": "Records Office",
-        "HeistCourts4": "Records Office",
-        "HeistCourts5": "Records Office",
-        "HeistCourts6": "Records Office",
-        "HeistCourts7": "Records Office",
-        "HeistCourts8": "Records Office",
-        "HeistCourts9_": "Records Office",
+        "HeistCourts2": "Escritório de Arquivos",
+        "HeistCourts3": "Escritório de Arquivos",
+        "HeistCourts4": "Escritório de Arquivos",
+        "HeistCourts5": "Escritório de Arquivos",
+        "HeistCourts6": "Escritório de Arquivos",
+        "HeistCourts7": "Escritório de Arquivos",
+        "HeistCourts8": "Escritório de Arquivos",
+        "HeistCourts9_": "Escritório de Arquivos",
         "HeistMansion1": "Mansão",
-        "HeistMansion2": "Mansion",
-        "HeistMansion3": "Mansion",
-        "HeistMansion4": "Mansion",
-        "HeistMansion5": "Mansion",
-        "HeistMansion6": "Mansion",
-        "HeistMansion7": "Mansion",
-        "HeistMansion8": "Mansion",
-        "HeistMansion9": "Mansion",
+        "HeistMansion2": "Mansão",
+        "HeistMansion3": "Mansão",
+        "HeistMansion4": "Mansão",
+        "HeistMansion5": "Mansão",
+        "HeistMansion6": "Mansão",
+        "HeistMansion7": "Mansão",
+        "HeistMansion8": "Mansão",
+        "HeistMansion9": "Mansão",
         "HeistBoss_AdmiralDarnaw": "Chegada de Darnaw",
         "HeistBoss_FreidrichTarollo": "O Fosso de Corpos",
         "HeistBoss_Jamanra": "Tumba dos Banidos",
@@ -13528,7 +13528,7 @@
         "IslaEngineeringOne": "Uma solução simples. ",
         "IslaEngineeringTwo": "É só uma questão de matemática. ",
         "IslaEngineeringThree": "Quase não é um obstáculo!",
-        "IslaEngineeringFour": "Os eixos e as engrenagens giram e giram...",
+        "IslaEngineeringFour": "Os eixos e as engrenagens giram, giram...",
         "IslaEngineeringFive": "Você coloca os eixos, tira o rolamento...",
         "IslaEngineeringSix": "Às vezes tem uma solução elegante... às vezes. ",
         "IslaEngineeringSeven": "Eu tenho a maquininha perfeita pra isso!",
@@ -15187,86 +15187,86 @@
         "HeistCinematic": "[DNT] Cinematic",
         "HeistHub": "ท่าเรือโจร",
         "HeistBunker1": "บังเกอร์",
-        "HeistBunker2": "Bunker",
-        "HeistBunker3": "Bunker",
-        "HeistBunker4": "Bunker",
-        "HeistBunker5": "Bunker",
-        "HeistBunker6": "Bunker",
-        "HeistBunker7": "Bunker",
-        "HeistBunker8": "Bunker",
-        "HeistBunker9": "Bunker",
+        "HeistBunker2": "บังเกอร์",
+        "HeistBunker3": "บังเกอร์",
+        "HeistBunker4": "บังเกอร์",
+        "HeistBunker5": "บังเกอร์",
+        "HeistBunker6": "บังเกอร์",
+        "HeistBunker7": "บังเกอร์",
+        "HeistBunker8": "บังเกอร์",
+        "HeistBunker9": "บังเกอร์",
         "HeistMines1": "ดงโจร",
-        "HeistMines2": "Smuggler's Den",
-        "HeistMines3": "Smuggler's Den",
-        "HeistMines4": "Smuggler's Den",
-        "HeistMines5": "Smuggler's Den",
-        "HeistMines6": "Smuggler's Den",
-        "HeistMines7": "Smuggler's Den",
-        "HeistMines8": "Smuggler's Den",
-        "HeistMines9": "Smuggler's Den",
+        "HeistMines2": "ดงโจร",
+        "HeistMines3": "ดงโจร",
+        "HeistMines4": "ดงโจร",
+        "HeistMines5": "ดงโจร",
+        "HeistMines6": "ดงโจร",
+        "HeistMines7": "ดงโจร",
+        "HeistMines8": "ดงโจร",
+        "HeistMines9": "ดงโจร",
         "HeistDungeon1": "ห้องทดลอง",
-        "HeistDungeon2": "Laboratory",
-        "HeistDungeon3": "Laboratory",
-        "HeistDungeon4": "Laboratory",
-        "HeistDungeon5": "Laboratory",
-        "HeistDungeon6": "Laboratory",
-        "HeistDungeon7": "Laboratory",
-        "HeistDungeon8": "Laboratory",
-        "HeistDungeon9": "Laboratory",
+        "HeistDungeon2": "ห้องทดลอง",
+        "HeistDungeon3": "ห้องทดลอง",
+        "HeistDungeon4": "ห้องทดลอง",
+        "HeistDungeon5": "ห้องทดลอง",
+        "HeistDungeon6": "ห้องทดลอง",
+        "HeistDungeon7": "ห้องทดลอง",
+        "HeistDungeon8": "ห้องทดลอง",
+        "HeistDungeon9": "ห้องทดลอง",
         "HeistReliquary1": "โกดัง",
-        "HeistReliquary2": "Repository",
-        "HeistReliquary3": "Repository",
-        "HeistReliquary4": "Repository",
-        "HeistReliquary5": "Repository",
-        "HeistReliquary6": "Repository",
-        "HeistReliquary7": "Repository",
-        "HeistReliquary8": "Repository",
-        "HeistReliquary9": "Repository",
+        "HeistReliquary2": "โกดัง",
+        "HeistReliquary3": "โกดัง",
+        "HeistReliquary4": "โกดัง",
+        "HeistReliquary5": "โกดัง",
+        "HeistReliquary6": "โกดัง",
+        "HeistReliquary7": "โกดัง",
+        "HeistReliquary8": "โกดัง",
+        "HeistReliquary9": "โกดัง",
         "HeistLibrary1": "หอสมุดต้องห้าม",
-        "HeistLibrary2": "Prohibited Library",
-        "HeistLibrary3": "Prohibited Library",
-        "HeistLibrary4_": "Prohibited Library",
-        "HeistLibrary5": "Prohibited Library",
-        "HeistLibrary6": "Prohibited Library",
-        "HeistLibrary7": "Prohibited Library",
-        "HeistLibrary8_": "Prohibited Library",
-        "HeistLibrary9": "Prohibited Library",
+        "HeistLibrary2": "หอสมุดต้องห้าม",
+        "HeistLibrary3": "หอสมุดต้องห้าม",
+        "HeistLibrary4_": "หอสมุดต้องห้าม",
+        "HeistLibrary5": "หอสมุดต้องห้าม",
+        "HeistLibrary6": "หอสมุดต้องห้าม",
+        "HeistLibrary7": "หอสมุดต้องห้าม",
+        "HeistLibrary8_": "หอสมุดต้องห้าม",
+        "HeistLibrary9": "หอสมุดต้องห้าม",
         "HeistRobotTunnels1": "อุโมงค์",
-        "HeistRobotTunnels2": "Tunnels",
-        "HeistRobotTunnels3": "Tunnels",
-        "HeistRobotTunnels4": "Tunnels",
-        "HeistRobotTunnels5": "Tunnels",
-        "HeistRobotTunnels6": "Tunnels",
-        "HeistRobotTunnels7": "Tunnels",
-        "HeistRobotTunnels8": "Tunnels",
-        "HeistRobotTunnels9": "Tunnels",
+        "HeistRobotTunnels2": "อุโมงค์",
+        "HeistRobotTunnels3": "อุโมงค์",
+        "HeistRobotTunnels4": "อุโมงค์",
+        "HeistRobotTunnels5": "อุโมงค์",
+        "HeistRobotTunnels6": "อุโมงค์",
+        "HeistRobotTunnels7": "อุโมงค์",
+        "HeistRobotTunnels8": "อุโมงค์",
+        "HeistRobotTunnels9": "อุโมงค์",
         "HeistSewers1": "มุมมืด",
-        "HeistSewers2": "Underbelly",
-        "HeistSewers3": "Underbelly",
-        "HeistSewers4": "Underbelly",
-        "HeistSewers5": "Underbelly",
-        "HeistSewers6": "Underbelly",
-        "HeistSewers7": "Underbelly",
-        "HeistSewers8": "Underbelly",
-        "HeistSewers9": "Underbelly",
+        "HeistSewers2": "มุมมืด",
+        "HeistSewers3": "มุมมืด",
+        "HeistSewers4": "มุมมืด",
+        "HeistSewers5": "มุมมืด",
+        "HeistSewers6": "มุมมืด",
+        "HeistSewers7": "มุมมืด",
+        "HeistSewers8": "มุมมืด",
+        "HeistSewers9": "มุมมืด",
         "HeistCourts1": "หอจดบันทึก",
-        "HeistCourts2": "Records Office",
-        "HeistCourts3": "Records Office",
-        "HeistCourts4": "Records Office",
-        "HeistCourts5": "Records Office",
-        "HeistCourts6": "Records Office",
-        "HeistCourts7": "Records Office",
-        "HeistCourts8": "Records Office",
-        "HeistCourts9_": "Records Office",
+        "HeistCourts2": "หอจดบันทึก",
+        "HeistCourts3": "หอจดบันทึก",
+        "HeistCourts4": "หอจดบันทึก",
+        "HeistCourts5": "หอจดบันทึก",
+        "HeistCourts6": "หอจดบันทึก",
+        "HeistCourts7": "หอจดบันทึก",
+        "HeistCourts8": "หอจดบันทึก",
+        "HeistCourts9_": "หอจดบันทึก",
         "HeistMansion1": "แมนชั่น",
-        "HeistMansion2": "Mansion",
-        "HeistMansion3": "Mansion",
-        "HeistMansion4": "Mansion",
-        "HeistMansion5": "Mansion",
-        "HeistMansion6": "Mansion",
-        "HeistMansion7": "Mansion",
-        "HeistMansion8": "Mansion",
-        "HeistMansion9": "Mansion",
+        "HeistMansion2": "แมนชั่น",
+        "HeistMansion3": "แมนชั่น",
+        "HeistMansion4": "แมนชั่น",
+        "HeistMansion5": "แมนชั่น",
+        "HeistMansion6": "แมนชั่น",
+        "HeistMansion7": "แมนชั่น",
+        "HeistMansion8": "แมนชั่น",
+        "HeistMansion9": "แมนชั่น",
         "HeistBoss_AdmiralDarnaw": "บริเวณที่ดาร์นาวขึ้นบก",
         "HeistBoss_FreidrichTarollo": "หลุมทิ้งร่าง",
         "HeistBoss_Jamanra": "สุสานของผู้ถูกเนรเทศ",
@@ -15471,41 +15471,41 @@
         "BaranFourStoneDeathb": "... tell my brother... that I cannot be saved...",
         "BaranFourStoneDeathc": "Keep Kirac... out of the Atlas... at all costs...",
         "BaranFourStoneDeathd": "A brief moment of sanity... it never lasts...",
-        "TullinaAgilityOne": "ง่าย​แล​ะส​ะดว​กส​บา​ย...",
-        "TullinaAgilityTwo": "เอา​ที่​มัน​ไม่​ท้าทาย​มาก​เกินไ​ป..",
+        "TullinaAgilityOne": "ง่าย​แล​ะส​บา​ย...",
+        "TullinaAgilityTwo": "ไม่​ท้าทาย​ความ​สามารถ​ข้า​เอา​ซะ​เลย..",
         "TullinaAgilityThree": "ข้า​เอา​อยู่​ !",
-        "TullinaAgilityFour": "สงสัย​ข้า​คง​รับผิดชอบ​ชีวิต​เจ้า​ไม่​ไหว",
-        "TullinaAgilityFive": "โอเค ทู​รี​น่า ทำ​เหมือน​กับ​ที่​เจ้า​ฝึก​ซ้อม​มา​นั่นแหละ",
-        "TullinaAgilitySix": "ร​ะวั​ง...​ ร​ะวั​ง...",
-        "TullinaDisarmTrapOne": "ข้า​เห็น​ว่า​พวก​นั้น​มา​ทำ​อะไร​กัน​ที่​นี่...",
-        "TullinaDisarmTrapTwo": "หืมมม​ ? ใคร​กัน​ที่​ตกลง​มา​ยัง​หลุม​นี้​ ?",
-        "TullinaDisarmTrapThree": "หืมม อ้ออ ข้า​เข้าใจ​แล้ว",
+        "TullinaAgilityFour": "สงสัย​ว่า​ข้า​คง​เรียก​ข้า​แรง​จาก​เจ้า​น้อย​ไป​หน่อย",
+        "TullinaAgilityFive": "ใจ​เย็น​ทู​รี​นา ทำ​เหมือน​กับ​ที่​เจ้า​ฝึก​ซ้อม​มา​นั่นแหละ",
+        "TullinaAgilitySix": "ใจ​เย็​น..​ ร​ะมั​ดร​ะวั​ง...",
+        "TullinaDisarmTrapOne": "ข้า​รู้​ว่า​พวก​นั้น​มา​ทำ​อะไร​กัน​ที่​นี่...",
+        "TullinaDisarmTrapTwo": "หืมมม? ใคร​กัน​ที่​จะ​มา​ตก​หลุม​กับดัก​นี้?",
+        "TullinaDisarmTrapThree": "อ๊ะ! อ่าา~ อย่า​นี้​นี่เอง",
         "TullinaDisarmTrapFour": "หืมม ใช่​เลย​มัน​ซับซ้อน​มาก​เลย โคตร​ซับซ้อน",
-        "TullinaDisarmTrapFive": "มัน​ช่าง​เป็น​อุบาย​เล็กน้อย​แต่​ได้​ผล​ที่​แยบยล",
-        "TullinaDisarmTrapSix": "ฉลาด​นี่~ เกือบ​จะ​ฉลาด​ไป​มา​กว่า​นี้​แล้ว เกือบ​อ่ะ​นะ",
+        "TullinaDisarmTrapFive": "มัน​ช่าง​เป็น​อุบาย​ที่​กิ๊ก​ก๊อก แต่​มัน​ดัน​ได้​ผล​ดี​ซะ​งั้น",
+        "TullinaDisarmTrapSix": "ฉลาด​นี่~ แต่​เกือบ​นะ​ข้า​ให้​แค่​เกือบ​ฉลาด​เท่านั้น​แหละ",
         "TullinaLockpickOne": "ข้า​จะ​พา​พวก​เรา​ไป​ที่​นั่น",
         "TullinaLockpickTwo": "ไห​นน มา​ดู​ซิ แก​ซ่อน​อะไร​เอา​ไว้​ตรง​นี้~",
-        "TullinaLockpickThree": "หืมม อ้ออ ข้า​เข้าใจ​แล้ว",
-        "TullinaLockpickFour": "นี่​อาจ​จะ​ต้อง​ใช้​เวลา​สัก​พัก โอเค​มั้ย​ ?",
-        "TullinaLockpickFive": "ข้า​ทำ​ได้​นะ แต่.. มัน​จะ​ไม่​เร็ว​ดัง​ที่​ต้อง​กา​รห​นะ​สิ",
-        "TullinaLockpickSix": "แน่นอน ! ขอเพียงแค่อดทน",
-        "TullinaAgilityLoudOne": "เอาให้จบๆ",
+        "TullinaLockpickThree": "ข้า​สามารถ​ปลด​ล๊อก​นั่น​ได้่",
+        "TullinaLockpickFour": "นี่​อาจ​จะ​ต้อง​ใช้​เวลา​สัก​พัก เข้าใจมั้​ย?",
+        "TullinaLockpickFive": "ข้า​ทำ​ได้​นะ​แต่.. มัน​ต้อง​ใช้​เวลา​สัก​พัก",
+        "TullinaLockpickSix": "ได้​แน่! แต่​แค่​ใจ​เย็​นๆ",
+        "TullinaAgilityLoudOne": "รี​บๆท​ำใ​ห้มั​นจ​บๆ",
         "TullinaAgilityLoudTwo": "ข้า​กำลัง​ไป",
         "TullinaAgilityLoudThree": "ทะ​ล่วง​เข้า​ไป ทู​รี​นา",
-        "TullinaAgilityLoudFour": "เป็​นไ​ง? นี่​มัน​ไม่​มืงอาชีพ​เอา​ซะ​เลย",
+        "TullinaAgilityLoudFour": "เป็​นไ​ง? นี่​มัน​ไม่​มือ​อาชีพ​เอา​ซะ​เลย",
         "TullinaAgilityLoudFive": "นี่แหละ​น๊า​เหตุผล​ที่​ข้า​ว่า​ทำไม​เจ้า​ต้อง​ทำ​การ​ฝึก​ซ้อม",
         "TullinaAgilityLoudSix": "ไม่​เป็นไร​หรอก แต่​เจ้า​ควร​รับรู้​เอา​ไว้​ข้า​ไม่​ค่อย​ชอบใจ​เท่า​ไห​ร่!",
-        "TullinaTrapDisarmLoudOne": "ได้ อะไร​คือ​สิ่ง​ที่​เร็ว.... เห้ย​ !",
+        "TullinaTrapDisarmLoudOne": "ใช่​แล้ว นี่แหละ​ความ​เร็ว​ระดับ​เทพ​-​-.... อ๊ะ!",
         "TullinaTrapDisarmLoudTwo": "โชค​ดีจ​ริ​งๆ​ที่​มัน​ไม่​ซับ​ซ้อ​นข​นาดนั้​น!",
         "TullinaTrapDisarmLoudThree": "ข้า​คิด​ว่า ข้า​คิด​ออก​แล้ว​ว่า​จะ​แก้​ปัญหา​นี้​ทำ​ยังไง​ !",
-        "TullinaTrapDisarmLoudFour": "ถึง​จะ​ไม่​มี​ไอ้​ตระ​ก้า​บ้า​นั่น ข้า​ก็​ยัง​ต้อง​ใช้​เวลาสั​กพั​ก....!",
+        "TullinaTrapDisarmLoudFour": "ถึง​จะ​ไม่​มี​อุปกรณ์​นั่น ยังไง​ซะ​มัน​ก็​ต้อง​ใช้​เวลา​สัก​ครู่​อยู่​ดี..!",
         "TullinaTrapDisarmLoudFive": "นี่​ก็​เร็ว​ที่สุด​เท่า​ที่​ข้า​จะ​ลงมือ​ได้​แล้ว แต่​มัน​ก็​ยัง​เร็ว​ไม่​พอ",
-        "TullinaTrapDisarmLoudSix": "ภาวนา​ให้​เรา​เรียง​ไอ้​พวก​นี้​ทัน​ก่อน​ที่​พวก​เรา​จะ​หนี​ออ​กไ​ปล​ะกั​น!",
-        "TullinaLockpickLoudOne": "ไม่​เป็น ไม่​เป็​นไ​ร!",
+        "TullinaTrapDisarmLoudSix": "ภาวนา​ให้​เรา​จัดการ​มัน​ได้​ทัน​ก่อน​ที่​พวก​เรา​จะ​หนี​ออ​กไ​ปล​ะกั​น!",
+        "TullinaLockpickLoudOne": "เยี่ยม เยี่ยม​ที่​สุ​ด!",
         "TullinaLockpickLoudTwo": "ข้าได้อันหนึ่ง !",
-        "TullinaLockpickLoudThree": "กำลัง​ไป​ !",
+        "TullinaLockpickLoudThree": "ได้​แล้​ว!",
         "TullinaLockpickLoudFour": "นี่​อาจ​จะ​ต้อง​ใช้​เวลา​พอสมควร​ !",
-        "TullinaLockpickLoudFive": "แค่​ช่วย​ให้​พวก​เรา​ปลอดภัย ใน​ขณะ​ที่​ข้า​กำลัง​ลง​มือก​็พ​อ!",
+        "TullinaLockpickLoudFive": "แค่​ทำให้​พวก​เรา​ปลอดภัย ใน​ขณะ​ที่​ข้า​กำลัง​ลง​มือก​็พ​อ!",
         "TullinaLockpickLoudSix": "เจ้า​ต้อง​ทำให้​แน่ใจ​นะ ว่า​พวก​เรา​จะ​ไม่​ตาย​กัน​หมด​หลัง​จาก​จบ​งาน​นี้",
         "TibbsForcingObstacleOne": "แน่นอน",
         "TibbsForcingObstacleTwo": "จัด​ไป​เลย ท่าน​เจ้านาย",
@@ -15535,7 +15535,7 @@
         "KarstPerceptionTwo": "เจ้า​ซ่อ​นอ​ะไ​รไ​ว้..",
         "KarstPerceptionThree": "บาง​สิ่ง​บาง​อย่าง​นี่​มัน​ไม่​ถูก​ต้อ​ง..",
         "KarstPerceptionFour": "มา​ดู​กัน​ดีก​ว่า... ว่า​อะไร​ที่​มัน​โดด​เด่น​ไป​กว่า​เพื่อน",
-        "KarstPerceptionFive": "เรา​มา​ทำ​อะไร​กัน​ที่​นี่  ?",
+        "KarstPerceptionFive": "เรา​มา​ทำ​อะไร​กัน​ที่​นี่ ?",
         "KarstPerceptionSix": "พวก​นั้น​กำลัง​ซ่อน​บาง​สิ่ง​บาง​อย่าง​ที่่​นี่ ข้า​สัมผัส​ได้",
         "KarstVaultcrackingOne": "ข้า​จะ​พัง​มัน​เพื่อ​เปิด",
         "KarstVaultcrackingTwo": "เจ้า​ซ่อ​นอ​ะไ​รไ​ว้.. เอ่อ​อ..?",
@@ -15568,20 +15568,20 @@
         "IslaEngineeringFive": "เจ้า​ควร​ใส่​เพลา​ที่​เจ้า​ถือ​อยู่ แล้ว​ทำ​การ​ถอด​เอา​ลูกปืน​นั่น​ออก​มาซ​ะ...",
         "IslaEngineeringSix": "บาง​ครั้ง​ก็​มี​วิธร​แก้​ปัญหา​ที่​งดงาม​เสมอ​นั่นแหละ",
         "IslaEngineeringSeven": "ข้า​ควร​มี​สิ่ง​ประดิษฐ์​นี่​สำหรับ​งาน​นี้",
-        "IslaEngineeringEight": "Leave it to your engineer.",
+        "IslaEngineeringEight": "ปล่อยเป็นหน้าที่ของวิศกรเถอะ",
         "IslaEngineeringLoudOne": "ก็​ได้​ก็​ได้ เซ้า​ซี​้จั​ง!",
         "IslaEngineeringLoudTwo": "Carry the seven...",
         "IslaEngineeringLoudThree": "จะ​เอา​ขน​ด้วย​ไอ้​นี่​อ่ะ​นะ",
         "IslaEngineeringLoudFour": "ช่าง​มัน​รีบ​ ๆ ไป​ได้​แล้ว",
         "IslaEngineeringLoudFive": "คิด​ไม่​ออก​เลย​ว่า​สภาพ​แบบ​นี้​จะ​ไป​ยังไง",
         "IslaEngineeringLoudSix": "เจ้า​จะ​มา​เร่ง​งาน​วิศ​วก​รร​มไ​ม่ไ​ด้!",
-        "IslaEngineeringLoudSeven": "I'll do what I can!",
-        "IslaDisarmTrapOne": "Time to take it apart!",
-        "IslaDisarmTrapTwo": "Let's throw a wrench in the works.",
+        "IslaEngineeringLoudSeven": "ข้าจะทำในสิ่งที่ข้าทำได้!",
+        "IslaDisarmTrapOne": "มันต้องกินเวลาสักแปป!",
+        "IslaDisarmTrapTwo": "โยนประแจนั้นมาให้ข้าหน่อย ข้าต้องใช้มันในงานนี้",
         "IslaDisarmTrapThree": "คราว​ของ​ข้า​แล้​ว!",
         "IslaDisarmTrapFour": "การ​ก่อสร้าง หรือ​การ​รื้อถอน​ทั้ง​สอง​อย่าง​นี้​มัน​ก็​เหมือน​กัน​นั่น​ล่ะ​",
         "IslaDisarmTrapFive": "นั่น​มัน​เป็น​การ​ออกแบบ​ที่​สวย​งาม​ชิป​หาย​เลย​น่ะ! เสียดาย​แย่​ถ้า​จะ​ต้อง​มา​ทำลาย​มัน​ลง",
-        "IslaDisarmTrapSix": "Traps are the arse end of engineering. No artisanship.",
+        "IslaDisarmTrapSix": "กับดักมันเป็นงานของวิศวะกรรม ไม่ใช่งานศีลปะซะหน่อย",
         "IslaDisarmTrapLoudOne": "น่า​ระทึก​ ~!",
         "IslaDisarmTrapLoudTwo": "ส่วน​ที่​น่า​สนุก​ที่สุด​ก็​มา​ถึง​แล้​ว!",
         "IslaDisarmTrapLoudThree": "ระมัดระวัง​ด้วย​และ​ก็​เร็​วๆ​ด้ว​ย!",
@@ -15596,13 +15596,13 @@
         "IslaCounterThaumaturgySix": "สิ่ง​นี้​น่า​จะ​สามารถ​นำ​มา​ใช้​ได้​ใน​ทาง​สถิติ​นะ​เนี่ย",
         "IslaCounterThaumaturgyLoudOne": "ส่งสัย​ข้า​คง​คิด​ดัง​ไป​หน่อ​ย!",
         "IslaCounterThaumaturgyLoudTwo": "ข้า​เร่งมือ​กับ​สิ่ง​นี้​ไม่​ได้",
-        "IslaCounterThaumaturgyLoudThree": "Ack!",
+        "IslaCounterThaumaturgyLoudThree": "แอ๊ะ!",
         "IslaCounterThaumaturgyLoudFour": "ภาวะ​ให้​มัน​ทำงาน​ได้​สัก​ที​เถอ​ะ!",
         "IslaCounterThaumaturgyLoudFive": "ตร​ะก​ร้า​ที่​เต็ม​ไป​ด้วย​เลือ​ด? ข้า​จิต​นา​การ​ไม่​ออก​เลย​แหล​ะ!",
         "IslaCounterThaumaturgyLoudSix": "กู​ทำ​เต็ม​ที่​แล้ว​ !",
-        "GiannaPerceptionOne": "I know set dressing when I see it.",
+        "GiannaPerceptionOne": "ข้ารู้ว่าจะต้องแต่งตัวกับชุดเดรสนี่ยังไง ตั้งแต่ข้าแค่เห็นมั้ย",
         "GiannaPerceptionTwo": "พวก​เขา​กำลัง​ซ่อน​อะไร​บาง​อย่าง ดู​สิ",
-        "GiannaPerceptionThree": "Those are props. Something's amiss.",
+        "GiannaPerceptionThree": "พวกนั้นมันเป็นอุปกรณ์สำหรับประกอบฉาก แต่มีบางอย่างผิดปกติ",
         "GiannaPerceptionFour": "บาง​สิ่ง​บาง​อย่าง​เกี่ยว​กับ​สิ่ง​นี้​ไม่​ถูก​ต้อ​ง...​หืมม..",
         "GiannaPerceptionFive": "มัน​จะ​ง่าย​มาก​ที่​จะ​มอง​เห็น​มัน​ผ่าน​แสง​บน​เวทีนั่​น..",
         "GiannaPerceptionSix": "All that time squinting at cue cards has trained me for this.",
@@ -15662,22 +15662,22 @@
         "GiannaEngineerLoudSix": "This sort of thing always breaks when everyone's watching!",
         "VinderiVaultBreakingOne": "หาา มัน​ไม่​น่า​จะ​ยาก​ขนาด​นั้น​นะ",
         "VinderiVaultBreakingTwo": "ยังไง​ซะ​ราคา​ถูก​แบบ​นี้​มัน​ก็​แค่​ขยะ",
-        "VinderiVaultBreakingThree": "Let's pop this little sucker open.",
-        "VinderiVaultBreakingFour": "Hmm, tricky, but not impossible.",
+        "VinderiVaultBreakingThree": "ทำใหไอ้ประตูเซฟโง่ๆนี่เปิดกันเถอะ",
+        "VinderiVaultBreakingFour": "หืมม ยากนิดหน่อย แต่ใช่ว่าจะทำไม่ได้เลย",
         "VinderiVaultBreakingFive": "Haven't come across this make before. Well, let's give it a go.",
-        "VinderiVaultBreakingSix": "Ooh. Solidly built. Open up to me. It's okay, be vulnerable.",
+        "VinderiVaultBreakingSix": "โอ้วว แม่ตู้เซฟที่แข็งแกร่งเปิดใจให้ข้าหน่อยน่า อย่าใจแข็งไปเลยข้าน่ะจริงใจ",
         "VinderiEngineeringOne": "เอา​อีก​แล้​วหร​อ? นี่​ข้า​จะ​ต้อง​มา​ทำ​อะไร​แบบ​นี้​อีกครั้​งหร​อ?",
         "VinderiEngineeringTwo": "Con-fangled dang contraptions. ",
         "VinderiEngineeringThree": "เจ้า​คง​ไม่​คาด​หวัง​ให้​ข้า​กระ​โด​ดใช่มั้​ย? หรือ​ว่า​เจ้า​คิด",
-        "VinderiEngineeringFour": "I have the thing for this somewhere...",
+        "VinderiEngineeringFour": "ข้ามีบางอย่างที่ใช้งานกับมันได้สักที่.....",
         "VinderiEngineeringFive": "ข้า​ว่า​ข้า​เอา​สิ่ง​นั้น​มา​ด้วย​อยู่​นะ หรือ​ว่า​ข้า? ข้า​คิด​ว่า​ข้า​เอา​มาอ​ยู​่น​ะ..",
         "VinderiEngineeringSix": "ข้า​หวัง​ว่า ข้า​จะ​ยัง​ไม่​ลืม​วิธีการ​ใช้งาน​สำหรับ​ระเบิด​เจ้า​สิ่ง​นี้",
         "VinderiDismantleTrapOne": "อ่า ฉลาด​มาก​แต่​มัน​ยัง​ไม่​พอ​หรอก​แต่​ก็​ยัง​ฉลาด",
         "VinderiDismantleTrapTwo": "มัน​ก็​ไม่​ใช่​กับดัก​ห่วย​แตก แต่​มัน​ก็​ไม่​ดี​มาก​แต่​มัน​ก็​ไม่​ห่ว​ย...",
-        "VinderiDismantleTrapThree": "Just pop this spring and...",
+        "VinderiDismantleTrapThree": "แล้วดึงสปริงนี่ออกมาแล้วก็....",
         "VinderiDismantleTrapFour": "โ​อ้ว ไอ้​พวก​สมอง​ใส่​นั่น หืมมม หืมมมมมม",
         "VinderiDismantleTrapFive": "ง่า​ยยหร​-​-..​ โห​ โห​ไม่​นะ​ โ​ห้?​ โ​ห้~~!",
-        "VinderiDismantleTrapSix": "Huh. Looks like a twist on a Maloney design.",
+        "VinderiDismantleTrapSix": "ห๊ะ นั่นมันดูเหมือนกับงานออกของแบบ Maloney เลยนะนั่น",
         "VinderiDemolitionOne": "ฮี๊~~ ฮี ​ฮี ​ฮี",
         "VinderiDemolitionTwo": "มั​นส์ มั​นส์ มั​นส์",
         "VinderiDemolitionThree": "เอา​ตูด​ของ​แก​จับ​มัน​เอาไ​ว้ซ​ะ!",
@@ -15696,10 +15696,10 @@
         "VinderiEngineeringLoudFour": "เจ้า​มีสิ่งนั้​นอ​ยู​่หร​อ? เดี๋ยว​นะ ข้า​เอง​ก็​มี​เหมือน​กัน​นี่​นา!",
         "VinderiEngineeringLoudFive": "Ah! I've got the thing for this! Here we go--no, that's not it. AH! Here we go!",
         "VinderiEngineeringLoudSix": "A gap! I have just the tool for this. Somewhere. Did I drop it? Ha! I was holding it! Don't you just hate that?!",
-        "VinderiDismantleTrapLoudOne": "This is meant to be DELICATE work!",
-        "VinderiDismantleTrapLoudTwo": "The whole place is a damnable death trap!",
+        "VinderiDismantleTrapLoudOne": "นี่มันคือการทำงานที่ยอดเยี่ยมของข้า!",
+        "VinderiDismantleTrapLoudTwo": "ทีตรงนี้มันคือกับดักแห่งความตายชัดๆ!",
         "VinderiDismantleTrapLoudThree": "เดี๋ย​ว! ไอ้​สิ่ง​นั้น​ที่​ว่า​มัน​จะ​ฆ่า​เรา!",
-        "VinderiDismantleTrapLoudFour": "Gods! You were planning to blunder into this thing! ",
+        "VinderiDismantleTrapLoudFour": "พระเจ้าแผนเราเกือบพังเพราะไอ้กับดักนี่เนี่ยนะ!",
         "VinderiDismantleTrapLoudFive": "กับ​ดั​ก! นั่น​มัน​กับดัก​หยุด​เดียว​นี้่! นั้น​มัน​กับ​ดั​กโ​ว้ยยย!",
         "VinderiDismantleTrapLoudSix": "นี่​น่า​จะ​เป็น​สิ่ง​ที่​เรา​ควร​จัดการ​ก่อนหน้า​นี้ เพื่อ​ให้​เรา​สามารถ​ทำงาน​ให้​ง่ายขึ้​น!",
         "VinderiDemolitionLoudOne": "",
@@ -15707,103 +15707,103 @@
         "VinderiDemolitionLoudThree": "ข้า​โคตร​เกลียด​ทุก​อย่าง​ที่​เกี​ยว​กับ​มัน​เลย!",
         "VinderiDemolitionLoudFour": "ถ้า​ข้า​ตา​ย.. ข้า​ก็​หวัง​ว่า​เจ้า​จะ​ไป​ด้วย​เหมือน​กั​น!",
         "VinderiDemolitionLoudFive": "คุณ​พระ นั่น​ไม่​ใช่​เงื่อนไข​ที่​เหมาะสม​สำหรับ​การ​ควบคุม​ส่วนประกอบ​ของ​ระ​เบิ​ด!",
-        "VinderiDemolitionLoudSix": "I wanted to save this one for a special occasion. You owe me a new bomb!",
-        "NenetPerceptionShortOne": "I see.",
-        "NenetPerceptionShortTwo": "It's quite clear to me.",
-        "NenetPerceptionShortThree": "แน่นอน​ข้า​จ่าย​แล้ว",
-        "NenetPerceptionLongOne": "Allow me a moment to focus...",
-        "NenetPerceptionLongTwo": "Seeing sometimes relies on more than one's eyes.",
-        "NenetPerceptionLongThree": "Quiet, I'm listening...",
-        "NenetPerceptionShortAlarmOne": "แก๋วววว​ !",
-        "NenetPerceptionShortAlarmTwo": "Quickly, yes!",
-        "NenetPerceptionShortAlarmThree": "Reporting!",
-        "NenetPerceptionLongAlarmOne": "I'm trying to focus!",
-        "NenetPerceptionLongAlarmTwo": "Let me listen!",
-        "NenetPerceptionLongAlarmThree": "Quickly!",
-        "NenetVaultShortOne": "No lock can bar me.",
-        "NenetVaultShortTwo": "What's theirs is ours.",
-        "NenetVaultShortThree": "Not a problem.",
-        "NenetVaultLongOne": "They might as well have left this unlocked.",
-        "NenetVaultLongTwo": "Did they even try to secure this?",
-        "NenetVaultLongThree": "I can break this vault. No problem.",
-        "NenetVaultShortAlarmOne": "Working quickly!",
-        "NenetVaultShortAlarmTwo": "Smash and grab!",
-        "NenetVaultShortAlarmThree": "กำลัง​ไป​ !",
-        "NenetVaultLongAlarmOne": "You can do this, Nenet...",
+        "VinderiDemolitionLoudSix": "ข้าอยากจะเก็บกับดักนี่เอาไว้สำหรับโอกาศพิเศษ เจ้าติดระเบิดข้าลูกหนึ่งนะ!",
+        "NenetPerceptionShortOne": "ข้า​เข้าใจ​แล้ว",
+        "NenetPerceptionShortTwo": "มัน​ค่อน​ข้าง​ชัดเจน​สำหรับ​ข้า",
+        "NenetPerceptionShortThree": "แน่นอน",
+        "NenetPerceptionLongOne": "ขอ​เวลา​ให้​ข้า​ตั้ง​สติ​สัก​ครู่​ได้มั้​ย....",
+        "NenetPerceptionLongTwo": "จะ​มอง​หา​ความ​ไว้​วางใจ​ได้ อาจ​จะ​ต้อง​ใช้​มาก​กว่า​การ​มอง",
+        "NenetPerceptionLongThree": "เงีย​บ! ข้า​กำลัง​ฟัง​เสีย​งอ​ยู​่...",
+        "NenetPerceptionShortAlarmOne": "เยี​่ย​ม!",
+        "NenetPerceptionShortAlarmTwo": "เร็ว​เข้า ใช่​แล้​ว!",
+        "NenetPerceptionShortAlarmThree": "กำลัง​ราย​งา​น!",
+        "NenetPerceptionLongAlarmOne": "ข้า​พยายาม​ตั้ง​สติ​ตัว​ข้า​อยู่",
+        "NenetPerceptionLongAlarmTwo": "ให้​ข้า​ได้​ลอบ​ฟัง​ก่อ​น!",
+        "NenetPerceptionLongAlarmThree": "ใ​ห้ไ​ว!",
+        "NenetVaultShortOne": "ไม่​มี​กุญแจ​ดอก​ไหน​จะ​มา​ขวาง​ข้า​ได้",
+        "NenetVaultShortTwo": "ของ​ทั้งหมด​นั่น​จะ​เป็น​ของ​เรา",
+        "NenetVaultShortThree": "ไม่​มี​ปัญหา",
+        "NenetVaultLongOne": "นี่ต้องใช้เวลาสักพักเลยนะสำหรับการ สะเดาะล๊อกนี่",
+        "NenetVaultLongTwo": "พวก​นั้น​มัน​พยายาม​จะ​รักษา​ความ​ปลอดภัย​นี่​แล้​วหร​อ?",
+        "NenetVaultLongThree": "ข้า​สามารถ​ทะลาย​ตู้นิรภัย​นี่​ได้ ไม่​มี​ปัญหา​หรอก",
+        "NenetVaultShortAlarmOne": "มั​นไ​ด้ผ​ล! เร็ว​เข้​า~!",
+        "NenetVaultShortAlarmTwo": "พัง​แล้​วห​ยิบ!",
+        "NenetVaultShortAlarmThree": "ได้​แล้​ว!",
+        "NenetVaultLongAlarmOne": "เจ้า​ทำ​ได้​แน่นอน​น่า เนเนต....",
         "NenetVaultLongAlarmTwo": "กู​ทำ​เต็ม​ที่​แล้ว​ !",
         "NenetVaultLongAlarmThree": "ข้าท​ำไ​ด้! ข้าา​ทำ​ได้​แน่​นอ​นนน!",
-        "NenetThaumaturgyShortOne": "I shall make it happen.",
-        "NenetThaumaturgyShortTwo": "My will is their command.",
-        "NenetThaumaturgyShortThree": "จง​ปิด​ตา​แล้ว​เปิดใ​จ....",
-        "NenetThaumaturgyLongOne": "I'll crack their minds like so many rhoa eggs.",
-        "NenetThaumaturgyLongTwo": "I can almost hear their thoughts...",
-        "NenetThaumaturgyLongThree": "Isla says the mind is just another system of gears...",
-        "NenetThaumaturgyShortLoudOne": "Focusing!",
-        "NenetThaumaturgyShortLoudTwo": "I shall try.",
-        "NenetThaumaturgyShortLoudThree": "I hope this works.",
-        "NenetThaumaturgyLongLoudOne": "My bleakness shall become theirs!",
-        "NenetThaumaturgyLongLoudTwo": "Empty heads, easy puppets!",
-        "NenetThaumaturgyLongLoudThree": "Peering into their thoughts!",
-        "HuckLockpickingOne": "Standard issue lock. Shouldn't be too difficult.",
-        "HuckLockpickingTwo": "Trained on this exact kind.",
-        "HuckLockpickingThree": "Yessir.",
-        "HuckLockpickingFour": "Tricky one, but doable.",
-        "HuckLockpickingFive": "I'll do my damndest.",
-        "HuckLockpickingSix": "Ought to be able to open it.",
-        "HuckBruteforceOne": "Sir!",
-        "HuckBruteforceTwo": "Trained for this.",
-        "HuckBruteforceThree": "Not a problem.",
-        "HuckBruteforceFour": "Difficult, not impossible.",
-        "HuckBruteforceFive": "Leave it to me.",
-        "HuckBruteforceSix": "Looks heavy, but not too heavy.",
-        "HuckDemolitionOne": "Yessir.",
-        "HuckDemolitionTwo": "Putting down a charge.",
-        "HuckDemolitionThree": "Lighting up.",
-        "HuckDemolitionFour": "Stand back, this won't be pretty.",
-        "HuckDemolitionFive": "Get to a safe distance",
-        "HuckDemolitionSix": "Careful. Need to blow it up.",
-        "HuckLockpickingLoudOne": "Not a problem!",
-        "HuckLockpickingLoudTwo": "Yessir!",
+        "NenetThaumaturgyShortOne": "เข้า​จะ​ทำให้​มัน​เกิด​ขึ้น​ได้",
+        "NenetThaumaturgyShortTwo": "สิ่ง​ที่​ข้า​จะ​ทำ​ก็​คือ​สิ่ง​ที่​พวก​นั้น​สั่ง​มา",
+        "NenetThaumaturgyShortThree": "เปิด​ใจ​ของ​เจ้า..",
+        "NenetThaumaturgyLongOne": "ข้า​จะ​ทำลาย​ความคิด​ของ​พวก​นั้น เหมือน​กับ​ไข่​จิ้งจก​ที่​กำลัง​แตก",
+        "NenetThaumaturgyLongTwo": "ข้า​เกือบ​จะ​รับรู้​ความคิด​ของ​พวก​นั้น​ได้​แล้​ว...",
+        "NenetThaumaturgyLongThree": "อิส​รา เคย​กล่าว​ไว้​ว่า~ ความคิด​มัน​ก็​เหมือน​ฟันเฟือง​ที่​กำลัง​ทำงาน​ของ​เรา​นั่น​แหล​ะ...",
+        "NenetThaumaturgyShortLoudOne": "ตั้ง​สติ​เอาไ​ว้~!",
+        "NenetThaumaturgyShortLoudTwo": "ข้า​จะ​พยายาม",
+        "NenetThaumaturgyShortLoudThree": "ข้า​หวัง​ว่า​มัน​จะ​ใช้งาน​ได้",
+        "NenetThaumaturgyLongLoudOne": "ความ​มืดมัว​ของ​ข้า​จะ​กลืน​กิน​พวกนั้​น!",
+        "NenetThaumaturgyLongLoudTwo": "พว​กโ​ง่ๆ นี่​ควบคุม​ง่า​ย!",
+        "NenetThaumaturgyLongLoudThree": "กำลัง​มอง​ดู​ความคิด​ของ​พวกนั้​น!",
+        "HuckLockpickingOne": "การ​ล๊อก​แบบ​ทั่วไป​กา​กๆ ไม่​ใช่​ปัญหา​สำหรับ​ข้า​หรอก​กระจอก",
+        "HuckLockpickingTwo": "ข้า​น่ะ​ฝึกฝน​กับ​อะไร​แบบ​นี้​มา​เยอะ",
+        "HuckLockpickingThree": "จั​ดไ​ป!",
+        "HuckLockpickingFour": "ยุ่งยาก​นิดหน่อย แต่​ก็​ไม่​ใช่​ปัญหา",
+        "HuckLockpickingFive": "ข้า​จะ​ทำ​ใน​เรื่อง​เหี้​ยๆ​ที่​ข้า​ถนัด",
+        "HuckLockpickingSix": "ข้า​สามารถ​เปิด​มัน​ได้",
+        "HuckBruteforceOne": "ท่า​น!",
+        "HuckBruteforceTwo": "ฝึกฝน​มาก​เพื่อ​สิ่ง​นี้",
+        "HuckBruteforceThree": "ไม่​มี​ปัญหา",
+        "HuckBruteforceFour": "ยาก​แต่​ใช่​ว่า​จะ​เป็น​ไป​ไม่​ได้",
+        "HuckBruteforceFive": "ปล่อย​เป็น​หน้าที่​ข้า​เอง",
+        "HuckBruteforceSix": "เหมือน​จะ​ยาก แต่​ดู​ไป​ดู​มาก​ก็​ไม่​ยาก",
+        "HuckDemolitionOne": "ไ​ด้ครั​บ!",
+        "HuckDemolitionTwo": "ปล่อย​เป็น​หน้าที่​ข้า​เอง",
+        "HuckDemolitionThree": "จุ​ดไ​ฟ!",
+        "HuckDemolitionFour": "ถอย​ห่าง​ออก​ไป​ดี​กว่า ไม่​งั้น​ศพ​อาจ​จะ​ไม่​สวย",
+        "HuckDemolitionFive": "ถอย​ไป​ใน​ระยะ​ที่​ปลอดภัย​ดี​กว่า",
+        "HuckDemolitionSix": "ระวัง​ตูด​ไว้ ขา​ต้องการ​ที่​จะ​ระเบิด​มัน",
+        "HuckLockpickingLoudOne": "ไม่​มีปัญ​หา!",
+        "HuckLockpickingLoudTwo": "ไ​ด้ครั​บ!",
         "HuckLockpickingLoudThree": "กำลัง​ไป​ !",
-        "HuckLockpickingLoudFour": "Buy me some time!",
+        "HuckLockpickingLoudFour": "ซื้อ​เวลา​ให้​ข้า​หน่อ​ย!",
         "HuckLockpickingLoudFive": "กู​ทำ​เต็ม​ที่​แล้ว​ !",
-        "HuckLockpickingLoudSix": "Right! I've got this!",
+        "HuckLockpickingLoudSix": "ใ​ช่! ข้า​ได้​มัน​มา​แล้​ว!",
         "HuckBruteforceLoudOne": "ใ​ช่!",
-        "HuckBruteforceLoudTwo": "Sir!",
-        "HuckBruteforceLoudThree": "Got it!",
-        "HuckBruteforceLoudFour": "Gods, reckon I can handle it!",
-        "HuckBruteforceLoudFive": "Should've stretched for this!",
-        "HuckBruteforceLoudSix": "C'mon soldier! C'mon!",
-        "HuckDemolitionLoudOne": "Sir!",
+        "HuckBruteforceLoudTwo": "ท่า​น!",
+        "HuckBruteforceLoudThree": "ได้​แล้​ว!",
+        "HuckBruteforceLoudFour": "พระเจ้า ตาม​ที่​ข้าค​ำน​วน​เป๊ะ!",
+        "HuckBruteforceLoudFive": "ควร​จะ​งัด​สิ่ง​นี้​ออ​ก!",
+        "HuckBruteforceLoudSix": "ไม่​เอา​น่า​ทหาร มา​เลย!",
+        "HuckDemolitionLoudOne": "ท่า​น!",
         "HuckDemolitionLoudTwo": "ใช่​ !",
-        "HuckDemolitionLoudThree": "Stand clear!",
-        "HuckDemolitionLoudFour": "Get back!",
-        "HuckDemolitionLoudFive": "Ordinance going down!",
-        "HuckDemolitionLoudSix": "Keep back! Keep back!",
-        "NilesThaumaturgyShortOne": "I shall make it so.",
-        "NilesThaumaturgyShortTwo": "แน่นอน​ข้า​จ่าย​แล้ว",
-        "NilesThaumaturgyShortThree": "Focusing...",
+        "HuckDemolitionLoudThree": "ชัด​เจ​น!",
+        "HuckDemolitionLoudFour": "ถอย​ออก​มา!",
+        "HuckDemolitionLoudFive": "ยก​เลิ​กคำสั่​ง!",
+        "HuckDemolitionLoudSix": "ถอย​มา ถอย​กลับ​มา!",
+        "NilesThaumaturgyShortOne": "ข้า​จะ​ทำให้​มัน​เป็น​แบบ​นั้น​แหละ",
+        "NilesThaumaturgyShortTwo": "แน่นอน​",
+        "NilesThaumaturgyShortThree": "ตั้​งส​ติ...",
         "NilesThaumaturgyLongOne": "My mind shall dwarf theirs.",
-        "NilesThaumaturgyLongTwo": "I am a mental giant.",
-        "NilesThaumaturgyLongThree": "Allow me to focus...",
-        "NilesThaumaturgyShortAlarmOne": "Right away!",
-        "NilesThaumaturgyShortAlarmTwo": "I'll try to be quick!",
-        "NilesThaumaturgyShortAlarmThree": "Of course!",
-        "NilesThaumaturgyLongAlarmOne": "Mind control is a delicate art!",
-        "NilesThaumaturgyLongAlarmTwo": "I'll be as quick as I can!",
-        "NilesThaumaturgyLongAlarmThree": "Uggggh, if I must.",
-        "NilesDeceptionShortOne": "Easily fooled.",
-        "NilesDeceptionShortTwo": "Practiced lies, deceived eyes.",
-        "NilesDeceptionShortThree": "Watch and learn.",
-        "NilesDeceptionLongOne": "They'll never even suspect.",
-        "NilesDeceptionLongTwo": "This should be easy. Should be.",
-        "NilesDeceptionLongThree": "Just another form of mind control.",
-        "NilesDeceptionShortAlarmOne": "I'll try!",
-        "NilesDeceptionShortAlarmTwo": "Fine!",
-        "NilesDeceptionShortAlarmThree": "Alright!",
-        "NilesDeceptionLongAlarmOne": "This is a mess!",
-        "NilesDeceptionLongAlarmTwo": "This might still work!",
-        "NilesDeceptionLongAlarmThree": "Not a problem!"
+        "NilesThaumaturgyLongTwo": "ข้า​คือ หุ่น​เหล็ก​ยักษ์",
+        "NilesThaumaturgyLongThree": "ปล่อย​ให้​ข้า ตั้ง​สติ​ก่อ​น..",
+        "NilesThaumaturgyShortAlarmOne": "ถูกต้อง​เสม​อ!",
+        "NilesThaumaturgyShortAlarmTwo": "ข้า​จะ​พยายาม​ลงมือ​ให้​เร็​ว!",
+        "NilesThaumaturgyShortAlarmThree": "แน่​นอ​น!",
+        "NilesThaumaturgyLongAlarmOne": "ควบคุม​จิตใจ​มัน​เป็น​งาน​ศีล​ปะ​ที่​ละเอียด​อ่อ​น!",
+        "NilesThaumaturgyLongAlarmTwo": "ข้า​ลงมือ​เร็ว​ที่สุด​เท่า​ที่​จะ​เป็น​ไป​ได้​แล้​ว!",
+        "NilesThaumaturgyLongAlarmThree": "อ่าา ถ้า​ข้า​ทำ​ได้​อ่ะ​นะ",
+        "NilesDeceptionShortOne": "หลอกลวง​ได้​ง่าย",
+        "NilesDeceptionShortTwo": "ฝึก​การ​โกหก เริ่ม​จาก​การ​หลอก​ด้วย​สายตา",
+        "NilesDeceptionShortThree": "ดู​และ​จำ จำ​และ​นำ​ไป​ใช้",
+        "NilesDeceptionLongOne": "พวก​นั้น​จะ​ไม่​สงสัย​ข้า​ด้วย​ซ้ำ",
+        "NilesDeceptionLongTwo": "เรื่อง​นี้​มัน​น่า​จะ​ง่าย​อย่าง​ที่​มัน​ควร​จะ​เป็น",
+        "NilesDeceptionLongThree": "มัน​ก็​เป็น​รูปแบบ​หนึ่ง​ของ​การ​ควบคุม​จิตใจ",
+        "NilesDeceptionShortAlarmOne": "ข้าจ​ะลอ​งด​ู!",
+        "NilesDeceptionShortAlarmTwo": "ไม่​เป็​นไ​ร!",
+        "NilesDeceptionShortAlarmThree": "ก​็ไ​ด้~!",
+        "NilesDeceptionLongAlarmOne": "นั่น​มัน​บ้าชั​ดๆ!",
+        "NilesDeceptionLongAlarmTwo": "มัน​น่าจ​ะยั​งไ​ด้ผ​ล!",
+        "NilesDeceptionLongAlarmThree": "ไม่​มีปัญ​หา~!"
       }
     },
     "zh": {
