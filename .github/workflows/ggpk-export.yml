@@ -1,0 +1,42 @@
+name: ggpk-export
+on:
+  # schedule:
+    # - cron: "5 1 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    # Since 3.11.2's bundle update, we need ooz.exe to export properly - so, windows is required.
+    # Thanks Microsoft/Github, I guess
+    runs-on: windows-latest
+    steps:
+      - run: |
+          echo "::add-mask::${{ secrets.STEAMCTL_USER }}"
+          echo "::add-mask::${{ secrets.STEAMCTL_PASSWD }}"
+          echo "::add-mask::${{ secrets.STEAMCTL_SECRET }}"
+      - uses: actions/checkout@v2
+      # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - run: yarn --frozen-lockfile
+      # https://github.com/marketplace/actions/setup-python
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - run: pip install steamctl pexpect
+      - working-directory: ./packages/datamine
+        run: yarn pypoe:install
+
+      - working-directory: ./packages/datamine-dl
+        env:
+          STEAMCTL_USER: ${{ secrets.STEAMCTL_USER }}
+          STEAMCTL_PASSWD: ${{ secrets.STEAMCTL_PASSWD }}
+          STEAMCTL_SECRET: ${{ secrets.STEAMCTL_SECRET }}
+        run: python steamctl-auth.py
+
+      - working-directory: ./packages/datamine-dl
+        run: yarn fetch:force
+      - working-directory: ./packages/datamine
+        run: yarn export
