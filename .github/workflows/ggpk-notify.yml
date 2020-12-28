@@ -36,13 +36,13 @@ jobs:
         diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt >> $GITHUB_ENV
         echo EOF >> $GITHUB_ENV
       # diff has exitcode 1 (failure) if there are differences
-      - run: diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt
-      - if: ${{ failure() }}
+      - if: ${{ env.STEAM_DEPOT_INFO_DIFF != "" }}
         uses: JasonEtco/create-an-issue@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           filename: .github/ggpk-notify-issue-template.md
+          update_existing: true
 
       #- name: ggpk download
       #  env:
