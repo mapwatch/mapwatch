@@ -15,10 +15,13 @@ import pexpect
 import sys
 import os
 
+def printcmd(str):
+    print("\n+", str)
+    return str
+
 def authenticator_remove(steamctl, user):
     # Remove existing authenticator, if any
-    cmd = f"{steamctl} authenticator remove --force {user}"
-    print("+", cmd)
+    cmd = printcmd(f"{steamctl} authenticator remove --force {user}")
     output = pexpect.run(cmd)
     print(output)
 
@@ -26,36 +29,33 @@ def authenticator_add(steamctl, user, passwd, secret):
     # I don't like putting the secret in the command line like this - `ps` could see it.
     # But I'm running this on private CI machines, so it *should* be okay, I think.
     # Also, at least the password is still obscured.
-    cmd = f"{steamctl} authenticator add --from-secret {secret} evyaro"
-    print("+", cmd)
+    cmd = printcmd(f"{steamctl} authenticator add --from-secret {secret} {user}")
     child = pexpect.spawn(cmd)
     child.logfile_read = sys.stdout.buffer
-    child.expect(f"Enter password for '{user}':")
-    child.send(passwd)
+    index == child.expect([f"Enter password for '{user}':", pexpect.EOF])
+    if index == 0:
+        child.send(passwd)
     child.expect("Authenticator added successfully")
     child.read()
 
 def authenticator_code(steamctl, user):
-    cmd = f"{steamctl} authenticator code {user}"
-    print("+", cmd)
+    cmd = printcmd(f"{steamctl} authenticator code {user}")
     return pexpect.run(cmd)
 
 def login_with_2fa(steamctl, user, passwd):
-    cmd = f"{steamctl} --user {user} depot info -a 440"
-    print("+", cmd)
+    cmd = printcmd(f"{steamctl} --user {user} depot info -a 440")
     child = pexpect.spawn(cmd)
     child.logfile_read = sys.stdout.buffer
-    child.expect("Password:")
-    child.send(passwd)
-    # TODO: it only asks this the first time; can we branch if it doesn't ask?
-    child.expect(".*2FA.*:")
-    child.send(authenticator_code())
+    index = child.expect(["Password:", pexpect.EOF])
+    if index == 0:
+        child.send(passwd)
+        index = child.expect([".*2FA.*:", pexpect.EOF])
+        if index == 0:
+            child.send(authenticator_code())
     child.read()
-    #print('done')
 
 def verify_auth_remembered(steamctl):
-    cmd = f"{steamctl} depot info -a 440"
-    print("+", cmd)
+    cmd = printcmd(f"{steamctl} depot info -a 440")
     output = pexpect.run(cmd)
     print(output)
 
