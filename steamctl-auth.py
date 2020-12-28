@@ -32,10 +32,10 @@ def authenticator_add(steamctl, user, passwd, secret):
     cmd = printcmd(f"{steamctl} authenticator add --from-secret {secret} {user}")
     child = pexpect.spawn(cmd)
     child.logfile_read = sys.stdout.buffer
-    index = child.expect([f"Enter password for '.*':", pexpect.EOF])
+    index = child.expect(["Enter password for '.*':", pexpect.EOF])
     if index == 0:
         child.send(passwd)
-    child.expect("Authenticator added successfully")
+    # child.expect("Authenticator added successfully")
     child.read()
 
 def authenticator_code(steamctl, user):
