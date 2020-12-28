@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          echo "::add-mask::${{ secrets.STEAMCTL_USER }}"
+          echo "::add-mask::${{ secrets.STEAMCTL_PASSWD }}"
+          echo "::add-mask::${{ secrets.STEAMCTL_SECRET }}"
       - uses: actions/checkout@v2
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
       #- uses: actions/setup-node@v1
@@ -19,7 +23,6 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install steamctl pexpect
-      - run: env
       - run: python steamctl-auth.py
         env:
           STEAMCTL_USER: ${{ secrets.STEAMCTL_USER }}
@@ -27,6 +30,8 @@ jobs:
           STEAMCTL_SECRET: ${{ secrets.STEAMCTL_SECRET }}
       # skip the first line's gibberish
       - run: steamctl depot info -a 238960 -d 238961 | tail --lines=+2 > steam-depot-info-new.txt
+        env:
+          TZ: "Etc/UTC"
       # https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
       - run: |
           echo 'STEAM_DEPOT_INFO_NEW<<__EOF__' >> $GITHUB_ENV
@@ -37,6 +42,7 @@ jobs:
           diff packages/datamine/steam-depot-info.txt steam-depot-info-new.txt || true >> $GITHUB_ENV
           echo '__EOF__' >> $GITHUB_ENV
       # diff has exitcode 1 (failure) if there are differences
+      - run: echo "diff: $STEAM_DEPOT_INFO_DIFF"
       - if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}
         uses: JasonEtco/create-an-issue@v2
         env:
