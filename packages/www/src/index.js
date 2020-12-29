@@ -66,7 +66,7 @@ function main() {
     })
   }
   else {
-    backend.autoOpen(20 * MB)
+    backend.autoOpen(20 * MB, localStorage)
     .then(opened => {
       if (opened) {
         // logReader.processFile(app, backend, "history")
@@ -88,7 +88,7 @@ function main() {
     const maxSize = (config.maxSize == null ? 20 : config.maxSize) * MB
     return file => {
       activeBackend = backend
-      backend.open(file, maxSize)
+      backend.open(file, maxSize, localStorage)
       .then(() => {
         // logReader.processFile(app, backend, "history")
         app.ports.logOpened.send({date: Date.now(), size: backend.size()})

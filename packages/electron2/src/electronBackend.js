@@ -6,6 +6,7 @@
  */
 const fs = require('fs').promises
 const chokidar = require('chokidar')
+const REMEMBERED_KEY = "mapwatch.remembered"
 
 function ElectronBackend() {
   // Native file access: this absolutely must be private; class fields aren't
@@ -18,7 +19,12 @@ function ElectronBackend() {
   let fileStart = 0
   const onChanges = []
 
-  function autoOpen(maxSize) {
+  function autoOpen(maxSize, localStorage) {
+    const remembered = localStorage && localStorage.getItem(REMEMBERED_KEY)
+    if (remembered) {
+      // remember the last manually-opened path
+      return this.open({path: remembered}, maxSize)
+    }
     return Promise.all([
       "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt",
       "C:\\Program Files\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt",
@@ -39,7 +45,7 @@ function ElectronBackend() {
     )
     .then(path => this.open({path}, maxSize))
   }
-  function open({path}, maxSize) {
+  function open({path}, maxSize, localStorage) {
     return this.close()
     // TODO restrict filename?
     .then(() => fs.open(path))
@@ -57,6 +63,12 @@ function ElectronBackend() {
       poller = window.setInterval(_pollChanges, POLL_INTERVAL)
       return {size: stat.size}
     }))
+    .then(ret => {
+      if (localStorage) {
+        localStorage.setItem(REMEMBERED_KEY, path)
+      }
+      return ret
+    })
   }
   function _pollChanges() {
     return file.stat().then(_onChange)
