@@ -2,7 +2,7 @@ App ID: 238960
 Depot ID: 238961
 Depot Name: Path of Exile Content
 Manifest GID: 3018009575715786130
-Created On: 2020-12-17 08:46:05 UTC
+Created On: 2020-12-17 08:46:05 Coordinated Universal Time
 Size: 28 GB
 Compressed Size: 27 GB
 Unique/Total chunks: 55539 / 55736 (0.35%)

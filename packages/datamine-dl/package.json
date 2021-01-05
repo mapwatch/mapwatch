@@ -4,10 +4,9 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "info.txt": "bash -c \"TZ=UTC steamctl depot info --app 238960 --depot 238961 | tail --lines=+2 | tee steam-depot-info-new.txt\"",
-    "info.txt:mv": "bash -c \"mv --force --no-target-directory steam-depot-info.txt steam-depot-info-old.txt && mv --force --no-target-directory steam-depot-info-new.txt steam-depot-info.txt\"",
-    "fetch": "bash -c \"yarn fetch:query || (yarn fetch:force && yarn info.txt:mv)\"",
-    "fetch:query": "bash -c \"yarn info.txt && diff steam-depot-info.txt steam-depot-info-new.txt && echo \\\"ggpk is up to date.\\\"\"",
-    "fetch:force": "bash -c \"mkdir -p ${GGPK_FETCH_DIR:-dist} && cd ${GGPK_FETCH_DIR:-dist} && steamctl depot download --app 238960 --depot 238961 --regex 'Bundles2\\\\\\\\(Data|Metadata|_\\.index|_Preload|_Startup|_Tiny)' \""
+    "fetch:pull": "cd ../.. && git subtree pull --squash --prefix=packages/datamine-dl/steampull https://github.com/erosson/steampull.git master",
+    "fetch:install": "pip install -r steampull/requirements-win.txt",
+    "fetch:auth": "bash -c \"./steampull/steampull auth\"",
+    "fetch": "bash -c \"./steampull/steampull --app 238960 --depot 238961 --output . fetch --regex 'Bundles2\\\\\\\\(Data|Metadata|_\\.index|_Preload|_Startup|_Tiny)'\""
   }
 }
