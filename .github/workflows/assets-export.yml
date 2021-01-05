@@ -36,16 +36,16 @@ jobs:
 
       - working-directory: ./packages/datamine-dl
         run: |
-          echo 'STEAM_DEPOT_INFO_NEW<<__EOF__' >> $GITHUB_ENV
-          cat info.txt >> $GITHUB_ENV
-          echo '__EOF__' >> $GITHUB_ENV
-          cat $GITHUB_ENV
+          bash -c "echo 'STEAM_DEPOT_INFO_NEW<<__EOF__' >> $GITHUB_ENV"
+          bash -c "cat info.txt >> $GITHUB_ENV"
+          bash -c "echo '__EOF__' >> $GITHUB_ENV"
+          bash -c "cat $GITHUB_ENV"
       - working-directory: ./packages/datamine-dl
         run: |
-          echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV
-          (diff info-old.txt info.txt || true) >> $GITHUB_ENV
-          echo '__EOF__' >> $GITHUB_ENV
-          cat $GITHUB_ENV
+          bash -c "echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV"
+          bash -c "(diff info-old.txt info.txt || true) >> $GITHUB_ENV"
+          bash -c "echo '__EOF__' >> $GITHUB_ENV"
+          bash -c "cat $GITHUB_ENV"
       # Stop running here if there's no info.txt differences
       # If PRs ever stop working, we could create an issue instead:
       #- if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}
