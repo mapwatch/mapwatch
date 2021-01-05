@@ -19,7 +19,7 @@ Developing:
 
 # Release
 
-Each git-push to the master branch is automatically built and deployed by [Travis-CI](https://travis-ci.org/github/mapwatch/mapwatch). [CI configuration](https://github.com/mapwatch/mapwatch/blob/master/.travis.yml).
+Each git-push to the master branch is automatically built and deployed by [Github actions](https://github.com/mapwatch/mapwatch/actions?query=workflow%3Apush-deploy). [CI configuration](https://github.com/mapwatch/mapwatch/blob/master/.github/workflows).
 
 The downloadable Electron app is a little more complex, and is less automated: https://www.electron.build/configuration/publish#recommended-github-releases-workflow
 
@@ -29,6 +29,12 @@ There should always be a *draft release* in progress, invisible to the public, o
 * Draft the next release, so CI can post previews of the next version: 
   * Bump the version number in [electron's package.json](https://github.com/mapwatch/mapwatch/blob/master/packages/electron2/package.json), probably with `npm version patch`. Commit and push.
   * [Create a draft release on the releases page](https://github.com/mapwatch/mapwatch/releases). Name and tag should match the above package.json version, with a leading `v` - `v1.0.2`, for example.
+  
+# PoE content updates
+
+We pull lots of data from the PoE game files. This isn't done manually - once a day, the [continuous integration robot](https://github.com/mapwatch/mapwatch/blob/master/.github/workflows/assets-export.yml) checks if PoE's had a recent patch. If so, it automatically sends the datamined output as a pull request, [like this one](https://github.com/mapwatch/mapwatch/pull/153) (TODO pick a better PR example).
+
+We pull some data from the [PoE wiki](https://pathofexile.gamepedia.com/) and [official PoE API](https://www.pathofexile.com/developer/docs/api-resource-leagues) too. This is also the [CI robot's job](https://github.com/mapwatch/mapwatch/blob/master/.github/workflows/datamine-wiki.yml); it will automatically send pull requests [like this one](https://github.com/mapwatch/mapwatch/pull/154).
 
 # Resources
 
