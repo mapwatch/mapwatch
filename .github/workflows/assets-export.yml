@@ -8,6 +8,9 @@ jobs:
   # windows must run this, not ubuntu, as pypoe/our datamine export depends on packages/datamine/ooz.exe
   fetch:
     runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
     steps:
       - run: |
           echo "::add-mask::${{ secrets.STEAMCTL_USER }}"
@@ -36,16 +39,16 @@ jobs:
 
       - working-directory: ./packages/datamine-dl
         run: |
-          bash -c "echo 'STEAM_DEPOT_INFO_NEW<<__EOF__' >> $GITHUB_ENV"
-          bash -c "cat info.txt >> $GITHUB_ENV"
-          bash -c "echo '__EOF__' >> $GITHUB_ENV"
-          bash -c "cat $GITHUB_ENV"
+          echo 'STEAM_DEPOT_INFO_NEW<<__EOF__' >> $GITHUB_ENV
+          cat info.txt >> $GITHUB_ENV
+          echo '__EOF__' >> $GITHUB_ENV
+          cat $GITHUB_ENV
       - working-directory: ./packages/datamine-dl
         run: |
-          bash -c "echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV"
-          bash -c "(diff info-old.txt info.txt || true) >> $GITHUB_ENV"
-          bash -c "echo '__EOF__' >> $GITHUB_ENV"
-          bash -c "cat $GITHUB_ENV"
+          echo 'STEAM_DEPOT_INFO_DIFF<<__EOF__' >> $GITHUB_ENV
+          (diff info-old.txt info.txt || true) >> $GITHUB_ENV
+          echo '__EOF__' >> $GITHUB_ENV
+          cat $GITHUB_ENV
       # Stop running here if there's no info.txt differences
       # If PRs ever stop working, we could create an issue instead:
       #- if: ${{ env.STEAM_DEPOT_INFO_DIFF != '' }}

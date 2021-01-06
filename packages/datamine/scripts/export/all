@@ -2,7 +2,7 @@
 set -euxo pipefail
 cd "`dirname "$0"`/../.."
 
-GGPK_PATH_DEFAULT="$(cd .. && pwd)/datamine-dl/dist"
+GGPK_PATH_DEFAULT="$(cd .. && pwd)/datamine-dl/depot"
 GGPK_PATH="${GGPK_PATH:-$GGPK_PATH_DEFAULT}"
 ls $GGPK_PATH > /dev/null
 LANG_FILES="`node src/langFilenames.js`"
