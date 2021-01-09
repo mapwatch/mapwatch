@@ -9,4 +9,4 @@ async function main() {
   dom.window.eval(jquery)
   dom.window.eval(script)
 }
-main().catch(console.error)
+main()
