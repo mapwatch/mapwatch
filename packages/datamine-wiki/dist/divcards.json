@@ -2096,7 +2096,10 @@
     },
     {
       "card": "The Fishmonger",
-      "maps": [],
+      "maps": [
+        "Arid Lake Map",
+        "Bog Map"
+      ],
       "loot": {
         "text": "Albino Rhoa Feather"
       }
