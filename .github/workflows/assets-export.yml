@@ -31,7 +31,7 @@ jobs:
       - run: git submodule update
       # https://stackoverflow.com/a/5143914/2782048
       - run: git diff-index --quiet HEAD -- || echo "PYPOE_JSON_DIFF=1" >> $GITHUB_ENV
-      - if: ${{ github.event.inputs.force_fetch || env.PYPOE_JSON_DIFF != '' }}
+      - if: ${{ github.event.inputs.force_build || env.PYPOE_JSON_DIFF != '' }}
         working-directory: ./packages/datamine
         run: yarn dist
       # no need for a website rebuild, merging the pr below will trigger one
