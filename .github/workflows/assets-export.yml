@@ -26,9 +26,8 @@ jobs:
         with:
           node-version: 12.x
 
-      # TODO third-party/pypoe-json submodule update, check for differences before doing a full rebuild
       - run: yarn install --frozen-lockfile
-      - run: git submodule update
+      - run: git submodule update --remote
       # https://stackoverflow.com/a/5143914/2782048
       - run: git diff-index --quiet HEAD -- || echo "PYPOE_JSON_DIFF=1" >> $GITHUB_ENV
       - if: ${{ github.event.inputs.force_build || env.PYPOE_JSON_DIFF != '' }}
