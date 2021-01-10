@@ -1,4 +1,5 @@
-/** PyPoE exports more data than Mapwatch needs. Filter some of it. */
+#!/usr/bin/env node
+/** Preprocess PyPoE's json for Mapwatch's needs. */
 const _ = require('lodash')
 const schema = require('./schema/main.json')
 const fs = require('fs').promises

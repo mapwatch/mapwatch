@@ -26,7 +26,8 @@
     "IsTown",
     "IsHideout",
     "IsVaalArea",
-    "IsMapArea"
+    "IsMapArea",
+    "IsUniqueMapArea"
   ],
   "NPCTextAudio.dat": [
     "Id",
@@ -34,6 +35,6 @@
   ],
   "NPCs.dat": [
     "Id",
-    "Text"
+    "Name"
   ]
 }

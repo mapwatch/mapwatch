@@ -13,6 +13,6 @@
   ],
   "NPCs.dat": [
     "Id",
-    "Text"
+    "Name"
   ]
 }

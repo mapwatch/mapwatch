@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "install": "git submodule init",
-    "process": "node src/main.js > dist/mapwatch.json"
+    "dist": "bash scripts/dist"
   },
   "devDependencies": {
     "lodash": "^4.17.15"

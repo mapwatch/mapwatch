@@ -1,5 +1,4 @@
 !dist
+!dist/lang/Simplified Chinese.json
 dist/all.json
 dist/lang
-
-ggpk/

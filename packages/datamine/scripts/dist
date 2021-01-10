@@ -1,0 +1,17 @@
+#!/bin/bash
+set +x
+set +euo pipefail
+cd "`dirname "$0"`/.."
+
+JSON_PATH="../../third-party/pypoe-json/dist"
+
+mkdir -p ./dist/lang
+for LANG in `node --eval="require('$JSON_PATH/lang.json').forEach(l => console.log(l))"`; do
+  node ./src/schema.js "./src/schema/lang.json" "$JSON_PATH/lang/$LANG" "$JSON_PATH/dat" > "./dist/lang/$LANG.json"
+done
+node ./src/schema.js "./src/schema/lang.json" "$JSON_PATH/dat" > "./dist/lang/English.json"
+
+node ./src/schema.js "./src/schema/main.json" "$JSON_PATH/dat" > "./dist/all.json"
+node src/main.js > dist/mapwatch.json
+
+date > dist/date
