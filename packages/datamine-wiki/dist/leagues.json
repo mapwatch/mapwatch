@@ -73,8 +73,8 @@
       "description": "Hire a crew of thieves then plan and execute elaborate Heists to steal valuable rewards.\n\nThis is the default Path of Exile league.",
       "registerAt": "2020-09-18T17:30:00Z",
       "url": "https://www.pathofexile.com/forum/view-thread/2936817",
-      "startAt": "2020-12-07T21:32:44Z",
-      "endAt": "2021-01-10T21:00:00Z",
+      "startAt": "2021-01-10T21:20:00Z",
+      "endAt": "2021-01-11T21:00:00Z",
       "delveEvent": true,
       "rules": []
     },
@@ -84,8 +84,8 @@
       "description": "Hire a crew of thieves then plan and execute elaborate Heists to steal valuable rewards.\n\nA character killed in Hardcore Heist becomes a Standard character.",
       "registerAt": "2020-09-18T17:30:00Z",
       "url": "https://www.pathofexile.com/forum/view-thread/2936824",
-      "startAt": "2020-12-07T21:32:44Z",
-      "endAt": "2021-01-10T21:00:00Z",
+      "startAt": "2021-01-10T21:20:00Z",
+      "endAt": "2021-01-11T21:00:00Z",
       "delveEvent": true,
       "rules": [
         {
@@ -101,8 +101,8 @@
       "description": "SSF Heist",
       "registerAt": "2020-09-18T17:30:00Z",
       "url": "https://www.pathofexile.com/forum/view-thread/2936831",
-      "startAt": "2020-12-07T21:32:44Z",
-      "endAt": "2021-01-10T21:00:00Z",
+      "startAt": "2021-01-10T21:20:00Z",
+      "endAt": "2021-01-11T21:00:00Z",
       "delveEvent": true,
       "rules": [
         {
@@ -118,8 +118,8 @@
       "description": "SSF HC Heist",
       "registerAt": "2020-09-18T17:30:00Z",
       "url": "https://www.pathofexile.com/forum/view-thread/2936838",
-      "startAt": "2020-12-07T21:32:44Z",
-      "endAt": "2021-01-10T21:00:00Z",
+      "startAt": "2021-01-10T21:20:00Z",
+      "endAt": "2021-01-11T21:00:00Z",
       "delveEvent": true,
       "rules": [
         {
