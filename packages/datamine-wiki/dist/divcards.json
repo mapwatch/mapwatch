@@ -391,6 +391,13 @@
       }
     },
     {
+      "card": "Dying Anguish",
+      "maps": [],
+      "loot": {
+        "text": "Superior Level 19 Gem\nQuality: +19%"
+      }
+    },
+    {
       "card": "Earth Drinker",
       "maps": [
         "The Vastiri Desert",
