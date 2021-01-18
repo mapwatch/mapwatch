@@ -4,6 +4,11 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-01-18 (and some earlier stuff)
+- Data exported from PoE game files (regions, names, images, hideouts...) is now updated [automatically](https://github.com/erosson/pypoe-json) whenever PoE is patched, so it won't appear in this changelog anymore.
+- The "hide pre-(LEAGUE)" button is now updated automatically each league, so it won't appear in this changelog anymore.
+- The "hide pre-(LEAGUE)" button now supports events like Flashback and Mayhem.
+
 ## 2020-10-03
 - Heist NPCs are now tracked.
 - Heist contracts are now distinguished from grand heists.
