@@ -68,24 +68,24 @@
       ]
     },
     {
-      "id": "Heist",
+      "id": "Ritual",
       "realm": "pc",
-      "description": "Hire a crew of thieves then plan and execute elaborate Heists to steal valuable rewards.\n\nThis is the default Path of Exile league.",
-      "registerAt": "2020-09-18T17:30:00Z",
-      "url": "https://www.pathofexile.com/forum/view-thread/2936817",
-      "startAt": "2020-12-07T21:32:44Z",
-      "endAt": "2021-01-10T21:00:00Z",
+      "description": "Discover ancient Altars and perform dangerous Rituals to earn valuable rewards.\n\nThis is the default Path of Exile league.",
+      "registerAt": "2021-01-15T16:30:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/3010181",
+      "startAt": "2021-01-15T19:00:00Z",
+      "endAt": "2025-12-07T21:00:00Z",
       "delveEvent": true,
       "rules": []
     },
     {
-      "id": "Hardcore Heist",
+      "id": "Hardcore Ritual",
       "realm": "pc",
-      "description": "Hire a crew of thieves then plan and execute elaborate Heists to steal valuable rewards.\n\nA character killed in Hardcore Heist becomes a Standard character.",
-      "registerAt": "2020-09-18T17:30:00Z",
-      "url": "https://www.pathofexile.com/forum/view-thread/2936824",
-      "startAt": "2020-12-07T21:32:44Z",
-      "endAt": "2021-01-10T21:00:00Z",
+      "description": "Discover ancient Altars and perform dangerous Rituals to earn valuable rewards.\n\nA character killed in Hardcore Ritual becomes a Standard character.",
+      "registerAt": "2021-01-15T16:30:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/3010189",
+      "startAt": "2021-01-15T19:00:00Z",
+      "endAt": "2025-12-07T21:00:00Z",
       "delveEvent": true,
       "rules": [
         {
@@ -96,13 +96,13 @@
       ]
     },
     {
-      "id": "SSF Heist",
+      "id": "SSF Ritual",
       "realm": "pc",
-      "description": "SSF Heist",
-      "registerAt": "2020-09-18T17:30:00Z",
-      "url": "https://www.pathofexile.com/forum/view-thread/2936831",
-      "startAt": "2020-12-07T21:32:44Z",
-      "endAt": "2021-01-10T21:00:00Z",
+      "description": "SSF Ritual",
+      "registerAt": "2021-01-15T16:30:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/3010197",
+      "startAt": "2021-01-15T19:00:00Z",
+      "endAt": "2025-12-07T21:00:00Z",
       "delveEvent": true,
       "rules": [
         {
@@ -113,13 +113,15 @@
       ]
     },
     {
-      "id": "SSF Heist HC",
+      "id": "SSF Ritual HC",
       "realm": "pc",
-      "description": "SSF HC Heist",
-      "registerAt": "2020-09-18T17:30:00Z",
-      "url": "https://www.pathofexile.com/forum/view-thread/2936838",
-      "startAt": "2020-12-07T21:32:44Z",
-      "endAt": "2021-01-10T21:00:00Z",
+      "description": "SSF HC Ritual",
+      "registerAt": "2021-01-15T16:30:00Z",
+      "url": "https://www.pathofexile.com/forum/view-thread/3010205",
+      "startAt": "2021-01-15T19:00:00Z",
+      "endAt": "2025-12-07T21:00:00Z",
+      "timedEvent": true,
+      "scoreEvent": true,
       "delveEvent": true,
       "rules": [
         {

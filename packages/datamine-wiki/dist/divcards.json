@@ -51,6 +51,13 @@
       }
     },
     {
+      "card": "Acclimatisation",
+      "maps": [],
+      "loot": {
+        "text": "20x Orb of Alteration"
+      }
+    },
+    {
       "card": "Akil's Prophecy",
       "maps": [],
       "loot": {
@@ -212,6 +219,13 @@
       "maps": [],
       "loot": {
         "text": "5x Exalted Orb"
+      }
+    },
+    {
+      "card": "Brotherhood in Exile",
+      "maps": [],
+      "loot": {
+        "text": "One With Nothing\nCorrupted"
       }
     },
     {
@@ -391,6 +405,27 @@
       }
     },
     {
+      "card": "Draped in Dreams",
+      "maps": [],
+      "loot": {
+        "text": "Six-Linked Body Armour\nItem Level: 100\nInfluenced Item"
+      }
+    },
+    {
+      "card": "Dying Anguish",
+      "maps": [],
+      "loot": {
+        "text": "Superior Level 19 Gem\nQuality: +19%"
+      }
+    },
+    {
+      "card": "Dying Light",
+      "maps": [],
+      "loot": {
+        "text": "Diamond Ring\nItem Level: 100\nShaper + Elder Item"
+      }
+    },
+    {
       "card": "Earth Drinker",
       "maps": [
         "The Vastiri Desert",
@@ -445,6 +480,13 @@
       "maps": [],
       "loot": {
         "text": "Rigwald's Quills\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "Fateful Meeting",
+      "maps": [],
+      "loot": {
+        "text": "League-Specific Item\nDouble-Influenced Item\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -523,6 +565,13 @@
       "maps": [],
       "loot": {
         "text": "9x Shrieking Essence"
+      }
+    },
+    {
+      "card": "Haunting Shadows",
+      "maps": [],
+      "loot": {
+        "text": "Metamorph Item"
       }
     },
     {
@@ -795,6 +844,13 @@
       }
     },
     {
+      "card": "Keeper's Corruption",
+      "maps": [],
+      "loot": {
+        "text": "Eldritch Bone Helmet(Concentrated Effect)\nItem Level: 89\nElder Item"
+      }
+    },
+    {
       "card": "Lantador's Lost Love",
       "maps": [
         "The Twilight Strand (Act 6)",
@@ -911,6 +967,13 @@
       "maps": [],
       "loot": {
         "text": "Map\nMap Tier: 15"
+      }
+    },
+    {
+      "card": "Love Through Ice",
+      "maps": [],
+      "loot": {
+        "text": "Unnatural Instinct\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -1175,6 +1238,13 @@
       }
     },
     {
+      "card": "Reckless Ambition",
+      "maps": [],
+      "loot": {
+        "text": "Omeyocan"
+      }
+    },
+    {
       "card": "Remembrance",
       "maps": [],
       "loot": {
@@ -1218,6 +1288,13 @@
       ],
       "loot": {
         "text": "Vivid Jewel"
+      }
+    },
+    {
+      "card": "Society's Remorse",
+      "maps": [],
+      "loot": {
+        "text": "10x Orb of Alteration"
       }
     },
     {
@@ -1273,14 +1350,7 @@
     },
     {
       "card": "The Aesthete",
-      "maps": [
-        "The Harvest (area)",
-        "Shavronne's Tower",
-        "The Rotting Core",
-        "Core Map",
-        "Scriptorium Map",
-        "Tower Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Shavronne Item"
       }
@@ -1317,6 +1387,13 @@
       }
     },
     {
+      "card": "The Astromancer",
+      "maps": [],
+      "loot": {
+        "text": "The Eternity Shroud\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
       "card": "The Avenger",
       "maps": [
         "Primordial Blocks Map"
@@ -1349,6 +1426,13 @@
       ],
       "loot": {
         "text": "Axe"
+      }
+    },
+    {
+      "card": "The Bear Woman",
+      "maps": [],
+      "loot": {
+        "text": "Fecund Ursine Pelt\nWarlord Item"
       }
     },
     {
@@ -2685,6 +2769,13 @@
       }
     },
     {
+      "card": "The Long Watch",
+      "maps": [],
+      "loot": {
+        "text": "The Vigil"
+      }
+    },
+    {
       "card": "The Lord in Black",
       "maps": [],
       "loot": {
@@ -2838,13 +2929,7 @@
     },
     {
       "card": "The Offering",
-      "maps": [
-        "The Rotting Core",
-        "Cells Map",
-        "Core Map",
-        "Scriptorium Map",
-        "Tower Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Shavronne's Wrappings"
       }
@@ -2907,6 +2992,13 @@
       ],
       "loot": {
         "text": "Pledge of Hands"
+      }
+    },
+    {
+      "card": "The Patient",
+      "maps": [],
+      "loot": {
+        "text": "The Nurse"
       }
     },
     {
@@ -3653,6 +3745,13 @@
       ],
       "loot": {
         "text": "Six-Link Astral Plate\nItem Level: 100\nCrusader Item"
+      }
+    },
+    {
+      "card": "The Whiteout",
+      "maps": [],
+      "loot": {
+        "text": "Cospri's Malice"
       }
     },
     {
