@@ -6796,11 +6796,11 @@
       ],
       [
         "MavenHub",
-        "The Proving Ground"
+        "เบ้าหลอมของเมเวน"
       ],
       [
         "MavenBoss",
-        "The Maven's Keep"
+        "สูญสิ้นซึ่งเมตตาปรานี"
       ],
       [
         "MavenElderGuardian1",
@@ -9001,7 +9001,7 @@
       ],
       [
         "MavenCitadelNotUnlocked",
-        "Activation failed. You have not unlocked the Citadel for this Atlas Region."
+        "การใช้งานล้มเหลว คุณยังไม่ได้ปลดล็อก Citadel สำหรับเขตของสมุดแผนที่นี้"
       ],
       [
         "StashAffinityFailedNoRoom",
@@ -54735,7 +54735,7 @@
       ],
       [
         "Metadata/NPC/League/Harvest/HarvestNPCGardenTutorial",
-        "Oshabi"
+        "โอชาบิ"
       ],
       [
         "Metadata/Monsters/AtlasExiles/AtlasExile1",
@@ -54763,7 +54763,7 @@
       ],
       [
         "Metadata/Monsters/AtlasExiles/AtlasExile5Intruder",
-        "Sirus, Awakener of Worlds"
+        "ไซรัส ผู้ทำให้โลกตื่น"
       ],
       [
         "Metadata/NPC/Epilogue/Kirac",
@@ -54903,7 +54903,7 @@
       ],
       [
         "Metadata/NPC/Freya",
-        "Freya"
+        "เฟรยา"
       ],
       [
         "Metadata/Monsters/LeagueHarvest/Oshabi/OshabiBoss",
@@ -55039,23 +55039,23 @@
       ],
       [
         "Metadata/Monsters/LeagueHeist/Boss/VicVoxMeeting_",
-        "Vic Vox"
+        "วิค วอกซ์"
       ],
       [
         "Metadata/NPC/League/Heist/TullinaFiance",
-        "Julius Farrow"
+        "จูเลียส แฟร์โรว์"
       ],
       [
         "Metadata/NPC/Act3/Tolman",
-        "Tolman"
+        "โทลแมน"
       ],
       [
         "Metadata/NPC/Act8/Solaris",
-        "Solaris"
+        "โซลาริส"
       ],
       [
         "Metadata/NPC/Act8/Lunarus",
-        "Lunaris"
+        "ลูนาริส"
       ],
       [
         "Metadata/NPC/RiddleQuest",
@@ -55063,31 +55063,31 @@
       ],
       [
         "Metadata/NPC/League/EndlessDelve/Lilly",
-        "Lilly Roth"
+        "ลิลลี่ รอธ"
       ],
       [
         "Metadata/NPC/Epilogue/Envoy",
-        "The Envoy"
+        "ราชทูต"
       ],
       [
         "Metadata/NPC/Epilogue/EnvoyRandom",
-        "The Envoy"
+        "ราชทูต"
       ],
       [
         "Metadata/NPC/Epilogue/EnvoyMaven",
-        "The Envoy"
+        "ราชทูต"
       ],
       [
         "Metadata/NPC/Epilogue/Maven",
-        "The Maven"
+        "เมเวน"
       ],
       [
         "Metadata/Monsters/MavenBoss/TheMaven",
-        "The Maven"
+        "เมเวน"
       ],
       [
         "Metadata/Monsters/MavenBoss/MavenBrainBoss",
-        "The Maven"
+        "เมเวน"
       ],
       [
         "Metadata/Monsters/CrimsonPriest",
