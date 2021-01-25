@@ -223,7 +223,9 @@
     },
     {
       "card": "Brotherhood in Exile",
-      "maps": [],
+      "maps": [
+        "Villa Map"
+      ],
       "loot": {
         "text": "One With Nothing\nCorrupted"
       }
@@ -2745,7 +2747,9 @@
     },
     {
       "card": "The Life Thief",
-      "maps": [],
+      "maps": [
+        "Crimson Temple Map"
+      ],
       "loot": {
         "text": "Zerphi's Heart"
       }
@@ -2770,7 +2774,9 @@
     },
     {
       "card": "The Long Watch",
-      "maps": [],
+      "maps": [
+        "Primordial Blocks Map"
+      ],
       "loot": {
         "text": "The Vigil"
       }
@@ -2996,7 +3002,9 @@
     },
     {
       "card": "The Patient",
-      "maps": [],
+      "maps": [
+        "Armoury Map"
+      ],
       "loot": {
         "text": "The Nurse"
       }
