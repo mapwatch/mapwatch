@@ -3,8 +3,9 @@ const fetch = require("node-fetch")
 async function main() {
   const res = await fetch("https://api.pathofexile.com/leagues", {
     headers: {
-      // cloudflare doesn't seem to like node-fetch, but a custom useragent seems to work
-      'User-Agent': 'node-fetch_mapwatch-erosson-org',
+      // GGG staff asks that user-agents have contact info for the author
+      // This is (weakly) enforced by blocking the default node-fetch.
+      'User-Agent': 'node-fetch from https://github.com/erosson/mapwatch',
     }
   })
   if (res.status !== 200) {
