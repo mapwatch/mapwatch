@@ -17006,7 +17006,7 @@
       ],
       [
         "AlvaIncursionCongrats2",
-        "Buen trabajo, exiliado."
+        "<if:MS>{Buen trabajo, exiliado.}<elif:FS>{Buen trabajo, exiliada.}"
       ],
       [
         "AlvaTempleArrival",
@@ -45322,27 +45322,27 @@
       ],
       [
         "MavenTier1GuardSkillRandom",
-        "Endurecer."
+        "Endurécete."
       ],
       [
         "MavenTier1GuardSkill2",
-        "Endurecer."
+        "Endurécete."
       ],
       [
         "MavenTier1GuardSkill3",
-        "¡Endurecer!"
+        "¡Endurécete!"
       ],
       [
         "MavenTier1GuardSkill4",
-        "Absorber."
+        "Absorbe."
       ],
       [
         "MavenTier1GuardSkill5",
-        "Absorber."
+        "Absorbe."
       ],
       [
         "MavenTier1GuardSkill6",
-        "¡Absorber!"
+        "¡Absorbe!"
       ],
       [
         "MavenTier1SpaceVinesRandom",
@@ -45798,7 +45798,7 @@
       ],
       [
         "ZanaOnTheMaven",
-        "<if:MS>{Hay dos fuentes de entidades dentro del Atlas, que yo seá, y estoy segura de que nadie ha entrado desde este lado.\r\n\r\nSea lo que sea esa cosa, ha venido desde algún lugar más allá del Atlas, en algún reino paralelo desconocido. Es completamente posible que tenga el mismo origen que el Antiguo, aunque espero desesperadamente que no sea el caso. Simplemente no tenemos las herramientas para sellar a otra criatura así.\r\n\r\nQuizá seamos afortunados. Quizá somos demasiado insignificantes como para que nos preste atención. Estamos en una pequeña isla de seguridad, al menos por ahora, pero la marea está subiendo, y hay cosas extrañas llegando a la orilla. Ten cuidado, exiliado. No sabemos con qué estamos tratando, y todos deberíamos temer a lo desconocido.}<elif:FS>{Hay dos fuentes de entidades dentro del Atlas, que yo seá, y estoy segura de que nadie ha entrado desde este lado.\r\n\r\nSea lo que sea esa cosa, ha venido desde algún lugar más allá del Atlas, en algún reino paralelo desconocido. Es completamente posible que tenga el mismo origen que el Antiguo, aunque espero desesperadamente que no sea el caso. Simplemente no tenemos las herramientas para sellar a otra criatura así.\r\n\r\nQuizá seamos afortunados. Quizá somos demasiado insignificantes como para que nos preste atención. Estamos en una pequeña isla de seguridad, al menos por ahora, pero la marea está subiendo, y hay cosas extrañas llegando a la orilla. Ten cuidado, exiliada. No sabemos con qué estamos tratando, y todos deberíamos temer a lo desconocido.}"
+        "<if:MS>{Hay dos fuentes de entidades dentro del Atlas, que yo sepa, y estoy segura de que nadie ha entrado desde este lado.\r\n\r\nSea lo que sea esa cosa, ha venido desde algún lugar más allá del Atlas, en algún reino paralelo desconocido. Es completamente posible que tenga el mismo origen que el Antiguo, aunque espero desesperadamente que no sea el caso. Simplemente no tenemos las herramientas para sellar a otra criatura así.\r\n\r\nQuizá seamos afortunados. Quizá somos demasiado insignificantes como para que nos preste atención. Estamos en una pequeña isla de seguridad, al menos por ahora, pero la marea está subiendo, y hay cosas extrañas llegando a la orilla. Ten cuidado, exiliado. No sabemos con qué estamos tratando, y todos deberíamos temer a lo desconocido.}<elif:FS>{Hay dos fuentes de entidades dentro del Atlas, que yo sepa, y estoy segura de que nadie ha entrado desde este lado.\r\n\r\nSea lo que sea esa cosa, ha venido desde algún lugar más allá del Atlas, en algún reino paralelo desconocido. Es completamente posible que tenga el mismo origen que el Antiguo, aunque espero desesperadamente que no sea el caso. Simplemente no tenemos las herramientas para sellar a otra criatura así.\r\n\r\nQuizá seamos afortunados. Quizá somos demasiado insignificantes como para que nos preste atención. Estamos en una pequeña isla de seguridad, al menos por ahora, pero la marea está subiendo, y hay cosas extrañas llegando a la orilla. Ten cuidado, exiliada. No sabemos con qué estamos tratando, y todos deberíamos temer a lo desconocido.}"
       ],
       [
         "ZanaOnTheMavenPostSirus",
@@ -53071,6 +53071,10 @@
       [
         "MavenFinalFightWaitingOnMapOwner3",
         "¿Cuánto tiempo tendré que esperar?"
+      ],
+      [
+        "MavenFinalFightDualIceBarrage",
+        "A cascade of pain!"
       ]
     ]
   },

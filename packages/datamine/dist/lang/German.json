@@ -6408,11 +6408,11 @@
       ],
       [
         "AtlasExilesBoss4",
-        "Feste des Kriegsherrn"
+        "Feste des Kriegsfürsten"
       ],
       [
         "AtlasExilesBoss4Uber",
-        "Feste des Kriegsherrn"
+        "Feste des Kriegsfürsten"
       ],
       [
         "AtlasExilesBoss5",
@@ -53071,6 +53071,10 @@
       [
         "MavenFinalFightWaitingOnMapOwner3",
         "Wie lange muss ich warten?"
+      ],
+      [
+        "MavenFinalFightDualIceBarrage",
+        "A cascade of pain!"
       ]
     ]
   },
