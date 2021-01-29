@@ -53071,6 +53071,10 @@
       [
         "MavenFinalFightWaitingOnMapOwner3",
         "How long will I be kept waiting?"
+      ],
+      [
+        "MavenFinalFightDualIceBarrage",
+        "A cascade of pain!"
       ]
     ]
   },

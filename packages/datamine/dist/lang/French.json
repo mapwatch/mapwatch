@@ -45662,43 +45662,43 @@
       ],
       [
         "KiracOnTheEnvoyPostMaven",
-        "<if:MS>{Vous vous êtes débarrassé de la Prodige pour le moment, mais l'Émissaire est toujours dans les parages ? Ce n'est pas bon signe. Je présumais que c'était son serviteur, mais si ce n'est pas le cas, alors on pourrait bien avoir un plus gros problème sur les bras d'ici peu…}<elif:FS>{Vous vous êtes débarrassée de la Prodige pour le moment, mais l'Émissaire est toujours dans les parages ? Ce n'est pas bon signe. Je présumais que c'était son serviteur, mais si ce n'est pas le cas, alors on pourrait bien avoir un plus gros problème sur les bras d'ici peu…}"
+        "<if:MS>{Vous vous êtes débarrassé de la Prodige pour l'heure, mais l'Émissaire est toujours dans les parages ? Ce n'est pas bon signe. Je supposais que c'était son serviteur, mais si ce n'est pas le cas, alors on pourrait bien avoir un plus gros problème sur les bras d'ici peu…}<elif:FS>{Vous vous êtes débarrassée de la Prodige pour l'heure, mais l'Émissaire est toujours dans les parages ? Ce n'est pas bon signe. Je supposais que c'était son serviteur, mais si ce n'est pas le cas, alors on pourrait bien avoir un plus gros problème sur les bras d'ici peu…}"
       ],
       [
         "KiracOnTheMaven",
-        "Ne jamais faire confiance aux femmes qui flottent dans l'air. Je l'ai appris à la dure lors de ma deuxième campagne et moins on en parlera, mieux je me porterai. Si jamais la Prodige essaie de communiquer avec vous, soutirez-lui ce que vous pouvez, mais ne baissez jamais votre garde, ne serait-ce qu'une seconde."
+        "Ne jamais faire confiance aux femmes qui flottent dans les airs. Je l'ai appris à la dure lors de ma deuxième campagne et moins on en parlera, mieux je me porterai. Si jamais la Prodige essaie de communiquer avec vous, soutirez-lui ce que vous pouvez mais ne baissez jamais votre garde, ne serait-ce qu'une seconde."
       ],
       [
         "KiracOnTheMavenPostBaranKilled",
-        "Je vous avais bien dit que c'était un boulot qui n'en finit jamais, pas vrai ? Alors, on va aller pister les Conquérants, affronter Sirus et, tant qu'à faire, percer le mystère qui entoure cette Prodige. Quand ce sera fait, on ira boire un godet, puis on recommencera dès qu'apparaîtra le prochain ennemi juré de l'humanité. C'est pourquoi j'ai voulu faire ce métier, alors c'est ce qu'on va faire et pas autrement."
+        "Je vous avais bien dit que c'était un boulot qui ne finit jamais, non ? Alors, on va aller pister les Conquérants, affronter Sirus et, tant qu'à faire, percer le mystère qui entoure cette Prodige. Une fois que ce sera fait, on ira boire un godet, puis on recommencera dès qu'apparaîtra le prochain ennemi juré de l'humanité. C'est ce que je me suis engagé à faire et c'est ce qu'on fera."
       ],
       [
         "KiracOnTheMavenPostMavenKilled",
-        "<if:MS>{Après toute cette galère, on apprend que la Prodige n'était qu'une de ces entités à l'état <i>{jeune} ? J'en ai vu des choses horribles, mais ça… Je devrais être soulagé, mais je ne ressens que de l'inquiétude. Si <i>{ça} c'était une enfant, alors quels genres de pouvoirs ses aînés possèdent-ils ? Qu'arrivera-t-il quand ces monstruosités cosmiques vont finalement tourner leurs yeux innombrables dans <i>{notre direction} ? On est tous en train de fouler un sentier bien obscur, exilé.}<elif:FS>{Après toute cette galère, on apprend que la Prodige n'était qu'une de ces entités à l'état <i>{jeune} ? J'en ai vu des choses horribles, mais ça… Je devrais être soulagé, mais je ne ressens que de l'inquiétude. Si <i>{ça} c'était une enfant, alors quels genres de pouvoirs ses aînés possèdent-ils ? Qu'arrivera-t-il quand ces monstruosités cosmiques vont finalement tourner leurs yeux innombrables dans <i>{notre direction} ? On est tous en train de fouler un sentier bien obscur, exilée.}"
+        "<if:MS>{Après toute cette galère, on apprend que la Prodige n'était qu'une de ces entités à l'état <i>{jeune} ? J'en ai vu des choses horribles, mais ça… Je devrais être soulagé, mais je ne ressens que de l'inquiétude. Si <i>{ça} c'était une enfant, alors quels genres de pouvoirs ses aînés peuvent-ils bien posséder ? Qu'arrivera-t-il quand ces monstruosités cosmiques vont finalement tourner leurs yeux innombrables dans <i>{notre} direction ? On est en train de fouler un sentier bien obscur, exilé.}<elif:FS>{Après toute cette galère, on apprend que la Prodige n'était qu'une de ces entités à l'état <i>{jeune} ? J'en ai vu des choses horribles, mais ça… Je devrais être soulagé, mais je ne ressens que de l'inquiétude. Si <i>{ça} c'était une enfant, alors quels genres de pouvoirs ses aînés peuvent-ils bien posséder ? Qu'arrivera-t-il quand ces monstruosités cosmiques vont finalement tourner leurs yeux innombrables dans <i>{notre} direction ? On est en train de fouler un sentier bien obscur, exilée.}"
       ],
       [
         "KiracOnBaranResurrection",
-        "<if:MS>{Vous avez <i>{vu} Baran ? Comment est-ce possible, si vous l'avez tué ? À moins que…\r\n\r\nC'est la Prodige. C'est la seule explication. Elle était déjà en train de recréer des créatures de l'Atlas pour se divertir ; ça coule donc de source qu'elle ait fait la même chose avec mon frère, vu la force remarquable qui était la sienne. D'ailleurs, aucune créature de cet endroit n'est à sa hauteur, ce qui signifie que la Prodige l'a ressuscité afin de pouvoir assister à ses combats contre <i>{vous}, et l'Atlas est le champ de bataille idéal pour un spectacle de cette ampleur.\r\n\r\nContinuez de la divertir, exilé. Ça nous donnera l'occasion d'en apprendre davantage sur elle. Et si on mène bien notre barque, alors peut-être que Baran pourra être sauvé après tout.}<elif:FS>{Vous avez <i>{vu} Baran ? Comment est-ce possible, si vous l'avez tué ? À moins que…\r\n\r\nC'est la Prodige. C'est la seule explication. Elle était déjà en train de recréer des créatures de l'Atlas pour se divertir ; ça coule donc de source qu'elle ait fait la même chose avec mon frère, vu la force remarquable qui était la sienne. D'ailleurs, aucune créature de cet endroit n'est à sa hauteur, ce qui signifie que la Prodige l'a ressuscité afin de pouvoir assister à ses combats contre <i>{vous}, et l'Atlas est le champ de bataille idéal pour un spectacle de cette ampleur.\r\n\r\nContinuez de la divertir, exilée. Ça nous donnera l'occasion d'en apprendre davantage sur elle. Et si on mène bien notre barque, alors peut-être que Baran pourra être sauvé après tout.}"
+        "<if:MS>{Vous dites avoir <i>{vu} Baran ? Comment est-ce possible, si vous l'avez tué ? À moins que…\r\n\r\nC'est la Prodige. C'est la seule explication. Elle était déjà en train de recréer des créatures de l'Atlas pour se divertir ; ça coule donc de source qu'elle ait fait la même chose avec mon frère, vu la force remarquable qui était la sienne. D'ailleurs, aucun être de cet endroit n'est à sa hauteur. Ce qui signifie que la Prodige l'a ressuscité afin de pouvoir assister à ses combats contre <i>{vous} ; or, l'Atlas est le champ de bataille idéal pour un spectacle de cette ampleur.\r\n\r\nContinuez de la divertir, exilé. Ça nous donnera l'occasion d'en apprendre davantage sur elle. Et si on mène bien notre barque, alors peut-être que Baran pourra finalement être sauvé.}<elif:FS>{Vous dites avoir <i>{vu} Baran ? Comment est-ce possible, si vous l'avez tué ? À moins que…\r\n\r\nC'est la Prodige. C'est la seule explication. Elle était déjà en train de recréer des créatures de l'Atlas pour se divertir ; ça coule donc de source qu'elle ait fait la même chose avec mon frère, vu la force remarquable qui était la sienne. D'ailleurs, aucun être de cet endroit n'est à sa hauteur. Ce qui signifie que la Prodige l'a ressuscité afin de pouvoir assister à ses combats contre <i>{vous} ; or, l'Atlas est le champ de bataille idéal pour un spectacle de cette ampleur.\r\n\r\nContinuez de la divertir, exilée. Ça nous donnera l'occasion d'en apprendre davantage sur elle. Et si on mène bien notre barque, alors peut-être que Baran pourra finalement être sauvé.}"
       ],
       [
         "KiracOnBaranResurrectionTwo",
-        "<if:MS>{J'avais vu juste. La Prodige était bien capable de ressusciter Baran et elle l'a fait pour satisfaire ses caprices. Si c'est elle qui l'empêche de trouver le repos, alors nous devons soit la détruire, soit la convaincre de le relâcher. Dans les deux cas, nous avons une longue route devant nous. Tâchez d'aller jusqu'au bout, exilé.}<elif:FS>{J'avais vu juste. La Prodige était bien capable de ressusciter Baran et elle l'a fait pour satisfaire ses caprices. Si c'est elle qui l'empêche de trouver le repos, alors nous devons soit la détruire, soit la convaincre de le relâcher. Dans les deux cas, nous avons une longue route devant nous. Tâchez d'aller jusqu'au bout, exilée.}"
+        "<if:MS>{J'avais vu juste : la Prodige était bel et bien capable de ressusciter Baran, et elle l'a fait pour satisfaire ses caprices. Si c'est elle qui l'empêche de trouver le repos, alors nous devons soit la détruire, soit la convaincre de le relâcher. Dans les deux cas, nous avons une longue route devant nous. Tâchez d'aller jusqu'au bout, exilé.}<elif:FS>{J'avais vu juste : la Prodige était bel et bien capable de ressusciter Baran, et elle l'a fait pour satisfaire ses caprices. Si c'est elle qui l'empêche de trouver le repos, alors nous devons soit la détruire, soit la convaincre de le relâcher. Dans les deux cas, nous avons une longue route devant nous. Tâchez d'aller jusqu'au bout, exilée.}"
       ],
       [
         "KiracOnBaranResurrectionThree",
-        "<if:MS>{Vous avez donné une bonne leçon à la Prodige, mais elle n'est pas encore vaincue, s'il est au moins possible de venir à bout d'une telle entité. Je ne suis même pas convaincu qu'il est possible de communiquer avec elle de manière convaincante, mais je dois garder espoir. Continuez de jouer à son petit jeu, exilé. Peut-être qu'un jour elle vous verra comme un égal. Et que nous pourrons alors lui demander de nous rendre Baran.}<elif:FS>{Vous avez donné une bonne leçon à la Prodige, mais elle n'est pas encore vaincue, s'il est au moins possible de venir à bout d'une telle entité. Je ne suis même pas convaincu qu'il est possible de communiquer avec elle de manière convaincante, mais je dois garder espoir. Continuez de jouer à son petit jeu, exilée. Peut-être qu'un jour elle vous verra comme une égale. Et que nous pourrons alors lui demander de nous rendre Baran.}"
+        "<if:MS>{Vous lui avez donné une bonne leçon à cette Prodige, mais elle n'est pas encore vaincue pour autant, s'il est au moins possible de venir à bout d'une telle entité. Je ne suis même pas certain qu'il est possible de communiquer avec elle de manière significative, mais il me faut garder espoir. Continuez de jouer à son petit jeu, exilé. Peut-être qu'un jour elle vous verra comme un égal. Et que nous pourrons alors lui demander de nous rendre Baran.}<elif:FS>{Vous lui avez donné une bonne leçon à cette Prodige, mais elle n'est pas encore vaincue pour autant, s'il est au moins possible de venir à bout d'une telle entité. Je ne suis même pas certain qu'il est possible de communiquer avec elle de manière significative, mais il me faut garder espoir. Continuez de jouer à son petit jeu, exilée. Peut-être qu'un jour elle vous verra comme une égale. Et que nous pourrons alors lui demander de nous rendre Baran.}"
       ],
       [
         "KiracToEyeOfTheStorm",
-        "Caeserius m'annonce que Sirus est sur le point d'achever la création d'un dispositif cartographique de son cru. On aurait dû s'y attendre après avoir empêché les Conquérants d'interférer entre eux.\r\n\r\nL'énergie grandissante de ce dispositif a trahi l'emplacement d'une citadelle secrète dissimulée au cœur d'une formidable tempête. Caeserius peut nous y faire pénétrer et, ayant suivi vos rencontres avec Sirus, je peux affirmer que celui-ci ne s'y trouve pas à l'heure actuelle. Si l'on parvenait à atteindre cette machine et à la détruire avant que Sirus puisse s'en servir, on pourrait bien réussir à mettre un terme à cette histoire avant même qu'elle ne commence.\r\n\r\nLe destin du monde est encore une fois en jeu. Au diable le danger ! Nous allons tous les deux vous accompagner. Si c'est la dernière fois que nous nous parlons, sachez que ce fut un honneur d'être à vos côtés."
+        "Caeserius m'annonce que Sirus est sur le point d'achever la création d'un dispositif cartographique de son cru. On aurait dû s'y attendre après avoir empêché les Conquérants de communiquer entre eux.\r\n\r\nL'énergie grandissante diffusée par ce dispositif a fini par trahir l'emplacement d'une citadelle secrète dissimulée au cœur d'une formidable tempête. Caeserius peut nous y introduire et, ayant moi-même suivi vos rencontres avec Sirus, je peux affirmer que celui-ci ne s'y trouve pas à l'heure actuelle. Si l'on parvenait à atteindre cette machine et à la détruire avant que Sirus puisse s'en servir, on pourrait bien réussir à mettre un terme à cette histoire avant même qu'elle ne commence.\r\n\r\nLe destin du monde est encore une fois en jeu. Au diable le danger ! Elle et moi allons vous accompagner. Si c'est la dernière fois que nous nous parlons, sachez que ce fut un honneur d'être à vos côtés."
       ],
       [
         "KiracOnSirusLives",
-        "Sirus est <i>{vivant} ? J'imagine que Caeserius en saute de joie, sauf si Sirus s'avère est aussi fou que le reste des Conquérants. Je vais surveiller de près vos rencontres avec lui. Peut-être serons-nous en mesure de déterminer où il se cache."
+        "Sirus est <i>{vivant} ? J'imagine que Caeserius en saute de joie, sauf si Sirus s'avère aussi fou que le reste des Conquérants. Je vais surveiller de près vos affrontements. Peut-être parviendrons-nous à déterminer où il se cache."
       ],
       [
         "KiracOnSirusLivesTwo",
-        "Si les dernières paroles de mon frère étaient pour nous mettre en garde contre Sirus, c'est qu'il doit être vraiment très dangereux. J'avoue ne m'être jamais demandé ce que ses tempêtes pouvaient faire subir à l'humanité si elles ravageaient Wraeclast au lieu de l'Atlas…"
+        "Si les dernières paroles de mon frère étaient des mises en garde contre Sirus, c'est que ce dernier doit être vraiment très dangereux. J'avoue que je ne me suis jamais demandé ce que ses tempêtes pouvaient faire subir à l'humanité si elles ravageaient Wraeclast au lieu de l'Atlas…"
       ],
       [
         "KiracOnAtlasAwakening",
@@ -45710,11 +45710,11 @@
       ],
       [
         "KiracOnSirusDead",
-        "Était-ce un homme maléfique ? J'y pense toutes les nuits quand j'essaie de m'endormir, parce que j'ai l'impression que cette blessure qu'il m'a infligée ne guérira jamais vraiment. C'est comme si une nuée de mouches à bouse enragées me grignotait, me désintégrait à la même vitesse que la peau se régénère…\r\n\r\nSirus, donc. Je n'ose pas m'imaginer être abandonné dans l'obscurité pendant une éternité, aussi subjective soit-elle. Pas plus que je ne peux concevoir être vidé de mon être au point d'attaquer ceux que j'aime. Au bout du compte, je présume que ça n'a pas d'importance. On a fait ce qu'on avait à faire… et on le refera lorsque le moment sera venu."
+        "Était-il maléfique ? J'y pense toutes les nuits quand j'essaie de m'endormir, parce que j'ai l'impression que cette blessure qu'il m'a infligée ne guérira jamais vraiment. C'est comme si une nuée de mouches à bouse enragées me grignotait, me désintégrait à la même vitesse que la peau se régénère…\r\n\r\nSirus, donc. Je n'ose pas m'imaginer être abandonné dans l'obscurité pendant une éternité, aussi subjective soit-elle. Pas plus que je ne peux concevoir être vidé de mon être au point d'attaquer ceux que j'aime. Au bout du compte, j'imagine que ça n'a pas d'importance. On a fait ce qu'on avait à faire… et on le refera lorsque le moment sera venu."
       ],
       [
         "KiracOnNiko",
-        "Il est loyal, mais inapte à se faire confier la moindre responsabilité, pour des raisons évidentes. Parfois, j'aimerais bien posséder un chapeau éclairant. J'ai la fâcheuse tendance à trébucher quand je me rends aux latrines la nuit. Mais il vaut sans doute mieux ne pas exposer mon œil valide à une flamme nue."
+        "Il est loyal, mais inapte à se faire confier la moindre responsabilité, et ce pour des raisons évidentes. Parfois, j'aimerais bien posséder un chapeau éclairant. J'ai la fâcheuse tendance à trébucher quand je me rends aux latrines la nuit. Mais il vaut sans doute mieux ne pas exposer mon œil valide à une flamme nue."
       ],
       [
         "KiracOnNavali",
@@ -45726,7 +45726,7 @@
       ],
       [
         "KiracOnHelena",
-        "Jamais je n'ai fait confiance à un Garde noir de toute ma vie. Réhabilité ou pas. Et c'est pas demain la veille que je vais m'y mettre. Ce salopard de Gravicius et son taré de disciple Caméria… Mais j'imagine que je ne devrais pas tenir Héléna pour responsable pour ce qui m'est arrivé. Le fait que l'autre con ait encore mon œil me rend fou, c'est tout."
+        "Jamais je n'ai fait confiance à un Garde noir de toute ma vie. Réhabilité ou pas. Et c'est pas demain la veille que je vais m'y mettre. Ce salopard de Gravicius et son taré de disciple Caméria… Mais j'imagine que je ne devrais pas tenir Héléna pour responsable de ce qui m'est arrivé. Le fait que l'autre con ait encore mon œil me rend fou, c'est tout."
       ],
       [
         "KiracOnEinhar",
@@ -45754,7 +45754,7 @@
       ],
       [
         "KiracAdvisingWatchstone2",
-        "Un Conquérant se méfie de nous. Nous aurons besoin de mettre au moins deux Pierres de veille dans la Citadelle de cette région si nous comptons l'appâter."
+        "Un Conquérant se méfie de nous. Nous aurons besoin d'enchâsser au moins deux Pierres de veille dans la Citadelle de cette région si nous comptons l'appâter."
       ],
       [
         "KiracAdvisingWatchstone3",
@@ -45762,7 +45762,7 @@
       ],
       [
         "KiracAdvisingWatchstone4",
-        "Ils savent maintenant qu'il s'agit d'un combat à mort, exilé. Nous devrons poser au moins quatre Pierres de veille dans la Citadelle de cette région pour les forcer à sortir."
+        "<if:MS>{Ils savent maintenant qu'il s'agit d'un combat à mort, exilé. Nous devrons enchâsser au moins quatre Pierres de veille dans la Citadelle de cette région pour les forcer à sortir.}<elif:FS>{Ils savent maintenant qu'il s'agit d'un combat à mort, exilée. Nous devrons enchâsser au moins quatre Pierres de veille dans la Citadelle de cette région pour les forcer à sortir.}"
       ],
       [
         "KiracAdvisingLexProxima",
@@ -53071,6 +53071,10 @@
       [
         "MavenFinalFightWaitingOnMapOwner3",
         "Combien de temps me fera-t-on attendre ?"
+      ],
+      [
+        "MavenFinalFightDualIceBarrage",
+        "A cascade of pain!"
       ]
     ]
   },
