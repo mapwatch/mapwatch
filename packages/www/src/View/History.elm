@@ -371,9 +371,16 @@ viewHistoryRun ({ query, tz } as m) config goals r =
             , r.conqueror
                 |> Maybe.map (viewConquerorRow config r.npcSays)
                 |> Maybe.Extra.toList
+            , if r.isHeartOfTheGrove then
+                [ viewHistoryNpcTextRow_ query config (Dict.get NpcId.oshabi r.npcSays |> Maybe.withDefault []) [ View.Icon.harvest, text "Heart of the Grove" ] ]
+
+              else
+                []
             , r.npcSays
                 -- Ignore heist npcs who didn't use any skills
                 |> Dict.filter (\npcId _ -> not (Set.member npcId NpcId.heistNpcs) || Set.member npcId r.heistNpcs)
+                -- Don't show regular-harvest-Oshabi if it's heart of the grove
+                |> Dict.filter (\npcId _ -> not (npcId == NpcId.oshabi && r.isHeartOfTheGrove))
                 |> Dict.toList
                 |> List.filterMap (viewHistoryNpcTextRow query config)
             ]
@@ -461,8 +468,8 @@ viewHistorySideAreaRow query { showDate } ( instance, d ) =
 
 
 viewHistoryNpcTextRow : QueryDict -> HistoryRowConfig -> ( NpcId, List String ) -> Maybe (Html msg)
-viewHistoryNpcTextRow query { showDate, loadedAt } ( npcId, texts ) =
-    case viewNpcText query loadedAt npcId of
+viewHistoryNpcTextRow query config ( npcId, texts ) =
+    case viewNpcText query config.loadedAt npcId of
         [] ->
             Nothing
 
@@ -471,24 +478,28 @@ viewHistoryNpcTextRow query { showDate, loadedAt } ( npcId, texts ) =
                 Nothing
 
             else
-                Just <|
-                    tr [ class "npctext-area" ]
-                        ((if showDate then
-                            [ td [ class "date" ] [] ]
+                Just <| viewHistoryNpcTextRow_ query config texts body
 
-                          else
-                            []
-                         )
-                            ++ [ td [] []
-                               , td [] []
 
-                               -- , td [ colspan 7, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
-                               , td [ colspan 7, title <| String.join "\n\n" texts ] body
-                               , td [ class "side-dur" ] []
-                               , td [ class "portals" ] []
-                               , td [ class "town-pct" ] []
-                               ]
-                        )
+viewHistoryNpcTextRow_ : QueryDict -> HistoryRowConfig -> List String -> List (Html msg) -> Html msg
+viewHistoryNpcTextRow_ query { showDate, loadedAt } texts body =
+    tr [ class "npctext-area" ]
+        ((if showDate then
+            [ td [ class "date" ] [] ]
+
+          else
+            []
+         )
+            ++ [ td [] []
+               , td [] []
+
+               -- , td [ colspan 7, title (encounters |> List.reverse |> List.map .raw |> String.join "\n\n") ] body
+               , td [ colspan 7, title <| String.join "\n\n" texts ] body
+               , td [ class "side-dur" ] []
+               , td [ class "portals" ] []
+               , td [ class "town-pct" ] []
+               ]
+        )
 
 
 viewNpcText : QueryDict -> Posix -> String -> List (Html msg)
@@ -514,7 +525,7 @@ viewNpcText query loadedAt npcId =
         -- [ View.Icon.tane, text "Tane Octavius" ]
         -- Don't show conquerors, they have their own special function
 
-    else if npcId == NpcId.delirium && Feature.isActive Feature.DeliriumEncounter query then
+    else if npcId == NpcId.delirium then
         [ View.Icon.delirium, text "Delirium Mirror" ]
 
     else if npcId == NpcId.legionGeneralGroup then
@@ -539,38 +550,7 @@ viewNpcText query loadedAt npcId =
         [ View.Icon.vinderi, text "Vinderi, the Dismantler" ]
 
     else if npcId == NpcId.tortilla then
-        -- https://www.reddit.com/r/pathofexile/comments/iwbvt2/got_it_good/
-        -- memes are serious business
-        let
-            gen : Generator (Generator String)
-            gen =
-                Random.weighted
-                    ( 65, Random.constant "Tullina" )
-                    [ ( 35
-                      , Random.uniform
-                            "Tutu"
-                            [ "Tina"
-                            , "Teeny"
-                            , "Thimblina"
-                            , "Tulololina"
-                            , "Tumblrina"
-                            , "Tortilla"
-                            , "Lee"
-                            , "Tukohama"
-                            , "Leelee"
-                            , "Tony"
-                            ]
-                      )
-                    ]
-
-            name : String
-            name =
-                Random.initialSeed (Time.posixToMillis loadedAt)
-                    |> Random.step gen
-                    |> (\( gen1, seed ) -> Random.step gen1 seed)
-                    |> Tuple.first
-        in
-        [ View.Icon.tortilla, text (name ++ ", the Catburglar") ]
+        [ View.Icon.tortilla, text <| tortillaName loadedAt ++ ", the Catburglar" ]
 
     else if npcId == NpcId.gianna then
         [ View.Icon.gianna, text "Gianna, the Master of Disguise" ]
@@ -578,8 +558,49 @@ viewNpcText query loadedAt npcId =
     else if npcId == NpcId.isla then
         [ View.Icon.isla, text "Isla, the Engineer" ]
 
+    else if npcId == NpcId.envoy then
+        [ View.Icon.envoy, text "The Envoy" ]
+
+    else if npcId == NpcId.maven then
+        [ View.Icon.maven, text "The Maven" ]
+
+    else if npcId == NpcId.oshabi then
+        [ View.Icon.harvest, text "Oshabi" ]
+
     else
         []
+
+
+tortillaName : Posix -> String
+tortillaName loadedAt =
+    -- https://www.reddit.com/r/pathofexile/comments/iwbvt2/got_it_good/
+    -- memes are serious business
+    let
+        gen : Generator (Generator String)
+        gen =
+            Random.weighted
+                ( 65, Random.constant "Tullina" )
+                [ ( 35
+                  , Random.uniform
+                        "Tutu"
+                        [ "Tina"
+                        , "Teeny"
+                        , "Thimblina"
+                        , "Tulololina"
+                        , "Tumblrina"
+                        , "Tortilla"
+                        , "Lee"
+                        , "Tukohama"
+                        , "Leelee"
+                        , "Tony"
+                        ]
+                  )
+                ]
+    in
+    Random.initialSeed (Time.posixToMillis loadedAt)
+        |> Random.step gen
+        |> (\( gen1, seed ) -> Random.step gen1 seed)
+        |> Tuple.first
 
 
 viewConquerorRow : HistoryRowConfig -> Dict NpcId (List String) -> ( Conqueror.Id, Conqueror.Encounter ) -> Html msg

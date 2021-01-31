@@ -405,6 +405,8 @@ createNPCText1 lang =
     , createNPCTextSet lang NpcId.drox (Tuple.first >> String.startsWith "Drox")
     , createNPCTextSet lang NpcId.cassia (Tuple.first >> String.startsWith "Cassia")
     , createNPCTextSet lang NpcId.shaper (Tuple.first >> String.startsWith "Shaper")
+    , createNPCTextSet lang NpcId.oshabi (Tuple.first >> String.startsWith "Harvest")
+    , createNPCTextSet lang NpcId.oshabi (Tuple.first >> String.startsWith "Oshabi")
 
     -- heist
     , createNPCTextSet lang NpcId.karst (Tuple.first >> String.startsWith "Karst")

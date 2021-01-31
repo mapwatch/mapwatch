@@ -41,6 +41,7 @@ type alias MapRun =
     , conqueror : Maybe ( Conqueror.Id, Conqueror.Encounter )
     , npcSays : Dict NpcGroup (List String)
     , heistNpcs : Set NpcId
+    , isHeartOfTheGrove : Bool
     }
 
 
@@ -193,6 +194,7 @@ fromRaw dm ({ address } as raw) =
     , isAbandoned = raw.isAbandoned
     , isBlightedMap = isBlightedMap raw
     , heistNpcs = heistNpcs raw
+    , isHeartOfTheGrove = isHeartOfTheGrove raw
     , conqueror = conquerorEncounterFromNpcs raw.npcSays
 
     -- List.reverse: RawMapRun prepends the newest runs to the list, because that's
@@ -236,6 +238,18 @@ isBlightedMap run =
                 |> List.filter (.textId >> String.startsWith "CassiaNewLane")
     in
     Dict.size run.npcSays == 1 && List.length newLanes >= 8
+
+
+{-| If Oshabi uses one of her boss voicelines, this is Heart of the Grove fight, not a regular Harvest
+-}
+isHeartOfTheGrove : RawMapRun -> Bool
+isHeartOfTheGrove =
+    .npcSays
+        >> Dict.get NpcId.oshabi
+        >> Maybe.withDefault []
+        >> Debug.log "hotg"
+        >> List.filter (.textId >> (\t -> String.startsWith "HarvestBoss" t || String.startsWith "HarvestReBoss" t))
+        >> (\l -> List.length l > 0)
 
 
 {-| Ignore Heist rogues that don't use any skills.

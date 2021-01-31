@@ -142,7 +142,11 @@ viewEncountersRows tally =
     , { count = tally.alva, label = "Alva" }
     , { count = tally.niko, label = "Niko" }
     , { count = tally.jun, label = "Jun" }
-    , { count = tally.cassia, label = "Cassia" }
+    , { count = tally.delirium, label = "Delirium" }
+    , { count = tally.oshabi, label = "Oshabi" }
+    , { count = tally.heartOfTheGrove, label = "Heart of the Grove" }
+    , { count = tally.envoy, label = "The Envoy" }
+    , { count = tally.maven, label = "The Maven" }
     ]
         |> List.sortBy .count
         |> List.reverse
@@ -195,22 +199,20 @@ viewHistoryHeaders model =
     , "Jun"
     , "Cassia"
     , "Legion General"
+    , "Delirium"
+    , "Oshabi"
+    , "Heart of the Grove"
+    , "Envoy"
+    , "Maven"
+    , "Zana"
+    , "Vaal"
+    , "Lab Trial"
+    , "Abyssal Depths"
+    , "Abandoned Map Run"
+
+    -- this one goes last
+    , "https://mapwatch.erosson.org"
     ]
-        ++ (if Feature.isActive Feature.DeliriumEncounter model.query then
-                [ "Delirium" ]
-
-            else
-                []
-           )
-        ++ [ "Zana"
-           , "Vaal"
-           , "Lab Trial"
-           , "Abyssal Depths"
-           , "Abandoned Map Run"
-
-           -- this one goes last
-           , "https://mapwatch.erosson.org"
-           ]
 
 
 viewHistoryRow : OkModel -> Int -> MapRun -> List Cell
@@ -239,19 +241,17 @@ viewHistoryRow model i run =
     , run |> viewNpc NpcId.betrayalGroup
     , run |> viewNpc NpcId.cassia
     , run |> viewNpc NpcId.legionGeneralGroup
+    , run |> viewNpc NpcId.delirium
+    , run |> viewNpc NpcId.oshabi
+    , run.isHeartOfTheGrove |> CellBool
+    , run |> viewNpc NpcId.envoy
+    , run |> viewNpc NpcId.maven
+    , run |> viewSideArea Datamine.isMap
+    , run |> viewSideArea .isVaalArea
+    , run |> viewSideArea .isLabTrial
+    , run |> viewSideArea .isAbyssalDepths |> (/=) CellEmpty |> CellBool
+    , CellBool run.isAbandoned
     ]
-        ++ (if Feature.isActive Feature.DeliriumEncounter model.query then
-                [ run |> viewNpc NpcId.delirium ]
-
-            else
-                []
-           )
-        ++ [ run |> viewSideArea Datamine.isMap
-           , run |> viewSideArea .isVaalArea
-           , run |> viewSideArea .isLabTrial
-           , run |> viewSideArea .isAbyssalDepths |> (/=) CellEmpty |> CellBool
-           , CellBool run.isAbandoned
-           ]
 
 
 viewSideArea : (WorldArea -> Bool) -> MapRun -> Cell

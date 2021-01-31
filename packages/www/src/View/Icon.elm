@@ -269,4 +269,20 @@ isla =
 
 divCard : Html msg
 divCard =
-    img [ class "side-icon", src "https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?scale=1" ] []
+    -- not a side-area icon, this is for the divcard-drops under the timer
+    img [ class "divcard side-icon", src "https://web.poecdn.com/image/Art/2DItems/Divination/InventoryIcon.png?scale=1" ] []
+
+
+envoy : Html msg
+envoy =
+    sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+
+
+maven : Html msg
+maven =
+    sideArea { name = "maven med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+
+
+harvest : Html msg
+harvest =
+    sideArea { name = "harvest big-icon", url = "Art/2DItems/Effects/Portals/HarvestPortal.png?scale=1" }

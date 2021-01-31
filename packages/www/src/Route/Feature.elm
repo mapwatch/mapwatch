@@ -35,7 +35,6 @@ type Feature
     | DownloadLink
     | GSheets
     | ConquerorStatus
-    | DeliriumEncounter
     | Backend
     | HeistNpcs
     | Drops
@@ -52,7 +51,6 @@ list =
     , DownloadLink
     , GSheets
     , ConquerorStatus
-    , DeliriumEncounter
     , Backend
     , HeistNpcs
     , Drops
@@ -81,9 +79,6 @@ config feature =
 
         ConquerorStatus ->
             FeatureConfig feature "conquerorStatus" False
-
-        DeliriumEncounter ->
-            FeatureConfig feature "deliriumEncounter" True
 
         Backend ->
             FeatureConfig feature "backend" False

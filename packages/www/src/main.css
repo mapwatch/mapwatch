@@ -188,6 +188,9 @@ table.timer-details .session-buttons .button {
 /* .map-icon-Incursion_Temple1, */
 /* .side-icon-alva, */
 /* .side-icon-heist-npc, */
+/* .side-icon-harvest, */
+/* .side-icon-envoy, */
+/* .side-icon-maven, */
 [src$="IncursionPortal.png"] {
   filter: drop-shadow(1px 1px 0 #eb99a1)
           drop-shadow(-1px -1px 0 #eb99a1);

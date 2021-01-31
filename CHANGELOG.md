@@ -4,6 +4,15 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-01-31
+- The Maven encounters are now tracked.
+- The Envoy encounters are now tracked.
+- Oshabi and Heart of The Grove encounters are now tracked, and correctly distinguished from one another.
+  - If Oshabi is silent during a harvest, Harvest unfortunately cannot be tracked.
+  - Once you've beaten Heart of the Grove, Oshabi will always be silent and unfortunately cannot be tracked (I think).
+- The Maven's Crucible is now tracked.
+- Removed the Delirium feature-flag; it's now always tracked.
+
 ## 2021-01-18 (and some earlier stuff)
 - Data exported from PoE game files (regions, names, images, hideouts...) is now updated [automatically](https://github.com/erosson/pypoe-json) whenever PoE is patched, so it won't appear in this changelog anymore.
 - The "hide pre-(LEAGUE)" button is now updated automatically each league, so it won't appear in this changelog anymore.

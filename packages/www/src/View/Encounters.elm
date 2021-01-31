@@ -139,13 +139,12 @@ listEncounterTally query tally =
     , ( tally.niko, "npc:niko", [ View.Icon.niko, text "Niko" ] )
     , ( tally.jun, "npc:jun", [ View.Icon.jun, text "Jun" ] )
     , ( tally.cassia, "npc:cassia", [ View.Icon.cassia, text "Cassia" ] )
+    , ( tally.delirium, "npc:strange voice", [ View.Icon.delirium, text "Delirium" ] )
+    , ( tally.oshabi, "npc:oshabi", [ View.Icon.harvest, text "Oshabi" ] )
+    , ( tally.heartOfTheGrove, "heartOfTheGrove", [ View.Icon.harvest, text "Heart of the Grove" ] )
+    , ( tally.envoy, "npc:envoy", [ View.Icon.envoy, text "The Envoy" ] )
+    , ( tally.envoy, "npc:maven", [ View.Icon.maven, text "The Maven" ] )
     ]
-        ++ (if Feature.isActive Feature.DeliriumEncounter query then
-                [ ( tally.delirium, "npc:strange voice", [ View.Icon.delirium, text "Delirium" ] ) ]
-
-            else
-                []
-           )
         |> List.map
             (\( count, search, label ) ->
                 { label = label

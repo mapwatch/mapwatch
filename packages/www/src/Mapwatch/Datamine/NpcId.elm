@@ -150,3 +150,19 @@ heistNpcsList =
 
 heistNpcs =
     Set.fromList heistNpcsList
+
+
+
+-- echoes
+
+
+envoy =
+    "Metadata/NPC/Epilogue/Envoy"
+
+
+maven =
+    "Metadata/NPC/Epilogue/Maven"
+
+
+oshabi =
+    "Metadata/NPC/League/Harvest/HarvestNPC"

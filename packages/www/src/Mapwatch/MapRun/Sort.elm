@@ -438,6 +438,11 @@ searchString dm r =
         |> (++) "region:"
         |> Just
     , r.conqueror |> Maybe.map Conqueror.searchString
+    , if r.isHeartOfTheGrove then
+        Just "heartOfTheGrove"
+
+      else
+        Nothing
     ]
         ++ (r.npcSays |> Dict.keys |> List.map (\id -> npcName id dm))
         ++ (r.sideAreas |> Dict.values |> List.map (Tuple.first >> sideAreaSearchString dm >> Just))

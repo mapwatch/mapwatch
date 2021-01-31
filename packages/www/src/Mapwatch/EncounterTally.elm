@@ -28,12 +28,16 @@ type alias EncounterTally =
     , niko : Int
     , jun : Int
     , cassia : Int
+    , envoy : Int
+    , maven : Int
+    , oshabi : Int
+    , heartOfTheGrove : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -63,14 +67,19 @@ fromMapRuns runs =
         npcs : List NpcGroup
         npcs =
             runs |> List.concatMap (.npcSays >> Dict.keys)
+
+        hearts =
+            runs |> List.filter .isHeartOfTheGrove |> List.length
     in
     { empty
         | blightedMaps = runs |> List.filter .isBlightedMap |> List.length
+        , heartOfTheGrove = hearts
         , uniqueMaps = maps |> List.filterMap .worldArea |> List.filter .isUniqueMapArea |> List.length
         , conquerors = runs |> List.filterMap .conqueror |> List.filter (\( conqueror, encounter ) -> encounter == Conqueror.Fight) |> List.length
         , count = List.length runs
     }
         |> tallyNpcs npcs
+        |> (\t -> { t | oshabi = t.oshabi - hearts |> max 0 })
         |> tallySides sides
 
 
@@ -88,6 +97,9 @@ tallyNpcs npcs tally =
         , jun = Dict.get NpcId.betrayalGroup counts |> Maybe.withDefault 0
         , cassia = Dict.get NpcId.cassia counts |> Maybe.withDefault 0
         , delirium = Dict.get NpcId.delirium counts |> Maybe.withDefault 0
+        , envoy = Dict.get NpcId.envoy counts |> Maybe.withDefault 0
+        , maven = Dict.get NpcId.maven counts |> Maybe.withDefault 0
+        , oshabi = Dict.get NpcId.oshabi counts |> Maybe.withDefault 0
     }
 
 

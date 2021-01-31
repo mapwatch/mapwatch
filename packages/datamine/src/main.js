@@ -76,6 +76,8 @@ const nonAtlasMaps = {
   "BreachBossLightning": "Art/2DItems/Currency/Breach/BreachFragmentsLightning.png",
   "BreachBossPhysical": "Art/2DItems/Currency/Breach/BreachFragmentsPhysical.png",
   "BreachBossChaos": "Art/2DItems/Currency/Breach/BreachFragmentsChaos.png",
+  // maven
+  "MavenHub": "Art/2DItems/Effects/Portals/MavenPortalEffect.png",
 }
 function nonAtlasMapIcon(id) {
   if (nonAtlasMaps[id]) {
@@ -169,6 +171,7 @@ const exportedNPCs = Object.assign({}, ...[
   "Metadata/NPC/League/Delve/DelveMiner",
   "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop", // ninja-cop, lol
   "Metadata/Monsters/Masters/BlightBuilderWild",
+  // other dialogue-based encounters
   "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC",
   "Metadata/NPC/League/Affliction/StrangeVoice",
   "Metadata/Monsters/LegionLeague/LegionKaruiGeneral",
@@ -178,6 +181,9 @@ const exportedNPCs = Object.assign({}, ...[
   "Metadata/Monsters/LegionLeague/LegionTemplarGeneral",
   "Metadata/Monsters/LegionLeague/LegionVaalGeneral",
   "Metadata/NPC/Shaper",
+  "Metadata/NPC/League/Harvest/HarvestNPC",
+  "Metadata/NPC/Epilogue/Envoy",
+  "Metadata/NPC/Epilogue/Maven",
 ].map(name => ({[name]: true})))
 function isNPCIdExported(raw) {
   return !!exportedNPCs[raw.Id]
@@ -221,6 +227,13 @@ function isNPCTextExported(raw) {
       || /^Gianna(Perception|Deception|Smuggler|Cultist|Engineer)/.test(raw.Id)
       || /^EngineeringGianna/.test(raw.Id)
       || /^Isla(Engineering|DisarmTrap|CounterThaumaturgy)/.test(raw.Id)
+      // Oshabi: distinguish plain harvests vs. Heart of the Grove boss.
+      // TODO: In 3.11, Oshabi disappears after beating heart of the grove,
+      // silencing harvests in the logs. Is this still true in 3.13?
+      || /^HarvestBoss/.test(raw.Id)
+      || /^HarvestReBoss/.test(raw.Id)
+      || /^OshabiWhenHarvesting/.test(raw.Id)
+      || /^OshabiWhenFightEnds/.test(raw.Id)
 }
 function transformAtlasNode(raw, {json}) {
   return {
