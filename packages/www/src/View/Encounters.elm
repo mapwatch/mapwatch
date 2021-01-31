@@ -143,7 +143,7 @@ listEncounterTally query tally =
     , ( tally.oshabi, "npc:oshabi", [ View.Icon.harvest, text "Oshabi" ] )
     , ( tally.heartOfTheGrove, "heartOfTheGrove", [ View.Icon.harvest, text "Heart of the Grove" ] )
     , ( tally.envoy, "npc:envoy", [ View.Icon.envoy, text "The Envoy" ] )
-    , ( tally.envoy, "npc:maven", [ View.Icon.maven, text "The Maven" ] )
+    , ( tally.maven, "npc:maven", [ View.Icon.maven, text "The Maven" ] )
     ]
         |> List.map
             (\( count, search, label ) ->
