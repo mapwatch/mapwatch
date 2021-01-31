@@ -6,6 +6,9 @@
  */
 const fs = require('fs').promises
 const chokidar = require('chokidar')
+const regedit = require('regedit')
+const promisify = require('util').promisify
+const path = require('path')
 const REMEMBERED_KEY = "mapwatch.remembered"
 
 function ElectronBackend() {
@@ -19,31 +22,34 @@ function ElectronBackend() {
   let fileStart = 0
   const onChanges = []
 
-  function autoOpen(maxSize, localStorage) {
+  async function autoOpen(maxSize, localStorage) {
     const remembered = localStorage && localStorage.getItem(REMEMBERED_KEY)
     if (remembered) {
-      // remember the last manually-opened path
+      // remember the last manually-opened path. If it fails (poe was moved?),
+      // force the user to select another path manually, don't surprise them by
+      // picking a new one
       return this.open({path: remembered}, maxSize)
     }
-    return Promise.all([
-      "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt",
-      "C:\\Program Files\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt",
-      "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt",
-      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt",
-      "C:\\Program Files\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt",
-    ].map(path =>
-      fs.access(path)
-      .then(() => path)
-      .catch(err => null)
-    ))
-    .then(paths => paths.filter(val => !!val))
-    // .then(paths => {console.log('autoOpen paths', paths); return paths})
-    .then(paths =>
-        paths.length
-          ? Promise.resolve(paths[0])
-          : Promise.reject("Couldn't guess client.txt path")
-    )
-    .then(path => this.open({path}, maxSize))
+    let paths = await Promise.all([
+        await catchAndWarn(windowsRegistryPath(), "windows registry inaccessible: ignoring."),
+        "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt",
+        "C:\\Program Files\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt",
+        "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt",
+        "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt",
+        "C:\\Program Files\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt",
+      ].map(path =>
+        fs.access(path)
+        .then(() => path)
+        .catch(err => null)
+      ))
+    paths = paths.filter(val => !!val)
+    // console.log('autoOpen paths', paths)
+    if (paths.length) {
+      return this.open({path: paths[0]}, maxSize)
+    }
+    else {
+      throw new Error("Couldn't guess client.txt path")
+    }
   }
   function open({path}, maxSize, localStorage) {
     return this.close()
@@ -119,4 +125,24 @@ function ElectronBackend() {
     onChange,
   }
 }
+
+function catchAndWarn(p, w) {
+  return p.catch(err => {
+    console.warn(w, err)
+    return null
+  })
+}
+async function windowsRegistryPath() {
+  // throw new Error('oops')
+  const KEY = "HKCU\\Software\\GrindingGearGames\\Path of Exile"
+  const entry = await promisify(regedit.list)(KEY)
+  const dir = entry[KEY].values.InstallLocation.value
+  if (dir) {
+    return path.join(dir, "logs", "Client.txt")
+  }
+  else {
+    throw new Error("null(ish) windows registry InstallLocation: "+KEY)
+  }
+}
+
 module.exports = {ElectronBackend}
