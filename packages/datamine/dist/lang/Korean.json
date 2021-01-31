@@ -4988,7 +4988,7 @@
       ],
       [
         "MapWorldsHarbingerUber",
-        "주입된 교두보(Infused Beachhead)"
+        "주입된 교두보"
       ],
       [
         "MapWorldsDrySea",
@@ -5008,7 +5008,7 @@
       ],
       [
         "MapWorldsFrozenCabins",
-        "얼어붙은 오두막"
+        "얼어붙은 오막"
       ],
       [
         "MapWorldsHarbingerPrison",
@@ -53071,6 +53071,10 @@
       [
         "MavenFinalFightWaitingOnMapOwner3",
         "얼마나 더 기다려야 하지?"
+      ],
+      [
+        "MavenFinalFightDualIceBarrage",
+        "고통이 몰아친다!"
       ]
     ]
   },

@@ -7301,7 +7301,7 @@
       ],
       [
         "MapDeviceTooManyItemsSound",
-        "Активация не удалась. Слишком много звуков предметов."
+        "Активация не удалась. Вы слышите отдаленные звуки."
       ],
       [
         "MapDeviceNotMap",
@@ -53071,6 +53071,10 @@
       [
         "MavenFinalFightWaitingOnMapOwner3",
         "Как долго мне ещё придётся ждать?"
+      ],
+      [
+        "MavenFinalFightDualIceBarrage",
+        "A cascade of pain!"
       ]
     ]
   },

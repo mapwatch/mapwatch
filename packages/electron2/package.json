@@ -42,7 +42,7 @@
     "regedit": "^3.0.3"
   },
   "devDependencies": {
-    "electron": "11.2.0",
+    "electron": "11.2.1",
     "electron-builder": "^22.7.0"
   }
 }
