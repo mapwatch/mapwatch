@@ -247,7 +247,6 @@ isHeartOfTheGrove =
     .npcSays
         >> Dict.get NpcId.oshabi
         >> Maybe.withDefault []
-        >> Debug.log "hotg"
         >> List.filter (.textId >> (\t -> String.startsWith "HarvestBoss" t || String.startsWith "HarvestReBoss" t))
         >> (\l -> List.length l > 0)
 
