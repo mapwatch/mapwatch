@@ -12,6 +12,7 @@ All substantial Mapwatch website changes.
   - Once you've beaten Heart of the Grove, Oshabi will always be silent and unfortunately cannot be tracked (I think).
 - The Maven's Crucible is now tracked.
 - Removed the Delirium feature-flag; it's now always tracked.
+- Fixed a bunch of localization bugs introduced with 2021-01-18's changes. Searching for NPCs now works, for example.
 
 ## 2021-01-18 (and some earlier stuff)
 - Data exported from PoE game files (regions, names, images, hideouts...) is now updated [automatically](https://github.com/erosson/pypoe-json) whenever PoE is patched, so it won't appear in this changelog anymore.

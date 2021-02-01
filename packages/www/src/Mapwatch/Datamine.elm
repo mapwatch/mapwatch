@@ -7,6 +7,7 @@ module Mapwatch.Datamine exposing
     , createDatamine_
     , decoder
     , defaultAtlasRegion
+    , defaultLang
     , divCards
     , imgCdn
     , imgSrc
@@ -109,10 +110,15 @@ tier =
     .tiers >> Maybe.andThen (List.filter ((/=) 0) >> List.head)
 
 
+defaultLang : String
+defaultLang =
+    "English"
+
+
 worldAreaToString : Datamine -> WorldArea -> String
 worldAreaToString dm world =
     dm.lang
-        |> Dict.get "en"
+        |> Dict.get defaultLang
         |> Maybe.andThen (.index >> .worldAreas >> Dict.get world.id)
         |> Maybe.withDefault world.id
 
@@ -133,7 +139,7 @@ sortLangs =
     -- english first, for my own personal ease of reading/debugging
     List.sortBy
         (\l ->
-            ( if l.name == "en" then
+            ( if l.name == defaultLang then
                 0
 
               else
@@ -272,7 +278,7 @@ isHeistMap w =
 wikiPath : Datamine -> WorldArea -> String
 wikiPath dm w =
     dm.lang
-        |> Dict.get "en"
+        |> Dict.get defaultLang
         |> Maybe.andThen (.index >> .worldAreas >> Dict.get w.id)
         |> Maybe.map
             (\name ->
@@ -299,7 +305,7 @@ atlasBases dm w =
 
 divCards : Datamine -> WorldArea -> List DivCard
 divCards dm w =
-    case dm.lang |> Dict.get "en" |> Maybe.andThen (.index >> .worldAreas >> Dict.get w.id) of
+    case dm.lang |> Dict.get defaultLang |> Maybe.andThen (.index >> .worldAreas >> Dict.get w.id) of
         Nothing ->
             []
 

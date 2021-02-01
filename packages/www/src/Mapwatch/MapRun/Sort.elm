@@ -401,7 +401,7 @@ parseGoalDuration =
 
 npcName : NpcId -> Datamine -> Maybe String
 npcName id dm =
-    Dict.get "en" dm.lang
+    Dict.get Datamine.defaultLang dm.lang
         |> Maybe.andThen (\l -> Dict.get id l.index.npcs)
         |> Maybe.Extra.orElse
             (if id == NpcId.betrayalGroup then
@@ -416,7 +416,7 @@ npcName id dm =
 searchString : Datamine -> MapRun -> String
 searchString dm r =
     [ if r.isBlightedMap then
-        Just "Blighted"
+        Just <| "Blighted " ++ r.address.zone
 
       else
         Nothing

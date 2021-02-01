@@ -12,8 +12,8 @@ import Time exposing (Posix)
 datamine : Datamine
 datamine =
     Datamine.createDatamine_ Array.empty
-        (Dict.singleton "en"
-            { name = "en"
+        (Dict.singleton Datamine.defaultLang
+            { name = Datamine.defaultLang
             , unindex = langIndexEmpty
             , index = { langIndexEmpty | backendErrors = Dict.singleton "EnteredArea" "You have entered {0}." }
             }
