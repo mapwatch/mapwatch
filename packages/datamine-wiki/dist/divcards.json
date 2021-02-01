@@ -149,9 +149,7 @@
     },
     {
       "card": "Beauty Through Death",
-      "maps": [
-        "Vaal Temple Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Queen's Sacrifice"
       }
