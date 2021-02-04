@@ -92,6 +92,6 @@ If your language seems broken, please file a bug. I usually test Mapwatch in Eng
 
 **Your true Harvest encounter rate is higher than Mapwatch says.**
 
-Mapwatch tracks all Harvest encounters where Oshabi speaks. This works well for most of the game's NPC encounters - unfortunately, [Oshabi is often quiet](https://github.com/mapwatch/mapwatch/issues/183). Mapwatch can't detect harvests where Oshabi is quiet (nor can any other client.txt-based tool). Sadly, Mapwatch cannot fix this.
+Mapwatch tracks all Harvest encounters where Oshabi speaks. This works well for most of the game's NPC encounters - unfortunately, [Oshabi is often quiet, at random](https://github.com/mapwatch/mapwatch/issues/183). Mapwatch can't detect harvests where Oshabi happens to be quiet (nor can any other client.txt-based tool). Sadly, Mapwatch cannot fix this.
 
 Harvest maps are usually slower than other maps. You might be able to estimate a more accurate (but still inexact) Harvest encounter rate by combining your slower-than-average map count with Oshabi's dialogue. [I'd like to add something like this to Mapwatch soon.](https://github.com/mapwatch/mapwatch/issues/185)
