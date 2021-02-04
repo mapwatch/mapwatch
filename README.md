@@ -87,3 +87,11 @@ This has been pretty uncommon, in my experience. It could be more or less common
 Yes! Mapwatch itself is English-only, but you can play Path of Exile in any language - Mapwatch should be able to understand your Client.txt.
 
 If your language seems broken, please file a bug. I usually test Mapwatch in English, but I want to know if your language isn't working!
+
+### [My Harvest encounter rate seems low?](https://github.com/mapwatch/mapwatch/issues/183)
+
+**Your true Harvest encounter rate is higher than Mapwatch says.**
+
+Mapwatch tracks all Harvest encounters where Oshabi speaks, similar to other NPC encounters. Unfortunately, [Oshabi is often quiet](https://github.com/mapwatch/mapwatch/issues/183). Mapwatch can't detect harvests where Oshabi is quiet (neither can any other client.txt-based tool). Sadly, this cannot be fixed.
+
+Harvest maps are usually slower than other maps. You might be able to estimate a more accurate (but still inexact) Harvest encounter rate by counting slower-than-average map runs. [I'd like to add something like this to Mapwatch soon.](https://github.com/mapwatch/mapwatch/issues/185)
