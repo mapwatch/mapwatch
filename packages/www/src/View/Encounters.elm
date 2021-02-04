@@ -119,45 +119,74 @@ viewEncounterTally query tally =
                             , td [] [ text "×", text <| String.fromInt row.count ]
                             , td [] [ row.pct * 100 |> String.fromFloat |> String.left 5 |> text, text "%" ]
                             ]
+                            :: (if row.disclaimer == [] then
+                                    []
+
+                                else
+                                    [ tr [] [ td [ colspan 3 ] row.disclaimer ] ]
+                               )
                     )
+                |> List.concat
             )
         ]
     ]
 
 
-listEncounterTally : QueryDict -> EncounterTally -> List { label : List (Html msg), count : Int, pct : Float, search : Maybe String }
-listEncounterTally query tally =
-    [ ( tally.abyssalDepths, "side:abyssal depths", [ View.Icon.abyss, text "Abyssal Depths" ] )
-    , ( tally.vaalAreas, "vaal-side:", [ View.Icon.vaal, text "Vaal side areas" ] )
-    , ( tally.uniqueMaps, "unique-map:", [ View.Icon.uniqueMap, text "Unique Maps" ] )
-    , ( tally.labTrialsTotal, "lab-trial-side:", [ View.Icon.labTrial, text "(", text <| String.fromInt <| List.length tally.labTrials, text "/6) Labyrinth Trials" ] )
-    , ( tally.blightedMaps, "blighted", [ View.Icon.blightedMap, text "Blighted Maps" ] )
-    , ( tally.conquerors, "conqueror:", [ span [ title "excluding Sirus" ] [ View.Icon.sirus, text "Conqueror Fights" ] ] )
-    , ( tally.zana, "npc:zana", [ View.Icon.zana, text "Zana" ] )
-    , ( tally.einhar, "npc:einhar", [ View.Icon.einhar, text "Einhar" ] )
-    , ( tally.alva, "npc:alva", [ View.Icon.alva, text "Alva" ] )
-    , ( tally.niko, "npc:niko", [ View.Icon.niko, text "Niko" ] )
-    , ( tally.jun, "npc:jun", [ View.Icon.jun, text "Jun" ] )
-    , ( tally.cassia, "npc:cassia", [ View.Icon.cassia, text "Cassia" ] )
-    , ( tally.delirium, "npc:strange voice", [ View.Icon.delirium, text "Delirium" ] )
-    , ( tally.oshabi, "npc:oshabi", [ View.Icon.harvest, text "Oshabi" ] )
-    , ( tally.heartOfTheGrove, "heartOfTheGrove", [ View.Icon.harvest, text "Heart of the Grove" ] )
-    , ( tally.envoy, "npc:envoy", [ View.Icon.envoy, text "The Envoy" ] )
-    , ( tally.maven, "npc:maven", [ View.Icon.maven, text "The Maven" ] )
-    ]
-        |> List.map
-            (\( count, search, label ) ->
-                { label = label
-                , search =
-                    if search == "" then
-                        Nothing
+type alias TallyEntry msg =
+    { label : List (Html msg)
+    , count : Int
+    , pct : Float
+    , search : Maybe String
+    , disclaimer : List (Html msg)
+    }
 
-                    else
-                        Just search
-                , count = count
-                , pct = toFloat count / toFloat tally.count
-                }
-            )
+
+listEncounterTally : QueryDict -> EncounterTally -> List (TallyEntry msg)
+listEncounterTally query tally =
+    let
+        entry : Int -> String -> List (Html msg) -> TallyEntry msg
+        entry count search label =
+            discEntry count search label []
+
+        discEntry : Int -> String -> List (Html msg) -> List (Html msg) -> TallyEntry msg
+        discEntry count search label disc =
+            { label = label
+            , search =
+                if search == "" then
+                    Nothing
+
+                else
+                    Just search
+            , count = count
+            , pct = toFloat count / toFloat tally.count
+            , disclaimer = disc
+            }
+    in
+    [ entry tally.abyssalDepths "side:abyssal depths" [ View.Icon.abyss, text "Abyssal Depths" ]
+    , entry tally.vaalAreas "vaal-side:" [ View.Icon.vaal, text "Vaal side areas" ]
+    , entry tally.uniqueMaps "unique-map:" [ View.Icon.uniqueMap, text "Unique Maps" ]
+    , entry tally.labTrialsTotal "lab-trial-side:" [ View.Icon.labTrial, text "(", text <| String.fromInt <| List.length tally.labTrials, text "/6) Labyrinth Trials" ]
+    , entry tally.blightedMaps "blighted" [ View.Icon.blightedMap, text "Blighted Maps" ]
+    , entry tally.conquerors "conqueror:" [ span [ title "excluding Sirus" ] [ View.Icon.sirus, text "Conqueror Fights" ] ]
+    , entry tally.zana "npc:zana" [ View.Icon.zana, text "Zana" ]
+    , entry tally.einhar "npc:einhar" [ View.Icon.einhar, text "Einhar" ]
+    , entry tally.alva "npc:alva" [ View.Icon.alva, text "Alva" ]
+    , entry tally.niko "npc:niko" [ View.Icon.niko, text "Niko" ]
+    , entry tally.jun "npc:jun" [ View.Icon.jun, text "Jun" ]
+    , entry tally.cassia "npc:cassia" [ View.Icon.cassia, text "Cassia" ]
+    , entry tally.delirium "npc:strange voice" [ View.Icon.delirium, text "Delirium" ]
+    , discEntry tally.oshabi
+        "npc:oshabi"
+        [ View.Icon.harvest, text "Oshabi", b [] [ text " * " ] ]
+        -- https://github.com/mapwatch/mapwatch/issues/183
+        [ text "* Beware: Mapwatch cannot accurately track Harvests. "
+        , a [ target "_blank", href "https://github.com/mapwatch/mapwatch#my-harvest-encounter-rate-seems-low" ]
+            [ text "Your true Harvest rate is higher." ]
+        ]
+    , entry tally.heartOfTheGrove "heartOfTheGrove" [ View.Icon.harvest, text "Heart of the Grove" ]
+    , entry tally.envoy "npc:envoy" [ View.Icon.envoy, text "The Envoy" ]
+    , entry tally.maven "npc:maven" [ View.Icon.maven, text "The Maven" ]
+    ]
         |> List.filter (\r -> r.count > 0)
         |> List.sortBy .count
         |> List.reverse

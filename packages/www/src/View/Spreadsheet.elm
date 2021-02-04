@@ -143,7 +143,7 @@ viewEncountersRows tally =
     , { count = tally.niko, label = "Niko" }
     , { count = tally.jun, label = "Jun" }
     , { count = tally.delirium, label = "Delirium" }
-    , { count = tally.oshabi, label = "Oshabi" }
+    , { count = tally.oshabi, label = "Oshabi (INCOMPLETE)" }
     , { count = tally.heartOfTheGrove, label = "Heart of the Grove" }
     , { count = tally.envoy, label = "The Envoy" }
     , { count = tally.maven, label = "The Maven" }
