@@ -12,7 +12,7 @@ All substantial Mapwatch website changes.
 - The Envoy encounters are now tracked.
 - Oshabi and Heart of The Grove encounters are now tracked, and correctly distinguished from one another.
   - If Oshabi is silent during a harvest, Harvest unfortunately cannot be tracked.
-  - Once you've beaten Heart of the Grove, Oshabi will always be silent and unfortunately cannot be tracked (I think).
+  - ~~Once you've beaten Heart of the Grove, Oshabi will always be silent and unfortunately cannot be tracked (I think).~~
 - The Maven's Crucible is now tracked.
 - Removed the Delirium feature-flag; it's now always tracked.
 - Fixed a bunch of localization bugs introduced with 2021-01-18's changes. Searching for NPCs now works, for example.
