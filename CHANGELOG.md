@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-02-07
+- Sirus map encounters are now tracked.
+
 ## 2021-02-04
 - The Encounters page now includes a disclaimer about [Harvest tracking inaccuracy](https://github.com/mapwatch/mapwatch#my-harvest-encounter-rate-seems-low).
 
