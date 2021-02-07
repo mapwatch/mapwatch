@@ -147,6 +147,7 @@ viewEncountersRows tally =
     , { count = tally.heartOfTheGrove, label = "Heart of the Grove" }
     , { count = tally.envoy, label = "The Envoy" }
     , { count = tally.maven, label = "The Maven" }
+    , { count = tally.sirus, label = "Sirus Invasions" }
     ]
         |> List.sortBy .count
         |> List.reverse

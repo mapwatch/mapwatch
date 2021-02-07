@@ -32,6 +32,7 @@ betrayalGroup =
 
 
 conquerors =
+    -- not sirus, he behaves very differently from the others
     Set.fromList [ baran, veritania, alHezmin, drox ]
 
 
@@ -49,6 +50,10 @@ alHezmin =
 
 drox =
     "Metadata/Monsters/AtlasExiles/AtlasExile4"
+
+
+sirus =
+    "Metadata/Monsters/AtlasExiles/AtlasExile5"
 
 
 einhar =

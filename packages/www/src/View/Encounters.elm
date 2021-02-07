@@ -186,6 +186,7 @@ listEncounterTally query tally =
     , entry tally.heartOfTheGrove "heartOfTheGrove" [ View.Icon.harvest, text "Heart of the Grove" ]
     , entry tally.envoy "npc:envoy" [ View.Icon.envoy, text "The Envoy" ]
     , entry tally.maven "npc:maven" [ View.Icon.maven, text "The Maven" ]
+    , entry tally.sirus "npc:sirus" [ View.Icon.sirus, text "Sirus Invasions" ]
     ]
         |> List.filter (\r -> r.count > 0)
         |> List.sortBy .count

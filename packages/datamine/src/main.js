@@ -165,6 +165,7 @@ const exportedNPCs = Object.assign({}, ...[
   "Metadata/Monsters/AtlasExiles/AtlasExile2",
   "Metadata/Monsters/AtlasExiles/AtlasExile3",
   "Metadata/Monsters/AtlasExiles/AtlasExile4",
+  "Metadata/Monsters/AtlasExiles/AtlasExile5",
   // masters. no Zana dialogue, she's already tracked by detecting maps within maps
   "Metadata/Monsters/Masters/Einhar",
   "Metadata/Monsters/LeagueIncursion/Alva",
@@ -192,10 +193,10 @@ function isNPCIdExported(raw) {
 }
 function isNPCTextExported(raw) {
   // conquerors
-  return /^AlHezmin.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
-      || /^Veritania.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
-      || /^Baran.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
-      || /^Drox.*(Encounter|Fleeing|Fight|Death)/.test(raw.Id)
+  return /^AlHezmin.*(Encounter|Fleeing|Fight|Death|ResponseToSirus)/.test(raw.Id)
+      || /^Veritania.*(Encounter|Fleeing|Fight|Death|ResponseToSirus)/.test(raw.Id)
+      || /^Baran.*(Encounter|Fleeing|Fight|Death|ResponseToSirus)/.test(raw.Id)
+      || /^Drox.*(Encounter|Fleeing|Fight|Death|ResponseToSirus)/.test(raw.Id)
       // masters
       // Turns out for most of these, we don't care what they have to say.
       // Saying anything at all is enough.

@@ -567,6 +567,9 @@ viewNpcText query loadedAt npcId =
     else if npcId == NpcId.oshabi then
         [ View.Icon.harvest, text "Oshabi" ]
 
+    else if npcId == NpcId.sirus then
+        [ View.Icon.sirus, text "Sirus, Awakener of Worlds" ]
+
     else
         []
 

@@ -32,12 +32,13 @@ type alias EncounterTally =
     , maven : Int
     , oshabi : Int
     , heartOfTheGrove : Int
+    , sirus : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -100,6 +101,7 @@ tallyNpcs npcs tally =
         , envoy = Dict.get NpcId.envoy counts |> Maybe.withDefault 0
         , maven = Dict.get NpcId.maven counts |> Maybe.withDefault 0
         , oshabi = Dict.get NpcId.oshabi counts |> Maybe.withDefault 0
+        , sirus = Dict.get NpcId.sirus counts |> Maybe.withDefault 0
     }
 
 
