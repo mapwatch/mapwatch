@@ -3001,7 +3001,8 @@
     {
       "card": "The Patient",
       "maps": [
-        "Armoury Map"
+        "Armoury Map",
+        "Lighthouse Map"
       ],
       "loot": {
         "text": "The Nurse"
