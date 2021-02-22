@@ -8993,7 +8993,7 @@
       ],
       [
         "ReceivedAtlasPassivePointN",
-        "Has recibido {1} puntos de habilidad del Atlas por {0}."
+        "Has recibido {1} puntos de habilidad del Atlas para {0}."
       ],
       [
         "MavenNotEnoughBosses",
@@ -17614,7 +17614,7 @@
       ],
       [
         "EinharArrives3",
-        "<if:MS>{¿Estás preparado, exiliado? ¡Es hora de cazar!}<elif:FS>{¿Estás preparado, exiliada? ¡Es hora de cazar!}"
+        "<if:MS>{¿Estás preparado, exiliado? ¡Es hora de cazar!}<elif:FS>{¿Estás preparada, exiliada? ¡Es hora de cazar!}"
       ],
       [
         "EinharArrives4",
@@ -53074,7 +53074,7 @@
       ],
       [
         "MavenFinalFightDualIceBarrage",
-        "A cascade of pain!"
+        "¡Una cascada de dolor!"
       ]
     ]
   },

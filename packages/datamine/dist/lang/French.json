@@ -5016,7 +5016,7 @@
       ],
       [
         "MapWorldsGraveTrough",
-        "Fond de vallée"
+        "Thalweg macabre"
       ],
       [
         "MapWorldsCrimsonTownship",
@@ -31050,7 +31050,7 @@
       ],
       [
         "AlHezminCombatWyvern1",
-        "Dehors ! Attaque !"
+        "Émergez ! À l'attaque !"
       ],
       [
         "AlHezminCombatWyvern2",
@@ -45798,11 +45798,11 @@
       ],
       [
         "ZanaOnTheMaven",
-        "<if:MS>{Je connais deux points d'entrée d'entités au sein de l'Atlas et je suis sûre que rien n'est arrivé de notre côté.\r\n\r\nQuelle que soit cette chose, elle provient d'un endroit situé au-delà de l'Atlas, d'un royaume parallèle inconnu. Il est tout à fait possible qu'il s'agisse du même monde auquel appartenait l'Ancien, même si j'espère vraiment que ce n'est pas le cas. Nous ne disposons pas des outils adéquats pour renvoyer une autre de ces créatures.\r\n\r\nPeut-être avons-nous de la chance. Peut-être sommes-nous trop insignifiants aux yeux de cette chose pour qu'elle nous remarque. Nous nous trouvons en sécurité sur notre îlot pour l'instant, mais la marée monte et avec elle s'échouent d'étranges nouveaux monstres. Soyez prudent, exilé. Nous ignorons à quoi nous avons affaire et nous devrions tous craindre l'inconnu.}<elif:FS>{Je connais deux points d'entrée d'entités au sein de l'Atlas et je suis sûre que rien n'est arrivé de notre côté.\r\n\r\nQuelle que soit cette chose, elle provient d'un endroit situé au-delà de l'Atlas, d'un royaume parallèle inconnu. Il est tout à fait possible qu'il s'agisse du même monde auquel appartenait l'Ancien, même si j'espère vraiment que ce n'est pas le cas. Nous ne disposons pas des outils adéquats pour renvoyer une autre de ces créatures.\r\n\r\nPeut-être avons-nous de la chance. Peut-être sommes-nous trop insignifiants aux yeux de cette chose pour qu'elle nous remarque. Nous nous trouvons en sécurité sur notre îlot pour l'instant, mais la marée monte et avec elle s'échouent d'étranges nouveaux monstres. Soyez prudente, exilée. Nous ignorons à quoi nous avons affaire et nous devrions tous craindre l'inconnu.}"
+        "<if:MS>{Je connais deux sources d'arrivée d'entités au sein de l'Atlas et je suis absolument certaine que rien n'est entré de ce côté.\r\n\r\nQuelle que soit cette chose, elle tire son origine d'un endroit situé au-delà de l'Atlas, d'une sorte de royaume parallèle inconnu. Il est tout à fait possible qu'il s'agisse du même monde duquel provenait l'Ancien, même si j'espère vraiment que ce n'est pas le cas. Nous ne disposons pas des outils adéquats pour renvoyer une autre de ces créatures.\r\n\r\nPeut-être avons-nous de la chance. Peut-être sommes-nous trop insignifiants aux yeux de cette chose pour qu'elle nous remarque. Nous nous trouvons en sécurité sur notre îlot pour l'instant, mais la marée monte et avec elle s'échouent d'étranges nouveaux monstres. Soyez prudent, exilé. Nous ignorons ce à quoi nous avons affaire… et nous devrions tous craindre l'inconnu.}<elif:FS>{Je connais deux sources d'arrivée d'entités au sein de l'Atlas et je suis absolument certaine que rien n'est entré de ce côté.\r\n\r\nQuelle que soit cette chose, elle tire son origine d'un endroit situé au-delà de l'Atlas, d'une sorte de royaume parallèle inconnu. Il est tout à fait possible qu'il s'agisse du même monde duquel provenait l'Ancien, même si j'espère vraiment que ce n'est pas le cas. Nous ne disposons pas des outils adéquats pour renvoyer une autre de ces créatures.\r\n\r\nPeut-être avons-nous de la chance. Peut-être sommes-nous trop insignifiants aux yeux de cette chose pour qu'elle nous remarque. Nous nous trouvons en sécurité sur notre îlot pour l'instant, mais la marée monte et avec elle s'échouent d'étranges nouveaux monstres. Soyez prudente, exilée. Nous ignorons ce à quoi nous avons affaire… et nous devrions tous craindre l'inconnu.}"
       ],
       [
         "ZanaOnTheMavenPostSirus",
-        "<if:MS>{J'espère que vous savez ce que vous faites, exilé. Nous ne disposons pas des outils adéquats pour repousser une autre créature comme l'Ancien, ou même pour espérer reconstruire un dispositif tel que l'Arcane cosmique. Nous avons à peine de quoi survivre au jour le jour.\r\n\r\nSi cette… <i>{chose} devait tourner son regard sur nous, sur notre foyer… Nous ignorons de quoi elle est capable ou ce qu'elle veut. En majeure partie.}<elif:FS>{J'espère que vous savez ce que vous faites, exilée. Nous ne disposons pas des outils adéquats pour repousser une autre créature comme l'Ancien, ou même pour espérer reconstruire un dispositif tel que l'Arcane cosmique. Nous avons à peine de quoi survivre au jour le jour.\r\n\r\nSi cette… <i>{chose} devait tourner son regard sur nous, sur notre foyer… Nous ignorons de quoi elle est capable ou ce qu'elle veut. En majeure partie.}"
+        "<if:MS>{J'espère que vous savez ce que vous faites, exilé. Nous ne disposons pas des outils adéquats pour repousser une autre créature comme l'Ancien, ou même pour espérer reconstruire un dispositif comparable à l'Arcane cosmique. Nous avons à peine de quoi survivre au jour le jour.\r\n\r\nSi cette… <i>{chose} devait tourner son regard sur nous, sur notre foyer… Nous ignorons de quoi elle est capable ou ce qu'elle veut. En majeure partie.}<elif:FS>{J'espère que vous savez ce que vous faites, exilée. Nous ne disposons pas des outils adéquats pour repousser une autre créature comme l'Ancien, ou même pour espérer reconstruire un dispositif comparable à l'Arcane cosmique. Nous avons à peine de quoi survivre au jour le jour.\r\n\r\nSi cette… <i>{chose} devait tourner son regard sur nous, sur notre foyer… Nous ignorons de quoi elle est capable ou ce qu'elle veut. En majeure partie.}"
       ],
       [
         "ZanaOnGettingMapDeviceAugment",
@@ -45810,7 +45810,7 @@
       ],
       [
         "ZanaOnMapDeviceAugmented",
-        "<if:MS>{Avez-vous la moindre idée de ce que vous venez de faire ? Pas moi, alors que nous étions censés travailler à deux !\r\n\r\nQu'est-ce qui vous assure que ce n'est pas une sorte d'orbe-espion qui permettrait à cette entité d'épier notre dimension, ou même de la faire entrer sans opposition ? Sans parler de la possibilité qu'elle vous réduise en poussière la prochaine fois que vous tenterez de vous aventurer dans l'Atlas ! Vous jouez avec des instruments dont vous ignorez tout, exilé. Vous vous engagez sur la même voie que celle qui a conduit mon père et Vénarius à libérer l'Ancien.\r\n\r\nJe tiens à travailler avec vous au nom du salut de Wraeclast, mais… je ne peux m'empêcher de remettre en question votre discernement.}<elif:FS>{Avez-vous la moindre idée de ce que vous venez de faire ? Pas moi, alors que nous étions censées travailler à deux !\r\n\r\nQu'est-ce qui vous assure que ce n'est pas une sorte d'orbe-espion qui permettrait à cette entité d'épier notre dimension, ou même de la faire entrer sans opposition ? Sans parler de la possibilité qu'elle vous réduise en poussière la prochaine fois que vous tenterez de vous aventurer dans l'Atlas ! Vous jouez avec des instruments dont vous ignorez tout, exilée. Vous vous engagez sur la même voie que celle qui a conduit mon père et Vénarius à libérer l'Ancien.\r\n\r\nJe tiens à travailler avec vous au nom du salut de Wraeclast, mais… je ne peux m'empêcher de remettre en question votre discernement.}"
+        "<if:MS>{Avez-vous la moindre idée de ce que vous venez de faire ?! Pas moi, alors que nous étions censés travailler à deux !\r\n\r\nQu'est-ce qui vous assure que ce n'est pas une sorte d'orbe-espion qui permettrait à cette entité d'épier notre dimension, ou même de la faire entrer sans opposition ? Sans parler de la possibilité qu'elle vous réduise en poussière la prochaine fois que vous tenterez de vous aventurer dans l'Atlas ! Vous jouez avec des instruments dont vous ignorez tout, exilé. Vous vous engagez sur la même voie que celle qui a conduit mon père et Vénarius à libérer l'Ancien.\r\n\r\nJe tiens à travailler avec vous au nom du salut de Wraeclast, mais… je ne peux m'empêcher de remettre en question votre discernement.}<elif:FS>{Avez-vous la moindre idée de ce que vous venez de faire ?! Pas moi, alors que nous étions censées travailler à deux !\r\n\r\nQu'est-ce qui vous assure que ce n'est pas une sorte d'orbe-espion qui permettrait à cette entité d'épier notre dimension, ou même de la faire entrer sans opposition ? Sans parler de la possibilité qu'elle vous réduise en poussière la prochaine fois que vous tenterez de vous aventurer dans l'Atlas ! Vous jouez avec des instruments dont vous ignorez tout, exilée. Vous vous engagez sur la même voie que celle qui a conduit mon père et Vénarius à libérer l'Ancien.\r\n\r\nJe tiens à travailler avec vous au nom du salut de Wraeclast, mais… je ne peux m'empêcher de remettre en question votre discernement.}"
       ],
       [
         "ZanaMissionMetamorph",
@@ -45818,7 +45818,7 @@
       ],
       [
         "ZanaMissionDelirium",
-        "Je perçois une présence qui… eh bien, que je ne peux expliquer. Elle ne diffère pas tant de celle laissée dans le sillage des Tueurs de l'Ancien, mais elle demeure… indéfinissable. J'ai bien essayé d'en déterminer la source, mais c'est comme si elle était concentrée à un endroit un moment, puis partout à la fois le suivant. Dès que j'ai l'impression de faire quelque progrès pour la cerner, elle n'est plus tout à fait la même. Ça me rend folle.\r\n\r\nJ'espère que vous aurez plus de chance que moi. Gardez les yeux ouverts pour toute chose — <i>{quoi que ce soit} — qui sortirait de l'ordinaire."
+        "Je perçois une présence qui… eh bien, que je ne peux expliquer. Elle ne diffère pas tant de celle laissée dans le sillage des Tueurs de l'Ancien, mais elle demeure… indéfinissable. J'ai bien essayé d'en déterminer la source, mais c'est comme si elle était concentrée à un endroit un moment, puis partout à la fois le suivant. Dès que j'ai l'impression de faire quelque progrès pour la cerner, elle n'est plus tout à fait la même. Ça me rend folle.\r\n\r\nJ'espère que la chance vous sourira davantage qu'à moi. Gardez les yeux ouverts pour toute chose — <i>{quoi que ce soit} — qui sortirait de l'ordinaire."
       ],
       [
         "ZanaMissionHarvest",
@@ -45826,11 +45826,11 @@
       ],
       [
         "ZanaMissionBlightedMap",
-        "Sœur Cassia m'annonce qu'une sorte de champignon a envahi une zone d'une superficie non négligeable. Je vais vous envoyer la rejoindre. Elle a déjà mis en place sa pompe, mais elle a besoin de quelqu'un capable de la protéger des défenseurs fongiques."
+        "Sœur Cassia m'annonce qu'une sorte de champignon a envahi une zone d'une superficie non négligeable. Je vais vous envoyer la rejoindre. Elle a déjà mis sa pompe en place, mais elle a besoin d'une personne capable de repousser les défenseurs fongiques."
       ],
       [
         "ZanaMissionBlight",
-        "Je vous envoie dans un endroit qui présente des signes d'une contamination fongique malsaine. Sœur Cassia est déjà en train d'y mettre en place son matériel. Vous devez l'aider à exterminer l'infestation avant que celle-ci ne se propage dans d'autres régions de l'Atlas. Cassia vous fournira des renseignements supplémentaires au besoin."
+        "Je vous envoie dans un endroit qui présente des signes d'une contamination fongique malsaine. Sœur Cassia est déjà en train d'y installer son matériel. Vous devez l'aider à exterminer l'infestation avant que celle-ci ne se propage dans d'autres régions de l'Atlas. Cassia vous fournira des renseignements supplémentaires si besoin est."
       ],
       [
         "ZanaPleadsWithSirus",
@@ -45838,7 +45838,7 @@
       ],
       [
         "ZanaOnSirusDeath",
-        "L'homme que fut Sirus et l'entité qui a détruit nos foyers sont comme le jour et la nuit. Ce qui lui est arrivé au moment où l'Ancien fut repoussé a volé l'essence même de son être. À son retour, dépouillé de cette essence vitale, Sirus était incomplet.\r\n\r\nIl n'y a pas si longtemps, j'aurais pu espérer retrouver cet élément manquant, espérer que le véritable Sirus fut à la dérive quelque part dans l'Atlas dans l'attente que nous le retrouvions et le ramenions à la maison.\r\n\r\nJe sais maintenant que tout espoir en ce sens est vain. Peut-être l'Atlas a-t-il aussi effrité cette partie de moi, tout compte fait."
+        "L'homme que fut Sirus et l'entité qui a détruit nos foyers sont comme le jour et la nuit. Ce qui lui est arrivé au moment où l'Ancien fut renvoyé a volé l'essence même de son être. À son retour, dépouillé de cette essence vitale, Sirus était incomplet.\r\n\r\nIl n'y a pas si longtemps, j'aurais pu espérer retrouver cet élément manquant, espérer que le véritable Sirus fut à la dérive quelque part dans l'Atlas dans l'attente que nous le retrouvions et le ramenions à la maison.\r\n\r\nJe sais maintenant que tout espoir en ce sens est vain. Peut-être l'Atlas a-t-il aussi effrité cette partie de moi, tout compte fait."
       ],
       [
         "ZanaOnKiracTwo",
@@ -45850,7 +45850,7 @@
       ],
       [
         "ZanaOnKiracFour",
-        "Sirus a tenté de me tuer, et il aurait réussi sans la présence d'esprit et l'abnégation de Kirac. Ce rayon était porteur d'une énergie capable de désintégrer tout à fait unique que je ne peux ni identifier ni guérir… J'ignore pourquoi Kirac a agi de la sorte, mais je lui serai à jamais reconnaissante, alors que lui restera marqué à jamais…\r\n\r\nMaintenant qu'Oriath n'est plus que ruines, on dirait que l'Avant-garde citoyenne ne m'a plus dans son collimateur. Peut-être Kirac s'est-il porté garant de ma personne, ou que l'Avant-garde en a tout simplement plein les bras avec autre chose. Quoi qu'il en soit, ça demeure un mince soulagement parmi une montagne de nouveaux soucis… mais un soulagement tout de même."
+        "Sirus a tenté de me tuer, et il aurait réussi sans la présence d'esprit et l'abnégation de Kirac. Ce rayon était porteur d'une énergie destructrice tout à fait unique que je ne peux ni identifier ni guérir… J'ignore pourquoi Kirac a agi de la sorte, mais je lui serai à jamais reconnaissante alors que lui restera marqué pour toujours…\r\n\r\nMaintenant qu'Oriath n'est plus que ruines, on dirait que l'Avant-garde citoyenne ne m'a plus dans son collimateur. Peut-être Kirac s'est-il porté garant de ma personne, ou que l'Avant-garde en a tout simplement plein les bras avec autre chose. Quoi qu'il en soit, ça demeure un mince soulagement parmi une montagne de nouveaux tracas… mais un soulagement tout de même."
       ],
       [
         "ZanaToTheEyeOfTheStorm",
@@ -47594,19 +47594,19 @@
       ],
       [
         "MavenTier2DamageReductionOrbsRandom",
-        "Sois défendu !"
+        "Défense accrue !"
       ],
       [
         "MavenTier2DamageReductionOrbs2",
-        "Sois défendu."
+        "Défense accrue."
       ],
       [
         "MavenTier2DamageReductionOrbs3",
-        "Sois défendu !"
+        "… défense accrue."
       ],
       [
         "MavenTier2DamageReductionOrbs4",
-        "Sois défendu !"
+        "Défense accrue."
       ],
       [
         "MavenTier2DamageReductionOrbs5",
@@ -47666,15 +47666,15 @@
       ],
       [
         "MavenTier2ChasingOrb4",
-        "Semez !"
+        "Fuyez !"
       ],
       [
         "MavenTier2ChasingOrb5",
-        "Semez !"
+        "Fuyez !"
       ],
       [
         "MavenTier2ChasingOrb6",
-        "Semez !"
+        "Fuyez !"
       ],
       [
         "MavenTier2SpeedZonesRandom",
@@ -47722,19 +47722,19 @@
       ],
       [
         "MavenTier2BossClone5",
-        "Géminé !"
+        "Jumeaux !"
       ],
       [
         "MavenTier2BossClone6",
-        "Géminé !"
+        "Jumeaux !"
       ],
       [
         "MavenTier2BossClone7",
-        "Géminé !"
+        "Jumeaux !"
       ],
       [
         "MavenTier2BossClone8",
-        "Géminé !"
+        "Jumeaux !"
       ],
       [
         "MavenTier2SpaceChargesRandom",
@@ -49034,15 +49034,15 @@
       ],
       [
         "MavenTier3ChasingOrb4",
-        "Semez ceci !"
+        "Fuyez-les !"
       ],
       [
         "MavenTier3ChasingOrb5",
-        "Semez ceci !"
+        "Fuyez-les !"
       ],
       [
         "MavenTier3ChasingOrb6",
-        "Semez ceci !"
+        "Fuyez-les !"
       ],
       [
         "MavenTier3SpeedZonesRandom",
@@ -53074,7 +53074,7 @@
       ],
       [
         "MavenFinalFightDualIceBarrage",
-        "A cascade of pain!"
+        "Un barrage de douleur !"
       ]
     ]
   },

@@ -6796,7 +6796,7 @@
       ],
       [
         "MavenHub",
-        "เบ้าหลอมของเมเวน"
+        "สถานหล่อหลอมของเมเวน"
       ],
       [
         "MavenBoss",
@@ -7909,7 +7909,7 @@
       ],
       [
         "FFALadderUpdate",
-        "ตอนนี้คุณเป็นอันดับ #{0} ในอารีนา"
+        "ตอนนี้คุณเป็นอันดับ #{0} ในลานประลอง"
       ],
       [
         "CraftingFailed",
@@ -8197,7 +8197,7 @@
       ],
       [
         "PvPRelocatingArena",
-        "คุณกำลังถูกพาตัวไปยังอารีนา PvP อีกแห่งหนึ่งเพื่อปรับสมดุลจำนวนผู้เล่น"
+        "คุณกำลังถูกพาตัวไปยังลานประลอง PvP อีกแห่งหนึ่งเพื่อปรับสมดุลจำนวนผู้เล่น"
       ],
       [
         "MapCraftingFailedCost",
@@ -11558,7 +11558,7 @@
       ],
       [
         "ZanaWildAttention",
-        "ยังคงมีสติเนรเทศ?"
+        "มีสติอยู่ไหม เอ็กไซล์?"
       ],
       [
         "ZanaWildUpTo2",
@@ -11618,7 +11618,7 @@
       ],
       [
         "ZanaDismissHideout",
-        "Stay สติเนรเทศ"
+        "รักษาสติไว้ เอ็กไซล์"
       ],
       [
         "ZanaCreateHideout",
@@ -13334,11 +13334,11 @@
       ],
       [
         "RigwaldTransform7",
-        "คุณควรใช้!"
+        "คุณควรหนี!"
       ],
       [
         "RigwaldTransform8",
-        "คุณควรใช้!"
+        "คุณควรหนี!"
       ],
       [
         "CadiroIntroduction",
@@ -17154,7 +17154,7 @@
       ],
       [
         "NikoMineIntro",
-        "เหมือนขรี้ ใช่ป๊ะ? เอาเป็นว่า อย่าตัดสินเหมืองที่ทางเข้า ไอ้พวกนิรันดร์มันเคยเจอของดีๆ จากหินพวกนี้มาเยอะละ ขนาดว่าพวกมันไม่มีอาวุธลับของข้านะ\r\n\r\nตรงทางเข้าเหมืองมันจะมีลูกน้อย Crawler เอี๊ยดๆ ของข้า เอาเครื่องมือทรมารของพวกนิรันดร์มาดัดแปลงนิดหน่อย.. เพื่อให้ใช้งานได้ เอ๊อ แต่มันก็ยังถลกหนังเจ้าได้เหมือนปลอกเปลือกผลไม้นะ ก็หวังว่ามันจะไม่ทำอย่างที่ว่า ข้าก็เลย ให้มันวางไฟที่ใช้พลังจากไอ้ Voltaxic Sulphite เป็นทอดๆ ตามทางแทน มันเป้นหน้าที่เจ้าแล้วล่ะที่ต้องไปหามันมาเพิ่ม\r\n\r\nส่วนขวัญตามหึมาข้างๆ ข้านี้น่ะหรอ? ความภาคภูมิใจของข้าเลยล่ะ มันให้พลัง Crawler จากการสกัดแร่ sulphite และสามารถนำวัตถุดิบอีเหละเขะขะใต้ดินทุกชนิดมาทำเป็นแหล่งแสงสว่างและระเบิทได้ด้วย\r\n\r\nเจ้าไม่ลองลงไปใต้ดินแล้วตามหุ่นกระป๋องน้อยไปหาสายแร่ azurite ดูล่ะ เหะ?"
+        "เหมือนขรี้ ใช่ป๊ะ? เอาเป็นว่า อย่าตัดสินเหมืองที่ทางเข้า ไอ้พวกนิรันดร์มันเคยเจอของดีๆ จากหินพวกนี้มาเยอะละ ขนาดว่าพวกมันไม่มีอาวุธลับของข้านะ\r\n\r\nตรงทางเข้าเหมืองมันจะมีลูกน้อย Crawler เอี๊ยดๆ ของข้า เอาเครื่องมือทรมานของพวกนิรันดร์มาดัดแปลงนิดหน่อย.. เพื่อให้ใช้งานได้ เอ๊อ แต่มันก็ยังถลกหนังเจ้าได้เหมือนปลอกเปลือกผลไม้นะ ก็หวังว่ามันจะไม่ทำอย่างที่ว่า ข้าก็เลย ให้มันวางไฟที่ใช้พลังจากไอ้ Voltaxic Sulphite เป็นทอดๆ ตามทางแทน มันเป้นหน้าที่เจ้าแล้วล่ะที่ต้องไปหามันมาเพิ่ม\r\n\r\nส่วนขวัญตามหึมาข้างๆ ข้านี้น่ะหรอ? ความภาคภูมิใจของข้าเลยล่ะ มันให้พลัง Crawler จากการสกัดแร่ sulphite และสามารถนำวัตถุดิบอีเหละเขะขะใต้ดินทุกชนิดมาทำเป็นแหล่งแสงสว่างและระเบิดได้ด้วย\r\n\r\nเจ้าไม่ลองลงไปใต้ดินแล้วตามหุ่นกระป๋องน้อยไปหาสายแร่ azurite ดูล่ะ เหะ?"
       ],
       [
         "NikoActivateCrawler",
@@ -17162,11 +17162,11 @@
       ],
       [
         "NikoAzuriteAcquired",
-        "ช่างสวยงาม ดูประกายมันสิ ส่องสว่างเหมือนเศษถ่านสีฟ้าท่ามกลางความมืด เครื่องจักรนี้ของข้าสามารถเปลี่ยนหินพวกนี้ให้กลายเป็นอะไรที่มีประโยชน์ได้ เจ้าอาจจะต้องการแสงเพิ่มที่ใต้ดินนั่น งั้นลองมาทำพลุไฟดูไหมล่ะ\r\n\r\nเหมืองมันเต็มไปด้วยทางตัน และพวกสิ่งมีชีวิตตันๆ ด้วยเช่นกัน เอาแท่งระเบิทนี่ไปลองดู น่าจะพอทำให้เจ้าได้ทั้งสองอย่างนะ"
+        "ช่างสวยงาม ดูประกายมันสิ ส่องสว่างเหมือนเศษถ่านสีฟ้าท่ามกลางความมืด เครื่องจักรนี้ของข้าสามารถเปลี่ยนหินพวกนี้ให้กลายเป็นอะไรที่มีประโยชน์ได้ เจ้าอาจจะต้องการแสงเพิ่มที่ใต้ดินนั่น งั้นลองมาทำพลุไฟดูไหมล่ะ\r\n\r\nเหมืองมันเต็มไปด้วยทางตัน และพวกสิ่งมีชีวิตตันๆ ด้วยเช่นกัน เอาแท่งระเบิดนี่ไปลองดู น่าจะพอทำให้เจ้าได้ทั้งสองอย่างนะ"
       ],
       [
         "NikoFlares",
-        "ไอ้แท่งร้อนๆ ที่เจ้าได้มาน่ะ ระวังอย่าเผลอใช้ผิดเชียวล่ะ ข้าไม่อยากเก็บซากเจ้านักหรอก... แต่มาลองนึกๆ ดู โดนระเบิทเป็นชิ้นๆ ก็ยังดีกว่าหลงทางในความมืดนั่นล่ะนะ\r\n\r\nข้าแนะนำให้เจ้าเอาระเบิทและพลุไฟไปด้วยซักสองสามอันถ้าเจ้าจะลงไปลุยข้างล่างนั่นนะ Crawler มันจะพาเจ้าไปตามสายทานแร่เส้นใหญ่ๆ แต่การโยนพลุไฟไปในความมืด มันอาจเผยให้เห็นขุมทรัพย์ที่ซ่อนอยู่ก็เป็นได้\r\n\r\nเหมืองนี้มันก็มีมาแต่นมนานละ เพราะงั้นของที่หาง่ายๆ ก็โดนสอยไปหมดแล้ว บางทีเจ้าอาจจะต้องขุดให้มันลึกเข้าไปอีกด้วยตัวเอง ถ้าเจ้าอยากจะเจออะไรที่มีล้ำค่าจริงๆ\r\n\r\nมันมีกำแพงบางแห่งที่ดูเปราะๆ ถ้าเห็นล่ะก็โยนระเบิดแม่นๆ ซักลูกก็พอที่จะทำให้มันทลายลงมาได้ เจ้าก็ลองดูซักทีสิ เหะ? ถ้าเจออะไรข้างหลังกำแพงนั่น ข้ายกให้เจ้าไปเลย"
+        "ไอ้แท่งร้อนๆ ที่เจ้าได้มาน่ะ ระวังอย่าเผลอใช้ผิดเชียวล่ะ ข้าไม่อยากเก็บซากเจ้านักหรอก... แต่มาลองนึกๆ ดู โดนระเบิดเป็นชิ้นๆ ก็ยังดีกว่าหลงทางในความมืดนั่นล่ะนะ\r\n\r\nข้าแนะนำให้เจ้าเอาระเบิดและพลุไฟไปด้วยซักสองสามอันถ้าเจ้าจะลงไปลุยข้างล่างนั่นนะ Crawler มันจะพาเจ้าไปตามสายทานแร่เส้นใหญ่ๆ แต่การโยนพลุไฟไปในความมืด มันอาจเผยให้เห็นขุมทรัพย์ที่ซ่อนอยู่ก็เป็นได้\r\n\r\nเหมืองนี้มันก็มีมาแต่นมนานละ เพราะงั้นของที่หาง่ายๆ ก็โดนสอยไปหมดแล้ว บางทีเจ้าอาจจะต้องขุดให้มันลึกเข้าไปอีกด้วยตัวเอง ถ้าเจ้าอยากจะเจออะไรที่มีล้ำค่าจริงๆ\r\n\r\nมันมีกำแพงบางแห่งที่ดูเปราะๆ ถ้าเห็นล่ะก็โยนระเบิดแม่นๆ ซักลูกก็พอที่จะทำให้มันทลายลงมาได้ เจ้าก็ลองดูซักทีสิ เหะ? ถ้าเจออะไรข้างหลังกำแพงนั่น ข้ายกให้เจ้าไปเลย"
       ],
       [
         "NikoMine1",
@@ -17174,7 +17174,7 @@
       ],
       [
         "NikoCongrats",
-        "เจ้าระเบิททิ้งไปแล้วสินะ กำแพงน่ะ แถมยังรอดกลับมาด้วย! ยอดเยียมกระเทียมเจียว หวังว่าคงจะเจออะไรดีๆ ที่อีกฟากนั่นนะ\r\n\r\nเออออ เจ้าเอ็กไซล์ มันก็มีแค่นั่นแหละ ง๊าาย ง่าย เพราะงั้น... กลับไปหาแร่มาเติมเถอะ เหะ?"
+        "เจ้าระเบิดทิ้งไปแล้วสินะ กำแพงน่ะ แถมยังรอดกลับมาด้วย! ยอดเยียมกระเทียมเจียว หวังว่าคงจะเจออะไรดีๆ ที่อีกฟากนั่นนะ\r\n\r\nเออออ เจ้าเอ็กไซล์ มันก็มีแค่นั่นแหละ ง๊าาย ง่าย เพราะงั้น... กลับไปหาแร่มาเติมเถอะ เหะ?"
       ],
       [
         "NikoClaimOreFirstRandom",
@@ -17302,7 +17302,7 @@
       ],
       [
         "NikoProspero2",
-        "ลัทธิส่วนใหญ่มันหายไปพร้อมกับจักรวรรดินิรันดร์ แต่ดูเหมือนเจ้าจะเจอกับศาลเจ้าของ Prospero แล้วสิ ตามที่เขาว่ามา Prospero ดูแลทุกสิ่งที่มาจากดิน คนเหมืองมักจะสรรเสริญเขา บางทีพวกมันอาจจะหวังให้ Prospero ปกป้องพวกมันจากการโดนดินยุบก็เป็นได้ ไม่งั้นก็ระเบิท หรืออาจจะแก๊ส?\r\n\r\nนี่ข้าบอกเจ้าหรือยังว่างานนี้มันอันตรายแค่ไหน?"
+        "ลัทธิส่วนใหญ่มันหายไปพร้อมกับจักรวรรดินิรันดร์ แต่ดูเหมือนเจ้าจะเจอกับศาลเจ้าของ Prospero แล้วสิ ตามที่เขาว่ามา Prospero ดูแลทุกสิ่งที่มาจากดิน คนเหมืองมักจะสรรเสริญเขา บางทีพวกมันอาจจะหวังให้ Prospero ปกป้องพวกมันจากการโดนดินยุบก็เป็นได้ ไม่งั้นก็ระเบิด หรืออาจจะแก๊ส?\r\n\r\nนี่ข้าบอกเจ้าหรือยังว่างานนี้มันอันตรายแค่ไหน?"
       ],
       [
         "NikoFullGeneratorSecondRandom",
@@ -17486,7 +17486,7 @@
       ],
       [
         "NikoAboutSulphite5",
-        "พวกมันต้องมาเอาไอ้สิ่งนั้นแน่ๆ เลย เอ็กไซล์ ต้องมาเอาหินสวยๆ ของพวกเราแน่ๆ อ้อมล้อมเราเหมือนฝูงหมาป่า เหมือนความมืดลึกในเหมืองนั่น พวกมันต้องการหินของเรา ให้พวกมันหัวเราะไปก่อน เพราะยังไง \"หัวเราะที่หลัง ดังกว่า\"\r\n\r\nsulphite เป็นของพวกเรา ทำให้ที่มืดกลายเป็นสว่างด้วยหินสวยๆพวกนี้ มันนำพาเราลึกลงไป ลึกลงไป ไปในที่ๆ ไม่มีใครรู้จัก และไม่มีวันรู้จักนั่น\r\n\r\nใกล้เข้าไป ใกล้... พวกมัน"
+        "พวกมันต้องมาเอาไอ้สิ่งนั้นแน่ๆ เลย เอ็กไซล์ ต้องมาเอาหินสวยๆ ของพวกเราแน่ๆ อ้อมล้อมเราเหมือนฝูงหมาป่า เหมือนความมืดลึกในเหมืองนั่น พวกมันต้องการหินของเรา ให้พวกมันหัวเราะไปก่อน เพราะยังไง \"หัวเราะที่หลัง ดังกว่า\"\r\n\r\nซัลไฟต์เป็นของพวกเรา ทำให้ที่มืดกลายเป็นสว่างด้วยหินสวยๆพวกนี้ มันนำพาเราลึกลงไป ลึกลงไป ไปในที่ๆ ไม่มีใครรู้จัก และไม่มีวันรู้จักนั่น\r\n\r\nใกล้เข้าไป ใกล้... พวกมัน"
       ],
       [
         "NikoGenerator5",
@@ -17942,155 +17942,155 @@
       ],
       [
         "BetrayalNikoQuestFromTown",
-        "See that? One moment, big blades, next moment, gone! Should be able to go in there now. Heard this place reeked of Voltaxic Sulphite back in the day. I was planning on having a wander down there, only... I think I can hear things shuffling around down there, and I'm more of a lover than a fighter. \r\n\r\nActually, if you're headed in there, maybe you could do us a favour. See, I run a little mining operation of my own. Mining's dangerous at the best of times, but it's suicidal without a proper source of light. I've got lights, just ain't got no power. Run on Voltaxic Sulphite, they do. Nasty rocks. Stink like a dozen eggs rotting in the summer sun on the back of a whale carcass, and they're less stable than the High Templar on a bad day. Bloody toxic too. \r\n\r\nKeep your nostrils peeled for some Voltaxic Sulphite while you're down there, or anywhere really."
+        "เห็น​นั่น​ไหม​ล่ะ​? เมื่อ​กี๊​มีใบ​มีด​ใหญ่ยักษ์เต็ม​ไป​หมด ตอน​นี้​มัน​ก็หาย​ไป​แล้ว​! น่า​จะ​เข้าไป​ได้แล้ว​ละ ได้ยิน​ว่า​สมัย​ก่อน​ที่นี่มีวอล​ทา​ซิก​ซัล​ไฟต์เต็ม​ไป​หมด ข้า​เอง​ก็ว่า​จะ​แวะ​ลง​ไป​ดูที่นั่น​สัก​หน่อย แต่... ข้า​ว่า​ข้า​ได้ยิน​อะไร​เดิน​เพ่นพ่าน​อยู่ข้าง​ล่าง​นั่น แล้ว​ข้า​ก็เป็น​นัก​รัก​มากกว่า​นัก​รบ​น่ะ​นะ\r\n\r\nที่จริง​ถ้า​เจ้า​ลง​ไป​ใน​นั้น เจ้า​อาจ​จะ​ช่วย​อะไร​เรา​ได้นะ คือ​ข้า​เอง​ก็ทำ​เหมือง​เล็กๆ น้อยๆ อยู่เหมือน​กัน การ​ทำ​เหมือง​มัน​อันตราย​อยู่แล้ว​ใน​ช่วง​ขา​ขึ้น แต่ถ้า​ไม่มีแหล่ง​ไฟ​ที่ดีมัน​ก็เหมือน​การ​ฆ่า​ตัว​ตาย​เปล่าๆ ข้า​มีไฟ​นะ แต่ข้า​ไม่มีเชื้อ​เพลิง​เลย ไฟ​พวก​นั้น​ใช้วอล​ทา​ซิก​ซัล​ไฟต์ เป็น​หิน​ที่แย่จริงๆ กลิ่น​เหมือน​ไข่หนึ่ง​โหล​เน่า​อยู่กลาง​แดด​ฤดูร้อน​บน​หลัง​ซาก​วาฬ และ​หิน​พวก​นี้ก็มั่นคง​น้อย​กว่า​เทม​พลาร์ระดับ​สูง​ที่เจอ​เรื่อง​แย่ๆ มา​ทั้ง​วัน แถม​ยัง​เป็น​พิษ​สุดๆ อีก\r\n\r\nลอง​ดมหากลิ่น​วอล​ทา​ซิก​ซัล​ไฟต์ดูแล้ว​กัน​ถ้า​ลง​ไป​ใน​นั้น หรือ​ไม่​ว่า​จะ​ไป​ที่​ไหน​ก็ตาม​เถอะ"
       ],
       [
         "BetrayalNikoVeinOutOfTown",
-        "My, my! Good nose, exile. Know what you've found here? This is Voltaxic Sulphite. My name's Niko and I run a little mining operation of my own. Mining's dangerous at the best of times, but it's suicidal without a proper source of light. I've got lights, just ain't got no power. Run on Voltaxic Sulphite, they do. Nasty rocks. Stink like a dozen eggs rotting in the summer sun on the back of a whale carcass, and they're less stable than the High Templar on a bad day. Bloody toxic too. \r\n\r\nYou find more and I'll come right over. Don't touch it though. Stuff'll send you mad without the right precautions. You think I want to be dressed like this?\r\n\r\nTell you what - how about we take a look around my mine."
+        "โอ้โห​! จมูก​ดีนี่เอ็ก​ไซล์ รู้ไหม​ว่า​เจ้า​พบ​อะไร​? นี่คือ​วอล​ทา​ซิก​ซัล​ไฟต์ ข้า​ชื่อ​นิโค้ ข้า​เอง​ก็ทำ​เหมือง​เล็กๆ น้อยๆ อยู่เหมือน​กัน การ​ทำ​เหมือง​มัน​อันตราย​อยู่แล้ว​ใน​ช่วง​ขา​ขึ้น แต่ถ้า​ไม่มีแหล่ง​ไฟ​ที่ดีมัน​ก็เหมือน​การ​ฆ่า​ตัว​ตาย​เปล่าๆ ข้า​มีไฟ​นะ แต่ข้า​ไม่มีเชื้อ​เพลิง​เลย ไฟ​พวก​นั้น​ใช้วอล​ทา​ซิก​ซัล​ไฟต์ เป็น​หิน​ที่แย่จริงๆ กลิ่น​เหมือน​ไข่หนึ่ง​โหล​เน่า​อยู่กลาง​แดด​ฤดูร้อน​บน​หลัง​ซาก​วาฬ และ​หิน​พวก​นี้ก็มั่นคง​น้อย​กว่า​เทม​พลาร์ระดับ​สูง​ที่เจอ​เรื่อง​แย่ๆ มา​ทั้ง​วัน แถม​ยัง​เป็น​พิษ​สุดๆ อีก\r\n\r\nหาก​เจ้า​พบ​หิน​พวก​นี้เพิ่ม​เติม ข้า​จะ​แวะ​มา​หา​เอง อย่า​แตะ​ต้อง​มัน​เชียว​ล่ะ มัน​ทำให้เจ้า​เสีย​สติได้ถ้า​เจ้า​เตรียม​การ​ได้ไม่ดีพอ เจ้า​คิด​เห​รอ​ว่า​ข้า​อยาก​แต่ง​ตัว​แบบ​นี้\r\n\r\nเอา​แบบ​นี้ไหม เรา​มา​ดูเหมือง​ของ​ข้า​กัน​ไหม​ล่ะ"
       ],
       [
         "BetrayalNikoAct9Intro",
-        "Quite liked it here, you know, right up until the bloody mountainside started bloody...well...bleedin'. Thought for sure I was hallucinating, 'til the others started screaming and scrambling. Always nice to get a little reassurance about your sanity, eh?"
+        "ข้า​ชอบ​ที่นี่มาก​เลย​นะ จน​กระทั่ง​ไอ้ไหล่เขา​บ้า​เลือด​นี่ดัน​... หลั่ง​เลือด​ขึ้น​มาน่ะ ตอน​แรก​ข้า​ก็คิด​ว่า​ข้า​ประสาทหลอน จน​คน​อื่นๆ ตะโกน​แตก​ตื่น​กัน​ไป​หมด การ​มีสิ่ง​ที่ยืนยัน​ว่า​เจ้า​มีสติดีอยู่มัน​ก็ดีนี่นา เหะ?"
       ],
       [
         "BetrayalNikoAct9Gossip1",
-        "Well, this nice little outpost here's been, shall we say, marred. Don't get me wrong, I love a splash of colour, I just don't love that colour splashing on me and my friends here. Why do I get the feeling you were involved...?"
+        "ด่าน​หน้า​เล็กๆ น่า​รัก​นี่มัน​ก็ เรียก​ว่า​ไง​ดีล่ะ เสีย​หายนั่นแหละ อย่า​เข้าใจ​ข้า​ผิด​นะ ข้า​ชอบ​ให้ชีวิต​มีสีสัน แต่ข้า​ไม่ชอบ​สีสัน​บน​ตัว​ข้า​กับ​เพื่อนๆ ข้า​เลย​สัก​นิด ทำไม​ข้า​ถึง​รู้สึก​ว่า​เจ้า​มีส่วน​กัน​นะ​...?"
       ],
       [
         "BetrayalNikoAct9Gossip2",
-        "Blood everywhere around here... Startin' to remind me of my time in that little room back in Oriath. All that digging really made a mess of me hands. The mitts ain't just for protecting me against the sulphite you know."
+        "เลือด​เปื้อน​ไป​ทั่ว​ที่นี่เลย​... ทำให้ข้า​นึกถึง​ห้อง​เล็กๆ ใน​โอ​ริอา​ทนั่น การ​ขุด​ทำให้มือ​ข้า​เละ​จริงๆ ถุงมือ​นี่ไม่ได้มีไว้กัน​ข้า​จาก​ซัล​ไฟต์เพียง​อย่าง​เดียว​น่ะ"
       ],
       [
         "BetrayalNikoAct9Gossip3",
-        "How can there be this much blood, exile? Where's it coming from? Where's it going? Know what I think? I think it's going back into the mountain. One big loop, exile. One bloody big loop, and someone's down there pumpin it."
+        "ทำไม​ถึง​มีเลือด​เยอะ​ขนาด​นี้กัน​เล่า เอ็ก​ไซล์? มัน​ไหล​มา​จาก​ไหน​กัน​? แล้ว​มัน​จะ​ไหล​ไป​ทาง​ไหน​? รู้ไหม​ว่า​ข้า​คิด​ว่า​ยัง​ไง​? ข้า​ว่า​มัน​จะ​ไหล​กลับ​ไป​ยัง​ภูเขา เป็น​วังวน​ขนาด​ยักษ์น่ะ​เอ็ก​ไซล์ วังวน​เลือด​ขนาด​ยักษ์ และ​ก็มีคน​คอย​สูบ​เลือด​อยู่ใน​นั้น​ด้วย"
       ],
       [
         "BetrayalNikoAct9Gossip4",
-        "This is a bad omen, exile. A real baaaad sign. What if all the water's turning to blood, eh? They say the Cataclysm did all sorts of strange things. This seems pretty strange to me! Been having a lot of dreams where I drink all that blood up. My body swells up like a big grape. Can't hold it in. BANG! I'm gone. What do you think that means, eh? Maybe I'm the only one who can stop it... Maybe I'm the reason it's here in the first place."
+        "นี่มัน​ลาง​ร้าย​ชัดๆ เอ็ก​ไซล์ ลาง​ร้าาาาย​ชัดๆ ถ้า​น้ำ​ทั้งหมด​กลาย​เป็น​เลือด​ล่ะ เหะ​? ว่า​กัน​ว่า​วัน​มหา​ภัย​พิบัติทำให้เกิด​อะไร​ประหลาดๆ มา​มากมาย ข้า​ว่า​นี่มัน​ก็ประหลาด​อยู่นะ​! ข้า​ฝัน​อยู่บ่อยๆ ว่า​ข้า​ดื่ม​เลือด​ทั้งหมด​นั่น แล้ว​ตัว​ข้า​ก็บวมเหมือน​องุ่น​เบิ้มๆ เก็บ​มัน​ไว้ไม่ได้ เผละ​! ข้า​ก็​หาย​ไป เจ้า​ว่า​มัน​แปล​ว่า​อะไร​กัน​ล่ะ เหะ​? ข้า​อาจ​เป็น​คน​เดียว​ที่หยุด​มัน​ก็ได้... ข้า​อาจ​เป็น​เหตุที่ทำให้มัน​อยู่ตรง​นี้ตั้งแต่แรก​ก็ได้"
       ],
       [
         "BetrayalNikoAboutAlva1",
-        "I'm plenty familiar with her type. Sniffin' around for treasure but doing anything they can to make sure it's not their own nose that gets dirty. No thank you."
+        "ข้า​คุ้น​เคย​กับ​คน​อย่าง​เธอ คอย​ดม​หาก​ลิ่น​สมบัติ แต่ทำ​ทุก​วิถีทาง​ไม่ให้จมูก​ตัว​เอง​เปื้อน ถึง​จมูก​คน​อื่น​จะ​เปื้อน​ก็ตาม ไม่​เอา​ดี​กว่า ไม่เป็นไร"
       ],
       [
         "BetrayalNikoAboutAlva2",
-        "I know 'er, sure. Don't care much for her. She's the type of person that gets others to do the hard work. Rather just do me own work, thank you."
+        "ข้า​รู้จัก​เธอ​แน่ๆ ไม่สนใจ​เธอ​นัก​หรอก คน​อย่าง​เธอ​ชอบ​ให้คน​อื่น​ทำงาน​หนัก​ให้เธอ ข้า​ทำงาน​ของ​ตัว​เอง​ดีกว่า ไม่เป็นไร"
       ],
       [
         "BetrayalNikoAboutAlva3",
-        "Seen her sniffin' around my mine... Reckon she was looking for some unguarded goods. Lucky for me I own nothing of value!"
+        "ข้า​เห็น​เธอ​สอด​ส่อง​ใน​เหมือง​ของ​ข้า​... เธอ​คง​ตาม​หา​ของดีที่ที่ไม่ถูก​คุ้ม​กัน​แน่ๆ โชค​ดีที่ข้า​ไม่มีของ​มีค่า​อะไร​เลย​!"
       ],
       [
         "BetrayalNikoAboutAlva4",
-        "Oh yes... The time traveller. Says she can go back in time. Must mean she's from the future, eh? Yet when I asked her what I was gonna do next, she couldn't tell me. Very suspicious."
+        "อ๋อ ใช่... นัก​เดิน​ทาง​ย้อน​เวลา เธอ​บอก​ว่า​เธอ​ย้อน​เวลา​ได้ แสดง​ว่า​เธอ​ต้อง​มา​จาก​อนาคต​แน่ๆ เหะ​? แต่พอ​ข้า​ถาม​เธอ​ว่า​ข้า​จะ​ทำ​อะไร​ต่อ เธอ​ก็ตอบ​ข้า​ไม่ได้ มีพิรุธ​จริงๆ"
       ],
       [
         "BetrayalNikoAboutAlva5",
-        "That girl... She's been eyeing my machine. I know she's after it. Greedy little-... She can't have it. Can't even touch it. She tries, and I'll bury her alive."
+        "แม่สาว​นั่น​... มัน​คอย​จับตา​ดูเครื่อง​ของ​ข้า​อยู่ ข้า​รู้ว่า​มัน​ต้องการ​เครื่อง​นั่น นัง​โลภ​-... มัน​จะ​ไม่มีวัน​ครอง​แน่ๆ แตะ​แม้แต่ปลาย​นิ้ว​ก็ไม่ได้ หาก​มัน​ลองดี ข้า​จะ​จับ​มัน​ฝัง​ทั้ง​เป็น"
       ],
       [
         "BetrayalNikoAboutJun1",
-        "Somethin' about masks just put me on the defensive. Probably has something to do with my less-than-pleasant run-ins with the Templar. But she seems like an alright sort. Not exactly one to mess with, what with those bloody big blades of hers."
+        "หน้ากาก​ทำให้​ข้า​หวาดระแวง​มา​แต่ไหน​แต่ไร คง​เป็น​เพราะ​ข้า​เคย​เผชิญ​กับ​เทม​พลาร์อย่าง​ไม่น่า​ยินดีนัก แต่เธอ​ก็คง​ไม่เลว​นัก อย่า​ไป​ลองดีกับ​เธอ​ล่ะ กระบี่​เธอ​เล่ม​เบ้อเร่อ​เชียว"
       ],
       [
         "BetrayalNikoAboutJun2",
-        "She's hiding her face, but her eyes tell you everything you need to know, don't they. Curious. A thinker. The type of person who looks you in the eye but sees every other movement too. Dangerous."
+        "เธอ​ปกปิด​หน้า​ตัว​เอง แต่ดวงตา​เธอ​บ่ง​บอก​ทุก​สิ่ง​ที่เจ้า​ควร​รู้นี่นา เป็น​คน​ช่าง​สงสัย ช่าง​คิด เป็น​คน​ที่จ้อง​ตา​เจ้า​แต่ก็เห็น​การ​เคลื่อนไหว​อย่าง​อื่น​ทั้งหมด​ใน​เวลา​เดียวกัน อันตราย"
       ],
       [
         "BetrayalNikoAboutJun3",
-        "The thing about her is... she's so... normal. It's like she's trying to blend in so hard that she sticks out. Suspicious if you ask me... very, very suspicious. Not that I'd tell her that. I've seen what she can do with a knife."
+        "คือ​เธอ​เป็น​แบบ​นี้... เธอ​มัน​... ปกติเหลือ​เกิน เหมือน​กับ​เธอ​พยายาม​ทำตัว​กลืน​กับ​คน​อื่น​เสีย​จน​เด่น​ขึ้น​มา ข้า​ว่า​มีพิรุธ​นะ​... มีพิรุธ​มากๆ แต่ข้า​ไม่กล้า​บอก​เธอ​ตรงๆ หรอก ข้า​เคย​เห็น​แล้ว​ว่า​เธอ​ทำ​อะไร​กับ​มีด​ใน​มือ​ได้บ้าง"
       ],
       [
         "BetrayalNikoAboutJun4",
-        "Ooooh, she's up to something. Nobody with those darty little eyes and massive blades is completely innocent. Dunno what she's hidin', but I'm sure I'll find out soon enough."
+        "อู้ เธอ​วางแผน​อะไร​อยู่แน่ๆ ไม่มีผู้บริสุทธิ์คน​ไหน​มีด​วง​ตา​ว่อง​ไว​เล็กๆ กับ​กระบี่ใหญ่ๆ แน่ๆ ข้า​ไม่รู้ว่า​เธอ​ปิดบัง​อะไร​เอา​ไว้ แต่เดี๋ยว​อีก​ไม่นาน​ก็คง​รู้"
       ],
       [
         "BetrayalNikoAboutJun5",
-        "Nice girl, she is. Very nice indeed. Too nice. Whatever it is she's hiding with that little performance, its big, exile. Big and heavy. A boulder-sized secret that threatens to sink our nice little ship."
+        "นัง​นั่น​เป็น​เด็ก​สาว​ที่นิสัย​ดีจริงๆ นะ ดีจริงๆ ดีเกิน​ไป ไม่ว่า​มัน​ตั้งใจ​แสดง​เพื่อ​ปิดบัง​เรื่อง​อะไร มัน​ย่อม​เป็น​เรื่อง​ใหญ่แน่ๆ เอ็ก​ไซล์ เรื่อง​ใหญ่ เรื่อง​หนัก​ด้วย เป็น​ความ​ลับ​ขนาด​เท่า​หิน​ยักษ์ที่พร้อม​จะ​ล่ม​เรือ​เล็กๆ ของ​เรา​ได้ทุก​เมื่อ"
       ],
       [
         "BetrayalNikoAboutEinhar1",
-        "Einhar... Bloody Einhar won't leave me alone! \"We are best friends yes? We will survive the bloody first ones yes?\" No, Einhar, none of that is true and you're bloody crazy. And wash yourself once in a bloody while, will ya!"
+        "ไอ​นาร์... ไอ​นาร์มัน​ไม่ยอม​ปล่อย​ข้า​ไป​เลย​! \"​เรา​จะ​เป็น​เพื่อน​ที่ดีนะ​? เรา​จะ​รอด​จาก​เหล่า​เทพ​ผู้บุกเบิก​นะ​?\" ไม่ ไอ​นาร์ เรื่อง​บ้าๆ นั่น​ไม่จริง​เลย​สัก​นิด แก​มัน​เป็น​บ้า ช่วย​ไป​อาบ​น้ำ​อาบ​ท่า​บ้าง​เถอะ​นะ​!"
       ],
       [
         "BetrayalNikoAboutEinhar2",
-        "That Einhar keeps lugging skins and organs over to me, like they're bloody gifts. What am I supposed to do with half a hellion kidney, Einhar? Eh? I don't want it. No one wants it. No one wants you. Just stay in your little zoo!"
+        "ไอนาร์นั่น​เอาแต่ขน​ผิวหนัง​กับ​อวัยวะ​มา​ให้ข้า​ราวกับ​ว่า​ไอ้ของ​พวก​นั้น​เป็น​ของ​ขวัญ​งั้น​แหละ ข้า​จะ​เอา​ไต Hellion ครึ่ง​หนึ่ง​ไป​ทำ​บ้า​อะไร​ล่ะ​ไอ​นาร์? เหะ​? ข้า​ไม่ต้องการ​มัน ไม่มีใคร​ต้องการ​มัน​เลย ไม่มีใคร​ต้องการ​แกด้วย อยู่ใน​สวน​สัตว์เล็กๆ ของ​แก​ต่อ​ไป​เถอะ​!"
       ],
       [
         "BetrayalNikoAboutEinhar3",
-        "You know, me and him have spent a little time together now, and I must say... I really don't like him. He smells and he talks too much. I told him to piss off and he laughed and slapped me on the back! I wasn't bloody joking."
+        "รู้ไหม ข้า​กับ​เขา​ได้ใช้เวลา​ด้วย​กัน​มา​บ้าง ข้า​ขอบ​อก​เลย​ว่า​... ข้า​ไม่ชอบ​เขา​เลย​สัก​นิด เขา​ตัว​เหม็น ปากมาก​เกิน​ไป ข้า​บอก​ให้เขา​ไสหัว​ไป​ให้พ้น เขา​ก็หัวเราะ​แล้ว​ตบ​หลัง​ข้า​! ข้า​ไม่ได้ล้อ​เล่น​นะ​โว้ย"
       ],
       [
         "BetrayalNikoAboutEinhar4",
-        "Einhar's a bloody lunatic. But you know what? He's growing on me. I don't want to actively hit him in the face with a rock, so that's something. Weird thing is, when he's not around, I still hear his laugh. Or someone's laugh... Might be my laugh."
+        "ไอนาร์มัน​บ้า​สิ้น​ดี แต่รู้ไหม​? ข้า​เริ่ม​ชอบ​เขา​แล้ว ข้า​ไม่อยาก​เอา​หิน​ฟาด​หน้า​เขา​อีก​ต่อ​ไป​แล้ว ซึ่ง​คงจะ​พอ​มีค่า​อยู่บ้าง ที่แปลก​ก็คือ​เวลา​ที่เขา​ไม่อยู่ ข้า​ยัง​ได้ยิน​เสียง​หัวเราะ​ของ​เขา​อยู่ หรือ​เสียง​หัวเราะ​ใคร​สัก​คน​... อาจ​เป็น​เสียง​หัวเราะ​ของ​ข้า​เอง"
       ],
       [
         "BetrayalNikoAboutEinhar5",
-        "My beasty mate. What a guy. Heck of a shot. Loves a laugh. Rips animals apart and brings me all sorts of odd giblets. Can't believe I used to hate him! Dunno what changed if I'm honest, but since we're all stuck together, I ain't complaining."
+        "เพื่อน​ยาก​ผู้รัก​สัตว์ของ​ข้า เขา​มัน​เจ๋ง​จริงๆ ยิง​ก็แม่น หัวเราะ​เก่ง​อีก​ด้วย เขา​ชอบ​ฉีก​ทึ้ง​สัตว์แล้ว​เอา​เครื่อง​ใน​แปลกๆ มา​ให้ข้า ข้า​ไม่อยาก​เชื่อ​เลย​ว่า​ข้า​เกลียด​เขา​มา​ก่อน​! ข้า​ไม่รู้นะ​ว่า​มีอะไร​เปลี่ยน​ไป แต่ใน​เมื่อ​เรา​ลง​เรือ​ลำ​เดียวกัน​หมด มัน​ก็ไม่เลว​นัก​เลย"
       ],
       [
         "BetrayalNikoAboutZana1",
-        "Zana's bright. Brighter than anyone else I can think of, actually, and since I live surrounded by literal darkness, I know a thing or two about bright. When I hit a wall with my own machinery, she's the one I talk to."
+        "ซา​นะ​เป็น​คน​แจ่ม​แจ้ง ไม่คิด​ว่า​มีใคร​ฉลาด​ไป​กว่า​เธอ​แล้ว และ​ใน​เมื่อ​ข้า​อ​ยูใน​ที่ที่เต็ม​ไป​ด้วย​ความ​มืด​มิด​ของ​จริง ข้า​ก็พอ​รู้เกี่ยว​กับ​ความ​แจ่ม​แจ้ง​อยู่บ้าง พอ​ข้า​ถึง​ทาง​ตัน​เรื่อง​เครื่องจักร​ของ​ข้า ข้า​ก็ไป​คุย​กับ​เธอ​นั่น​แหละ"
       ],
       [
         "BetrayalNikoAboutZana2",
-        "There aren't many people worthy of praise left in this world, but Zana is one of them. She outwitted the Templar, built a magnificent device, and hasn't tried to kill anyone in front of me yet. A rare gem indeed."
+        "โลก​ใบ​นี้ไม่มีใคร​ที่น่า​สรรเสริญ​อีก​ต่อ​ไป​แล้ว แต่ซา​นะ​ก็เป็น​หนึ่ง​ใน​นั้น เธอ​เอาชนะ​พวก​เทม​พลาร์ด้วย​สติปัญญา สร้าง​เครื่อง​อัน​งดงาม และ​ยัง​ไม่เคย​พยายาม​ฆ่า​ใคร​ต่อ​หน้า​เธอ​เลย เป็น​เพชร​เม็ด​งาม​ที่หา​ยาก​เสีย​จริง"
       ],
       [
         "BetrayalNikoAboutZana3",
-        "Clever and ambitious, that Zana. And with a kind heart! That's a particularly rare find in this day and age. Still... I can't shake the feeling there's something she's not telling me. Something... important."
+        "ซานะ​ช่าง​เฉลียวฉลาด​และ​ทะเยอทะยาน แถม​มีจิตใจ​ดีอีก​ด้วย​! ซึ่ง​เป็น​สิ่ง​ที่หา​ได้ยาก​ใน​ยุค​สมัย​นี้ แต่ว่า​... ข้า​อด​รู้สึก​ไม่ได้ว่า​มีเรื่อง​ที่เธอ​ไม่ได้บอก​ข้า เรื่อง​ที่มัน​... สำคัญ"
       ],
       [
         "BetrayalNikoAboutZana4",
-        "Zana's hiding something. She's very clever, so it's not obvious, but I've seen her...fidgeting. And fretting. What is there to fret about? Something she hasn't told us, that's what. She's lucky I like her..."
+        "ซา​นะ​แอบ​ปิดบัง​อะไร​บาง​อย่าง​เอา​ไว้ เธอ​เฉลียว​ฉลาด​มาก มัน​จึง​สังเกต​ไม่ได้ง่ายๆ แต่ข้า​เคย​เห็น​เธอ​... กระวนกระวาย จะ​มีเรื่อง​อะไร​ให้กระวนกระวาย​อีก​เล่า​? เรื่อง​ที่เธอ​ไม่ได้บอก​เรา​แน่ๆ เธอ​โชค​ดีนัก​ที่ข้า​ชอบ​เธอ​..."
       ],
       [
         "BetrayalNikoAboutZana5",
-        "Shh. Don't want her hearing. I think she's found something she doesn't want the rest of us to know about. Know what I think it is?... That's right, exile... another mine. A secret load of Azurite. And she's keeping it all for herself. But her secret's safe with me! ...err... Us, I guess."
+        "ชู่ ข้า​ไม่อยาก​ให้เธอ​ได้ยิน ข้า​ว่า​เธอ​พบ​อะไร​ที่เธอ​ไม่อยาก​ให้พวก​เรา​ที่เหลือ​ได้รู้ รู้ไหม​ว่า​ข้า​คิด​ว่า​เป็น​อะไร​? ... ใช่แล้ว​เอ็ก​ไซล์... มัน​เป็น​เหมือง​อีก​เหมือง เป็น​คลัง​อะซูไรต์ลับ​อีก​แห่ง และ​เธอ​ก็เก็บ​มัน​ไว้เป็น​ของ​เธอ​แต่เพียง​ผู้เดียว แต่ข้า​จะ​ไม่ปาก​โป้ง​เรื่อง​ความ​ลับ​ของ​เธอ​แน่ๆ​! ...​เอ่อ​... เรา​ละ​มั้ง"
       ],
       [
         "BetrayalNikoAboutNavali1",
-        "Dunno how I feel about Navali. Seems to me like the power to see the future could make someone very prosperous, but she's keeping tight-lipped about anything that could help me! Seems pretty selfish, if you ask me."
+        "ข้า​ไม่รู้ว่า​ข้า​คิด​ยัง​ไง​กับ​นาวา​ลี เหมือน​ว่า​พลัง​ใน​การ​มอง​เห็น​โลก​อนาคต​อาจ​ทำให้ใคร​ร่ำรวย​มหาศาล​ขึ้น​มา​ได้ แต่เธอ​ไม่ปริปาก​พูด​อะไร​ที่จะ​ช่วย​ข้า​ได้เลย​! ข้า​ว่า​มัน​เห็น​แก่ตัว​อยู่นะ"
       ],
       [
         "BetrayalNikoAboutNavali2",
-        "I want to like Navali. I really do. But... did you know she's bloody undead?! I've seen what the undead can do, exile, and let me tell you, it's hard to trust someone who might eat your face at any moment."
+        "ข้า​อยาก​จะ​ชอบ​นาวา​ลี ข้า​อยาก​ชอบ​เธอ​จริงๆ แต่... เจ้า​รู้ไหม​ว่า​เธอ​เป็น​อัน​เดด​น่ะ​?!  ข้า​เคย​เห็น​แล้ว​ว่า​อัน​เดด​ทำ​อะไร​ได้บ้าง เอ็ก​ไซล์ ข้า​ขอบ​อก​เจ้า​เลย​ว่า​มัน​ยาก​ที่จะ​ไว้ใจ​ใคร​ก็ตาม​ที่พร้อม​จะ​กิน​หน้า​ของ​เจ้า​ได้ทุก​เมื่อ"
       ],
       [
         "BetrayalNikoAboutNavali3",
-        "Sometimes Navali looks over at me and just... frowns. Not an angry frown, more like... pity? I know she's seeing my future... Doesn't exactly fill me with hope. If my future's looking grim, I'd quite frankly rather not know."
+        "บาง​ครั้ง​นาวา​ลีมอง​มา​ทาง​ข้า​แล้ว​ก็... ขมวด​คิ้ว ไม่ได้ขมวด​คิ้ว​เพราะ​โกรธ​นะ เหมือน​จะ​เป็น​... ความ​สงสาร​? ข้า​รู้ว่า​เธอ​เห็น​อนาคต​ของ​ข้า​... ก็ไม่ทำให้ข้า​มีความ​หวัง​นัก​หรอก ถ้า​อนาคต​ของ​ข้า​มัน​สยดสยอง ข้า​ไม่รู้เสีย​จะ​ดีกว่า"
       ],
       [
         "BetrayalNikoAboutNavali4",
-        "How can Navali sit there, knowing what's going to happen to all of us, keeping those lips tightly sealed, eh? She knows exactly where and when each of us is going to die. That's creepy. And she won't bloody tell us? That's... evil."
+        "ทำไม​นาวา​ลีถึง​นั่ง​ไม่ปริปาก​อะไร​อยู่แบบ​นั้น ทั้ง​ที่รู้ว่า​จะ​เกิด​อะไร​ขึ้น​กับ​เรา​ทุก​คน เหะ​?! เธอ​รู้ดีว่า​เรา​จะ​ตาย​ที่ไหน​และ​ตอน​ไหน มัน​น่า​ขนลุก​สิ้น​ดี แล้ว​เธอ​ก็ไม่ยอม​บอก​เรา​เนี่ย​นะ​? มัน​... ชั่ว​ร้าย​มาก"
       ],
       [
         "BetrayalNikoAboutNavali5",
-        "She knows too much, exile. Too much! And there's nothing we can do about it! Can't kill her, since she's already bloody dead. Can't make her tell us what she knows, because even if we know, we can't bloody do a thing to change it. What's the point? What's the point in anything!?"
+        "เธอ​รู้มาก​เกิน​ไป​แล้ว​เอ็ก​ไซล์ รู้มาก​เกิน​ไป​! แล้ว​เรา​ก็ทำ​อะไร​ไม่ได้ด้วย​! ฆ่า​เธอ​ก็ไม่ได้เพราะ​เธอ​ตาย​ไป​แล้ว บังคับ​ให้เธอ​พูด​ใน​สิ่ง​ที่เธอ​รู้ก็ไม่ได้ เพราะ​ต่อ​ให้เรา​รู้ เรา​ก็เปลี่ยนแปลง​ไม่ได้อยู่ดี มัน​จะ​ไป​มีความ​หมาย​อะไร​? ทุก​อย่าง​มัน​จะ​มีความ​หมาย​อะไร​!?"
       ],
       [
         "BetrayalNikoAboutHelena1",
-        "She's smart enough to know that the blackguards are bad news... Though she did join 'em in the first place. Well, we've all made bad decisions, eh? Couldn't have been easy deciding to leave 'em neither. They're not exactly the most forgiving lot."
+        "เธอ​ฉลาด​พอที่จะ​รู้ว่า​พวก​การ์ด​ดำ​เป็น​พวก​ที่ไม่ดี... แต่เธอ​ก็ไป​ร่วม​กับ​พวก​เขา​แต่แรก แต่เรา​ก็เคย​ตัดสิน​ใจ​ผิด​พลาด​กัน​ทุก​คน​แหละ เหะ​? การ​ตัดสิน​ใจ​ออก​จาก​กลุ่ม​นั้น​ก็คง​ไม่ใช่เรื่อง​ง่าย​ด้วย พวก​มัน​ไม่ใช่พวก​ที่ให้อภัย​นัก​เลย"
       ],
       [
         "BetrayalNikoAboutHelena2",
-        "Helena's a good egg. Her moral compass was a little bent, but Oriath'll do that to ya, as we both know all too well. Got a pretty good brain in her too. Not quite as knowledgeable as me about rocks, but who is, eh?"
+        "เฮ​เลน่า​เป็น​คน​ดีนะ ถึง​แม้ว่า​ศีล​ธรรม​ของ​เธอ​จะ​บิดเบี้ยว​ไป​นิด​หน่อย แต่มัน​ก็เป็น​ผล​จาก​โอ​ริอา​ทนั่น​แหละ เรา​ต่าง​ก็รู้กัน​ดีเกิน​ไป เธอ​มีหัว​ดีเหมือน​กัน ถึง​แม้จะ​ไม่ฉลาด​เท่ากับ​ข้า​ใน​เรื่อง​ก้อน​หิน แต่ใคร​จะ​ฉลาด​เท่า​ข้า​ล่ะ เหะ​?"
       ],
       [
         "BetrayalNikoAboutHelena3",
-        "Been thinkin' that maybe I oughta keep an eye on that girl. She seems pretty desperate to stay hidden. Gotta ask yourself why... She says she's worried about blackguards, but who knows how true that really is, eh?"
+        "ข้า​คิด​มา​คลอด​ว่า​ข้า​ควร​จับตา​แม่สาว​นั่น เธอ​ดูจน​ตรอก​ที่จะ​ซ่อน​ตัว ลอง​ถาม​ตัว​เอง​ดูสิว่า​อะไร​เป็น​เหตุ... เธอ​บอก​ว่า​เธอ​กังวล​เรื่อง​พวก​การ์ด​ดำ แต่ใคร​จะ​ไป​รู้ล่ะ​ว่า​มัน​จะ​จริง​ขนาด​ไหน เหะ​?"
       ],
       [
         "BetrayalNikoAboutHelena4",
-        "She says she's still on the run from the blackguards, but... how do we really know where her loyalties lie? Wish we could crack her head open and see what her brain's doing. She looks like a fighter though. Not really much of a fighter, myself. Just gonna keep an eye on her for now."
+        "เธอ​บอก​ว่า​เธอ​ยัง​กำลัง​หลบ​หนีพวก​การ์ด​ดำ​อยู่ แต่... เรา​จะ​รู้ได้ยัง​ไง​ว่า​เธอ​ภักดีกับ​ฝั่ง​ไหน​? เรา​น่า​จะ​แกะ​หัว​เธอ​มา​ดูได้ว่า​สมอง​เธอ​คิด​อะไร​อยู่กัน​แน่ แต่เหมือน​เธอ​จะ​เป็น​นัก​สู้ ส่วน​ข้า​ก็ไม่ใช่นัก​สู้เอา​เสีย​เลย ข้า​จะ​จับตา​ดูเธอ​เอา​ไว้เฉยๆ แล้ว​กัน"
       ],
       [
         "BetrayalNikoAboutHelena5",
-        "Helena... Clever, kind, polite... seems too good to be true, if you ask me. You ask me, I think it IS too good to be true. Reckon she's got some sinister plans... Oh, she hasn't done anything...untoward...yet, but why would she blow her cover like that, eh? No, she's biding her time. Well I'm biding mine too. Let's see who lasts longer. Let's just wait and see, eh?"
+        "เฮ​เลน่า​... เฉลียว​ฉลาด ใจดี สุภาพ​... ข้า​ว่า​เหมือน​จะ​ดีจน​เกิน​เหตุนะ ข้า​ว่า​มันดีจน​เกิน​เหตุไป​จริงๆ มัน​ต้อง​มีแผน​ร้าย​แน่ๆ​... โอ้ มัน​ยัง​ไม่ได้ทำ​อะไร​ที่...​ไม่เหมาะ​สม​...​หรอก​นะ แต่มัน​จะ​เปิด​เผย​ไต๋ไป​ทำไม​ล่ะ เหะ​? ไม่ มัน​กำลัง​รอ​เวลา​อยู่ ข้า​เอง​ก็รอ​เวลา​เหมือน​กัน มา​ดูกัน​เถอะ​ว่า​ใคร​จะ​อยู่ได้นาน​กว่า​กัน มา​รอ​ดูกัน​เถอะ เหะ​?"
       ],
       [
         "BetrayalNikoInviteToHideout",
-        "You got space for me? Do you?"
+        "เจ้ามีที่ให้ข้าไหม? มีใช่ไหมล่ะ?"
       ],
       [
         "BetrayalNikoDismissFromHideout",
@@ -25838,7 +25838,7 @@
       ],
       [
         "RikerDefeatedThree",
-        "ฉันควรจะรู้ดีกว่านี้."
+        "ฉันควรจะรู้ดีกว่านี้"
       ],
       [
         "RikerDefeatedFour",
@@ -31358,239 +31358,239 @@
       ],
       [
         "BaranNoStoneEncounterOne",
-        "You reek of antipathy. Whatever you are, stay far from my sanctuary."
+        "เจ้ามีกลิ่น​ไอ​ของ​ความ​เกลียด​ชัง ไม่ว่า​เจ้า​จะ​เป็น​ใคร จง​ไป​ให้ไกล​จาก​ปูชนีย​สถาน​ของ​ข้า​เสีย"
       ],
       [
         "BaranNoStoneEncounterTwo",
-        "Oh yes... I understand your darkness now. Sin has sent his lackey to defile the devout."
+        "โอ้ ใช่... ข้า​เข้าใจ​ความ​มืด​มิด​ของ​เจ้า​แล้ว ซิน​ส่ง​ขี้ข้า​ของ​มัน​มาส​ร้าง​ความ​มัว​หมอง​แก่ผู้เปี่ยมศรัทธา​นั่นเอง"
       ],
       [
         "BaranNoStoneEncounterThree",
-        "I will not allow Sin to overtake purity."
+        "ข้า​จะ​ไม่ยอม​ให้ซินครองชัยเหนือความ​บริสุทธิ์เป็น​อัน​ขาด"
       ],
       [
         "BaranNoStoneFleeing",
-        "No minion of Sin could be this powerful... what are you?"
+        "ซิน​ไม่มีสมุน​ที่ทรง​พลัง​เช่น​นี้แน่... เจ้า​เป็น​อะไร​กัน​?"
       ],
       [
         "BaranOneStoneEncounterOne",
-        "I see now. You are a test sent to me by God as I reach the threshold of worthiness."
+        "ข้า​เข้าใจ​แล้ว พระเจ้า​ทรง​ส่ง​เจ้า​มา​ทดสอบ​ข้า​ยาม​ที่ข้า​ใกล้ความ​คู่ควร​นี่เอง"
       ],
       [
         "BaranOneStoneEncounterTwo",
-        "Draw closer. Bring the holy fires. I shall not burn."
+        "เข้า​มา​ใกล้อีก นำ​เพลิง​ศักดิ์สิทธิ์เข้า​มา ข้า​ย่อม​ไม่มอด​ไหม้"
       ],
       [
         "BaranOneStoneEncounterThree",
-        "To prove oneself to God is the ultimate trial."
+        "การ​พิสูจน์ตน​ต่อ​พระเจ้า​ถือ​เป็นการ​ทดสอบ​อัน​สูงสุด"
       ],
       [
         "BaranOneStoneFleeing",
-        "... yours is no righteous strength. Deceiver! You are no servant of Innocence!"
+        "... พลัง​ของ​เจ้า​หา​ได้มา​จาก​ธรรมะ ไอ้คน​ลวง​โลก​! เจ้า​มิ​ใช่​บริวาร​แห่ง​อิน​โน​เซน​!"
       ],
       [
         "BaranTwoStoneEncounterOne",
-        "Ah, my fellow forsaken soul. You, too, found the void lonely. You seek my wisdom."
+        "อา วิญญาณ​ผู้ถูก​ทอด​ทิ้ง​เช่น​เดียว​กับ​ข้า เจ้า​ก็พบ​ว่า​ความ​ว่าง​เปล่า​นั้น​เดียว​ดาย​เช่น​เดียวกัน เจ้า​แสวงหา​ปัญญา​ของ​ข้า"
       ],
       [
         "BaranTwoStoneEncounterTwo",
-        "Good and evil have abandoned us. From whence does morality spring in the absence of God?"
+        "ความ​ดีกับ​ความ​ชั่ว​ได้ทิ้ง​เรา​ไป​เสีย​สิ้น ยาม​ที่ไร้ซึ่ง​พระเจ้า ศีล​ธรรม​จะ​มา​จาก​สิ่ง​ใด​เล่า​?"
       ],
       [
         "BaranTwoStoneEncounterThree",
-        "In this blasted land unseen by the divine, we must make our own truths. I shall show you the light."
+        "ใน​ดิน​แดน​เลว​ร้าย​ที่ไม่มีพระเจ้า​ได้พบเห็น เรา​จะ​ต้อง​สร้าง​สัจธรรม​ของ​เรา​ขึ้น​มา​เอง ข้า​จะ​ทำให้เจ้า​ได้พบ​กับ​แสง​สว่าง"
       ],
       [
         "BaranTwoStoneFleeing",
-        "You reject... my wisdom...? Blasphemer..."
+        "เจ้าปฏิเสธ... ปัญญาของข้าหรือ...? มารศาสนา..."
       ],
       [
         "BaranThreeStoneEncounterOne",
-        "Yet again, the void in your soul draws you back to my domain."
+        "ความ​ว่าง​เปล่า​ใน​วิญญาณ​เจ้า​ดึงดูด​เจ้า​มา​สู่แดน​ของ​ข้า​อีก​ครา"
       ],
       [
         "BaranThreeStoneEncounterTwo",
-        "Intrude upon my citadel. I promise you a revelation."
+        "บุกรุก​เข้าไป​ใน​หอคอย​ของ​ข้า​เสีย ข้า​จะ​ทำให้เจ้า​ได้ตื่น​รู้"
       ],
       [
         "BaranThreeStoneEncounterThree",
-        "You seek the light, and you have found it. I am become God, Creator and Shaper of Worlds."
+        "เจ้าแสวงหา​แสง​สว่าง และ​แสง​นั้น​อยู่ตรง​หน้า​เจ้า​แล้ว ข้า​เป็น​พระเจ้า ผู้สร้าง และ​ผู้ก่อ​รูป​แก่เหล่า​โลกา"
       ],
       [
         "BaranThreeStoneFleeing",
-        "I see now... what you are... even God has his opposite..."
+        "ข้า​เห็น​แล้ว​... ว่า​เจ้า​เป็น​สิ่ง​ใด​... กระทั่ง​พระเจ้า​ก็มีขั้วตรง​ข้าม​ของ​ตน"
       ],
       [
         "BaranFourStoneEncounter1a",
-        "The Creator and the Destroyer meet once more, and in that eternal struggle, the world is forged."
+        "ผู้สร้าง​กับ​ผู้ทำลาย​ได้พบ​กัน​อีก​ครา โลก​จึง​ถูก​หล่อ​หลอม​ขึ้น​มา​ผ่าน​การ​ต่อสู้อัน​เป็น​นิรันดร์เช่น​นี้"
       ],
       [
         "BaranFourStoneEncounter1b",
-        "My soul is free of doubt, for I cast it aside, and it became you."
+        "วิญญาณ​ของ​ข้า​ไร้ความ​สงสัย​อื่น​ใด​เพราะ​ข้า​ได้ละทิ้ง​มัน​ไป วิญญาณ​นั้น​จึง​กลาย​เป็น​เจ้า​นั่นเอง"
       ],
       [
         "BaranFourStoneEncounter1c",
-        "You are drawn to me like a moth to a flame, for you cannot exist without me."
+        "เจ้า​ถูก​ดึงดูด​มา​สู่ข้า​ไม่ต่าง​จาก​แมลง​เม่า​กับ​กอง​ไฟ เพราะ​เจ้า​มิอาจ​มีตัวตน​หาก​ไม่มีข้า"
       ],
       [
         "BaranFourStoneEncounter2a",
-        "Like Sin and Innocence before us, we two are bound forever; God and his shadow."
+        "ไม่ต่าง​จาก​ซินกับ​อิน​โน​เซน​ก่อน​หน้า​เรา เรา​ทั้ง​สอง​ไม่อาจ​หนีจาก​กัน​ได้พ้น เป็น​พระเจ้า​กับ​เงา​ของ​พระองค์"
       ],
       [
         "BaranFourStoneEncounter2b",
-        "You mean to torment me, but you are the weakness I once had. I reject you."
+        "เจ้า​จงใจ​ทรมาน​ข้า แต่เจ้า​เป็น​ความ​อ่อนแอ​ที่ข้า​เคย​มี ข้า​ปฏิเสธ​เจ้า"
       ],
       [
         "BaranFourStoneEncounter2c",
-        "The Fire of Creation burns within me, and it will reshape you into something worthy. Only then will you be Forgiven."
+        "เพลิง​แห่ง​การ​สรรสร้าง​แผด​เผา​ใน​ตัว​ข้า มัน​จะ​ก่อ​รูป​เจ้า​ขึ้น​ใหม่​ให้เป็น​สิ่ง​ที่คู่ควร มีเพียง​กาล​นั้น​ที่เจ้า​จะ​ได้รับ​การ​ให้อภัย"
       ],
       [
         "BaranFourStoneEncounter3a",
-        "Here, whole worlds come into existence at my whim. What hope can you possibly have?"
+        "ณ ที่แห่ง​นี้ เหล่า​โลกา​มีตัว​ตน​ตาม​บันดาล​ใจ​ของ​ข้า เจ้า​จัก​มีความ​หวัง​อะไร​ได้อีก​?"
       ],
       [
         "BaranFourStoneEncounter3b",
-        "I seek to create a land of pure righteousness. What do you seek, except to destroy?"
+        "ข้า​ประสงค์สร้าง​ดิน​แดน​อัน​ชอบ​ธรรม เจ้า​ประสงค์สิ่ง​ใด​เล่า​หาก​มิใช่การ​ทำลาย​ล้าง​?"
       ],
       [
         "BaranFourStoneFighta",
-        "Shadow can never overtake light, demon."
+        "เงา​ไม่มีทาง​ครอง​ชัย​เหนือ​แสง​สว่าง​ได้ เจ้า​มาร​ร้าย"
       ],
       [
         "BaranFourStoneFightb",
-        "How dare you question God?!"
+        "กล้า​ดียัง​ไง​ถึง​ไม่เชื่อ​ใน​พระเจ้า​?!"
       ],
       [
         "BaranFourStoneFightc",
-        "You seek Forgiveness, but you do not deserve it."
+        "เจ้า​แสวงหา​การ​ให้อภัย แต่เจ้า​ไม่คู่ควร"
       ],
       [
         "BaranFourStoneFightd",
-        "I am the Fire of Creation, and I shall purify your soul."
+        "ข้า​เป็น​เพลิง​แห่ง​การ​สรร​สร้าง ข้า​จัก​ชำระ​วิญญาณ​เจ้า"
       ],
       [
         "BaranFourStoneFighte",
-        "I shall cast you into a pit of infinite tortures."
+        "ข้า​จะ​ส่ง​เจ้า​ไป​สู่หุบเหว​อัน​ทรมาน​นับ​อนันต์"
       ],
       [
         "BaranFourStoneStoryDeathTalk",
-        "Kirac... sent you? You must keep him out of the Atlas... I cannot be saved... he will find only his own doom, endlessly pursuing my rescue... he will end up... like me...\r\n\r\nTell Zana... she was right... to seal us away... Sirus must never... be..."
+        "​พี่คิรัค​... ส่งเจ้ามาหรือ? เจ้าจะ​ต้อง​ทำให้เขา​ห่าง​ไกล​จาก​สมุด​แผนที่... ไม่มี​ใคร​ช่วยชีวิต​ข้า​ได้​แล้ว​... เขา​จะ​พบ​แต่ความ​หายนะ​ของ​ตัว​เอง​จาก​การ​พยายาม​ช่วย​ชีวิต​ข้า​... เขา​จะ​ลงเอย​... เหมือน​กับ​ข้า​...\r\n\r\nบอก​ซานะ​... เธอ​พูด​ถูก​... ที่ปิด​ผนึก​พวก​เรา​ไว้... ไซ​รัส​จะ​ต้อง​... ไม่มีทาง​..."
       ],
       [
         "BaranFourStoneDeatha",
-        "Tell Zana... ... ...<italic>{demons}... "
+        "บอก​ซานะ​... ... ... <italic​>{​มาร​ร้าย​}..."
       ],
       [
         "BaranFourStoneDeathb",
-        "... tell my brother... that I cannot be saved..."
+        "...​บอก​พี่ชาย​ข้า​... ว่า​ไม่มี​ใคร​ช่วยชีวิต​ข้า​ได้​แล้ว..."
       ],
       [
         "BaranFourStoneDeathc",
-        "Keep Kirac... out of the Atlas... at all costs..."
+        "อย่า​ให้คิรัค​... เข้า​มา​ใน​สมุด​แผนที่... ใน​ทุก​วิถีทาง​..."
       ],
       [
         "BaranFourStoneDeathd",
-        "A brief moment of sanity... it never lasts..."
+        "การ​มีสติเพียง​ชั่ว​ครู่... มัน​ไม่เคย​อยู่ได้ยืนยาว​..."
       ],
       [
         "BaranFourStoneWina",
-        "In death, you are Forgiven."
+        "ยาม​เจ้า​ตาย เจ้า​​ได้รับ​การ​ให้อภัย"
       ],
       [
         "BaranFourStoneWinb",
-        "You were nothing before God."
+        "เจ้า​หา​ได้มีค่า​ต่อ​หน้า​พระเจ้า"
       ],
       [
         "BaranFourStoneWinc",
-        "You were a fool to challenge me, mortal child."
+        "เจ้า​โง่นัก​ที่ท้าทาย​ข้า เจ้า​มนุษย์อัน​เยาว์เอ๋ย"
       ],
       [
         "BaranRuneActivation1",
-        "Faithless!"
+        "ไร้ศรัทธา!"
       ],
       [
         "BaranRuneActivation2",
-        "Banished!"
+        "ขับไล่!"
       ],
       [
         "BaranRuneActivation3",
-        "Face your destiny!"
+        "เผชิญ​กับ​ชะตา​กรรม​ของ​เจ้า​!"
       ],
       [
         "BaranRuneActivation4",
-        "Faith empowers!"
+        "ศรัทธามอบพลัง!"
       ],
       [
         "BaranRuneActivation5",
-        "Heretic!"
+        "นอกรีต!"
       ],
       [
         "BaranSlam1",
-        "Release your soul!"
+        "ปลด​ปล่อย​วิญญาณ​เจ้า​!"
       ],
       [
         "BaranSlam2",
-        "Die, and be forgiven!"
+        "ตาย​แล้ว​รับ​การ​อภัย​เสีย​!"
       ],
       [
         "BaranSlam3",
-        "Sinners must be punished!"
+        "คน​บาป​ต้อง​ถูก​ลงโทษ​!"
       ],
       [
         "BaranSlam4",
-        "Repent!"
+        "สำนึกผิด!"
       ],
       [
         "BaranSlam5",
-        "Atone!"
+        "ไถ่บาป!"
       ],
       [
         "BaranGenericSkill",
-        "Righteousness prevail!"
+        "ธรรมะย่อมครองชัย!"
       ],
       [
         "BaranResponseToSirus0",
-        "The lamb has woken the lion, and damned us all."
+        "ลูก​แกะ​ได้ปลุก​สิงโต และ​นำ​หายนะ​มา​สู่เรา​ทุก​คน"
       ],
       [
         "BaranResponseToSirus2",
-        "You've awoken the slumbering giant, Exile. "
+        "เจ้า​ได้ปลุก​ยักษ์ที่หลับ​ไหล​ขึ้น​มา​แล้ว เอ็ก​ไซล์"
       ],
       [
         "BaranResponseToSirus3",
-        "Even God fears the wrath of Sirus."
+        "กระทั่ง​พระเจ้า​ก็กลัว​เกรง​ความ​โกรธ​เคือง​ของ​ไซ​รัส"
       ],
       [
         "BaranResponseToSirus4",
-        "There are some beyond even God's judgement."
+        "มีบาง​สิ่ง​ที่ล่วง​เลย​ไป​จาก​การ​ตัดสิน​ของ​พระเจ้า"
       ],
       [
         "BaranResponseToSirus5",
-        "If Sirus casts his eyes upon you, not even your soul shall remain."
+        "หาก​ไซ​รัส​จับ​จ้อง​มายัง​เจ้า เจ้า​ย่อม​สูญสิ้น​กระทั่ง​วิญญาณ"
       ],
       [
         "BaranResponseToSirus6",
-        "Seek God's Forgiveness before Sirus seeks your head."
+        "แสวงหา​การ​ให้อภัย​ของ​พระเจ้า ก่อน​ที่ไซรัส​จะ​แสวงหา​หัว​ของ​เจ้า"
       ],
       [
         "BaranResponseToSirus7",
-        "And with his burning gaze, God swept clean the Land of Sin."
+        "และ​ด้วย​สายตา​อัน​มอด​ไหม้ของ​ท่าน พระองค์ได้ชำระ​ดิน​แดน​แห่ง​บาป​ให้สะอาด​บริสุทธิ์"
       ],
       [
         "BaranGlyph1",
-        "I, Baran, son of Galhad, being of full age and sound mind and memory, do make, publish and declare this to be my Last Will and Testament. We shall soon meet a cosmic abomination in battle in a place truly outside of all that is Good and Meaningful. Our chance of success, even by God's grace, is slim. \r\n\r\nTo my good friends and allies, Veritania, Sirus, Drox, and Al-Hezmin, I bequeath to you my staff and platemail. May you use it to seal the great evil that haunts these lands.\r\n\r\nTo my brothers and sisters of the Templar faith in Exile, Herules, Gomin, Cassia, and Landren, I bequeath to you my home in Oriath, that you might never be without one again.\r\n\r\nSigned,\r\n\r\nBaran, son of Galhad"
+        "ข้า บาราน บุตร​กัลฮัด ผู้มีอายุเต็ม​วัย มีจิตใจ​กับ​ความ​ทรง​จำ​อัน​สมบูรณ์ ขอ​ทำ​เอกสาร​นี้และ​ประกาศ​ว่า​สิ่ง​นี้เป็น​พินัยกรรม​ของ​ข้า เรา​จัก​ได้ต่อสู้กับ​สิ่ง​เลว​ทราม​แห่ง​จักรวาล​ใน​สถาน​ที่อยู่นอก​เหนือ​จาก​ที่ถูก​ที่ควร​อย่าง​แท้จริง​ใน​ไม่ช้า แม้น​พระเจ้า​อวยพร เรา​ต่าง​ก็มีโอกาส​เพียง​น้อย​นิด\r\n\r\nแด่​เหล่า​เพื่อน​และ​มิตร​สหาย​ของ​ข้า เวริทาเนีย ไซรัส ดร็อกซ์ อัล-เฮซมิน ข้า​ขอ​ยก​มรดก​ให้พวก​เจ้า​เป็น​ไม้พลอง​กับ​ชุด​เกราะ​เหล็ก​ของ​ข้า ขอ​ให้พวก​เจ้า​ใช้มัน​ใน​การ​ผนึก​ความ​ชั่ว​อัน​ยิ่ง​ใหญ่ที่​หลอก​หลอน​ดิน​แดน​เหล่า​นี้\r\n\r\nแด่พี่น้อง​ชาย​หญิง​ศาสนิก​เทม​พลาร์ที่ถูก​เนรเทศ​ทั้ง​หลาย เฮ​รูลส์ โก​มิน แค​ส​เซีย กับ​แลน​เดรน ข้า​ขอ​ยก​มรดก​ให้พวก​เจ้า​เป็น​บ้าน​ของ​ข้า​ใน​โอ​ริอาท เพื่อ​ที่พวก​เจ้า​จะ​ไม่ไร้บ้าน​อีก​ต่อ​ไป\r\n\r\nลงชื่อ\r\n\r\nบาราน บุตร​กัลฮัด"
       ],
       [
         "BaranGlyph2",
-        "My dearest Landren,\r\n\r\nIt seems we may never leave this strange place. Our guide claims the device we used to come here has been broken and cannot be fixed, and that it would take a miracle for a path home to open. Unfortunately, we know the value of miracles.\r\n\r\nI can only hope that perhaps some intrepid explorers will discover this place and see to it that this letter finds you, though that could be a thousand years from now.\r\n\r\nHow I wish I could have spent but a few more moments with you, and felt your hand in mine just one more time. Fate has seen to it, that like our days in the Courts, duty must come before desire. \r\n\r\nKnow that I did it all so that you might be safe. \r\n\r\nI hope you find happiness.\r\n\r\nYours eternally,\r\n\r\nBaran"
+        "แลน​เดรน​ที่รัก\r\n\r\nผม​เกรง​ว่า​เรา​ไม่มีวัน​หลุด​พ้น​จาก​สถาน​อัน​ประหลาด​นี้ไป​ได้ ผู้นำ​ทาง​ของ​เรา​อ้าง​ว่า​เครื่อง​ที่นำ​พวก​เรา​มา​ที่นี่นั้น​ชำรุด​และ​มิอาจ​ซ่อม​ได้ และ​เรา​ต้อง​อาศัย​เพียง​ปาฏิหาริย์จึง​จะ​พบ​ทาง​กลับ​บ้าน โชค​ร้าย​ที่เรา​เข้าใจ​ถึง​คุณค่า​ของ​ปาฏิหาริย์\r\n\r\nผม​หวัง​แต่เพียง​ว่า​นัก​สำรวจ​ผู้กล้า​หาญ​อาจ​พบ​สถาน​แห่ง​นี้ แล้ว​นำ​จดหมาย​นี้ไป​ส่ง​ให้คุณ แม้ว่า​มัน​อาจ​ผ่าน​ไป​จาก​นี้เป็น​พันปีก็ตาม\r\n\r\nผม​อยาก​ได้ใช้เวลา​ร่วม​กับ​คุณ​อีก​นิดหนึ่ง อยาก​สัมผัส​มือ​ของ​คุณ​อีก​ครา​เดียว ทว่า​มัน​เป็น​ลิขิต​ขอ​ชะตา​กรรม​เฉก​เช่น​ตอน​ที่เรา​อยู่ใน​ชั้น​ศาล​ว่า​หน้าที่ต้อง​มา​ก่อน​ความ​ปรารถนา​เสมอ\r\n\r\nขอ​ให้คุณ​รู้ไว้ว่า​ผม​ทำ​แบบ​นี้เพื่อ​ให้คุณ​ปลอดภัย\r\n\r\nขอ​ให้คุณ​มีความ​สุข\r\n\r\nรัก​คุณ​ตลอด​กาล\r\n\r\nบา​ราน"
       ],
       [
         "BaranGlyph3",
-        "To the discoverer of this letter,\r\n\r\nWhat transpired here in this strange and twisted realm is beyond comprehension. An evil older than time itself roamed these lands feeding on the memories of Valdo Caeserius, a son of Oriath. \r\n\r\nAlas, the fiend that fed upon him was powerful beyond measure, and unerring in its desire to spread what we discovered was known as the 'Decay.' I know not how long we pursued the demon. Long enough that my allies began to show signs of madness. We'd surely have fallen to the evil were it not for Sirus' courageous leadership... and his sacrifice. \r\n\r\nWe could find no way to slay the demon, though we tried countless times. It was the daughter of Valdo who found a way to seal it, though it cost poor Zana her father, rest his soul. Our gambit would have failed were it not for Sirus. The demon would not give in, clawing its way from Zana's device. Sirus... He leapt onto it. We saw the demon tap into his body, at last relinquishing its grip. Sirus and the demon spiraled into the trap and out of our reality. Both gone. \r\n\r\nThen Sirus was there once more. None of us witnessed his return. His eyes did not move, he did not blink, and his mutterings... Mad and unceasing. Then his face contorted in ways I'd seen only from men possessed by the black spirit. He struck at us again and again. We could not restrain him. We had to flee that place. That is when we discovered our path home was sealed. Valdo's daughter had sabotaged our return. \r\n\r\nI do not know how long we have been trapped here. Weeks, at least. Possibly years. Time in the Atlas is a mirage. \r\n\r\nPlease, dear reader, if you have an ounce of sense in your body, do not dwell here. Return to Oriath, or wherever it is you are from. Tell of Sirus' heroism and sacrifice, and leave him, and us, to die with the secrets we uncovered.\r\n\r\nBaran, the Faithless"
+        "แด่ผู้ใด​ที่พบ​จดหมาย​ฉบับ​นี้\r\n\r\nสิ่ง​ที่เกิด​ขึ้น​ที่นี่ใน​ดิน​แดน​อัน​ประหลาด​และ​ผิด​เพี้ยน​นั้น​ยาก​เกิน​การ​เข้า​ใจ​ใดๆ สิ่ง​ชั่ว​ร้าย​ที่เก่า​แก่กว่า​กาล​เวลา​ผู้ที่ร่อนเร่ไป​ตาม​ดิน​แดน​นี้ได้กัดกิน​ความ​ทรงจำ​ของ​วาลโด คาเซอริอุส บุตร​แห่ง​โอริอาท\r\n\r\nทว่า​ปีศาจ​ที่ได้กัด​กิน​เขา​นั้น​ทรง​พลัง​เหนือ​คณา​นับ และ​มีปรารถนา​อย่าง​ไม่หยุด​ยั้ง​ใน​การ​แพร่กระจาย​สิ่ง​ที่เรา​ค้น​พบ​ว่า​ถูก​เรียก​ว่า '​การ​เสื่อม​สลาย​' เรา​ไม่รู้ว่า​เรา​ได้ตาม​ติด​มาร​ร้าย​นี้มา​นาน​เสีย​เท่าไร นาน​พอที่มิตร​ของ​ข้า​เริ่ม​มีอาการ​แห่ง​ความ​บ้า​คลั่ง เรา​คงจะ​แพ้พ่าย​ต่อ​ความ​ชั่ว​ร้าย​นี้หาก​ไม่มีไซรัส​ผู้เป็น​ผู้นำ​... และ​ผู้เสียสละ\r\n\r\nเรา​ไม่พบ​ทาง​ใด​ที่จะ​สยบ​มาร​ร้าย​นี้ แม้เรา​จะ​พยายาม​มา​นับ​ไม่ถ้วน​ก็ตาม ทว่า​เป็น​บุตร​สาว​ของ​วาล​โด​ที่พบ​วิธีปิด​ผนึก​มัน ทว่า​มัน​ต้อง​แลก​มา​กับ​การ​ที่ซานะ​ต้อง​สูญ​เสีย​บิดา​ของ​เธอ​ไป ขอ​ให้วิญญาณ​เขา​ทรง​ไป​สู่สุคติ การ​เดิม​พัน​ของ​เรา​คง​ล้ม​เหลว​หาก​ไม่มีไซ​รัส มาร​ร้าย​ไม่ยอม​จำนน พยายาม​ตะกาย​หา​ทางออก​มา​จาก​เครื่อง​ของ​ซานะ ไซรัส​... เขา​กระโจน​เข้าไป เรา​เห็น​มาร​ร้าย​สัมผัส​ร่าง​ของ​เขา แล้ว​ก็ปล่อย​เงื้อม​มือ​ของ​มัน​ไป​ใน​ท้าย​ที่สุด ท้ง​ไซรัส​กับ​มาร​ร้าย​นั่น​เข้าไป​สู่กับดัก​และ​ออก​ไป​จาก​ความ​เป็น​จริง​ของ​เรา ทั้ง​คู่หาย​ไป\r\n\r\nแล้ว​ไซ​รัส​ก็กลับ​มา​อีก​ครั้ง ไม่มีใคร​พบ​ว่า​เขา​กลับ​มา ดวงตา​ของ​เขา​ไม่ขยับ เขา​ไม่กระพริบ​ตา เขา​พร่ำเพ้อ... อย่าง​บ้า​คลั่ง​และ​ไม่หยุด​ยั้ง ใบหน้า​ของ​เขา​ถูก​บิดเบือน​เช่น​เดียว​กับ​ผู้อื่น​ที่ถูก​วิญญาณ​ดำ​สิงสู่ เขา​จู่โจม​เรา​ครั้ง​แล้ว​ครั้ง​เล่า เรา​ไม่อาจ​เหนี่ยว​รั้ง​เขา​ได้ เรา​ต้อง​หลบ​หนีไป​จาก​ที่นั่น นั่น​เป็น​ตอน​ที่เรา​พบ​ว่า​ทาง​กลับ​บ้าน​ของ​เรา​ถูก​ปิด​ลง บุตร​สาว​ของ​วาล​โด​ได้ทำลาย​ทาง​กลับ​บ้าน​ของ​เรา\r\n\r\nข้า​ไม่ทราบ​ว่า​เรา​ติด​อยู่ใน​นี้มา​นาน​เท่าไร อย่าง​น้อย​เป็น​สัปดาห์ อาจ​เป็น​ปีก็เป็น​ได้ เวลา​ใน​สมุด​แผนที่นั้น​เป็น​เพียง​เรื่อง​ลวงตา\r\n\r\nได้โปรด​เถิด​ผู้อ่าน หาก​เจ้า​ยัง​มีสำนึก​หลง​เหลือ​อยู่ อย่า​ได้ดำรง​อยู่ใน​ที่แห่ง​นี้ กลับ​ไป​สู่โอ​ริอา​ท​หรือ​ที่ใด​ที่เจ้า​จาก​มา บอก​เล่า​ให้พวก​เขา​รู้ถึง​ความ​เป็น​วีรบุรุษ​และ​การ​เสีย​สละ​ของ​ไซ​รัส แล้ว​ปล่อย​ให้เขา​กับ​พวก​เรา​ตาย​ไป​พร้อม​กับ​ความ​ลับ​ที่เรา​ได้พบ\r\n\r\nบาราน ผู้สิ้น​ศรัทธา"
       ],
       [
         "BaranGlyph4",
-        "He has gone silent. At long last, he has finally ceased his mad mutterings.\r\n\r\nIt was inescapable. No matter where we tread, where we hid, where we sought solace, his mutterings found us. Even when we splintered, his voice wrapped around our heads like a snake, squeezing every other thought into warped shapes. I could not hear God's whispers with such constant noise.\r\n\r\nI dare not visit him now. I want only to escape this prison and punish that insolent blasphemer, Caeserius, for her foolishness. Then, perhaps, I will return here with an army, and take the Atlas. What better show of faith is there than the establishment of a nation in God's name? And then? Whatever God whispers. \r\n\r\nHe has shown me a door. The stones. The paths they reveal. I need only find the right key. \r\n\r\nGod almighty, I am your servant. I am your sword. I am yours, mind, body, and soul, and I promise I will deliver unto you all you wish to have.\r\n\r\n\r\nBaran, the Blessed"
+        "เขา​ได้เงียบ​ลง​ไป​แล้ว ใน​ท้าย​ที่สุด​เขา​ก็หยุด​พร่ำเพ้อ​อย่าง​บ้า​คลั่ง​เสียที\r\n\r\nเรา​ไม่อาจ​หลบ​หนีไป​ได้ ไม่ว่า​เรา​จะ​ไป​ที่ใด หลบ​ซ่อน​อยู่ที่ใด พำนัก​อยู่ที่ใด เรา​ก็พบ​เสียง​พร่ำเพ้อ​ของ​เขา ถึง​แม้ว่า​เรา​จะ​แตกคอ​กัน เสียง​ของ​เขา​ได้รัด​รอบ​ศีรษะ​เรา​ดั่ง​งูตัว​หนึ่ง บีบรัด​เอา​ความ​ทรง​จำ​อื่นๆ ให้เป็น​รูป​ทรง​ที่บิด​เบี้ยว ข้า​ไม่อาจ​ได้ยิน​เสียง​พระเจ้า​ด้วย​เสียง​รบกวน​ที่ดัง​ขึ้น​ตลอด​เวลา​เช่น​นี้\r\n\r\nข้า​มิกล้า​มา​เยือน​พระองค์แล้ว ข้า​อยาก​หนีจาก​เรือน​จำ​แห่ง​นี้แล้ว​ลงโทษ​มาร​ศาสนา​อวดดีคน​นั้น คาเซอริอุส โทษ​ฐาน​ที่เธอ​กระทำ​อย่าง​โง่งม จาก​นั้น​ข้า​อาจ​กลับ​มา​พร้อม​กับ​กองทัพ​หนึ่ง​แล้ว​ยึด​ครอง​สมุด​แผนที่เอา​ไว้ จะ​มีวิธีใด​อีก​เล่า​ที่จะ​แสดง​ศรัทธา​ได้ดีกว่า​การ​สร้าง​ชาติใน​นาม​ของ​พระเจ้า​? แล้ว​จาก​นั้น​เล่า​? ตาม​แต่เสียง​กระซิบ​ของ​พระองค์​ท่าน\r\n\r\nพระองค์ท่าน​ได้เผย​ประตูให้แก่ข้า​แล้ว เผย​ให้ข้า​เห็น​หิน หนทาง​ที่หิน​เหล่า​นั้น​ได้เผย ข้า​เพียง​ต้องตา​มหา​กุญแจ​ที่ถูก​ดอก​เพียง​เท่านั้น\r\n\r\nท่าน​พระ​ผู้เป็น​เจ้า ข้า​เป็น​บริวาร​ของ​ท่าน ข้า​เป็น​ดาบ​ของ​ท่าน ทั้ง​จิต ร่างกาย และ​วิญญาณ​ของ​ข้า​ต่าง​เป็น​ของ​ท่าน และ​ข้า​ขอ​ปฏิญาณ​ว่า​ข้า​จะ​มอบ​ทุก​สิ่ง​ที่ท่าน​ประสงค์\r\n\r\nบา​ราน ผู้ได้รับ​พร"
       ],
       [
         "SirusExilEnters",
@@ -32558,7 +32558,7 @@
       ],
       [
         "DeliriumVoiceRandom45",
-        "Still sane, exile?"
+        "มีสติอยู่ไหม เอ็กไซล์?"
       ],
       [
         "DeliriumVoiceRandom46",
@@ -33434,7 +33434,7 @@
       ],
       [
         "KuraiContractThree",
-        "ไอ้​สอง​พี่น้อง​ฝาแฝด​ว๊อก มัน​จะ​ยอม​คืน​น้อง​แมว​ให้​ข้า​และ​ยุติ​สงคราม แต่​จาก​ที่​เดา​ถ้า​ข้า​ยอม​ไป​เจอ​หน้า​มัน​อีก​ตัว​ต่อ​ตัว​อีก​ครั้ง แต่​ข้า​ว่า​นะ​การ​พบ​กัน​ครั้ง​นี้​เนี่ย​ไม่​น่า​จะ​ช่ว​ยอ​ะไ​รดีขึ้​นนมาก​กว่า​ครั้ง​ก่อน ที่​แน่ๆ​เรา​อาจ​จะ​เจอ​การ​ซุ่ม​โจม​ตีจาก​พวก​นั้น​ด้วย​ซ้ำ แต่​ข้า​ต้องการ​น้อง​แมว​ฮา​นะ​ของ​ข้า​คืน​มา ตอน​นี้​ข้า​ให้​สมาชิก​ของ​ภาคี​เฝ้า​ระวัง​ไว้​ตลอด​ใน​ช่วง​เวลา​ที่​พวก​เรา​จะ​ออก​ไป แล้ว​อาดีย์​ยา​ก็​พร้อม​ที่​จะ​พา​เรา​หลบ​หนี​ออก​จาก​ที่​นี่​หาก​จำเป็น​ต้อง​ทำ\r\n \r\n เมื่อ​เจ้า​พร้อม​เรา​จะ​เดินทาง​กัน​เลย"
+        "ไอ้​คู่แฝดวอกซ์ มัน​จะ​ยอม​คืน​น้อง​แมว​ให้​ข้า​และ​ยุติ​สงคราม แต่​จาก​ที่​เดา​ถ้า​ข้า​ยอม​ไป​เจอ​หน้า​มัน​อีก​ตัว​ต่อ​ตัว​อีก​ครั้ง แต่​ข้า​ว่า​นะ​การ​พบ​กัน​ครั้ง​นี้​เนี่ย​ไม่​น่า​จะ​ช่ว​ยอ​ะไ​รดีขึ้​นนมาก​กว่า​ครั้ง​ก่อน ที่​แน่ๆ​เรา​อาจ​จะ​เจอ​การ​ซุ่ม​โจม​ตีจาก​พวก​นั้น​ด้วย​ซ้ำ แต่​ข้า​ต้องการ​น้อง​แมว​ฮา​นะ​ของ​ข้า​คืน​มา ตอน​นี้​ข้า​ให้​สมาชิก​ของ​ภาคี​เฝ้า​ระวัง​ไว้​ตลอด​ใน​ช่วง​เวลา​ที่​พวก​เรา​จะ​ออก​ไป แล้ว​อาดีย์​ยา​ก็​พร้อม​ที่​จะ​พา​เรา​หลบ​หนี​ออก​จาก​ที่​นี่​หาก​จำเป็น​ต้อง​ทำ\r\n \r\n เมื่อ​เจ้า​พร้อม​เรา​จะ​เดินทาง​กัน​เลย"
       ],
       [
         "KuraiContractThreeKuraiToVinnyOne",
@@ -35754,7 +35754,7 @@
       ],
       [
         "ExitBanterKarstAdiyahReply",
-        "แน่นอน นั่น​มัน​เป็น​หน้าที่​ขอ​ข้า​อยู่​แล้ว"
+        "แน่นอน นั่น​มัน​เป็น​หน้าที่​ของ​ข้า​อยู่​แล้ว"
       ],
       [
         "ExitBanterAdiyahToKarst",
@@ -38566,7 +38566,7 @@
       ],
       [
         "IslaDisarmTrapLoudFive",
-        "อะไหล่​ก็​ห่วย​แตก ฝีมือ​กา​รส​ร้า​งา​สรรค์​ก็​กา​ก!"
+        "อะไหล่​ก็​ห่วย​แตก ฝีมือ​กา​รส​ร้า​ง​สรรค์​ก็​กา​ก!"
       ],
       [
         "IslaDisarmTrapLoudSix",
@@ -39390,7 +39390,7 @@
       ],
       [
         "ExitBanterNilesToIsla",
-        "ข้า...ข้าคิดว่าเราน่าจะใช้เหรียญเงินเพื่อนทำเป็นเครื่องหมายสำหรับทางหนีของเรานะ"
+        "ข้า...ข้าคิดว่าเราน่าจะใช้เหรียญเงินเพื่อทำเป็นเครื่องหมายสำหรับทางหนีของเรานะ"
       ],
       [
         "ExitBanterNilesIslaReply",
@@ -44406,7 +44406,7 @@
       ],
       [
         "EnvoyMavenQuest1",
-        "จง​หยุด​แล้ว​สดับ​ฟัง​คำ​เตือน​นี้เสีย นัก​พเนจร ​เม​เวน​ได้มา​ถึง เธอผู้นี้มา​เป็น​สักขีพยาน​ต่อ​การ​ต่อสู้ของ​เจ้า เธอผู้นี้มา​เป็น​สักขีพยาน​ต่อ​การ​พิชิต​ของ​เจ้า เธอ​ผู้นี้มา​เพื่อ​ให้เจ้า​ได้รับ​การ​ท้าทาย​แต่พอควร แม้น​เจ้า​ปราชัย เจ้า​จัก​ไม่ม้วย​มรณ​า​อย่าง​สูญ​เปล่า\r\n\r\nเธอกำลังร่ำรอเจ้า นักพเนจร เธอมิได้มีชื่อด้านความอดทนเสียสักนิด"
+        "จง​หยุด​แล้ว​สดับ​ฟัง​คำ​เตือน​เสีย นัก​พเนจร ​เม​เวน​ได้มา​ถึง เธอผู้นี้มา​เป็น​สักขีพยาน​ต่อ​การ​ต่อสู้ของ​เจ้า เธอผู้นี้มา​เป็น​สักขีพยาน​ต่อ​การ​พิชิต​ของ​เจ้า เธอ​ผู้นี้มา​เพื่อ​ให้เจ้า​ได้รับ​การ​ท้าทาย​แต่พอควร แม้น​เจ้า​ปราชัย เจ้า​จัก​ไม่ม้วย​มรณ​า​อย่าง​สูญ​เปล่า\r\n\r\nเธอกำลังร่ำรอเจ้า นักพเนจร เธอมิได้มีชื่อด้านความอดทนเสียสักนิด"
       ],
       [
         "EnvoyMavenQuest2",
@@ -44430,7 +44430,7 @@
       ],
       [
         "EnvoyTheMaven1",
-        "เป็น​เวลา​ชั่ว​นิรันดร์​ที่ความ​มืด​มิด​พอง​ไป​ด้วย​อาหาร​ตลอด​กาล แล้ว​ก็... บังเกิด​ความ​เงียบ​งัน ความ​เงียบ​งัน​นั้น​ดัง​กึกก้อง​ต่อ​ผู้​ที่​รับ​ฟัง หุบเหว​นั้น​ได้จับ​จ้อง​ไป​ยัง​ต้น​กำเนิด​ของ​มัน อาณาเขต​ที่เกิด​ขึ้น​ก่อน​รุ่งอรุณ​ได้​เคลื่อน​ซวนเซ ผู้อ้าง​สิทธิ์​ได้มา​ถึง เจ้า​คง​ทราบ​ถึง​ผู้นั้น เจ้า​คง​ต้องการ​ทราบ​สาเหตุ\r\n\r\nเม​เวน​ประสงค์​ความ​ขัดแย้ง​ใหม่ เธอ​หน่าย​ต่อ​ดิน​แดน​ที่เธอ​ได้รับ เธอ​มิใช่​เพียง​ผู้เดียว ความ​เงียบ​งัน​นั้น​ดัง​กึกก้อง​ต่อ​ทุก​ผู้\r\n\r\nเจ้า​หวาด​กลัว​ต่อ​เม​เวน เจ้า​หวาด​กลัว​ว่า​เธอ​จัก​เป็น​เอลเดอร์​ที่กลับ​มา​กล้า​แกร่ง เธอ​จัก​เป็น และ​เธอ​จัก​มิเป็น\r\n\r\nเม​เวน​มิได้​รับใช้​ความเสื่อมสลาย เธอ​รับ​ใช้เพียง​ความ​อภิรมย์​ของ​เธอ ผ่าน​เวลา​ชั่ว​นิรันดร์​ด้วย​การ​ต่อสู้​ดิ้นรน​อัน​ไร้​ความ​หมาย​ที่​มิ​จบ​สิ้น\r\n\r\nเธอ​หา​ใช่​เอลเดอร์ แต่เจ้า​สมควร​กลัว​เกรง​เธอ"
+        "เป็น​เวลา​ชั่ว​นิรันดร์​ที่ความ​มืด​มิด​พอง​ไป​ด้วย​อาหาร​ตลอด​กาล แล้ว​ก็... บังเกิด​ความ​เงียบ​งัน ความ​เงียบ​งัน​นั้น​ดังสนั่น​ต่อ​ผู้​ที่สดับ​ฟัง หุบเหว​นั้น​ได้จับ​จ้อง​ไป​ยัง​ต้น​กำเนิด​ของ​มัน อาณาเขต​ที่เกิด​ขึ้น​ก่อน​รุ่งอรุณ​ได้​เคลื่อน​ซวนเซ ผู้อ้าง​สิทธิ์​ได้มา​ถึง เจ้า​คง​ทราบ​ถึง​ผู้นั้น เจ้า​คง​ต้องการ​ทราบ​สาเหตุ\r\n\r\nเม​เวน​ประสงค์​ความ​ขัดแย้ง​ใหม่ เธอ​หน่าย​ต่อ​ดิน​แดน​ที่เธอ​ได้รับ เธอ​มิใช่​เพียง​ผู้เดียว ความ​เงียบ​งัน​นั้น​ดัง​กึกก้อง​ต่อ​ทุก​ผู้\r\n\r\nเจ้า​หวาด​กลัว​ต่อ​เม​เวน เจ้า​หวาด​กลัว​ว่า​เธอ​จัก​เป็น​เอลเดอร์​ที่กลับ​มา​กล้า​แกร่ง เธอ​จัก​เป็น และ​เธอ​จัก​มิเป็น\r\n\r\nเม​เวน​มิได้​รับใช้​ความเสื่อมสลาย เธอ​รับ​ใช้เพียง​ความ​อภิรมย์​ของ​เธอ ผ่าน​เวลา​ชั่ว​นิรันดร์​ด้วย​การ​ต่อสู้​ดิ้นรน​อัน​ไร้​ความ​หมาย​ที่​มิ​จบ​สิ้น\r\n\r\nเธอ​หา​ใช่​เอลเดอร์ แต่เจ้า​สมควร​กลัว​เกรง​เธอ"
       ],
       [
         "EnvoyTheMaven2",
@@ -44446,11 +44446,11 @@
       ],
       [
         "EnvoyGreetingT1Maven3",
-        "เหล่า​ผู้ที่ข้า​รับ​ใช้​ได้​ทอด​สายตา​ไป​ยัง​ขอบ​ฟ้า​ไร้การ​แปร​เปลี่ยน​อัน​มิสิ้น​สุด มิเคย​มี​เหตุ​ให้มอง​ไป​ทาง​อื่น เมื่อ​ไร้การ​แปร​เปลี่ยน เวลา​ย่อม​ผ่าน​ไป​ดั่ง​หยาด​น้ำตา​ใน​สายน้ำ มัน​มิอาจ​ถูก​พบเห็น ไร้ค่า ไร้​ความหมาย​ต่อ​ผู้ที่ไม่มีจุด​กำเนิด​และ​จุดจบ\r\n\r\nแต่แล้ว​ความ​เงียบ​งัน​ก็มา​ถึง มัน​ดัง​เสีย​จน​พวก​เขา​มิอาจ​ได้ยิน ทำให้สายน้ำ​ถูก​ขัด​ขวาง พวก​มัน​มิอาจ​มอง​เห็น​สิ่ง​ใด มิอาจ​ได้ยิน​สิ่ง​ใด"
+        "เหล่า​ผู้ที่ข้า​รับ​ใช้​ได้​ทอด​สายตา​ไป​ยัง​ขอบ​ฟ้า​ไร้การ​แปร​เปลี่ยน​อัน​มิสิ้น​สุด มิเคย​มี​เหตุ​ให้มอง​ไป​ทาง​อื่น เมื่อ​ไร้การ​แปร​เปลี่ยน เวลา​ย่อม​ผ่าน​ไป​ดั่ง​หยาด​น้ำตา​ใน​สายน้ำ มัน​มิอาจ​ถูก​พบเห็น ไร้ค่า ไร้​ความหมาย​ต่อ​ผู้ที่ไม่มีจุด​กำเนิด​และ​จุดจบ\r\n\r\nแต่แล้ว​ความ​เงียบ​งัน​ก็มา​ถึง มัน​ดังสนั่นแก่พวกมัน ทำให้สายน้ำ​ถูก​ขัด​ขวาง พวก​มัน​มิอาจ​มอง​เห็น​สิ่ง​ใด มิอาจ​ได้ยิน​สิ่ง​ใด"
       ],
       [
         "EnvoyGreetingT1Maven4",
-        "ผู้ถูก​สร้าง​บังเกิด​ผู้ถูก​สร้าง​บังเกิด​ผู้ถูก​สร้าง ระเบียบ​กับ​ความ​ทะเยอทะยาน​เร่ง​ให้เกิด​ความ​ก้าวหน้า เวลา​กับ​การ​เน่า​สลาย​คุม​ความ​ก้าวหน้า แหล่ง​กำเนิด​ของ​เธอ​ประสงค์ทดสอบ​ขีด​จำกัด​ของ​พลัง​อัน​ไร้ขีด​จำกัด ประสงค์รับ​ภาระ​ของ​ผู้สร้าง​แล้ว​แหวก​ว่าย​ไป​ตาม​หล่ม​กาล​เวลา เป็น​อุปสรรค​อัน​ไร้ความ​หมาย​ท่ามกลาง​เวลา​ชั่ว​นิรัน​ดร์ แต่ความ​เงียบ​งัน​ทำให้ทุก​ผู้มิอาจ​ได้ยิน"
+        "ผู้ถูก​สร้าง​บังเกิด​ผู้ถูก​สร้าง​บังเกิด​ผู้ถูก​สร้าง ระเบียบ​กับ​ความ​ทะเยอทะยาน​เร่ง​ให้เกิด​ความ​ก้าวหน้า เวลา​กับ​การ​เน่า​สลาย​คุม​ความ​ก้าวหน้า ต้น​กำเนิด​ของ​เธอ​ประสงค์ทดสอบ​ขีด​จำกัด​ของ​พลัง​อัน​ไร้ขีด​จำกัด ประสงค์รับ​ภาระ​ของ​ผู้สร้าง​แล้ว​แหวก​ว่าย​ไป​ตาม​หล่ม​กาล​เวลา เป็น​อุปสรรค​อัน​ไร้ความ​หมาย​ท่ามกลาง​เวลา​ชั่ว​นิรัน​ดร์ แต่​ความ​เงียบงัน​นั้น​ดังสนั่น​แก่​ทุกผู้"
       ],
       [
         "EnvoyGreetingT1Maven5",
@@ -44466,135 +44466,135 @@
       ],
       [
         "EnvoyGreetingT1Maven8",
-        "They cried out for the milk of the mother and it was given. They danced rapturously beneath the nourishing rain, suffocating in the tangled amnion, falling one by one to the selfish scramble for survival."
+        "พวก​มัน​ร่ำ​หา​น้ำนม​ของ​มารดา พวก​มัน​ร่าย​รำ​ด้วย​ความ​ปีติยินดีภาย​ใต้ฝน​ที่หล่อ​เลี้ยง สำลัก​ใน​ถุง​น้ำ​คร่ำ​อัน​เคี้ยว​คด แต่ละ​คน​ต่าง​สิ้นชีพ​เพราะ​ดิ้นรน​เอา​ตัว​รอด​โดย​เห็น​แก่ตน​เพียง​ลำพัง"
       ],
       [
         "EnvoyGreetingT2MavenRandom",
-        "I envy you at times, Nomad. You act in service of survival. You move with purpose, to protect a fragile existence. Your mind is assaulted by reality, that you are a mote of dust adrift a desert without end. Yet it shields itself with hope. A flimsy falsehood that halts the crashing truth of hopelessness all the same."
+        "บาง​ครา​ข้า​ริษยา​เจ้า​นัก นัก​พเนจร เจ้า​กระทำ​ใน​นาม​การ​เอา​ตัว​รอด เจ้า​เคลื่อน​ด้วย​เจตนา​การ​ปกป้อง​การ​มีอยู่อัน​แสน​บอบบาง จิตใจ​เจ้า​ถูก​รุกราน​ด้วย​ความ​เป็น​จริง​ว่า​เจ้า​เป็น​เพียง​ฝุ่น​ผง​ท่ามกลาง​ทะเล​ทราย​อัน​มิรู้สิ้น ทว่า​จิตใจ​นั้น​ใช้ความ​หวัง​ใน​การ​ปกป้อง​ตัว​มัน​เอง ความ​หวัง​อัน​เป็น​ความ​คิด​ลวง​หลอก​แสน​บอบบาง​ที่หยุด​ยั้ง​ความ​เป็น​จริง​อัน​แสน​สิ้น​หวัง​ได้เฉก​เช่น​เดียวกัน"
       ],
       [
         "EnvoyGreetingT2Maven2",
-        "The Maven fixates on struggle and suffering. Such was the agony it created that it seeped deep into the fabric of the void. Its influence unseen but pervasive, filling every empty space with the recurring torment the Maven wrought. You feel it. You are filled with it. You are perpetuating it."
+        "้เม​เวน​จดจ่อ​กับ​การ​ดิ้นรน​และ​ความ​ทุกข์ทรมาน ซึ่ง​มัน​ได้ก่อ​ความ​ทุกข์ระทม​จน​ไหล​ซึม​ลึก​เข้าไป​สู่โครงสร้าง​ของ​ความ​ว่าง​เปล่า อิทธิพล​ความ​ทุกข์ระทม​แทรกซึม​ไป​ทุก​ที่อย่าง​ไร้การ​พบเห็น ทุก​พื้นที่อัน​ว่าง​เปล่า​เต็ม​ไป​ด้วย​กับ​ความ​ทรมาน​มิรู้จบ​จาก​น้ำมือ​เม​เวน เจ้า​สัมผัส​ถึง​ความ​ทุกข์ระทม เจ้า​เปี่ยม​ไป​ด้วย​ความ​ทุกข์ระทม เจ้า​รักษา​ความ​ทุกข์ระทม​ไว้"
       ],
       [
         "EnvoyGreetingT2Maven3",
-        "I saw in the Nomad the same lethal desperation for survival that I saw in the churning black masses. Its instincts took it this far, and it was right to trust them, but now it strayed to a place where nothing learned could be relied upon, where truth and lie could inhabit the same space, the same word, the same thought; the observer and the observed made one and the same. "
+        "ข้า​พบ​การ​เอา​ตัว​รอด​อย่าง​จน​ตรอก​อัน​โหด​เหี้ยม​ภายใน​นัก​พเนจร เฉก​เช่น​ที่ข้า​เคย​พบ​ใน​มวล​ดำ​ที่กัด​กิน​ตลอด​กาล สัญชาตญาณ​มัน​นำ​มัน​ได้มา​ไกล​เพียง​นี้ และ​มัน​ทำ​ถูก​ที่เชื่อ​ใจ​พวก​มัน แต่มัน​ได้ร่อน​เร่มา​สู่ ณ สถาน​ที่มัน​มิอาจ​พึ่งพา​สิ่ง​ที่มัน​เรียน​รู้ได้เสีย​อีก ณ สถาน​ที่ความ​จริง​กับ​ความ​โกหก​อาจ​อาศัย​ใน​พื้นที่เดียว กับ​คำ​เดียว กับ​ความ​คิด​เดียว ผู้สังเกตการณ์กับ​ผู้ถูก​สังเกตการณ์กลาย​เป็น​หนึ่ง​เดียว"
       ],
       [
         "EnvoyGreetingT2Maven4",
-        "I thought myself different from the countless reflections I saw etched in the darkness. I am free, I thought. They are not. And each had the same thought, and each took the same path, and each befell the same fate. But I am different, I repeated, and heard its echoes forever. "
+        "ข้า​เคย​นึก​ว่า​ข้า​ต่าง​จาก​ภาพ​สะท้อน​มาก​เหนือ​คณา​นับ​ที่สลัก​ไว้ใน​ความ​มืด​มิด ข้า​เคย​นึก​ว่า​ข้า​เป็น​ไท พวก​มัน​ไม่ พวก​มัน​ต่าง​มีความ​คิด​เดียว พวก​มัน​ต่าง​สัญจร​ตาม​ทาง​เดียว และ​พวก​มัน​แต่ละ​ตน​มีชะตา​เดียว แต่ข้า​มิใช่พวก​มัน ข้า​ย้ำ แล้ว​สดับ​ฟัง​เสียง​สะท้อน​ของ​มัน​ไป​ตลอด​กาล"
       ],
       [
         "EnvoyGreetingT2Maven5",
-        "There was a time before time, and perhaps a time before that, it told us. A time of vast possibilities hemmed by petty squabbles. Constancy swept across like a veil, and all beneath its shadow was cooled and comforted and drawn into a steady sleep."
+        "ครั้ง​หนึ่ง​เคย​มีกาล​เวลาก่อน​กาลเวลา หรือ​อาจ​มีกาลเวลา​ก่อน​หน้า​นั้น จาก​คำ​ที่มัน​พร่ำ​บอก​เรา กาล​เวลาอัน​เปี่ยม​ความ​เป็น​ไป​ได้มากมาย​อัน​ราย​ล้อม​ด้วย​การ​ต่อ​ล้อ​ต่อ​เถียง​อัน​ไร้ค่า ความ​มั่นคง​กวาด​ไป​ทั่ว​ดั่ง​ม่าน​หมอก ทุก​ผู้ภาย​ใต้เงา​ของ​มัน​จึง​สงบ​ลง ถูก​ปลอบโยน ถูก​ขับ​กล่อม​สู่นิทรา"
       ],
       [
         "EnvoyGreetingT2Maven6",
-        "There came a time when time seemed to leave us, and nothing came to pass, for passage and time must dance together. The ants in their nests swarmed and swelled and died and were reborn, but in truth, nothing changed, and we looked upon the ants with envy. A waking, hypnotic slumber. "
+        "แล้ว​กาล​เวลา​ที่กาล​เวลา​ลา​จาก​เรา​ก็มา​ถึง มิมีสิ่ง​ใด​พ้น​ผ่าน เพราะ​การ​พ้น​ผ่าน​กับ​กาล​เวลา​จำ​ต้อง​ร่วม​ร่าย​รำ​ไป​ด้วย​กัน มด​ใน​รังกลาย​เป็น​ฝูง เพิ่ม​จำนวน ตาย​ลง​และ​กำเนิดใหม่ ทว่า​ความ​เป็น​จริง​นั้น​มิมีสิ่ง​ใด​แปร​เปลี่ยน เรา​มอง​มด​ด้วย​ความ​ริษยา เป็น​การ​หลับ​ใหล​ระคน​ตื่น​ใน​ภวังค์"
       ],
       [
         "EnvoyGreetingT2Maven7",
-        "The stars watch in envy as life invades and envelops every open space, a cycle of birth and death that is as dynamic as it is rhythmic, while the stars themselves burn unceasingly and unchanging for countless lifetimes. Eternity is stagnation, and stagnation is torment."
+        "ดวงดาว​จับ​จ้อง​ด้วย​ความ​ริษยา​เมื่อ​ชีวิต​รุกราน​และ​กลืน​กิน​สิ้น​ทุก​พื้นที่ วัฏจักร​กำเนิด​และ​ตาย​อัน​เกิด​ขึ้น​เป็น​พลวัต​และ​เป็น​จังหวะ​ทัดเทียม​กัน ขณะ​ที่ดวงดาว​มอด​ไหม้มิสิ้น​และ​มิแปร​เปลี่ยน​ใน​ชั่ว​ชีวิต​มาก​มาย​เกิน​คณา​นับ นิรัน​ดร์คือ​ความ​แน่นิ่ง ความ​แน่นิ่ง​คือ​ความ​ทรมาน"
       ],
       [
         "EnvoyGreetingT3MavenRandom",
-        "Time's tether tugs all life, like hounds on leashes, to the same terminus. Yet gleefully they canter along, always believing their master has their best interests at heart. "
+        "เวลา​ล่าม​ทุก​ชีวิต​สู่ปลาย​ทาง​เดียว​ดั่ง​สุนัข​ร้าย​ใน​สาย​รั้ง ทว่า​พวก​มัน​วิ่ง​ไป​ด้วย​ความ​ยินดี ด้วย​ศรัทธา​ว่า​นาย​พวก​มัน​มีประสงค์ดีต่อ​พวก​มัน​เสมอ"
       ],
       [
         "EnvoyGreetingT3Maven2",
-        "I followed her though I did not want to. I saw a moment, brief as a life, when I could stray and never return, and I did not take it. My thoughts were free and wandered and danced with abandon, but my form was ensnared and tethered."
+        "ข้า​ตาม​เธอ​แม้ข้า​มิประสงค์ ข้า​เห็น​ชั่ว​ขณะ​หนึ่ง​อัน​แสน​สั้น​ราวกับ​หนึ่ง​ชั่วชีวิต​ที่​ข้า​สามารถ​ร่อน​เร่โดย​มิหวน​คืน แต่ข้า​มิได้ฉวย​โอกาส​นั้น ความ​คิด​ข้า​เป็น​ไท เตลิด​และ​ร่าย​รำ​อย่าง​เสรี ทว่า​ร่าง​ข้า​ติด​บ่วง​และ​ถูก​ล่าม​"
       ],
       [
         "EnvoyGreetingT3Maven3",
-        "The vanquished lay waiting for the time of victory to sink beneath the noise of memory. Castles of bone and clay hold their beating hearts in sacred secrecy for the era of loss and rebirth to come."
+        "ผู้ถูก​กำจัด​ร่ำ​รอ​กาล​แห่ง​ชัยชนะ​จม​สู่ภาย​ใต้สุรเสียง​ความ​ทรง​จำ ปราสาท​กระดูก​กับ​ดิน​เหนียว​กุม​หฤทัย​มิหยุด​เต้น​ด้วย​ความ​เร้น​ลับ​ยิ่ง ร่ำ​รอ​ยุค​การ​สูญ​เสีย​และ​กำเนิด​ใหม่ใน​อนาคต"
       ],
       [
         "EnvoyGreetingT3Maven4",
-        "I set my eyes upon the great peaks of fire and light and watched them unravelled and devoured by the black sky above. I heard the choir of darkness sing as they drank their fill, and left the world below a frozen, lifeless shell. This was their gift to me, their eternal servant: to walk among the countless silent screaming dead and witness."
+        "ข้า​เคลื่อน​สายตา​ไป​สู่ภูเขา​เพลิง​กับ​แสง​อัน​ยิ่ง​ใหญ่ และ​จับ​จ้อง​มัน​คลี่คลาย​และ​ถูก​กลืน​กิน​โดย​ท้องฟ้า​มืด​ดำ​จาก​เบื้อง​บน ข้า​ได้ยิน​เสียง​ร้อง​ประสาน​ของ​ความ​มืด​มิด​ยาม​ที่มัน​ดื่ม​จน​เอิบ​อิ่ม เหลือ​โลก​เบื้อง​ล่าง​ไว้เพียง​เปลือก​อัน​เยือก​แข็ง​ไร้ชีวิต พวก​มัน​ได้มอบ​ของ​ขวัญ​ให้แก่ข้า​ผู้เป็น​บริวาร​นิรันดร์ ใน​การ​เดิน​ตาม​ผู้วางวาย​มาก​มาย​เหนือ​คณา​นับ​ผู้กรีด​ร้อง​อย่าง​เงียบ​งัน และ​เป็น​สักขีพยาน"
       ],
       [
         "EnvoyGreetingT3Maven5",
-        "I wandered the valley of husks, treading on my own ancient bones, retracing my own footfalls, hearing my own voice echo across the monolithic walls. I knew the words yet not the meaning, knew the path yet not where it led, knew that I walked atop events that had not yet run their course."
+        "ข้า​เดิน​เหิน​ผ่าน​หุบเขา​แห่ง​ซาก เหยียบ​ย่ำ​กระดูก​ดึกดำบรรพ์ของ​ข้า​เอง เดิน​ย้อน​ตาม​รอย​เท้า​ข้า​เอง สดับ​ฟัง​เสียง​ข้า​ก้อง​สะท้อน​ไป​ตาม​เหล่า​กำแพง​หิน ข้า​ทราบ​ถึง​คำ แต่ข้า​มิทราบ​ความ​หมาย ทราบ​เส้น​ทาง แต่มิทราบ​ทาง​ที่นำพา ทราบ​ว่า​ข้า​ได้สัญจร​มา​สู่เหตุการณ์ที่ยัง​มิเคย​ดำเนิน"
       ],
       [
         "EnvoyGreetingT3Maven6",
-        "I felt the leash cinch tight and sure, felt its pull towards the inky terminus. I grasped at the roots for anything that would hold against the gentle tug, but all I held tore free. I alone was to be drawn below, and I was, only to be thrust back into the searing illumination. Those I serve would not allow me more than a moment's respite."
+        "ข้า​สัมผัส​ถึง​เชือก​ล่าม​รัด​แน่น ดึง​ไป​สู่ปลาย​ทาง​ดำ​สนิท ข้า​ไขว่คว้า​ทุก​สิ่ง​ที่จะ​ช่วย​กัน​มิให้ข้า​ถูก​ดึง​อย่าง​อ่อน​โยน แต่ทุก​อย่าง​ที่ข้า​เหนี่ยว​รั้ง​ต่าง​หลุด​ลอย​ไป ข้า​เป็น​ผู้เดียว​ที่จะ​ถูก​ดึง​ไป​สู่เบื้อง​ล่าง ข้า​ถูก​ดึง​กลับ​ลงไป แล้ว​ถูก​ผลัก​สู่แสง​สว่าง​อัน​แสบ​สัน เหล่า​ผู้ที่ข้า​รับ​ใช้มิยอม​ให้ข้า​ได้หยุด​พัก​เกิน​ชั่ว​ขณะ​เดียว"
       ],
       [
         "EnvoyGreetingT3Maven7",
-        "I watch the Nomad's passing with great admiration. Its life was brief and without consequence, and its struggle fuelled the growth and maturation of the wisened and eternal. For a flash, I felt the sadness I sought in my own youth, and the relief that I sought it no longer."
+        "ข้า​จับ​จ้อง​การ​พ้น​ผ่าน​ของ​นัก​พเนจร​ด้วย​ความ​ยกย่อง​อัน​ยิ่ง​ใหญ่ มัน​มีชีวิต​อัน​แสน​สั้น​และ​ไร้ผล​สืบ​เนื่อง การ​ต่อสู้ของ​มัน​เป็น​เชื้อ​ไฟ​ต่อ​การ​เติบโต​และ​เติบ​ใหญ่ของ​ผู้ฉลาด​และ​เป็นนิรันดร์ ใน​ช่วง​เวลา​เพียง​ชั่ว​อึดใจ ข้า​สัมผัส​ได้ถึง​ความ​โศก​สลด​ที่ข้า​ถวิลหา​ยาม​เยาว์วัย กับ​ความ​โล่ง​ใจ​ที่ข้า​มิถวิลหา​มัน​อีก​ต่อ​ไป"
       ],
       [
         "EnvoyGreetingT3Maven8",
-        "Its body contorts weightlessly in the vast emptiness, twisting and dividing, etching scars in the darkness. Light spills through the rift, and a vast army follows, clamouring to be seen and sanctified by the living abyss."
+        "ร่าง​มัน​บิด​เบี้ยว​อย่าง​ไร้น้ำ​หนัก​ใน​ความ​ว่าง​เปล่า​ไพศาล หมุน​พลิก แบ่ง​กระจาย และ​สลัก​รอย​แผล​ไว้ใน​ความ​มืด​มิด แสง​สว่าง​ลอด​ผ่าน​รอย​แยก ติดตาม​ไป​ด้วย​กองทัพ​จำนวน​มาก พวก​มัน​ประกาศ​กร้าว​ให้ถูก​พบเห็น​และ​ถูก​ล้าง​บาป​โดย​โลกันตร์อัน​มีชีวิต"
       ],
       [
         "EnvoyGreetingT3Maven9",
-        "I came across a bastion of flesh that towered above, smothering the stars. Those who followed in my footsteps did not halt, pushing me against the warm walls. I was crushed and swallowed whole, urged unerringly by those I led. I was welcomed into his embrace."
+        "ข้า​มา​สู่ปราการ​แห่ง​เลือด​เนื้อ​อัน​สูงส่ง​ใกล้ชิด​ดวงดาว เหล่า​ผู้ตาม​รอย​เท้า​ข้า​มิได้หยุด พวก​เขา​ผลัก​ข้า​เข้า​สู่กำแพง​อุ่น ข้า​ถูก​บีบ​อัด​และ​ถูก​ถาโถม​ทั้ง​เป็น​จาก​เหล่า​ผู้ตาม​ของ​ข้า ข้า​ถูก​ต้อนรับ​สู่อ้อมอก​ของ​เขา"
       ],
       [
         "EnvoyGreetingT3Maven10",
-        "I was led into the darkness and given a torch burning with fury to guide my path to her. I felt her pull, felt the fires grow and lick and lash at my face. I was consumed by the journey and thrust into her care as a hollow shell, to protect and limit and never leave her. This would be my punishment beyond measure."
+        "ข้า​ถูก​นำสู่ความ​มืด​มิด ได้รับ​คบ​เพลิง​ที่ลุก​ไหม้ไป​ด้วย​ความ​เดือดดาล​เพื่อ​นำ​ข้า​ไป​สู่เธอ ข้า​สัมผัส​ได้ถึง​การ​ดึง​ของ​เธอ ข้า​สัมผัส​ถึง​เพลิง​ที่ลุก​โชน โลม​เลีย เฆี่ยน​ตีใบหน้า ข้า​ถูก​กลืน​กิน​จาก​การ​เดิน​ทาง เหลือ​เพียง​เปลือก​อัน​กลวง​เปล่า​ที่ได้รับ​บัญชา​ให้ปกป้อง​เธอ จำกัด​เธอ และ​มิทิ้ง​เธอ​ไป​ไหน ซึ่ง​จะ​เป็นการ​ลงโทษ​ของ​ข้า​อัน​หา​ใด​เทียบ"
       ],
       [
         "EnvoyGreetingT4MavenRandom",
-        "Each night the silence came and drove all thoughts of leaving into the inky black sea. I watched my hopes drown, watched them wash ashore lifeless and limp, adorning the sharp sands like clothes cast off with reckless abandon."
+        "แต่ละ​คืน​ความ​เงียบ​งัน​มา​ถึง ต้อน​เอา​ความ​คิด​การ​ลา​จาก​ไป​สู่ทะเล​อัน​ดำ​สนิท ข้า​จับ​จ้อง​ความ​หวัง​ของ​ข้า​จมลง จับ​จ้อง​พวก​มัน​ถูก​ซัด​สู่ชายฝั่ง​อย่าง​ไร้ชีวิต ประดับ​หาด​ทราย​หยาบ​ไว้ราวกับ​เสื้อผ้า​ที่ถูก​สลัด​อย่าง​ไม่ใย​ดี"
       ],
       [
         "EnvoyGreetingT4Maven2",
-        "She tried to flee, to leave the island prison of her making. Teeth gnashing, claws whirling like dancers to music I could not hear. But the prison walls towered so far above, lined with silent sentries armed with sharp spears that could pierce her shadow. "
+        "เธอ​พยายาม​หลบ​หนี พยายาม​ออก​ไป​จาก​เกาะ​เรือน​จำ​ที่เธอ​สร้าง​ขึ้น​มา​เอง เธอ​กัดฟัน หมุน​กรง​เล็บ​ราวกับ​นัก​เต้น​ต่อ​ดนตรีที่ข้า​มิได้ยิน ทว่า​กำแพง​เรือน​จำ​นั้น​ช่าง​สูงส่ง เต็ม​ไป​ด้วย​ทหาร​ยาม​อัน​เงียบ​งัน​ผู้มีหอก​อัน​แหลมคม​เสีย​จน​สามารถ​ทะลุเงา​ของ​เธอ​"
       ],
       [
         "EnvoyGreetingT4Maven3",
-        "The great silence came suddenly and without warning and was deafening to all. The walls still towered but now folded and frayed to her touch. She fled and in doing so dragged countless in her wake. The invitation was clear and could not be refused. It was deafening to all, and we could not look away."
+        "ความ​เงียบ​งัน​อัน​ยิ่ง​ใหญ่มา​ถึง​กะทันหัน​อย่าง​ไร้คำ​เตือน มัน​ดัง​เสีย​จน​ทุก​ผู้มิอาจ​ได้ยิน กำแพง​ยัง​อยู่สูง แต่มัน​หลุด​ลุ่ย​บิด​งอ​จาม​สัมผัส​ของ​เธอ เธอ​หลบ​หนี ทำให้หลาย​ผู้เหนือ​คณา​นับ​หลบ​หนีตาม​ไป​ด้วย คำ​เชิญ​นั้น​ชัดเจน​และ​มิอาจ​ปฏิเสธ​ได้ มัน​ดัง​สนั่น​แก่ทุก​ผู้ เรา​มิอาจ​มอง​ไป​ทาง​อื่น"
       ],
       [
         "EnvoyGreetingT4Maven4",
-        "Duty is a blessing afforded to the fortunate, to the ones whose fates are given over to the weavers of destiny. We act without hesitation or thought to the murmurs of the lightkeeper. Though the path is illuminated by him, we do not see it, and do not need to see it. To look ahead is to fall to dust in the light."
+        "หน้าที่นั้น​เป็น​พร​แก่ผู้มีเคราะห์ดี แก่ผู้ที่ดวง​ชะตา​ถูก​หยิบ​ยื่น​แก่​ผู้กำหนด​ชะตา เรา​กระทำ​อย่าง​มิลังเล​และ​มิคาด​คิด​ต่อ​การ​พึมพำ​ของ​ผู้คุ้ม​แสง แม้น​เขา​ส่อง​เส้น​ทาง​ให้สว่าง เรา​มิเห็น​แสง​นั้น และ​มิต้อง​เห็น​แสง​นั้น การ​มอง​เบื้อง​หน้า​จัก​ทำให้สลาย​เป็น​ผุยผง​แก่แสง"
       ],
       [
         "EnvoyGreetingT4Maven5",
-        "I tried to count the ones who followed her past the barrier but none did, or all who did fell to dust in the light. This was the duty of one alone, to hold vigil as nascence ripened and the raw and unshaped was forged in the heat of time's passage. My punishment would not be so easy to escape."
+        "ข้า​พยายาม​นับ​เหล่า​ผู้ตาม​เธอ​เลย​ไป​จาก​สิ่ง​ที่กีดขวาง แต่มิมีผู้ใด​หลุด​พ้น​ เหล่า​ผู้หลุด​พ้น​ต่าง​กลาย​เป็น​สลาย​เป็น​ผุยผง​แก่แสง นี่เป็น​หน้าที่ของ​ผู้เดียวใน​การ​เฝ้า​ระวัง​ขณะ​เหตุกำเนิด​เกิด​ขึ้น และ​เหล่า​สรรพ​สิ่ง​ที่ดิบ​และ​ไร้รูป​ร่าง​ถูก​หลอม​ด้วย​ความ​ร้อน​แห่ง​กาล​เวลา​ที่พ้น​ผ่าน การ​ลง​ทัณฑ์ของ​ข้า​นั้น​รอดพ้น​ได้ยาก​ยิ่ง"
       ],
       [
         "EnvoyGreetingT5MavenRandom",
-        "The Dreamer's promise was at once fulfilled, though we did not know it. His arrival came at first as a whisper in our minds that, once uttered, subsumed all other thoughts. But an eternity will pass before we feel his fire."
+        "สัญญา​ของ​นัก​ฝัน​สำเร็จ​สิ้น แม้น​เรา​มิรู้ก็ตาม เขา​มา​ถึง​ใน​ครา​แรก​เป็น​เสียง​กระซิบ​ใน​จิตใจ หาก​พูด​เสียง​นั้น มัน​จัก​รวบรวม​ความ​คิด​อื่น​ทั้งหมด​จน​เสีย​สิ้น ทว่า​นิรันดร​จัก​ผ่าน​พ้น​ก่อนเรา​ได้สัมผัส​เพลิง​ของ​เขา"
       ],
       [
         "EnvoyGreetingT5Maven2",
-        "The emptiness shattered like ice, and through each crack rushed the tumult and mass, carving their place in existence with the desperate ferocity that attends every fight for life. Even the stars themselves began to vanish behind the tangle of grasping limbs and screaming mouths. Yet there was no predator but the one that lurked in the shadow of each newborn mind."
+        "ความ​ว่าง​เปล่า​ร้าว​ดั่ง​น้ำ​แข็ง รอย​ร้าว​อึกทึก​มากมาย จารึก​การ​มีอยู่ด้วย​ความ​โหด​ร้าย​ใน​ทุก​การ​ต่อสู้เพื่อ​ชีวิต กระทั่ง​ดวงดาว​ก็เลือน​หาย​ไป​จาก​เหล่า​อวัยวะ​พัวพัน​อัน​ไขว่คว้า​กับ​ปาก​อัน​กรีด​ร้อง ทว่า​มิมีผู้ล่า​ใด​เว้น​แต่เหล่า​ผู้เร้น​กาย​ใน​เงามืด​ของ​ทุก​จิต​ผู้กำเนิด​ใหม่"
       ],
       [
         "EnvoyGreetingT5Maven3",
-        "The eternal stillness was replaced by a billowing storm of movement; eyes and teeth reflecting the smallest of lights like furious and starving constellations. It felt instantaneous, but I cannot be certain. The time before held no meaning and left no mark. "
+        "ความ​แน่นิ่ง​อัน​นิรัน​ดร์ถูก​แทนที่ด้วย​การ​เคลื่อนไหว​ดั่ง​คลื่น​ยักษ์ ตา​กับ​ฟัน​สะท้อน​แสง​เพียง​น้อย​นิด​ราวกับ​หมู่ดาว​ที่โกรธ​เกรี้ยว​และ​หิวโหย ราวกับ​เกิด​ขึ้นกะทันหัน แต่ข้า​มิแน่ใจ​นัก กาล​ก่อน​นั้น​มิมีความ​หมาย​และ​ไร้ร่อง​รอย​ใดๆ"
       ],
       [
         "EnvoyGreetingT5Maven4",
-        "The eyes that dwell among the stars, each burning with envy and desire, roll and turn and focus on this place. It is the source of the silence. The beginning of the beginning. The point where that which roamed and fed ceaselessly was undone. "
+        "ดวงตา​ที่อาศัย​ตาม​หมู่ดาว​แต่ละ​ดวง​ต่าง​ลุก​โชน​ไป​ด้วย​ริษยา​และ​ปรารถนา ต่าง​หมุน หันเห และ​มุ่ง​ไป​ยัง​สถาน​แห่ง​นี้ มัน​เป็น​ต้นตอ​แห่ง​ความ​เงียบ​งัน เป็น​จุด​เริ่ม​ต้น​ของ​จุด​เริ่ม​ต้น จุด​ที่สิ่ง​ที่ร่อน​เร่และ​กัด​กิน​อย่าง​ไม่สิ้น​นั้น​สลาย​ไป"
       ],
       [
         "EnvoyGreetingT5Maven5",
-        "The tether cinches them now, as they awaken from their dreamless slumber. They are pulled by the leash of desire, each one. A tangle, a knot, and for the lucky, perhaps a noose, awaits them. The lightkeeper can only stand and cast its glow and watch them all become entangled."
+        "ล่าม​มัด​พวก​มัน​แล้ว ขณะ​ที่พวก​มัน​ตื่น​ขึ้น​จาก​นิทรา​ไร้ฝัน พวก​มัน​ต่าง​ถูก​ดึง​ด้วย​ล่าม​แห่ง​ปรารถนา สิ่ง​ที่ร่ำ​รอ​พวก​มัน​คือ​ปม​อัน​พัวพัน เงื่อน หรือ​บ่วง​หาก​ผู้ใด​โชค​ดี ผู้คุ้ม​ฝัน​ทำได้เพียง​ยืน​ทอด​แสง มอง​ล่าม​เหล่า​นั้น​พัวพัน​พวก​มัน​ทุก​ผู้"
       ],
       [
         "EnvoyGreetingT5Maven6",
-        "The veil, now pulled away, reveals the rust of aeons. The emptiness drew them in, unready and unwilling, patina sloughing in crushing waves of stubborn adaptation, angry and curious and impetulant, all, greedy and desperate and newly alive."
+        "บัดนี้ม่าน​ถูก​เปิด​ออก เผย​สนิม​แห่ง​นิรันดร์กาล ความ​ว่าง​เปล่า​ชักจูง​พวก​มัน​เข้าไป​อย่าง​มิพร้อม​และ​มิเจตนา สนิม​ลอก​คราบ​ใน​คลื่น​แห่ง​การ​ปรับ​ตัวอย่าง​ดื้อ​ดึง ทั้ง​โกรธ ฉงน ฉุนเฉียว​ง่าย ทั้งหมด โลภ จน​ตรอก และ​มีชีวิต​ขึ้น​มา​ใหม่"
       ],
       [
         "EnvoyGreetingT5Maven7",
-        "Where the bastion once stood unmoving and unbending and unerringly eternal, now the flesh curls and relinquishes its grip on the stone. It hurls unanchored through the vast sea of darkness, crashing and cascading over all in its path, dragging and enthralling all in its wake. It will arrive, though I know not when or how."
+        "ยาม​ที่ปราการ​เคย​ตั้ง​ตระหง่าน​อัน​เป็น​นิรัน​ดร์อย่าง​มิไหว​ติง มิบิด​เบี้ยว เที่ยง​ตรง บัดนี้เลือด​เนื้อ​ขด​ตัว​แล้ว​สละ​การ​ยึด​หิน​นี้ ปราการ​นี้ถูก​เหวี่ยง​ออก​ไป​สู่ทะเล​ความ​มืด​มิด​มหาศาล ชน​และ​ตกลง​ไป​ตาม​ทาง ดึงและ​ก่อ​ทาส​ต่อ​ทุก​ผู้ใน​เส้น​ทาง มัน​จัก​มา​ถึง แม้น​ข้า​มิรู้ว่า​จะ​เป็น​ยาม​ใด​หรือ​เยี่ยง​ไร"
       ],
       [
         "EnvoyGreetingT5Maven8",
-        "It slashes against the stars and surges towards the silence now, grasping at the fabric and binds all, tugging and rasping and tearing like a reaping scythe. It tumbles in the emptiness no more. It is moving with purpose and direction and intent, and it fills me with awe and fear and desire. Can you feel it too, Nomad?"
+        "บัดนี้มัน​​เฉือน​ผ่าน​ดวงดาว​และ​ไหล​สู่ความ​เงียบ​งัน คว้า​ที่เส้นใย​แล้ว​ผูกมัด​ทุก​ผู้ ดึง ถู และ​ฉีก​ราวกับ​เคียว​ที่เก็บ​เกี่ยว มัน​มิได้เพ่นพ่าน​ตาม​ความ​ว่าง​เปล่า​อีก​ต่อ​ไป มัน​เคลื่อนไหว​โดย​เป้า​หมาย ทิศทาง และ​เจตนา มัน​ทำให้ข้า​เกรง​ขาม กลัว และ​ปรารถนา เจ้า​สัมผัส​ได้เช่น​กัน​ไหม นัก​พเนจร​?"
       ],
       [
         "EnvoyMavenDefeatedOnce",
-        "You force an intervention, Nomad. You have proved your might. You have proved your ignorance. \r\n\r\nThe Maven is a toddler, a nymph, a hatchling that has wandered too far from the nest. Were I to allow you to continue, it would surely call for its progenitor. Were I to allow you to continue, you would drag all into its gaping maw. \r\n\r\nThe Maven must be protected and guarded. A mercy for you both. The end is delayed but not prevented. Savour your remaining time, I urge you. Prepare for its arrival, I urge you."
+        "เจ้า​บังคับ​ให้แทรกแซง นัก​พเนจร เจ้า​ได้พิสูจน์ว่า​เจ้า​แข็งแกร่ง เจ้า​ได้พิสูจน์ว่า​เจ้า​เขลา​นัก\r\n\r\nเมเวน​เป็น​เพียง​เด็ก​หัด​เดิน ดักแด้ ตัว​อ่อน​ผู้เตลิด​ไป​ไกล​จาก​รัง หาก​ข้า​ยอม​ให้เจ้า​ดำเนิน​ต่อ​ไป มัน​ย่อม​เรียก​หา​แหล่ง​กำเนิด​ของ​มัน หาก​ข้า​ยอม​ให้เจ้า​ดำเนิน​ต่อ​ไป เจ้า​ย่อม​ดึง​ทุก​ผู้ไป​สู่ปาก​อัน​เปิด​กว้าง​ของ​มัน​เป็น​แน่แท้\r\n\r\nเมเวน​จำ​ต้อง​ต้อง​ถูก​พิทักษ์และ​คุ้มครอง​เพื่อ​เป็น​เมตตา​แก่พวก​เจ้า​ทั้ง​สอง จุดจบ​นั้น​เลื่อน​ถอย​แต่มิได้สิ้น​ไป ขอ​ให้เจ้า​จง​สำราญ​ไป​กับ​กาล​ที่เหลือ​ของ​เจ้า​เถิด ขอ​ให้เจ้า​จง​เตรียม​พร้อม​ต่อ​การ​มา​ถึง​ของ​มัน​เถิด"
       ],
       [
         "EnvoyMavenDefeatedRepeated",
-        "Children are capricious, Nomad. Be warned. The memory of your sting will fade soon enough, and so too will her... contrition."
+        "เด็ก​ย่อม​ทำ​ตาม​อำเภอ​ใจ นัก​พเนจร ข้า​ขอ​เตือน​ไว้ ความ​ทรง​จำ​ของ​ความ​เจ็บ​ปวด​เล็ก​น้อย​ของ​เจ้า​จัก​เลือน​หาย​ไป​ใน​ไม่ช้า เช่น​เดียว​กับ​... ความ​สำนึก​ผิด​ของ​เธอ"
       ],
       [
         "MavenFirstEncounterRandom",
@@ -44834,15 +44834,15 @@
       ],
       [
         "MavenTier1InvitationToFight7",
-        "Game!"
+        "เกม!"
       ],
       [
         "MavenTier1InvitationToFight8",
-        "Game."
+        "เกม"
       ],
       [
         "MavenTier1InvitationToFight9",
-        "Game!"
+        "เกม!"
       ],
       [
         "MavenTier1PassivesWonRandom",
@@ -44930,15 +44930,15 @@
       ],
       [
         "MavenTier1OffAtlasBossEncounter4",
-        "Might."
+        "องอาจ"
       ],
       [
         "MavenTier1OffAtlasBossEncounter5",
-        "Might."
+        "องอาจ"
       ],
       [
         "MavenTier1OffAtlasBossEncounter6",
-        "Might."
+        "องอาจ"
       ],
       [
         "MavenTier1OffAtlasBossEncounter7",
@@ -44954,27 +44954,27 @@
       ],
       [
         "MavenTier1FirstOffAtlasBossVictoryRandom",
-        "Special. Mine."
+        "ตัวพิเศษ ของข้า"
       ],
       [
         "MavenTier1FirstOffAtlasBossVictory2",
-        "Special... mine."
+        "ตัวพิเศษ... ของข้า"
       ],
       [
         "MavenTier1FirstOffAtlasBossVictory3",
-        "Special! Mine!"
+        "ตัวพิเศษ! ของข้า!"
       ],
       [
         "MavenTier1OffAtlasBossVictoryRandom",
-        "Glee!"
+        "เบิกบาน!"
       ],
       [
         "MavenTier1OffAtlasBossVictory2",
-        "Glee!"
+        "เบิกบาน!"
       ],
       [
         "MavenTier1OffAtlasBossVictory3",
-        "Glee."
+        "เบิกบาน"
       ],
       [
         "MavenTier1OffAtlasBossVictory4",
@@ -44990,15 +44990,15 @@
       ],
       [
         "MavenTier1OffAtlasBossVictory7",
-        "Mine now."
+        "ของข้าแล้ว"
       ],
       [
         "MavenTier1OffAtlasBossVictory8",
-        "Mine now!"
+        "ของข้าแล้ว!"
       ],
       [
         "MavenTier1OffAtlasBossVictory9",
-        "Mine now."
+        "ของข้าแล้ว"
       ],
       [
         "MavenTier1OffAtlasInvitationRandom",
@@ -45014,51 +45014,51 @@
       ],
       [
         "MavenTier1KitavaCommentRandom",
-        "Hungry!"
+        "หิว!"
       ],
       [
         "MavenTier1KitavaComment2",
-        "Hungry."
+        "หิว"
       ],
       [
         "MavenTier1ElderCommentRandom",
-        "Terror!"
+        "กลัว!"
       ],
       [
         "MavenTier1ElderComment2",
-        "Terror!"
+        "กลัว!"
       ],
       [
         "MavenTier1ShaperCommentRandom",
-        "Not real!"
+        "ไม่จริง!"
       ],
       [
         "MavenTier1ShaperComment2",
-        "Not real?"
+        "ไม่จริง?"
       ],
       [
         "MavenTier1ShaperComment3",
-        "Not real."
+        "ไม่จริง"
       ],
       [
         "MavenTier1SirusCommentRandom",
-        "Lost..."
+        "หลงทาง..."
       ],
       [
         "MavenTier1SirusComment2",
-        "Lost..."
+        "หลงทาง..."
       ],
       [
         "MavenTier1SirusComment3",
-        "Lost!"
+        "หลงทาง!"
       ],
       [
         "MavenTier1GroupBossFightCommentRandom",
-        "Many!"
+        "มากมาย!"
       ],
       [
         "MavenTier1GroupBossFightComment2",
-        "Many."
+        "มากมาย"
       ],
       [
         "MavenTier1TrioFightCommentRandom",
@@ -45090,27 +45090,27 @@
       ],
       [
         "MavenTier1WitnessPhaseTransition3",
-        "Change."
+        "เปลี่ยนแปลง"
       ],
       [
         "MavenTier1WitnessPhaseTransition4",
-        "Change!"
+        "เปลี่ยนแปลง!"
       ],
       [
         "MavenTier1WitnessPhaseTransition5",
-        "Adapt!"
+        "ปรับตัว!"
       ],
       [
         "MavenTier1WitnessPhaseTransition6",
-        "Adapt?"
+        "ปรับตัว?"
       ],
       [
         "MavenTier1WitnessPhaseTransition7",
-        "Yes!"
+        "เยี่ยม!"
       ],
       [
         "MavenTier1WitnessPhaseTransition8",
-        "Yes!"
+        "เยี่ยม!"
       ],
       [
         "MavenTier1ObservingCombatGaspRandom",
@@ -45138,11 +45138,11 @@
       ],
       [
         "MavenTier1IntroMultiBossArena4",
-        "Survive."
+        "เอาตัวรอด"
       ],
       [
         "MavenTier1IntroMultiBossArena5",
-        "Survive!"
+        "เอาตัวรอด!"
       ],
       [
         "MavenTier1IntroMultiBossArena6",
@@ -45158,23 +45158,23 @@
       ],
       [
         "MavenTier1IntroMultiBossArena9",
-        "Overcome!"
+        "เอาชนะ!"
       ],
       [
         "MavenTier1IntroMultiBossArena10",
-        "Overcome."
+        "เอาชนะ"
       ],
       [
         "MavenTier1OutroMultiBossArenaRandom",
-        "Joyful blood!"
+        "เลือดน่าสนุก!"
       ],
       [
         "MavenTier1OutroMultiBossArena2",
-        "Joyful blood."
+        "เลือดน่าสนุก!"
       ],
       [
         "MavenTier1OutroMultiBossArena3",
-        "Joyful blood!"
+        "เลือดน่าสนุก!"
       ],
       [
         "MavenTier1OutroMultiBossArena4",
@@ -45262,63 +45262,63 @@
       ],
       [
         "MavenTier1ReleaseBossIntoArena10",
-        "Slay."
+        "ฆ่า"
       ],
       [
         "MavenTier1ReleaseBossIntoArena11",
-        "Slay!"
+        "ฆ่า!"
       ],
       [
         "MavenTier1ReleaseBossIntoArena12",
-        "Slay."
+        "ฆ่า"
       ],
       [
         "MavenTier1ReleaseBossIntoArena13",
-        "Strangle."
+        "บีบรัด"
       ],
       [
         "MavenTier1ReleaseBossIntoArena14",
-        "Strangle."
+        "บีบรัด"
       ],
       [
         "MavenTier1ReleaseBossIntoArena15",
-        "Strangle."
+        "บีบรัด"
       ],
       [
         "MavenTier1ReleaseBossIntoArena16",
-        "Obliterate."
+        "ทำลายล้าง"
       ],
       [
         "MavenTier1ReleaseBossIntoArena17",
-        "Obliterate."
+        "ทำลายล้าง"
       ],
       [
         "MavenTier1ReleaseBossIntoArena18",
-        "Obliterate."
+        "ทำลายล้าง"
       ],
       [
         "MavenTier1HealSkillRandom",
-        "Flesh."
+        "เลือดเนื้อ"
       ],
       [
         "MavenTier1HealSkill2",
-        "Flesh..."
+        "เลือดเนื้อ..."
       ],
       [
         "MavenTier1HealSkill3",
-        "Flesh..."
+        "เลือดเนื้อ..."
       ],
       [
         "MavenTier1HealSkill4",
-        "Vigor..."
+        "กระฉับกระเฉง..."
       ],
       [
         "MavenTier1HealSkill5",
-        "Vigor."
+        "กระฉับกระเฉง"
       ],
       [
         "MavenTier1HealSkill6",
-        "Vigor..."
+        "กระฉับกระเฉง..."
       ],
       [
         "MavenTier1GuardSkillRandom",
@@ -45346,23 +45346,23 @@
       ],
       [
         "MavenTier1SpaceVinesRandom",
-        "Grasp...!"
+        "เหนี่ยวรั้ง...!"
       ],
       [
         "MavenTier1SpaceVines2",
-        "Grasp...!"
+        "เหนี่ยวรั้ง...!"
       ],
       [
         "MavenTier1SpaceVines3",
-        "Grasp...!"
+        "เหนี่ยวรั้ง...!"
       ],
       [
         "MavenTier1SpaceVines4",
-        "Lash!"
+        "ฟาด!"
       ],
       [
         "MavenTier1SpaceVines5",
-        "Lash!"
+        "ฟาด!"
       ],
       [
         "MavenTier1SpaceInfuseWeaponsRandom",
@@ -46518,99 +46518,99 @@
       ],
       [
         "MavenTier2BossFightEncounter14",
-        "Boring. Kill!"
+        "น่าเบื่อ ฆ่า!"
       ],
       [
         "MavenTier2BossFightEncounter15",
-        "Boring! Kill!"
+        "น่าเบื่อ! ฆ่า!"
       ],
       [
         "MavenTier2BossFightEncounter16",
-        "Boring! Kill."
+        "น่าเบื่อ! ฆ่า"
       ],
       [
         "MavenTier2BossFightEncounter17",
-        "Fight again."
+        "สู้อีกครั้ง"
       ],
       [
         "MavenTier2BossFightEncounter18",
-        "Fight again!"
+        "สู้อีกครั้ง!"
       ],
       [
         "MavenTier2BossFightEncounter19",
-        "Fight again..."
+        "สู้อีกครั้ง..."
       ],
       [
         "MavenTier2BossFightEncounter20",
-        "Release. Anger."
+        "ปลดปล่อย ความโกรธ"
       ],
       [
         "MavenTier2BossFightEncounter21",
-        "Release. Anger!"
+        "ปลดปล่อย ความโกรธ!"
       ],
       [
         "MavenTier2BossFightEncounter22",
-        "Release anger!"
+        "ปลดปล่อยความโกรธ!"
       ],
       [
         "MavenTier2BossFightEncounter23",
-        "Impress!"
+        "ทำให้ประทับใจ!"
       ],
       [
         "MavenTier2BossFightEncounter24",
-        "Impress."
+        "ทำให้ประทับใจ"
       ],
       [
         "MavenTier2BossFightEncounter25",
-        "Impress!"
+        "ทำให้ประทับใจ!"
       ],
       [
         "MavenTier2BossFightEncounter26",
-        "Show might."
+        "แสดงความองอาจ"
       ],
       [
         "MavenTier2BossFightEncounter27",
-        "Show might!"
+        "แสดงความองอาจ!"
       ],
       [
         "MavenTier2BossFightEncounter28",
-        "Show might."
+        "แสดงความองอาจ"
       ],
       [
         "MavenTier2BossFightEncounter29",
-        "Vanquish."
+        "กำจัด"
       ],
       [
         "MavenTier2BossFightEncounter30",
-        "Vanquish."
+        "กำจัด"
       ],
       [
         "MavenTier2BossFightEncounter31",
-        "Vanquish!"
+        "กำจัด!"
       ],
       [
         "MavenTier2BossVictoryRandom",
-        "Another. Joy."
+        "เอาอีก สนุก"
       ],
       [
         "MavenTier2BossVictory2",
-        "Another! Joy."
+        "เอาอีก! สนุก"
       ],
       [
         "MavenTier2BossVictory3",
-        "Another. Joy!"
+        "เอาอีก สนุก!"
       ],
       [
         "MavenTier2BossVictory4",
-        "Death... enjoy."
+        "ความตาย... สนุก"
       ],
       [
         "MavenTier2BossVictory5",
-        "Death... enjoy!"
+        "ความตาย... สนุก!"
       ],
       [
         "MavenTier2BossVictory6",
-        "Death! Enjoy!"
+        "ความตาย! สนุก!"
       ],
       [
         "MavenTier2BossVictory7",
@@ -46626,51 +46626,51 @@
       ],
       [
         "MavenTier2BossVictory10",
-        "Mine now..."
+        "ของข้าแล้ว..."
       ],
       [
         "MavenTier2BossVictory11",
-        "Mine now!"
+        "ของข้าแล้ว!"
       ],
       [
         "MavenTier2BossVictory12",
-        "Mine now."
+        "ของข้าแล้ว"
       ],
       [
         "MavenTier2BossVictory13",
-        "Great pleasure."
+        "เพลิดเพลินยิ่งนัก"
       ],
       [
         "MavenTier2BossVictory14",
-        "Great... pleasure."
+        "เพลิดเพลิน... ยิ่งนัก"
       ],
       [
         "MavenTier2BossVictory15",
-        "Great pleasure!"
+        "เพลิดเพลินยิ่งนัก!"
       ],
       [
         "MavenTier2BossVictory16",
-        "Worthy."
+        "คู่ควร"
       ],
       [
         "MavenTier2BossVictory17",
-        "Worthy!"
+        "คู่ควร!"
       ],
       [
         "MavenTier2BossVictory18",
-        "Worthy."
+        "คู่ควร"
       ],
       [
         "MavenTier2BossVictory19",
-        "Delicious!"
+        "อร่อย!"
       ],
       [
         "MavenTier2BossVictory20",
-        "Delicious!"
+        "อร่อย!"
       ],
       [
         "MavenTier2BossVictory21",
-        "Delicious!"
+        "อร่อย!"
       ],
       [
         "MavenTier2InvitationToFightRandom",
@@ -46698,67 +46698,67 @@
       ],
       [
         "MavenTier2InvitationToFight7",
-        "Game. Play!"
+        "เกม เล่น!"
       ],
       [
         "MavenTier2InvitationToFight8",
-        "Game! Play!"
+        "เกม! เล่น!"
       ],
       [
         "MavenTier2InvitationToFight9",
-        "Game. Play."
+        "เกม เล่น"
       ],
       [
         "MavenTier2InvitationToFight10",
-        "Come. Again."
+        "มา อีก"
       ],
       [
         "MavenTier2InvitationToFight11",
-        "Come! Again!"
+        "มา! อีก!"
       ],
       [
         "MavenTier2InvitationToFight12",
-        "Come. Again."
+        "มา อีก"
       ],
       [
         "MavenTier2InvitationToFight13",
-        "Test. Come."
+        "ทดสอบ มา"
       ],
       [
         "MavenTier2InvitationToFight14",
-        "Test! Come!"
+        "ทดสอบ! มา!"
       ],
       [
         "MavenTier2InvitationToFight15",
-        "Test. Come!"
+        "ทดสอบ มา!"
       ],
       [
         "MavenTier2PassivesWonRandom",
-        "Gift for survival."
+        "ของขวัญจากการรอด"
       ],
       [
         "MavenTier2PassivesWon2",
-        "Gift! For survival."
+        "ของขวัญ! จากการรอด"
       ],
       [
         "MavenTier2PassivesWon3",
-        "Gift for joy."
+        "ของขวัญจากความสนุก"
       ],
       [
         "MavenTier2PassivesWon4",
-        "Gift! For joy."
+        "ของขวัญ! จากความสนุก"
       ],
       [
         "MavenTier2PassivesWon5",
-        "Prize for killing!"
+        "รางวัลจากการฆ่า!"
       ],
       [
         "MavenTier2PassivesWon6",
-        "Prize. For killing!"
+        "รางวัล จากการฆ่า!"
       ],
       [
         "MavenTier2PassivesWon7",
-        "Prize! For killing..."
+        "รางวัล! จากการฆ่า..."
       ],
       [
         "MavenTier2PostfightPromptRandom",
@@ -46774,155 +46774,155 @@
       ],
       [
         "MavenTier2PostfightPrompt4",
-        "Do again!"
+        "ทำอีก!"
       ],
       [
         "MavenTier2PostfightPrompt5",
-        "Do again."
+        "ทำอีก"
       ],
       [
         "MavenTier2PostfightPrompt6",
-        "Do again..."
+        "ทำอีก..."
       ],
       [
         "MavenTier2PostfightPrompt7",
-        "Repeat this."
+        "ซ้ำอีก"
       ],
       [
         "MavenTier2PostfightPrompt8",
-        "Repeat this!"
+        "ซ้ำอีก!"
       ],
       [
         "MavenTier2PostfightPrompt9",
-        "Repeat this!"
+        "ซ้ำอีก!"
       ],
       [
         "MavenTier2PostfightPrompt10",
-        "Again! Soon."
+        "เอาอีก! เร็วๆ นี้"
       ],
       [
         "MavenTier2PostfightPrompt11",
-        "Again! Soon..."
+        "เอาอีก! เร็วๆ นี้..."
       ],
       [
         "MavenTier2PostfightPrompt12",
-        "Again! Soon!"
+        "เอาอีก! เร็วๆ นี้!"
       ],
       [
         "MavenTier2PostfightPrompt13",
-        "Again! Now!"
+        "เอาอีก! เดี๋ยวนี้!"
       ],
       [
         "MavenTier2PostfightPrompt14",
-        "Again. Now!"
+        "เอาอีก เดี๋ยวนี้!"
       ],
       [
         "MavenTier2FirstOffAtlassBossEncounterRandom",
-        "Destroy rare creature!"
+        "ทำลายตัวหายาก!"
       ],
       [
         "MavenTier2FirstOffAtlassBossEncounter2",
-        "Destroy rare creature."
+        "ทำลายตัวหายาก"
       ],
       [
         "MavenTier2FirstOffAtlassBossEncounter3",
-        "Destroy rare creature!"
+        "ทำลายตัวหายาก!"
       ],
       [
         "MavenTier2FirstOffAtlassBossEncounter4",
-        "Unusual!"
+        "แปลก!"
       ],
       [
         "MavenTier2FirstOffAtlassBossEncounter5",
-        "Unusual..."
+        "แปลก..."
       ],
       [
         "MavenTier2FirstOffAtlassBossEncounter6",
-        "Unusual...!"
+        "แปลก...!"
       ],
       [
         "MavenTier2OffAtlasBossEncounterRandom",
-        "Ancient power."
+        "พลังดึกดำบรรพ์"
       ],
       [
         "MavenTier2OffAtlasBossEncounter2",
-        "Ancient power?"
+        "พลังดึกดำบรรพ์?"
       ],
       [
         "MavenTier2OffAtlasBossEncounter3",
-        "Strange might!"
+        "องอาจอย่างประหลาดนัก!"
       ],
       [
         "MavenTier2OffAtlasBossEncounter4",
-        "Strange might..."
+        "องอาจอย่างประหลาดนัก..."
       ],
       [
         "MavenTier2OffAtlasBossEncounter5",
-        "It glows!"
+        "มันสว่างด้วย!"
       ],
       [
         "MavenTier2OffAtlasBossEncounter6",
-        "It glows...!"
+        "มันสว่างด้วย...!"
       ],
       [
         "MavenTier2OffAtlasBossEncounter7",
-        "It glows!"
+        "มันสว่างด้วย!"
       ],
       [
         "MavenTier2OffAtlasBossEncounter8",
-        "Ohh, it glows!"
+        "โอ้ มันสว่างด้วย!"
       ],
       [
         "MavenTier2FirstOffAtlasBossVictoryRandom",
-        "Yes, mine!"
+        "เยี่ยม ของข้า!"
       ],
       [
         "MavenTier2FirstOffAtlasBossVictory2",
-        "Yes mine!"
+        "เยี่ยมของข้า!"
       ],
       [
         "MavenTier2FirstOffAtlasBossVictory3",
-        "Yes, mine!"
+        "เยี่ยม ของข้า!"
       ],
       [
         "MavenTier2FirstOffAtlasBossVictory4",
-        "Ohh, yes, mine!"
+        "โอ้ เยี่ยม ของข้า!"
       ],
       [
         "MavenTier2FirstOffAtlasBossVictory5",
-        "Strange! Better..."
+        "ประหลาด! ดีกว่าเดิม..."
       ],
       [
         "MavenTier2FirstOffAtlasBossVictory6",
-        "Strange. Better."
+        "ประหลาด ดีกว่าเดิม"
       ],
       [
         "MavenTier2FirstOffAtlasBossVictory7",
-        "Strange! Better."
+        "ประหลาด! ดีกว่าเดิม"
       ],
       [
         "MavenTier2FirstOffAtlasBossVictory8",
-        "Strange... better..."
+        "ประหลาด... ดีกว่าเดิม"
       ],
       [
         "MavenTier2OffAtlasBossVictoryRandom",
-        "Rare creature!"
+        "ตัวหายาก!"
       ],
       [
         "MavenTier2OffAtlasBossVictory2",
-        "Rare... creature..."
+        "ตัว... หายาก..."
       ],
       [
         "MavenTier2OffAtlasBossVictory3",
-        "Exultant..."
+        "หรรษา..."
       ],
       [
         "MavenTier2OffAtlasBossVictory4",
-        "Exultant...!"
+        "หรรษา...!"
       ],
       [
         "MavenTier2OffAtlasBossVictory5",
-        "Exultant!"
+        "หรรษา!"
       ],
       [
         "MavenTier2OffAtlasBossVictory6",
@@ -46934,47 +46934,47 @@
       ],
       [
         "MavenTier2OffAtlasInvitationRandom",
-        "Exotic gifts!"
+        "ของขวัญล้ำค่า!"
       ],
       [
         "MavenTier2OffAtlasInvitation2",
-        "Exotic gifts?"
+        "ของขวัญล้ำค่า?"
       ],
       [
         "MavenTier2OffAtlasInvitation3",
-        "Exotic gifts...!"
+        "ของขวัญล้ำค่า...!"
       ],
       [
         "MavenTier2OffAtlasInvitation4",
-        "Strange test..."
+        "การทดสอบประหลาด..."
       ],
       [
         "MavenTier2OffAtlasInvitation5",
-        "Strange test?"
+        "การทดสอบประหลาด?"
       ],
       [
         "MavenTier2OffAtlasInvitation6",
-        "Strange test."
+        "การทดสอบประหลาด"
       ],
       [
         "MavenTier2OffAtlasInvitation7",
-        "New! Come."
+        "ใหม่! มา"
       ],
       [
         "MavenTier2OffAtlasInvitation8",
-        "New. Come."
+        "ใหม่ มา"
       ],
       [
         "MavenTier2KitavaCommentRandom",
-        "Such hunger!"
+        "ความหิวเช่นนี้!"
       ],
       [
         "MavenTier2KitavaComment2",
-        "Such hunger...!"
+        "ความหิวเช่นนี้...!"
       ],
       [
         "MavenTier2KitavaComment3",
-        "Such hunger!"
+        "ความหิวเช่นนี้!"
       ],
       [
         "MavenTier2ElderCommentRandom",
@@ -47006,39 +47006,39 @@
       ],
       [
         "MavenTier2SirusCommentRandom",
-        "Lost... strange..."
+        "หลงทาง... ประหลาด..."
       ],
       [
         "MavenTier2SirusComment2",
-        "Lost! Strange..."
+        "หลงทาง! ประหลาด..."
       ],
       [
         "MavenTier2SirusComment3",
-        "Lost! Strange."
+        "หลงทาง! ประหลาด"
       ],
       [
         "MavenTier2GroupBossFightCommentRandom",
-        "Many fight..."
+        "สู้มากมาย..."
       ],
       [
         "MavenTier2GroupBossFightComment2",
-        "Many fight!"
+        "สู้มากมาย!"
       ],
       [
         "MavenTier2GroupBossFightComment3",
-        "Many fight..."
+        "สู้มากมาย..."
       ],
       [
         "MavenTier2GroupBossFightComment4",
-        "Outnumbered..."
+        "จำนวนมากกว่า..."
       ],
       [
         "MavenTier2GroupBossFightComment5",
-        "Outnumbered!"
+        "จำนวนมากกว่า!"
       ],
       [
         "MavenTier2GroupBossFightComment6",
-        "Outnumbered..."
+        "จำนวนมากกว่า..."
       ],
       [
         "MavenTier2TrioFightCommentRandom",
@@ -47054,15 +47054,15 @@
       ],
       [
         "MavenTier2TrioFightComment4",
-        "Dark siblings?"
+        "ญาติมืดมิด?"
       ],
       [
         "MavenTier2TrioFightComment5",
-        "Dark siblings..."
+        "ญาติมืดมิด..."
       ],
       [
         "MavenTier2TrioFightComment6",
-        "Dark siblings...!"
+        "ญาติมืดมิด...!"
       ],
       [
         "MavenTier2MerveilFightCommentRandom",
@@ -47090,59 +47090,59 @@
       ],
       [
         "MavenTier2WitnessPhaseTransition4",
-        "It shifts!"
+        "มันเปลี่ยนรูป!"
       ],
       [
         "MavenTier2WitnessPhaseTransition5",
-        "It shifts!"
+        "มันเปลี่ยนรูป!"
       ],
       [
         "MavenTier2WitnessPhaseTransition6",
-        "It shifts...!"
+        "มันเปลี่ยนรูป...!"
       ],
       [
         "MavenTier2WitnessPhaseTransition7",
-        "Changing!"
+        "กำลังเปลี่ยนแปลง!"
       ],
       [
         "MavenTier2WitnessPhaseTransition8",
-        "Changing."
+        "กำลังเปลี่ยนแปลง"
       ],
       [
         "MavenTier2WitnessPhaseTransition9",
-        "Changing!"
+        "กำลังเปลี่ยนแปลง!"
       ],
       [
         "MavenTier2WitnessPhaseTransition10",
-        "Suspense...!"
+        "ระทึก...!"
       ],
       [
         "MavenTier2WitnessPhaseTransition11",
-        "Suspense...!"
+        "ระทึก...!"
       ],
       [
         "MavenTier2WitnessPhaseTransition12",
-        "Suspense...!"
+        "ระทึก...!"
       ],
       [
         "MavenTier2ObservingCombatGaspRandom",
-        "Ooh!"
+        "อู้!"
       ],
       [
         "MavenTier2ObservingCombatGasp2",
-        "Ooh!"
+        "อู้!"
       ],
       [
         "MavenTier2ObservingCombatGasp3",
-        "Ooh!"
+        "อู้!"
       ],
       [
         "MavenTier2ObservingCombatGasp4",
-        "Ah!"
+        "อ้า!"
       ],
       [
         "MavenTier2ObservingCombatGasp5",
-        "Ah!"
+        "อ้า!"
       ],
       [
         "MavenTier2ObservingCombatGasp6",
@@ -47262,95 +47262,95 @@
       ],
       [
         "MavenTier2IntroMultiBossArena8",
-        "Prove worth."
+        "พิสูจน์ความคู่ควร"
       ],
       [
         "MavenTier2IntroMultiBossArena9",
-        "Prove worth!"
+        "พิสูจน์ความคู่ควร!"
       ],
       [
         "MavenTier2IntroMultiBossArena10",
-        "Prove worth!"
+        "พิสูจน์ความคู่ควร!"
       ],
       [
         "MavenTier2IntroMultiBossArena11",
-        "Prove. Worth."
+        "พิสูจน์ความคู่ควร"
       ],
       [
         "MavenTier2IntroMultiBossArena12",
-        "Entertain."
+        "สร้างความบันเทิง"
       ],
       [
         "MavenTier2IntroMultiBossArena13",
-        "Entertain!"
+        "สร้างความบันเทิง!"
       ],
       [
         "MavenTier2IntroMultiBossArena14",
-        "En-ter-tain!"
+        "สร้าง-ความ-บันเทิง!"
       ],
       [
         "MavenTier2IntroMultiBossArena15",
-        "Entertain..."
+        "สร้างความบันเทิง..."
       ],
       [
         "MavenTier2OutroMultiBossArenaRandom",
-        "Such death!"
+        "ความตายนี้!"
       ],
       [
         "MavenTier2OutroMultiBossArena2",
-        "Mmm, such death!"
+        "หืม ความตายนี้!"
       ],
       [
         "MavenTier2OutroMultiBossArena3",
-        "Mm, such death!"
+        "หืม ความตายนี้!"
       ],
       [
         "MavenTier2OutroMultiBossArena4",
-        "Glorious!"
+        "ยิ่งใหญ่!"
       ],
       [
         "MavenTier2OutroMultiBossArena5",
-        "Mm, glorious."
+        "หืม ยิ่งใหญ่"
       ],
       [
         "MavenTier2OutroMultiBossArena6",
-        "Glorious."
+        "ยิ่งใหญ่"
       ],
       [
         "MavenTier2OutroMultiBossArena7",
-        "Vibrant!"
+        "ตื่นตาตื่นใจ!"
       ],
       [
         "MavenTier2OutroMultiBossArena8",
-        "Mm, vibrant."
+        "หืม ตื่นตาตื่นใจ"
       ],
       [
         "MavenTier2OutroMultiBossArena9",
-        "Vibrant!"
+        "ตื่นตาตื่นใจ!"
       ],
       [
         "MavenTier2OutroMultiBossArena10",
-        "Champion!"
+        "วีรบุรุษ!"
       ],
       [
         "MavenTier2OutroMultiBossArena11",
-        "Champion!"
+        "วีรบุรุษ!"
       ],
       [
         "MavenTier2OutroMultiBossArena12",
-        "Champion..."
+        "วีรบุรุษ..."
       ],
       [
         "MavenTier2OutroMultiBossArena13",
-        "Defiant!"
+        "ท้าทาย!"
       ],
       [
         "MavenTier2OutroMultiBossArena14",
-        "Defiant!"
+        "ท้าทาย!"
       ],
       [
         "MavenTier2OutroMultiBossArena15",
-        "Defiant...!"
+        "ท้าทาย...!"
       ],
       [
         "MavenTier2ReleaseBossIntoArenaRandom",
@@ -47394,51 +47394,51 @@
       ],
       [
         "MavenTier2ReleaseBossIntoArena11",
-        "Ah, hah, hah, haaa!"
+        "อ้ะ ฮ่า ฮ่า ฮ่า!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena12",
-        "Another!"
+        "อีกตัว!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena13",
-        "Another! Another!"
+        "อีกตัว! อีกตัว!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena14",
-        "Another!"
+        "อีกตัว!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena15",
-        "Flood!"
+        "ท่วม!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena16",
-        "Flood!"
+        "ท่วม!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena17",
-        "Flood."
+        "ท่วม"
       ],
       [
         "MavenTier2ReleaseBossIntoArena18",
-        "Flood...!"
+        "ท่วม...!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena19",
-        "Released!"
+        "ปล่อยแล้ว!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena20",
-        "Released."
+        "ปล่อยแล้ว"
       ],
       [
         "MavenTier2ReleaseBossIntoArena21",
-        "Released!"
+        "ปล่อยแล้ว!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena22",
-        "Released!"
+        "ปล่อยแล้ว!"
       ],
       [
         "MavenTier2ReleaseBossIntoArena23",
@@ -47466,15 +47466,15 @@
       ],
       [
         "MavenTier2HealSkillRandom",
-        "Live. Longer!"
+        "อยู่ นานกว่านี้!"
       ],
       [
         "MavenTier2HealSkill2",
-        "Live. Longer."
+        "อยู่ นานกว่านี้"
       ],
       [
         "MavenTier2HealSkill3",
-        "Live. Longer..."
+        "อยู่ นานกว่านี้..."
       ],
       [
         "MavenTier2HealSkill4",
@@ -47490,19 +47490,19 @@
       ],
       [
         "MavenTier2HealSkill7",
-        "Not yet!"
+        "อย่าเพิ่ง!"
       ],
       [
         "MavenTier2HealSkill8",
-        "Not yet."
+        "อย่าเพิ่ง"
       ],
       [
         "MavenTier2HealSkill9",
-        "Not yet..."
+        "อย่าเพิ่ง..."
       ],
       [
         "MavenTier2HealSkill10",
-        "Not yet!"
+        "อย่าเพิ่ง!"
       ],
       [
         "MavenTier2HealSkill11",
@@ -47518,139 +47518,139 @@
       ],
       [
         "MavenTier2GuardSkillRandom",
-        "Toughen!"
+        "แกร่งขึ้น!"
       ],
       [
         "MavenTier2GuardSkill2",
-        "Toughen."
+        "แกร่งขึ้น"
       ],
       [
         "MavenTier2GuardSkill3",
-        "Toughen..."
+        "แกร่งขึ้น..."
       ],
       [
         "MavenTier2GuardSkill4",
-        "Absorb."
+        "ดูดซับ"
       ],
       [
         "MavenTier2GuardSkill5",
-        "Absorb."
+        "ดูดซับ"
       ],
       [
         "MavenTier2GuardSkill6",
-        "Absorb!"
+        "ดูดซับ!"
       ],
       [
         "MavenTier2GuardSkill7",
-        "Absorb....!"
+        "ดูดซับ....!"
       ],
       [
         "MavenTier2SpaceVinesRandom",
-        "Grasping!"
+        "จงเหนี่ยวรั้ง!"
       ],
       [
         "MavenTier2SpaceVines2",
-        "Grasping!"
+        "จงเหนี่ยวรั้ง!"
       ],
       [
         "MavenTier2SpaceVines3",
-        "Grasping!"
+        "จงเหนี่ยวรั้ง!"
       ],
       [
         "MavenTier2SpaceVines4",
-        "Lashing!"
+        "จงฟาด!"
       ],
       [
         "MavenTier2SpaceVines5",
-        "Lashing!"
+        "จงฟาด!"
       ],
       [
         "MavenTier2SpaceVines6",
-        "Lashing...!"
+        "จงฟาด...!"
       ],
       [
         "MavenTier2SpaceInfuseWeaponsRandom",
-        "Void. Open."
+        "ความว่างเปล่า เปิด"
       ],
       [
         "MavenTier2SpaceInfuseWeapons2",
-        "Void. Open!"
+        "ความว่างเปล่า เปิด!"
       ],
       [
         "MavenTier2SpaceInfuseWeapons3",
-        "Void. Open!"
+        "ความว่างเปล่า เปิด!"
       ],
       [
         "MavenTier2SpaceInfuseWeapons4",
-        "Atrophy!"
+        "สิ้นสลาย!"
       ],
       [
         "MavenTier2SpaceInfuseWeapons5",
-        "Atrophy!"
+        "สิ้นสลาย!"
       ],
       [
         "MavenTier2SpaceInfuseWeapons6",
-        "Atrophy!"
+        "สิ้นสลาย!"
       ],
       [
         "MavenTier2DamageReductionOrbsRandom",
-        "Be guarded!"
+        "รับการตั้งการ์ด!"
       ],
       [
         "MavenTier2DamageReductionOrbs2",
-        "Be guarded."
+        "รับการตั้งการ์ด"
       ],
       [
         "MavenTier2DamageReductionOrbs3",
-        "...be guarded."
+        "...รับการตั้งการ์ด"
       ],
       [
         "MavenTier2DamageReductionOrbs4",
-        "Be guarded."
+        "รับการตั้งการ์ด"
       ],
       [
         "MavenTier2DamageReductionOrbs5",
-        "Be protected."
+        "รับการคุ้มครอง"
       ],
       [
         "MavenTier2DamageReductionOrbs6",
-        "Mm. Be protected."
+        "หืม รับการคุ้มครอง"
       ],
       [
         "MavenTier2DamageReductionOrbs7",
-        "Be protected!"
+        "รับการคุ้มครอง!"
       ],
       [
         "MavenTier2DamageReductionOrbs8",
-        "Be! Protected!"
+        "รับ! การคุ้มครอง!"
       ],
       [
         "MavenTier2SpaceFlameWallRandom",
-        "Flames!"
+        "เพลิง!"
       ],
       [
         "MavenTier2SpaceFlameWall2",
-        "Flames!"
+        "เพลิง!"
       ],
       [
         "MavenTier2SpaceFlameWall3",
-        "Flames!"
+        "เพลิง!"
       ],
       [
         "MavenTier2SpaceFlameWall4",
-        "Rising fires!"
+        "ไฟขึ้นสูง!"
       ],
       [
         "MavenTier2SpaceFlameWall5",
-        "Rising fires!"
+        "ไฟขึ้นสูง!"
       ],
       [
         "MavenTier2SpaceFlameWall6",
-        "Rising fires!"
+        "ไฟขึ้นสูง!"
       ],
       [
         "MavenTier2SpaceFlameWall7",
-        "Rising fires...!"
+        "ไฟขึ้นสูง...!"
       ],
       [
         "MavenTier2ChasingOrbRandom",
@@ -47666,87 +47666,87 @@
       ],
       [
         "MavenTier2ChasingOrb4",
-        "Outrun!"
+        "หนีให้พ้น!"
       ],
       [
         "MavenTier2ChasingOrb5",
-        "Outrun!"
+        "หนีให้พ้น!"
       ],
       [
         "MavenTier2ChasingOrb6",
-        "Outrun!"
+        "หนีให้พ้น!"
       ],
       [
         "MavenTier2SpeedZonesRandom",
-        "Move quicker!"
+        "ขยับเร็วขึ้น!"
       ],
       [
         "MavenTier2SpeedZones2",
-        "Move quicker!"
+        "ขยับเร็วขึ้น!"
       ],
       [
         "MavenTier2SpeedZones3",
-        "Move quicker!"
+        "ขยับเร็วขึ้น!"
       ],
       [
         "MavenTier2SpeedZones4",
-        "Speed up!"
+        "เร็วขึ้น!"
       ],
       [
         "MavenTier2SpeedZones5",
-        "Speed up!"
+        "เร็วขึ้น!"
       ],
       [
         "MavenTier2SpeedZones6",
-        "Speed up!"
+        "เร็วขึ้น!"
       ],
       [
         "MavenTier2SpeedZones7",
-        "Speed up!"
+        "เร็วขึ้น!"
       ],
       [
         "MavenTier2BossCloneRandom",
-        "Doubled!"
+        "เป็นสองเท่า!"
       ],
       [
         "MavenTier2BossClone2",
-        "Doubled."
+        "เป็นสองเท่า"
       ],
       [
         "MavenTier2BossClone3",
-        "Doubled!"
+        "เป็นสองเท่า!"
       ],
       [
         "MavenTier2BossClone4",
-        "Doubled...!"
+        "เป็นสองเท่า...!"
       ],
       [
         "MavenTier2BossClone5",
-        "Twinned!"
+        "เป็นแฝด!"
       ],
       [
         "MavenTier2BossClone6",
-        "Twinned!"
+        "เป็นแฝด!"
       ],
       [
         "MavenTier2BossClone7",
-        "Twinned!"
+        "เป็นแฝด!"
       ],
       [
         "MavenTier2BossClone8",
-        "Twinned!"
+        "เป็นแฝด!"
       ],
       [
         "MavenTier2SpaceChargesRandom",
-        "Powered up!"
+        "เพิ่มพลัง!"
       ],
       [
         "MavenTier2SpaceCharges2",
-        "Powered up...!"
+        "เพิ่มพลัง...!"
       ],
       [
         "MavenTier2SpaceCharges3",
-        "Powered up."
+        "เพิ่มพลัง"
       ],
       [
         "MavenTier2SpaceCharges4",
@@ -47766,19 +47766,19 @@
       ],
       [
         "MavenTier2VoidZonesRandom",
-        "Waste away."
+        "สลายไป"
       ],
       [
         "MavenTier2VoidZones2",
-        "Waste away!"
+        "สลายไป!"
       ],
       [
         "MavenTier2VoidZones3",
-        "Waste away..."
+        "สลายไป..."
       ],
       [
         "MavenTier2VoidZones4",
-        "Waste away!"
+        "สลายไป!"
       ],
       [
         "MavenTier2AoERandom",
@@ -47802,39 +47802,39 @@
       ],
       [
         "MavenTier2AoE6",
-        "Smother!"
+        "หยุดหายใจ!"
       ],
       [
         "MavenTier2AoE7",
-        "Smother...!"
+        "หยุดหายใจ...!"
       ],
       [
         "MavenTier2AoE8",
-        "Smother!"
+        "หยุดหายใจ!"
       ],
       [
         "MavenTier2AoE9",
-        "Destroy!"
+        "ทำลาย!"
       ],
       [
         "MavenTier2AoE10",
-        "Destroy!"
+        "ทำลาย!"
       ],
       [
         "MavenTier2AoE11",
-        "Destroy."
+        "ทำลาย"
       ],
       [
         "MavenTier2AoE12",
-        "Break."
+        "พัง"
       ],
       [
         "MavenTier2AoE13",
-        "Break."
+        "พัง"
       ],
       [
         "MavenTier2AoE14",
-        "Break!"
+        "พัง!"
       ],
       [
         "MavenTier2ProjectilesRandom",
@@ -47870,31 +47870,31 @@
       ],
       [
         "MavenTier2Projectiles9",
-        "Evade."
+        "หลบหลีก"
       ],
       [
         "MavenTier2Projectiles10",
-        "Evade."
+        "หลบหลีก"
       ],
       [
         "MavenTier2Projectiles11",
-        "Evade."
+        "หลบหลีก"
       ],
       [
         "MavenTier2Projectiles12",
-        "Evade."
+        "หลบหลีก"
       ],
       [
         "MavenTier2BuffsRandom",
-        "พลังเพิ่มขึ้นอีก!"
+        "เพิ่มพลังขึ้นอีก!"
       ],
       [
         "MavenTier2Buffs2",
-        "พลังเพิ่มขึ้นอีก!"
+        "เพิ่มพลังขึ้นอีก!"
       ],
       [
         "MavenTier2Buffs3",
-        "พลังเพิ่มขึ้นอีก!"
+        "เพิ่มพลังขึ้นอีก!"
       ],
       [
         "MavenTier2Buffs4",
@@ -47910,27 +47910,27 @@
       ],
       [
         "MavenTier2Buffs7",
-        "Imbued!"
+        "ถูกเสริมแล้ว!"
       ],
       [
         "MavenTier2Buffs8",
-        "Imbued!"
+        "ถูกเสริมแล้ว!"
       ],
       [
         "MavenTier2Buffs9",
-        "Imbued!"
+        "ถูกเสริมแล้ว!"
       ],
       [
         "MavenTier2Buffs10",
-        "Mightier!"
+        "องอาจกว่าเดิม!"
       ],
       [
         "MavenTier2Buffs11",
-        "Mightier!"
+        "องอาจกว่าเดิม!"
       ],
       [
         "MavenTier2Buffs12",
-        "Mightier!"
+        "องอาจกว่าเดิม!"
       ],
       [
         "MavenTier3BossFightEncounterRandom",
@@ -48010,75 +48010,75 @@
       ],
       [
         "MavenTier3BossFightEncounter20",
-        "Take out anger until dead."
+        "เอา​ความ​โกรธ​ออก​มา​จนกว่า​จะ​ตาย"
       ],
       [
         "MavenTier3BossFightEncounter21",
-        "Take out anger until dead."
+        "เอา​ความ​โกรธ​ออก​มา​จนกว่า​จะ​ตาย"
       ],
       [
         "MavenTier3BossFightEncounter22",
-        "Take out anger until dead."
+        "เอา​ความ​โกรธ​ออก​มา​จนกว่า​จะ​ตาย"
       ],
       [
         "MavenTier3BossFightEncounter23",
-        "Fight for survival!"
+        "สู้เพื่อเอาตัวรอด!"
       ],
       [
         "MavenTier3BossFightEncounter24",
-        "Fight for survival!"
+        "สู้เพื่อเอาตัวรอด!"
       ],
       [
         "MavenTier3BossFightEncounter25",
-        "Fight for survival!"
+        "สู้เพื่อเอาตัวรอด!"
       ],
       [
         "MavenTier3BossFightEncounter26",
-        "Hold my attention."
+        "รักษาความสนใจข้า"
       ],
       [
         "MavenTier3BossFightEncounter27",
-        "Hold my attention!"
+        "รักษาความสนใจข้า!"
       ],
       [
         "MavenTier3BossFightEncounter28",
-        "Hold my attention..."
+        "รักษาความสนใจข้า..."
       ],
       [
         "MavenTier3BossVictoryRandom",
-        "Collect another!"
+        "เก็บตัวอื่นมาอีก!"
       ],
       [
         "MavenTier3BossVictory2",
-        "Collect another."
+        "เก็บตัวอื่นมาอีก"
       ],
       [
         "MavenTier3BossVictory3",
-        "Collect another..."
+        "เก็บตัวอื่นมาอีก..."
       ],
       [
         "MavenTier3BossVictory4",
-        "Death. Brings. Joy."
+        "ความตาย ทำให้เกิด ความสนุก"
       ],
       [
         "MavenTier3BossVictory5",
-        "Death brings joy."
+        "ความตายทำให้เกิดความสนุก"
       ],
       [
         "MavenTier3BossVictory6",
-        "Death brings joy..."
+        "ความตายทำให้เกิดความสนุก..."
       ],
       [
         "MavenTier3BossVictory7",
-        "Sprayed blood floats."
+        "เลือดที่กระจายนั้นล่องลอย"
       ],
       [
         "MavenTier3BossVictory8",
-        "Sprayed blood floats..."
+        "เลือดที่กระจายนั้นล่องลอย..."
       ],
       [
         "MavenTier3BossVictory9",
-        "Sprayed blood floats."
+        "เลือดที่กระจายนั้นล่องลอย"
       ],
       [
         "MavenTier3BossVictory10",
@@ -48094,39 +48094,39 @@
       ],
       [
         "MavenTier3BossVictory13",
-        "Must improve!"
+        "พัฒนามากกว่าเดิม!"
       ],
       [
         "MavenTier3BossVictory14",
-        "Must improve."
+        "พัฒนามากกว่าเดิม"
       ],
       [
         "MavenTier3BossVictory15",
-        "Must improve?"
+        "พัฒนามากกว่าเดิม?"
       ],
       [
         "MavenTier3BossVictory16",
-        "No challenge."
+        "ไม่ท้าทาย"
       ],
       [
         "MavenTier3BossVictory17",
-        "No challenge..."
+        "ไม่ท้าทาย..."
       ],
       [
         "MavenTier3BossVictory18",
-        "No challenge..."
+        "ไม่ท้าทาย..."
       ],
       [
         "MavenTier3BossVictory19",
-        "Delightful violence."
+        "มัน​เป็น​ความ​รุนแรง​อัน​น่า​ยินดี"
       ],
       [
         "MavenTier3BossVictory20",
-        "Delightful violence."
+        "มัน​เป็น​ความ​รุนแรง​อัน​น่า​ยินดี"
       ],
       [
         "MavenTier3BossVictory21",
-        "Delightful violence!"
+        "มัน​เป็น​ความ​รุนแรง​อัน​น่า​ยินดี!"
       ],
       [
         "MavenTier3InvitationToFightRandom",
@@ -48150,75 +48150,75 @@
       ],
       [
         "MavenTier3InvitationToFight6",
-        "Play game for gift."
+        "เล่นเกมเพื่อของขวัญ"
       ],
       [
         "MavenTier3InvitationToFight7",
-        "Play game for gift?"
+        "เล่นเกมเพื่อของขวัญ?"
       ],
       [
         "MavenTier3InvitationToFight8",
-        "Play game for gift!"
+        "เล่นเกมเพื่อของขวัญ!"
       ],
       [
         "MavenTier3InvitationToFight9",
-        "Prove worth again!"
+        "พิสูจน์ความคู่ควรอีก!"
       ],
       [
         "MavenTier3InvitationToFight10",
-        "Prove worth again."
+        "พิสูจน์ความคู่ควรอีก"
       ],
       [
         "MavenTier3InvitationToFight11",
-        "Prove worth again."
+        "พิสูจน์ความคู่ควรอีก"
       ],
       [
         "MavenTier3InvitationToFight12",
-        "Greater challenge waits."
+        "การท้าทายที่เหนือกว่ารออยู่"
       ],
       [
         "MavenTier3InvitationToFight13",
-        "Greater challenge waits!"
+        "การท้าทายที่เหนือกว่ารออยู่!"
       ],
       [
         "MavenTier3InvitationToFight14",
-        "Greater challenge waits."
+        "การท้าทายที่เหนือกว่ารออยู่"
       ],
       [
         "MavenTier3InvitationToFight15",
-        "A new challenge. Come."
+        "การท้าทายใหม่ มาเถิด"
       ],
       [
         "MavenTier3InvitationToFight16",
-        "A new challenge! Come."
+        "การท้าทายใหม่! มาเถิด"
       ],
       [
         "MavenTier3InvitationToFight17",
-        "A new challenge. Come..."
+        "การท้าทายใหม่ มาเถิด..."
       ],
       [
         "MavenTier3PassivesWonRandom",
-        "Victory gift."
+        "ของขวัญการชนะ"
       ],
       [
         "MavenTier3PassivesWon2",
-        "Victory gift."
+        "ของขวัญการชนะ"
       ],
       [
         "MavenTier3PassivesWon3",
-        "Victory gift."
+        "ของขวัญการชนะ"
       ],
       [
         "MavenTier3PassivesWon4",
-        "Entertained gift."
+        "ของขวัญความบันเทิง"
       ],
       [
         "MavenTier3PassivesWon5",
-        "Entertained gift."
+        "ของขวัญความบันเทิง"
       ],
       [
         "MavenTier3PassivesWon6",
-        "Entertained gift?"
+        "ของขวัญความบันเทิง?"
       ],
       [
         "MavenTier3PassivesWon7",
@@ -48234,23 +48234,23 @@
       ],
       [
         "MavenTier3PassivesWon10",
-        "Victory. New possession. Seize it."
+        "ชนะ ของใหม่ให้ครอง ครองเสีย"
       ],
       [
         "MavenTier3PassivesWon11",
-        "Victory. New possession. Seize it."
+        "ชนะ ของใหม่ให้ครอง ครองเสีย"
       ],
       [
         "MavenTier3PassivesWon12",
-        "Held attention. Worthy."
+        "รักษา​ความ​สนใจ​ได้ คู่ควร"
       ],
       [
         "MavenTier3PassivesWon13",
-        "Held attention. Worthy!"
+        "รักษา​ความ​สนใจ​ได้ คู่ควร!"
       ],
       [
         "MavenTier3PassivesWon14",
-        "Held attention. Worthy."
+        "รักษา​ความ​สนใจ​ได้ คู่ควร"
       ],
       [
         "MavenTier3PostfightPromptRandom",
@@ -48266,35 +48266,35 @@
       ],
       [
         "MavenTier3PostfightPrompt10",
-        "Do it again."
+        "ทำแบบนั้นอีก"
       ],
       [
         "MavenTier3PostfightPrompt11",
-        "Do it again."
+        "ทำแบบนั้นอีก"
       ],
       [
         "MavenTier3PostfightPrompt12",
-        "Do it again."
+        "ทำแบบนั้นอีก"
       ],
       [
         "MavenTier3PostfightPrompt13",
-        "Do it again."
+        "ทำแบบนั้นอีก"
       ],
       [
         "MavenTier3PostfightPrompt14",
-        "Fight and repeat."
+        "ต่อสู้และทำต่อไป"
       ],
       [
         "MavenTier3PostfightPrompt15",
-        "Fight and repeat."
+        "ต่อสู้และทำต่อไป"
       ],
       [
         "MavenTier3PostfightPrompt16",
-        "Fight and repeat."
+        "ต่อสู้และทำต่อไป"
       ],
       [
         "MavenTier3PostfightPrompt17",
-        "Fight and repeat."
+        "ต่อสู้และทำต่อไป"
       ],
       [
         "MavenTier3PostfightPrompt18",
@@ -48322,27 +48322,27 @@
       ],
       [
         "MavenTier3PostfightPrompt24",
-        "Test over. New test?"
+        "การ​ทดสอบ​จบ​แล้ว ทดสอบ​ใหม่?"
       ],
       [
         "MavenTier3PostfightPrompt25",
-        "Test over. New test?"
+        "การ​ทดสอบ​จบ​แล้ว ทดสอบ​ใหม่?"
       ],
       [
         "MavenTier3PostfightPrompt26",
-        "Test over. New test?"
+        "การ​ทดสอบ​จบ​แล้ว ทดสอบ​ใหม่?"
       ],
       [
         "MavenTier3PostfightPrompt27",
-        "Quickly, again!"
+        "เร็วเข้า เอาอีก!"
       ],
       [
         "MavenTier3PostfightPrompt28",
-        "Quickly, again!"
+        "เร็วเข้า เอาอีก!"
       ],
       [
         "MavenTier3PostfightPrompt29",
-        "Quickly, again!"
+        "เร็วเข้า เอาอีก!"
       ],
       [
         "MavenTier3FirstOffAtlassBossEncounterRandom",
@@ -48358,47 +48358,47 @@
       ],
       [
         "MavenTier3OffAtlasBossEncounterRandom",
-        "Collect ancient power."
+        "เก็บพลังดึกดำบรรพ์"
       ],
       [
         "MavenTier3OffAtlasBossEncounter2",
-        "Collect ancient power."
+        "เก็บพลังดึกดำบรรพ์"
       ],
       [
         "MavenTier3OffAtlasBossEncounter3",
-        "Defeat strange might!"
+        "ปราบสิ่งองอาจอย่างประหลาด!"
       ],
       [
         "MavenTier3OffAtlasBossEncounter4",
-        "Defeat strange might!"
+        "ปราบสิ่งองอาจอย่างประหลาด!"
       ],
       [
         "MavenTier3OffAtlasBossEncounter5",
-        "Accumulation of the scarce."
+        "รวบรวมสิ่งหายาก"
       ],
       [
         "MavenTier3OffAtlasBossEncounter6",
-        "Accumulation of the scarce!"
+        "รวบรวมสิ่งหายาก!"
       ],
       [
         "MavenTier3OffAtlasBossEncounter7",
-        "Mm, accumulation of the scarce..."
+        "หืม รวบรวมสิ่งหายาก..."
       ],
       [
         "MavenTier3OffAtlasBossEncounter8",
-        "Vanquish strange entity!"
+        "กำจัดมันผู้ประหลาดนี้!"
       ],
       [
         "MavenTier3OffAtlasBossEncounter9",
-        "Vanquish strange entity!"
+        "กำจัดมันผู้ประหลาดนี้!"
       ],
       [
         "MavenTier3OffAtlasBossEncounter10",
-        "Unusual. Kill it. Now."
+        "แปลก ฆ่ามันเดี๋ยวนี้"
       ],
       [
         "MavenTier3OffAtlasBossEncounter11",
-        "Hmm. Unusual. Kill it. Now."
+        "หืม แปลก ฆ่ามันเดี๋ยวนี้"
       ],
       [
         "MavenTier3FirstOffAtlasBossVictoryRandom",
@@ -48426,15 +48426,15 @@
       ],
       [
         "MavenTier3OffAtlasBossVictory4",
-        "This brings exultation."
+        "มันสร้างความหรรษา"
       ],
       [
         "MavenTier3OffAtlasBossVictory5",
-        "This brings exultation."
+        "มันสร้างความหรรษา"
       ],
       [
         "MavenTier3OffAtlasBossVictory6",
-        "This brings exultation."
+        "มันสร้างความหรรษา"
       ],
       [
         "MavenTier3OffAtlasBossVictory7",
@@ -48462,19 +48462,19 @@
       ],
       [
         "MavenTier3OffAtlasBossVictory13",
-        "A rare treat."
+        "พบเห็นได้ยากจริง"
       ],
       [
         "MavenTier3OffAtlasBossVictory14",
-        "A rare treat."
+        "พบเห็นได้ยากจริง"
       ],
       [
         "MavenTier3OffAtlasBossVictory15",
-        "Savoured delight."
+        "ความสุขอันอิ่มเอม"
       ],
       [
         "MavenTier3OffAtlasBossVictory16",
-        "Savoured delight."
+        "ความสุขอันอิ่มเอม"
       ],
       [
         "MavenTier3OffAtlasInvitationRandom",
@@ -48490,27 +48490,27 @@
       ],
       [
         "MavenTier3OffAtlasInvitation4",
-        "A special test. Visit."
+        "การทดสอบพิเศษ จงมาเยือน"
       ],
       [
         "MavenTier3OffAtlasInvitation5",
-        "A special test. Visit."
+        "การทดสอบพิเศษ จงมาเยือน"
       ],
       [
         "MavenTier3OffAtlasInvitation6",
-        "A special test. Visit."
+        "การทดสอบพิเศษ จงมาเยือน"
       ],
       [
         "MavenTier3OffAtlasInvitation7",
-        "Such unusual entities. All together. Come."
+        "เป็น​ผู้แปลก​นัก ทุก​ผู้มา​ร่วม​กัน มา​เถิด"
       ],
       [
         "MavenTier3OffAtlasInvitation8",
-        "Such unusual entities. All together. Come."
+        "เป็น​ผู้แปลกนัก ทุก​ผู้มา​ร่วม​กัน มา​เถิด"
       ],
       [
         "MavenTier3OffAtlasInvitation9",
-        "Such unusual entities. All together. Come."
+        "เป็น​ผู้แปลกนัก ทุก​ผู้มา​ร่วม​กัน มา​เถิด"
       ],
       [
         "MavenTier3OffAtlasInvitation10",
@@ -48562,15 +48562,15 @@
       ],
       [
         "MavenTier3SirusCommentRandom",
-        "Strange realm..."
+        "ดินแดนประหลาด..."
       ],
       [
         "MavenTier3SirusComment2",
-        "Strange realm..."
+        "ดินแดนประหลาด..."
       ],
       [
         "MavenTier3SirusComment3",
-        "Hmm, strange realm..."
+        "หืม ดินแดนประหลาด..."
       ],
       [
         "MavenTier3GroupBossFightCommentRandom",
@@ -48606,99 +48606,99 @@
       ],
       [
         "MavenTier3WitnessPhaseTransitionRandom",
-        "Fight must continue!"
+        "การต่อสู้ต้องดำเนินต่อ!"
       ],
       [
         "MavenTier3WitnessPhaseTransition2",
-        "Fight must continue!"
+        "การต่อสู้ต้องดำเนินต่อ!"
       ],
       [
         "MavenTier3WitnessPhaseTransition3",
-        "Fight must continue!"
+        "การต่อสู้ต้องดำเนินต่อ!"
       ],
       [
         "MavenTier3WitnessPhaseTransition4",
-        "ต้องทำต่อไปเรื่อยๆ"
+        "ต้องสู้ต่อไป"
       ],
       [
         "MavenTier3WitnessPhaseTransition5",
-        "ต้องทำต่อไปเรื่อยๆ"
+        "ต้องสู้ต่อไป"
       ],
       [
         "MavenTier3WitnessPhaseTransition6",
-        "ต้องทำต่อไปเรื่อยๆ"
+        "ต้องสู้ต่อไป"
       ],
       [
         "MavenTier3WitnessPhaseTransition7",
-        "New tactic!"
+        "กลยุทธ์ใหม่!"
       ],
       [
         "MavenTier3WitnessPhaseTransition8",
-        "New tactic!"
+        "กลยุทธ์ใหม่!"
       ],
       [
         "MavenTier3WitnessPhaseTransition9",
-        "New tactic!"
+        "กลยุทธ์ใหม่!"
       ],
       [
         "MavenTier3WitnessPhaseTransition10",
-        "What's next?"
+        "มีอะไรต่อ?"
       ],
       [
         "MavenTier3WitnessPhaseTransition11",
-        "Ooh, what's next?"
+        "อู้ มีอะไรต่อ?"
       ],
       [
         "MavenTier3WitnessPhaseTransition12",
-        "What's next?"
+        "มีอะไรต่อ?"
       ],
       [
         "MavenTier3IntroMultiBossArenaRandom",
-        "Grand game!"
+        "เกมอันยิ่งใหญ่!"
       ],
       [
         "MavenTier3IntroMultiBossArena2",
-        "Grand game."
+        "เกมอันยิ่งใหญ่"
       ],
       [
         "MavenTier3IntroMultiBossArena3",
-        "Grand game!"
+        "เกมอันยิ่งใหญ่!"
       ],
       [
         "MavenTier3IntroMultiBossArena4",
-        "A show for me."
+        "เป็นการแสดงแก่ข้า"
       ],
       [
         "MavenTier3IntroMultiBossArena5",
-        "A show for me."
+        "เป็นการแสดงแก่ข้า"
       ],
       [
         "MavenTier3IntroMultiBossArena6",
-        "A show for me."
+        "เป็นการแสดงแก่ข้า"
       ],
       [
         "MavenTier3IntroMultiBossArena7",
-        "Another challenge?"
+        "ท้าทายอีกรอบ?"
       ],
       [
         "MavenTier3IntroMultiBossArena8",
-        "Another challenge."
+        "ท้าทายอีกรอบ"
       ],
       [
         "MavenTier3IntroMultiBossArena9",
-        "Another challenge!"
+        "ท้าทายอีกรอบ!"
       ],
       [
         "MavenTier3IntroMultiBossArena10",
-        "Survive and be rewarded."
+        "รอดเพื่อรับรางวัล"
       ],
       [
         "MavenTier3IntroMultiBossArena11",
-        "Survive and be rewarded."
+        "รอดเพื่อรับรางวัล"
       ],
       [
         "MavenTier3IntroMultiBossArena12",
-        "Survive and be rewarded."
+        "รอดเพื่อรับรางวัล"
       ],
       [
         "MavenTier3IntroMultiBossArena13",
@@ -48710,63 +48710,63 @@
       ],
       [
         "MavenTier3OutroMultiBossArenaRandom",
-        "Glorious."
+        "ยิ่งใหญ่"
       ],
       [
         "MavenTier3OutroMultiBossArena2",
-        "Glorious!"
+        "ยิ่งใหญ่!"
       ],
       [
         "MavenTier3OutroMultiBossArena3",
-        "Glorious, ahh!"
+        "ยิ่งใหญ่ อา!"
       ],
       [
         "MavenTier3OutroMultiBossArena4",
-        "Captivating!"
+        "ประทับใจ!"
       ],
       [
         "MavenTier3OutroMultiBossArena5",
-        "Captivating!"
+        "ประทับใจ!"
       ],
       [
         "MavenTier3OutroMultiBossArena6",
-        "Captivating!"
+        "ประทับใจ!"
       ],
       [
         "MavenTier3OutroMultiBossArena7",
-        "Too brief!"
+        "สั้นเกินไป!"
       ],
       [
         "MavenTier3OutroMultiBossArena8",
-        "Too brief!"
+        "สั้นเกินไป!"
       ],
       [
         "MavenTier3OutroMultiBossArena9",
-        "Too brief."
+        "สั้นเกินไป"
       ],
       [
         "MavenTier3OutroMultiBossArena10",
-        "Not challenge enough..."
+        "ไม่ท้าทายพอ..."
       ],
       [
         "MavenTier3OutroMultiBossArena11",
-        "Not challenge enough..."
+        "ไม่ท้าทายพอ..."
       ],
       [
         "MavenTier3OutroMultiBossArena12",
-        "Not challenge enough!"
+        "ไม่ท้าทายพอ!"
       ],
       [
         "MavenTier3ReleaseBossIntoArenaRandom",
-        "Fight now!"
+        "สู้เดี๋ยวนี้!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena2",
-        "Fight now!"
+        "สู้เดี๋ยวนี้!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena3",
-        "Fight now!"
+        "สู้เดี๋ยวนี้!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena4",
@@ -48782,51 +48782,51 @@
       ],
       [
         "MavenTier3ReleaseBossIntoArena7",
-        "Another round!"
+        "อีกรอบหนึ่ง!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena8",
-        "Another round!"
+        "อีกรอบหนึ่ง!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena9",
-        "Another round!"
+        "อีกรอบหนึ่ง!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena10",
-        "Keep fighting!"
+        "สู้ต่อไป!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena11",
-        "Keep fighting!"
+        "สู้ต่อไป!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena12",
-        "Keep fighting!"
+        "สู้ต่อไป!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena13",
-        "It continues!"
+        "มันดำเนินต่อไป!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena14",
-        "It continues!"
+        "มันดำเนินต่อไป!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena15",
-        "It continues!"
+        "มันดำเนินต่อไป!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena16",
-        "ไม่สิ้นสุด!"
+        "ไม่จบ!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena17",
-        "ไม่สิ้นสุด!"
+        "ไม่จบ!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena18",
-        "ไม่สิ้นสุด!"
+        "ไม่จบ!"
       ],
       [
         "MavenTier3ReleaseBossIntoArena19",
@@ -48842,27 +48842,27 @@
       ],
       [
         "MavenTier3HealSkillRandom",
-        "Fight longer!"
+        "สู้ให้นานกว่านี้!"
       ],
       [
         "MavenTier3HealSkill2",
-        "Fight longer!"
+        "สู้ให้นานกว่านี้!"
       ],
       [
         "MavenTier3HealSkill3",
-        "Fight longer!"
+        "สู้ให้นานกว่านี้!"
       ],
       [
         "MavenTier3HealSkill4",
-        "Take vitality."
+        "รับการเยียวยา"
       ],
       [
         "MavenTier3HealSkill5",
-        "Take vitality."
+        "รับการเยียวยา"
       ],
       [
         "MavenTier3HealSkill6",
-        "Take vitality."
+        "รับการเยียวยา"
       ],
       [
         "MavenTier3HealSkill7",
@@ -48886,139 +48886,139 @@
       ],
       [
         "MavenTier3HealSkill12",
-        "Life prolonged!"
+        "ต่อชีวิต!"
       ],
       [
         "MavenTier3HealSkill13",
-        "Life prolonged!"
+        "ต่อชีวิต!"
       ],
       [
         "MavenTier3HealSkill14",
-        "Life prolonged!"
+        "ต่อชีวิต!"
       ],
       [
         "MavenTier3GuardSkillRandom",
-        "Grow tougher!"
+        "จงแกร่งขึ้น!"
       ],
       [
         "MavenTier3GuardSkill2",
-        "Grow tougher."
+        "จงแกร่งขึ้น"
       ],
       [
         "MavenTier3GuardSkill3",
-        "Grow tougher!"
+        "จงแกร่งขึ้น!"
       ],
       [
         "MavenTier3GuardSkill4",
-        "Absorb pain!"
+        "ดูดซับความเจ็บปวด!"
       ],
       [
         "MavenTier3GuardSkill5",
-        "Absorb pain."
+        "ดูดซับความเจ็บปวด"
       ],
       [
         "MavenTier3GuardSkill6",
-        "Absorb pain."
+        "ดูดซับความเจ็บปวด"
       ],
       [
         "MavenTier3SpaceVinesRandom",
-        "Grasping coils!"
+        "เถาวัลย์เหนี่ยวรั้ง!"
       ],
       [
         "MavenTier3SpaceVines2",
-        "Grasping coils!"
+        "เถาวัลย์เหนี่ยวรั้ง!"
       ],
       [
         "MavenTier3SpaceVines3",
-        "Grasping coils!"
+        "เถาวัลย์เหนี่ยวรั้ง!"
       ],
       [
         "MavenTier3SpaceVines4",
-        "Lashing space!"
+        "อวกาศอันฟาดฟัน!"
       ],
       [
         "MavenTier3SpaceVines5",
-        "Lashing space!"
+        "อวกาศอันฟาดฟัน!"
       ],
       [
         "MavenTier3SpaceVines6",
-        "Lashing space!"
+        "อวกาศอันฟาดฟัน!"
       ],
       [
         "MavenTier3SpaceInfuseWeaponsRandom",
-        "Open the void!"
+        "เปิดความว่างเปล่า!"
       ],
       [
         "MavenTier3SpaceInfuseWeapons2",
-        "Open the void!"
+        "เปิดความว่างเปล่า!"
       ],
       [
         "MavenTier3SpaceInfuseWeapons3",
-        "Open the void!"
+        "เปิดความว่างเปล่า!"
       ],
       [
         "MavenTier3SpaceInfuseWeapons4",
-        "Atrophy flesh!"
+        "เลือดเนื้อสิ้นสลาย!"
       ],
       [
         "MavenTier3SpaceInfuseWeapons5",
-        "Atrophy flesh!"
+        "เลือดเนื้อสิ้นสลาย!"
       ],
       [
         "MavenTier3SpaceInfuseWeapons6",
-        "Atrophy flesh!"
+        "เลือดเนื้อสิ้นสลาย!"
       ],
       [
         "MavenTier3DamageReductionOrbsRandom",
-        "Heavy guard."
+        "ตั้งการ์ดอย่างหนัก"
       ],
       [
         "MavenTier3DamageReductionOrbs2",
-        "Heavy guard."
+        "ตั้งการ์ดอย่างหนัก"
       ],
       [
         "MavenTier3DamageReductionOrbs3",
-        "Heavy guard."
+        "ตั้งการ์ดอย่างหนัก"
       ],
       [
         "MavenTier3DamageReductionOrbs4",
-        "Become bastion."
+        "กลายเป็นป้อมปราการ"
       ],
       [
         "MavenTier3DamageReductionOrbs5",
-        "Become bastion."
+        "กลายเป็นป้อมปราการ"
       ],
       [
         "MavenTier3DamageReductionOrbs6",
-        "Become bastion."
+        "กลายเป็นป้อมปราการ"
       ],
       [
         "MavenTier3SpaceFlameWallRandom",
-        "Release the flames!"
+        "ปล่อยเพลิง!"
       ],
       [
         "MavenTier3SpaceFlameWall2",
-        "Release the flames!"
+        "ปล่อยเพลิง!"
       ],
       [
         "MavenTier3SpaceFlameWall3",
-        "Release the flames!"
+        "ปล่อยเพลิง!"
       ],
       [
         "MavenTier3SpaceFlameWall4",
-        "Burn in the fires!"
+        "มอดไหม้ด้วยไฟเพลิง!"
       ],
       [
         "MavenTier3SpaceFlameWall5",
-        "Burn in the fires!"
+        "มอดไหม้ด้วยไฟเพลิง!"
       ],
       [
         "MavenTier3SpaceFlameWall6",
-        "Burn in the fires!"
+        "มอดไหม้ด้วยไฟเพลิง!"
       ],
       [
         "MavenTier3SpaceFlameWall7",
-        "Burn in the fires!"
+        "มอดไหม้ด้วยไฟเพลิง!"
       ],
       [
         "MavenTier3ChasingOrbRandom",
@@ -49034,71 +49034,71 @@
       ],
       [
         "MavenTier3ChasingOrb4",
-        "Outrun this!"
+        "หนีมันให้พ้น!"
       ],
       [
         "MavenTier3ChasingOrb5",
-        "Outrun this!"
+        "หนีมันให้พ้น!"
       ],
       [
         "MavenTier3ChasingOrb6",
-        "Outrun this!"
+        "หนีมันให้พ้น!"
       ],
       [
         "MavenTier3SpeedZonesRandom",
-        "Begin the quickening!"
+        "เริ่มการเร่งความเร็ว!"
       ],
       [
         "MavenTier3SpeedZones2",
-        "Begin the quickening!"
+        "เริ่มการเร่งความเร็ว!"
       ],
       [
         "MavenTier3SpeedZones3",
-        "Begin the quickening!"
+        "เริ่มการเร่งความเร็ว!"
       ],
       [
         "MavenTier3SpeedZones4",
-        "Fight faster!"
+        "สู้ให้เร็วกว่านี้!"
       ],
       [
         "MavenTier3SpeedZones5",
-        "Fight faster!"
+        "สู้ให้เร็วกว่านี้!"
       ],
       [
         "MavenTier3BossCloneRandom",
-        "Twice as hard!"
+        "ยากเป็นสองเท่า!"
       ],
       [
         "MavenTier3BossClone2",
-        "Twice as hard!"
+        "ยากเป็นสองเท่า!"
       ],
       [
         "MavenTier3BossClone3",
-        "Twice as hard!"
+        "ยากเป็นสองเท่า!"
       ],
       [
         "MavenTier3BossClone4",
-        "Double attack!"
+        "โจมตีคู่!"
       ],
       [
         "MavenTier3BossClone5",
-        "Double attack!"
+        "โจมตีคู่!"
       ],
       [
         "MavenTier3BossClone6",
-        "Double attack!"
+        "โจมตีคู่!"
       ],
       [
         "MavenTier3SpaceChargesRandom",
-        "Enigmatic power!"
+        "พลังพิศวง!"
       ],
       [
         "MavenTier3SpaceCharges2",
-        "Enigmatic power!"
+        "พลังพิศวง!"
       ],
       [
         "MavenTier3SpaceCharges3",
-        "Enigmatic power!"
+        "พลังพิศวง!"
       ],
       [
         "MavenTier3SpaceCharges4",
@@ -49110,63 +49110,63 @@
       ],
       [
         "MavenTier3VoidZonesRandom",
-        "Resist entropy..."
+        "ต้านทานการสูญสลาย..."
       ],
       [
         "MavenTier3VoidZones2",
-        "Resist entropy..."
+        "ต้านทานการสูญสลาย..."
       ],
       [
         "MavenTier3VoidZones3",
-        "Resist entropy..."
+        "ต้านทานการสูญสลาย..."
       ],
       [
         "MavenTier3VoidZones4",
-        "Hungering void..."
+        "ความว่างเปล่าอันหิวโหย..."
       ],
       [
         "MavenTier3VoidZones5",
-        "Hungering void..."
+        "ความว่างเปล่าอันหิวโหย..."
       ],
       [
         "MavenTier3VoidZones6",
-        "Hungering void..."
+        "ความว่างเปล่าอันหิวโหย..."
       ],
       [
         "MavenTier3VoidZones7",
-        "Wither away..."
+        "เหี่ยวเฉาไปเสีย..."
       ],
       [
         "MavenTier3VoidZones8",
-        "Wither away..."
+        "เหี่ยวเฉาไปเสีย..."
       ],
       [
         "MavenTier3VoidZones9",
-        "Wither away..."
+        "เหี่ยวเฉาไปเสีย..."
       ],
       [
         "MavenTier3VoidZones10",
-        "Waste away..."
+        "สลายไปเสีย..."
       ],
       [
         "MavenTier3VoidZones11",
-        "Waste away..."
+        "สลายไปเสีย..."
       ],
       [
         "MavenTier3VoidZones12",
-        "Waste away..."
+        "สลายไปเสีย..."
       ],
       [
         "MavenTier3VoidZones13",
-        "Darkness calls."
+        "ความมืดมิดเพรียกหา"
       ],
       [
         "MavenTier3VoidZones14",
-        "Darkness calls."
+        "ความมืดมิดเพรียกหา"
       ],
       [
         "MavenTier3VoidZones15",
-        "Darkness calls."
+        "ความมืดมิดเพรียกหา"
       ],
       [
         "MavenTier3AoERandom",
@@ -49194,11 +49194,11 @@
       ],
       [
         "MavenTier3AoE7",
-        "Squirm!"
+        "ดิ้น!"
       ],
       [
         "MavenTier3AoE8",
-        "Squirm!"
+        "ดิ้น!"
       ],
       [
         "MavenTier3ProjectilesRandom",
@@ -49226,15 +49226,15 @@
       ],
       [
         "MavenTier3Projectiles7",
-        "Move or perish!"
+        "ขยับหรือมอดม้วย!"
       ],
       [
         "MavenTier3Projectiles8",
-        "Move or perish!"
+        "ขยับหรือมอดม้วย!"
       ],
       [
         "MavenTier3Projectiles9",
-        "Move or perish!"
+        "ขยับหรือมอดม้วย!"
       ],
       [
         "MavenTier3Projectiles10",
@@ -49270,35 +49270,35 @@
       ],
       [
         "MavenTier3Buffs6",
-        "My blessing!"
+        "พรของข้า!"
       ],
       [
         "MavenTier3Buffs7",
-        "My blessing!"
+        "พรของข้า!"
       ],
       [
         "MavenTier3Buffs8",
-        "Be empowered!"
+        "จงรับพลัง!"
       ],
       [
         "MavenTier3Buffs9",
-        "Be empowered!"
+        "จงรับพลัง!"
       ],
       [
         "MavenTier3Buffs10",
-        "Be empowered!"
+        "จงรับพลัง!"
       ],
       [
         "MavenTier3Buffs11",
-        "Feel might!"
+        "สัมผัสความองอาจ!"
       ],
       [
         "MavenTier3Buffs12",
-        "Feel might!"
+        "สัมผัสความองอาจ!"
       ],
       [
         "MavenTier3Buffs13",
-        "Feel might."
+        "สัมผัสความองอาจ"
       ],
       [
         "MavenTier4BossFightEncounterRandom",
@@ -49422,43 +49422,43 @@
       ],
       [
         "MavenTier4BossVictory16",
-        "Such pleasure, so brief."
+        "ความ​เพลิดเพลิน​จบ​เร็ว​เสีย​จริง"
       ],
       [
         "MavenTier4BossVictory17",
-        "Such pleasure, so brief."
+        "ความ​เพลิดเพลิน​จบ​เร็ว​เสีย​จริง"
       ],
       [
         "MavenTier4BossVictory18",
-        "Such pleasure, so brief."
+        "ความ​เพลิดเพลิน​จบ​เร็ว​เสีย​จริง"
       ],
       [
         "MavenTier4BossVictory19",
-        "Fleeting joy."
+        "ความ​สนุก​เพียง​ประเดี๋ยว​เดียว"
       ],
       [
         "MavenTier4BossVictory20",
-        "Fleeting joy."
+        "ความ​สนุก​เพียง​ประเดี๋ยว​เดียว"
       ],
       [
         "MavenTier4BossVictory21",
-        "Fleeting joy."
+        "ความ​สนุก​เพียง​ประเดี๋ยว​เดียว"
       ],
       [
         "MavenTier4BossVictory22",
-        "Over too quickly. Another!"
+        "จบเร็วเกินไป เอาอีก!"
       ],
       [
         "MavenTier4BossVictory23",
-        "Over too quickly. Another!"
+        "จบเร็วเกินไป เอาอีก!"
       ],
       [
         "MavenTier4InvitationToFightRandom",
-        "Fight to become champion."
+        "ต่อสู้เพื่อเป็นวีรบุรุษ"
       ],
       [
         "MavenTier4InvitationToFight2",
-        "Fight to become champion."
+        "ต่อสู้เพื่อเป็นวีรบุรุษ"
       ],
       [
         "MavenTier4InvitationToFight3",
@@ -49470,67 +49470,67 @@
       ],
       [
         "MavenTier4InvitationToFight5",
-        "The winner of the game receives gift."
+        "ผู้ชนะเกมนี้จะได้รับของขวัญ"
       ],
       [
         "MavenTier4InvitationToFight6",
-        "The winner of the game receives gift."
+        "ผู้ชนะเกมนี้จะได้รับของขวัญ"
       ],
       [
         "MavenTier4InvitationToFight7",
-        "The test is ready."
+        "การทดสอบพร้อมแล้ว"
       ],
       [
         "MavenTier4InvitationToFight8",
-        "The test is ready."
+        "การทดสอบพร้อมแล้ว"
       ],
       [
         "MavenTier4InvitationToFight9",
-        "A new game. Don't make me wait."
+        "เกมใหม่ อย่าให้ข้าต้องรอ"
       ],
       [
         "MavenTier4InvitationToFight10",
-        "A new game. Don't make me wait."
+        "เกมใหม่ อย่าให้ข้าต้องรอ"
       ],
       [
         "MavenTier4InvitationToFight11",
-        "A trial of my making."
+        "การ​แข่งขัน​จาก​น้ำมือ​ข้า​เอง"
       ],
       [
         "MavenTier4InvitationToFight12",
-        "A trial of my making."
+        "การ​แข่งขัน​จาก​น้ำมือ​ข้า​เอง"
       ],
       [
         "MavenTier4InvitationToFight13",
-        "Come entertain me. Try not to die."
+        "จง​มา​ร่วม​สร้าง​ความ​บันเทิง​กับ​ข้า อย่า​ตาย​แล้ว​กัน"
       ],
       [
         "MavenTier4InvitationToFight14",
-        "Come entertain me. Try not to die."
+        "จง​มา​ร่วม​สร้าง​ความ​บันเทิง​กับ​ข้า อย่า​ตาย​แล้ว​กัน"
       ],
       [
         "MavenTier4InvitationToFight15",
-        "Come entertain me. Try not to die."
+        "จง​มา​ร่วม​สร้าง​ความ​บันเทิง​กับ​ข้า อย่า​ตาย​แล้ว​กัน"
       ],
       [
         "MavenTier4PassivesWonRandom",
-        "Gift because of victory."
+        "ของขวัญจากชัยชนะ"
       ],
       [
         "MavenTier4PassivesWon2",
-        "Gift because of victory."
+        "ของขวัญจากชัยชนะ"
       ],
       [
         "MavenTier4PassivesWon3",
-        "Gift because of victory."
+        "ของขวัญจากชัยชนะ"
       ],
       [
         "MavenTier4PassivesWon4",
-        "Gift because entertaining."
+        "ของขวัญจากความบันเทิง"
       ],
       [
         "MavenTier4PassivesWon5",
-        "Gift because entertaining."
+        "ของขวัญจากความบันเทิง"
       ],
       [
         "MavenTier4PassivesWon6",
@@ -49542,27 +49542,27 @@
       ],
       [
         "MavenTier4PassivesWon8",
-        "Deserving entertainment."
+        "เป็นความบันเทิงอันคู่ควร"
       ],
       [
         "MavenTier4PassivesWon9",
-        "Deserving entertainment."
+        "เป็นความบันเทิงอันคู่ควร"
       ],
       [
         "MavenTier4PassivesWon10",
-        "I was not bored!"
+        "ข้าไม่เบื่อสักนิด!"
       ],
       [
         "MavenTier4PassivesWon11",
-        "I was not bored!"
+        "ข้าไม่เบื่อสักนิด!"
       ],
       [
         "MavenTier4PassivesWon12",
-        "Surprising. A gift."
+        "น่าประหลาดใจ ของขวัญ"
       ],
       [
         "MavenTier4PassivesWon13",
-        "Surprising. A gift."
+        "น่าประหลาดใจ ของขวัญ"
       ],
       [
         "MavenTier4PostfightPromptRandom",
@@ -49578,51 +49578,51 @@
       ],
       [
         "MavenTier4PostfightPrompt4",
-        "Another round, soon."
+        "อีกรอบ เร็วๆ นี้"
       ],
       [
         "MavenTier4PostfightPrompt5",
-        "Another round, soon."
+        "อีกรอบ เร็วๆ นี้"
       ],
       [
         "MavenTier4PostfightPrompt6",
-        "Another round, soon."
+        "อีกรอบ เร็วๆ นี้"
       ],
       [
         "MavenTier4PostfightPrompt7",
-        "Repeat my challenge."
+        "เผชิญการท้าทายของข้าอีก"
       ],
       [
         "MavenTier4PostfightPrompt8",
-        "Repeat my challenge."
+        "เผชิญการท้าทายของข้าอีก"
       ],
       [
         "MavenTier4PostfightPrompt9",
-        "Repeat my challenge."
+        "เผชิญการท้าทายของข้าอีก"
       ],
       [
         "MavenTier4PostfightPrompt10",
-        "Bored again. Don't make me wait."
+        "เบื่อแล้ว อย่าทำให้ข้ารอ"
       ],
       [
         "MavenTier4PostfightPrompt11",
-        "Bored again. Don't make me wait."
+        "เบื่อแล้ว อย่าทำให้ข้ารอ"
       ],
       [
         "MavenTier4PostfightPrompt12",
-        "Bored again. Don't make me wait."
+        "เบื่อแล้ว อย่าทำให้ข้ารอ"
       ],
       [
         "MavenTier4PostfightPrompt13",
-        "Hurry. I want to watch another!"
+        "เร็วเข้า ข้าอยากดูอีกรอบ!"
       ],
       [
         "MavenTier4PostfightPrompt14",
-        "Hurry. I want to watch another!"
+        "เร็วเข้า ข้าอยากดูอีกรอบ!"
       ],
       [
         "MavenTier4PostfightPrompt15",
-        "Hurry. I want to watch another!"
+        "เร็วเข้า ข้าอยากดูอีกรอบ!"
       ],
       [
         "MavenTier4FirstOffAtlassBossEncounterRandom",
@@ -49634,35 +49634,35 @@
       ],
       [
         "MavenTier4FirstOffAtlassBossEncounter3",
-        "A strange one. Kill it. Now."
+        "มันเป็นตัวประหลาด ฆ่ามันเดี๋ยวนี้"
       ],
       [
         "MavenTier4FirstOffAtlassBossEncounter4",
-        "A strange one. Kill it. Now."
+        "มันเป็นตัวประหลาด ฆ่ามันเดี๋ยวนี้"
       ],
       [
         "MavenTier4OffAtlasBossEncounterRandom",
-        "Collect this ancient power for me."
+        "เก็บ​พลัง​ดึกดำบรรพ์นี้​มา​ให้ข้า"
       ],
       [
         "MavenTier4OffAtlasBossEncounter2",
-        "Collect this ancient power for me."
+        "เก็บ​พลัง​ดึกดำบรรพ์นี้​มา​ให้ข้า"
       ],
       [
         "MavenTier4OffAtlasBossEncounter3",
-        "This one has uncommon might."
+        "มันมีความองอาจอย่างไม่ธรรมดา"
       ],
       [
         "MavenTier4OffAtlasBossEncounter4",
-        "This one has uncommon might."
+        "มันมีความองอาจอย่างไม่ธรรมดา"
       ],
       [
         "MavenTier4OffAtlasBossEncounter5",
-        "How unusual."
+        "ช่างแปลกนัก"
       ],
       [
         "MavenTier4OffAtlasBossEncounter6",
-        "How unusual."
+        "ช่างแปลกนัก"
       ],
       [
         "MavenTier4OffAtlasBossEncounter7",
@@ -49686,87 +49686,87 @@
       ],
       [
         "MavenTier4OffAtlasBossVictoryRandom",
-        "I must get all rare playthings!"
+        "ข้า​ต้อง​เอา​ของ​เล่น​หา​ยาก​ทั้งหมด​มา​ให้ได้!"
       ],
       [
         "MavenTier4OffAtlasBossVictory2",
-        "I must get all rare playthings!"
+        "ข้า​ต้อง​เอา​ของ​เล่น​หา​ยาก​ทั้งหมด​มา​ให้ได้!"
       ],
       [
         "MavenTier4OffAtlasBossVictory3",
-        "This is exquisite!"
+        "นี่มันประเสริฐยิ่งนัก!"
       ],
       [
         "MavenTier4OffAtlasBossVictory4",
-        "This is exquisite!"
+        "นี่มันประเสริฐยิ่งนัก!"
       ],
       [
         "MavenTier4OffAtlasBossVictory5",
-        "I want all of the special ones..."
+        "ข้า​อยาก​ได้ตัว​พิเศษ​ทั้งหมด​..."
       ],
       [
         "MavenTier4OffAtlasBossVictory6",
-        "I want all of the special ones..."
+        "ข้า​อยาก​ได้ตัว​พิเศษ​ทั้งหมด​..."
       ],
       [
         "MavenTier4OffAtlasBossVictory7",
-        "Delectable. Another!"
+        "สำราญยิ่งนัก เอาอีก!"
       ],
       [
         "MavenTier4OffAtlasBossVictory8",
-        "Delectable. Another!"
+        "สำราญยิ่งนัก เอาอีก!"
       ],
       [
         "MavenTier4OffAtlasBossVictory9",
-        "Truly riveting!"
+        "น่าตราตรึงเสียจริง!"
       ],
       [
         "MavenTier4OffAtlasBossVictory10",
-        "Truly riveting!"
+        "น่าตราตรึงเสียจริง!"
       ],
       [
         "MavenTier4OffAtlasInvitationRandom",
-        "Defeat special playthings for exotic gifts."
+        "สยบ​ของ​เล่น​พิเศษ​ทั้ง​หลาย​เพื่อ​ของ​ขวัญ​ล้ำค่า"
       ],
       [
         "MavenTier4OffAtlasInvitation2",
-        "Defeat special playthings for exotic gifts."
+        "สยบ​ของ​เล่น​พิเศษ​ทั้ง​หลาย​เพื่อ​ของ​ขวัญ​ล้ำค่า"
       ],
       [
         "MavenTier4OffAtlasInvitation3",
-        "Defeat special playthings for exotic gifts."
+        "สยบ​ของ​เล่น​พิเศษ​ทั้ง​หลาย​เพื่อ​ของ​ขวัญ​ล้ำค่า"
       ],
       [
         "MavenTier4OffAtlasInvitation4",
-        "A true spectacle awaits."
+        "ความ​ตื่น​เต้น​เร้าใจ​กำลัง​ร่ำ​รอ​เจ้า"
       ],
       [
         "MavenTier4OffAtlasInvitation5",
-        "A true spectacle awaits."
+        "ความ​ตื่น​เต้น​เร้าใจ​กำลัง​ร่ำ​รอ​เจ้า"
       ],
       [
         "MavenTier4OffAtlasInvitation6",
-        "A true spectacle awaits."
+        "ความ​ตื่น​เต้น​เร้าใจ​กำลัง​ร่ำ​รอ​เจ้า"
       ],
       [
         "MavenTier4OffAtlasInvitation7",
-        "A challenge like none other."
+        "เป็นการท้าทายหาใดเทียบ"
       ],
       [
         "MavenTier4OffAtlasInvitation8",
-        "A challenge like none other."
+        "เป็นการท้าทายหาใดเทียบ"
       ],
       [
         "MavenTier4OffAtlasInvitation9",
-        "A challenge like none other."
+        "เป็นการท้าทายหาใดเทียบ"
       ],
       [
         "MavenTier4KitavaCommentRandom",
-        "Rip its heart out!"
+        "ควักหัวใจออกมา!"
       ],
       [
         "MavenTier4KitavaComment2",
-        "Rip its heart out!"
+        "ควักหัวใจออกมา!"
       ],
       [
         "MavenTier4ElderCommentRandom",
@@ -49806,15 +49806,15 @@
       ],
       [
         "MavenTier4TrioFightCommentRandom",
-        "Blades, blood, and death!"
+        "คม​ดาบ เลือด กับ​ความ​ตาย​!"
       ],
       [
         "MavenTier4TrioFightComment2",
-        "Blades, blood, and death!"
+        "คม​ดาบ เลือด กับ​ความ​ตาย​!"
       ],
       [
         "MavenTier4TrioFightComment3",
-        "Blades, blood, and death!"
+        "คม​ดาบ เลือด กับ​ความ​ตาย​!"
       ],
       [
         "MavenTier4MerveilFightCommentRandom",
@@ -49842,39 +49842,39 @@
       ],
       [
         "MavenTier4WitnessPhaseTransition4",
-        "Dynamic!"
+        "ชีวิตชีวา!"
       ],
       [
         "MavenTier4WitnessPhaseTransition5",
-        "Dynamic!"
+        "ชีวิตชีวา!"
       ],
       [
         "MavenTier4WitnessPhaseTransition6",
-        "Dynamic!"
+        "ชีวิตชีวา!"
       ],
       [
         "MavenTier4WitnessPhaseTransition7",
-        "The tides may turn."
+        "เหตุการณ์พลิกผัน"
       ],
       [
         "MavenTier4WitnessPhaseTransition8",
-        "The tides may turn."
+        "เหตุการณ์พลิกผัน"
       ],
       [
         "MavenTier4WitnessPhaseTransition9",
-        "The tides may turn."
+        "เหตุการณ์พลิกผัน"
       ],
       [
         "MavenTier4WitnessPhaseTransition10",
-        "A shift in tactics."
+        "กลยุทธ์เปลี่ยนผัน"
       ],
       [
         "MavenTier4WitnessPhaseTransition11",
-        "A shift in tactics."
+        "กลยุทธ์เปลี่ยนผัน"
       ],
       [
         "MavenTier4WitnessPhaseTransition12",
-        "A shift in tactics."
+        "กลยุทธ์เปลี่ยนผัน"
       ],
       [
         "MavenTier4ObservingCombatGaspRandom",
@@ -49890,15 +49890,15 @@
       ],
       [
         "MavenTier4ObservingCombatGasp4",
-        "Fascinating."
+        "น่าหลงใหล"
       ],
       [
         "MavenTier4ObservingCombatGasp5",
-        "Fascinating."
+        "น่าหลงใหล"
       ],
       [
         "MavenTier4ObservingCombatGasp6",
-        "Fascinating."
+        "น่าหลงใหล"
       ],
       [
         "MavenTier4ObservingCombatGasp7",
@@ -49914,15 +49914,15 @@
       ],
       [
         "MavenTier4ObservingCombatGasp10",
-        "Brutal!"
+        "โหดนัก!"
       ],
       [
         "MavenTier4ObservingCombatGasp11",
-        "Brutal!"
+        "โหดนัก!"
       ],
       [
         "MavenTier4ObservingCombatGasp12",
-        "Brutal!"
+        "โหดนัก!"
       ],
       [
         "MavenTier4IntroMultiBossArenaRandom",
@@ -49938,35 +49938,35 @@
       ],
       [
         "MavenTier4IntroMultiBossArena4",
-        "I grow impatient."
+        "ข้าเริ่มหมดความอดทน"
       ],
       [
         "MavenTier4IntroMultiBossArena5",
-        "I grow impatient."
+        "ข้าเริ่มหมดความอดทน"
       ],
       [
         "MavenTier4IntroMultiBossArena6",
-        "I grow impatient."
+        "ข้าเริ่มหมดความอดทน"
       ],
       [
         "MavenTier4IntroMultiBossArena7",
-        "Hurry. Same as always."
+        "เร็วเข้า ก็เหมือนเคย"
       ],
       [
         "MavenTier4IntroMultiBossArena8",
-        "Hurry. Same as always."
+        "เร็วเข้า ก็เหมือนเคย"
       ],
       [
         "MavenTier4IntroMultiBossArena9",
-        "Hurry. Same as always."
+        "เร็วเข้า ก็เหมือนเคย"
       ],
       [
         "MavenTier4OutroMultiBossArenaRandom",
-        "That was glorious!"
+        "มันช่างยิ่งใหญ่เสียจริง!"
       ],
       [
         "MavenTier4OutroMultiBossArena2",
-        "That was glorious!"
+        "มันช่างยิ่งใหญ่เสียจริง!"
       ],
       [
         "MavenTier4OutroMultiBossArena3",
@@ -49994,15 +49994,15 @@
       ],
       [
         "MavenTier4ReleaseBossIntoArenaRandom",
-        "Harder fight, now."
+        "สู้แบบยากขึ้นเดี๋ยวนี้"
       ],
       [
         "MavenTier4ReleaseBossIntoArena2",
-        "Harder fight, now."
+        "สู้แบบยากขึ้นเดี๋ยวนี้"
       ],
       [
         "MavenTier4ReleaseBossIntoArena3",
-        "Harder fight, now."
+        "สู้แบบยากขึ้นเดี๋ยวนี้"
       ],
       [
         "MavenTier4ReleaseBossIntoArena4",
@@ -50042,23 +50042,23 @@
       ],
       [
         "MavenTier4ReleaseBossIntoArena13",
-        "Now this one!"
+        "ต่อไปเป็นตัวนี้!"
       ],
       [
         "MavenTier4ReleaseBossIntoArena14",
-        "Now this one."
+        "ต่อไปเป็นตัวนี้"
       ],
       [
         "MavenTier4ReleaseBossIntoArena15",
-        "Now this one!"
+        "ต่อไปเป็นตัวนี้!"
       ],
       [
         "MavenTier4ReleaseBossIntoArena16",
-        "No rest!"
+        "ไม่ให้พัก!"
       ],
       [
         "MavenTier4ReleaseBossIntoArena17",
-        "No rest!"
+        "ไม่ให้พัก!"
       ],
       [
         "MavenTier4HealSkillRandom",
@@ -50074,23 +50074,23 @@
       ],
       [
         "MavenTier4HealSkill4",
-        "A vitality boon."
+        "พรเยียวยาชีวิต"
       ],
       [
         "MavenTier4HealSkill5",
-        "A vitality boon!"
+        "พรเยียวยาชีวิต!"
       ],
       [
         "MavenTier4HealSkill6",
-        "A vitality boon."
+        "พรเยียวยาชีวิต"
       ],
       [
         "MavenTier4HealSkill7",
-        "Be renewed!"
+        "จงฟื้นฟู!"
       ],
       [
         "MavenTier4HealSkill8",
-        "Be renewed!"
+        "จงฟื้นฟู!"
       ],
       [
         "MavenTier4HealSkill9",
@@ -50102,27 +50102,27 @@
       ],
       [
         "MavenTier4GuardSkillRandom",
-        "Shielded."
+        "ถูกป้องกัน"
       ],
       [
         "MavenTier4GuardSkill2",
-        "Shielded."
+        "ถูกป้องกัน"
       ],
       [
         "MavenTier4GuardSkill3",
-        "Shielded."
+        "ถูกป้องกัน"
       ],
       [
         "MavenTier4GuardSkill4",
-        "Defended."
+        "ถูกคุ้มกัน"
       ],
       [
         "MavenTier4GuardSkill5",
-        "Defended."
+        "ถูกคุ้มกัน"
       ],
       [
         "MavenTier4GuardSkill6",
-        "Defended."
+        "ถูกคุ้มกัน"
       ],
       [
         "MavenTier4SpaceVinesRandom",
@@ -50138,23 +50138,23 @@
       ],
       [
         "MavenTier4SpaceVines4",
-        "Inescapable!"
+        "หนีไม่พ้น!"
       ],
       [
         "MavenTier4SpaceVines5",
-        "Inescapable!"
+        "หนีไม่พ้น!"
       ],
       [
         "MavenTier4SpaceVines6",
-        "Inescapable!"
+        "หนีไม่พ้น!"
       ],
       [
         "MavenTier4SpaceInfuseWeaponsRandom",
-        "The void, imbued!"
+        "เติม​เต็ม​ไป​ด้วย​ความ​ว่าง​เปล่า​!"
       ],
       [
         "MavenTier4SpaceInfuseWeapons2",
-        "The void, imbued!"
+        "เติม​เต็ม​ไป​ด้วย​ความ​ว่าง​เปล่า​!"
       ],
       [
         "MavenTier4SpaceInfuseWeapons3",
@@ -50170,27 +50170,27 @@
       ],
       [
         "MavenTier4DamageReductionOrbsRandom",
-        "A game of guards!"
+        "เกมแห่งการตั้งการ์ด!"
       ],
       [
         "MavenTier4DamageReductionOrbs2",
-        "A game of guards!"
+        "เกมแห่งการตั้งการ์ด!"
       ],
       [
         "MavenTier4DamageReductionOrbs3",
-        "A game of guards."
+        "เกมแห่งการตั้งการ์ด"
       ],
       [
         "MavenTier4DamageReductionOrbs4",
-        "A private citadel."
+        "ปราการส่วนตัว"
       ],
       [
         "MavenTier4DamageReductionOrbs5",
-        "A private citadel."
+        "ปราการส่วนตัว"
       ],
       [
         "MavenTier4DamageReductionOrbs6",
-        "A private citadel."
+        "ปราการส่วนตัว"
       ],
       [
         "MavenTier4SpaceFlameWallRandom",
@@ -50242,55 +50242,55 @@
       ],
       [
         "MavenTier4SpeedZonesRandom",
-        "Seek the quickening!"
+        "ตามพื้นเร่งความเร็วเสีย!"
       ],
       [
         "MavenTier4SpeedZones2",
-        "Seek the quickening!"
+        "ตามพื้นเร่งความเร็วเสีย!"
       ],
       [
         "MavenTier4SpeedZones3",
-        "I'm speeding this up."
+        "ข้าจะเร่งความเร็วแล้ว"
       ],
       [
         "MavenTier4SpeedZones4",
-        "I'm speeding this up."
+        "ข้าจะเร่งความเร็วแล้ว"
       ],
       [
         "MavenTier4SpeedZones5",
-        "I'm speeding this up."
+        "ข้าจะเร่งความเร็วแล้ว"
       ],
       [
         "MavenTier4BossCloneRandom",
-        "Duplicate attack!"
+        "โจมตีเป็นสองเท่า!"
       ],
       [
         "MavenTier4BossClone2",
-        "Duplicate attack!"
+        "โจมตีเป็นสองเท่า!"
       ],
       [
         "MavenTier4BossClone3",
-        "Duplicate attack!"
+        "โจมตีเป็นสองเท่า!"
       ],
       [
         "MavenTier4BossClone4",
-        "Reconstructing early..."
+        "รีบสร้างใหม่แต่เนิ่นๆ ..."
       ],
       [
         "MavenTier4BossClone5",
-        "Reconstructing early..."
+        "รีบสร้างใหม่แต่เนิ่นๆ ..."
       ],
       [
         "MavenTier4SpaceChargesRandom",
-        "The void empowers!"
+        "พลังจากความว่างเปล่า!"
       ],
       [
         "MavenTier4SpaceCharges2",
-        "The void empowers!"
+        "พลังจากความว่างเปล่า!"
       ],
       [
         "MavenTier4SpaceCharges3",
-        "The void empowers."
+        "พลังจากความว่างเปล่า"
       ],
       [
         "MavenTier4SpaceCharges4",
@@ -50302,11 +50302,11 @@
       ],
       [
         "MavenTier4VoidZonesRandom",
-        "Resist my entropy..."
+        "ต้านทานการสูญสลายของข้า..."
       ],
       [
         "MavenTier4VoidZones2",
-        "Resist my entropy!"
+        "ต้านทานการสูญสลายของข้า!"
       ],
       [
         "MavenTier4VoidZones3",
@@ -50322,15 +50322,15 @@
       ],
       [
         "MavenTier4VoidZones6",
-        "Feel death's pull."
+        "สัมผัส​ความ​ตาย​ที่ดึงดูด"
       ],
       [
         "MavenTier4VoidZones7",
-        "Feel death's pull."
+        "สัมผัส​ความ​ตาย​ที่ดึงดูด"
       ],
       [
         "MavenTier4VoidZones8",
-        "Feel death's pull."
+        "สัมผัส​ความ​ตาย​ที่ดึงดูด"
       ],
       [
         "MavenTier4AoERandom",
@@ -50342,11 +50342,11 @@
       ],
       [
         "MavenTier4AoE3",
-        "Vast pain!"
+        "ความเจ็บปวดมากมาย!"
       ],
       [
         "MavenTier4AoE4",
-        "Vast pain!"
+        "ความเจ็บปวดมากมาย!"
       ],
       [
         "MavenTier4AoE5",
@@ -50358,15 +50358,15 @@
       ],
       [
         "MavenTier4ProjectilesRandom",
-        "ลองหลบดูเถิด"
+        "ลองหลบเถิด"
       ],
       [
         "MavenTier4Projectiles2",
-        "ลองหลบดูเถิด"
+        "ลองหลบเถิด"
       ],
       [
         "MavenTier4Projectiles3",
-        "ลองหลบดูเถิด"
+        "ลองหลบเถิด"
       ],
       [
         "MavenTier4Projectiles4",
@@ -50394,27 +50394,27 @@
       ],
       [
         "MavenTier4Projectiles10",
-        "อย่ายืนอยู่นิ่งๆ"
+        "อย่าอยู่นิ่งๆ"
       ],
       [
         "MavenTier4Projectiles11",
-        "อย่ายืนอยู่นิ่งๆ"
+        "อย่าอยู่นิ่งๆ"
       ],
       [
         "MavenTier4Projectiles12",
-        "อย่ายืนอยู่นิ่งๆ"
+        "อย่าอยู่นิ่งๆ"
       ],
       [
         "MavenTier4Projectiles13",
-        "A cascade of pain!"
+        "ความเจ็บปวดอันท่วมท้น!"
       ],
       [
         "MavenTier4Projectiles14",
-        "A cascade of pain."
+        "ความเจ็บปวดอันท่วมท้น"
       ],
       [
         "MavenTier4Projectiles15",
-        "A cascade of pain!"
+        "ความเจ็บปวดอันท่วมท้น!"
       ],
       [
         "MavenTier4BuffsRandom",
@@ -50426,19 +50426,19 @@
       ],
       [
         "MavenTier4Buffs3",
-        "Let's make this even."
+        "มา​ทำให้มัน​สมดุล​กัน​ดีกว่า"
       ],
       [
         "MavenTier4Buffs4",
-        "Let's make this even."
+        "มา​ทำให้มัน​สมดุล​กัน​ดีกว่า"
       ],
       [
         "MavenTier4Buffs5",
-        "Now it is a fair fight."
+        "คราวนี้​เป็นการ​ต่อสู้​ที่ยุติธรรม​แล้ว"
       ],
       [
         "MavenTier4Buffs6",
-        "Now it is a fair fight."
+        "คราวนี้​เป็นการ​ต่อสู้​ที่ยุติธรรม​แล้ว"
       ],
       [
         "MavenTier4Buffs7",
@@ -50522,11 +50522,11 @@
       ],
       [
         "MavenTier5BossFightEncounter19",
-        "At least try to hold my attention."
+        "พยายาม​ไม่ให้ข้า​หมด​ความ​สนใจ​ก็จัก​ดี"
       ],
       [
         "MavenTier5BossFightEncounter20",
-        "At least try to hold my attention."
+        "พยายาม​ไม่ให้ข้า​หมด​ความ​สนใจ​ก็จัก​ดี"
       ],
       [
         "MavenTier5BossFightEncounter21",
@@ -50542,15 +50542,15 @@
       ],
       [
         "MavenTier5BossFightEncounter24",
-        "Do not leave me unsatisfied."
+        "อย่า​ทำให้ข้า​ไร้ความ​พึง​พอใจ"
       ],
       [
         "MavenTier5BossFightEncounter25",
-        "Do not leave me unsatisfied."
+        "อย่า​ทำให้ข้า​ไร้ความ​พึง​พอใจ"
       ],
       [
         "MavenTier5BossFightEncounter26",
-        "Do not leave me unsatisfied."
+        "อย่า​ทำให้ข้า​ไร้ความ​พึง​พอใจ"
       ],
       [
         "MavenTier5BossFightEncounter27",
@@ -50634,23 +50634,23 @@
       ],
       [
         "MavenTier5BossFightEncounter47",
-        "Show me mortality."
+        "แสดง​ความ​ตาย​ให้ข้า​เห็น​เสียที"
       ],
       [
         "MavenTier5BossFightEncounter48",
-        "Show me mortality."
+        "แสดง​ความ​ตาย​ให้ข้า​เห็น​เสียที"
       ],
       [
         "MavenTier5BossFightEncounter49",
-        "To fight is to exist."
+        "การ​ต่อสู้คือ​การ​มีตัว​ตน"
       ],
       [
         "MavenTier5BossFightEncounter50",
-        "To fight is to exist."
+        "การ​ต่อสู้คือ​การ​มีตัว​ตน"
       ],
       [
         "MavenTier5BossFightEncounter51",
-        "To fight is to exist."
+        "การ​ต่อสู้คือ​การ​มีตัว​ตน"
       ],
       [
         "MavenTier5BossVictoryRandom",
@@ -50666,15 +50666,15 @@
       ],
       [
         "MavenTier5BossVictory4",
-        "Ahh, death is such a beautiful caress across my senses."
+        "อา ความ​ตาย​ช่าง​เป็น​สัมผัส​อัน​งดงาม​แก่ตัว​ข้า​เสีย​จริง"
       ],
       [
         "MavenTier5BossVictory5",
-        "Ahh, death is such a beautiful caress across my senses."
+        "อา ความ​ตาย​ช่าง​เป็น​สัมผัส​อัน​งดงาม​แก่ตัว​ข้า​เสีย​จริง"
       ],
       [
         "MavenTier5BossVictory6",
-        "Ahh, death is such a beautiful caress across my senses."
+        "อา ความ​ตาย​ช่าง​เป็น​สัมผัส​อัน​งดงาม​แก่ตัว​ข้า​เสีย​จริง"
       ],
       [
         "MavenTier5BossVictory7",
@@ -50710,35 +50710,35 @@
       ],
       [
         "MavenTier5BossVictory15",
-        "That was... satisfactory."
+        "มันช่างน่า... พึงพอใจ"
       ],
       [
         "MavenTier5BossVictory16",
-        "That was... satisfactory."
+        "มันช่างน่า... พึงพอใจ"
       ],
       [
         "MavenTier5BossVictory17",
-        "That was... satisfactory."
+        "มันช่างน่า... พึงพอใจ"
       ],
       [
         "MavenTier5BossVictory18",
-        "A flash of pleasure, over all too quickly."
+        "ความ​เพลิดเพลิน​เพียง​ชั่ว​อึดใจ สิ้น​ไป​เสีย​เร็ว​เกิน​ควร"
       ],
       [
         "MavenTier5BossVictory19",
-        "A flash of pleasure, over all too quickly."
+        "ความ​เพลิดเพลิน​เพียง​ชั่ว​อึดใจ สิ้น​ไป​เสีย​เร็ว​เกิน​ควร"
       ],
       [
         "MavenTier5BossVictory20",
-        "A flash of pleasure, over all too quickly."
+        "ความ​เพลิดเพลิน​เพียง​ชั่ว​อึดใจ สิ้น​ไป​เสีย​เร็ว​เกิน​ควร"
       ],
       [
         "MavenTier5BossVictory21",
-        "Only one leaves... with me."
+        "มีเพียง​ตัว​เดียว​ที่จะ​จาก​ไป​... กับ​ข้า"
       ],
       [
         "MavenTier5BossVictory22",
-        "Only one leaves... with me."
+        "มีเพียง​ตัว​เดียว​ที่จะ​จาก​ไป​... กับ​ข้า"
       ],
       [
         "MavenTier5BossVictory23",
@@ -50758,15 +50758,15 @@
       ],
       [
         "MavenTier5BossVictory27",
-        "Quite the rush."
+        "ระทึกเสียจริง"
       ],
       [
         "MavenTier5BossVictory28",
-        "Quite the rush."
+        "ระทึกเสียจริง"
       ],
       [
         "MavenTier5BossVictory29",
-        "Quite the rush."
+        "ระทึกเสียจริง"
       ],
       [
         "MavenTier5BossVictory30",
@@ -50842,11 +50842,11 @@
       ],
       [
         "MavenTier5BossVictory48",
-        "It was never in doubt."
+        "ข้า​ไม่เคย​สงสัย​เลย​สัก​นิด"
       ],
       [
         "MavenTier5BossVictory49",
-        "It was never in doubt."
+        "ข้า​ไม่เคย​สงสัย​เลย​สัก​นิด"
       ],
       [
         "MavenTier5BossVictory50",
@@ -50862,15 +50862,15 @@
       ],
       [
         "MavenTier5BossVictory53",
-        "Flashy."
+        "เตะตายิ่งนัก"
       ],
       [
         "MavenTier5BossVictory54",
-        "Flashy."
+        "เตะตายิ่งนัก"
       ],
       [
         "MavenTier5BossVictory55",
-        "Flashy."
+        "เตะตายิ่งนัก"
       ],
       [
         "MavenTier5BossVictory56",
@@ -50886,15 +50886,15 @@
       ],
       [
         "MavenTier5InvitationToFightRandom",
-        "A real fight will allow a true champion to emerge..."
+        "การ​ต่อสู้อัน​สัจ​จริง​เป็น​บ่อ​เกิด​วีรบุรุษ​ที่แท้จริง​..."
       ],
       [
         "MavenTier5InvitationToFight2",
-        "A real fight will allow a true champion to emerge..."
+        "การ​ต่อสู้อัน​สัจ​จริง​เป็น​บ่อ​เกิด​วีรบุรุษ​ที่แท้จริง​..."
       ],
       [
         "MavenTier5InvitationToFight3",
-        "A real fight will allow a true champion to emerge..."
+        "การ​ต่อสู้อัน​สัจ​จริง​เป็น​บ่อ​เกิด​วีรบุรุษ​ที่แท้จริง​..."
       ],
       [
         "MavenTier5InvitationToFight4",
@@ -50910,15 +50910,15 @@
       ],
       [
         "MavenTier5InvitationToFight7",
-        "Entertain me with a game. The victor will receive a gift."
+        "จง​ร่วม​เกม​มาส​ร้าง​ความ​บันเทิง​กับ​ข้า ผู้ชนะ​จะ​ได้รับ​ของ​ขวัญ"
       ],
       [
         "MavenTier5InvitationToFight8",
-        "Entertain me with a game. The victor will receive a gift."
+        "จง​ร่วม​เกม​มาส​ร้าง​ความ​บันเทิง​กับ​ข้า ผู้ชนะ​จะ​ได้รับ​ของ​ขวัญ"
       ],
       [
         "MavenTier5InvitationToFight9",
-        "Entertain me with a game. The victor will receive a gift."
+        "จง​ร่วม​เกม​มาส​ร้าง​ความ​บันเทิง​กับ​ข้า ผู้ชนะ​จะ​ได้รับ​ของ​ขวัญ"
       ],
       [
         "MavenTier5InvitationToFight10",
@@ -50946,15 +50946,15 @@
       ],
       [
         "MavenTier5InvitationToFight16",
-        "An invitation to a vibrant display of mortal peril. Come."
+        "ข้า​ขอ​เชิญ​การ​เผชิญ​กับ​ความ​ตาย​อัน​ตื่นตาตื่นใจ มา​เสียเถิด"
       ],
       [
         "MavenTier5InvitationToFight17",
-        "An invitation to a vibrant display of mortal peril. Come."
+        "ข้า​ขอ​เชิญ​การ​เผชิญ​กับ​ความ​ตาย​อัน​ตื่นตาตื่นใจ มา​เสียเถิด"
       ],
       [
         "MavenTier5InvitationToFight18",
-        "An invitation to a vibrant display of mortal peril. Come."
+        "ข้า​ขอ​เชิญ​การ​เผชิญ​กับ​ความ​ตาย​อัน​ตื่นตาตื่นใจ มา​เสียเถิด"
       ],
       [
         "MavenTier5PassivesWonRandom",
@@ -50970,15 +50970,15 @@
       ],
       [
         "MavenTier5PassivesWon4",
-        "This has been most entertaining. Take the prize."
+        "มัน​ช่าง​บันเทิง​ยิ่ง​นัก รับ​รางวัล​ไป​เสีย"
       ],
       [
         "MavenTier5PassivesWon5",
-        "This has been most entertaining. Take the prize."
+        "มัน​ช่าง​บันเทิง​ยิ่ง​นัก รับ​รางวัล​ไป​เสีย"
       ],
       [
         "MavenTier5PassivesWon6",
-        "This has been most entertaining. Take the prize."
+        "มัน​ช่าง​บันเทิง​ยิ่ง​นัก รับ​รางวัล​ไป​เสีย"
       ],
       [
         "MavenTier5PassivesWon7",
@@ -51098,39 +51098,39 @@
       ],
       [
         "MavenTier5OffAtlasBossEncounter3",
-        "This one's uncommon might will make for a fantastic show."
+        "ความ​องอาจ​อย่าง​ไม่ธรรมดา​ของ​มัน​ย่อม​บังเกิด​การ​แสดง​ที่น่า​ทึ่ง​แน่ๆ"
       ],
       [
         "MavenTier5OffAtlasBossEncounter4",
-        "This one's uncommon might will make for a fantastic show."
+        "ความ​องอาจ​อย่าง​ไม่ธรรมดา​ของ​มัน​ย่อม​บังเกิด​การ​แสดง​ที่น่า​ทึ่ง​แน่ๆ"
       ],
       [
         "MavenTier5OffAtlasBossEncounter5",
-        "Such a dark glow. I cannot look away."
+        "เปล่ง​แสง​อัน​มืด​มิด​เสีย​จริง ข้า​ไม่อาจ​ละ​สายตา​ได้​ลง"
       ],
       [
         "MavenTier5OffAtlasBossEncounter6",
-        "Such a dark glow. I cannot look away."
+        "เปล่ง​แสง​อัน​มืด​มิด​เสีย​จริง ข้า​ไม่อาจ​ละ​สายตา​ได้​ลง"
       ],
       [
         "MavenTier5OffAtlasBossEncounter7",
-        "What a mysterious presence..."
+        "เป็นตัวตนที่ลึกลับเสียจริง..."
       ],
       [
         "MavenTier5OffAtlasBossEncounter8",
-        "What a mysterious presence..."
+        "เป็นตัวตนที่ลึกลับเสียจริง..."
       ],
       [
         "MavenTier5OffAtlasBossEncounter9",
-        "What a mysterious presence..."
+        "เป็นตัวตนที่ลึกลับเสียจริง..."
       ],
       [
         "MavenTier5OffAtlasBossEncounter10",
-        "Dissect it. Smear it across the ground."
+        "ชำแหละ​มัน ละเลง​ศพมัน​ไป​ทั่ว​พื้น"
       ],
       [
         "MavenTier5OffAtlasBossEncounter11",
-        "Dissect it. Smear it across the ground."
+        "ชำแหละ​มัน ละเลง​ศพมัน​ไป​ทั่ว​พื้น"
       ],
       [
         "MavenTier5OffAtlasBossEncounter12",
@@ -51298,27 +51298,27 @@
       ],
       [
         "MavenTier5OffAtlasInvitation4",
-        "An invitation to a true display of ferocious survivalism!"
+        "ข้าขอเชิญมาร่วมการเอาตัวรอดอันเกรี้ยวกราดอย่างแท้จริง!"
       ],
       [
         "MavenTier5OffAtlasInvitation5",
-        "An invitation to a true display of ferocious survivalism!"
+        "ข้าขอเชิญมาร่วมการเอาตัวรอดอันเกรี้ยวกราดอย่างแท้จริง!"
       ],
       [
         "MavenTier5OffAtlasInvitation6",
-        "An invitation to a true display of ferocious survivalism!"
+        "ข้าขอเชิญมาร่วมการเอาตัวรอดอันเกรี้ยวกราดอย่างแท้จริง!"
       ],
       [
         "MavenTier5OffAtlasInvitation7",
-        "I've assembled a challenge unlike any other!"
+        "ข้า​ได้เตรียม​การ​ท้าทาย​หา​ใด​เทียม​ไว้แล้ว​!"
       ],
       [
         "MavenTier5OffAtlasInvitation8",
-        "I've assembled a challenge unlike any other!"
+        "ข้า​ได้เตรียม​การ​ท้าทาย​หา​ใด​เทียม​ไว้แล้ว​!"
       ],
       [
         "MavenTier5OffAtlasInvitation9",
-        "I've assembled a challenge unlike any other!"
+        "ข้า​ได้เตรียม​การ​ท้าทาย​หา​ใด​เทียม​ไว้แล้ว​!"
       ],
       [
         "MavenTier5KitavaCommentRandom",
@@ -51378,15 +51378,15 @@
       ],
       [
         "MavenTier5TrioFightCommentRandom",
-        "These three are positively vicious!"
+        "ทั้ง​สาม​ตัว​นี้ช่าง​ดุดัน​เสีย​จริง​!"
       ],
       [
         "MavenTier5TrioFightComment2",
-        "These three are positively vicious!"
+        "ทั้ง​สาม​ตัว​นี้ช่าง​ดุดัน​เสีย​จริง​!"
       ],
       [
         "MavenTier5TrioFightComment3",
-        "These three are positively vicious!"
+        "ทั้ง​สาม​ตัว​นี้ช่าง​ดุดัน​เสีย​จริง​!"
       ],
       [
         "MavenTier5MerveilFightCommentRandom",
@@ -51402,63 +51402,63 @@
       ],
       [
         "MavenTier5WitnessPhaseTransitionRandom",
-        "The turn of the tide..."
+        "กลับตาลปัตร..."
       ],
       [
         "MavenTier5WitnessPhaseTransition2",
-        "The turn of the tide..."
+        "กลับตาลปัตร..."
       ],
       [
         "MavenTier5WitnessPhaseTransition3",
-        "The turn of the tide..."
+        "กลับตาลปัตร..."
       ],
       [
         "MavenTier5WitnessPhaseTransition4",
-        "Twists and turns and tangles."
+        "พลิกผันปั่นป่วนปนเป"
       ],
       [
         "MavenTier5WitnessPhaseTransition5",
-        "Twists and turns and tangles."
+        "พลิกผันปั่นป่วนปนเป"
       ],
       [
         "MavenTier5WitnessPhaseTransition6",
-        "Twists and turns and tangles."
+        "พลิกผันปั่นป่วนปนเป"
       ],
       [
         "MavenTier5WitnessPhaseTransition7",
-        "Peril forces new ideas."
+        "อุปสรรค​เป็น​สิ่ง​สร้าง​แนวคิด​ใหม่"
       ],
       [
         "MavenTier5WitnessPhaseTransition8",
-        "Peril forces new ideas."
+        "อุปสรรค​เป็น​สิ่ง​สร้าง​แนวคิด​ใหม่"
       ],
       [
         "MavenTier5WitnessPhaseTransition9",
-        "Peril forces new ideas."
+        "อุปสรรค​เป็น​สิ่ง​สร้าง​แนวคิด​ใหม่"
       ],
       [
         "MavenTier5ObservingCombatGaspRandom",
-        "Spectacular!"
+        "น่าตื่นเต้นเสียจริง!"
       ],
       [
         "MavenTier5ObservingCombatGasp2",
-        "Spectacular!"
+        "น่าตื่นเต้นเสียจริง!"
       ],
       [
         "MavenTier5ObservingCombatGasp3",
-        "Spectacular!"
+        "น่าตื่นเต้นเสียจริง!"
       ],
       [
         "MavenTier5ObservingCombatGasp4",
-        "Magnificent!"
+        "ประเสริฐนัก!"
       ],
       [
         "MavenTier5ObservingCombatGasp5",
-        "Magnificent!"
+        "ประเสริฐนัก!"
       ],
       [
         "MavenTier5ObservingCombatGasp6",
-        "Magnificent!"
+        "ประเสริฐนัก!"
       ],
       [
         "MavenTier5ObservingCombatGasp7",
@@ -51486,15 +51486,15 @@
       ],
       [
         "MavenTier5IntroMultiBossArenaRandom",
-        "Entertain me."
+        "ทำให้ข้าบันเทิงเสีย"
       ],
       [
         "MavenTier5IntroMultiBossArena2",
-        "Entertain me."
+        "ทำให้ข้าบันเทิงเสีย"
       ],
       [
         "MavenTier5IntroMultiBossArena3",
-        "Entertain me."
+        "ทำให้ข้าบันเทิงเสีย"
       ],
       [
         "MavenTier5IntroMultiBossArena4",
@@ -51510,111 +51510,111 @@
       ],
       [
         "MavenTier5IntroMultiBossArena7",
-        "The long-awaited event is finally here!"
+        "ใน​ที่สุด ​การ​แข่งขัน​ที่เฝ้า​รอ​มา​นาน​จะ​เริ่ม​ขึ้น​แล้ว​!"
       ],
       [
         "MavenTier5IntroMultiBossArena8",
-        "The long-awaited event is finally here!"
+        "ใน​ที่สุด​ การ​แข่งขัน​ที่เฝ้า​รอ​มา​นาน​จะ​เริ่ม​ขึ้น​แล้ว​!"
       ],
       [
         "MavenTier5IntroMultiBossArena9",
-        "The long-awaited event is finally here!"
+        "ใน​ที่สุด ​การ​แข่งขัน​ที่เฝ้า​รอ​มา​นาน​จะ​เริ่ม​ขึ้น​แล้ว​!"
       ],
       [
         "MavenTier5IntroMultiBossArena10",
-        "Put on a good show."
+        "แสดง​ให้มัน​สนุก​หน่อย"
       ],
       [
         "MavenTier5IntroMultiBossArena11",
-        "Put on a good show."
+        "แสดง​ให้มัน​สนุก​หน่อย"
       ],
       [
         "MavenTier5IntroMultiBossArena12",
-        "Put on a good show."
+        "แสดง​ให้มัน​สนุก​หน่อย"
       ],
       [
         "MavenTier5IntroMultiBossArena13",
-        "At least die with some flair."
+        "ตาย​ให้มีรสนิยม​หน่อย"
       ],
       [
         "MavenTier5IntroMultiBossArena14",
-        "At least die with some flair."
+        "ตาย​ให้มีรสนิยม​หน่อย"
       ],
       [
         "MavenTier5IntroMultiBossArena15",
-        "At least die with some flair."
+        "ตาย​ให้มีรสนิยม​หน่อย"
       ],
       [
         "MavenTier5OutroMultiBossArenaRandom",
-        "A glorious spectacle!"
+        "การแสดงอันน่าตกตะลึง!"
       ],
       [
         "MavenTier5OutroMultiBossArena2",
-        "A glorious spectacle!"
+        "การแสดงอันน่าตกตะลึง!"
       ],
       [
         "MavenTier5OutroMultiBossArena3",
-        "A glorious spectacle!"
+        "การแสดงอันน่าตกตะลึง!"
       ],
       [
         "MavenTier5OutroMultiBossArena4",
-        "Worth the effort."
+        "คุ้มค่ากับความพยายาม"
       ],
       [
         "MavenTier5OutroMultiBossArena5",
-        "Worth the effort."
+        "คุ้มค่ากับความพยายาม"
       ],
       [
         "MavenTier5OutroMultiBossArena6",
-        "Worth the effort."
+        "คุ้มค่ากับความพยายาม"
       ],
       [
         "MavenTier5OutroMultiBossArena7",
-        "Until next time..."
+        "ไว้คราวหน้า..."
       ],
       [
         "MavenTier5OutroMultiBossArena8",
-        "Until next time..."
+        "ไว้คราวหน้า..."
       ],
       [
         "MavenTier5OutroMultiBossArena9",
-        "Until next time..."
+        "ไว้คราวหน้า..."
       ],
       [
         "MavenTier5OutroMultiBossArena10",
-        "Such wildly delightful desperation."
+        "มัน​เป็น​ความ​จน​ตรอก​อัน​แสน​สนุก​เสีย​จริง"
       ],
       [
         "MavenTier5OutroMultiBossArena11",
-        "Such wildly delightful desperation."
+        "มัน​เป็น​ความ​จน​ตรอก​อัน​แสน​สนุก​เสีย​จริง"
       ],
       [
         "MavenTier5OutroMultiBossArena12",
-        "Such wildly delightful desperation."
+        "มัน​เป็น​ความ​จน​ตรอก​อัน​แสน​สนุก​เสีย​จริง"
       ],
       [
         "MavenTier5OutroMultiBossArena13",
-        "A dazzling display of survival."
+        "มัน​เป็นการ​เอา​ตัว​รอด​อัน​น่า​ตก​ตะลึง"
       ],
       [
         "MavenTier5OutroMultiBossArena14",
-        "A dazzling display of survival."
+        "มัน​เป็นการ​เอา​ตัว​รอด​อัน​น่า​ตก​ตะลึง"
       ],
       [
         "MavenTier5OutroMultiBossArena15",
-        "A dazzling display of survival."
+        "มัน​เป็นการ​เอา​ตัว​รอด​อัน​น่า​ตก​ตะลึง"
       ],
       [
         "MavenTier5ReleaseBossIntoArenaRandom",
-        "Handle this."
+        "รับมือกับนี่เสีย"
       ],
       [
         "MavenTier5ReleaseBossIntoArena2",
-        "Handle this."
+        "รับมือกับนี่เสีย"
       ],
       [
         "MavenTier5ReleaseBossIntoArena3",
-        "Handle this."
+        "รับมือกับนี่เสีย"
       ],
       [
         "MavenTier5ReleaseBossIntoArena4",
@@ -51630,63 +51630,63 @@
       ],
       [
         "MavenTier5ReleaseBossIntoArena7",
-        "Time to up the stakes."
+        "ได้เวลาเพิ่มเดิมพันแล้ว"
       ],
       [
         "MavenTier5ReleaseBossIntoArena8",
-        "Time to up the stakes."
+        "ได้เวลาเพิ่มเดิมพันแล้ว"
       ],
       [
         "MavenTier5ReleaseBossIntoArena9",
-        "Time to up the stakes."
+        "ได้เวลาเพิ่มเดิมพันแล้ว"
       ],
       [
         "MavenTier5VoidZonesRandom",
-        "None resist my entropy!"
+        "ไม่มีใคร​ต้าน​การ​สูญ​สลาย​ของ​ข้า​ได้!"
       ],
       [
         "MavenTier5VoidZones2",
-        "None resist my entropy!"
+        "ไม่มีใคร​ต้าน​การ​สูญ​สลาย​ของ​ข้า​ได้!"
       ],
       [
         "MavenTier5VoidZones3",
-        "None resist my entropy!"
+        "ไม่มีใคร​ต้าน​การ​สูญ​สลาย​ของ​ข้า​ได้!"
       ],
       [
         "MavenTier5VoidZones4",
-        "Feel your life drain away."
+        "ชีวิตเจ้าจะถูกดูดกลืน"
       ],
       [
         "MavenTier5VoidZones5",
-        "Feel your life drain away."
+        "ชีวิตเจ้าจะถูกดูดกลืน"
       ],
       [
         "MavenTier5VoidZones6",
-        "Feel your life drain away."
+        "ชีวิตเจ้าจะถูกดูดกลืน"
       ],
       [
         "MavenTier5VoidZones7",
-        "Give yourself to the void."
+        "จง​ถวาย​ตัว​ให้แก่ความ​ว่าง​เปล่า"
       ],
       [
         "MavenTier5VoidZones8",
-        "Give yourself to the void."
+        "จง​ถวาย​ตัว​ให้แก่ความ​ว่าง​เปล่า"
       ],
       [
         "MavenTier5VoidZones9",
-        "Give yourself to the void."
+        "จง​ถวาย​ตัว​ให้แก่ความ​ว่าง​เปล่า"
       ],
       [
         "MavenTier5VoidZones10",
-        "Feel death's pull."
+        "สัมผัส​การ​ดึงดูด​ของ​ความ​ตาย"
       ],
       [
         "MavenTier5VoidZones11",
-        "Feel death's pull."
+        "สัมผัส​การ​ดึงดูด​ของ​ความ​ตาย"
       ],
       [
         "MavenTier5VoidZones12",
-        "Feel death's pull."
+        "สัมผัส​การ​ดึงดูด​ของ​ความ​ตาย"
       ],
       [
         "MavenTier5AoERandom",
@@ -51698,11 +51698,11 @@
       ],
       [
         "MavenTier5AoE3",
-        "Sudden impact!"
+        "ปะทะกะทันหัน!"
       ],
       [
         "MavenTier5AoE4",
-        "Sudden impact!"
+        "ปะทะกะทันหัน!"
       ],
       [
         "MavenTier5AoE5",
@@ -51754,15 +51754,15 @@
       ],
       [
         "MavenTier5BuffsRandom",
-        "Utmost power, utmost fun."
+        "พลังมหาศาล สนุกมหาศาล"
       ],
       [
         "MavenTier5Buffs2",
-        "Utmost power, utmost fun."
+        "พลังมหาศาล สนุกมหาศาล"
       ],
       [
         "MavenTier5Buffs3",
-        "Utmost power, utmost fun."
+        "พลังมหาศาล สนุกมหาศาล"
       ],
       [
         "MavenTier5Buffs4",
@@ -51794,35 +51794,35 @@
       ],
       [
         "MavenTier5HealSkill4",
-        "Take this vitality boon!"
+        "รับพรเยียวยาชีวิตนี้ไปเสีย!"
       ],
       [
         "MavenTier5HealSkill5",
-        "Take this vitality boon!"
+        "รับพรเยียวยาชีวิตนี้ไปเสีย!"
       ],
       [
         "MavenTier5HealSkill6",
-        "Take this vitality boon!"
+        "รับพรเยียวยาชีวิตนี้ไปเสีย!"
       ],
       [
         "MavenTier5HealSkill7",
-        "Take this vitality boon!"
+        "รับพรเยียวยาชีวิตนี้ไปเสีย!"
       ],
       [
         "MavenTier5GuardSkillRandom",
-        "Grasp your mortality tightly."
+        "เหนี่ยวรั้งความตายไว้เสียให้ดี"
       ],
       [
         "MavenTier5GuardSkill2",
-        "Grasp your mortality tightly."
+        "เหนี่ยวรั้งความตายไว้เสียให้ดี"
       ],
       [
         "MavenTier5GuardSkill3",
-        "Resist the assault!"
+        "ต้านทานการจู่โจม!"
       ],
       [
         "MavenTier5GuardSkill4",
-        "Resist the assault!"
+        "ต้านทานการจู่โจม!"
       ],
       [
         "MavenTier5SpaceVinesRandom",
@@ -51842,43 +51842,43 @@
       ],
       [
         "MavenTier5SpaceVines5",
-        "Tight tethers!"
+        "พันธนาการรัดแน่น!"
       ],
       [
         "MavenTier5SpaceVines6",
-        "Tight tethers!"
+        "พันธนาการรัดแน่น!"
       ],
       [
         "MavenTier5SpaceVines7",
-        "Tight tethers!"
+        "พันธนาการรัดแน่น!"
       ],
       [
         "MavenTier5SpaceVines8",
-        "Grip of the infinite!"
+        "เงื้อมมืออนันต์!"
       ],
       [
         "MavenTier5SpaceVines9",
-        "Grip of the infinite!"
+        "เงื้อมมืออนันต์!"
       ],
       [
         "MavenTier5SpaceVines10",
-        "Grip of the infinite!"
+        "เงื้อมมืออนันต์!"
       ],
       [
         "MavenTier5SpaceInfuseWeaponsRandom",
-        "Mortal flesh is so fallible..."
+        "เลือด​เนื้อ​มนุษย์ช่าง​เต็ม​ไป​ด้วย​ความ​ผิด​พลาด​..."
       ],
       [
         "MavenTier5SpaceInfuseWeapons2",
-        "Mortal flesh is so fallible..."
+        "เลือด​เนื้อ​มนุษย์ช่าง​เต็ม​ไป​ด้วย​ความ​ผิด​พลาด​..."
       ],
       [
         "MavenTier5SpaceInfuseWeapons3",
-        "Mortal flesh is so fallible..."
+        "เลือด​เนื้อ​มนุษย์ช่าง​เต็ม​ไป​ด้วย​ความ​ผิด​พลาด​..."
       ],
       [
         "MavenTier5SpaceInfuseWeapons4",
-        "Mortal flesh is so fallible..."
+        "เลือด​เนื้อ​มนุษย์ช่าง​เต็ม​ไป​ด้วย​ความ​ผิด​พลาด​..."
       ],
       [
         "MavenTier5SpaceInfuseWeapons5",
@@ -51910,19 +51910,19 @@
       ],
       [
         "MavenTier5DamageReductionOrbs4",
-        "A veil of safety and security."
+        "ม่าน​พิทักษ์คุ้มครอง"
       ],
       [
         "MavenTier5DamageReductionOrbs5",
-        "A veil of safety and security."
+        "ม่าน​พิทักษ์คุ้มครอง"
       ],
       [
         "MavenTier5DamageReductionOrbs6",
-        "A veil of safety and security."
+        "ม่าน​พิทักษ์คุ้มครอง"
       ],
       [
         "MavenTier5DamageReductionOrbs7",
-        "A veil of safety and security."
+        "ม่าน​พิทักษ์คุ้มครอง"
       ],
       [
         "MavenTier5SpaceFlameWallRandom",
@@ -51938,127 +51938,127 @@
       ],
       [
         "MavenTier5SpaceFlameWall4",
-        "Burn and smolder!"
+        "จงลุกไหม้เป็นผุยผง!"
       ],
       [
         "MavenTier5SpaceFlameWall5",
-        "Burn and smolder!"
+        "จงลุกไหม้เป็นผุยผง!"
       ],
       [
         "MavenTier5SpaceFlameWall6",
-        "Burn and smolder!"
+        "จงลุกไหม้เป็นผุยผง!"
       ],
       [
         "MavenTier5ChasingOrbRandom",
-        "Stalk and hunt!"
+        "ย่องแล้วออกล่า!"
       ],
       [
         "MavenTier5ChasingOrb2",
-        "Stalk and hunt!"
+        "ย่องแล้วออกล่า!"
       ],
       [
         "MavenTier5ChasingOrb3",
-        "Stalk and hunt!"
+        "ย่องแล้วออกล่า!"
       ],
       [
         "MavenTier5ChasingOrb4",
-        "A mote of my might."
+        "มัน​เป็น​เพียง​เศษ​ธุลี​ของ​พลัง​ข้า"
       ],
       [
         "MavenTier5ChasingOrb5",
-        "A mote of my might."
+        "มัน​เป็น​เพียง​เศษ​ธุลี​ของ​พลัง​ข้า"
       ],
       [
         "MavenTier5ChasingOrb6",
-        "A mote of my might."
+        "มัน​เป็น​เพียง​เศษ​ธุลี​ของ​พลัง​ข้า"
       ],
       [
         "MavenTier5SpeedZonesRandom",
-        "Temporal tears!"
+        "หักฉีกกาลเวลา!"
       ],
       [
         "MavenTier5SpeedZones2",
-        "Temporal tears!"
+        "หักฉีกกาลเวลา!"
       ],
       [
         "MavenTier5SpeedZones3",
-        "Temporal tears!"
+        "หักฉีกกาลเวลา!"
       ],
       [
         "MavenTier5SpeedZones4",
-        "Time bends to my will!"
+        "เวลา​อยู่ใต้เจตจำนง​ของ​ข้า​!"
       ],
       [
         "MavenTier5SpeedZones5",
-        "Time bends to my will!"
+        "เวลา​อยู่ใต้เจตจำนง​ของ​ข้า​!"
       ],
       [
         "MavenTier5SpeedZones6",
-        "Time bends to my will!"
+        "เวลา​อยู่ใต้เจตจำนง​ของ​ข้า​!"
       ],
       [
         "MavenTier5BossCloneRandom",
-        "Twin terrors!"
+        "แฝดเขย่าขวัญ!"
       ],
       [
         "MavenTier5BossClone2",
-        "Twin terrors!"
+        "แฝดเขย่าขวัญ!"
       ],
       [
         "MavenTier5BossClone3",
-        "Twin terrors!"
+        "แฝดเขย่าขวัญ!"
       ],
       [
         "MavenTier5BossClone4",
-        "Twin terrors!"
+        "แฝดเขย่าขวัญ!"
       ],
       [
         "MavenTier5BossClone5",
-        "Shadow, rise and fight!"
+        "เจ้าเงา จงลุกขึ้นมาสู้!"
       ],
       [
         "MavenTier5BossClone6",
-        "Shadow, rise and fight!"
+        "เจ้าเงา จงลุกขึ้นมาสู้!"
       ],
       [
         "MavenTier5BossClone7",
-        "Shadow, rise and fight!"
+        "เจ้าเงา จงลุกขึ้นมาสู้!"
       ],
       [
         "MavenTier5SpaceChargesRandom",
-        "Be emboldened!"
+        "จงกล้าแกร่งขึ้น!"
       ],
       [
         "MavenTier5SpaceCharges2",
-        "Be emboldened!"
+        "จงกล้าแกร่งขึ้น!"
       ],
       [
         "MavenTier5SpaceCharges3",
-        "Be emboldened!"
+        "จงกล้าแกร่งขึ้น!"
       ],
       [
         "MavenTier5SpaceCharges4",
-        "Imbue and improve!"
+        "จงถูกเสริมแล้วพัฒนาเสีย!"
       ],
       [
         "MavenTier5SpaceCharges5",
-        "Imbue and improve!"
+        "จงถูกเสริมแล้วพัฒนาเสีย!"
       ],
       [
         "MavenTier5SpaceCharges6",
-        "Imbue and improve!"
+        "จงถูกเสริมแล้วพัฒนาเสีย!"
       ],
       [
         "MavenFinalFightCombatMemoryGameRandom",
-        "Scurry, scurry!"
+        "รีบไป รีบไป!"
       ],
       [
         "MavenFinalFightCombatMemoryGame2",
-        "Scurry, scurry!"
+        "รีบไป รีบไป!"
       ],
       [
         "MavenFinalFightCombatMemoryGame3",
-        "Scurry, scurry!"
+        "รีบไป รีบไป!"
       ],
       [
         "MavenFinalFightCombatFlappyBirdRandom",
@@ -52074,27 +52074,27 @@
       ],
       [
         "MavenFinalFightCombatSweepingBeamRandom",
-        "ยืนอยู่นิ่งๆ!"
+        "อยู่นิ่งๆ!"
       ],
       [
         "MavenFinalFightCombatSweepingBeam2",
-        "ยืนอยู่นิ่งๆ!"
+        "อยู่นิ่งๆ!"
       ],
       [
         "MavenFinalFightCombatSweepingBeam3",
-        "ยืนอยู่นิ่งๆ!"
+        "อยู่นิ่งๆ!"
       ],
       [
         "MavenFinalFightCombatSuperProjectileRandom",
-        "Take this!"
+        "รับนี่ไปเสีย!"
       ],
       [
         "MavenFinalFightCombatSuperProjectile2",
-        "Take this!"
+        "รับนี่ไปเสีย!"
       ],
       [
         "MavenFinalFightCombatSuperProjectile3",
-        "Take this!"
+        "รับนี่ไปเสีย!"
       ],
       [
         "MavenFinalFightCombatCircleSlamRandom",
@@ -52122,15 +52122,15 @@
       ],
       [
         "MavenFinalFightCombatLineRandom",
-        "Take this!"
+        "รับนี่ไปเสีย!"
       ],
       [
         "MavenFinalFightCombatLine2",
-        "Take this!"
+        "รับนี่ไปเสีย!"
       ],
       [
         "MavenFinalFightCombatLine3",
-        "Take this!"
+        "รับนี่ไปเสีย!"
       ],
       [
         "MavenFinalFightCombatLine4",
@@ -52170,15 +52170,15 @@
       ],
       [
         "MavenFinalFightCombatLine13",
-        "Scurry, scurry!"
+        "รีบไป รีบไป!"
       ],
       [
         "MavenFinalFightCombatLine14",
-        "Scurry, scurry!"
+        "รีบไป รีบไป!"
       ],
       [
         "MavenFinalFightCombatLine15",
-        "Scurry, scurry!"
+        "รีบไป รีบไป!"
       ],
       [
         "MavenFinalFightCombatLine16",
@@ -52298,15 +52298,15 @@
       ],
       [
         "MavenFinalFightBrainSpaceAlignsRandom",
-        "Space aligns."
+        "ปรับแนวอวกาศ"
       ],
       [
         "MavenFinalFightBrainSpaceAligns2",
-        "Space aligns."
+        "ปรับแนวอวกาศ"
       ],
       [
         "MavenFinalFightBrainSpaceAligns3",
-        "Space aligns."
+        "ปรับแนวอวกาศ"
       ],
       [
         "MavenFinalFightBrainRealityBendsRandom",
@@ -52342,15 +52342,15 @@
       ],
       [
         "MavenFinalFightBrainScurryScurryRandom",
-        "Scurry, scurry..."
+        "รีบไป รีบไป..."
       ],
       [
         "MavenFinalFightBrainScurryScurry2",
-        "Scurry, scurry..."
+        "รีบไป รีบไป..."
       ],
       [
         "MavenFinalFightBrainScurryScurry3",
-        "Scurry, scurry..."
+        "รีบไป รีบไป..."
       ],
       [
         "MavenFinalFightBrainBossesSpawningNotUsed",
@@ -52586,27 +52586,27 @@
       ],
       [
         "MavenConquerorEncounter10",
-        "ข้า​อยาก​ให้เจ้า​นี่เจ็บ​ปวด"
+        "ข้า​อยาก​ให้มันเจ็บ​ปวด"
       ],
       [
         "MavenConquerorEncounter11",
-        "ข้า​อยาก​ให้เจ้า​นี่เจ็บ​ปวด"
+        "ข้า​อยาก​ให้มันเจ็บ​ปวด"
       ],
       [
         "MavenConquerorEncounter12",
-        "ข้า​อยาก​ให้เจ้า​นี่เจ็บ​ปวด"
+        "ข้า​อยาก​ให้มันเจ็บ​ปวด"
       ],
       [
         "MavenBaranEncounterRandom",
-        "มัน​ร่ำ​ร้อง​หา​พี่น้อง​ของ​มัน​..."
+        "มัน​ร่ำ​ร้อง​หา​พี่​ของ​มัน​..."
       ],
       [
         "MavenBaranEncounter2",
-        "มัน​ร่ำ​ร้อง​หา​พี่น้อง​ของ​มัน​..."
+        "มัน​ร่ำ​ร้อง​หา​พี่​ของ​มัน​..."
       ],
       [
         "MavenBaranEncounter3",
-        "มัน​ร่ำ​ร้อง​หา​พี่น้อง​ของ​มัน​..."
+        "มัน​ร่ำ​ร้อง​หา​พี่​ของ​มัน​..."
       ],
       [
         "MavenConquerorVictory1",
@@ -53010,19 +53010,19 @@
       ],
       [
         "EnvoyFinalConversationA",
-        "You force an intervention, Nomad. You have proved your might. You have proved your ignorance."
+        "เจ้า​บังคับ​ให้แทรกแซง นัก​พเนจร เจ้า​ได้พิสูจน์ว่า​เจ้า​แข็งแกร่ง เจ้า​ได้พิสูจน์ว่า​เจ้า​เขลา​นัก"
       ],
       [
         "EnvoyFinalConversationB",
-        "The Maven is a toddler, a nymph, a hatchling that has wandered too far from the nest. Were I to allow you to continue, it would surely call for its progenitor. Were I to allow you to continue, you would drag all into its gaping maw."
+        "เมเวน​เป็น​เพียง​เด็ก​หัด​เดิน ดักแด้ ตัว​อ่อน​ผู้เตลิด​ไป​ไกล​จาก​รัง หาก​ข้า​ยอม​ให้เจ้า​ดำเนิน​ต่อ​ไป มัน​ย่อม​เรียก​หา​แหล่ง​กำเนิด​ของ​มัน หาก​ข้า​ยอม​ให้เจ้า​ดำเนิน​ต่อ​ไป เจ้า​ย่อม​ดึง​ทุก​ผู้ไป​สู่ปาก​อัน​เปิด​กว้าง​ของ​มัน​เป็น​แน่แท้"
       ],
       [
         "EnvoyFinalConversationC",
-        "The Maven must be protected and guarded. A mercy for you both. The end is delayed but not prevented. Savour your remaining time, I urge you. Prepare for its arrival, I urge you."
+        "เมเวน​จำ​ต้องถูก​พิทักษ์และ​คุ้มครอง​เพื่อ​เป็น​เมตตา​แก่พวก​เจ้า​ทั้ง​สอง จุดจบ​นั้น​เลื่อน​ถอย​แต่มิได้สิ้น​ไป ขอ​ให้เจ้า​จง​สำราญ​ไป​กับ​กาล​ที่เหลือ​ของ​เจ้า​เถิด ขอ​ให้เจ้า​จง​เตรียม​พร้อม​ต่อ​การ​มา​ถึง​ของ​มัน​เถิด"
       ],
       [
         "EnvoyFinalConversationBC",
-        "The Maven is a toddler, a nymph, a hatchling that has wandered too far from the nest. Were I to allow you to continue, it would surely call for its progenitor. Were I to allow you to continue, you would drag all into its gaping maw.\r\n\r\nThe Maven must be protected and guarded. A mercy for you both. The end is delayed but not prevented. Savour your remaining time, I urge you. Prepare for its arrival, I urge you."
+        "เมเวน​เป็น​เพียง​เด็ก​หัด​เดิน ดักแด้ ตัว​อ่อน​ผู้เตลิด​ไป​ไกล​จาก​รัง หาก​ข้า​ยอม​ให้เจ้า​ดำเนิน​ต่อ​ไป มัน​ย่อม​เรียก​หา​แหล่ง​กำเนิด​ของ​มัน หาก​ข้า​ยอม​ให้เจ้า​ดำเนิน​ต่อ​ไป เจ้า​ย่อม​ดึง​ทุก​ผู้ไป​สู่ปาก​อัน​เปิด​กว้าง​ของ​มัน​เป็น​แน่แท้\r\n\r\nเมเวน​จำ​ต้องถูก​พิทักษ์และ​คุ้มครอง​เพื่อ​เป็น​เมตตา​แก่พวก​เจ้า​ทั้ง​สอง จุดจบ​นั้น​เลื่อน​ถอย​แต่มิได้สิ้น​ไป ขอ​ให้เจ้า​จง​สำราญ​ไป​กับ​กาล​ที่เหลือ​ของ​เจ้า​เถิด ขอ​ให้เจ้า​จง​เตรียม​พร้อม​ต่อ​การ​มา​ถึง​ของ​มัน​เถิด"
       ],
       [
         "MavenFinalFightHumanoidRecreatedSecondRandom",
@@ -53050,15 +53050,15 @@
       ],
       [
         "MavenFinalFightHumanoidRecreatedThirdRandom",
-        "เจ้าของเล่นโอหัง!"
+        "เจ้า​ของเล่น​แสน​โอหัง​!"
       ],
       [
         "MavenFinalFightHumanoidRecreatedThird2",
-        "เจ้าของเล่นโอหัง!"
+        "เจ้า​ของเล่น​แสน​โอหัง​!"
       ],
       [
         "MavenFinalFightHumanoidRecreatedThird3",
-        "เจ้าของเล่นโอหัง!"
+        "เจ้า​ของเล่น​แสน​โอหัง​!"
       ],
       [
         "MavenFinalFightWaitingOnMapOwnerRandom",
@@ -53074,7 +53074,7 @@
       ],
       [
         "MavenFinalFightDualIceBarrage",
-        "A cascade of pain!"
+        "ความเจ็บปวดอันท่วมท้น!"
       ]
     ]
   },
@@ -55015,7 +55015,7 @@
       ],
       [
         "Metadata/Monsters/LeagueHeist/Boss/Jamanra",
-        "จามันรา เจ้ายักษ์"
+        "จามันรา ผู้ยิ่งใหญ่"
       ],
       [
         "Metadata/Monsters/LeagueHeist/Boss/Danai",
@@ -55027,7 +55027,7 @@
       ],
       [
         "Metadata/Monsters/LeagueHeist/Boss/FriedrichTarollo",
-        "ฟรีดริช พ่อค้าทาส"
+        "ฟรีดริช ทารอลโล พ่อค้าทาส"
       ],
       [
         "Metadata/NPC/League/Heist/TheBossLioneyes",
@@ -55103,11 +55103,11 @@
       ],
       [
         "Metadata/Monsters/LunarisSolaris/LunarisMap",
-        "คอร์ แม่ชีแห่งเงามืด"
+        "คอร์ ธิดาแห่งเงามืด"
       ],
       [
         "Metadata/Monsters/LunarisSolaris/SolarisMap",
-        "อารา แม่ชีแห่งแสงสว่าง"
+        "อารา ธิดาแห่งแสงสว่าง"
       ],
       [
         "Metadata/Monsters/DjinnDemon/DjinnDemonMapBoss_",
