@@ -89,7 +89,14 @@ plaintext =
 italic : P.Parser Token
 italic =
     P.succeed Italic
-        |. P.symbol "<italic>{"
+        |. P.oneOf
+            [ P.symbol "<italic>{"
+
+            -- the Thai translation of "BaranFourStoneDeatha" puts a zero-width space in the middle of this tag. Most inconvenient.
+            -- https://www.fileformat.info/info/unicode/char/200b/index.htm
+            , P.symbol <| "<italic\u{200B}>"
+            ]
+        -- |. P.symbol "<italic>{"
         |= (P.chompUntil "}" |> P.getChompedString)
         |. P.symbol "}"
 

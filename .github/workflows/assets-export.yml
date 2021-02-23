@@ -35,7 +35,7 @@ jobs:
         run: yarn dist
       # no need for a website rebuild, merging the pr below will trigger one
 
-      - run: echo "POE_VERSION=`cat third-party/pypoe-json/dist/version.txt`" >> $GITHUB_ENV
+      - run: echo "POE_VERSION=`cat packages/datamine/dist/version.txt`" >> $GITHUB_ENV
       # https://peterevans.dev/posts/github-actions-how-to-create-pull-requests-automatically/
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3

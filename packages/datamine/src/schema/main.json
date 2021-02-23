@@ -29,6 +29,10 @@
     "IsMapArea",
     "IsUniqueMapArea"
   ],
+  "BackendErrors.dat": [
+    "Id",
+    "Text"
+  ],
   "NPCTextAudio.dat": [
     "Id",
     "Text"

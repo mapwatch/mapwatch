@@ -42,5 +42,8 @@ async function main(schemaPath, jsonRoots) {
 }
 if (require.main === module) {
   const argv = process.argv.slice(2)
-  main(argv[0], argv.slice(1))
+  main(argv[0], argv.slice(1)).catch(e => {
+    console.error(e)
+    process.exit(1)
+  })
 }

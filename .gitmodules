@@ -1,3 +1,0 @@
-[submodule "third-party/pypoe-json"]
-	path = third-party/pypoe-json
-	url = https://github.com/erosson/pypoe-json.git

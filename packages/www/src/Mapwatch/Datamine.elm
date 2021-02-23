@@ -407,6 +407,7 @@ createNPCText1 : Lang -> Result String (List ( String, NpcTextEntry ))
 createNPCText1 lang =
     [ createNPCTextSet lang NpcId.baran (Tuple.first >> String.startsWith "Baran")
     , createNPCTextSet lang NpcId.veritania (Tuple.first >> String.startsWith "Veritania")
+    , createNPCTextSet lang NpcId.veritania (Tuple.first >> String.startsWith "Veritania")
     , createNPCTextSet lang NpcId.alHezmin (Tuple.first >> String.startsWith "AlHezmin")
     , createNPCTextSet lang NpcId.drox (Tuple.first >> String.startsWith "Drox")
     , createNPCTextSet lang NpcId.cassia (Tuple.first >> String.startsWith "Cassia")
@@ -471,7 +472,7 @@ decoder =
     D.map5 createDatamine
         (D.at [ "datamine", "worldAreas", "data" ] worldAreasDecoder)
         (D.at [ "datamine", "lang" ] langDecoder)
-        (D.at [ "leagues", "data" ] leaguesDecoder)
+        (D.at [ "leagues" ] leaguesDecoder)
         (D.at [ "wiki", "atlasbase", "data" ] atlasBaseDecoder)
         (D.at [ "wiki", "divcards", "data" ] divCardsDecoder)
         |> D.andThen resultToDecoder
