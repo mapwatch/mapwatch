@@ -1,0 +1,4069 @@
+{
+  "data": [
+    {
+      "card": "A Dab of Ink",
+      "maps": [
+        "The Library",
+        "Academy Map",
+        "Museum Map",
+        "Scriptorium Map"
+      ],
+      "loot": {
+        "text": "The Poet's Pen"
+      }
+    },
+    {
+      "card": "A Familiar Call",
+      "maps": [],
+      "loot": {
+        "text": "Jewellery of Farrul\nItem Level: 100\nShaper + Hunter Item"
+      }
+    },
+    {
+      "card": "A Mother's Parting Gift",
+      "maps": [
+        "The Imperial Gardens",
+        "The High Gardens"
+      ],
+      "loot": {
+        "text": "Fertile Mind"
+      }
+    },
+    {
+      "card": "A Note in the Wind",
+      "maps": [
+        "The Oasis",
+        "Desert Spring Map"
+      ],
+      "loot": {
+        "text": "Song of the Sekhema"
+      }
+    },
+    {
+      "card": "Abandoned Wealth",
+      "maps": [
+        "Arsenal Map",
+        "Precinct Map",
+        "Mao Kun"
+      ],
+      "loot": {
+        "text": "3x Exalted Orb"
+      }
+    },
+    {
+      "card": "Acclimatisation",
+      "maps": [],
+      "loot": {
+        "text": "20x Orb of Alteration"
+      }
+    },
+    {
+      "card": "Akil's Prophecy",
+      "maps": [],
+      "loot": {
+        "text": "Fated Unique Item"
+      }
+    },
+    {
+      "card": "Alluring Bounty",
+      "maps": [
+        "The Apex of Sacrifice",
+        "The Alluring Abyss"
+      ],
+      "loot": {
+        "text": "10x Exalted Orb"
+      }
+    },
+    {
+      "card": "Alone in the Darkness",
+      "maps": [],
+      "loot": {
+        "text": "Delve Item"
+      }
+    },
+    {
+      "card": "Anarchy's Price",
+      "maps": [],
+      "loot": {
+        "text": "Voltaxic Rift\nCorrupted"
+      }
+    },
+    {
+      "card": "Arrogance of the Vaal",
+      "maps": [
+        "Ancient City Map",
+        "Sunken City Map"
+      ],
+      "loot": {
+        "text": "Item\n Two-Implicit\n Corrupted"
+      }
+    },
+    {
+      "card": "Assassin's Favour",
+      "maps": [
+        "The Marketplace",
+        "The Quay",
+        "Alleyways Map",
+        "Arcade Map",
+        "Bazaar Map",
+        "Park Map",
+        "Port Map"
+      ],
+      "loot": {
+        "text": "Dagger"
+      }
+    },
+    {
+      "card": "Atziri's Arsenal",
+      "maps": [
+        "Vaults of Atziri"
+      ],
+      "loot": {
+        "text": "Weapon\nCorrupted"
+      }
+    },
+    {
+      "card": "Audacity",
+      "maps": [
+        "The Apex of Sacrifice"
+      ],
+      "loot": {
+        "text": "Doryani's Fist\nCorrupted"
+      }
+    },
+    {
+      "card": "Azyran's Reward",
+      "maps": [
+        "Relic Chambers Map"
+      ],
+      "loot": {
+        "text": "Prismatic Jewel\nCorrupted"
+      }
+    },
+    {
+      "card": "Baited Expectations",
+      "maps": [],
+      "loot": {
+        "text": "Fishing Item"
+      }
+    },
+    {
+      "card": "Beauty Through Death",
+      "maps": [],
+      "loot": {
+        "text": "Queen's Sacrifice"
+      }
+    },
+    {
+      "card": "Blessing of God",
+      "maps": [],
+      "loot": {
+        "text": "Elreon's Jewellery\nItem Level: 85"
+      }
+    },
+    {
+      "card": "Blind Venture",
+      "maps": [
+        "The Reliquary (Act 5)",
+        "The Reliquary (Act 10)",
+        "Museum Map",
+        "Relic Chambers Map"
+      ],
+      "loot": {
+        "text": "Ring\nCorrupted"
+      }
+    },
+    {
+      "card": "Boon of Justice",
+      "maps": [
+        "Chateau Map",
+        "Orchard Map",
+        "Plaza Map"
+      ],
+      "loot": {
+        "text": "Offering to the Goddess"
+      }
+    },
+    {
+      "card": "Boon of the First Ones",
+      "maps": [
+        "Pit of the Chimera Map"
+      ],
+      "loot": {
+        "text": "Bestiary Item"
+      }
+    },
+    {
+      "card": "Boundless Realms",
+      "maps": [
+        "The Solaris Temple Level 1 (Act 8)",
+        "The Solaris Temple Level 2 (Act 8)",
+        "Ivory Temple Map",
+        "Temple Map"
+      ],
+      "loot": {
+        "text": "Map"
+      }
+    },
+    {
+      "card": "Bowyer's Dream",
+      "maps": [],
+      "loot": {
+        "text": "Six-Link Harbinger Bow\nItem Level: 91"
+      }
+    },
+    {
+      "card": "Brother's Stash",
+      "maps": [],
+      "loot": {
+        "text": "5x Exalted Orb"
+      }
+    },
+    {
+      "card": "Brotherhood in Exile",
+      "maps": [
+        "Villa Map"
+      ],
+      "loot": {
+        "text": "One With Nothing\nCorrupted"
+      }
+    },
+    {
+      "card": "Buried Treasure",
+      "maps": [
+        "Crystal Ore Map",
+        "Dig Map",
+        "Excavation Map",
+        "Flooded Mine Map",
+        "Geode Map"
+      ],
+      "loot": {
+        "text": "Sulphite Scarab"
+      }
+    },
+    {
+      "card": "Burning Blood",
+      "maps": [
+        "Lava Chamber Map",
+        "Forge of the Phoenix Map"
+      ],
+      "loot": {
+        "text": "Xoph's Blood\nCorrupted"
+      }
+    },
+    {
+      "card": "Call to the First Ones",
+      "maps": [
+        "The Northern Forest (Act 7)",
+        "Infested Valley Map"
+      ],
+      "loot": {
+        "text": "Tier 1 Talisman\nCorrupted"
+      }
+    },
+    {
+      "card": "Cameria's Cut",
+      "maps": [],
+      "loot": {
+        "text": "Scarab"
+      }
+    },
+    {
+      "card": "Cartographer's Delight",
+      "maps": [
+        "The Harbour Bridge",
+        "The Foothills"
+      ],
+      "loot": {
+        "text": "Map\nMap Tier: 5"
+      }
+    },
+    {
+      "card": "Chaotic Disposition",
+      "maps": [
+        "Poorjoy's Asylum"
+      ],
+      "loot": {
+        "text": "5x Chaos Orb"
+      }
+    },
+    {
+      "card": "Council of Cats",
+      "maps": [
+        "Hunter's Ambush"
+      ],
+      "loot": {
+        "text": "Farrul Item"
+      }
+    },
+    {
+      "card": "Coveted Possession",
+      "maps": [
+        "The Catacombs",
+        "The Ossuary (Act 5)",
+        "The Ossuary (Act 10)",
+        "Bone Crypt Map"
+      ],
+      "loot": {
+        "text": "5x Regal Orb"
+      }
+    },
+    {
+      "card": "Cursed Words",
+      "maps": [
+        "Graveyard Map"
+      ],
+      "loot": {
+        "text": "Maw of Mischief"
+      }
+    },
+    {
+      "card": "Dark Dreams",
+      "maps": [],
+      "loot": {
+        "text": "Bone Helmet\nElder Item"
+      }
+    },
+    {
+      "card": "Dark Temptation",
+      "maps": [],
+      "loot": {
+        "text": "Obliteration"
+      }
+    },
+    {
+      "card": "Death",
+      "maps": [
+        "The Karui Fortress",
+        "Bog Map",
+        "Flooded Mine Map",
+        "Marshes Map",
+        "Mud Geyser Map"
+      ],
+      "loot": {
+        "text": "Mon'tregul's Grasp"
+      }
+    },
+    {
+      "card": "Deathly Designs",
+      "maps": [],
+      "loot": {
+        "text": "Level 21 Trap Gem\nQuality: +23%\nCorrupted"
+      }
+    },
+    {
+      "card": "Demigod's Wager",
+      "maps": [],
+      "loot": {
+        "text": "Orb of Annulment"
+      }
+    },
+    {
+      "card": "Desecrated Virtue",
+      "maps": [],
+      "loot": {
+        "text": "Level 6 Awakened Support Gem\nQuality: +23%\nCorrupted"
+      }
+    },
+    {
+      "card": "Destined to Crumble",
+      "maps": [
+        "Academy Map",
+        "Museum Map",
+        "Scriptorium Map"
+      ],
+      "loot": {
+        "text": "Body Armour\nItem Level: 100"
+      }
+    },
+    {
+      "card": "Dialla's Subjugation",
+      "maps": [
+        "Ivory Temple Map",
+        "The Twilight Temple",
+        "Temple Map"
+      ],
+      "loot": {
+        "text": "Superior Support Gem\nQuality: +23%\nCorrupted"
+      }
+    },
+    {
+      "card": "Divine Justice",
+      "maps": [
+        "Chateau Map",
+        "Defiled Cathedral Map"
+      ],
+      "loot": {
+        "text": "Helmet\nEternal Labyrinth Enchantment"
+      }
+    },
+    {
+      "card": "Doedre's Madness",
+      "maps": [],
+      "loot": {
+        "text": "Doedre Item"
+      }
+    },
+    {
+      "card": "Draped in Dreams",
+      "maps": [],
+      "loot": {
+        "text": "Six-Linked Body Armour\nItem Level: 100\nInfluenced Item"
+      }
+    },
+    {
+      "card": "Dying Anguish",
+      "maps": [],
+      "loot": {
+        "text": "Level 19 Gem\nAlternative Quality: +19%"
+      }
+    },
+    {
+      "card": "Dying Light",
+      "maps": [],
+      "loot": {
+        "text": "Diamond Ring\nItem Level: 100\nShaper + Elder Item"
+      }
+    },
+    {
+      "card": "Earth Drinker",
+      "maps": [
+        "The Vastiri Desert",
+        "The Oasis",
+        "The Foothills",
+        "Desert Map",
+        "Dunes Map"
+      ],
+      "loot": {
+        "text": "Granite Flask"
+      }
+    },
+    {
+      "card": "Echoes of Love",
+      "maps": [
+        "Overgrown Ruin Map",
+        "Overgrown Shrine Map"
+      ],
+      "loot": {
+        "text": "Fidelitas' Spike\n Two-Implicit\n Corrupted"
+      }
+    },
+    {
+      "card": "Emperor of Purity",
+      "maps": [
+        "The Western Forest (Act 6)",
+        "The Chamber of Sins Level 1 (Act 7)",
+        "The Chamber of Sins Level 2 (Act 7)",
+        "Overgrown Ruin Map",
+        "Overgrown Shrine Map",
+        "Fungal Hollow Map"
+      ],
+      "loot": {
+        "text": "Six-Link Holy Chainmail\nItem Level: 60"
+      }
+    },
+    {
+      "card": "Emperor's Luck",
+      "maps": [
+        "The Imperial Gardens",
+        "The High Gardens",
+        "Courtyard Map",
+        "Orchard Map",
+        "Terrace Map"
+      ],
+      "loot": {
+        "text": "5x Currency"
+      }
+    },
+    {
+      "card": "Etched in Blood",
+      "maps": [],
+      "loot": {
+        "text": "Rigwald's Quills\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "Fateful Meeting",
+      "maps": [],
+      "loot": {
+        "text": "League-Specific Item\nDouble-Influenced Item\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "Forbidden Power",
+      "maps": [],
+      "loot": {
+        "text": "Balefire\nCorrupted"
+      }
+    },
+    {
+      "card": "Friendship",
+      "maps": [],
+      "loot": {
+        "text": "A Master Seeks Help (Niko)"
+      }
+    },
+    {
+      "card": "Gemcutter's Promise",
+      "maps": [
+        "The Ebony Barracks",
+        "The Lunaris Concourse",
+        "Colonnade Map",
+        "Promenade Map"
+      ],
+      "loot": {
+        "text": "Superior Gem\nQuality: +20%"
+      }
+    },
+    {
+      "card": "Gift of Asenath",
+      "maps": [],
+      "loot": {
+        "text": "Asenath's Gentle Touch\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "Gift of the Gemling Queen",
+      "maps": [
+        "The Tunnel",
+        "The Quarry",
+        "Crystal Ore Map",
+        "Dig Map",
+        "Excavation Map",
+        "Flooded Mine Map",
+        "Geode Map"
+      ],
+      "loot": {
+        "text": "Level 20 Support Gem"
+      }
+    },
+    {
+      "card": "Glimmer of Hope",
+      "maps": [
+        "The Cavern of Anger (Act 6)",
+        "Flooded Mine Map",
+        "Underground Sea Map"
+      ],
+      "loot": {
+        "text": "Gold Ring"
+      }
+    },
+    {
+      "card": "Grave Knowledge",
+      "maps": [
+        "The Ossuary (Act 10)",
+        "Bone Crypt Map",
+        "Olmec's Sanctum",
+        "Cursed Crypt Map"
+      ],
+      "loot": {
+        "text": "Summon Raging Spirit\nQuality: +20%"
+      }
+    },
+    {
+      "card": "Harmony of Souls",
+      "maps": [],
+      "loot": {
+        "text": "9x Shrieking Essence"
+      }
+    },
+    {
+      "card": "Haunting Shadows",
+      "maps": [],
+      "loot": {
+        "text": "Metamorph Item"
+      }
+    },
+    {
+      "card": "Her Mask",
+      "maps": [
+        "Academy Map",
+        "Alleyways Map",
+        "Ancient City Map",
+        "Arachnid Tomb Map",
+        "Arcade Map",
+        "Arena Map",
+        "Arid Lake Map",
+        "Armoury Map",
+        "Arsenal Map",
+        "Ashen Wood Map",
+        "Atoll Map",
+        "Maelström of Chaos",
+        "Barrows Map",
+        "Basilica Map",
+        "Bazaar Map",
+        "Beach Map",
+        "Belfry Map",
+        "Bog Map",
+        "Bone Crypt Map",
+        "Olmec's Sanctum",
+        "Burial Chambers Map",
+        "Cage Map",
+        "Caldera Map",
+        "Canyon Map",
+        "Castle Ruins Map",
+        "Cells Map",
+        "Cemetery Map",
+        "Hallowed Ground",
+        "Channel Map",
+        "Chateau Map",
+        "Perandus Manor",
+        "City Square Map",
+        "Colonnade Map",
+        "Colosseum Map",
+        "Conservatory Map",
+        "Coral Ruins Map",
+        "Courthouse Map",
+        "Courtyard Map",
+        "The Vinktar Square",
+        "Coves Map",
+        "Crystal Ore Map",
+        "Cursed Crypt Map",
+        "The Coward's Trial",
+        "Dark Forest Map",
+        "Defiled Cathedral Map",
+        "Desert Map",
+        "Desert Spring Map",
+        "Dig Map",
+        "Dunes Map",
+        "Dungeon Map",
+        "Estuary Map",
+        "Excavation Map",
+        "Fields Map",
+        "Flooded Mine Map",
+        "Gardens Map",
+        "Geode Map",
+        "Ghetto Map",
+        "Glacier Map",
+        "Graveyard Map",
+        "Grotto Map",
+        "The Beachhead (High Tier)",
+        "Harbinger Map",
+        "Haunted Mansion Map",
+        "Iceberg Map",
+        "Infested Valley Map",
+        "Ivory Temple Map",
+        "Jungle Valley Map",
+        "Laboratory Map",
+        "Lair Map",
+        "Lava Chamber Map",
+        "Leyline Map",
+        "Lighthouse Map",
+        "Lookout Map",
+        "Marshes Map",
+        "Mausoleum Map",
+        "Maze Map",
+        "Doryani's Machinarium",
+        "Mesa Map",
+        "Moon Temple Map",
+        "Mud Geyser Map",
+        "Museum Map",
+        "Necropolis Map",
+        "Orchard Map",
+        "Overgrown Ruin Map",
+        "Overgrown Shrine Map",
+        "Park Map",
+        "Pen Map",
+        "Peninsula Map",
+        "Phantasmagoria Map",
+        "Pier Map",
+        "Pit Map",
+        "Plateau Map",
+        "Plaza Map",
+        "Port Map",
+        "Precinct Map",
+        "Primordial Pool Map",
+        "Promenade Map",
+        "The Hall of Grandmasters",
+        "Racecourse Map",
+        "Ramparts Map",
+        "Reef Map",
+        "Relic Chambers Map",
+        "Residence Map",
+        "Scriptorium Map",
+        "Sepulchre Map",
+        "Shipyard Map",
+        "Shore Map",
+        "Siege Map",
+        "Spider Lair Map",
+        "Fungal Hollow Map",
+        "Strand Map",
+        "Whakawairua Tuahu",
+        "Sulphur Vents Map",
+        "Summit Map",
+        "Sunken City Map",
+        "Temple Map",
+        "Poorjoy's Asylum",
+        "Terrace Map",
+        "Thicket Map",
+        "Primordial Blocks Map",
+        "Tower Map",
+        "Toxic Sewer Map",
+        "Crater Map",
+        "Tropical Island Map",
+        "Untainted Paradise",
+        "Underground River Map",
+        "Underground Sea Map",
+        "Vaal Pyramid Map",
+        "Vaults of Atziri",
+        "Vault Map",
+        "Villa Map",
+        "Volcano Map",
+        "Wasteland Map",
+        "Waste Pool Map",
+        "Waterways Map",
+        "Wharf Map",
+        "Augmented Distant Memory",
+        "Twisted Distant Memory",
+        "Rewritten Distant Memory"
+      ],
+      "loot": {
+        "text": "Sacrifice Fragment"
+      }
+    },
+    {
+      "card": "Heterochromia",
+      "maps": [
+        "Estuary Map"
+      ],
+      "loot": {
+        "text": "Two-Stone Ring"
+      }
+    },
+    {
+      "card": "Hope",
+      "maps": [
+        "Beach Map",
+        "Dungeon Map",
+        "Graveyard Map",
+        "Jungle Valley Map",
+        "Lookout Map"
+      ],
+      "loot": {
+        "text": "Prismatic Ring\nCorrupted"
+      }
+    },
+    {
+      "card": "House of Mirrors",
+      "maps": [
+        "The Alluring Abyss"
+      ],
+      "loot": {
+        "text": "Mirror of Kalandra"
+      }
+    },
+    {
+      "card": "Hubris",
+      "maps": [
+        "The Library"
+      ],
+      "loot": {
+        "text": "Ring"
+      }
+    },
+    {
+      "card": "Humility",
+      "maps": [
+        "The Aqueduct",
+        "The Blood Aqueduct",
+        "Channel Map",
+        "Waterways Map"
+      ],
+      "loot": {
+        "text": "Tabula Rasa"
+      }
+    },
+    {
+      "card": "Hunter's Resolve",
+      "maps": [
+        "The Riverways (Act 6)",
+        "Ramparts Map",
+        "Fungal Hollow Map"
+      ],
+      "loot": {
+        "text": "Bow"
+      }
+    },
+    {
+      "card": "Hunter's Reward",
+      "maps": [
+        "Grotto Map",
+        "The Putrid Cloister",
+        "Underground River Map"
+      ],
+      "loot": {
+        "text": "The Taming"
+      }
+    },
+    {
+      "card": "Immortal Resolve",
+      "maps": [
+        "Carcass Map",
+        "Vault Map"
+      ],
+      "loot": {
+        "text": "Fated Connections"
+      }
+    },
+    {
+      "card": "Imperial Legacy",
+      "maps": [
+        "The Vastiri Desert",
+        "The Oasis",
+        "The Foothills",
+        "Desert Map",
+        "Desert Spring Map",
+        "Dunes Map",
+        "Pillars of Arun"
+      ],
+      "loot": {
+        "text": "Six-Link Imperial Bow\nItem Level: 100"
+      }
+    },
+    {
+      "card": "Jack in the Box",
+      "maps": [
+        "The Ebony Barracks",
+        "The Slums",
+        "The Docks",
+        "The Sarn Ramparts",
+        "The Imperial Fields",
+        "The Harbour Bridge",
+        "The Grand Promenade",
+        "The Lunaris Concourse",
+        "The Quay",
+        "The Grain Gate",
+        "Arsenal Map",
+        "Ghetto Map",
+        "Port Map",
+        "Precinct Map",
+        "Promenade Map"
+      ],
+      "loot": {
+        "text": "Item"
+      }
+    },
+    {
+      "card": "Keeper's Corruption",
+      "maps": [],
+      "loot": {
+        "text": "Eldritch Bone Helmet(Concentrated Effect)\nItem Level: 89\nElder Item"
+      }
+    },
+    {
+      "card": "Lantador's Lost Love",
+      "maps": [
+        "The Twilight Strand (Act 6)",
+        "The Riverways (Act 6)",
+        "The Wetlands (Act 6)",
+        "The Southern Forest (Act 6)",
+        "The Cavern of Anger (Act 6)",
+        "The Beacon",
+        "The Brine King's Reef",
+        "The Coast (Act 6)",
+        "The Tidal Island (Act 6)",
+        "The Mud Flats (Act 6)",
+        "The Karui Fortress",
+        "The Ridge",
+        "The Lower Prison (Act 6)",
+        "Shavronne's Tower",
+        "Prisoner's Gate (Act 6)",
+        "The Western Forest (Act 6)",
+        "Maelström of Chaos",
+        "Lighthouse Map",
+        "Mineral Pools Map",
+        "Reef Map",
+        "Underground Sea Map"
+      ],
+      "loot": {
+        "text": "Two-Stone Ring"
+      }
+    },
+    {
+      "card": "Last Hope",
+      "maps": [
+        "Vaal Temple Map"
+      ],
+      "loot": {
+        "text": "Mortal Hope"
+      }
+    },
+    {
+      "card": "Left to Fate",
+      "maps": [
+        "The Pale Court"
+      ],
+      "loot": {
+        "text": "Map\nMap Tier: 16\nUnidentified Corrupted"
+      }
+    },
+    {
+      "card": "Light and Truth",
+      "maps": [
+        "The Upper Sceptre of God",
+        "Palace Map",
+        "Residence Map",
+        "Villa Map"
+      ],
+      "loot": {
+        "text": "Crystal Sceptre"
+      }
+    },
+    {
+      "card": "Lingering Remnants",
+      "maps": [
+        "Acid Caverns Map",
+        "Arachnid Tomb Map",
+        "Arsenal Map",
+        "Basilica Map",
+        "Bog Map",
+        "Burial Chambers Map",
+        "Caldera Map",
+        "Carcass Map",
+        "Castle Ruins Map",
+        "Chateau Map",
+        "Pit of the Chimera Map",
+        "Colonnade Map",
+        "Colosseum Map",
+        "Core Map",
+        "Courthouse Map",
+        "Crimson Temple Map",
+        "Crystal Ore Map",
+        "Dark Forest Map",
+        "Defiled Cathedral Map",
+        "Desert Spring Map",
+        "Dig Map",
+        "Factory Map",
+        "Ghetto Map",
+        "Lair of the Hydra Map",
+        "Ivory Temple Map",
+        "Lair Map",
+        "Lava Lake Map",
+        "Malformation Map",
+        "Mesa Map",
+        "Maze of the Minotaur Map",
+        "Necropolis Map",
+        "Overgrown Shrine Map",
+        "Palace Map",
+        "Park Map",
+        "Forge of the Phoenix Map",
+        "Racecourse Map",
+        "Reef Map",
+        "Shrine Map",
+        "Siege Map",
+        "Summit Map",
+        "Sunken City Map",
+        "Terrace Map",
+        "Primordial Blocks Map",
+        "Tower Map",
+        "Villa Map"
+      ],
+      "loot": {
+        "text": "Vaal Temple Map\nItem Level: 83\nCorrupted"
+      }
+    },
+    {
+      "card": "Lost Worlds",
+      "maps": [],
+      "loot": {
+        "text": "Map\nMap Tier: 15"
+      }
+    },
+    {
+      "card": "Love Through Ice",
+      "maps": [],
+      "loot": {
+        "text": "Unnatural Instinct\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "Loyalty",
+      "maps": [
+        "The Den (Act 7)",
+        "Barrows Map",
+        "Grotto Map",
+        "Lair Map"
+      ],
+      "loot": {
+        "text": "3x Orb of Fusing"
+      }
+    },
+    {
+      "card": "Lucky Connections",
+      "maps": [
+        "The Docks",
+        "The Quay",
+        "Pier Map",
+        "Port Map",
+        "Shipyard Map",
+        "Wharf Map"
+      ],
+      "loot": {
+        "text": "20x Orb of Fusing"
+      }
+    },
+    {
+      "card": "Lucky Deck",
+      "maps": [
+        "Ramparts Map",
+        "Mao Kun"
+      ],
+      "loot": {
+        "text": "10x Stacked Deck"
+      }
+    },
+    {
+      "card": "Lysah's Respite",
+      "maps": [
+        "Maelström of Chaos",
+        "Mineral Pools Map",
+        "Underground Sea Map"
+      ],
+      "loot": {
+        "text": "Agate Amulet\nCorrupted"
+      }
+    },
+    {
+      "card": "Mawr Blaidd",
+      "maps": [
+        "Dark Forest Map"
+      ],
+      "loot": {
+        "text": "Eyes of the Greatwolf"
+      }
+    },
+    {
+      "card": "Merciless Armament",
+      "maps": [
+        "Armoury Map",
+        "Colonnade Map"
+      ],
+      "loot": {
+        "text": "Merciless Two-Hand Weapon\nItem Level: 100"
+      }
+    },
+    {
+      "card": "Might is Right",
+      "maps": [
+        "The Ossuary (Act 5)",
+        "The Reliquary (Act 5)",
+        "The Reliquary (Act 10)",
+        "The Ossuary (Act 10)",
+        "Mausoleum Map",
+        "Relic Chambers Map",
+        "Sepulchre Map"
+      ],
+      "loot": {
+        "text": "Trypanon"
+      }
+    },
+    {
+      "card": "Mitts",
+      "maps": [
+        "The Ascent",
+        "The Solaris Temple Level 1 (Act 8)",
+        "The Solaris Temple Level 2 (Act 8)",
+        "Iceberg Map",
+        "Summit Map"
+      ],
+      "loot": {
+        "text": "Gloves"
+      }
+    },
+    {
+      "card": "Monochrome",
+      "maps": [
+        "Maelström of Chaos",
+        "The Vinktar Square",
+        "The Coward's Trial",
+        "Pillars of Arun",
+        "The Twilight Temple",
+        "Mao Kun",
+        "Whakawairua Tuahu",
+        "Poorjoy's Asylum",
+        "Oba's Cursed Trove",
+        "Vaults of Atziri"
+      ],
+      "loot": {
+        "text": "10x Sextant"
+      }
+    },
+    {
+      "card": "More is Never Enough",
+      "maps": [
+        "Infested Valley Map"
+      ],
+      "loot": {
+        "text": "Gilded Scarab"
+      }
+    },
+    {
+      "card": "No Traces",
+      "maps": [
+        "The Ossuary (Act 5)",
+        "The Reliquary (Act 10)",
+        "The Ossuary (Act 10)",
+        "Mausoleum Map",
+        "Relic Chambers Map",
+        "Sepulchre Map"
+      ],
+      "loot": {
+        "text": "30x Orb of Scouring"
+      }
+    },
+    {
+      "card": "Nook's Crown",
+      "maps": [],
+      "loot": {
+        "text": "Bone Helmet\nItem Level: 100\nElder Item"
+      }
+    },
+    {
+      "card": "Peaceful Moments",
+      "maps": [],
+      "loot": {
+        "text": "Timeless Jewel"
+      }
+    },
+    {
+      "card": "Perfection",
+      "maps": [
+        "Pit of the Chimera Map",
+        "Lair of the Hydra Map",
+        "Maze of the Minotaur Map",
+        "Forge of the Phoenix Map"
+      ],
+      "loot": {
+        "text": "Jewellery\nItem Level: 100\nShaper Item"
+      }
+    },
+    {
+      "card": "Pride Before the Fall",
+      "maps": [
+        "The Coast (Act 6)",
+        "The Tidal Island (Act 6)",
+        "The Mud Flats (Act 6)",
+        "The Karui Fortress",
+        "Caldera Map",
+        "Lava Lake Map",
+        "Marshes Map",
+        "Volcano Map"
+      ],
+      "loot": {
+        "text": "Kaom's Heart\nCorrupted"
+      }
+    },
+    {
+      "card": "Pride of the First Ones",
+      "maps": [
+        "Barrows Map",
+        "Grotto Map",
+        "Lair Map"
+      ],
+      "loot": {
+        "text": "Farrul's Fur"
+      }
+    },
+    {
+      "card": "Prometheus' Armoury",
+      "maps": [],
+      "loot": {
+        "text": "One-Hand Weapon\nItem Level: 100\nDouble-Influenced Item"
+      }
+    },
+    {
+      "card": "Prosperity",
+      "maps": [
+        "The Tidal Island (Act 6)",
+        "Shore Map"
+      ],
+      "loot": {
+        "text": "Perandus' Gold Ring"
+      }
+    },
+    {
+      "card": "Rain of Chaos",
+      "maps": [
+        "The Crossroads (Act 7)",
+        "The Imperial Fields",
+        "Castle Ruins Map"
+      ],
+      "loot": {
+        "text": "Chaos Orb"
+      }
+    },
+    {
+      "card": "Rain Tempter",
+      "maps": [
+        "Grotto Map"
+      ],
+      "loot": {
+        "text": "Strand Map\nItem Level: 73"
+      }
+    },
+    {
+      "card": "Rats",
+      "maps": [
+        "The Imperial Fields",
+        "The Grain Gate",
+        "Arsenal Map",
+        "Factory Map"
+      ],
+      "loot": {
+        "text": "Rat's Nest"
+      }
+    },
+    {
+      "card": "Rebirth",
+      "maps": [
+        "The Battlefront",
+        "The Slave Pens",
+        "The Ruined Square",
+        "The Desecrated Chambers",
+        "The Control Blocks (Act 10)",
+        "The Reliquary (Act 10)",
+        "The Ossuary (Act 10)",
+        "The Broken Bridge (Act 7)",
+        "The Crypt (Act 7)",
+        "The Ashen Fields",
+        "The Bath House",
+        "The Blood Aqueduct",
+        "The Vastiri Desert",
+        "The Oasis",
+        "The Foothills",
+        "The Quarry"
+      ],
+      "loot": {
+        "text": "Charan's Sword"
+      }
+    },
+    {
+      "card": "Reckless Ambition",
+      "maps": [],
+      "loot": {
+        "text": "Omeyocan"
+      }
+    },
+    {
+      "card": "Remembrance",
+      "maps": [],
+      "loot": {
+        "text": "Precursor's Emblem\nCorrupted"
+      }
+    },
+    {
+      "card": "Sambodhi's Vow",
+      "maps": [],
+      "loot": {
+        "text": "Mortal Fragment"
+      }
+    },
+    {
+      "card": "Scholar of the Seas",
+      "maps": [
+        "The Brine King's Reef",
+        "Coves Map",
+        "Reef Map"
+      ],
+      "loot": {
+        "text": "Mao Kun"
+      }
+    },
+    {
+      "card": "Seven Years Bad Luck",
+      "maps": [
+        "Defiled Cathedral Map"
+      ],
+      "loot": {
+        "text": "Mirror Shard"
+      }
+    },
+    {
+      "card": "Shard of Fate",
+      "maps": [
+        "The Chamber of Sins Level 2 (Act 7)",
+        "Museum Map",
+        "Overgrown Ruin Map",
+        "Overgrown Shrine Map"
+      ],
+      "loot": {
+        "text": "Vivid Jewel"
+      }
+    },
+    {
+      "card": "Society's Remorse",
+      "maps": [],
+      "loot": {
+        "text": "10x Orb of Alteration"
+      }
+    },
+    {
+      "card": "Squandered Prosperity",
+      "maps": [],
+      "loot": {
+        "text": "Perandus Manor\nWatchstone Count: 4\nCorrupted"
+      }
+    },
+    {
+      "card": "Struck by Lightning",
+      "maps": [
+        "Cemetery Map",
+        "Colonnade Map",
+        "Courtyard Map",
+        "Graveyard Map",
+        "Infested Valley Map",
+        "Leyline Map",
+        "Promenade Map",
+        "Shipyard Map",
+        "Tower Map",
+        "Villa Map",
+        "Wharf Map"
+      ],
+      "loot": {
+        "text": "Electrocuting Jewellery\nItem Level: 76"
+      }
+    },
+    {
+      "card": "Succor of the Sinless",
+      "maps": [],
+      "loot": {
+        "text": "Bottled Faith"
+      }
+    },
+    {
+      "card": "The Academic",
+      "maps": [],
+      "loot": {
+        "text": "Inspired Learning"
+      }
+    },
+    {
+      "card": "The Admirer",
+      "maps": [
+        "Ancient City Map",
+        "Maze Map",
+        "Vaal Pyramid Map"
+      ],
+      "loot": {
+        "text": "Atziri Item"
+      }
+    },
+    {
+      "card": "The Aesthete",
+      "maps": [],
+      "loot": {
+        "text": "Shavronne Item"
+      }
+    },
+    {
+      "card": "The Archmage's Right Hand",
+      "maps": [],
+      "loot": {
+        "text": "Glyphic Prophecy Wand\nItem Level: 100"
+      }
+    },
+    {
+      "card": "The Arena Champion",
+      "maps": [],
+      "loot": {
+        "text": "Colosseum Map"
+      }
+    },
+    {
+      "card": "The Army of Blood",
+      "maps": [
+        "The Lunaris Temple Level 2 (Act 3)",
+        "Shrine Map"
+      ],
+      "loot": {
+        "text": "Bloodbond"
+      }
+    },
+    {
+      "card": "The Artist",
+      "maps": [],
+      "loot": {
+        "text": "Level 4 Enhance\nCorrupted"
+      }
+    },
+    {
+      "card": "The Astromancer",
+      "maps": [],
+      "loot": {
+        "text": "The Eternity Shroud\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "The Avenger",
+      "maps": [
+        "Primordial Blocks Map"
+      ],
+      "loot": {
+        "text": "Mjölner\nCorrupted"
+      }
+    },
+    {
+      "card": "The Awakened",
+      "maps": [],
+      "loot": {
+        "text": "Jewellery\nItem Level: 86\nDouble-Influenced Item"
+      }
+    },
+    {
+      "card": "The Bargain",
+      "maps": [],
+      "loot": {
+        "text": "Pure Breachstone"
+      }
+    },
+    {
+      "card": "The Battle Born",
+      "maps": [
+        "Kaom's Dream",
+        "Kaom's Stronghold",
+        "Caldera Map",
+        "Volcano Map"
+      ],
+      "loot": {
+        "text": "Axe"
+      }
+    },
+    {
+      "card": "The Bear Woman",
+      "maps": [],
+      "loot": {
+        "text": "Fecund Ursine Pelt\nWarlord Item"
+      }
+    },
+    {
+      "card": "The Beast",
+      "maps": [
+        "The Belly of the Beast Level 1",
+        "The Belly of the Beast Level 2",
+        "The Belly of the Beast (Act 9)"
+      ],
+      "loot": {
+        "text": "Belly of the Beast"
+      }
+    },
+    {
+      "card": "The Betrayal",
+      "maps": [
+        "The Riverways (Act 6)",
+        "The Southern Forest (Act 6)",
+        "The Western Forest (Act 6)",
+        "The Crossroads (Act 7)",
+        "The Northern Forest (Act 7)",
+        "Burial Chambers Map",
+        "Mesa Map",
+        "Spider Forest Map",
+        "Fungal Hollow Map",
+        "Strand Map"
+      ],
+      "loot": {
+        "text": "Maligaro's Virtuosity"
+      }
+    },
+    {
+      "card": "The Bitter Blossom",
+      "maps": [],
+      "loot": {
+        "text": "Level 21 Chaos Gem\nQuality: +23%\nCorrupted"
+      }
+    },
+    {
+      "card": "The Blazing Fire",
+      "maps": [
+        "The Ruined Square",
+        "The Torched Courts (Act 5)",
+        "The Ravaged Square",
+        "The Torched Courts (Act 10)",
+        "Alleyways Map",
+        "Haunted Mansion Map",
+        "Siege Map"
+      ],
+      "loot": {
+        "text": "Chin Sol"
+      }
+    },
+    {
+      "card": "The Body",
+      "maps": [],
+      "loot": {
+        "text": "Body Armour"
+      }
+    },
+    {
+      "card": "The Bones",
+      "maps": [],
+      "loot": {
+        "text": "Level 21 Vaal Summon Skeletons\nCorrupted"
+      }
+    },
+    {
+      "card": "The Breach",
+      "maps": [],
+      "loot": {
+        "text": "Breach Item"
+      }
+    },
+    {
+      "card": "The Brittle Emperor",
+      "maps": [
+        "The Dried Lake",
+        "Wasteland Map"
+      ],
+      "loot": {
+        "text": "Voll's Devotion\nCorrupted"
+      }
+    },
+    {
+      "card": "The Cache",
+      "maps": [],
+      "loot": {
+        "text": "Jewellery"
+      }
+    },
+    {
+      "card": "The Cacophony",
+      "maps": [
+        "Maelström of Chaos",
+        "Cemetery Map",
+        "Crimson Temple Map",
+        "Excavation Map",
+        "Mineral Pools Map",
+        "Sepulchre Map",
+        "Underground Sea Map"
+      ],
+      "loot": {
+        "text": "3x Deafening Essence"
+      }
+    },
+    {
+      "card": "The Calling",
+      "maps": [],
+      "loot": {
+        "text": "Beyond Item"
+      }
+    },
+    {
+      "card": "The Carrion Crow",
+      "maps": [
+        "The Western Forest (Act 2)",
+        "The City of Sarn",
+        "The Ebony Barracks",
+        "The Imperial Gardens",
+        "The Battlefront",
+        "The Aqueduct",
+        "The Ascent",
+        "The Grand Promenade",
+        "The Blood Aqueduct",
+        "Channel Map",
+        "City Square Map",
+        "Colonnade Map",
+        "Courtyard Map",
+        "Promenade Map",
+        "Ramparts Map"
+      ],
+      "loot": {
+        "text": "Life Armour"
+      }
+    },
+    {
+      "card": "The Cartographer",
+      "maps": [],
+      "loot": {
+        "text": "10x Cartographer's Chisel"
+      }
+    },
+    {
+      "card": "The Cataclysm",
+      "maps": [
+        "Strange Sinkhole",
+        "Concealed Cavity",
+        "Sunken Shingle",
+        "Clouded Ridge",
+        "Forgotten Oubliette",
+        "Remote Gulch",
+        "Cremated Archives",
+        "Narrow Ravine",
+        "Mystical Clearing",
+        "Covered-up Hollow",
+        "Hidden Patch",
+        "Entombed Alcove",
+        "Secret Laboratory",
+        "Secluded Copse",
+        "Forbidden Chamber",
+        "Quarantined Quarters",
+        "Inner Grounds",
+        "Sealed Corridors",
+        "Restricted Gallery",
+        "Disused Furnace",
+        "Blind Alley",
+        "Entombed Chamber",
+        "Sacred Chambers",
+        "Stagnant Canal",
+        "Walled-off Ducts",
+        "Neglected Cellar",
+        "Arcane Chambers",
+        "Forgotten Conduit",
+        "Ancient Catacomb",
+        "Haunted Mineshaft",
+        "Abandoned Dam",
+        "Desolate Track",
+        "Reclaimed Barracks",
+        "Sealed Basement",
+        "Secluded Canal",
+        "Forbidden Archives",
+        "Cremated Archives",
+        "Twisted Inquisitorium",
+        "Deathly Chambers",
+        "Restricted Collection",
+        "Side Chapel",
+        "Radiant Pools",
+        "Clouded Ledge",
+        "Flooded Complex",
+        "Forbidden Shrine",
+        "Sealed Repository",
+        "Evacuated Quarter",
+        "Concealed Caldarium",
+        "Moonlit Chambers",
+        "Shifting Sands",
+        "Forgotten Gulch",
+        "Desolate Isle",
+        "Dusty Bluff"
+      ],
+      "loot": {
+        "text": "Level 21 Spell Gem\nCorrupted"
+      }
+    },
+    {
+      "card": "The Catalyst",
+      "maps": [
+        "The Causeway",
+        "The Vaal City",
+        "The Temple of Decay Level 1",
+        "The Temple of Decay Level 2",
+        "Ancient City Map",
+        "Maze Map",
+        "Vaal Pyramid Map",
+        "Vaults of Atziri",
+        "Vaal Temple Map"
+      ],
+      "loot": {
+        "text": "Vaal Orb"
+      }
+    },
+    {
+      "card": "The Celestial Justicar",
+      "maps": [
+        "The Crypt (Act 7)",
+        "Cursed Crypt Map"
+      ],
+      "loot": {
+        "text": "Six-Link Astral Plate"
+      }
+    },
+    {
+      "card": "The Celestial Stone",
+      "maps": [
+        "Basilica Map",
+        "Lair of the Hydra Map",
+        "Terrace Map"
+      ],
+      "loot": {
+        "text": "Opal Ring\nItem Level: 100\nShaper Item"
+      }
+    },
+    {
+      "card": "The Chains that Bind",
+      "maps": [
+        "Cage Map",
+        "Lava Chamber Map",
+        "Pen Map",
+        "Pit Map"
+      ],
+      "loot": {
+        "text": "Six-Link Body Armour"
+      }
+    },
+    {
+      "card": "The Cheater",
+      "maps": [],
+      "loot": {
+        "text": "Level 6 Awakened Support Gem\nQuality: +20%\nCorrupted"
+      }
+    },
+    {
+      "card": "The Chosen",
+      "maps": [],
+      "loot": {
+        "text": "Skin of the Lords\nCorrupted"
+      }
+    },
+    {
+      "card": "The Coming Storm",
+      "maps": [
+        "Colonnade Map",
+        "Graveyard Map",
+        "Infested Valley Map",
+        "Leyline Map",
+        "Shipyard Map",
+        "Villa Map",
+        "Wharf Map"
+      ],
+      "loot": {
+        "text": "Lightning Coil"
+      }
+    },
+    {
+      "card": "The Conduit",
+      "maps": [],
+      "loot": {
+        "text": "Doryani's Fist"
+      }
+    },
+    {
+      "card": "The Craving",
+      "maps": [
+        "Bone Crypt Map"
+      ],
+      "loot": {
+        "text": "Unending Hunger"
+      }
+    },
+    {
+      "card": "The Cursed King",
+      "maps": [
+        "Caer Blaidd, Wolfpack's Den"
+      ],
+      "loot": {
+        "text": "Rigwald's Curse"
+      }
+    },
+    {
+      "card": "The Damned",
+      "maps": [
+        "Ancient City Map",
+        "Vaults of Atziri",
+        "Vaal Temple Map"
+      ],
+      "loot": {
+        "text": "Soul Ripper"
+      }
+    },
+    {
+      "card": "The Dapper Prodigy",
+      "maps": [
+        "Residence Map"
+      ],
+      "loot": {
+        "text": "Six-Link Body Armour\nItem Level: 100"
+      }
+    },
+    {
+      "card": "The Dark Mage",
+      "maps": [
+        "The Chamber of Sins Level 2 (Act 7)",
+        "Overgrown Ruin Map",
+        "Overgrown Shrine Map"
+      ],
+      "loot": {
+        "text": "Six-Link Staff\nItem Level: 55"
+      }
+    },
+    {
+      "card": "The Darkest Dream",
+      "maps": [
+        "Whakawairua Tuahu"
+      ],
+      "loot": {
+        "text": "Severed in Sleep\nCorrupted"
+      }
+    },
+    {
+      "card": "The Deal",
+      "maps": [],
+      "loot": {
+        "text": "Cartography Scarab"
+      }
+    },
+    {
+      "card": "The Deceiver",
+      "maps": [
+        "The Grand Arena",
+        "Arena Map",
+        "Colosseum Map"
+      ],
+      "loot": {
+        "text": "Belt of the Deceiver\nCorrupted"
+      }
+    },
+    {
+      "card": "The Deep Ones",
+      "maps": [
+        "The Brine King's Reef",
+        "Coral Ruins Map",
+        "Reef Map"
+      ],
+      "loot": {
+        "text": "Tidebreaker"
+      }
+    },
+    {
+      "card": "The Demon",
+      "maps": [],
+      "loot": {
+        "text": "Headhunter\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "The Demoness",
+      "maps": [
+        "The Northern Forest (Act 7)"
+      ],
+      "loot": {
+        "text": "Death's Hand"
+      }
+    },
+    {
+      "card": "The Doctor",
+      "maps": [
+        "Burial Chambers Map",
+        "Spider Forest Map"
+      ],
+      "loot": {
+        "text": "Headhunter"
+      }
+    },
+    {
+      "card": "The Doppelganger",
+      "maps": [
+        "The Crossroads (Act 7)",
+        "Whakawairua Tuahu"
+      ],
+      "loot": {
+        "text": "Superior Mirror Arrow\nQuality: +20%"
+      }
+    },
+    {
+      "card": "The Dragon",
+      "maps": [
+        "Dark Forest Map"
+      ],
+      "loot": {
+        "text": "Coruscating Elixir"
+      }
+    },
+    {
+      "card": "The Dragon's Heart",
+      "maps": [
+        "Pit of the Chimera Map",
+        "The Putrid Cloister"
+      ],
+      "loot": {
+        "text": "Level 4 Empower\nCorrupted"
+      }
+    },
+    {
+      "card": "The Dreamer",
+      "maps": [],
+      "loot": {
+        "text": "Chayula Item"
+      }
+    },
+    {
+      "card": "The Dreamland",
+      "maps": [
+        "Laboratory Map"
+      ],
+      "loot": {
+        "text": "Poorjoy's Asylum"
+      }
+    },
+    {
+      "card": "The Drunken Aristocrat",
+      "maps": [
+        "The Sceptre of God",
+        "Residence Map"
+      ],
+      "loot": {
+        "text": "Divination Distillate"
+      }
+    },
+    {
+      "card": "The Easy Stroll",
+      "maps": [
+        "Gardens Map"
+      ],
+      "loot": {
+        "text": "Terrace Map\nModifiers: 8\nCorrupted"
+      }
+    },
+    {
+      "card": "The Eldritch Decay",
+      "maps": [
+        "Manor of Madness"
+      ],
+      "loot": {
+        "text": "Uber Elder Fragment"
+      }
+    },
+    {
+      "card": "The Encroaching Darkness",
+      "maps": [
+        "Chayula's Domain",
+        "Tul's Domain",
+        "Xoph's Domain",
+        "Esh's Domain",
+        "Uul-Netol's Domain",
+        "Academy Map",
+        "Acid Caverns Map",
+        "Arachnid Nest Map",
+        "Arachnid Tomb Map",
+        "Arena Map",
+        "Armoury Map",
+        "Arsenal Map",
+        "Ashen Wood Map",
+        "Atoll Map",
+        "Maelström of Chaos",
+        "Basilica Map",
+        "Bazaar Map",
+        "Belfry Map",
+        "Bog Map",
+        "Bone Crypt Map",
+        "Olmec's Sanctum",
+        "Caldera Map",
+        "Carcass Map",
+        "Castle Ruins Map",
+        "Cemetery Map",
+        "Hallowed Ground",
+        "Pit of the Chimera Map",
+        "Colonnade Map",
+        "Colosseum Map",
+        "Coral Ruins Map",
+        "Core Map",
+        "Courtyard Map",
+        "The Vinktar Square",
+        "Coves Map",
+        "Crimson Temple Map",
+        "Crystal Ore Map",
+        "Cursed Crypt Map",
+        "The Coward's Trial",
+        "Dark Forest Map",
+        "Defiled Cathedral Map",
+        "Desert Spring Map",
+        "Dig Map",
+        "Dunes Map",
+        "Pillars of Arun",
+        "Desert of Dementia",
+        "Halls of Delirium",
+        "Ruins of Despair",
+        "Sea of Isolation",
+        "Repository of Derision",
+        "Pits of Sorrow",
+        "Islands of Devastation",
+        "Manor of Madness",
+        "Wastes of Lunacy",
+        "Vaults of Insanity",
+        "Spires of Delusion",
+        "River of Hysteria",
+        "Absence of Value and Meaning",
+        "Factory Map",
+        "Fields Map",
+        "Gardens Map",
+        "Geode Map",
+        "Ghetto Map",
+        "The Beachhead (High Tier)",
+        "The Beachhead (Mid Tier)",
+        "Lair of the Hydra Map",
+        "Infested Valley Map",
+        "Jungle Valley Map",
+        "Laboratory Map",
+        "Lair Map",
+        "Lava Chamber Map",
+        "Lava Lake Map",
+        "Malformation Map",
+        "Mausoleum Map",
+        "Mesa Map",
+        "Mineral Pools Map",
+        "Maze of the Minotaur Map",
+        "Moon Temple Map",
+        "The Twilight Temple",
+        "Mud Geyser Map",
+        "Museum Map",
+        "The Putrid Cloister",
+        "Necropolis Map",
+        "Death and Taxes",
+        "Orchard Map",
+        "Overgrown Ruin Map",
+        "Overgrown Shrine Map",
+        "Acton's Nightmare",
+        "Palace Map",
+        "Park Map",
+        "Phantasmagoria Map",
+        "Forge of the Phoenix Map",
+        "Pier Map",
+        "Pit Map",
+        "Plateau Map",
+        "Plaza Map",
+        "Precinct Map",
+        "Primordial Pool Map",
+        "Promenade Map",
+        "The Hall of Grandmasters",
+        "Racecourse Map",
+        "Ramparts Map",
+        "Reef Map",
+        "Residence Map",
+        "Scriptorium Map",
+        "Sepulchre Map",
+        "The Shaper's Realm",
+        "Shipyard Map",
+        "Shore Map",
+        "Mao Kun",
+        "Shrine Map",
+        "Siege Map",
+        "Spider Forest Map",
+        "Summit Map",
+        "Sunken City Map",
+        "Temple Map",
+        "Poorjoy's Asylum",
+        "Terrace Map",
+        "Thicket Map",
+        "Primordial Blocks Map",
+        "Oba's Cursed Trove",
+        "Tower Map",
+        "Crater Map",
+        "Tropical Island Map",
+        "Underground River Map",
+        "Caer Blaidd, Wolfpack's Den",
+        "Underground Sea Map",
+        "Vaal Pyramid Map",
+        "Vaults of Atziri",
+        "Vaal Temple Map",
+        "Vault Map",
+        "Villa Map",
+        "Wasteland Map",
+        "Waste Pool Map",
+        "Waterways Map",
+        "Wharf Map"
+      ],
+      "loot": {
+        "text": "Map\nCorrupted"
+      }
+    },
+    {
+      "card": "The Endless Darkness",
+      "maps": [
+        "The Beachhead (High Tier)",
+        "The Beachhead (Low Tier)",
+        "The Beachhead (Mid Tier)"
+      ],
+      "loot": {
+        "text": "Voidforge"
+      }
+    },
+    {
+      "card": "The Endurance",
+      "maps": [
+        "The Mines Level 1",
+        "The Mines Level 2",
+        "The Crystal Veins",
+        "The Tunnel",
+        "The Quarry",
+        "Crystal Ore Map",
+        "Dig Map",
+        "Excavation Map",
+        "Flooded Mine Map",
+        "Geode Map"
+      ],
+      "loot": {
+        "text": "Vivid Crimson Jewel"
+      }
+    },
+    {
+      "card": "The Enlightened",
+      "maps": [
+        "Ashen Wood Map"
+      ],
+      "loot": {
+        "text": "Level 3 Enlighten"
+      }
+    },
+    {
+      "card": "The Escape",
+      "maps": [
+        "Oriath Delusion",
+        "Hysteriagate",
+        "Lunacy's Watch",
+        "The Bridge Enraptured",
+        "The Syndrome Encampment",
+        "Tul's Domain",
+        "Xoph's Domain",
+        "Esh's Domain"
+      ],
+      "loot": {
+        "text": "Seven-League Step"
+      }
+    },
+    {
+      "card": "The Ethereal",
+      "maps": [
+        "The Apex of Sacrifice"
+      ],
+      "loot": {
+        "text": "Six-Link Vaal Regalia"
+      }
+    },
+    {
+      "card": "The Explorer",
+      "maps": [
+        "The Dread Thicket (Act 7)",
+        "Thicket Map"
+      ],
+      "loot": {
+        "text": "Map\nCorrupted"
+      }
+    },
+    {
+      "card": "The Eye of Terror",
+      "maps": [],
+      "loot": {
+        "text": "Pure Chayula Breachstone"
+      }
+    },
+    {
+      "card": "The Eye of the Dragon",
+      "maps": [
+        "The Boiling Lake",
+        "Marshes Map",
+        "Sulphur Vents Map"
+      ],
+      "loot": {
+        "text": "Jewel\nCorrupted"
+      }
+    },
+    {
+      "card": "The Fathomless Depths",
+      "maps": [
+        "The Cavern of Anger (Act 6)",
+        "Flooded Mine Map",
+        "Underground Sea Map"
+      ],
+      "loot": {
+        "text": "Lightpoacher"
+      }
+    },
+    {
+      "card": "The Feast",
+      "maps": [
+        "The Northern Forest (Act 2)",
+        "The Sewers",
+        "The Toxic Conduits",
+        "Lair of the Hydra Map",
+        "Toxic Sewer Map",
+        "Waste Pool Map"
+      ],
+      "loot": {
+        "text": "Romira's Banquet\nCorrupted"
+      }
+    },
+    {
+      "card": "The Fiend",
+      "maps": [
+        "The Putrid Cloister",
+        "Shrine Map"
+      ],
+      "loot": {
+        "text": "Headhunter\nCorrupted"
+      }
+    },
+    {
+      "card": "The Fishmonger",
+      "maps": [
+        "Arid Lake Map",
+        "Bog Map"
+      ],
+      "loot": {
+        "text": "Albino Rhoa Feather"
+      }
+    },
+    {
+      "card": "The Fletcher",
+      "maps": [],
+      "loot": {
+        "text": "Drillneck\nCorrupted"
+      }
+    },
+    {
+      "card": "The Flora's Gift",
+      "maps": [
+        "Ashen Wood Map",
+        "Jungle Valley Map",
+        "Tropical Island Map"
+      ],
+      "loot": {
+        "text": "Five-Link Staff\nItem Level: 66"
+      }
+    },
+    {
+      "card": "The Fool",
+      "maps": [],
+      "loot": {
+        "text": "20x Orb of Chance"
+      }
+    },
+    {
+      "card": "The Formless Sea",
+      "maps": [
+        "Reef Map"
+      ],
+      "loot": {
+        "text": "Varunastra"
+      }
+    },
+    {
+      "card": "The Forsaken",
+      "maps": [
+        "Bone Crypt Map",
+        "Olmec's Sanctum",
+        "The Coward's Trial"
+      ],
+      "loot": {
+        "text": "Umbilicus Immortalis"
+      }
+    },
+    {
+      "card": "The Fox",
+      "maps": [
+        "The Western Forest (Act 2)",
+        "The Riverways (Act 6)",
+        "The Vaal City",
+        "The Crossroads (Act 7)",
+        "The Fellshrine Ruins (Act 7)",
+        "Barrows Map",
+        "Castle Ruins Map",
+        "Sunken City Map"
+      ],
+      "loot": {
+        "text": "Level 20 Gem"
+      }
+    },
+    {
+      "card": "The Gambler",
+      "maps": [
+        "Ancient Reliquary",
+        "The Pale Court",
+        "Chayula's Domain",
+        "Tul's Domain",
+        "Xoph's Domain",
+        "Esh's Domain",
+        "Uul-Netol's Domain",
+        "The Apex of Sacrifice",
+        "The Alluring Abyss",
+        "Academy Map",
+        "Acid Caverns Map",
+        "Alleyways Map",
+        "Ancient City Map",
+        "Arachnid Nest Map",
+        "Arachnid Tomb Map",
+        "Arcade Map",
+        "Arena Map",
+        "Arid Lake Map",
+        "Armoury Map",
+        "Arsenal Map",
+        "Ashen Wood Map",
+        "Atoll Map",
+        "Maelström of Chaos",
+        "Barrows Map",
+        "Basilica Map",
+        "Bazaar Map",
+        "Beach Map",
+        "Belfry Map",
+        "Bog Map",
+        "Bone Crypt Map",
+        "Olmec's Sanctum",
+        "Burial Chambers Map",
+        "Cage Map",
+        "Caldera Map",
+        "Canyon Map",
+        "Carcass Map",
+        "Castle Ruins Map",
+        "Cells Map",
+        "Cemetery Map",
+        "Hallowed Ground",
+        "Channel Map",
+        "Chateau Map",
+        "Perandus Manor",
+        "Pit of the Chimera Map",
+        "City Square Map",
+        "Colonnade Map",
+        "Colosseum Map",
+        "Conservatory Map",
+        "Coral Ruins Map",
+        "Core Map",
+        "Courthouse Map",
+        "Courtyard Map",
+        "The Vinktar Square",
+        "Coves Map",
+        "Crimson Temple Map",
+        "Crystal Ore Map",
+        "Cursed Crypt Map",
+        "The Coward's Trial",
+        "Dark Forest Map",
+        "Defiled Cathedral Map",
+        "Desert Map",
+        "Desert Spring Map",
+        "Dig Map",
+        "Dunes Map",
+        "Pillars of Arun",
+        "Dungeon Map",
+        "Desert of Dementia",
+        "Halls of Delirium",
+        "Ruins of Despair",
+        "Sea of Isolation",
+        "Repository of Derision",
+        "Pits of Sorrow",
+        "Islands of Devastation",
+        "Manor of Madness",
+        "Wastes of Lunacy",
+        "Vaults of Insanity",
+        "Spires of Delusion",
+        "River of Hysteria",
+        "Absence of Value and Meaning",
+        "Estuary Map",
+        "Excavation Map",
+        "Factory Map",
+        "Fields Map",
+        "Flooded Mine Map",
+        "Gardens Map",
+        "Geode Map",
+        "Ghetto Map",
+        "Glacier Map",
+        "Graveyard Map",
+        "Grotto Map",
+        "Harbinger's Isle",
+        "The Beachhead (High Tier)",
+        "Harbinger Map",
+        "The Beachhead (Mid Tier)",
+        "Haunted Mansion Map",
+        "Lair of the Hydra Map",
+        "Iceberg Map",
+        "Infested Valley Map",
+        "Ivory Temple Map",
+        "Jungle Valley Map",
+        "Laboratory Map",
+        "Lair Map",
+        "Lava Chamber Map",
+        "Lava Lake Map",
+        "Leyline Map",
+        "Lighthouse Map",
+        "Lookout Map",
+        "Malformation Map",
+        "Marshes Map",
+        "Mausoleum Map",
+        "Maze Map",
+        "Doryani's Machinarium",
+        "Mesa Map",
+        "Mineral Pools Map",
+        "Maze of the Minotaur Map",
+        "Moon Temple Map",
+        "The Twilight Temple",
+        "Mud Geyser Map",
+        "Museum Map",
+        "The Putrid Cloister",
+        "Necropolis Map",
+        "Death and Taxes",
+        "Orchard Map",
+        "Overgrown Ruin Map",
+        "Overgrown Shrine Map",
+        "Acton's Nightmare",
+        "Palace Map",
+        "Park Map",
+        "Pen Map",
+        "Peninsula Map",
+        "Phantasmagoria Map",
+        "Forge of the Phoenix Map",
+        "Pier Map",
+        "Pit Map",
+        "Plateau Map",
+        "Plaza Map",
+        "Port Map",
+        "Precinct Map",
+        "Primordial Pool Map",
+        "Promenade Map",
+        "The Hall of Grandmasters",
+        "Racecourse Map",
+        "Ramparts Map",
+        "Reef Map",
+        "Relic Chambers Map",
+        "Residence Map",
+        "Scriptorium Map",
+        "Sepulchre Map",
+        "The Shaper's Realm",
+        "Shipyard Map",
+        "Shore Map",
+        "Mao Kun",
+        "Shrine Map",
+        "Siege Map",
+        "Spider Forest Map",
+        "Spider Lair Map",
+        "Fungal Hollow Map",
+        "Strand Map",
+        "Whakawairua Tuahu",
+        "Sulphur Vents Map",
+        "Summit Map",
+        "Sunken City Map",
+        "Temple Map",
+        "Poorjoy's Asylum",
+        "Terrace Map",
+        "Thicket Map",
+        "Primordial Blocks Map",
+        "Oba's Cursed Trove",
+        "Tower Map",
+        "Toxic Sewer Map",
+        "Crater Map",
+        "Tropical Island Map",
+        "Underground River Map",
+        "Caer Blaidd, Wolfpack's Den",
+        "Underground Sea Map",
+        "Vaal Pyramid Map",
+        "Vaults of Atziri",
+        "Vaal Temple Map",
+        "Vault Map",
+        "Villa Map",
+        "Volcano Map",
+        "Wasteland Map",
+        "Waste Pool Map",
+        "Waterways Map",
+        "Wharf Map"
+      ],
+      "loot": {
+        "text": "Divination Card"
+      }
+    },
+    {
+      "card": "The Garish Power",
+      "maps": [
+        "The Chamber of Sins Level 1 (Act 7)",
+        "The Chamber of Sins Level 2 (Act 7)",
+        "Overgrown Ruin Map",
+        "Overgrown Shrine Map"
+      ],
+      "loot": {
+        "text": "Jewel"
+      }
+    },
+    {
+      "card": "The Gemcutter",
+      "maps": [],
+      "loot": {
+        "text": "Gemcutter's Prism"
+      }
+    },
+    {
+      "card": "The Gentleman",
+      "maps": [
+        "The Slums",
+        "The Sarn Ramparts",
+        "The Grain Gate",
+        "Ghetto Map"
+      ],
+      "loot": {
+        "text": "Sword\nCorrupted"
+      }
+    },
+    {
+      "card": "The Gladiator",
+      "maps": [
+        "Daresso's Dream",
+        "The Grand Arena",
+        "Arena Map",
+        "Pit of the Chimera Map",
+        "Colosseum Map",
+        "Pit Map"
+      ],
+      "loot": {
+        "text": "Nightmare Bascinet"
+      }
+    },
+    {
+      "card": "The Golden Era",
+      "maps": [
+        "Ivory Temple Map"
+      ],
+      "loot": {
+        "text": "Flaring Eclipse Staff\nItem Level: 100"
+      }
+    },
+    {
+      "card": "The Greatest Intentions",
+      "maps": [],
+      "loot": {
+        "text": "The Saviour\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "The Gulf",
+      "maps": [],
+      "loot": {
+        "text": "Thread of Hope\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "The Hale Heart",
+      "maps": [],
+      "loot": {
+        "text": "Item\nItem Level: 100\nElder Item"
+      }
+    },
+    {
+      "card": "The Harvester",
+      "maps": [
+        "The Imperial Fields"
+      ],
+      "loot": {
+        "text": "The Harvest"
+      }
+    },
+    {
+      "card": "The Hermit",
+      "maps": [
+        "The Broken Bridge (Act 7)",
+        "The Causeway",
+        "The Vaal City",
+        "The Crossroads (Act 7)",
+        "The Fellshrine Ruins (Act 7)",
+        "The Ashen Fields"
+      ],
+      "loot": {
+        "text": "Lifesprig"
+      }
+    },
+    {
+      "card": "The Heroic Shot",
+      "maps": [],
+      "loot": {
+        "text": "17x Chromatic Orb"
+      }
+    },
+    {
+      "card": "The Hive of Knowledge",
+      "maps": [
+        "Vaal Pyramid Map"
+      ],
+      "loot": {
+        "text": "Machina Mitts\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "The Hoarder",
+      "maps": [
+        "The Belly of the Beast Level 1",
+        "The Belly of the Beast Level 2",
+        "The Harvest (area)",
+        "The Rotting Core",
+        "Vault Map"
+      ],
+      "loot": {
+        "text": "Exalted Orb"
+      }
+    },
+    {
+      "card": "The Hunger",
+      "maps": [
+        "The Belly of the Beast Level 1",
+        "The Belly of the Beast Level 2",
+        "The Harvest (area)",
+        "The Belly of the Beast (Act 9)",
+        "The Rotting Core",
+        "Carcass Map",
+        "Malformation Map",
+        "Phantasmagoria Map"
+      ],
+      "loot": {
+        "text": "Taste of Hate"
+      }
+    },
+    {
+      "card": "The Immortal",
+      "maps": [
+        "The Hall of Grandmasters"
+      ],
+      "loot": {
+        "text": "House of Mirrors"
+      }
+    },
+    {
+      "card": "The Incantation",
+      "maps": [
+        "The Western Forest (Act 6)",
+        "Burial Chambers Map",
+        "Spider Forest Map"
+      ],
+      "loot": {
+        "text": "The Whispering Ice"
+      }
+    },
+    {
+      "card": "The Innocent",
+      "maps": [
+        "The Chamber of Innocence",
+        "Basilica Map"
+      ],
+      "loot": {
+        "text": "40x Orb of Regret"
+      }
+    },
+    {
+      "card": "The Inoculated",
+      "maps": [
+        "Acid Caverns Map",
+        "Primordial Pool Map"
+      ],
+      "loot": {
+        "text": "Seraphim's Armour"
+      }
+    },
+    {
+      "card": "The Insatiable",
+      "maps": [
+        "The Rotting Core",
+        "Carcass Map"
+      ],
+      "loot": {
+        "text": "The Harvest\nCorrupted"
+      }
+    },
+    {
+      "card": "The Inventor",
+      "maps": [
+        "The Temple of Decay Level 1",
+        "The Temple of Decay Level 2",
+        "Maze Map",
+        "Vaal Pyramid Map",
+        "Vaults of Atziri",
+        "Vaal Temple Map"
+      ],
+      "loot": {
+        "text": "10x Vaal Orb"
+      }
+    },
+    {
+      "card": "The Iron Bard",
+      "maps": [
+        "The Vinktar Square"
+      ],
+      "loot": {
+        "text": "Trash to Treasure"
+      }
+    },
+    {
+      "card": "The Jester",
+      "maps": [],
+      "loot": {
+        "text": "Merciless One-Hand Weapon\nItem Level: 100"
+      }
+    },
+    {
+      "card": "The Jeweller's Boon",
+      "maps": [
+        "The Crystal Veins",
+        "Crystal Ore Map"
+      ],
+      "loot": {
+        "text": "The Jeweller's Touch"
+      }
+    },
+    {
+      "card": "The Journalist",
+      "maps": [],
+      "loot": {
+        "text": "Helmet\nDouble-Veiled Item"
+      }
+    },
+    {
+      "card": "The Journey",
+      "maps": [
+        "Lighthouse Map"
+      ],
+      "loot": {
+        "text": "Harbinger's Orb"
+      }
+    },
+    {
+      "card": "The King's Blade",
+      "maps": [
+        "Daresso's Dream",
+        "Pit Map"
+      ],
+      "loot": {
+        "text": "Bloodthirsty Eternal Sword\nItem Level: 66"
+      }
+    },
+    {
+      "card": "The King's Heart",
+      "maps": [
+        "The Coast (Act 6)",
+        "Caldera Map",
+        "Volcano Map"
+      ],
+      "loot": {
+        "text": "Kaom's Heart"
+      }
+    },
+    {
+      "card": "The Landing",
+      "maps": [
+        "Shore Map",
+        "Mao Kun",
+        "Strand Map",
+        "Whakawairua Tuahu"
+      ],
+      "loot": {
+        "text": "The Beachhead\nMap Tier: 15\nCorrupted"
+      }
+    },
+    {
+      "card": "The Last One Standing",
+      "maps": [
+        "The Hall of Grandmasters"
+      ],
+      "loot": {
+        "text": "Atziri's Disfavour"
+      }
+    },
+    {
+      "card": "The Lich",
+      "maps": [
+        "The Upper Prison",
+        "Bone Crypt Map"
+      ],
+      "loot": {
+        "text": "Midnight Bargain\nCorrupted"
+      }
+    },
+    {
+      "card": "The Life Thief",
+      "maps": [
+        "Crimson Temple Map"
+      ],
+      "loot": {
+        "text": "Zerphi's Heart"
+      }
+    },
+    {
+      "card": "The Lion",
+      "maps": [
+        "The Mud Flats (Act 6)",
+        "Caldera Map",
+        "Glacier Map"
+      ],
+      "loot": {
+        "text": "Lioneye Item"
+      }
+    },
+    {
+      "card": "The Long Con",
+      "maps": [],
+      "loot": {
+        "text": "Elderslayer's Exalted Orb"
+      }
+    },
+    {
+      "card": "The Long Watch",
+      "maps": [
+        "Primordial Blocks Map"
+      ],
+      "loot": {
+        "text": "The Vigil"
+      }
+    },
+    {
+      "card": "The Lord in Black",
+      "maps": [],
+      "loot": {
+        "text": "Ring of Bameth\nItem Level: 83"
+      }
+    },
+    {
+      "card": "The Lord of Celebration",
+      "maps": [
+        "Siege Map"
+      ],
+      "loot": {
+        "text": "Sceptre of Celebration\nShaper Item"
+      }
+    },
+    {
+      "card": "The Lover",
+      "maps": [
+        "Maelström of Chaos",
+        "Mineral Pools Map",
+        "Underground Sea Map"
+      ],
+      "loot": {
+        "text": "Jewellery\nItem Level: 79"
+      }
+    },
+    {
+      "card": "The Lunaris Priestess",
+      "maps": [
+        "The Lunaris Temple Level 1 (Act 3)",
+        "The Lunaris Temple Level 1 (Act 8)",
+        "The Lunaris Temple Level 2 (Act 8)",
+        "The Twilight Temple",
+        "Shrine Map"
+      ],
+      "loot": {
+        "text": "Sire of Shards"
+      }
+    },
+    {
+      "card": "The Mad King",
+      "maps": [
+        "Caldera Map",
+        "Dark Forest Map",
+        "Lair Map",
+        "Reef Map"
+      ],
+      "loot": {
+        "text": "The King's Path"
+      }
+    },
+    {
+      "card": "The Master",
+      "maps": [
+        "Pen Map"
+      ],
+      "loot": {
+        "text": "Bisco's Collar"
+      }
+    },
+    {
+      "card": "The Master Artisan",
+      "maps": [],
+      "loot": {
+        "text": "20x Quality Currency"
+      }
+    },
+    {
+      "card": "The Mayor",
+      "maps": [
+        "Ivory Temple Map"
+      ],
+      "loot": {
+        "text": "The Perandus Manor\nWatchstone Count: 4"
+      }
+    },
+    {
+      "card": "The Mercenary",
+      "maps": [
+        "The Broken Bridge (Act 7)",
+        "Castle Ruins Map"
+      ],
+      "loot": {
+        "text": "Shield\nCorrupted"
+      }
+    },
+    {
+      "card": "The Messenger",
+      "maps": [
+        "Crystal Ore Map"
+      ],
+      "loot": {
+        "text": "Harbinger Fragment"
+      }
+    },
+    {
+      "card": "The Metalsmith's Gift",
+      "maps": [
+        "The Mud Flats (Act 1)",
+        "The Fetid Pool",
+        "The Coast (Act 6)",
+        "The Mud Flats (Act 6)",
+        "The Karui Fortress"
+      ],
+      "loot": {
+        "text": "Prismatic Ring"
+      }
+    },
+    {
+      "card": "The Mountain",
+      "maps": [
+        "The Ascent",
+        "The Descent",
+        "Summit Map"
+      ],
+      "loot": {
+        "text": "Jewel of Potency"
+      }
+    },
+    {
+      "card": "The Nurse",
+      "maps": [
+        "Shavronne's Tower",
+        "Arachnid Tomb Map",
+        "Tower Map"
+      ],
+      "loot": {
+        "text": "The Doctor"
+      }
+    },
+    {
+      "card": "The Oath",
+      "maps": [
+        "The Belly of the Beast (Act 9)",
+        "The Rotting Core",
+        "Carcass Map",
+        "Core Map",
+        "Malformation Map",
+        "Phantasmagoria Map"
+      ],
+      "loot": {
+        "text": "Death's Oath"
+      }
+    },
+    {
+      "card": "The Obscured",
+      "maps": [],
+      "loot": {
+        "text": "Breachstone"
+      }
+    },
+    {
+      "card": "The Offering",
+      "maps": [],
+      "loot": {
+        "text": "Shavronne's Wrappings"
+      }
+    },
+    {
+      "card": "The Old Man",
+      "maps": [],
+      "loot": {
+        "text": "Fishing Rod\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "The One With All",
+      "maps": [
+        "The Tidal Island (Act 6)",
+        "Oba's Cursed Trove"
+      ],
+      "loot": {
+        "text": "Le Heup of All\nCorrupted"
+      }
+    },
+    {
+      "card": "The Opulent",
+      "maps": [
+        "Basilica Map",
+        "Chateau Map",
+        "Conservatory Map",
+        "Crimson Temple Map",
+        "Haunted Mansion Map",
+        "Ivory Temple Map",
+        "Laboratory Map",
+        "Palace Map",
+        "Relic Chambers Map",
+        "Residence Map",
+        "Temple Map",
+        "Vaults of Atziri",
+        "Vault Map",
+        "Villa Map"
+      ],
+      "loot": {
+        "text": "Ring\nItem Level: 100"
+      }
+    },
+    {
+      "card": "The Pack Leader",
+      "maps": [
+        "Jungle Valley Map",
+        "Tropical Island Map"
+      ],
+      "loot": {
+        "text": "Alpha's Howl"
+      }
+    },
+    {
+      "card": "The Pact",
+      "maps": [
+        "The Quay",
+        "Pier Map",
+        "Port Map"
+      ],
+      "loot": {
+        "text": "Pledge of Hands"
+      }
+    },
+    {
+      "card": "The Patient",
+      "maps": [
+        "Armoury Map",
+        "Lighthouse Map"
+      ],
+      "loot": {
+        "text": "The Nurse"
+      }
+    },
+    {
+      "card": "The Penitent",
+      "maps": [
+        "Cells Map"
+      ],
+      "loot": {
+        "text": "Unset Ring"
+      }
+    },
+    {
+      "card": "The Poet",
+      "maps": [
+        "The Marketplace",
+        "The Quay",
+        "Alleyways Map",
+        "Arcade Map"
+      ],
+      "loot": {
+        "text": "Blood of Corruption\nCorrupted"
+      }
+    },
+    {
+      "card": "The Polymath",
+      "maps": [
+        "The Reliquary (Act 5)",
+        "The Reliquary (Act 10)",
+        "Museum Map",
+        "Relic Chambers Map"
+      ],
+      "loot": {
+        "text": "Astramentis"
+      }
+    },
+    {
+      "card": "The Porcupine",
+      "maps": [
+        "The High Gardens",
+        "Gardens Map",
+        "Plaza Map",
+        "Terrace Map"
+      ],
+      "loot": {
+        "text": "Six-Link Short Bow\nItem Level: 50"
+      }
+    },
+    {
+      "card": "The Price of Loyalty",
+      "maps": [],
+      "loot": {
+        "text": "Skin of the Loyal\nItem Level: 25\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "The Price of Protection",
+      "maps": [],
+      "loot": {
+        "text": "Chateau Map\nWatchstone Count: 4"
+      }
+    },
+    {
+      "card": "The Primordial",
+      "maps": [
+        "Coves Map",
+        "Flooded Mine Map",
+        "Geode Map",
+        "Grotto Map",
+        "Peninsula Map",
+        "Vault Map",
+        "Waterways Map",
+        "Wharf Map"
+      ],
+      "loot": {
+        "text": "Jewel\nPrimordial"
+      }
+    },
+    {
+      "card": "The Professor",
+      "maps": [
+        "Laboratory Map"
+      ],
+      "loot": {
+        "text": "The Putrid Cloister"
+      }
+    },
+    {
+      "card": "The Progeny of Lunaris",
+      "maps": [],
+      "loot": {
+        "text": "Dying Sun"
+      }
+    },
+    {
+      "card": "The Puzzle",
+      "maps": [],
+      "loot": {
+        "text": "5x Breachstone Splinter"
+      }
+    },
+    {
+      "card": "The Queen",
+      "maps": [
+        "Vaults of Atziri"
+      ],
+      "loot": {
+        "text": "Atziri's Acuity"
+      }
+    },
+    {
+      "card": "The Rabid Rhoa",
+      "maps": [
+        "Arid Lake Map"
+      ],
+      "loot": {
+        "text": "Malicious Gemini Claw\nItem Level: 83"
+      }
+    },
+    {
+      "card": "The Realm",
+      "maps": [],
+      "loot": {
+        "text": "Superior Portal"
+      }
+    },
+    {
+      "card": "The Risk",
+      "maps": [],
+      "loot": {
+        "text": "Ventor's Gamble"
+      }
+    },
+    {
+      "card": "The Rite of Elements",
+      "maps": [
+        "Courthouse Map",
+        "Coves Map",
+        "Flooded Mine Map",
+        "Geode Map",
+        "Grotto Map",
+        "Vault Map",
+        "Waterways Map",
+        "Wharf Map"
+      ],
+      "loot": {
+        "text": "Level 21 Golem Gem\nCorrupted"
+      }
+    },
+    {
+      "card": "The Road to Power",
+      "maps": [
+        "Castle Ruins Map"
+      ],
+      "loot": {
+        "text": "Runic One-Hand Weapon\nItem Level: 100"
+      }
+    },
+    {
+      "card": "The Ruthless Ceinture",
+      "maps": [
+        "The Descent",
+        "The Foothills",
+        "Dig Map",
+        "Maze of the Minotaur Map",
+        "Summit Map"
+      ],
+      "loot": {
+        "text": "Meginord's Girdle\nCorrupted"
+      }
+    },
+    {
+      "card": "The Sacrifice",
+      "maps": [
+        "The Temple of Atzoatl"
+      ],
+      "loot": {
+        "text": "Six-Link Sacrificial Garb\nItem Level: 100"
+      }
+    },
+    {
+      "card": "The Saint's Treasure",
+      "maps": [
+        "The Slums",
+        "The Marketplace",
+        "The Imperial Fields",
+        "The Grain Gate",
+        "Alleyways Map",
+        "Arcade Map",
+        "Bazaar Map",
+        "Ghetto Map",
+        "Port Map",
+        "Precinct Map"
+      ],
+      "loot": {
+        "text": "2x Exalted Orb"
+      }
+    },
+    {
+      "card": "The Samurai's Eye",
+      "maps": [],
+      "loot": {
+        "text": "Watcher's Eye"
+      }
+    },
+    {
+      "card": "The Scarred Meadow",
+      "maps": [
+        "The Old Fields",
+        "Ashen Wood Map",
+        "Fields Map",
+        "Peninsula Map"
+      ],
+      "loot": {
+        "text": "Wake of Destruction"
+      }
+    },
+    {
+      "card": "The Scavenger",
+      "maps": [
+        "The Aqueduct",
+        "Channel Map",
+        "Chateau Map",
+        "Underground River Map"
+      ],
+      "loot": {
+        "text": "Carcass Jack"
+      }
+    },
+    {
+      "card": "The Scholar",
+      "maps": [
+        "The Library",
+        "The Archives",
+        "Academy Map",
+        "Museum Map",
+        "Scriptorium Map"
+      ],
+      "loot": {
+        "text": "40x Scroll of Wisdom"
+      }
+    },
+    {
+      "card": "The Seeker",
+      "maps": [
+        "The Temple of Atzoatl"
+      ],
+      "loot": {
+        "text": "3x Orb of Annulment"
+      }
+    },
+    {
+      "card": "The Sephirot",
+      "maps": [
+        "The Upper Sceptre of God",
+        "Palace Map"
+      ],
+      "loot": {
+        "text": "10x Divine Orb"
+      }
+    },
+    {
+      "card": "The Side Quest",
+      "maps": [
+        "Vault Map"
+      ],
+      "loot": {
+        "text": "A Master Seeks Help"
+      }
+    },
+    {
+      "card": "The Sigil",
+      "maps": [
+        "Overgrown Shrine Map"
+      ],
+      "loot": {
+        "text": "Unassailable Amulet"
+      }
+    },
+    {
+      "card": "The Siren",
+      "maps": [
+        "The Cavern of Anger (Act 6)",
+        "The Brine King's Reef",
+        "Maelström of Chaos",
+        "Underground Sea Map"
+      ],
+      "loot": {
+        "text": "The Whispering Ice\nCorrupted"
+      }
+    },
+    {
+      "card": "The Skeleton",
+      "maps": [],
+      "loot": {
+        "text": "Level 1 Summon Skeletons\nQuality: +23%\nCorrupted"
+      }
+    },
+    {
+      "card": "The Soul",
+      "maps": [
+        "Cells Map",
+        "Overgrown Shrine Map",
+        "Sepulchre Map",
+        "Crater Map"
+      ],
+      "loot": {
+        "text": "Soul Taker"
+      }
+    },
+    {
+      "card": "The Spark and the Flame",
+      "maps": [
+        "Atoll Map",
+        "Maelström of Chaos",
+        "Plateau Map"
+      ],
+      "loot": {
+        "text": "Berek's Respite"
+      }
+    },
+    {
+      "card": "The Spoiled Prince",
+      "maps": [
+        "The Temple of Decay Level 1",
+        "Vaal Pyramid Map"
+      ],
+      "loot": {
+        "text": "Dictator's Prophecy Wand\nItem Level: 100"
+      }
+    },
+    {
+      "card": "The Standoff",
+      "maps": [
+        "The Torched Courts (Act 5)",
+        "The Torched Courts (Act 10)",
+        "Bone Crypt Map",
+        "Lava Chamber Map",
+        "Forge of the Phoenix Map",
+        "Crater Map"
+      ],
+      "loot": {
+        "text": "Rustic Sash"
+      }
+    },
+    {
+      "card": "The Stormcaller",
+      "maps": [],
+      "loot": {
+        "text": "Agnerod Staff"
+      }
+    },
+    {
+      "card": "The Strategist",
+      "maps": [],
+      "loot": {
+        "text": "Inspired Learning\nCorrupted"
+      }
+    },
+    {
+      "card": "The Summoner",
+      "maps": [
+        "The Fetid Pool",
+        "The Lower Prison (Act 1)",
+        "The Upper Prison",
+        "The Crypt Level 2",
+        "The Chamber of Sins Level 1 (Act 2)",
+        "The Chamber of Sins Level 2 (Act 2)",
+        "The Crematorium",
+        "The Catacombs",
+        "Shavronne's Tower",
+        "Bone Crypt Map",
+        "Cells Map",
+        "Cursed Crypt Map",
+        "Dungeon Map",
+        "Lava Chamber Map",
+        "Overgrown Ruin Map",
+        "Acton's Nightmare",
+        "Primordial Blocks Map"
+      ],
+      "loot": {
+        "text": "Superior Minion Gem\nQuality: +20%"
+      }
+    },
+    {
+      "card": "The Sun",
+      "maps": [
+        "The Solaris Temple Level 1 (Act 3)",
+        "The Solaris Temple Level 2 (Act 3)",
+        "The Solaris Temple Level 1 (Act 8)",
+        "Ivory Temple Map",
+        "The Twilight Temple",
+        "Temple Map"
+      ],
+      "loot": {
+        "text": "Rise of the Phoenix"
+      }
+    },
+    {
+      "card": "The Surgeon",
+      "maps": [
+        "The Chamber of Sins Level 1 (Act 7)",
+        "The Chamber of Sins Level 2 (Act 7)",
+        "Overgrown Ruin Map",
+        "Overgrown Shrine Map"
+      ],
+      "loot": {
+        "text": "Surgeon's Flask"
+      }
+    },
+    {
+      "card": "The Surveyor",
+      "maps": [
+        "Carcass Map",
+        "Core Map",
+        "Malformation Map",
+        "Phantasmagoria Map"
+      ],
+      "loot": {
+        "text": "Map\nMap Tier: 14"
+      }
+    },
+    {
+      "card": "The Survivalist",
+      "maps": [
+        "The Wetlands (Act 2)",
+        "Flooded Mine Map",
+        "Mineral Pools Map",
+        "Underground Sea Map"
+      ],
+      "loot": {
+        "text": "7x Orb of Alchemy"
+      }
+    },
+    {
+      "card": "The Sustenance",
+      "maps": [],
+      "loot": {
+        "text": "Energy From Within\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "The Sword King's Salute",
+      "maps": [
+        "Colosseum Map"
+      ],
+      "loot": {
+        "text": "Daresso's Salute"
+      }
+    },
+    {
+      "card": "The Thaumaturgist",
+      "maps": [
+        "Shrine Map"
+      ],
+      "loot": {
+        "text": "Shavronne's Revelation\nCorrupted"
+      }
+    },
+    {
+      "card": "The Throne",
+      "maps": [
+        "Lair of the Hydra Map",
+        "Toxic Sewer Map",
+        "Waste Pool Map"
+      ],
+      "loot": {
+        "text": "Kaom's Roots\nCorrupted"
+      }
+    },
+    {
+      "card": "The Tinkerer's Table",
+      "maps": [
+        "Arid Lake Map",
+        "Atoll Map",
+        "Barrows Map",
+        "Geode Map",
+        "Mesa Map",
+        "Mud Geyser Map"
+      ],
+      "loot": {
+        "text": "5x Fossil"
+      }
+    },
+    {
+      "card": "The Tower",
+      "maps": [
+        "The Sceptre of God",
+        "The Upper Sceptre of God",
+        "Shavronne's Tower",
+        "Residence Map",
+        "Tower Map"
+      ],
+      "loot": {
+        "text": "Staff"
+      }
+    },
+    {
+      "card": "The Traitor",
+      "maps": [
+        "The Battlefront",
+        "The Sarn Ramparts",
+        "The Solaris Concourse",
+        "Promenade Map",
+        "Ramparts Map"
+      ],
+      "loot": {
+        "text": "Wand\nCorrupted"
+      }
+    },
+    {
+      "card": "The Trial",
+      "maps": [
+        "Arachnid Nest Map",
+        "Arachnid Tomb Map",
+        "Arena Map",
+        "Armoury Map",
+        "Bazaar Map",
+        "Belfry Map",
+        "Bog Map",
+        "Bone Crypt Map",
+        "Colonnade Map",
+        "Coral Ruins Map",
+        "Courtyard Map",
+        "Coves Map",
+        "Cursed Crypt Map",
+        "Dunes Map",
+        "Estuary Map",
+        "Factory Map",
+        "Gardens Map",
+        "Geode Map",
+        "The Beachhead (Mid Tier)",
+        "Infested Valley Map",
+        "Laboratory Map",
+        "Lair Map",
+        "Lava Chamber Map",
+        "Mausoleum Map",
+        "Mesa Map",
+        "Mineral Pools Map",
+        "Moon Temple Map",
+        "Mud Geyser Map",
+        "Museum Map",
+        "The Putrid Cloister",
+        "Orchard Map",
+        "Overgrown Ruin Map",
+        "Pier Map",
+        "Pit Map",
+        "Plateau Map",
+        "Precinct Map",
+        "Primordial Pool Map",
+        "Promenade Map",
+        "Ramparts Map",
+        "Residence Map",
+        "Scriptorium Map",
+        "Sepulchre Map",
+        "Shipyard Map",
+        "Shore Map",
+        "Siege Map",
+        "Spider Forest Map",
+        "Temple Map",
+        "Tower Map",
+        "Crater Map",
+        "Tropical Island Map",
+        "Underground River Map",
+        "Caer Blaidd, Wolfpack's Den",
+        "Vaal Pyramid Map",
+        "Vault Map",
+        "Wasteland Map",
+        "Waste Pool Map",
+        "Waterways Map"
+      ],
+      "loot": {
+        "text": "Map\nMap Tier: 15\nCorrupted"
+      }
+    },
+    {
+      "card": "The Tumbleweed",
+      "maps": [],
+      "loot": {
+        "text": "Wasteland Map"
+      }
+    },
+    {
+      "card": "The Twilight Moon",
+      "maps": [
+        "Moon Temple Map",
+        "Temple Map"
+      ],
+      "loot": {
+        "text": "The Twilight Temple"
+      }
+    },
+    {
+      "card": "The Twins",
+      "maps": [
+        "Ivory Temple Map",
+        "Moon Temple Map"
+      ],
+      "loot": {
+        "text": "Gemini Claw of Celebration\nItem Level: 83"
+      }
+    },
+    {
+      "card": "The Tyrant",
+      "maps": [
+        "Precinct Map"
+      ],
+      "loot": {
+        "text": "Merciless Weapon\nItem Level: 100"
+      }
+    },
+    {
+      "card": "The Undaunted",
+      "maps": [
+        "Basilica Map",
+        "Courthouse Map",
+        "Precinct Map"
+      ],
+      "loot": {
+        "text": "Nemesis Item\nCorrupted"
+      }
+    },
+    {
+      "card": "The Undisputed",
+      "maps": [],
+      "loot": {
+        "text": "Merciless Vaal Axe\nItem Level: 100\nElder Item"
+      }
+    },
+    {
+      "card": "The Unexpected Prize",
+      "maps": [
+        "Residence Map"
+      ],
+      "loot": {
+        "text": "Attribute Transforming Jewel"
+      }
+    },
+    {
+      "card": "The Union",
+      "maps": [
+        "Cemetery Map",
+        "Graveyard Map"
+      ],
+      "loot": {
+        "text": "10x Gemcutter's Prism"
+      }
+    },
+    {
+      "card": "The Valkyrie",
+      "maps": [],
+      "loot": {
+        "text": "Nemesis Item"
+      }
+    },
+    {
+      "card": "The Valley of Steel Boxes",
+      "maps": [],
+      "loot": {
+        "text": "Monstrous Treasure"
+      }
+    },
+    {
+      "card": "The Vast",
+      "maps": [
+        "Coral Ruins Map",
+        "Reef Map"
+      ],
+      "loot": {
+        "text": "Song of the Sirens"
+      }
+    },
+    {
+      "card": "The Visionary",
+      "maps": [
+        "The Grand Arena",
+        "Arena Map",
+        "Colosseum Map",
+        "Racecourse Map"
+      ],
+      "loot": {
+        "text": "Lioneye's Vision"
+      }
+    },
+    {
+      "card": "The Void",
+      "maps": [],
+      "loot": {
+        "text": "N/A"
+      }
+    },
+    {
+      "card": "The Warden",
+      "maps": [
+        "The Lower Prison (Act 1)",
+        "The Upper Prison",
+        "The Slave Pens",
+        "The Lower Prison (Act 6)",
+        "Shavronne's Tower",
+        "Cage Map",
+        "Dungeon Map",
+        "Pen Map",
+        "Tower Map"
+      ],
+      "loot": {
+        "text": "Amulet\nCorrupted"
+      }
+    },
+    {
+      "card": "The Warlord",
+      "maps": [
+        "Arsenal Map"
+      ],
+      "loot": {
+        "text": "Six-Link Coronal Maul\nItem Level: 83"
+      }
+    },
+    {
+      "card": "The Watcher",
+      "maps": [
+        "Geode Map",
+        "Grotto Map"
+      ],
+      "loot": {
+        "text": "Crown of Eyes"
+      }
+    },
+    {
+      "card": "The Web",
+      "maps": [
+        "The Weaver's Chambers",
+        "Arachnid Nest Map",
+        "Arachnid Tomb Map",
+        "Jungle Valley Map",
+        "Spider Lair Map"
+      ],
+      "loot": {
+        "text": "Weapon of Crafting"
+      }
+    },
+    {
+      "card": "The White Knight",
+      "maps": [
+        "Trial of Stinging Doubt"
+      ],
+      "loot": {
+        "text": "Six-Link Astral Plate\nItem Level: 100\nCrusader Item"
+      }
+    },
+    {
+      "card": "The Whiteout",
+      "maps": [],
+      "loot": {
+        "text": "Cospri's Malice"
+      }
+    },
+    {
+      "card": "The Wilted Rose",
+      "maps": [
+        "Acton's Nightmare"
+      ],
+      "loot": {
+        "text": "Level 21 Aura Gem\nCorrupted"
+      }
+    },
+    {
+      "card": "The Wind",
+      "maps": [
+        "Atoll Map",
+        "Jungle Valley Map"
+      ],
+      "loot": {
+        "text": "Windripper"
+      }
+    },
+    {
+      "card": "The Witch",
+      "maps": [
+        "Burial Chambers Map",
+        "Spider Forest Map"
+      ],
+      "loot": {
+        "text": "Kiara's Determination"
+      }
+    },
+    {
+      "card": "The Wolf",
+      "maps": [
+        "Flooded Mine Map"
+      ],
+      "loot": {
+        "text": "Rigwald Item"
+      }
+    },
+    {
+      "card": "The Wolf's Legacy",
+      "maps": [],
+      "loot": {
+        "text": "Vaults of Atziri"
+      }
+    },
+    {
+      "card": "The Wolf's Shadow",
+      "maps": [
+        "Lair Map",
+        "Underground River Map",
+        "Caer Blaidd, Wolfpack's Den"
+      ],
+      "loot": {
+        "text": "Hyaon's Fury"
+      }
+    },
+    {
+      "card": "The Wolven King's Bite",
+      "maps": [
+        "Dark Forest Map",
+        "Lair Map"
+      ],
+      "loot": {
+        "text": "Rigwald's Quills"
+      }
+    },
+    {
+      "card": "The Wolverine",
+      "maps": [
+        "Prisoner's Gate (Act 6)",
+        "Glacier Map",
+        "Summit Map"
+      ],
+      "loot": {
+        "text": "Claw\nCorrupted"
+      }
+    },
+    {
+      "card": "The World Eater",
+      "maps": [],
+      "loot": {
+        "text": "Starforge"
+      }
+    },
+    {
+      "card": "The Wrath",
+      "maps": [
+        "The Cathedral Rooftop (Act 5)",
+        "The Canals",
+        "The Feeding Trough",
+        "The Cavern of Anger (Act 6)",
+        "Belfry Map",
+        "Lava Lake Map"
+      ],
+      "loot": {
+        "text": "10x Chaos Orb"
+      }
+    },
+    {
+      "card": "The Wretched",
+      "maps": [
+        "Bone Crypt Map",
+        "Cells Map",
+        "Cursed Crypt Map",
+        "The Coward's Trial",
+        "Dungeon Map",
+        "Necropolis Map",
+        "Overgrown Ruin Map",
+        "Acton's Nightmare",
+        "Forge of the Phoenix Map",
+        "Primordial Blocks Map",
+        "Tower Map"
+      ],
+      "loot": {
+        "text": "Belt"
+      }
+    },
+    {
+      "card": "Thirst for Knowledge",
+      "maps": [
+        "The Library",
+        "The Archives",
+        "Academy Map",
+        "Museum Map"
+      ],
+      "loot": {
+        "text": "Gluttony"
+      }
+    },
+    {
+      "card": "Three Faces in the Dark",
+      "maps": [
+        "The Marketplace",
+        "The Imperial Fields",
+        "The Grain Gate",
+        "The Refinery",
+        "Arsenal Map",
+        "Factory Map"
+      ],
+      "loot": {
+        "text": "3x Chaos Orb"
+      }
+    },
+    {
+      "card": "Three Voices",
+      "maps": [
+        "Arena Map",
+        "City Square Map",
+        "Courthouse Map",
+        "Courtyard Map",
+        "Crystal Ore Map",
+        "Graveyard Map",
+        "Racecourse Map",
+        "Vaal Pyramid Map",
+        "Vaal Temple Map"
+      ],
+      "loot": {
+        "text": "3x Essence"
+      }
+    },
+    {
+      "card": "Thunderous Skies",
+      "maps": [
+        "The Twilight Strand (Act 6)",
+        "Shavronne's Tower",
+        "Courtyard Map",
+        "Strand Map",
+        "Tower Map"
+      ],
+      "loot": {
+        "text": "Storm Cloud"
+      }
+    },
+    {
+      "card": "Time-Lost Relic",
+      "maps": [],
+      "loot": {
+        "text": "League-Specific Item"
+      }
+    },
+    {
+      "card": "Tranquillity",
+      "maps": [
+        "The Ashen Fields",
+        "Fields Map"
+      ],
+      "loot": {
+        "text": "Voltaxic Rift"
+      }
+    },
+    {
+      "card": "Treasure Hunter",
+      "maps": [
+        "The Cavern of Anger (Act 6)",
+        "Flooded Mine Map",
+        "Grotto Map",
+        "Underground River Map",
+        "Underground Sea Map"
+      ],
+      "loot": {
+        "text": "Vaults of Atziri\nCorrupted"
+      }
+    },
+    {
+      "card": "Triskaidekaphobia",
+      "maps": [],
+      "loot": {
+        "text": "Map\nMap Tier: 13\nQuality: +13%\nDelirium: 100%\nModifiers: 8\nCorrupted"
+      }
+    },
+    {
+      "card": "Turn the Other Cheek",
+      "maps": [
+        "The Library"
+      ],
+      "loot": {
+        "text": "Pacifism\nCorrupted"
+      }
+    },
+    {
+      "card": "Unchained",
+      "maps": [],
+      "loot": {
+        "text": "Facebreaker\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "Underground Forest",
+      "maps": [],
+      "loot": {
+        "text": "10x Awakened Sextant"
+      }
+    },
+    {
+      "card": "Unrequited Love",
+      "maps": [],
+      "loot": {
+        "text": "19x Mirror Shard"
+      }
+    },
+    {
+      "card": "Vanity",
+      "maps": [],
+      "loot": {
+        "text": "Tabula Rasa\nCorrupted"
+      }
+    },
+    {
+      "card": "Vile Power",
+      "maps": [
+        "Core Map",
+        "Toxic Sewer Map",
+        "Waste Pool Map"
+      ],
+      "loot": {
+        "text": "Ancient Doom"
+      }
+    },
+    {
+      "card": "Vinia's Token",
+      "maps": [
+        "The Lunaris Temple Level 2 (Act 3)",
+        "The Crematorium",
+        "Overgrown Shrine Map",
+        "Shrine Map"
+      ],
+      "loot": {
+        "text": "10x Orb of Regret"
+      }
+    },
+    {
+      "card": "Void of the Elements",
+      "maps": [],
+      "loot": {
+        "text": "Overpowering Opal Ring\nItem Level: 100\nElder Item"
+      }
+    },
+    {
+      "card": "Volatile Power",
+      "maps": [
+        "The Mines Level 1",
+        "The Mines Level 2",
+        "The Crystal Veins",
+        "The Tunnel",
+        "The Quarry",
+        "Crystal Ore Map",
+        "Dig Map",
+        "Excavation Map",
+        "Flooded Mine Map",
+        "Geode Map"
+      ],
+      "loot": {
+        "text": "Superior Vaal Gem\nQuality: +20%\nCorrupted"
+      }
+    },
+    {
+      "card": "Wealth and Power",
+      "maps": [
+        "The Lunaris Temple Level 2 (Act 8)"
+      ],
+      "loot": {
+        "text": "Level 4 Enlighten\nCorrupted"
+      }
+    }
+  ]
+}
