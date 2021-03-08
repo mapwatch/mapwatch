@@ -1090,9 +1090,7 @@
     },
     {
       "card": "More is Never Enough",
-      "maps": [
-        "Infested Valley Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Gilded Scarab"
       }
@@ -2157,7 +2155,6 @@
     {
       "card": "The Feast",
       "maps": [
-        "The Northern Forest (Act 2)",
         "The Sewers",
         "The Toxic Conduits",
         "Lair of the Hydra Map",
@@ -2588,7 +2585,7 @@
     {
       "card": "The Immortal",
       "maps": [
-        "The Hall of Grandmasters"
+        "Hall of Grandmasters"
       ],
       "loot": {
         "text": "House of Mirrors"
@@ -2754,11 +2751,7 @@
     },
     {
       "card": "The Lion",
-      "maps": [
-        "The Mud Flats (Act 6)",
-        "Caldera Map",
-        "Glacier Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Lioneye Item"
       }
@@ -3128,7 +3121,7 @@
       "card": "The Realm",
       "maps": [],
       "loot": {
-        "text": "Superior Portal"
+        "text": "Portal\nQuality: +1-20%"
       }
     },
     {
@@ -4011,6 +4004,8 @@
     {
       "card": "Vile Power",
       "maps": [
+        "The Rotting Core",
+        "Carcass Map",
         "Core Map",
         "Toxic Sewer Map",
         "Waste Pool Map"
