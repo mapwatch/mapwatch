@@ -33,4 +33,5 @@ node src/main.js > dist/mapwatch.json
 cp -f "$JSON_PATH/version.json" dist/
 echo "$POE_VERSION" > "dist/version.txt"
 
-date > dist/date
+# a timestamp would be nice to have, but it breaks CI diffs
+rm -f dist/date
