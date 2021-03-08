@@ -2,15 +2,10 @@ name: assets-export
 on:
   schedule:
     - cron: "5 1 * * *"
-  push:
-    branches: [master]
-    paths: ["third-party/**"]
+  # push:
+    # branches: [master]
+    # paths: ["packages/datamine/scripts", "packages/datamine/src"]
   workflow_dispatch:
-    inputs:
-      force_build:
-        description: "force_build: if non-empty, rebuild even if there are no PoE content changes"
-        required: false
-        default: ''
 
 jobs:
   # windows must run this, not ubuntu, as pypoe/our datamine export depends on packages/datamine/ooz.exe
