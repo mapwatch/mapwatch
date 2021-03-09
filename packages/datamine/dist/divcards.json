@@ -413,7 +413,12 @@
     },
     {
       "card": "Dying Anguish",
-      "maps": [],
+      "maps": [
+        "Arsenal Map",
+        "Colonnade Map",
+        "Ghetto Map",
+        "Port Map"
+      ],
       "loot": {
         "text": "Level 19 Gem\nAlternative Quality: +19%"
       }
