@@ -111,10 +111,9 @@ function updateCells({res, content}) {
           : 69420 + i
         const resetSheet = sheet
           ? {
-              // sheet with this name exists - clear all cells
-              updateCells: {
+              // sheet with this name exists - delete all cells
+              deleteDimension: {
                 range: {sheetId},
-                fields: "userEnteredValue",
               },
             }
           : {
@@ -123,6 +122,14 @@ function updateCells({res, content}) {
               },
             }
         return [resetSheet, {
+          // updateCells adds colums for you only if there's fewer than 26 columns (A-Z). Bizarre. appendDimension manually for the excess columns.
+          // `Invalid requests[1].updateCells: Attempting to write column: 26, beyond the last requested column of: 25`
+          appendDimension: {
+            sheetId,
+            dimension: "COLUMNS",
+            length: Math.max.apply(null, headers.map(hs => hs.length)),
+          },
+        },{
           updateCells: {
             range: {sheetId},
             fields: "userEnteredValue",
