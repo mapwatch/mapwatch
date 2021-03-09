@@ -75,7 +75,7 @@ config feature =
             FeatureConfig feature "downloadLink" True
 
         GSheets ->
-            FeatureConfig feature "gsheets" False
+            FeatureConfig feature "gsheets" True
 
         ConquerorStatus ->
             FeatureConfig feature "conquerorStatus" False

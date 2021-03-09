@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-03-09
+- Enabled exporting your map data to Google Sheets. It's on the history screen, next to the TSV-export button.
+
 ## 2021-02-07
 - Sirus map encounters are now tracked.
 
