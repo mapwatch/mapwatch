@@ -25,13 +25,13 @@ jobs:
       # no need to check versions first, it's a quick build
       - working-directory: ./packages/datamine
         run: yarn dist
-      # - run: git diff-index --quiet HEAD -- || echo "PYPOE_JSON_DIFF=1" >> $GITHUB_ENV
-      # - if: ${{ github.event.inputs.force_build || env.PYPOE_JSON_DIFF != '' }}
 
       - run: echo "POE_VERSION=`cat packages/datamine/dist/version.txt`" >> $GITHUB_ENV
+      - run: git diff-index --quiet HEAD -- || echo "PYPOE_JSON_DIFF=1" >> $GITHUB_ENV
       # https://peterevans.dev/posts/github-actions-how-to-create-pull-requests-automatically/
       # if nothing's changed - the common case, when poe was not patched - this doesn't create a pr
-      - name: Create pull request
+      - if: ${{ github.event.inputs.force_build || env.PYPOE_JSON_DIFF != '' }}
+        name: Create pull request
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
