@@ -7,6 +7,7 @@ All substantial Mapwatch website changes.
 ## 2021-03-13
 - Syndicate and Mastermind hideouts are now tracked.
 - The Domain of Timeless Conflict is now tracked.
+- Fixed wiki links for Eye of the Storm and The Maven's Crucible.
 
 ## 2021-03-09
 - Enabled exporting your map data to Google Sheets. It's on the history screen, next to the TSV-export button.

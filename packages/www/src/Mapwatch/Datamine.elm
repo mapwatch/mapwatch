@@ -282,13 +282,22 @@ wikiPath dm w =
         |> Maybe.andThen (.index >> .worldAreas >> Dict.get w.id)
         |> Maybe.map
             (\name ->
-                if w.isMapArea && not w.isUniqueMapArea then
+                if w.isMapArea && not w.isUniqueMapArea && not (Set.member w.id wikiExceptions) then
                     name ++ " Map"
 
                 else
                     name
             )
         |> Maybe.withDefault ("Area:" ++ w.id)
+
+
+{-| Zones that should be displayed and wiki-linked as "XYZ", not "XYZ Map".
+
+There's no clear rule for this, so we'll just list these exceptions.
+
+-}
+wikiExceptions =
+    Set.fromList [ "AtlasExilesBoss5", "MavenHub" ]
 
 
 wikiUrl : Datamine -> WorldArea -> String
