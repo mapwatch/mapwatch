@@ -47,7 +47,17 @@ function transform(rawJson, rawLangs) {
     itemVisualIdentity: _.keyBy(json["ItemVisualIdentity.dat"].data, 'Id')
   }))
   // I'm interested in maps, towns, and hideouts. other zones - usually campaign stuff - don't matter to mapwatch
-  .filter(w => w.IsMapArea || w.IsUniqueMapArea || w.IsTown || w.IsHideout || w.IsVaalArea || w._IsLabTrial || w._IsAbyssalDepths || w.Id.startsWith('Heist') || !!nonAtlasMaps[w.Id])
+  .filter(w => w.IsMapArea
+    || w.IsUniqueMapArea
+    || w.IsTown
+    || w.IsHideout
+    || w.IsVaalArea
+    || w._IsLabTrial
+    || w._IsAbyssalDepths
+    || w.Id.startsWith('Heist')
+    || !!nonAtlasMaps[w.Id]
+    || w.Id.includes("_Labyrinth_")
+  )
   // it looks like maps with no visuals are either duplicates or boss arenas. Either way, not interested
   .filter(w => w.ItemVisualIdentity || !w.IsMapArea)
 
@@ -260,6 +270,7 @@ function transformUniqueMap(raw, {json}) {
   }
 }
 function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes, itemVisualIdentity}) {
+  const _IsLabTrial = raw.Id.startsWith('EndGame_Labyrinth_trials_')
   return {
     Id: raw.Id,
     IsTown: raw.IsTown,
@@ -267,7 +278,8 @@ function transformWorldArea(raw, {index, json, uniqueMaps, atlasNodes, itemVisua
     IsMapArea: raw.IsMapArea,
     IsUniqueMapArea: raw.IsUniqueMapArea,
     IsVaalArea: raw.IsVaalArea,
-    _IsLabTrial: raw.Id.startsWith('EndGame_Labyrinth_trials_'),
+    _IsLabTrial,
+    _IsLabyrinth: raw.Id.includes('_Labyrinth_') && !raw.Id.includes("_Labyrinth_Airlock") && !_IsLabTrial,
     _IsAbyssalDepths : raw.Id.startsWith('AbyssLeague'),
     ItemVisualIdentity: nonAtlasMapIcon(raw.Id) ||
       _.get(uniqueMaps[index] || atlasNodes[index], 'ItemVisualIdentity') ||

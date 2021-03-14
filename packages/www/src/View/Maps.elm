@@ -233,6 +233,14 @@ viewRegionName query w =
 
 
 viewMapName : QueryDict -> String -> WorldArea -> Html msg
-viewMapName query name worldArea =
+viewMapName query name_ worldArea =
+    let
+        ( icon, name ) =
+            if worldArea.isLabyrinth then
+                ( View.Icon.labTrial, "The Labyrinth" )
+
+            else
+                ( View.Icon.mapOrBlank { isBlightedMap = False, heistNpcs = Set.empty } (Just worldArea), name_ )
+    in
     a [ Route.href (View.Util.insertSearch name query) Route.History ]
-        [ View.Icon.mapOrBlank { isBlightedMap = False, heistNpcs = Set.empty } (Just worldArea), text name ]
+        [ icon, text name ]

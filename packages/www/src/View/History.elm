@@ -365,7 +365,12 @@ viewHistoryRun : { m | query : QueryDict, tz : Time.Zone, mapwatch : { mm | data
 viewHistoryRun ({ query, tz } as m) config goals r =
     viewHistoryMainRow m config (goals r) r
         :: List.concat
-            [ r.sideAreas
+            [ if r.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
+                [ viewHistorySideAreaRow query config ( r.address, r.duration.mainMap ) ]
+
+              else
+                []
+            , r.sideAreas
                 |> Dict.values
                 |> List.map (viewHistorySideAreaRow query config)
             , r.conqueror

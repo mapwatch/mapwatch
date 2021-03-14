@@ -56,7 +56,7 @@ They're treated as "side areas", like abyssal depths or trials, not a separate m
   * These tools must always be open while playing PoE to analyze your maps - if you run a map while these tools are closed, it's not tracked; Mapwatch can always fully analyze your mapping history, whether or not it was running at the time. Also, Mapwatch existed before both of these tools.
 * Any others out there I'm not aware of?
 
-### Does this track the labyrinth or acts 1-10?
+### Does this track acts 1-10?
 
 No. [Livesplit](https://github.com/brandondong/POE-LiveSplit-Component)'s already good at those.
 

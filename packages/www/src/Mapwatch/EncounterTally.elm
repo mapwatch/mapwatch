@@ -36,12 +36,13 @@ type alias EncounterTally =
     , grandHeists : Int
     , heistContracts : Int
     , nonHeists : Int
+    , labyrinths : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -89,6 +90,7 @@ fromMapRuns runs =
         , heartOfTheGrove = hearts
         , uniqueMaps = maps |> List.filterMap .worldArea |> List.filter .isUniqueMapArea |> List.length
         , conquerors = runs |> List.filterMap .conqueror |> List.filter (\( conqueror, encounter ) -> encounter == Conqueror.Fight) |> List.length
+        , labyrinths = maps |> List.filterMap .worldArea |> List.filter .isLabyrinth |> List.length
         , grandHeists = grandHeists
         , heistContracts = heistContracts
         , nonHeists = count - grandHeists - heistContracts

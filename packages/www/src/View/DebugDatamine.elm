@@ -105,6 +105,8 @@ viewTags w =
     , ifMaybe w.isHideout "Hideout"
     , ifMaybe w.isMapArea "Map"
     , ifMaybe w.isUniqueMapArea "UniqueMap"
+    , ifMaybe w.isLabTrial "LabTrial"
+    , ifMaybe w.isLabyrinth "Labyrinth"
     , ifMaybe (Datamine.isHeistMap w) "HeistMap"
     ]
         |> List.filterMap identity

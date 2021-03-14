@@ -7,6 +7,8 @@ All substantial Mapwatch website changes.
 ## 2021-03-13
 - Syndicate and Mastermind hideouts are now tracked.
 - The Domain of Timeless Conflict is now tracked.
+- The Labyrinth is now tracked.
+  - This one was kind of tricky. [Please report any bugs](https://github.com/mapwatch/mapwatch/issues); thanks!
 - Fixed wiki links for Eye of the Storm and The Maven's Crucible.
 - The Encounters page now tracks Grand Heists, Heist contracts, and non-Heist maps.
 

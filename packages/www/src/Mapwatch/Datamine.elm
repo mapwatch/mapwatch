@@ -75,6 +75,7 @@ type alias WorldArea =
     , isUniqueMapArea : Bool
     , isVaalArea : Bool
     , isLabTrial : Bool
+    , isLabyrinth : Bool
     , isAbyssalDepths : Bool
     , itemVisualId : Maybe String
     , atlasRegion : Maybe String
@@ -247,7 +248,10 @@ boolQuery n b =
 
 isTown : WorldArea -> Bool
 isTown w =
-    w.isTown || isHeistTown w
+    w.isTown
+        || isHeistTown w
+        -- aspirants' plaza
+        || (w.id == "1_Labyrinth_AirlockClean")
 
 
 isMap : WorldArea -> Bool
@@ -258,7 +262,7 @@ isMap w =
     else
         case imgSrc { isBlightedMap = False, heistNpcs = Set.empty } w of
             Nothing ->
-                isHeistMap w
+                isHeistMap w || w.isLabyrinth
 
             Just _ ->
                 True
@@ -549,10 +553,11 @@ worldAreasDecoder =
         (D.index 6 D.bool)
         |> D.andThen
             (\w ->
-                D.map4 w
+                D.map5 w
                     (D.index 7 D.bool)
-                    (D.index 8 (D.maybe D.string))
+                    (D.index 8 D.bool)
                     (D.index 9 (D.maybe D.string))
-                    (D.index 10 (D.maybe (D.list D.int)))
+                    (D.index 10 (D.maybe D.string))
+                    (D.index 11 (D.maybe (D.list D.int)))
             )
         |> D.array

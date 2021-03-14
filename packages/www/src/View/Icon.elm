@@ -81,6 +81,11 @@ zana =
     sideArea { name = "zana big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedMaps.png?scale=1" }
 
 
+labTrialUrl : String
+labTrialUrl =
+    Datamine.imgCdn ++ "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLabyrinth.png?scale=1"
+
+
 labTrial : Html msg
 labTrial =
     -- sideArea { name = "trial", url = "Art/2DItems/Maps/Labyrinth.png" }

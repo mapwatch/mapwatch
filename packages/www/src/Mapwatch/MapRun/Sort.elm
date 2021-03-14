@@ -267,9 +267,13 @@ groupByMap =
     List.filter (.isBlightedMap >> not)
         >> Dict.Extra.groupBy
             (\i ->
-                i.address.worldArea
-                    |> Maybe.map .id
-                    |> Maybe.withDefault ""
+                if i.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
+                    "The Labyrinth"
+
+                else
+                    i.address.worldArea
+                        |> Maybe.map .id
+                        |> Maybe.withDefault ""
             )
 
 
@@ -417,6 +421,11 @@ searchString : Datamine -> MapRun -> String
 searchString dm r =
     [ if r.isBlightedMap then
         Just <| "Blighted " ++ r.address.zone
+
+      else
+        Nothing
+    , if r.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
+        Just "The Labyrinth"
 
       else
         Nothing

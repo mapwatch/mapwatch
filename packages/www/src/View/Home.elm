@@ -80,7 +80,12 @@ viewInstance query =
 
 viewRun : QueryDict -> MapRun -> Html msg
 viewRun query run =
-    viewAddress query run run.address
+    if run.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
+        a [ Route.href (View.Util.insertSearch "The Labyrinth" query) Route.History ]
+            [ Icon.labTrial, text "The Labyrinth" ]
+
+    else
+        viewAddress query run run.address
 
 
 viewRegion : QueryDict -> Maybe WorldArea -> Html msg
@@ -287,7 +292,11 @@ viewSideAreaName query instance =
 
         Just w ->
             if Datamine.isMap w then
-                span [] [ Icon.zana, text "Zana (", label, text ")" ]
+                if w.isLabyrinth then
+                    span [] [ Icon.labTrial, label ]
+
+                else
+                    span [] [ Icon.zana, text "Zana (", label, text ")" ]
 
             else if w.isVaalArea then
                 span [] [ Icon.vaal, text "Vaal side area (", label, text ")" ]

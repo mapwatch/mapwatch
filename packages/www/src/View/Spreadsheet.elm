@@ -20,6 +20,7 @@ import Route.Feature as Feature exposing (Feature)
 import Set exposing (Set)
 import Time exposing (Posix)
 import View.Home exposing (monthToString)
+import View.Icon
 import View.Maps
 
 
@@ -89,10 +90,18 @@ viewMapsHeaders =
 viewMapsRow : Int -> View.Maps.GroupedRuns -> List Cell
 viewMapsRow i row =
     [ i + 1 |> CellInt
-    , row.worldArea
-        |> Datamine.imgSrc { isBlightedMap = False, heistNpcs = Set.empty }
-        |> Maybe.Extra.unwrap CellEmpty CellIcon
-    , row.name |> CellString
+    , if row.worldArea.isLabyrinth then
+        CellIcon View.Icon.labTrialUrl
+
+      else
+        row.worldArea
+            |> Datamine.imgSrc { isBlightedMap = False, heistNpcs = Set.empty }
+            |> Maybe.Extra.unwrap CellEmpty CellIcon
+    , if row.worldArea.isLabyrinth then
+        CellString "The Labyrinth"
+
+      else
+        row.name |> CellString
     , row.worldArea.atlasRegion |> Maybe.withDefault "---" |> CellString
     , Datamine.tier row.worldArea
         |> Maybe.Extra.unwrap CellEmpty CellInt
@@ -148,6 +157,7 @@ viewEncountersRows tally =
     , { count = tally.grandHeists, label = "Grand Heists" }
     , { count = tally.heistContracts, label = "Heist Contracts" }
     , { count = tally.nonHeists, label = "Non-Heist Maps" }
+    , { count = tally.labyrinths, label = "The Labyrinth" }
     , { count = tally.envoy, label = "The Envoy" }
     , { count = tally.maven, label = "The Maven" }
     , { count = tally.sirus, label = "Sirus Invasions" }
@@ -223,8 +233,16 @@ viewHistoryRow : OkModel -> Int -> MapRun -> List Cell
 viewHistoryRow model i run =
     [ i + 1 |> CellInt
     , run.updatedAt |> CellPosix model.tz
-    , run.address.worldArea |> Maybe.andThen (Datamine.imgSrc run) |> Maybe.Extra.unwrap CellEmpty CellIcon
-    , run.address.zone |> CellString
+    , if run.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
+        CellIcon View.Icon.labTrialUrl
+
+      else
+        run.address.worldArea |> Maybe.andThen (Datamine.imgSrc run) |> Maybe.Extra.unwrap CellEmpty CellIcon
+    , if run.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
+        CellString "The Labyrinth"
+
+      else
+        run.address.zone |> CellString
     , run.address.worldArea |> Maybe.andThen .atlasRegion |> Maybe.withDefault "---" |> CellString
     , if run.isAbandoned then
         "???" |> CellString

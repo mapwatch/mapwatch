@@ -187,6 +187,7 @@ listEncounterTally query tally =
     , entry tally.grandHeists "grand-heist:" [ View.Icon.grandHeistGeneric, text "Grand Heists" ]
     , entry tally.heistContracts "heist-contract:" [ View.Icon.heistContractGeneric, text "Heist Contracts" ]
     , entry tally.nonHeists "map:" [ View.Icon.zana, text "Non-Heist Maps" ]
+    , entry tally.labyrinths "The Labyrinth" [ View.Icon.labTrial, text "The Labyrinth" ]
     , entry tally.envoy "npc:envoy" [ View.Icon.envoy, text "The Envoy" ]
     , entry tally.maven "npc:maven" [ View.Icon.maven, text "The Maven" ]
     , entry tally.sirus "npc:sirus" [ View.Icon.sirus, text "Sirus Invasions" ]
