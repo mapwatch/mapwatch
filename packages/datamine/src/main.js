@@ -47,7 +47,7 @@ function transform(rawJson, rawLangs) {
     itemVisualIdentity: _.keyBy(json["ItemVisualIdentity.dat"].data, 'Id')
   }))
   // I'm interested in maps, towns, and hideouts. other zones - usually campaign stuff - don't matter to mapwatch
-  .filter(w => w.IsMapArea || w.IsUniqueMapArea || w.IsTown || w.IsHideout || w.IsVaalArea || w._IsLabTrial || w._IsAbyssalDepths || w.Id.startsWith('Heist'))
+  .filter(w => w.IsMapArea || w.IsUniqueMapArea || w.IsTown || w.IsHideout || w.IsVaalArea || w._IsLabTrial || w._IsAbyssalDepths || w.Id.startsWith('Heist') || !!nonAtlasMaps[w.Id])
   // it looks like maps with no visuals are either duplicates or boss arenas. Either way, not interested
   .filter(w => w.ItemVisualIdentity || !w.IsMapArea)
 
@@ -76,6 +76,14 @@ const nonAtlasMaps = {
   "BreachBossLightning": "Art/2DItems/Currency/Breach/BreachFragmentsLightning.png",
   "BreachBossPhysical": "Art/2DItems/Currency/Breach/BreachFragmentsPhysical.png",
   "BreachBossChaos": "Art/2DItems/Currency/Breach/BreachFragmentsChaos.png",
+  // domain of timeless conflict
+  "LegionLeague": "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLegion.png",
+  "BetrayalMastermindFight": "Art/2DItems/Hideout/HideoutImageofCatarina.png",
+  // These four are all named "Syndicate Hideout" so we can't tell them apart, but grouping them all should be fine
+  "BetrayalSafeHouseFortress": "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
+  "BetrayalSafeHouseAssassins": "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
+  "BetrayalSafeHouseCaravan": "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
+  "BetrayalSafeHouseLaboratory": "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
   // maven
   "MavenHub": "Art/2DItems/Effects/Portals/MavenPortalEffect.png",
 }
