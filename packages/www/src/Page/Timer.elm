@@ -1,4 +1,4 @@
-module View.Timer exposing (view)
+module Page.Timer exposing (view)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
@@ -12,13 +12,13 @@ import Mapwatch.MapRun.Sort as RunSort
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
 import Model exposing (Msg, OkModel)
+import Page.History
 import Route
 import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Set exposing (Set)
 import Time exposing (Posix)
 import View.Drops
-import View.History
 import View.Home
 import View.Icon
 import View.Nav
@@ -103,7 +103,7 @@ viewMain model =
 
         historyTable =
             table [ class "timer history" ]
-                [ tbody [] (List.concat <| List.map (View.History.viewHistoryRun model { showDate = False, loadedAt = model.loadedAt } goalDuration) <| history)
+                [ tbody [] (List.concat <| List.map (Page.History.viewHistoryRun model { showDate = False, loadedAt = model.loadedAt } goalDuration) <| history)
                 , tfoot []
                     [ tr []
                         [ td [ colspan 12 ]
@@ -174,7 +174,7 @@ viewMain model =
                         [ View.Home.viewMaybeInstance model.query <| Maybe.map .val model.mapwatch.instance
                         , small [ style "opacity" "0.5" ]
                             [ text " ("
-                            , text <| View.History.formatMaybeDuration sinceLastUpdated
+                            , text <| Page.History.formatMaybeDuration sinceLastUpdated
                             , text ")"
                             ]
                         ]
@@ -195,9 +195,9 @@ viewTimer : Maybe Duration -> Maybe Duration -> Html msg
 viewTimer dur goal =
     div []
         [ div [ class "main-timer" ]
-            [ div [] [ text <| View.History.formatMaybeDuration dur ] ]
+            [ div [] [ text <| Page.History.formatMaybeDuration dur ] ]
         , div [ class "sub-timer" ]
-            [ div [] [ View.History.viewDurationDelta dur goal ] ]
+            [ div [] [ Page.History.viewDurationDelta dur goal ] ]
         ]
 
 

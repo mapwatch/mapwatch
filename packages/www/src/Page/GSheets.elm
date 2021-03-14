@@ -1,4 +1,4 @@
-module View.GSheets exposing (view)
+module Page.GSheets exposing (view)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
@@ -9,15 +9,15 @@ import Mapwatch
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Maybe.Extra
 import Model exposing (Msg, OkModel)
+import Page.History
+import Page.NotFound
 import RemoteData exposing (RemoteData)
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
 import Time exposing (Posix)
-import View.History
 import View.Home
 import View.Icon
 import View.Nav
-import View.NotFound
 import View.Setup
 import View.Spreadsheet as Spreadsheet
 
@@ -33,7 +33,7 @@ view model =
             ]
 
     else
-        View.NotFound.view model
+        Page.NotFound.view model
 
 
 viewBody : OkModel -> Html Msg
@@ -82,7 +82,7 @@ viewMain model =
         RemoteData.Success gsheets ->
             let
                 runs =
-                    View.History.listRuns model
+                    Page.History.listRuns model
             in
             [ div []
                 [ case ( gsheets.url, model.settings.spreadsheetId ) of

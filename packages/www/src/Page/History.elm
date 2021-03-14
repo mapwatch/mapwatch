@@ -1,4 +1,4 @@
-module View.History exposing (formatMaybeDuration, listRuns, view, viewDurationDelta, viewHistoryRun)
+module Page.History exposing (formatMaybeDuration, listRuns, view, viewDurationDelta, viewHistoryRun)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
@@ -16,6 +16,7 @@ import Mapwatch.MapRun.Sort as RunSort
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
 import Model exposing (Msg(..), OkModel)
+import Page.NotFound
 import Random exposing (Generator)
 import Regex
 import Route exposing (Route)
@@ -27,7 +28,6 @@ import View.Drops
 import View.Home
 import View.Icon
 import View.Nav
-import View.NotFound
 import View.Setup
 import View.Util
 
@@ -35,7 +35,7 @@ import View.Util
 view : OkModel -> Html Msg
 view model =
     if Mapwatch.isReady model.mapwatch && not (isValidPage (QueryDict.getInt Route.keys.page model.query |> Maybe.withDefault 0) model) then
-        View.NotFound.view model
+        Page.NotFound.view model
 
     else
         div [ class "main" ]

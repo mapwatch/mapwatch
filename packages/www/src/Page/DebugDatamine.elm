@@ -1,4 +1,4 @@
-module View.DebugDatamine exposing (view)
+module Page.DebugDatamine exposing (view)
 
 import Array exposing (Array)
 import Dict exposing (Dict)

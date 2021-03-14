@@ -1,11 +1,14 @@
-module View.NotFound exposing (view)
+module Page.Privacy exposing (view)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import Markdown
+import Maybe.Extra
 import Model exposing (OkModel)
-import Route
+import Route as Route exposing (Route)
 import View.Home
+import View.Icon
 import View.Nav
 
 
@@ -14,5 +17,5 @@ view model =
     div [ class "main" ]
         [ View.Home.viewHeader model
         , View.Nav.view model
-        , text "404"
+        , model.flags.privacy |> Markdown.toHtml []
         ]

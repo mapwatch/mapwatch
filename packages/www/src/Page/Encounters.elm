@@ -1,4 +1,4 @@
-module View.Encounters exposing (view)
+module Page.Encounters exposing (view)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
@@ -12,11 +12,11 @@ import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Sort as RunSort
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
+import Page.History
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Time exposing (Posix)
-import View.History
 import View.Home
 import View.Icon
 import View.Nav

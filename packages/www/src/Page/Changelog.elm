@@ -1,4 +1,4 @@
-module View.Changelog exposing (view)
+module Page.Changelog exposing (view)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)

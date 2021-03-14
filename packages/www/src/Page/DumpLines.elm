@@ -1,4 +1,4 @@
-module View.DumpLines exposing (view)
+module Page.DumpLines exposing (view)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)

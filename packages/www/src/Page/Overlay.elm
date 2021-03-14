@@ -1,4 +1,4 @@
-module View.Overlay exposing (view)
+module Page.Overlay exposing (view)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
@@ -10,12 +10,12 @@ import Mapwatch.MapRun.Sort as RunSort
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
 import Model as Model exposing (Msg, OkModel)
+import Page.History
 import Readline exposing (Readline)
 import Route exposing (Route)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Set exposing (Set)
 import Time exposing (Posix)
-import View.History
 import View.Home
 import View.Icon
 import View.Nav
@@ -124,9 +124,9 @@ viewRow query count i goalDuration run =
 
 viewTimer : Maybe Duration -> Html msg
 viewTimer dur =
-    text <| View.History.formatMaybeDuration dur
+    text <| Page.History.formatMaybeDuration dur
 
 
 viewGoalTimer : Maybe Duration -> Maybe Duration -> Html msg
 viewGoalTimer dur goal =
-    View.History.viewDurationDelta dur goal
+    Page.History.viewDurationDelta dur goal

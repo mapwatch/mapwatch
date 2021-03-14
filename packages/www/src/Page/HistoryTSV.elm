@@ -1,11 +1,11 @@
-module View.HistoryTSV exposing (view)
+module Page.HistoryTSV exposing (view)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Mapwatch
 import Model exposing (Msg, OkModel)
-import View.History
+import Page.History
 import View.Home
 import View.Nav
 import View.Setup
@@ -39,7 +39,7 @@ viewMain : OkModel -> Html Msg
 viewMain model =
     let
         runs =
-            View.History.listRuns model
+            Page.History.listRuns model
     in
     div []
         [ p []

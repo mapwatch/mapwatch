@@ -1,4 +1,4 @@
-module View.Maps exposing (GroupedRuns, applySort, groupRuns, view)
+module Page.Maps exposing (GroupedRuns, applySort, groupRuns, view)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
@@ -11,11 +11,11 @@ import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Sort as RunSort
 import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
+import Page.History
 import Route exposing (Route)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Set exposing (Set)
 import Time exposing (Posix)
-import View.History
 import View.Home
 import View.Icon
 import View.Nav

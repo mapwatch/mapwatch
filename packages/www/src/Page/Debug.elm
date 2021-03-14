@@ -1,4 +1,4 @@
-module View.Debug exposing (view)
+module Page.Debug exposing (view)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)

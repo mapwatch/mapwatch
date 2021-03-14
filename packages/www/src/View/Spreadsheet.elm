@@ -16,12 +16,12 @@ import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Maybe.Extra
 import Model exposing (Msg, OkModel)
+import Page.Maps
 import Route.Feature as Feature exposing (Feature)
 import Set exposing (Set)
 import Time exposing (Posix)
 import View.Home exposing (monthToString)
 import View.Icon
-import View.Maps
 
 
 type Cell
@@ -59,7 +59,7 @@ viewMaps model runs =
     let
         rows =
             runs
-                |> View.Maps.groupRuns model.mapwatch.datamine
+                |> Page.Maps.groupRuns model.mapwatch.datamine
                 |> List.sortBy (.runs >> .num)
                 |> List.reverse
     in
@@ -87,7 +87,7 @@ viewMapsHeaders =
     ]
 
 
-viewMapsRow : Int -> View.Maps.GroupedRuns -> List Cell
+viewMapsRow : Int -> Page.Maps.GroupedRuns -> List Cell
 viewMapsRow i row =
     [ i + 1 |> CellInt
     , if row.worldArea.isLabyrinth then

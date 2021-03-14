@@ -1,4 +1,4 @@
-module View.Settings exposing (view)
+module Page.Settings exposing (view)
 
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
