@@ -92,7 +92,7 @@ view model =
             [ text "Analyze only the last "
             , input
                 [ type_ "number"
-                , value <| String.fromInt model.config.maxSize
+                , value <| String.fromInt model.maxSize
                 , onInput InputMaxSize
                 , A.min "0"
                 , A.max "100"

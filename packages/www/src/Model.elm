@@ -50,10 +50,6 @@ type alias Progress =
     Ports.Progress
 
 
-type alias Config =
-    { maxSize : Int }
-
-
 type alias Model =
     Result String OkModel
 
@@ -61,7 +57,7 @@ type alias Model =
 type alias OkModel =
     { nav : Nav.Key
     , mapwatch : Mapwatch.Model
-    , config : Config
+    , maxSize : Int
     , flags : Flags
     , loadedAt : Posix
     , route : Route
@@ -154,7 +150,7 @@ reset flags nav query route settings tz gsheets =
         createModel mapwatch =
             { nav = nav
             , mapwatch = mapwatch
-            , config = { maxSize = 20 }
+            , maxSize = 20
             , flags = flags
             , loadedAt = loadedAt
             , route = route
@@ -201,7 +197,7 @@ update msg rmodel =
 
 
 updateOk : Msg -> OkModel -> ( OkModel, Cmd Msg )
-updateOk msg ({ config, mapwatch, settings } as model) =
+updateOk msg ({ mapwatch, settings } as model) =
     case msg of
         Tick t ->
             if Mapwatch.isReady model.mapwatch then
@@ -249,15 +245,15 @@ updateOk msg ({ config, mapwatch, settings } as model) =
             ( model, urlstr |> Nav.load )
 
         FileSelector ->
-            ( model, Ports.fileSelector { maxSize = config.maxSize } )
+            ( model, Ports.fileSelector { maxSize = model.maxSize } )
 
         LogSelected id ->
-            ( model, Ports.logSelected { id = id, maxSize = config.maxSize } )
+            ( model, Ports.logSelected { id = id, maxSize = model.maxSize } )
 
         InputMaxSize s ->
             case String.toInt s of
                 Just s_ ->
-                    ( { model | config = { config | maxSize = s_ } }, Cmd.none )
+                    ( { model | maxSize = s_ }, Cmd.none )
 
                 Nothing ->
                     ( model, Cmd.none )
