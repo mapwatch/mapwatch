@@ -111,9 +111,11 @@ function updateCells({res, content}) {
           : 69420 + i
         const resetSheet = sheet
           ? {
-              // sheet with this name exists - delete all cells
-              deleteDimension: {
+              // sheet with this name exists - clear all cells
+              // don't delete+recreate the sheet - that breaks references elsewhere in the spreadsheet!
+              updateCells: {
                 range: {sheetId},
+                fields: "userEnteredValue",
               },
             }
           : {
