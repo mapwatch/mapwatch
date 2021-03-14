@@ -25,6 +25,7 @@ sirusAddr =
                 , isUniqueMapArea = False
                 , isVaalArea = False
                 , isLabTrial = False
+                , isLabyrinth = False
                 , isAbyssalDepths = False
                 , itemVisualId = Nothing
                 , atlasRegion = Nothing
