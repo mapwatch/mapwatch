@@ -60,7 +60,7 @@ type alias Model =
 
 type alias OkModel =
     { nav : Nav.Key
-    , mapwatch : Mapwatch.OkModel
+    , mapwatch : Mapwatch.Model
     , config : Config
     , flags : Flags
     , loadedAt : Posix
@@ -150,7 +150,7 @@ reset flags nav query route settings tz gsheets =
         logtz =
             flags.logtz |> Maybe.map (\offset -> Time.customZone (60 * offset |> round) [])
 
-        createModel : Mapwatch.OkModel -> OkModel
+        createModel : Mapwatch.Model -> OkModel
         createModel mapwatch =
             { nav = nav
             , mapwatch = mapwatch
@@ -388,7 +388,7 @@ updateMapwatch : Mapwatch.Msg -> OkModel -> ( OkModel, Cmd Msg )
 updateMapwatch msg model =
     let
         ( mapwatch, cmd ) =
-            Mapwatch.updateOk model.settings msg model.mapwatch
+            Mapwatch.update model.settings msg model.mapwatch
     in
     ( { model | mapwatch = mapwatch }, Cmd.map M cmd )
         |> Tuple.mapFirst
@@ -410,7 +410,7 @@ subscriptions rmodel =
 
         Ok model ->
             Sub.batch
-                [ Mapwatch.subscriptions (Ok model.mapwatch) |> Sub.map M
+                [ Mapwatch.subscriptions model.mapwatch |> Sub.map M
                 , Ports.gsheetsLoginUpdate GSheetsLoginUpdate
                 , Ports.gsheetsWritten GSheetsWritten
 

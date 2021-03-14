@@ -1,7 +1,6 @@
 module Mapwatch exposing
     ( Model
     , Msg(..)
-    , OkModel
     , ReadyState(..)
     , init
     , initModel
@@ -11,7 +10,6 @@ module Mapwatch exposing
     , subscriptions
     , tick
     , update
-    , updateOk
     )
 
 import Duration exposing (Millis)
@@ -31,10 +29,6 @@ import TimedReadline exposing (TimedReadline)
 
 
 type alias Model =
-    Result String OkModel
-
-
-type alias OkModel =
     { datamine : Datamine
     , history : Maybe TimedReadline
     , instance : Maybe Instance.State
@@ -51,7 +45,7 @@ type Msg
     | LogOpened { date : Int, size : Int }
 
 
-createModel : Maybe Time.Zone -> Datamine -> OkModel
+createModel : Maybe Time.Zone -> Datamine -> Model
 createModel tz datamine =
     { datamine = datamine
     , instance = Nothing
@@ -63,19 +57,19 @@ createModel tz datamine =
     }
 
 
-initModel : Maybe Time.Zone -> D.Value -> Model
+initModel : Maybe Time.Zone -> D.Value -> Result String Model
 initModel tz =
     D.decodeValue Datamine.decoder
         >> Result.mapError D.errorToString
         >> Result.map (createModel tz)
 
 
-init : Maybe Time.Zone -> D.Value -> ( Model, Cmd Msg )
+init : Maybe Time.Zone -> D.Value -> ( Result String Model, Cmd Msg )
 init tz datamineJson =
     ( initModel tz datamineJson, Cmd.none )
 
 
-updateLine : Settings -> LogLine.Line -> ( OkModel, List (Cmd Msg) ) -> ( OkModel, List (Cmd Msg) )
+updateLine : Settings -> LogLine.Line -> ( Model, List (Cmd Msg) ) -> ( Model, List (Cmd Msg) )
 updateLine settings line ( model, cmds0 ) =
     let
         instance =
@@ -116,7 +110,7 @@ updateLine settings line ( model, cmds0 ) =
     )
 
 
-tick : Posix -> OkModel -> OkModel
+tick : Posix -> Model -> Model
 tick t model =
     case model.instance of
         Nothing ->
@@ -136,18 +130,7 @@ tick t model =
 
 
 update : Settings -> Msg -> Model -> ( Model, Cmd Msg )
-update settings msg rmodel =
-    case rmodel of
-        Err err ->
-            ( rmodel, Cmd.none )
-
-        Ok model ->
-            updateOk settings msg model
-                |> Tuple.mapFirst Ok
-
-
-updateOk : Settings -> Msg -> OkModel -> ( OkModel, Cmd Msg )
-updateOk settings msg model =
+update settings msg model =
     case msg of
         LogOpened { date, size } ->
             case model.readline of
@@ -226,7 +209,7 @@ type ReadyState
     | Ready TimedReadline.Progress
 
 
-ready : OkModel -> ReadyState
+ready : Model -> ReadyState
 ready m =
     case m.history of
         Just h ->
@@ -241,12 +224,12 @@ ready m =
                     TimedReadline.progress r |> LoadingHistory
 
 
-isReady : OkModel -> Bool
+isReady : Model -> Bool
 isReady =
     .history >> Maybe.Extra.isJust
 
 
-lastUpdatedAt : OkModel -> Maybe Posix
+lastUpdatedAt : Model -> Maybe Posix
 lastUpdatedAt model =
     [ model.instance |> Maybe.map .joinedAt
     , model.runState |> Maybe.map RawMapRun.updatedAt
