@@ -8,6 +8,7 @@ All substantial Mapwatch website changes.
 - Syndicate and Mastermind hideouts are now tracked.
 - The Domain of Timeless Conflict is now tracked.
 - Fixed wiki links for Eye of the Storm and The Maven's Crucible.
+- The Encounters page now tracks Grand Heists, Heist contracts, and non-Heist maps.
 
 ## 2021-03-09
 - Enabled exporting your map data to Google Sheets. It's on the history screen, next to the TSV-export button.

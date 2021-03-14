@@ -267,6 +267,26 @@ isla =
     sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Isla.png?scale=1" }
 
 
+adiyah : Html msg
+adiyah =
+    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Adiyah.png?scale=1" }
+
+
+kurai : Html msg
+kurai =
+    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Kura.png?scale=1" }
+
+
+grandHeistGeneric : Html msg
+grandHeistGeneric =
+    sideArea { name = "med-icon", url = "Art/2DItems/Currency/Heist/BlueprintApproved.png?scale=1" }
+
+
+heistContractGeneric : Html msg
+heistContractGeneric =
+    sideArea { name = "med-icon", url = "Art/2DItems/Currency/Heist/ContractItem.png?scale=1" }
+
+
 divCard : Html msg
 divCard =
     -- not a side-area icon, this is for the divcard-drops under the timer

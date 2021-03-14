@@ -33,12 +33,15 @@ type alias EncounterTally =
     , oshabi : Int
     , heartOfTheGrove : Int
     , sirus : Int
+    , grandHeists : Int
+    , heistContracts : Int
+    , nonHeists : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -71,13 +74,25 @@ fromMapRuns runs =
 
         hearts =
             runs |> List.filter .isHeartOfTheGrove |> List.length
+
+        grandHeists =
+            runs |> List.filter (\r -> Set.size r.heistNpcs > 1) |> List.length
+
+        heistContracts =
+            runs |> List.filter (\r -> Set.size r.heistNpcs == 1) |> List.length
+
+        count =
+            List.length runs
     in
     { empty
         | blightedMaps = runs |> List.filter .isBlightedMap |> List.length
         , heartOfTheGrove = hearts
         , uniqueMaps = maps |> List.filterMap .worldArea |> List.filter .isUniqueMapArea |> List.length
         , conquerors = runs |> List.filterMap .conqueror |> List.filter (\( conqueror, encounter ) -> encounter == Conqueror.Fight) |> List.length
-        , count = List.length runs
+        , grandHeists = grandHeists
+        , heistContracts = heistContracts
+        , nonHeists = count - grandHeists - heistContracts
+        , count = count
     }
         |> tallyNpcs npcs
         |> (\t -> { t | oshabi = t.oshabi - hearts |> max 0 })

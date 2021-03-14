@@ -145,6 +145,9 @@ viewEncountersRows tally =
     , { count = tally.delirium, label = "Delirium" }
     , { count = tally.oshabi, label = "Oshabi (INCOMPLETE)" }
     , { count = tally.heartOfTheGrove, label = "Heart of the Grove" }
+    , { count = tally.grandHeists, label = "Grand Heists" }
+    , { count = tally.heistContracts, label = "Heist Contracts" }
+    , { count = tally.nonHeists, label = "Non-Heist Maps" }
     , { count = tally.envoy, label = "The Envoy" }
     , { count = tally.maven, label = "The Maven" }
     , { count = tally.sirus, label = "Sirus Invasions" }
