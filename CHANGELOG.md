@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-03-14 🥧
+- The Laboratory heist contract is now correctly distinguished from the Laboratory map.
+
 ## 2021-03-13
 - Syndicate and Mastermind hideouts are now tracked.
 - The Domain of Timeless Conflict is now tracked.

@@ -115,7 +115,7 @@ aggregate runs0 =
 
 
 fromRaw : Datamine -> RawMapRun -> MapRun
-fromRaw dm ({ address } as raw) =
+fromRaw dm raw =
     let
         -- durations by instance. includes time spent with the game closed.
         idurs : List ( Instance, Millis )
@@ -153,39 +153,7 @@ fromRaw dm ({ address } as raw) =
 
         addr : Address
         addr =
-            address.worldArea
-                |> Maybe.map
-                    (\w ->
-                        -- The overwhelming majority of the time, the worldarea is based solely on its name, unchanged.
-                        -- One special case: Shaper and Uber-Elder maps are both named "The Shaper's Realm", ambiguous.
-                        -- Use the shaper's voice lines to distinguish them.
-                        -- https://github.com/mapwatch/mapwatch/issues/55
-                        if w.id == "MapWorldsShapersRealm" || w.id == "MapWorldsElderArenaUber" then
-                            let
-                                shaperSays =
-                                    Dict.get NpcId.shaper raw.npcSays
-                                        |> Maybe.withDefault []
-                                        |> List.map .textId
-                                        |> List.filter ((/=) "")
-                            in
-                            if List.any ((==) "ShaperMapShapersRealm") shaperSays then
-                                { address | worldArea = Dict.get "MapWorldsShapersRealm" dm.worldAreasById }
-
-                            else if List.any ((==) "ShaperUberElderIntro") shaperSays then
-                                { address
-                                    | worldArea = Dict.get "MapWorldsElderArenaUber" dm.worldAreasById
-
-                                    -- Distinguish the display name so users can easily tell them apart
-                                    , zone = address.zone ++ ": Uber Elder"
-                                }
-
-                            else
-                                address
-
-                        else
-                            address
-                    )
-                |> Maybe.withDefault address
+            toMapRunAddress dm raw
     in
     { address = addr
     , startedAt = raw.startedAt
@@ -212,6 +180,54 @@ fromRaw dm ({ address } as raw) =
         , sides = sideDurs |> List.map Tuple.second |> List.sum
         }
     }
+
+
+toMapRunAddress : Datamine -> RawMapRun -> Address
+toMapRunAddress dm ({ address } as raw) =
+    case address.worldArea of
+        Nothing ->
+            address
+
+        Just w ->
+            -- The overwhelming majority of the time, the worldarea is based solely on its name, unchanged.
+            -- There are a few special cases, though:
+            if w.id == "MapWorldsShapersRealm" || w.id == "MapWorldsElderArenaUber" then
+                -- Shaper and Uber-Elder maps are both named "The Shaper's Realm", ambiguous.
+                -- Use the shaper's voice lines to distinguish them.
+                -- https://github.com/mapwatch/mapwatch/issues/55
+                let
+                    shaperSays =
+                        Dict.get NpcId.shaper raw.npcSays
+                            |> Maybe.withDefault []
+                            |> List.map .textId
+                            |> List.filter ((/=) "")
+                in
+                if List.any ((==) "ShaperMapShapersRealm") shaperSays then
+                    { address | worldArea = Dict.get "MapWorldsShapersRealm" dm.worldAreasById }
+
+                else if List.any ((==) "ShaperUberElderIntro") shaperSays then
+                    { address
+                        | worldArea = Dict.get "MapWorldsElderArenaUber" dm.worldAreasById
+
+                        -- Distinguish the display name so users can easily tell them apart
+                        , zone = address.zone ++ ": Uber Elder"
+                    }
+
+                else
+                    address
+
+            else if w.id == "MapWorldsLaboratory" || String.startsWith "HeistDungeon" w.id then
+                -- There's a Laboratory map and a Laboratory heist.
+                -- Use Heist rogue voicelines to distinguish them.
+                -- https://github.com/mapwatch/mapwatch/issues/124
+                if raw |> heistNpcs |> Set.isEmpty then
+                    { address | worldArea = Dict.get "MapWorldsLaboratory" dm.worldAreasById }
+
+                else
+                    { address | worldArea = Dict.get "HeistDungeon1" dm.worldAreasById }
+
+            else
+                address
 
 
 conquerorEncounterFromNpcs : RawMapRun.NpcEncounters -> Maybe ( Conqueror.Id, Conqueror.Encounter )
