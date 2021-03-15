@@ -9,6 +9,7 @@ import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
 import View.Home
 import View.Nav
+import View.Setup
 
 
 view : OkModel -> Html Msg
@@ -40,7 +41,35 @@ view model =
             [ li [] [ a [ Route.href model.query Route.DebugDatamine ] [ text "/debug/datamine" ] ]
             , li [] [ a [ Route.href model.query Route.DebugDumpLines ] [ text "/debug/dumplines (broken)" ] ]
             ]
+        , b [] [ text "Test cases:" ]
+        , ul []
+            (testCases
+                |> List.map
+                    (\( file, query, comment ) ->
+                        li []
+                            [ a [ target "_blank", href <| "?example=" ++ file ++ query ] [ text file ]
+                            , text " ("
+                            , a [ target "_blank", href <| "/examples/" ++ file ] [ text "raw" ]
+                            , text "): "
+                            , text comment
+                            ]
+                    )
+            )
         ]
+
+
+testCases : List ( String, String, String )
+testCases =
+    [ ( View.Setup.example.file, View.Setup.example.query, "Front page's \"Run an example now!\"" )
+    , ( "laboratory.txt", "#/history", "Laboratory map vs. heist" )
+    , ( "grand-heist.txt", "#/history", "Heist-contract vs. Grand-heist" )
+    , ( "shaper-uberelder.txt", "#/history", "Shaper vs Uber-Elder in \"The Shaper's Realm\"" )
+    , ( "oshabi-boss.txt", "#/history", "Oshabi boss-fight vs. standard harvest" )
+    , ( "chinese-client.txt", "&tickStart=1526227994000&logtz=0#/history", "Chinese client test. BROKEN since ggpk reformat: https://github.com/mapwatch/mapwatch/issues/118" )
+    , ( "simulacrum.txt", "&tickStart=1526927461000&logtz=0#/history", "Simulacrum has a 60min timeout, other maps have 30min" )
+    , ( "daylight-savings.txt", "&tickStart=1603996952265&logtz=0#/history", "DST" )
+    , ( "short-client.txt", "#/history", "for testing text-to-speech" )
+    ]
 
 
 debugNotification : E.Value

@@ -1,4 +1,4 @@
-module View.Setup exposing (view, viewDownloadLink)
+module View.Setup exposing (example, view, viewDownloadLink)
 
 import AppPlatform
 import Html as H exposing (..)
@@ -45,6 +45,10 @@ viewDownloadLink model =
         div [] []
 
 
+example =
+    { file = "stripped-client.txt", query = "&tickStart=1526927461000&logtz=0#/" }
+
+
 view : OkModel -> Html Msg
 view model =
     let
@@ -84,7 +88,7 @@ view model =
                 ++ [ text "leave me open while you play - I'll keep watching, no need to upload again. " ]
             )
         , p []
-            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href "?tickStart=1526927461000&logtz=0&example=stripped-client.txt#/" ]) [ text "Run an example now!" ]
+            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href <| "?example=" ++ example.file ++ example.query ++ "#/" ]) [ text "Run an example now!" ]
             ]
         , viewDownloadLink model
         , hr [] []
