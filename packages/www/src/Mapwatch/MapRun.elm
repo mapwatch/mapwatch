@@ -239,8 +239,33 @@ toMapRunAddress dm ({ address } as raw) =
                 else
                     { address | worldArea = Dict.get "HeistDungeon1" dm.worldAreasById }
 
+            else if w.isLabyrinth then
+                -- Treat the Labyrinth as a single worldArea. This isn't accurate -
+                -- it's a series of different worldAreas - but faking a consistent
+                -- lab worldArea simplifies so much.
+                { address | worldArea = Just labyrinthWorldArea, zone = "The Labyrinth" }
+
             else
                 address
+
+
+labyrinthWorldArea : WorldArea
+labyrinthWorldArea =
+    { id = "__mapwatch:TheLabyrinth"
+    , isLabyrinth = True
+    , itemVisualId = Just "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLabyrinth.png?scale=1"
+
+    --
+    , isTown = False
+    , isHideout = False
+    , isMapArea = False
+    , isUniqueMapArea = False
+    , isVaalArea = False
+    , isLabTrial = False
+    , isAbyssalDepths = False
+    , atlasRegion = Nothing
+    , tiers = Nothing
+    }
 
 
 conquerorEncounterFromNpcs : RawMapRun.NpcEncounters -> Maybe ( Conqueror.Id, Conqueror.Encounter )

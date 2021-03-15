@@ -80,12 +80,7 @@ viewInstance query =
 
 viewRun : QueryDict -> MapRun -> Html msg
 viewRun query run =
-    if run.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
-        a [ Route.href (View.Util.insertSearch "The Labyrinth" query) Route.History ]
-            [ Icon.labTrial, text "The Labyrinth" ]
-
-    else
-        viewAddress query run run.address
+    viewAddress query run run.address
 
 
 viewRegion : QueryDict -> Maybe WorldArea -> Html msg

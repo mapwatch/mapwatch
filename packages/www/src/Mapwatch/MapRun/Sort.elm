@@ -265,16 +265,7 @@ filterToday zone now =
 groupByMap : List MapRun -> Dict.Dict String (List MapRun)
 groupByMap =
     List.filter (.isBlightedMap >> not)
-        >> Dict.Extra.groupBy
-            (\i ->
-                if i.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
-                    "The Labyrinth"
-
-                else
-                    i.address.worldArea
-                        |> Maybe.map .id
-                        |> Maybe.withDefault ""
-            )
+        >> Dict.Extra.groupBy (.address >> .worldArea >> Maybe.Extra.unwrap "" .id)
 
 
 type GoalDuration
@@ -421,11 +412,6 @@ searchString : Datamine -> MapRun -> String
 searchString dm r =
     [ if r.isBlightedMap then
         Just <| "Blighted " ++ r.address.zone
-
-      else
-        Nothing
-    , if r.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
-        Just "The Labyrinth"
 
       else
         Nothing

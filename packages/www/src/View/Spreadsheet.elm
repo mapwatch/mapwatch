@@ -233,16 +233,8 @@ viewHistoryRow : OkModel -> Int -> MapRun -> List Cell
 viewHistoryRow model i run =
     [ i + 1 |> CellInt
     , run.updatedAt |> CellPosix model.tz
-    , if run.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
-        CellIcon View.Icon.labTrialUrl
-
-      else
-        run.address.worldArea |> Maybe.andThen (Datamine.imgSrc run) |> Maybe.Extra.unwrap CellEmpty CellIcon
-    , if run.address.worldArea |> Maybe.map .isLabyrinth |> Maybe.withDefault False then
-        CellString "The Labyrinth"
-
-      else
-        run.address.zone |> CellString
+    , run.address.worldArea |> Maybe.andThen (Datamine.imgSrc run) |> Maybe.Extra.unwrap CellEmpty CellIcon
+    , run.address.zone |> CellString
     , run.address.worldArea |> Maybe.andThen .atlasRegion |> Maybe.withDefault "---" |> CellString
     , if run.isAbandoned then
         "???" |> CellString
