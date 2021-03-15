@@ -41,6 +41,7 @@ type alias MapRun =
     , conqueror : Maybe ( Conqueror.Id, Conqueror.Encounter )
     , npcSays : Dict NpcGroup (List String)
     , heistNpcs : Set NpcId
+    , rootNpcs : Set NpcId
 
     -- isGrandHeist: True, False (heist contract), or Null (not a heist)
     , isGrandHeist : Maybe Bool
@@ -168,6 +169,7 @@ fromRaw dm raw =
     , isAbandoned = raw.isAbandoned
     , isBlightedMap = isBlightedMap raw
     , heistNpcs = heist
+    , rootNpcs = rootNpcs raw
     , isGrandHeist =
         if Set.isEmpty heist then
             -- not a heist!
@@ -180,7 +182,7 @@ fromRaw dm raw =
 
     -- List.reverse: RawMapRun prepends the newest runs to the list, because that's
     -- how linked lists work. We want to view oldest-first, not newest-first.
-    , npcSays = raw.npcSays |> Dict.map (\npcId -> List.map .raw >> List.reverse)
+    , npcSays = raw.npcSays |> Dict.map (\npcId -> List.map (Tuple.first >> .raw) >> List.reverse)
     , sideAreas =
         sideDurs
             |> List.map (\( a, d ) -> ( Instance.addressId a, ( a, d ) ))
@@ -212,7 +214,7 @@ toMapRunAddress dm ({ address } as raw) =
                     shaperSays =
                         Dict.get NpcId.shaper raw.npcSays
                             |> Maybe.withDefault []
-                            |> List.map .textId
+                            |> List.map (Tuple.first >> .textId)
                             |> List.filter ((/=) "")
                 in
                 if List.any ((==) "ShaperMapShapersRealm") shaperSays then
@@ -274,7 +276,7 @@ conquerorEncounterFromNpcs npcSays =
         |> List.filterMap
             (\id ->
                 Dict.get (Conqueror.npcFromId id) npcSays
-                    |> Maybe.andThen (List.map .textId >> Conqueror.encounter id)
+                    |> Maybe.andThen (List.map (Tuple.first >> .textId) >> Conqueror.encounter id)
                     |> Maybe.map (Tuple.pair id)
             )
         |> List.head
@@ -289,7 +291,7 @@ isBlightedMap run =
             run.npcSays
                 |> Dict.get NpcId.cassia
                 |> Maybe.withDefault []
-                |> List.filter (.textId >> String.startsWith "CassiaNewLane")
+                |> List.filter (Tuple.first >> .textId >> String.startsWith "CassiaNewLane")
     in
     Dict.size run.npcSays == 1 && List.length newLanes >= 8
 
@@ -301,7 +303,7 @@ isHeartOfTheGrove =
     .npcSays
         >> Dict.get NpcId.oshabi
         >> Maybe.withDefault []
-        >> List.filter (.textId >> (\t -> String.startsWith "HarvestBoss" t || String.startsWith "HarvestReBoss" t))
+        >> List.filter (Tuple.first >> .textId >> (\t -> String.startsWith "HarvestBoss" t || String.startsWith "HarvestReBoss" t))
         >> (\l -> List.length l > 0)
 
 
@@ -314,10 +316,26 @@ heistNpcs : RawMapRun -> Set NpcId
 heistNpcs =
     .npcSays
         >> Dict.filter (\k _ -> Set.member k NpcId.heistNpcs)
-        >> Dict.map (\_ -> List.filter (\t -> t.textId /= ""))
+        >> Dict.map (\_ -> List.filter (\( t, _ ) -> t.textId /= ""))
         >> Dict.filter (\_ -> List.isEmpty >> not)
         >> Dict.keys
         >> Set.fromList
+
+
+{-| NpcIds encountered in the root map. NpcIds not in this list must've been encountered in a side area, like a Zana map.
+-}
+rootNpcs : RawMapRun -> Set NpcId
+rootNpcs raw =
+    raw.npcSays
+        |> Dict.toList
+        |> List.filter
+            (Tuple.second
+                >> List.filter (\( addr, instance ) -> Instance.Instance raw.address == instance)
+                >> List.isEmpty
+                >> not
+            )
+        |> List.map Tuple.first
+        |> Set.fromList
 
 
 durationPerInstance : RawMapRun -> List ( Instance, Millis )

@@ -6,6 +6,7 @@ All substantial Mapwatch website changes.
 
 ## 2021-03-14 🥧
 - The Laboratory heist contract is now correctly distinguished from the Laboratory map.
+- NPCs encountered in Zana maps now have a Zana icon next to their names. This helps distinguish "natural" Oshabi encounters from encounters that may have been forced by Zana, for example.
 
 ## 2021-03-13
 - Syndicate and Mastermind hideouts are now tracked.

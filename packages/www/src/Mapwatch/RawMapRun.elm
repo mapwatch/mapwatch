@@ -42,7 +42,7 @@ type alias State =
 
 
 type alias NpcEncounters =
-    Dict NpcGroup (List LogLine.NPCSaysData)
+    Dict NpcGroup (List ( LogLine.NPCSaysData, Instance ))
 
 
 create : Instance.Address -> Posix -> NpcEncounters -> Maybe RawMapRun
@@ -210,16 +210,16 @@ update instance_ mvisit state =
                                 ( Just run, Nothing )
 
 
-updateNPCText : LogLine.Line -> State -> State
-updateNPCText line state =
+updateNPCText : LogLine.Line -> Instance -> State -> State
+updateNPCText line instance state =
     case line.info of
         LogLine.NPCSays says ->
-            state |> Maybe.map (\run -> { run | npcSays = run.npcSays |> pushNpcEncounter says })
+            state |> Maybe.map (\run -> { run | npcSays = run.npcSays |> pushNpcEncounter says instance })
 
         _ ->
             state
 
 
-pushNpcEncounter : LogLine.NPCSaysData -> NpcEncounters -> NpcEncounters
-pushNpcEncounter says =
-    Dict.update (NpcId.toNpcGroup says.npcId) (Maybe.withDefault [] >> (::) says >> Just)
+pushNpcEncounter : LogLine.NPCSaysData -> Instance -> NpcEncounters -> NpcEncounters
+pushNpcEncounter says instance =
+    Dict.update (NpcId.toNpcGroup says.npcId) (Maybe.withDefault [] >> (::) ( says, instance ) >> Just)

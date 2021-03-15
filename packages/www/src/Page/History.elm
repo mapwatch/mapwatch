@@ -382,7 +382,7 @@ viewHistoryRun ({ query, tz } as m) config goals r =
                 -- Don't show regular-harvest-Oshabi if it's heart of the grove
                 |> Dict.filter (\npcId _ -> not (npcId == NpcId.oshabi && r.isHeartOfTheGrove))
                 |> Dict.toList
-                |> List.filterMap (viewHistoryNpcTextRow query config)
+                |> List.filterMap (viewHistoryNpcTextRow query config r.rootNpcs)
             ]
 
 
@@ -467,8 +467,8 @@ viewHistorySideAreaRow query { showDate } ( instance, d ) =
         )
 
 
-viewHistoryNpcTextRow : QueryDict -> HistoryRowConfig -> ( NpcId, List String ) -> Maybe (Html msg)
-viewHistoryNpcTextRow query config ( npcId, texts ) =
+viewHistoryNpcTextRow : QueryDict -> HistoryRowConfig -> Set NpcId -> ( NpcId, List String ) -> Maybe (Html msg)
+viewHistoryNpcTextRow query config rootNpcs ( npcId, texts ) =
     case viewNpcText query config.loadedAt npcId of
         [] ->
             Nothing
@@ -478,7 +478,15 @@ viewHistoryNpcTextRow query config ( npcId, texts ) =
                 Nothing
 
             else
-                Just <| viewHistoryNpcTextRow_ query config texts body
+                let
+                    sideIcon =
+                        if Set.member npcId rootNpcs || body == [] then
+                            []
+
+                        else
+                            [ span [ title "Encountered this NPC in a side area" ] [ View.Icon.zana ] ]
+                in
+                Just <| viewHistoryNpcTextRow_ query config texts <| sideIcon ++ body
 
 
 viewHistoryNpcTextRow_ : QueryDict -> HistoryRowConfig -> List String -> List (Html msg) -> Html msg
