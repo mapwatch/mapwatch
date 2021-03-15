@@ -212,7 +212,7 @@ imgCdn =
 
 
 type alias MapIconArgs a =
-    { a | isBlightedMap : Bool, heistNpcs : Set String }
+    { a | isBlightedMap : Bool, isGrandHeist : Maybe Bool }
 
 
 imgSrc : MapIconArgs a -> WorldArea -> Maybe String
@@ -221,7 +221,7 @@ imgSrc args w =
         |> Maybe.map
             (String.replace ".dds" ".png"
                 >> (\path ->
-                        if Set.size args.heistNpcs > 1 then
+                        if args.isGrandHeist |> Maybe.withDefault False then
                             String.replace "ContractItem" "BlueprintNotApproved" path
 
                         else
@@ -260,7 +260,7 @@ isMap w =
         False
 
     else
-        case imgSrc { isBlightedMap = False, heistNpcs = Set.empty } w of
+        case imgSrc { isBlightedMap = False, isGrandHeist = Just False } w of
             Nothing ->
                 isHeistMap w || w.isLabyrinth
 

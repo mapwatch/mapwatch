@@ -240,7 +240,7 @@ viewMapName query name_ worldArea =
                 ( View.Icon.labTrial, "The Labyrinth" )
 
             else
-                ( View.Icon.mapOrBlank { isBlightedMap = False, heistNpcs = Set.empty } (Just worldArea), name_ )
+                ( View.Icon.mapOrBlank { isBlightedMap = False, isGrandHeist = Nothing } (Just worldArea), name_ )
     in
     a [ Route.href (View.Util.insertSearch name query) Route.History ]
         [ icon, text name ]

@@ -158,7 +158,7 @@ viewExactSearchResult dm query =
                     div []
                         [ div []
                             [ span [ class "zone" ]
-                                [ View.Icon.mapOrBlank { isBlightedMap = False, heistNpcs = Set.empty } (Just w)
+                                [ View.Icon.mapOrBlank { isBlightedMap = False, isGrandHeist = Nothing } (Just w)
                                 , text " "
                                 , text q
                                 ]

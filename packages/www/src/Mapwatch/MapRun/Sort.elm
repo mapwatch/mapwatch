@@ -433,14 +433,16 @@ searchString dm r =
         if r.address.worldArea |> Maybe.Extra.unwrap False .isUniqueMapArea then
             "unique-map:" ++ r.address.zone
 
-        else if Set.size r.heistNpcs > 1 then
-            "grand-heist:" ++ r.address.zone
-
-        else if Set.size r.heistNpcs > 0 then
-            "heist-contract:" ++ r.address.zone
-
         else
-            "map:" ++ r.address.zone
+            case r.isGrandHeist of
+                Just True ->
+                    "grand-heist:" ++ r.address.zone
+
+                Just False ->
+                    "heist-contract:" ++ r.address.zone
+
+                Nothing ->
+                    "map:" ++ r.address.zone
     , r.address.worldArea
         |> Maybe.andThen .atlasRegion
         |> Maybe.withDefault Datamine.defaultAtlasRegion

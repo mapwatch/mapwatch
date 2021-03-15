@@ -102,7 +102,7 @@ viewRow query count i goalDuration run =
             ]
         ]
         ([ td [ class "instance" ]
-            ([ View.Home.viewAddress query { isBlightedMap = False, heistNpcs = Set.empty } run.address ]
+            ([ View.Home.viewAddress query { isBlightedMap = False, isGrandHeist = Nothing } run.address ]
                 ++ (if isLast then
                         [ a [ class "overlay-back", Route.href query Route.Timer ] [ View.Icon.fas "cog" ] ]
 

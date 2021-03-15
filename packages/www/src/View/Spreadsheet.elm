@@ -95,7 +95,7 @@ viewMapsRow i row =
 
       else
         row.worldArea
-            |> Datamine.imgSrc { isBlightedMap = False, heistNpcs = Set.empty }
+            |> Datamine.imgSrc { isBlightedMap = False, isGrandHeist = Nothing }
             |> Maybe.Extra.unwrap CellEmpty CellIcon
     , if row.worldArea.isLabyrinth then
         CellString "The Labyrinth"

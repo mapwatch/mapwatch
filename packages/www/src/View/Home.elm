@@ -64,7 +64,7 @@ viewMaybeInstance : QueryDict -> Maybe Instance -> Html msg
 viewMaybeInstance query instance =
     case instance of
         Just (Instance.Instance addr) ->
-            viewAddress query { isBlightedMap = False, heistNpcs = Set.empty } addr
+            viewAddress query { isBlightedMap = False, isGrandHeist = Nothing } addr
 
         Just Instance.MainMenu ->
             span [] [ text "(none)" ]

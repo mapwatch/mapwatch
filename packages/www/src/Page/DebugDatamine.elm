@@ -77,7 +77,7 @@ viewWorldAreas query datamine =
                     (\w ->
                         tr []
                             ([ td [ style "min-width" "1em", style "height" "1em" ]
-                                (case Datamine.imgSrc { isBlightedMap = False, heistNpcs = Set.empty } w of
+                                (case Datamine.imgSrc { isBlightedMap = False, isGrandHeist = Nothing } w of
                                     Nothing ->
                                         [ text "" ]
 

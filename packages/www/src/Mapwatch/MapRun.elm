@@ -41,6 +41,9 @@ type alias MapRun =
     , conqueror : Maybe ( Conqueror.Id, Conqueror.Encounter )
     , npcSays : Dict NpcGroup (List String)
     , heistNpcs : Set NpcId
+
+    -- isGrandHeist: True, False (heist contract), or Null (not a heist)
+    , isGrandHeist : Maybe Bool
     , isHeartOfTheGrove : Bool
     }
 
@@ -154,6 +157,9 @@ fromRaw dm raw =
         addr : Address
         addr =
             toMapRunAddress dm raw
+
+        heist =
+            heistNpcs raw
     in
     { address = addr
     , startedAt = raw.startedAt
@@ -161,7 +167,14 @@ fromRaw dm raw =
     , portals = raw.portals
     , isAbandoned = raw.isAbandoned
     , isBlightedMap = isBlightedMap raw
-    , heistNpcs = heistNpcs raw
+    , heistNpcs = heist
+    , isGrandHeist =
+        if Set.isEmpty heist then
+            -- not a heist!
+            Nothing
+
+        else
+            Just <| Set.size heist > 1
     , isHeartOfTheGrove = isHeartOfTheGrove raw
     , conqueror = conquerorEncounterFromNpcs raw.npcSays
 

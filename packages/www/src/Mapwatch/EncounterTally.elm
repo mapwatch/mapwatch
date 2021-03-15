@@ -77,10 +77,10 @@ fromMapRuns runs =
             runs |> List.filter .isHeartOfTheGrove |> List.length
 
         grandHeists =
-            runs |> List.filter (\r -> Set.size r.heistNpcs > 1) |> List.length
+            runs |> List.filter (\r -> r.isGrandHeist == Just True) |> List.length
 
         heistContracts =
-            runs |> List.filter (\r -> Set.size r.heistNpcs == 1) |> List.length
+            runs |> List.filter (\r -> r.isGrandHeist == Just False) |> List.length
 
         count =
             List.length runs
