@@ -54,7 +54,10 @@ function transform(rawJson, rawLangs) {
     || w.IsVaalArea
     || w._IsLabTrial
     || w._IsAbyssalDepths
-    || w.Id.startsWith('Heist')
+    // include heist maps. The Twins zone name is "Mansion", but it's expressed
+    // in these files as "The Den", which conflicts with the campaign zone, so exclude it.
+    // https://github.com/mapwatch/mapwatch/issues/119
+    || (w.Id.startsWith('Heist') && w.Id !== 'HeistBoss_Twins')
     || !!nonAtlasMaps[w.Id]
     || w.Id.includes("_Labyrinth_")
   )
