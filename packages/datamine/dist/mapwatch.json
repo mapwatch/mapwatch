@@ -12866,21 +12866,6 @@
         1687
       ],
       [
-        "HeistBoss_Twins",
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Currency/Heist/VoxFamilyFightContract.dds",
-        null,
-        null,
-        1688
-      ],
-      [
         "HeistBoss_TheUnbreakable",
         false,
         false,
@@ -13709,7 +13694,6 @@
         "HeistBoss_FreidrichTarollo": "The Body Pit",
         "HeistBoss_Jamanra": "Tomb of the Banished",
         "HeistBoss_Nashta": "Pillaged Camp",
-        "HeistBoss_Twins": "The Den",
         "HeistBoss_TheUnbreakable": "Combat Capacity Test Chamber",
         "MavenHub": "The Maven's Crucible"
       },
@@ -15117,7 +15101,6 @@
         "HeistBoss_FreidrichTarollo": "La Fosse à cadavres",
         "HeistBoss_Jamanra": "Tombeau des bannis",
         "HeistBoss_Nashta": "Campement pillé",
-        "HeistBoss_Twins": "L'Antre",
         "HeistBoss_TheUnbreakable": "Chambre d'essai de capacités au combat",
         "MavenHub": "Le Creuset de la Prodige"
       },
@@ -16525,7 +16508,6 @@
         "HeistBoss_FreidrichTarollo": "Die Knochengrube",
         "HeistBoss_Jamanra": "Grab des Verbannten",
         "HeistBoss_Nashta": "Geplündertes Lager",
-        "HeistBoss_Twins": "Die Höhle",
         "HeistBoss_TheUnbreakable": "Prüfkammer der Kampfleistung",
         "MavenHub": "Die Prüfung der Seherin"
       },
@@ -17933,7 +17915,6 @@
         "HeistBoss_FreidrichTarollo": "시체 구덩이",
         "HeistBoss_Jamanra": "추방자의 무덤",
         "HeistBoss_Nashta": "약탈당한 야영지",
-        "HeistBoss_Twins": "굴",
         "HeistBoss_TheUnbreakable": "전투 역량 시험실",
         "MavenHub": "메이븐의 시련"
       },
@@ -19341,7 +19322,6 @@
         "HeistBoss_FreidrichTarollo": "O Fosso de Corpos",
         "HeistBoss_Jamanra": "Tumba dos Banidos",
         "HeistBoss_Nashta": "Campo de Pilhagem",
-        "HeistBoss_Twins": "O Covil",
         "HeistBoss_TheUnbreakable": "Câmara de Teste de Capacidade de Combate",
         "MavenHub": "Crisol da Maven"
       },
@@ -20749,7 +20729,6 @@
         "HeistBoss_FreidrichTarollo": "Трупная яма",
         "HeistBoss_Jamanra": "Гробница изгнанных",
         "HeistBoss_Nashta": "Разорённый лагерь",
-        "HeistBoss_Twins": "Логово",
         "HeistBoss_TheUnbreakable": "Испытательная камера боевых возможностей",
         "MavenHub": "Горнило Мейвен"
       },
@@ -23063,7 +23042,6 @@
         "HeistBoss_FreidrichTarollo": "La fosa sangrienda",
         "HeistBoss_Jamanra": "Tumba de los desterrados",
         "HeistBoss_Nashta": "Campamento saqueado",
-        "HeistBoss_Twins": "El cubil",
         "HeistBoss_TheUnbreakable": "Combat Capacity Test Chamber",
         "MavenHub": "La prueba de la Especialista"
       },
@@ -24471,7 +24449,6 @@
         "HeistBoss_FreidrichTarollo": "หลุมทิ้งร่าง",
         "HeistBoss_Jamanra": "สุสานของผู้ถูกเนรเทศ",
         "HeistBoss_Nashta": "ค่ายที่ถูกปล้นสะดม",
-        "HeistBoss_Twins": "ซ่องสุม",
         "HeistBoss_TheUnbreakable": "ห้องทดสอบการต่อสู้",
         "MavenHub": "สถานหล่อหลอมของเมเวน"
       },
