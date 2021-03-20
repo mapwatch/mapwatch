@@ -15,7 +15,6 @@ jobs:
       run:
         shell: bash
     steps:
-      - run: git config --global core.safecrlf false
       - uses: actions/checkout@v2
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
       - uses: actions/setup-node@v1
@@ -26,6 +25,8 @@ jobs:
       # no need to check versions first, it's a quick build
       - working-directory: ./packages/datamine
         run: yarn dist
+      - working-directory: ./packages/datamine/dist
+        run: find . -type f -print0 | xargs -0 dos2unix
 
       - run: echo "POE_VERSION=`cat packages/datamine/dist/version.txt`" | tee $GITHUB_ENV
       - run: git diff
