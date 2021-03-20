@@ -26,8 +26,8 @@ jobs:
       - working-directory: ./packages/datamine
         run: yarn dist
 
-      - run: echo "POE_VERSION=`cat packages/datamine/dist/version.txt`" >> $GITHUB_ENV
-      - run: git diff-index --quiet HEAD -- || echo "PYPOE_JSON_DIFF=1" >> $GITHUB_ENV
+      - run: echo "POE_VERSION=`cat packages/datamine/dist/version.txt`" | tee $GITHUB_ENV
+      - run: git diff-index --quiet HEAD -- || echo "PYPOE_JSON_DIFF=1" | tee $GITHUB_ENV
       # https://peterevans.dev/posts/github-actions-how-to-create-pull-requests-automatically/
       # if nothing's changed - the common case, when poe was not patched - this doesn't create a pr
       - if: ${{ github.event.inputs.force_build || env.PYPOE_JSON_DIFF != '' }}
