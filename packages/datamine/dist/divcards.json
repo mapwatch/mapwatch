@@ -2979,6 +2979,7 @@
     {
       "card": "The Pack Leader",
       "maps": [
+        "Ashen Wood Map",
         "Jungle Valley Map",
         "Tropical Island Map"
       ],
@@ -3351,7 +3352,9 @@
     },
     {
       "card": "The Stormcaller",
-      "maps": [],
+      "maps": [
+        "Primordial Blocks Map"
+      ],
       "loot": {
         "text": "Agnerod Staff"
       }
@@ -3483,7 +3486,8 @@
         "Cold River Map",
         "Geode Map",
         "Mesa Map",
-        "Mud Geyser Map"
+        "Mud Geyser Map",
+        "Promenade Map"
       ],
       "loot": {
         "text": "5x Fossil"
