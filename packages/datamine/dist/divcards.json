@@ -417,7 +417,8 @@
         "Arsenal Map",
         "Colonnade Map",
         "Ghetto Map",
-        "Port Map"
+        "Port Map",
+        "Promenade Map"
       ],
       "loot": {
         "text": "Level 19 Gem\nAlternative Quality: +19%"
@@ -3483,6 +3484,7 @@
         "Arid Lake Map",
         "Atoll Map",
         "Barrows Map",
+        "Cage Map",
         "Cold River Map",
         "Geode Map",
         "Mesa Map",
@@ -3949,6 +3951,7 @@
       "card": "Tranquillity",
       "maps": [
         "The Ashen Fields",
+        "Ashen Wood Map",
         "Fields Map"
       ],
       "loot": {
