@@ -3487,9 +3487,11 @@
         "Cage Map",
         "Cold River Map",
         "Geode Map",
+        "Iceberg Map",
         "Mesa Map",
         "Mud Geyser Map",
-        "Promenade Map"
+        "Promenade Map",
+        "Wasteland Map"
       ],
       "loot": {
         "text": "5x Fossil"
