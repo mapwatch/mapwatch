@@ -5,6 +5,11 @@ All substantial Mapwatch website changes.
 ---
 
 ## 2021-04-10
+- The Encounters page now has text discouraging its use in Angry Reddit Threads.
+- The Encounters page is now split into two tables: encounters restricted to normal maps, and encounters in all endgame areas.
+  - A "normal map" is anywhere a master can spawn: non-blighted, non-unique, endgame areas with an atlas region; plus Shaper guardian maps.
+  - Hopefully this makes Angry Reddit Threads somewhat more accurate.
+- Changed map search strings to better distinguish "normal maps" from other endgame areas.
 - The example link on the front page works again.
 
 ## 2021-03-14 🥧

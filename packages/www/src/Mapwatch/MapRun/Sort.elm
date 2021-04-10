@@ -12,6 +12,7 @@ module Mapwatch.MapRun.Sort exposing
     , reverseSort
     , search
     , searchString
+    , shaperGuardianMaps
     , sort
     , stringifyGoalDuration
     , stringifySort
@@ -408,6 +409,10 @@ npcName id dm =
         |> Maybe.map ((++) "npc:")
 
 
+shaperGuardianMaps =
+    Set.fromList [ "MapWorldsChimera", "MapWorldsHydra", "MapWorldsPhoenix", "MapWorldsMinotaur" ]
+
+
 searchString : Datamine -> MapRun -> String
 searchString dm r =
     [ if r.isBlightedMap then
@@ -416,19 +421,32 @@ searchString dm r =
       else
         Nothing
     , Just <|
-        if r.address.worldArea |> Maybe.Extra.unwrap False .isUniqueMapArea then
-            "unique-map:" ++ r.address.zone
+        case r.address.worldArea of
+            Nothing ->
+                "area: " ++ r.address.zone
 
-        else
-            case r.isGrandHeist of
-                Just True ->
-                    "grand-heist:" ++ r.address.zone
+            Just worldArea ->
+                if worldArea.isUniqueMapArea then
+                    "unique-map: " ++ r.address.zone
 
-                Just False ->
-                    "heist-contract:" ++ r.address.zone
+                else if r.isBlightedMap then
+                    "blighted-map: " ++ r.address.zone
 
-                Nothing ->
-                    "map:" ++ r.address.zone
+                else if Maybe.Extra.isJust worldArea.atlasRegion || Set.member worldArea.id shaperGuardianMaps then
+                    "normal-map: " ++ r.address.zone
+
+                else
+                    case r.isGrandHeist of
+                        Just True ->
+                            "grand-heist:" ++ r.address.zone
+
+                        Just False ->
+                            "heist-contract:" ++ r.address.zone
+
+                        Nothing ->
+                            "area:" ++ r.address.zone
+    , r.address.worldArea
+        |> Maybe.map (\w -> "id:" ++ w.id)
     , r.address.worldArea
         |> Maybe.andThen .atlasRegion
         |> Maybe.withDefault Datamine.defaultAtlasRegion

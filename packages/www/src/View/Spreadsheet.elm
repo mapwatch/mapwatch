@@ -160,7 +160,7 @@ viewEncountersRows tally =
     , { count = tally.labyrinths, label = "The Labyrinth" }
     , { count = tally.envoy, label = "The Envoy" }
     , { count = tally.maven, label = "The Maven" }
-    , { count = tally.sirus, label = "Sirus Invasions" }
+    , { count = tally.sirusInvasions, label = "Sirus Invasions" }
     ]
         |> List.sortBy .count
         |> List.reverse

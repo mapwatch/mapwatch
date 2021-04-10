@@ -8,6 +8,7 @@ import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
+import Mapwatch.MapRun.Sort exposing (shaperGuardianMaps)
 import Maybe.Extra
 import Set exposing (Set)
 
@@ -32,17 +33,20 @@ type alias EncounterTally =
     , maven : Int
     , oshabi : Int
     , heartOfTheGrove : Int
-    , sirus : Int
+    , sirusInvasions : Int
     , grandHeists : Int
     , heistContracts : Int
     , nonHeists : Int
     , labyrinths : Int
+    , normalMaps : Int
+    , mavenCrucibles : Int
+    , sirusFights : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -61,9 +65,23 @@ empty =
 fromMapRuns : List MapRun -> EncounterTally
 fromMapRuns runs =
     let
+        normalRuns : List MapRun
+        normalRuns =
+            runs
+                |> List.filter (.isBlightedMap >> not)
+                |> List.filter
+                    (.address
+                        >> .worldArea
+                        >> Maybe.Extra.unwrap False (\w -> not w.isUniqueMapArea && (Maybe.Extra.isJust w.atlasRegion || Set.member w.id shaperGuardianMaps))
+                    )
+
         maps : List Address
         maps =
             runs |> List.map .address
+
+        normalMaps : List Address
+        normalMaps =
+            normalRuns |> List.map .address
 
         sides : List ( Address, Millis )
         sides =
@@ -71,7 +89,8 @@ fromMapRuns runs =
 
         npcs : List NpcGroup
         npcs =
-            runs |> List.concatMap (.npcSays >> Dict.keys)
+            -- TODO: track maven in unique maps
+            normalRuns |> List.concatMap (.npcSays >> Dict.keys)
 
         hearts =
             runs |> List.filter .isHeartOfTheGrove |> List.length
@@ -95,6 +114,9 @@ fromMapRuns runs =
         , heistContracts = heistContracts
         , nonHeists = count - grandHeists - heistContracts
         , count = count
+        , mavenCrucibles = maps |> List.filterMap .worldArea |> List.filter (\w -> w.id == "MavenHub") |> List.length
+        , sirusFights = maps |> List.filterMap .worldArea |> List.filter (\w -> w.id == "AtlasExilesBoss5") |> List.length
+        , normalMaps = normalRuns |> List.length
     }
         |> tallyNpcs npcs
         |> (\t -> { t | oshabi = t.oshabi - hearts |> max 0 })
@@ -118,7 +140,7 @@ tallyNpcs npcs tally =
         , envoy = Dict.get NpcId.envoy counts |> Maybe.withDefault 0
         , maven = Dict.get NpcId.maven counts |> Maybe.withDefault 0
         , oshabi = Dict.get NpcId.oshabi counts |> Maybe.withDefault 0
-        , sirus = Dict.get NpcId.sirus counts |> Maybe.withDefault 0
+        , sirusInvasions = Dict.get NpcId.sirus counts |> Maybe.withDefault 0
     }
 
 

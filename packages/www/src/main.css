@@ -360,3 +360,8 @@ svg.icon-region .focus.focus-drox {
   padding: 0;
   margin: 0;
 }
+
+table.encounters {
+  margin-bottom: 1em;
+  border-top: 1px inset grey;
+}
