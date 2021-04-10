@@ -88,7 +88,7 @@ view model =
                 ++ [ text "leave me open while you play - I'll keep watching, no need to upload again. " ]
             )
         , p []
-            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href <| "?example=" ++ example.file ++ example.query ++ "#/" ]) [ text "Run an example now!" ]
+            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href <| "/?example=" ++ example.file ++ example.query ]) [ text "Run an example now!" ]
             ]
         , viewDownloadLink model
         , hr [] []
