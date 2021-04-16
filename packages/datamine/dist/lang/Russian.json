@@ -9018,6 +9018,10 @@
       [
         "MapDeviceInvalidQuestState",
         "Активация не удалась. Вы не находитесь на требуемом этапе задания."
+      ],
+      [
+        "AccountNotVerified",
+        "Account is not verified."
       ]
     ]
   },

@@ -9018,6 +9018,10 @@
       [
         "MapDeviceInvalidQuestState",
         "Activation échouée : vous n'avez pas le statut de quête requis."
+      ],
+      [
+        "AccountNotVerified",
+        "Account is not verified."
       ]
     ]
   },

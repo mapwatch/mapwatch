@@ -9018,6 +9018,10 @@
       [
         "MapDeviceInvalidQuestState",
         "Falha na ativação. Você não possui o estado de missões necessário."
+      ],
+      [
+        "AccountNotVerified",
+        "Account is not verified."
       ]
     ]
   },

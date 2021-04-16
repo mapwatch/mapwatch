@@ -9018,6 +9018,10 @@
       [
         "MapDeviceInvalidQuestState",
         "การเปิดใช้งานล้มเหลว สถานะเควสของคุณยังไม่ถึงระดับที่สามารถใช้งานได้"
+      ],
+      [
+        "AccountNotVerified",
+        "Account is not verified."
       ]
     ]
   },
