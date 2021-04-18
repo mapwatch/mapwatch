@@ -1143,6 +1143,10 @@
         "Relicario Deteriorado por el tiempo"
       ],
       [
+        "ClassicTreasury_Vaal",
+        "Relicario vaal"
+      ],
+      [
         "ZanaGauntlet",
         "[UNUSED] TEST ZANA GAUNTLET"
       ],
@@ -1804,19 +1808,19 @@
       ],
       [
         "Synthesis_MapGuardian1",
-        "Memoria distante alterada"
+        "Memoria lejana alterada"
       ],
       [
         "Synthesis_MapGuardian2",
-        "Memoria distante aumentada"
+        "Memoria lejana aumentada"
       ],
       [
         "Synthesis_MapGuardian3",
-        "Memoria distante retorcida"
+        "Memoria lejana retorcida"
       ],
       [
         "Synthesis_MapGuardian4",
-        "Memoria distante reescrita"
+        "Memoria lejana reescrita"
       ],
       [
         "Metamorphosis_Hub",
@@ -5156,7 +5160,11 @@
       ],
       [
         "HarvestLeague",
-        "El huerto sagrado"
+        "El Huerto sagrado"
+      ],
+      [
+        "HarvestLeagueBoss",
+        "El Huerto sagrado"
       ],
       [
         "ffa1_1",
@@ -5959,6 +5967,10 @@
         ""
       ],
       [
+        "AnyUberTabTrial",
+        ""
+      ],
+      [
         "Hideout4_3",
         "Guarida Cavernosa"
       ],
@@ -6341,6 +6353,18 @@
       [
         "HideoutRitualLeague",
         "Guarida del ritualista"
+      ],
+      [
+        "HideoutArenaMaven",
+        "Guarida de crisol"
+      ],
+      [
+        "HideoutHasina",
+        "Guarida de Hasina"
+      ],
+      [
+        "HideoutAzuriteCave",
+        "Guarida de Azurita"
       ],
       [
         "pvpTown",
@@ -6817,6 +6841,18 @@
       [
         "MavenElderGuardian4",
         "El purificador"
+      ],
+      [
+        "UltimatumArena",
+        "La Arena Utzaal"
+      ],
+      [
+        "UltimatumArenaEndgame",
+        "La Arena Utzaal"
+      ],
+      [
+        "UltimatumBossArena",
+        "La torre de los calvarios"
       ]
     ]
   },
@@ -6861,7 +6897,7 @@
       ],
       [
         "AccountNameInvalid",
-        "El nombre de la cuenta debe tener al menos 3 caracters de largo y está restringida a los caracteres a-z, 0-9 y _"
+        "El nombre de la cuenta debe tener al menos 3 caracteres y está restringido a los caracteres a-z, 0-9 y _"
       ],
       [
         "EmailInvalid",
@@ -6897,7 +6933,7 @@
       ],
       [
         "AccountNotLoggedIn",
-        "Esta operación requiere que la cuenta inicie sesión."
+        "Esta operación requiere que inicies sesión con tu cuenta."
       ],
       [
         "Timeout",
@@ -6909,7 +6945,7 @@
       ],
       [
         "TerrainGenerationOutOfSync",
-        "El generador de terreno para el cliente está desincronizado con el servidor. Por favor inicia una nueva instancia e intenta nuevamente."
+        "El generador de terreno para el cliente está desincronizado con el servidor. Por favor inicia una nueva instancia e inténtalo de nuevo."
       ],
       [
         "UnexpectedDisconnect",
@@ -6929,7 +6965,7 @@
       ],
       [
         "DatabaseError",
-        "Ocurrió un error de base de datos inesperado. Intenta nuevamente."
+        "Ocurrió un error de base de datos inesperado. Inténtalo de nuevo."
       ],
       [
         "TransferredToInstance",
@@ -7005,7 +7041,7 @@
       ],
       [
         "DestinationUnreachable",
-        "No es posible hacer contacto con el servicio."
+        "No es posible contactar con el servicio."
       ],
       [
         "NotInPartyWith",
@@ -7033,7 +7069,7 @@
       ],
       [
         "DownForMaintenance",
-        "El reino está actualmente caído por mantenimiento. Intenta nuevamente más tarde."
+        "El reino está actualmente caído por mantenimiento. Inténtalo de nuevo más tarde."
       ],
       [
         "InstanceAuthenticationInvalid",
@@ -7141,7 +7177,7 @@
       ],
       [
         "LoginRateLimited",
-        "Has intentado conectarte demasiadas veces en un corto período de tiempo. intenta nuevamente más tarde."
+        "Has intentado conectarte demasiadas veces en un corto período de tiempo. Inténtalo de nuevo más tarde."
       ],
       [
         "AccountLocked",
@@ -7185,7 +7221,7 @@
       ],
       [
         "LeagueUnavailableToNonBeta",
-        "Esta liga solo está disponible a jugadores de la Beta."
+        "Esta liga solo está disponible para los jugadores de la Beta."
       ],
       [
         "InstanceDoesNotExist",
@@ -7305,7 +7341,7 @@
       ],
       [
         "MapDeviceNotMap",
-        "La activación falló. No hay mapa en el artefacto de mapas."
+        "La activación falló. No hay ningún mapa en el artefacto de mapas."
       ],
       [
         "MapDeviceCreateInstanceFailed",
@@ -9020,8 +9056,16 @@
         "La activación ha fallado. No tienes el estado de misión necesario."
       ],
       [
+        "MapDeviceFull",
+        "Tu Artefacto de mapas está lleno."
+      ],
+      [
         "AccountNotVerified",
-        "Account is not verified."
+        "La cuenta no está verificada."
+      ],
+      [
+        "UltimatumTrialStarted",
+        "No puedes unirte a una prueba que ya ha empezado."
       ]
     ]
   },
@@ -33350,7 +33394,7 @@
       ],
       [
         "KuraiContractOneCompleted",
-        "Obtuviste el libro. Salvo por esta humedad, parece estar en buenas condiciones.\r\n\r\n<italic>{A mi reina karui.\r\nNunca antes la rosa de Ngamakanui había sido tan bella\r\nni sus espinas tan mortales.\r\nQue tu puntería jamás decaiga,\r\ny tu historia se cuente para siempre.}\r\n\r\nGracias. Me aseguraré de que regrese a Ngamakanui, a donde pertenece.\r\n\r\n"
+        "Obtuviste el libro. Salvo por esta humedad, parece estar en buenas condiciones.\r\n\r\n<italic>{A mi reina karui.\r\nNunca antes la rosa de Ngamakanui había sido tan bella\r\nni sus espinas tan mortales.\r\nQue tu puntería jamás decaiga,\r\ny tu historia se cuente para siempre.}\r\n\r\nGracias. Me aseguraré de que regrese a Ngamakanui, a donde pertenece."
       ],
       [
         "KuraiContractTwo",
@@ -35494,7 +35538,7 @@
       ],
       [
         "AdiyahContractTwoStart",
-        "Mi hermana, Nashta, y sus bandidos han respondido a nuestra recuperación de la Lanza de Solerai atacando con sus bandas a otras caravanas maraketh. En sí mismo no es vergonzoso, pero lo está haciendo mientras usa los colores de mi akhara. Está tratando de iniciar una guerra entre nuestra gente, y no podemos permitirnos un conflicto así cuando ya estamos al borde de desaparecer.\r\n\r\nTú y yo debemos infiltrarnos en su fortaleza y obtener sus planes de guerra. Con eso como prueba, podremos asegurarnos de que las Sekhemas sepan quién es el culpable."
+        "Mi hermana, Nashta, y sus bandidos han respondido a nuestra recuperación de la Lanza de Solerai atacando con sus bandas a otras caravanas maraketh. En sí mismo no es vergonzoso, pero lo está haciendo mientras usa los colores de mi <i>{akhara}. Está tratando de iniciar una guerra entre nuestra gente, y no podemos permitirnos un conflicto así cuando ya estamos al borde de desaparecer.\r\n\r\nTú y yo debemos infiltrarnos en su fortaleza y obtener sus planes de guerra. Con eso como prueba, podremos asegurarnos de que las Sekhemas sepan quién es el culpable."
       ],
       [
         "AdiyahContractTwoEnd",
@@ -35538,7 +35582,7 @@
       ],
       [
         "AdiyahContractThreeEnd",
-        "<if:MS>{Este es el mejor final que podría haber deseado para Nashta. Creo que es lo que ella siempre había querido: no vivir bajo la opresión de reglas rígidas sino vivir peleando, como una verdadera dekhara. Será recordada como una mujer llena del incontenible espíritu del guerrero, una mujer con tanta agresión que no tenía lugar en este mundo civilizado.\r\n\r\nLlevaré su cuerpo. Déjame sola. Las palabras finales que quiero decirle a mi hermana no deben ser oídas por un jingakh. Que te vaya bien, mi amigo.}<elif:FS>{Este es el mejor final que podría haber deseado para Nashta. Creo que es lo que ella siempre había querido: no vivir bajo la opresión de reglas rígidas sino vivir peleando, como una verdadera dekhara. Será recordada como una mujer llena del incontenible espíritu del guerrero, una mujer con tanta agresión que no tenía lugar en este mundo civilizado.\r\n\r\nLlevaré su cuerpo. Déjame sola. Las palabras finales que quiero decirle a mi hermana no deben ser oídas por un jingakh. Que te vaya bien, mi amiga.}"
+        "<if:MS>{Este es el mejor final que podría haber deseado para Nashta. Creo que es lo que ella siempre había querido: no vivir bajo la opresión de reglas rígidas sino vivir peleando, como una verdadera <i>{dekhara}. Será recordada como una mujer llena del incontenible espíritu del guerrero, una mujer con tanta agresión que no tenía lugar en este mundo civilizado.\r\n\r\nLlevaré su cuerpo. Déjame sola. Las palabras finales que quiero decirle a mi hermana no deben ser oídas por un jingakh. Que te vaya bien, mi amigo.}<elif:FS>{Este es el mejor final que podría haber deseado para Nashta. Creo que es lo que ella siempre había querido: no vivir bajo la opresión de reglas rígidas sino vivir peleando, como una verdadera <i>{dekhara}. Será recordada como una mujer llena del incontenible espíritu del guerrero, una mujer con tanta agresión que no tenía lugar en este mundo civilizado.\r\n\r\nLlevaré su cuerpo. Déjame sola. Las palabras finales que quiero decirle a mi hermana no deben ser oídas por un jingakh. Que te vaya bien, mi amiga.}"
       ],
       [
         "AdiyahGossipAboutNenet",
@@ -53077,8 +53121,2644 @@
         "¿Cuánto tiempo tendré que esperar?"
       ],
       [
+        "TrialmasterTutorialGreeting",
+        "<if:MS>{Acércate, retador.}<elif:FS>{Acércate, retadora.}"
+      ],
+      [
+        "TrialmasterTutorialIntro",
+        "Muchos exiliados han puesto a prueba sus habilidades aquí últimamente. Enfréntate a las pruebas de Caos y ve en busca de tu destino. Puede que mueras aquí, ahora, o puede que algún día rivalices contra los mismísimos dioses."
+      ],
+      [
+        "TrialmasterTutorialAltarUnlocked",
+        "Hora de elegir."
+      ],
+      [
+        "TrialmasterTutorialAltarClicked",
+        "Acaba con las oleadas de enemigos. Muy simple."
+      ],
+      [
+        "TrialmasterTutorialPlayerWalksAway",
+        "No participar es en sí mismo una elección."
+      ],
+      [
+        "TrialmasterTutorialPlayerLoses",
+        "Tu potencial seguirá sin ser aprovechado."
+      ],
+      [
+        "TrialmasterTutorialContinueOrStopOne",
+        "Un resultado favorable. Ahora enfrentas otra elección: ¿te comprometerás a un desafío más difícil, o retrocederás?"
+      ],
+      [
+        "TrialmasterTutorialStopChosen",
+        "La opción segura."
+      ],
+      [
+        "TrialmasterTutorialContinueOrStopTwo",
+        "Una elección de futuros, al igual que antes. El siguiente desafío será aún más difícil."
+      ],
+      [
+        "TrialmasterTutorialStopChosenTwo",
+        "La elección esperable."
+      ],
+      [
+        "TrialmasterTutorialContinueOrStopThree",
+        "¿Deseas conservar tus tesoros o seguirás en busca de riquezas mayores?"
+      ],
+      [
+        "TrialmasterTutorialStopChosenThree",
+        "Que así sea, sin importar cuán decepcionante es."
+      ],
+      [
+        "TrialmasterTutorialFullWin",
+        "<if:MS>{Juegas bien el juego, retador. Goza de los frutos de tu suerte y tus habilidades. Nos volveremos a encontrar.}<elif:FS>{Juegas bien el juego, retadora. Goza de los frutos de tu suerte y tus habilidades. Nos volveremos a encontrar.}"
+      ],
+      [
+        "TrialmasterSeeEachOtherAgainShout",
+        "El futuro alberga más desafíos. Cuenta con ello."
+      ],
+      [
         "MavenFinalFightDualIceBarrage",
         "¡Una cascada de dolor!"
+      ],
+      [
+        "TrialmasterFinalEncounterEffortRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterEffort2",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterEffort3",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterSpellEffortRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterSpellEffort2",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterSpellEffort3",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterGoesCasterStanceRandom",
+        "¡Caos, ayúdame!"
+      ],
+      [
+        "TrialmasterFinalEncounterGoesCasterStance2",
+        "¡Caos, ayúdame!"
+      ],
+      [
+        "TrialmasterFinalEncounterGoesCasterStance3",
+        "¡Caos, ayúdame!"
+      ],
+      [
+        "TrialmasterFinalEncounterCleaveAttackRandom",
+        "¡Enfréntame!"
+      ],
+      [
+        "TrialmasterFinalEncounterCleaveAttack2",
+        "¡Enfréntame!"
+      ],
+      [
+        "TrialmasterFinalEncounterCleaveAttack3",
+        "¡Enfréntame!"
+      ],
+      [
+        "TrialmasterFinalEncounterSlamAttackRandom",
+        "¡Por Caos!"
+      ],
+      [
+        "TrialmasterFinalEncounterSlamAttack2",
+        "¡Por Caos!"
+      ],
+      [
+        "TrialmasterFinalEncounterSlamAttack3",
+        "¡Por Caos!"
+      ],
+      [
+        "TrialmasterFinalEncounterShockwaveSlamRandom",
+        "¡Siente su poder!"
+      ],
+      [
+        "TrialmasterFinalEncounterShockwaveSlam2",
+        "¡Siente su poder!"
+      ],
+      [
+        "TrialmasterFinalEncounterShockwaveSlam3",
+        "¡Siente su poder!"
+      ],
+      [
+        "TrialmasterFinalEncounterTectonicSlamRandom",
+        "¡Cae ante mí!"
+      ],
+      [
+        "TrialmasterFinalEncounterTectonicSlam2",
+        "¡Cae ante mí!"
+      ],
+      [
+        "TrialmasterFinalEncounterTectonicSlam3",
+        "¡Cae ante mí!"
+      ],
+      [
+        "TrialmasterFinalEncounterChaosShrineInMeleeRandom",
+        "Tentaciones para los tontos."
+      ],
+      [
+        "TrialmasterFinalEncounterChaosShrineInMelee2",
+        "Tentaciones para los tontos."
+      ],
+      [
+        "TrialmasterFinalEncounterChaosShrineInMelee3",
+        "Tentaciones para los tontos."
+      ],
+      [
+        "TrialmasterFinalEncounterThrowWeaponAttackRandom",
+        "¡Te aplastaré!"
+      ],
+      [
+        "TrialmasterFinalEncounterThrowWeaponAttack2",
+        "¡Te aplastaré!"
+      ],
+      [
+        "TrialmasterFinalEncounterThrowWeaponAttack3",
+        "¡Te aplastaré!"
+      ],
+      [
+        "TrialmasterFinalEncounterOmegaProjectileCastRandom",
+        "No se puede escapar del destino."
+      ],
+      [
+        "TrialmasterFinalEncounterOmegaProjectileCast2",
+        "No se puede escapar del destino."
+      ],
+      [
+        "TrialmasterFinalEncounterOmegaProjectileCast3",
+        "No se puede escapar del destino."
+      ],
+      [
+        "TrialmasterFinalEncounterSummonTetherSpikeCastRandom",
+        "<if:MS>{¡Quieto!}<elif:FS>{¡Quieta!}"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonTetherSpikeCast2",
+        "<if:MS>{¡Quieto!}<elif:FS>{¡Quieta!}"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonTetherSpikeCast3",
+        "<if:MS>{¡Quieto!}<elif:FS>{¡Quieta!}"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonChaosShrineInCasterRandom",
+        "Tómalo. Adelante."
+      ],
+      [
+        "TrialmasterFinalEncounterSummonChaosShrineInCaster2",
+        "Tómalo. Adelante."
+      ],
+      [
+        "TrialmasterFinalEncounterSummonChaosShrineInCaster3",
+        "Tómalo. Adelante."
+      ],
+      [
+        "TrialmasterFinalEncounterSummonWeaponRandom",
+        "¡El poder de Caos!"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonWeapon2",
+        "¡El poder de Caos!"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonWeapon3",
+        "¡El poder de Caos!"
+      ],
+      [
+        "TrialmasterFinalEncounter75healthRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounter50healthRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounter25healthRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterDefeatedRandom",
+        "Mi servicio… al fin ha terminado…"
+      ],
+      [
+        "TrialmasterFinalEncounterPostDefeatedRandom",
+        "…y mi servicio continúa. Caos ríe, mortal, y la fortuna te pertenece."
+      ],
+      [
+        "TrialmasterFinalEncounterPlayerDiedTauntRandom",
+        ""
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallengeRandom",
+        "Mátalos a todos."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge2",
+        "Mátalos a todos."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge3",
+        "Mátalos a todos."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge4",
+        "Acaba con todo."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge5",
+        "Acaba con todo."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge6",
+        "Acaba con todo."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge7",
+        "No dejes ni uno vivo."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge8",
+        "No dejes ni uno vivo."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge9",
+        "No dejes ni uno vivo."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge10",
+        "Imparte muerte."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge11",
+        "Imparte muerte."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge12",
+        "Imparte muerte."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallengeRandom",
+        "Defiende lo que te pertenece."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge2",
+        "Defiende lo que te pertenece."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge3",
+        "Defiende lo que te pertenece."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge4",
+        "Mantente firme."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge5",
+        "Mantente firme."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge6",
+        "Mantente firme."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge7",
+        "Mantén tu posición… si puedes."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge8",
+        "Mantén tu posición… si puedes."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge9",
+        "Mantén tu posición… si puedes."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge10",
+        "Detén la marea."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge11",
+        "Detén la marea."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge12",
+        "Detén la marea."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallengeRandom",
+        "Trata de no morir."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge2",
+        "Trata de no morir."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge3",
+        "Trata de no morir."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge4",
+        "Vive."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge5",
+        "Vive."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge6",
+        "Vive."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge7",
+        "Aférrate a la vida."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge8",
+        "Aférrate a la vida."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge9",
+        "Aférrate a la vida."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge10",
+        "Sobrepasa mis expectativas."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge11",
+        "Sobrepasa mis expectativas."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge12",
+        "Sobrepasa mis expectativas."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallengeRandom",
+        "¡Comienza la conquista!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge2",
+        "¡Comienza la conquista!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge3",
+        "¡Comienza la conquista!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge4",
+        "Toma lo que te pertenece."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge5",
+        "Toma lo que te pertenece."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge6",
+        "Toma lo que te pertenece."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge7",
+        "No dejes que nadie te detenga."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge8",
+        "No dejes que nadie te detenga."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge9",
+        "No dejes que nadie te detenga."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge10",
+        "¡Conquístalo todo!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge11",
+        "¡Conquístalo todo!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge12",
+        "¡Conquístalo todo!"
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallengeRandom",
+        "Avanza y destruye."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge2",
+        "Avanza y destruye."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge3",
+        "Avanza y destruye."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge4",
+        "Destruye aquello que buscas."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge5",
+        "Destruye aquello que buscas."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge6",
+        "Destruye aquello que buscas."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge7",
+        "<if:MS>{¡Comienza, destructor!}<elif:FS>{¡Comienza, destructora!}"
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge8",
+        "<if:MS>{¡Comienza, destructor!}<elif:FS>{¡Comienza, destructora!}"
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge9",
+        "<if:MS>{¡Comienza, destructor!}<elif:FS>{¡Comienza, destructora!}"
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge10",
+        "Destruye todo."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge11",
+        "Destruye todo."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge12",
+        "Destruye todo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtTenRuinRandom",
+        "Caerás en la ruina."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtTenRuin2",
+        "Caerás en la ruina."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtTenRuin3",
+        "Caerás en la ruina."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterRandom",
+        "La ruina viene por ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunter2",
+        "La ruina viene por ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunter3",
+        "La ruina viene por ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "La ruina llega repentinamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin2",
+        "La ruina llega repentinamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin3",
+        "La ruina llega repentinamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin4",
+        "La carga de la ruina pesa el doble."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin5",
+        "La carga de la ruina pesa el doble."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin6",
+        "La carga de la ruina pesa el doble."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTwoTypesApplyRuinRandom",
+        "La ruina te rodea."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTwoTypesApplyRuin2",
+        "La ruina te rodea."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTwoTypesApplyRuin3",
+        "La ruina te rodea."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesToRuinPhantasmsRandom",
+        "La ruina se oculta en cada rincón."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesToRuinPhantasms2",
+        "La ruina se oculta en cada rincón."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesToRuinPhantasms3",
+        "La ruina se oculta en cada rincón."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBeforeACertainTimeRandom",
+        "Es mejor que te apresures…"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBeforeACertainTime2",
+        "Es mejor que te apresures…"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBeforeACertainTime3",
+        "Es mejor que te apresures…"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBuffsExpireFasterRandom",
+        "El tiempo es tu enemigo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBuffsExpireFaster2",
+        "El tiempo es tu enemigo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBuffsExpireFaster3",
+        "El tiempo es tu enemigo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTimeIsShorterRandom",
+        "Nunca hay suficiente tiempo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTimeIsShorter2",
+        "Nunca hay suficiente tiempo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTimeIsShorter3",
+        "Nunca hay suficiente tiempo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseChargesEverySecondRandom",
+        "El sol se pone sobre tu éxito."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseChargesEverySecond2",
+        "El sol se pone sobre tu éxito."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseChargesEverySecond3",
+        "El sol se pone sobre tu éxito."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVulnRandom",
+        "La mortalidad también te persigue a ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln2",
+        "La mortalidad también te persigue a ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln3",
+        "La mortalidad también te persigue a ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln4",
+        "Ninguna defensa será suficiente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln5",
+        "Ninguna defensa será suficiente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln6",
+        "Ninguna defensa será suficiente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercentRandom",
+        "La muerte ya está deslizándose hacia ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent2",
+        "La muerte ya está deslizándose hacia ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent3",
+        "La muerte ya está deslizándose hacia ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent4",
+        "Eres más frágil de lo que crees."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent5",
+        "Eres más frágil de lo que crees."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent6",
+        "Eres más frágil de lo que crees."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFasterRandom",
+        "La muerte es rápida."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster2",
+        "La muerte es rápida."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster3",
+        "La muerte es rápida."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster4",
+        "La fragilidad recorre tus huesos."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster5",
+        "La fragilidad recorre tus huesos."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster6",
+        "La fragilidad recorre tus huesos."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpRandom",
+        "Tus enemigos se apresuran."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp2",
+        "Tus enemigos se apresuran."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp3",
+        "Tus enemigos se apresuran."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp4",
+        "La marea de la muerte es veloz."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp5",
+        "La marea de la muerte es veloz."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp6",
+        "La marea de la muerte es veloz."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeedRandom",
+        "Una resistencia más rápida."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed2",
+        "Una resistencia más rápida."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed3",
+        "Una resistencia más rápida."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed4",
+        "Se mueven con extrema celeridad."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed5",
+        "Se mueven con extrema celeridad."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed6",
+        "Se mueven con extrema celeridad."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFasterRandom",
+        "Velocidad y más velocidad."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster2",
+        "Velocidad y más velocidad."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster3",
+        "Velocidad y más velocidad."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster4",
+        "Aceleran más allá de la razón."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster5",
+        "Aceleran más allá de la razón."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster6",
+        "Aceleran más allá de la razón."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryRandom",
+        "Lucha contra la ralentización de tu propio corazón."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecovery2",
+        "Lucha contra la ralentización de tu propio corazón."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecovery3",
+        "Lucha contra la ralentización de tu propio corazón."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesTierTwoRandom",
+        "¿Puedes sentir a la muerte envolviendo tu corazón?"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesTierTwo2",
+        "¿Puedes sentir a la muerte envolviendo tu corazón?"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesTierTwo3",
+        "¿Puedes sentir a la muerte envolviendo tu corazón?"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryStartTwentyRandom",
+        "Tu corazón ya late más lentamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryStartTwenty2",
+        "Tu corazón ya late más lentamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryStartTwenty3",
+        "Tu corazón ya late más lentamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDealNoDamageSometimesRandom",
+        "Tus arterias se contraen."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDealNoDamageSometimes2",
+        "Tus arterias se contraen."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDealNoDamageSometimes3",
+        "Tus arterias se contraen."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFasterRandom",
+        "Tu sangre se debilita."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster2",
+        "Tu sangre se debilita."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster3",
+        "Tu sangre se debilita."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster4",
+        "La muerte viaja por tus venas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster5",
+        "La muerte viaja por tus venas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster6",
+        "La muerte viaja por tus venas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaRandom",
+        "Los vapores asfixiantes buscan a los vivos."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma2",
+        "Los vapores asfixiantes buscan a los vivos."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma3",
+        "Los vapores asfixiantes buscan a los vivos."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma4",
+        "Evita el miasma, si es que puedes."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma5",
+        "Evita el miasma, si es que puedes."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma6",
+        "Evita el miasma, si es que puedes."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLargerRandom",
+        "El miasma se propaga."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger2",
+        "El miasma se propaga."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger3",
+        "El miasma se propaga."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger4",
+        "Raras son las bocanadas de aire vital."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger5",
+        "Raras son las bocanadas de aire vital."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger6",
+        "Raras son las bocanadas de aire vital."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFasterRandom",
+        "No puedes escapar de los vapores."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster2",
+        "No puedes escapar de los vapores."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster3",
+        "No puedes escapar de los vapores."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster4",
+        "La contaminación viaja rápidamente en el viento."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster5",
+        "La contaminación viaja rápidamente en el viento."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster6",
+        "La contaminación viaja rápidamente en el viento."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsRandom",
+        "Mátalos entre las llamas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals2",
+        "Mátalos entre las llamas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals3",
+        "Mátalos entre las llamas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals4",
+        "El fuego busca lo que desea."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals5",
+        "El fuego busca lo que desea."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals6",
+        "El fuego busca lo que desea."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFasterRandom",
+        "El viento conspira con las llamas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster2",
+        "El viento conspira con las llamas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster3",
+        "El viento conspira con las llamas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster4",
+        "Las llamas se apresuran para alcanzarte."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster5",
+        "Las llamas se apresuran para alcanzarte."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster6",
+        "Las llamas se apresuran para alcanzarte."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThirdRandom",
+        "Las llamas generan más llamas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird2",
+        "Las llamas generan más llamas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird3",
+        "Las llamas generan más llamas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird4",
+        "El fuego siempre se propaga."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird5",
+        "El fuego siempre se propaga."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird6",
+        "El fuego siempre se propaga."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdRandom",
+        "Los muertos se estiran con garras heladas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedCold2",
+        "Los muertos se estiran con garras heladas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedCold3",
+        "Los muertos se estiran con garras heladas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesRandom",
+        "La venganza sin dudas es fría."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpines2",
+        "La venganza sin dudas es fría."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpines3",
+        "La venganza sin dudas es fría."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesLargerRandom",
+        "No se puede escapar del frío abrazo de la muerte."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesLarger2",
+        "No se puede escapar del frío abrazo de la muerte."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesLarger3",
+        "No se puede escapar del frío abrazo de la muerte."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdTwoRandom",
+        "Desde la muerte, el odio se aferra a toda la vida."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdTwo2",
+        "Desde la muerte, el odio se aferra a toda la vida."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdTwo3",
+        "Desde la muerte, el odio se aferra a toda la vida."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesMoreRandom",
+        "El odio genera odio."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesMore2",
+        "El odio genera odio."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesMore3",
+        "El odio genera odio."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdThreeRandom",
+        "Cuidado con la velocidad con la que matas…"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdThree2",
+        "Cuidado con la velocidad con la que matas…"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdThree3",
+        "Cuidado con la velocidad con la que matas…"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesRandom",
+        "La tormenta se acerca."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes2",
+        "La tormenta se acerca."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes3",
+        "La tormenta se acerca."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes4",
+        "El rayo desciende."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes5",
+        "El rayo desciende."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes6",
+        "El rayo desciende."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFasterRandom",
+        "La tormenta llega rápidamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster2",
+        "La tormenta llega rápidamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster3",
+        "La tormenta llega rápidamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster4",
+        "El rayo cae casi sin avisar."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster5",
+        "El rayo cae casi sin avisar."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster6",
+        "El rayo cae casi sin avisar."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMoreRandom",
+        "El rayo siempre cae dos veces."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore2",
+        "El rayo siempre cae dos veces."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore3",
+        "El rayo siempre cae dos veces."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore4",
+        "Abundan los truenos y los rayos."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore5",
+        "Abundan los truenos y los rayos."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore6",
+        "Abundan los truenos y los rayos."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlamespeakerRandom",
+        "Tus enemigos traen las llamas del verano."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlamespeaker2",
+        "Tus enemigos traen las llamas del verano."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlamespeaker3",
+        "Tus enemigos traen las llamas del verano."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireTotemRandom",
+        "El fuego del verano arde en el interior."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireTotem2",
+        "El fuego del verano arde en el interior."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireTotem3",
+        "El fuego del verano arde en el interior."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeakerRandom",
+        "Tus oponentes traen el odio del invierno."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker2",
+        "Tus oponentes traen el odio del invierno."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker3",
+        "Tus oponentes traen el odio del invierno."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker4",
+        "Un campo de batalla helado por el odio del invierno."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker5",
+        "Un campo de batalla helado por el odio del invierno."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker6",
+        "Un campo de batalla helado por el odio del invierno."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeakerRandom",
+        "Tus adversarios traen el trueno de la primavera."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker2",
+        "Tus adversarios traen el trueno de la primavera."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker3",
+        "Tus adversarios traen el trueno de la primavera."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker4",
+        "El trueno de la primavera. La mismísima cólera."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker5",
+        "El trueno de la primavera. La mismísima cólera."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker6",
+        "El trueno de la primavera. La mismísima cólera."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVoidspeakerRandom",
+        "Tus oponentes traen la locura de la noche."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVoidspeaker2",
+        "Tus oponentes traen la locura de la noche."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVoidspeaker3",
+        "Tus oponentes traen la locura de la noche."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesRandom",
+        "La locura de la noche drena toda esperanza."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatches2",
+        "La locura de la noche drena toda esperanza."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatches3",
+        "La locura de la noche drena toda esperanza."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadePhysicalTotemRandom",
+        "Acero y dolor."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadePhysicalTotem2",
+        "Acero y dolor."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadePhysicalTotem3",
+        "Acero y dolor."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeShardspeakerRandom",
+        "Metralla y esquirlas por doquier."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeShardspeaker2",
+        "Metralla y esquirlas por doquier."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeShardspeaker3",
+        "Metralla y esquirlas por doquier."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesSecondTierRandom",
+        "Un ataque incesante."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesSecondTier2",
+        "Un ataque incesante."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesSecondTier3",
+        "Un ataque incesante."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesThirdTierRandom",
+        "Quedarás hecho trizas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesThirdTier2",
+        "Quedarás hecho trizas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesThirdTier3",
+        "Quedarás hecho trizas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelayRandom",
+        "Avanza rápido o las detonaciones te destruirán."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay2",
+        "Avanza rápido o las detonaciones te destruirán."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay3",
+        "Avanza rápido o las detonaciones te destruirán."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay4",
+        "Buscan sorprenderte."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay5",
+        "Buscan sorprenderte."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay6",
+        "Buscan sorprenderte."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsRandom",
+        "Cuidado con la mordida de la bestia encadenada."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeasts2",
+        "Cuidado con la mordida de la bestia encadenada."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeasts3",
+        "Cuidado con la mordida de la bestia encadenada."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSmallerArenaRandom",
+        "Aléjate demasiado y encontrarás dolor."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSmallerArena2",
+        "Aléjate demasiado y encontrarás dolor."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSmallerArena3",
+        "Aléjate demasiado y encontrarás dolor."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMoreRandom",
+        "La naturaleza está hambrienta y fuera de tu control."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore2",
+        "La naturaleza está hambrienta y fuera de tu control."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore3",
+        "La naturaleza está hambrienta y fuera de tu control."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore4",
+        "Hay un gran número de bestias hambrientas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore5",
+        "Hay un gran número de bestias hambrientas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore6",
+        "Hay un gran número de bestias hambrientas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore7",
+        "Una horda de bestias hambrientas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore8",
+        "Una horda de bestias hambrientas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore9",
+        "Una horda de bestias hambrientas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFasterRandom",
+        "El hambre genera salvajismo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster2",
+        "El hambre genera salvajismo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster3",
+        "El hambre genera salvajismo."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster4",
+        "Las fauces rápidas acaban rápido con sus presas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster5",
+        "Las fauces rápidas acaban rápido con sus presas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster6",
+        "Las fauces rápidas acaban rápido con sus presas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecoveryRandom",
+        "Un peso sobre el alma."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecovery2",
+        "Un peso sobre el alma."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecovery3",
+        "Un peso sobre el alma."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecoveryTwoRandom",
+        "Corazón y espíritu, atosigados."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecoveryTwo2",
+        "Corazón y espíritu, atosigados."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecoveryTwo3",
+        "Corazón y espíritu, atosigados."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksHinderRandom",
+        "Sufrirás tu propia irritabilidad."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksHinder2",
+        "Sufrirás tu propia irritabilidad."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksHinder3",
+        "Sufrirás tu propia irritabilidad."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeCurseReflectRandom",
+        "Tus epítetos se harán eco."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeCurseReflect2",
+        "Tus epítetos se harán eco."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeCurseReflect3",
+        "Tus epítetos se harán eco."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamageRandom",
+        "Tus pensamientos se retuercen de dolor."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage2",
+        "Tus pensamientos se retuercen de dolor."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage3",
+        "Tus pensamientos se retuercen de dolor."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage4",
+        "El rayo acecha en tu interior."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage5",
+        "El rayo acecha en tu interior."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage6",
+        "El rayo acecha en tu interior."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseChargesRandom",
+        "La sangre se vuelve rancia."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseCharges2",
+        "La sangre se vuelve rancia."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseCharges3",
+        "La sangre se vuelve rancia."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksCancelEachOtherRandom",
+        "Tu sangre te traiciona."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksCancelEachOther2",
+        "Tu sangre te traiciona."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksCancelEachOther3",
+        "Tu sangre te traiciona."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLessAOELessProjSpeedRandom",
+        "Tu alcance excede a tu fuerza."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLessAOELessProjSpeed2",
+        "Tu alcance excede a tu fuerza."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLessAOELessProjSpeed3",
+        "Tu alcance excede a tu fuerza."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnluckyCritRandom",
+        "Sé reducido."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnluckyCrit2",
+        "Sé reducido."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnluckyCrit3",
+        "Sé reducido."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReflectProjectilesRandom",
+        "Tus aluviones se vuelven contra ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReflectProjectiles2",
+        "Tus aluviones se vuelven contra ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReflectProjectiles3",
+        "Tus aluviones se vuelven contra ti."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeYourAurasAffectEnemiesRandom",
+        "Confronta a aquello que liberas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeYourAurasAffectEnemies2",
+        "Confronta a aquello que liberas."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeYourAurasAffectEnemies3",
+        "Confronta a aquello que liberas."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOneRandom",
+        "<if:MS>{El retador de una sola ronda está de vuelta.}<elif:FS>{La retadora de una sola ronda está de vuelta.}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne2",
+        "<if:MS>{El retador de una sola ronda está de vuelta.}<elif:FS>{La retadora de una sola ronda está de vuelta.}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne3",
+        "<if:MS>{El retador de una sola ronda está de vuelta.}<elif:FS>{La retadora de una sola ronda está de vuelta.}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne4",
+        "Esto debería ser rápido…"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne5",
+        "Esto debería ser rápido…"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne6",
+        "Esto debería ser rápido…"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne7",
+        "¿Cómo podrás igualar el increíble rendimiento de la última vez?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne8",
+        "¿Cómo podrás igualar el increíble rendimiento de la última vez?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwoRandom",
+        "Sinceramente espero que trates de durar más de dos rondas."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo2",
+        "Sinceramente espero que trates de durar más de dos rondas."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo3",
+        "Al menos llega a la tercera ronda esta vez."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo4",
+        "Al menos llega a la tercera ronda esta vez."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo5",
+        "Al menos llega a la tercera ronda esta vez."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo6",
+        "Espero un rendimiento mejor."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo7",
+        "Espero un rendimiento mejor."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo8",
+        "Espero un rendimiento mejor."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThreeRandom",
+        "Trata de superar las tres rondas esta vez."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree2",
+        "Trata de superar las tres rondas esta vez."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree3",
+        "Trata de superar las tres rondas esta vez."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree4",
+        "<if:MS>{El retador de las tres rondas está de vuelta…}<elif:FS>{La retadora de las tres rondas está de vuelta…}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree5",
+        "<if:MS>{El retador de las tres rondas está de vuelta…}<elif:FS>{La retadora de las tres rondas está de vuelta…}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree6",
+        "<if:MS>{El retador de las tres rondas está de vuelta…}<elif:FS>{La retadora de las tres rondas está de vuelta…}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFourRandom",
+        "Deberías poder superar fácilmente el récord de cuatro rondas."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour2",
+        "Deberías poder superar fácilmente el récord de cuatro rondas."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour3",
+        "Deberías poder superar fácilmente el récord de cuatro rondas."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour4",
+        "No hay gloria en llegar solo cuatro rondas."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour5",
+        "No hay gloria en llegar solo cuatro rondas."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour6",
+        "No hay gloria en llegar solo cuatro rondas."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFiveRandom",
+        "Solo llegaste a la quinta ronda la última vez. ¿Vienes por más?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive2",
+        "Solo llegaste a la quinta ronda la última vez. ¿Vienes por más?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive3",
+        "Solo llegaste a la quinta ronda la última vez. ¿Vienes por más?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive4",
+        "<if:MS>{El retador de las cinco rondas está de vuelta…}<elif:FS>{La retadora de las cinco rondas está de vuelta…}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive5",
+        "<if:MS>{El retador de las cinco rondas está de vuelta…}<elif:FS>{La retadora de las cinco rondas está de vuelta…}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive6",
+        "<if:MS>{El retador de las cinco rondas está de vuelta…}<elif:FS>{La retadora de las cinco rondas está de vuelta…}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive7",
+        "<if:MS>{Oh, es el retador de las cinco rondas.}<elif:FS>{Oh, es la retadora de las cinco rondas.}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive8",
+        "<if:MS>{Oh, es el retador de las cinco rondas.}<elif:FS>{Oh, es la retadora de las cinco rondas.}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSixRandom",
+        "Solo superaste seis rondas la última vez. ¿Para qué regresas?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix2",
+        "Solo superaste seis rondas la última vez. ¿Para qué regresas?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix3",
+        "Solo superaste seis rondas la última vez. ¿Para qué regresas?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix4",
+        "¿Seis rondas? Trata de llegar al final esta vez."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix5",
+        "¿Seis rondas? Trata de llegar al final esta vez."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix6",
+        "¿Seis rondas? Trata de llegar al final esta vez."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSevenRandom",
+        "Dudo que puedas llegar a siete rondas nuevamente."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven2",
+        "Dudo que puedas llegar a siete rondas nuevamente."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven3",
+        "Dudo que puedas llegar a siete rondas nuevamente."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven4",
+        "Caos querría verte superar la ronda siete…"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven5",
+        "Caos querría verte superar la ronda siete…"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven6",
+        "Caos querría verte superar la ronda siete…"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEightRandom",
+        "Ocho rondas fue… respetable."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight2",
+        "Ocho rondas fue… respetable."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight3",
+        "Ocho rondas fue… respetable."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight4",
+        "¡Ocho rondas! Caos te observa expectante."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight5",
+        "¡Ocho rondas! Caos te observa expectante."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight6",
+        "¡Ocho rondas! Caos te observa expectante."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNineRandom",
+        "¿Te duele haber llegado tan cerca la última vez?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine2",
+        "¿Te duele haber llegado tan cerca la última vez?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine3",
+        "¿Te duele haber llegado tan cerca la última vez?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine4",
+        "Nueve rondas, y aún así la victoria quedó fuera de tu alcance."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine5",
+        "Nueve rondas, y aún así la victoria quedó fuera de tu alcance."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine6",
+        "Nueve rondas, y aún así la victoria quedó fuera de tu alcance."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLossesRandom",
+        "Nunca ganas, pero sigues intentando…"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses2",
+        "Nunca ganas, pero sigues intentando…"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses3",
+        "Parece que no escarmientas."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses4",
+        "Parece que no escarmientas."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses5",
+        "La persistencia es tu única virtud."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses6",
+        "La persistencia es tu única virtud."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses7",
+        "¿Sabes que el objetivo es tener éxito, cierto?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses8",
+        "¿Sabes que el objetivo es tener éxito, cierto?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses9",
+        "¿Seguirás intentando superar mis pruebas?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses10",
+        "¿Seguirás intentando superar mis pruebas?"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLossesRandom",
+        "¿Vienes a perder de nuevo?"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses2",
+        "¿Vienes a perder de nuevo?"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses3",
+        "Sí, ven a perder en una prueba. Productivo."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses4",
+        "Sí, ven a perder en una prueba. Productivo."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses5",
+        "Sí, ven a perder en una prueba. Productivo."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses6",
+        "Muchas derrotas. Es un poco vergonzoso."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses7",
+        "Muchas derrotas. Es un poco vergonzoso."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses8",
+        "Muchas derrotas. Es un poco vergonzoso."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses9",
+        "<if:MS>{Tu orgullo pide recuperarse, retador.}<elif:FS>{Tu orgullo pide recuperarse, retadora.}"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses10",
+        "<if:MS>{Tu orgullo pide recuperarse, retador.}<elif:FS>{Tu orgullo pide recuperarse, retadora.}"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses11",
+        "<if:MS>{Tu orgullo pide recuperarse, retador.}<elif:FS>{Tu orgullo pide recuperarse, retadora.}"
+      ],
+      [
+        "TrialmasterMoodBeginOneLossRandom",
+        "Una derrota no es nada de lo que avergonzarse."
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss2",
+        "Una derrota no es nada de lo que avergonzarse."
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss3",
+        "<if:MS>{Gana para recuperar tu orgullo, retador.}<elif:FS>{Gana para recuperar tu orgullo, retadora.}"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss4",
+        "<if:MS>{Gana para recuperar tu orgullo, retador.}<elif:FS>{Gana para recuperar tu orgullo, retadora.}"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss5",
+        "¿Será esta tu segunda derrota consecutiva?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss6",
+        "¿Será esta tu segunda derrota consecutiva?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss7",
+        "¿Está herido tu ego?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss8",
+        "¿Está herido tu ego?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss9",
+        "¿Podrás limpiar las marcas de tu fracaso?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss10",
+        "¿Podrás limpiar las marcas de tu fracaso?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss11",
+        "Esta es tu oportunidad de reclamar la victoria."
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss12",
+        "Esta es tu oportunidad de reclamar la victoria."
+      ],
+      [
+        "TrialmasterMoodBeginOneWinRandom",
+        "¿Podrás vencer dos veces seguidas?"
+      ],
+      [
+        "TrialmasterMoodBeginOneWin2",
+        "¿Podrás vencer dos veces seguidas?"
+      ],
+      [
+        "TrialmasterMoodBeginOneWin3",
+        "Demuestra que tu última victoria no fue por casualidad."
+      ],
+      [
+        "TrialmasterMoodBeginOneWin4",
+        "Demuestra que tu última victoria no fue por casualidad."
+      ],
+      [
+        "TrialmasterMoodBeginOneWin5",
+        "El azar dicta que debes ganar... alguna vez."
+      ],
+      [
+        "TrialmasterMoodBeginOneWin6",
+        "El azar dicta que debes ganar... alguna vez."
+      ],
+      [
+        "TrialmasterMoodBeginOneWin7",
+        "Has ganado. Una vez. Que no se te suba a la cabeza."
+      ],
+      [
+        "TrialmasterMoodBeginOneWin8",
+        "Has ganado. Una vez. Que no se te suba a la cabeza."
+      ],
+      [
+        "TrialmasterMoodBeginOneWin9",
+        "Has ganado. Una vez. Que no se te suba a la cabeza."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWinsRandom",
+        "Tu racha de victorias acabará aquí."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins2",
+        "Tu racha de victorias acabará aquí."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins3",
+        "Has estado ganando pero, ¿podrás seguír así?"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins4",
+        "Has estado ganando pero, ¿podrás seguír así?"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins5",
+        "Espero que hayas disfrutado de tu breve racha de victorias."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins6",
+        "Espero que hayas disfrutado de tu breve racha de victorias."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins7",
+        "Espero que hayas disfrutado de tu breve racha de victorias."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins8",
+        "<if:MS>{Tu suerte se agotará pronto, retador.}<elif:FS>{Tu suerte se agotará pronto, retadora.}"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins9",
+        "<if:MS>{Tu suerte se agotará pronto, retador.}<elif:FS>{Tu suerte se agotará pronto, retadora.}"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins10",
+        "<if:MS>{Tu suerte se agotará pronto, retador.}<elif:FS>{Tu suerte se agotará pronto, retadora.}"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins11",
+        "Esta prueba quizás sea la que provoque tu derrota."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins12",
+        "Esta prueba quizás sea la que provoque tu derrota."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWinsRandom",
+        "Tus victorias no continuarán."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins2",
+        "Tus victorias no continuarán."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins3",
+        "Esta prueba será tu perdición."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins4",
+        "Esta prueba será tu perdición."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins5",
+        "Esta vez perderás por fin."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins6",
+        "Esta vez perderás por fin."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins7",
+        "¿Es esto algún tipo de broma?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins8",
+        "¿Es esto algún tipo de broma?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins9",
+        "Me están castigando, ¿verdad?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins10",
+        "Me están castigando, ¿verdad?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins11",
+        "Me están castigando, ¿verdad?"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLossesRandom",
+        "<if:MS>{Sinceramente, ya era hora. Enhorabuena, retador. De verdad.}<elif:FS>{Sinceramente, ya era hora. Enhorabuena, retadora. De verdad.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses2",
+        "<if:MS>{Sinceramente, ya era hora. Enhorabuena, retador. De verdad.}<elif:FS>{Sinceramente, ya era hora. Enhorabuena, retadora. De verdad.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses3",
+        "<if:MS>{Sinceramente, ya era hora. Enhorabuena, retador. De verdad.}<elif:FS>{Sinceramente, ya era hora. Enhorabuena, retadora. De verdad.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses4",
+        "Tú... ¿has ganado? Sinceramente, no lo esperaba de ti."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses5",
+        "Tú... ¿has ganado? Sinceramente, no lo esperaba de ti."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses6",
+        "Tú... ¿has ganado? Sinceramente, no lo esperaba de ti."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses7",
+        "Gracias por no decepcionar a mi maestro una vez más."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses8",
+        "Gracias por no decepcionar a mi maestro una vez más."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses9",
+        "Tu mala racha ha acabado por fin."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses10",
+        "Tu mala racha ha acabado por fin."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses11",
+        "Tu mala racha ha acabado por fin."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLossesRandom",
+        "No estaba seguro de que fueras capaz."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses2",
+        "No estaba seguro de que fueras capaz."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses3",
+        "Está bien. La suerte es la suerte."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses4",
+        "Está bien. La suerte es la suerte."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses5",
+        "Has recuperado tu orgullo."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses6",
+        "Has recuperado tu orgullo."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses7",
+        "Algunas veces se gana y... la mayoría se pierde."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses8",
+        "Algunas veces se gana y... la mayoría se pierde."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses9",
+        "Has frenado la ola de derrotas."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses10",
+        "Has frenado la ola de derrotas."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLossRandom",
+        "Te has redimido."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss2",
+        "Te has redimido."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss3",
+        "Así son los caprichos del azar."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss4",
+        "Así son los caprichos del azar."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss5",
+        "Esto se pone interesante."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss6",
+        "Esto se pone interesante."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss7",
+        "Un giro exiguo."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss8",
+        "Un giro exiguo."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWinRandom",
+        "¡Ya van dos seguidas!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin2",
+        "¡Ya van dos seguidas!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin3",
+        "¡Una segunda victoria!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin4",
+        "¡Una segunda victoria!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin5",
+        "Casi puedo ver cómo crece tu ego."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin6",
+        "Casi puedo ver cómo crece tu ego."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin7",
+        "No te emociones tanto."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin8",
+        "No te emociones tanto."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWinsRandom",
+        "<if:MS>{Impresionante, retador.}<elif:FS>{Impresionante, retadora.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins2",
+        "<if:MS>{Impresionante, retador.}<elif:FS>{Impresionante, retadora.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins3",
+        "Tu racha de victorias continúa."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins4",
+        "Tu racha de victorias continúa."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins5",
+        "Tarde o temprano se agotará tu suerte..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins6",
+        "Tarde o temprano se agotará tu suerte..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins7",
+        "Por ahora, ¡el vencedor sigue siendo vencedor!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins8",
+        "Por ahora, ¡el vencedor sigue siendo vencedor!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins9",
+        "No está mal... para un mortal."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins10",
+        "No está mal... para un mortal."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins11",
+        "Esto no continuará. No estoy preocupado."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins12",
+        "Esto no continuará. No estoy preocupado."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWinsRandom",
+        "Esto ya no es gracioso."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins2",
+        "Esto ya no es gracioso."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins3",
+        "Esta racha de victorias es asombrosa."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins4",
+        "Esta racha de victorias es asombrosa."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins5",
+        "¿¡Cómo puedes seguir ganando!?"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins6",
+        "¿¡Cómo puedes seguir ganando!?"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins7",
+        "¡Sospecho que me toman el pelo!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins8",
+        "¡Sospecho que me toman el pelo!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins9",
+        "Debería haberme hecho sacerdote de Yaomac..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins10",
+        "Debería haberme hecho sacerdote de Yaomac..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins11",
+        "Debería haberme hecho sacerdote de Yaomac..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins12",
+        "Has ganado... otra vez."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins13",
+        "Has ganado... otra vez."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins14",
+        "Has ganado... otra vez."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins15",
+        "Esto es inaguantable..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins16",
+        "Esto es inaguantable..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins17",
+        "Esto es inaguantable..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins18",
+        "Toma tu premio y vete."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins19",
+        "Toma tu premio y vete."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLossesRandom",
+        "Me haces perder el tiempo, idiota."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses2",
+        "Me haces perder el tiempo, idiota."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses3",
+        "Qué... previsible."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses4",
+        "Qué... previsible."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses5",
+        "Otra vez..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses6",
+        "Otra vez..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses7",
+        "¡Sigues fracasando!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses8",
+        "¡Sigues fracasando!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses9",
+        "Qué vergonzoso para ti."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses10",
+        "Qué vergonzoso para ti."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLossesRandom",
+        "Quizá estas pruebas sean demasiado difíciles para ti."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses2",
+        "Quizá estas pruebas sean demasiado difíciles para ti."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses3",
+        "Quizá deberías perfeccionar tus habilidades antes de volver a intentar superar mis pruebas."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses4",
+        "Quizá deberías perfeccionar tus habilidades antes de volver a intentar superar mis pruebas."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses5",
+        "Tu récord empeora..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses6",
+        "Tu récord empeora..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses7",
+        "Ahora ya sabes qué no hay que hacer."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses8",
+        "Ahora ya sabes qué no hay que hacer."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLossRandom",
+        "Otro fracaso..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss2",
+        "Otro fracaso..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss3",
+        "Perder dos veces seguidas... qué mala suerte."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss4",
+        "Perder dos veces seguidas... qué mala suerte."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss5",
+        "¡Dos derrotas consecutivas!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss6",
+        "¡Dos derrotas consecutivas!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss7",
+        "¡Dos derrotas consecutivas!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss8",
+        "Igual es que no entiendes las normas..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss9",
+        "Igual es que no entiendes las normas..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss10",
+        "Igual es que no entiendes las normas..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWinRandom",
+        "Una segunda victoria consecutiva no estaba en tu destino, parece ser."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin2",
+        "Una segunda victoria consecutiva no estaba en tu destino, parece ser."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin3",
+        "<if:MS>{Vuelve a probar suerte pronto, retador.}<elif:FS>{Vuelve a probar suerte pronto, retadora.}"
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin4",
+        "<if:MS>{Vuelve a probar suerte pronto, retador.}<elif:FS>{Vuelve a probar suerte pronto, retadora.}"
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin5",
+        "No te avergüences de tu humilde récord."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin6",
+        "No te avergüences de tu humilde récord."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin7",
+        "No te avergüences de tu humilde récord."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin8",
+        "No pudo ser."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin9",
+        "No pudo ser."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWinsRandom",
+        "Tu racha de victorias ha finalizado."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins2",
+        "Tu racha de victorias ha finalizado."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins3",
+        "Los vencedores siempre caen al final."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins4",
+        "Los vencedores siempre caen al final."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins5",
+        "Tus visiones de grandeza se desvanecen en el polvo."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins6",
+        "Tus visiones de grandeza se desvanecen en el polvo."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins7",
+        "Parece que hemos encontrado el límite de tu habilidad."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins8",
+        "Parece que hemos encontrado el límite de tu habilidad."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins9",
+        "El azar ya no te favorece."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins10",
+        "El azar ya no te favorece."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins11",
+        "Era inevitable."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins12",
+        "Era inevitable."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins13",
+        "Tu camino a la gloria ha girado drásticamente hacia un precipicio."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins14",
+        "Tu camino a la gloria ha girado drásticamente hacia un precipicio."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWinsRandom",
+        "No hay que avergonzarse de la derrota. Bueno... un poco."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins2",
+        "No hay que avergonzarse de la derrota. Bueno... un poco."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins3",
+        "El vencedor fue vencido."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins4",
+        "El vencedor fue vencido."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins5",
+        "Tu racha de victorias ha llegado a su final."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins6",
+        "Tu racha de victorias ha llegado a su final."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins7",
+        "¡Jajajajaja! ¡Tu suerte se ha acabado, idiota!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins8",
+        "¡Jajajajaja! ¡Tu suerte se ha acabado, idiota!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins9",
+        "Maestro, ¡ya está hecho! ¡No me tortures más!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins10",
+        "Maestro, ¡ya está hecho! ¡No me tortures más!"
+      ],
+      [
+        "TrialmasterDefeatedRandom",
+        "Mi servicio... ha acabado por fin..."
+      ],
+      [
+        "TrialmasterReturnsAfterDefeatRandom",
+        "...y mi servicio continúa. El Caos se ríe, mortal, y la fortuna es tuya."
+      ],
+      [
+        "TrialmasterAboutHisDefeat",
+        "<if:MS>{No eres el único cuyo camino diverge durante los momentos de azar. Mi señor, el Caos, lo ve todo. Tú experimentaste la victoria... como yo. Desde mi perspectiva, yo te derroté, y luego el Caos me ordenó que me ocupara de la otra posibilidad. Esta posibilidad.\r\n\r\nContinúo sirviendo...}<elif:FS>{No eres la única cuyo camino diverge durante los momentos de azar. Mi señor, el Caos, lo ve todo. Tú experimentaste la victoria... como yo. Desde mi perspectiva, yo te derroté, y luego el Caos me ordenó que me ocupara de la otra posibilidad. Esta posibilidad.\r\n\r\nContinúo sirviendo...}"
+      ],
+      [
+        "TrialmasterIntroduction",
+        "Durante mucho tiempo he recorrido este mundo en busca de retadores dignos. Mi maestro, el Caos, me ha encargado esta tarea. Muchos han intentado superar mis pruebas en la búsqueda de la grandeza. Académicos, criminales, héroes, y los mansos. Todos han dado un paso al frente, y la mayoría han caído. Las normas nunca cambiaron para ellos, y las normas no cambiarán para ti. Trae solo aquello que puedas permitirte perder, incluida tu vida."
+      ],
+      [
+        "TrialmasterGossipChaos",
+        "Mi maestro es la esencia de todo lo que podría ser. Él es el lanzamiento de la moneda, y también la tirada del dado. Ganes o pierdas, su propósito está servido. Y aún así, tus probabilidades pueden estar influidas por tu habilidad, tu intelecto, y tu poder. Eso es lo que le fascina al Caos. Los mortales habilidosos pueden inclinar la balanza a su favor, pues en los vientos de lo desconocido, la flecha de un maestro cae con más seguridad que la flecha de un novato. Muéstrale tu maestría, y él te sonreirá. Sorpréndelo con un talento superior, y puede que incluso se ría. La fortuna lloverá sobre aquellos que le lleven el humor al Caos."
+      ],
+      [
+        "TrialmasterGossipDoryani",
+        "<if:MS>{Una vez fui mortal, y ahora sé cómo el mortal que fui se habría sentido acerca de ciertas cosas. Ese hombre habría odiado a Doryani con todo su ser por provocar la caída de la mayor civilización que este mundo ha conocido. Afortunadamente, ya no tengo esos vínculos. Por la gracia del Caos, ahora entiendo que todas las cosas que pueden ocurrir, ocurren. Aun ahora estoy poniendo a prueba el poder de otro superviviente que naufragó en Wraeclast en tu lugar, y para ella, tú estás muerto. Todo lo que consigas es irrelevante. Todo lo que Doryani arruinó fue igualmente irrelevante.}<elif:FS>{Una vez fui mortal, y ahora sé cómo el mortal que fui se habría sentido acerca de ciertas cosas. Ese hombre habría odiado a Doryani con todo su ser por provocar la caída de la mayor civilización que este mundo ha conocido. Afortunadamente, ya no tengo esos vínculos. Por la gracia del Caos, ahora entiendo que todas las cosas que pueden ocurrir, ocurren. Aun ahora estoy poniendo a prueba el poder de otra superviviente que naufragó en Wraeclast en tu lugar, y para ella, tú estás muerta. Todo lo que consigas es irrelevante. Todo lo que Doryani arruinó fue igualmente irrelevante.}"
+      ],
+      [
+        "TrialmasterGossipAtziri",
+        "La Reina representa una rara isla de estabilidad que el Caos no puede entender. Casi todos los eventos vienen cargados de posibilidades, pero la historia de su existencia es una única maldición ininterrumpida. No hay ningún mundo, real o imaginario, en el que Atziri no llevara a nuestra gente a la ruina.\r\n\r\nElla sigue mirando en un espejo, en algún lugar lejos del alcance de mi maestro, en un sitio de locura y pesadillas carmesíes... mi maestro adora la incertidumbre de los resultados del azar, pero aborrece los enigmas cósmicos que no tienen una respuesta clara, especialmente cuando dichos enigmas parecen poseer el poder de imprimir el determinismo sobre el tejido de la existencia."
+      ],
+      [
+        "TrialmasterGossipAnathema",
+        "Mi señor, el Caos, ha sentido a menudo que hay una fuerza siniestra acechando desde las nieblas desconocidas de la Creación que busca oponerse a él. No se deja ver. No, es un Impulso cobarde, uno que enreda sutilmente los hilos del Destino para unir a los mortales en cada era con el propósito del Orden, un conflicto frío que se ha librado eternamente - con una única excepción."
+      ],
+      [
+        "TrialmasterCombatUltimatumMoveRandom",
+        "¡Ultimatum!"
+      ],
+      [
+        "TrialmasterCombatUltimatumMove2",
+        "¡Ultimatum!"
+      ],
+      [
+        "TrialmasterCombatTransformation",
+        "¡Tiempo de poner fin a esto!"
+      ],
+      [
+        "TrialmasterPlayerTookRewardRandom",
+        "La elección segura."
+      ],
+      [
+        "TrialmasterPlayerTookReward2",
+        "La elección esperable."
+      ],
+      [
+        "TrialmasterPlayerTookReward3",
+        "Que así sea, sin importar cuán decepcionante es."
+      ],
+      [
+        "HasinaPetIdleRandom",
+        ""
+      ],
+      [
+        "HasinaPetIdle2",
+        ""
+      ],
+      [
+        "HasinaPetIdle3",
+        ""
+      ],
+      [
+        "HasinaPetIdle4",
+        ""
+      ],
+      [
+        "HasinaPetIdle5",
+        ""
+      ],
+      [
+        "HasinaPetIdle6",
+        ""
+      ],
+      [
+        "HasinaPetIdle7",
+        ""
+      ],
+      [
+        "HasinaPetIdle8",
+        ""
+      ],
+      [
+        "HasinaPetDismiss",
+        ""
+      ],
+      [
+        "HasinaPetExaltedOrb",
+        ""
+      ],
+      [
+        "HasinaPetToHideoutRandom",
+        ""
+      ],
+      [
+        "HasinaPetToHideout2",
+        ""
+      ],
+      [
+        "HasinaPetUniqueKill",
+        ""
+      ],
+      [
+        "HasinaPetMirrorDrop",
+        ""
+      ],
+      [
+        "HasinaPetPlayerDeathRandom",
+        ""
+      ],
+      [
+        "HasinaPetPlayerDeath2",
+        ""
+      ],
+      [
+        "HasinaPetSummon",
+        ""
       ]
     ]
   },
@@ -55124,6 +57804,22 @@
       [
         "Metadata/Monsters/Thaumaturgy/ThaumaturgistBoss",
         "Ciergan, Alquimista de sombras"
+      ],
+      [
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC",
+        "El Maestro de pruebas"
+      ],
+      [
+        "Metadata/NPC/League/Ultimatum/UltimatumNPCPostFight",
+        "El Maestro de pruebas"
+      ],
+      [
+        "Metadata/Monsters/LeagueUltimatum/TrialMaster/TrialMasterBoss",
+        "El Maestro de pruebas"
+      ],
+      [
+        "Metadata/NPC/Hasina",
+        "Hasina"
       ]
     ]
   }

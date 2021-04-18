@@ -1859,7 +1859,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        283
+        284
       ],
       [
         "Incursion_Temple2",
@@ -1874,7 +1874,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        284
+        285
       ],
       [
         "Incursion_Temple3",
@@ -1889,7 +1889,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        285
+        286
       ],
       [
         "Incursion_Temple4",
@@ -1904,7 +1904,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        286
+        287
       ],
       [
         "Incursion_Temple5",
@@ -1919,7 +1919,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        287
+        288
       ],
       [
         "Incursion_Temple6",
@@ -1934,7 +1934,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        288
+        289
       ],
       [
         "Incursion_Temple7_",
@@ -1949,7 +1949,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        289
+        290
       ],
       [
         "Incursion_Temple8",
@@ -1964,7 +1964,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        290
+        291
       ],
       [
         "Incursion_Temple9",
@@ -1979,7 +1979,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        291
+        292
       ],
       [
         "Incursion_Temple10",
@@ -1994,7 +1994,7 @@
         "Art/2DItems/Effects/Portals/IncursionPortal.png",
         null,
         null,
-        292
+        293
       ],
       [
         "BetrayalSafeHouseFortress",
@@ -2009,7 +2009,7 @@
         "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
         null,
         null,
-        405
+        406
       ],
       [
         "BetrayalSafeHouseAssassins",
@@ -2024,7 +2024,7 @@
         "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
         null,
         null,
-        406
+        407
       ],
       [
         "BetrayalSafeHouseCaravan",
@@ -2039,7 +2039,7 @@
         "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
         null,
         null,
-        407
+        408
       ],
       [
         "BetrayalSafeHouseLaboratory",
@@ -2054,7 +2054,7 @@
         "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
         null,
         null,
-        408
+        409
       ],
       [
         "BetrayalMastermindFight",
@@ -2069,7 +2069,7 @@
         "Art/2DItems/Hideout/HideoutImageofCatarina.png",
         null,
         null,
-        409
+        410
       ],
       [
         "Synthesis_MapBoss",
@@ -2084,7 +2084,7 @@
         "Art/2DItems/Maps/SynthesisBossGuardianMap.dds",
         null,
         null,
-        441
+        442
       ],
       [
         "Synthesis_MapGuardian1",
@@ -2099,7 +2099,7 @@
         "Art/2DItems/Maps/SynthesisColdGuardianMap.dds",
         null,
         null,
-        442
+        443
       ],
       [
         "Synthesis_MapGuardian2",
@@ -2114,7 +2114,7 @@
         "Art/2DItems/Maps/SynthesisFireGuardianMap.dds",
         null,
         null,
-        443
+        444
       ],
       [
         "Synthesis_MapGuardian3",
@@ -2129,7 +2129,7 @@
         "Art/2DItems/Maps/SynthesisLightningGuardianMap.dds",
         null,
         null,
-        444
+        445
       ],
       [
         "Synthesis_MapGuardian4",
@@ -2144,7 +2144,7 @@
         "Art/2DItems/Maps/SynthesisGolemGuardianMap.dds",
         null,
         null,
-        445
+        446
       ],
       [
         "1_Labyrinth_AirlockClean",
@@ -2159,7 +2159,7 @@
         null,
         null,
         null,
-        448
+        449
       ],
       [
         "1_Labyrinth_C_end",
@@ -2174,7 +2174,7 @@
         null,
         null,
         null,
-        449
+        450
       ],
       [
         "1_Labyrinth_C_end_bottleneck",
@@ -2189,7 +2189,7 @@
         null,
         null,
         null,
-        450
+        451
       ],
       [
         "1_Labyrinth_C_straight",
@@ -2204,7 +2204,7 @@
         null,
         null,
         null,
-        451
+        452
       ],
       [
         "1_Labyrinth_C_straight_bottleneck",
@@ -2219,7 +2219,7 @@
         null,
         null,
         null,
-        452
+        453
       ],
       [
         "1_Labyrinth_C_branch",
@@ -2234,7 +2234,7 @@
         null,
         null,
         null,
-        453
+        454
       ],
       [
         "1_Labyrinth_C_branch_bottleneck_1",
@@ -2249,7 +2249,7 @@
         null,
         null,
         null,
-        454
+        455
       ],
       [
         "1_Labyrinth_C_branch_bottleneck_2",
@@ -2264,7 +2264,7 @@
         null,
         null,
         null,
-        455
+        456
       ],
       [
         "1_Labyrinth_C_branch_door",
@@ -2279,7 +2279,7 @@
         null,
         null,
         null,
-        456
+        457
       ],
       [
         "1_Labyrinth_C_quad",
@@ -2294,7 +2294,7 @@
         null,
         null,
         null,
-        457
+        458
       ],
       [
         "1_Labyrinth_C_quad_bottleneck",
@@ -2309,7 +2309,7 @@
         null,
         null,
         null,
-        458
+        459
       ],
       [
         "1_Labyrinth_C_quad_door",
@@ -2324,7 +2324,7 @@
         null,
         null,
         null,
-        459
+        460
       ],
       [
         "1_Labyrinth_P_end",
@@ -2339,7 +2339,7 @@
         null,
         null,
         null,
-        460
+        461
       ],
       [
         "1_Labyrinth_P_end_bottleneck",
@@ -2354,7 +2354,7 @@
         null,
         null,
         null,
-        461
+        462
       ],
       [
         "1_Labyrinth_P_straight",
@@ -2369,7 +2369,7 @@
         null,
         null,
         null,
-        462
+        463
       ],
       [
         "1_Labyrinth_P_straight_bottleneck",
@@ -2384,7 +2384,7 @@
         null,
         null,
         null,
-        463
+        464
       ],
       [
         "1_Labyrinth_P_branch",
@@ -2399,7 +2399,7 @@
         null,
         null,
         null,
-        464
+        465
       ],
       [
         "1_Labyrinth_P_branch_bottleneck_1",
@@ -2414,7 +2414,7 @@
         null,
         null,
         null,
-        465
+        466
       ],
       [
         "1_Labyrinth_P_branch_bottleneck_2",
@@ -2429,7 +2429,7 @@
         null,
         null,
         null,
-        466
+        467
       ],
       [
         "1_Labyrinth_P_branch_door",
@@ -2444,7 +2444,7 @@
         null,
         null,
         null,
-        467
+        468
       ],
       [
         "1_Labyrinth_P_quad",
@@ -2459,7 +2459,7 @@
         null,
         null,
         null,
-        468
+        469
       ],
       [
         "1_Labyrinth_P_quad_bottleneck",
@@ -2474,7 +2474,7 @@
         null,
         null,
         null,
-        469
+        470
       ],
       [
         "1_Labyrinth_P_quad_door",
@@ -2489,7 +2489,7 @@
         null,
         null,
         null,
-        470
+        471
       ],
       [
         "1_Labyrinth_EH_end",
@@ -2504,7 +2504,7 @@
         null,
         null,
         null,
-        471
+        472
       ],
       [
         "1_Labyrinth_EH_end_bottleneck",
@@ -2519,7 +2519,7 @@
         null,
         null,
         null,
-        472
+        473
       ],
       [
         "1_Labyrinth_EH_straight_#",
@@ -2534,7 +2534,7 @@
         null,
         null,
         null,
-        473
+        474
       ],
       [
         "1_Labyrinth_EH_straight_bottleneck",
@@ -2549,7 +2549,7 @@
         null,
         null,
         null,
-        474
+        475
       ],
       [
         "1_Labyrinth_EH_branch",
@@ -2564,7 +2564,7 @@
         null,
         null,
         null,
-        475
+        476
       ],
       [
         "1_Labyrinth_EH_branch_bottleneck_1",
@@ -2579,7 +2579,7 @@
         null,
         null,
         null,
-        476
+        477
       ],
       [
         "1_Labyrinth_EH_branch_bottleneck_2",
@@ -2594,7 +2594,7 @@
         null,
         null,
         null,
-        477
+        478
       ],
       [
         "1_Labyrinth_EH_branch_door",
@@ -2609,7 +2609,7 @@
         null,
         null,
         null,
-        478
+        479
       ],
       [
         "1_Labyrinth_EH_quad",
@@ -2624,7 +2624,7 @@
         null,
         null,
         null,
-        479
+        480
       ],
       [
         "1_Labyrinth_EH_quad_bottleneck",
@@ -2639,7 +2639,7 @@
         null,
         null,
         null,
-        480
+        481
       ],
       [
         "1_Labyrinth_EH_quad_door_#",
@@ -2654,7 +2654,7 @@
         null,
         null,
         null,
-        481
+        482
       ],
       [
         "1_Labyrinth_EH_block_branch",
@@ -2669,7 +2669,7 @@
         null,
         null,
         null,
-        482
+        483
       ],
       [
         "1_Labyrinth_RT_end",
@@ -2684,7 +2684,7 @@
         null,
         null,
         null,
-        483
+        484
       ],
       [
         "1_Labyrinth_RT_end_bottleneck",
@@ -2699,7 +2699,7 @@
         null,
         null,
         null,
-        484
+        485
       ],
       [
         "1_Labyrinth_RT_straight",
@@ -2714,7 +2714,7 @@
         null,
         null,
         null,
-        485
+        486
       ],
       [
         "1_Labyrinth_RT_straight_bottleneck",
@@ -2729,7 +2729,7 @@
         null,
         null,
         null,
-        486
+        487
       ],
       [
         "1_Labyrinth_RT_branch",
@@ -2744,7 +2744,7 @@
         null,
         null,
         null,
-        487
+        488
       ],
       [
         "1_Labyrinth_RT_branch_bottleneck_1",
@@ -2759,7 +2759,7 @@
         null,
         null,
         null,
-        488
+        489
       ],
       [
         "1_Labyrinth_RT_branch_bottleneck_2",
@@ -2774,7 +2774,7 @@
         null,
         null,
         null,
-        489
+        490
       ],
       [
         "1_Labyrinth_RT_branch_door",
@@ -2789,7 +2789,7 @@
         null,
         null,
         null,
-        490
+        491
       ],
       [
         "1_Labyrinth_RT_quad_#",
@@ -2804,7 +2804,7 @@
         null,
         null,
         null,
-        491
+        492
       ],
       [
         "1_Labyrinth_RT_quad_bottleneck",
@@ -2819,7 +2819,7 @@
         null,
         null,
         null,
-        492
+        493
       ],
       [
         "1_Labyrinth_RT_quad_door",
@@ -2834,7 +2834,7 @@
         null,
         null,
         null,
-        493
+        494
       ],
       [
         "1_Labyrinth_DG_end",
@@ -2849,7 +2849,7 @@
         null,
         null,
         null,
-        494
+        495
       ],
       [
         "1_Labyrinth_DG_end_bottleneck_#",
@@ -2864,7 +2864,7 @@
         null,
         null,
         null,
-        495
+        496
       ],
       [
         "1_Labyrinth_DG_straight",
@@ -2879,7 +2879,7 @@
         null,
         null,
         null,
-        496
+        497
       ],
       [
         "1_Labyrinth_DG_straight_bottleneck",
@@ -2894,7 +2894,7 @@
         null,
         null,
         null,
-        497
+        498
       ],
       [
         "1_Labyrinth_DG_branch",
@@ -2909,7 +2909,7 @@
         null,
         null,
         null,
-        498
+        499
       ],
       [
         "1_Labyrinth_DG_branch_bottleneck_1_#",
@@ -2924,7 +2924,7 @@
         null,
         null,
         null,
-        499
+        500
       ],
       [
         "1_Labyrinth_DG_branch_bottleneck_2",
@@ -2939,7 +2939,7 @@
         null,
         null,
         null,
-        500
+        501
       ],
       [
         "1_Labyrinth_DG_branch_door",
@@ -2954,7 +2954,7 @@
         null,
         null,
         null,
-        501
+        502
       ],
       [
         "1_Labyrinth_DG_quad",
@@ -2969,7 +2969,7 @@
         null,
         null,
         null,
-        502
+        503
       ],
       [
         "1_Labyrinth_DG_quad_bottleneck",
@@ -2984,7 +2984,7 @@
         null,
         null,
         null,
-        503
+        504
       ],
       [
         "1_Labyrinth_DG_quad_door",
@@ -2999,7 +2999,7 @@
         null,
         null,
         null,
-        504
+        505
       ],
       [
         "1_Labyrinth_OH_end",
@@ -3014,7 +3014,7 @@
         null,
         null,
         null,
-        505
+        506
       ],
       [
         "1_Labyrinth_OH_end_bottleneck",
@@ -3029,7 +3029,7 @@
         null,
         null,
         null,
-        506
+        507
       ],
       [
         "1_Labyrinth_OH_straight",
@@ -3044,7 +3044,7 @@
         null,
         null,
         null,
-        507
+        508
       ],
       [
         "1_Labyrinth_OH_straight_bottleneck",
@@ -3059,7 +3059,7 @@
         null,
         null,
         null,
-        508
+        509
       ],
       [
         "1_Labyrinth_OH_branch",
@@ -3074,7 +3074,7 @@
         null,
         null,
         null,
-        509
+        510
       ],
       [
         "1_Labyrinth_OH_branch_bottleneck_1",
@@ -3089,7 +3089,7 @@
         null,
         null,
         null,
-        510
+        511
       ],
       [
         "1_Labyrinth_OH_branch_bottleneck_2",
@@ -3104,7 +3104,7 @@
         null,
         null,
         null,
-        511
+        512
       ],
       [
         "1_Labyrinth_OH_branch_door",
@@ -3119,7 +3119,7 @@
         null,
         null,
         null,
-        512
+        513
       ],
       [
         "1_Labyrinth_OH_quad_#",
@@ -3134,7 +3134,7 @@
         null,
         null,
         null,
-        513
+        514
       ],
       [
         "1_Labyrinth_OH_quad_bottleneck",
@@ -3149,7 +3149,7 @@
         null,
         null,
         null,
-        514
+        515
       ],
       [
         "1_Labyrinth_OH_quad_door_#",
@@ -3164,7 +3164,7 @@
         null,
         null,
         null,
-        515
+        516
       ],
       [
         "1_Labyrinth_boss_1",
@@ -3179,7 +3179,7 @@
         null,
         null,
         null,
-        516
+        517
       ],
       [
         "1_Labyrinth_boss_2",
@@ -3194,7 +3194,7 @@
         null,
         null,
         null,
-        517
+        518
       ],
       [
         "1_Labyrinth_boss_3",
@@ -3209,7 +3209,7 @@
         null,
         null,
         null,
-        518
+        519
       ],
       [
         "1_Labyrinth_boss_1_end",
@@ -3224,7 +3224,7 @@
         null,
         null,
         null,
-        519
+        520
       ],
       [
         "1_Labyrinth_boss_2_end",
@@ -3239,7 +3239,7 @@
         null,
         null,
         null,
-        520
+        521
       ],
       [
         "1_Labyrinth_boss_3_end_#",
@@ -3254,7 +3254,7 @@
         null,
         null,
         null,
-        521
+        522
       ],
       [
         "2_Labyrinth_C_end",
@@ -3269,7 +3269,7 @@
         null,
         null,
         null,
-        522
+        523
       ],
       [
         "2_Labyrinth_C_end_bottleneck",
@@ -3284,7 +3284,7 @@
         null,
         null,
         null,
-        523
+        524
       ],
       [
         "2_Labyrinth_C_straight",
@@ -3299,7 +3299,7 @@
         null,
         null,
         null,
-        524
+        525
       ],
       [
         "2_Labyrinth_C_straight_bottleneck",
@@ -3314,7 +3314,7 @@
         null,
         null,
         null,
-        525
+        526
       ],
       [
         "2_Labyrinth_C_branch",
@@ -3329,7 +3329,7 @@
         null,
         null,
         null,
-        526
+        527
       ],
       [
         "2_Labyrinth_C_branch_bottleneck_1",
@@ -3344,7 +3344,7 @@
         null,
         null,
         null,
-        527
+        528
       ],
       [
         "2_Labyrinth_C_branch_bottleneck_2",
@@ -3359,7 +3359,7 @@
         null,
         null,
         null,
-        528
+        529
       ],
       [
         "2_Labyrinth_C_branch_door",
@@ -3374,7 +3374,7 @@
         null,
         null,
         null,
-        529
+        530
       ],
       [
         "2_Labyrinth_C_quad",
@@ -3389,7 +3389,7 @@
         null,
         null,
         null,
-        530
+        531
       ],
       [
         "2_Labyrinth_C_quad_bottleneck",
@@ -3404,7 +3404,7 @@
         null,
         null,
         null,
-        531
+        532
       ],
       [
         "2_Labyrinth_C_quad_door",
@@ -3419,7 +3419,7 @@
         null,
         null,
         null,
-        532
+        533
       ],
       [
         "2_Labyrinth_P_end",
@@ -3434,7 +3434,7 @@
         null,
         null,
         null,
-        533
+        534
       ],
       [
         "2_Labyrinth_P_end_bottleneck",
@@ -3449,7 +3449,7 @@
         null,
         null,
         null,
-        534
+        535
       ],
       [
         "2_Labyrinth_P_straight",
@@ -3464,7 +3464,7 @@
         null,
         null,
         null,
-        535
+        536
       ],
       [
         "2_Labyrinth_P_straight_bottleneck",
@@ -3479,7 +3479,7 @@
         null,
         null,
         null,
-        536
+        537
       ],
       [
         "2_Labyrinth_P_branch",
@@ -3494,7 +3494,7 @@
         null,
         null,
         null,
-        537
+        538
       ],
       [
         "2_Labyrinth_P_branch_bottleneck_1",
@@ -3509,7 +3509,7 @@
         null,
         null,
         null,
-        538
+        539
       ],
       [
         "2_Labyrinth_P_branch_bottleneck_2",
@@ -3524,7 +3524,7 @@
         null,
         null,
         null,
-        539
+        540
       ],
       [
         "2_Labyrinth_P_branch_door",
@@ -3539,7 +3539,7 @@
         null,
         null,
         null,
-        540
+        541
       ],
       [
         "2_Labyrinth_P_quad",
@@ -3554,7 +3554,7 @@
         null,
         null,
         null,
-        541
+        542
       ],
       [
         "2_Labyrinth_P_quad_bottleneck",
@@ -3569,7 +3569,7 @@
         null,
         null,
         null,
-        542
+        543
       ],
       [
         "2_Labyrinth_P_quad_door",
@@ -3584,7 +3584,7 @@
         null,
         null,
         null,
-        543
+        544
       ],
       [
         "2_Labyrinth_EH_end",
@@ -3599,7 +3599,7 @@
         null,
         null,
         null,
-        544
+        545
       ],
       [
         "2_Labyrinth_EH_end_bottleneck",
@@ -3614,7 +3614,7 @@
         null,
         null,
         null,
-        545
+        546
       ],
       [
         "2_Labyrinth_EH_straight_#",
@@ -3629,7 +3629,7 @@
         null,
         null,
         null,
-        546
+        547
       ],
       [
         "2_Labyrinth_EH_straight_bottleneck",
@@ -3644,7 +3644,7 @@
         null,
         null,
         null,
-        547
+        548
       ],
       [
         "2_Labyrinth_EH_branch",
@@ -3659,7 +3659,7 @@
         null,
         null,
         null,
-        548
+        549
       ],
       [
         "2_Labyrinth_EH_branch_bottleneck_1",
@@ -3674,7 +3674,7 @@
         null,
         null,
         null,
-        549
+        550
       ],
       [
         "2_Labyrinth_EH_branch_bottleneck_2",
@@ -3689,7 +3689,7 @@
         null,
         null,
         null,
-        550
+        551
       ],
       [
         "2_Labyrinth_EH_branch_door",
@@ -3704,7 +3704,7 @@
         null,
         null,
         null,
-        551
+        552
       ],
       [
         "2_Labyrinth_EH_quad",
@@ -3719,7 +3719,7 @@
         null,
         null,
         null,
-        552
+        553
       ],
       [
         "2_Labyrinth_EH_quad_bottleneck",
@@ -3734,7 +3734,7 @@
         null,
         null,
         null,
-        553
+        554
       ],
       [
         "2_Labyrinth_EH_quad_door_#",
@@ -3749,7 +3749,7 @@
         null,
         null,
         null,
-        554
+        555
       ],
       [
         "2_Labyrinth_RT_end",
@@ -3764,7 +3764,7 @@
         null,
         null,
         null,
-        555
+        556
       ],
       [
         "2_Labyrinth_RT_end_bottleneck",
@@ -3779,7 +3779,7 @@
         null,
         null,
         null,
-        556
+        557
       ],
       [
         "2_Labyrinth_RT_straight",
@@ -3794,7 +3794,7 @@
         null,
         null,
         null,
-        557
+        558
       ],
       [
         "2_Labyrinth_RT_straight_bottleneck",
@@ -3809,7 +3809,7 @@
         null,
         null,
         null,
-        558
+        559
       ],
       [
         "2_Labyrinth_RT_branch",
@@ -3824,7 +3824,7 @@
         null,
         null,
         null,
-        559
+        560
       ],
       [
         "2_Labyrinth_RT_branch_bottleneck_1",
@@ -3839,7 +3839,7 @@
         null,
         null,
         null,
-        560
+        561
       ],
       [
         "2_Labyrinth_RT_branch_bottleneck_2",
@@ -3854,7 +3854,7 @@
         null,
         null,
         null,
-        561
+        562
       ],
       [
         "2_Labyrinth_RT_branch_door",
@@ -3869,7 +3869,7 @@
         null,
         null,
         null,
-        562
+        563
       ],
       [
         "2_Labyrinth_RT_quad_#",
@@ -3884,7 +3884,7 @@
         null,
         null,
         null,
-        563
+        564
       ],
       [
         "2_Labyrinth_RT_quad_bottleneck",
@@ -3899,7 +3899,7 @@
         null,
         null,
         null,
-        564
+        565
       ],
       [
         "2_Labyrinth_RT_quad_door",
@@ -3914,7 +3914,7 @@
         null,
         null,
         null,
-        565
+        566
       ],
       [
         "2_Labyrinth_DG_end",
@@ -3929,7 +3929,7 @@
         null,
         null,
         null,
-        566
+        567
       ],
       [
         "2_Labyrinth_DG_end_bottleneck_#",
@@ -3944,7 +3944,7 @@
         null,
         null,
         null,
-        567
+        568
       ],
       [
         "2_Labyrinth_DG_straight",
@@ -3959,7 +3959,7 @@
         null,
         null,
         null,
-        568
+        569
       ],
       [
         "2_Labyrinth_DG_straight_bottleneck",
@@ -3974,7 +3974,7 @@
         null,
         null,
         null,
-        569
+        570
       ],
       [
         "2_Labyrinth_DG_branch",
@@ -3989,7 +3989,7 @@
         null,
         null,
         null,
-        570
+        571
       ],
       [
         "2_Labyrinth_DG_branch_bottleneck_1_#",
@@ -4004,7 +4004,7 @@
         null,
         null,
         null,
-        571
+        572
       ],
       [
         "2_Labyrinth_DG_branch_bottleneck_2",
@@ -4019,7 +4019,7 @@
         null,
         null,
         null,
-        572
+        573
       ],
       [
         "2_Labyrinth_DG_branch_door",
@@ -4034,7 +4034,7 @@
         null,
         null,
         null,
-        573
+        574
       ],
       [
         "2_Labyrinth_DG_quad",
@@ -4049,7 +4049,7 @@
         null,
         null,
         null,
-        574
+        575
       ],
       [
         "2_Labyrinth_DG_quad_bottleneck",
@@ -4064,7 +4064,7 @@
         null,
         null,
         null,
-        575
+        576
       ],
       [
         "2_Labyrinth_DG_quad_door",
@@ -4079,7 +4079,7 @@
         null,
         null,
         null,
-        576
+        577
       ],
       [
         "2_Labyrinth_OH_end",
@@ -4094,7 +4094,7 @@
         null,
         null,
         null,
-        577
+        578
       ],
       [
         "2_Labyrinth_OH_end_bottleneck",
@@ -4109,7 +4109,7 @@
         null,
         null,
         null,
-        578
+        579
       ],
       [
         "2_Labyrinth_OH_straight",
@@ -4124,7 +4124,7 @@
         null,
         null,
         null,
-        579
+        580
       ],
       [
         "2_Labyrinth_OH_straight_bottleneck",
@@ -4139,7 +4139,7 @@
         null,
         null,
         null,
-        580
+        581
       ],
       [
         "2_Labyrinth_OH_branch",
@@ -4154,7 +4154,7 @@
         null,
         null,
         null,
-        581
+        582
       ],
       [
         "2_Labyrinth_OH_branch_bottleneck_1",
@@ -4169,7 +4169,7 @@
         null,
         null,
         null,
-        582
+        583
       ],
       [
         "2_Labyrinth_OH_branch_bottleneck_2",
@@ -4184,7 +4184,7 @@
         null,
         null,
         null,
-        583
+        584
       ],
       [
         "2_Labyrinth_OH_branch_door",
@@ -4199,7 +4199,7 @@
         null,
         null,
         null,
-        584
+        585
       ],
       [
         "2_Labyrinth_OH_quad_#",
@@ -4214,7 +4214,7 @@
         null,
         null,
         null,
-        585
+        586
       ],
       [
         "2_Labyrinth_OH_quad_bottleneck",
@@ -4229,7 +4229,7 @@
         null,
         null,
         null,
-        586
+        587
       ],
       [
         "2_Labyrinth_OH_quad_door_#",
@@ -4244,7 +4244,7 @@
         null,
         null,
         null,
-        587
+        588
       ],
       [
         "2_Labyrinth_boss_1",
@@ -4259,7 +4259,7 @@
         null,
         null,
         null,
-        588
+        589
       ],
       [
         "2_Labyrinth_boss_2",
@@ -4274,7 +4274,7 @@
         null,
         null,
         null,
-        589
+        590
       ],
       [
         "2_Labyrinth_boss_3",
@@ -4289,7 +4289,7 @@
         null,
         null,
         null,
-        590
+        591
       ],
       [
         "2_Labyrinth_boss_1_end",
@@ -4304,7 +4304,7 @@
         null,
         null,
         null,
-        591
+        592
       ],
       [
         "2_Labyrinth_boss_2_end",
@@ -4319,7 +4319,7 @@
         null,
         null,
         null,
-        592
+        593
       ],
       [
         "2_Labyrinth_boss_3_end_#",
@@ -4334,7 +4334,7 @@
         null,
         null,
         null,
-        593
+        594
       ],
       [
         "3_Labyrinth_C_end",
@@ -4349,7 +4349,7 @@
         null,
         null,
         null,
-        594
+        595
       ],
       [
         "3_Labyrinth_C_end_bottleneck",
@@ -4364,7 +4364,7 @@
         null,
         null,
         null,
-        595
+        596
       ],
       [
         "3_Labyrinth_C_straight",
@@ -4379,7 +4379,7 @@
         null,
         null,
         null,
-        596
+        597
       ],
       [
         "3_Labyrinth_C_straight_bottleneck",
@@ -4394,7 +4394,7 @@
         null,
         null,
         null,
-        597
+        598
       ],
       [
         "3_Labyrinth_C_branch",
@@ -4409,7 +4409,7 @@
         null,
         null,
         null,
-        598
+        599
       ],
       [
         "3_Labyrinth_C_branch_bottleneck_1",
@@ -4424,7 +4424,7 @@
         null,
         null,
         null,
-        599
+        600
       ],
       [
         "3_Labyrinth_C_branch_bottleneck_2",
@@ -4439,7 +4439,7 @@
         null,
         null,
         null,
-        600
+        601
       ],
       [
         "3_Labyrinth_C_branch_door",
@@ -4454,7 +4454,7 @@
         null,
         null,
         null,
-        601
+        602
       ],
       [
         "3_Labyrinth_C_quad",
@@ -4469,7 +4469,7 @@
         null,
         null,
         null,
-        602
+        603
       ],
       [
         "3_Labyrinth_C_quad_bottleneck",
@@ -4484,7 +4484,7 @@
         null,
         null,
         null,
-        603
+        604
       ],
       [
         "3_Labyrinth_C_quad_door",
@@ -4499,7 +4499,7 @@
         null,
         null,
         null,
-        604
+        605
       ],
       [
         "3_Labyrinth_P_end",
@@ -4514,7 +4514,7 @@
         null,
         null,
         null,
-        605
+        606
       ],
       [
         "3_Labyrinth_P_end_bottleneck",
@@ -4529,7 +4529,7 @@
         null,
         null,
         null,
-        606
+        607
       ],
       [
         "3_Labyrinth_P_straight",
@@ -4544,7 +4544,7 @@
         null,
         null,
         null,
-        607
+        608
       ],
       [
         "3_Labyrinth_P_straight_bottleneck",
@@ -4559,7 +4559,7 @@
         null,
         null,
         null,
-        608
+        609
       ],
       [
         "3_Labyrinth_P_branch",
@@ -4574,7 +4574,7 @@
         null,
         null,
         null,
-        609
+        610
       ],
       [
         "3_Labyrinth_P_branch_bottleneck_1",
@@ -4589,7 +4589,7 @@
         null,
         null,
         null,
-        610
+        611
       ],
       [
         "3_Labyrinth_P_branch_bottleneck_2",
@@ -4604,7 +4604,7 @@
         null,
         null,
         null,
-        611
+        612
       ],
       [
         "3_Labyrinth_P_branch_door",
@@ -4619,7 +4619,7 @@
         null,
         null,
         null,
-        612
+        613
       ],
       [
         "3_Labyrinth_P_quad",
@@ -4634,7 +4634,7 @@
         null,
         null,
         null,
-        613
+        614
       ],
       [
         "3_Labyrinth_P_quad_bottleneck",
@@ -4649,7 +4649,7 @@
         null,
         null,
         null,
-        614
+        615
       ],
       [
         "3_Labyrinth_P_quad_door",
@@ -4664,7 +4664,7 @@
         null,
         null,
         null,
-        615
+        616
       ],
       [
         "3_Labyrinth_EH_end",
@@ -4679,7 +4679,7 @@
         null,
         null,
         null,
-        616
+        617
       ],
       [
         "3_Labyrinth_EH_end_bottleneck",
@@ -4694,7 +4694,7 @@
         null,
         null,
         null,
-        617
+        618
       ],
       [
         "3_Labyrinth_EH_straight_#",
@@ -4709,7 +4709,7 @@
         null,
         null,
         null,
-        618
+        619
       ],
       [
         "3_Labyrinth_EH_straight_bottleneck",
@@ -4724,7 +4724,7 @@
         null,
         null,
         null,
-        619
+        620
       ],
       [
         "3_Labyrinth_EH_branch",
@@ -4739,7 +4739,7 @@
         null,
         null,
         null,
-        620
+        621
       ],
       [
         "3_Labyrinth_EH_branch_bottleneck_1",
@@ -4754,7 +4754,7 @@
         null,
         null,
         null,
-        621
+        622
       ],
       [
         "3_Labyrinth_EH_branch_bottleneck_2",
@@ -4769,7 +4769,7 @@
         null,
         null,
         null,
-        622
+        623
       ],
       [
         "3_Labyrinth_EH_branch_door",
@@ -4784,7 +4784,7 @@
         null,
         null,
         null,
-        623
+        624
       ],
       [
         "3_Labyrinth_EH_quad",
@@ -4799,7 +4799,7 @@
         null,
         null,
         null,
-        624
+        625
       ],
       [
         "3_Labyrinth_EH_quad_bottleneck",
@@ -4814,7 +4814,7 @@
         null,
         null,
         null,
-        625
+        626
       ],
       [
         "3_Labyrinth_EH_quad_door_#",
@@ -4829,7 +4829,7 @@
         null,
         null,
         null,
-        626
+        627
       ],
       [
         "3_Labyrinth_RT_end",
@@ -4844,7 +4844,7 @@
         null,
         null,
         null,
-        627
+        628
       ],
       [
         "3_Labyrinth_RT_end_bottleneck",
@@ -4859,7 +4859,7 @@
         null,
         null,
         null,
-        628
+        629
       ],
       [
         "3_Labyrinth_RT_straight",
@@ -4874,7 +4874,7 @@
         null,
         null,
         null,
-        629
+        630
       ],
       [
         "3_Labyrinth_RT_straight_bottleneck",
@@ -4889,7 +4889,7 @@
         null,
         null,
         null,
-        630
+        631
       ],
       [
         "3_Labyrinth_RT_branch",
@@ -4904,7 +4904,7 @@
         null,
         null,
         null,
-        631
+        632
       ],
       [
         "3_Labyrinth_RT_branch_bottleneck_1",
@@ -4919,7 +4919,7 @@
         null,
         null,
         null,
-        632
+        633
       ],
       [
         "3_Labyrinth_RT_branch_bottleneck_2",
@@ -4934,7 +4934,7 @@
         null,
         null,
         null,
-        633
+        634
       ],
       [
         "3_Labyrinth_RT_branch_door",
@@ -4949,7 +4949,7 @@
         null,
         null,
         null,
-        634
+        635
       ],
       [
         "3_Labyrinth_RT_quad_#",
@@ -4964,7 +4964,7 @@
         null,
         null,
         null,
-        635
+        636
       ],
       [
         "3_Labyrinth_RT_quad_bottleneck",
@@ -4979,7 +4979,7 @@
         null,
         null,
         null,
-        636
+        637
       ],
       [
         "3_Labyrinth_RT_quad_door",
@@ -4994,7 +4994,7 @@
         null,
         null,
         null,
-        637
+        638
       ],
       [
         "3_Labyrinth_DG_end",
@@ -5009,7 +5009,7 @@
         null,
         null,
         null,
-        638
+        639
       ],
       [
         "3_Labyrinth_DG_end_bottleneck_#",
@@ -5024,7 +5024,7 @@
         null,
         null,
         null,
-        639
+        640
       ],
       [
         "3_Labyrinth_DG_straight",
@@ -5039,7 +5039,7 @@
         null,
         null,
         null,
-        640
+        641
       ],
       [
         "3_Labyrinth_DG_straight_bottleneck",
@@ -5054,7 +5054,7 @@
         null,
         null,
         null,
-        641
+        642
       ],
       [
         "3_Labyrinth_DG_branch",
@@ -5069,7 +5069,7 @@
         null,
         null,
         null,
-        642
+        643
       ],
       [
         "3_Labyrinth_DG_branch_bottleneck_1_#",
@@ -5084,7 +5084,7 @@
         null,
         null,
         null,
-        643
+        644
       ],
       [
         "3_Labyrinth_DG_branch_bottleneck_2",
@@ -5099,7 +5099,7 @@
         null,
         null,
         null,
-        644
+        645
       ],
       [
         "3_Labyrinth_DG_branch_door",
@@ -5114,7 +5114,7 @@
         null,
         null,
         null,
-        645
+        646
       ],
       [
         "3_Labyrinth_DG_quad",
@@ -5129,7 +5129,7 @@
         null,
         null,
         null,
-        646
+        647
       ],
       [
         "3_Labyrinth_DG_quad_bottleneck",
@@ -5144,7 +5144,7 @@
         null,
         null,
         null,
-        647
+        648
       ],
       [
         "3_Labyrinth_DG_quad_door",
@@ -5159,7 +5159,7 @@
         null,
         null,
         null,
-        648
+        649
       ],
       [
         "3_Labyrinth_OH_end",
@@ -5174,7 +5174,7 @@
         null,
         null,
         null,
-        649
+        650
       ],
       [
         "3_Labyrinth_OH_end_bottleneck",
@@ -5189,7 +5189,7 @@
         null,
         null,
         null,
-        650
+        651
       ],
       [
         "3_Labyrinth_OH_straight",
@@ -5204,7 +5204,7 @@
         null,
         null,
         null,
-        651
+        652
       ],
       [
         "3_Labyrinth_OH_straight_bottleneck",
@@ -5219,7 +5219,7 @@
         null,
         null,
         null,
-        652
+        653
       ],
       [
         "3_Labyrinth_OH_branch",
@@ -5234,7 +5234,7 @@
         null,
         null,
         null,
-        653
+        654
       ],
       [
         "3_Labyrinth_OH_branch_bottleneck_1",
@@ -5249,7 +5249,7 @@
         null,
         null,
         null,
-        654
+        655
       ],
       [
         "3_Labyrinth_OH_branch_bottleneck_2",
@@ -5264,7 +5264,7 @@
         null,
         null,
         null,
-        655
+        656
       ],
       [
         "3_Labyrinth_OH_branch_door",
@@ -5279,7 +5279,7 @@
         null,
         null,
         null,
-        656
+        657
       ],
       [
         "3_Labyrinth_OH_quad_#",
@@ -5294,7 +5294,7 @@
         null,
         null,
         null,
-        657
+        658
       ],
       [
         "3_Labyrinth_OH_quad_bottleneck",
@@ -5309,7 +5309,7 @@
         null,
         null,
         null,
-        658
+        659
       ],
       [
         "3_Labyrinth_OH_quad_door_#",
@@ -5324,7 +5324,7 @@
         null,
         null,
         null,
-        659
+        660
       ],
       [
         "3_Labyrinth_boss_1",
@@ -5339,7 +5339,7 @@
         null,
         null,
         null,
-        660
+        661
       ],
       [
         "3_Labyrinth_boss_2",
@@ -5354,7 +5354,7 @@
         null,
         null,
         null,
-        661
+        662
       ],
       [
         "3_Labyrinth_boss_3",
@@ -5369,7 +5369,7 @@
         null,
         null,
         null,
-        662
+        663
       ],
       [
         "3_Labyrinth_boss_1_end",
@@ -5384,7 +5384,7 @@
         null,
         null,
         null,
-        663
+        664
       ],
       [
         "3_Labyrinth_boss_2_end_#",
@@ -5399,7 +5399,7 @@
         null,
         null,
         null,
-        664
+        665
       ],
       [
         "3_Labyrinth_boss_3_end",
@@ -5414,7 +5414,7 @@
         null,
         null,
         null,
-        665
+        666
       ],
       [
         "EndGame_Labyrinth_C_end",
@@ -5429,7 +5429,7 @@
         null,
         null,
         null,
-        666
+        667
       ],
       [
         "EndGame_Labyrinth_C_end_bottleneck",
@@ -5444,7 +5444,7 @@
         null,
         null,
         null,
-        667
+        668
       ],
       [
         "EndGame_Labyrinth_C_straight",
@@ -5459,7 +5459,7 @@
         null,
         null,
         null,
-        668
+        669
       ],
       [
         "EndGame_Labyrinth_C_straight_bottleneck",
@@ -5474,7 +5474,7 @@
         null,
         null,
         null,
-        669
+        670
       ],
       [
         "EndGame_Labyrinth_C_branch",
@@ -5489,7 +5489,7 @@
         null,
         null,
         null,
-        670
+        671
       ],
       [
         "EndGame_Labyrinth_C_branch_bottleneck_1",
@@ -5504,7 +5504,7 @@
         null,
         null,
         null,
-        671
+        672
       ],
       [
         "EndGame_Labyrinth_C_branch_bottleneck_2",
@@ -5519,7 +5519,7 @@
         null,
         null,
         null,
-        672
+        673
       ],
       [
         "EndGame_Labyrinth_C_branch_door",
@@ -5534,7 +5534,7 @@
         null,
         null,
         null,
-        673
+        674
       ],
       [
         "EndGame_Labyrinth_C_quad",
@@ -5549,7 +5549,7 @@
         null,
         null,
         null,
-        674
+        675
       ],
       [
         "EndGame_Labyrinth_C_quad_bottleneck",
@@ -5564,7 +5564,7 @@
         null,
         null,
         null,
-        675
+        676
       ],
       [
         "EndGame_Labyrinth_C_quad_door",
@@ -5579,7 +5579,7 @@
         null,
         null,
         null,
-        676
+        677
       ],
       [
         "EndGame_Labyrinth_P_end",
@@ -5594,7 +5594,7 @@
         null,
         null,
         null,
-        677
+        678
       ],
       [
         "EndGame_Labyrinth_P_end_bottleneck",
@@ -5609,7 +5609,7 @@
         null,
         null,
         null,
-        678
+        679
       ],
       [
         "EndGame_Labyrinth_P_straight",
@@ -5624,7 +5624,7 @@
         null,
         null,
         null,
-        679
+        680
       ],
       [
         "EndGame_Labyrinth_P_straight_bottleneck",
@@ -5639,7 +5639,7 @@
         null,
         null,
         null,
-        680
+        681
       ],
       [
         "EndGame_Labyrinth_P_branch",
@@ -5654,7 +5654,7 @@
         null,
         null,
         null,
-        681
+        682
       ],
       [
         "EndGame_Labyrinth_P_branch_bottleneck_1",
@@ -5669,7 +5669,7 @@
         null,
         null,
         null,
-        682
+        683
       ],
       [
         "EndGame_Labyrinth_P_branch_bottleneck_2",
@@ -5684,7 +5684,7 @@
         null,
         null,
         null,
-        683
+        684
       ],
       [
         "EndGame_Labyrinth_P_branch_door",
@@ -5699,7 +5699,7 @@
         null,
         null,
         null,
-        684
+        685
       ],
       [
         "EndGame_Labyrinth_P_quad",
@@ -5714,7 +5714,7 @@
         null,
         null,
         null,
-        685
+        686
       ],
       [
         "EndGame_Labyrinth_P_quad_bottleneck",
@@ -5729,7 +5729,7 @@
         null,
         null,
         null,
-        686
+        687
       ],
       [
         "EndGame_Labyrinth_P_quad_door",
@@ -5744,7 +5744,7 @@
         null,
         null,
         null,
-        687
+        688
       ],
       [
         "EndGame_Labyrinth_EH_end",
@@ -5759,7 +5759,7 @@
         null,
         null,
         null,
-        688
+        689
       ],
       [
         "EndGame_Labyrinth_EH_end_bottleneck",
@@ -5774,7 +5774,7 @@
         null,
         null,
         null,
-        689
+        690
       ],
       [
         "EndGame_Labyrinth_EH_straight_#",
@@ -5789,7 +5789,7 @@
         null,
         null,
         null,
-        690
+        691
       ],
       [
         "EndGame_Labyrinth_EH_straight_bottleneck",
@@ -5804,7 +5804,7 @@
         null,
         null,
         null,
-        691
+        692
       ],
       [
         "EndGame_Labyrinth_EH_branch",
@@ -5819,7 +5819,7 @@
         null,
         null,
         null,
-        692
+        693
       ],
       [
         "EndGame_Labyrinth_EH_branch_bottleneck_1",
@@ -5834,7 +5834,7 @@
         null,
         null,
         null,
-        693
+        694
       ],
       [
         "EndGame_Labyrinth_EH_branch_bottleneck_2",
@@ -5849,7 +5849,7 @@
         null,
         null,
         null,
-        694
+        695
       ],
       [
         "EndGame_Labyrinth_EH_branch_door",
@@ -5864,7 +5864,7 @@
         null,
         null,
         null,
-        695
+        696
       ],
       [
         "EndGame_Labyrinth_EH_quad",
@@ -5879,7 +5879,7 @@
         null,
         null,
         null,
-        696
+        697
       ],
       [
         "EndGame_Labyrinth_EH_quad_bottleneck",
@@ -5894,7 +5894,7 @@
         null,
         null,
         null,
-        697
+        698
       ],
       [
         "EndGame_Labyrinth_EH_quad_door_#",
@@ -5909,7 +5909,7 @@
         null,
         null,
         null,
-        698
+        699
       ],
       [
         "EndGame_Labyrinth_RT_end",
@@ -5924,7 +5924,7 @@
         null,
         null,
         null,
-        699
+        700
       ],
       [
         "EndGame_Labyrinth_RT_end_bottleneck",
@@ -5939,7 +5939,7 @@
         null,
         null,
         null,
-        700
+        701
       ],
       [
         "EndGame_Labyrinth_RT_straight",
@@ -5954,7 +5954,7 @@
         null,
         null,
         null,
-        701
+        702
       ],
       [
         "EndGame_Labyrinth_RT_straight_bottleneck",
@@ -5969,7 +5969,7 @@
         null,
         null,
         null,
-        702
+        703
       ],
       [
         "EndGame_Labyrinth_RT_branch",
@@ -5984,7 +5984,7 @@
         null,
         null,
         null,
-        703
+        704
       ],
       [
         "EndGame_Labyrinth_RT_branch_bottleneck_1",
@@ -5999,7 +5999,7 @@
         null,
         null,
         null,
-        704
+        705
       ],
       [
         "EndGame_Labyrinth_RT_branch_bottleneck_2",
@@ -6014,7 +6014,7 @@
         null,
         null,
         null,
-        705
+        706
       ],
       [
         "EndGame_Labyrinth_RT_branch_door",
@@ -6029,7 +6029,7 @@
         null,
         null,
         null,
-        706
+        707
       ],
       [
         "EndGame_Labyrinth_RT_quad_#",
@@ -6044,7 +6044,7 @@
         null,
         null,
         null,
-        707
+        708
       ],
       [
         "EndGame_Labyrinth_RT_quad_bottleneck",
@@ -6059,7 +6059,7 @@
         null,
         null,
         null,
-        708
+        709
       ],
       [
         "EndGame_Labyrinth_RT_quad_door",
@@ -6074,7 +6074,7 @@
         null,
         null,
         null,
-        709
+        710
       ],
       [
         "EndGame_Labyrinth_DG_end",
@@ -6089,7 +6089,7 @@
         null,
         null,
         null,
-        710
+        711
       ],
       [
         "EndGame_Labyrinth_DG_end_bottleneck_#",
@@ -6104,7 +6104,7 @@
         null,
         null,
         null,
-        711
+        712
       ],
       [
         "EndGame_Labyrinth_DG_straight",
@@ -6119,7 +6119,7 @@
         null,
         null,
         null,
-        712
+        713
       ],
       [
         "EndGame_Labyrinth_DG_straight_bottleneck",
@@ -6134,7 +6134,7 @@
         null,
         null,
         null,
-        713
+        714
       ],
       [
         "EndGame_Labyrinth_DG_branch",
@@ -6149,7 +6149,7 @@
         null,
         null,
         null,
-        714
+        715
       ],
       [
         "EndGame_Labyrinth_DG_branch_bottleneck_1_#",
@@ -6164,7 +6164,7 @@
         null,
         null,
         null,
-        715
+        716
       ],
       [
         "EndGame_Labyrinth_DG_branch_bottleneck_2",
@@ -6179,7 +6179,7 @@
         null,
         null,
         null,
-        716
+        717
       ],
       [
         "EndGame_Labyrinth_DG_branch_door",
@@ -6194,7 +6194,7 @@
         null,
         null,
         null,
-        717
+        718
       ],
       [
         "EndGame_Labyrinth_DG_quad",
@@ -6209,7 +6209,7 @@
         null,
         null,
         null,
-        718
+        719
       ],
       [
         "EndGame_Labyrinth_DG_quad_bottleneck",
@@ -6224,7 +6224,7 @@
         null,
         null,
         null,
-        719
+        720
       ],
       [
         "EndGame_Labyrinth_DG_quad_door",
@@ -6239,7 +6239,7 @@
         null,
         null,
         null,
-        720
+        721
       ],
       [
         "EndGame_Labyrinth_OH_end",
@@ -6254,7 +6254,7 @@
         null,
         null,
         null,
-        721
+        722
       ],
       [
         "EndGame_Labyrinth_OH_end_bottleneck",
@@ -6269,7 +6269,7 @@
         null,
         null,
         null,
-        722
+        723
       ],
       [
         "EndGame_Labyrinth_OH_straight",
@@ -6284,7 +6284,7 @@
         null,
         null,
         null,
-        723
+        724
       ],
       [
         "EndGame_Labyrinth_OH_straight_bottleneck",
@@ -6299,7 +6299,7 @@
         null,
         null,
         null,
-        724
+        725
       ],
       [
         "EndGame_Labyrinth_OH_branch",
@@ -6314,7 +6314,7 @@
         null,
         null,
         null,
-        725
+        726
       ],
       [
         "EndGame_Labyrinth_OH_branch_bottleneck_1",
@@ -6329,7 +6329,7 @@
         null,
         null,
         null,
-        726
+        727
       ],
       [
         "EndGame_Labyrinth_OH_branch_bottleneck_2",
@@ -6344,7 +6344,7 @@
         null,
         null,
         null,
-        727
+        728
       ],
       [
         "EndGame_Labyrinth_OH_branch_door",
@@ -6359,7 +6359,7 @@
         null,
         null,
         null,
-        728
+        729
       ],
       [
         "EndGame_Labyrinth_OH_quad_#",
@@ -6374,7 +6374,7 @@
         null,
         null,
         null,
-        729
+        730
       ],
       [
         "EndGame_Labyrinth_OH_quad_bottleneck",
@@ -6389,7 +6389,7 @@
         null,
         null,
         null,
-        730
+        731
       ],
       [
         "EndGame_Labyrinth_OH_quad_door_#",
@@ -6404,7 +6404,7 @@
         null,
         null,
         null,
-        731
+        732
       ],
       [
         "EndGame_Labyrinth_boss_1",
@@ -6419,7 +6419,7 @@
         null,
         null,
         null,
-        732
+        733
       ],
       [
         "EndGame_Labyrinth_boss_2",
@@ -6434,7 +6434,7 @@
         null,
         null,
         null,
-        733
+        734
       ],
       [
         "EndGame_Labyrinth_boss_3",
@@ -6449,7 +6449,7 @@
         null,
         null,
         null,
-        734
+        735
       ],
       [
         "EndGame_Labyrinth_boss_1_end",
@@ -6464,7 +6464,7 @@
         null,
         null,
         null,
-        735
+        736
       ],
       [
         "EndGame_Labyrinth_boss_2_end",
@@ -6479,7 +6479,7 @@
         null,
         null,
         null,
-        736
+        737
       ],
       [
         "EndGame_Labyrinth_boss_3_end",
@@ -6494,7 +6494,7 @@
         null,
         null,
         null,
-        737
+        738
       ],
       [
         "EndGame_Labyrinth_trials_sawblades_#",
@@ -6509,7 +6509,7 @@
         null,
         null,
         null,
-        738
+        739
       ],
       [
         "EndGame_Labyrinth_trials_lava_#",
@@ -6524,7 +6524,7 @@
         null,
         null,
         null,
-        739
+        740
       ],
       [
         "EndGame_Labyrinth_trials_spinners",
@@ -6539,7 +6539,7 @@
         null,
         null,
         null,
-        740
+        741
       ],
       [
         "EndGame_Labyrinth_trials_spikes",
@@ -6554,7 +6554,7 @@
         null,
         null,
         null,
-        741
+        742
       ],
       [
         "EndGame_Labyrinth_trials_arrows",
@@ -6569,7 +6569,7 @@
         null,
         null,
         null,
-        742
+        743
       ],
       [
         "EndGame_Labyrinth_trials_roombas",
@@ -6584,7 +6584,7 @@
         null,
         null,
         null,
-        743
+        744
       ],
       [
         "MapAtziri1",
@@ -6599,7 +6599,7 @@
         "Art/2DItems/Maps/VaalComplete.png",
         null,
         null,
-        744
+        745
       ],
       [
         "MapAtziri2",
@@ -6614,7 +6614,7 @@
         "Art/2DItems/Maps/UberVaalComplete.png",
         null,
         null,
-        745
+        746
       ],
       [
         "BreachBossPhysical",
@@ -6629,7 +6629,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsPhysical.png",
         null,
         null,
-        1049
+        1050
       ],
       [
         "BreachBossChaos",
@@ -6644,7 +6644,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsChaos.png",
         null,
         null,
-        1050
+        1051
       ],
       [
         "BreachBossFire",
@@ -6659,7 +6659,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsFire.png",
         null,
         null,
-        1051
+        1052
       ],
       [
         "BreachBossCold",
@@ -6674,7 +6674,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsCold.png",
         null,
         null,
-        1052
+        1053
       ],
       [
         "BreachBossLightning",
@@ -6689,7 +6689,7 @@
         "Art/2DItems/Currency/Breach/BreachFragmentsLightning.png",
         null,
         null,
-        1053
+        1054
       ],
       [
         "MapWorldsLookout",
@@ -6710,7 +6710,7 @@
           12,
           14
         ],
-        1073
+        1074
       ],
       [
         "MapWorldsBeach",
@@ -6731,7 +6731,7 @@
           14,
           16
         ],
-        1074
+        1075
       ],
       [
         "MapWorldsGraveyard",
@@ -6752,7 +6752,7 @@
           12,
           15
         ],
-        1075
+        1076
       ],
       [
         "MapWorldsDungeon",
@@ -6773,7 +6773,7 @@
           14,
           16
         ],
-        1076
+        1077
       ],
       [
         "MapWorldsAlleyways",
@@ -6794,7 +6794,7 @@
           13,
           15
         ],
-        1077
+        1078
       ],
       [
         "MapWorldsPen",
@@ -6815,7 +6815,7 @@
           10,
           14
         ],
-        1078
+        1079
       ],
       [
         "MapWorldsDesert",
@@ -6836,7 +6836,7 @@
           12,
           15
         ],
-        1079
+        1080
       ],
       [
         "MapWorldsAridLake",
@@ -6857,7 +6857,7 @@
           11,
           14
         ],
-        1080
+        1081
       ],
       [
         "MapWorldsFloodedMine",
@@ -6878,7 +6878,7 @@
           13,
           15
         ],
-        1081
+        1082
       ],
       [
         "MapWorldsMarshes",
@@ -6899,7 +6899,7 @@
           12,
           15
         ],
-        1082
+        1083
       ],
       [
         "MapWorldsIceberg",
@@ -6920,7 +6920,7 @@
           13,
           16
         ],
-        1083
+        1084
       ],
       [
         "MapWorldsCage",
@@ -6941,7 +6941,7 @@
           14,
           16
         ],
-        1084
+        1085
       ],
       [
         "MapWorldsSprings",
@@ -6962,7 +6962,7 @@
           13,
           15
         ],
-        1085
+        1086
       ],
       [
         "MapWorldsExcavation",
@@ -6983,7 +6983,7 @@
           14,
           16
         ],
-        1086
+        1087
       ],
       [
         "MapWorldsLeyline",
@@ -7004,7 +7004,7 @@
           12,
           14
         ],
-        1087
+        1088
       ],
       [
         "MapWorldsPeninsula",
@@ -7025,7 +7025,7 @@
           11,
           14
         ],
-        1088
+        1089
       ],
       [
         "MapWorldsPort",
@@ -7046,7 +7046,7 @@
           11,
           14
         ],
-        1089
+        1090
       ],
       [
         "MapWorldsBurialChambers",
@@ -7067,7 +7067,7 @@
           0,
           16
         ],
-        1090
+        1091
       ],
       [
         "MapWorldsCells",
@@ -7088,7 +7088,7 @@
           12,
           15
         ],
-        1091
+        1092
       ],
       [
         "MapWorldsArcade",
@@ -7109,7 +7109,7 @@
           10,
           14
         ],
-        1092
+        1093
       ],
       [
         "MapWorldsCitySquare",
@@ -7130,7 +7130,7 @@
           0,
           14
         ],
-        1093
+        1094
       ],
       [
         "MapWorldsRelicChambers",
@@ -7151,7 +7151,7 @@
           13,
           15
         ],
-        1094
+        1095
       ],
       [
         "MapWorldsCourthouse",
@@ -7172,7 +7172,7 @@
           13,
           15
         ],
-        1095
+        1096
       ],
       [
         "MapWorldsStrand",
@@ -7193,7 +7193,7 @@
           12,
           14
         ],
-        1096
+        1097
       ],
       [
         "MapWorldsStrandUnique",
@@ -7214,7 +7214,7 @@
           12,
           14
         ],
-        1097
+        1098
       ],
       [
         "MapWorldsChateau",
@@ -7235,7 +7235,7 @@
           11,
           14
         ],
-        1098
+        1099
       ],
       [
         "MapWorldsChateauUnique",
@@ -7256,7 +7256,7 @@
           11,
           14
         ],
-        1099
+        1100
       ],
       [
         "MapWorldsGrotto",
@@ -7277,7 +7277,7 @@
           11,
           14
         ],
-        1100
+        1101
       ],
       [
         "MapWorldsGorge",
@@ -7298,7 +7298,7 @@
           11,
           14
         ],
-        1101
+        1102
       ],
       [
         "MapWorldsVolcano",
@@ -7319,7 +7319,7 @@
           11,
           14
         ],
-        1102
+        1103
       ],
       [
         "MapWorldsLighthouse",
@@ -7340,7 +7340,7 @@
           14,
           16
         ],
-        1103
+        1104
       ],
       [
         "MapWorldsCanyon",
@@ -7361,7 +7361,7 @@
           12,
           15
         ],
-        1104
+        1105
       ],
       [
         "MapWorldsConservatory",
@@ -7382,7 +7382,7 @@
           13,
           15
         ],
-        1105
+        1106
       ],
       [
         "MapWorldsSulphurVents",
@@ -7403,7 +7403,7 @@
           12,
           14
         ],
-        1106
+        1107
       ],
       [
         "MapWorldsHauntedMansion",
@@ -7424,7 +7424,7 @@
           11,
           14
         ],
-        1107
+        1108
       ],
       [
         "MapWorldsMaze",
@@ -7445,7 +7445,7 @@
           13,
           16
         ],
-        1108
+        1109
       ],
       [
         "MapWorldsMazeUnique",
@@ -7466,7 +7466,7 @@
           13,
           16
         ],
-        1109
+        1110
       ],
       [
         "MapWorldsChannel",
@@ -7487,7 +7487,7 @@
           13,
           15
         ],
-        1110
+        1111
       ],
       [
         "MapWorldsToxicSewer",
@@ -7508,7 +7508,7 @@
           11,
           14
         ],
-        1111
+        1112
       ],
       [
         "MapWorldsAncientCity",
@@ -7529,7 +7529,7 @@
           11,
           14
         ],
-        1112
+        1113
       ],
       [
         "MapWorldsIvoryTemple",
@@ -7550,7 +7550,7 @@
           11,
           14
         ],
-        1113
+        1114
       ],
       [
         "MapWorldsSpiderLair",
@@ -7571,7 +7571,7 @@
           12,
           14
         ],
-        1114
+        1115
       ],
       [
         "MapWorldsBarrows",
@@ -7592,7 +7592,7 @@
           14,
           16
         ],
-        1115
+        1116
       ],
       [
         "MapWorldsMausoleum",
@@ -7613,7 +7613,7 @@
           13,
           16
         ],
-        1116
+        1117
       ],
       [
         "MapWorldsFields",
@@ -7634,7 +7634,7 @@
           11,
           14
         ],
-        1117
+        1118
       ],
       [
         "MapWorldsJungleValley",
@@ -7655,7 +7655,7 @@
           10,
           14
         ],
-        1118
+        1119
       ],
       [
         "MapWorldsPhantasmagoria",
@@ -7676,7 +7676,7 @@
           12,
           14
         ],
-        1119
+        1120
       ],
       [
         "MapWorldsAcademy",
@@ -7697,7 +7697,7 @@
           13,
           16
         ],
-        1120
+        1121
       ],
       [
         "MapWorldsThicket",
@@ -7718,7 +7718,7 @@
           0,
           14
         ],
-        1121
+        1122
       ],
       [
         "MapWorldsWharf",
@@ -7739,7 +7739,7 @@
           11,
           14
         ],
-        1122
+        1123
       ],
       [
         "MapWorldsAshenWood",
@@ -7760,7 +7760,7 @@
           11,
           14
         ],
-        1123
+        1124
       ],
       [
         "MapWorldsAtoll",
@@ -7781,7 +7781,7 @@
           14,
           16
         ],
-        1124
+        1125
       ],
       [
         "MapWorldsAtollUnique",
@@ -7802,7 +7802,7 @@
           14,
           16
         ],
-        1125
+        1126
       ],
       [
         "MapWorldsCemetery",
@@ -7823,7 +7823,7 @@
           12,
           14
         ],
-        1126
+        1127
       ],
       [
         "MapWorldsCemeteryUnique",
@@ -7844,7 +7844,7 @@
           12,
           14
         ],
-        1127
+        1128
       ],
       [
         "MapWorldsUndergroundSea",
@@ -7865,7 +7865,7 @@
           11,
           14
         ],
-        1128
+        1129
       ],
       [
         "MapWorldsTribunal",
@@ -7886,7 +7886,7 @@
           11,
           14
         ],
-        1129
+        1130
       ],
       [
         "MapWorldsCoralRuins",
@@ -7907,7 +7907,7 @@
           12,
           14
         ],
-        1130
+        1131
       ],
       [
         "MapWorldsLavaChamber",
@@ -7928,7 +7928,7 @@
           11,
           14
         ],
-        1131
+        1132
       ],
       [
         "MapWorldsResidence",
@@ -7949,7 +7949,7 @@
           0,
           14
         ],
-        1132
+        1133
       ],
       [
         "MapWorldsRamparts",
@@ -7970,7 +7970,7 @@
           12,
           14
         ],
-        1133
+        1134
       ],
       [
         "MapWorldsDunes",
@@ -7991,7 +7991,7 @@
           13,
           15
         ],
-        1134
+        1135
       ],
       [
         "MapWorldsDunesUnique",
@@ -8012,7 +8012,7 @@
           13,
           15
         ],
-        1135
+        1136
       ],
       [
         "MapWorldsBoneCrypt",
@@ -8033,7 +8033,7 @@
           12,
           15
         ],
-        1136
+        1137
       ],
       [
         "MapWorldsBoneCryptUnique",
@@ -8054,7 +8054,7 @@
           12,
           15
         ],
-        1137
+        1138
       ],
       [
         "MapWorldsUndergroundRiver",
@@ -8075,7 +8075,7 @@
           11,
           14
         ],
-        1138
+        1139
       ],
       [
         "MapWorldsUndergroundRiverUnique",
@@ -8096,7 +8096,7 @@
           11,
           14
         ],
-        1139
+        1140
       ],
       [
         "MapWorldsGardens",
@@ -8117,7 +8117,7 @@
           11,
           14
         ],
-        1140
+        1141
       ],
       [
         "MapWorldsArachnidNest",
@@ -8138,7 +8138,7 @@
           0,
           16
         ],
-        1141
+        1142
       ],
       [
         "MapWorldsBazaar",
@@ -8159,7 +8159,7 @@
           0,
           15
         ],
-        1142
+        1143
       ],
       [
         "MapWorldsLaboratory",
@@ -8180,7 +8180,7 @@
           12,
           14
         ],
-        1143
+        1144
       ],
       [
         "MapWorldsInfestedValley",
@@ -8201,7 +8201,7 @@
           11,
           14
         ],
-        1144
+        1145
       ],
       [
         "MapWorldsOvergrownRuin",
@@ -8222,7 +8222,7 @@
           11,
           14
         ],
-        1145
+        1146
       ],
       [
         "MapWorldsVaalPyramid",
@@ -8243,7 +8243,7 @@
           11,
           14
         ],
-        1146
+        1147
       ],
       [
         "MapWorldsVaalPyramidUnique",
@@ -8264,7 +8264,7 @@
           11,
           14
         ],
-        1147
+        1148
       ],
       [
         "MapWorldsGeode",
@@ -8285,7 +8285,7 @@
           12,
           14
         ],
-        1148
+        1149
       ],
       [
         "MapWorldsArmoury",
@@ -8306,7 +8306,7 @@
           13,
           15
         ],
-        1149
+        1150
       ],
       [
         "MapWorldsCourtyard",
@@ -8327,7 +8327,7 @@
           11,
           14
         ],
-        1150
+        1151
       ],
       [
         "MapWorldsCourtyardUnique",
@@ -8348,7 +8348,7 @@
           11,
           14
         ],
-        1151
+        1152
       ],
       [
         "MapWorldsMudGeyser",
@@ -8369,7 +8369,7 @@
           12,
           16
         ],
-        1152
+        1153
       ],
       [
         "MapWorldsShore",
@@ -8390,7 +8390,7 @@
           12,
           14
         ],
-        1153
+        1154
       ],
       [
         "MapWorldsShoreUnique",
@@ -8411,7 +8411,7 @@
           12,
           14
         ],
-        1154
+        1155
       ],
       [
         "MapWorldsTropicalIsland",
@@ -8432,7 +8432,7 @@
           11,
           14
         ],
-        1155
+        1156
       ],
       [
         "MapWorldsTropicalIslandUnique",
@@ -8447,7 +8447,7 @@
         "Art/2DItems/Maps/UniqueMap2.dds",
         null,
         null,
-        1156
+        1157
       ],
       [
         "MapWorldsMineralPools",
@@ -8468,7 +8468,7 @@
           11,
           14
         ],
-        1157
+        1158
       ],
       [
         "MapWorldsMoonTemple",
@@ -8489,7 +8489,7 @@
           11,
           14
         ],
-        1158
+        1159
       ],
       [
         "MapWorldsMoonTempleUnique",
@@ -8510,7 +8510,7 @@
           11,
           14
         ],
-        1159
+        1160
       ],
       [
         "MapWorldsSepulchre",
@@ -8531,7 +8531,7 @@
           0,
           14
         ],
-        1160
+        1161
       ],
       [
         "MapWorldsTower",
@@ -8552,7 +8552,7 @@
           11,
           14
         ],
-        1161
+        1162
       ],
       [
         "MapWorldsWastePool",
@@ -8573,7 +8573,7 @@
           14,
           16
         ],
-        1162
+        1163
       ],
       [
         "MapWorldsPlateau",
@@ -8594,7 +8594,7 @@
           13,
           15
         ],
-        1163
+        1164
       ],
       [
         "MapWorldsEstuary",
@@ -8615,7 +8615,7 @@
           0,
           15
         ],
-        1164
+        1165
       ],
       [
         "MapWorldsVault",
@@ -8636,7 +8636,7 @@
           0,
           15
         ],
-        1165
+        1166
       ],
       [
         "MapWorldsTemple",
@@ -8657,7 +8657,7 @@
           12,
           14
         ],
-        1166
+        1167
       ],
       [
         "MapWorldsTempleUnique",
@@ -8678,7 +8678,7 @@
           12,
           14
         ],
-        1167
+        1168
       ],
       [
         "MapWorldsArena",
@@ -8699,7 +8699,7 @@
           11,
           14
         ],
-        1168
+        1169
       ],
       [
         "MapWorldsMuseum",
@@ -8720,7 +8720,7 @@
           13,
           15
         ],
-        1169
+        1170
       ],
       [
         "MapWorldsMuseumUnique",
@@ -8741,7 +8741,7 @@
           13,
           15
         ],
-        1170
+        1171
       ],
       [
         "MapWorldsScriptorium",
@@ -8762,7 +8762,7 @@
           13,
           15
         ],
-        1171
+        1172
       ],
       [
         "MapWorldsSiege",
@@ -8783,7 +8783,7 @@
           14,
           16
         ],
-        1172
+        1173
       ],
       [
         "MapWorldsShipyard",
@@ -8804,7 +8804,7 @@
           14,
           16
         ],
-        1173
+        1174
       ],
       [
         "MapWorldsBelfry",
@@ -8825,7 +8825,7 @@
           11,
           14
         ],
-        1174
+        1175
       ],
       [
         "MapWorldsArachnidTomb",
@@ -8846,7 +8846,7 @@
           0,
           15
         ],
-        1175
+        1176
       ],
       [
         "MapWorldsWasteland",
@@ -8867,7 +8867,7 @@
           14,
           16
         ],
-        1176
+        1177
       ],
       [
         "MapWorldsPrecinct",
@@ -8888,7 +8888,7 @@
           13,
           15
         ],
-        1177
+        1178
       ],
       [
         "MapWorldsBog",
@@ -8909,7 +8909,7 @@
           0,
           15
         ],
-        1178
+        1179
       ],
       [
         "MapWorldsPier",
@@ -8930,7 +8930,7 @@
           12,
           15
         ],
-        1179
+        1180
       ],
       [
         "MapWorldsCursedCrypt",
@@ -8951,7 +8951,7 @@
           13,
           16
         ],
-        1180
+        1181
       ],
       [
         "MapWorldsCursedCryptUnique",
@@ -8972,7 +8972,7 @@
           13,
           16
         ],
-        1181
+        1182
       ],
       [
         "MapWorldsOrchard",
@@ -8993,7 +8993,7 @@
           11,
           14
         ],
-        1182
+        1183
       ],
       [
         "MapWorldsPromenade",
@@ -9014,7 +9014,7 @@
           11,
           14
         ],
-        1183
+        1184
       ],
       [
         "MapWorldsPromenadeUnique",
@@ -9029,7 +9029,7 @@
         "Art/2DItems/Maps/HallOfGrandmasters.dds",
         null,
         null,
-        1184
+        1185
       ],
       [
         "MapWorldsLair",
@@ -9050,7 +9050,7 @@
           11,
           14
         ],
-        1185
+        1186
       ],
       [
         "MapWorldsColonnade",
@@ -9071,7 +9071,7 @@
           0,
           15
         ],
-        1186
+        1187
       ],
       [
         "MapWorldsPrimordialPool",
@@ -9092,7 +9092,7 @@
           12,
           14
         ],
-        1187
+        1188
       ],
       [
         "MapWorldsSpiderForest",
@@ -9113,7 +9113,7 @@
           11,
           14
         ],
-        1188
+        1189
       ],
       [
         "MapWorldsCoves",
@@ -9134,7 +9134,7 @@
           10,
           14
         ],
-        1189
+        1190
       ],
       [
         "MapWorldsWaterways",
@@ -9155,7 +9155,7 @@
           14,
           15
         ],
-        1190
+        1191
       ],
       [
         "MapWorldsFactory",
@@ -9176,7 +9176,7 @@
           13,
           16
         ],
-        1191
+        1192
       ],
       [
         "MapWorldsMesa",
@@ -9197,7 +9197,7 @@
           0,
           14
         ],
-        1192
+        1193
       ],
       [
         "MapWorldsPit",
@@ -9218,7 +9218,7 @@
           0,
           16
         ],
-        1193
+        1194
       ],
       [
         "MapWorldsDefiledCathedral",
@@ -9239,7 +9239,7 @@
           11,
           14
         ],
-        1195
+        1196
       ],
       [
         "MapWorldsSummit",
@@ -9260,7 +9260,7 @@
           0,
           15
         ],
-        1196
+        1197
       ],
       [
         "MapWorldsOvergrownShrine",
@@ -9281,7 +9281,7 @@
           11,
           14
         ],
-        1197
+        1198
       ],
       [
         "MapWorldsOvergrownShrineUnique",
@@ -9302,7 +9302,7 @@
           11,
           14
         ],
-        1198
+        1199
       ],
       [
         "MapWorldsCastleRuins",
@@ -9323,7 +9323,7 @@
           0,
           15
         ],
-        1199
+        1200
       ],
       [
         "MapWorldsCrystalOre",
@@ -9344,7 +9344,7 @@
           12,
           14
         ],
-        1200
+        1201
       ],
       [
         "MapWorldsVilla",
@@ -9365,7 +9365,7 @@
           0,
           15
         ],
-        1201
+        1202
       ],
       [
         "MapWorldsTortureChamber",
@@ -9386,7 +9386,7 @@
           12,
           14
         ],
-        1202
+        1203
       ],
       [
         "MapWorldsTortureChamberUnique",
@@ -9407,7 +9407,7 @@
           11,
           14
         ],
-        1203
+        1204
       ],
       [
         "MapWorldsNecropolis",
@@ -9428,7 +9428,7 @@
           0,
           16
         ],
-        1204
+        1205
       ],
       [
         "MapWorldsNecropolisUnique",
@@ -9449,7 +9449,7 @@
           0,
           16
         ],
-        1205
+        1206
       ],
       [
         "MapWorldsRacecourse_",
@@ -9470,7 +9470,7 @@
           13,
           15
         ],
-        1206
+        1207
       ],
       [
         "MapWorldsCaldera",
@@ -9491,7 +9491,7 @@
           14,
           16
         ],
-        1207
+        1208
       ],
       [
         "MapWorldsGhetto",
@@ -9512,7 +9512,7 @@
           12,
           15
         ],
-        1208
+        1209
       ],
       [
         "MapWorldsPark",
@@ -9533,7 +9533,7 @@
           13,
           16
         ],
-        1209
+        1210
       ],
       [
         "MapWorldsMalformation",
@@ -9554,7 +9554,7 @@
           12,
           14
         ],
-        1210
+        1211
       ],
       [
         "MapWorldsTerrace",
@@ -9575,7 +9575,7 @@
           0,
           15
         ],
-        1211
+        1212
       ],
       [
         "MapWorldsShrine",
@@ -9596,7 +9596,7 @@
           14,
           16
         ],
-        1212
+        1213
       ],
       [
         "MapWorldsArsenal",
@@ -9617,7 +9617,7 @@
           12,
           15
         ],
-        1213
+        1214
       ],
       [
         "MapWorldsDesertSpring",
@@ -9638,7 +9638,7 @@
           11,
           14
         ],
-        1214
+        1215
       ],
       [
         "MapWorldsCore",
@@ -9659,7 +9659,7 @@
           0,
           14
         ],
-        1215
+        1216
       ],
       [
         "MapWorldsColosseum",
@@ -9680,7 +9680,7 @@
           14,
           16
         ],
-        1216
+        1217
       ],
       [
         "MapWorldsAcidLakes",
@@ -9701,7 +9701,7 @@
           0,
           14
         ],
-        1217
+        1218
       ],
       [
         "MapWorldsDarkForest",
@@ -9722,7 +9722,7 @@
           11,
           14
         ],
-        1218
+        1219
       ],
       [
         "MapWorldsCrimsonTemple",
@@ -9743,7 +9743,7 @@
           13,
           15
         ],
-        1219
+        1220
       ],
       [
         "MapWorldsPlaza",
@@ -9764,7 +9764,7 @@
           12,
           14
         ],
-        1220
+        1221
       ],
       [
         "MapWorldsDig",
@@ -9785,7 +9785,7 @@
           12,
           14
         ],
-        1221
+        1222
       ],
       [
         "MapWorldsPalace",
@@ -9806,7 +9806,7 @@
           13,
           15
         ],
-        1222
+        1223
       ],
       [
         "MapWorldsLavaLake",
@@ -9827,7 +9827,7 @@
           0,
           15
         ],
-        1223
+        1224
       ],
       [
         "MapWorldsBasilica",
@@ -9848,7 +9848,7 @@
           12,
           14
         ],
-        1224
+        1225
       ],
       [
         "MapWorldsSunkenCity",
@@ -9869,7 +9869,7 @@
           11,
           14
         ],
-        1225
+        1226
       ],
       [
         "MapWorldsReef",
@@ -9890,7 +9890,7 @@
           12,
           15
         ],
-        1226
+        1227
       ],
       [
         "MapWorldsCarcass",
@@ -9911,7 +9911,7 @@
           11,
           14
         ],
-        1227
+        1228
       ],
       [
         "MapWorldsChimera",
@@ -9926,7 +9926,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Chimera.dds",
         null,
         null,
-        1228
+        1229
       ],
       [
         "MapWorldsHydra",
@@ -9941,7 +9941,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Hydra.dds",
         null,
         null,
-        1229
+        1230
       ],
       [
         "MapWorldsPhoenix",
@@ -9956,7 +9956,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Phoenix.dds",
         null,
         null,
-        1230
+        1231
       ],
       [
         "MapWorldsMinotaur",
@@ -9971,7 +9971,7 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Minotaur.dds",
         null,
         null,
-        1231
+        1232
       ],
       [
         "MapWorldsShapersRealm",
@@ -9986,7 +9986,7 @@
         "Art/2DItems/Maps/ShaperComplete.png",
         null,
         null,
-        1232
+        1233
       ],
       [
         "MapWorldsVaalTemple",
@@ -10007,7 +10007,7 @@
           0,
           16
         ],
-        1233
+        1234
       ],
       [
         "MapWorldsHarbingerLow",
@@ -10022,7 +10022,7 @@
         "Art/2DItems/Maps/HarbingerWhite.dds",
         null,
         null,
-        1235
+        1236
       ],
       [
         "MapWorldsHarbingerMid",
@@ -10037,7 +10037,7 @@
         "Art/2DItems/Maps/HarbingerYellow.dds",
         null,
         null,
-        1236
+        1237
       ],
       [
         "MapWorldsHarbingerHigh",
@@ -10052,7 +10052,7 @@
         "Art/2DItems/Maps/HarbingerRed.dds",
         null,
         null,
-        1237
+        1238
       ],
       [
         "MapWorldsHarbingerUber",
@@ -10067,7 +10067,7 @@
         "Art/2DItems/Maps/HarbingerUber.dds",
         null,
         null,
-        1238
+        1239
       ],
       [
         "MapWorldsDrySea",
@@ -10088,7 +10088,7 @@
           10,
           14
         ],
-        1239
+        1240
       ],
       [
         "MapWorldsStagnation",
@@ -10109,7 +10109,7 @@
           11,
           14
         ],
-        1241
+        1242
       ],
       [
         "MapWorldsBrambleValley",
@@ -10130,7 +10130,7 @@
           0,
           14
         ],
-        1242
+        1243
       ],
       [
         "MapWorldsFrozenCabins",
@@ -10151,7 +10151,7 @@
           12,
           15
         ],
-        1243
+        1244
       ],
       [
         "MapWorldsGraveTrough",
@@ -10172,7 +10172,7 @@
           13,
           15
         ],
-        1245
+        1246
       ],
       [
         "MapWorldsCrimsonTownship",
@@ -10193,7 +10193,7 @@
           12,
           15
         ],
-        1246
+        1247
       ],
       [
         "MapWorldsForkingRiver",
@@ -10214,7 +10214,7 @@
           12,
           14
         ],
-        1247
+        1248
       ],
       [
         "MapWorldsFoundry",
@@ -10235,7 +10235,7 @@
           0,
           15
         ],
-        1248
+        1249
       ],
       [
         "MapWorldsColdRiver_",
@@ -10256,7 +10256,7 @@
           11,
           14
         ],
-        1249
+        1250
       ],
       [
         "MapWorldsForbiddenWoods",
@@ -10277,7 +10277,7 @@
           11,
           14
         ],
-        1250
+        1251
       ],
       [
         "MapWorldsSilo",
@@ -10298,7 +10298,7 @@
           11,
           14
         ],
-        1251
+        1252
       ],
       [
         "MapWorldsElderArena",
@@ -10313,7 +10313,7 @@
         "Art/2DItems/Maps/ElderComplete.png",
         null,
         null,
-        1264
+        1265
       ],
       [
         "MapWorldsElderArenaUber",
@@ -10328,7 +10328,7 @@
         "Art/2DItems/Maps/UberElderComplete.png",
         null,
         null,
-        1265
+        1266
       ],
       [
         "AbyssLeague",
@@ -10343,7 +10343,7 @@
         null,
         null,
         null,
-        1266
+        1267
       ],
       [
         "AbyssLeague2",
@@ -10358,7 +10358,7 @@
         null,
         null,
         null,
-        1267
+        1268
       ],
       [
         "AbyssLeagueBoss",
@@ -10373,7 +10373,7 @@
         null,
         null,
         null,
-        1268
+        1269
       ],
       [
         "AbyssLeagueBoss2",
@@ -10388,7 +10388,7 @@
         null,
         null,
         null,
-        1269
+        1270
       ],
       [
         "AbyssLeagueBoss3",
@@ -10403,7 +10403,7 @@
         null,
         null,
         null,
-        1270
+        1271
       ],
       [
         "LegionLeague",
@@ -10418,7 +10418,7 @@
         "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLegion.png",
         null,
         null,
-        1275
+        1276
       ],
       [
         "Hideout4_3",
@@ -10433,7 +10433,7 @@
         null,
         null,
         null,
-        1481
+        1484
       ],
       [
         "Hideout5_3",
@@ -10448,7 +10448,7 @@
         null,
         null,
         null,
-        1482
+        1485
       ],
       [
         "Hideout11_3",
@@ -10463,7 +10463,7 @@
         null,
         null,
         null,
-        1483
+        1486
       ],
       [
         "Hideout12_3",
@@ -10478,7 +10478,7 @@
         null,
         null,
         null,
-        1484
+        1487
       ],
       [
         "Hideout13_3",
@@ -10493,7 +10493,7 @@
         null,
         null,
         null,
-        1485
+        1488
       ],
       [
         "Hideout16_3",
@@ -10508,7 +10508,7 @@
         null,
         null,
         null,
-        1486
+        1489
       ],
       [
         "Hideout17_3",
@@ -10523,7 +10523,7 @@
         null,
         null,
         null,
-        1487
+        1490
       ],
       [
         "Hideout24_1",
@@ -10538,7 +10538,7 @@
         null,
         null,
         null,
-        1488
+        1491
       ],
       [
         "Hideout61_3",
@@ -10553,7 +10553,7 @@
         null,
         null,
         null,
-        1489
+        1492
       ],
       [
         "HideoutArch",
@@ -10568,7 +10568,7 @@
         null,
         null,
         null,
-        1490
+        1493
       ],
       [
         "HideoutCoral",
@@ -10583,7 +10583,7 @@
         null,
         null,
         null,
-        1493
+        1496
       ],
       [
         "HideoutShapersRealm",
@@ -10598,7 +10598,7 @@
         null,
         null,
         null,
-        1494
+        1497
       ],
       [
         "HideoutCave",
@@ -10613,7 +10613,7 @@
         null,
         null,
         null,
-        1495
+        1498
       ],
       [
         "HideoutPrisonTower",
@@ -10628,7 +10628,7 @@
         null,
         null,
         null,
-        1496
+        1499
       ],
       [
         "HideoutBaths",
@@ -10643,7 +10643,7 @@
         null,
         null,
         null,
-        1498
+        1501
       ],
       [
         "HideoutOssuary",
@@ -10658,7 +10658,7 @@
         null,
         null,
         null,
-        1500
+        1503
       ],
       [
         "HideoutCourts",
@@ -10673,7 +10673,7 @@
         null,
         null,
         null,
-        1502
+        1505
       ],
       [
         "HideoutCauseway",
@@ -10688,7 +10688,7 @@
         null,
         null,
         null,
-        1504
+        1507
       ],
       [
         "HideoutHighGardens",
@@ -10703,7 +10703,7 @@
         null,
         null,
         null,
-        1506
+        1509
       ],
       [
         "HideoutShipgraveyard",
@@ -10718,7 +10718,7 @@
         null,
         null,
         null,
-        1508
+        1511
       ],
       [
         "HideoutForest",
@@ -10733,7 +10733,7 @@
         null,
         null,
         null,
-        1510
+        1513
       ],
       [
         "HideoutSewer",
@@ -10748,7 +10748,7 @@
         null,
         null,
         null,
-        1512
+        1515
       ],
       [
         "HideoutSpace",
@@ -10763,7 +10763,7 @@
         null,
         null,
         null,
-        1513
+        1516
       ],
       [
         "HideoutArenaGraveyardTrio",
@@ -10778,7 +10778,7 @@
         null,
         null,
         null,
-        1514
+        1517
       ],
       [
         "HideoutMine",
@@ -10793,7 +10793,7 @@
         null,
         null,
         null,
-        1516
+        1519
       ],
       [
         "HideoutRuinedTemple",
@@ -10808,7 +10808,7 @@
         null,
         null,
         null,
-        1518
+        1521
       ],
       [
         "HideoutOasis",
@@ -10823,7 +10823,7 @@
         null,
         null,
         null,
-        1520
+        1523
       ],
       [
         "HideoutPillarsOfArun",
@@ -10838,7 +10838,7 @@
         null,
         null,
         null,
-        1521
+        1524
       ],
       [
         "HideoutAtziriArena",
@@ -10853,7 +10853,7 @@
         null,
         null,
         null,
-        1522
+        1525
       ],
       [
         "HideoutInnocenceArena",
@@ -10868,7 +10868,7 @@
         null,
         null,
         null,
-        1523
+        1526
       ],
       [
         "HideoutShaperArena",
@@ -10883,7 +10883,7 @@
         null,
         null,
         null,
-        1524
+        1527
       ],
       [
         "HideoutKaomArena",
@@ -10898,7 +10898,7 @@
         null,
         null,
         null,
-        1525
+        1528
       ],
       [
         "HideoutDaressoArena",
@@ -10913,7 +10913,7 @@
         null,
         null,
         null,
-        1526
+        1529
       ],
       [
         "HideoutDominusArena",
@@ -10928,7 +10928,7 @@
         null,
         null,
         null,
-        1527
+        1530
       ],
       [
         "HideoutPietyArena",
@@ -10943,7 +10943,7 @@
         null,
         null,
         null,
-        1528
+        1531
       ],
       [
         "HideoutLunarisSolarisArena",
@@ -10958,7 +10958,7 @@
         null,
         null,
         null,
-        1529
+        1532
       ],
       [
         "HideoutKitavaArenaAct10",
@@ -10973,7 +10973,7 @@
         null,
         null,
         null,
-        1530
+        1533
       ],
       [
         "HideoutTemplarLab",
@@ -10988,7 +10988,7 @@
         null,
         null,
         null,
-        1531
+        1534
       ],
       [
         "HideoutSlum",
@@ -11003,7 +11003,7 @@
         null,
         null,
         null,
-        1532
+        1535
       ],
       [
         "HideoutBeach",
@@ -11018,7 +11018,7 @@
         null,
         null,
         null,
-        1534
+        1537
       ],
       [
         "HideoutFellshrine",
@@ -11033,7 +11033,7 @@
         null,
         null,
         null,
-        1536
+        1539
       ],
       [
         "HideoutBattleground",
@@ -11048,7 +11048,7 @@
         null,
         null,
         null,
-        1538
+        1541
       ],
       [
         "HideoutLibrary",
@@ -11063,7 +11063,7 @@
         null,
         null,
         null,
-        1540
+        1543
       ],
       [
         "HideoutSolaris",
@@ -11078,7 +11078,7 @@
         null,
         null,
         null,
-        1542
+        1545
       ],
       [
         "HideoutGardens",
@@ -11093,7 +11093,7 @@
         null,
         null,
         null,
-        1544
+        1547
       ],
       [
         "HideoutIceberg",
@@ -11108,7 +11108,7 @@
         null,
         null,
         null,
-        1546
+        1549
       ],
       [
         "HideoutCrimsonTemple",
@@ -11123,7 +11123,7 @@
         null,
         null,
         null,
-        1548
+        1551
       ],
       [
         "HideoutTwilightTemple",
@@ -11138,7 +11138,7 @@
         null,
         null,
         null,
-        1550
+        1553
       ],
       [
         "HideoutMountain",
@@ -11153,7 +11153,7 @@
         null,
         null,
         null,
-        1552
+        1555
       ],
       [
         "HideoutHaunted",
@@ -11168,7 +11168,7 @@
         null,
         null,
         null,
-        1554
+        1557
       ],
       [
         "HideoutMoonTemple",
@@ -11183,7 +11183,7 @@
         null,
         null,
         null,
-        1556
+        1559
       ],
       [
         "HideoutPrimevalRuins",
@@ -11198,7 +11198,7 @@
         null,
         null,
         null,
-        1558
+        1561
       ],
       [
         "HideoutDoomguard",
@@ -11213,7 +11213,7 @@
         null,
         null,
         null,
-        1560
+        1563
       ],
       [
         "HideoutSunspire",
@@ -11228,7 +11228,7 @@
         null,
         null,
         null,
-        1561
+        1564
       ],
       [
         "HideoutDarkwood",
@@ -11243,7 +11243,7 @@
         null,
         null,
         null,
-        1562
+        1565
       ],
       [
         "HideoutArenaElder",
@@ -11258,7 +11258,7 @@
         null,
         null,
         null,
-        1563
+        1566
       ],
       [
         "HideoutChiyouSpring",
@@ -11273,7 +11273,7 @@
         null,
         null,
         null,
-        1564
+        1567
       ],
       [
         "HideoutBlankAbyss",
@@ -11288,7 +11288,7 @@
         null,
         null,
         null,
-        1565
+        1568
       ],
       [
         "HideoutBlankCity",
@@ -11303,7 +11303,7 @@
         null,
         null,
         null,
-        1566
+        1569
       ],
       [
         "HideoutBlankClouds",
@@ -11318,7 +11318,7 @@
         null,
         null,
         null,
-        1567
+        1570
       ],
       [
         "HideoutBlankDesert",
@@ -11333,7 +11333,7 @@
         null,
         null,
         null,
-        1568
+        1571
       ],
       [
         "HideoutBlankDirt",
@@ -11348,7 +11348,7 @@
         null,
         null,
         null,
-        1569
+        1572
       ],
       [
         "HideoutBlankGrass",
@@ -11363,7 +11363,7 @@
         null,
         null,
         null,
-        1570
+        1573
       ],
       [
         "HideoutBlankSea",
@@ -11378,7 +11378,7 @@
         null,
         null,
         null,
-        1571
+        1574
       ],
       [
         "HideoutBlankSnow",
@@ -11393,7 +11393,7 @@
         null,
         null,
         null,
-        1572
+        1575
       ],
       [
         "HideoutThaumaturgy",
@@ -11408,7 +11408,7 @@
         null,
         null,
         null,
-        1573
+        1576
       ],
       [
         "HideoutYaochi",
@@ -11423,7 +11423,7 @@
         null,
         null,
         null,
-        1574
+        1577
       ],
       [
         "HideoutHumanoidPet",
@@ -11438,7 +11438,7 @@
         null,
         null,
         null,
-        1575
+        1578
       ],
       [
         "HideoutRitualLeague",
@@ -11453,7 +11453,52 @@
         null,
         null,
         null,
-        1576
+        1579
+      ],
+      [
+        "HideoutArenaMaven",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1580
+      ],
+      [
+        "HideoutHasina",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1581
+      ],
+      [
+        "HideoutAzuriteCave",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1582
       ],
       [
         "pvpTown",
@@ -11468,7 +11513,7 @@
         null,
         null,
         null,
-        1577
+        1583
       ],
       [
         "AtlasExilesBoss5",
@@ -11483,7 +11528,7 @@
         "Art/2DItems/Currency/Strongholds/WatchstoneIridescent.png",
         null,
         null,
-        1595
+        1601
       ],
       [
         "AfflictionTown6",
@@ -11498,7 +11543,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1596
+        1602
       ],
       [
         "AfflictionTown4",
@@ -11513,7 +11558,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1597
+        1603
       ],
       [
         "AfflictionTown7",
@@ -11528,7 +11573,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1598
+        1604
       ],
       [
         "AfflictionTown8",
@@ -11543,7 +11588,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1599
+        1605
       ],
       [
         "AfflictionTown10",
@@ -11558,7 +11603,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1600
+        1606
       ],
       [
         "HeistCinematic",
@@ -11573,7 +11618,7 @@
         null,
         null,
         null,
-        1601
+        1607
       ],
       [
         "HeistHub",
@@ -11588,7 +11633,7 @@
         null,
         null,
         null,
-        1602
+        1608
       ],
       [
         "HeistBunker1",
@@ -11603,7 +11648,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1603
+        1609
       ],
       [
         "HeistBunker2",
@@ -11618,7 +11663,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1604
+        1610
       ],
       [
         "HeistBunker3",
@@ -11633,7 +11678,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1605
+        1611
       ],
       [
         "HeistBunker4",
@@ -11648,7 +11693,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1606
+        1612
       ],
       [
         "HeistBunker5",
@@ -11663,7 +11708,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1607
+        1613
       ],
       [
         "HeistBunker6",
@@ -11678,7 +11723,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1608
+        1614
       ],
       [
         "HeistBunker7",
@@ -11693,7 +11738,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1609
+        1615
       ],
       [
         "HeistBunker8",
@@ -11708,7 +11753,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1610
+        1616
       ],
       [
         "HeistBunker9",
@@ -11723,7 +11768,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1611
+        1617
       ],
       [
         "HeistMines1",
@@ -11738,7 +11783,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1612
+        1618
       ],
       [
         "HeistMines2",
@@ -11753,7 +11798,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1613
+        1619
       ],
       [
         "HeistMines3",
@@ -11768,7 +11813,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1614
+        1620
       ],
       [
         "HeistMines4",
@@ -11783,7 +11828,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1615
+        1621
       ],
       [
         "HeistMines5",
@@ -11798,7 +11843,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1616
+        1622
       ],
       [
         "HeistMines6",
@@ -11813,7 +11858,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1617
+        1623
       ],
       [
         "HeistMines7",
@@ -11828,7 +11873,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1618
+        1624
       ],
       [
         "HeistMines8",
@@ -11843,7 +11888,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1619
+        1625
       ],
       [
         "HeistMines9",
@@ -11858,7 +11903,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1620
+        1626
       ],
       [
         "HeistDungeon1",
@@ -11873,7 +11918,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1621
+        1627
       ],
       [
         "HeistDungeon2",
@@ -11888,7 +11933,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1622
+        1628
       ],
       [
         "HeistDungeon3",
@@ -11903,7 +11948,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1623
+        1629
       ],
       [
         "HeistDungeon4",
@@ -11918,7 +11963,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1624
+        1630
       ],
       [
         "HeistDungeon5",
@@ -11933,7 +11978,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1625
+        1631
       ],
       [
         "HeistDungeon6",
@@ -11948,7 +11993,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1626
+        1632
       ],
       [
         "HeistDungeon7",
@@ -11963,7 +12008,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1627
+        1633
       ],
       [
         "HeistDungeon8",
@@ -11978,7 +12023,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1628
+        1634
       ],
       [
         "HeistDungeon9",
@@ -11993,7 +12038,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1629
+        1635
       ],
       [
         "HeistReliquary1",
@@ -12008,7 +12053,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1630
+        1636
       ],
       [
         "HeistReliquary2",
@@ -12023,7 +12068,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1631
+        1637
       ],
       [
         "HeistReliquary3",
@@ -12038,7 +12083,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1632
+        1638
       ],
       [
         "HeistReliquary4",
@@ -12053,7 +12098,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1633
+        1639
       ],
       [
         "HeistReliquary5",
@@ -12068,7 +12113,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1634
+        1640
       ],
       [
         "HeistReliquary6",
@@ -12083,7 +12128,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1635
+        1641
       ],
       [
         "HeistReliquary7",
@@ -12098,7 +12143,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1636
+        1642
       ],
       [
         "HeistReliquary8",
@@ -12113,7 +12158,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1637
+        1643
       ],
       [
         "HeistReliquary9",
@@ -12128,7 +12173,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1638
+        1644
       ],
       [
         "HeistLibrary1",
@@ -12143,7 +12188,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1639
+        1645
       ],
       [
         "HeistLibrary2",
@@ -12158,7 +12203,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1640
+        1646
       ],
       [
         "HeistLibrary3",
@@ -12173,7 +12218,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1641
+        1647
       ],
       [
         "HeistLibrary4_",
@@ -12188,7 +12233,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1642
+        1648
       ],
       [
         "HeistLibrary5",
@@ -12203,7 +12248,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1643
+        1649
       ],
       [
         "HeistLibrary6",
@@ -12218,7 +12263,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1644
+        1650
       ],
       [
         "HeistLibrary7",
@@ -12233,7 +12278,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1645
+        1651
       ],
       [
         "HeistLibrary8_",
@@ -12248,7 +12293,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1646
+        1652
       ],
       [
         "HeistLibrary9",
@@ -12263,7 +12308,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1647
+        1653
       ],
       [
         "HeistRobotTunnels1",
@@ -12278,7 +12323,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1648
+        1654
       ],
       [
         "HeistRobotTunnels2",
@@ -12293,7 +12338,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1649
+        1655
       ],
       [
         "HeistRobotTunnels3",
@@ -12308,7 +12353,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1650
+        1656
       ],
       [
         "HeistRobotTunnels4",
@@ -12323,7 +12368,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1651
+        1657
       ],
       [
         "HeistRobotTunnels5",
@@ -12338,7 +12383,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1652
+        1658
       ],
       [
         "HeistRobotTunnels6",
@@ -12353,7 +12398,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1653
+        1659
       ],
       [
         "HeistRobotTunnels7",
@@ -12368,7 +12413,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1654
+        1660
       ],
       [
         "HeistRobotTunnels8",
@@ -12383,7 +12428,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1655
+        1661
       ],
       [
         "HeistRobotTunnels9",
@@ -12398,7 +12443,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1656
+        1662
       ],
       [
         "HeistSewers1",
@@ -12413,7 +12458,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1657
+        1663
       ],
       [
         "HeistSewers2",
@@ -12428,7 +12473,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1658
+        1664
       ],
       [
         "HeistSewers3",
@@ -12443,7 +12488,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1659
+        1665
       ],
       [
         "HeistSewers4",
@@ -12458,7 +12503,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1660
+        1666
       ],
       [
         "HeistSewers5",
@@ -12473,7 +12518,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1661
+        1667
       ],
       [
         "HeistSewers6",
@@ -12488,7 +12533,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1662
+        1668
       ],
       [
         "HeistSewers7",
@@ -12503,7 +12548,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1663
+        1669
       ],
       [
         "HeistSewers8",
@@ -12518,7 +12563,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1664
+        1670
       ],
       [
         "HeistSewers9",
@@ -12533,7 +12578,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1665
+        1671
       ],
       [
         "HeistCourts1",
@@ -12548,7 +12593,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1666
+        1672
       ],
       [
         "HeistCourts2",
@@ -12563,7 +12608,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1667
+        1673
       ],
       [
         "HeistCourts3",
@@ -12578,7 +12623,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1668
+        1674
       ],
       [
         "HeistCourts4",
@@ -12593,7 +12638,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1669
+        1675
       ],
       [
         "HeistCourts5",
@@ -12608,7 +12653,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1670
+        1676
       ],
       [
         "HeistCourts6",
@@ -12623,7 +12668,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1671
+        1677
       ],
       [
         "HeistCourts7",
@@ -12638,7 +12683,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1672
+        1678
       ],
       [
         "HeistCourts8",
@@ -12653,7 +12698,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1673
+        1679
       ],
       [
         "HeistCourts9_",
@@ -12668,7 +12713,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1674
+        1680
       ],
       [
         "HeistMansion1",
@@ -12683,7 +12728,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1675
+        1681
       ],
       [
         "HeistMansion2",
@@ -12698,7 +12743,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1676
+        1682
       ],
       [
         "HeistMansion3",
@@ -12713,7 +12758,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1677
+        1683
       ],
       [
         "HeistMansion4",
@@ -12728,7 +12773,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1678
+        1684
       ],
       [
         "HeistMansion5",
@@ -12743,7 +12788,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1679
+        1685
       ],
       [
         "HeistMansion6",
@@ -12758,7 +12803,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1680
+        1686
       ],
       [
         "HeistMansion7",
@@ -12773,7 +12818,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1681
+        1687
       ],
       [
         "HeistMansion8",
@@ -12788,7 +12833,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1682
+        1688
       ],
       [
         "HeistMansion9",
@@ -12803,7 +12848,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1683
+        1689
       ],
       [
         "HeistBoss_AdmiralDarnaw",
@@ -12818,7 +12863,7 @@
         "Art/2DItems/Currency/Heist/AdmiralDarnawFightContract.dds",
         null,
         null,
-        1684
+        1690
       ],
       [
         "HeistBoss_FreidrichTarollo",
@@ -12833,7 +12878,7 @@
         "Art/2DItems/Currency/Heist/SlaveMerchantFightContract.dds",
         null,
         null,
-        1685
+        1691
       ],
       [
         "HeistBoss_Jamanra",
@@ -12848,7 +12893,7 @@
         "Art/2DItems/Currency/Heist/JamanraFightContract.dds",
         null,
         null,
-        1686
+        1692
       ],
       [
         "HeistBoss_Nashta",
@@ -12863,7 +12908,7 @@
         "Art/2DItems/Currency/Heist/UsurperFightContract.dds",
         null,
         null,
-        1687
+        1693
       ],
       [
         "HeistBoss_TheUnbreakable",
@@ -12878,7 +12923,7 @@
         "Art/2DItems/Currency/Heist/UnbreakableFightContract.dds",
         null,
         null,
-        1689
+        1695
       ],
       [
         "MavenHub",
@@ -12893,7 +12938,7 @@
         "Art/2DItems/Effects/Portals/MavenPortalEffect.png",
         null,
         null,
-        1690
+        1696
       ]
     ]
   },
@@ -13600,6 +13645,9 @@
         "HideoutYaochi": "Yaochi Hideout",
         "HideoutHumanoidPet": "Humanoid Pet Hideout",
         "HideoutRitualLeague": "Ritualist's Hideout",
+        "HideoutArenaMaven": "Crucible Hideout",
+        "HideoutHasina": "Hasina Hideout",
+        "HideoutAzuriteCave": "Azurite Hideout",
         "pvpTown": "Sarn Arena Staging Area",
         "AtlasExilesBoss5": "Eye of the Storm",
         "AfflictionTown6": "Lunacy's Watch",
@@ -14085,7 +14133,7 @@
         "IslaDisarmTrapLoudTwo": "The fun part!",
         "IslaDisarmTrapLoudThree": "Careful and quick!",
         "IslaDisarmTrapLoudFour": "I'm just going to smack it with a wrench!",
-        "IslaDisarmTrapLoudFive": " Poor parts, bad craftsmanship!",
+        "IslaDisarmTrapLoudFive": "Poor parts, bad craftsmanship!",
         "IslaDisarmTrapLoudSix": "I can't even hear myself think!",
         "IslaCounterThaumaturgyOne": "Open your mind...",
         "IslaCounterThaumaturgyTwo": "Empty-headed, that one.",
@@ -15004,9 +15052,12 @@
         "HideoutBlankSea": "Repaire en Haute mer",
         "HideoutBlankSnow": "Repaire de l'Étendue glaciale",
         "HideoutThaumaturgy": "Repaire thaumaturgique",
-        "HideoutYaochi": "Repaire yaochi",
+        "HideoutYaochi": "Repaire Yaochi",
         "HideoutHumanoidPet": "Repaire de Familiers humanoïdes",
         "HideoutRitualLeague": "Repaire du Ritualiste",
+        "HideoutArenaMaven": "Repaire du Creuset",
+        "HideoutHasina": "Repaire de l'Hasina",
+        "HideoutAzuriteCave": "Repaire d'Azurite",
         "pvpTown": "Scène de l'arène de Sarn",
         "AtlasExilesBoss5": "L'Œil du cyclone",
         "AfflictionTown6": "Le Guet de l'Œil accusateur",
@@ -16414,6 +16465,9 @@
         "HideoutYaochi": "Yaochi-Versteck",
         "HideoutHumanoidPet": "Humanoid Pet Hideout",
         "HideoutRitualLeague": "Rituelles Versteck",
+        "HideoutArenaMaven": "Verstecktes Astrolabium",
+        "HideoutHasina": "Hasina Hideout",
+        "HideoutAzuriteCave": "Versteckte Azurithöhle",
         "pvpTown": "Sarn-Arena, Sammelplatz",
         "AtlasExilesBoss5": "Auge des Sturms",
         "AfflictionTown6": "Löwenauges Wahn",
@@ -17821,6 +17875,9 @@
         "HideoutYaochi": "요지 은신처",
         "HideoutHumanoidPet": "인간형 애완동물 은신처",
         "HideoutRitualLeague": "의식술사의 은신처(Ritualist's Hideout)",
+        "HideoutArenaMaven": "혹독한 시련의 은신처",
+        "HideoutHasina": "하시나 은신처",
+        "HideoutAzuriteCave": "남동석 은신처",
         "pvpTown": "사안 투기장",
         "AtlasExilesBoss5": "태풍의 눈",
         "AfflictionTown6": "광기의 초소",
@@ -19228,6 +19285,9 @@
         "HideoutYaochi": "Refúgio Yaochi",
         "HideoutHumanoidPet": "Refúgio Mascote Humanóide",
         "HideoutRitualLeague": "Refúgio Ritualístico",
+        "HideoutArenaMaven": "Refúgio Crisol",
+        "HideoutHasina": "Refúgio Hasina",
+        "HideoutAzuriteCave": "Refúgio de Azurita",
         "pvpTown": "Área de Testes da Arena de Sarn",
         "AtlasExilesBoss5": "Olho da Tempestade",
         "AfflictionTown6": "Vigia da Loucura",
@@ -19341,7 +19401,7 @@
         "Metadata/Monsters/LeagueBetrayal/BetrayalLeo": "Leo, Lobo dos Fossos",
         "Metadata/Monsters/LeagueBetrayal/BetrayalGrenn": "Guff \"Pequeno\" Grenn",
         "Metadata/Monsters/LeagueBetrayal/BetrayalJanus": "Janus Perandus",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalBreach": "Aquilo que Fugiu",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalBreach": "Coisa Fugitiva",
         "Metadata/Monsters/LeagueBetrayal/BetrayalGravicius": "Gravicius Renascido",
         "Metadata/Monsters/LeagueBetrayal/BetrayalThane": "Thane Jorgin, o Banido",
         "Metadata/Monsters/LeagueBetrayal/BetrayalKeema": "Korel Goya, Filho da Pedra",
@@ -20635,6 +20695,9 @@
         "HideoutYaochi": "Yaochi Hideout",
         "HideoutHumanoidPet": "Убежище гуманоидов",
         "HideoutRitualLeague": "Убежище ритуалиста",
+        "HideoutArenaMaven": "Убежище горнила",
+        "HideoutHasina": "Убежище Хасины",
+        "HideoutAzuriteCave": "Азуритовое убежище",
         "pvpTown": "Внутренние помещения арены Сарна",
         "AtlasExilesBoss5": "Око Шторма",
         "AfflictionTown6": "Застава безумия",
@@ -22389,10 +22452,10 @@
         "BetrayalSafeHouseLaboratory": "Guarida de Sindicato",
         "BetrayalMastermindFight": "Guarida de la Mente Maestra",
         "Synthesis_MapBoss": "Córtex",
-        "Synthesis_MapGuardian1": "Memoria distante alterada",
-        "Synthesis_MapGuardian2": "Memoria distante aumentada",
-        "Synthesis_MapGuardian3": "Memoria distante retorcida",
-        "Synthesis_MapGuardian4": "Memoria distante reescrita",
+        "Synthesis_MapGuardian1": "Memoria lejana alterada",
+        "Synthesis_MapGuardian2": "Memoria lejana aumentada",
+        "Synthesis_MapGuardian3": "Memoria lejana retorcida",
+        "Synthesis_MapGuardian4": "Memoria lejana reescrita",
         "1_Labyrinth_AirlockClean": "Plaza de los Aspirantes",
         "1_Labyrinth_C_end": "Anexo del Sepulcro",
         "1_Labyrinth_C_end_bottleneck": "Anexo del Sepulcro",
@@ -22948,6 +23011,9 @@
         "HideoutYaochi": "Guarida Yaochi",
         "HideoutHumanoidPet": "Guarida de mascota humanoide",
         "HideoutRitualLeague": "Guarida del ritualista",
+        "HideoutArenaMaven": "Guarida de crisol",
+        "HideoutHasina": "Guarida de Hasina",
+        "HideoutAzuriteCave": "Guarida de Azurita",
         "pvpTown": "Área de Preparación de la Arena de Sarn",
         "AtlasExilesBoss5": "El ojo de la tormenta",
         "AfflictionTown6": "Vigilia de la locura",
@@ -24355,6 +24421,9 @@
         "HideoutYaochi": "ที่ซ่อน Yaochi",
         "HideoutHumanoidPet": "ที่ซ่อน Humanoid Pet",
         "HideoutRitualLeague": "ที่ซ่อน Ritualist",
+        "HideoutArenaMaven": "ที่ซ่อน Crucible",
+        "HideoutHasina": "ที่ซ่อน Hasina",
+        "HideoutAzuriteCave": "ที่ซ่อน Azurite",
         "pvpTown": "Sarn Arena Staging Area",
         "AtlasExilesBoss5": "Eye of the Storm",
         "AfflictionTown6": "Lunacy's Watch",
@@ -24453,36 +24522,36 @@
         "MavenHub": "สถานหล่อหลอมของเมเวน"
       },
       "npcs": {
-        "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
-        "Metadata/NPC/Shaper": "The Shaper",
-        "Metadata/Monsters/LeagueIncursion/Alva": "Alva, Master Explorer",
-        "Metadata/NPC/League/Delve/DelveMiner": "Niko, Master of the Depths",
-        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "Jun, Veiled Master",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalCatarina1": "Catarina, Master of Undeath",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalHaku": "Haku, Warmaster",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalElreon": "Elreon, Light's Judge",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalTora": "Tora, the Culler",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalVagan": "Vagan, Victory's Herald",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalVorici": "Vorici, Silent Brother",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalHillock_": "Hillock, the Blacksmith",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalLeo": "Leo, Wolf of the Pits",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalGrenn": "Guff \"Tiny\" Grenn",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalJanus": "Janus Perandus",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalBreach": "It That Fled",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalGravicius": "Gravicius Reborn",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalThane": "Thane Jorgin the Banished",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalKeema": "Korell Goya, Son of Stone",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalRin": "Rin Yuushu",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalCameria": "Cameria the Coldblooded",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalAislin": "Aisling Laffrey, The Silent Butcher",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalRiker": "Riker Maloney, Midnight Tinkerer",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalCatarina2": "Catarina, Master of Undeath",
-        "Metadata/Monsters/LegionLeague/LegionKaruiGeneral": "Queen Hyrri Ngamaku",
-        "Metadata/Monsters/LegionLeague/LegionEternalEmpireGeneral": "General Marceus Lioneye",
-        "Metadata/Monsters/LegionLeague/LegionMarakethGeneral": "Aukuna, the Black Sekhema",
-        "Metadata/Monsters/LegionLeague/LegionMarakethGeneralDismounted": "Aukuna, the Black Sekhema",
-        "Metadata/Monsters/LegionLeague/LegionTemplarGeneral": "Cardinal Sanctus Vox",
-        "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "Viper Napuatzi",
+        "Metadata/Monsters/Masters/Einhar": "ไอนาร์ มาสเตอร์แห่งสรรพสัตว์",
+        "Metadata/NPC/Shaper": "เชปเปอร์",
+        "Metadata/Monsters/LeagueIncursion/Alva": "อัลวา มาสเตอร์แห่งการสำรวจ",
+        "Metadata/NPC/League/Delve/DelveMiner": "นิโค้ มาสเตอร์แห่งเหมืองลึก",
+        "Metadata/Monsters/LeagueBetrayal/MasterNinjaCop": "จุน มาสเตอร์แห่งการผนึก",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalCatarina1": "คาทาริน่า มาสเตอร์ไร้วันตาย",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalHaku": "ฮาคู มาสเตอร์แห่งสงคราม",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalElreon": "เอล์เรออน ตุลาการแห่งแสงสว่าง",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalTora": "ทอร่า ผู้คัดสรรชีวี",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalVagan": "เวแกน ผู้นำสาส์นแห่งชัยชนะ",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalVorici": "วอรีชี ภราดรผู้เงียบงัน",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalHillock_": "ฮิลล็อค ช่างตีเหล็ก",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalLeo": "ลีโอ หมาป่าแห่งลานประลอง",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalGrenn": "กัฟ \"ไอ้จ้อย\" เกรนน์",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalJanus": "ยานัส เพแรนดัส",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalBreach": "มันผู้หลบหนี",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalGravicius": "กราวิเชียสผู้เกิดใหม่",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalThane": "เธน จอร์กิน ผู้ถูกขับไล่",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalKeema": "คอเรลล์ โกยา, บุตรแห่งก้อนหิน",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalRin": "ริน ยูชู",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalCameria": "คามีเรียผู้เลือดเย็น",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalAislin": "แอชลิ่ง แลฟฟรีย์ นักเชือดผู้เงียบงัน",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalRiker": "ไรเกอร์ มาโลนีย์ นักประดิษฐ์ราตรี",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalCatarina2": "คาทาริน่า มาสเตอร์ไร้วันตาย",
+        "Metadata/Monsters/LegionLeague/LegionKaruiGeneral": "ราชินีไฮรี งามาคู",
+        "Metadata/Monsters/LegionLeague/LegionEternalEmpireGeneral": "นายพลมาร์เซอัส ไลออนอาย",
+        "Metadata/Monsters/LegionLeague/LegionMarakethGeneral": "ออคูนา เซ็คเคมาสีดำ",
+        "Metadata/Monsters/LegionLeague/LegionMarakethGeneralDismounted": "ออคูนา เซ็คเคมาสีดำ",
+        "Metadata/Monsters/LegionLeague/LegionTemplarGeneral": "พระคาร์ดินัลแซงค์ทัส วอกซ์",
+        "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "ไวเปอร์ นาปวดซี",
         "Metadata/Monsters/Masters/BlightBuilderWild": "แม่ชีแคสเซีย",
         "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "ทาเน อ็อกเทเวียส",
         "Metadata/NPC/League/Harvest/HarvestNPC": "โอชาบิ",
@@ -24493,7 +24562,7 @@
         "Metadata/Monsters/AtlasExiles/AtlasExile5": "ไซรัส ผู้ทำให้โลกตื่น",
         "Metadata/NPC/League/Affliction/StrangeVoice": "เสียงประหลาด",
         "Metadata/NPC/League/Heist/TheBoss": "คูรัย ผู้ดูแลทีม",
-        "Metadata/NPC/League/Heist/Fence": "ฟาวทัส มนุษย์กำแพง",
+        "Metadata/NPC/League/Heist/Fence": "ฟาวทัส พ่อค้าของโจร",
         "Metadata/NPC/League/Heist/Driver": "อาดีย์ยา ผู้หาเส้นทาง",
         "Metadata/NPC/League/Heist/Barber": "วาคาโน ช่างตัดผม",
         "Metadata/NPC/League/Heist/Lockpick1": "คาร์สท์ จอมสะเดาะ",
@@ -24556,7 +24625,7 @@
         "DroxFourStoneDeathd": "เวริทา​เนีย​... ข้าสร้างอาณาจักร​​เพื่อ​... เวริทา​เนีย​...",
         "DroxResponseToSirus0": "เอ็กไซล์ มัน​ย่อม​มี​นายเหนือหัว​ที่​มีอำนาจกว่า​เสมอ",
         "DroxResponseToSirus2": "สิ่ง​ที่​สูง​ยิ่ง​ไป​กว่า​กฎหมาย​กับ​อนาธิปไตย​น่ะ​เอ็ก​ไซล์ มัน​คือ​การ​ทำลาย​ล้าง",
-        "DroxResponseToSirus3": "กระทั่ง​ราชา​ยัง​ทำ​ตาม​คำ​สั่ง​จักรพรรดิ์ เจ้า​โง่​...",
+        "DroxResponseToSirus3": "กระทั่ง​ราชา​ยัง​ทำ​ตาม​คำ​สั่ง​จักรพรรดิ เจ้า​โง่​...",
         "DroxResponseToSirus4": "หาก​อำนาจ​นำ​มา​ซึ่ง​ความ​ชอบ​ธรรม ก็​ย่อม​ไม่มี​กฎหมาย​ใด​ที่​สามารถ​ลงโทษ​ท่าน​ไซรัส​ได้",
         "DroxResponseToSirus5": "ท่าน​ไซรัส​ไม่​จำเป็น​ต้อง​ใช้​กฎหมาย​หรือ​การ​ลงโทษ ท่าน​ทำ​เพียง​แต่​ทำลาย​ล้าง",
         "DroxResponseToSirus6": "เอ็กไซล์ เจ้า​ปลุก​สัตว์​ร้าย​จาก​ภวังค์​!",
@@ -24731,7 +24800,7 @@
         "TullinaAgilityFour": "ข้า​คง​เรียก​ค่า​แรง​จาก​เจ้า​น้อย​ไป​หน่อย",
         "TullinaAgilityFive": "ใจ​เย็น​ ทู​ลี​นา ทำ​เหมือน​ที่เจ้า​ซ้อม​มา​นั่นแหละ",
         "TullinaAgilitySix": "ระวังนะ..​. ระวัง...",
-        "TullinaDisarmTrapOne": "ข้า​รู้​ว่า​พวก​นั้น​มา​ทำ​อะไร​กัน​ที่​นี่...",
+        "TullinaDisarmTrapOne": "ข้า​รู้​ว่า​พวก​มัน​ทำ​อะไร​เอา​ไว้​นะ​...",
         "TullinaDisarmTrapTwo": "ฮึ? ใครมันจะมาติดกับดักนี่ได้?",
         "TullinaDisarmTrapThree": "หา อ๋อ เข้าใจแล้ว",
         "TullinaDisarmTrapFour": "อืมม ใช่ โคตรซับซ้อนเลย ซับซ้อนสุดๆ",
@@ -24790,9 +24859,9 @@
         "KarstPerceptionThree": "บาง​สิ่ง​บาง​อย่าง​​มัน​ไม่​ถูก​ต้อ​ง...",
         "KarstPerceptionFour": "มาดู​กัน​ดี​กว่า​... มี​อะไร​โดด​เด่น​ไป​กว่า​เพื่อน​ไหม​?",
         "KarstPerceptionFive": "มัน​จะ​มี​อะไร​กัน​เนี่ย​?",
-        "KarstPerceptionSix": "พวก​นั้น​กำลัง​ซ่อน​อะไร​เอา​ไว้​ที่่​นี่ ข้า​สัมผัส​ได้",
+        "KarstPerceptionSix": "พวก​มัน​ซ่อน​อะไร​เอา​ไว้​ที่่​นี่ ข้า​สัมผัส​ได้",
         "KarstVaultcrackingOne": "ข้า​จะ​เปิด​มัน​ออก​มา",
-        "KarstVaultcrackingTwo": "แก​ซ่อน​อะไร​กัน​อยู่​นะ เห​?",
+        "KarstVaultcrackingTwo": "แก​ซ่อน​อะไร​กัน​เอาไว้​เนี่ย​?",
         "KarstVaultcrackingThree": "ข้า​จะ​ทำให้​พวก​เรา​เข้าไป​ใน​นั้น",
         "KarstVaultcrackingFour": "ข้า​เป็น​เหยื่อ​ความ​อยาก​รู้​อยาก​เห็น​อยู่​เสมอ​...",
         "KarstVaultcrackingFive": "ชอบ​กลิ่น​ไอ​เหล็ก​ร้อน​ๆ นี่จ​ริ​งๆ​",
@@ -24854,210 +24923,210 @@
         "IslaCounterThaumaturgyLoudFour": "ภาวนา​ว่า​มัน​จะ​ได้ผล​เถอะ​!",
         "IslaCounterThaumaturgyLoudFive": "เสียง​ดัง​ฉิบหาย​เลย​โว้ย คิด​ไม่​ออก​!",
         "IslaCounterThaumaturgyLoudSix": "ข้าจะทำสุดความสามารถ!",
-        "GiannaPerceptionOne": "ข้ารู้ว่าจะต้องแต่งตัวกับชุดเดรสนี่ยังไง ตั้งแต่ข้าแค่เห็นไหม",
-        "GiannaPerceptionTwo": "พวก​เขา​กำลัง​ซ่อน​อะไร​บาง​อย่าง ดู​สิ",
-        "GiannaPerceptionThree": "พวกนั้นมันเป็นอุปกรณ์สำหรับประกอบฉาก แต่มีบางอย่างผิดปกติ",
-        "GiannaPerceptionFour": "บาง​สิ่ง​บาง​อย่าง​เกี่ยว​กับ​สิ่ง​นี้​ไม่​ถูก​ต้อ​ง...​หืมม..",
-        "GiannaPerceptionFive": "มัน​จะ​ง่าย​มาก​ที่​จะ​มอง​เห็น​มัน​ผ่าน​แสง​บน​เวทีนั่​น..",
-        "GiannaPerceptionSix": "All that time squinting at cue cards has trained me for this.",
-        "GiannaDeceptionOne": "กลับ​เข้า​ประจำ​ตำแหน่ง​ ท​หา​ร! ข้า​กำลัง​โดน​จับ​ตา​อยู่",
-        "GiannaDeceptionTwo": "เจ้า​บอ​กว่า​ข้า​สามารถ​พูด​ได้งั้​นหร​อ? งั้น​ข้า​ขอ​ลอง​หน่อย",
-        "GiannaDeceptionThree": "เงีย​บ... เห็นมั้​ย? ไม่​มี​อะไร​เลย ข้า​จะ​แสดง​ให้​เจ้า​ดู",
-        "GiannaDeceptionFour": "เจ้า​เมา​รึ​เปล่าท​หา​ร? ตรง​นั้น​น่ะ​ที่​เจ้า​กำลัง​จะ​ไป​มัน​ไม่​มี​อะไร​นะ",
-        "GiannaDeceptionFive": "อยู่​ใน​รูป​แบ​บข​บว​น! แล้ว​ดัน​เข้​าไ​ป!",
-        "GiannaDeceptionSix": "เชื่อฟัง​คำ​สั่ง​เอา​ไว้ เดี๋ยว​ข้า​จะ​ชี้​เป้​าใ​ห้!",
-        "GiannaSmugglerOne": "ข้า​ไม่​ได้ยิน​อะไร​เลย แต่​ข้า​มอง​เห็น​มัน",
-        "GiannaSmugglerTwo": "Oi, keep it down. Gettin' each other spooked. Here, I'll prove it.",
-        "GiannaSmugglerThree": "อย่า​สติ​แตก​ไป​ก่อน​สิ ดู​นี่​มัน​ไม่​อะไร​อยู่​ตรง​นี้​เลย....",
-        "GiannaSmugglerFour": "เจ้า​แค่​เมา​น่ะ​เพื่อน ดู​นี่​สิ​มัน​ว่างเปล่า​เห็น​ไหม",
-        "GiannaSmugglerFive": "น่า​จะ​เป็น​แค่​หนู​ตัว​เดีย​ว? กลัว​หนู​หรอ​กหร​อ? เรา​มา​หา​เหตุผล​กั​น!",
-        "GiannaSmugglerSix": "Nah, you're just losin' it. How could anything be here?",
-        "GiannaCultistOne": "Ease off the elixir. Nothing is here. Observe.",
-        "GiannaCultistTwo": "The fumes are affecting your judgement. I shall prove it.",
-        "GiannaCultistThree": "เหมือน​กับ​การ​ปรากฏ​ตัว​ของ​วิญญาณ​แต่​ยังไง​ซะ​เดี๋ยว​ข้า​ไป​ตรวจสอบ​ให้​แน่ใจ",
-        "GiannaCultistFour": "บาง​ที่​เจ้า​น่า​จะ​พักผ่อน​บ้าง​นะ มา​เดี๋ยว​ข้า​จะ​ตรวจ​ร่างกาย​ให้",
-        "GiannaCultistFive": "มัน​ก็​แค่​อาการ​ประสาท​หลอน สิ่ง​ที่​เจ้า​เห็น​น่ะ​มัน​ไม่​มี​จริง​หรอก",
-        "GiannaCultistSix": "ได้ยิน​เสียง​แปล​กๆ นั้น​น่า​จะ​เป็น​ผล​ข้าง​เคียง​นะ​แต่​ยังไง​ข้า​จะ​ทำให้​แน่ใ​จ....",
-        "EngineeringGiannaOne": "Just like the stagehands taught me.",
-        "EngineeringGiannaTwo": "Let's hope this thing holds.",
-        "EngineeringGiannaThree": "มัน​ควร​มี​ความ​แข็ง​แร​ง..​กว่า​นี้",
-        "EngineeringGiannaFour": "Not the sort of catwalk I thought I'd be walking...",
-        "EngineeringGiannaFive": "We used one of these backstage, 'til it took a lad's head off.",
-        "EngineeringGiannaSix": "Drumroll please... But quietly.",
+        "GiannaPerceptionOne": "ข้า​รู้​ดี​ว่าการ​จัด​ฉาก​แสดง​มัน​เป็น​ยัง​ไง",
+        "GiannaPerceptionTwo": "พวก​มัน​ซ่อน​อะไร​บาง​อย่าง​อยู่ ดูสิ",
+        "GiannaPerceptionThree": "พวกนั้นเป็นอุปกรณ์ประกอบฉาก มีบางอย่างผิดปกติ",
+        "GiannaPerceptionFour": "ตรง​นี้​มี​อะไร​แปลกๆ นัก​... หืม",
+        "GiannaPerceptionFive": "มันจะมองเห็นง่ายกว่านี้ถ้ามีไฟฉากดีๆ น่ะ...",
+        "GiannaPerceptionSix": "ข้า​หรี่​ตา​ดู​ใบ​บอก​บท​มา​บ่อย​จน​พร้อม​ทำงาน​นี้​แล้ว",
+        "GiannaDeceptionOne": "กลับ​ไป​เข้า​แถว​เสีย​ทหาร​! ข้า​จะ​ไป​ตรวจ​เอง​!",
+        "GiannaDeceptionTwo": "ข้าอนุญาตให้เจ้าพูดหรือไง? ข้าจัดการเอง",
+        "GiannaDeceptionThree": "เงียบ​... เห็น​ไหม​? ไม่มี​อะไร​เลย เจ้า​มา​ดู​สิ",
+        "GiannaDeceptionFour": "เจ้า​เมา​หรือ​ไง​ทหาร​? อีก​ฝั่ง​หนึ่ง​ไม่มี​อะไร​สัก​หน่อย",
+        "GiannaDeceptionFive": "กลับเข้าประจำตำแหน่งเสีย! นี่​เป็นการซ้อม​!",
+        "GiannaDeceptionSix": "เตรียม​ทำ​ตาม​คำ​สั่ง​ข้า​! ข้า​จะ​เป็น​คน​นำ​!",
+        "GiannaSmugglerOne": "ข้า​ไม่​ได้ยิน​อะไร​นะ แต่​มา​ดู​กัน​เถอะ",
+        "GiannaSmugglerTwo": "โอ้ย เงียบ​หน่อย​สิ อย่า​ทำให้​ตกใจ​กันเอง นี่ ข้า​จะ​พิสูจน์​ให้​เห็น​นะ",
+        "GiannaSmugglerThree": "อย่า​สติ​แตก​ไป​ก่อน​สิ ดู​นี่ ไม่มี​อะไร​อยู่​ตรง​นี้​...",
+        "GiannaSmugglerFour": "เจ้า​แค่​เมา​น่ะ​พวก ดูนะ มัน​ไม่มี​อะไร​แน่ๆ",
+        "GiannaSmugglerFive": "คง​เป็น​แค่​หนู​น่ะ เจ้า​กลัว​หนู​หรือ​ไง​? มาดู​กัน​เถอะ​!",
+        "GiannaSmugglerSix": "ไม่หรอก เจ้าแค่เพ้อไปเอง จะมีอะไรมาอยู่นี่ได้ยังไง?",
+        "GiannaCultistOne": "ดื่ม​ยา​น้อย​ลง​เสีย​เถิด ไม่มี​สิ่ง​ใด​อยู่​ที่​นี่ จงมา​ดู​กับ​ตา​เสีย",
+        "GiannaCultistTwo": "ควัน​พวก​นี้​ทำให้​เจ้า​ตัดสิน​ใจ​ผิด​พลาด ข้า​จัก​พิสูจน์​ให้​เห็น​เอง",
+        "GiannaCultistThree": "ย่อม​เป็น​เพียง​ภาพลวงตา แต่​ข้า​จะ​ไป​ดู​ให้​แน่ใจ",
+        "GiannaCultistFour": "เจ้า​ไป​พัก​ผ่อน​เถิด ข้า​จะ​ดู​ให้​เจ้า​เสีย​เอง",
+        "GiannaCultistFive": "มัน​เป็น​ปรากฏการณ์​ประสาทหลอน เหมือน​ทุก​อย่าง​ที่​เจ้า​เห็น​ใน​กาล​นี้",
+        "GiannaCultistSix": "การได้ยินเสียงแปลกๆ นั้นถือเป็นผลข้างเคียง แต่ข้าจะไปดูให้แน่ใจ...",
+        "EngineeringGiannaOne": "แบบ​ที่​คน​คุม​เวที​สอน​ข้า​เอา​ไว้",
+        "EngineeringGiannaTwo": "หวัง​ว่า​มัน​จะ​ไม่ขาดนะ",
+        "EngineeringGiannaThree": "มัน​น่า​จะ​แข็ง​แรง​... พอ",
+        "EngineeringGiannaFour": "ข้า​ไม่คิด​ว่า​จะ​ได้​เดิน​บน​แคทวอล์ก​แบบ​ตีน​แมว​น่ะ​นะ​...",
+        "EngineeringGiannaFive": "เรา​เคย​ใช้​ของ​แบบ​นี้​ที่​หลัง​เวที​มา​ก่อน จน​กระทั่ง​มัน​ไป​กุด​หัว​ใคร​คน​หนึ่ง​เข้า",
+        "EngineeringGiannaSix": "ช่วย​รัว​กลอง​ด้วย​... แต่​รัว​เบาๆ นะ",
         "GiannaPerceptionLoudOne": "เดี๋ยว​นะ นั่น​มัน​อะไร​น่ะ!?",
-        "GiannaPerceptionLoudTwo": "นี่​ดู​นั่น​สิ​ ไ​ม่โ​ว้ยยยนั่​นตรงนั้​น!",
-        "GiannaPerceptionLoudThree": "พวก​นั้น​พยายาม​จะ​ซ่อน​อะไร​บาง​อย่า​ง!",
-        "GiannaPerceptionLoudFour": "ข้า​รู้​ว่า​มี​บาง​อย่าง​ที่​ผิด​ปกติ​สำหรับ​ที่​นี่ แต่​ยังไง​ซะ​ข้าร​อสั​กพั​ก!",
-        "GiannaPerceptionLoudFive": "มี​งาน​เยอะ​เกิน​ไป​ที่​จะ​แบ่ง​เวลา​ไป​ซ่อน​บาง​อย่าง​ตรง​นี้!",
-        "GiannaPerceptionLoudSix": "มี​บาง​อย่าง​ที่​กำลัง​ตบตา​บริเวณ​นี้ พวก​นั้น​มัน​กำลัง​พยายาม​จะ​ซ่อน​อะไร​กัน​แน่!?",
-        "GiannaDeceptionLoudOne": "เปิด​มั​น! แล้ว​ให้​พวก​นั้น​ผ่าน​เข้า​มา! โอ่ ข้าท​ำมั​นไ​ด้!",
-        "GiannaDeceptionLoudTwo": "ถอย​ออ​กไ​ป! ข้า​จะ​เอา​พวก​นี้​ไป​ด้วย​ตัว​ข้า​เอ​ง!",
-        "GiannaDeceptionLoudThree": "เปิด​ทา​งซ​ะ! ข้า​ต้องการ​ให้​กำลัง​เสริม​เข้า​มา​ยัง​ที่​นี่!",
-        "GiannaDeceptionLoudFour": "ปล่อย​ให้​พวก​มั​นไ​ป! ข้า​น่ะ​มี​แผน!",
-        "GiannaDeceptionLoudFive": "พวก​นั้น​จาก​มา​กับ​เรา!",
-        "GiannaDeceptionLoudSix": "ข้า​จะ​เปิด​ทา​งใ​ห้! แล้ว​เจ้า​ต้อง​ปล่อย​พวก​นั้น​ให้​มี​ชีวิต",
-        "GiannaSmugglerOneCopy": "เราจ​ะจั​ดพ​การ​พวก​มัน​ใน​นี้​ได้​แน่ เจ้า​หนุ่​ม!",
-        "GiannaSmugglerTwoCopy": "เดี๋ยว​ก่อน​นะ พวก​นั้น​จะ​ไม่​ไป​กับ​เราหร​อ?!​ ห​รือไ​ป?​ ไ​ปใช่มั้​ย?",
-        "GiannaSmugglerThreeCopy": "พวก​เรา​จัดการ​พวก​นั้น​จาก​ฝั่ง​นี้ไ​ม่ไ​ด้! ฉะนั้น​ดัน​เข้​าไ​ป!​เปิด​มั​นใ​ห้ไ​ด้!",
-        "GiannaSmugglerFourCopy": "ถ้า​พวก​เรา​ปล่อย​พวก​นั้น​เข้า​มา พวก​นั้น​จะ​ต้อง งง​กับ​สิ่ง​ที่​เกิด​ขึ้น​ใน​การ​ต่อสู้​นี่​แน่!",
-        "GiannaSmugglerFiveCopy": "โ​ห่ยย ท่าน​ผู้นำ​ต้องการ​ให้​เรา​เปิด​ประตูนั่​น!",
-        "GiannaSmugglerSixCopy": "ข้า​ไม่​ได้​ป๊อด​นะ​เว้ย​ ส​หา​ย! ข้า​จะ​ไป​เปิด​ประตู​นั่น​เอ​ง!",
-        "GiannaCultistOneCopy": "Allow passage! We shall claim their ichors!",
-        "GiannaCultistTwoCopy": "They beg to be sacrificed! I say we let them!",
-        "GiannaCultistThreeCopy": "Their flesh demands passage! We must obey!",
-        "GiannaCultistFourCopy": "We must unify! Open the gate!",
-        "GiannaCultistFiveCopy": "Separation is trickery! Open the way!",
-        "GiannaCultistSixCopy": "They test our faith! Let faith shield you!",
-        "GiannaEngineerLoudOne": "ยก​สะ​พานขึ้​น!",
-        "GiannaEngineerLoudTwo": "ติดตั้ง​ทางข้าม​เร็​วๆ​เข้​า~!",
-        "GiannaEngineerLoudThree": "เชื่อม​ต่อ​ช่อง​ว่า​งตรงนั้​นซ​ะ!",
-        "GiannaEngineerLoudFour": "เรา​น่า​จะ​ใกล้​ข้าม​ไป​ได้​แล้ว​หละ อีก​นิดเดียว​มัน​ก็​พร้อม​ที่​จะ​ใช้งาน​แล้​ว!",
-        "GiannaEngineerLoudFive": "ถ้า​มัน​พัง​เรา​คง​ต้องหา​วิธี​อื่น​แล้ว​แหล​ะ!",
-        "GiannaEngineerLoudSix": "This sort of thing always breaks when everyone's watching!",
-        "VinderiVaultBreakingOne": "หาา มัน​ไม่​น่า​จะ​ยาก​ขนาด​นั้น​นะ",
-        "VinderiVaultBreakingTwo": "ยังไง​ซะ​ราคา​ถูก​แบบ​นี้​มัน​ก็​แค่​ขยะ",
-        "VinderiVaultBreakingThree": "ทำใหไอ้ประตูเซฟโง่ๆนี่เปิดกันเถอะ",
-        "VinderiVaultBreakingFour": "หืมม ยากนิดหน่อย แต่ใช่ว่าจะทำไม่ได้เลย",
-        "VinderiVaultBreakingFive": "Haven't come across this make before. Well, let's give it a go.",
-        "VinderiVaultBreakingSix": "โอ้วว แม่ตู้เซฟที่แข็งแกร่งเปิดใจให้ข้าหน่อยน่า อย่าใจแข็งไปเลยข้าน่ะจริงใจ",
-        "VinderiEngineeringOne": "เอา​อีก​แล้​วหร​อ? นี่​ข้า​จะ​ต้อง​มา​ทำ​อะไร​แบบ​นี้​อีกครั้​งหร​อ?",
-        "VinderiEngineeringTwo": "Con-fangled dang contraptions. ",
-        "VinderiEngineeringThree": "เจ้า​คง​ไม่​คาด​หวัง​ให้​ข้า​กระ​โด​ดใช่มั้​ย? หรือ​ว่า​เจ้า​คิด",
-        "VinderiEngineeringFour": "ข้ามีบางอย่างที่ใช้งานกับมันได้สักที่.....",
-        "VinderiEngineeringFive": "ข้า​ว่า​ข้า​เอา​สิ่ง​นั้น​มา​ด้วย​อยู่​นะ หรือ​ว่า​ข้า? ข้า​คิด​ว่า​ข้า​เอา​มาอ​ยู​่น​ะ..",
-        "VinderiEngineeringSix": "ข้า​หวัง​ว่า ข้า​จะ​ยัง​ไม่​ลืม​วิธีการ​ใช้งาน​สำหรับ​ระเบิด​เจ้า​สิ่ง​นี้",
-        "VinderiDismantleTrapOne": "อ่า ฉลาด​มาก​แต่​มัน​ยัง​ไม่​พอ​หรอก​แต่​ก็​ยัง​ฉลาด",
-        "VinderiDismantleTrapTwo": "มัน​ก็​ไม่​ใช่​กับดัก​ห่วย​แตก แต่​มัน​ก็​ไม่​ดี​มาก​แต่​มัน​ก็​ไม่​ห่ว​ย...",
-        "VinderiDismantleTrapThree": "แล้วดึงสปริงนี่ออกมาแล้วก็....",
-        "VinderiDismantleTrapFour": "โ​อ้ว ไอ้​พวก​สมอง​ใส่​นั่น หืมมม หืมมมมมม",
-        "VinderiDismantleTrapFive": "ง่า​ยยหร​-​-..​ โห​ โห​ไม่​นะ​ โ​ห้?​ โ​ห้~~!",
-        "VinderiDismantleTrapSix": "ห๊ะ นั่นมันดูเหมือนกับงานออกของแบบ Maloney เลยนะนั่น",
-        "VinderiDemolitionOne": "ฮี๊~~ ฮี ​ฮี ​ฮี",
-        "VinderiDemolitionTwo": "มั​นส์ มั​นส์ มั​นส์",
-        "VinderiDemolitionThree": "เอา​ตูด​ของ​แก​จับ​มัน​เอาไ​ว้ซ​ะ!",
-        "VinderiDemolitionFour": "ข้าง​ต้องการ​อะไร​ที่​มัน​ใหญ่​กว่า​นี้",
-        "VinderiDemolitionFive": "ใช่ ใช่​แล้​ว! ข้า​มี​ไอ้นั่​นอ​ยู​่!",
-        "VinderiDemolitionSix": "ข้า​เก็บ​มัน​ไว้​ให้​เจ้า​อัน​หนึ่ง​อยู่",
-        "VinderiVaultBreakingLoudOne": "เจ้า​แน่ใ​จจ​ริ​งๆ?​ ก​็ไ​ด้...!",
-        "VinderiVaultBreakingLoudTwo": "เอาจ​ริ​ง? ตอน​นี้​เนี่ยน​ะ!?",
-        "VinderiVaultBreakingLoudThree": "พระเจ้า เจ้า​เอาจ​ริ​งหร​อ...!",
-        "VinderiVaultBreakingLoudFour": "​วิน​เด​อร์รี เจ้า​คง​ไม่​ยุ่ง​พอ​ที่​จะ​วิ่ง​หนี​เพื่อ​ชีวิต​ของ​เจ้า​หรอก​ ?!",
-        "VinderiVaultBreakingLoudFive": "เจ้า​กำลัง​เสีย​สติ เจ้า​รู​้ตั​วรึ​เปล่า?",
-        "VinderiVaultBreakingLoudSix": "ข้า​ทำงาน​ได้​ไม่​ค่อย​ดี​นัก หาก​เกิด​ความ​กดดัน​ขึ้น​ใน​การ​ทำงาน",
-        "VinderiEngineeringLoudOne": "ไหน​ล่ะ​สิ่ง​ที่​เสีย​หา​ย?",
-        "VinderiEngineeringLoudTwo": "มัน​อยู่​ไหน​ว๊าา​-​-..​ โ​อ้! ข้า​เจอ​แล้​ว!",
-        "VinderiEngineeringLoudThree": "ไป ไป​เลย​ไป​หน้า​โง่​-..!",
-        "VinderiEngineeringLoudFour": "เจ้า​มีสิ่งนั้​นอ​ยู​่หร​อ? เดี๋ยว​นะ ข้า​เอง​ก็​มี​เหมือน​กัน​นี่​นา!",
-        "VinderiEngineeringLoudFive": "Ah! I've got the thing for this! Here we go--no, that's not it. AH! Here we go!",
-        "VinderiEngineeringLoudSix": "A gap! I have just the tool for this. Somewhere. Did I drop it? Ha! I was holding it! Don't you just hate that?!",
-        "VinderiDismantleTrapLoudOne": "นี่มันคือการทำงานที่ยอดเยี่ยมของข้า!",
-        "VinderiDismantleTrapLoudTwo": "ทีตรงนี้มันคือกับดักแห่งความตายชัดๆ!",
-        "VinderiDismantleTrapLoudThree": "เดี๋ย​ว! ไอ้​สิ่ง​นั้น​ที่​ว่า​มัน​จะ​ฆ่า​เรา!",
-        "VinderiDismantleTrapLoudFour": "พระเจ้าแผนเราเกือบพังเพราะไอ้กับดักนี่เนี่ยนะ!",
-        "VinderiDismantleTrapLoudFive": "กับ​ดั​ก! นั่น​มัน​กับดัก​หยุด​เดียว​นี้่! นั้น​มัน​กับ​ดั​กโ​ว้ยยย!",
-        "VinderiDismantleTrapLoudSix": "นี่​น่า​จะ​เป็น​สิ่ง​ที่​เรา​ควร​จัดการ​ก่อนหน้า​นี้ เพื่อ​ให้​เรา​สามารถ​ทำงาน​ให้​ง่ายขึ้​น!",
+        "GiannaPerceptionLoudTwo": "ดู​นั่น​สิ​! ตรง​นั้น​! ไม่​ใช่โว้ย ตรง​นั้น​!",
+        "GiannaPerceptionLoudThree": "พวก​มันพยายาม​ซ่อน​อะไร​บาง​อย่าง​เอา​ไว้​!",
+        "GiannaPerceptionLoudFour": "ข้า​รู้​ว่า​ที่​นี่​มี​อะไร​ผิด​ปกติ ขอ​เวลา​ข้า​สัก​พัก​!",
+        "GiannaPerceptionLoudFive": "พวก​มัน​ทำ​อะไร​อย่าง​หนัก​เพื่อ​ซ่อน​อะไร​เอา​ไว้​!",
+        "GiannaPerceptionLoudSix": "ที่​นี่​มี​ของ​ปลอม​ที่​ตบตา​ได้​ดีนัก​! พวก​มัน​ซ่อน​อะไร​เอา​ไว้​นะ​!?",
+        "GiannaDeceptionLoudOne": "เปิด​เสีย​! ให้​พวก​เขา​เข้า​มา​! โอ้ ข้า​ทำ​เอง​ก็ได้​!",
+        "GiannaDeceptionLoudTwo": "ถอยออกไป! ข้าจะจัดการพวกมันด้วยตัวเอง!",
+        "GiannaDeceptionLoudThree": "เปิด​ทาง​ซะ​! ข้า​ต้องการ​ให้​กำลัง​เสริม​เข้า​มา​ที่​นี่​!",
+        "GiannaDeceptionLoudFour": "ขอ​ทาง​ด้วย​! ข้า​มี​แผน​!",
+        "GiannaDeceptionLoudFive": "พวกเขาเป็นพวก​เรา​!",
+        "GiannaDeceptionLoudSix": "ข้า​จะ​เปิด​ทาง​ให้ เจ้า​จง​จับ​เป็นเสีย!",
+        "GiannaSmugglerOneCopy": "เราจ​ะจั​ด​การ​พวก​มัน​ใน​นี้​ได้​แน่ หนุ่มๆ!",
+        "GiannaSmugglerTwoCopy": "เดี๋ยว พวก​นั้น​เป็น​พวก​เรา​เหรอ​!? เป็น​พวก​เรา​ใช่​ไหม​!?",
+        "GiannaSmugglerThreeCopy": "เรา​จัดการ​พวก​มัน​จาก​ฝั่ง​นี้​ไม่​ได้​! เปิด​ออก​มา​เลย​!",
+        "GiannaSmugglerFourCopy": "ถ้าเราปล่อยพวกมันเข้ามา พวกมันจะงงจนต่อสู้ไม่ออกแน่!",
+        "GiannaSmugglerFiveCopy": "โอ้ย เจ้า​นาย​อยาก​ให้​เรา​เปิด​ประตู​!",
+        "GiannaSmugglerSixCopy": "ข้า​ไม่​กลัว​หรอก​พวก​! ข้า​จะ​เปิด​ประตู​ออก​ไป​เอง​!",
+        "GiannaCultistOneCopy": "เปิด​ทาง​เสีย​! เรา​จะ​ครองน้ำหนอง​พวก​มัน​เป็นแน่!",
+        "GiannaCultistTwoCopy": "พวก​มัน​อ้อนวอน​อยาก​ถูก​บูชายัญ​! ข้า​ว่า​เรา​ทำ​ตาม​ที่​พวก​มัน​ต้องการ​เสีย​เถิด​!",
+        "GiannaCultistThreeCopy": "ร่าง​พวก​มัน​ขอ​ทาง​! เรา​ต้อง​ทำ​ตาม​เสีย​!",
+        "GiannaCultistFourCopy": "เรา​ต้อง​รวม​กัน​เป็น​หนึ่ง​! เปิด​ประตู​เสีย​!",
+        "GiannaCultistFiveCopy": "การ​แยก​จาก​กัน​นั้น​เป็น​กล​ลวง​! เปิด​ทาง​เสีย​!",
+        "GiannaCultistSixCopy": "พวก​มัน​ลองดี​กับ​ศรัทธา​ของ​เรา​! ขอ​ให้​ศรัทธา​คุ้มครอง​เจ้า​!",
+        "GiannaEngineerLoudOne": "กำลัง​เปิด​สะพาน​!",
+        "GiannaEngineerLoudTwo": "กำลังติดตั้งทางข้าม!",
+        "GiannaEngineerLoudThree": "กำลัง​เชื่อม​ต่อ​ช่อง​ว่าง​!",
+        "GiannaEngineerLoudFour": "เรา​จะ​ได้​ข้าม​ทันที​ที่​มัน​พร้อม​!",
+        "GiannaEngineerLoudFive": "ถ้ามันพัง เราจะมาด้นสดกันอีกที!",
+        "GiannaEngineerLoudSix": "ของ​แบบ​นี้​มัน​ชอบ​พัง​ตอน​ที่​ทุก​คน​มอง​มัน​อยู่​!",
+        "VinderiVaultBreakingOne": "หือ ไม่​ยาก​เกิน​ไป​นะ",
+        "VinderiVaultBreakingTwo": "มัน​เป็น​แค่​ขยะ​ราคา​ถูก​น่ะ",
+        "VinderiVaultBreakingThree": "เรา​มา​เปิด​ไอ้​นี่​ออก​มา​กัน​เถอะ",
+        "VinderiVaultBreakingFour": "หืม ยาก​นิด​หน่อย แต่​ใช่​ว่า​จะ​ทำ​ไม่​ได้​เลย",
+        "VinderiVaultBreakingFive": "ข้า​ไม่​เคย​เห็น​รูป​แบบ​นี้​มา​ก่อน งั้น​เรา​มา​ลอง​กัน​หน่อย​แล้ว​กัน",
+        "VinderiVaultBreakingSix": "อู้ว ถูก​สร้าง​อย่าง​แข็งแกร่ง เปิด​ใจ​ให้​ข้า​หน่อย​สิ ไม่​เป็นไร​หรอก​น่า อ่อนแอ​เสีย​เถอะ",
+        "VinderiEngineeringOne": "เดี๋ยวนะ ข้า​จะ​ใช้​เจ้า​นี่​ยัง​ไง​นะ​?",
+        "VinderiEngineeringTwo": "ไอ้​สิ่ง​ประดิษฐ์​นี่​ก็​นะ",
+        "VinderiEngineeringThree": "เจ้า​คง​ไม่​คาด​หวัง​ให้​ข้า​กระ​โด​ดใช่ไหม?",
+        "VinderiEngineeringFour": "ข้า​มี​ของ​ที่​ใช้​ทำงาน​นี้​อยู่​ที่ไหน​สัก​แห่ง​...",
+        "VinderiEngineeringFive": "ข้า​เอา​ของ​นั่น​มา​แล้ว เอา​มา​ใช่​ไหม​? ข้า​นึก​ว่า​ข้า​เอา​มา​แล้ว​นะ​...",
+        "VinderiEngineeringSix": "ข้า​เอง​ก็​หวัง​อยู่​ว่า​จะ​ไม่​ต้อง​มา​นั่ง​จำ​วิธี​ใช้​ไอ้​ของ​เวร​นี่",
+        "VinderiDismantleTrapOne": "อ้า ฉลาด​นะ ไม่​ฉลาด​พอ​หรอก แต่​ก็​นะ",
+        "VinderiDismantleTrapTwo": "กับ​ดัก​นี่​ไม่​ห่วย​นัก​หรอก ถึง​จะ​ไม่​ดี​ที่สุด แต่​ก็​ไม่​ห่วย​ที่สุด​แน่ๆ",
+        "VinderiDismantleTrapThree": "แค่ดึงสปริงนี่ออกมาแล้วก็...",
+        "VinderiDismantleTrapFour": "โอ้ ไอ้​พวก​หัว​ใส​นั่น หืม หืมมมมม",
+        "VinderiDismantleTrapFive": "ง่าย​เหมือน​ปอ--... โอ๊ะ โอ้​ไม่​นะ โอ๊ะ​? โอ้ย",
+        "VinderiDismantleTrapSix": "หือ เหมือน​จะ​เป็นการ​พลิก​แบบ​ของ​มาโลนีย์​เลย",
+        "VinderiDemolitionOne": "ฮี่ ฮี่ ฮี่ ฮี่ ฮี่!",
+        "VinderiDemolitionTwo": "มั​นส์ มั​นส์ มั​นส์!",
+        "VinderiDemolitionThree": "จับ​อะไร​เอา​ไว้​ให้​ดี​ล่ะ​!",
+        "VinderiDemolitionFour": "งาน​นี้​ต้องการ​ระเบิด​ลูก<b>{​เบ้อเร่อ}​นะ",
+        "VinderiDemolitionFive": "ใช่ ใช่​แล้​ว... ข้า​มี​ของ​ที่​เหมาะ​อยู่​พอดี!",
+        "VinderiDemolitionSix": "ข้า​เก็บ​ลูก​นี้​ไว้​ให้​เจ้า​เลย​นะ",
+        "VinderiVaultBreakingLoudOne": "เจ้า​แน่ใ​จนะ?!​ ก​็ไ​ด้...!",
+        "VinderiVaultBreakingLoudTwo": "เอาจ​ริ​งเหรอ? ตอน​นี้​เนี่ยน​ะ?!",
+        "VinderiVaultBreakingLoudThree": "พระเจ้า เจ้า​ไม่​ได้​ล้อ​เล่น...!",
+        "VinderiVaultBreakingLoudFour": "\"วินเดอร์รี เจ้า​คง​ไม่​ยุ่ง​กับ​การ​หนี​เอา​ตัว​รอด​อยู่​ใช่​ไหม?!\"",
+        "VinderiVaultBreakingLoudFive": "เจ้า​มัน​เสีย​สติ เจ้า​รู​้ตั​วหรือ​เปล่า?",
+        "VinderiVaultBreakingLoudSix": "ข้า​ทำงาน​ใต้​แรง​กดดัน​ได้​ไม่​ดี​นะ​!",
+        "VinderiEngineeringLoudOne": "ไอ้​ของ​เวร​นั่น​มัน​อยู่​ไหน​กัน!?",
+        "VinderiEngineeringLoudTwo": "อีท่า​ไหน​ถึง​จะ--... โอ้! เจอ​แล้ว​!",
+        "VinderiEngineeringLoudThree": "ไป ไป​เลย​ไอ้หน้า​โง่​-..!",
+        "VinderiEngineeringLoudFour": "เจ้า​มี​ของ​นั่น​เหรอ​!? เดี๋ยว​นะ ข้า​มี​ของ​นั่น​แล้ว​!",
+        "VinderiEngineeringLoudFive": "อา! ข้า​มี​ของ​ที่เหมาะ​กับ​งาน​นี้​พอดี​! เริ่ม​กัน​เลย​--​เดี๋ยว ไม่ใช่​แบบ​นั้น <b>{อ้า}​! เริ่ม​กัน​เลย​!",
+        "VinderiEngineeringLoudSix": "ช่อง​ว่าง​! ข้า​มี​เครื่อง​มือ​จัดการ​เรื่อง​นี้​พอดี อยู่​ที่ไหน​สัก​แห่ง ข้า​ทำ​มัน​ตก​ไว้​เห​รอ​? ฮ่า​! ข้า​ถือ​มัน​อยู่​นี่เอง​!",
+        "VinderiDismantleTrapLoudOne": "งาน​นี้​มัน​ควร​จะ​เป็น​งาน​<b>{ละเอียด​อ่อน​}!",
+        "VinderiDismantleTrapLoudTwo": "ที่​นี่​มัน​เป็นกับดักแห่งความตายชัดๆ!",
+        "VinderiDismantleTrapLoudThree": "เดี๋ยว​ก่อน​! ไอ้​นี่​ถูก​ติด​ตั้ง​มา​เพื่อ​ฆ่า​พวก​เรา​!",
+        "VinderiDismantleTrapLoudFour": "พระเจ้า​! เจ้าตั้งใจ​เดิน​เข้า​มา​หา​เจ้า​นี่​จริงๆ​!",
+        "VinderiDismantleTrapLoudFive": "มี​กับ​ดัก​! มี​กับ​ดัก​! หยุด​เดี๋ยว​นี้​! นั่น​มัน​กับ​ดัก​โว้ย​! นั่น​มัน​กับ​ดัก​!",
+        "VinderiDismantleTrapLoudSix": "นี่​น่า​จะ​เป็น​สิ่ง​ที่​เรา​ควร​จัดการ​ตั้งแต่ก่อนหน้า​นี้!",
         "VinderiDemolitionLoudOne": "",
-        "VinderiDemolitionLoudTwo": "ข้า​ไม่​มี​เวลา​แม้​แต่​จะ​สนุก​กับ​มัน​สัก​เล็กน้อย​เลยหร​อ!",
-        "VinderiDemolitionLoudThree": "ข้า​โคตร​เกลียด​ทุก​อย่าง​ที่​เกี​ยว​กับ​มัน​เลย!",
-        "VinderiDemolitionLoudFour": "ถ้า​ข้า​ตา​ย.. ข้า​ก็​หวัง​ว่า​เจ้า​จะ​ไป​ด้วย​เหมือน​กั​น!",
-        "VinderiDemolitionLoudFive": "คุณ​พระ นั่น​ไม่​ใช่​เงื่อนไข​ที่​เหมาะสม​สำหรับ​การ​ควบคุม​ส่วนประกอบ​ของ​ระ​เบิ​ด!",
-        "VinderiDemolitionLoudSix": "ข้าอยากจะเก็บกับดักนี่เอาไว้สำหรับโอกาศพิเศษ เจ้าติดระเบิดข้าลูกหนึ่งนะ!",
-        "NenetPerceptionShortOne": "ข้า​เข้าใจ​แล้ว",
+        "VinderiDemolitionLoudTwo": "ข้า​ไม่มี​เวลา​​สนุก​กับ​มัน​ด้วย​ซ้ำ​!",
+        "VinderiDemolitionLoudThree": "ข้า​เกลียด​ทุก​อย่าง​เกี่ยว​กับ​งาน​นี้​จริง​!",
+        "VinderiDemolitionLoudFour": "ถ้า​ข้า​ตาย ข้า​ขอ​ให้​เจ้า​โดน​มัน​ระเบิด​ตาย​ตาม​ไป​ด้วย​!",
+        "VinderiDemolitionLoudFive": "คุณ​พระ นี่​<b>{ไม่ใช่}​สภาพ​ที่​เหมาะ​กับ​การ​จัดการ​วัตถุ​ระเบิด​เลย​!",
+        "VinderiDemolitionLoudSix": "ข้า​กะ​จะ​เก็บ​เจ้า​นี่​ไว้​ใช้​ใน​โอกาส​พิเศษ​สัก​หน่อย เจ้า​ติด​ระเบิด​ข้า​ลูก​หนึ่ง​นะ​!",
+        "NenetPerceptionShortOne": "ข้า​เห็น​แล้ว",
         "NenetPerceptionShortTwo": "มัน​ค่อน​ข้าง​ชัดเจน​สำหรับ​ข้า",
         "NenetPerceptionShortThree": "แน่นอน",
-        "NenetPerceptionLongOne": "ขอ​เวลา​ให้​ข้า​ตั้ง​สติ​สัก​ครู่​ได้มั้​ย....",
-        "NenetPerceptionLongTwo": "จะ​มอง​หา​ความ​ไว้​วางใจ​ได้ อาจ​จะ​ต้อง​ใช้​มาก​กว่า​การ​มอง",
-        "NenetPerceptionLongThree": "เงีย​บ! ข้า​กำลัง​ฟัง​เสีย​งอ​ยู​่...",
+        "NenetPerceptionLongOne": "ข้า​ขอ​เวลา​ตั้ง​สติ​สัก​ครู่​....",
+        "NenetPerceptionLongTwo": "บางที​การ​มอง​ก็​ไม่​ได้​ใช้​เพียง​ลูก​ตา",
+        "NenetPerceptionLongThree": "เงีย​บที ข้า​ฟัง​อ​ยู​่...",
         "NenetPerceptionShortAlarmOne": "เยี​่ย​ม!",
         "NenetPerceptionShortAlarmTwo": "เร็ว​เข้า ใช่​แล้​ว!",
         "NenetPerceptionShortAlarmThree": "กำลัง​ราย​งา​น!",
-        "NenetPerceptionLongAlarmOne": "ข้า​พยายาม​ตั้ง​สติ​ตัว​ข้า​อยู่",
-        "NenetPerceptionLongAlarmTwo": "ให้​ข้า​ได้​ลอบ​ฟัง​ก่อ​น!",
-        "NenetPerceptionLongAlarmThree": "ใ​ห้ไ​ว!",
+        "NenetPerceptionLongAlarmOne": "ข้า​พยายาม​ตั้ง​สติ​อยู่!",
+        "NenetPerceptionLongAlarmTwo": "ให้ข้าได้ฟังก่อน!",
+        "NenetPerceptionLongAlarmThree": "เร็วเข้า!",
         "NenetVaultShortOne": "ไม่​มี​กุญแจ​ดอก​ไหน​จะ​มา​ขวาง​ข้า​ได้",
         "NenetVaultShortTwo": "ของ​ทั้งหมด​นั่น​จะ​เป็น​ของ​เรา",
         "NenetVaultShortThree": "ไม่​มี​ปัญหา",
-        "NenetVaultLongOne": "นี่ต้องใช้เวลาสักพักเลยนะสำหรับการ สะเดาะล๊อกนี่",
-        "NenetVaultLongTwo": "พวก​นั้น​มัน​พยายาม​จะ​รักษา​ความ​ปลอดภัย​นี่​แล้​วหร​อ?",
-        "NenetVaultLongThree": "ข้า​สามารถ​ทะลาย​ตู้นิรภัย​นี่​ได้ ไม่​มี​ปัญหา​หรอก",
-        "NenetVaultShortAlarmOne": "มั​นไ​ด้ผ​ล! เร็ว​เข้​า~!",
+        "NenetVaultLongOne": "พวก​เขา​ไม่​น่า​จะ​เสีย​เวลา​ล็อก​เลย​นะ",
+        "NenetVaultLongTwo": "พวก​เขา​พยายาม​ล็อก​ไว้​จริงๆ เหรอ​?",
+        "NenetVaultLongThree": "ข้า​​ทลาย​ตู้นิรภัย​นี่​ได้ ไม่​มี​ปัญหา​หรอก",
+        "NenetVaultShortAlarmOne": "ข้ารีบทำงานอยู่!",
         "NenetVaultShortAlarmTwo": "พัง​แล้​วห​ยิบ!",
-        "NenetVaultShortAlarmThree": "ได้​แล้​ว!",
-        "NenetVaultLongAlarmOne": "เจ้า​ทำ​ได้​แน่นอน​น่า เนเนต....",
-        "NenetVaultLongAlarmTwo": "กู​ทำ​เต็ม​ที่​แล้ว​ !",
-        "NenetVaultLongAlarmThree": "ข้าท​ำไ​ด้! ข้าา​ทำ​ได้​แน่​นอ​นนน!",
-        "NenetThaumaturgyShortOne": "เข้า​จะ​ทำให้​มัน​เกิด​ขึ้น​ได้",
-        "NenetThaumaturgyShortTwo": "สิ่ง​ที่​ข้า​จะ​ทำ​ก็​คือ​สิ่ง​ที่​พวก​นั้น​สั่ง​มา",
-        "NenetThaumaturgyShortThree": "เปิด​ใจ​ของ​เจ้า..",
-        "NenetThaumaturgyLongOne": "ข้า​จะ​ทำลาย​ความคิด​ของ​พวก​นั้น เหมือน​กับ​ไข่​จิ้งจก​ที่​กำลัง​แตก",
-        "NenetThaumaturgyLongTwo": "ข้า​เกือบ​จะ​รับรู้​ความคิด​ของ​พวก​นั้น​ได้​แล้​ว...",
-        "NenetThaumaturgyLongThree": "อิส​รา เคย​กล่าว​ไว้​ว่า~ ความคิด​มัน​ก็​เหมือน​ฟันเฟือง​ที่​กำลัง​ทำงาน​ของ​เรา​นั่น​แหล​ะ...",
-        "NenetThaumaturgyShortLoudOne": "ตั้ง​สติ​เอาไ​ว้~!",
+        "NenetVaultShortAlarmThree": "จัดการอยู่!",
+        "NenetVaultLongAlarmOne": "เจ้า​ทำได้​น่า เนเนต​...",
+        "NenetVaultLongAlarmTwo": "ข้า​จะ​ทำ​สุด​ความ​สามารถ!",
+        "NenetVaultLongAlarmThree": "ข้า​ทำได้​!",
+        "NenetThaumaturgyShortOne": "ข้า​จะ​ทำให้​มัน​เกิด​ขึ้น​",
+        "NenetThaumaturgyShortTwo": "ข้า​จะ​สั่ง​การ​พวกมัน​ด้วย​ใจ​ข้า",
+        "NenetThaumaturgyShortThree": "เปิด​ใจ​ของ​เจ้า...",
+        "NenetThaumaturgyLongOne": "ข้า​จะ​ทำลายจิตใจของ​พวก​มัน เหมือน​กับ​ไข่​โรอ์​หลาย​ต่อ​หลาย​ใบ",
+        "NenetThaumaturgyLongTwo": "ข้า​เกือบ​​ได้ยิน​ความคิด​ของ​พวก​นั้น​ได้​แล้​ว...",
+        "NenetThaumaturgyLongThree": "ไอล่า​เคย​บอกว่า​จิตใจ​เป็น​เพียง​ฟัน​เฟือง​อีก​ระบบ​หนึ่ง​เท่านั้น",
+        "NenetThaumaturgyShortLoudOne": "กำลัง​ตั้ง​สติ​!",
         "NenetThaumaturgyShortLoudTwo": "ข้า​จะ​พยายาม",
-        "NenetThaumaturgyShortLoudThree": "ข้า​หวัง​ว่า​มัน​จะ​ใช้งาน​ได้",
-        "NenetThaumaturgyLongLoudOne": "ความ​มืดมัว​ของ​ข้า​จะ​กลืน​กิน​พวกนั้​น!",
-        "NenetThaumaturgyLongLoudTwo": "พว​กโ​ง่ๆ นี่​ควบคุม​ง่า​ย!",
-        "NenetThaumaturgyLongLoudThree": "กำลัง​มอง​ดู​ความคิด​ของ​พวกนั้​น!",
-        "HuckLockpickingOne": "การ​ล๊อก​แบบ​ทั่วไป​กา​กๆ ไม่​ใช่​ปัญหา​สำหรับ​ข้า​หรอก​กระจอก",
-        "HuckLockpickingTwo": "ข้า​น่ะ​ฝึกฝน​กับ​อะไร​แบบ​นี้​มา​เยอะ",
-        "HuckLockpickingThree": "จั​ดไ​ป!",
+        "NenetThaumaturgyShortLoudThree": "ข้า​หวัง​ว่า​จะ​ได้​ผล",
+        "NenetThaumaturgyLongLoudOne": "พวก​มัน​จะ​ได้​หมด​หวัง​แทน​ข้า​!",
+        "NenetThaumaturgyLongLoudTwo": "สมอง​ว่างๆ ก็​คุม​ได้​ง่ายๆ​!",
+        "NenetThaumaturgyLongLoudThree": "ส่อง​เข้าไป​ใน​ความ​คิด​พวก​มัน​อยู่​!",
+        "HuckLockpickingOne": "ล็อก​มาตรฐาน ไม่​น่า​จะ​ยาก​เกิน​ไป",
+        "HuckLockpickingTwo": "ข้า​เคย​ฝึกฝน​มา​กับ​ล็อก​แบบ​นี้​เป๊ะ",
+        "HuckLockpickingThree": "ครับผม",
         "HuckLockpickingFour": "ยุ่งยาก​นิดหน่อย แต่​ก็​ไม่​ใช่​ปัญหา",
-        "HuckLockpickingFive": "ข้า​จะ​ทำ​ใน​เรื่อง​เหี้​ยๆ​ที่​ข้า​ถนัด",
-        "HuckLockpickingSix": "ข้า​สามารถ​เปิด​มัน​ได้",
-        "HuckBruteforceOne": "ท่า​น!",
-        "HuckBruteforceTwo": "ฝึกฝน​มาก​เพื่อ​สิ่ง​นี้",
+        "HuckLockpickingFive": "ข้า​จะ​ทำให้​สุด​ความ​สามารถ",
+        "HuckLockpickingSix": "ข้าน่าจะ​เปิด​มัน​ได้",
+        "HuckBruteforceOne": "ครับผม!",
+        "HuckBruteforceTwo": "ฝึกฝน​มา​เพื่องาน​นี้",
         "HuckBruteforceThree": "ไม่​มี​ปัญหา",
-        "HuckBruteforceFour": "ยาก​แต่​ใช่​ว่า​จะ​เป็น​ไป​ไม่​ได้",
+        "HuckBruteforceFour": "ยาก ​แต่​ใช่​ว่า​จะ​เป็น​ไป​ไม่​ได้",
         "HuckBruteforceFive": "ปล่อย​เป็น​หน้าที่​ข้า​เอง",
-        "HuckBruteforceSix": "เหมือน​จะ​ยาก แต่​ดู​ไป​ดู​มาก​ก็​ไม่​ยาก",
-        "HuckDemolitionOne": "ไ​ด้ครั​บ!",
-        "HuckDemolitionTwo": "ปล่อย​เป็น​หน้าที่​ข้า​เอง",
-        "HuckDemolitionThree": "จุ​ดไ​ฟ!",
-        "HuckDemolitionFour": "ถอย​ห่าง​ออก​ไป​ดี​กว่า ไม่​งั้น​ศพ​อาจ​จะ​ไม่​สวย",
-        "HuckDemolitionFive": "ถอย​ไป​ใน​ระยะ​ที่​ปลอดภัย​ดี​กว่า",
-        "HuckDemolitionSix": "ระวัง​ตูด​ไว้ ขา​ต้องการ​ที่​จะ​ระเบิด​มัน",
+        "HuckBruteforceSix": "เหมือน​จะ​หนัก แต่​ไม่​หนัก​เกิน​ไป​หรอก",
+        "HuckDemolitionOne": "ได้ครับผม",
+        "HuckDemolitionTwo": "กำลัง​จุด​ระเบิด",
+        "HuckDemolitionThree": "จุ​ดชนวน!",
+        "HuckDemolitionFour": "ถอย​ห่าง​ออก​ไป​ดี​กว่า ไม่​งั้น​ศพ​ไม่​สวยแน่ๆ",
+        "HuckDemolitionFive": "ถอย​ไป​ใน​ระยะ​ที่​ปลอดภัย​เสีย",
+        "HuckDemolitionSix": "ระวัง​ให้​ดี ข้า​ต้อง​ระเบิด​มัน​ทิ้ง",
         "HuckLockpickingLoudOne": "ไม่​มีปัญ​หา!",
-        "HuckLockpickingLoudTwo": "ไ​ด้ครั​บ!",
-        "HuckLockpickingLoudThree": "กำลัง​ไป​ !",
-        "HuckLockpickingLoudFour": "ซื้อ​เวลา​ให้​ข้า​หน่อ​ย!",
-        "HuckLockpickingLoudFive": "กู​ทำ​เต็ม​ที่​แล้ว​ !",
-        "HuckLockpickingLoudSix": "ใ​ช่! ข้า​ได้​มัน​มา​แล้​ว!",
-        "HuckBruteforceLoudOne": "ใ​ช่!",
+        "HuckLockpickingLoudTwo": "ไ​ด้ครั​บผม!",
+        "HuckLockpickingLoudThree": "กำลัง​จัดการ!",
+        "HuckLockpickingLoudFour": "ขอเวลา​ให้​ข้า​หน่อ​ย!",
+        "HuckLockpickingLoudFive": "ข้า​จะ​ทำให้​เต็ม​ที่​!",
+        "HuckLockpickingLoudSix": "ได้! ข้า​จัดการ​เอง​!",
+        "HuckBruteforceLoudOne": "ได้!",
         "HuckBruteforceLoudTwo": "ท่า​น!",
-        "HuckBruteforceLoudThree": "ได้​แล้​ว!",
-        "HuckBruteforceLoudFour": "พระเจ้า ตาม​ที่​ข้าค​ำน​วน​เป๊ะ!",
-        "HuckBruteforceLoudFive": "ควร​จะ​งัด​สิ่ง​นี้​ออ​ก!",
-        "HuckBruteforceLoudSix": "ไม่​เอา​น่า​ทหาร มา​เลย!",
-        "HuckDemolitionLoudOne": "ท่า​น!",
-        "HuckDemolitionLoudTwo": "ใช่​ !",
-        "HuckDemolitionLoudThree": "ชัด​เจ​น!",
+        "HuckBruteforceLoudThree": "ได้​เลย!",
+        "HuckBruteforceLoudFour": "พระเจ้า ข้า​ว่า​ข้า​จัดการ​ได้​!",
+        "HuckBruteforceLoudFive": "ข้า​น่า​จะ​ยืด​เส้น​ยืด​สาย​ก่อน​มา​ทำงาน​นี้​!",
+        "HuckBruteforceLoudSix": "สู้​เข้าไป​สิ​ทหาร​! สู้​เข้าไป​!",
+        "HuckDemolitionLoudOne": "ครับผม!",
+        "HuckDemolitionLoudTwo": "ได้ครับ!",
+        "HuckDemolitionLoudThree": "ถอยห่าง!",
         "HuckDemolitionLoudFour": "ถอย​ออก​มา!",
-        "HuckDemolitionLoudFive": "ยก​เลิ​กคำสั่​ง!",
-        "HuckDemolitionLoudSix": "ถอย​มา ถอย​กลับ​มา!",
-        "NilesThaumaturgyShortOne": "ข้า​จะ​ทำให้​มัน​เป็น​แบบ​นั้น​แหละ",
+        "HuckDemolitionLoudFive": "ระเบิดกำลังทำงาน!",
+        "HuckDemolitionLoudSix": "ถอย​มา! ถอย​กลับ​มา!",
+        "NilesThaumaturgyShortOne": "ข้าจะทำให้เป็นเช่นนั้น",
         "NilesThaumaturgyShortTwo": "แน่นอน​",
-        "NilesThaumaturgyShortThree": "ตั้​งส​ติ...",
-        "NilesThaumaturgyLongOne": "My mind shall dwarf theirs.",
-        "NilesThaumaturgyLongTwo": "ข้า​คือ หุ่น​เหล็ก​ยักษ์",
-        "NilesThaumaturgyLongThree": "ปล่อย​ให้​ข้า ตั้ง​สติ​ก่อ​น..",
-        "NilesThaumaturgyShortAlarmOne": "ถูกต้อง​เสม​อ!",
+        "NilesThaumaturgyShortThree": "กำลังตั้​งส​ติ...",
+        "NilesThaumaturgyLongOne": "จิตของข้าย่อมอยู่เหนือกว่าพวกมัน",
+        "NilesThaumaturgyLongTwo": "จิตข้าย่อมเป็นยักษ์ใหญ่",
+        "NilesThaumaturgyLongThree": "ขอข้าตั้ง​สติ​ก่อ​น..",
+        "NilesThaumaturgyShortAlarmOne": "ได้ทันที!",
         "NilesThaumaturgyShortAlarmTwo": "ข้า​จะ​พยายาม​ลงมือ​ให้​เร็​ว!",
         "NilesThaumaturgyShortAlarmThree": "แน่​นอ​น!",
-        "NilesThaumaturgyLongAlarmOne": "ควบคุม​จิตใจ​มัน​เป็น​งาน​ศีล​ปะ​ที่​ละเอียด​อ่อ​น!",
-        "NilesThaumaturgyLongAlarmTwo": "ข้า​ลงมือ​เร็ว​ที่สุด​เท่า​ที่​จะ​เป็น​ไป​ได้​แล้​ว!",
-        "NilesThaumaturgyLongAlarmThree": "อ่าา ถ้า​ข้า​ทำ​ได้​อ่ะ​นะ",
-        "NilesDeceptionShortOne": "หลอกลวง​ได้​ง่าย",
-        "NilesDeceptionShortTwo": "ฝึก​การ​โกหก เริ่ม​จาก​การ​หลอก​ด้วย​สายตา",
-        "NilesDeceptionShortThree": "ดู​และ​จำ จำ​และ​นำ​ไป​ใช้",
+        "NilesThaumaturgyLongAlarmOne": "การควบคุม​จิตใจ​มัน​เป็น​ศาสตร์ศิลป์ที่​ละเอียด​อ่อ​น!",
+        "NilesThaumaturgyLongAlarmTwo": "ข้าจะลงมือให้เร็วเท่าที่จะได้!",
+        "NilesThaumaturgyLongAlarmThree": "แหวะ ข้า​ทำ​ก็ได้",
+        "NilesDeceptionShortOne": "หลอก​ได้​ง่าย​นัก",
+        "NilesDeceptionShortTwo": "การโกหกย่อมลวงหลอกกระทั่งสายตา",
+        "NilesDeceptionShortThree": "ดู​แล้ว​จำ จำ​แล้ว​นำ​ไป​ใช้",
         "NilesDeceptionLongOne": "พวก​นั้น​จะ​ไม่​สงสัย​ข้า​ด้วย​ซ้ำ",
-        "NilesDeceptionLongTwo": "เรื่อง​นี้​มัน​น่า​จะ​ง่าย​อย่าง​ที่​มัน​ควร​จะ​เป็น",
-        "NilesDeceptionLongThree": "มัน​ก็​เป็น​รูปแบบ​หนึ่ง​ของ​การ​ควบคุม​จิตใจ",
+        "NilesDeceptionLongTwo": "เรื่อง​นี้​มัน​น่า​จะ​ง่าย​นะ น่า​จะ​น่ะ",
+        "NilesDeceptionLongThree": "มัน​เป็นการ​ควบคุม​จิตใจ​อีก​วิธี​หนึ่ง​เท่านั้น",
         "NilesDeceptionShortAlarmOne": "ข้าจ​ะลอ​งด​ู!",
-        "NilesDeceptionShortAlarmTwo": "ไม่​เป็​นไ​ร!",
-        "NilesDeceptionShortAlarmThree": "ก​็ไ​ด้~!",
-        "NilesDeceptionLongAlarmOne": "นั่น​มัน​บ้าชั​ดๆ!",
+        "NilesDeceptionShortAlarmTwo": "ก็ได้!",
+        "NilesDeceptionShortAlarmThree": "ได้เลย!",
+        "NilesDeceptionLongAlarmOne": "นั่น​มัน​เละเทะจริงๆ!",
         "NilesDeceptionLongAlarmTwo": "มัน​น่าจ​ะยั​งไ​ด้ผ​ล!",
-        "NilesDeceptionLongAlarmThree": "ไม่​มีปัญ​หา~!"
+        "NilesDeceptionLongAlarmThree": "ไม่​มีปัญ​หา!"
       }
     }
   }
