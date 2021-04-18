@@ -1143,6 +1143,10 @@
         "Ветхий Реликварий"
       ],
       [
+        "ClassicTreasury_Vaal",
+        "Реликварий ваал"
+      ],
+      [
         "ZanaGauntlet",
         "[UNUSED] TEST ZANA GAUNTLET"
       ],
@@ -5159,6 +5163,10 @@
         "Священная роща"
       ],
       [
+        "HarvestLeagueBoss",
+        "Священная роща"
+      ],
+      [
         "ffa1_1",
         "Арена Сарна"
       ],
@@ -5959,6 +5967,10 @@
         ""
       ],
       [
+        "AnyUberTabTrial",
+        ""
+      ],
+      [
         "Hideout4_3",
         "Убежище в пещере"
       ],
@@ -6341,6 +6353,18 @@
       [
         "HideoutRitualLeague",
         "Убежище ритуалиста"
+      ],
+      [
+        "HideoutArenaMaven",
+        "Убежище горнила"
+      ],
+      [
+        "HideoutHasina",
+        "Убежище Хасины"
+      ],
+      [
+        "HideoutAzuriteCave",
+        "Азуритовое убежище"
       ],
       [
         "pvpTown",
@@ -6817,6 +6841,18 @@
       [
         "MavenElderGuardian4",
         "Искупитель"
+      ],
+      [
+        "UltimatumArena",
+        "Арена Утцааля"
+      ],
+      [
+        "UltimatumArenaEndgame",
+        "Арена Утцааля"
+      ],
+      [
+        "UltimatumBossArena",
+        "Башня испытаний"
       ]
     ]
   },
@@ -9020,8 +9056,16 @@
         "Активация не удалась. Вы не находитесь на требуемом этапе задания."
       ],
       [
+        "MapDeviceFull",
+        "Ваша машина картоходца полна."
+      ],
+      [
         "AccountNotVerified",
-        "Account is not verified."
+        "Учетная запись не подтверждена."
+      ],
+      [
+        "UltimatumTrialStarted",
+        "Вы не можете присоединиться к уже начатому испытанию."
       ]
     ]
   },
@@ -53077,8 +53121,2644 @@
         "Как долго мне ещё придётся ждать?"
       ],
       [
+        "TrialmasterTutorialGreeting",
+        "Подойди, претендент."
+      ],
+      [
+        "TrialmasterTutorialIntro",
+        "В последнее время много изгнанников приходило испытать свои силы. Прими участие в испытаниях Хаоса и следуй за своей судьбой. Ты можешь умереть здесь и сейчас или когда-нибудь бросить вызов самим богам."
+      ],
+      [
+        "TrialmasterTutorialAltarUnlocked",
+        "Сделай свой выбор."
+      ],
+      [
+        "TrialmasterTutorialAltarClicked",
+        "Срази волны врагов. Довольно просто."
+      ],
+      [
+        "TrialmasterTutorialPlayerWalksAway",
+        "Не участвовать – тоже выбор."
+      ],
+      [
+        "TrialmasterTutorialPlayerLoses",
+        "Твой потенциал до сих пор не раскрыт."
+      ],
+      [
+        "TrialmasterTutorialContinueOrStopOne",
+        "Достойный результат. Теперь перед тобой другой выбор: усложнить испытание или уйти."
+      ],
+      [
+        "TrialmasterTutorialStopChosen",
+        "Надёжный выбор."
+      ],
+      [
+        "TrialmasterTutorialContinueOrStopTwo",
+        "Выбор будущего, как и предыдущие. Следующее испытание будет ещё сложнее."
+      ],
+      [
+        "TrialmasterTutorialStopChosenTwo",
+        "Ожидаемый выбор."
+      ],
+      [
+        "TrialmasterTutorialContinueOrStopThree",
+        "Сохранишь ли ты свою награду или продолжишь погоню за большим богатством?"
+      ],
+      [
+        "TrialmasterTutorialStopChosenThree",
+        "Пусть будет так. Досадно."
+      ],
+      [
+        "TrialmasterTutorialFullWin",
+        "Ты хорошо показал себя, претендент. Наслаждайся плодами своей удачи и мастерства. Мы ещё встретимся."
+      ],
+      [
+        "TrialmasterSeeEachOtherAgainShout",
+        "В будущем тебя ждут новые испытания. Не забывай об этом."
+      ],
+      [
         "MavenFinalFightDualIceBarrage",
         "Каскад боли!"
+      ],
+      [
+        "TrialmasterFinalEncounterEffortRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterEffort2",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterEffort3",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterSpellEffortRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterSpellEffort2",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterSpellEffort3",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterGoesCasterStanceRandom",
+        "Хаос, помоги мне!"
+      ],
+      [
+        "TrialmasterFinalEncounterGoesCasterStance2",
+        "Хаос, помоги мне!"
+      ],
+      [
+        "TrialmasterFinalEncounterGoesCasterStance3",
+        "Хаос, помоги мне!"
+      ],
+      [
+        "TrialmasterFinalEncounterCleaveAttackRandom",
+        "Сразись со мной!"
+      ],
+      [
+        "TrialmasterFinalEncounterCleaveAttack2",
+        "Сразись со мной!"
+      ],
+      [
+        "TrialmasterFinalEncounterCleaveAttack3",
+        "Сразись со мной!"
+      ],
+      [
+        "TrialmasterFinalEncounterSlamAttackRandom",
+        "Во имя Хаоса!"
+      ],
+      [
+        "TrialmasterFinalEncounterSlamAttack2",
+        "Во имя Хаоса!"
+      ],
+      [
+        "TrialmasterFinalEncounterSlamAttack3",
+        "Во имя Хаоса!"
+      ],
+      [
+        "TrialmasterFinalEncounterShockwaveSlamRandom",
+        "Почувствуй его силу!"
+      ],
+      [
+        "TrialmasterFinalEncounterShockwaveSlam2",
+        "Почувствуй его силу!"
+      ],
+      [
+        "TrialmasterFinalEncounterShockwaveSlam3",
+        "Почувствуй его силу!"
+      ],
+      [
+        "TrialmasterFinalEncounterTectonicSlamRandom",
+        "Пади предо мной!"
+      ],
+      [
+        "TrialmasterFinalEncounterTectonicSlam2",
+        "Пади предо мной!"
+      ],
+      [
+        "TrialmasterFinalEncounterTectonicSlam3",
+        "Пади предо мной!"
+      ],
+      [
+        "TrialmasterFinalEncounterChaosShrineInMeleeRandom",
+        "Искушение для дурака."
+      ],
+      [
+        "TrialmasterFinalEncounterChaosShrineInMelee2",
+        "Искушение для дурака."
+      ],
+      [
+        "TrialmasterFinalEncounterChaosShrineInMelee3",
+        "Искушение для дурака."
+      ],
+      [
+        "TrialmasterFinalEncounterThrowWeaponAttackRandom",
+        "Я сокрушу тебя!"
+      ],
+      [
+        "TrialmasterFinalEncounterThrowWeaponAttack2",
+        "Я сокрушу тебя!"
+      ],
+      [
+        "TrialmasterFinalEncounterThrowWeaponAttack3",
+        "Я сокрушу тебя!"
+      ],
+      [
+        "TrialmasterFinalEncounterOmegaProjectileCastRandom",
+        "От судьбы не уйдёшь."
+      ],
+      [
+        "TrialmasterFinalEncounterOmegaProjectileCast2",
+        "От судьбы не уйдёшь."
+      ],
+      [
+        "TrialmasterFinalEncounterOmegaProjectileCast3",
+        "От судьбы не уйдёшь."
+      ],
+      [
+        "TrialmasterFinalEncounterSummonTetherSpikeCastRandom",
+        "Стой смирно!"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonTetherSpikeCast2",
+        "Стой смирно!"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonTetherSpikeCast3",
+        "Стой смирно!"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonChaosShrineInCasterRandom",
+        "Прими же."
+      ],
+      [
+        "TrialmasterFinalEncounterSummonChaosShrineInCaster2",
+        "Прими же."
+      ],
+      [
+        "TrialmasterFinalEncounterSummonChaosShrineInCaster3",
+        "Прими же."
+      ],
+      [
+        "TrialmasterFinalEncounterSummonWeaponRandom",
+        "Сила Хаоса!"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonWeapon2",
+        "Сила Хаоса!"
+      ],
+      [
+        "TrialmasterFinalEncounterSummonWeapon3",
+        "Сила Хаоса!"
+      ],
+      [
+        "TrialmasterFinalEncounter75healthRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounter50healthRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounter25healthRandom",
+        ""
+      ],
+      [
+        "TrialmasterFinalEncounterDefeatedRandom",
+        "Мое служение... наконец-то закончилось..."
+      ],
+      [
+        "TrialmasterFinalEncounterPostDefeatedRandom",
+        "...и мое служение продолжается. Хаос смеется, смертный, и удача благоволит тебе."
+      ],
+      [
+        "TrialmasterFinalEncounterPlayerDiedTauntRandom",
+        ""
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallengeRandom",
+        "Убей их всех."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge2",
+        "Убей их всех."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge3",
+        "Убей их всех."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge4",
+        "Сокруши всё."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge5",
+        "Сокруши всё."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge6",
+        "Сокруши всё."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge7",
+        "Не оставляй живых."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge8",
+        "Не оставляй живых."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge9",
+        "Не оставляй живых."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge10",
+        "Принеси смерть."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge11",
+        "Принеси смерть."
+      ],
+      [
+        "TrialmasterChoiceMadeKillChallenge12",
+        "Принеси смерть."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallengeRandom",
+        "Защити своё."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge2",
+        "Защити своё."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge3",
+        "Защити своё."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge4",
+        "Укрепи позицию."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge5",
+        "Укрепи позицию."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge6",
+        "Укрепи позицию."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge7",
+        "Не сдавайся... если сможешь."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge8",
+        "Не сдавайся... если сможешь."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge9",
+        "Не сдавайся... если сможешь."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge10",
+        "Обуздай волну."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge11",
+        "Обуздай волну."
+      ],
+      [
+        "TrialmasterChoiceMadeProtectChallenge12",
+        "Обуздай волну."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallengeRandom",
+        "Постарайся не умереть."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge2",
+        "Постарайся не умереть."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge3",
+        "Постарайся не умереть."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge4",
+        "Живи."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge5",
+        "Живи."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge6",
+        "Живи."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge7",
+        "Цепляйся за жизнь."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge8",
+        "Цепляйся за жизнь."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge9",
+        "Цепляйся за жизнь."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge10",
+        "Оправдай мои ожидания."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge11",
+        "Оправдай мои ожидания."
+      ],
+      [
+        "TrialmasterChoiceMadeSurviveChallenge12",
+        "Оправдай мои ожидания."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallengeRandom",
+        "Стань завоевателем!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge2",
+        "Стань завоевателем!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge3",
+        "Стань завоевателем!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge4",
+        "Забери своё."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge5",
+        "Забери своё."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge6",
+        "Забери своё."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge7",
+        "Не позволяй себя остановить."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge8",
+        "Не позволяй себя остановить."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge9",
+        "Не позволяй себя остановить."
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge10",
+        "Покори всех!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge11",
+        "Покори всех!"
+      ],
+      [
+        "TrialmasterChoiceMadeConquerChallenge12",
+        "Покори всех!"
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallengeRandom",
+        "Иди и уничтожай."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge2",
+        "Иди и уничтожай."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge3",
+        "Иди и уничтожай."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge4",
+        "Уничтожь то, что ищешь."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge5",
+        "Уничтожь то, что ищешь."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge6",
+        "Уничтожь то, что ищешь."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge7",
+        "Разрушитель, начинай!"
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge8",
+        "Разрушитель, начинай!"
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge9",
+        "Разрушитель, начинай!"
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge10",
+        "Разрушь всё."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge11",
+        "Разрушь всё."
+      ],
+      [
+        "TrialmasterChoiceMadeDestroyChallenge12",
+        "Разрушь всё."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtTenRuinRandom",
+        "Ты сгинешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtTenRuin2",
+        "Ты сгинешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtTenRuin3",
+        "Ты сгинешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterRandom",
+        "Гибель ищет тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunter2",
+        "Гибель ищет тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunter3",
+        "Гибель ищет тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "Гибель настигает внезапно."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin2",
+        "Гибель настигает внезапно."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin3",
+        "Гибель настигает внезапно."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin4",
+        "Бремя гибели вдвое тяжелее."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin5",
+        "Бремя гибели вдвое тяжелее."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuin6",
+        "Бремя гибели вдвое тяжелее."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTwoTypesApplyRuinRandom",
+        "Гибель окружает тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTwoTypesApplyRuin2",
+        "Гибель окружает тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTwoTypesApplyRuin3",
+        "Гибель окружает тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesToRuinPhantasmsRandom",
+        "Гибель прячется в каждом углу."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesToRuinPhantasms2",
+        "Гибель прячется в каждом углу."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesToRuinPhantasms3",
+        "Гибель прячется в каждом углу."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBeforeACertainTimeRandom",
+        "Лучше будь быстрее..."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBeforeACertainTime2",
+        "Лучше будь быстрее..."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBeforeACertainTime3",
+        "Лучше будь быстрее..."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBuffsExpireFasterRandom",
+        "Время – твой враг."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBuffsExpireFaster2",
+        "Время – твой враг."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBuffsExpireFaster3",
+        "Время – твой враг."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTimeIsShorterRandom",
+        "Времени всегда не хватает."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTimeIsShorter2",
+        "Времени всегда не хватает."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeTimeIsShorter3",
+        "Времени всегда не хватает."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseChargesEverySecondRandom",
+        "Твой успех клонится к закату."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseChargesEverySecond2",
+        "Твой успех клонится к закату."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseChargesEverySecond3",
+        "Твой успех клонится к закату."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVulnRandom",
+        "Смерть отвечает тебе тем же."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln2",
+        "Смерть отвечает тебе тем же."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln3",
+        "Смерть отвечает тебе тем же."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln4",
+        "Никакой защиты не хватит."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln5",
+        "Никакой защиты не хватит."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeEscalatingVuln6",
+        "Никакой защиты не хватит."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercentRandom",
+        "Смерть уже склонилась над тобой."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent2",
+        "Смерть уже склонилась над тобой."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent3",
+        "Смерть уже склонилась над тобой."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent4",
+        "Ты более хрупок, чем думаешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent5",
+        "Ты более хрупок, чем думаешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent6",
+        "Ты более хрупок, чем думаешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFasterRandom",
+        "Смерть быстра."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster2",
+        "Смерть быстра."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster3",
+        "Смерть быстра."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster4",
+        "Слабость пронизывает твои кости."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster5",
+        "Слабость пронизывает твои кости."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster6",
+        "Слабость пронизывает твои кости."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpRandom",
+        "Твои враги ускорились."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp2",
+        "Твои враги ускорились."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp3",
+        "Твои враги ускорились."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp4",
+        "Прилив смерти стремителен."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp5",
+        "Прилив смерти стремителен."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUp6",
+        "Прилив смерти стремителен."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeedRandom",
+        "Скорое сопротивление."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed2",
+        "Скорое сопротивление."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed3",
+        "Скорое сопротивление."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed4",
+        "Они идут очень быстро."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed5",
+        "Они идут очень быстро."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed6",
+        "Они идут очень быстро."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFasterRandom",
+        "Ускорение за ускорением."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster2",
+        "Ускорение за ускорением."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster3",
+        "Ускорение за ускорением."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster4",
+        "Они убыстряются сверх меры."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster5",
+        "Они убыстряются сверх меры."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster6",
+        "Они убыстряются сверх меры."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryRandom",
+        "\r\n\r\nБорись с замедлением своего сердца."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecovery2",
+        "\r\n\r\nБорись с замедлением своего сердца."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecovery3",
+        "\r\n\r\nБорись с замедлением своего сердца."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesTierTwoRandom",
+        "Чувствуешь, как смерть обвивается вокруг твоего сердца?"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesTierTwo2",
+        "Чувствуешь, как смерть обвивается вокруг твоего сердца?"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesTierTwo3",
+        "Чувствуешь, как смерть обвивается вокруг твоего сердца?"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryStartTwentyRandom",
+        "Твое сердце уже бьётся медленнее."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryStartTwenty2",
+        "Твое сердце уже бьётся медленнее."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryStartTwenty3",
+        "Твое сердце уже бьётся медленнее."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDealNoDamageSometimesRandom",
+        "Твои артерии сужаются."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDealNoDamageSometimes2",
+        "Твои артерии сужаются."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDealNoDamageSometimes3",
+        "Твои артерии сужаются."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFasterRandom",
+        "Твоя кровь слабеет."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster2",
+        "Твоя кровь слабеет."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster3",
+        "Твоя кровь слабеет."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster4",
+        "Смерть растекается по твоим венам."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster5",
+        "Смерть растекается по твоим венам."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster6",
+        "Смерть растекается по твоим венам."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaRandom",
+        "Удушающие пары ищут живых."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma2",
+        "Удушающие пары ищут живых."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma3",
+        "Удушающие пары ищут живых."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma4",
+        "Избегай испарений, если сможешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma5",
+        "Избегай испарений, если сможешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasma6",
+        "Избегай испарений, если сможешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLargerRandom",
+        "Испарения распространяются."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger2",
+        "Испарения распространяются."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger3",
+        "Испарения распространяются."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger4",
+        "Редкие глотки свежего воздуха."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger5",
+        "Редкие глотки свежего воздуха."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger6",
+        "Редкие глотки свежего воздуха."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFasterRandom",
+        "От испарений не скрыться."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster2",
+        "От испарений не скрыться."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster3",
+        "От испарений не скрыться."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster4",
+        "Загрязнение быстро разносится по ветру."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster5",
+        "Загрязнение быстро разносится по ветру."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster6",
+        "Загрязнение быстро разносится по ветру."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsRandom",
+        "Убей их среди огней."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals2",
+        "Убей их среди огней."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals3",
+        "Убей их среди огней."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals4",
+        "Огонь ищет что пожелает."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals5",
+        "Огонь ищет что пожелает."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystals6",
+        "Огонь ищет что пожелает."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFasterRandom",
+        "Ветер плетёт заговор с пламенем."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster2",
+        "Ветер плетёт заговор с пламенем."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster3",
+        "Ветер плетёт заговор с пламенем."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster4",
+        "Пламя несётся к тебе."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster5",
+        "Пламя несётся к тебе."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster6",
+        "Пламя несётся к тебе."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThirdRandom",
+        "Пламя порождает пламя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird2",
+        "Пламя порождает пламя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird3",
+        "Пламя порождает пламя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird4",
+        "Пламя всегда растёт."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird5",
+        "Пламя всегда растёт."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireCrystalsThird6",
+        "Пламя всегда растёт."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdRandom",
+        "Мёртвые тянутся ледяной хваткой."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedCold2",
+        "Мёртвые тянутся ледяной хваткой."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedCold3",
+        "Мёртвые тянутся ледяной хваткой."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesRandom",
+        "\r\n\r\nМесть и правда холодна."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpines2",
+        "\r\n\r\nМесть и правда холодна."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpines3",
+        "\r\n\r\nМесть и правда холодна."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesLargerRandom",
+        "Холодная хватка смерти неизбежна."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesLarger2",
+        "Холодная хватка смерти неизбежна."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesLarger3",
+        "Холодная хватка смерти неизбежна."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdTwoRandom",
+        "Ненависть смерти хватается за любую жизнь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdTwo2",
+        "Ненависть смерти хватается за любую жизнь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdTwo3",
+        "Ненависть смерти хватается за любую жизнь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesMoreRandom",
+        "Ненависть порождает ненависть. "
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesMore2",
+        "Ненависть порождает ненависть. "
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeIceSpinesMore3",
+        "Ненависть порождает ненависть. "
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdThreeRandom",
+        "Будь осторожен, убивая быстро..."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdThree2",
+        "Будь осторожен, убивая быстро..."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnusedColdThree3",
+        "Будь осторожен, убивая быстро..."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesRandom",
+        "Приближается буря."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes2",
+        "Приближается буря."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes3",
+        "Приближается буря."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes4",
+        "Спускается молния."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes5",
+        "Спускается молния."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunes6",
+        "Спускается молния."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFasterRandom",
+        "Шторм настигает быстро."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster2",
+        "Шторм настигает быстро."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster3",
+        "Шторм настигает быстро."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster4",
+        "Молнию мало кто ждёт."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster5",
+        "Молнию мало кто ждёт."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster6",
+        "Молнию мало кто ждёт."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMoreRandom",
+        "Молния всегда ударяет дважды."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore2",
+        "Молния всегда ударяет дважды."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore3",
+        "Молния всегда ударяет дважды."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore4",
+        "Гром и молнии повсюду."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore5",
+        "Гром и молнии повсюду."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormRunesMore6",
+        "Гром и молнии повсюду."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlamespeakerRandom",
+        "Твои враги приносят летнее пламя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlamespeaker2",
+        "Твои враги приносят летнее пламя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlamespeaker3",
+        "Твои враги приносят летнее пламя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireTotemRandom",
+        "Пламя лета горит изнутри."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireTotem2",
+        "Пламя лета горит изнутри."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFireTotem3",
+        "Пламя лета горит изнутри."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeakerRandom",
+        "Твои враги несут ненависть зимы."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker2",
+        "Твои враги несут ненависть зимы."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker3",
+        "Твои враги несут ненависть зимы."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker4",
+        "Поле битвы, охлаждённое ненавистью зимы."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker5",
+        "Поле битвы, охлаждённое ненавистью зимы."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFrostspeaker6",
+        "Поле битвы, охлаждённое ненавистью зимы."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeakerRandom",
+        "Твои враги приносят гром весны."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker2",
+        "Твои враги приносят гром весны."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker3",
+        "Твои враги приносят гром весны."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker4",
+        "Весенний гром. Сам гнев."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker5",
+        "Весенний гром. Сам гнев."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeStormspeaker6",
+        "Весенний гром. Сам гнев."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVoidspeakerRandom",
+        "Твои враги несут безумие ночи."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVoidspeaker2",
+        "Твои враги несут безумие ночи."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeVoidspeaker3",
+        "Твои враги несут безумие ночи."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatchesRandom",
+        "Безумие ночи истощает всякую надежду."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatches2",
+        "Безумие ночи истощает всякую надежду."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnhallowedPatches3",
+        "Безумие ночи истощает всякую надежду."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadePhysicalTotemRandom",
+        "Сталь и боль."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadePhysicalTotem2",
+        "Сталь и боль."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadePhysicalTotem3",
+        "Сталь и боль."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeShardspeakerRandom",
+        "Шрапнель и осколки в избытке."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeShardspeaker2",
+        "Шрапнель и осколки в избытке."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeShardspeaker3",
+        "Шрапнель и осколки в избытке."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesSecondTierRandom",
+        "Безжалостное нападение."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesSecondTier2",
+        "Безжалостное нападение."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesSecondTier3",
+        "Безжалостное нападение."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesThirdTierRandom",
+        "Разорвись в клочья."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesThirdTier2",
+        "Разорвись в клочья."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeBladesThirdTier3",
+        "Разорвись в клочья."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelayRandom",
+        "Шагай быстрее, чтобы взрывы тебя не прикончили."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay2",
+        "Шагай быстрее, чтобы взрывы тебя не прикончили."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay3",
+        "Шагай быстрее, чтобы взрывы тебя не прикончили."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay4",
+        "Они хотят удивить тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay5",
+        "Они хотят удивить тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay6",
+        "Они хотят удивить тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsRandom",
+        "Остерегайся укусов пленённого зверя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeasts2",
+        "Остерегайся укусов пленённого зверя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeasts3",
+        "Остерегайся укусов пленённого зверя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSmallerArenaRandom",
+        "Заблудишься и найдёшь боль."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSmallerArena2",
+        "Заблудишься и найдёшь боль."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeSmallerArena3",
+        "Заблудишься и найдёшь боль."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMoreRandom",
+        "На задворках голодная природа."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore2",
+        "На задворках голодная природа."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore3",
+        "На задворках голодная природа."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore4",
+        "Голодные звери кишат вокруг."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore5",
+        "Голодные звери кишат вокруг."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore6",
+        "Голодные звери кишат вокруг."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore7",
+        "Орда голодных зверей."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore8",
+        "Орда голодных зверей."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsMore9",
+        "Орда голодных зверей."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFasterRandom",
+        "Голод порождает жестокость."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster2",
+        "Голод порождает жестокость."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster3",
+        "Голод порождает жестокость."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster4",
+        "Быстрые челюсти быстро справляются с добычей."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster5",
+        "Быстрые челюсти быстро справляются с добычей."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeChainedBeastsFaster6",
+        "Быстрые челюсти быстро справляются с добычей."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecoveryRandom",
+        "Бремя на душе."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecovery2",
+        "Бремя на душе."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecovery3",
+        "Бремя на душе."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecoveryTwoRandom",
+        "Сердце и дух отягощены."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecoveryTwo2",
+        "Сердце и дух отягощены."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReducedRecoveryTwo3",
+        "Сердце и дух отягощены."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksHinderRandom",
+        "Ты будешь страдать от собственной желчи."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksHinder2",
+        "Ты будешь страдать от собственной желчи."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksHinder3",
+        "Ты будешь страдать от собственной желчи."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeCurseReflectRandom",
+        "Эхо твоей брани."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeCurseReflect2",
+        "Эхо твоей брани."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeCurseReflect3",
+        "Эхо твоей брани."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamageRandom",
+        "Твои мысли трещат болью."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage2",
+        "Твои мысли трещат болью."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage3",
+        "Твои мысли трещат болью."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage4",
+        "В тебе притаилась молния."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage5",
+        "В тебе притаилась молния."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeManaCostAsDamage6",
+        "В тебе притаилась молния."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseChargesRandom",
+        "Кровь горчит."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseCharges2",
+        "Кровь горчит."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLoseCharges3",
+        "Кровь горчит."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksCancelEachOtherRandom",
+        "Твоя кровь предаёт тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksCancelEachOther2",
+        "Твоя кровь предаёт тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFlasksCancelEachOther3",
+        "Твоя кровь предаёт тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLessAOELessProjSpeedRandom",
+        "Ты метишь слишком высоко."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLessAOELessProjSpeed2",
+        "Ты метишь слишком высоко."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeLessAOELessProjSpeed3",
+        "Ты метишь слишком высоко."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnluckyCritRandom",
+        "Познай лишения."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnluckyCrit2",
+        "Познай лишения."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeUnluckyCrit3",
+        "Познай лишения."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReflectProjectilesRandom",
+        "Твои же залпы оборачиваются против тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReflectProjectiles2",
+        "Твои же залпы оборачиваются против тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeReflectProjectiles3",
+        "Твои же залпы оборачиваются против тебя."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeYourAurasAffectEnemiesRandom",
+        "Столкнись с тем, что испускаешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeYourAurasAffectEnemies2",
+        "Столкнись с тем, что испускаешь."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeYourAurasAffectEnemies3",
+        "Столкнись с тем, что испускаешь."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOneRandom",
+        "Возвращение претендента на один раунд."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne2",
+        "Возвращение претендента на один раунд."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne3",
+        "Возвращение претендента на один раунд."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne4",
+        "Это будет быстро..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne5",
+        "Это будет быстро..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne6",
+        "Это будет быстро..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne7",
+        "Как же ты повторишь столь выдающееся прошлое выступление?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundOne8",
+        "Как же ты повторишь столь выдающееся прошлое выступление?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwoRandom",
+        "Я искренне надеюсь, что ты намереваешься продержаться дольше двух раундов."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo2",
+        "Я искренне надеюсь, что ты планируешь продержаться дольше двух раундов."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo3",
+        "Начни хотя бы третий раунд в этот раз."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo4",
+        "Начни хотя бы третий раунд в этот раз."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo5",
+        "Начни хотя бы третий раунд в этот раз."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo6",
+        "Я жду больших достижений."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo7",
+        "Я жду больших достижений."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundTwo8",
+        "Я жду больших достижений."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThreeRandom",
+        "Попробуй в этот раз зайти дальше трёх раундов."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree2",
+        "Попробуй в этот раз зайти дальше трёх раундов."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree3",
+        "Попробуй в этот раз зайти дальше трёх раундов."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree4",
+        "Возвращение претендента с тремя раундами..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree5",
+        "Возвращение претендента с тремя раундами..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundThree6",
+        "Возвращение претендента с тремя раундами..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFourRandom",
+        "Четыре раунда должно быть не сложно преодолеть."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour2",
+        "Четыре раунда должно быть не сложно преодолеть."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour3",
+        "Четыре раунда должно быть не сложно преодолеть."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour4",
+        "Всего четыре раунда славы не принесут."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour5",
+        "Всего четыре раунда славы не принесут."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFour6",
+        "Всего четыре раунда славы не принесут."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFiveRandom",
+        "Прошлый раз был не дальше пятого раунда. Хочешь ещё?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive2",
+        "Прошлый раз был не дальше пятого раунда. Хочешь ещё?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive3",
+        "Прошлый раз был не дальше пятого раунда. Хочешь ещё?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive4",
+        "Претендент с пятью раундами возвращается..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive5",
+        "Претендент с пятью раундами возвращается..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive6",
+        "Претендент с пятью раундами возвращается..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive7",
+        "О, это претендент с пятью раундами."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundFive8",
+        "О, это претендент с пятью раундами."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSixRandom",
+        "<if:MS>{В прошлый раз ты остановился всего на шести. Чего время терять?}<elif:FS>{В прошлый раз ты остановилась всего на шести. Чего время терять?}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix2",
+        "<if:MS>{В прошлый раз ты остановился всего на шести. Чего время терять?}<elif:FS>{В прошлый раз ты остановилась всего на шести. Чего время терять?}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix3",
+        "<if:MS>{В прошлый раз ты остановился всего на шести. Чего время терять?}<elif:FS>{В прошлый раз ты остановилась всего на шести. Чего время терять?}"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix4",
+        "Шесть раундов? Попробуй на сей раз дойти до конца."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix5",
+        "Шесть раундов? Попробуй на сей раз дойти до конца."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSix6",
+        "Шесть раундов? Попробуй на сей раз дойти до конца."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSevenRandom",
+        "Сомневаюсь, что ты снова доберёшься до семи раундов."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven2",
+        "Сомневаюсь, что ты снова доберёшься до семи раундов."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven3",
+        "Сомневаюсь, что ты снова доберёшься до семи раундов."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven4",
+        "Хаос желал бы увидеть, как ты преодолеешь раунд семь..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven5",
+        "Хаос желал бы увидеть, как ты преодолеешь раунд семь..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundSeven6",
+        "Хаос желал бы увидеть, как ты преодолеешь раунд семь..."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEightRandom",
+        "Восемь раундов были... достойны."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight2",
+        "Восемь раундов были... достойны."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight3",
+        "Восемь раундов были... достойны."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight4",
+        "Восемь раундов! Хаос смотрит с нетерпением."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight5",
+        "Восемь раундов! Хаос смотрит с нетерпением."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundEight6",
+        "Восемь раундов! Хаос смотрит с нетерпением."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNineRandom",
+        "Досадно было в прошлый раз оказаться так близко?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine2",
+        "Досадно было в прошлый раз оказаться так близко?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine3",
+        "Досадно было в прошлый раз оказаться так близко?"
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine4",
+        "Девять раундов, но победа всё равно оказалась недосягаема."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine5",
+        "Девять раундов, но победа всё равно оказалась недосягаема."
+      ],
+      [
+        "TrialmasterPlayerTookRewardLastTimeRoundNine6",
+        "Девять раундов, но победа всё равно оказалась недосягаема."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLossesRandom",
+        "Ты никогда не выигрываешь, но продолжаешь пытаться..."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses2",
+        "Ты никогда не выигрываешь, но продолжаешь пытаться..."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses3",
+        "Ты, видимо, любишь страдать."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses4",
+        "Ты, видимо, любишь страдать."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses5",
+        "Упорство – твоё единственное достоинство."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses6",
+        "Упорство – твоё единственное достоинство."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses7",
+        "Ты знаешь, что цель состоит в победе, да?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses8",
+        "Ты знаешь, что цель состоит в победе, да?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses9",
+        "По-прежнему собираешься участвовать в моих испытаниях?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreLosses10",
+        "По-прежнему собираешься участвовать в моих испытаниях?"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLossesRandom",
+        "Хочешь снова проиграть?"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses2",
+        "Хочешь снова проиграть?"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses3",
+        "Да, приходи провалить испытание. Продуктивно."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses4",
+        "Да, приходи провалить испытание. Продуктивно."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses5",
+        "Да, приходи провалить испытание. Продуктивно."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses6",
+        "Ряд поражений. Слегка постыдно."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses7",
+        "Ряд поражений. Слегка постыдно."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses8",
+        "Ряд поражений. Слегка постыдно."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses9",
+        "Твоя гордость требует поквитаться, претендент."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses10",
+        "Твоя гордость требует поквитаться, претендент."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourLosses11",
+        "Твоя гордость требует поквитаться, претендент."
+      ],
+      [
+        "TrialmasterMoodBeginOneLossRandom",
+        "Одного поражения не следует стыдиться."
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss2",
+        "Одного поражения не следует стыдиться."
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss3",
+        "Поправь уязвлённую гордость, претендент."
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss4",
+        "Поправь уязвлённую гордость, претендент."
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss5",
+        "Будет ли это второй проигрыш подряд?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss6",
+        "Будет ли это второй проигрыш подряд?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss7",
+        "Задето твоё самолюбие?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss8",
+        "Задето твоё самолюбие?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss9",
+        "Смоешь ли ты с себя следы неудачи?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss10",
+        "Смоешь ли ты с себя следы неудачи?"
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss11",
+        "Настал твой шанс вернуть себе победу."
+      ],
+      [
+        "TrialmasterMoodBeginOneLoss12",
+        "Настал твой шанс вернуть себе победу."
+      ],
+      [
+        "TrialmasterMoodBeginOneWinRandom",
+        "Сможешь ли ты победить дважды подряд?"
+      ],
+      [
+        "TrialmasterMoodBeginOneWin2",
+        "Сможешь ли ты победить дважды подряд?"
+      ],
+      [
+        "TrialmasterMoodBeginOneWin3",
+        "Докажи, что прошлая победа была не случайна."
+      ],
+      [
+        "TrialmasterMoodBeginOneWin4",
+        "Докажи, что прошлая победа была не случайна."
+      ],
+      [
+        "TrialmasterMoodBeginOneWin5",
+        "<if:MS>{По теории вероятности ты должен побеждать... иногда.}<elif:FS>{По теории вероятности ты должна побеждать... иногда.}"
+      ],
+      [
+        "TrialmasterMoodBeginOneWin6",
+        "<if:MS>{По теории вероятности ты должен побеждать... иногда.}<elif:FS>{По теории вероятности ты должна побеждать... иногда.}"
+      ],
+      [
+        "TrialmasterMoodBeginOneWin7",
+        "<if:MS>{Ты победил. Единожды. Не забегай вперёд.}<elif:FS>{Ты победила. Единожды. Не забегай вперёд.}"
+      ],
+      [
+        "TrialmasterMoodBeginOneWin8",
+        "<if:MS>{Ты победил. Единожды. Не забегай вперёд.}<elif:FS>{Ты победила. Единожды. Не забегай вперёд.}"
+      ],
+      [
+        "TrialmasterMoodBeginOneWin9",
+        "<if:MS>{Ты победил. Единожды. Не забегай вперёд.}<elif:FS>{Ты победила. Единожды. Не забегай вперёд.}"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWinsRandom",
+        "Твоя череда побед закончится здесь."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins2",
+        "Твоя череда побед закончится здесь."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins3",
+        "<if:MS>{Ты побеждал, но сможешь ли впредь?}<elif:FS>{Ты побеждала, но сможешь ли впредь?}"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins4",
+        "<if:MS>{Ты побеждал, но сможешь ли впредь?}<elif:FS>{Ты побеждала, но сможешь ли впредь?}"
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins5",
+        "Я надеюсь, тебе принесла удовольствие твоя череда побед."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins6",
+        "Я надеюсь, тебе принесла удовольствие твоя череда побед."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins7",
+        "Я надеюсь, тебе принесла удовольствие твоя череда побед."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins8",
+        "Вскоре удача изменит тебе, претендент."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins9",
+        "Вскоре удача изменит тебе, претендент."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins10",
+        "Вскоре удача изменит тебе, претендент."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins11",
+        "В этом испытании ты можешь потерпеть поражение."
+      ],
+      [
+        "TrialmasterMoodBeginTwoToFourWins12",
+        "В этом испытании ты можешь потерпеть поражение."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWinsRandom",
+        "Дальше ты побежать не будешь."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins2",
+        "Дальше ты побежать не будешь."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins3",
+        "В этом испытании ты падёшь."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins4",
+        "В этом испытании ты падёшь."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins5",
+        "В этот раз ты наконец проиграешь."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins6",
+        "В этот раз ты наконец проиграешь."
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins7",
+        "Это что, нелепая шутка?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins8",
+        "Это что, нелепая шутка?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins9",
+        "Видимо, это моё наказание?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins10",
+        "Видимо, это моё наказание?"
+      ],
+      [
+        "TrialmasterMoodBeginFiveOrMoreWins11",
+        "Видимо, это моё наказание?"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLossesRandom",
+        "Честно говоря, давно пора. Поздравляю, претендент. Искренне."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses2",
+        "Честно говоря, давно пора. Поздравляю, претендент. Искренне."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses3",
+        "Честно говоря, давно пора. Поздравляю, претендент. Искренне."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses4",
+        "<if:MS>{Ты... ты выиграл? Я, честно, не ожидал этого от тебя.}<elif:FS>{Ты... ты выиграла? Я, честно, не ожидал этого от тебя.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses5",
+        "<if:MS>{Ты... ты выиграл? Я, честно, не ожидал этого от тебя.}<elif:FS>{Ты... ты выиграла? Я, честно, не ожидал этого от тебя.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses6",
+        "<if:MS>{Ты... ты выиграл? Я, честно, не ожидал этого от тебя.}<elif:FS>{Ты... ты выиграла? Я, честно, не ожидал этого от тебя.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses7",
+        "Спасибо, что не разочаровал моего хозяина в который раз."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses8",
+        "Спасибо, что не разочаровал моего хозяина в который раз."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses9",
+        "Твоя серия проигрышей наконец закончилась."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses10",
+        "Твоя серия проигрышей наконец закончилась."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreLosses11",
+        "Твоя серия проигрышей наконец закончилась."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLossesRandom",
+        "Я не был уверен, что в тебе найдутся силы."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses2",
+        "Я не был уверен, что в тебе найдутся силы."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses3",
+        "Справедливо. Удача есть удача."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses4",
+        "Справедливо. Удача есть удача."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses5",
+        "<if:MS>{Ты вернул себе гордость.}<elif:FS>{Ты вернула себе гордость.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses6",
+        "<if:MS>{Ты вернул себе гордость.}<elif:FS>{Ты вернула себе гордость.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses7",
+        "<if:MS>{Где-то выиграл... больше проиграл.}<elif:FS>{Где-то выиграла... больше проиграла.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses8",
+        "<if:MS>{Где-то выиграл... больше проиграл.}<elif:FS>{Где-то выиграла... больше проиграла.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses9",
+        "<if:MS>{Ты положил конец череде поражений.}<elif:FS>{Ты положила конец череде поражений.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourLosses10",
+        "<if:MS>{Ты положил конец череде поражений.}<elif:FS>{Ты положила конец череде поражений.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLossRandom",
+        "<if:MS>{Ты реабилитировал себя.}<elif:FS>{Ты реабилитировала себя.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss2",
+        "<if:MS>{Ты реабилитировал себя.}<elif:FS>{Ты реабилитировала себя.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss3",
+        "Что ж, капризы случая."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss4",
+        "Что ж, капризы случая."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss5",
+        "Не даёшь заскучать, как я вижу."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss6",
+        "Не даёшь заскучать, как я вижу."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss7",
+        "Незначительные перемены."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneLoss8",
+        "Незначительные перемены."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWinRandom",
+        "Две подряд!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin2",
+        "Две подряд!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin3",
+        "Повторная победа!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin4",
+        "Повторная победа!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin5",
+        "Я прямо вижу, как раздувается твоё самолюбие."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin6",
+        "Я прямо вижу, как раздувается твоё самолюбие."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin7",
+        "Не слишком зазнавайся."
+      ],
+      [
+        "TrialmasterMoodPlayerWonOneWin8",
+        "Не слишком зазнавайся."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWinsRandom",
+        "Впечатляет, претендент."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins2",
+        "Впечатляет, претендент."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins3",
+        "Твоя серия побед продолжается."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins4",
+        "Твоя серия побед продолжается."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins5",
+        "На удаче слишком далеко не уедешь...."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins6",
+        "На удаче слишком далеко не уедешь...."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins7",
+        "До сей поры победитель остаётся победителем!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins8",
+        "До сей поры победитель остаётся победителем!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins9",
+        "<if:MS>{Неплохо... для смертного.}<elif:FS>{Неплохо... для смертной.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins10",
+        "<if:MS>{Неплохо... для смертного.}<elif:FS>{Неплохо... для смертной.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins11",
+        "Так дальше не будет. Никаких тревог."
+      ],
+      [
+        "TrialmasterMoodPlayerWonTwoToFourWins12",
+        "Так дальше не будет. Никаких тревог."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWinsRandom",
+        "Это уже не смешно."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins2",
+        "Это уже не смешно."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins3",
+        "Эта череда побед поразительна."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins4",
+        "Эта череда побед поразительна."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins5",
+        "Как тебе удаётся постоянно выигрывать?!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins6",
+        "Как тебе удаётся постоянно выигрывать?!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins7",
+        "Я чувствую, что меня выставляют дураком!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins8",
+        "Я чувствую, что меня выставляют дураком!"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins9",
+        "Лучше бы я стал жрецом Яомака..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins10",
+        "Лучше бы я стал жрецом Яомака..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins11",
+        "Лучше бы я стал жрецом Яомака..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins12",
+        "<if:MS>{Ты победил... опять.}<elif:FS>{Ты победила... опять.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins13",
+        "<if:MS>{Ты победил... опять.}<elif:FS>{Ты победила... опять.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins14",
+        "<if:MS>{Ты победил... опять.}<elif:FS>{Ты победила... опять.}"
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins15",
+        "Это невыносимо..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins16",
+        "Это невыносимо..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins17",
+        "Это невыносимо..."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins18",
+        "Забирай свою награду и уходи."
+      ],
+      [
+        "TrialmasterMoodPlayerWonFiveOrMoreWins19",
+        "Забирай свою награду и уходи."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLossesRandom",
+        "<if:MS>{Ты тратишь моё время, глупец.}<elif:FS>{Ты тратишь моё время, глупая женщина.}"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses2",
+        "<if:MS>{Ты тратишь моё время, глупец.}<elif:FS>{Ты тратишь моё время, глупая женщина.}"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses3",
+        "Как... ожидаемо."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses4",
+        "Как... ожидаемо."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses5",
+        "И снова..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses6",
+        "И снова..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses7",
+        "И ты продолжаешь терпеть поражения!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses8",
+        "И ты продолжаешь терпеть поражения!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses9",
+        "Как это должно быть позорно."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreLosses10",
+        "Как это должно быть позорно."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLossesRandom",
+        "Возможно, эти испытания для тебя слишком сложны."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses2",
+        "Возможно, эти испытания для тебя слишком сложны."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses3",
+        "Возможно, тебе стоит отточить навыки, прежде чем вновь браться за мои испытания."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses4",
+        "Возможно, тебе стоит отточить навыки, прежде чем вновь браться за мои испытания."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses5",
+        "Твой счёт ухудшается..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses6",
+        "Твой счёт ухудшается..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses7",
+        "Теперь ты знаешь, чего не надо делать."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourLosses8",
+        "Теперь ты знаешь, чего не надо делать."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLossRandom",
+        "Ещё одна неудача..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss2",
+        "Ещё одна неудача..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss3",
+        "Проиграть дважды подряд... как незавидно."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss4",
+        "Проиграть дважды подряд... как незавидно."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss5",
+        "Два поражения подряд!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss6",
+        "Два поражения подряд!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss7",
+        "Два поражения подряд!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss8",
+        "Быть может, ты не понимаешь правил..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss9",
+        "Быть может, ты не понимаешь правил..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneLoss10",
+        "Быть может, ты не понимаешь правил..."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWinRandom",
+        "Видно, второй победы подряд тебе достичь было не суждено."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin2",
+        "Видно, второй победы подряд тебе достичь было не суждено."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin3",
+        "Приходи попытать удачу снова, претендент."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin4",
+        "Приходи попытать удачу снова, претендент."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin5",
+        "Не стыдись своего мизерного счёта."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin6",
+        "Не стыдись своего мизерного счёта."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin7",
+        "Не стыдись своего мизерного счёта."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin8",
+        "Тому не суждено было сбыться."
+      ],
+      [
+        "TrialmasterMoodPlayerLostOneWin9",
+        "Тому не суждено было сбыться."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWinsRandom",
+        "Твоя серия побед подошла к концу."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins2",
+        "Твоя серия побед подошла к концу."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins3",
+        "Рано или поздно победители проигрывают."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins4",
+        "Рано или поздно победители проигрывают."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins5",
+        "Твои великие планы рассыпались в пыль."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins6",
+        "Твои великие планы рассыпались в пыль."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins7",
+        "Похоже, мы нашли предел твоих умений."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins8",
+        "Похоже, мы нашли предел твоих умений."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins9",
+        "Удача больше не благоволит тебе."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins10",
+        "Удача больше не благоволит тебе."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins11",
+        "Это было неизбежно."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins12",
+        "Это было неизбежно."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins13",
+        "Твой путь к величию совершил крутой поворот к обрыву."
+      ],
+      [
+        "TrialmasterMoodPlayerLostTwoToFourWins14",
+        "Твой путь к величию совершил крутой поворот к обрыву."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWinsRandom",
+        "Проиграть не стыдно. ...Почти."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins2",
+        "Проиграть не стыдно. ...Почти."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins3",
+        "Ты больше не выходишь победителем."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins4",
+        "Ты больше не выходишь победителем."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins5",
+        "Твоя череда побед достигла своего финала."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins6",
+        "Твоя череда побед достигла своего финала."
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins7",
+        "<if:MS>{Хахахахаха! Конец твоей удаче, глупец!}<elif:FS>{Хахахахаха! Конец твоей удаче, глупая!}"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins8",
+        "<if:MS>{Хахахахаха! Конец твоей удаче, глупец!}<elif:FS>{Хахахахаха! Конец твоей удаче, глупая!}"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins9",
+        "Хозяин, дело сделано! Не мучай меня больше!"
+      ],
+      [
+        "TrialmasterMoodPlayerLostFiveOrMoreWins10",
+        "Хозяин, дело сделано! Не мучай меня больше!"
+      ],
+      [
+        "TrialmasterDefeatedRandom",
+        "Мое служение... наконец-то закончилось..."
+      ],
+      [
+        "TrialmasterReturnsAfterDefeatRandom",
+        "...и мое служение продолжается. Хаос смеется, смертный, и удача благоволит тебе"
+      ],
+      [
+        "TrialmasterAboutHisDefeat",
+        "<if:MS>{Ты не единственный, чей путь подвластен слепой удаче. Мой повелитель Хаос видит всё. Ты одержал победу... как и я. С моей точки зрения я убил тебя, а затем Хаос предложил мне другую возможность. Эту.\r\n\r\nЯ продолжаю служить...}<elif:FS>{Ты не единственная, чей путь подвластен слепой удаче. Мой повелитель Хаос видит всё. Ты одержала победу... как и я. С моей точки зрения я убил тебя, а затем Хаос предложил мне другую возможность. Эту.\r\n\r\nЯ продолжаю служить...}"
+      ],
+      [
+        "TrialmasterIntroduction",
+        "Я долго бродил по этому миру в поисках подходящих претендентов. Мой хозяин, Хаос, возложил на меня это задание. Многие пробовали силы в моих испытаниях, ища величия. Учёные, преступники, герои и агнцы. Все они вызвались, и большинство пали. Правила всегда были одни и те же, и для тебя они тоже не изменятся. Приноси с собой лишь то, что можешь позволить себе потерять – включая собственную жизнь."
+      ],
+      [
+        "TrialmasterGossipChaos",
+        "Мой хозяин – воплощение всех возможностей. Он – в броске монеты и в отскоках кубика. Победишь ты или проиграешь, его предназначение свершится всё равно. И всё же – на свои шансы ты можешь повлиять умением, умом и силой. Вот что прельщает Хаос. Умелые смертные способны обернуть шансы в свою пользу, ибо во встречных ветрах неизведанного стрела мастера разит вернее, чем стрела новичка. Покажи ему своё мастерство, и он улыбнётся тебе. Удиви его великим талантом, и можешь даже вызвать его смех. Фортуна дождём просыплется на тех, кто дарит юмор Хаосу."
+      ],
+      [
+        "TrialmasterGossipDoryani",
+        "Когда-то я был смертным, и я знаю, что думал бы смертный, которым я был, о некоторых вещах. Этот человек страстно ненавидел бы Дориани за то, что тот оказался причиной падения величайшей из цивилизаций, которые только знал этот мир. К счастью, подобные привязанности больше не тревожат меня. Милостью Хаоса теперь я понимаю, что всё, способное произойти, происходит. Даже сейчас я испытываю силы другой выжившей, выброшенной на берег Рэкласта вместо тебя, и для неё ты мёртв. Всё достигнутое тобой не имеет значения. Как незначительно было и то, что разрушил Дориани."
+      ],
+      [
+        "TrialmasterGossipAtziri",
+        "Царица являет собой странный островок стабильности, который Хаос не может постичь. Почти все события полнятся возможностями, но история её существования всегда идёт одним неразрывным путём. Нет ни одного мира, реального или воображаемого, где Атзири не привела бы наш народ к гибели.\r\n\r\nОна и сейчас смотрится в зеркало где-то вне досягаемости моего хозяина, среди багрового безумия и кошмара... мой хозяин восторгается неопределённостью случая, но он питает отвращение к космическим загадкам без ясного ответа, особенно когда такие загадки, судя по всему, обладают способностью вплетать детерминизм в материю бытия."
+      ],
+      [
+        "TrialmasterGossipAnathema",
+        "Мой повелитель Хаос нередко ощущает зловещую силу, таящуюся в неизведанном тумане сырого Созидания, что старается противиться ему. Она не раскрывает себя. Нет, это трусливый Порыв, что незаметно переплетает нити Судьбы, сводя вместе смертных в каждой эпохе, чтобы достичь Порядка. Холодное противостояние, бушевавшее извечно – с одним лишь исключением."
+      ],
+      [
+        "TrialmasterCombatUltimatumMoveRandom",
+        "Ультиматум!"
+      ],
+      [
+        "TrialmasterCombatUltimatumMove2",
+        "Ультиматум!"
+      ],
+      [
+        "TrialmasterCombatTransformation",
+        "Пора заканчивать!"
+      ],
+      [
+        "TrialmasterPlayerTookRewardRandom",
+        "Надёжный выбор."
+      ],
+      [
+        "TrialmasterPlayerTookReward2",
+        "Ожидаемый выбор."
+      ],
+      [
+        "TrialmasterPlayerTookReward3",
+        "Пусть будет так. Досадно."
+      ],
+      [
+        "HasinaPetIdleRandom",
+        ""
+      ],
+      [
+        "HasinaPetIdle2",
+        ""
+      ],
+      [
+        "HasinaPetIdle3",
+        ""
+      ],
+      [
+        "HasinaPetIdle4",
+        ""
+      ],
+      [
+        "HasinaPetIdle5",
+        ""
+      ],
+      [
+        "HasinaPetIdle6",
+        ""
+      ],
+      [
+        "HasinaPetIdle7",
+        ""
+      ],
+      [
+        "HasinaPetIdle8",
+        ""
+      ],
+      [
+        "HasinaPetDismiss",
+        ""
+      ],
+      [
+        "HasinaPetExaltedOrb",
+        ""
+      ],
+      [
+        "HasinaPetToHideoutRandom",
+        ""
+      ],
+      [
+        "HasinaPetToHideout2",
+        ""
+      ],
+      [
+        "HasinaPetUniqueKill",
+        ""
+      ],
+      [
+        "HasinaPetMirrorDrop",
+        ""
+      ],
+      [
+        "HasinaPetPlayerDeathRandom",
+        ""
+      ],
+      [
+        "HasinaPetPlayerDeath2",
+        ""
+      ],
+      [
+        "HasinaPetSummon",
+        ""
       ]
     ]
   },
@@ -55124,6 +57804,22 @@
       [
         "Metadata/Monsters/Thaumaturgy/ThaumaturgistBoss",
         "Кьерган, Тёмный алхимик"
+      ],
+      [
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC",
+        "Мастер испытаний"
+      ],
+      [
+        "Metadata/NPC/League/Ultimatum/UltimatumNPCPostFight",
+        "Мастер испытаний"
+      ],
+      [
+        "Metadata/Monsters/LeagueUltimatum/TrialMaster/TrialMasterBoss",
+        "Мастер испытаний"
+      ],
+      [
+        "Metadata/NPC/Hasina",
+        "Hasina"
       ]
     ]
   }
