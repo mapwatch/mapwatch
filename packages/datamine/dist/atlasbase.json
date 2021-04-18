@@ -23,10 +23,12 @@
       "region": "Haewark Hamlet",
       "loot": {
         "red": [
-          "Marble Amulet"
+          "Marble Amulet",
+          "Opal Ring"
         ],
         "yellow": [
-          "Marble Amulet"
+          "Marble Amulet",
+          "Opal Ring"
         ],
         "white": [
           "Marble Amulet"
@@ -119,6 +121,7 @@
       "loot": {
         "red": [
           "Fingerless Silk Gloves",
+          "Opal Ring",
           "Vanguard Belt"
         ],
         "yellow": [

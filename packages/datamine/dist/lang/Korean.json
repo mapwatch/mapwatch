@@ -9018,6 +9018,10 @@
       [
         "MapDeviceInvalidQuestState",
         "활성화에 실패했습니다. 필수 퀘스트 상태에 도달하지 못했습니다."
+      ],
+      [
+        "AccountNotVerified",
+        "Account is not verified."
       ]
     ]
   },
