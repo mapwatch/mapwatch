@@ -99,6 +99,11 @@ const nonAtlasMaps = {
   "BetrayalSafeHouseLaboratory": "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
   // maven
   "MavenHub": "Art/2DItems/Effects/Portals/MavenPortalEffect.png",
+  // 3.14
+  "HarvestLeagueBoss": "Art/2DItems/Maps/OshabiMap.png",
+  "UltimatumArena": "Art/2DItems/Maps/UltimatumTrialBase.png",
+  "UltimatumArenaEndgame": "Art/2DItems/Maps/UltimatumTrialBase.png",
+  "UltimatumBossArena": "Art/2DItems/Maps/UltimatumTrialBase.png",
 }
 function nonAtlasMapIcon(id) {
   if (nonAtlasMaps[id]) {
@@ -206,6 +211,8 @@ const exportedNPCs = Object.assign({}, ...[
   "Metadata/NPC/League/Harvest/HarvestNPC",
   "Metadata/NPC/Epilogue/Envoy",
   "Metadata/NPC/Epilogue/Maven",
+  // the trialmaster
+  "Metadata/NPC/League/Ultimatum/UltimatumNPC",
 ].map(name => ({[name]: true})))
 function isNPCIdExported(raw) {
   return !!exportedNPCs[raw.Id]

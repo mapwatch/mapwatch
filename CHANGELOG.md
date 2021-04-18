@@ -4,6 +4,11 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-04-18
+- The Trialmaster is now tracked. (More details coming soon.)
+- Inscribed ultimatums are now tracked.
+- The new Harvest boss fight area is now tracked.
+
 ## 2021-04-10
 - The Encounters page now has text discouraging its use in Angry Reddit Threads.
 - The Encounters page is now split into two tables: encounters restricted to normal maps, and encounters in all endgame areas.

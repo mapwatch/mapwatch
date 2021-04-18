@@ -171,3 +171,7 @@ maven =
 
 oshabi =
     "Metadata/NPC/League/Harvest/HarvestNPC"
+
+
+trialmaster =
+    "Metadata/NPC/League/Ultimatum/UltimatumNPC"

@@ -41,12 +41,13 @@ type alias EncounterTally =
     , normalMaps : Int
     , mavenCrucibles : Int
     , sirusFights : Int
+    , trialmaster : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -141,6 +142,7 @@ tallyNpcs npcs tally =
         , maven = Dict.get NpcId.maven counts |> Maybe.withDefault 0
         , oshabi = Dict.get NpcId.oshabi counts |> Maybe.withDefault 0
         , sirusInvasions = Dict.get NpcId.sirus counts |> Maybe.withDefault 0
+        , trialmaster = Dict.get NpcId.trialmaster counts |> Maybe.withDefault 0
     }
 
 

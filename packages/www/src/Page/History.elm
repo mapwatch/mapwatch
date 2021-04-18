@@ -578,6 +578,9 @@ viewNpcText query loadedAt npcId =
     else if npcId == NpcId.sirus then
         [ View.Icon.sirus, text "Sirus, Awakener of Worlds" ]
 
+    else if npcId == NpcId.trialmaster then
+        [ View.Icon.trialmaster, text "The Trialmaster" ]
+
     else
         []
 

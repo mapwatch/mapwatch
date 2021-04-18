@@ -311,3 +311,8 @@ maven =
 harvest : Html msg
 harvest =
     sideArea { name = "harvest big-icon", url = "Art/2DItems/Effects/Portals/HarvestPortal.png?scale=1" }
+
+
+trialmaster : Html msg
+trialmaster =
+    sideArea { name = "ultimatum big-icon", url = "Art/2DItems/Currency/VeiledChaosOrb.png?scale=1" }

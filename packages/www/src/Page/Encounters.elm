@@ -230,6 +230,7 @@ listEncounterTally query tally =
       , entry tally.envoy "npc:envoy" [ View.Icon.envoy, text "The Envoy" ]
       , entry tally.sirusInvasions "npc:sirus" [ View.Icon.sirus, text "Sirus Invasions" ]
       , entry tally.maven "npc:the maven" [ View.Icon.maven, text "The Maven" ]
+      , entry tally.maven "npc:the trialmaster" [ View.Icon.trialmaster, text "The Trialmaster" ]
       ]
         |> List.filter (\r -> r.count > 0)
         |> List.sortBy .count
