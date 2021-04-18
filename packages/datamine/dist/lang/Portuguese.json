@@ -1143,10 +1143,6 @@
         "Relicário Gasto pelo Tempo"
       ],
       [
-        "ClassicTreasury_Vaal",
-        "Relicário Vaal"
-      ],
-      [
         "ZanaGauntlet",
         "[UNUSED] TEST ZANA GAUNTLET"
       ],
@@ -5163,10 +5159,6 @@
         "O Bosque Sagrado"
       ],
       [
-        "HarvestLeagueBoss",
-        "O Bosque Sagrado"
-      ],
-      [
         "ffa1_1",
         "Arena de Sarn"
       ],
@@ -5967,10 +5959,6 @@
         ""
       ],
       [
-        "AnyUberTabTrial",
-        ""
-      ],
-      [
         "Hideout4_3",
         "Refúgio Cavernoso"
       ],
@@ -6353,18 +6341,6 @@
       [
         "HideoutRitualLeague",
         "Refúgio Ritualístico"
-      ],
-      [
-        "HideoutArenaMaven",
-        "Refúgio Crisol"
-      ],
-      [
-        "HideoutHasina",
-        "Refúgio Hasina"
-      ],
-      [
-        "HideoutAzuriteCave",
-        "Refúgio de Azurita"
       ],
       [
         "pvpTown",
@@ -6841,18 +6817,6 @@
       [
         "MavenElderGuardian4",
         "A Purificadora"
-      ],
-      [
-        "UltimatumArena",
-        "A Arena Utzaal"
-      ],
-      [
-        "UltimatumArenaEndgame",
-        "A Arena Utzaal"
-      ],
-      [
-        "UltimatumBossArena",
-        "A Torre das Provações"
       ]
     ]
   },
@@ -9056,16 +9020,8 @@
         "Falha na ativação. Você não possui o estado de missões necessário."
       ],
       [
-        "MapDeviceFull",
-        "Seu Dispositivo de Mapas está cheio."
-      ],
-      [
         "AccountNotVerified",
-        "Conta não foi verificada."
-      ],
-      [
-        "UltimatumTrialStarted",
-        "Você não pode participar de uma provação que já tenha começado."
+        "Account is not verified."
       ]
     ]
   },
@@ -9854,7 +9810,7 @@
       ],
       [
         "OakImpatient",
-        "Esta floresta sangra pelos ferimentos de uma guerra sem sentido. E ainda assim, aqui está você, inútil. Pelo jeito você não é o aliado da ação que achei que fosse."
+        "Esta floresta sangra pelos ferimentos de uma guerra sem sentido. E ainda assim, aqui está você, inútil. Pelo jeito você não é o aliado da ação que achei que era."
       ],
       [
         "KraitynOnDarkness",
@@ -11022,7 +10978,7 @@
       ],
       [
         "LibraryMilitary3",
-        "<b>{Livro 3: O Taumaturgo da Rainha}\r\n\r\nNuma cultura repleta de gemas e mergulhada em taumaturgia, Doryani deveria ter uma mente excepcional para se erguer até uma posição tão proeminente quanto conseguiu. Ou talvez ele simplesmente fosse mais implacável que os outros. É o que parece, quando vemos os eventos que seguiram a morte de Zerphi.\r\n\r\nAs ordens de Atziri são mencionadas em vários textos diferentes. Doryani deveria \"fazer todo esforço dentro das possibilidades, e agir sem medo de quaisquer consequências\". E para qual objetivo Doryani deveria aplicar este esforço supremo? A investigação da longevidade e incrível vitalidade de Zerphi.\r\n\r\nHá um manifesto particularmente arrepiante, contendo infindáveis listas de nomes, página após página. Os nomes de homens e mulheres jovens, entre as idades de dezesseis até vinte e seis, enviados para Doryani para \"processamento\". Apenas aqueles com \"maturidade completa e recente\" eram capazes de cumprir os \"procedimentos necessários\" sem sucumbir à \"validade prematura\".\r\n\r\nSim, a Rainha Atziri estava pronta para matar seu próprio povo, desesperada atrás da beleza e da juventude perpétua. A Vaidade é, de fato, o mais pérfido dos pecados.\r\n\r\n<i>{ - Trinian - Intelecto Primordial}"
+        "<b>{Livro 3: O Taumaturgo da Rainha}\r\n\r\nNuma cultura repleta de gemas e mergulhada em taumaturgia, Doryani deveria ter uma mente excepcional para se erguer numa posição tão proeminente quanto conseguiu. Ou talvez ele simplesmente fosse mais implacável que os outros. É o que parece, quando vemos os eventos que seguiram a morte de Zerphi.\r\n\r\nAs ordens de Atziri são mencionadas em vários textos diferentes. Doryani deveria \"fazer todo esforço dentro da possibilidade, e agir sem medo de quaisquer consequências\". E para qual objetivo Doryani deveria aplicar este esforço supremo? A investigação da longevidade e incrível vitalidade de Zerphi.\r\n\r\nHá um manifesto particularmente arrepiante, contendo infindáveis listas de nomes, página após página. Os nomes de homens e mulheres jovens, entre as idades de dezesseis até vinte e seis, enviados para Doryani para \"processamento\". Apenas aqueles com \"maturidade completa e recente\" eram capazes de cumprir os \"procedimentos necessários\" sem sucumbir à \"validade prematura\".\r\n\r\nSim, a Rainha Atziri estava pronta para matar seu próprio povo desesperadamente atrás da beleza e da juventude perpétua. A Vaidade é, de fato, o mais pérfido dos pecados.\r\n\r\n<i>{ - Trinian - Intelecto Primordial}"
       ],
       [
         "LibraryMilitary4",
@@ -19258,19 +19214,19 @@
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightZero",
-        "Por que A Coisa veste a pele assim? Certamente A Coisa está com dor? A Coisa vai ajudar A Coisa a se sentir melhor."
+        "Por que Aquilo veste a pele assim? Certamente Aquilo está com dor? Aquilo vai ajudar Aquilo a se sentir melhor."
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightOne",
-        "A Coisa não é um Lorde, mas esse ainda é o domínio da Coisa, e A Coisa ra protegê-lo."
+        "Aquilo não é um Lorde, mas esse ainda é o domínio d'Aquilo, e Aquilo ira protegê-lo."
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightTwo",
-        "A Coisa não pode pegar isso! Não não não não!"
+        "Aquilo não pode pegar isso! Não não não não!"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightThree",
-        "A Coisa entra na toca da Coisa! Os Lordes não ficarão felizes!"
+        "Aquilo entra na toca d'Aquilo! Os Lordes não ficarão felizes!"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightFour",
@@ -19278,7 +19234,7 @@
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightFive",
-        "A Coisa odeia a sala de metal. A Coisa odeia!"
+        "Aquilo odeia a sala de metal. Aquilo odeia!"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightSix",
@@ -19286,139 +19242,139 @@
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightSeven",
-        "A Coisa deu isso, A Coisa ganhou isso, A Coisa deu isso, A Coisa ganhou isso…"
+        "Aquilo deu isso, Aquilo ganhou isso, Aquilo deu isso, Aquilo ganhou isso…"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightEight",
-        "Barganha, barganha, A Coisa deu isso, A Coisa ganhou isso…"
+        "Barganha, barganha, Aquilo deu isso, Aquilo ganhou isso…"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightNine",
-        "A coisa foi punida pelos presentes da Coisa. A Coisa não vai ouvir de novo!"
+        "Aquilo foi punido pelos presentes d'Aquilo. Aquilo não vai ouvir de novo!"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightTen",
-        "<if:MS>{Amigo! A Coisa gostou tanto de morrer. A Coisa irá devolver o favor!}<elif:FS>{Amiga! A Coisa gostou tanto de morrer. A Coisa irá devolver o favor!}"
+        "<if:MS>{Amigo! Aquilo gostou tanto de morrer. Aquilo irá devolver o favor!}<elif:FS>{Amiga! Aquilo gostou tanto de morrer. Aquilo irá devolver o favor!}"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightEleven",
-        "A Coisa acordou com um presente! A Coisa quer ver o que aquilo faz?"
+        "Aquilo acordou com um presente! Aquilo quer ver o que aquilo faz?"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightTwelve",
-        "A Coisa se contorce de novo! A Coisa está pronta para brincar mais um pouco?"
+        "Aquilo se contorce de novo! Aquilo está pronto para brincar mais um pouco?"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightThirteen",
-        "A Coisa está coberto da energia do Sonhador. A Coisa consegue sentir?"
+        "Aquilo está coberto da energia do Sonhador. Aquilo consegue sentir?"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightFourteen",
-        "Esh rodeia A Coisa agora. Os pensamentos d'A Coisa quebram como os ossos d'A Coisa."
+        "Esh rodeia Aquilo agora. Os pensamentos d'Aquilo quebram como os ossos d'Aquilo."
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightFifteen",
-        "O gelo rasteja a pele d'A Coisa agora. Lentamente. A Coisa vê? A Coisa sente a avalanche?"
+        "O gelo rasteja a pele d'Aquilo agora. Lentamente. Aquilo vê? Aquilo sente a avalanche?"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightSixteen",
-        "Cozinhe! Chie e frite na Pira Vermelha como os parentes e amigos d'A Coisa. "
+        "Cozinhe! Chie e frite na Pira Vermelha como os parentes e amigos d'Aquilo."
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightSeventeen",
-        "A Coisa parece cansado. A Coisa irá arrancar o fardo da carne d'A Coisa."
+        "Aquilo parece cansado. Aquilo irá arrancar o fardo da carne d'Aquilo."
       ],
       [
         "ItThatFledSafehouseLeaderIntroZero",
-        "A Coia não era um Lorde antes. Agora esse domínio é d'A Coisa. Avance, sinta o gosto."
+        "Aquilo não era um Lorde antes. Agora esse domínio é d'Aquilo. Avance, sinta o gosto."
       ],
       [
         "ItThatFledSecondaryDefenderArrivalZero",
-        "A Coisa serve ao domínio!"
+        "Aquilo serve ao domínio!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalOne",
-        "Tão invejosa, A Coisa está, mas aquilo não é para A Coisa!"
+        "Tão invejoso, Aquilo está, mas aquilo não é para Aquilo!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwo",
-        "Esconda os parentes felizes d'A Coisa, rápido!"
+        "Esconda os parentes felizes d'Aquilo, rápido!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalThree",
-        "A Coisa está aqui para ajudar com a cirurgia!"
+        "Aquilo está aqui para ajudar com a cirurgia!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalFour",
-        "A Coisa irá consertar A Coisa . Não resista."
+        "Aquilo irá consertar Aquilo. Não resista."
       ],
       [
         "ItThatFledSecondaryDefenderArrivalFive",
-        "Lorde desse domínio, comande A Coisa !"
+        "Lorde desse domínio, comande Aquilo!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalSix",
-        "A Coisa  Que Se Gaba dança e grasna mas não consegue nada…"
+        "Aquilo Que Se Gaba dança e grasna mas não consegue nada…"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalSeven",
-        "A Coisa  Que Um Dia Reluziu precisa de um amigo, não precisa?"
+        "Aquilo Que Um Dia Reluziu precisa de um amigo, não precisa?"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalEight",
-        "A Coisa  Que Esmaga precisa da ajuda d'A Coisa !"
+        "Aquilo Que Esmaga precisa da ajuda d'Aquilo!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalNine",
-        "A Coisa luta por amor! A Coisa  luta pela Rainha!"
+        "Aquilo luta por amor! Aquilo luta pela Rainha!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTen",
-        "A Coisa  Que Desmembra é um monstro assim como A Coisa! A Coisa gosta de A Coisa Que Desmembra."
+        "Aquilo Que Desmembra é um monstro assim como Aquilo! Aquilo gosta de Aquilo Que Desmembra."
       ],
       [
         "ItThatFledSecondaryDefenderArrivalEleven",
-        "A Coisa  veio para lutar! A Coisa  veio para cortar, para empalar, para rasgar!"
+        "Aquilo veio para lutar! Aquilo veio para cortar, para empalar, para rasgar!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwelve",
-        "A Coisa  quer esse domínio… A Coisa  precisa dele!"
+        "Aquilo quer esse domínio… Aquilo precisa dele!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalThirteen",
-        "A Coisa  leva os brinquedos. A Coisa não ganha nenhum."
+        "Aquilo leva os brinquedos. Aquilo não ganha nenhum."
       ],
       [
         "ItThatFledSecondaryDefenderArrivalFourteen",
-        "A Coisa  desfaz o trabalho árduo d'A Coisa! A Coisa é um inimigo d'A Coisa!"
+        "Aquilo desfaz o trabalho árduo d'Aquilo! Aquilo é um inimigo d'Aquilo!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalFifteen",
-        "A Coisa ouve os Lordes mandando A Coisa matar!"
+        "Aquilo ouve os Lordes mandando Aquilo matar!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalSixteen",
-        "A Coisa Que Protege logo irá encontrar seus ancestrais..."
+        "Aquilo Que Protege logo irá encontrar seus ancestrais..."
       ],
       [
         "ItThatFledSecondaryDefenderArrivalSeventeen",
-        "A Coisa irá tomar o outro braço! E a perna! E o rosto!"
+        "Aquilo irá tomar o outro braço! E a perna! E o rosto!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalEighteen",
-        "A Coisa quer o rosto d'A Coisa Que Se Gaba. Dê a face d'A Coisa para A Coisa?"
+        "Aquilo quer o rosto d'Aquilo Que Se Gaba. Dê a face d'Aquilo para Aquilo?"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalNineteen",
-        "A Coisa Que É Peluda diz que A Coisa é fraca. A Coisa não e fraca. A Coisa vai provar."
+        "Aquilo Que É Peludo diz que Aquilo é fraco. Aquilo não e fraco. Aquilo vai provar."
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwenty",
-        "A Coisa ira mostrar o amor da Rainha! Amor rasgante, cortante, mordaz."
+        "Aquilo ira mostrar o amor da Rainha! Amor rasgante, cortante, mordaz."
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwentyOne",
-        "Todos As Coisas parecem iguais. A Coisa irá empalar a todos!"
+        "Todos Aquilos parecem iguais. Aquilo irá empalar a todos!"
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalZero",
@@ -19426,47 +19382,47 @@
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalOne",
-        "Coisa vai transformar Coisa em fragmentos."
+        "Aquilo irá transformar Aquilo em fragmentos."
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalTwo",
-        "Coisa é mau, muito mau, malcriado!"
+        "Aquilo é mau, muito mau, malcriado!"
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalThree",
-        "Coisa está confusa. A Coisa Que Chegou não deveria matar a Coisa Fugitiva."
+        "Aquilo está confuso. Aquilo Que Chegou não deveria Aquilo que fugiu."
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalFour",
-        "A Coisa não quer ir pra lugar nenhum! A Coisa quer ir para algum lugar!"
+        "Aquilo não quer ir pra lugar nenhum! Aquilo quer ir para algum lugar!"
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalFive",
-        "A Pira Vermelha…! A Coisa irá mostrar para A Coisa Que Reza."
+        "A Pira Vermelha…! Aquilo irá mostrar para Aquilo Que Reza."
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalSix",
-        "Mentira! A Natureza anseia pela Coisa Fugitiva com dedos que agarram!"
+        "Mentira! A Natureza anseia por Aquilo Que Fugiu com dedos que agarram!"
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalSeven",
-        "A Coisa Que Desmembra não vai gostar do que A Coisa revela…"
+        "Aquilo Que Desmembra não vai gostar do que Aquilo revela…"
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalEight",
-        "A Coisa ainda tem emoções… emoções doídas, contorcidas, famintas…"
+        "Aquilo ainda tem emoções… emoções doídas, contorcidas, famintas…"
       ],
       [
         "ItThatFledReplyToSecondaryDefenderArrivalNine",
-        "A Coisa gosta d'A Coisa e odeia A Coisa, porque A Coisa não consegue se entender?"
+        "Aquilo gosta d'Aquilo e odeia Aquilo, porque não Aquilo não consegue se entender?"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwentyTwo",
-        "A Coisa  vem ajudar A Coisa Que Luta!"
+        "Aquilo vem ajudar Aquilo Que Luta!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwentyThree",
-        "Mais rápido, mais rápido! Tão rápido quanto A Coisa fugitiva."
+        "Mais rápido, mais rápido! Tão rápido quanto Aquilo fugiu."
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwentyFour",
@@ -19474,75 +19430,75 @@
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwentyFive",
-        "Muitos órgãos para A Coisasegurar e cochichar…"
+        "Muitos órgãos para Aquilo segurar e cochichar…"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwentySix",
-        "A Coisa é Lorde dos Muitos com tanta felicidade e violência!"
+        "Aquilo é Lorde dos Muitos com tanta felicidade e violência!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwentySeven",
-        "A Coisa Que Brilha deve fazer o que A Coisa mandar!"
+        "Aquilo Que Brilha deve fazer o que Aquilo mandar!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwentyEight",
-        "A Coisa Que Ri será absorvido na nova ordem!"
+        "Aquilo Que Ri será absorvido na nova ordem!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalTwentyNine",
-        "Lorde dos Muitos, A Coisa é, e A Coisa diz o que fazer à Coisa agora! A Coisa deve matar As Coisas e trazer lascas de osso para A Coisa!"
+        "Lorde dos Muitos, Aquilo é, e Aquilo diz o que fazer à Aquilo agora! Aquilo deve matar Aquilos e trazer lascas de osso para Aquilo!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalThirty",
-        "A Rainha d'A Coisa deve reconhecer seu Lorde agora!"
+        "A Rainha d'Aquilo deve reconhecer seu Lorde agora!"
       ],
       [
         "ItThatFledSecondaryDefenderArrivalThirtyOne",
-        "A Coisa que Desmonta terá um lugar especial no domínio d'A Coisa agora que A Coisa está no comando."
+        "Aquilo que Desmonta terá um lugar especial no domínio d'Aquilo agora que Aquilo está no comando."
       ],
       [
         "ItThatFledKillPlayerZero",
-        "A Coisa conseguiu! A Coisa defendeu o domínio!"
+        "Aquilo conseguiu! Aquilo defendeu o domínio!"
       ],
       [
         "ItThatFledKillPlayerOne",
-        "Os ossos d'A Coisa farão lascas brancas e crocantes."
+        "Os ossos d'Aquilo farão lascas brancas e crocantes."
       ],
       [
         "ItThatFledKillPlayerTwo",
-        "Há tempo, agora que A Coisa se foi."
+        "Há tempo, agora que Aquilo se foi."
       ],
       [
         "ItThatFledKillPlayerThree",
-        "Porque A Coisa está parado? Brinque com A Coisa! Brinque!"
+        "Porque Aquilo está parado? Brinque com Aquilo! Brinque!"
       ],
       [
         "ItThatFledEscapeZero",
-        "Igual em casa. Uma Coisa morre, uma Coisa se levanta."
+        "Igual em casa. Um Aquilo morre, um Aquilo se levanta."
       ],
       [
         "ItThatFledEscapeOne",
-        "A Coisa não pode pegar isso! É o que diz A Coisa Que É Eterna!"
+        "Aquilo não pode pegar isso! É o que diz Aquilo Que É Eterno!"
       ],
       [
         "ItThatFledEscapeTwo",
-        "A Coisa não será pega!"
+        "Aquilo não será pego!"
       ],
       [
         "ItThatFledDefeatedZero",
-        "O domínio d'A Coisa Nãããão!"
+        "O domínio d'Aquilo! Nãããão!"
       ],
       [
         "ItThatFledDefeatedOne",
-        "A Coisa não entende…"
+        "Aquilo não entende…"
       ],
       [
         "ItThatFledDefeatedTwo",
-        "Porque… porque quer os amigos d'A Coisa!?"
+        "Porque… porque quer os amigos d'Aquilo!?"
       ],
       [
         "ItThatFledDefeatedThree",
-        "A Coisa… estava só brincando…"
+        "Aquilo… estava só brincando…"
       ],
       [
         "ItThatFledDefeatedFour",
@@ -19554,51 +19510,51 @@
       ],
       [
         "ItThatFledDefeatedSix",
-        "Que agonia! A Coisa pode compartilhar com A Coisa se A Coisa quiser…"
+        "Que agonia! Aquilo pode compartilhar com Aquilo se Aquilo quiser…"
       ],
       [
         "ItThatFledDefeatedSeven",
-        "A Coisa pode ir para o Lugar Escuro de novo?"
+        "Aquilo pode ir para o Lugar Escuro de novo?"
       ],
       [
         "ItThatFledDefeatedEight",
-        "Agora A Coisa é A Coisa Que Perdeu, também. As Coisas estão iguais… As Coisas são justas…"
+        "Agora Aquilo é Aquilo Que Perdeu, também. Aquilos estão iguais… Aquilos são justos…"
       ],
       [
         "ItThatFledDefeatedNine",
-        "A Coisa falhou os Lordes! A Coisa busca misericórdia! Tenha misericórdia da Coisa!"
+        "Aquilo falhou os Lordes! Aquilo busca misericórdia! Tenha misericórdia d'Aquilo!"
       ],
       [
         "ItThatFledDefeatedTen",
-        "A Coisa… perdeu…? Isso dói dentro d'A Coisa. Cego e afiado… parado e se movendo…"
+        "Aquilo… perdeu…? Aquilo dói dentro d'Aquilo. Cego e afiado… parado e se movendo…"
       ],
       [
         "ItThatFledOfferBargainZero",
-        "A Coisa não quer ir para o Lugar Escuro… Os Lordes sussurram para A Coisa lá. A Coisa precisa ficar! A Coisa fará qualquer coisa!"
+        "Aquilo não quer ir para o Lugar Escuro… Os Lordes sussurram para Aquilo lá. Aquilo precisa ficar! Aquilo fará qualquer coisa!"
       ],
       [
         "ItThatFledOfferBargainOne",
-        "A colmeia zumbe com vozes mas A Coisa está sozinha! Deixo A Coisa ir. A Coisa quer trazer um amigo dos Muitos."
+        "A colmeia zumbe com vozes mas Aquilo está sozinho! Deixo Aquilo ir. Aquilo quer trazer um amigo dos Muitos."
       ],
       [
         "ItThatFledOfferBargainTwo",
-        "Um presente! Deixe A Coisa nó Lugar Luminoso. Dê força aos Muitos. Dê um amigo para A Coisa. Sim. Essa é a maneira de encontrar A Coisa Que Nunca Morre."
+        "Um presente! Deixe Aquilo nó Lugar Luminoso. Dê força aos Muitos. Dê um amigo para Aquilo. Sim. Essa é a maneira de encontrar Aquilo Que Nunca Morre."
       ],
       [
         "ItThatFledOfferBargainThree",
-        "A Coisa está com inveja. A Coisa não gosta deste lugar. A Coisa quer estar em outro. Tanta dor e movimento aqui. A Coisa permite A Coisa ir a outro lugar? A Coisa trará um dos Muitos de volta."
+        "Aquilo está com inveja. Aquilo não gosta deste lugar. Aquilo quer estar em outro. Tanta dor e movimento aqui. Aquilo permite Aquilo ir a outro lugar? Aquilo trará um dos Muitos de volta."
       ],
       [
         "ItThatFledOfferBargainFour",
-        "A Coisa quer fugir! Deixo A Coisa fugir!"
+        "Aquilo quer fugir! Deixo Aquilo fugir!"
       ],
       [
         "ItThatFledOfferBargainFive",
-        "A Coisa ouve palavras que A Coisa não entende. Os Lordes acenam com a cabeça e mostram seus dentes quando eles ouvem as palavras. A Coisa pode repetir elas para A Coisa. A Coisa quer ouvir as palavras?"
+        "Aquilo ouve palavras que Aquilo não entende. Os Lordes acenam com a cabeça e mostram seus dentes quando eles ouvem as palavras. Aquilo pode repetir elas para Aquilo. Aquilo quer ouvir as palavras?"
       ],
       [
         "ItThatFledOfferBargainSix",
-        "Peles e garras tão bonitas A Coisa coletou. Tão afiadas e brilhantes. Será triste dar tais presentes para A Coisa, mas A Coisa  não quer ir para o Lugar Escuro. Salve A Coisa do Lugar Escuro e A Coisa pode ficar com as belezas d'A Coisa."
+        "Peles e garras tão bonitas Aquilo coletou. Tão afiadas e brilhantes. Será triste dar tais presentes para Aquilo, mas Aquilo não quer ir para o Lugar Escuro. Salve Aquilo do Lugar Escuro e Aquilo pode ficar com as belezas d'Aquilo."
       ],
       [
         "ItThatFledBargainAcceptedZero",
@@ -19606,11 +19562,11 @@
       ],
       [
         "ItThatFledBargainAcceptedOne",
-        "A Coisa tenta se aproximar mas nunca se aproxima."
+        "Aquilo tenta se aproximar mas nunca se aproxima."
       ],
       [
         "ItThatFledBargainAcceptedTwo",
-        "A Coisa irá se lembrar da dor da separação."
+        "Aquilo irá se lembrar da dor da separação."
       ],
       [
         "ItThatFledBargainAcceptedThree",
@@ -19622,95 +19578,95 @@
       ],
       [
         "ItThatFledBargainAcceptedFive",
-        "Os presentes d'A Coisa foram escolhidos tão cuidadosamente. A Coisa ira sentir falta deles."
+        "Os presentes d'Aquilo foram escolhidos tão cuidadosamente. Aquilo ira sentir falta deles."
       ],
       [
         "ItThatFledOfferBetrayalZero",
-        "A Coisa assistiu e ouviu Os Lordes por uma eternidade. A Coisa pode imitá-los. A Coisa pode disseminar muitas inverdades sobre eles. A Coisa fará isso, se A Coisa prometer não mandar A Coisa para o Lugar Escuro."
+        "Aquilo assistiu e ouviu Os Lordes por uma eternidade. Aquilo pode imitá-los. Aquilo pode disseminar muitas inverdades sobre eles. Aquilo fará isso, se Aquilo prometer não mandar Aquilo para o Lugar Escuro."
       ],
       [
         "ItThatFledOfferBetrayalOne",
-        "Outros pensam que A Coisa não pode contar inverdades, mas A Coisa sabe que muitas inverdades são verdades em outros lugares. A Coisa pode trazer as verdades para A Coisa Que Nunca Morre e Os Lordes seriam punidos. O que A Coisa acha?"
+        "Outros pensam que Aquilo não pode contar inverdades, mas Aquilo sabe que muitas inverdades são verdades em outros lugares. Aquilo pode trazer as verdades para Aquilo Que Nunca Morre e Os Lordes seriam punidos. O que Aquilo acha?"
       ],
       [
         "ItThatFledOfferBetrayalTwo",
-        "Quando A Coisa tenta ficar amigo de um dos Muitos eles vazam da pele deles. Tanta humidade! A Coisa pensa que é medo liquido. A Coisa pode fazer outros sentir medo até que fujam, molhados e brilhantes, assim como A Coisa fez! Então A Coisa deixará A Coisa ser livre?"
+        "Quando Aquilo tenta ficar amigo de um dos Muitos eles vazam da pele deles. Tanta humidade! Aquilo pensa que é medo liquido. Aquilo pode fazer outros sentir medo até que fujam, molhados e brilhantes, assim como Aquilo fez! Então Aquilo deixará Aquilo ser livre?"
       ],
       [
         "ItThatFledOfferBetrayalThree",
-        "A Coisa ouve. A Coisa está sempre ouvindo. A Coisa quer saber o que A Coisa ouviu? A Coisa pode repetir aqui as palavras dos Muitos."
+        "Aquilo ouve. Aquilo está sempre ouvindo. Aquilo quer saber o que Aquilo ouviu? Aquilo pode repetir aqui as palavras dos Muitos."
       ],
       [
         "ItThatFledOfferBetrayalFour",
-        "A Coisa quer ajudar A Coisa em vez disso? A Coisa não quer morrer. A Coisa nasceu falha na Pira Vermelha e não se deliciou-se como seus irmão em ser polpa e ossos para os Lordes. A Coisa faria qualquer coisa para não voltar ao sangue e a lama…"
+        "Aquilo quer ajudar Aquilo em vez disso? Aquilo não quer morrer. Aquilo nasceu falho na Pira Vermelha e não se deliciou-se como seus irmão em ser polpa e ossos para os Lordes. Aquilo faria qualquer coisa para não voltar ao sangue e a lama…"
       ],
       [
         "ItThatFledOfferBetrayalFive",
-        "A Coisa odeia o brilho d'A Coisa. A Coisa não vê? Cegante, queimando, horrível! A Coisa precisa agir contra A Coisa!"
+        "Aquilo odeia o brilho d'Aquilo. Aquilo não vê? Cegante, queimando, horrível! Aquilo precisa agir contra Aquilo!"
       ],
       [
         "ItThatFledOfferBetrayalSix",
-        "A Coisa odeia a ninhada d'A Coisa Que É Peluda. Sem pensamentos, bocas abertas, babando poder para os inimigos odiados de Antes de Tudo. Animais, As Coisas são. Animais doentes. A Coisa odeia odeia odeia odeia!"
+        "Aquilo odeia a ninhada d'Aquilo Que É Peludo. Sem pensamentos, bocas abertas, babando poder para os inimigos odiados de Antes de Tudo. Animais, Aquilos são. Animais doentes. Aquilo odeia odeia odeia odeia!"
       ],
       [
         "ItThatFledOfferBetrayalSeven",
-        "A Rainha d'A Coisa não ama os presente que A Coisa deu a Rainha d'A Coisa. Não A Coisa de Muitas Pernas. Não A Coisa de Garras Afiadas. Sempre a Rainha d'A Coisa esta brava. Então A Coisa dá mais raiva para a Rainha d'A Coisa."
+        "A Rainha d'Aquilo não ama os presente que Aquilo deu a Rainha d'Aquilo. Não Aquilo de Muitas Pernas. Não Aquilo de Garras Afiadas. Sempre a Rainha d'Aquilo esta brava. Então Aquilo dá mais raiva para a Rainha d'Aquilo."
       ],
       [
         "ItThatFledOfferBetrayalEight",
-        "A Coisa Que Desmembra quebra tantas coisas! Transforma ossos em lascas e as lascas em pó. Não deixa lascas para A Coisa, nem mesmo quando A Coisa pede! A Coisa Que Desmembra é tão malvado com A Coisa."
+        "Aquilo Que Desmembra quebra tantas coisas! Transforma ossos em lascas e as lascas em pó. Não deixa lascas para Aquilo, nem mesmo quando Aquilo pede! Aquilo Que Desmembra é tão malvado com Aquilo."
       ],
       [
         "ItThatFledOfferBetrayalNine",
-        "A Coisa Que Desmonta tenta colocar as peças de volta no lugar. Sempre errado. A Coisa não consegue fazer as peças ficarem. Braços e faces e pele, uma grande pilha. A Coisa quer ajudar, mas A Coisa Que Desmonta ameaça A Coisa. Então A Co isadesiste. Faça o que A Coisa quiser com A Coisa Que Desmonta."
+        "Aquilo Que Desmonta tenta colocar as peças de volta no lugar. Sempre errado. Aquilo não consegue fazer as peças ficarem. Braços e faces e pele, uma grande pilha. Aquilo quer ajudar, mas Aquilo Que Desmonta ameaça Aquilo. Então Aquilo desiste. Faça o que Aquilo quiser com Aquilo Que Desmonta."
       ],
       [
         "ItThatFledOfferExecuteZero",
-        "Sim, sim, envie A Coisa para o Lugar Escuro!"
+        "Sim, sim, envie Aquilo para o Lugar Escuro!"
       ],
       [
         "ItThatFledOfferExecuteOne",
-        "A Coisa morrerá pelo Lorde d'A Coisa!"
+        "Aquilo morrerá pelo Lorde d'Aquilo!"
       ],
       [
         "ItThatFledOfferExecuteTwo",
-        "A Coisa é só um dos Muitos. Acabe com A Coisa e outro virá."
+        "Aquilo é só um dos Muitos. Acabe com Aquilo e outro virá."
       ],
       [
         "ItThatFledOfferExecuteThree",
-        "Não! A Coisa não voltará para o Lugar Solitário. A Coisa terá que matar A Coisa."
+        "Não! Aquilo não voltará para o Lugar Solitário. Aquilo terá que matar Aquilo."
       ],
       [
         "ItThatFledReplyToBetrayalAcceptedZero",
-        "O sofrimento d'A Coisa será lendário!"
+        "O sofrimento d'Aquilo será lendário!"
       ],
       [
         "ItThatFledReplyToBetrayalAcceptedOne",
-        "Traia A Coisa. Faça o que quiser com A Coisa. A Coisa rasteja e implora e serve. Tudo que A Coisa pede para é não voltar ao Lugar Escuro, onde os Lordes sussurram e riem d'A Coisa, zombando d'A Coisa, machucando A Coisa..."
+        "Traia Aquilo. Faça o que quiser com Aquilo. Aquilo rasteja e implora e serve. Tudo que Aquilo pede para é não voltar ao Lugar Escuro, onde os Lordes sussurram e riem d'Aquilo, zombando d'Aquilo, machucando Aquilo..."
       ],
       [
         "ItThatFledReplyToBetrayalAcceptedTwo",
-        "A Coisa Que Protege não grasnaria assim se A Coisa soubesse o que a Pira Vermelha ensina no nascimento d'A Coisa..."
+        "Aquilo Que Protege não grasnaria assim se Aquilo soubesse o que a Pira Vermelha ensina no nascimento d'Aquilo…"
       ],
       [
         "ItThatFledReplyToBetrayalAcceptedThree",
-        "A Coisa odeia A Coisa Que Reza! Tanto brilho! Brilho odioso…"
+        "Aquilo odeia Aquilo Que Reza! Tanto brilho! Brilho odioso…"
       ],
       [
         "ItThatFledReplyToBetrayalAcceptedFour",
-        "A Coisa Que Se Gaba é estúpida. A Coisa tem um criador. A Coisa fugiu d'A Coisa."
+        "Aquilo Que Se Gaba é estúpido. Aquilo tem um criador. Aquilo fugiu d'Aquilo."
       ],
       [
         "ItThatFledReplyToBetrayalAcceptedFive",
-        "A Coisa olha e vê e ouve e não entende."
+        "Aquilo olha e vê e ouve e não entende."
       ],
       [
         "ItThatFledReplyToBetrayalAcceptedSix",
-        "A Coisa está tão feliz! A Coisa Que Desmonta fez o coração d'A Coisa acordar como músculo exposto ao Sul Quebrado!"
+        "Aquilo está tão feliz! Aquilo Que Desmonta fez o coração d'Aquilo acordar como músculo exposto ao Sul Quebrado!"
       ],
       [
         "ItThatFledInterrogatedZero",
-        "Porque A Coisa está fazendo isso com A Coisa?!"
+        "Porque Aquilo está fazendo isso com Aquilo?!"
       ],
       [
         "ItThatFledInterrogatedOne",
@@ -19722,7 +19678,7 @@
       ],
       [
         "ItThatFledReplyToExecutionZero",
-        "A Coisa é muito bruta nas brincadeiras!"
+        "Aquilo é muito bruto nas brincadeiras!"
       ],
       [
         "ItThatFledReplyToExecutionOne",
@@ -19730,11 +19686,11 @@
       ],
       [
         "ItThatFledReplyToExecutionTwo",
-        "A Coisa sorri."
+        "Aquilo sorri."
       ],
       [
         "ItThatFledSafehouseLeaderDefeatedZero",
-        "Mas… A Coisa era um Lorde!"
+        "Mas… Aquilo era um Lorde!"
       ],
       [
         "ItThatFledPrimaryDefenderStartsFightEighteen",
@@ -53121,2644 +53077,8 @@
         "Por quanto tempo terei que esperar?"
       ],
       [
-        "TrialmasterTutorialGreeting",
-        "Aproxime-se, Desafiante"
-      ],
-      [
-        "TrialmasterTutorialIntro",
-        "Muitos exilados testaram suas habilidades aqui ultimamente. Encare os desafios do Caos e vá atrás do seu destino. Você pode morrer aqui, agora, ou talvez um dia você poderá desafiar os próprios deuses. "
-      ],
-      [
-        "TrialmasterTutorialAltarUnlocked",
-        "Faça sua escolha."
-      ],
-      [
-        "TrialmasterTutorialAltarClicked",
-        "Mate a onda de inimigos. É bem simples. "
-      ],
-      [
-        "TrialmasterTutorialPlayerWalksAway",
-        "Não participar é uma escolha. "
-      ],
-      [
-        "TrialmasterTutorialPlayerLoses",
-        "Seu potencial permanece não apreciado. "
-      ],
-      [
-        "TrialmasterTutorialContinueOrStopOne",
-        "Um resultado favorável. Agora você encara outra escolha: um comprometimento maior com um desafio mais difícil, ou hesitação?"
-      ],
-      [
-        "TrialmasterTutorialStopChosen",
-        "A escolha segura. "
-      ],
-      [
-        "TrialmasterTutorialContinueOrStopTwo",
-        "Uma escolha de futuros, como antes. O próximo desafio será ainda mais difícil. "
-      ],
-      [
-        "TrialmasterTutorialStopChosenTwo",
-        "A escolha esperada. "
-      ],
-      [
-        "TrialmasterTutorialContinueOrStopThree",
-        "Você deseja coletar seus ganhos, ou continuar em busca de maiores riquezas?"
-      ],
-      [
-        "TrialmasterTutorialStopChosenThree",
-        "Assim será, por mais decepcionante que seja. "
-      ],
-      [
-        "TrialmasterTutorialFullWin",
-        "Você joga bem, Desafiante. Desfrute o resultado da sua sorte e de sua habilidade. Nos encontraremos novamente. "
-      ],
-      [
-        "TrialmasterSeeEachOtherAgainShout",
-        "O futuro guarda mais desafios. Tenha certeza. "
-      ],
-      [
         "MavenFinalFightDualIceBarrage",
         "Uma cascata de dor!"
-      ],
-      [
-        "TrialmasterFinalEncounterEffortRandom",
-        ""
-      ],
-      [
-        "TrialmasterFinalEncounterEffort2",
-        ""
-      ],
-      [
-        "TrialmasterFinalEncounterEffort3",
-        ""
-      ],
-      [
-        "TrialmasterFinalEncounterSpellEffortRandom",
-        ""
-      ],
-      [
-        "TrialmasterFinalEncounterSpellEffort2",
-        ""
-      ],
-      [
-        "TrialmasterFinalEncounterSpellEffort3",
-        ""
-      ],
-      [
-        "TrialmasterFinalEncounterGoesCasterStanceRandom",
-        "Caos me ajude!"
-      ],
-      [
-        "TrialmasterFinalEncounterGoesCasterStance2",
-        "Caos me ajude!"
-      ],
-      [
-        "TrialmasterFinalEncounterGoesCasterStance3",
-        "Caos me ajude!"
-      ],
-      [
-        "TrialmasterFinalEncounterCleaveAttackRandom",
-        "Enfrente-me!"
-      ],
-      [
-        "TrialmasterFinalEncounterCleaveAttack2",
-        "Enfrente-me!"
-      ],
-      [
-        "TrialmasterFinalEncounterCleaveAttack3",
-        "Enfrente-me!"
-      ],
-      [
-        "TrialmasterFinalEncounterSlamAttackRandom",
-        "Pelo Caos!"
-      ],
-      [
-        "TrialmasterFinalEncounterSlamAttack2",
-        "Pelo Caos!"
-      ],
-      [
-        "TrialmasterFinalEncounterSlamAttack3",
-        "Pelo Caos!"
-      ],
-      [
-        "TrialmasterFinalEncounterShockwaveSlamRandom",
-        "Sinta seu poder!"
-      ],
-      [
-        "TrialmasterFinalEncounterShockwaveSlam2",
-        "Sinta seu poder!"
-      ],
-      [
-        "TrialmasterFinalEncounterShockwaveSlam3",
-        "Sinta seu poder!"
-      ],
-      [
-        "TrialmasterFinalEncounterTectonicSlamRandom",
-        "Falhe diante de mim!"
-      ],
-      [
-        "TrialmasterFinalEncounterTectonicSlam2",
-        "Falhe diante de mim!"
-      ],
-      [
-        "TrialmasterFinalEncounterTectonicSlam3",
-        "Falhe diante de mim!"
-      ],
-      [
-        "TrialmasterFinalEncounterChaosShrineInMeleeRandom",
-        "Tentação pelo tolo. "
-      ],
-      [
-        "TrialmasterFinalEncounterChaosShrineInMelee2",
-        "Tentação pelo tolo. "
-      ],
-      [
-        "TrialmasterFinalEncounterChaosShrineInMelee3",
-        "Tentação pelo tolo. "
-      ],
-      [
-        "TrialmasterFinalEncounterThrowWeaponAttackRandom",
-        "Eu irei lhe esmagar!"
-      ],
-      [
-        "TrialmasterFinalEncounterThrowWeaponAttack2",
-        "Eu irei lhe esmagar!"
-      ],
-      [
-        "TrialmasterFinalEncounterThrowWeaponAttack3",
-        "Eu irei lhe esmagar!"
-      ],
-      [
-        "TrialmasterFinalEncounterOmegaProjectileCastRandom",
-        "Não há como escapar do destino. "
-      ],
-      [
-        "TrialmasterFinalEncounterOmegaProjectileCast2",
-        "Não há como escapar do destino. "
-      ],
-      [
-        "TrialmasterFinalEncounterOmegaProjectileCast3",
-        "Não há como escapar do destino. "
-      ],
-      [
-        "TrialmasterFinalEncounterSummonTetherSpikeCastRandom",
-        "Fique parado!"
-      ],
-      [
-        "TrialmasterFinalEncounterSummonTetherSpikeCast2",
-        "Fique parado!"
-      ],
-      [
-        "TrialmasterFinalEncounterSummonTetherSpikeCast3",
-        "Fique parado!"
-      ],
-      [
-        "TrialmasterFinalEncounterSummonChaosShrineInCasterRandom",
-        "Pegue. Vá em frente. "
-      ],
-      [
-        "TrialmasterFinalEncounterSummonChaosShrineInCaster2",
-        "Pegue. Vá em frente. "
-      ],
-      [
-        "TrialmasterFinalEncounterSummonChaosShrineInCaster3",
-        "Pegue. Vá em frente. "
-      ],
-      [
-        "TrialmasterFinalEncounterSummonWeaponRandom",
-        "Força do Caos!"
-      ],
-      [
-        "TrialmasterFinalEncounterSummonWeapon2",
-        "Força do Caos!"
-      ],
-      [
-        "TrialmasterFinalEncounterSummonWeapon3",
-        "Força do Caos!"
-      ],
-      [
-        "TrialmasterFinalEncounter75healthRandom",
-        ""
-      ],
-      [
-        "TrialmasterFinalEncounter50healthRandom",
-        ""
-      ],
-      [
-        "TrialmasterFinalEncounter25healthRandom",
-        ""
-      ],
-      [
-        "TrialmasterFinalEncounterDefeatedRandom",
-        "Meu serviço... finalmente acabou..."
-      ],
-      [
-        "TrialmasterFinalEncounterPostDefeatedRandom",
-        "...e meu serviço continua. O Caos ri, mortal, e a sorte é sua. "
-      ],
-      [
-        "TrialmasterFinalEncounterPlayerDiedTauntRandom",
-        ""
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallengeRandom",
-        "Mate todos. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge2",
-        "Mate todos. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge3",
-        "Mate todos. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge4",
-        "Destrua tudo. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge5",
-        "Destrua tudo. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge6",
-        "Destrua tudo. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge7",
-        "Não deixe ninguém vivo. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge8",
-        "Não deixe ninguém vivo. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge9",
-        "Não deixe ninguém vivo. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge10",
-        "Traga morte. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge11",
-        "Traga morte. "
-      ],
-      [
-        "TrialmasterChoiceMadeKillChallenge12",
-        "Traga morte. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallengeRandom",
-        "Defenda o que é seu. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge2",
-        "Defenda o que é seu. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge3",
-        "Defenda o que é seu. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge4",
-        "Posicione-se. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge5",
-        "Posicione-se. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge6",
-        "Posicione-se. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge7",
-        "Mantenha-se posicionado... se puder. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge8",
-        "Mantenha-se posicionado... se puder. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge9",
-        "Mantenha-se posicionado... se puder. "
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge10",
-        "Controle a maré."
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge11",
-        "Controle a maré."
-      ],
-      [
-        "TrialmasterChoiceMadeProtectChallenge12",
-        "Controle a maré."
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallengeRandom",
-        "Tente não morrer. "
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge2",
-        "Tente não morrer. "
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge3",
-        "Tente não morrer. "
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge4",
-        "Viva."
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge5",
-        "Viva."
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge6",
-        "Viva."
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge7",
-        "Agarre-se à vida. "
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge8",
-        "Agarre-se à vida. "
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge9",
-        "Agarre-se à vida. "
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge10",
-        "Supere minhas expectativas."
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge11",
-        "Supere minhas expectativas."
-      ],
-      [
-        "TrialmasterChoiceMadeSurviveChallenge12",
-        "Supere minhas expectativas."
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallengeRandom",
-        "Comece a conquista!"
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge2",
-        "Comece a conquista!"
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge3",
-        "Comece a conquista!"
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge4",
-        "Tome o que é seu."
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge5",
-        "Tome o que é seu."
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge6",
-        "Tome o que é seu."
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge7",
-        "Não deixe ninguém te parar. "
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge8",
-        "Não deixe ninguém te parar. "
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge9",
-        "Não deixe ninguém te parar. "
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge10",
-        "Conquiste tudo. "
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge11",
-        "Conquiste tudo. "
-      ],
-      [
-        "TrialmasterChoiceMadeConquerChallenge12",
-        "Conquiste tudo. "
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallengeRandom",
-        "Vá em frente e destrua. "
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge2",
-        "Vá em frente e destrua. "
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge3",
-        "Vá em frente e destrua. "
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge4",
-        "Destrua aquilo que você busca. "
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge5",
-        "Destrua aquilo que você busca. "
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge6",
-        "Destrua aquilo que você busca. "
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge7",
-        "Destruidor, comece!"
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge8",
-        "Destruidor, comece!"
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge9",
-        "Destruidor, comece!"
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge10",
-        "Destrua tudo. "
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge11",
-        "Destrua tudo. "
-      ],
-      [
-        "TrialmasterChoiceMadeDestroyChallenge12",
-        "Destrua tudo. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtTenRuinRandom",
-        "Você não conseguirá arruinar. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtTenRuin2",
-        "Você não conseguirá arruinar. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtTenRuin3",
-        "Você não conseguirá arruinar. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeRuinHunterRandom",
-        "A ruína lhe persegue. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeRuinHunter2",
-        "A ruína lhe persegue. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeRuinHunter3",
-        "A ruína lhe persegue. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
-        "A ruína chega de súbito. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin2",
-        "A ruína chega de súbito. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin3",
-        "A ruína chega de súbito. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin4",
-        "O fardo da ruína é duas vezes mais pesado. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin5",
-        "O fardo da ruína é duas vezes mais pesado. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin6",
-        "O fardo da ruína é duas vezes mais pesado. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeTwoTypesApplyRuinRandom",
-        "A ruína lhe cerca. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeTwoTypesApplyRuin2",
-        "A ruína lhe cerca. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeTwoTypesApplyRuin3",
-        "A ruína lhe cerca. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnhallowedPatchesToRuinPhantasmsRandom",
-        "A ruína se esconde em todos os cantos. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnhallowedPatchesToRuinPhantasms2",
-        "A ruína se esconde em todos os cantos. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnhallowedPatchesToRuinPhantasms3",
-        "A ruína se esconde em todos os cantos. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBeforeACertainTimeRandom",
-        "Melhor ir rápido..."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBeforeACertainTime2",
-        "Melhor ir rápido..."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBeforeACertainTime3",
-        "Melhor ir rápido..."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBuffsExpireFasterRandom",
-        "O tempo é seu inimigo. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBuffsExpireFaster2",
-        "O tempo é seu inimigo. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBuffsExpireFaster3",
-        "O tempo é seu inimigo. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeTimeIsShorterRandom",
-        "Nunca há tempo suficiente. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeTimeIsShorter2",
-        "Nunca há tempo suficiente. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeTimeIsShorter3",
-        "Nunca há tempo suficiente. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeLoseChargesEverySecondRandom",
-        "Seu sucesso está acabando."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeLoseChargesEverySecond2",
-        "Seu sucesso está acabando."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeLoseChargesEverySecond3",
-        "Seu sucesso está acabando."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeEscalatingVulnRandom",
-        "A mortalidade busca seu pagamento. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeEscalatingVuln2",
-        "A mortalidade busca seu pagamento. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeEscalatingVuln3",
-        "A mortalidade busca seu pagamento. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeEscalatingVuln4",
-        "Nenhuma defesa será suficiente. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeEscalatingVuln5",
-        "Nenhuma defesa será suficiente. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeEscalatingVuln6",
-        "Nenhuma defesa será suficiente. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnStartsTenPercentRandom",
-        "A morte já está à sua espreita. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent2",
-        "A morte já está à sua espreita. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent3",
-        "A morte já está à sua espreita. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent4",
-        "Você é mais frágil do que acha. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent5",
-        "Você é mais frágil do que acha. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnStartsTenPercent6",
-        "Você é mais frágil do que acha. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnEscalatesFasterRandom",
-        "A morte é rápida. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster2",
-        "A morte é rápida. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster3",
-        "A morte é rápida. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster4",
-        "Uma resistência mais ágil."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster5",
-        "Uma resistência mais ágil."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVulnEscalatesFaster6",
-        "A fragilidade corre pelos seus ossos. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUpRandom",
-        "Seus inimigos aceleram. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUp2",
-        "Seus inimigos aceleram. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUp3",
-        "Seus inimigos aceleram. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUp4",
-        "A maré da morte é rápida. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUp5",
-        "A maré da morte é rápida. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUp6",
-        "A maré da morte é rápida. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeedRandom",
-        "Uma resistência mais ágil."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed2",
-        "Uma resistência mais ágil."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed3",
-        "Uma resistência mais ágil."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed4",
-        "Eles se movem com o extremo ódio. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed5",
-        "Eles se movem com o extremo ódio. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersStartAtTwentySpeed6",
-        "Eles se movem com o extremo ódio. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFasterRandom",
-        "Velocidade sobre velocidade. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster2",
-        "Velocidade sobre velocidade. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster3",
-        "Velocidade sobre velocidade. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster4",
-        "Eles aceleram além da razão."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster5",
-        "Eles aceleram além da razão."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeMonstersSpeedUpFaster6",
-        "Eles aceleram além da razão."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryRandom",
-        "Lute contra a desaceleração do seu próprio coração."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecovery2",
-        "Lute contra a desaceleração do seu próprio coração."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecovery3",
-        "Lute contra a desaceleração do seu próprio coração."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnhallowedPatchesTierTwoRandom",
-        "Você sente a morte envolvendo seu coração?"
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnhallowedPatchesTierTwo2",
-        "Você sente a morte envolvendo seu coração?"
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnhallowedPatchesTierTwo3",
-        "Você sente a morte envolvendo seu coração?"
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryStartTwentyRandom",
-        "Seu coração já bate mais devagar. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryStartTwenty2",
-        "Seu coração já bate mais devagar. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryStartTwenty3",
-        "Seu coração já bate mais devagar. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDealNoDamageSometimesRandom",
-        "Suas artérias se contraem."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDealNoDamageSometimes2",
-        "Suas artérias se contraem."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDealNoDamageSometimes3",
-        "Suas artérias se contraem."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryFasterRandom",
-        "Seu sangue enfraquece. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster2",
-        "Seu sangue enfraquece. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster3",
-        "Seu sangue enfraquece. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster4",
-        "A morte se espalha nas suas veias. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster5",
-        "A morte se espalha nas suas veias. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeDiminishRecoveryFaster6",
-        "A morte se espalha nas suas veias. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaRandom",
-        "Vapores sufocantes procuram os vivos."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasma2",
-        "Vapores sufocantes procuram os vivos."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasma3",
-        "Vapores sufocantes procuram os vivos."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasma4",
-        "Evite o miasma, se puder. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasma5",
-        "Evite o miasma, se puder. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasma6",
-        "Evite o miasma, se puder. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaLargerRandom",
-        "O miasma se espalha. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger2",
-        "O miasma se espalha. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger3",
-        "O miasma se espalha. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger4",
-        "É raro o sopro de ar vivo. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger5",
-        "É raro o sopro de ar vivo. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaLarger6",
-        "É raro o sopro de ar vivo. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaFasterRandom",
-        "Os vapores são inevitáveis. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster2",
-        "Os vapores são inevitáveis. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster3",
-        "Os vapores são inevitáveis. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster4",
-        "A contaminação se move rapidamente pelo vento."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster5",
-        "A contaminação se move rapidamente pelo vento."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChasingMiasmaFaster6",
-        "A contaminação se move rapidamente pelo vento."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsRandom",
-        "Mate-os entre as chamas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystals2",
-        "Mate-os entre as chamas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystals3",
-        "Mate-os entre as chamas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystals4",
-        "O fogo busca o que quer."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystals5",
-        "O fogo busca o que quer."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystals6",
-        "O fogo busca o que quer."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsFasterRandom",
-        "O vento conspira com as chamas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster2",
-        "O vento conspira com as chamas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster3",
-        "O vento conspira com as chamas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster4",
-        "As chamas correm em sua direção."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster5",
-        "As chamas correm em sua direção."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster6",
-        "As chamas correm em sua direção."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsThirdRandom",
-        "As chamas geram mais chamas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsThird2",
-        "As chamas geram mais chamas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsThird3",
-        "As chamas geram mais chamas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsThird4",
-        "O fogo sempre se espalha."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsThird5",
-        "O fogo sempre se espalha."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireCrystalsThird6",
-        "O fogo sempre se espalha."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnusedColdRandom",
-        "Os mortos se estendem com um aperto gélido. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnusedCold2",
-        "Os mortos se estendem com um aperto gélido. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnusedCold3",
-        "Os mortos se estendem com um aperto gélido. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeIceSpinesRandom",
-        "A vingança é fria, de fato."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeIceSpines2",
-        "A vingança é fria, de fato."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeIceSpines3",
-        "A vingança é fria, de fato."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeIceSpinesLargerRandom",
-        "O aperto frio da morte é inevitável."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeIceSpinesLarger2",
-        "O aperto frio da morte é inevitável."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeIceSpinesLarger3",
-        "O aperto frio da morte é inevitável."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnusedColdTwoRandom",
-        "Da morte, o ódio se apodera de toda a vida."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnusedColdTwo2",
-        "Da morte, o ódio se apodera de toda a vida."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnusedColdTwo3",
-        "Da morte, o ódio se apodera de toda a vida."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeIceSpinesMoreRandom",
-        "O ódio gera ódio."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeIceSpinesMore2",
-        "O ódio gera ódio."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeIceSpinesMore3",
-        "O ódio gera ódio."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnusedColdThreeRandom",
-        "Cuidado com a rapidez com a qual você mata..."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnusedColdThree2",
-        "Cuidado com a rapidez com a qual você mata..."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnusedColdThree3",
-        "Cuidado com a rapidez com a qual você mata..."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesRandom",
-        "A tempestade se aproxima."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunes2",
-        "A tempestade se aproxima."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunes3",
-        "A tempestade se aproxima."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunes4",
-        "O relâmpago desce."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunes5",
-        "O relâmpago desce."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunes6",
-        "O relâmpago desce."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesChargeFasterRandom",
-        "A tempestade vem rapidamente."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster2",
-        "A tempestade vem rapidamente."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster3",
-        "A tempestade vem rapidamente."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster4",
-        "O relâmpago dá poucos avisos."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster5",
-        "O relâmpago dá poucos avisos."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesChargeFaster6",
-        "O relâmpago dá poucos avisos."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesMoreRandom",
-        "O raio sempre atinge duas vezes."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesMore2",
-        "O raio sempre atinge duas vezes."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesMore3",
-        "O raio sempre atinge duas vezes."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesMore4",
-        "Raios e trovões para todo lado. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesMore5",
-        "Raios e trovões para todo lado. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormRunesMore6",
-        "Raios e trovões para todo lado. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFlamespeakerRandom",
-        "Seus inimigos trazem a chama do verão."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFlamespeaker2",
-        "Seus inimigos trazem a chama do verão."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFlamespeaker3",
-        "Seus inimigos trazem a chama do verão."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireTotemRandom",
-        "O fogo do verão arde por dentro."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireTotem2",
-        "O fogo do verão arde por dentro."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFireTotem3",
-        "O fogo do verão arde por dentro."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFrostspeakerRandom",
-        "Seus oponentes trazem o ódio do inverno."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFrostspeaker2",
-        "Seus oponentes trazem o ódio do inverno."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFrostspeaker3",
-        "Seus oponentes trazem o ódio do inverno."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFrostspeaker4",
-        "Um campo de batalha gelado pelo ódio do inverno."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFrostspeaker5",
-        "Um campo de batalha gelado pelo ódio do inverno."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFrostspeaker6",
-        "Um campo de batalha gelado pelo ódio do inverno."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormspeakerRandom",
-        "Seus adversários trazem o trovão da primavera."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormspeaker2",
-        "Seus adversários trazem o trovão da primavera."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormspeaker3",
-        "Seus adversários trazem o trovão da primavera."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormspeaker4",
-        "O trovão da primavera. A própria ira."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormspeaker5",
-        "O trovão da primavera. A própria ira."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeStormspeaker6",
-        "O trovão da primavera. A própria ira."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVoidspeakerRandom",
-        "Seus oponentes trazem a loucura da noite."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVoidspeaker2",
-        "Seus oponentes trazem a loucura da noite."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeVoidspeaker3",
-        "Seus oponentes trazem a loucura da noite."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnhallowedPatchesRandom",
-        "A loucura da noite suga todas as esperanças."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnhallowedPatches2",
-        "A loucura da noite suga todas as esperanças."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnhallowedPatches3",
-        "A loucura da noite suga todas as esperanças."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadePhysicalTotemRandom",
-        "Aço e dor."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadePhysicalTotem2",
-        "Aço e dor."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadePhysicalTotem3",
-        "Aço e dor."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeShardspeakerRandom",
-        "Estilhaços e cacos para todos os lados. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeShardspeaker2",
-        "Estilhaços e cacos para todos os lados. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeShardspeaker3",
-        "Estilhaços e cacos para todos os lados. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBladesSecondTierRandom",
-        "Ataque impiedoso. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBladesSecondTier2",
-        "Ataque impiedoso. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBladesSecondTier3",
-        "Ataque impiedoso. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBladesThirdTierRandom",
-        "Seja feito em pedaços."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBladesThirdTier2",
-        "Seja feito em pedaços."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeBladesThirdTier3",
-        "Seja feito em pedaços."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeSpeakerShorterDelayRandom",
-        "Dê um passo rápido para que as explosões não acabem com você."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay2",
-        "Dê um passo rápido para que as explosões não acabem com você."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay3",
-        "Dê um passo rápido para que as explosões não acabem com você."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay4",
-        "Eles buscam lhe surpreender."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay5",
-        "Eles buscam lhe surpreender."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeSpeakerShorterDelay6",
-        "Eles buscam lhe surpreender."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsRandom",
-        "Cuidado com a mordida da besta acorrentada."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeasts2",
-        "Cuidado com a mordida da besta acorrentada."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeasts3",
-        "Cuidado com a mordida da besta acorrentada."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeSmallerArenaRandom",
-        "Vá longe demais e encontre a dor."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeSmallerArena2",
-        "Vá longe demais e encontre a dor."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeSmallerArena3",
-        "Vá longe demais e encontre a dor."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsMoreRandom",
-        "A natureza tem fome nas bordas. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsMore2",
-        "A natureza tem fome nas bordas. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsMore3",
-        "A natureza tem fome nas bordas. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsMore4",
-        "As bestas famintas são numerosas. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsMore5",
-        "As bestas famintas são numerosas. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsMore6",
-        "As bestas famintas são numerosas. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsMore7",
-        "Uma horda de bestas famintas. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsMore8",
-        "Uma horda de bestas famintas. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsMore9",
-        "Uma horda de bestas famintas. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsFasterRandom",
-        "A fome gera selvageria."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsFaster2",
-        "A fome gera selvageria."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsFaster3",
-        "A fome gera selvageria."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsFaster4",
-        "Mandíbulas rápidas são rápidas com as presas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsFaster5",
-        "Mandíbulas rápidas são rápidas com as presas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeChainedBeastsFaster6",
-        "Mandíbulas rápidas são rápidas com as presas."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeReducedRecoveryRandom",
-        "Um peso na alma."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeReducedRecovery2",
-        "Um peso na alma."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeReducedRecovery3",
-        "Um peso na alma."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeReducedRecoveryTwoRandom",
-        "Coração e espírito, sobrecarregados."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeReducedRecoveryTwo2",
-        "Coração e espírito, sobrecarregados."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeReducedRecoveryTwo3",
-        "Coração e espírito, sobrecarregados."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFlasksHinderRandom",
-        "Você sofrerá com sua própria bile. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFlasksHinder2",
-        "Você sofrerá com sua própria bile. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFlasksHinder3",
-        "Você sofrerá com sua própria bile. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeCurseReflectRandom",
-        "Seus epítetos ecoaram."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeCurseReflect2",
-        "Seus epítetos ecoaram."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeCurseReflect3",
-        "Seus epítetos ecoaram."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeManaCostAsDamageRandom",
-        "Seus pensamentos estalam de dor."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeManaCostAsDamage2",
-        "Seus pensamentos estalam de dor."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeManaCostAsDamage3",
-        "Seus pensamentos estalam de dor."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeManaCostAsDamage4",
-        "Os raios espreitam dentro de você."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeManaCostAsDamage5",
-        "Os raios espreitam dentro de você."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeManaCostAsDamage6",
-        "Os raios espreitam dentro de você."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeLoseChargesRandom",
-        "O sangue azeda."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeLoseCharges2",
-        "O sangue azeda."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeLoseCharges3",
-        "O sangue azeda."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFlasksCancelEachOtherRandom",
-        "Seu sangue te trai."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFlasksCancelEachOther2",
-        "Seu sangue te trai."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFlasksCancelEachOther3",
-        "Seu sangue te trai."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeLessAOELessProjSpeedRandom",
-        "Seu alcance excede seu aperto. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeLessAOELessProjSpeed2",
-        "Seu alcance excede seu aperto. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeLessAOELessProjSpeed3",
-        "Seu alcance excede seu aperto. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnluckyCritRandom",
-        "<if:MS>{Seja diminuído. }<elif:FS>{Seja diminuída. }"
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnluckyCrit2",
-        "<if:MS>{Seja diminuído. }<elif:FS>{Seja diminuída. }"
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeUnluckyCrit3",
-        "<if:MS>{Seja diminuído. }<elif:FS>{Seja diminuída. }"
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeReflectProjectilesRandom",
-        "Seus próprios golpes se voltam contra você."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeReflectProjectiles2",
-        "Seus próprios golpes se voltam contra você."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeReflectProjectiles3",
-        "Seus próprios golpes se voltam contra você."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeYourAurasAffectEnemiesRandom",
-        "Enfrente aquilo que você libera."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeYourAurasAffectEnemies2",
-        "Enfrente aquilo que você libera."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeYourAurasAffectEnemies3",
-        "Enfrente aquilo que você libera."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundOneRandom",
-        "<if:MS>{O desafiante de rodada única retorna.}<elif:FS>{A desafiante de rodada única retorna.}"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundOne2",
-        "<if:MS>{O desafiante de rodada única retorna.}<elif:FS>{A desafiante de rodada única retorna.}"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundOne3",
-        "<if:MS>{O desafiante de rodada única retorna.}<elif:FS>{A desafiante de rodada única retorna.}"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundOne4",
-        "Isso vai ser rápido..."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundOne5",
-        "Isso vai ser rápido..."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundOne6",
-        "Isso vai ser rápido..."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundOne7",
-        "Como você vai superar esta última performance incrível?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundOne8",
-        "Como você vai superar esta última performance incrível?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundTwoRandom",
-        "Como você vai superar esta última performance incrível?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundTwo2",
-        "Eu espero sinceramente que você esteja planejando durar mais que duas rodadas. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundTwo3",
-        "Vá até pelo menos a terceira rodada desta vez. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundTwo4",
-        "Vá até pelo menos a terceira rodada desta vez. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundTwo5",
-        "Vá até pelo menos a terceira rodada desta vez. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundTwo6",
-        "Eu esperava uma performance melhor."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundTwo7",
-        "Eu esperava uma performance melhor."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundTwo8",
-        "Eu esperava uma performance melhor."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundThreeRandom",
-        "Tente ir além de três rodadas desta vez. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundThree2",
-        "Tente ir além de três rodadas desta vez. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundThree3",
-        "Tente ir além de três rodadas desta vez. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundThree4",
-        "<if:MS>{O desafiante de três rodadas retorna...}<elif:FS>{A desafiante de três rodadas retorna...}"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundThree5",
-        "<if:MS>{O desafiante de três rodadas retorna...}<elif:FS>{A desafiante de três rodadas retorna...}"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundThree6",
-        "<if:MS>{O desafiante de três rodadas retorna...}<elif:FS>{A desafiante de três rodadas retorna...}"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFourRandom",
-        "Quatro rodadas deve ser um objetivo fácil de alcançar. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFour2",
-        "Quatro rodadas deve ser um objetivo fácil de alcançar. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFour3",
-        "Quatro rodadas deve ser um objetivo fácil de alcançar. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFour4",
-        "Não há glória em sobreviver a apenas quatro rodadas. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFour5",
-        "Não há glória em sobreviver a apenas quatro rodadas. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFour6",
-        "Não há glória em sobreviver a apenas quatro rodadas. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFiveRandom",
-        "Só conseguiu ir até cinco rodadas da última vez. Voltou para mais?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFive2",
-        "Só conseguiu ir até cinco rodadas da última vez. Voltou para mais?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFive3",
-        "Só conseguiu ir até cinco rodadas da última vez. Voltou para mais?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFive4",
-        "<if:MS>{O desafiante de cinco rodadas retorna...}<elif:FS>{A desafiante de cinco rodadas retorna...}"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFive5",
-        "<if:MS>{O desafiante de cinco rodadas retorna...}<elif:FS>{A desafiante de cinco rodadas retorna...}"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFive6",
-        "<if:MS>{O desafiante de cinco rodadas retorna...}<elif:FS>{A desafiante de cinco rodadas retorna...}"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFive7",
-        "<if:MS>{Oh, é o desafiante de cinco rodadas. }<elif:FS>{Oh, é a desafiante de cinco rodadas. }"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundFive8",
-        "<if:MS>{Oh, é o desafiante de cinco rodadas. }<elif:FS>{Oh, é a desafiante de cinco rodadas. }"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSixRandom",
-        "Você só conseguiu ir até seis rodadas da última vez. Por que se dá ao trabalho?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSix2",
-        "Você só conseguiu ir até seis rodadas da última vez. Por que se dá ao trabalho?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSix3",
-        "Você só conseguiu ir até seis rodadas da última vez. Por que se dá ao trabalho?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSix4",
-        "Seis rodadas? Tente chegar até om final desta vez. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSix5",
-        "Seis rodadas? Tente chegar até om final desta vez. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSix6",
-        "Seis rodadas? Tente chegar até om final desta vez. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSevenRandom",
-        "Duvido que você irá até sete rodadas novamente. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSeven2",
-        "Duvido que você irá até sete rodadas novamente. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSeven3",
-        "Duvido que você irá até sete rodadas novamente. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSeven4",
-        "O Caos gostaria de ver você sobreviver a sete rodadas novamente..."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSeven5",
-        "O Caos gostaria de ver você sobreviver a sete rodadas novamente..."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundSeven6",
-        "O Caos gostaria de ver você sobreviver a sete rodadas novamente..."
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundEightRandom",
-        "Oito rodadas foi... respeitável. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundEight2",
-        "Oito rodadas foi... respeitável. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundEight3",
-        "Oito rodadas foi... respeitável. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundEight4",
-        "Oito rodadas! O Caos lhe observa animado. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundEight5",
-        "Oito rodadas! O Caos lhe observa animado. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundEight6",
-        "Oito rodadas! O Caos lhe observa animado. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundNineRandom",
-        "Dói ter chegao tão perto da última vez?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundNine2",
-        "Dói ter chegao tão perto da última vez?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundNine3",
-        "Dói ter chegao tão perto da última vez?"
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundNine4",
-        "Nove rodadas, e a vitória ainda estava fora do alcance. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundNine5",
-        "Nove rodadas, e a vitória ainda estava fora do alcance. "
-      ],
-      [
-        "TrialmasterPlayerTookRewardLastTimeRoundNine6",
-        "Nove rodadas, e a vitória ainda estava fora do alcance. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLossesRandom",
-        "Você nunca ganha, e ainda assim continua tentando..."
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLosses2",
-        "Você nunca ganha, e ainda assim continua tentando..."
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLosses3",
-        "Você parece ter fome de punição. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLosses4",
-        "Você parece ter fome de punição. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLosses5",
-        "Persistência é sua única virtude. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLosses6",
-        "Persistência é sua única virtude. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLosses7",
-        "Você sabe que o objetivo é ganhar, né?"
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLosses8",
-        "Você sabe que o objetivo é ganhar, né?"
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLosses9",
-        "Você ainda vai tentar os meus desafios?"
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreLosses10",
-        "Você ainda vai tentar os meus desafios?"
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLossesRandom",
-        "Veio perder novamente?"
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses2",
-        "Veio perder novamente?"
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses3",
-        "Sim, venha perder um desafio. Produtivo. "
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses4",
-        "Sim, venha perder um desafio. Produtivo. "
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses5",
-        "Sim, venha perder um desafio. Produtivo. "
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses6",
-        "Múltiplas perdas. Um tanto vergonhoso."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses7",
-        "Múltiplas perdas. Um tanto vergonhoso."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses8",
-        "Múltiplas perdas. Um tanto vergonhoso."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses9",
-        "Seu orgulho exige restauração, desafiante."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses10",
-        "Seu orgulho exige restauração, desafiante."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourLosses11",
-        "Seu orgulho exige restauração, desafiante."
-      ],
-      [
-        "TrialmasterMoodBeginOneLossRandom",
-        "Uma perda não é motivo para se envergonhar."
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss2",
-        "Uma perda não é motivo para se envergonhar."
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss3",
-        "Recupere seu orgulho, desafiante."
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss4",
-        "Recupere seu orgulho, desafiante."
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss5",
-        "Será esta uma segunda derrota consecutiva?"
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss6",
-        "Será esta uma segunda derrota consecutiva?"
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss7",
-        "Seu ego está machucado?"
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss8",
-        "Seu ego está machucado?"
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss9",
-        "Você vai limpar as marcas do fracasso?"
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss10",
-        "Você vai limpar as marcas do fracasso?"
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss11",
-        "Agora é sua chance de reivindicar a vitória."
-      ],
-      [
-        "TrialmasterMoodBeginOneLoss12",
-        "Agora é sua chance de reivindicar a vitória."
-      ],
-      [
-        "TrialmasterMoodBeginOneWinRandom",
-        "Você pode conquistar a vitória duas vezes seguidas?"
-      ],
-      [
-        "TrialmasterMoodBeginOneWin2",
-        "Você pode conquistar a vitória duas vezes seguidas?"
-      ],
-      [
-        "TrialmasterMoodBeginOneWin3",
-        "Prove que sua última vitória não foi mera sorte. "
-      ],
-      [
-        "TrialmasterMoodBeginOneWin4",
-        "Prove que sua última vitória não foi mera sorte. "
-      ],
-      [
-        "TrialmasterMoodBeginOneWin5",
-        "A sorte aleatória deve ditar que você vença...  ocasionalmente."
-      ],
-      [
-        "TrialmasterMoodBeginOneWin6",
-        "A sorte aleatória deve ditar que você vença...  ocasionalmente."
-      ],
-      [
-        "TrialmasterMoodBeginOneWin7",
-        "Você ganhou. Uma vez. Não fique se achando. "
-      ],
-      [
-        "TrialmasterMoodBeginOneWin8",
-        "Você ganhou. Uma vez. Não fique se achando. "
-      ],
-      [
-        "TrialmasterMoodBeginOneWin9",
-        "Você ganhou. Uma vez. Não fique se achando. "
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWinsRandom",
-        "Sua série de vitórias acabará aqui. "
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins2",
-        "Sua série de vitórias acabará aqui. "
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins3",
-        "Você estpa ganhando, mas será que pode continuar?"
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins4",
-        "Você estpa ganhando, mas será que pode continuar?"
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins5",
-        "Espero que você tenha gostado de sua breve sequência de vitórias."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins6",
-        "Espero que você tenha gostado de sua breve sequência de vitórias."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins7",
-        "Espero que você tenha gostado de sua breve sequência de vitórias."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins8",
-        "Sua sorte acabará logo, desafiante."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins9",
-        "Sua sorte acabará logo, desafiante."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins10",
-        "Sua sorte acabará logo, desafiante."
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins11",
-        "Este pode ser o desafio que trará a sua derrota. "
-      ],
-      [
-        "TrialmasterMoodBeginTwoToFourWins12",
-        "Este pode ser o desafio que trará a sua derrota. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWinsRandom",
-        "Suas vitórias não irão continuar. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins2",
-        "Suas vitórias não irão continuar. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins3",
-        "Este desafio será a sua ruína. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins4",
-        "Este desafio será a sua ruína. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins5",
-        "Desta vez você finalmente irá perder. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins6",
-        "Desta vez você finalmente irá perder. "
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins7",
-        "Isso é alguma piada ridícula?"
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins8",
-        "Isso é alguma piada ridícula?"
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins9",
-        "Estou sendo punido, não é?"
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins10",
-        "Estou sendo punido, não é?"
-      ],
-      [
-        "TrialmasterMoodBeginFiveOrMoreWins11",
-        "Estou sendo punido, não é?"
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLossesRandom",
-        "Honestamente, já tinha passado da hora. Parabéns, desafiante. Sinceramente."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses2",
-        "Honestamente, já tinha passado da hora. Parabéns, desafiante. Sinceramente."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses3",
-        "Honestamente, já tinha passado da hora. Parabéns, desafiante. Sinceramente."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses4",
-        "Você... você ganhou? Eu sinceramente não esperava isso de você. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses5",
-        "Você... você ganhou? Eu sinceramente não esperava isso de você. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses6",
-        "Você... você ganhou? Eu sinceramente não esperava isso de você. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses7",
-        "Obrigado por não decepcionar meu mestre novamente. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses8",
-        "Obrigado por não decepcionar meu mestre novamente. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses9",
-        "Sua série de perdas finalmente acabou. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses10",
-        "Sua série de perdas finalmente acabou. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreLosses11",
-        "Sua série de perdas finalmente acabou. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLossesRandom",
-        "Eu não acreditava que você fosse capaz. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLosses2",
-        "Eu não acreditava que você fosse capaz. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLosses3",
-        "É justo. Sorte é sorte. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLosses4",
-        "É justo. Sorte é sorte. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLosses5",
-        "Você restaurou seu orgulho."
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLosses6",
-        "Você restaurou seu orgulho."
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLosses7",
-        "Ganhe alguns... perca a maioria. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLosses8",
-        "Ganhe alguns... perca a maioria. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLosses9",
-        "Você conteve a maré de perdas."
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourLosses10",
-        "Você conteve a maré de perdas."
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneLossRandom",
-        "Você se redimiu."
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneLoss2",
-        "Você se redimiu."
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneLoss3",
-        "Assim, os caprichos do acaso."
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneLoss4",
-        "Assim, os caprichos do acaso."
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneLoss5",
-        "Mantendo interessante, entendo. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneLoss6",
-        "Mantendo interessante, entendo. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneLoss7",
-        "Uma pequena reviravolta."
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneLoss8",
-        "Uma pequena reviravolta."
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneWinRandom",
-        "São dois consecutivos!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneWin2",
-        "São dois consecutivos!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneWin3",
-        "Uma segunda vitória!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneWin4",
-        "Uma segunda vitória!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneWin5",
-        "Eu posso praticamente ver o seu ego inflando. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneWin6",
-        "Eu posso praticamente ver o seu ego inflando. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneWin7",
-        "<if:MS>{Não fique ávido demais. }<elif:FS>{Não fique ávida demais. }"
-      ],
-      [
-        "TrialmasterMoodPlayerWonOneWin8",
-        "<if:MS>{Não fique ávido demais. }<elif:FS>{Não fique ávida demais. }"
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWinsRandom",
-        "Impressionante, desafiante. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins2",
-        "Impressionante, desafiante. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins3",
-        "Sua série de vitórias continua. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins4",
-        "Sua série de vitórias continua. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins5",
-        "A sorte só pode te levar até certo ponto..."
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins6",
-        "A sorte só pode te levar até certo ponto..."
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins7",
-        "Por enquanto, a vitória continua sendo sua!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins8",
-        "Por enquanto, a vitória continua sendo sua!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins9",
-        "Nada mal... para um mortal."
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins10",
-        "Nada mal... para um mortal."
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins11",
-        "Isso não vai continuar. Eu não estou preocupado."
-      ],
-      [
-        "TrialmasterMoodPlayerWonTwoToFourWins12",
-        "Isso não vai continuar. Eu não estou preocupado."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWinsRandom",
-        "Isso não tem mais graça. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins2",
-        "Isso não tem mais graça. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins3",
-        "Essa série de vitórias é surpreendente."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins4",
-        "Essa série de vitórias é surpreendente."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins5",
-        "Como você continua ganhano?!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins6",
-        "Como você continua ganhano?!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins7",
-        "Eu suspeito que estou sendo feito de idiota!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins8",
-        "Eu suspeito que estou sendo feito de idiota!"
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins9",
-        "Eu deveria ter me tornado um padre de Yaomac em vez disso..."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins10",
-        "Eu deveria ter me tornado um padre de Yaomac em vez disso..."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins11",
-        "Eu deveria ter me tornado um padre de Yaomac em vez disso..."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins12",
-        "Você ganhou... de novo. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins13",
-        "Você ganhou... de novo. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins14",
-        "Você ganhou... de novo. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins15",
-        "Isso é insuportável..."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins16",
-        "Isso é insuportável..."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins17",
-        "Isso é insuportável..."
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins18",
-        "Pegue seu prêmio e vá embora. "
-      ],
-      [
-        "TrialmasterMoodPlayerWonFiveOrMoreWins19",
-        "Pegue seu prêmio e vá embora. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLossesRandom",
-        "Você está me fazendo perder tempo, idiota. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLosses2",
-        "Você está me fazendo perder tempo, idiota. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLosses3",
-        "Que... esperado."
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLosses4",
-        "Que... esperado."
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLosses5",
-        "E ainda assim..."
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLosses6",
-        "E ainda assim..."
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLosses7",
-        "Você continua falhando!"
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLosses8",
-        "Você continua falhando!"
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLosses9",
-        "Que vergonhoso para você. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreLosses10",
-        "Que vergonhoso para você. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourLossesRandom",
-        "Talvez esses desafios sejam difíceis demais para você. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourLosses2",
-        "Talvez esses desafios sejam difíceis demais para você. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourLosses3",
-        "Talvez você deva aprimorar suas habilidades antes de tentar meus desafios novamente."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourLosses4",
-        "Talvez você deva aprimorar suas habilidades antes de tentar meus desafios novamente."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourLosses5",
-        "Seu recorde piora..."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourLosses6",
-        "Seu recorde piora..."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourLosses7",
-        "Agora você sabe o que não fazer. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourLosses8",
-        "Agora você sabe o que não fazer. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLossRandom",
-        "Outro fracasso..."
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLoss2",
-        "Outro fracasso..."
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLoss3",
-        "Perder duas vezes seguidas... que pena. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLoss4",
-        "Perder duas vezes seguidas... que pena. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLoss5",
-        "Duas perdas seguidas!"
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLoss6",
-        "Duas perdas seguidas!"
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLoss7",
-        "Duas perdas seguidas!"
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLoss8",
-        "Talvez você não entenda as regras..."
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLoss9",
-        "Talvez você não entenda as regras..."
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneLoss10",
-        "Talvez você não entenda as regras..."
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneWinRandom",
-        "Parece que uma segunda vitória consecutiva não era seu destino. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneWin2",
-        "Parece que uma segunda vitória consecutiva não era seu destino. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneWin3",
-        "Tente sua sorte novamente em breve, desafiante. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneWin4",
-        "Tente sua sorte novamente em breve, desafiante. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneWin5",
-        "Não se envergonhe de seu magro recorde."
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneWin6",
-        "Não se envergonhe de seu magro recorde."
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneWin7",
-        "Não se envergonhe de seu magro recorde."
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneWin8",
-        "Não era pra ser. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostOneWin9",
-        "Não era pra ser. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWinsRandom",
-        "Sua série de vitórias chegou ao fim."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins2",
-        "Sua série de vitórias chegou ao fim."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins3",
-        "Os vitoriosos sempre caem eventualmente."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins4",
-        "Os vitoriosos sempre caem eventualmente."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins5",
-        "Suas grandes visões se transformam em pó."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins6",
-        "Suas grandes visões se transformam em pó."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins7",
-        "Parece que encontramos o limite de suas habilidades."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins8",
-        "Parece que encontramos o limite de suas habilidades."
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins9",
-        "A sorte não lhe favorece mais. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins10",
-        "A sorte não lhe favorece mais. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins11",
-        "Era inevitável. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins12",
-        "Era inevitável. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins13",
-        "Seu caminho até a grandiosidade fez uma séria curva em diração ao penhasco. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostTwoToFourWins14",
-        "Seu caminho até a grandiosidade fez uma séria curva em diração ao penhasco. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWinsRandom",
-        "Não há verginha na derrota. Bom... um pouco. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWins2",
-        "Não há verginha na derrota. Bom... um pouco. "
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWins3",
-        "Você não sai mais vitorioso."
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWins4",
-        "Você não sai mais vitorioso."
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWins5",
-        "Sua série de vitórias chegou ao fim."
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWins6",
-        "Sua série de vitórias chegou ao fim."
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWins7",
-        "Hahahahaha! Sua sorte acabou, idiota!"
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWins8",
-        "Hahahahaha! Sua sorte acabou, idiota!"
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWins9",
-        "Meu mestre, está feito! Não me torture mais!"
-      ],
-      [
-        "TrialmasterMoodPlayerLostFiveOrMoreWins10",
-        "Meu mestre, está feito! Não me torture mais!"
-      ],
-      [
-        "TrialmasterDefeatedRandom",
-        "Meu serviço... finalmente acabou..."
-      ],
-      [
-        "TrialmasterReturnsAfterDefeatRandom",
-        "...e meu serviço continua. O Caos ri, mortal, e a sorte é sua. "
-      ],
-      [
-        "TrialmasterAboutHisDefeat",
-        "Eu continuo a servir..."
-      ],
-      [
-        "TrialmasterIntroduction",
-        "Há muito tempo que caminho por este mundo em busca de desafiantes adequados. Meu mestre, o Caos, me encarregou dessa tarefa. Muitos tentaram meus desafios em busca de grandeza. Estudiosos, criminosos, heróis e os mansos. Todos deram um passo à frente e muitos caíram. As regras nunca mudaram para eles e as regras não mudarão para você. Traga apenas o que você pode perder - incluindo sua vida."
-      ],
-      [
-        "TrialmasterGossipChaos",
-        "Meu mestre é a essência de tudo o que pode existir. Ele é a virada da moeda, e ele é o rolar dos dados. Quer você ganhe ou perca, seu propósito ainda é servido. E ainda - suas chances podem ser influenciadas por sua habilidade, por seu intelecto e por seu poder. Isso é o que fascina o Caos. Mortais habilidosos podem dobrar suas chances em seu próprio favor, pois nos ventos contrários do desconhecido, a flecha de um mestre cai com mais segurança do que a flecha de um novato. Mostre a ele sua maestria e ele sorrirá para você. Surpreenda-o com o maior talento, e ele pode até rir. Choverá sorte sobre aqueles que trazem humor ao Caos."
-      ],
-      [
-        "TrialmasterGossipDoryani",
-        "Eu já fui mortal e sei como o mortal que fui se sentiria a respeito de certas coisas. Aquele homem teria odiado Doryani fortemente por causar a queda da maior civilização que este mundo já conheceu. Felizmente, não estou mais preocupado com esses apegos. Pela graça do Caos, agora entendo que todas as coisas que podem acontecer acontecem. Mesmo agora, estou testando o poder de outro sobrevivente que apareceu em Wraeclast em vez de você, e para ela, você está morto. Tudo o que você alcança não tem sentido. Tudo o que Doryani arruinou era igualmente sem sentido."
-      ],
-      [
-        "TrialmasterGossipAtziri",
-        "A Rainha representa uma estranha ilha de estabilidade que o Caos não pode compreender. Quase todos os eventos vêm carregados de possibilidades, mas a história de sua existência é um curso único e ininterrupto. Não há mundo, real ou imaginário, onde Atziri não tenha conduzido nosso povo para a ruína.\r\n\r\nEla ainda se olha em um espelho, em algum lugar fora do alcance de meu mestre, em um lugar de loucura carmesim e pesadelo... meu mestre adora a incerteza dos resultados fortuitos, mas ele abomina enigmas cósmicos sem uma resposta clara, especialmente quando tais enigmas parecem possuir o poder de imprimir determinismo na estrutura da existência. "
-      ],
-      [
-        "TrialmasterGossipAnathema",
-        "Meu senhor Caos sempre sentiu que há uma força sinistra à espreita nas brumas desconhecidas da Criação crua que busca se opor a ele. Não se mostra. Não, é um Impulso covarde, que sutilmente emaranha os fios do Destino para reunir os mortais em cada era para o propósito da Ordem, um conflito frio que se alastra eternamente - com apenas uma exceção."
-      ],
-      [
-        "TrialmasterCombatUltimatumMoveRandom",
-        "Ultimato!"
-      ],
-      [
-        "TrialmasterCombatUltimatumMove2",
-        "Ultimato!"
-      ],
-      [
-        "TrialmasterCombatTransformation",
-        "Hora de acaba com isso!"
-      ],
-      [
-        "TrialmasterPlayerTookRewardRandom",
-        "A escolha segura. "
-      ],
-      [
-        "TrialmasterPlayerTookReward2",
-        "A escolha esperada. "
-      ],
-      [
-        "TrialmasterPlayerTookReward3",
-        "Assim será, por mais decepcionante que seja. "
-      ],
-      [
-        "HasinaPetIdleRandom",
-        ""
-      ],
-      [
-        "HasinaPetIdle2",
-        ""
-      ],
-      [
-        "HasinaPetIdle3",
-        ""
-      ],
-      [
-        "HasinaPetIdle4",
-        ""
-      ],
-      [
-        "HasinaPetIdle5",
-        ""
-      ],
-      [
-        "HasinaPetIdle6",
-        ""
-      ],
-      [
-        "HasinaPetIdle7",
-        ""
-      ],
-      [
-        "HasinaPetIdle8",
-        ""
-      ],
-      [
-        "HasinaPetDismiss",
-        ""
-      ],
-      [
-        "HasinaPetExaltedOrb",
-        ""
-      ],
-      [
-        "HasinaPetToHideoutRandom",
-        ""
-      ],
-      [
-        "HasinaPetToHideout2",
-        ""
-      ],
-      [
-        "HasinaPetUniqueKill",
-        ""
-      ],
-      [
-        "HasinaPetMirrorDrop",
-        ""
-      ],
-      [
-        "HasinaPetPlayerDeathRandom",
-        ""
-      ],
-      [
-        "HasinaPetPlayerDeath2",
-        ""
-      ],
-      [
-        "HasinaPetSummon",
-        ""
       ]
     ]
   },
@@ -57231,7 +54551,7 @@
       ],
       [
         "Metadata/Monsters/LeagueBetrayal/BetrayalBreach",
-        "Coisa Fugitiva"
+        "Aquilo que Fugiu"
       ],
       [
         "Metadata/Monsters/LeagueBetrayal/BetrayalGravicius",
@@ -57804,22 +55124,6 @@
       [
         "Metadata/Monsters/Thaumaturgy/ThaumaturgistBoss",
         "Ciergan, Alquimista das Sombras"
-      ],
-      [
-        "Metadata/NPC/League/Ultimatum/UltimatumNPC",
-        "O Mestre das Provações"
-      ],
-      [
-        "Metadata/NPC/League/Ultimatum/UltimatumNPCPostFight",
-        "O Mestre das Provações"
-      ],
-      [
-        "Metadata/Monsters/LeagueUltimatum/TrialMaster/TrialMasterBoss",
-        "O Mestre das Provações"
-      ],
-      [
-        "Metadata/NPC/Hasina",
-        "Hasina"
       ]
     ]
   }
