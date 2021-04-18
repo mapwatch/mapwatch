@@ -10421,6 +10421,21 @@
         1276
       ],
       [
+        "HarvestLeagueBoss",
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/OshabiMap.png",
+        null,
+        null,
+        1282
+      ],
+      [
         "Hideout4_3",
         false,
         true,
@@ -12939,6 +12954,51 @@
         null,
         null,
         1696
+      ],
+      [
+        "UltimatumArena",
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/UltimatumTrialBase.png",
+        null,
+        null,
+        1702
+      ],
+      [
+        "UltimatumArenaEndgame",
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/UltimatumTrialBase.png",
+        null,
+        null,
+        1703
+      ],
+      [
+        "UltimatumBossArena",
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/UltimatumTrialBase.png",
+        null,
+        null,
+        1704
       ]
     ]
   },
@@ -13576,6 +13636,7 @@
         "AbyssLeagueBoss2": "Abyssal Depths",
         "AbyssLeagueBoss3": "Abyssal Depths",
         "LegionLeague": "Domain of Timeless Conflict",
+        "HarvestLeagueBoss": "The Sacred Grove",
         "Hideout4_3": "Cavernous Hideout",
         "Hideout5_3": "Forsaken Hideout",
         "Hideout11_3": "Bloodsoaked Hideout",
@@ -13743,7 +13804,10 @@
         "HeistBoss_Jamanra": "Tomb of the Banished",
         "HeistBoss_Nashta": "Pillaged Camp",
         "HeistBoss_TheUnbreakable": "Combat Capacity Test Chamber",
-        "MavenHub": "The Maven's Crucible"
+        "MavenHub": "The Maven's Crucible",
+        "UltimatumArena": "The Utzaal Arena",
+        "UltimatumArenaEndgame": "The Utzaal Arena",
+        "UltimatumBossArena": "The Tower of Ordeals"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Beastmaster",
@@ -13801,7 +13865,8 @@
         "Metadata/NPC/League/Heist/TheBossLioneyes": "Kurai, the Administrator",
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "The Envoy",
-        "Metadata/NPC/Epilogue/Maven": "The Maven"
+        "Metadata/NPC/Epilogue/Maven": "The Maven",
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "The Trialmaster"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "I see you, little mouse... you don't belong here. Run along!",
@@ -14986,6 +15051,7 @@
         "AbyssLeagueBoss2": "Profondeurs abyssales",
         "AbyssLeagueBoss3": "Profondeurs abyssales",
         "LegionLeague": "Domaine du Conflit intemporel",
+        "HarvestLeagueBoss": "Le Bosquet sacré",
         "Hideout4_3": "Repaire caverneux",
         "Hideout5_3": "Repaire abandonné",
         "Hideout11_3": "Repaire ensanglanté",
@@ -15153,7 +15219,10 @@
         "HeistBoss_Jamanra": "Tombeau des bannis",
         "HeistBoss_Nashta": "Campement pillé",
         "HeistBoss_TheUnbreakable": "Chambre d'essai de capacités au combat",
-        "MavenHub": "Le Creuset de la Prodige"
+        "MavenHub": "Le Creuset de la Prodige",
+        "UltimatumArena": "L'Arène d'Utzaal",
+        "UltimatumArenaEndgame": "L'Arène d'Utzaal",
+        "UltimatumBossArena": "La Tour des Calvaires"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Maître des Bêtes",
@@ -15211,7 +15280,8 @@
         "Metadata/NPC/League/Heist/TheBossLioneyes": "Kuraï, l'Administratrice",
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "L'Émissaire",
-        "Metadata/NPC/Epilogue/Maven": "La Prodige"
+        "Metadata/NPC/Epilogue/Maven": "La Prodige",
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "Le Maître des Épreuves"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "Je te vois, petite souris… tu n'as rien à faire ici. Du balais !",
@@ -16396,6 +16466,7 @@
         "AbyssLeagueBoss2": "Abgründige Tiefen",
         "AbyssLeagueBoss3": "Abgründige Tiefen",
         "LegionLeague": "Reich des immerwährenden Krieges",
+        "HarvestLeagueBoss": "Der Heilige Hain",
         "Hideout4_3": "Versteckte Höhle",
         "Hideout5_3": "Vergessenes Versteck",
         "Hideout11_3": "Blutgetränktes Versteck",
@@ -16563,7 +16634,10 @@
         "HeistBoss_Jamanra": "Grab des Verbannten",
         "HeistBoss_Nashta": "Geplündertes Lager",
         "HeistBoss_TheUnbreakable": "Prüfkammer der Kampfleistung",
-        "MavenHub": "Die Prüfung der Seherin"
+        "MavenHub": "Die Prüfung der Seherin",
+        "UltimatumArena": "Die Arena von Utzaal",
+        "UltimatumArenaEndgame": "Die Arena von Utzaal",
+        "UltimatumBossArena": "Der Turm der Qualen"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Meister der Bestien",
@@ -16621,7 +16695,8 @@
         "Metadata/NPC/League/Heist/TheBossLioneyes": "Kurai die Verwalterin",
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "Der Gesandte",
-        "Metadata/NPC/Epilogue/Maven": "Die Seherin"
+        "Metadata/NPC/Epilogue/Maven": "Die Seherin",
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "Der Prüfungsmeister"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "Ich sehe dich, kleines Ungeziefer ... du hast hier nichts verloren. Scher dich fort!",
@@ -17806,6 +17881,7 @@
         "AbyssLeagueBoss2": "심연 지하",
         "AbyssLeagueBoss3": "심연 지하",
         "LegionLeague": "끝없는 분쟁의 영토",
+        "HarvestLeagueBoss": "신성한 숲",
         "Hideout4_3": "암굴 은신처",
         "Hideout5_3": "버림받은 은신처",
         "Hideout11_3": "피투성이 은신처",
@@ -17973,7 +18049,10 @@
         "HeistBoss_Jamanra": "추방자의 무덤",
         "HeistBoss_Nashta": "약탈당한 야영지",
         "HeistBoss_TheUnbreakable": "전투 역량 시험실",
-        "MavenHub": "메이븐의 시련"
+        "MavenHub": "메이븐의 시련",
+        "UltimatumArena": "웃자알 투기장",
+        "UltimatumArenaEndgame": "웃자알 투기장",
+        "UltimatumBossArena": "시련의 탑"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "야수의 대가 아인하르",
@@ -18031,7 +18110,8 @@
         "Metadata/NPC/League/Heist/TheBossLioneyes": "사무관 쿠라이",
         "Metadata/NPC/League/Heist/TullinaFiance": "줄리우스 패로우",
         "Metadata/NPC/Epilogue/Envoy": "사절",
-        "Metadata/NPC/Epilogue/Maven": "메이븐"
+        "Metadata/NPC/Epilogue/Maven": "메이븐",
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "시련의 대가"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "네가 보이는구나, 생쥐. 이 세상에 속하지 않은 자여, 썩 물러가거라!",
@@ -19216,6 +19296,7 @@
         "AbyssLeagueBoss2": "Profundezas Abissais",
         "AbyssLeagueBoss3": "Profundezas Abissais",
         "LegionLeague": "Domínio do Conflito Atemporal",
+        "HarvestLeagueBoss": "O Bosque Sagrado",
         "Hideout4_3": "Refúgio Cavernoso",
         "Hideout5_3": "Refúgio Abandonado",
         "Hideout11_3": "Refúgio Ensanguentado",
@@ -19383,7 +19464,10 @@
         "HeistBoss_Jamanra": "Tumba dos Banidos",
         "HeistBoss_Nashta": "Campo de Pilhagem",
         "HeistBoss_TheUnbreakable": "Câmara de Teste de Capacidade de Combate",
-        "MavenHub": "Crisol da Maven"
+        "MavenHub": "Crisol da Maven",
+        "UltimatumArena": "A Arena Utzaal",
+        "UltimatumArenaEndgame": "A Arena Utzaal",
+        "UltimatumBossArena": "A Torre das Provações"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar, Mestre das Bestas",
@@ -19441,7 +19525,8 @@
         "Metadata/NPC/League/Heist/TheBossLioneyes": "Kurai, a Administradora",
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "O Enviado",
-        "Metadata/NPC/Epilogue/Maven": "A Maven"
+        "Metadata/NPC/Epilogue/Maven": "A Maven",
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "O Mestre das Provações"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "<if:MS>{Bem-vindo ao crisol da criação. A bigorna em qual os mundos foram forjados.}<elif:FS>{Bem-vinda ao crisol da criação. A bigorna em qual os mundos foram forjados.}",
@@ -20626,6 +20711,7 @@
         "AbyssLeagueBoss2": "Глубины Бездны",
         "AbyssLeagueBoss3": "Глубины Бездны",
         "LegionLeague": "Владения вневременной войны",
+        "HarvestLeagueBoss": "Священная роща",
         "Hideout4_3": "Убежище в пещере",
         "Hideout5_3": "Забытое убежище",
         "Hideout11_3": "Залитое кровью убежище",
@@ -20793,7 +20879,10 @@
         "HeistBoss_Jamanra": "Гробница изгнанных",
         "HeistBoss_Nashta": "Разорённый лагерь",
         "HeistBoss_TheUnbreakable": "Испытательная камера боевых возможностей",
-        "MavenHub": "Горнило Мейвен"
+        "MavenHub": "Горнило Мейвен",
+        "UltimatumArena": "Арена Утцааля",
+        "UltimatumArenaEndgame": "Арена Утцааля",
+        "UltimatumBossArena": "Башня испытаний"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Эйнар, Мастер зверей",
@@ -20851,7 +20940,8 @@
         "Metadata/NPC/League/Heist/TheBossLioneyes": "Кураи Распорядительница",
         "Metadata/NPC/League/Heist/TullinaFiance": "Юлий Фарроу",
         "Metadata/NPC/Epilogue/Envoy": "Посланник",
-        "Metadata/NPC/Epilogue/Maven": "Мейвен"
+        "Metadata/NPC/Epilogue/Maven": "Мейвен",
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "Мастер испытаний"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "Я тебя вижу, мышонок... Тебе здесь не место. Убирайся!",
@@ -22942,6 +23032,7 @@
         "AbyssLeagueBoss2": "Profundidades Abisales",
         "AbyssLeagueBoss3": "Profundidades Abisales",
         "LegionLeague": "Dominio de Conflicto Atemporal",
+        "HarvestLeagueBoss": "El Huerto sagrado",
         "Hideout4_3": "Guarida Cavernosa",
         "Hideout5_3": "Guarida Abandonada",
         "Hideout11_3": "Guarida Ensangrentada",
@@ -23109,7 +23200,10 @@
         "HeistBoss_Jamanra": "Tumba de los desterrados",
         "HeistBoss_Nashta": "Campamento saqueado",
         "HeistBoss_TheUnbreakable": "Combat Capacity Test Chamber",
-        "MavenHub": "La prueba de la Especialista"
+        "MavenHub": "La prueba de la Especialista",
+        "UltimatumArena": "La Arena Utzaal",
+        "UltimatumArenaEndgame": "La Arena Utzaal",
+        "UltimatumBossArena": "La torre de los calvarios"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "Einhar Frey, Maestro de Bestias",
@@ -23167,7 +23261,8 @@
         "Metadata/NPC/League/Heist/TheBossLioneyes": "Kurai, la Administradora",
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "El Emisario",
-        "Metadata/NPC/Epilogue/Maven": "La Especialista"
+        "Metadata/NPC/Epilogue/Maven": "La Especialista",
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "El Maestro de pruebas"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "<if:MS>{Te veo, ratoncito... no perteneces aquí. ¡Sigue tu camino!}<elif:FS>{Te veo, ratoncita... no perteneces aquí. ¡Sigue tu camino!}",
@@ -24352,6 +24447,7 @@
         "AbyssLeagueBoss2": "Abyssal Depths",
         "AbyssLeagueBoss3": "Abyssal Depths",
         "LegionLeague": "แดนแห่งความขัดแย้งชั่วกัปชั่วกัลป์",
+        "HarvestLeagueBoss": "สวนศักดิ์สิทธิ์",
         "Hideout4_3": "ที่ซ่อน Cavernous",
         "Hideout5_3": "ที่ซ่อน Forsaken",
         "Hideout11_3": "ที่ซ่อน Bloodsoaked",
@@ -24519,7 +24615,10 @@
         "HeistBoss_Jamanra": "สุสานของผู้ถูกเนรเทศ",
         "HeistBoss_Nashta": "ค่ายที่ถูกปล้นสะดม",
         "HeistBoss_TheUnbreakable": "ห้องทดสอบการต่อสู้",
-        "MavenHub": "สถานหล่อหลอมของเมเวน"
+        "MavenHub": "สถานหล่อหลอมของเมเวน",
+        "UltimatumArena": "ลานประลองอัทซาล",
+        "UltimatumArenaEndgame": "ลานประลองอัทซาล",
+        "UltimatumBossArena": "หอคอยมหาอุปสรรค"
       },
       "npcs": {
         "Metadata/Monsters/Masters/Einhar": "ไอนาร์ มาสเตอร์แห่งสรรพสัตว์",
@@ -24577,7 +24676,8 @@
         "Metadata/NPC/League/Heist/TheBossLioneyes": "คูรัย ผู้ดูแลทีม",
         "Metadata/NPC/League/Heist/TullinaFiance": "จูเลียส แฟร์โรว์",
         "Metadata/NPC/Epilogue/Envoy": "ราชทูต",
-        "Metadata/NPC/Epilogue/Maven": "เมเวน"
+        "Metadata/NPC/Epilogue/Maven": "เมเวน",
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "ผู้คุมบททดสอบ"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "ข้าเห็นเจ้าแล้วเจ้าหนูน้อย เจ้าไม่ใช่คนที่นี่ ไปซะไป!",
