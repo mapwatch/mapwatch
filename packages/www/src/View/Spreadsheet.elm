@@ -161,6 +161,7 @@ viewEncountersRows tally =
     , { count = tally.envoy, label = "The Envoy" }
     , { count = tally.maven, label = "The Maven" }
     , { count = tally.sirusInvasions, label = "Sirus Invasions" }
+    , { count = tally.trialmaster, label = "The Trialmaster" }
     ]
         |> List.sortBy .count
         |> List.reverse
