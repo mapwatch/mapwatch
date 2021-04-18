@@ -14,14 +14,75 @@ type Token
     = Plaintext String
     | Gendered String String
     | Italic String
+    | Bold String
 
 
 parse : String -> Result String (List String)
-parse =
-    P.run parser
-        >> Result.mapError P.deadEndsToString
-        -- >> Result.mapError Debug.toString
-        >> Result.map toString
+parse input =
+    input
+        |> P.run parser
+        -- |> Result.mapError P.deadEndsToString
+        -- |> Result.mapError Debug.toString
+        |> Result.mapError (\e -> "NpcText parse error: \n\"" ++ input ++ "\"\n\n" ++ deadEndsToString e)
+        |> Result.map toString
+
+
+{-| from <https://github.com/elm/parser/pull/16/files>
+-}
+deadEndsToString : List P.DeadEnd -> String
+deadEndsToString deadEnds =
+    String.concat (List.intersperse "; " (List.map deadEndToString deadEnds))
+
+
+deadEndToString : P.DeadEnd -> String
+deadEndToString deadend =
+    problemToString deadend.problem ++ " at row " ++ String.fromInt deadend.row ++ ", col " ++ String.fromInt deadend.col
+
+
+problemToString : P.Problem -> String
+problemToString p =
+    case p of
+        P.Expecting s ->
+            "expecting '" ++ s ++ "'"
+
+        P.ExpectingInt ->
+            "expecting int"
+
+        P.ExpectingHex ->
+            "expecting hex"
+
+        P.ExpectingOctal ->
+            "expecting octal"
+
+        P.ExpectingBinary ->
+            "expecting binary"
+
+        P.ExpectingFloat ->
+            "expecting float"
+
+        P.ExpectingNumber ->
+            "expecting number"
+
+        P.ExpectingVariable ->
+            "expecting variable"
+
+        P.ExpectingSymbol s ->
+            "expecting symbol '" ++ s ++ "'"
+
+        P.ExpectingKeyword s ->
+            "expecting keyword '" ++ s ++ "'"
+
+        P.ExpectingEnd ->
+            "expecting end"
+
+        P.UnexpectedChar ->
+            "unexpected char"
+
+        P.Problem s ->
+            "problem " ++ s
+
+        P.BadRepeat ->
+            "bad repeat"
 
 
 toString : List Token -> List String
@@ -38,6 +99,9 @@ toString tokens =
                     [ s :: accum ]
 
                 Italic s ->
+                    [ s :: accum ]
+
+                Bold s ->
                     [ s :: accum ]
 
                 Gendered m f ->
@@ -66,6 +130,7 @@ token : P.Parser Token
 token =
     P.oneOf
         [ plaintext
+        , bold
         , italic
         , gendered
         ]
@@ -97,6 +162,14 @@ italic =
             , P.symbol <| "<italic\u{200B}>"
             ]
         -- |. P.symbol "<italic>{"
+        |= (P.chompUntil "}" |> P.getChompedString)
+        |. P.symbol "}"
+
+
+bold : P.Parser Token
+bold =
+    P.succeed Bold
+        |. P.symbol "<b>{"
         |= (P.chompUntil "}" |> P.getChompedString)
         |. P.symbol "}"
 
