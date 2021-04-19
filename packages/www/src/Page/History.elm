@@ -406,7 +406,7 @@ viewTrialmasterRow { showDate } says state =
                     "retreat"
 
                 Trialmaster.Abandoned ->
-                    "abandoned"
+                    "incomplete"
 
         rounds =
             List.length state.mods
@@ -431,7 +431,7 @@ viewTrialmasterRow { showDate } says state =
                , td [] []
                , td [ colspan 7, title <| String.join "\n\n" says ]
                     [ div [] body
-                    , div [] (state.mods |> List.reverse |> List.map viewTrialmasterMod)
+                    , div [] (state.mods |> List.map viewTrialmasterMod)
                     ]
                , td [ class "side-dur" ] []
                , td [ class "portals" ] []
