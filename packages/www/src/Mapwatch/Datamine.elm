@@ -438,6 +438,7 @@ createNPCText1 lang =
     , createNPCTextSet lang NpcId.tortilla (Tuple.first >> String.startsWith "Tullina")
     , createNPCTextSet lang NpcId.gianna (Tuple.first >> (\s -> String.startsWith "Gianna" s || String.endsWith "Gianna" s))
     , createNPCTextSet lang NpcId.isla (Tuple.first >> String.startsWith "Isla")
+    , createNPCTextSet lang NpcId.trialmaster (Tuple.first >> String.startsWith "Trialmaster")
     ]
         |> Result.Extra.combine
         |> Result.map List.concat

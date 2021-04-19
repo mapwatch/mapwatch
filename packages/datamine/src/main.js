@@ -263,6 +263,8 @@ function isNPCTextExported(raw) {
       || /^HarvestReBoss/.test(raw.Id)
       || /^OshabiWhenHarvesting/.test(raw.Id)
       || /^OshabiWhenFightEnds/.test(raw.Id)
+      // Trialmaster: very specific voicelines, lots we can analyze
+      || /^Trialmaster/.test(raw.Id)
 }
 function transformAtlasNode(raw, {json}) {
   return {

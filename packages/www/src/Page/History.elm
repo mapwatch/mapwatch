@@ -371,6 +371,9 @@ viewHistoryRun ({ query, tz } as m) config goals r =
             , r.conqueror
                 |> Maybe.map (viewConquerorRow config r.npcSays)
                 |> Maybe.Extra.toList
+            , r.trialmaster
+                |> Maybe.map (viewTrialmasterRow config (Dict.get NpcId.trialmaster r.npcSays |> Maybe.withDefault []))
+                |> Maybe.Extra.toList
             , if r.isHeartOfTheGrove then
                 [ viewHistoryNpcTextRow_ query config (Dict.get NpcId.oshabi r.npcSays |> Maybe.withDefault []) [ View.Icon.harvest, text "Heart of the Grove" ] ]
 
@@ -384,6 +387,59 @@ viewHistoryRun ({ query, tz } as m) config goals r =
                 |> Dict.toList
                 |> List.filterMap (viewHistoryNpcTextRow query config r.rootNpcs)
             ]
+
+
+viewTrialmasterRow : HistoryRowConfig -> List String -> MapRun.TrialmasterState -> Html msg
+viewTrialmasterRow { showDate } says state =
+    let
+        result : String
+        result =
+            case state.result of
+                MapRun.TrialmasterWin ->
+                    "victory"
+
+                MapRun.TrialmasterLoss ->
+                    "defeat"
+
+                MapRun.TrialmasterFled ->
+                    "retreat"
+
+                MapRun.TrialmasterResultUnknown ->
+                    "abandoned"
+
+        roundSuffix =
+            if state.rounds == 1 then
+                " round"
+
+            else
+                " rounds"
+
+        body =
+            [ View.Icon.trialmaster
+            , text "The Trialmaster: "
+            , text result
+            , text ", "
+            , text <| String.fromInt state.rounds
+            , text roundSuffix
+            ]
+    in
+    tr [ class "npctext-area" ]
+        ((if showDate then
+            [ td [ class "date" ] [] ]
+
+          else
+            []
+         )
+            ++ [ td [] []
+               , td [] []
+               , td [ colspan 7, title <| String.join "\n\n" says ]
+                    [ div [] body
+                    ]
+               , td [ class "side-dur" ] []
+               , td [ class "portals" ] []
+               , td [ class "town-pct" ] []
+               ]
+        )
 
 
 viewDurationAggregate : { a | portals : Float, duration : MapRun.Durations } -> List (Html msg)
@@ -577,9 +633,6 @@ viewNpcText query loadedAt npcId =
 
     else if npcId == NpcId.sirus then
         [ View.Icon.sirus, text "Sirus, Awakener of Worlds" ]
-
-    else if npcId == NpcId.trialmaster then
-        [ View.Icon.trialmaster, text "The Trialmaster" ]
 
     else
         []
