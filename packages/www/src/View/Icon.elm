@@ -315,4 +315,4 @@ harvest =
 
 trialmaster : Html msg
 trialmaster =
-    sideArea { name = "ultimatum big-icon", url = "Art/2DItems/Currency/VeiledChaosOrb.png?scale=1" }
+    div [ class "ultimatum-minimap minimap" ] []

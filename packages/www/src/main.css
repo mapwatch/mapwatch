@@ -365,3 +365,20 @@ table.encounters {
   margin-bottom: 1em;
   border-top: 1px inset grey;
 }
+
+/* Thanks, poedb! https://poedb.tw/us/Ultimatum#MinimapIcons */
+.ultimatum-minimap.minimap {
+  display: inline-block;
+  background-image: url("https://web.poecdn.com/image/Art/2DArt/minimap/player.png");
+  /* background-position: -256px -1280px; */
+  background-position: -8em -40em;
+  /* 32px * 14 */
+  /* background-size: 448px auto; */
+  background-size: 14em auto;
+
+  /* width: 32px; */
+  width: 1em;
+  height: 1em;
+  font-size: 150%;
+  margin-right: 0.2em;
+}
