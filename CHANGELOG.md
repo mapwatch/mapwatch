@@ -5,7 +5,9 @@ All substantial Mapwatch website changes.
 ---
 
 ## 2021-04-18
-- The Trialmaster is now tracked. (More details coming soon.)
+- The Trialmaster is now tracked, including victory/defeat and modifiers.
+  - Very kind of The Trialmaster to be so noisy for me.
+  - If you see any obnoxious red text indicating a modifier Mapwatch doesn't know about, please report it to the developer - thanks! https://github.com/mapwatch/mapwatch/issues
 - Inscribed ultimatums are now tracked.
 - The new Harvest boss fight area is now tracked.
 

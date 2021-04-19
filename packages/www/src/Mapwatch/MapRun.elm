@@ -2,8 +2,6 @@ module Mapwatch.MapRun exposing
     ( Aggregate
     , Durations
     , MapRun
-    , TrialmasterResult(..)
-    , TrialmasterState
     , aggregate
     , fromRaw
     )
@@ -16,15 +14,14 @@ Frozen; cannot be modified. Lots of redundancy. Use RawMapRun for updates and lo
 
 import Dict exposing (Dict)
 import Duration exposing (Millis)
-import List.Extra
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.LogLine as LogLine exposing (NPCSaysData)
 import Mapwatch.MapRun.Conqueror as Conqueror
+import Mapwatch.MapRun.Trialmaster as Trialmaster
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Mapwatch.Visit as Visit exposing (Visit)
-import Maybe.Extra
 import Set exposing (Set)
 import Time exposing (Posix)
 
@@ -46,7 +43,7 @@ type alias MapRun =
     , npcSays : Dict NpcGroup (List String)
     , heistNpcs : Set NpcId
     , rootNpcs : Set NpcId
-    , trialmaster : Maybe TrialmasterState
+    , trialmaster : Maybe Trialmaster.State
 
     -- isGrandHeist: True, False (heist contract), or Null (not a heist)
     , isGrandHeist : Maybe Bool
@@ -56,17 +53,6 @@ type alias MapRun =
 
 type alias AddressId =
     String
-
-
-type alias TrialmasterState =
-    { rounds : Int, result : TrialmasterResult }
-
-
-type TrialmasterResult
-    = TrialmasterWin
-    | TrialmasterLoss
-    | TrialmasterFled
-    | TrialmasterResultUnknown
 
 
 type alias Durations =
@@ -195,7 +181,7 @@ fromRaw dm raw =
             Just <| Set.size heist > 1
     , isHeartOfTheGrove = isHeartOfTheGrove raw
     , conqueror = conquerorEncounterFromNpcs raw.npcSays
-    , trialmaster = trialmasterFromNpcs raw.npcSays
+    , trialmaster = Trialmaster.fromNpcs dm raw.npcSays
 
     -- List.reverse: RawMapRun prepends the newest runs to the list, because that's
     -- how linked lists work. We want to view oldest-first, not newest-first.
@@ -284,39 +270,6 @@ labyrinthWorldArea =
     , isAbyssalDepths = False
     , atlasRegion = Nothing
     , tiers = Nothing
-    }
-
-
-trialmasterFromNpcs : RawMapRun.NpcEncounters -> Maybe TrialmasterState
-trialmasterFromNpcs =
-    Dict.get NpcId.trialmaster
-        >> Maybe.map (List.map Tuple.first >> trialmasterFromLines)
-
-
-trialmasterFromLines : List LogLine.NPCSaysData -> TrialmasterState
-trialmasterFromLines lines =
-    let
-        ids : List String
-        ids =
-            lines |> List.map .textId
-    in
-    { rounds =
-        List.Extra.count (String.startsWith "TrialmasterChallengeChoiceMade") ids
-    , result =
-        if ids |> List.Extra.find (String.startsWith "TrialmasterMoodPlayerWon") |> Maybe.Extra.isJust then
-            TrialmasterWin
-
-        else if ids |> List.Extra.find (String.startsWith "TrialmasterMoodPlayerLost") |> Maybe.Extra.isJust then
-            TrialmasterLoss
-
-        else if
-            (ids |> List.Extra.find (String.startsWith "TrialmasterPlayerTookReward") |> Maybe.Extra.isJust)
-                || (ids |> List.Extra.find (String.startsWith "TrialmasterTutorialStop") |> Maybe.Extra.isJust)
-        then
-            TrialmasterFled
-
-        else
-            TrialmasterResultUnknown
     }
 
 

@@ -13,6 +13,7 @@ import Mapwatch.LogLine as LogLine
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Mapwatch.MapRun.Sort as RunSort
+import Mapwatch.MapRun.Trialmaster as Trialmaster
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
 import Model exposing (Msg(..), OkModel)
@@ -389,38 +390,34 @@ viewHistoryRun ({ query, tz } as m) config goals r =
             ]
 
 
-viewTrialmasterRow : HistoryRowConfig -> List String -> MapRun.TrialmasterState -> Html msg
+viewTrialmasterRow : HistoryRowConfig -> List String -> Trialmaster.State -> Html msg
 viewTrialmasterRow { showDate } says state =
     let
         result : String
         result =
-            case state.result of
-                MapRun.TrialmasterWin ->
+            case state.outcome of
+                Trialmaster.Won ->
                     "victory"
 
-                MapRun.TrialmasterLoss ->
+                Trialmaster.Lost ->
                     "defeat"
 
-                MapRun.TrialmasterFled ->
+                Trialmaster.Retreated ->
                     "retreat"
 
-                MapRun.TrialmasterResultUnknown ->
+                Trialmaster.Abandoned ->
                     "abandoned"
 
-        roundSuffix =
-            if state.rounds == 1 then
-                " round"
-
-            else
-                " rounds"
+        rounds =
+            List.length state.mods
 
         body =
             [ View.Icon.trialmaster
             , text "The Trialmaster: "
             , text result
-            , text ", "
-            , text <| String.fromInt state.rounds
-            , text roundSuffix
+            , text " ("
+            , text <| String.fromInt rounds
+            , text ")"
             ]
     in
     tr [ class "npctext-area" ]
@@ -434,12 +431,34 @@ viewTrialmasterRow { showDate } says state =
                , td [] []
                , td [ colspan 7, title <| String.join "\n\n" says ]
                     [ div [] body
+                    , div [] (state.mods |> List.reverse |> List.map viewTrialmasterMod)
                     ]
                , td [ class "side-dur" ] []
                , td [ class "portals" ] []
                , td [ class "town-pct" ] []
                ]
         )
+
+
+viewTrialmasterMod : Result String Datamine.UltimatumModifier -> Html msg
+viewTrialmasterMod mmod =
+    case mmod of
+        Err npcTextId ->
+            code [ style "background-color" "red" ] [ text npcTextId ]
+
+        Ok mod ->
+            img
+                [ class "trialmaster-mod"
+                , title <|
+                    mod.name
+                        ++ " ("
+                        ++ mod.id
+                        ++ ")"
+                        ++ "\n\n"
+                        ++ mod.description
+                , src <| "https://web.poecdn.com/image/" ++ String.replace ".dds" "" mod.icon ++ ".png?scale=1"
+                ]
+                []
 
 
 viewDurationAggregate : { a | portals : Float, duration : MapRun.Durations } -> List (Html msg)

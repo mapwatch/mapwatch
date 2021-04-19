@@ -2,6 +2,7 @@ module Mapwatch.Datamine exposing
     ( Datamine
     , League
     , MapIconArgs
+    , UltimatumModifier
     , WorldArea
     , atlasBases
     , createDatamine_
@@ -32,6 +33,7 @@ import Json.Decode as D
 import List.Extra
 import Mapwatch.Datamine.NpcId as NpcId
 import Mapwatch.Datamine.NpcText as NpcText
+import Mapwatch.Datamine.Trialmaster as Trialmaster
 import Maybe.Extra
 import Result.Extra
 import Set exposing (Set)
@@ -50,7 +52,14 @@ type alias Datamine =
     , divcards : List DivCard
     , divcardsByMapName : Dict String (List DivCard)
     , npcText : Dict String NpcTextEntry
+    , ultimatumModifiers : List UltimatumModifier
+    , ultimatumModifiersById : Dict String UltimatumModifier
+    , ultimatumNpcTextIndex : Trialmaster.Index
     }
+
+
+type alias UltimatumModifier =
+    { id : String, name : String, icon : String, tier : Int, description : String }
 
 
 type alias League =
@@ -332,13 +341,13 @@ divCards dm w =
 -- Parsing
 
 
-createDatamine : Array WorldArea -> Dict String Lang -> List League -> Dict String (List String) -> List DivCard -> Result String Datamine
-createDatamine ws ls leagues atlasBase divCards_ =
-    Result.map (createDatamine_ ws ls leagues atlasBase divCards_)
+createDatamine : Array WorldArea -> Dict String Lang -> List League -> Dict String (List String) -> List DivCard -> List UltimatumModifier -> Result String Datamine
+createDatamine ws ls leagues atlasBase divCards_ ultimatumModifiers =
+    Result.map (createDatamine_ ws ls leagues atlasBase divCards_ ultimatumModifiers)
         (createNPCText ls)
 
 
-createDatamine_ ws ls leagues atlasBase divCards_ npcText =
+createDatamine_ ws ls leagues atlasBase divCards_ ultimatumModifiers npcText =
     let
         worldAreasById =
             ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
@@ -359,6 +368,13 @@ createDatamine_ ws ls leagues atlasBase divCards_ npcText =
                     |> Dict.map (\k -> List.map Tuple.second)
                 )
                 npcText
+                ultimatumModifiers
+                (ultimatumModifiers |> Dict.Extra.fromListBy .id)
+                (npcText
+                    |> Dict.values
+                    |> List.map .textId
+                    |> Trialmaster.npcTextIndex
+                )
     in
     { init
         | unindex = init |> langs |> List.map .unindex |> langIndexUnion
@@ -483,13 +499,25 @@ createNPCTextSet lang npcId npcTextFilter =
 
 decoder : D.Decoder Datamine
 decoder =
-    D.map5 createDatamine
+    D.map6 createDatamine
         (D.at [ "datamine", "worldAreas", "data" ] worldAreasDecoder)
         (D.at [ "datamine", "lang" ] langDecoder)
         (D.at [ "leagues" ] leaguesDecoder)
         (D.at [ "wiki", "atlasbase", "data" ] atlasBaseDecoder)
         (D.at [ "wiki", "divcards", "data" ] divCardsDecoder)
+        (D.at [ "ultimatum" ] ultimatumDecoder)
         |> D.andThen resultToDecoder
+
+
+ultimatumDecoder : D.Decoder (List UltimatumModifier)
+ultimatumDecoder =
+    D.map5 UltimatumModifier
+        (D.field "id" D.string)
+        (D.field "name" D.string)
+        (D.field "icon" D.string)
+        (D.field "tier" D.int)
+        (D.field "description" D.string)
+        |> D.list
 
 
 leaguesDecoder : D.Decoder (List League)
