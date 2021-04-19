@@ -298,7 +298,7 @@ trialmasterFromLines lines =
     let
         ids : List String
         ids =
-            lines |> List.map .textId |> Debug.log "trialmaster-ids"
+            lines |> List.map .textId
     in
     { rounds =
         List.Extra.count (String.startsWith "TrialmasterChallengeChoiceMade") ids
