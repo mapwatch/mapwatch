@@ -52,7 +52,13 @@ outcomeFromId id =
     else if String.startsWith "TrialmasterMoodPlayerLost" id then
         Just Lost
 
-    else if String.startsWith "TrialmasterPlayerTookReward" id || String.startsWith "TrialmasterTutorialStop" id then
+    else if
+        (String.startsWith "TrialmasterPlayerTookReward" id
+            -- `PlayerTookRewardLastTime` is a first message, not a last message
+            && not String.startsWith "TrialmasterPlayerTookRewardLastTime"
+        )
+            || String.startsWith "TrialmasterTutorialStop" id
+    then
         Just Retreated
 
     else
@@ -90,8 +96,8 @@ idPrefixesToMods =
     , ( "DiminishRecovery", "PlayerDebuffCooldownSpeed" )
     , ( "EscalatingVuln", "PlayerDebuffIncreasingVulnerability" )
     , ( "MonstersSpeedUp", "MonsterBuffAcceleratingSpeed" )
+    , ( "Voidspeaker", "MonsterBuffNonChaosDamageToAddAsChaosDamage" )
 
-    -- , ( ";", "MonsterBuffNonChaosDamageToAddAsChaosDamage" )
     -- guess
     , ( "UnluckyCrit", "PlayerDebuffExtraCriticalRolls" )
     , ( "FlasksHinder", "PlayerDebuffHinderedMsOnFlaskUse" )

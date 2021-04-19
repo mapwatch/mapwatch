@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-04-19
+- A few Trialmaster tracking fixes.
+
 ## 2021-04-18
 - The Trialmaster is now tracked, including victory/defeat and modifiers.
   - Very kind of The Trialmaster to be so noisy for me.
