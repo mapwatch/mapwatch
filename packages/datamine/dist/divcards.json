@@ -20,6 +20,13 @@
       }
     },
     {
+      "card": "A Modest Request",
+      "maps": [],
+      "loot": {
+        "text": "Megalomaniac"
+      }
+    },
+    {
       "card": "A Mother's Parting Gift",
       "maps": [
         "The Imperial Gardens",
@@ -213,6 +220,13 @@
       }
     },
     {
+      "card": "Broken Promises",
+      "maps": [],
+      "loot": {
+        "text": "Diamond Ring\nItem Level: 87\nTwo-Implicit\nSynthesised"
+      }
+    },
+    {
       "card": "Brother's Stash",
       "maps": [],
       "loot": {
@@ -226,6 +240,13 @@
       ],
       "loot": {
         "text": "One With Nothing\nCorrupted"
+      }
+    },
+    {
+      "card": "Brush, Paint and Palette",
+      "maps": [],
+      "loot": {
+        "text": "The Artist"
       }
     },
     {
@@ -329,6 +350,13 @@
       "maps": [],
       "loot": {
         "text": "Obliteration"
+      }
+    },
+    {
+      "card": "Deadly Joy",
+      "maps": [],
+      "loot": {
+        "text": "Torrent's Reclamation\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -1019,6 +1047,13 @@
       }
     },
     {
+      "card": "Luminous Trove",
+      "maps": [],
+      "loot": {
+        "text": "Voices"
+      }
+    },
+    {
       "card": "Lysah's Respite",
       "maps": [
         "Maelström of Chaos",
@@ -1143,6 +1178,13 @@
       }
     },
     {
+      "card": "Prejudice",
+      "maps": [],
+      "loot": {
+        "text": "Item\nInfluenced Item"
+      }
+    },
+    {
       "card": "Pride Before the Fall",
       "maps": [
         "The Coast (Act 6)",
@@ -1264,6 +1306,13 @@
       }
     },
     {
+      "card": "Sambodhi's Wisdom",
+      "maps": [],
+      "loot": {
+        "text": "A Master Seeks Help (Jun)"
+      }
+    },
+    {
       "card": "Scholar of the Seas",
       "maps": [
         "The Brine King's Reef",
@@ -1351,6 +1400,13 @@
       ],
       "loot": {
         "text": "Atziri Item"
+      }
+    },
+    {
+      "card": "The Adventuring Spirit",
+      "maps": [],
+      "loot": {
+        "text": "Victario's Influence"
       }
     },
     {
@@ -1549,6 +1605,13 @@
       "maps": [],
       "loot": {
         "text": "Beyond Item"
+      }
+    },
+    {
+      "card": "The Card Sharp",
+      "maps": [],
+      "loot": {
+        "text": "Divination Scarab"
       }
     },
     {
@@ -2096,6 +2159,13 @@
       }
     },
     {
+      "card": "The Enthusiasts",
+      "maps": [],
+      "loot": {
+        "text": "Victario's Influence\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
       "card": "The Escape",
       "maps": [
         "Oriath Delusion",
@@ -2109,6 +2179,13 @@
       ],
       "loot": {
         "text": "Seven-League Step"
+      }
+    },
+    {
+      "card": "The Eternal War",
+      "maps": [],
+      "loot": {
+        "text": "Timeless Jewel\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -2571,6 +2648,13 @@
       ],
       "loot": {
         "text": "Exalted Orb"
+      }
+    },
+    {
+      "card": "The Hook",
+      "maps": [],
+      "loot": {
+        "text": "Watchstone"
       }
     },
     {
@@ -3265,6 +3349,13 @@
       ],
       "loot": {
         "text": "10x Divine Orb"
+      }
+    },
+    {
+      "card": "The Shortcut",
+      "maps": [],
+      "loot": {
+        "text": "Quicksilver Flask of Adrenaline\nItem Level: 100"
       }
     },
     {
@@ -4130,6 +4221,13 @@
       ],
       "loot": {
         "text": "Level 4 Enlighten\nCorrupted"
+      }
+    },
+    {
+      "card": "Winter's Embrace",
+      "maps": [],
+      "loot": {
+        "text": "Circle of Fear\nThree-Implicit\nSynthesised"
       }
     }
   ]
