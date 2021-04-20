@@ -68,7 +68,7 @@ outcomeFromId id =
 idPrefixesToMods : List ( String, String )
 idPrefixesToMods =
     -- NpcTextId prefix to mod id. We don't care about mod tier (yet).
-    -- TODO is there a datamineable map for this mapping? probably not...
+    -- TODO can this mapping be datamined, instead of figured out here? probably not...
     [ ( "ChasingMiasma", "ChaosCloudDaemon1" )
     , ( "StormRunes", "LightningRuneDaemon1" )
     , ( "FireCrystals", "FlamespitterDaemon1" )
