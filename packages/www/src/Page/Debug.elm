@@ -69,6 +69,7 @@ testCases =
     , ( "simulacrum.txt", "&tickStart=1526927461000&logtz=0#/history", "Simulacrum has a 60min timeout, other maps have 30min" )
     , ( "daylight-savings.txt", "&tickStart=1603996952265&logtz=0#/history", "DST" )
     , ( "short-client.txt", "#/history", "for testing text-to-speech" )
+    , ( "235.txt", "#/history", "test case from https://github.com/mapwatch/mapwatch/issues/235" )
     ]
 
 
