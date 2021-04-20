@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-04-20
+- A few more Trialmaster tracking fixes. Thank you for your bug reports!
+
 ## 2021-04-19
 - A few Trialmaster tracking fixes.
 

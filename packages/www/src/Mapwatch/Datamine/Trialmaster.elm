@@ -86,10 +86,11 @@ idPrefixesToMods =
     , ( "SmallerArena", "Radius1" )
     , ( "FailAtFiveRuin", "MonstersApplyRuin1" )
     , ( "FailAtTenRuin", "MonstersApplyRuin1" )
+    , ( "TwoTypesApplyRuin", "MonstersApplyRuin1" )
 
     -- Guess
     , ( "ReducedRecovery", "PlayerDebuffRecoveryReduction1" )
-    , ( "ReflectProjectiles", "PlayerDebuffAreaAndProjectileSpeed" )
+    , ( "LessAOELessProjSpeed", "PlayerDebuffAreaAndProjectileSpeed" )
     , ( "BuffsExpireFaster", "PlayerDebuffBuffsExpireFaster" )
 
     -- Guess
