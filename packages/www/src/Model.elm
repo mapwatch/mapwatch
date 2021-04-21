@@ -13,7 +13,6 @@ import Browser
 import Browser.Navigation as Nav
 import Json.Decode as D
 import Mapwatch
-import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Instance as Instance
 import Mapwatch.LogLine as LogLine
 import Mapwatch.MapRun as MapRun exposing (MapRun)
@@ -67,6 +66,7 @@ type alias OkModel =
     , settings : Settings
     , tz : Time.Zone
     , gsheets : RemoteData String GSheetsSession
+    , logSlicePage : RemoteData String { log : String, model : Mapwatch.Model }
     }
 
 
@@ -95,6 +95,7 @@ type Msg
     | GSheetsWrite { spreadsheetId : Maybe String, title : String, content : List Sheet }
     | GSheetsWritten { res : Maybe { spreadsheetUrl : String, spreadsheetId : String }, error : Maybe String }
     | DebugNotification D.Value
+    | LogSlicePageRes { date : Int, length : Int, position : Int, value : String }
 
 
 type alias Sheet =
@@ -160,10 +161,11 @@ reset flags nav query route settings tz gsheets =
             , settings = settings
             , tz = tz
             , gsheets = gsheets
+            , logSlicePage = RemoteData.NotAsked
             }
     in
-    Result.map createModel
-        (Mapwatch.initModel logtz flags.datamine)
+    -- case Mapwatch.initModel logtz flags.datamine |> Result.map (createModel >> initRoute route query) of
+    Mapwatch.initModel logtz flags.datamine |> Result.map createModel
 
 
 sendSettings : OkModel -> Cmd msg
@@ -233,10 +235,10 @@ updateOk msg ({ mapwatch, settings } as model) =
                 ( route, query ) =
                     Route.parse url
 
-                newModel =
-                    { model | route = route, query = query }
+                ( m, cmd ) =
+                    initRoute route query model
             in
-            ( newModel, sendSettings newModel )
+            ( m, Cmd.batch [ cmd, sendSettings m ] )
 
         NavRequest (Browser.Internal url) ->
             ( model, url |> Url.toString |> Nav.pushUrl model.nav )
@@ -368,16 +370,52 @@ updateOk msg ({ mapwatch, settings } as model) =
                     ( model, Cmd.none )
 
         Reset redirect ->
-            ( reset model.flags model.nav model.query model.route model.settings model.tz model.gsheets
-                |> Result.withDefault model
+            ( reset model.flags model.nav model.query model.route model.settings model.tz model.gsheets |> Result.withDefault model
             , Maybe.Extra.unwrap Cmd.none (Route.pushUrl model.nav model.query) redirect
             )
 
         DebugNotification json ->
             ( model, Ports.debugNotification json )
 
+        LogSlicePageRes res ->
+            let
+                sliceModel =
+                    Mapwatch.fromLogSlice
+                        model.mapwatch.tz
+                        model.mapwatch.datamine
+                        model.settings
+                        res.position
+                        res.value
+            in
+            ( { model | logSlicePage = RemoteData.Success { log = res.value, model = sliceModel } }, Cmd.none )
+
         M msg_ ->
             updateMapwatch msg_ model
+
+
+initRoute : Route -> QueryDict -> OkModel -> ( OkModel, Cmd msg )
+initRoute route query model =
+    let
+        newModel =
+            { model | route = route, query = query }
+    in
+    case route of
+        -- TODO page-specific models/updates/subs would be more appropriate here...
+        -- ...but so far it *is* only needed for LogSlicePage, so I guess it's ok,
+        -- but if this expands we should refactor
+        Route.LogSlice posStart posEnd ->
+            let
+                ( logSlicePage, cmd ) =
+                    if posEnd < posStart then
+                        ( RemoteData.Failure "can't fetch a log slice where end < start", Cmd.none )
+
+                    else
+                        ( RemoteData.Loading, Ports.logSlicePageReq { position = posStart, length = posEnd - posStart } )
+            in
+            ( { newModel | logSlicePage = logSlicePage }, cmd )
+
+        _ ->
+            ( newModel, Cmd.none )
 
 
 updateMapwatch : Mapwatch.Msg -> OkModel -> ( OkModel, Cmd Msg )
@@ -385,17 +423,26 @@ updateMapwatch msg model =
     let
         ( mapwatch, cmd ) =
             Mapwatch.update model.settings msg model.mapwatch
-    in
-    ( { model | mapwatch = mapwatch }, Cmd.map M cmd )
-        |> Tuple.mapFirst
-            (\m ->
-                -- just after we finish processing history, send mapwatch the first tick so timeOffset is immediately applied
-                if not (Mapwatch.isReady model.mapwatch) && Mapwatch.isReady mapwatch then
-                    tick m.now m
 
-                else
-                    m
-            )
+        model_ =
+            { model | mapwatch = mapwatch }
+
+        cmd_ =
+            Cmd.map M cmd
+    in
+    -- just after we finish processing history, send mapwatch the first tick so timeOffset is immediately applied.
+    -- also do any initialization required by the current page
+    if not (Mapwatch.isReady model.mapwatch) && Mapwatch.isReady mapwatch then
+        let
+            ( m, c ) =
+                model_
+                    |> tick model_.now
+                    |> initRoute model.route model_.query
+        in
+        ( m, Cmd.batch [ cmd_, c ] )
+
+    else
+        ( model_, cmd_ )
 
 
 subscriptions : Model -> Sub Msg
@@ -409,6 +456,7 @@ subscriptions rmodel =
                 [ Mapwatch.subscriptions model.mapwatch |> Sub.map M
                 , Ports.gsheetsLoginUpdate GSheetsLoginUpdate
                 , Ports.gsheetsWritten GSheetsWritten
+                , Ports.logSlicePage LogSlicePageRes
 
                 -- Slow down animation, deliberately - don't eat poe's cpu
                 --, Browser.Events.onAnimationFrame Tick

@@ -31,6 +31,8 @@ type alias MapRun =
     , startedAt : Posix
     , updatedAt : Posix
     , portals : Int
+    , positionStart : Int
+    , positionEnd : Int
 
     -- durations
     , sideAreas : Dict AddressId ( Address, Millis )
@@ -167,6 +169,8 @@ fromRaw dm raw =
     { address = addr
     , startedAt = raw.startedAt
     , updatedAt = RawMapRun.updatedAt raw
+    , positionStart = raw.positionStart
+    , positionEnd = raw.positionEnd
     , portals = raw.portals
     , isAbandoned = raw.isAbandoned
     , isBlightedMap = isBlightedMap raw

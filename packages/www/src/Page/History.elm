@@ -510,7 +510,11 @@ viewHistoryMainRow : { m | query : QueryDict, tz : Time.Zone, mapwatch : { mm | 
 viewHistoryMainRow ({ tz, query } as m) { showDate } goal r =
     tr [ class "main-area" ]
         ((if showDate then
-            [ td [ class "date" ] [ View.Home.viewDate tz r.updatedAt ] ]
+            if Feature.isActive Feature.LogSlice query then
+                [ td [ class "date" ] [ a [ Route.href query <| Route.LogSlice r.positionStart r.positionEnd ] [ View.Home.viewDate tz r.updatedAt ] ] ]
+
+            else
+                [ td [ class "date" ] [ View.Home.viewDate tz r.updatedAt ] ]
 
           else
             []

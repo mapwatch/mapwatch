@@ -13,6 +13,7 @@ import Page.Encounters
 import Page.GSheets
 import Page.History
 import Page.HistoryTSV
+import Page.LogSlice
 import Page.Maps
 import Page.NotFound
 import Page.Overlay
@@ -84,6 +85,9 @@ viewBody rmodel =
 
                 Settings ->
                     Page.Settings.view model
+
+                LogSlice posStart posEnd ->
+                    Page.LogSlice.view posStart posEnd model
 
                 NotFound loc ->
                     Page.NotFound.view model

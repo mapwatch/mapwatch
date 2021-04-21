@@ -66,13 +66,14 @@ type alias State =
     { val : Instance
     , joinedAt : Posix
     , next : Builder
+    , position : Int
     }
 
 
-init : Posix -> State
-init t =
+init : Posix -> Int -> State
+init t pos =
     -- initial-date is awkward, only Nothing on init, but we need to be able to tell the difference
-    { val = MainMenu, joinedAt = t, next = Empty }
+    { val = MainMenu, joinedAt = t, next = Empty, position = pos }
 
 
 unwrap : a -> (Address -> a) -> Instance -> a
@@ -153,7 +154,7 @@ initOrUpdate datamine line instance =
             update datamine line i
 
         Nothing ->
-            init line.date |> update datamine line
+            init line.date line.position |> update datamine line
 
 
 update : Datamine -> LogLine.Line -> State -> State
@@ -163,29 +164,26 @@ update datamine line state =
         -- * "connecting to instance server (addr)"
         -- * "you have entered (zone)"
         -- we need both zone and addr, split across two lines, so it takes two steps.
-        ( Empty, LogLine.ConnectingToInstanceServer addr ) ->
+        ( _, LogLine.ConnectingToInstanceServer addr ) ->
             -- step 1
-            { state | next = Connecting addr }
+            { state | next = Connecting addr, position = line.position }
 
         ( Connecting addr, LogLine.YouHaveEntered zone_ ) ->
             -- step 2
-            { val =
-                Instance
-                    { zone = zone_
-                    , addr = addr
-                    , worldArea = Datamine.worldAreaFromName zone_ datamine
-                    }
-            , joinedAt = line.date
-            , next = Empty
+            { state
+                | val =
+                    Instance
+                        { zone = zone_
+                        , addr = addr
+                        , worldArea = Datamine.worldAreaFromName zone_ datamine
+                        }
+                , joinedAt = line.date
+                , next = Empty
             }
-
-        ( Connecting _, LogLine.ConnectingToInstanceServer addr ) ->
-            -- two "connecting" messages - should never happen, but trust the most recent one
-            { state | next = Connecting addr }
 
         ( _, LogLine.Opening ) ->
             -- the game crashed and was just reopened, reset the instance
-            init line.date
+            init line.date line.position
 
         _ ->
             -- ignore everything else

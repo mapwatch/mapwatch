@@ -31,10 +31,10 @@ expectParseEquals raw result0 =
         result : Result LogLine.ParseError LogLine.Line
         result =
             result0
-                |> Result.map (\( t, i ) -> { raw = raw, date = Time.millisToPosix t, info = i })
-                |> Result.mapError (\e -> { raw = raw, err = e })
+                |> Result.map (\( t, i ) -> { raw = raw, position = 69, date = Time.millisToPosix t, info = i })
+                |> Result.mapError (\e -> { raw = raw, position = 69, err = e })
     in
-    LogLine.parse datamine Time.utc raw
+    LogLine.parse datamine Time.utc ( 69, raw )
         |> Expect.equal result
 
 

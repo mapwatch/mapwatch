@@ -27,9 +27,9 @@ create args =
     }
 
 
-read : Posix -> String -> TimedReadline -> ( List String, TimedReadline )
-read now chunk r =
-    Readline.read chunk r.val
+read : Posix -> Int -> String -> TimedReadline -> ( List ( Int, String ), TimedReadline )
+read now pos chunk r =
+    Readline.read pos chunk r.val
         |> Tuple.mapSecond (\val -> { r | val = val, updatedAt = now })
 
 

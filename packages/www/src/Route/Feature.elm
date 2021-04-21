@@ -38,6 +38,7 @@ type Feature
     | Backend
     | HeistNpcs
     | Drops
+    | LogSlice
 
 
 type alias QueryString =
@@ -54,6 +55,7 @@ list =
     , Backend
     , HeistNpcs
     , Drops
+    , LogSlice
     ]
 
 
@@ -88,6 +90,9 @@ config feature =
 
         Drops ->
             FeatureConfig feature "drops" True
+
+        LogSlice ->
+            FeatureConfig feature "logslice" False
 
 
 byString : Dict String FeatureConfig

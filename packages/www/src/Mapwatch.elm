@@ -2,6 +2,7 @@ module Mapwatch exposing
     ( Model
     , Msg(..)
     , ReadyState(..)
+    , fromLogSlice
     , init
     , initModel
     , isReady
@@ -12,6 +13,7 @@ module Mapwatch exposing
     , update
     )
 
+import Bytes.Encode
 import Duration exposing (Millis)
 import Json.Decode as D
 import Mapwatch.Datamine as Datamine exposing (Datamine)
@@ -64,6 +66,21 @@ initModel tz =
         >> Result.map (createModel tz)
 
 
+fromLogSlice : Maybe Time.Zone -> Datamine -> Settings -> Int -> String -> Model
+fromLogSlice tz datamine settings position log =
+    let
+        size =
+            Bytes.Encode.getStringWidth log
+
+        model0 =
+            createModel tz datamine
+    in
+    -- logOpened with a fudged start position
+    { model0 | readline = TimedReadline.create { now = Time.millisToPosix 0, start = position, end = position + size } |> Just }
+        |> update settings (LogSlice { date = 0, position = position, length = size, value = log ++ "\n" })
+        |> Tuple.first
+
+
 init : Maybe Time.Zone -> D.Value -> ( Result String Model, Cmd Msg )
 init tz datamineJson =
     ( initModel tz datamineJson, Cmd.none )
@@ -76,7 +93,7 @@ updateLine settings line ( model, cmds0 ) =
             Instance.initOrUpdate model.datamine line model.instance
 
         visit =
-            Visit.tryInit model.instance instance
+            Visit.tryInit model.instance instance <| LogLine.positionEnd line
 
         ( runState, lastRun ) =
             RawMapRun.update instance visit model.runState
@@ -154,7 +171,7 @@ update settings msg model =
                 Just r ->
                     let
                         ( lines, readline ) =
-                            TimedReadline.read (Time.millisToPosix date) value r
+                            TimedReadline.read (Time.millisToPosix date) position value r
 
                         ( model1, cmds ) =
                             -- Log-parsing errors are ignored: lines we don't use, like chat or asset-loading, are incredibly common

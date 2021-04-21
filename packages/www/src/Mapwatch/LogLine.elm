@@ -5,6 +5,8 @@ module Mapwatch.LogLine exposing
     , ParseError
     , parse
     , parseErrorToString
+    , positionEnd
+    , positionStart
     )
 
 {-| Parse log lines with regexes.
@@ -27,7 +29,7 @@ import Util.String
 
 
 type alias ParseError =
-    { raw : String, err : String }
+    { raw : String, position : Int, err : String }
 
 
 parseErrorToString : ParseError -> String
@@ -53,24 +55,35 @@ type alias NPCSaysData =
 
 type alias Line =
     { raw : String
+    , position : Int
     , date : Posix
     , info : Info
     }
 
 
-parse : Datamine -> Time.Zone -> String -> Result ParseError Line
-parse dm tz raw =
+parse : Datamine -> Time.Zone -> ( Int, String ) -> Result ParseError Line
+parse dm tz ( pos, raw ) =
     case parseInfo dm raw of
         Nothing ->
-            Err { raw = raw, err = "logline not recognized" }
+            Err { raw = raw, position = pos, err = "logline not recognized" }
 
         Just info ->
             case parseDate tz raw of
                 Err err ->
-                    Err { raw = raw, err = "logline date invalid: " ++ err }
+                    Err { raw = raw, position = pos, err = "logline date invalid: " ++ err }
 
                 Ok date ->
-                    Ok { raw = raw, date = date, info = info }
+                    Ok { raw = raw, position = pos, date = date, info = info }
+
+
+positionStart : Line -> Int
+positionStart =
+    .position
+
+
+positionEnd : Line -> Int
+positionEnd line =
+    line.position + String.length line.raw
 
 
 parseInfo : Datamine -> String -> Maybe Info

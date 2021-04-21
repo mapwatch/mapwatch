@@ -13,6 +13,8 @@ port module Ports exposing
     , logOpened
     , logSelected
     , logSlice
+    , logSlicePage
+    , logSlicePageReq
     , logSliceReq
     , logline
     , progress
@@ -73,6 +75,12 @@ Usually a response to a logSliceReq
 
 -}
 port logSlice : ({ position : Int, length : Int, value : String, date : Int } -> msg) -> Sub msg
+
+
+port logSlicePageReq : { position : Int, length : Int } -> Cmd msg
+
+
+port logSlicePage : ({ position : Int, length : Int, value : String, date : Int } -> msg) -> Sub msg
 
 
 type alias Progress =

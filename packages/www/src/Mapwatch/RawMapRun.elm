@@ -34,6 +34,8 @@ type alias RawMapRun =
     , npcSays : NpcEncounters
     , visits : List Visit
     , isAbandoned : Bool
+    , positionStart : Int
+    , positionEnd : Int
     }
 
 
@@ -45,8 +47,8 @@ type alias NpcEncounters =
     Dict NpcGroup (List ( LogLine.NPCSaysData, Instance ))
 
 
-create : Instance.Address -> Posix -> NpcEncounters -> Maybe RawMapRun
-create addr startedAt npcSays =
+create : Instance.Address -> Posix -> NpcEncounters -> Int -> Int -> Maybe RawMapRun
+create addr startedAt npcSays posStart posEnd =
     if Instance.isMap (Instance.Instance addr) then
         Just
             { address = addr
@@ -55,6 +57,8 @@ create addr startedAt npcSays =
             , visits = []
             , portals = 1
             , isAbandoned = False
+            , positionStart = posStart
+            , positionEnd = posEnd
             }
 
     else
@@ -88,7 +92,7 @@ push visit run =
             Just { run | isAbandoned = True }
 
     else
-        Just { run | visits = visit :: run.visits }
+        Just { run | visits = visit :: run.visits, positionEnd = visit.positionEnd }
 
 
 tick : Posix -> Instance.State -> State -> ( State, Maybe RawMapRun )
@@ -140,8 +144,8 @@ current now minstance_ state =
                 Nothing ->
                     Nothing
 
-                _ ->
-                    Visit.initSince instance_ now
+                Just raw ->
+                    Visit.initSince instance_ now raw.positionStart raw.positionEnd
                         |> visitResult
 
 
@@ -165,7 +169,7 @@ update instance_ mvisit state =
                     if Instance.isMap instance_.val && Visit.isTown visit then
                         -- when not running, entering a map from town starts a run.
                         Instance.unwrap Nothing
-                            (\addr -> create addr instance_.joinedAt npcSays)
+                            (\addr -> create addr instance_.joinedAt npcSays visit.positionStart visit.positionEnd)
                             instance_.val
 
                     else

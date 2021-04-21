@@ -6,6 +6,8 @@ import Expect
 import Mapwatch.Datamine as Datamine exposing (Datamine, langIndexEmpty)
 import Mapwatch.Instance as Instance exposing (Address)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
+import Mapwatch.Visit as Visit exposing (Visit)
 import Settings exposing (Settings)
 import Speech exposing (Speech)
 import Test exposing (..)
@@ -26,6 +28,7 @@ emptySettings =
     { s | volume = 100 }
 
 
+emptyRaw : RawMapRun
 emptyRaw =
     { address = emptyAddr
     , startedAt = Time.millisToPosix 0
@@ -33,13 +36,18 @@ emptyRaw =
     , npcSays = Dict.empty
     , visits = []
     , isAbandoned = False
+    , positionStart = 69
+    , positionEnd = 420
     }
 
 
+emptyVisit : Visit
 emptyVisit =
     { instance = Instance.Instance emptyAddr
     , joinedAt = Time.millisToPosix 0
     , leftAt = Time.millisToPosix 0
+    , positionStart = 6969
+    , positionEnd = 42069
     }
 
 

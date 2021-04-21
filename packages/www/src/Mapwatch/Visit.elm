@@ -16,7 +16,12 @@ import Time exposing (Posix)
 
 
 type alias Visit =
-    { instance : Instance, joinedAt : Posix, leftAt : Posix }
+    { instance : Instance
+    , joinedAt : Posix
+    , leftAt : Posix
+    , positionStart : Int
+    , positionEnd : Int
+    }
 
 
 duration : Visit -> Millis
@@ -39,13 +44,13 @@ isOffline v =
     Instance.isDurationOffline (duration v) v.instance
 
 
-initSince : Instance.State -> Posix -> Visit
-initSince before leftAt =
-    { instance = before.val, joinedAt = before.joinedAt, leftAt = leftAt }
+initSince : Instance.State -> Posix -> Int -> Int -> Visit
+initSince before leftAt posStart posEnd =
+    { instance = before.val, joinedAt = before.joinedAt, leftAt = leftAt, positionStart = posStart, positionEnd = posEnd }
 
 
-tryInit : Maybe Instance.State -> Instance.State -> Maybe Visit
-tryInit mbefore after =
+tryInit : Maybe Instance.State -> Instance.State -> Int -> Maybe Visit
+tryInit mbefore after posEnd =
     case mbefore of
         Nothing ->
             Nothing
@@ -63,4 +68,6 @@ tryInit mbefore after =
                     { instance = before.val
                     , joinedAt = before.joinedAt
                     , leftAt = leftAt
+                    , positionStart = before.position
+                    , positionEnd = posEnd
                     }

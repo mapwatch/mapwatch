@@ -39,6 +39,7 @@ type Route
     | Changelog
     | Privacy
     | Settings
+    | LogSlice Int Int
     | Debug
     | DebugDumpLines
     | DebugDatamine
@@ -102,6 +103,7 @@ parser =
         , P.map Changelog <| P.s "changelog"
         , P.map Privacy <| P.s "privacy"
         , P.map Settings <| P.s "settings"
+        , P.map LogSlice <| P.s "logslice" </> P.int </> P.int
         , P.map Debug <| P.s "debug"
         , P.map DebugDumpLines <| P.s "debug" </> P.s "dumplines"
         , P.map DebugDatamine <| P.s "debug" </> P.s "datamine"
@@ -161,6 +163,9 @@ routeParts r =
 
         Settings ->
             ( "/settings", pageKeys.other )
+
+        LogSlice s e ->
+            ( String.join "/" [ "", "logslice", String.fromInt s, String.fromInt e ], pageKeys.other )
 
         Debug ->
             ( "/debug", pageKeys.other )

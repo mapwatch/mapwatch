@@ -10,6 +10,8 @@ module Readline exposing
     , size
     )
 
+import Bytes.Encode
+
 
 megabyte : Int
 megabyte =
@@ -100,17 +102,43 @@ next r =
 
 {-| Receive a chunk of text and parse it into lines
 -}
-read : String -> Readline -> ( List String, Readline )
-read chunk reader =
-    case reader.lineBuffer ++ chunk |> String.lines |> List.reverse of
+read : Int -> String -> Readline -> ( List ( Int, String ), Readline )
+read pos0 chunk reader =
+    case reader.lineBuffer ++ chunk |> String.split "\n" |> List.reverse of
         -- this is impossible, string.split/string.lines never return an empty list
         [] ->
             ( [], reader )
 
         last :: rlines ->
-            ( List.reverse rlines
+            let
+                fold : String -> ( Int, List ( Int, String ) ) -> ( Int, List ( Int, String ) )
+                fold line0 ( pos, accum ) =
+                    let
+                        ( sepsize, line ) =
+                            -- detect and normalize windows line endings.
+                            -- elm-format is reformatting my \r
+                            if String.endsWith "\u{000D}" line0 then
+                                ( 2, line0 |> String.dropRight 1 )
+
+                            else
+                                ( 1, line0 )
+                    in
+                    ( pos + Bytes.Encode.getStringWidth line + sepsize, ( pos, line ) :: accum )
+
+                _ =
+                    rlines
+                        |> List.reverse
+                        |> List.foldl fold ( reader.cursor - Bytes.Encode.getStringWidth reader.lineBuffer, [] )
+                        |> Tuple.second
+                        |> List.reverse
+            in
+            ( rlines
+                |> List.reverse
+                |> List.foldl fold ( reader.cursor - Bytes.Encode.getStringWidth reader.lineBuffer, [] )
+                |> Tuple.second
+                |> List.reverse
             , { reader
                 | lineBuffer = last
-                , cursor = reader.cursor + String.length chunk |> clamp reader.start reader.end
+                , cursor = reader.cursor + Bytes.Encode.getStringWidth chunk |> clamp reader.start reader.end
               }
             )

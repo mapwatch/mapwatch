@@ -101,6 +101,11 @@ function main() {
     activeBackend.slice(position, length)
     .then(value => app.ports.logSlice.send({date: Date.now(), position, length, value}))
   })
+  app.ports.logSlicePageReq.subscribe(({position, length}) => {
+    // console.log('logSlicePageReq', activeBackend)
+    activeBackend.slice(position, length)
+    .then(value => app.ports.logSlicePage.send({date: Date.now(), position, length, value}))
+  })
   activeBackend.onChange(change => app.ports.logChanged.send({date: Date.now(), ...change}))
 
   const speechCapable = !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
