@@ -78,7 +78,7 @@ viewBody posStart posEnd model =
                         , textarea [ readonly True, style "min-height" "20em", style "width" "100%" ] [ text slice.filteredLog ]
                         , details []
                             [ summary [] [ text "Click for the unfiltered log excerpt, including chat, whispers, and IP addresses." ]
-                            , div [] [ b [] [ text "It's not safe to share this with the public." ] ]
+                            , div [] [ b [] [ text "It's ", u [] [ text "not" ], text " safe to share this with others." ] ]
                             , div []
                                 [ small []
                                     [ text "One exception: if you're "
