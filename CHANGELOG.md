@@ -6,6 +6,8 @@ All substantial Mapwatch website changes.
 
 ## 2021-04-20
 - A few more Trialmaster tracking fixes. Thank you for your bug reports!
+- Each map run now has a link to its `client.txt` source text.
+  - This is useful for better understanding what's in `client.txt`, understanding how Mapwatch works, or reporting Mapwatch bugs.
 
 ## 2021-04-19
 - A few Trialmaster tracking fixes.

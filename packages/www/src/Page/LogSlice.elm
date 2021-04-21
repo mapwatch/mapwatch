@@ -57,7 +57,7 @@ viewBody posStart posEnd model =
                         -- ++ Url.Builder.toQuery [ Url.Builder.string "body" <| "<details><summary>Client.txt log snippet</summary><pre>" ++ escapedLog ++ "</pre></details>" ]
                     in
                     div []
-                        [ h3 [] [ text "Log Snippet" ]
+                        [ h3 [] [ text "Log Source" ]
                         , table [ class "timer history" ]
                             [ slice.model.runs
                                 |> List.map (Page.History.viewHistoryRun model { showDate = True, loadedAt = model.loadedAt } (always Nothing))
@@ -66,25 +66,19 @@ viewBody posStart posEnd model =
                             ]
                         , div [] <|
                             if List.isEmpty slice.model.runs then
-                                [ p [] [ text "This excerpt from your ", code [] [ text "client.txt" ], text " file generated no complete Mapwatch runs." ]
-                                ]
+                                [ p [] [ text "This ", code [] [ text "client.txt" ], text " source text generated no complete Mapwatch runs." ] ]
 
                             else
-                                [ p []
-                                    [ text "Mapwatch generated this using the excerpt from your "
-                                    , code [] [ text "client.txt" ]
-                                    , text " file seen below."
-                                    ]
-                                ]
+                                [ p [] [ text "Mapwatch generated this using the ", code [] [ text "client.txt" ], text " source text below." ] ]
                         , p []
                             [ text "Anything uninteresting to Mapwatch has been removed, including chat and IP addresses."
                             , br [] []
-                            , b [] [ text "You can copy and share this text with others." ]
+                            , b [] [ text "It's safe to copy and share this text with others." ]
                             ]
                         , textarea [ readonly True, style "min-height" "20em", style "width" "100%" ] [ text slice.filteredLog ]
                         , details []
                             [ summary [] [ text "Click for the unfiltered log excerpt, including chat, whispers, and IP addresses." ]
-                            , div [] [ b [] [ text "Do not share this with the public." ] ]
+                            , div [] [ b [] [ text "It's not safe to share this with the public." ] ]
                             , div []
                                 [ small []
                                     [ text "One exception: if you're "

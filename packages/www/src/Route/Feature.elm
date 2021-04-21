@@ -92,7 +92,7 @@ config feature =
             FeatureConfig feature "drops" True
 
         LogSlice ->
-            FeatureConfig feature "logslice" False
+            FeatureConfig feature "logslice" True
 
 
 byString : Dict String FeatureConfig
