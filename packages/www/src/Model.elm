@@ -66,7 +66,7 @@ type alias OkModel =
     , settings : Settings
     , tz : Time.Zone
     , gsheets : RemoteData String GSheetsSession
-    , logSlicePage : RemoteData String { log : String, model : Mapwatch.Model }
+    , logSlicePage : RemoteData String { log : String, model : Mapwatch.Model, filteredLog : String }
     }
 
 
@@ -386,8 +386,24 @@ updateOk msg ({ mapwatch, settings } as model) =
                         model.settings
                         res.position
                         res.value
+
+                filteredLog =
+                    Mapwatch.filteredLogSlice model.tz
+                        model.mapwatch.datamine
+                        model.settings
+                        res.position
+                        res.value
             in
-            ( { model | logSlicePage = RemoteData.Success { log = res.value, model = sliceModel } }, Cmd.none )
+            ( { model
+                | logSlicePage =
+                    RemoteData.Success
+                        { log = res.value
+                        , filteredLog = filteredLog
+                        , model = sliceModel
+                        }
+              }
+            , Cmd.none
+            )
 
         M msg_ ->
             updateMapwatch msg_ model

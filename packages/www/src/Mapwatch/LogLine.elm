@@ -3,6 +3,7 @@ module Mapwatch.LogLine exposing
     , Line
     , NPCSaysData
     , ParseError
+    , dateLength
     , parse
     , parseErrorToString
     , positionEnd

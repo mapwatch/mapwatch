@@ -3,8 +3,10 @@ module Mapwatch.LogLineTest exposing (..)
 import Array
 import Dict
 import Expect
+import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine, langIndexEmpty)
 import Mapwatch.LogLine as LogLine
+import Settings
 import Test exposing (..)
 import Time exposing (Posix)
 
@@ -14,7 +16,15 @@ datamine =
     Datamine.createDatamine_ Array.empty
         (Dict.singleton Datamine.defaultLang
             { name = Datamine.defaultLang
-            , unindex = langIndexEmpty
+            , unindex =
+                { langIndexEmpty
+                  -- for the log-filtering test with npcs
+                    | npcs =
+                        Dict.fromList
+                            [ ( "Jun Ortoi", "a" )
+                            , ( "Baran, the Crusader", "b" )
+                            ]
+                }
             , index = { langIndexEmpty | backendErrors = Dict.singleton "EnteredArea" "You have entered {0}." }
             }
         )
@@ -78,5 +88,40 @@ all =
                     expectParseEquals
                         "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] SomeJerkInLocalChat: 1801062 9b0 [INFO Client 1636] : You have entered The Twilight Strand."
                         (Err "logline not recognized")
+            ]
+        , describe "log filtering"
+            [ test "filtered logs" <|
+                \_ ->
+                    [ "2018/05/13 16:10:08 1795218 d8 [INFO Client 1636] Connecting to instance server at 169.63.67.235:6112"
+                    , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] SomeJerkInLocalChat: 1801062 9b0 [INFO Client 1636] Connecting to instance server at 1.2.3.4:6112"
+                    , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] : You have entered The Twilight Strand."
+                    , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] SomeJerkInLocalChat: 1801062 9b0 [INFO Client 1636] : You have entered The Twilight Zone."
+                    , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] Jun Ortoi: I'm an NPC with dialogue!"
+                    , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] Baran, the Crusader: I'm an NPC with multiline dialogue, "
+                    , "and at least my first line must survive!"
+                    , ""
+                    , "and let's throw in some dialogue with a ] just for fun"
+                    , "2018/05/13 16:10:15 1795218 d8 [INFO Client 1636] Connecting to instance server at 169.63.67.236:6112"
+                    , "2018/05/13 16:10:16 1795218 d8 [INFO Client 1636] Connecting to instance server at 169.63.67.235:6112"
+                    ]
+                        |> String.join "\n"
+                        |> Mapwatch.filteredLogSlice Time.utc datamine Settings.empty 0
+                        |> Expect.equal
+                            ([ "2018/05/13 16:10:08] Connecting to instance server at 999.999.999.0:6112"
+                             , "2018/05/13 16:10:14] : You have entered The Twilight Strand."
+                             , "2018/05/13 16:10:14] Jun Ortoi: I'm an NPC with dialogue!"
+                             , "2018/05/13 16:10:14] Baran, the Crusader: I'm an NPC with multiline dialogue, "
+
+                             -- https://github.com/mapwatch/mapwatch/issues/61
+                             -- , "and at least my first line must survive!"
+                             -- , ""
+                             -- , "and let's throw in some dialogue with a ] just for fun"
+                             --
+                             -- preserve ip uniqueness: if an ip is repeated in the original, repeat it here too
+                             , "2018/05/13 16:10:15] Connecting to instance server at 999.999.999.1:6112"
+                             , "2018/05/13 16:10:16] Connecting to instance server at 999.999.999.0:6112"
+                             ]
+                                |> String.join "\n"
+                            )
             ]
         ]

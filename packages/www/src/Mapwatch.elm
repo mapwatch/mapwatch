@@ -2,6 +2,7 @@ module Mapwatch exposing
     ( Model
     , Msg(..)
     , ReadyState(..)
+    , filteredLogSlice
     , fromLogSlice
     , init
     , initModel
@@ -14,6 +15,7 @@ module Mapwatch exposing
     )
 
 import Bytes.Encode
+import Dict exposing (Dict)
 import Duration exposing (Millis)
 import Json.Decode as D
 import Mapwatch.Datamine as Datamine exposing (Datamine)
@@ -25,6 +27,8 @@ import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Ports
 import Readline
+import Regex exposing (Regex)
+import Result.Extra
 import Settings exposing (Settings)
 import Time exposing (Posix)
 import TimedReadline exposing (TimedReadline)
@@ -68,6 +72,7 @@ initModel tz =
 
 fromLogSlice : Maybe Time.Zone -> Datamine -> Settings -> Int -> String -> Model
 fromLogSlice tz datamine settings position log =
+    -- for the `/logslice` page. Turn a string into a map run, and relevant log lines
     let
         size =
             Bytes.Encode.getStringWidth log
@@ -75,10 +80,77 @@ fromLogSlice tz datamine settings position log =
         model0 =
             createModel tz datamine
     in
-    -- logOpened with a fudged start position
+    -- logOpened with a fudged start position, to keep links identical to the history screen
     { model0 | readline = TimedReadline.create { now = Time.millisToPosix 0, start = position, end = position + size } |> Just }
         |> update settings (LogSlice { date = 0, position = position, length = size, value = log ++ "\n" })
         |> Tuple.first
+
+
+filteredLogSlice : Time.Zone -> Datamine -> Settings -> Int -> String -> String
+filteredLogSlice tz datamine settings position log =
+    -- step 1: filter all lines that mean something to mapwatch; all non-parse-errors
+    Readline.create { start = 0, end = Bytes.Encode.getStringWidth log + 1 }
+        |> Readline.read 0 (log ++ "\n")
+        |> Tuple.first
+        |> List.filter (LogLine.parse datamine tz >> Result.Extra.isOk)
+        |> List.map Tuple.second
+        -- step 2: remove the gibberish between the date and the message
+        |> List.map
+            (\line ->
+                case line |> String.indexes "]" |> List.head of
+                    Nothing ->
+                        line
+
+                    Just end ->
+                        String.left (LogLine.dateLength - 1) line
+                            ++ String.dropLeft end line
+            )
+        -- step 3: filter IP addresses
+        |> List.foldl
+            (\line ( count, seens, accum ) ->
+                line
+                    |> filterIp 0 count seens
+                    |> (\( count2, seens2, line2 ) -> ( count2, seens2, line2 :: accum ))
+            )
+            ( 0, Dict.empty, [] )
+        |> (\( c, s, a ) -> a)
+        |> List.reverse
+        -- finally, join the results into one string
+        |> String.join "\n"
+
+
+ipRegex : Regex
+ipRegex =
+    Regex.fromString "\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}" |> Maybe.withDefault Regex.never
+
+
+filterIp : Int -> Int -> Dict String String -> String -> ( Int, Dict String String, String )
+filterIp index count seens line =
+    case line |> String.dropLeft index |> Regex.findAtMost 1 ipRegex |> List.head of
+        Nothing ->
+            ( count, seens, line )
+
+        Just match ->
+            let
+                endIndex =
+                    index + match.index + String.length match.match
+            in
+            case Dict.get match.match seens of
+                Nothing ->
+                    let
+                        replace =
+                            "999.999.999." ++ String.fromInt count
+                    in
+                    String.left (index + match.index) line
+                        ++ replace
+                        ++ String.dropLeft endIndex line
+                        |> filterIp endIndex (count + 1) (seens |> Dict.insert match.match replace)
+
+                Just replace ->
+                    String.left (index + match.index) line
+                        ++ replace
+                        ++ String.dropLeft endIndex line
+                        |> filterIp endIndex count seens
 
 
 init : Maybe Time.Zone -> D.Value -> ( Result String Model, Cmd Msg )
