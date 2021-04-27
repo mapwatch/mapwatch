@@ -674,7 +674,7 @@
         "Graveyard Map",
         "Grotto Map",
         "The Beachhead (High Tier)",
-        "Harbinger Map",
+        "The Beachhead (Low Tier)",
         "Haunted Mansion Map",
         "Iceberg Map",
         "Infested Valley Map",
@@ -710,7 +710,7 @@
         "Precinct Map",
         "Primordial Pool Map",
         "Promenade Map",
-        "The Hall of Grandmasters",
+        "Hall of Grandmasters",
         "Racecourse Map",
         "Ramparts Map",
         "Reef Map",
@@ -2080,7 +2080,7 @@
         "Precinct Map",
         "Primordial Pool Map",
         "Promenade Map",
-        "The Hall of Grandmasters",
+        "Hall of Grandmasters",
         "Racecourse Map",
         "Ramparts Map",
         "Reef Map",
@@ -2427,7 +2427,7 @@
         "Grotto Map",
         "Harbinger's Isle",
         "The Beachhead (High Tier)",
-        "Harbinger Map",
+        "The Beachhead (Low Tier)",
         "The Beachhead (Mid Tier)",
         "Haunted Mansion Map",
         "Lair of the Hydra Map",
@@ -2475,7 +2475,7 @@
         "Precinct Map",
         "Primordial Pool Map",
         "Promenade Map",
-        "The Hall of Grandmasters",
+        "Hall of Grandmasters",
         "Racecourse Map",
         "Ramparts Map",
         "Reef Map",
@@ -2817,7 +2817,7 @@
     {
       "card": "The Last One Standing",
       "maps": [
-        "The Hall of Grandmasters"
+        "Hall of Grandmasters"
       ],
       "loot": {
         "text": "Atziri's Disfavour"
@@ -3311,12 +3311,7 @@
     },
     {
       "card": "The Scavenger",
-      "maps": [
-        "The Aqueduct",
-        "Channel Map",
-        "Chateau Map",
-        "Underground River Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Carcass Jack"
       }
@@ -3574,6 +3569,7 @@
     {
       "card": "The Tinkerer's Table",
       "maps": [
+        "Alleyways Map",
         "Arid Lake Map",
         "Atoll Map",
         "Barrows Map",
@@ -3964,11 +3960,13 @@
     {
       "card": "The Wretched",
       "maps": [
+        "The Catacombs",
         "Bone Crypt Map",
         "Cells Map",
         "Cursed Crypt Map",
         "The Coward's Trial",
         "Dungeon Map",
+        "Mud Geyser Map",
         "Necropolis Map",
         "Overgrown Ruin Map",
         "Acton's Nightmare",
