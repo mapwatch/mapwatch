@@ -1181,7 +1181,10 @@
     },
     {
       "card": "Prejudice",
-      "maps": [],
+      "maps": [
+        "Beach Map",
+        "Burial Chambers Map"
+      ],
       "loot": {
         "text": "Item\nInfluenced Item"
       }
@@ -1406,7 +1409,9 @@
     },
     {
       "card": "The Adventuring Spirit",
-      "maps": [],
+      "maps": [
+        "Vaults of Atziri"
+      ],
       "loot": {
         "text": "Victario's Influence"
       }
