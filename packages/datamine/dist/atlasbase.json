@@ -6,6 +6,7 @@
         "red": [
           "Gripped Gloves",
           "Spiked Gloves",
+          "Cerulean Ring",
           "Gripped Gloves",
           "Spiked Gloves"
         ],
@@ -39,9 +40,11 @@
       "region": "Lex Ejoris",
       "loot": {
         "red": [
+          "Cerulean Ring",
           "Convoking Wand"
         ],
         "yellow": [
+          "Cerulean Ring",
           "Convoking Wand"
         ],
         "white": [
