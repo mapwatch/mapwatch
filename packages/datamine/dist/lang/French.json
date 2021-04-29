@@ -10522,7 +10522,7 @@
       ],
       [
         "GraviciusIntro1",
-        "Je te purifierai par les flammes, putain du cauchemar !"
+        "Je te purifierai par les flammes, putain issue du cauchemar !"
       ],
       [
         "GraviciusIntro2",
@@ -11082,7 +11082,7 @@
       ],
       [
         "DominusDeath",
-        "<if:MS>{Le monde entier est une illusion, exilé.}<elif:FS>{Le monde entier est une illusion, exilée.}"
+        "<if:MS>{Le monde entier n'est qu'une illusion, exilé.}<elif:FS>{Le monde entier n'est qu'une illusion, exilée.}"
       ],
       [
         "MalachaiStatue",
@@ -24566,7 +24566,7 @@
       ],
       [
         "JanusInterrogatedThree",
-        "Tu vas pourrir en cache, salopard."
+        "Tu vas pourrir au trou, salopard !"
       ],
       [
         "JanusSecondaryDefenderArrivalThirtyTwo",
@@ -24590,187 +24590,187 @@
       ],
       [
         "HillockPrimaryDefenderStartsFightZero",
-        "Hé !... Pourquoi ta tronche me revient ?"
+        "Hé, mais !... Attends, pourquoi ta tronche me revient ?"
       ],
       [
         "HillockPrimaryDefenderStartsFightOne",
-        "C'est CHEZ MOI, ici. Vous allez MOURIR, petits envahisseurs."
+        "C'est CHEZ MOI, ici. Et vous allez MOURIR, nabots d'envahisseurs."
       ],
       [
         "HillockPrimaryDefenderStartsFightTwo",
-        "C'est mes trucs, c'est pas à toi ! Je vais te CASSER EN MORCEAUX !"
+        "C'est à moi, pas à toi ! Je vais te CASSER EN MORCEAUX !"
       ],
       [
         "HillockPrimaryDefenderStartsFightThree",
-        "<if:MS>{Tu ne dois pas voir ça ! Je vais te tuer jusqu'à ce que TU SOIS MORT !}<elif:FS>{Tu ne dois pas voir ça ! Je vais te tuer jusqu'à ce que TU SOIS MORTE !}"
+        "<if:MS>{Tu dois pas voir ça ! Je vais T'TUER JUSQU'À QUE TU SOIS MORT !}<elif:FS>{Tu dois pas voir ça ! Je vais T'TUER JUSQU'À QUE TU SOIS MORTE !}"
       ],
       [
         "HillockPrimaryDefenderStartsFightFour",
-        "<if:MS>{Je t'ai trouvé, petit exilé. Et maintenant je vais te tuer !}<elif:FS>{Je t'ai trouvée, petite exilée. Et maintenant je vais te tuer !}"
+        "<if:MS>{J't'ai trouvé, petit exilé. Et maintenant, je vais t'tuer !}<elif:FS>{J't'ai trouvé, petite exilée. Et maintenant, je vais t'tuer !}"
       ],
       [
         "HillockPrimaryDefenderStartsFightFive",
-        "Je déteste le noir. Et je TE déteste pour m'avoir mis dedans !"
+        "Je déteste être dans l'noir. Et je te déteste TOI parce que tu m'y as mis !"
       ],
       [
         "HillockPrimaryDefenderStartsFightSix",
-        "TOI ! Tu m'as confusé. Je vais te tordre le cou pour ça."
+        "TOI, LÀ ! Tu m'as embrouillé. Je vais t'tordre le cou pour ça."
       ],
       [
         "HillockPrimaryDefenderStartsFightSeven",
-        "Tu m'as obligé à faire du mal à mes copains. Maintenant, c'est à toi que je vais faire mal !"
+        "Tu m'as forcé à faire du mal à mes copains. Maintenant, c'est à toi que je vais faire mal !"
       ],
       [
         "HillockPrimaryDefenderStartsFightEight",
-        "Tu m'as tué. Maintenant, c'est moi qui te tue. Et pour toi, ça va durer."
+        "Tu m'as tué. Mais maintenant, c'est moi qui te tue. Et je j'vais faire ça à petit feu."
       ],
       [
         "HillockPrimaryDefenderStartsFightNine",
-        "<if:MS>{J'ai bien aimé te casser en deux, petit exilé. Et je suis content de pouvoir recommencer.}<elif:FS>{J'ai bien aimé te casser en deux, petite exilée. Et je suis content de pouvoir recommencer.}"
+        "<if:MS>{J'ai bien aimé t'casser en deux, petit exilé. Et je suis content, parce que je peux recommencer.}<elif:FS>{J'ai bien aimé t'casser en deux, petite exilée. Et je suis content, parce que je peux recommencer.}"
       ],
       [
         "HillockPrimaryDefenderStartsFightTen",
-        "Je vais te cogner comme j'ai jamais cogné personne !"
+        "Je vais t'casser la gueule comme je l'ai jamais fait !"
       ],
       [
         "HillockPrimaryDefenderStartsFightEleven",
-        "Les gens que je tue sont toujours avec moi."
+        "Les gens que j'tue sont toujours avec moi."
       ],
       [
         "HillockPrimaryDefenderStartsFightTwelve",
-        "<if:MS>{Un coup, exilé. C'est tout ce qu'il me faut.}<elif:FS>{Un coup, exilée. C'est tout ce qu'il me faut.}"
+        "<if:MS>{J't'en colle une, exilé. Ça suffira à te sécher.}<elif:FS>{J't'en colle une, exilée. Ça suffira à te sécher.}"
       ],
       [
         "HillockPrimaryDefenderStartsFightThirteen",
-        "Cours, petit jouet ! Cours !"
+        "Allez cours, p'tit jouet ! Cours !"
       ],
       [
         "HillockPrimaryDefenderStartsFightFourteen",
-        "Quand je m'énerve, des trucs brûlent. Des GENS brûlent."
+        "Quand j'm'énerve, y a des trucs qui brûlent. ET DES GENS qui brûlent."
       ],
       [
         "HillockSafehouseLeaderIntroZero",
-        "Tu es entré dans ma maison. MA maison. Je vais t'ARRACHER la colonne vertébrale !"
+        "T'as mis les pieds chez moi... CHEZ MOI ! Je vais T'ARRACHER la colonne vertébrale !"
       ],
       [
         "HillockSecondaryDefenderArrivalZero",
-        "Je vais aider à tuer les petits envahisseurs !"
+        "J'vais aider à tuer ces nabots d'envahisseurs !"
       ],
       [
         "HillockSecondaryDefenderArrivalOne",
-        "<if:MS>{Ces machins, c'est pas à toi, petit exilé !}<elif:FS>{Ces machins, c'est pas à toi, petite exilée !}"
+        "<if:MS>{Pas touche à mes machins, exilé !}<elif:FS>{Pas touche à mes machins, exilée !}"
       ],
       [
         "HillockSecondaryDefenderArrivalTwo",
-        "Je vais réduire les petits envahisseurs en PURÉE !"
+        "J'vais réduire ces nabots d'envahisseurs en PURÉE !"
       ],
       [
         "HillockSecondaryDefenderArrivalThree",
-        "Tuez-les jusqu'à la mort ! Hahahaha !"
+        "Allez, on en fait d'la bouillie ! Hahahaha !"
       ],
       [
         "HillockSecondaryDefenderArrivalFour",
-        "Je vais te faire mal parce que c'est rigolo."
+        "J'vais te faire mal, parce que c'est rigolo."
       ],
       [
         "HillockSecondaryDefenderArrivalFive",
-        "<if:MS>{Je vais te protéger ! Je protège la famille ! J'arrache les petites têtes d'exilés !}<elif:FS>{Je vais te protéger ! Je protège la famille ! J'arrache les petites têtes d'exilées !}"
+        "J'vais te protéger ! J'protège la famille ! J'arrache les p'tites têtes des exilés !"
       ],
       [
         "HillockSecondaryDefenderArrivalSix",
-        "Je vais t'aider à taper."
+        "J'vais t'aider à taper."
       ],
       [
         "HillockSecondaryDefenderArrivalSeven",
-        "Des flèches ? Je déteste les flèches."
+        "Des flèches ? J'déteste les flèches."
       ],
       [
         "HillockSecondaryDefenderArrivalEight",
-        "Je vais t'aider à trancher."
+        "J'vais t'aider à les déchiqueter."
       ],
       [
         "HillockSecondaryDefenderArrivalNine",
-        "Je vais t'aider à découper."
+        "J'vais t'aider à en faire de la charpie."
       ],
       [
         "HillockSecondaryDefenderArrivalTen",
-        "Je vais t'aider, madame qui fait peur."
+        "J'vais t'aider, madame qui fait peur."
       ],
       [
         "HillockSecondaryDefenderArrivalEleven",
-        "Je vais t'aider à cogner."
+        "J'vais t'aider à en faire de la bouillie."
       ],
       [
         "HillockSecondaryDefenderArrivalTwelve",
-        "Vous m'avez tous fait mal. Je vais tous vous faire mal aussi !"
+        "Vous m'avez tous fait mal ! Alors moi aussi j'vais tous vous faire mal !"
       ],
       [
         "HillockSecondaryDefenderArrivalThirteen",
-        "C'est mes choses à moi maintenant, espèce de stupide."
+        "C'est mes choses à moi, espèce d'abruti."
       ],
       [
         "HillockSecondaryDefenderArrivalFourteen",
-        "Je vais tuer tous ceux qui sont ici."
+        "Je vais tuer tout l'monde."
       ],
       [
         "HillockSecondaryDefenderArrivalFifteen",
-        "<if:MS>{Ha ! Espèce d'idiot stupide, tu es tombé dans mon piège.}<elif:FS>{Ha ! Espèce d'idiote stupide, tu es tombée dans mon piège.}"
+        "<if:MS>{Ha ! Pauvre abruti, t'es tombé dans mon piège.}<elif:FS>{Ha ! Pauvre abrutie, t'es tombée dans mon piège.}"
       ],
       [
         "HillockSecondaryDefenderArrivalSixteen",
-        "Je vais t'avoir, la sauvage !"
+        "J'vais t'avoir, la sauvage !"
       ],
       [
         "HillockSecondaryDefenderArrivalSeventeen",
-        "Tu parles trop, Vagan. Je vais te faire fermer ta jolie petite bouche."
+        "Tu parles trop, Vagan. J'vais te clouer ton p'tit bec."
       ],
       [
         "HillockSecondaryDefenderArrivalEighteen",
-        "Jolie petite Rin, je viens te chercher !"
+        "Fais gaffe à toi ma jolie petite Rin, j'arrive !"
       ],
       [
         "HillockSecondaryDefenderArrivalNineteen",
-        "Je peux te taper, Caméria ?"
+        "J'peux t'en coller une, Caméria ?"
       ],
       [
         "HillockSecondaryDefenderArrivalTwenty",
-        "Effrayante petite Aisling... tu es à moi, maintenant."
+        "Petite Aisling... Tu m'fais peur, mais tu es à moi, maintenant."
       ],
       [
         "HillockSecondaryDefenderArrivalTwentyOne",
-        "<if:MS>{Taper l'exilé, taper les Syndicat. Taper tout le monde.}<elif:FS>{Taper l'exilée, taper les Syndicat. Taper tout le monde.}"
+        "<if:MS>{Taper l'exilé. Taper ceux du Syndicat. Taper tout le monde.}<elif:FS>{Taper l'exilée. Taper ceux du Syndicat. Taper tout le monde.}"
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalZero",
-        "Par contre, tu es dans ma maison, stupide."
+        "<if:MS>{Non mais là t'es chez moi, abruti.}<elif:FS>{Non mais là t'es chez moi, abrutie.}"
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalOne",
-        "Je vais te tuer aussi ! Je vais tous vous réduire en MIETTES !"
+        "J'vais te tuer toi aussi ! J'vais tous vous réduire en MIETTES !"
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalTwo",
-        "Je vais garder ton corps. Tu ne te réveilleras plus."
+        "Je vais garder ton cadavre. Tu t'réveilleras plus jamais."
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalThree",
-        "Je vais peindre avec toi après. Une grosse tâche rouge. Hahaha !"
+        "Toi et moi, on va faire de la peinture ! Et tu feras une grosse tache rouge ! Hahaha !"
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalFour",
-        "Je vais utiliser ton corps pour essayer mes lames."
+        "Tu vas m'servir à aiguiser mes lames."
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalFive",
-        "Je déteste les pirates ! Ils puent tous le sel et le pourri."
+        "J'déteste les pirates ! Ils puent tous le sel et puis le pourri."
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalSix",
-        "<if:MS>{Ah ouais ? Eh bien toi, tu vas être MORT-mort !}<elif:FS>{Ah ouais ? Eh bien toi, tu vas être MORTE-morte !}"
+        "Ah ouais ? Eh ben toi, j'vais t'tuer tellement fort que tu vas MOURIR !"
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalSeven",
-        "Hé ! Qui c'est que tu traites d'idiot ? Moi ? Hé !"
+        "Hé ! Mais qui c'est qu'tu traites d'idiot ? Moi ? Hé !"
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalEight",
@@ -24778,75 +24778,75 @@
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalNine",
-        "Dans ce cas, je vais te cogner aussi."
+        "Alors toi aussi, j'vais te frapper."
       ],
       [
         "HillockSecondaryDefenderArrivalTwentyTwo",
-        "Ne te mets pas en travers de mon chemin."
+        "Te mets pas en travers de mon chemin."
       ],
       [
         "HillockSecondaryDefenderArrivalTwentyThree",
-        "<if:MS>{Vous, protégez les trucs ! Je vais fracasser le petit exilé.}<elif:FS>{Vous, protégez les trucs ! Je vais fracasser la petite exilée.}"
+        "<if:MS>{Protégez les trucs ! Moi, j'fracasse le p'tit exilé.}<elif:FS>{Protégez les trucs ! Moi, j'fracasse la p'tite exilée.}"
       ],
       [
         "HillockSecondaryDefenderArrivalTwentyFour",
-        "Je vais te mettre une beigne légendaire !"
+        "Je vais t'mettre une raclée légendaire !"
       ],
       [
         "HillockSecondaryDefenderArrivalTwentyFive",
-        "<if:MS>{Je vais faire des cure-dents avec les os de l'exilé.}<elif:FS>{Je vais faire des cure-dents avec les os de l'exilée.}"
+        "<if:MS>{Je vais m'faire des cure-dents avec les os de l'exilé.}<elif:FS>{Je vais m'faire des cure-dents avec les os de l'exilée.}"
       ],
       [
         "HillockSecondaryDefenderArrivalTwentySix",
-        "Bats-toi bien, Léo, et je te ferai un autre crochet."
+        "Bats-toi bien, Léo, et j'te ferai un autre crochet."
       ],
       [
         "HillockSecondaryDefenderArrivalTwentySeven",
-        "<if:MS>{Éloignez ces flèches de moi. Pointez-les sur l'exilé !}<elif:FS>{Éloignez ces flèches de moi. Pointez-les sur l'exilée !}"
+        "<if:MS>{J'veux pas de flèches sur moi. Visez l'exilé !}<elif:FS>{J'veux pas de flèches sur moi. Visez l'exilée !}"
       ],
       [
         "HillockSecondaryDefenderArrivalTwentyEight",
-        "Petit homme avec ses lames, tu poignardes ce que je te dis."
+        "Poignarde ce que j'te dis, petit homme avec des lames."
       ],
       [
         "HillockSecondaryDefenderArrivalTwentyNine",
-        "C'est moi le plus fort ici, petit Thane. C'est moi qui commande."
+        "C'est moi l'plus fort ici, petit Thane. C'est moi qui commande."
       ],
       [
         "HillockSecondaryDefenderArrivalThirty",
-        "C'est mon tour de choisir ce qu'on va mettre en pièces !"
+        "C'est à mon tour de choisir ce qu'on va mettre en pièces !"
       ],
       [
         "HillockSecondaryDefenderArrivalThirtyOne",
-        "Tu sais ce que je veux. Taper. Taper ! TAPER !"
+        "Tu sais ce que je veux : taper... Taper !... TAPER !"
       ],
       [
         "HillockKillPlayerZero",
-        "Et reste comme ça !"
+        "J'ai dit : pas touche !"
       ],
       [
         "HillockKillPlayerOne",
-        "Ce qui est à moi est à moi."
+        "C'qui est à moi est à moi."
       ],
       [
         "HillockKillPlayerTwo",
-        "<if:MS>{Écrabouillé.}<elif:FS>{Écrabouillée.}"
+        "D'la bouillie."
       ],
       [
         "HillockKillPlayerThree",
-        "Facile facile facile."
+        "Facile, facile, facile."
       ],
       [
         "HillockEscapeZero",
-        "Huhuhahaha... HAHahahahahaha !"
+        "Huhuhahaha... HAHAHAHAHAHAHA !"
       ],
       [
         "HillockEscapeOne",
-        "Tu vois ? Personne ne me prends mes choses !"
+        "Alors, hein ? Personne à l'droit de toucher à mes trucs."
       ],
       [
         "HillockEscapeTwo",
-        "Je vais vous casser en petits morceaux plus tard, petits envahisseurs."
+        "J'vais vous casser en petits morceaux, nabots d'envahisseurs."
       ],
       [
         "HillockDefeatedZero",
@@ -24854,7 +24854,7 @@
       ],
       [
         "HillockDefeatedOne",
-        "Aaaah !"
+        "Aaaaaaah !"
       ],
       [
         "HillockDefeatedTwo",
@@ -24862,27 +24862,27 @@
       ],
       [
         "HillockDefeatedThree",
-        "Tu as triché ! C'est obligé !"
+        "T'as triché ! C'est obligé !"
       ],
       [
         "HillockDefeatedFour",
-        "Non... pas encore le noir..."
+        "Non... J'veux pas retourner dans l'noir..."
       ],
       [
         "HillockDefeatedFive",
-        "Ma tête me fait encore mal !"
+        "J'ai ma tête qui m'fait encore mal !"
       ],
       [
         "HillockDefeatedSix",
-        "Ne m'oblige pas... à faire encore du mal à mes copains..."
+        "M'oblige pas à... faire encore du mal à mes copains..."
       ],
       [
         "HillockDefeatedSeven",
-        "Non... je ne veux pas mourir... encore..."
+        "Non... J'veux pas mourir... Pas encore..."
       ],
       [
         "HillockDefeatedEight",
-        "Mon tour... déjà... ?"
+        "Quoi ? C'est déjà mon tour...?"
       ],
       [
         "HillockDefeatedNine",
@@ -24890,31 +24890,31 @@
       ],
       [
         "HillockDefeatedTen",
-        "Stupide Hillock ! Stupide !"
+        "Abruti d'Hillock ! Abruti !"
       ],
       [
         "HillockOfferBargainZero",
-        "<if:MS>{Tuer, tu fais ça tellement bien, exilé. C'est rapide et ça éclabousse partout. Ça te dit qu'on soit copains, juste pour aujourd'hui ?}<elif:FS>{Tuer, tu fais ça tellement bien, exilée. C'est rapide et ça éclabousse partout. Ça te dit qu'on soit copains, juste pour aujourd'hui ?}"
+        "<if:MS>{Toi tu sais tuer, exilé. Ça va vite et ça en fout partout. Tu veux être mon copain, au moins pour aujourd'hui ?}<elif:FS>{Toi tu sais tuer, exilé. Ça va vite et ça en fout partout. Tu veux être ma copine, au moins pour aujourd'hui ?}"
       ],
       [
         "HillockOfferBargainOne",
-        "Je veux un copain, ça oui. Être assis dans ma chambre, taper avec mon marteau, me parler tout seul... me mettre en COLÈRE... Peut-être qu'avec un copain, j'arrêterai de faire du mal aux gens. Est-ce que tu vas m'aider à trouver un copain ?"
+        "J'veux un copain, ça oui ! Rester chez moi, taper avec mon marteau, me parler tout seul... me mettre en COLÈRE... Peut-être qu'avec un copain, j'arrêterais de faire du mal aux gens. Tu veux m'aider à trouver un copain ?"
       ],
       [
         "HillockOfferBargainTwo",
-        "J'ai déjà fait copain-copain avec quelqu'un, ça oui. On doit souper ensemble. Boire un coup, aussi. Parler du travail. On a déjà parlé de deux ou trois trucs, tu sais. Laisse-moi partir et je te répéterai ce qu'on s'est dit."
+        "J'ai déjà fait copain-copain avec quelqu'un, ça oui. On doit souper ensemble. Pis boire un coup, aussi. Parler du travail. On a déjà parlé de deux ou trois trucs, tu sais. Si tu m'laisses partir, je te dirai ce qu'on s'est dit."
       ],
       [
         "HillockOfferBargainThree",
-        "J'ai vraiment essayé de faire ce travail mais j'y comprends RIEN. Ça n'a aucun sens pour moi ! Ça me fait mal au crâne ! Ça me fout en ROGNE ! Me donne envie de CASSER DES TRUCS ! Je veux partir d'ici !"
+        "J'ai vraiment essayé d'faire ce travail mais j'y comprends RIEN. Rien du tout ! Ça m'pète le crâne ! Ça m'fout en ROGNE ! Ça me donne envie d'CASSER DES TRUCS ! Je veux partir d'ici !"
       ],
       [
         "HillockOfferBargainFour",
-        "La forge me manque, ça oui. Ici, je peux pas faire des épées comme avant. Peut-être que tu peux dire à la Source de Vie que j'ai été réduit en cendres, et comme ça je peux rentrer à la maison. Retrouver mon enclume, et ma taverne."
+        "Ah, la forge me manque, ça oui. Ici, j'peux pas faire des épées comme avant. Peut-être que tu peux dire à la Source de Vie que j'ai été réduit en cendres, comme ça j'peux rentrer à la maison. Pour retrouver mon enclume, et ma taverne."
       ],
       [
         "HillockOfferBargainFive",
-        "Je déteste ce travail. Je le déteste ! Je n'y comprends rien ! Mon chef m'a donné un papier tout gribouillé. Il m'a dit que tout ce que je dois savoir est dessus, mais j'arrive pas à comprendre ce qui est dessiné. Si tu me laisses partir, tu peux regarder. Peut-être que toi, tu comprendras ce que ça veut dire."
+        "Je déteste ce travail. Je l'déteste ! J'y comprends rien ! Mon chef m'a donné un papier tout gribouillé. Il m'a dit que tout ce que je dois savoir s'trouve dessus, mais j'arrive pas à comprendre ce qui est dessiné. Si tu me laisses partir, tu peux regarder. Peut-être que toi, tu comprendras ce que ça veut dire."
       ],
       [
         "HillockOfferBargainSix",
@@ -24922,11 +24922,11 @@
       ],
       [
         "HillockBargainAcceptedZero",
-        "Peut-être que ça va faire partir les vilaines pensées..."
+        "Peut-être que ça f'ra partir les vilaines idées..."
       ],
       [
         "HillockBargainAcceptedOne",
-        "C'est pas facile de se faire des copains, ça non..."
+        "C'est pas facile de s'faire des copains. Ça, non..."
       ],
       [
         "HillockBargainAcceptedTwo",
@@ -24934,103 +24934,103 @@
       ],
       [
         "HillockBargainAcceptedThree",
-        "Je me sens... content... !"
+        "J'me sens... content... !"
       ],
       [
         "HillockBargainAcceptedFour",
-        "Tu y comprends quelque chose, toi ?"
+        "T'y comprends quelque chose, toi ?"
       ],
       [
         "HillockBargainAcceptedFive",
-        "Prends-en soin, d'accord ?"
+        "T'en prends soin, d'accord ?"
       ],
       [
         "HillockOfferBetrayalZero",
-        "Le chef me parle mal. Comme si j'étais stupide. Je ne suis pas stupide. PAS STUPIDE ! Ça me met tellement en COLÈRE. Assez pour me donner envie de taper tout ce qui bouge ! C'est moi qui devrait être le chef !"
+        "Le chef me parle mal. Comme si j'étais un abruti. Je suis pas un abruti. JE SUIS PAS UN ABRUTI ! Ça me fout tellement en ROGNE. Assez pour me donner envie de taper tout c'qui bouge ! C'est moi qui devrais être chef !"
       ],
       [
         "HillockOfferBetrayalOne",
-        "Les gens dans le Syndicat ont peur de moi, ça oui. Ils savent à quel point je peux les taper fort. Ils sont prêts à me donner tout ce que je veux, sinon... Tu veux voir ça ?"
+        "Les gens du Syndicat ont peur de moi, ça oui. Ils savent à quel point je peux les taper fort. Ils sont prêts à me donner tout ce que j'veux, sinon... Tu veux voir ça ?"
       ],
       [
         "HillockOfferBetrayalTwo",
-        "<if:MS>{Je suis tellement en rogne maintenant, exilé. C'est tout ROUGE. J'ai besoin d'entendre des os CRAQUER. De le sentir dans mes POINGS ! Je m'en fiche de qui je cogne. Un nom ! Donne-moi un nom !}<elif:FS>{Je suis tellement en rogne maintenant, exilée. C'est tout ROUGE. J'ai besoin d'entendre des os CRAQUER. De le sentir dans mes POINGS ! Je m'en fiche de qui je cogne. Un nom ! Donne-moi un nom !}"
+        "<if:MS>{J'suis tellement en rogne maintenant, exilé. J'vois tout ROUGE. Il faut qu'j'entende des os qui CRAQUENT. Que j'les sente dans mes POINGS ! Je m'en fous de qui j'cogne. Un nom ! Donne-moi un nom !}<elif:FS>{J'suis tellement en rogne maintenant, exilée. J'vois tout ROUGE. Il faut qu'j'entende des os qui CRAQUENT. Que j'les sente dans mes POINGS ! Je m'en fous de qui j'cogne. Un nom ! Donne-moi un nom !}"
       ],
       [
         "HillockOfferBetrayalThree",
-        "Je donne aux gens du Syndicat le choix. Soit je tape, tape et tape jusqu'à être content, ou bien ils te disent ce que tu veux savoir. Après ça, tu me laisses partir, d'accord ?"
+        "Les gens du Syndicat, ils ont le choix : soit je les tape, tape et tape jusqu'à être content, soit ils te disent ce que tu veux savoir. Mais après, tu me laisses partir, d'accord ?"
       ],
       [
         "HillockOfferBetrayalFour",
-        "Vagan gigote trop. J'ai essayé de l'attraper une fois mais il m'a glissé entre les doigts. Ne le laisse pas s'échapper encore. Tu pourrais ne jamais avoir une autre chance de l'avoir !"
+        "Vagan, il gigote trop. J'ai essayé de l'attraper une fois mais il m'a glissé entre les doigts. Évite de le laisser d'échapper. Si ça se trouve ,t'auras jamais plus d'occasion de l'choper !"
       ],
       [
         "HillockOfferBetrayalFive",
-        "<if:MS>{Je pense que je peux enfoncer Guff dans le sol comme si c'était un poteau. Je parie qu'il serait prêt à faire n'importe quoi pour se tirer de là. Qu'est-ce que t'en pense, petit exilé ?}<elif:FS>{Je pense que je peux enfoncer Guff dans le sol comme si c'était un poteau. Je parie qu'il serait prêt à faire n'importe quoi pour se tirer de là. Qu'est-ce que t'en pense, petite exilée ?}"
+        "<if:MS>{J'pense que je peux enfoncer Guff dans le sol comme si c'était un poteau. Je parie qu'il ferait tout pour s'barrer. Qu'est-ce t'en pense, petit exilé ?}<elif:FS>{J'pense que je peux enfoncer Guff dans le sol comme si c'était un poteau. Je parie qu'il ferait tout pour s'barrer. Qu'est-ce t'en pense, petite exilée ?}"
       ],
       [
         "HillockOfferBetrayalSix",
-        "<if:MS>{J'ai trouvé Korell dans ma chambre, en train de prier devant ma forge. Dans MA chambre. J'ai jamais dit qu'il pouvait faire ça ! Ça M'ÉNERVE tellement ! Apprends le respect, sale Rougelame ! Exilé, apprends-lui le respect !}<elif:FS>{J'ai trouvé Korell dans ma chambre, en train de prier devant ma forge. Dans MA chambre. J'ai jamais dit qu'il pouvait faire ça ! Ça M'ÉNERVE tellement ! Apprends le respect, sale Rougelame ! Exilée, apprends-lui le respect !}"
+        "<if:MS>{J'suis tombé sur Korell chez moi. Il était en train de prier devant ma forge. CHEZ MOI. J'lui ai jamais donné le droit ! Ça me fout tellement en ROGNE ! Apprends c'que c'est le respect, sale Rougelame ! Exilé, et si tu lui apprenais le respect ?!}<elif:FS>{J'suis tombé sur Korell chez moi. Il était en train de prier devant ma forge. CHEZ MOI. J'lui ai jamais donné le droit ! Ça me fout tellement en ROGNE ! Apprends c'que c'est le respect, sale Rougelame ! Exilée, et si tu lui apprenais le respect ?!}"
       ],
       [
         "HillockOfferBetrayalSeven",
-        "J'ai envie de casser le masque de Maloney, juste pour voir son crâne se faire fendre en deux. Je parie qu'il y a plein de choses bonnes à savoir dans ce crâne."
+        "J'ai envie de péter le masque de Maloney, juste pour voir son crâne se fendre en deux. J'parie qu'il y a plein de choses bonnes à apprendre dans ce crâne."
       ],
       [
         "HillockOfferBetrayalEight",
-        "<if:MS>{Tu sais cogner, exilé ! Aujourd'hui, on est des copains. Ça te dit d'en cogner un autre ?}<elif:FS>{Tu sais cogner, exilée ! Aujourd'hui, on est des copains. Ça te dit d'en cogner un autre ?}"
+        "<if:MS>{Tu sais mettre des raclées, exilé ! T'es mon copain pour aujourd'hui. Ça te dit de coller d'autres raclées ?}<elif:FS>{Tu sais mettre des raclées, exilée ! T'es ma copine pour aujourd'hui. Ça te dit de coller d'autres raclées ?}"
       ],
       [
         "HillockOfferExecuteZero",
-        "Je me déteste. Je déteste le Syndicat. Je préfère encore être mort."
+        "J'me déteste. J'déteste le Syndicat. J'préfère encore être mort."
       ],
       [
         "HillockOfferExecuteOne",
-        "Soit tu me tues, soit c'est le chef qui le fait plus tard. Je suis mort de toutes façons."
+        "Soit tu m'butes, soit c'est le chef qui le fait plus tard. De toute façon, j'suis mort."
       ],
       [
         "HillockOfferExecuteTwo",
-        "Tu vas me manquer, copain."
+        "<if:MS>{Tu vas me manquer, copain.}<elif:FS>{Tu vas me manquer, copine.}"
       ],
       [
         "HillockOfferExecuteThree",
-        "Plutôt être mort que de retourner dans le noir."
+        "Plutôt être mort que de r'tourner dans le noir."
       ],
       [
         "HillockReplyToBetrayalAcceptedZero",
-        "Toi... rrggghhh... rrrrRRAAAGGHHH !"
+        "Tu ne... arrggghhh... arrrrRRAAAGGHHH !"
       ],
       [
         "HillockReplyToBetrayalAcceptedOne",
-        "Tu n'es plus mon copain, Léo Col-sanglant."
+        "T'es plus mon copain, Léo Col-sanglant."
       ],
       [
         "HillockReplyToBetrayalAcceptedTwo",
-        "Tu ferais mieux de ne dormir que d'un œil, femme sauvage."
+        "Tu f'rais mieux de ne dormir que d'un œil, madame la sauvage."
       ],
       [
         "HillockReplyToBetrayalAcceptedThree",
-        "Oh, Ventmuet. Je vais t'ENTERRER pour ça."
+        "Oh, Ventmuet... Tu vas finir SIX PIEDS SOUS TERRE pour ça."
       ],
       [
         "HillockReplyToBetrayalAcceptedFour",
-        "Tu es... horrible ! Je vais t'encastrer tellement fort qu'il faudra te décaper !"
+        "Tu es... atroce ! Je vais t'encastrer tellement fort qu'il faudra te décaper !"
       ],
       [
         "HillockReplyToBetrayalAcceptedFive",
-        "Tu me fais pas peur, petit homme masqué. Je vais te casser, et toutes tes petites machines aussi."
+        "Tu m'fais pas peur, petit nabot masqué. Je vais te péter en deux, et puis toutes tes petites machines aussi."
       ],
       [
         "HillockReplyToBetrayalAcceptedSix",
-        "Mauvais ! T'es mauvais ! Je vais t'écrabouiller jusqu'à te réduire en BOUILLIE ROUGE pour ça."
+        "Méchant ! T'es méchant ! Je vais te transformer en BOUILLIE ROUGE."
       ],
       [
         "HillockInterrogatedZero",
-        "Je déteste le noir !"
+        "Je déteste l'endroit où il fait noir !"
       ],
       [
         "HillockInterrogatedOne",
-        "Non, non, arrête de m'envoyer dans le noir !"
+        "Non, non, arrête de m'envoyer dans l'endroit où c'est noir !"
       ],
       [
         "HillockInterrogatedTwo",
@@ -25046,23 +25046,23 @@
       ],
       [
         "HillockReplyToExecutionTwo",
-        "Mouahahaha ! Quel bazar."
+        "Mouahahaha ! Quel bordel."
       ],
       [
         "HillockSafehouseLeaderDefeatedZero",
-        "Je ne... comprends pas... c'était moi, le chef..."
+        "Je... comprends pas... C'était moi, le chef..."
       ],
       [
         "HillockPrimaryDefenderStartsFightFifteen",
-        "La force seule ne suffira pas pour nous vaincre, brute."
+        "Il va falloir plus que de la force pour nous vaincre, pauvre brute !"
       ],
       [
         "HillockEscape0Three",
-        "Comment avons-nous pu perdre contre cette tête creuse ?"
+        "Comment avons-nous pu perdre contre ce demeuré ?"
       ],
       [
         "HillockDefeatedTwelve",
-        "L'intelligence l'emporte sur la force, à chaque fois."
+        "L'intelligence l'emporte sur la force. Comme à chaque fois."
       ],
       [
         "HillockBargainAcceptedSix",
@@ -25070,15 +25070,15 @@
       ],
       [
         "HillockInterrogatedThree",
-        "J'espère que celui-là est en mesure de nous révéler quelque chose !"
+        "J'espère que ce gros tas est en mesure de nous révéler quelque chose !"
       ],
       [
         "HillockSecondaryDefenderArrivalThirtyTwo",
-        "Cela ne serait-il pas plus amusant de frapper tout le monde, brute ?"
+        "T'aimerais bien frapper tout le monde, hein ? Grosse brute."
       ],
       [
         "HillockSecondaryDefenderArrivalThirtyThree",
-        "Tu aurais dû rester morte, brute."
+        "Tu aurais dû rester morte, sale brute."
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalTen",
@@ -25086,11 +25086,11 @@
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalEleven",
-        "Une brute avec des renforts est autrement plus inquiétante."
+        "Quand la brute a des renforts, elle est hautement plus inquiétante."
       ],
       [
         "HillockReplyToSecondaryDefenderArrivalTwelve",
-        "Brute, tu as les yeux plus gros que le ventre."
+        "Sale brute, t'as eu les yeux plus gros que le ventre."
       ],
       [
         "GraviciusPrimaryDefenderStartsFightZero",
@@ -53350,11 +53350,11 @@
       ],
       [
         "TrialmasterFinalEncounterDefeatedRandom",
-        "<if:MS>{Je ne suis enfin plus… serviteur…}<elif:FS>{ }"
+        "<if:MS>{Mon travail… est enfin terminé…}<elif:FS>{ }"
       ],
       [
         "TrialmasterFinalEncounterPostDefeatedRandom",
-        "<if:MS>{… et je redeviens serviteur. Chaos s'esclaffe, mortel, et les grandes richesses sont à vous.}<elif:FS>{… et je redeviens serviteur. Chaos s'esclaffe, mortelle, et les grandes richesses sont à vous.}"
+        "<if:MS>{… et mon travail se poursuit. Chaos s'esclaffe, mortel, et les grandes richesses sont à vous.}<elif:FS>{… et mon travail se poursuit. Chaos s'esclaffe, mortelle, et les grandes richesses sont à vous.}"
       ],
       [
         "TrialmasterFinalEncounterPlayerDiedTauntRandom",
@@ -53625,27 +53625,27 @@
         "<if:MS>{La ruine vous traque.}<elif:FS>{ }"
       ],
       [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeedRandom",
         "<if:MS>{La ruine arrive toujours subitement.}<elif:FS>{ }"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed2",
+        "<if:MS>{La ruine arrive toujours subitement.}<elif:FS>{ }"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed3",
+        "<if:MS>{La ruine arrive toujours subitement.}<elif:FS>{ }"
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "<if:MS>{Le fardeau de la ruine pèse deux fois plus lourd.}<elif:FS>{ }"
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin2",
-        "<if:MS>{La ruine arrive toujours subitement.}<elif:FS>{ }"
+        "<if:MS>{Le fardeau de la ruine pèse deux fois plus lourd.}<elif:FS>{ }"
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin3",
-        "<if:MS>{La ruine arrive toujours subitement.}<elif:FS>{ }"
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin4",
-        "<if:MS>{Le fardeau de la ruine pèse deux fois plus lourd.}<elif:FS>{ }"
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin5",
-        "<if:MS>{Le fardeau de la ruine pèse deux fois plus lourd.}<elif:FS>{ }"
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin6",
         "<if:MS>{Le fardeau de la ruine pèse deux fois plus lourd.}<elif:FS>{ }"
       ],
       [
@@ -54502,15 +54502,15 @@
       ],
       [
         "TrialmasterChallengeChoiceMadeFlasksHinderRandom",
-        "<if:MS>{Vous devrez supporter votre propre bile.}<elif:FS>{ }"
+        "<if:MS>{Vous devrez supporter votre propre fiel.}<elif:FS>{ }"
       ],
       [
         "TrialmasterChallengeChoiceMadeFlasksHinder2",
-        "<if:MS>{Vous devrez supporter votre propre bile.}<elif:FS>{ }"
+        "<if:MS>{Vous devrez supporter votre propre fiel.}<elif:FS>{ }"
       ],
       [
         "TrialmasterChallengeChoiceMadeFlasksHinder3",
-        "<if:MS>{Vous devrez supporter votre propre bile.}<elif:FS>{ }"
+        "<if:MS>{Vous devrez supporter votre propre fiel.}<elif:FS>{ }"
       ],
       [
         "TrialmasterChallengeChoiceMadeCurseReflectRandom",
@@ -55638,11 +55638,11 @@
       ],
       [
         "TrialmasterDefeatedRandom",
-        "<if:MS>{Je ne suis enfin plus… serviteur…}<elif:FS>{ }"
+        "<if:MS>{Mon travail… est enfin terminé…}<elif:FS>{ }"
       ],
       [
         "TrialmasterReturnsAfterDefeatRandom",
-        "<if:MS>{… et je redeviens serviteur. Chaos s'esclaffe, mortel, et les grandes richesses sont à vous.}<elif:FS>{… et je redeviens serviteur. Chaos s'esclaffe, mortelle, et les grandes richesses sont à vous.}"
+        "<if:MS>{… et mon travail se poursuit. Chaos s'esclaffe, mortel, et les grandes richesses sont à vous.}<elif:FS>{… et mon travail se poursuit. Chaos s'esclaffe, mortelle, et les grandes richesses sont à vous.}"
       ],
       [
         "TrialmasterAboutHisDefeat",

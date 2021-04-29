@@ -53625,27 +53625,27 @@
         "Гибель ищет тебя."
       ],
       [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeedRandom",
         "Гибель настигает внезапно."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed2",
+        "Гибель настигает внезапно."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed3",
+        "Гибель настигает внезапно."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "Бремя гибели вдвое тяжелее."
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin2",
-        "Гибель настигает внезапно."
+        "Бремя гибели вдвое тяжелее."
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin3",
-        "Гибель настигает внезапно."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin4",
-        "Бремя гибели вдвое тяжелее."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin5",
-        "Бремя гибели вдвое тяжелее."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin6",
         "Бремя гибели вдвое тяжелее."
       ],
       [
@@ -55078,11 +55078,11 @@
       ],
       [
         "TrialmasterMoodBeginFiveOrMoreWinsRandom",
-        "Дальше ты побежать не будешь."
+        "Дальше ты побеждать не будешь."
       ],
       [
         "TrialmasterMoodBeginFiveOrMoreWins2",
-        "Дальше ты побежать не будешь."
+        "Дальше ты побеждать не будешь."
       ],
       [
         "TrialmasterMoodBeginFiveOrMoreWins3",
@@ -57819,7 +57819,7 @@
       ],
       [
         "Metadata/NPC/Hasina",
-        "Hasina"
+        "Хасина"
       ]
     ]
   }
