@@ -75,11 +75,7 @@ idPrefixesToMods =
     , ( "IceSpines", "FrostInfectionDaemon1" )
     , ( "UnhallowedPatches", "GraveyardDaemon1" )
     , ( "RuinHunter", "RevenantDaemon1" )
-
-    -- guess
     , ( "Shardspeaker", "SawbladeDaemon1" )
-
-    -- guess
     , ( "Blades", "SawbladeDaemon1" )
     , ( "PhysicalTotem", "PhysTotemDaemon" )
     , ( "FireTotem", "EleTotemDaemon" )
@@ -87,19 +83,13 @@ idPrefixesToMods =
     , ( "FailAtFiveRuin", "MonstersApplyRuin1" )
     , ( "FailAtTenRuin", "MonstersApplyRuin1" )
     , ( "TwoTypesApplyRuin", "MonstersApplyRuin1" )
-
-    -- Guess
     , ( "ReducedRecovery", "PlayerDebuffRecoveryReduction1" )
     , ( "LessAOELessProjSpeed", "PlayerDebuffAreaAndProjectileSpeed" )
     , ( "BuffsExpireFaster", "PlayerDebuffBuffsExpireFaster" )
-
-    -- Guess
     , ( "DiminishRecovery", "PlayerDebuffCooldownSpeed" )
     , ( "EscalatingVuln", "PlayerDebuffIncreasingVulnerability" )
     , ( "MonstersSpeedUp", "MonsterBuffAcceleratingSpeed" )
     , ( "Voidspeaker", "MonsterBuffNonChaosDamageToAddAsChaosDamage" )
-
-    -- guess
     , ( "UnluckyCrit", "PlayerDebuffExtraCriticalRolls" )
     , ( "FlasksHinder", "PlayerDebuffHinderedMsOnFlaskUse" )
     , ( "FlasksCancel", "PlayerDebuffCancelFlaskEffectOnFlaskUse" )
@@ -108,8 +98,6 @@ idPrefixesToMods =
     , ( "ReflectProjectiles", "PlayerDebuffRandomProjectileDirection" )
     , ( "YourAurasAffectEnemies", "PlayerDebuffAurasAffectAllies" )
     , ( "DealNoDamageSometimes", "PlayerDebuffUltimatumDealNoDamageFor2SecondEvery8Seconds" )
-
-    -- guess
     , ( "LoseCharges", "PlayerDebuffUltimatumLoseChargesEverySecond" )
     ]
         -- common id prefix
