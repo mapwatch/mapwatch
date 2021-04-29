@@ -1,12 +1,13 @@
-module Mapwatch.MapRun.Trialmaster exposing (Outcome(..), State, fromNpcs)
+module Mapwatch.MapRun.Trialmaster exposing (Outcome(..), State, duration, fromNpcs)
 
 import Dict exposing (Dict)
+import Duration exposing (Millis)
 import List.Extra
 import Mapwatch.Datamine as Datamine exposing (Datamine, UltimatumModifier)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Datamine.Trialmaster as DMTrialmaster exposing (Index)
 import Mapwatch.LogLine as LogLine exposing (NPCSaysData)
-import Mapwatch.RawMapRun as RawMapRun exposing (NpcEncounters, RawMapRun)
+import Mapwatch.RawMapRun as RawMapRun exposing (NpcEncounter, NpcEncounters, RawMapRun)
 import Maybe.Extra
 
 
@@ -17,13 +18,29 @@ type alias State =
 
 
 type Outcome
-    = Won
-    | Lost
-    | Retreated
+    = Won Millis
+    | Lost Millis
+    | Retreated Millis
     | Abandoned
 
 
-datamineOutcome : DMTrialmaster.Outcome -> Outcome
+duration : Outcome -> Maybe Millis
+duration o =
+    case o of
+        Won d ->
+            Just d
+
+        Lost d ->
+            Just d
+
+        Retreated d ->
+            Just d
+
+        Abandoned ->
+            Nothing
+
+
+datamineOutcome : DMTrialmaster.Outcome -> Millis -> Outcome
 datamineOutcome o =
     case o of
         DMTrialmaster.Won ->
@@ -36,36 +53,60 @@ datamineOutcome o =
             Retreated
 
         DMTrialmaster.Abandoned ->
-            Abandoned
+            always Abandoned
 
 
 fromNpcs : Datamine -> NpcEncounters -> Maybe State
 fromNpcs dm =
-    Dict.get NpcId.trialmaster
-        >> Maybe.map (List.map (Tuple.first >> .textId) >> fromLines dm)
+    Dict.get NpcId.trialmaster >> Maybe.map (fromLines dm)
 
 
-fromLines : Datamine -> List String -> State
-fromLines dm npcTextIds =
+fromLines : Datamine -> List NpcEncounter -> State
+fromLines dm encounters =
     let
-        modNpcTextIds =
-            npcTextIds |> List.filter (String.startsWith DMTrialmaster.roundPrefix)
+        outcomeEncounter : Maybe ( NpcEncounter, DMTrialmaster.Outcome )
+        outcomeEncounter =
+            encounters
+                |> List.filterMap (\enc -> Dict.get enc.says.textId dm.ultimatumNpcTextIndex.outcomes |> Maybe.map (Tuple.pair enc))
+                |> List.head
+
+        modEncounters : List NpcEncounter
+        modEncounters =
+            encounters |> List.filter (.says >> .textId >> String.startsWith DMTrialmaster.roundPrefix)
+
+        dur : Millis
+        dur =
+            let
+                encs : List NpcEncounter
+                encs =
+                    -- ordered by date
+                    List.reverse modEncounters ++ (outcomeEncounter |> Maybe.Extra.unwrap [] (Tuple.first >> List.singleton))
+            in
+            case encs of
+                [] ->
+                    0
+
+                first :: rest ->
+                    let
+                        last =
+                            rest |> List.Extra.last |> Maybe.withDefault first
+                    in
+                    Duration.diff { before = first.date, after = last.date }
 
         mods : List (Result String UltimatumModifier)
         mods =
-            modNpcTextIds
+            modEncounters
                 |> List.map
-                    (\npcTextId ->
-                        Dict.get npcTextId dm.ultimatumNpcTextIndex.modIds
+                    (\enc ->
+                        Dict.get enc.says.textId dm.ultimatumNpcTextIndex.modIds
                             |> Maybe.andThen (\modId -> Dict.get modId dm.ultimatumModifiersById)
-                            |> Result.fromMaybe npcTextId
+                            |> Result.fromMaybe enc.says.textId
                     )
     in
     { outcome =
-        npcTextIds
-            |> List.filterMap (\id -> Dict.get id dm.ultimatumNpcTextIndex.outcomes)
-            |> List.head
-            |> Maybe.map datamineOutcome
+        outcomeEncounter
+            |> Maybe.map (Tuple.second >> datamineOutcome)
+            |> Maybe.map (\o -> o dur)
             |> Maybe.withDefault Abandoned
     , mods = mods
     }

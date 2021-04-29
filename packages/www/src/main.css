@@ -58,6 +58,7 @@ table.history tbody tr.side-area {
   font-size: 80%;
 }
 table.history tbody tr.side-area td.side-dur,
+table.history tbody tr.npctext-area td.side-dur,
 table.history tbody tr td.portals {
   text-align: left;
 }

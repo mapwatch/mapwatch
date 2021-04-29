@@ -1,5 +1,6 @@
 module Mapwatch.RawMapRun exposing
-    ( NpcEncounters
+    ( NpcEncounter
+    , NpcEncounters
     , RawMapRun
     , State
     , current
@@ -44,7 +45,14 @@ type alias State =
 
 
 type alias NpcEncounters =
-    Dict NpcGroup (List ( LogLine.NPCSaysData, Instance ))
+    Dict NpcGroup (List NpcEncounter)
+
+
+type alias NpcEncounter =
+    { says : LogLine.NPCSaysData
+    , instance : Instance
+    , date : Posix
+    }
 
 
 create : Instance.Address -> Posix -> NpcEncounters -> Int -> Int -> Maybe RawMapRun
@@ -218,12 +226,16 @@ updateNPCText : LogLine.Line -> Instance -> State -> State
 updateNPCText line instance state =
     case line.info of
         LogLine.NPCSays says ->
-            state |> Maybe.map (\run -> { run | npcSays = run.npcSays |> pushNpcEncounter says instance })
+            let
+                encounter =
+                    NpcEncounter says instance line.date
+            in
+            state |> Maybe.map (\run -> { run | npcSays = run.npcSays |> pushNpcEncounter encounter })
 
         _ ->
             state
 
 
-pushNpcEncounter : LogLine.NPCSaysData -> Instance -> NpcEncounters -> NpcEncounters
-pushNpcEncounter says instance =
-    Dict.update (NpcId.toNpcGroup says.npcId) (Maybe.withDefault [] >> (::) ( says, instance ) >> Just)
+pushNpcEncounter : NpcEncounter -> NpcEncounters -> NpcEncounters
+pushNpcEncounter encounter =
+    Dict.update (NpcId.toNpcGroup encounter.says.npcId) (Maybe.withDefault [] >> (::) encounter >> Just)

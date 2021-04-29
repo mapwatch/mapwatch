@@ -396,13 +396,13 @@ viewTrialmasterRow { showDate } says state =
         result : String
         result =
             case state.outcome of
-                Trialmaster.Won ->
+                Trialmaster.Won _ ->
                     "victory"
 
-                Trialmaster.Lost ->
+                Trialmaster.Lost _ ->
                     "defeat"
 
-                Trialmaster.Retreated ->
+                Trialmaster.Retreated _ ->
                     "retreat"
 
                 Trialmaster.Abandoned ->
@@ -433,7 +433,12 @@ viewTrialmasterRow { showDate } says state =
                     [ div [] body
                     , div [] (state.mods |> List.map viewTrialmasterMod)
                     ]
-               , td [ class "side-dur" ] []
+               , td [ class "side-dur" ]
+                    (state.outcome
+                        |> Trialmaster.duration
+                        |> Maybe.map (viewDuration >> List.singleton)
+                        |> Maybe.withDefault []
+                    )
                , td [ class "portals" ] []
                , td [ class "town-pct" ] []
                ]

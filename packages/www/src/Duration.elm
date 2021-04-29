@@ -1,4 +1,6 @@
-module Duration exposing (Millis, hour, minute, second)
+module Duration exposing (Millis, diff, hour, minute, second)
+
+import Time exposing (Posix)
 
 
 type alias Millis =
@@ -18,3 +20,8 @@ minute =
 hour : Millis
 hour =
     minute * 60
+
+
+diff : { before : Posix, after : Posix } -> Millis
+diff { before, after } =
+    Time.posixToMillis after - Time.posixToMillis before
