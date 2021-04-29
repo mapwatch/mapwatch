@@ -8,7 +8,7 @@ import ISO8601
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
-import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
@@ -373,8 +373,7 @@ viewHistoryRun ({ query, tz } as m) config goals r =
                 |> Maybe.map (viewConquerorRow config r.npcSays)
                 |> Maybe.Extra.toList
             , r.trialmaster
-                |> Maybe.map (viewTrialmasterRow config (Dict.get NpcId.trialmaster r.npcSays |> Maybe.withDefault []))
-                |> Maybe.Extra.toList
+                |> List.map (viewTrialmasterRow config r.address)
             , if r.isHeartOfTheGrove then
                 [ viewHistoryNpcTextRow_ query config (Dict.get NpcId.oshabi r.npcSays |> Maybe.withDefault []) [ View.Icon.harvest, text "Heart of the Grove" ] ]
 
@@ -390,8 +389,8 @@ viewHistoryRun ({ query, tz } as m) config goals r =
             ]
 
 
-viewTrialmasterRow : HistoryRowConfig -> List String -> Trialmaster.State -> Html msg
-viewTrialmasterRow { showDate } says state =
+viewTrialmasterRow : HistoryRowConfig -> Address -> Trialmaster.State -> Html msg
+viewTrialmasterRow { showDate } root state =
     let
         result : String
         result =
@@ -419,6 +418,13 @@ viewTrialmasterRow { showDate } says state =
             , text <| String.fromInt rounds
             , text ")"
             ]
+
+        sideIcon =
+            if root == state.address then
+                []
+
+            else
+                [ span [ title "Encountered this NPC in a side area" ] [ View.Icon.zana ] ]
     in
     tr [ class "npctext-area" ]
         ((if showDate then
@@ -429,8 +435,8 @@ viewTrialmasterRow { showDate } says state =
          )
             ++ [ td [] []
                , td [] []
-               , td [ colspan 7, title <| String.join "\n\n" says ]
-                    [ div [] body
+               , td [ colspan 7, title <| String.join "\n\n" state.says ]
+                    [ div [] <| sideIcon ++ body
                     , div [] (state.mods |> List.map viewTrialmasterMod)
                     ]
                , td [ class "side-dur" ]

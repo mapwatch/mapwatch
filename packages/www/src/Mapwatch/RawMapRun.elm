@@ -22,14 +22,14 @@ import Dict exposing (Dict)
 import Duration exposing (Millis)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Debug
-import Mapwatch.Instance as Instance exposing (Instance)
+import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Visit as Visit exposing (Visit)
 import Time exposing (Posix)
 
 
 type alias RawMapRun =
-    { address : Instance.Address
+    { address : Address
     , startedAt : Posix
     , portals : Int
     , npcSays : NpcEncounters
@@ -50,12 +50,12 @@ type alias NpcEncounters =
 
 type alias NpcEncounter =
     { says : LogLine.NPCSaysData
-    , instance : Instance
+    , address : Address
     , date : Posix
     }
 
 
-create : Instance.Address -> Posix -> NpcEncounters -> Int -> Int -> Maybe RawMapRun
+create : Address -> Posix -> NpcEncounters -> Int -> Int -> Maybe RawMapRun
 create addr startedAt npcSays posStart posEnd =
     if Instance.isMap (Instance.Instance addr) then
         Just
@@ -224,16 +224,21 @@ update instance_ mvisit state =
 
 updateNPCText : LogLine.Line -> Instance -> State -> State
 updateNPCText line instance state =
-    case line.info of
-        LogLine.NPCSays says ->
-            let
-                encounter =
-                    NpcEncounter says instance line.date
-            in
-            state |> Maybe.map (\run -> { run | npcSays = run.npcSays |> pushNpcEncounter encounter })
-
-        _ ->
+    case Instance.toAddress instance of
+        Nothing ->
             state
+
+        Just addr ->
+            case line.info of
+                LogLine.NPCSays says ->
+                    let
+                        encounter =
+                            NpcEncounter says addr line.date
+                    in
+                    state |> Maybe.map (\run -> { run | npcSays = run.npcSays |> pushNpcEncounter encounter })
+
+                _ ->
+                    state
 
 
 pushNpcEncounter : NpcEncounter -> NpcEncounters -> NpcEncounters

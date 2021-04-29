@@ -4,9 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
-## 2021-04-20
-- Added a duration to Trialmaster encounters.
-  - Trialmaster time is currently counted as time-in-map, not time-in-side-areas. This will change soon.
+## 2021-04-29
+- Added a duration to Trialmaster encounters. Trialmaster time is counted as time spent in a side area.
+- The Trialmaster encounter in a Zana map is now correctly split from the Trialmaster encounter in the parent map.
 
 ## 2021-04-20
 - A few more Trialmaster tracking fixes. Thank you for your bug reports!

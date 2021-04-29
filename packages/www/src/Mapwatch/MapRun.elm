@@ -45,7 +45,7 @@ type alias MapRun =
     , npcSays : Dict NpcGroup (List String)
     , heistNpcs : Set NpcId
     , rootNpcs : Set NpcId
-    , trialmaster : Maybe Trialmaster.State
+    , trialmaster : List Trialmaster.State
 
     -- isGrandHeist: True, False (heist contract), or Null (not a heist)
     , isGrandHeist : Maybe Bool
@@ -205,11 +205,11 @@ fromRaw dm raw =
         , sides =
             sideDurs
                 |> List.map Tuple.second
-                --|> (::)
-                --    (trialmaster
-                --        |> Maybe.andThen (.outcome >> Trialmaster.duration)
-                --        |> Maybe.withDefault 0
-                --    )
+                |> (++)
+                    (trialmaster
+                        |> List.filter (\t -> t.address == addr)
+                        |> List.filterMap (.outcome >> Trialmaster.duration)
+                    )
                 |> List.sum
         }
     }
@@ -348,7 +348,7 @@ rootNpcs raw =
         |> Dict.toList
         |> List.filter
             (Tuple.second
-                >> List.filter (\enc -> Instance.Instance raw.address == enc.instance)
+                >> List.filter (\enc -> raw.address == enc.address)
                 >> List.isEmpty
                 >> not
             )

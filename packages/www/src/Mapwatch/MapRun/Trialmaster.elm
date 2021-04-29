@@ -6,14 +6,17 @@ import List.Extra
 import Mapwatch.Datamine as Datamine exposing (Datamine, UltimatumModifier)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Datamine.Trialmaster as DMTrialmaster exposing (Index)
+import Mapwatch.Instance as Instance exposing (Address)
 import Mapwatch.LogLine as LogLine exposing (NPCSaysData)
 import Mapwatch.RawMapRun as RawMapRun exposing (NpcEncounter, NpcEncounters, RawMapRun)
 import Maybe.Extra
 
 
 type alias State =
-    { outcome : Outcome
+    { address : Address
+    , outcome : Outcome
     , mods : List (Result String UltimatumModifier)
+    , says : List String
     }
 
 
@@ -56,13 +59,16 @@ datamineOutcome o =
             always Abandoned
 
 
-fromNpcs : Datamine -> NpcEncounters -> Maybe State
+fromNpcs : Datamine -> NpcEncounters -> List State
 fromNpcs dm =
-    Dict.get NpcId.trialmaster >> Maybe.map (fromLines dm)
+    Dict.get NpcId.trialmaster
+        >> Maybe.withDefault []
+        >> List.Extra.gatherEqualsBy .address
+        >> List.map (\( head, tail ) -> head :: tail |> fromLines dm head.address)
 
 
-fromLines : Datamine -> List NpcEncounter -> State
-fromLines dm encounters =
+fromLines : Datamine -> Address -> List NpcEncounter -> State
+fromLines dm addr encounters =
     let
         outcomeEncounter : Maybe ( NpcEncounter, DMTrialmaster.Outcome )
         outcomeEncounter =
@@ -103,10 +109,12 @@ fromLines dm encounters =
                             |> Result.fromMaybe enc.says.textId
                     )
     in
-    { outcome =
+    { address = addr
+    , outcome =
         outcomeEncounter
             |> Maybe.map (Tuple.second >> datamineOutcome)
             |> Maybe.map (\o -> o dur)
             |> Maybe.withDefault Abandoned
     , mods = mods
+    , says = encounters |> List.map (.says >> .raw) |> List.reverse
     }

@@ -13,6 +13,7 @@ module Mapwatch.Instance exposing
     , isOffline
     , isTown
     , offlineThreshold
+    , toAddress
     , unwrap
     , update
     , worldArea
@@ -76,24 +77,29 @@ init t pos =
     { val = MainMenu, joinedAt = t, next = Empty, position = pos }
 
 
-unwrap : a -> (Address -> a) -> Instance -> a
-unwrap default fn instance0 =
-    case instance0 of
+toAddress : Instance -> Maybe Address
+toAddress instance =
+    case instance of
         MainMenu ->
-            default
+            Nothing
 
-        Instance instance ->
-            fn instance
+        Instance a ->
+            Just a
+
+
+unwrap : a -> (Address -> a) -> Instance -> a
+unwrap default fn =
+    toAddress >> Maybe.Extra.unwrap default fn
 
 
 worldArea : Instance -> Maybe WorldArea
 worldArea =
-    unwrap Nothing .worldArea
+    toAddress >> Maybe.andThen .worldArea
 
 
 zoneName : Instance -> Maybe String
 zoneName =
-    unwrap Nothing (.zone >> Just)
+    toAddress >> Maybe.map .zone
 
 
 isTown : Instance -> Bool
