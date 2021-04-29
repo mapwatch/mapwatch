@@ -9226,7 +9226,7 @@
       ],
       [
         "TarkleighMerveilDead",
-        "¡Maldita sea! No creí que fuera posible. Todas estas almas que Merveil y su prole  han consumido a lo largo de los años... haz hecho un bien por aquellos que están muertos, y por aquellos que aún pueden estar vivos."
+        "¡Maldita sea! No creí que fuera posible. Todas estas almas que Merveil y su prole  han consumido a lo largo de los años... has hecho un bien por aquellos que están muertos, y por aquellos que aún pueden estar vivos."
       ],
       [
         "TarkleighOnNessa",
@@ -9690,7 +9690,7 @@
       ],
       [
         "FairgravesAllflameQuest",
-        "Encayé rápido en el mugroso lodo de Wraeclast gracias a una pequeña y seductora muchacha esclava. La liberé de los pozos de carne de Trarthus y me lo pagó por completo con sus manos diestras y sus pies ágiles. Cambió la lealtad de mi primer oficial, se llevó mi Llama Eterna, conseguida con tanto esfuerzo, y con ella se llevó el viento de mis velas.\r\n\r\nEncuentra mi Llama Eterna, te lo ruego. Hasta que sienta su calor de nuevo estaré atrapado aquí, varado hasta que el último ocaso del mundo."
+        "Encayé rápido en el mugroso lodo de Wraeclast gracias a una pequeña y seductora muchacha esclava. La liberé de los pozos de carne de Trarthus y me lo pagó por completo con sus manos diestras y sus pies ágiles. Cambió la lealtad de mi primer oficial, se llevó mi Llama Eterna, conseguida con tanto esfuerzo, y con ella se llevó el viento de mis velas.\r\n\r\nEncuentra mi Llama Eterna, te lo ruego. Hasta que sienta su calor de nuevo estaré atrapado aquí, varado hasta el último ocaso del mundo."
       ],
       [
         "FairgravesOnAllflame",
@@ -16858,7 +16858,7 @@
       ],
       [
         "EinharBloodAltarComplete",
-        "<if:MS>{¡Ja, ja, ja! El crujido del hueso, la salpicadura de la sangre... ¿Hay algo más satisfactorio? Has demostrado que eres un sobrevivinete, y los Primeros te han recompensado.\r\n\r\nCaptura más bestias. Ejecuta más rituales. Eso es lo que haremos, ¿verdad?\r\n\r\nLos Primeros tienen muchas bendiciones para otorgar. Las descubriremos.\r\n\r\nAhora ve, sobreviviente. Más bestias te esperan.}<elif:FS>{¡Ja, ja, ja! El crujido del hueso, la salpicadura de la sangre... ¿Hay algo más satisfactorio? Has demostrado que eres una sobrevivinete, y los Primeros te han recompensado.\r\n\r\nCaptura más bestias. Ejecuta más rituales. Eso es lo que haremos, ¿verdad?\r\n\r\nLos Primeros tienen muchas bendiciones para otorgar. Las descubriremos.\r\n\r\nAhora ve, sobreviviente. Más bestias te esperan.}"
+        "<if:MS>{¡Ja, ja, ja! El crujido del hueso, la salpicadura de la sangre... ¿Hay algo más satisfactorio? Has demostrado que eres un sobreviviente, y los Primeros te han recompensado.\r\n\r\nCaptura más bestias. Ejecuta más rituales. Eso es lo que haremos, ¿verdad?\r\n\r\nLos Primeros tienen muchas bendiciones para otorgar. Las descubriremos.\r\n\r\nAhora ve, sobreviviente. Más bestias te esperan.}<elif:FS>{¡Ja, ja, ja! El crujido del hueso, la salpicadura de la sangre... ¿Hay algo más satisfactorio? Has demostrado que eres una sobreviviente, y los Primeros te han recompensado.\r\n\r\nCaptura más bestias. Ejecuta más rituales. Eso es lo que haremos, ¿verdad?\r\n\r\nLos Primeros tienen muchas bendiciones para otorgar. Las descubriremos.\r\n\r\nAhora ve, sobreviviente. Más bestias te esperan.}"
       ],
       [
         "EinharOnBloodAltar",
@@ -19230,7 +19230,7 @@
       ],
       [
         "HakuInterrogatedThree",
-        "Tu cuerpo es fuerte Karui... pero la celda podrá a prueba tu mente."
+        "Tu cuerpo es fuerte Karui... pero la celda pondrá a prueba tu mente."
       ],
       [
         "HakuSecondaryDefenderArrivalThirtyTwo",
@@ -35958,7 +35958,7 @@
       ],
       [
         "TibbsCombatStartOne",
-        "<if:MS>{Deberías haber ignorado el ruido, amigo.}<elif:FS>{Deberías haber ignorado el ruido, amiga.}"
+        "Deberías haber ignorado el ruido, amigo."
       ],
       [
         "TibbsCombatStartTwo",
@@ -42674,7 +42674,7 @@
       ],
       [
         "HuckIntroduction",
-        "¡Señor! Lo siento, es un viejo hábito. Te acostumbrarás. El entrenamiento de Guardia negro me dejó marcado. Soy Huck. Serví en la tercera de Oriath durante cinco años. Me dieron de baja por falta de honor, aunque yo lo considero un honor.\r\n\r\nMi tiempo en los Guardias negros puso muchas cosas en perspectiva, al menos luego de que tomé distancia de ellas. Puede que lo que hagamos aquí sea ilegal, pero eso no lo hace incorrecto.\r\n\r\nSi necesitas algo, lo que sea, ven a mí, ¿cierto? Ahora somos familia. Y en las familias nos cuidamos mutuamente."
+        "<if:MS>{¡Señor! Lo siento, es un viejo hábito. Te acostumbrarás. El entrenamiento de Guardia negro me dejó marcado. Soy Huck. Serví en la tercera de Oriath durante cinco años. Me dieron de baja por falta de honor, aunque yo lo considero un honor.\r\n\r\nMi tiempo en los Guardias negros puso muchas cosas en perspectiva, al menos luego de que tomé distancia de ellas. Puede que lo que hagamos aquí sea ilegal, pero eso no lo hace incorrecto.\r\n\r\nSi necesitas algo, lo que sea, ven a mí, ¿cierto? Ahora somos familia. Y en las familias nos cuidamos mutuamente.}<elif:FS>{¡Señora! Lo siento, es un viejo hábito. Te acostumbrarás. El entrenamiento de Guardia negro me dejó marcado. Soy Huck. Serví en la tercera de Oriath durante cinco años. Me dieron de baja por falta de honor, aunque yo lo considero un honor.\r\n\r\nMi tiempo en los Guardias negros puso muchas cosas en perspectiva, al menos luego de que tomé distancia de ellas. Puede que lo que hagamos aquí sea ilegal, pero eso no lo hace incorrecto.\r\n\r\nSi necesitas algo, lo que sea, ven a mí, ¿cierto? Ahora somos familia. Y en las familias nos cuidamos mutuamente.}"
       ],
       [
         "HuckAboutBoss",
@@ -53625,27 +53625,27 @@
         "La ruina viene por ti."
       ],
       [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeedRandom",
         "La ruina llega repentinamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed2",
+        "La ruina llega repentinamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed3",
+        "La ruina llega repentinamente."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "La carga de la ruina pesa el doble."
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin2",
-        "La ruina llega repentinamente."
+        "La carga de la ruina pesa el doble."
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin3",
-        "La ruina llega repentinamente."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin4",
-        "La carga de la ruina pesa el doble."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin5",
-        "La carga de la ruina pesa el doble."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin6",
         "La carga de la ruina pesa el doble."
       ],
       [
@@ -54722,15 +54722,15 @@
       ],
       [
         "TrialmasterPlayerTookRewardLastTimeRoundFour4",
-        "No hay gloria en llegar solo cuatro rondas."
+        "No hay gloria en llegar solo a cuatro rondas."
       ],
       [
         "TrialmasterPlayerTookRewardLastTimeRoundFour5",
-        "No hay gloria en llegar solo cuatro rondas."
+        "No hay gloria en llegar solo a cuatro rondas."
       ],
       [
         "TrialmasterPlayerTookRewardLastTimeRoundFour6",
-        "No hay gloria en llegar solo cuatro rondas."
+        "No hay gloria en llegar solo a cuatro rondas."
       ],
       [
         "TrialmasterPlayerTookRewardLastTimeRoundFiveRandom",

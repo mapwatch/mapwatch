@@ -30734,11 +30734,11 @@
       ],
       [
         "DroxFourStoneFightd",
-        "Eu perdi tanto tempo tentando impor a lei. Aquelas regras eram apenas uma gaiola."
+        "Eu perdi tanto tempo tentando impor a lei. Aquelas regras eram apenas uma jaula."
       ],
       [
         "DroxFourStoneFighte",
-        "I've killed countless thousands. What's one more?"
+        "Eu já matei milhares. Você vai ser só mais um!"
       ],
       [
         "DroxFourStoneDeatha",
@@ -31670,7 +31670,7 @@
       ],
       [
         "SirusTurnsTowardRealWorldC",
-        "Você quer o Atlas? Pegue. É seu. Mas Oriath? Oriath irá queimar. Talvez o sofrimento dos meus concidadãos vai finalmente agitar as coisas. "
+        "Você quer o Atlas? Pegue. É seu. Mas Oriath? Oriath queimará. Talvez o sofrimento dos meus concidadãos finalmente agitará algo."
       ],
       [
         "SirusInvasionRandom",
@@ -31886,7 +31886,7 @@
       ],
       [
         "SirusGlyph1",
-        "Eu sempre quis um propósito. Eu queria encontrar o meu lugar na vida, Se eu soubesse o que isso causaria, provavelmente eu teria tentado aproveitar minha vida vazia um pouco mais. Eu odeio esse lugar. Odeio o que ele nos força a fazer. Não quero ser responsável por essas pessoas, porque não acredito que iremos sobreviver a isso, e será minha culpa. Se não fosse pela Zana... Se não fosse pela Zana eu provavelmente ainda estaria infeliz. Eu farei por ela."
+        "Eu sempre quis um propósito. Eu queria encontrar o meu lugar na vida, Se eu soubesse o que isso causaria, provavelmente eu teria tentado aproveitar minha vida vazia um pouco mais. \r\n\r\nEu odeio esse lugar. Odeio o que ele nos força a fazer. Não quero ser responsável por essas pessoas, porque não acredito que iremos sobreviver a isso, e será minha culpa. \r\n\r\nSe não fosse pela Zana... \r\n\r\nSe não fosse pela Zana eu provavelmente ainda estaria infeliz. \r\n\r\nEu farei por ela."
       ],
       [
         "SirusGlyph2",
@@ -53625,27 +53625,27 @@
         "A ruína lhe persegue. "
       ],
       [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeedRandom",
         "A ruína chega de súbito. "
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed2",
+        "A ruína chega de súbito. "
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed3",
+        "A ruína chega de súbito. "
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "O fardo da ruína é duas vezes mais pesado. "
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin2",
-        "A ruína chega de súbito. "
+        "O fardo da ruína é duas vezes mais pesado. "
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin3",
-        "A ruína chega de súbito. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin4",
-        "O fardo da ruína é duas vezes mais pesado. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin5",
-        "O fardo da ruína é duas vezes mais pesado. "
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin6",
         "O fardo da ruína é duas vezes mais pesado. "
       ],
       [

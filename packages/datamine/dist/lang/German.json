@@ -11022,7 +11022,7 @@
       ],
       [
         "LibraryMilitary3",
-        "<b>{Buch 3: Der Thaumaturg der Königin}\r\n\r\nIn einer Kultur, die mit Gemmen behangen und mit Thaumaturgie vollgesogen war, muss Doryani schon über außergewöhnliche Talente verfügt haben, um diese Vormachtstellung zu erlangen. Möglicherweise war er auch nur skrupelloser als die Menschen, mit denen er zu tun hatte. Zumindest gewinnt man diesen Eindruck, wenn man sich die Aufzeichnungen vor Augen führt, die nach Zerphis Tod entstanden sind.\r\n\r\nAtziris Befehle werden an vielen Stellen diverser Texte zitiert. Doryani unternahm alle Anstrengungen, die im Bereich des Möglichen waren, und handelte ohne Furcht vor Fragen oder Konsequenzen. Und welchem Zweck mögen diese Anstrengungen gegolten haben? Der Untersuchung von Zerphis langem Leben und dessen jugendlicher Vitalität.\r\n\r\nMan fand ein besonders abschreckendes Manifest mit einer endlosen Liste von Namen, Seite um Seite. Alles Namen junger Männer und Frauen im Alter von sechzehn bis sechsundzwanzig, die Doryani zur \"Aufbereitung\" entsandt hatte. Nur jene, die \"kürzlich voll ausgereift\" waren, wurden als geeignet erachtet, sich den \"nötigen Prozeduren\" zu unterwerfen, ohne einem \"vorzeitigem Erlöschen\" zu erliegen.\r\n\r\nJa, Königin Atziri war bereit, ihr eigenes Volk in dem verzweifelten Unterfangen zu meucheln, immerwährende Jugend und Schönheit zu erreichen. In der Tat, Eitelkeit ist die heimtückischste aller Sünden.\r\n\r\n<i>{– Trinian, Primus Intellectus}"
+        "<b>{Buch 3: Der Thaumaturg der Königin}\r\n\r\nIn einer Kultur, die mit Gemmen behangen und mit Thaumaturgie vollgesogen war, muss Doryani schon über außergewöhnliche Talente verfügt haben, um diese Vormachtstellung zu erlangen. Möglicherweise war er auch nur skrupelloser als die Menschen, mit denen er zu tun hatte. Zumindest gewinnt man diesen Eindruck, wenn man sich die Aufzeichnungen vor Augen führt, die nach Zerphis Tod entstanden sind.\r\n\r\nAtziris Befehle werden an vielen Stellen diverser Texte zitiert. \"Doryani unternahm alle Anstrengungen, die im Bereich des Möglichen waren, und handelte ohne Furcht vor Fragen oder Konsequenzen\". Und welchem Zweck mögen diese Anstrengungen gegolten haben? Der Untersuchung von Zerphis langem Leben und dessen jugendlicher Vitalität.\r\n\r\nMan fand ein besonders abschreckendes Manifest mit einer endlosen Liste von Namen, Seite um Seite. Alles Namen junger Männer und Frauen im Alter von sechzehn bis sechsundzwanzig, die Doryani zur \"Aufbereitung\" entsandt hatte. Nur jene, die \"kürzlich voll ausgereift\" waren, wurden als geeignet erachtet, sich den \"nötigen Prozeduren\" zu unterwerfen, ohne einem \"vorzeitigem Erlöschen\" zu erliegen.\r\n\r\nJa, Königin Atziri war bereit, ihr eigenes Volk in dem verzweifelten Unterfangen zu meucheln, immerwährende Jugend und Schönheit zu erreichen. In der Tat, Eitelkeit ist die heimtückischste aller Sünden.\r\n\r\n<i>{– Trinian, Primus Intellectus}"
       ],
       [
         "LibraryMilitary4",
@@ -53625,27 +53625,27 @@
         "Der Untergang ist Euch auf der Spur."
       ],
       [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeedRandom",
         "Der Untergang kommt aus heiterem Himmel."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed2",
+        "Der Untergang kommt aus heiterem Himmel."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed3",
+        "Der Untergang kommt aus heiterem Himmel."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "Die Bürde des Untergangs wiegt doppelt schwer."
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin2",
-        "Der Untergang kommt aus heiterem Himmel."
+        "Die Bürde des Untergangs wiegt doppelt schwer."
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin3",
-        "Der Untergang kommt aus heiterem Himmel."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin4",
-        "Die Bürde des Untergangs wiegt doppelt schwer."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin5",
-        "Die Bürde des Untergangs wiegt doppelt schwer."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin6",
         "Die Bürde des Untergangs wiegt doppelt schwer."
       ],
       [

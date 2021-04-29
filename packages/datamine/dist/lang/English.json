@@ -6364,7 +6364,7 @@
       ],
       [
         "HideoutAzuriteCave",
-        "Azurite Hideout"
+        "Azurite Cavern Hideout"
       ],
       [
         "pvpTown",
@@ -53625,27 +53625,27 @@
         "Ruin seeks you."
       ],
       [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeedRandom",
         "Ruin arrives suddenly."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed2",
+        "Ruin arrives suddenly."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeRuinHunterSpeed3",
+        "Ruin arrives suddenly."
+      ],
+      [
+        "TrialmasterChallengeChoiceMadeFailAtFiveRuinRandom",
+        "Ruin's burden weighs twice as heavy."
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin2",
-        "Ruin arrives suddenly."
+        "Ruin's burden weighs twice as heavy."
       ],
       [
         "TrialmasterChallengeChoiceMadeFailAtFiveRuin3",
-        "Ruin arrives suddenly."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin4",
-        "Ruin's burden weighs twice as heavy."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin5",
-        "Ruin's burden weighs twice as heavy."
-      ],
-      [
-        "TrialmasterChallengeChoiceMadeFailAtFiveRuin6",
         "Ruin's burden weighs twice as heavy."
       ],
       [
