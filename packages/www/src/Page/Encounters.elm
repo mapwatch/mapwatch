@@ -99,7 +99,7 @@ viewMainDisclaimer =
 viewEncounterTally : QueryDict -> EncounterTally -> List (Html msg)
 viewEncounterTally query tally =
     let
-        ( mapEncs, nonMapEncs ) =
+        encs =
             listEncounterTally query tally
     in
     [ viewEncounterTally_
@@ -109,7 +109,7 @@ viewEncounterTally query tally =
         , text " maps"
         ]
         query
-        mapEncs
+        encs.maps
     , viewEncounterTally_
         [ text "Endgame area encounters" ]
         [ text "% of "
@@ -117,7 +117,31 @@ viewEncounterTally query tally =
         , text " endgame areas"
         ]
         query
-        nonMapEncs
+        encs.areas
+    , if tally.trialmaster > 0 then
+        viewEncounterTally_
+            [ text "Trialmaster encounters" ]
+            [ text "% of "
+            , text <| String.fromInt tally.trialmaster
+            , text " trialmasters"
+            ]
+            query
+            encs.trialmasters
+
+      else
+        []
+    , if tally.trialmasterBossRolls > 0 then
+        viewEncounterTally_
+            [ text "Trialmaster wins + bosses" ]
+            [ text "% of "
+            , text <| String.fromInt tally.trialmasterBossRolls
+            , text " trialmaster wins + bosses"
+            ]
+            query
+            encs.trialmasterBossRolls
+
+      else
+        []
     ]
         |> List.concat
 
@@ -181,7 +205,15 @@ type alias TallyEntry msg =
     }
 
 
-listEncounterTally : QueryDict -> EncounterTally -> ( List (TallyEntry msg), List (TallyEntry msg) )
+type alias EncounterTables msg =
+    { maps : List (TallyEntry msg)
+    , areas : List (TallyEntry msg)
+    , trialmasters : List (TallyEntry msg)
+    , trialmasterBossRolls : List (TallyEntry msg)
+    }
+
+
+listEncounterTally : QueryDict -> EncounterTally -> EncounterTables msg
 listEncounterTally query tally =
     let
         entry : Int -> String -> List (Html msg) -> TallyEntry msg
@@ -191,6 +223,10 @@ listEncounterTally query tally =
         nonMapEntry : Int -> String -> List (Html msg) -> TallyEntry msg
         nonMapEntry count search label =
             discEntry count tally.count search label []
+
+        trialmasterEntry : Int -> String -> List (Html msg) -> TallyEntry msg
+        trialmasterEntry count search label =
+            discEntry count tally.trialmaster search label []
 
         discEntry : Int -> Int -> String -> List (Html msg) -> List (Html msg) -> TallyEntry msg
         discEntry count max search label disc =
@@ -206,18 +242,19 @@ listEncounterTally query tally =
             , disclaimer = disc
             }
     in
-    ( [ entry tally.abyssalDepths "side:abyssal depths" [ View.Icon.abyss, text "Abyssal Depths" ]
-      , entry tally.vaalAreas "vaal-side:" [ View.Icon.vaal, text "Vaal side areas" ]
-      , entry tally.labTrialsTotal "lab-trial-side:" [ View.Icon.labTrial, text "(", text <| String.fromInt <| List.length tally.labTrials, text "/6) Labyrinth Trials" ]
-      , entry tally.conquerors "conqueror:" [ span [ title "excluding Sirus" ] [ View.Icon.sirus, text "Conqueror Fights" ] ]
-      , entry tally.zana "npc:zana" [ View.Icon.zana, text "Zana" ]
-      , entry tally.einhar "npc:einhar" [ View.Icon.einhar, text "Einhar" ]
-      , entry tally.alva "npc:alva" [ View.Icon.alva, text "Alva" ]
-      , entry tally.niko "npc:niko" [ View.Icon.niko, text "Niko" ]
-      , entry tally.jun "npc:jun" [ View.Icon.jun, text "Jun" ]
-      , entry tally.cassia "npc:cassia" [ View.Icon.cassia, text "Cassia" ]
-      , entry tally.delirium "npc:strange voice" [ View.Icon.delirium, text "Delirium" ]
-      , discEntry tally.oshabi
+    { maps =
+        [ entry tally.abyssalDepths "side:abyssal depths" [ View.Icon.abyss, text "Abyssal Depths" ]
+        , entry tally.vaalAreas "vaal-side:" [ View.Icon.vaal, text "Vaal side areas" ]
+        , entry tally.labTrialsTotal "lab-trial-side:" [ View.Icon.labTrial, text "(", text <| String.fromInt <| List.length tally.labTrials, text "/6) Labyrinth Trials" ]
+        , entry tally.conquerors "conqueror:" [ span [ title "excluding Sirus" ] [ View.Icon.sirus, text "Conqueror Fights" ] ]
+        , entry tally.zana "npc:zana" [ View.Icon.zana, text "Zana" ]
+        , entry tally.einhar "npc:einhar" [ View.Icon.einhar, text "Einhar" ]
+        , entry tally.alva "npc:alva" [ View.Icon.alva, text "Alva" ]
+        , entry tally.niko "npc:niko" [ View.Icon.niko, text "Niko" ]
+        , entry tally.jun "npc:jun" [ View.Icon.jun, text "Jun" ]
+        , entry tally.cassia "npc:cassia" [ View.Icon.cassia, text "Cassia" ]
+        , entry tally.delirium "npc:strange voice" [ View.Icon.delirium, text "Delirium" ]
+        , discEntry tally.oshabi
             tally.normalMaps
             "npc:oshabi"
             [ View.Icon.harvest, text "Oshabi", b [] [ text " * " ] ]
@@ -226,25 +263,43 @@ listEncounterTally query tally =
             , a [ target "_blank", href "https://github.com/mapwatch/mapwatch#my-harvest-encounter-rate-seems-low" ]
                 [ text "Your true Harvest rate is higher." ]
             ]
-      , entry tally.heartOfTheGrove "heartOfTheGrove" [ View.Icon.harvest, text "Heart of the Grove" ]
-      , entry tally.envoy "npc:envoy" [ View.Icon.envoy, text "The Envoy" ]
-      , entry tally.sirusInvasions "npc:sirus" [ View.Icon.sirus, text "Sirus Invasions" ]
-      , entry tally.maven "npc:the maven" [ View.Icon.maven, text "The Maven" ]
-      , entry tally.trialmaster "npc:the trialmaster" [ View.Icon.trialmaster, text "The Trialmaster" ]
-      ]
-        |> List.filter (\r -> r.count > 0)
-        |> List.sortBy .count
-        |> List.reverse
-    , [ nonMapEntry tally.grandHeists "grand-heist:" [ View.Icon.grandHeistGeneric, text "Grand Heists" ]
-      , nonMapEntry tally.heistContracts "heist-contract:" [ View.Icon.heistContractGeneric, text "Heist Contracts" ]
-      , nonMapEntry tally.normalMaps "normal-map:" [ View.Icon.zana, text "Maps (non-unique, non-blighted)" ]
-      , nonMapEntry tally.labyrinths "The Labyrinth" [ View.Icon.labTrial, text "The Labyrinth" ]
-      , nonMapEntry tally.uniqueMaps "unique-map:" [ View.Icon.uniqueMap, text "Unique Maps" ]
-      , nonMapEntry tally.blightedMaps "blighted" [ View.Icon.blightedMap, text "Blighted Maps" ]
-      , nonMapEntry tally.mavenCrucibles "id:MavenHub" [ View.Icon.maven, text "The Maven's Crucible" ]
-      , nonMapEntry tally.sirusFights "id:AtlasExilesBoss5" [ View.Icon.sirus, text "Eye of the Storm (Sirus)" ]
-      ]
-        |> List.filter (\r -> r.count > 0)
-        |> List.sortBy .count
-        |> List.reverse
-    )
+        , entry tally.heartOfTheGrove "heartOfTheGrove" [ View.Icon.harvest, text "Heart of the Grove" ]
+        , entry tally.envoy "npc:envoy" [ View.Icon.envoy, text "The Envoy" ]
+        , entry tally.sirusInvasions "npc:sirus" [ View.Icon.sirus, text "Sirus Invasions" ]
+        , entry tally.maven "npc:the maven" [ View.Icon.maven, text "The Maven" ]
+        , entry tally.trialmaster "npc:the trialmaster" [ View.Icon.trialmaster, text "The Trialmaster" ]
+        ]
+            |> List.filter (\r -> r.count > 0)
+            |> List.sortBy .count
+            |> List.reverse
+    , areas =
+        [ nonMapEntry tally.grandHeists "grand-heist:" [ View.Icon.grandHeistGeneric, text "Grand Heists" ]
+        , nonMapEntry tally.heistContracts "heist-contract:" [ View.Icon.heistContractGeneric, text "Heist Contracts" ]
+        , nonMapEntry tally.normalMaps "normal-map:" [ View.Icon.zana, text "Maps (non-unique, non-blighted)" ]
+        , nonMapEntry tally.labyrinths "The Labyrinth" [ View.Icon.labTrial, text "The Labyrinth" ]
+        , nonMapEntry tally.uniqueMaps "unique-map:" [ View.Icon.uniqueMap, text "Unique Maps" ]
+        , nonMapEntry tally.blightedMaps "blighted" [ View.Icon.blightedMap, text "Blighted Maps" ]
+        , nonMapEntry tally.mavenCrucibles "id:MavenHub" [ View.Icon.maven, text "The Maven's Crucible" ]
+        , nonMapEntry tally.sirusFights "id:AtlasExilesBoss5" [ View.Icon.sirus, text "Eye of the Storm (Sirus)" ]
+        ]
+            |> List.filter (\r -> r.count > 0)
+            |> List.sortBy .count
+            |> List.reverse
+    , trialmasters =
+        [ trialmasterEntry tally.trialmasterWon "trialmaster-won" [ View.Icon.trialmaster, text "Trialmasters won" ]
+        , trialmasterEntry tally.trialmasterLost "trialmaster-lost" [ View.Icon.trialmaster, text "Trialmasters lost" ]
+        , trialmasterEntry tally.trialmasterRetreated "trialmaster-retreated" [ View.Icon.trialmaster, text "Trialmasters retreated" ]
+        , trialmasterEntry tally.trialmasterAbandoned "trialmaster-abandoned" [ View.Icon.trialmaster, text "Trialmasters incomplete" ]
+        ]
+    , trialmasterBossRolls =
+        [ discEntry tally.trialmasterBosses
+            tally.trialmasterBossRolls
+            "trialmaster-boss"
+            [ View.Icon.trialmaster, text "Trialmaster boss fights *" ]
+            [ text "* "
+            , a [ target "_blank", href "https://old.reddit.com/r/pathofexile/comments/n4ahe0/3141b_patch_notes/gwuktc9/" ]
+                [ text "Trialmaster boss fight rate" ]
+            , text " depends on map level, which Mapwatch cannot track."
+            ]
+        ]
+    }

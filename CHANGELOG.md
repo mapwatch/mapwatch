@@ -4,6 +4,11 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-05-04
+- The Trialmaster boss fight is now correctly tracked.
+  - It is very unlikely you found a bug with Trialmaster spawn rates. Please don't use this as evidence for your Angry Reddit Thread.
+- Trialmaster win/loss/retreat/abandon rates are now tracked on the Encounters screen.
+
 ## 2021-04-29
 - Added a duration to Trialmaster encounters. Trialmaster time is counted as time spent in a side area.
 - The Trialmaster encounter in a Zana map is now correctly split from the Trialmaster encounter in the parent map.

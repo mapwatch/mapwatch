@@ -3,12 +3,15 @@ module Mapwatch.EncounterTally exposing (EncounterTally, fromMapRuns)
 import Dict exposing (Dict)
 import Dict.Extra
 import Duration exposing (Millis)
+import List.Extra
 import Mapwatch.Datamine as Datamine exposing (WorldArea)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
+import Mapwatch.Datamine.Trialmaster as DMTrialmaster
 import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Mapwatch.MapRun.Sort exposing (shaperGuardianMaps)
+import Mapwatch.MapRun.Trialmaster as Trialmaster
 import Maybe.Extra
 import Set exposing (Set)
 
@@ -42,12 +45,18 @@ type alias EncounterTally =
     , mavenCrucibles : Int
     , sirusFights : Int
     , trialmaster : Int
+    , trialmasterWon : Int
+    , trialmasterLost : Int
+    , trialmasterRetreated : Int
+    , trialmasterAbandoned : Int
+    , trialmasterBosses : Int
+    , trialmasterBossRolls : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -104,20 +113,33 @@ fromMapRuns runs =
 
         count =
             List.length runs
+
+        trialmasters =
+            runs |> List.concatMap .trialmaster
+
+        trialmasterOutcomes =
+            trialmasters |> List.map (.outcome >> Trialmaster.toDatamineOutcome)
     in
     { empty
-        | blightedMaps = runs |> List.filter .isBlightedMap |> List.length
+        | blightedMaps = runs |> List.Extra.count .isBlightedMap
         , heartOfTheGrove = hearts
-        , uniqueMaps = maps |> List.filterMap .worldArea |> List.filter .isUniqueMapArea |> List.length
-        , conquerors = runs |> List.filterMap .conqueror |> List.filter (\( conqueror, encounter ) -> encounter == Conqueror.Fight) |> List.length
-        , labyrinths = maps |> List.filterMap .worldArea |> List.filter .isLabyrinth |> List.length
+        , uniqueMaps = maps |> List.filterMap .worldArea |> List.Extra.count .isUniqueMapArea
+        , conquerors = runs |> List.filterMap .conqueror |> List.Extra.count (\( conqueror, encounter ) -> encounter == Conqueror.Fight)
+        , labyrinths = maps |> List.filterMap .worldArea |> List.Extra.count .isLabyrinth
         , grandHeists = grandHeists
         , heistContracts = heistContracts
         , nonHeists = count - grandHeists - heistContracts
         , count = count
-        , mavenCrucibles = maps |> List.filterMap .worldArea |> List.filter (\w -> w.id == "MavenHub") |> List.length
-        , sirusFights = maps |> List.filterMap .worldArea |> List.filter (\w -> w.id == "AtlasExilesBoss5") |> List.length
+        , mavenCrucibles = maps |> List.filterMap .worldArea |> List.Extra.count (\w -> w.id == "MavenHub")
+        , sirusFights = maps |> List.filterMap .worldArea |> List.Extra.count (\w -> w.id == "AtlasExilesBoss5")
         , normalMaps = normalRuns |> List.length
+        , trialmaster = List.length trialmasters
+        , trialmasterBossRolls = trialmasters |> List.Extra.count (\t -> t.isBossFight || Trialmaster.toDatamineOutcome t.outcome == DMTrialmaster.Won)
+        , trialmasterBosses = trialmasters |> List.Extra.count .isBossFight
+        , trialmasterWon = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Won)
+        , trialmasterLost = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Lost)
+        , trialmasterRetreated = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Retreated)
+        , trialmasterAbandoned = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Abandoned)
     }
         |> tallyNpcs npcs
         |> (\t -> { t | oshabi = t.oshabi - hearts |> max 0 })
@@ -142,7 +164,8 @@ tallyNpcs npcs tally =
         , maven = Dict.get NpcId.maven counts |> Maybe.withDefault 0
         , oshabi = Dict.get NpcId.oshabi counts |> Maybe.withDefault 0
         , sirusInvasions = Dict.get NpcId.sirus counts |> Maybe.withDefault 0
-        , trialmaster = Dict.get NpcId.trialmaster counts |> Maybe.withDefault 0
+
+        -- , trialmaster = Dict.get NpcId.trialmaster counts |> Maybe.withDefault 0
     }
 
 

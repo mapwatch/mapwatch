@@ -26,6 +26,7 @@ import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
+import Mapwatch.MapRun.Trialmaster as Trialmaster
 import Maybe.Extra
 import Regex exposing (Regex)
 import Set exposing (Set)
@@ -458,6 +459,37 @@ searchString dm r =
 
       else
         Nothing
+    , List.concatMap
+        (\t ->
+            [ case t.outcome of
+                Trialmaster.Won _ ->
+                    "trialmaster-won"
+
+                Trialmaster.Lost _ ->
+                    "trialmaster-lost"
+
+                Trialmaster.Retreated _ ->
+                    "trialmaster-retreated"
+
+                Trialmaster.Abandoned ->
+                    "trialmaster-abandoned"
+            , if t.isBossFight then
+                "trialmaster-boss"
+
+              else
+                ""
+            ]
+        )
+        r.trialmaster
+        |> List.filter ((/=) "")
+        |> String.join "\n"
+        |> (\t ->
+                if t == "" then
+                    Nothing
+
+                else
+                    Just t
+           )
     ]
         ++ (r.npcSays |> Dict.keys |> List.map (\id -> npcName id dm))
         ++ (r.sideAreas |> Dict.values |> List.map (Tuple.first >> sideAreaSearchString dm >> Just))

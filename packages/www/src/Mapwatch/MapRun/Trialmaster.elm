@@ -1,4 +1,4 @@
-module Mapwatch.MapRun.Trialmaster exposing (Outcome(..), State, duration, fromNpcs)
+module Mapwatch.MapRun.Trialmaster exposing (Outcome(..), State, duration, fromNpcs, toDatamineOutcome)
 
 import Dict exposing (Dict)
 import Duration exposing (Millis)
@@ -17,6 +17,7 @@ type alias State =
     , outcome : Outcome
     , mods : List (Result String UltimatumModifier)
     , says : List String
+    , isBossFight : Bool
     }
 
 
@@ -57,6 +58,22 @@ datamineOutcome o =
 
         DMTrialmaster.Abandoned ->
             always Abandoned
+
+
+toDatamineOutcome : Outcome -> DMTrialmaster.Outcome
+toDatamineOutcome o =
+    case o of
+        Won _ ->
+            DMTrialmaster.Won
+
+        Lost _ ->
+            DMTrialmaster.Lost
+
+        Retreated _ ->
+            DMTrialmaster.Retreated
+
+        Abandoned ->
+            DMTrialmaster.Abandoned
 
 
 fromNpcs : Datamine -> NpcEncounters -> List State
@@ -117,4 +134,5 @@ fromLines dm addr encounters =
             |> Maybe.withDefault Abandoned
     , mods = mods
     , says = encounters |> List.map (.says >> .raw) |> List.reverse
+    , isBossFight = encounters |> List.map (.says >> .textId) |> List.member "TrialmasterCombatTransformation"
     }

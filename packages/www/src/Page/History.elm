@@ -411,13 +411,20 @@ viewTrialmasterRow { showDate } root state =
             List.length state.mods
 
         body =
-            [ View.Icon.trialmaster
-            , text "The Trialmaster: "
-            , text result
-            , text " ("
-            , text <| String.fromInt rounds
-            , text ")"
-            ]
+            if state.isBossFight then
+                [ View.Icon.trialmaster
+                , text "Trialmaster boss fight: "
+                , text result
+                ]
+
+            else
+                [ View.Icon.trialmaster
+                , text "The Trialmaster: "
+                , text result
+                , text " ("
+                , text <| String.fromInt rounds
+                , text ")"
+                ]
 
         sideIcon =
             if root == state.address then

@@ -46,7 +46,12 @@ modFromId id =
 
 outcomeFromId : String -> Maybe Outcome
 outcomeFromId id =
-    if String.startsWith "TrialmasterMoodPlayerWon" id || String.startsWith "TrialmasterTutorialFullWin" id then
+    if
+        String.startsWith "TrialmasterMoodPlayerWon" id
+            || String.startsWith "TrialmasterTutorialFullWin" id
+            || String.startsWith "TrialmasterDefeated" id
+            || String.startsWith "TrialmasterFinalEncounterDefeated" id
+    then
         Just Won
 
     else if String.startsWith "TrialmasterMoodPlayerLost" id || String.startsWith "TrialmasterTutorialPlayerLoses" id then
