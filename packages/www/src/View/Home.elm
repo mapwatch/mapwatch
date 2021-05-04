@@ -54,7 +54,11 @@ viewAddress query args addr =
                 ""
     in
     if Maybe.Extra.unwrap False Datamine.isMap addr.worldArea then
-        a [ Route.href (View.Util.insertSearch addr.zone query) Route.History, title addr.addr ] [ Icon.mapOrBlank args addr.worldArea, text blighted, text addr.zone ]
+        if Maybe.Extra.unwrap False (\w -> w.isLabyrinth || w.isLabTrial) addr.worldArea then
+            a [ Route.href (View.Util.insertSearch addr.zone query) Route.History, title addr.addr ] [ Icon.labTrial, text blighted, text addr.zone ]
+
+        else
+            a [ Route.href (View.Util.insertSearch addr.zone query) Route.History, title addr.addr ] [ Icon.mapOrBlank args addr.worldArea, text blighted, text addr.zone ]
 
     else
         span [ title addr.addr ] [ text addr.zone ]
@@ -287,8 +291,8 @@ viewSideAreaName query instance =
 
         Just w ->
             if Datamine.isMap w then
-                if w.isLabyrinth then
-                    span [] [ Icon.labTrial, label ]
+                if w.isLabyrinth || w.isLabTrial then
+                    span [] [ label ]
 
                 else
                     span [] [ Icon.zana, text "Zana (", label, text ")" ]

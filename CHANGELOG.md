@@ -8,6 +8,7 @@ All substantial Mapwatch website changes.
 - The Trialmaster boss fight is now correctly tracked.
   - It is very unlikely you found a bug with Trialmaster spawn rates. Please don't use this as evidence for your Angry Reddit Thread.
 - Trialmaster win/loss/retreat/abandon rates are now tracked on the Encounters screen.
+- Lab trials opened with an offering in the map device are now tracked.
 
 ## 2021-04-29
 - Added a duration to Trialmaster encounters. Trialmaster time is counted as time spent in a side area.

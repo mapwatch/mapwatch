@@ -16,6 +16,7 @@ module Mapwatch.Datamine exposing
     , isHeistTown
     , isMap
     , isTown
+    , isZanaMap
     , langIndexEmpty
     , langs
     , tier
@@ -271,10 +272,15 @@ isMap w =
     else
         case imgSrc { isBlightedMap = False, isGrandHeist = Just False } w of
             Nothing ->
-                isHeistMap w || w.isLabyrinth
+                isHeistMap w || w.isLabyrinth || w.isLabTrial
 
             Just _ ->
                 True
+
+
+isZanaMap : WorldArea -> Bool
+isZanaMap w =
+    isMap w && not w.isLabTrial
 
 
 isHeistTown : WorldArea -> Bool

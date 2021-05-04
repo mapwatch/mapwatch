@@ -261,7 +261,7 @@ viewHistoryRow model i run =
     , run.isHeartOfTheGrove |> CellBool
     , run |> viewNpc NpcId.envoy
     , run |> viewNpc NpcId.maven
-    , run |> viewSideArea Datamine.isMap
+    , run |> viewSideArea Datamine.isZanaMap
     , run |> viewSideArea .isVaalArea
     , run |> viewSideArea .isLabTrial
     , run |> viewSideArea .isAbyssalDepths |> (/=) CellEmpty |> CellBool
