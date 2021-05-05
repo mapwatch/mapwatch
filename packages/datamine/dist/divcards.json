@@ -1183,7 +1183,8 @@
       "card": "Prejudice",
       "maps": [
         "Beach Map",
-        "Burial Chambers Map"
+        "Burial Chambers Map",
+        "Mud Geyser Map"
       ],
       "loot": {
         "text": "Item\nInfluenced Item"
