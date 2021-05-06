@@ -1,49 +1,12 @@
 module Mapwatch.LogLineTest exposing (..)
 
-import Array
-import Dict
 import Expect
+import Fixture exposing (datamine)
 import Mapwatch
-import Mapwatch.Datamine as Datamine exposing (Datamine, langIndexEmpty)
 import Mapwatch.LogLine as LogLine
 import Settings
 import Test exposing (..)
 import Time exposing (Posix)
-
-
-datamine : Datamine
-datamine =
-    Datamine.createDatamine_ Array.empty
-        (Dict.singleton Datamine.defaultLang
-            { name = Datamine.defaultLang
-            , unindex =
-                { langIndexEmpty
-                  -- for the log-filtering test with npcs
-                    | npcs =
-                        Dict.fromList
-                            [ ( "Jun Ortoi", "a" )
-                            , ( "Baran, the Crusader", "b" )
-                            ]
-                    , backendErrors =
-                        Dict.fromList
-                            [ ( "AFK mode is now OFF.", "AFKModeDisabled" )
-                            ]
-                }
-            , index =
-                { langIndexEmpty
-                    | backendErrors =
-                        Dict.fromList
-                            [ ( "EnteredArea", "You have entered {0}." )
-                            , ( "AFKModeEnabled", "AFK mode is now ON. Autoreply \"{0}\"" )
-                            ]
-                }
-            }
-        )
-        []
-        Dict.empty
-        []
-        []
-        Dict.empty
 
 
 expectParseEquals : String -> Result String ( Int, LogLine.Info ) -> Expect.Expectation
@@ -117,8 +80,8 @@ all =
                     , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] SomeJerkInLocalChat: 1801062 9b0 [INFO Client 1636] Connecting to instance server at 1.2.3.4:6112"
                     , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] : You have entered The Twilight Strand."
                     , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] SomeJerkInLocalChat: 1801062 9b0 [INFO Client 1636] : You have entered The Twilight Zone."
-                    , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] Jun Ortoi: I'm an NPC with dialogue!"
-                    , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] Baran, the Crusader: I'm an NPC with multiline dialogue, "
+                    , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] Einhar, Beastmaster: I'm an NPC with dialogue!"
+                    , "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] Alva, Master Explorer: I'm an NPC with multiline dialogue, "
                     , "and at least my first line must survive!"
                     , ""
                     , "and let's throw in some dialogue with a ] just for fun"
@@ -130,8 +93,8 @@ all =
                         |> Expect.equal
                             ([ "2018/05/13 16:10:08] Connecting to instance server at 999.999.999.0:6112"
                              , "2018/05/13 16:10:14] : You have entered The Twilight Strand."
-                             , "2018/05/13 16:10:14] Jun Ortoi: I'm an NPC with dialogue!"
-                             , "2018/05/13 16:10:14] Baran, the Crusader: I'm an NPC with multiline dialogue, "
+                             , "2018/05/13 16:10:14] Einhar, Beastmaster: I'm an NPC with dialogue!"
+                             , "2018/05/13 16:10:14] Alva, Master Explorer: I'm an NPC with multiline dialogue, "
 
                              -- https://github.com/mapwatch/mapwatch/issues/61
                              -- , "and at least my first line must survive!"

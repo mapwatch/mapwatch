@@ -9,11 +9,7 @@ import * as util from './util'
 import {BrowserBackend} from './browserBackend'
 import {BrowserNativeFSBackend} from './browserNativeFSBackend'
 import {MemoryBackend} from './memoryBackend'
-import {default as datamine} from '../../datamine/dist/mapwatch.json'
-import {default as leagues} from '../../datamine/dist/leagues.json'
-import {default as atlasbase} from '../../datamine/dist/atlasbase.json'
-import {default as divcards} from '../../datamine/dist/divcards.json'
-import {default as ultimatum} from '../../datamine/UltimatumModifiers.json'
+import datamine from './datamine'
 import changelog from '!!raw-loader!../../../CHANGELOG.md'
 import privacy from '!!raw-loader!../../../PRIVACY.md'
 // version.txt is created by by `yarn _build:version`
@@ -177,7 +173,7 @@ function createFlags({backend, settings, qs, electronFlags}) {
     isBrowserSupported: !!window.FileReader,
     // isBrowserSupported: false,
     platform: backend.platform,
-    datamine: {datamine, leagues, wiki: {atlasbase, divcards}, ultimatum},
+    datamine,
     electronFlags,
   }
 }
