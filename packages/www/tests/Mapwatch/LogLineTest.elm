@@ -24,8 +24,19 @@ datamine =
                             [ ( "Jun Ortoi", "a" )
                             , ( "Baran, the Crusader", "b" )
                             ]
+                    , backendErrors =
+                        Dict.fromList
+                            [ ( "AFK mode is now OFF.", "AFKModeDisabled" )
+                            ]
                 }
-            , index = { langIndexEmpty | backendErrors = Dict.singleton "EnteredArea" "You have entered {0}." }
+            , index =
+                { langIndexEmpty
+                    | backendErrors =
+                        Dict.fromList
+                            [ ( "EnteredArea", "You have entered {0}." )
+                            , ( "AFKModeEnabled", "AFK mode is now ON. Autoreply \"{0}\"" )
+                            ]
+                }
             }
         )
         []
@@ -67,6 +78,16 @@ all =
                 expectParseEquals
                     "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] : You have entered The Twilight Strand."
                     (Ok ( 1526227814000, LogLine.YouHaveEntered "The Twilight Strand" ))
+        , test "afk enabled" <|
+            \_ ->
+                expectParseEquals
+                    "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] : AFK mode is now ON. Autoreply \"toucan lol\""
+                    (Ok ( 1526227814000, LogLine.AFKMode True ))
+        , test "afk disabled" <|
+            \_ ->
+                expectParseEquals
+                    "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] : AFK mode is now OFF."
+                    (Ok ( 1526227814000, LogLine.AFKMode False ))
         , describe "chat ignored"
             [ test "opening" <|
                 \_ ->

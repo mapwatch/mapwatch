@@ -5,6 +5,7 @@ module Mapwatch.Instance exposing
     , Instance(..)
     , State
     , addressId
+    , afkOff
     , duration
     , init
     , initOrUpdate
@@ -67,6 +68,8 @@ type alias State =
     { val : Instance
     , joinedAt : Posix
     , next : Builder
+    , afkVisit : List ( Posix, Posix )
+    , afkStart : Maybe Posix
     , position : Int
     }
 
@@ -74,7 +77,7 @@ type alias State =
 init : Posix -> Int -> State
 init t pos =
     -- initial-date is awkward, only Nothing on init, but we need to be able to tell the difference
-    { val = MainMenu, joinedAt = t, next = Empty, position = pos }
+    { val = MainMenu, joinedAt = t, next = Empty, afkVisit = [], afkStart = Nothing, position = pos }
 
 
 toAddress : Instance -> Maybe Address
@@ -163,33 +166,66 @@ initOrUpdate datamine line instance =
             init line.date line.position |> update datamine line
 
 
+afkOff : Posix -> State -> State
+afkOff afkEnd state =
+    case state.afkStart of
+        Nothing ->
+            state
+
+        Just afkStart ->
+            { state
+                | afkStart = Nothing
+                , afkVisit = ( afkStart, afkEnd ) :: state.afkVisit
+            }
+
+
 update : Datamine -> LogLine.Line -> State -> State
 update datamine line state =
-    case ( state.next, line.info ) of
+    case line.info of
         -- it takes two loglines to build an instance:
         -- * "connecting to instance server (addr)"
         -- * "you have entered (zone)"
         -- we need both zone and addr, split across two lines, so it takes two steps.
-        ( _, LogLine.ConnectingToInstanceServer addr ) ->
+        LogLine.ConnectingToInstanceServer addr ->
             -- step 1
             { state | next = Connecting addr, position = line.position }
 
-        ( Connecting addr, LogLine.YouHaveEntered zone_ ) ->
-            -- step 2
-            { state
-                | val =
-                    Instance
-                        { zone = zone_
-                        , addr = addr
-                        , worldArea = Datamine.worldAreaFromName zone_ datamine
-                        }
-                , joinedAt = line.date
-                , next = Empty
-            }
+        LogLine.YouHaveEntered zone_ ->
+            case state.next of
+                Connecting addr ->
+                    -- step 2
+                    { state
+                        | val =
+                            Instance
+                                { zone = zone_
+                                , addr = addr
+                                , worldArea = Datamine.worldAreaFromName zone_ datamine
+                                }
+                        , joinedAt = line.date
+                        , next = Empty
+                        , afkStart = Nothing
+                        , afkVisit = []
+                    }
 
-        ( _, LogLine.Opening ) ->
+                _ ->
+                    state
+
+        LogLine.Opening ->
             -- the game crashed and was just reopened, reset the instance
             init line.date line.position
+
+        LogLine.AFKMode mode ->
+            case ( mode, state.afkStart ) of
+                ( True, Nothing ) ->
+                    -- afk enabled, transition from disabled
+                    { state | afkStart = Just line.date }
+
+                ( False, Just _ ) ->
+                    -- afk disabled, transition from enabled
+                    afkOff line.date state
+
+                _ ->
+                    state
 
         _ ->
             -- ignore everything else

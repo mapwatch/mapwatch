@@ -48,6 +48,7 @@ type alias Datamine =
     , worldAreasById : Dict String WorldArea
     , unindex : LangIndex
     , youHaveEntered : String -> Maybe String
+    , afkModeEnabled : String -> Bool
     , leagues : List League
     , atlasbase : Dict String (List String)
     , divcards : List DivCard
@@ -364,6 +365,7 @@ createDatamine_ ws ls leagues atlasBase divCards_ ultimatumModifiers npcText =
                 worldAreasById
                 langIndexEmpty
                 (createYouHaveEntered ls)
+                (createAfkModeEnabled ls)
                 leagues
                 atlasBase
                 divCards_
@@ -422,6 +424,33 @@ createYouHaveEntered lang =
     in
     \raw ->
         unwrappers |> Util.String.mapFirst (\fn -> fn raw) Maybe.Extra.isJust |> Maybe.Extra.join
+
+
+{-| Parse "AFK mode is now ON. Autoreply "{0}"" messages for all languages.
+-}
+createAfkModeEnabled : Dict String Lang -> String -> Bool
+createAfkModeEnabled lang =
+    let
+        strings : List String
+        strings =
+            lang
+                |> Dict.values
+                |> List.filterMap (\l -> Dict.get "AFKModeEnabled" l.index.backendErrors)
+
+        unwrappers : List (String -> Bool)
+        unwrappers =
+            strings
+                |> List.filterMap
+                    (\s ->
+                        case String.split "{0}" s of
+                            pre :: suf :: [] ->
+                                Just (Util.String.startsAndEndsWith (": " ++ pre) suf)
+
+                            _ ->
+                                Nothing
+                    )
+    in
+    \raw -> List.any (\fn -> fn raw) unwrappers
 
 
 createNPCText : Dict String Lang -> Result String (Dict String NpcTextEntry)

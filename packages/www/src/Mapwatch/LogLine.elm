@@ -44,6 +44,7 @@ type Info
     | ConnectingToInstanceServer String
     | YouHaveEntered String
     | NPCSays NPCSaysData
+    | AFKMode Bool
 
 
 type alias NPCSaysData =
@@ -132,7 +133,16 @@ parseInfo dm raw =
                                                 NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = "" } |> Just
 
                                             Nothing ->
-                                                Nothing
+                                                if dm.afkModeEnabled body then
+                                                    AFKMode True |> Just
+
+                                                else
+                                                    case Dict.get (String.dropLeft 2 body) dm.unindex.backendErrors of
+                                                        Just "AFKModeDisabled" ->
+                                                            AFKMode False |> Just
+
+                                                        _ ->
+                                                            Nothing
 
                                     entered ->
                                         entered

@@ -175,7 +175,8 @@ function transformLang(raw, {worldAreasById}) {
   // mapwatch is usually more concerned with name -> id for log parsing, but it can deal.
   const worldAreas = raw["WorldAreas.dat"].data.filter(w => !!worldAreasById[w.Id])
   // "You have entered" text can vary based on the user's language, so import it too
-  const backendErrors = raw["BackendErrors.dat"].data.filter(e => e.Id == 'EnteredArea')
+  const backendErrorIds = new Set(['EnteredArea', 'AFKModeEnabled', 'AFKModeDisabled'])
+  const backendErrors = raw["BackendErrors.dat"].data.filter(e => backendErrorIds.has(e.Id))
   const npcs = raw["NPCs.dat"].data.filter(isNPCIdExported)
   const npcTextAudio = raw["NPCTextAudio.dat"].data.filter(isNPCTextExported)
   return {

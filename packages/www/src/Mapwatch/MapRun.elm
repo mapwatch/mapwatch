@@ -63,6 +63,7 @@ type alias Durations =
     , mainMap : Millis
     , sides : Millis
     , notTown : Millis
+    , afk : Millis
     }
 
 
@@ -95,6 +96,7 @@ aggregate runs0 =
             , mainMap = durations |> List.map .mainMap |> List.sum
             , sides = durations |> List.map .sides |> List.sum
             , notTown = durations |> List.map .notTown |> List.sum
+            , afk = durations |> List.map .afk |> List.sum
             }
 
         portals =
@@ -108,6 +110,7 @@ aggregate runs0 =
             , mainMap = totalDuration.mainMap // nmean
             , sides = totalDuration.sides // nmean
             , notTown = totalDuration.notTown // nmean
+            , afk = totalDuration.afk // nmean
             }
         }
     , total =
@@ -211,6 +214,7 @@ fromRaw dm raw =
                         |> List.filterMap (.outcome >> Trialmaster.duration)
                     )
                 |> List.sum
+        , afk = raw.visits |> List.map Visit.durationAfk |> List.sum
         }
     }
 

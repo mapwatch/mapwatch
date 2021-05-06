@@ -39,6 +39,7 @@ type Feature
     | HeistNpcs
     | Drops
     | LogSlice
+    | AFKDuration
 
 
 type alias QueryString =
@@ -56,6 +57,7 @@ list =
     , HeistNpcs
     , Drops
     , LogSlice
+    , AFKDuration
     ]
 
 
@@ -93,6 +95,9 @@ config feature =
 
         LogSlice ->
             FeatureConfig feature "logslice" True
+
+        AFKDuration ->
+            FeatureConfig feature "afkDuration" False
 
 
 byString : Dict String FeatureConfig

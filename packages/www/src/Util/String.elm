@@ -15,7 +15,7 @@ Most of our parsing doesn't need regexes!
 -}
 unwrap : String -> String -> String -> Maybe String
 unwrap prefix suffix s =
-    if String.startsWith prefix s && String.endsWith suffix s then
+    if startsAndEndsWith prefix suffix s then
         s
             |> String.dropLeft (String.length prefix)
             |> String.dropRight (String.length suffix)
@@ -23,6 +23,11 @@ unwrap prefix suffix s =
 
     else
         Nothing
+
+
+startsAndEndsWith : String -> String -> String -> Bool
+startsAndEndsWith prefix suffix s =
+    String.startsWith prefix s && String.endsWith suffix s
 
 
 mapFirst : (a -> b) -> (b -> Bool) -> List a -> Maybe b

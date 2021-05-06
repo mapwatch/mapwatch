@@ -1,6 +1,7 @@
 module Mapwatch.Visit exposing
     ( Visit
     , duration
+    , durationAfk
     ,  initSince
        -- selectors
 
@@ -19,6 +20,7 @@ type alias Visit =
     { instance : Instance
     , joinedAt : Posix
     , leftAt : Posix
+    , afk : List ( Posix, Posix )
     , positionStart : Int
     , positionEnd : Int
     }
@@ -26,7 +28,15 @@ type alias Visit =
 
 duration : Visit -> Millis
 duration v =
-    max 0 <| Time.posixToMillis v.leftAt - Time.posixToMillis v.joinedAt
+    Time.posixToMillis v.leftAt - Time.posixToMillis v.joinedAt |> max 0
+
+
+durationAfk : Visit -> Millis
+durationAfk v =
+    v.afk
+        |> List.map (\( start, end ) -> Time.posixToMillis end - Time.posixToMillis start |> abs)
+        |> List.sum
+        |> max 0
 
 
 isTown : Visit -> Bool
@@ -46,7 +56,13 @@ isOffline v =
 
 initSince : Instance.State -> Posix -> Int -> Int -> Visit
 initSince before leftAt posStart posEnd =
-    { instance = before.val, joinedAt = before.joinedAt, leftAt = leftAt, positionStart = posStart, positionEnd = posEnd }
+    { instance = before.val
+    , joinedAt = before.joinedAt
+    , leftAt = leftAt
+    , positionStart = posStart
+    , positionEnd = posEnd
+    , afk = (Instance.afkOff leftAt before).afkVisit
+    }
 
 
 tryInit : Maybe Instance.State -> Instance.State -> Int -> Maybe Visit
@@ -70,4 +86,5 @@ tryInit mbefore after posEnd =
                     , leftAt = leftAt
                     , positionStart = before.position
                     , positionEnd = posEnd
+                    , afk = (Instance.afkOff leftAt before).afkVisit
                     }

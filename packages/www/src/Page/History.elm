@@ -366,7 +366,8 @@ viewHistoryRun : { m | query : QueryDict, tz : Time.Zone, mapwatch : { mm | data
 viewHistoryRun ({ query, tz } as m) config goals r =
     viewHistoryMainRow m config (goals r) r
         :: List.concat
-            [ r.sideAreas
+            [ viewAfkDurationRow query config r.duration.afk
+            , r.sideAreas
                 |> Dict.values
                 |> List.map (viewHistorySideAreaRow query config)
             , r.conqueror
@@ -387,6 +388,32 @@ viewHistoryRun ({ query, tz } as m) config goals r =
                 |> Dict.toList
                 |> List.filterMap (viewHistoryNpcTextRow query config r.rootNpcs)
             ]
+
+
+viewAfkDurationRow : QueryDict -> HistoryRowConfig -> Int -> List (Html msg)
+viewAfkDurationRow query { showDate } durationAfk =
+    if Feature.isActive Feature.AFKDuration query && durationAfk > 0 then
+        [ tr [ class "npctext-area" ]
+            ((if showDate then
+                [ td [ class "date" ] [] ]
+
+              else
+                []
+             )
+                ++ [ td [] []
+                   , td [] []
+                   , td [ colspan 7 ]
+                        [ text "AFK mode: " ]
+                   , td [ class "side-dur" ]
+                        [ text "-", viewDuration durationAfk ]
+                   , td [ class "portals" ] []
+                   , td [ class "town-pct" ] []
+                   ]
+            )
+        ]
+
+    else
+        []
 
 
 viewTrialmasterRow : HistoryRowConfig -> Address -> Trialmaster.State -> Html msg
