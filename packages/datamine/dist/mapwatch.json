@@ -13005,7 +13005,9 @@
   "lang": {
     "English": {
       "backendErrors": {
-        "EnteredArea": "You have entered {0}."
+        "EnteredArea": "You have entered {0}.",
+        "AFKModeEnabled": "AFK mode is now ON. Autoreply \"{0}\"",
+        "AFKModeDisabled": "AFK mode is now OFF."
       },
       "worldAreas": {
         "1_1_town": "Lioneye's Watch",
@@ -15062,7 +15064,9 @@
     },
     "French": {
       "backendErrors": {
-        "EnteredArea": "Vous êtes à présent dans : {0}."
+        "EnteredArea": "Vous êtes à présent dans : {0}.",
+        "AFKModeEnabled": "Le mode Absent (AFK) est désormais activé. Réponse automatique : « {0} »",
+        "AFKModeDisabled": "Le mode Absent (AFK) est désactivé."
       },
       "worldAreas": {
         "1_1_town": "Le Guet d'Œil de Lion",
@@ -17119,7 +17123,9 @@
     },
     "German": {
       "backendErrors": {
-        "EnteredArea": "Ihr habt '{0}' betreten."
+        "EnteredArea": "Ihr habt '{0}' betreten.",
+        "AFKModeEnabled": "AFK-Modus ist nun AN. Automatische Antwort: '{0}'",
+        "AFKModeDisabled": "AFK-Modus ist nun AUS."
       },
       "worldAreas": {
         "1_1_town": "Löwenauges Wacht",
@@ -19176,7 +19182,9 @@
     },
     "Korean": {
       "backendErrors": {
-        "EnteredArea": "{0}에 진입했습니다."
+        "EnteredArea": "{0}에 진입했습니다.",
+        "AFKModeEnabled": "자리 비움 모드를 설정했습니다. \"{0}\"을(를) 자동으로 답신합니다.",
+        "AFKModeDisabled": "자리 비움 모드를 해제했습니다."
       },
       "worldAreas": {
         "1_1_town": "라이온아이 초소",
@@ -21233,7 +21241,9 @@
     },
     "Portuguese": {
       "backendErrors": {
-        "EnteredArea": "Você entrou em: {0}"
+        "EnteredArea": "Você entrou em: {0}",
+        "AFKModeEnabled": "Modo LDT Ativado. Reposta automática \"{0}\"",
+        "AFKModeDisabled": "Modo LDT Desativado."
       },
       "worldAreas": {
         "1_1_town": "Vigília de Lioneye",
@@ -23290,7 +23300,9 @@
     },
     "Russian": {
       "backendErrors": {
-        "EnteredArea": "Вы вошли в область {0}."
+        "EnteredArea": "Вы вошли в область {0}.",
+        "AFKModeEnabled": "Режим \"отошёл\" включён. Авто-ответ \"{0}\".",
+        "AFKModeDisabled": "Режим \"отошёл\" выключен."
       },
       "worldAreas": {
         "1_1_town": "Застава Львиного глаза",
@@ -25347,7 +25359,9 @@
     },
     "Simplified Chinese": {
       "backendErrors": {
-        "EnteredArea": "你已进入： %1%。"
+        "EnteredArea": "你已进入： %1%。",
+        "AFKModeEnabled": "暂离模式启动。将自动回复 \"%1%\"",
+        "AFKModeDisabled": "暂离模式关闭。"
       },
       "worldAreas": {
         "1_1_town": "狮眼守望",
@@ -26253,7 +26267,9 @@
     },
     "Spanish": {
       "backendErrors": {
-        "EnteredArea": "Has entrado a {0}"
+        "EnteredArea": "Has entrado a {0}",
+        "AFKModeEnabled": "El modo Ausente está habilitado. Autorespuesta \"{0}\"",
+        "AFKModeDisabled": "El modo Ausente está deshabilitado."
       },
       "worldAreas": {
         "1_1_town": "La Vigilancia de Lioneye",
@@ -28310,7 +28326,9 @@
     },
     "Thai": {
       "backendErrors": {
-        "EnteredArea": "คุณเข้าสู่ {0}"
+        "EnteredArea": "คุณเข้าสู่ {0}",
+        "AFKModeEnabled": "เปิดโหมด AFK แล้ว ตอบกลับอัตโนมัติ \"{0}\"",
+        "AFKModeDisabled": "ปิดโหมด AFK แล้ว"
       },
       "worldAreas": {
         "1_1_town": "Lioneye's Watch",

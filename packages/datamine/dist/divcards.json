@@ -4089,7 +4089,9 @@
     },
     {
       "card": "Unchained",
-      "maps": [],
+      "maps": [
+        "Pen Map"
+      ],
       "loot": {
         "text": "Facebreaker\nTwo-Implicit\nCorrupted"
       }
