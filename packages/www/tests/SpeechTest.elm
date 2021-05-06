@@ -48,6 +48,7 @@ emptyVisit =
     , leftAt = Time.millisToPosix 0
     , positionStart = 6969
     , positionEnd = 42069
+    , afk = []
     }
 
 
