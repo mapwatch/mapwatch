@@ -153,7 +153,7 @@ parseInfoEntered dm =
     dm.youHaveEntered >> Maybe.map YouHaveEntered
 
 
-{-| like "2018/05/13 16:05:37"
+{-| like "2018/05/13 16:05:37 "
 
 I don't like regexes. We could avoid this one with String.split shenanigans, but
 that's even uglier.

@@ -1,8 +1,9 @@
-module Fixture exposing (datamine)
+module Fixture exposing (datamine, worldArea)
 
+import Dict exposing (Dict)
 import Fixture.Json
 import Json.Decode as D
-import Mapwatch.Datamine as Datamine exposing (Datamine, langIndexEmpty)
+import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea, langIndexEmpty)
 
 
 datamine : Datamine
@@ -13,3 +14,13 @@ datamine =
 
         Ok dm ->
             dm
+
+
+worldArea : String -> Datamine -> WorldArea
+worldArea id dm =
+    case Dict.get id dm.worldAreasById of
+        Nothing ->
+            Debug.todo <| "no such worldArea: " ++ id
+
+        Just w ->
+            w

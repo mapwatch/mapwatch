@@ -90,22 +90,32 @@ all =
                     ]
                         |> String.join "\n"
                         |> Mapwatch.filteredLogSlice Time.utc datamine Settings.empty 0
-                        |> Expect.equal
-                            ([ "2018/05/13 16:10:08] Connecting to instance server at 999.999.999.0:6112"
-                             , "2018/05/13 16:10:14] : You have entered The Twilight Strand."
-                             , "2018/05/13 16:10:14] Einhar, Beastmaster: I'm an NPC with dialogue!"
-                             , "2018/05/13 16:10:14] Alva, Master Explorer: I'm an NPC with multiline dialogue, "
+                        |> Expect.all
+                            [ Expect.equal
+                                ([ "2018/05/13 16:10:08 ] Connecting to instance server at 999.999.999.0:6112"
+                                 , "2018/05/13 16:10:14 ] : You have entered The Twilight Strand."
+                                 , "2018/05/13 16:10:14 ] Einhar, Beastmaster: I'm an NPC with dialogue!"
+                                 , "2018/05/13 16:10:14 ] Alva, Master Explorer: I'm an NPC with multiline dialogue, "
 
-                             -- https://github.com/mapwatch/mapwatch/issues/61
-                             -- , "and at least my first line must survive!"
-                             -- , ""
-                             -- , "and let's throw in some dialogue with a ] just for fun"
-                             --
-                             -- preserve ip uniqueness: if an ip is repeated in the original, repeat it here too
-                             , "2018/05/13 16:10:15] Connecting to instance server at 999.999.999.1:6112"
-                             , "2018/05/13 16:10:16] Connecting to instance server at 999.999.999.0:6112"
-                             ]
-                                |> String.join "\n"
-                            )
+                                 -- https://github.com/mapwatch/mapwatch/issues/61
+                                 -- , "and at least my first line must survive!"
+                                 -- , ""
+                                 -- , "and let's throw in some dialogue with a ] just for fun"
+                                 --
+                                 -- preserve ip uniqueness: if an ip is repeated in the original, repeat it here too
+                                 , "2018/05/13 16:10:15 ] Connecting to instance server at 999.999.999.1:6112"
+                                 , "2018/05/13 16:10:16 ] Connecting to instance server at 999.999.999.0:6112"
+                                 ]
+                                    |> String.join "\n"
+                                )
+                            , \filtered ->
+                                filtered
+                                    -- we can parse filtered output, and it produces identical results
+                                    |> Mapwatch.filteredLogSlice Time.utc datamine Settings.empty 0
+                                    |> Mapwatch.filteredLogSlice Time.utc datamine Settings.empty 0
+                                    |> Mapwatch.filteredLogSlice Time.utc datamine Settings.empty 0
+                                    |> Mapwatch.filteredLogSlice Time.utc datamine Settings.empty 0
+                                    |> Expect.equal filtered
+                            ]
             ]
         ]

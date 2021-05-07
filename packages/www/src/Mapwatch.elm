@@ -102,7 +102,7 @@ filteredLogSlice tz datamine settings position log =
                         line
 
                     Just end ->
-                        String.left (LogLine.dateLength - 1) line
+                        String.left LogLine.dateLength line
                             ++ String.dropLeft end line
             )
         -- step 3: filter IP addresses
