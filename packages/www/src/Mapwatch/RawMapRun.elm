@@ -88,19 +88,19 @@ updatedAt r =
             r.startedAt
 
 
-push : Visit -> RawMapRun -> Maybe RawMapRun
+push : Visit -> RawMapRun -> RawMapRun
 push visit run =
     if Visit.isOffline visit then
         if Visit.isTown visit then
             -- offline in town: run's over
-            Nothing
+            { run | positionEnd = visit.positionEnd }
 
         else
             -- offline, out of town: run's abandoned. We don't know how long it was!
-            Just { run | isAbandoned = True }
+            { run | isAbandoned = True }
 
     else
-        Just { run | visits = visit :: run.visits, positionEnd = visit.positionEnd }
+        { run | visits = visit :: run.visits, positionEnd = visit.positionEnd }
 
 
 tick : Posix -> Instance.State -> State -> ( State, Maybe RawMapRun )
@@ -188,38 +188,40 @@ update instance_ mvisit state =
                     ( initRun Dict.empty, Nothing )
 
                 Just running ->
-                    case push visit running of
-                        Nothing ->
-                            -- they went offline in town - end the run, discarding the time in town.
-                            ( initRun Dict.empty
-                            , if duration running == 0 then
-                                Nothing
+                    let
+                        run =
+                            push visit running
+                    in
+                    if Visit.isOffline visit && Visit.isTown visit then
+                        -- they went offline in town - end the run, discarding the time in town.
+                        ( initRun Dict.empty
+                        , if duration running == 0 then
+                            Nothing
 
-                              else
-                                Just running
-                            )
+                          else
+                            Just run
+                        )
 
-                        Just run ->
-                            if run.isAbandoned then
-                                -- they went offline without returning to town first - we don't know how long the run was.
-                                -- End the run (we'll have a special display for this case later).
-                                ( initRun Dict.empty, Just run )
+                    else if run.isAbandoned then
+                        -- they went offline without returning to town first - we don't know how long the run was.
+                        -- End the run (we'll have a special display for this case later).
+                        ( initRun Dict.empty, Just run )
 
-                            else if (not <| Instance.isTown instance_.val) && instance_.val /= Instance.Instance run.address && Visit.isTown visit then
-                                -- entering a new non-town zone, from town, finishes this run and might start a new one. This condition is complex:
-                                -- * Reentering the same map does not! Ex: death, or portal-to-town to dump some gear.
-                                -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.
-                                -- * Even Non-Map -> Map does not! That's a Zana daily, or leaving an abyssal-depth/trial/other side-area.
-                                -- * Town -> Non-Map does, though. Ex: map -> town -> uberlab.
-                                ( initRun Dict.empty, Just run )
+                    else if (not <| Instance.isTown instance_.val) && instance_.val /= Instance.Instance run.address && Visit.isTown visit then
+                        -- entering a new non-town zone, from town, finishes this run and might start a new one. This condition is complex:
+                        -- * Reentering the same map does not! Ex: death, or portal-to-town to dump some gear.
+                        -- * Map -> Map does not! Ex: a Zana mission. TODO Zanas ought to split off into their own run, though.
+                        -- * Even Non-Map -> Map does not! That's a Zana daily, or leaving an abyssal-depth/trial/other side-area.
+                        -- * Town -> Non-Map does, though. Ex: map -> town -> uberlab.
+                        ( initRun Dict.empty, Just run )
 
-                            else if instance_.val == Instance.Instance run.address && Visit.isTown visit then
-                                -- reentering the *same* map from town is a portal.
-                                ( Just { run | portals = run.portals + 1 }, Nothing )
+                    else if instance_.val == Instance.Instance run.address && Visit.isTown visit then
+                        -- reentering the *same* map from town is a portal.
+                        ( Just { run | portals = run.portals + 1 }, Nothing )
 
-                            else
-                                -- the common case - just add the visit to the run
-                                ( Just run, Nothing )
+                    else
+                        -- the common case - just add the visit to the run
+                        ( Just run, Nothing )
 
 
 updateNPCText : LogLine.Line -> Instance -> State -> State
