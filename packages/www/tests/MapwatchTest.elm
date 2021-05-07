@@ -51,6 +51,11 @@ address addr id zone =
     { addr = addr, zone = zone, worldArea = Just <| Fixture.worldArea id datamine }
 
 
+crlfFix =
+    -- don't let git core.autocrlf derail test results
+    String.replace "\u{000D}" ""
+
+
 all : Test
 all =
     describe "Mapwatch" <|
@@ -58,6 +63,7 @@ all =
             \_ ->
                 """
                 """
+                    |> crlfFix
                     |> Mapwatch.fromLogSlice (Just Time.utc) datamine Settings.empty 0
                     |> .runs
                     |> Expect.equal []
@@ -75,6 +81,7 @@ all =
 2021/05/06 03:32:49 ] Connecting to instance server at 999.999.999.2:6112
 2021/05/06 03:32:51 ] : You have entered Port.
                 """
+                    |> crlfFix
                     |> Mapwatch.fromLogSlice (Just Time.utc) datamine Settings.empty 0
                     |> .runs
                     -- |> Expect.equal []
