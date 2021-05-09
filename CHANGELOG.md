@@ -4,6 +4,10 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-05-09
+- Retreating just before the Trialmaster boss fight is now correctly tracked as a boss spawn.
+  - Does it sting to have gotten so close last time?
+
 ## 2021-05-04
 - The Trialmaster boss fight is now correctly tracked.
   - It is very unlikely you found a bug with Trialmaster spawn rates. Please don't use this as evidence for your Angry Reddit Thread.

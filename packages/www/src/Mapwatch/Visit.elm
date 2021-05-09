@@ -2,6 +2,7 @@ module Mapwatch.Visit exposing
     ( Visit
     , duration
     , durationAfk
+    , durationMinusAfk
     ,  initSince
        -- selectors
 
@@ -37,6 +38,11 @@ durationAfk v =
         |> List.map (\( start, end ) -> Time.posixToMillis end - Time.posixToMillis start |> abs)
         |> List.sum
         |> max 0
+
+
+durationMinusAfk : Visit -> Millis
+durationMinusAfk v =
+    duration v - durationAfk v |> max 0
 
 
 isTown : Visit -> Bool

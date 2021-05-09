@@ -1,9 +1,10 @@
-module Fixture exposing (datamine, worldArea)
+module Fixture exposing (datamine, dictGetOrDie, ultimatumMod, worldArea)
 
 import Dict exposing (Dict)
 import Fixture.Json
 import Json.Decode as D
-import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea, langIndexEmpty)
+import Mapwatch.Datamine as Datamine exposing (Datamine, UltimatumModifier, WorldArea, langIndexEmpty)
+import Mapwatch.Datamine.Trialmaster as DMTrialmaster
 
 
 datamine : Datamine
@@ -18,9 +19,19 @@ datamine =
 
 worldArea : String -> Datamine -> WorldArea
 worldArea id dm =
-    case Dict.get id dm.worldAreasById of
-        Nothing ->
-            Debug.todo <| "no such worldArea: " ++ id
+    dictGetOrDie "no such worldArea" id dm.worldAreasById
 
-        Just w ->
-            w
+
+ultimatumMod : String -> Datamine -> UltimatumModifier
+ultimatumMod id dm =
+    dictGetOrDie "no such ultimatumMod" id dm.ultimatumModifiersById
+
+
+dictGetOrDie : String -> comparable -> Dict comparable v -> v
+dictGetOrDie err k dict =
+    case Dict.get k dict of
+        Just v ->
+            v
+
+        Nothing ->
+            Debug.todo <| err ++ ": " ++ Debug.toString k

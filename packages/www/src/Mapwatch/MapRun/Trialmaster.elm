@@ -125,14 +125,23 @@ fromLines dm addr encounters =
                             |> Maybe.andThen (\modId -> Dict.get modId dm.ultimatumModifiersById)
                             |> Result.fromMaybe enc.says.textId
                     )
+
+        outcome =
+            outcomeEncounter
+                |> Maybe.map (Tuple.second >> datamineOutcome)
+                |> Maybe.map (\o -> o dur)
+                |> Maybe.withDefault Abandoned
     in
     { address = addr
-    , outcome =
-        outcomeEncounter
-            |> Maybe.map (Tuple.second >> datamineOutcome)
-            |> Maybe.map (\o -> o dur)
-            |> Maybe.withDefault Abandoned
+    , outcome = outcome
     , mods = mods
     , says = encounters |> List.map (.says >> .raw) |> List.reverse
-    , isBossFight = encounters |> List.map (.says >> .textId) |> List.member "TrialmasterCombatTransformation"
+    , isBossFight =
+        case outcome of
+            Retreated _ ->
+                -- retreated after round 9/before round 10: boss spawned, but the player skipped him. (coward!)
+                List.length mods >= 9
+
+            _ ->
+                encounters |> List.map (.says >> .textId) |> List.member "TrialmasterCombatTransformation"
     }
