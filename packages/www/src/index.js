@@ -53,6 +53,13 @@ function main() {
   console.log('init', {backend, flags, electronFlags, analyticsFlags, datamine, qs})
 
   let activeBackend = backend
+  let localStorageWrapper = {
+    // electron contextIsolation insists on some real weirdness, man.
+    // localStorage is perfectly safe to access from nodejs code, where I've
+    // already been super-extra-careful about fs access.
+    getItem: (key) => localStorage.getItem(key),
+    setItem: (key, val) => localStorage.setItem(key, val),
+  }
   if (qs.example) {
     fetchExample(qs)
     .then(text => {
@@ -63,7 +70,7 @@ function main() {
     })
   }
   else {
-    backend.autoOpen(20 * MB, localStorage)
+    backend.autoOpen(20 * MB, localStorageWrapper)
     .then(opened => {
       if (opened) {
         // logReader.processFile(app, backend, "history")
@@ -85,7 +92,7 @@ function main() {
     const maxSize = (config.maxSize == null ? 20 : config.maxSize) * MB
     return file => {
       activeBackend = backend
-      backend.open(file, maxSize, localStorage)
+      backend.open(file, maxSize, localStorageWrapper)
       .then(() => {
         // logReader.processFile(app, backend, "history")
         app.ports.logOpened.send({date: Date.now(), size: backend.size()})

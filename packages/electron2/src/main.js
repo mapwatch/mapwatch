@@ -47,7 +47,7 @@ function main() {
       // https://electronjs.org/docs/tutorial/security
       enableRemoteModule: false,
       nodeIntegration: false,
-      // contextIsolation: true,
+      contextIsolation: true,
       additionalArguments: [JSON.stringify({version: electron.app.getVersion()})],
     }
   })

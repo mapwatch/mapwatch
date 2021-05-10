@@ -21,6 +21,7 @@ function ElectronBackend() {
   let poller = null
   let fileStart = 0
   const onChanges = []
+  let backend = null
 
   async function autoOpen(maxSize, localStorage) {
     const remembered = localStorage && localStorage.getItem(REMEMBERED_KEY)
@@ -28,7 +29,7 @@ function ElectronBackend() {
       // remember the last manually-opened path. If it fails (poe was moved?),
       // force the user to select another path manually, don't surprise them by
       // picking a new one
-      return this.open({path: remembered}, maxSize)
+      return backend.open({path: remembered}, maxSize)
     }
     let paths = await Promise.all([
         await catchAndWarn(windowsRegistryPath(), "windows registry inaccessible: ignoring."),
@@ -45,14 +46,14 @@ function ElectronBackend() {
     paths = paths.filter(val => !!val)
     // console.log('autoOpen paths', paths)
     if (paths.length) {
-      return this.open({path: paths[0]}, maxSize)
+      return backend.open({path: paths[0]}, maxSize)
     }
     else {
       throw new Error("Couldn't guess client.txt path")
     }
   }
   function open({path}, maxSize, localStorage) {
-    return this.close()
+    return backend.close()
     // TODO restrict filename?
     .then(() => fs.open(path))
     .then(fd => Promise.all([
@@ -115,7 +116,7 @@ function ElectronBackend() {
   function onChange(fn) {
     onChanges.push(fn)
   }
-  return {
+  backend = {
     platform: "electron",
     autoOpen,
     open,
@@ -124,6 +125,7 @@ function ElectronBackend() {
     slice,
     onChange,
   }
+  return backend
 }
 
 function catchAndWarn(p, w) {
