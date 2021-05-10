@@ -6,9 +6,24 @@ const os = require('os')
 const {autoUpdater} = require('electron-updater')
 const log = require('electron-log')
 const {URL} = require('url')
+const gsheetsOauth = require('./gsheets-oauth')
+require('dotenv').config()
 log.transports.file.level = 'debug'
 
 function main() {
+  // https://stackoverflow.com/questions/58622959/electron-app-onopen-url-alternative-for-custom-protocol-in-windows
+  electron.app.setAsDefaultProtocolClient('mapwatch')
+  const instance = electron.app.requestSingleInstanceLock();
+  if (!instance) {
+    return electron.app.quit();
+  }
+  electron.app.on('second-instance', (event0, args) => {
+    console.log('second-instance', event0, args)
+  })
+  electron.app.on('open-url', (event0, data) => {
+    console.log('open-url', event0, data)
+  })
+
   electron.app.on('web-contents-created', (event0, contents) => {
     // url restriction, for security
     // https://www.electronjs.org/docs/tutorial/security#12-disable-or-limit-navigation
@@ -20,7 +35,7 @@ function main() {
     }
     contents.on('will-navigate', (event, targetUrl) => {
       const url = new URL(targetUrl)
-      if (!(url.origin === 'https://mapwatch.erosson.org' || url.origin === appUrlOrigin || url.origin === 'https://accounts.google.com')) {
+      if (!(url.origin === 'https://mapwatch.erosson.org' || url.origin === appUrlOrigin)) {
         console.log('navigation blocked to non-mapwatch url', targetUrl)
         event.preventDefault()
       }
@@ -28,7 +43,17 @@ function main() {
     // https://stackoverflow.com/questions/32402327/how-can-i-force-external-links-from-browser-window-to-open-in-a-default-browser
     contents.on('new-window', (e, targetUrl) => {
       const url = new URL(targetUrl)
-      if (!(url.origin === 'https://accounts.google.com')) {
+      if (url.origin === 'https://accounts.google.com') {
+        // use a real browser for google authentication. https://github.com/mapwatch/mapwatch/issues/258
+        console.log('external browser google signin', targetUrl)
+        e.preventDefault()
+        const client = gsheetsOauth.getAuthenticatedClient({
+          open: async url => electron.shell.openExternal(url),
+          redirect_uri: `${appUrlOrigin || 'https://mapwatch.erosson.org'}/electron-login-redirect.html`,
+        })
+        // TODO do something with auth
+        console.log('authed', client)
+      } else {
         console.log('external new-window', targetUrl)
         e.preventDefault()
         electron.shell.openExternal(targetUrl)
@@ -52,6 +77,7 @@ function main() {
     }
   })
   win.setMenuBarVisibility(false)
+
 
   if (argv.spawn_www) {
     const www = child_process.exec('elm-app start --no-browser', {
