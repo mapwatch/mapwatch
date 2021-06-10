@@ -59,7 +59,9 @@
     },
     {
       "card": "Acclimatisation",
-      "maps": [],
+      "maps": [
+        "Dunes Map"
+      ],
       "loot": {
         "text": "20x Orb of Alteration"
       }
@@ -522,7 +524,7 @@
       "card": "Fateful Meeting",
       "maps": [],
       "loot": {
-        "text": "League-Specific Item\nDouble-Influenced Item\nTwo-Implicit\nCorrupted"
+        "text": "League-Specific Item\nDouble-Influenced Item\nItem Level: 97\nTwo-Implicit\nCorrupted"
       }
     },
     {
@@ -590,7 +592,8 @@
         "The Ossuary (Act 10)",
         "Bone Crypt Map",
         "Olmec's Sanctum",
-        "Cursed Crypt Map"
+        "Cursed Crypt Map",
+        "Necropolis Map"
       ],
       "loot": {
         "text": "Summon Raging Spirit\nQuality: +20%"
@@ -605,7 +608,9 @@
     },
     {
       "card": "Haunting Shadows",
-      "maps": [],
+      "maps": [
+        "The Twilight Temple"
+      ],
       "loot": {
         "text": "Metamorph Item"
       }
@@ -813,6 +818,7 @@
       "card": "Hunter's Resolve",
       "maps": [
         "The Riverways (Act 6)",
+        "Forking River Map",
         "Ramparts Map",
         "Fungal Hollow Map"
       ],
@@ -844,13 +850,7 @@
     {
       "card": "Imperial Legacy",
       "maps": [
-        "The Vastiri Desert",
-        "The Oasis",
-        "The Foothills",
-        "Desert Map",
-        "Desert Spring Map",
-        "Dunes Map",
-        "Pillars of Arun"
+        "Desert Spring Map"
       ],
       "loot": {
         "text": "Six-Link Imperial Bow\nItem Level: 100"
@@ -1181,11 +1181,7 @@
     },
     {
       "card": "Prejudice",
-      "maps": [
-        "Beach Map",
-        "Burial Chambers Map",
-        "Mud Geyser Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Item\nInfluenced Item"
       }
@@ -1880,6 +1876,7 @@
       "maps": [
         "The Brine King's Reef",
         "Coral Ruins Map",
+        "Coves Map",
         "Reef Map"
       ],
       "loot": {
@@ -2773,7 +2770,9 @@
     },
     {
       "card": "The Journalist",
-      "maps": [],
+      "maps": [
+        "City Square Map"
+      ],
       "loot": {
         "text": "Helmet\nDouble-Veiled Item"
       }
@@ -3434,6 +3433,7 @@
     {
       "card": "The Standoff",
       "maps": [
+        "The Ruined Square",
         "The Torched Courts (Act 5)",
         "The Torched Courts (Act 10)",
         "Bone Crypt Map",
@@ -3581,12 +3581,15 @@
         "Barrows Map",
         "Cage Map",
         "Cold River Map",
+        "Desert Map",
         "Geode Map",
         "Iceberg Map",
+        "Marshes Map",
         "Mesa Map",
         "Mud Geyser Map",
         "Overgrown Shrine Map",
         "Promenade Map",
+        "Silo Map",
         "Wasteland Map"
       ],
       "loot": {
@@ -3694,6 +3697,7 @@
     {
       "card": "The Twilight Moon",
       "maps": [
+        "Cold River Map",
         "Moon Temple Map",
         "Temple Map"
       ],
@@ -4062,6 +4066,7 @@
       "card": "Treasure Hunter",
       "maps": [
         "The Cavern of Anger (Act 6)",
+        "Crystal Ore Map",
         "Flooded Mine Map",
         "Grotto Map",
         "Underground River Map",

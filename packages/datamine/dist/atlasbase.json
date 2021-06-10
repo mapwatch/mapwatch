@@ -4,6 +4,7 @@
       "region": "Glennach Cairns",
       "loot": {
         "red": [
+          "Cerulean Ring",
           "Gripped Gloves",
           "Spiked Gloves",
           "Cerulean Ring",
@@ -11,6 +12,7 @@
           "Spiked Gloves"
         ],
         "yellow": [
+          "Cerulean Ring",
           "Gripped Gloves",
           "Spiked Gloves"
         ],
@@ -41,14 +43,17 @@
       "loot": {
         "red": [
           "Cerulean Ring",
-          "Convoking Wand"
+          "Convoking Wand",
+          "Iolite Ring"
         ],
         "yellow": [
           "Cerulean Ring",
-          "Convoking Wand"
+          "Convoking Wand",
+          "Iolite Ring"
         ],
         "white": [
-          "Convoking Wand"
+          "Convoking Wand",
+          "Iolite Ring"
         ]
       }
     },
@@ -62,7 +67,8 @@
         ],
         "yellow": [
           "Two-Toned Boots (Fire and Cold Resistance)",
-          "Two-Toned Boots (Fire and Lightning Resistance)"
+          "Two-Toned Boots (Fire and Lightning Resistance)",
+          "Vermillion Ring"
         ],
         "white": [
           "Two-Toned Boots (Fire and Cold Resistance)",
@@ -74,14 +80,17 @@
       "region": "Lira Arthain",
       "loot": {
         "red": [
+          "Blessed Boots",
           "Bone Helmet",
           "Steel Ring"
         ],
         "yellow": [
+          "Blessed Boots",
           "Bone Helmet",
           "Steel Ring"
         ],
         "white": [
+          "Blessed Boots",
           "Bone Helmet"
         ]
       }
@@ -90,14 +99,17 @@
       "region": "New Vastir",
       "loot": {
         "red": [
+          "Apothecary's Gloves",
           "Blue Pearl Amulet",
           "Vermillion Ring"
         ],
         "yellow": [
+          "Apothecary's Gloves",
           "Blue Pearl Amulet",
           "Vermillion Ring"
         ],
         "white": [
+          "Apothecary's Gloves",
           "Blue Pearl Amulet"
         ]
       }
@@ -106,15 +118,17 @@
       "region": "Tirn's End",
       "loot": {
         "red": [
+          "Artillery Quiver",
           "Crystal Belt",
-          "Steel Ring",
           "Two-Toned Boots (Cold and Lightning Resistance)"
         ],
         "yellow": [
+          "Artillery Quiver",
           "Crystal Belt",
           "Two-Toned Boots (Cold and Lightning Resistance)"
         ],
         "white": [
+          "Artillery Quiver",
           "Two-Toned Boots (Cold and Lightning Resistance)"
         ]
       }
@@ -124,15 +138,17 @@
       "loot": {
         "red": [
           "Fingerless Silk Gloves",
-          "Opal Ring",
+          "Seaglass Amulet",
           "Vanguard Belt"
         ],
         "yellow": [
           "Fingerless Silk Gloves",
+          "Seaglass Amulet",
           "Vanguard Belt"
         ],
         "white": [
-          "Fingerless Silk Gloves"
+          "Fingerless Silk Gloves",
+          "Seaglass Amulet"
         ]
       }
     }

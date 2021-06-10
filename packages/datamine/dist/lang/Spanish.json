@@ -4412,7 +4412,7 @@
       ],
       [
         "MapWorldsCitySquare",
-        "Plaza de la Ciudad"
+        "Plaza de Ciudad"
       ],
       [
         "MapWorldsRelicChambers",
@@ -31466,7 +31466,7 @@
       ],
       [
         "BaranThreeStoneFleeing",
-        "Ahora veo… lo que eres… Hasta Dios tienen su contraparte…"
+        "Ahora veo… lo que eres… Hasta Dios tiene su contraparte…"
       ],
       [
         "BaranFourStoneEncounter1a",
@@ -37198,11 +37198,11 @@
       ],
       [
         "KarstAfterAlert",
-        "¡Sal por donde entramos, novato!"
+        "<if:MS>{¡Sal por donde entramos, novato!}<elif:FS>{¡Sal por donde entramos, novata!}"
       ],
       [
         "KarstAfterExit",
-        "Aún respiramos, novato, así que no estuvo tan mal. Dale la urna a Faustus, ¿sí? Él pondrá todo en orden."
+        "<if:MS>{Aún respiramos, novato, así que no estuvo tan mal. Dale la urna a Faustus, ¿sí? Él pondrá todo en orden.}<elif:FS>{Aún respiramos, novata, así que no estuvo tan mal. Dale la urna a Faustus, ¿sí? Él pondrá todo en orden.}"
       ],
       [
         "KarstIntroduction",
@@ -37234,7 +37234,7 @@
       ],
       [
         "KarstContractThreeEnd",
-        "¿Sabes qué, novato? Ahora sí me siento entero de nuevo. Es solo cuestión de tiempo hasta que mi antiguo rival tenga el mismo destino que mi traicionero compañero de banda. Ahora que los dos bastardos están muertos y mi ganzúa es el único vínculo entre ambas cosas, el mensaje está clarísimo:\r\n\r\nNo le robes a un ladrón."
+        "<if:MS>{¿Sabes qué, novato? Ahora sí me siento entero de nuevo. Es solo cuestión de tiempo hasta que mi antiguo rival tenga el mismo destino que mi traicionero compañero de banda. Ahora que los dos bastardos están muertos y mi ganzúa es el único vínculo entre ambas cosas, el mensaje está clarísimo:\r\n\r\nNo le robes a un ladrón.}<elif:FS>{¿Sabes qué, novata? Ahora sí me siento entero de nuevo. Es solo cuestión de tiempo hasta que mi antiguo rival tenga el mismo destino que mi traicionero compañero de banda. Ahora que los dos bastardos están muertos y mi ganzúa es el único vínculo entre ambas cosas, el mensaje está clarísimo:\r\n\r\nNo le robes a un ladrón.}"
       ],
       [
         "IntroductionKarstToHuck",
