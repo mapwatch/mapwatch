@@ -6364,7 +6364,7 @@
       ],
       [
         "HideoutAzuriteCave",
-        "Repaire d'Azurite"
+        "Repaire de la Caverne d'Azurite"
       ],
       [
         "pvpTown",
@@ -10722,7 +10722,7 @@
       ],
       [
         "SiosaPageQuest",
-        "<if:MS>{Dans des circonstances plus ordinaires, il auraiit été grotesque de demander une telle chose à un parfait inconnu, mais puisque je ne sais pas combien de siècles il me faudra encore attendre avant de revoir une paire de mains de chair et d'os…\r\n\r\nIl y a une porte dérobée derrière les étagères… Elle mène aux Archives. C'est là qu'Icius Pérandus a caché ses Pages dorées. Saisissez-vous à quel point cela peut être exaspérant pour moi ? Non, bien sûr, vous n'en avez aucune idée. C'est ridicule de croire que… Disons simplement qu'elles se trouvent hors de ma portée.\r\n\r\nCes Pages contiennent quatre textes vaal d'une valeur historique inestimable. S'il vous plaît, trouvez les Pages dorées de mon ami et rapportez-les-moi. Vous serez récompensé. Je le jure devant les Ancêtres.}<elif:FS>{Dans des circonstances plus ordinaires, il aurait été grotesque de demander une telle chose à une parfaite inconnue, mais puisque je ne sais pas combien de siècles il me faudra encore attendre avant de revoir une paire de mains de chair et d'os…\r\n\r\nIl y a une porte dérobée derrière les étagères… Elle mène aux Archives. C'est là qu'Icius Pérandus a caché ses Pages dorées. Saisissez-vous à quel point cela peut être exaspérant pour moi ? Non, bien sûr, vous n'en avez aucune idée. C'est ridicule de croire que… Disons simplement qu'elles se trouvent hors de ma portée.\r\n\r\nCes Pages contiennent quatre textes vaal d'une valeur historique inestimable. S'il vous plaît, trouvez les Pages dorées de mon ami et rapportez-les-moi. Vous serez récompensée. Je le jure devant les Ancêtres.}"
+        "<if:MS>{Dans des circonstances plus ordinaires, il aurait été grotesque de demander une telle chose à un parfait inconnu, mais puisque je ne sais pas combien de siècles il me faudra encore attendre avant de revoir une paire de mains de chair et d'os…\r\n\r\nIl y a une porte dérobée derrière les étagères… Elle mène aux Archives. C'est là qu'Icius Pérandus a caché ses Pages dorées. Saisissez-vous à quel point cela peut être exaspérant pour moi ? Non, bien sûr, vous n'en avez aucune idée. C'est ridicule de croire que… Disons simplement qu'elles se trouvent hors de ma portée.\r\n\r\nCes Pages contiennent quatre textes vaal d'une valeur historique inestimable. S'il vous plaît, trouvez les Pages dorées de mon ami et rapportez-les-moi. Vous serez récompensé. Je le jure devant les Ancêtres.}<elif:FS>{Dans des circonstances plus ordinaires, il aurait été grotesque de demander une telle chose à une parfaite inconnue, mais puisque je ne sais pas combien de siècles il me faudra encore attendre avant de revoir une paire de mains de chair et d'os…\r\n\r\nIl y a une porte dérobée derrière les étagères… Elle mène aux Archives. C'est là qu'Icius Pérandus a caché ses Pages dorées. Saisissez-vous à quel point cela peut être exaspérant pour moi ? Non, bien sûr, vous n'en avez aucune idée. C'est ridicule de croire que… Disons simplement qu'elles se trouvent hors de ma portée.\r\n\r\nCes Pages contiennent quatre textes vaal d'une valeur historique inestimable. S'il vous plaît, trouvez les Pages dorées de mon ami et rapportez-les-moi. Vous serez récompensée. Je le jure devant les Ancêtres.}"
       ],
       [
         "SiosaPagesDelivered",
@@ -22046,7 +22046,7 @@
       ],
       [
         "ElreonPrimaryDefenderStartsFightZero",
-        "Salutations, exilé. Comprenez que nous devons purifier ceux qui se dressent contre notre croisade."
+        "<if:MS>{Salutations, exilé. Comprenez que nous devons purifier ceux qui se dressent contre notre croisade.}<elif:FS>{Salutations, exilée. Comprenez que nous devons purifier ceux qui se dressent contre notre croisade.}"
       ],
       [
         "ElreonPrimaryDefenderStartsFightOne",
@@ -37222,7 +37222,7 @@
       ],
       [
         "KarstContractTwo",
-        "<if:MS>{Ça fait plaisir de ravoir mes bons vieux crochets. Très plaisir, oui… mais ça ne suffit pas. C'est comme s'il se trouvait à l'intérieur de moi une serrure que même mes précieux outils antiques ne sauraient crocheter. Mais j'ai bien pris le temps de réfléchir à tout ça et je pense avoir trouvé ce qui pourrait y parvenir…\r\n\r\n… La vengeance.\r\n\r\nUn de mes anciens comparses s'est retiré du milieu. Il vit dans le luxe tandis que tout le monde autour de lui souffre et peine pour survivre. C'est l'existence que j'aurais été censé mener, mais il me l'a volée en même temps que mes crochets. Je veux leur envoyer un message, à lui et au reste de ma vieille bande. Ainsi, au lieu de subtiliser un truc, on va en poser un. Un truc qui leur foutra la trouille comme si Péché en personne se présentait à leur porte.}<elif:FS>{ }"
+        "<if:MS>{Ça fait plaisir de ravoir mes bons vieux crochets. Ça fait plaisir… mais ça ne suffit pas. C'est comme s'il se trouvait à l'intérieur de moi une serrure que même mes précieux outils antiques ne sauraient crocheter. Mais j'ai bien pris le temps de réfléchir à tout ça et je pense avoir trouvé ce qui pourrait y parvenir…\r\n\r\n… La vengeance.\r\n\r\nUn de mes anciens comparses s'est retiré du milieu. Il vit dans le luxe tandis que tout le monde autour de lui souffre et peine pour survivre. C'est l'existence que j'aurais été censé mener, mais il me l'a volée en même temps que mes crochets. Je veux leur envoyer un message, à lui et au reste de ma vieille bande. Ainsi, au lieu de subtiliser un truc, on va en poser un. Un truc qui leur foutra la trouille comme si Péché en personne se présentait à leur porte.}<elif:FS>{ }"
       ],
       [
         "KarstContractTwoEnd",
