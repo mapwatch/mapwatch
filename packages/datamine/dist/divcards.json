@@ -1106,6 +1106,7 @@
         "The Ascent",
         "The Solaris Temple Level 1 (Act 8)",
         "The Solaris Temple Level 2 (Act 8)",
+        "Frozen Cabins Map",
         "Iceberg Map",
         "Summit Map"
       ],
@@ -2799,7 +2800,6 @@
     {
       "card": "The King's Heart",
       "maps": [
-        "The Coast (Act 6)",
         "Caldera Map",
         "Volcano Map"
       ],
