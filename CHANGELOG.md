@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-06-19
+- Fixed a bug preventing Mapwatch from reading Russian language logs.
+
 ## 2021-05-09
 - Retreating just before the Trialmaster boss fight is now correctly tracked as a boss spawn.
   - Does it sting to have gotten so close last time?

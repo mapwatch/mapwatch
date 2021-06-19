@@ -41,6 +41,11 @@ all =
                 expectParseEquals
                     "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] : You have entered The Twilight Strand."
                     (Ok ( 1526227814000, LogLine.YouHaveEntered "The Twilight Strand" ))
+        , test "special russian log prefix: https://github.com/mapwatch/mapwatch/issues/273" <|
+            \_ ->
+                expectParseEquals
+                    "2021/06/19 10:23:03 804993734 bad [INFO Client 42068] : <<set:MS>><<set:M>><<set:S>>Вы вошли в область Берега Каруи."
+                    (Ok ( 1624098183000, LogLine.YouHaveEntered "Берега Каруи" ))
         , test "afk enabled" <|
             \_ ->
                 expectParseEquals

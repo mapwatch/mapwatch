@@ -408,6 +408,9 @@ createYouHaveEntered lang =
             lang
                 |> Dict.values
                 |> List.filterMap (\l -> Dict.get "EnteredArea" l.index.backendErrors)
+                -- special case for the russian language; there's no harm in doing it for other languages too
+                -- https://github.com/mapwatch/mapwatch/issues/273
+                |> List.concatMap (\s -> [ s, "<<set:MS>><<set:M>><<set:S>>" ++ s ])
 
         unwrappers : List (String -> Maybe String)
         unwrappers =
