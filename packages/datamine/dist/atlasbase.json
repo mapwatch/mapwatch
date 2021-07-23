@@ -80,18 +80,18 @@
       "region": "Lira Arthain",
       "loot": {
         "red": [
-          "Blessed Boots",
           "Bone Helmet",
+          "Fugitive Boots",
           "Steel Ring"
         ],
         "yellow": [
-          "Blessed Boots",
           "Bone Helmet",
+          "Fugitive Boots",
           "Steel Ring"
         ],
         "white": [
-          "Blessed Boots",
-          "Bone Helmet"
+          "Bone Helmet",
+          "Fugitive Boots"
         ]
       }
     },

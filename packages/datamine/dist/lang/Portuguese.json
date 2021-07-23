@@ -9066,6 +9066,26 @@
       [
         "UltimatumTrialStarted",
         "Você não pode participar de uma provação que já tenha começado."
+      ],
+      [
+        "RoyaleMatchEndedWonReward",
+        "O Vencedor Janta de Graça!\n Jantar de Rhoa Tier {0} foi adicionado às suas Decorações de Refúgio."
+      ],
+      [
+        "RoyaleMatchEndedWon",
+        "O Vencedor Janta de Graça!\n Próxima recompensa de Decoração de Refúgio em {0} vitórias."
+      ],
+      [
+        "RoyaleMatchEndedWonMax",
+        "O Vencedor Paga o Jantar de Rhoa!"
+      ],
+      [
+        "RoyaleMatchEnded",
+        "{0} venceu a partida!"
+      ],
+      [
+        "RoyaleMatchEndedTeam",
+        "{0} e {1} venceram a partida!"
       ]
     ]
   },
@@ -54654,7 +54674,7 @@
       ],
       [
         "TrialmasterPlayerTookRewardLastTimeRoundTwoRandom",
-        "Como você vai superar esta última performance incrível?"
+        "Eu espero sinceramente que você dure mais do que duas rodadas."
       ],
       [
         "TrialmasterPlayerTookRewardLastTimeRoundTwo2",
@@ -55038,11 +55058,11 @@
       ],
       [
         "TrialmasterMoodBeginTwoToFourWins3",
-        "Você estpa ganhando, mas será que pode continuar?"
+        "Você esta ganhando, mas será que pode continuar?"
       ],
       [
         "TrialmasterMoodBeginTwoToFourWins4",
-        "Você estpa ganhando, mas será que pode continuar?"
+        "Você esta ganhando, mas será que pode continuar?"
       ],
       [
         "TrialmasterMoodBeginTwoToFourWins5",
@@ -55350,15 +55370,15 @@
       ],
       [
         "TrialmasterMoodPlayerWonFiveOrMoreWins9",
-        "Eu deveria ter me tornado um padre de Yaomac em vez disso..."
+        "Eu deveria ter me tornado um sacerdote de Yaomac..."
       ],
       [
         "TrialmasterMoodPlayerWonFiveOrMoreWins10",
-        "Eu deveria ter me tornado um padre de Yaomac em vez disso..."
+        "Eu deveria ter me tornado um sacerdote de Yaomac..."
       ],
       [
         "TrialmasterMoodPlayerWonFiveOrMoreWins11",
-        "Eu deveria ter me tornado um padre de Yaomac em vez disso..."
+        "Eu deveria ter me tornado um sacerdote de Yaomac..."
       ],
       [
         "TrialmasterMoodPlayerWonFiveOrMoreWins12",
@@ -55590,11 +55610,11 @@
       ],
       [
         "TrialmasterMoodPlayerLostTwoToFourWins13",
-        "Seu caminho até a grandiosidade fez uma séria curva em diração ao penhasco. "
+        "Seu caminho até a grandiosidade fez uma séria curva em direção ao penhasco. "
       ],
       [
         "TrialmasterMoodPlayerLostTwoToFourWins14",
-        "Seu caminho até a grandiosidade fez uma séria curva em diração ao penhasco. "
+        "Seu caminho até a grandiosidade fez uma séria curva em direção ao penhasco. "
       ],
       [
         "TrialmasterMoodPlayerLostFiveOrMoreWinsRandom",
@@ -55758,6 +55778,38 @@
       ],
       [
         "HasinaPetSummon",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer5",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer4",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer3",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer2",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer1_",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerFight",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerDefeated",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerVictorious",
         ""
       ]
     ]
@@ -57820,6 +57872,10 @@
       [
         "Metadata/NPC/Hasina",
         "Hasina"
+      ],
+      [
+        "RoyaleAnnouncer",
+        "Anunciador Royale"
       ]
     ]
   }

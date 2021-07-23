@@ -9066,6 +9066,26 @@
       [
         "UltimatumTrialStarted",
         "Du kannst nicht an einer Prüfung teilnehmen, die schon begonnen hat."
+      ],
+      [
+        "RoyaleMatchEndedWonReward",
+        "Winner winner, Rhoa Dinner!\n Ein Rhoa-Festmahl des Levels {0} wurde deinen Versteck-Dekorationen hinzugefügt."
+      ],
+      [
+        "RoyaleMatchEndedWon",
+        "Winner winner, Rhoa Dinner!\n Nach {0} Siegen erhältst du die nächste Versteck-Dekoration als Belohnung."
+      ],
+      [
+        "RoyaleMatchEndedWonMax",
+        "Winner winner, Rhoa Dinner!"
+      ],
+      [
+        "RoyaleMatchEnded",
+        "{0} hat das Match gewonnen!"
+      ],
+      [
+        "RoyaleMatchEndedTeam",
+        "{0} und {1} haben das Match gewonnen!"
       ]
     ]
   },
@@ -16958,7 +16978,7 @@
       ],
       [
         "EinharEpicPoem",
-        "c"
+        "Manche Bestien sind gelb,\r\nmanche rot,\r\nalle Bestien sind dumm,\r\naber nützlich, wenn tot."
       ],
       [
         "AlvaIntroduction",
@@ -55759,6 +55779,38 @@
       [
         "HasinaPetSummon",
         ""
+      ],
+      [
+        "RoyaleAnnouncer5",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer4",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer3",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer2",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer1_",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerFight",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerDefeated",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerVictorious",
+        ""
       ]
     ]
   },
@@ -57820,6 +57872,10 @@
       [
         "Metadata/NPC/Hasina",
         "Hasina"
+      ],
+      [
+        "RoyaleAnnouncer",
+        "Royale-Sprecher"
       ]
     ]
   }

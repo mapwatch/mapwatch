@@ -9066,6 +9066,26 @@
       [
         "UltimatumTrialStarted",
         "You cannot join a trial that has already begun."
+      ],
+      [
+        "RoyaleMatchEndedWonReward",
+        "Winner winner, Rhoa Dinner!\n Tier {0} Rhoa Dinner has been added to your Hideout Decorations."
+      ],
+      [
+        "RoyaleMatchEndedWon",
+        "Winner winner, Rhoa Dinner!\n Next Hideout Decoration reward in {0} victories."
+      ],
+      [
+        "RoyaleMatchEndedWonMax",
+        "Winner winner, Rhoa Dinner!"
+      ],
+      [
+        "RoyaleMatchEnded",
+        "{0} has won the match!"
+      ],
+      [
+        "RoyaleMatchEndedTeam",
+        "{0} and {1} have won the match!"
       ]
     ]
   },
@@ -55759,6 +55779,38 @@
       [
         "HasinaPetSummon",
         ""
+      ],
+      [
+        "RoyaleAnnouncer5",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer4",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer3",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer2",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer1_",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerFight",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerDefeated",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerVictorious",
+        ""
       ]
     ]
   },
@@ -57820,6 +57872,10 @@
       [
         "Metadata/NPC/Hasina",
         "Hasina"
+      ],
+      [
+        "RoyaleAnnouncer",
+        "Royale Announcer"
       ]
     ]
   }
