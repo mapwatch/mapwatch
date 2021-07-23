@@ -8092,7 +8092,7 @@
         "나무뿌리가 앞을 가로막고 있습니다.\r\n나중에 걷어낼 수 있을지도 모릅니다."
       ],
       [
-        "InsteractErrorUndyingBlockage",
+        "InteractErrorUndyingBlockage",
         "길이 막혔습니다."
       ],
       [
@@ -9086,6 +9086,18 @@
       [
         "RoyaleMatchEndedTeam",
         "{0} 님과 {1} 님이 승리했습니다!"
+      ],
+      [
+        "TradeNoteBlacklistedCharactersError",
+        "거래 메모에 유효하지 않은 문자가 포함되어 있습니다. 다시 시도하십시오."
+      ],
+      [
+        "ExpeditionDetonatorNotInstanceOwner",
+        "해당 인스턴스의 소유자만이 폭발물 및 기폭 장치와 상호작용할 수 있습니다."
+      ],
+      [
+        "ActionTemporarilyDisabled",
+        "이 행동은 일시적으로 사용할 수 없습니다"
       ]
     ]
   },
@@ -12722,15 +12734,51 @@
       ],
       [
         "BrutusIntro2",
-        "무단 침입죄를 저질렀군. 네놈에게 사형을 선고한다!"
+        "바위 너머로 공포에 질린 심장이 요동치는군."
       ],
       [
         "BrutusIntro3",
-        "고통이 어떤 건지를 알게 해주지. 얼른 덤비도록 해라."
+        "네 죄목은 무단 침입이며, 선고는 사형이다!"
       ],
       [
         "BrutusIntro4",
-        "내가 두려운 건가? 진짜 두려운 게 뭔지를 보여주지."
+        "네 죄목은 무단 침입이며, 선고는 사형이다!"
+      ],
+      [
+        "BrutusIntro5",
+        "너는 나의 고통을 알게 될 것이다. 와서 고통을 나와 함께 나누자."
+      ],
+      [
+        "BrutusIntro6",
+        "내가 끔찍하다 생각하느냐? 진짜 끔찍한 것이 무엇인지 보여 주마..."
+      ],
+      [
+        "BrutusIntro7",
+        "내가 끔찍하다 생각하느냐? 진짜 끔찍한 것이 무엇인지 보여 주마..."
+      ],
+      [
+        "BrutusChainRandom",
+        "와라."
+      ],
+      [
+        "BrutusChain2",
+        "와라."
+      ],
+      [
+        "BrutusChain3",
+        "와라."
+      ],
+      [
+        "BrutusChain4",
+        "나의 포옹을 받아들여라."
+      ],
+      [
+        "BrutusChain5",
+        "나의 포옹을 받아들여라."
+      ],
+      [
+        "BrutusChain6",
+        "나의 포옹을 받아들여라."
       ],
       [
         "MalachaiIntro1",
@@ -33381,8 +33429,8 @@
         "강탈단이 굴러가는 데는 계약이 필요하지만, 우리는 실력 있는 전문가기도 하다네. 그리고 실력 있는 전문가는 실력의 한계를 시험하고 싶어 하는 법이지. 강탈단은 어마어마한 가치를 지닌 물건들이 있는 여러 장소의 구조도를 입수해 왔네. 그런 곳은 당연히 경비와 정찰이 삼엄하기 때문에, 제대로 한탕 하려면 팀이 필요하겠지. \r\n\r\n두목이 경비가 철통같은 곳들의 도면은 물론 그곳을 탈탈 터는 데 필요한 기술과 인재도 내주실 걸세... 물론 공짜는 아니지만 말이야. 계약을 완료하고 증표를 모으다 보면 그런 도움도 받을 수 있다네."
       ],
       [
-        "KuraiTheBoss  ",
-        "두목은 워낙 바쁜 분이라, 내가 두목의 지령을 실행하고 그분 대신 단원들에게 일을 나누어 준다네. 나는 어느 모로 보나 두목의 사무관이라 할 수 있지. 혹시라도 문제가 생기면 내게 말하게. 두목이 시간이 있을 때 전달할 테니."
+        "KuraiTheBoss",
+        "두목은 대단히 바쁜 분이라, 내가 그분의 지시를 실행에 옮기고 그분을 대신해서 필요에 따라 단원들에게 임무를 배정하고 있네. 어느 모로 보나 두목의 사무관이라 할 수 있지. 문제가 있으면 나에게 이야기하면, 두목께서 시간이 날 때 전달하겠네."
       ],
       [
         "KuraiVoxTwins",
@@ -44505,7 +44553,7 @@
         "우리는 살이 하나이되, 마음은 둘, 육신이 둘이다. 우리는 얽히고설킨 공허의 난장판에서 태어난 동족이나, 우리의 창조주는 다르다. 그녀는 나의 간수이고, 그녀는 나의 감옥이다. 나는 그녀의 보호자이고, 나는 그녀의 종이다."
       ],
       [
-        "EnvoyGreetingT1MavenRandom",
+        "EnvoyGreetingT1MavenOne",
         "그들은 보금자리가 있는 나무를 지키기 위하여 맹렬히도 싸웠다. 이제 숲은 불타고, 공중에는 연기가 피어오르며 퍼덕거리는 날개로 불길을 더욱 가까이 끌어들인다. 불이 닥쳐 온다, 유목민이여. 그것은 우리 모두를 집어삼키리라."
       ],
       [
@@ -44537,7 +44585,7 @@
         "그들이 어미의 젖을 달라 울부짖자 그대로 주어졌다. 그들은 몸을 휩싼 양막 속에서 질식하며 자양분을 주는 비 아래에서 무아지경으로 춤을 추었고, 이기적인 생존 경쟁 속에서 하나씩 하나씩 쓰러졌다."
       ],
       [
-        "EnvoyGreetingT2MavenRandom",
+        "EnvoyGreetingT2MavenOne",
         "유목민이여, 때로는 네가 부럽구나. 너는 생존을 위해 행한다. 너는 깨질 듯한 존재를 지키기 위해, 목적을 품고 움직인다. 너의 정신은 현실의 습격을 받아, 너는 끝이 없는 사막을 떠도는 티끌 하나와도 같다. 절망이라는 압도적인 진실을 막아 내는, 얇디 얇은 거짓이다."
       ],
       [
@@ -44565,7 +44613,7 @@
         "별들이 시샘의 눈길로 바라보는 동안, 생명은 트인 공간을 속속들이 스며들어 감싼다. 생과 사의 순환은 역동적이며 규칙적이나, 별들은 수도 없는 생애 동안 멈추지도 변하지도 않고 불탄다. 영원은 곧 정체이며, 정체는 곧 고문이다."
       ],
       [
-        "EnvoyGreetingT3MavenRandom",
+        "EnvoyGreetingT3MavenOne",
         "시간이라는 끈은 목줄이 개를 끌듯, 모든 생명을 하나의 종착점으로 끈다. 그러나 개들은 언제나 주인이 자신을 위한다고 믿으며 신이 나서 따라간다."
       ],
       [
@@ -44605,7 +44653,7 @@
         "나는 어둠 속으로 인도되어, 그녀에게 가는 길을 밝혀 줄 활활 타는 횃불을 받았다. 그녀가 나를 당기고, 불은 치솟으며 내 얼굴을 핥고 또 때렸다. 나는 그 여정에서 소진되어 텅 빈 껍데기인 채로 그녀의 품에 던져져서, 그녀를 절대로 떠나지 않고 지키고 제한하게 되었다. 이것이 나의 무량한 벌이다."
       ],
       [
-        "EnvoyGreetingT4MavenRandom",
+        "EnvoyGreetingT4MavenOne",
         "밤마다 침묵이 와서, 떠나고 싶은 생각을 칠흑같이 검은 바다에 빠뜨렸다. 내가 지켜보는 가운데, 물에 빠진 나의 희망은 생명을 잃고 축 처진 채 해안으로 밀려와서 아무렇게나 벗어 던진 옷가지처럼 날카로운 모래 위를 장식했다."
       ],
       [
@@ -44625,7 +44673,7 @@
         "나는 그녀를 따라 장벽을 지난 이들의 수를 세려 했으나, 아무도 지나지 못했다. 혹은 지났어도 모두 빛 속에서 먼지가 되어 스러졌으리라. 그것은 오직 한 사람의 의무였다. 탄생이 무르익고 형상을 갖추지 못한 날것이 시간의 흐름이라는 열기 속에 벼려지는 동안 불침번을 서는 것. 나의 벌에서 벗어나기란 그리 쉽지 않을 터였다."
       ],
       [
-        "EnvoyGreetingT5MavenRandom",
+        "EnvoyGreetingT5MavenOne",
         "우리는 알지 못했으나, 몽상가의 약속은 즉시 이루어졌다. 처음에 그의 당도는 우리 머릿속의 속삭임으로 왔다. 입 밖에 내는 순간 다른 모든 생각을 묻어 버릴 속삭임. 그러나 우리는 영원의 세월이 흐르고 나서야 비로소 그의 불을 느낄 것이다."
       ],
       [
@@ -55701,6 +55749,162 @@
         "끝을 낼 시간이다!"
       ],
       [
+        "DelveVaalCityBossIntroRandom",
+        "시크텝 쿠틀로틀!"
+      ],
+      [
+        "DelveVaalCityBossIntro2",
+        "시크텝 쿠틀로틀!"
+      ],
+      [
+        "DelveVaalCityBossIntro3",
+        "시크텝 쿠틀로틀!"
+      ],
+      [
+        "DelveVaalCityBossIntro4",
+        "시크텝 쿠틀로틀!"
+      ],
+      [
+        "DelveVaalCityBossIntro5",
+        "시크텝 쿠틀로틀!"
+      ],
+      [
+        "DelveVaalCityBossIntro6",
+        "시크텝 쿠틀로틀!"
+      ],
+      [
+        "DelveVaalCityBossIntro7",
+        "타틀랏 앗지리!"
+      ],
+      [
+        "DelveVaalCityBossIntro8",
+        "타틀랏 앗지리!"
+      ],
+      [
+        "DelveVaalCityBossIntro9",
+        "타틀랏 앗지리!"
+      ],
+      [
+        "DelveVaalCityBossIntro10",
+        "타틀랏 앗지리!"
+      ],
+      [
+        "DelveVaalCityBossIntro11",
+        "타틀랏 앗지리!"
+      ],
+      [
+        "DelveVaalCityBossIntro12",
+        "바알 아 조마플랏!"
+      ],
+      [
+        "DelveVaalCityBossIntro13",
+        "바알 아 조마플랏!"
+      ],
+      [
+        "DelveVaalCityBossIntro14",
+        "바알 아 조마플랏!"
+      ],
+      [
+        "DelveVaalCityBossIntro15",
+        "바알 아 조마플랏!"
+      ],
+      [
+        "DelveVaalCityBossDeathRandom",
+        "앗지... 아..."
+      ],
+      [
+        "DelveVaalCityBossDeath2",
+        "앗지... 아..."
+      ],
+      [
+        "DelveVaalCityBossDeath3",
+        "오필... 바알..."
+      ],
+      [
+        "DelveVaalCityBossDeath4",
+        "오필... 바알..."
+      ],
+      [
+        "DelveVaalCityBossDeath5",
+        "오필... 바알..."
+      ],
+      [
+        "DelveVaalCityBossDeath6",
+        "오필... 바알..."
+      ],
+      [
+        "DelveVaalCityBossDeath7",
+        "토카브... 아틀라..."
+      ],
+      [
+        "DelveVaalCityBossDeath8",
+        "토카브... 아틀라..."
+      ],
+      [
+        "DelveVaalCityBossDeath9",
+        "토카브... 아틀라..."
+      ],
+      [
+        "DelveVaalCityBossSkillARandom",
+        "자후아 모티!"
+      ],
+      [
+        "DelveVaalCityBossSkillA2",
+        "자후아 모티!"
+      ],
+      [
+        "DelveVaalCityBossSkillA3",
+        "자후아 모티!"
+      ],
+      [
+        "DelveVaalCityBossSkillBRandom",
+        "아즈카도!"
+      ],
+      [
+        "DelveVaalCityBossSkillB2",
+        "아즈카도!"
+      ],
+      [
+        "DelveVaalCityBossSkillB3",
+        "아즈카도!"
+      ],
+      [
+        "DelveVaalCityBossSkillCRandom",
+        "퀴콰테!"
+      ],
+      [
+        "DelveVaalCityBossSkillC2",
+        "퀴콰테!"
+      ],
+      [
+        "DelveVaalCityBossSkillC3",
+        "퀴콰테!"
+      ],
+      [
+        "DelveVaalCityBossSkillDRandom",
+        "후아타틀!"
+      ],
+      [
+        "DelveVaalCityBossSkillD2",
+        "후아타틀!"
+      ],
+      [
+        "DelveVaalCityBossSkillD3",
+        "후아타틀!"
+      ],
+      [
+        "DelveVaalCityBossSkillD4",
+        "후아타틀!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntroRandom",
+        "우오르 알남!"
+      ],
+      [
+        "DelveProtoVaalCityBossDeathRandom",
+        "암... 암타..."
+      ],
+      [
         "TrialmasterPlayerTookRewardRandom",
         "안전한 선택이군."
       ],
@@ -55711,6 +55915,138 @@
       [
         "TrialmasterPlayerTookReward3",
         "실망스럽지만 어쩔 수 없지."
+      ],
+      [
+        "DelveProtoVaalCityBossIntro2",
+        "우오르 알남!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro3",
+        "우오르 알남!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro4",
+        "우오르 알남!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro5",
+        "우오르 알남!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro6",
+        "하브라 안!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro7",
+        "하브라 안!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro8",
+        "하브라 안!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro9",
+        "하브라 안!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro10",
+        "우템 자줄!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro11",
+        "우템 자줄!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro12",
+        "우템 자줄!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro13",
+        "하템 아크 아울!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro14",
+        "하템 아크 아울!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro15",
+        "하템 아크 아울!"
+      ],
+      [
+        "DelveProtoVaalCityBossDeath2",
+        "암... 암타..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath3",
+        "암... 암타..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath4",
+        "주라... 샤..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath5",
+        "주라... 샤..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath6",
+        "주라... 샤..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath7",
+        "아크보 텔... 자르."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath8",
+        "아크보 텔... 자르."
+      ],
+      [
+        "DelveProtoVaalCityBossSkillARandom",
+        "후르나크!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillA2",
+        "후르나크!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillA3",
+        "후르나크!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillBRandom",
+        "젬 자마르!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillB2",
+        "젬 자마르!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillB3",
+        "젬 자마르!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillCRandom",
+        "오템바!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillC2",
+        "오템바!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillC3",
+        "오템바!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillDRandom",
+        "아주 아자르!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillD2",
+        "아주 아자르!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillD3",
+        "아주 아자르!"
       ],
       [
         "HasinaPetIdleRandom",
@@ -55811,6 +56147,3338 @@
       [
         "RoyaleAnnouncerVictorious",
         ""
+      ],
+      [
+        "EnvoyRandomFinalSayingRandom",
+        "그들이... 온다."
+      ],
+      [
+        "EnvoyRandomFinalSaying2",
+        "그들이... 온다."
+      ],
+      [
+        "EnvoyRandomFinalSaying3",
+        "그들이... 온다."
+      ],
+      [
+        "DannigOnExpeditionMap",
+        "탐험은 개인의 명예가 걸린 문제라 아무 데서나 논할 수가 없네. 자네 은신처에서 이야기를 합세."
+      ],
+      [
+        "TujenRandomMap",
+        "[DNT] Random map exile!"
+      ],
+      [
+        "TujenRareIntBoots",
+        "[DNT] Rare int boots exile?"
+      ],
+      [
+        "TujenRegretStack20",
+        "[DNT] Stack of 20 regrets i think, exile."
+      ],
+      [
+        "TujenRegalStack5",
+        "[DNT] Stack of 5 regals you'll never use, exile?"
+      ],
+      [
+        "TujenDivineStack4",
+        "[DNT] Stack of 4 divines, exile!"
+      ],
+      [
+        "TujenMirrorStack2",
+        "[DNT] Oh my god it's a stack of 2 mirrors exile"
+      ],
+      [
+        "GamblerCurrencyVeryLowMagicRarityEquipment",
+        "위험을 감수하지 않으면 보상도 없지."
+      ],
+      [
+        "GamblerCurrencyVeryLowRareRarityEquipment",
+        "어디 써먹을 곳이 있지 않겠어?"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentOne",
+        "최소한 뭐라도 건졌잖아!"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentTwo",
+        "그거, 물건인데!"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentThree",
+        "흥미로워 보이네!"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentFour",
+        "믿은 만큼 상을 받은 거야!"
+      ],
+      [
+        "GamblerCurrencyVeryLowDivineUniqueCommentOne",
+        "세상에! 그게 뭔지도 모르겠네! 그래도 당신이 그걸 헐값에 얻었다는 건 알겠어!"
+      ],
+      [
+        "GamblerCurrencyVeryLowHeadhunter",
+        "축하해! 당첨이야! 언젠가는 당신에게 운이 깃들 줄 알고 있었어!"
+      ],
+      [
+        "GamblerCurrencyVeryLowEquipmentSpecialLow",
+        "흥미롭군... 그나마 돈은 얼마 안 냈으니까."
+      ],
+      [
+        "GamblerCurrencyVeryLowEquipmentSpecialMid",
+        "그럭저럭 나쁘지 않은 것 같은데."
+      ],
+      [
+        "GamblerCurrencyVeryLowEquipmentSpecialHigh",
+        "꽤 흥미로운 장비군! 게다가 헐값에 얻었고 말이야!"
+      ],
+      [
+        "GamblerCurrencyLowMagicRarityEquipment",
+        "싼 게 비지떡이라잖아!"
+      ],
+      [
+        "GamblerCurrencyLowRareRarityEquipment",
+        "그나마 예쁘긴 하네."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentFive",
+        "흠. 그게 쓸모가 있는 상황이 있을 수는 있겠네."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentSix",
+        "꽤 좋은 상품이군!"
+      ],
+      [
+        "GamblerCurrencyLowDivineUniqueCommentTwo",
+        "당신이 가져가서 다행이야. 내 마음에는 안 들거든."
+      ],
+      [
+        "GamblerCurrencyLowHeadhunter",
+        "이야! 값을 더 부를 걸 그랬네!"
+      ],
+      [
+        "GamblerCurrencyLowEquipmentSpecialLow",
+        "안전하게 가니까 이상한 장비가 나오잖아. 도박이란 게 그렇지 뭐."
+      ],
+      [
+        "GamblerCurrencyLowEquipmentSpecialMid",
+        "정말 흥미롭군! 얼마 돈을 쓰지도 않았는데 말이야."
+      ],
+      [
+        "GamblerCurrencyLowEquipmentSpecialHigh",
+        "꽤 좋은 보상인데!"
+      ],
+      [
+        "GamblerCurrencyMediumMagicRarityEquipment",
+        "다음에는 운이 따르길 바랄게."
+      ],
+      [
+        "GamblerCurrencyMediumRareRarityEquipment",
+        "그런 장비는 진짜 몰라. 당신한테 사겠다는 사람이 나타날지도 모르지."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentSeven",
+        "별로 마음에 안 드는 기색이네."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentEight",
+        "아주 좋은 물건 같군."
+      ],
+      [
+        "GamblerCurrencyMediumDivineUniqueCommentThree",
+        "당신네 그 '신들'과 관련된 유물들은 믿을 수가 없다니까..."
+      ],
+      [
+        "GamblerCurrencyMediumHeadhunter",
+        "오오! 해냈네! 오늘은 행운의 여신이 당신 편인 모양인데!"
+      ],
+      [
+        "GamblerCurrencyMediumEquipmentSpecialLow",
+        "레이클라스트에는 별 이상한 장비도 있군..."
+      ],
+      [
+        "GamblerCurrencyMediumEquipmentSpecialMid",
+        "운을 향한 믿음이 결실을 맺은 모양이야."
+      ],
+      [
+        "GamblerCurrencyMediumEquipmentSpecialHigh",
+        "도박 실력이 좋아지고 있군!"
+      ],
+      [
+        "GamblerCurrencyHighMagicRarityEquipment",
+        "저런."
+      ],
+      [
+        "GamblerCurrencyHighRareRarityEquipment",
+        "더 굳게 믿어야 해."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentNine",
+        "...괜찮네."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentTen",
+        "흠. 큰돈을 투자했는데, 이건... 글쎄?"
+      ],
+      [
+        "GamblerCurrencyHighDivineUniqueCommentFour",
+        "정말 이 '신성한' 장비에 그 큰돈을 낼 가치가 있었을까?"
+      ],
+      [
+        "GamblerCurrencyHighHeadhunter",
+        "조심스레 말하자면, 꽤 유용해 보이는데!"
+      ],
+      [
+        "GamblerCurrencyHighEquipmentSpecialLow",
+        "큰돈을 내고 이상한 장비를 얻다니. 그런 게 도박의 묘미이지."
+      ],
+      [
+        "GamblerCurrencyHighEquipmentSpecialMid",
+        "건 금액을 생각하면 나쁘지 않네."
+      ],
+      [
+        "GamblerCurrencyHighEquipmentSpecialHigh",
+        "큰 모험에, 큰 보상!"
+      ],
+      [
+        "GamblerCurrencyVeryHighHeadhunter",
+        "방금 너무 기뻐서 비명 지른 거야?"
+      ],
+      [
+        "GamblerCurrencyVeryHighRareLeatherBeltWithLife",
+        "믿음이 부족했어. 다음에는 잘해 봐."
+      ],
+      [
+        "GwennenTutorialShout",
+        "거기 당신! 동네 사람! 여기 와 봐!"
+      ],
+      [
+        "GwennenTutorialIntro",
+        "당신 같은 촌뜨기는 폭발을 구경하고 싶어서 안달이 났겠지. 우리가 왜 이것저것 터뜨리고 다니는지는 당장은 신경 쓰지 마. 차차 이야기해 줄 테니.\r\n\r\n내가 보물과 위험이 있을 만한 곳을 미리 표시해 뒀어. 난 아량이 넓은 사람이야. 무엇을 발굴할지는 당신이 정해도 돼. 당신이 얼마나 운을 타고났는지 보고 싶거든. 난 이쪽에서 기다리겠어. 최대한 멀리서 말이야.\r\n\r\n장치들을 연결해서 배치해 봐. 아주 볼 만할 거야."
+      ],
+      [
+        "GwennenTutorialPlayerPlacesFirstExplosive",
+        "도폭선을 갖고 최대한 멀리 가 봐."
+      ],
+      [
+        "GwennenTutorialPlayerWalksTooFarAway",
+        "그렇게 멀리는 말고!"
+      ],
+      [
+        "GwennenTutorialPlayerPlacesSecondExplosive",
+        "더 가! 계속 가. 나에게서 멀리."
+      ],
+      [
+        "GwennenTutorialPlayerPlacesThirdExplosive",
+        "다 배치됐군. 그럼 불을 붙여 볼까?"
+      ],
+      [
+        "GwennenTutorialDetonating",
+        "또 하나 이야기해 두자면... 발굴 결과로 괴물이 나타날지도 몰라!"
+      ],
+      [
+        "GwennenTutorialMonstersAppearing",
+        "당신이 맡아 줘!"
+      ],
+      [
+        "GwennenTutorialMoreMonstersAppearing",
+        "가서 놈들을 잡아, 현지인!"
+      ],
+      [
+        "GwennenTutorialAllMonstersDead",
+        "해낸 거야?... 해냈네! 내가 이 일을 맡긴 현지인들은 대부분 오래 못 버티거든."
+      ],
+      [
+        "GwennenTutorialTalkAfter",
+        "하, 그래. 위험하다고 더 솔직하게 말할 수도 있었겠지... 하지만 파헤쳐진 땅에 무시무시한 괴물들이 득시글거린다는 말을 하면 사람들이 일을 맡으려고 하질 않거든. 당신네 동네는 참 끔찍하다니까. 이런 곳에서 살아남은 사람이 있는 게 신기할 지경이야. 물론 애초에 내가 여기 있는 이유가 그거긴 하지만... 그 이야기는 대닉에게 물어봐야 할 거야. 그를 찾는다면 말이지.\r\n\r\n그런데 혹시 모험을 좋아한다면, 내가 당신이 관심을 보일 법한 것들을 좀 발굴했는데 말이야..."
+      ],
+      [
+        "GwennenTutorialPartingShoutForTutorialTwo",
+        "투젠을 보면 내가 보냈다고 말해!"
+      ],
+      [
+        "GwennenTutorialPartingShout",
+        "내가 마무리할게. 다음에 봐!"
+      ],
+      [
+        "GwennenTutorialTwoShout",
+        "여기 특별한 걸 찾았어, 현지인!"
+      ],
+      [
+        "GwennenTutorialTwoIntro",
+        "이 대륙에는 고대 문명의 유적이 아주 많아. 그리고 아직도 신비로운 기운이 깃들어 있는 유적도 있다는 모양이야. 유적을 파괴해서 그 안의 에너지를 방출시키는 건 위험하지만, 그만한 가치가 있는 보상을 얻을 수 있을지도 몰라.\r\n\r\n유적을 폭파했을 때 나오는 발굴품은 매번 조금씩 다르지. 저쪽에 있는 유적 근처에 폭발 장치를 설치해보지 그래? 어떻게 되는지 보자고."
+      ],
+      [
+        "GwennenTutorialPlayerPlacesExplosiveNotNearRemnant",
+        "유적 근처에 폭발물을 설치해!"
+      ],
+      [
+        "GwennenTutorialTwoFailure",
+        "폭발물을 이렇게 배치해서야 저 유적에 흠집이나 나겠어? 어쩔 수 없지. 다음에 다시 해보자고."
+      ],
+      [
+        "GwennenTutorialPlayerPlacesExplosiveNearRemnant",
+        "좋아, 이거면 될 거야."
+      ],
+      [
+        "GwennenTutorialEnragedMonstersAppearing",
+        "또 하나 이야기해 두자면... 괴물의 화를 돋우게 될지도 몰라!"
+      ],
+      [
+        "GwennenTutorialTwoAllMonstersDead",
+        "잘했어, 유배자! 유적을 파괴하는 건 위험하지만, 당신한테는 별문제도 아닌 것 같네."
+      ],
+      [
+        "GwennenTutorialTwoTalkAfter",
+        "고대 유적을 파괴하면 그 후로 발굴되는 보물과 몬스터가 모두 변화하는 것 같군. 일종의 도박이네. 난 도박이라면 언제든 환영이야. 물론 그 뒤처리는... 힘 좀 쓰는 당신에게 맡겨야겠지만 말이야."
+      ],
+      [
+        "DannigTrailerLookingAtExpedition",
+        "이건 해석하기가 쉽지 않네. 이 탐험의 추모자는 초짜였던 모양이야. 가는 길에 지난 지형지물을 지루하게 나열하고 있네... 알 만한 언덕과 강, 산맥 따위 말일세... 그런데 전투에 대해서는 소상히 적었다네. 석궁 화살이 '이국적인 옷차림을 하고 휘청거리는 자들의 목과 심장에 박혔다'는 내용이 몇 페이지나 이어지는군. 젊은 것들이 피에 굶주린 강아지인 건 수천 년 전에도 마찬가지였던 모양일세.\r\n\r\n이 설명을 보면 바알 현장일 가능성도 있네만, 그들의 옷차림은 자세히 묘사되어 있지 않다네. 석궁을 썼다는 것을 보면 검은 낫의 소행일 수도 있겠지. 이 일지의 설명과 일치하는 장소들이 몇 군데 있다네. 자네 생각은 어떤가?"
+      ],
+      [
+        "DannigIntroGeneralWitch",
+        "유배자, 자네는 뼈와 거죽밖에 없는데도 용케 아직 살아 있군. 분명 재주가 좋아서겠지. 명예를 위한 일에 자네의 능력을 좀 빌려 주겠나?"
+      ],
+      [
+        "DannigIntroGeneralScion",
+        "유배자, 자네는 뼈와 거죽밖에 없는데도 용케 아직 살아 있군. 분명 재주가 좋아서겠지. 명예를 위한 일에 자네의 능력을 좀 빌려 주겠나?"
+      ],
+      [
+        "DannigIntroGeneralRanger",
+        "유배자, 자네는 뼈와 거죽밖에 없는데도 용케 아직 살아 있군. 분명 재주가 좋아서겠지. 명예를 위한 일에 자네의 능력을 좀 빌려 주겠나?"
+      ],
+      [
+        "DannigIntroGeneralDuelist",
+        "유배자, 자네는 뼈와 거죽밖에 없는데도 용케 아직 살아 있군. 분명 재주가 좋아서겠지. 명예를 위한 일에 자네의 능력을 좀 빌려 주겠나?"
+      ],
+      [
+        "DannigIntroGeneralShadow",
+        "유배자, 자네는 뼈와 거죽밖에 없는데도 용케 아직 살아 있군. 분명 재주가 좋아서겠지. 명예를 위한 일에 자네의 능력을 좀 빌려 주겠나?"
+      ],
+      [
+        "DannigIntroGeneralTemplar",
+        "유배자, 자네는 뼈와 거죽밖에 없는데도 용케 아직 살아 있군. 분명 재주가 좋아서겠지. 명예를 위한 일에 자네의 능력을 좀 빌려 주겠나?"
+      ],
+      [
+        "DannigIntroMarauder",
+        "아, 동료 전사로군! 나와 모닥불을 피워 놓고 앉아서 고대의 용맹에 대해 이야기꽃을 피워야겠는데. 하지만 그 전에 청이 하나 있다네. 명예를 위한 일이지. 필시 자네가 아주 잘할 수 있는 일일 걸세."
+      ],
+      [
+        "DannigNotHelping",
+        "밥값 할 시간이네. 싸움은 자네가 맡게."
+      ],
+      [
+        "DannigApproachShoutRandom",
+        "반갑네!"
+      ],
+      [
+        "DannigApproachShout2",
+        "반갑네!"
+      ],
+      [
+        "DannigApproachShout3",
+        "반갑네!"
+      ],
+      [
+        "DannigDetonationRandom",
+        "좋아!"
+      ],
+      [
+        "DannigDetonation2",
+        "좋아!"
+      ],
+      [
+        "DannigDetonation3",
+        "좋아!"
+      ],
+      [
+        "DannigDetonation4",
+        "아주 멋지네!"
+      ],
+      [
+        "DannigDetonation5",
+        "아주 멋지네!"
+      ],
+      [
+        "DannigDetonation6",
+        "아주 멋지네!"
+      ],
+      [
+        "DannigDetonation7",
+        "한 발 더 가까워지는군."
+      ],
+      [
+        "DannigDetonation8",
+        "한 발 더 가까워지는군."
+      ],
+      [
+        "DannigDetonation9",
+        "한 발 더 가까워지는군."
+      ],
+      [
+        "DannigBombPlacementRiskRandom",
+        "위험을 감수하겠다는 건가..."
+      ],
+      [
+        "DannigBombPlacementRisk2",
+        "위험을 감수하겠다는 건가..."
+      ],
+      [
+        "DannigBombPlacementRisk3",
+        "위험을 감수하겠다는 건가..."
+      ],
+      [
+        "DannigBombPlacementRisk4",
+        "괜찮겠나? 좀 위험해 보이는데."
+      ],
+      [
+        "DannigBombPlacementRisk5",
+        "괜찮겠나? 좀 위험해 보이는데."
+      ],
+      [
+        "DannigBombPlacementRisk6",
+        "괜찮겠나? 좀 위험해 보이는데."
+      ],
+      [
+        "DannigBombPlacementTreasureRandom",
+        "거기선 값나가는 물건이 좀 나오겠군."
+      ],
+      [
+        "DannigBombPlacementTreasure2",
+        "거기선 값나가는 물건이 좀 나오겠군."
+      ],
+      [
+        "DannigBombPlacementTreasure3",
+        "거기선 값나가는 물건이 좀 나오겠군."
+      ],
+      [
+        "DannigBombPlacementTreasure4",
+        "아아, 보물을 파낼 생각인가 보군!"
+      ],
+      [
+        "DannigBombPlacementTreasure5",
+        "아아, 보물을 파낼 생각인가 보군!"
+      ],
+      [
+        "DannigBombPlacementTreasure6",
+        "아아, 보물을 파낼 생각인가 보군!"
+      ],
+      [
+        "DannigBombPlacementDangerRandom",
+        "그러면 싸움이 날 걸세. 확실해..."
+      ],
+      [
+        "DannigBombPlacementDanger2",
+        "그러면 싸움이 날 걸세. 확실해..."
+      ],
+      [
+        "DannigBombPlacementDanger3",
+        "그러면 싸움이 날 걸세. 확실해..."
+      ],
+      [
+        "DannigBombPlacementDanger4",
+        "거긴 위험이 도사리고 있을 터인데..."
+      ],
+      [
+        "DannigBombPlacementDanger5",
+        "거긴 위험이 도사리고 있을 터인데..."
+      ],
+      [
+        "DannigBombPlacementDanger6",
+        "거긴 위험이 도사리고 있을 터인데..."
+      ],
+      [
+        "DannigAllBombsPlacedRandom",
+        "준비됐나?"
+      ],
+      [
+        "DannigAllBombsPlaced2",
+        "준비됐나?"
+      ],
+      [
+        "DannigAllBombsPlaced3",
+        "준비됐나?"
+      ],
+      [
+        "DannigAllBombsPlaced4",
+        "다 됐군."
+      ],
+      [
+        "DannigAllBombsPlaced5",
+        "다 됐군."
+      ],
+      [
+        "DannigAllBombsPlaced6",
+        "다 됐군."
+      ],
+      [
+        "DannigAllBombsPlaced7",
+        "나는 준비됐으니 말만 하게."
+      ],
+      [
+        "DannigAllBombsPlaced8",
+        "나는 준비됐으니 말만 하게."
+      ],
+      [
+        "DannigAllBombsPlaced9",
+        "나는 준비됐으니 말만 하게."
+      ],
+      [
+        "DannigDoingDetonationRandom",
+        "곧 폭발하네!"
+      ],
+      [
+        "DannigDoingDetonation2",
+        "곧 폭발하네!"
+      ],
+      [
+        "DannigDoingDetonation3",
+        "곧 폭발하네!"
+      ],
+      [
+        "DannigDoingDetonation4",
+        "곧 폭발하네!"
+      ],
+      [
+        "DannigDoingDetonation5",
+        "곧 폭발하네!"
+      ],
+      [
+        "DannigOrdersSquireDetonateRandom",
+        "이보게, 종자! 폭파하게!"
+      ],
+      [
+        "DannigOrdersSquireDetonate2",
+        "이보게, 종자! 폭파하게!"
+      ],
+      [
+        "DannigOrdersSquireDetonate3",
+        "이보게, 종자! 폭파하게!"
+      ],
+      [
+        "DannigExplainsExchanging",
+        "유물 중에서도 특히 중요한 것들이 있다네. 혹시라도 태양의 기사단의 물건을 찾으면 내게 가져오게. 남들이 찾는 물건으로 바꿔 줄 테니."
+      ],
+      [
+        "DannigExplainsExchangingAlternate",
+        "내 임무는 태양의 기사단을 연구하고 그들의 유물을 모으는 것일세. 태양의 기사단의 유물을 구할 수 있다면, 중요도가 떨어지는 다른 유물들을 내줄 용의가 있다네."
+      ],
+      [
+        "DanningRerollInventoryRandom",
+        "또 무슨 물건이 있나 볼까..."
+      ],
+      [
+        "DanningRerollInventory2",
+        "또 무슨 물건이 있나 볼까..."
+      ],
+      [
+        "DanningRerollInventory3",
+        "또 무슨 물건이 있나 볼까..."
+      ],
+      [
+        "DanningRerollInventory4",
+        "자네에게 보여 줄 물건을 조금 더 찾아볼 수 있겠군."
+      ],
+      [
+        "DanningRerollInventory5",
+        "자네에게 보여 줄 물건을 조금 더 찾아볼 수 있겠군."
+      ],
+      [
+        "DanningRerollInventory6",
+        "자네에게 보여 줄 물건을 조금 더 찾아볼 수 있겠군."
+      ],
+      [
+        "DanningRerollInventory7",
+        "다른 물건에 관심이 있나 보군?"
+      ],
+      [
+        "DanningRerollInventory8",
+        "다른 물건에 관심이 있나 보군?"
+      ],
+      [
+        "DanningRerollInventory9",
+        "다른 물건에 관심이 있나 보군?"
+      ],
+      [
+        "DannigOlrothFightTombOpened",
+        "트리스켈리온의 불길이 이 아래에 있다네! 그 힘이 느껴져!"
+      ],
+      [
+        "DannigOlrothFightFlameSeen",
+        "그걸세! 드디어 찾았군!"
+      ],
+      [
+        "DannigOlrothAwakens",
+        "유배자여! 그가 꿈틀거리고 있네!"
+      ],
+      [
+        "DannigOlrothDefeatedFirst",
+        "그가 쓰러져 있는 동안에 불길을 챙기세!"
+      ],
+      [
+        "DannigOlrothDamageFlameFirst",
+        "그를 직접 쓰러뜨리는 건 불가능하네. 폭발물을 사용해서 불길에 타격을 주게!"
+      ],
+      [
+        "DannigOlrothDefeatedSecond",
+        "아직 끝이 아니라네!"
+      ],
+      [
+        "DannigOlrothDefeatedDamageFlameSecond",
+        "폭발물을 다시 사용하게! 트리스켈리온의 불길에 타격을 줘!"
+      ],
+      [
+        "DannigOlrothFightEnd",
+        "불길이 사라졌군... 그나마 올로스는 마침내 편히 잠들 수 있을 걸세..."
+      ],
+      [
+        "DannigOlrothFightEpilogueCommentary",
+        "남들에겐 우리가 불길을 파괴했다고 말하지 말게. 그랬다간 다들 희망을 잃고 말 테니. 이 임무에서 중요한 것은 목적지가 아니라, 여정 그 자체라네."
+      ],
+      [
+        "DanningHowAboutYourHideout",
+        "우리는 안전하고 외딴 근거지를 찾고 있다네. 자네에게 은신처가 있다면 더할 나위가 없겠군. 거기서 우리의 탐험을 계획해 보세."
+      ],
+      [
+        "DannigReinvitedToHideout",
+        "꽤나 변덕스럽군. 어쨌든 알겠네."
+      ],
+      [
+        "DannigLogbookKnightsOfTheSun",
+        "태양의 기사단의 기록자들은 대부분 지나치게 시적이었다네. '두메'라는 말이 무슨 뜻인지 아는 사람이 있기는 할까? 이 기록자는 그 단어를 <i>{세 번}이나 썼는데 각각 골짜기, 빈터, 초원을 가리키는 것이었지. 좀 구체적으로 쓰란 말일세, 작가 양반! 이제 이 일지에서 해독할 수 있는 건 다 했네. 이제부터는 자네한테 달렸네, 유배자여."
+      ],
+      [
+        "DannigLogbookBlackScytheMercenaries",
+        "검은 낫 용병단의 일지는 한눈에 알아볼 수 있지. 전쟁에 대한 정보와 잔인한 전투, 전략적 판단, 보라나의 무자비한 모습에 대한 구구절절한 묘사가 가득하거든. 아쉽게도 지리적인 정보는 별로 없군. 나도 잘 모르겠기는 자네와 마찬가지일세, 유배자여."
+      ],
+      [
+        "DannigLogbookDruidsOfTheBrokenCircle",
+        "이건 왠지 찜찜한데, 드루이드 기록자들이 남긴 일지에는 <i>{당시}의 지형과 함께<i> {훗날 예상되는 지형}도 함께 적혀 있지. 그래서 드루이드의 일지에 나온 내용이 현재의 지형과 가장 흡사한 걸세. 그들이 정말 과거를 들여다봄으로써 미래를 내다볼 수 있었던 건 아니겠지? 그냥 자연의 전문가였던 거겠지. 그래, 신비주의의 장막을 두른 과학이랄까... 그렇게 생각해야 안심이 된다네. 자, 그럼 그들의 짐작이 맞았는지 확인해 볼까, 유배자여?"
+      ],
+      [
+        "DannigLogbookOrderOfTheChalice",
+        "우트레드와 그의 사제들에게는 비밀스러운 목적이 있었다네. 지나치게 종교적인 일지들을 해독하는 건 쉽지 않은 일이라네. 애초에 진실인지 아닌지도 알 수 없는 데다, 종교까지 가진 않더라도 단어 선택이 아주 과장되어 있거든. 모든 것을 죄 '순수하고' '별빛'을 띠며 '번뜩인다'고 표현하지. 그걸 해석해서 길을 알아내자면 참 곤혹스럽다니까. 어쨌든 성배단 유적이 하나 이상 언급되어 있군. 어디로 가야 하겠는가, 유배자여?"
+      ],
+      [
+        "DannigLogbookMaraketh",
+        "마라케스에 대해 잘은 모르지만, 이 일지에 나온 지형지물들을 따라가다 보면 마라케스의 고대 유적을 지나가게 될지도 모르겠네. 재빠르게 움직이면 무사히 지니갈 수도 있을 걸세. 자네의 선택에 달렸네, 유배자여."
+      ],
+      [
+        "DannigLogbookVaal",
+        "내가 타고난 보물 사냥꾼은 아니네만, 여기는 나도 혹하는군. 일지에 색색의 옷을 입고 휘청거리는 자들로 가득한 바알 도시에 산더미 같은 금이 있다는 기록이 있네. 산더미 같은 금... 산더미 같은... 금... 금이 아직 거기 있을까? 한번 알아보세. 특별한 이유가 있어서 별로 재미없는 곳으로 가고 싶은 게 아니라면 말이지..."
+      ],
+      [
+        "DannigLogbookKarui",
+        "이번 탐험에는 카루이 유적지를 지나가게 될지도 모르겠군. 워낙 명예로운 사람들인 듯하여 자세히 알고 싶은 마음이 드네. 나는 평생 명성을 찾아 살았기에 카루이의 길에 호기심이 들거든. 함께 배움을 얻으러 가겠는가, 유배자여?"
+      ],
+      [
+        "DannigLogbookEternalEmpire",
+        "이 영원한 제국이라는 곳에 호기심이 생기는군. 뭐 지금에야 다 죽어 버렸으니 영원하다는 말은 어울리지 않겠지만, 아직도 그들 중 많은 숫자가 아직도 휘청거리며 걸어 다니고 있는 것을 보면 오히려 적절한 이름인 걸까? 그 제국의 옛 유적을 탐험해 보겠나, 유배자여?"
+      ],
+      [
+        "DannigLogbookOriathan",
+        "오리아스인들은 우리와 썩 사이가 좋지 않았지. 이번 탐험에는 오리아스의 유적으로 가게 될지도 모르네. 일부러 조금 모독을 해 볼까 싶은 생각도 드는군. 파괴 행위에 관심 있나, 유배자여?"
+      ],
+      [
+        "DannigLogbookSiren",
+        "이 일지에 나온 단서들을 따라가면 한때 사이렌들이 살던 곳에 가게 될 듯하군. 사이렌 이야기가 나에게는 그냥 신화 같네만, 신화에는 일말의 진실이 있게 마련이지. 들으면 홀려 버린다는 사이렌의 노래를 막으려면 귀를 뭔가로 틀어막아야 할지도 모르겠군. 그러고 나면 직접 조사하고 진실이 무엇인지 알 수 있겠지. 어떤가, 유배자여?"
+      ],
+      [
+        "DannigLogbookMonkeyTribe",
+        "내가 이 일지를 제대로 해석했다면 이들은... 수화로 소통하는... 원숭이...? 부족을 만났다는 듯하네. 그곳에서는 물물교환이 이루어졌고, 정체 모를 신들을 나타낸 조각상도 있었다고 하네. 레이클라스트의 불가사의와 위험에는 거듭 놀라고 있지만, 이건 조금 못 미덥군. 함께 이 내용에 대해 조사해 보겠나, 유배자여?"
+      ],
+      [
+        "DannigLogbookLostMen",
+        "이해가 잘 되지 않는군. 이 일지에 언급된 장소 중에 최소 한 군데는 죽은 지 오래인 웬 짐승의 뼈를 숭배하는 '이름 없는 자들'의 땅이었다고 하네. 짐승에 대한 묘사가 나와 있긴 한데 나로서는 이해하기 힘들군. 자네 대륙은 이상한 곳이군그래. 그 구역을 탐험하는 데 흥미가 있는가, 유배자여?"
+      ],
+      [
+        "DannigLogbookVaalPlusBlackScythe",
+        "이건 해석하기가 쉽지 않군. 이 탐험의 기록자는 초짜였던 모양이야. 가는 길에 지난 지형지물을 지루하게 나열하고 있네... 알 만한 언덕과 강, 산맥 따위 말일세... 그런데 전투에 대해서는 아주 소상히 적었다네. 석궁 화살이 '이국적인 옷차림을 하고 휘청거리는 자들의 목과 심장에 박혔다'는 내용이 몇 페이지나 이어지는군. 젊은 것들이 피에 굶주린 개인 건 수천 년 전에도 마찬가지였던 모양일세.\r\n\r\n이 설명을 보면 바알 현장일 가능성도 있네만, 그들의 옷차림이 자세하게는 묘사되어 있지 않다네. 석궁을 썼다는 것을 보면 검은 낫의 작품일 수도 있겠지. 이 일지의 설명과 일치하는 장소들이 몇 군데 있다네. 자네 생각은 어떤가?"
+      ],
+      [
+        "DannigLogbookVaalPlusKnights",
+        "바알의 저주받은 도시들을 처음 탐험한 것은 태양의 기사단이었다네. 이 일지는 그 당시의 것일세. 그들이 레이클라스트에 막 당도해서 그 영광스럽고 빛나며... 휘청거리는 괴물이 득시글거리는 제국을 발견한 직후 말이지. 나는 도대체 무슨 끔찍한 일이 있었기에 하나의 문명이 완전히 무너진 것인지, 상상조차 할 수가 없네. 모르는 편이 나을지도 모르겠네만.\r\n\r\n그들의 발걸음을 따라 가 보겠나, 유배자여?"
+      ],
+      [
+        "DannigLogbookVaalPlusOrder",
+        "이 일지는 우트레드가 힘의 마석은 부정하므로 만져서는 안 된다고 단언했던 것에 대해 꽤나 자세히 설명하고 있군. 이 마석들은 주로 침묵의 바알 제국에서 휘청거리는 망자들에게서, 아니 그들의 <i>{몸 안}에서 나왔다고 하네. 그러니 그럴 만도 하지. 우리 민족이 그 교훈을 빨리 깨달은 건 희한하네만 자네는... 뭐, 자네가 나보다 마석에 대해서 더 잘 아니 말일세. 어찌하면 좋겠는가, 유배자여?"
+      ],
+      [
+        "DannigLogbookVaalPlusDruids",
+        "이 일지 말일세... 내가 읽은 걸 입 밖으로 내고 싶지가 않군. 끊어진 원의 드루이드들은 과거를 들여다 볼 수 있는 능력이 있다고 주장했고, 그래서 당연하게도 죽고 텅 빈 채로 레이클라스트에 뻗어 있는 바알 제국의 운명을 이해하려 했다네. 이 일지는...\r\n\r\n 아닐세. 나는 공포를 마주할 수 있어. 자네만 괜찮다면 가세, 유배자여."
+      ],
+      [
+        "DannigLogbookGeneric",
+        "이 일지에 나온 지형지물들은 우리의 현재 지도에서 두드러지는 것들과는 전혀 맞지 않네. 세월이 지나면서 지형이 너무 바뀌어 버렸어. 겨우 짐작만 할 수 있을 뿐이네. 자네가 목적지를 정해 볼 텐가?"
+      ],
+      [
+        "DannigLogbookOlroth",
+        "믿을 수가 없군! 우리가 드디어 찾아낸 것인가! 이 일지에는 자신들의 가장 위대한 지도자가 어디로 갔는지 간절히 알아내려 했던 한 기록자가 남긴 최후의 기록들이 적혀 있네. 이 글을 봤을 때, 이 유적지들 중 한 곳에 바로 그 올로스의 최후의 안식처가 있을지도 모르겠네!\r\n\r\n나와 함께 전설 속으로 걸어가 보겠나, 유배자여?"
+      ],
+      [
+        "DannigLogbookVorana",
+        "한 초짜 기록자가 보로나가 마지막 저항을 하며 갔던 학살의 길을 따라간 모양이야. 그가 묘사하는 지형을 따라 그의 발자취를 따라가다 보면 보라나의 최후의 안식처를 찾을 수 있을지도 모르겠네.\r\n\r\n솔직하게 말하면, 나는 조금 망설여진다네. 보라나는 누구의 말을 들어도 생전에 아주 공포스러운 전사였다고 하니까. 죽은 보라나는 자네의 실력으로도 대적하기 힘든 존재일 수도 있다네. 자네의 선택에 달렸네, 유배자여."
+      ],
+      [
+        "DannigLogbookMedved",
+        "네 명의 위대한 영웅들 중에 메드베드가 가장 신비로웠다네. 그의 자연 신비술사들은 대자연 곳곳의 안식처들을 지키며 관리했지. 그가 레이클라스트의 어둠 때문에 미쳐 버렸다고 해도, 그 안식처들을 악한 목적으로 사용했을 수도 있네. 이 일지에 적힌 정보를 참고하면 그가 있을 법한 곳을 찾을 수 있을 걸세. 선택은 자네에게 맡기겠네, 유배자여."
+      ],
+      [
+        "DannigLogbookUhtred",
+        "우리 민족의 역사 최후의 시기에, 수석 기록자는 다가오는 종말로부터 탈출하려고 남은 생존자들과 함께 달아났다네. 이게 바로 그의 일지라네, 유배자여! 이걸 보면 성배단이 무언가 발견했다고 하네... 웬 정체 모를 유물이었는데... 이 기록자가 아는 것이라곤 가장 나이가 많은 노인들도 그것의 힘을 알아채고 그 주변에 성소를 지었다는 것 뿐이었다네.\r\n\r\n우트레드가 보라나의 분노를 피해 도망쳐 간 곳이 그곳이었지. 생존자들은 그곳에 가면 우트레드가 있을 거라 생각했지만, 기록은 목적지를 바로 앞에서 끊긴다네. 그들의 발자취를 따라가 보겠나?"
+      ],
+      [
+        "DannigGossipOrigin",
+        "우리는 칼구르라네. 우리는 평생 일말의 명성이라도 거머쥐기 위해 필멸의 생이라는 오물과 진창 속에서 뒹굴지. 전장에서 명성을 찾는 이가 있는가 하면, 누군가를 섬기며 찾는 이도 있다네. 또한 불가능한 임무를 띠고 인간이 아는 세계의 끝으로 항해하는 이도 있지. 우리의 선택이 우리가 무엇인지를 결정하고, 그 무엇이 곧 전설이 된다네."
+      ],
+      [
+        "DannigGossipRunes",
+        "우리의 갑옷에 있는 룬은 본질적으로는 별빛을 사로잡아 형체로 빚어낸다네. 시적으로 들리지만, 속지 말게나. 칼구르의 대장장이들은 오래전, 이 룬에 화살이 표적을 찾게 하고 칼날이 더 깊이 박히게 하는 힘이 있다는 사실을 알자마자 룬을 살육에 이용하기 시작했다네. 가장 위대한 대장장이들은 장인이라 불리게 되었고, 천재적인 작품을 만들어 내었네. 그런 유물은 많지 않았지만, 많을 필요가 없기도 했지."
+      ],
+      [
+        "DannigGossipTriskelionFlame",
+        "우리가 아는 가장 강력한 유물은, 수천 년 전 이 대륙에 처음 발을 디딘 탐험대가 이곳에 가져왔다네. 옛 노래에 따르면 그것은 악을 불태우고 더럽혀진 들판을 정화하며 악의를 품은 자들을 물리친다고 하지. 지금 같은 난세에는 그런 유물이 특히 유용할 텐데 말일세... 그러나 그것을 찾으려면 우리는 오래전에 이곳을 지나간 영혼들의 발자취를 따라가야만 하네. 트리스켈리온의 불길의 최후를 알아내려면 그 방법밖에 없지."
+      ],
+      [
+        "DannigGossipGems",
+        "<i>{자네}는 그 형형색색의 마석들이 자네에게 힘을 준다고 생각하겠지? 나도 알고 있네, 유배자여. 나도 그것을 구한 적이 있었고, 저 현지인 타클레이의 말을 빌리자면 그것을 '활성화'하려고까지 해 봤지만, 아무 일도 일어나지 않더군. 의심이 많다고 해도 좋네. 그렇지만 내가 보기에 그 힘은 본래 자네 내면에 있던 것일세."
+      ],
+      [
+        "DannigGossipGods",
+        "나는 이곳에 발을 디디기 전에 이 '신들'이란 존재에 대해 들어 본 적이 없지만, 최소한 자기가 신이라 생각할 만한... <i>{인간}은 한 명 알고 있네. 고향 사람들에게는 신성에 대한 이야기는 안 하는 게 좋겠지."
+      ],
+      [
+        "DannigGossipTheKing",
+        "나는 그... <i>{인간}에 대해서는 말하지 않겠네."
+      ],
+      [
+        "DannigSagaBeforeArrival",
+        "그 징조의 참된 의미를 헤아릴 수는 없었지만, 그것이 징조였다는 사실은 누구도 부정할 수 없었다. 땅이 뒤흔들리고, 밤의 구름들이 달아나고, 사람들은 벌벌 떨며 숨고, 별똥별들이 하늘을 가로지르며 떨어져서 우리의 숲에 불을 질렀으며, 지평선에는 붉은 태양이 떠올랐다. 그 빛이 어찌나 강렬했는지 반달이 불그스름한 보름달로 변할 정도였다."
+      ],
+      [
+        "DannigSagaTheJourneyI",
+        "아주 경이롭고도 끔찍한 일이 일어났고, 그래서 캐디건 3세는 가장 강한 전사들에게 트리스켈리온의 불길의 비호를 받으며 지평선을 향해 원정을 떠나라고 명했다. 의무로써 그 불길에 매여 있었던 나는 수석 기록자가 되었다. 우리는 그 달이 다 가기 전에 출발했다."
+      ],
+      [
+        "DannigSagaTheJourneyII",
+        "험난하고 성난 바다를 건너는 여정은 거의 두 계절이나 이어졌다. 그동안 붉은 번개를 휘감은 검은 구름이 하늘을 덮어, 우리는 하늘을 거의 보지 못했다. 우리는 빗물을 마실 수도 생선을 먹을 수도 없었다. 결국 트리스켈리온의 불길이 물과 고기를 정화해 주었으나, 그래도 목숨을 부지하기가 쉽지 않았다. 저장품은 바닥이 나고 저 멀리 육지가 보일 때쯤에는 모두가 굶주린 상태였다."
+      ],
+      [
+        "DannigSagaArrivalI",
+        "이 땅에 처음 발을 디딘 자는 모래 밑에 숨어 있던 아가리에 발을 잃고 말았다. 징조는 확실하게 드러나지 않는 법. 우리는 간신히 물속의 괴물들을 물리치며 모래언덕을 가로질러 죽음의 길을 헤쳐 나간 끝에, 나무 사이에서 휘청거리는 끔찍한 것들과 맞딱뜨렸다. 한 발을 옮길 때마다 피로 대가를 치러야 했다."
+      ],
+      [
+        "DannigSagaArrivalII",
+        "일곱 번째 밤에 마침내 그 으스스한 구름이 잠시 걷히고, 우리의 축복받은 별들이 보였다. 올로스는 우리의 방어선 가운데에 트리스켈리온의 불길을 지폈다. 장벽을 세우는 의식이 끝나자 우리는 조금이나마 안전해졌다. 그리고 그곳에서부터 모든 것이 뻗어 나갔다. 나무에서 꽃이 피듯이."
+      ],
+      [
+        "DannigSagaArrivalIII",
+        "태양의 기사단이 내륙으로 들어가면서, 우리는 고향 땅의 것과 견줄 만큼 어마어마한 제국의 유적들을 발견했다. 불탄 채 널브러진 사체들의 수를 셀 수도 없었지만, 안식을 취하기를 거부하는 자들 역시 수를 셀 수 없었다. 대부분은 눈길을 끌며 우리를 유혹하는 번쩍이는 마석을 지니고 있었다. 걸어다니는 흉물들의 팔다리 안에 마석이 박혀 있었던 것이다. 우트레드가 그것을 보고 그 보석들은 부정하다고 단언했고, 우리 누구도 토를 달지 않았다."
+      ],
+      [
+        "DannigSagaArrivalIV",
+        "죽은 제국 전체에 산더미 같은 금이 쌓여 있었고, 대부분은 산 송장 중에서도 가장 위험하고 가장 화려하게 차려입은 것들이 지키고 있었다. 그 귀족들과 사제들은 괴물 같은 형상을 하고서도, 목숨보다도 소중했던 것들을 포기하기를 거부하며 보물 근처를 배회하고 있었다. 그들은 달아나려던 자들과는 달리, 길에서 죽지 않았다. 그들은 신전을 잠그고 방벽을 세워, 스스로의 무덤에 틀어박힌 것이었다."
+      ],
+      [
+        "DannigSagaArrivalV",
+        "웃자알의 귀족들은 수문을 개방해 스스로 수장되는 길을 택했다. 고통 없이 죽기 위해서가 아니라 미래의 약탈자들을 막기 위해서였다. 이곳은 광인들이 다스리는 제국이었다. 그들의 계획은 어느 정도 성공했다. 우리는 그 치명적인 물을 뺄 수가 없었던 것이다. 그들의 보물은 영원히 그곳에 잠들어 있을 것이다. 그러나 그 외의 도시들은 서서히, 그리고 꾸준히, 상상을 초월하는 부의 원천이 되어 주었다."
+      ],
+      [
+        "DannigSagaColonisationI",
+        "캐디건 3세는 이 새 땅과 보물은 마음껏 차지해도 되는 것이라고 생각했다. 장인들이 먼저 왔고, 곧이어 상인과 자유민을 가득 태운 배가 연달아 당도했다. 자연히 여자와 아이들이 뒤따랐고, 3년이 지났을 때쯤, 최초의 마을 헌장이 만들어졌다. 트리스켈리온의 불길이 밝게 타오르는 한 모든 것이 풍요로웠지만, 머지않아 사람이 너무 많아져서 모두가 불길의 가호 안에 머물 수가 없게 되었다."
+      ],
+      [
+        "DannigSagaColonisationII",
+        "검은 낫 용병단은 보라나의 지휘 아래 방어와 말살의 전략을 완성해 나아가며, 우리가 보호할 수 있는 영역을 확장해 갔다. 거리를 벌리는 것이 핵심이었다. 보라나의 병사들은 튼튼한 벽 뒤에서 쇠뇌를 쏘며, 괴물이 움직이지 못할 때까지 쏘는 식으로 하나씩 하나씩 처치해 나아갔다. 이 저주받은 대륙을 그처럼 간단하고 흔한 방법으로 정복할 수 있다고 생각했던 우리는 얼마나 발칙했던가. 그 해에만 열 개의 마을이 더 생겨났다."
+      ],
+      [
+        "DannigSagaColonisationIII",
+        "길고 긴 교역로를 따라 섬사람들과 산사람들 사이에서 교역이 시작되었다. 서로 언어도 다르고 이해도 하지 못했으나. 나는 섬사람들의 노래를 나중에 해석하기 위해 기록해 두었고, 산사람들 사이에서 몰락한 제국의 생존자들도 만났다."
+      ],
+      [
+        "DannigSagaColonisationIV",
+        "몰락한 제국의 몇 안 되는 생존자들은 우리가 휘청이는 망자들에게서 본 마석을 지니고 있지 않았다. 내가 흙에 보석 모양을 그렸더니 그들은 기겁을 했고, 우리는 산에서 추방당했다. 이 말을 전해 들은 캐디건 3세는 공식적으로 그 보석들을 금했고 그때부터 마석은 채집되지도, 본토로 수입되지도 않았다."
+      ],
+      [
+        "DannigSagaDarknessDescendsI",
+        "본토에서 캐디건 4세의 위세가 하늘을 찌르던 시절에는 마을의 수를 셀 수도 없었다. 반대파나 빈민, 종교적 소수자, 외면받던 이들은 새로운 땅에서 새로운 삶을 건설하고자 하였고, 기사들의 속박으로부터 벗어나기를 간절히 소망했다. 바로 이 외곽 지역 사람들이 새롭게 닥친 공포를 처음으로 맞닥뜨렸고, 이들은 자기 힘으로 이겨 내지 못할 위험과 씨름하고 있다는 사실을 외지인에게 인정하고 싶지 않아 침묵을 지켰다."
+      ],
+      [
+        "DannigSagaDarknessDescendsII",
+        "변경 지역에서 죽은 사람들은 예외 없이 밤에 휘청거리며 다니는 괴물로 변했다. 트리스켈리온의 불길로도 이 땅의 저주는 풀리지 않았고, 사람들이 죽어 나가면서 저주는 더욱 견고해질 뿐이었다."
+      ],
+      [
+        "DannigSagaDarknessDescendsIII",
+        "메드베드의 자연 신비술사들은 사람이 죽을 때 몸에서 빠져나가는 숨결, 혹은 기운을 발견했다고 선포했다. 그 사람이 금단의 마석 근처에서 죽음을 맞이했을 때에만, 그리고 그 기운이 마석 쪽으로 빨려들어가는 순간에만 보인다고 했다. 더불어 메드베드는 모든 인간에게 아직 밝혀지지 않은 정수를 지니고 있다고도 했는데, 이에 우트레드는 이 발언이 신성 모독이라며 메드베드의 교단에 유배 명령을 내렸다. 이에 메드베드는 유배를 면하려고 거액의 돈을 냈고, 그로써 갈등이 해결되었다."
+      ],
+      [
+        "DannigSagaDarknessDescendsIV",
+        "그 해 겨울, 변경 지역으로 떠났던 상인들과 파발들이 돌아오지 않자 올로스는 차디찬 숲과 언덕으로 태양의 기사단을 보내서 사람들을 찾게 했다. 변경 지역 사람들은 수가 크게 줄어 있었고, 난생처음 보는 괴물들에게 포위당한 채였다."
+      ],
+      [
+        "DannigSagaDarknessDescendsV",
+        "올로스는 변경 지역 사람들을 대피시키고 숲을 불태웠다. 남쪽 강가로부터 북쪽 사막까지 길게 이어지는 불길이 타올랐다. 그러나 그 극단적인 조치의 원인은 아무도 입에 올리지 않았다. 올로스는 돌아와서 트리스켈리온의 불길을 더욱 키웠으나, 별빛 방벽으로 그 광활한 영토를 보호하기엔 역부족이었다. 마을을 지켜야만 했다. 용맹한 올로스라 불리던 그는 자꾸 혼자 틀어박히게 되었고, 그리하여 음침한 올로스로 불리게 되었다."
+      ],
+      [
+        "DannigSagaOlrothsJournalI",
+        "참으로 잔혹한 봄이었어라! 어두운 달밤, 휑한 눈의 마귀가 목숨을 하나 더 앗아갔다. 이번에는 두 번째 통과 의례를 치른 후에 전사 훈련을 받을 예정이었던 젊은 아가씨였다. 초기에는 많은 이들이 이 저주받은 땅의 괴물들에게 죽어 나갔지만, 나는 우리가 정화 의식을 통해 어둠을 정복했다고 생각했다.\r\n\r\n그건 착각이었다. 독성이 없는 식량을 확보하는 것과 밤의 종자들로부터 몸을 지키는 것은 전혀 다른 일이었다. 이 저주받은 땅은 마치 우리의 승리를 보고 배우기라도 하는 듯, 우리의 방어 수단을 무력화할 수 있게 그 괴물들을 조금씩 변형시켰다."
+      ],
+      [
+        "DannigSagaOlrothsJournalII",
+        "이에 메드베드와 그의 자연 신비술사들이 새로운 전술을 개발했다. 본래 교리가 금하는 방법이었으나, 그는 이곳 괴물들의 신체 능력이 빠르게 강해지며 변해 가는 것을 보았던 것이다. 메드베드는 우리의 실수가 임무를 완수하지 않은 데 있다고 말했다.\r\n\r\n우리는 가장 강한 놈들을 빼고 뒤틀린 보르니쿨리아를 모두 물리쳤는데, 그때 살아남은 놈들에게서 생겨난 놈들이 그 위험성을 물려받았다. 최후의 승리를 거두고 번창하는 마을들을 지켜 내려면, 놈들을 하나도 남김없이 죽여야만 했다. 자연의 한 자락을 완전히 제거해야 한다는 것이다. 그러지 않으면 파멸의 손아귀는 우리의 숨통을 더욱 조일 뿐이라면서."
+      ],
+      [
+        "DannigSagaOlrothsJournalIII",
+        "보르니쿨리아는 완전히 씨를 말렸으니 이제 그 독기로 이 땅을 물들이지 못하리라. 이 저주받은 땅의 그림자 속에서 그 외에도 수많은 밤의 종자들이 도사리고 있지만, 작은 승리도 승리이긴 매한가지다. 나의 기사들과 보라나의 부하들은 실력이 뛰어나, 숲과 잡목을 태우는 과정에서 희생자는 나오지 않았다. 드물게도 애도할 일이 없는 날이다.\r\n\r\n이제 미처 마무리하지 못한 일에 생각이 미친다. 휑한 눈의 마귀... 그것은 난생처음 보는 종류였다. 그 마귀 역시 횃불과 칼로써 이 세계에서 사라지도록 해야만 한다."
+      ],
+      [
+        "DannigSagaOlrothsJournalIV",
+        "휑한 눈의 마귀를 쫓던 태양의 기사단은 절반이 언덕 위에 널브러지고 말았다. 나는 검으로 그것의 목을 똑바로 베었는데, 상처에서는 피가 흐르지 않았다. 살아 있는 존재가 아니다. 마귀가 수많은 이빨로 포식을 하는 것은, 먹이를 먹고 목숨을 부지하려고 그런 것이 아니라 희생자의 비명을 들으며 즐기기 위한 것이었다. 나는 마귀의 썩어 가는 얼굴에 뚫린 두 개의 구멍을 보고, 그 사실을 알 수 있었다. 그것은... 내 종자를 물어 동강 내면서... 나를 보고 미소 지었다. \r\n\r\n필멸자의 불길은 놈을 그슬리지 못했고, 필멸자의 무기는 피 한 방울 내지 못했다. 금단의 영역에 발을 들이고 싶은 유혹이 느껴진다. 메드베드와 그의 자연 신비술사들은 이곳에서 생존하기 위하여 교리를 포기했다. 지금, 나 역시 그래야만 한다. 산지 사람들은 우리에게 힘을 지닌 마석을 조심하라 경고했지만, 이제 선택의 여지가 없다..."
+      ],
+      [
+        "DannigSagaOlrothsJournalV",
+        "대단해! 황홀하다! 나는 형편없던 검의 자루에 금단의 마석을 끼운 채로, 깊은 밤 홀로 길을 나섰다. 그리고 이번에는 마귀의 머리를 가지고 돌아왔다. 놈은 숨이 끊어지는 순간까지 웃고 있었으나, 이제 내게 정복당한 신세다. 검 공격이 빗나갔는데도, 마석은 나의 분노를 응축시켜 별빛으로 뿜어내 치명적인 타격을 날렸다.\r\n\r\n이런 힘을 거부하다니 우리가 어리석었다. 그 실수 때문에 너무 많은 사람이 고통받았다. 서광이 나무 꼭대기를 비추면, 나는 살아남은 태양의 기사단에 금단의 마석을 더 찾으라고 명령할 것이다. 드디어, 이 땅을 정복하여 영원토록 안전한 곳으로 만들 때가 됐다."
+      ],
+      [
+        "DannigSagaTheBrokenCircleI",
+        "태양의 기사들이 무기와 장비에 금단의 마석을 붙이기 시작하던 여름, 원의 드루이드를 이끄는 메드베드는 사람들을 찾아가서 말했다. \"미래-과거가 흐릿해졌습니다. 미래를 비추는 이 땅의 웅덩이는 핏빛 안개로 가려 있는 일이 많으나, 그것과는 전혀 다른 현상입니다. 올로스가 홀로 떠나던 그날 밤부터 제게는 과거가 보이지 않습니다. 그래서 미래도 알 수가 없지요.\" 그 후로 그의 교단은 끊어진 원의 드루이드라고 불리게 되었다."
+      ],
+      [
+        "DannigSagaTheBrokenCircleII",
+        "한 두건을 쓴 여인이 광장에서, 휑한 눈의 마귀의 머리가 꽂힌 창 아래에서 메드베드에게 말했다. \"그 말은, 신앙을 잃었다는 뜻입니까, 고위 드루이드여?\"\r\n\r\n이에 메드베드가 대답했다. \"과거를 탐구하지 않는 자는 과거를 반복할 수밖에 없으나, 과거를 탐구하지 못하는 자에게는 미래가 아예 없습니다. 원이 끊어졌습니다.\"\r\n\r\n그러자 여인은 두건을 벗고 검은 낫 용병단의 단장인 보라나로서 답했다. \"그러면 함께 무기를 들고 함께 싸워 나아가며 과거와 미래 사이의 간극을 메워 보지요.\"\r\n\r\n메드베드는 보라나가 선물한 도끼 두 개를 받고 드루이드들에게 전투 훈련을 시키기 시작했다. 두 개의 도끼에는 손잡이에 마석이 박혀 있었기에, 어마어마한 힘을 지니고 있었다."
+      ],
+      [
+        "DannigSagaTheBrokenCircleIII",
+        "끊어진 원의 드루이드와 검은 낫 용병단은 휑한 눈의 마귀와 싸우느라 전력의 절반을 잃은 태양의 기사단을 지원하여, 변경 지역 근처에 군세를 집결시켰다. 별빛 방벽은 넓게 뻗어 있었지만 약했고, 새로 힘을 얻은 전사들은 마석의 힘을 사용해 밤마다 찾아오는 괴물들을 막아 냈다. 이런 교착 상태가 유지되는 동안 계절이 몇 번이나 바뀌었고, 그동안 많은 영웅들이 무공으로 명성을 떨치기도 하였다. 한편 메드베드와 보라나의 딸 아네스트는 고향으로 가서 안전하게 성장하고 있었다. 첫 번째 통과 의례를 앞둔 올로스의 아들이 아네스트의 보호자로 동행했다."
+      ],
+      [
+        "DannigSagaTheBrokenCircleIV",
+        "생각지도 못 했던 일이 일어나면서 공포가 전군을 휩쓸었다. 뒤틀린 괴물들 무리에 우두머리가 생긴 것이었다. 그자는 지능적인 판단을 내리고 지휘를 할 수 있었다. 괴물들은 별빛 방벽이 가장 약한 곳이나, 정찰대가 지나가지 않는 곳을 노려 공격하기 시작했다. 입 밖에 내기도 저어되는 끔찍한 생각에 사로잡힌 메드베드는, 어둠 속으로 전령을 보냈다. 전령은 용케 양피지를 가지고 살아 돌아왔다. 종이에 적힌 내용을 보고 자신의 우려가 옳았다는 것을 알게 된 메드베드는 깊은 밤, 적의 우두머리에게 결투를 청하러 떠났다. 그리고 돌아오지 않았다."
+      ],
+      [
+        "DannigSagaThePriesthoodI",
+        "메드베드가 종적을 감춘 계절에는, 세상 어디에나 사제들의 눈과 귀가 있었다. 배신 가능성에 생각이 미친 고위 사제 우트레드는 입회자들을 시켜 다른 지도자들의 일거수일투족을 몰래 감시하게 하였다. 이들은 음침한 올로스가 종일 지쳐 빠질 때까지 싸운 후에 거처로 돌아가 혼자 틀어박힌다는 것을 알아냈다. 그리고 잠시 후 다른 문으로 빠져나가 남몰래 밤을 헤맨다는 것이었다. 마치 잠을 자는 듯이 눈을 감은 채로."
+      ],
+      [
+        "DannigSagaThePriesthoodII",
+        "우트레드는 비뚤어진 계획을 세우면서, 보복을 피할 생각으로 아들 오웬을 고향으로 보냈다. 수확을 하고 일주일이 지난 어느 추운 밤, 사제 열둘이 올로스의 요새 앞에서 그가 나오기를 기다렸다. 그리고 성례에 사용되는 단검으로 몽유 상태의 올로스를 찔렀다. 그는 일흔 하나의 상처를 입고 쓰러졌다. 그리고 그때 보라나가 검은 바람처럼 나타나 열두 사제의 목을 한 번에 베어 버렸다."
+      ],
+      [
+        "DannigSagaThePriesthoodIII",
+        "사람들은 올로스를 상여에 눕히고 약과 붕대, 약초로 치료했다. 모두 사제단의 피를 요구하며 울부짖었지만, 우트레드는 열두 배신자를 전혀 모른다고 주장했다. 위대한 지도자가 죽음의 문턱에 이르자, 사람들은 그를 유리관 에 모셔 숨결이 빠져나가지 못하게 했다."
+      ],
+      [
+        "DannigSagaThePriesthoodIV",
+        "한 두건을 쓴 여인이 광장에서, 휑한 눈의 마귀의 머리가 꽂힌 창 아래에서 우트레드에게 말했다. \"어째서 사제들이 올로스를 덮쳤다고 생각하십니까?\"\r\n\r\n우트레드는 답했다. \"왜 올로스가 밤마다 몰래 나갔다고 생각하오? 그가 뒤틀린 괴물들의 우두머리가 되었기 때문이오. 낮에는 우리 편에서 싸우고 밤에는 저들을 위해 싸운 거요.\"\r\n\r\n그러자 여인은 두건을 벗고 검은 낫 용병단의 단장인 보라나로서 답했다. \"그런 말을 하다니 당장 죽여 주마.\"\r\n\r\n낫이 턱밑까지 들어오자 우트레드가 말했다. \"날 죽이겠다면 일주일 후에 죽이시오. 올로스가 저 유리 관에 누워 있는 동안 적들이 힘이 빠지거나 흐트러지는 모습이 보이면 내 말이 옳은지 틀린지 알게 될 거요.\"\r\n\r\n이에 보라나는 이렇게 답했다. \"만약 그 말이 틀리다면 휑한 눈의 마귀에게 너를 먹일 것이다.\"\r\n\r\n그리고 보라나는 자리를 떴다. 그 주에는 적이 힘이 빠지거나 흐트러지는 모습이 보이지 않았고, 우트레드는 힘을 지닌 고대의 터로 피신했다."
+      ],
+      [
+        "DannigSagaTheLastToFallI",
+        "보라나가 그를 죽이겠다 맹세한 주에, 괴물들 속에서 새로운 우두머리가 나타났다. 그자는 도끼 두 개를 휘두르며, 명성을 얻은 영웅들을 찾아가서 결투를 청했다. 하룻밤에 하나씩, 마흔 둘이 그자의 손에 죽어 나갔다. 보라나는 그 흉물을 마주하고 그것이 사랑하는 메드베드라는 사실을 알았으나, 차마 믿을 수는 없었다. 보라나는 완전 철수를 명하였고 그의 결투 신청에 응하지 않았다. 그리고 두 마을이 초토화되었다."
+      ],
+      [
+        "DannigSagaTheLastToFallII",
+        "보라나는 우트레드의 말이 옳았다는 것을 알고 그에게 전령을 보냈다. 그 지역 전체를 애매하게 방어하기보다는 몇몇 마을이라도 확실하게 지키기 위해, 트리스켈리온의 불길을 잠재워 별빛 방벽을 후퇴시킨다는 계획이 섰다. 보라나는 살아남은 사람들을 모두 중심부로 대피시키고, 올로스의 일지에서 화염을 다스리는 의식을 설명하는 내용을 찾아 전령을 통해 우트레드에게 보냈다."
+      ],
+      [
+        "DannigSagaTheLastToFallIII",
+        "중심부에 있는 마을들은 갑작스러운 인파에 혼잡해졌고, 사면초가에 몰린 태양의 기사단과 검은 낫 용병단, 끊어진 원의 드루이드들은 모두 후퇴했다. 별빛 방벽은 후퇴하는 것이 아니라, 사라지고 말았다. 보라나는 급히 제단으로 갔지만 트리스켈리온의 불길은 그 자리에 없었다. 항구에 있던 배는 모조리 불타거나 가라앉았고, 오직 한 척만이 남아 항구에서 나가고 있었다.\r\n\r\n보라나는 사람들에게 외쳤다.\"배신자 우트레드가 불길을 훔쳐 갔다!\"\r\n\r\n사람들은 사방에서 거리를 좁혀 오는 괴물들을 보며 절망에 빠져 울부짖었다. 별빛 방벽이 없다는 것은, 완전한 무방비 상태라는 뜻이었기에. 중심부 마을은 벽과 무기로 보호받는 요새가 되었지만, 그 누구도 나갈 수는 없는 무덤이 되고 말았다. 많은 이들이 올로스가 잠든 곳으로 몰려갔지만 그의 유리 관은 깨져 있었다. 배신자 우트레드의 주장과 달리 올로스는 어둠 속에서 우리를 위해 싸우고 있을 것이라고, 우리는 믿어야만 한다."
+      ],
+      [
+        "DannigSagaTheLastToFallIV",
+        "보라나는 섬사람들과 산사람들에게 전령을 보내 도움을 청했지만, 그들의 행방은 아무도 알지 못한다. 수호자들은 용맹스럽게 싸웠지만, 불길이 없었기에 식량을 정화할 수가 없었다. 기근이 닥쳤고, 계절은 무정하게 지나갔다. 시름시름 말라 가던 보라나는 기다리면 죽음뿐이라는 것을 깨달았다. 그녀는 힘을 키울 방법이 있다는 것을 알고, 금단의 의식을 거행하여 자신의 몸에 마석을 박았다."
+      ],
+      [
+        "DannigSagaTheLastToFallV",
+        "보라나는 그대로 일어나 벽 밖으로 나갔다. 그녀가 낫을 크게 휘두를 때마다 밤의 괴물들이 우수수 쓰러졌다. 그들도 보라나의 힘 앞에서는 속수무책이었다. 그녀는 우리를 향해 외쳤다. \"저는 흉물이 하나도 빠짐없이 죽어 쓰러질 때까지 쉬지 않겠습니다!\"\r\n\r\n우리 중에는 보라나가 이 버림받은 땅에서 혈혈단신으로 괴물을 모두 쓰러뜨릴 수 있을 거라 생각하는 사람도 있지만, 그리 낙관적이지 않은 사람도 있다. 혹시라도 그녀가 돌아오지 않는다 해도, 빠져나갈 구멍은 하나 있다. 가장 늙은 노인보다도 더 오래되고, 땅속에 묻혀 있어 감히 아무도 시도하지 못했던 최후의 수단이 있다. 희망을 버려서는 안 된다. 이 땅에서 우리의 명맥이 이렇게 끝이 나지는 않으리라. 밤이 내리지만, 새벽은 반드시 오리라."
+      ],
+      [
+        "RogNoDealAvailable",
+        "딱히 포장해 드릴 필요는 없겠지요."
+      ],
+      [
+        "RogTakeDealRandom",
+        "딱히 포장해 드릴 필요는 없겠지요?"
+      ],
+      [
+        "RogTakeDeal2",
+        "딱히 포장해 드릴 필요는 없겠지요?"
+      ],
+      [
+        "RogTakeDeal3",
+        "우리 둘 다 이득이군요."
+      ],
+      [
+        "RogTakeDeal4",
+        "우리 둘 다 이득이군요."
+      ],
+      [
+        "RogTakeDeal5",
+        "좋은 거래로군요."
+      ],
+      [
+        "RogTakeDeal6",
+        "좋은 거래로군요."
+      ],
+      [
+        "RogTakeDeal7",
+        "도움이 되기를 바라오."
+      ],
+      [
+        "RogTakeDeal8",
+        "도움이 되기를 바라오."
+      ],
+      [
+        "RogTakeDeal9",
+        "자, 여기 있소."
+      ],
+      [
+        "RogTakeDeal10",
+        "자, 여기 있소."
+      ],
+      [
+        "RogTakeDeal11",
+        "물자와 장비 걱정은 붙들어 매시오."
+      ],
+      [
+        "RogTakeDeal12",
+        "물자와 장비 걱정은 붙들어 매시오."
+      ],
+      [
+        "RogTakeDeal13",
+        "요긴하게 쓰길 바라오."
+      ],
+      [
+        "RogTakeDeal14",
+        "요긴하게 쓰길 바라오."
+      ],
+      [
+        "RogTakeItemRandom",
+        "자, 여기 있소."
+      ],
+      [
+        "RogTakeItem2",
+        "자, 여기 있소."
+      ],
+      [
+        "RogIntroWitch",
+        "나는 로그요. 병참과 계획 담당이라오. 어떻게 지금껏 혼자 살아남았는지는 모르겠지만, 물자를 조달하는 능력으로나마 당신을 돕겠소! 전장에서 먼, 이 후방에서 말이오."
+      ],
+      [
+        "RogIntroScion",
+        "나는 로그요. 투젠에게 당신이 올 거라고 들었소! 교양 있고 야심 있는 인물이라고 하던데. 당신이 정의를 위해 싸울 것이라는 것을, 나는 알 수 있소. 나는 병참과 계획에 능하니, 물자를 조달하는 능력으로나마 당신을 돕겠소! 내 제안을 살펴보겠소?"
+      ],
+      [
+        "RogIntroRanger",
+        "나는 로그요. 병참과 계획 담당이라오. 어떻게 지금껏 혼자 살아남았는지는 모르겠지만, 물자를 조달하는 능력으로나마 당신을 돕겠소! 전장에서 먼, 이 후방에서 말이오."
+      ],
+      [
+        "RogIntroDuelist",
+        "나는 로그요. 그위넨에게 당신이 올 거라고 들었소! 실력 있는 인물이라고 하던데. 당신은 용기와 실력으로 괴물들과 싸우는 부류인 것 같은데, 맞소? 이 대륙은 위험천만하다오. 나는 병참과 계획에 능하니, 물자를 조달하는 능력으로나마 당신을 돕겠소! 내 제안을 살펴보겠소?"
+      ],
+      [
+        "RogIntroShadow",
+        "나는 로그요. 병참과 계획 담당이라오. 어떻게 지금껏 혼자 살아남았는지는 모르겠지만, 물자를 조달하는 능력으로나마 당신을 돕겠소! 전장에서 먼, 이 후방에서 말이오."
+      ],
+      [
+        "RogIntroTemplar",
+        "나는 로그요. 병참과 계획 담당이라오. 어떻게 지금껏 혼자 살아남았는지는 모르겠지만, 물자를 조달하는 능력으로나마 당신을 돕겠소! 전장에서 먼, 이 후방에서 말이오."
+      ],
+      [
+        "RogIntroMarauder",
+        "나는 로그요. 병참과 계획 담당이라오. 어떻게 지금껏 혼자 살아남았는지는 모르겠지만, 물자를 조달하는 능력으로나마 당신을 돕겠소! 전장에서 먼, 이 후방에서 말이오."
+      ],
+      [
+        "RogFirstApproachShoutRandom",
+        "안녕하시오?"
+      ],
+      [
+        "RogFirstApproachShout2",
+        "안녕하시오?"
+      ],
+      [
+        "RogFirstApproachShout3",
+        "안녕하시오?"
+      ],
+      [
+        "RogFirstApproachShout4",
+        "안녕하시오?"
+      ],
+      [
+        "RogOfferGenericRandom",
+        "필요하면 더 좋게 만들어 줄 수 있소만.."
+      ],
+      [
+        "RogOfferGeneric2",
+        "필요하면 더 좋게 만들어 줄 수 있소만.."
+      ],
+      [
+        "RogOfferGeneric3",
+        "헐값에 그걸 강화해 보지 않겠소?"
+      ],
+      [
+        "RogOfferGeneric4",
+        "헐값에 그걸 강화해 보지 않겠소?"
+      ],
+      [
+        "RogOfferDialogueWhiteSockets",
+        "칼로 안료를 살살 벗길 수 있을 것 같은데..."
+      ],
+      [
+        "RogOfferDialogueRedSockets",
+        "빨간색이 낫지 않겠소? 가시늑대 심장을 빻아서 그 가루를 바르면 된다오."
+      ],
+      [
+        "RogOfferDialogueGreenSockets",
+        "녹색이 필요하진 않겠소? 마침 나한테 이 땅의 기묘한 장비에 잘 듣는 희귀한 산성 액체가 있소."
+      ],
+      [
+        "RogOfferDialogueBlueSockets",
+        "파란색이 좀 있으면 더 보기 좋겠는데 말이오. 마침 내가 그런 일에 딱 적당한 작은 기계를 가지고 있다오. 세상에 하나뿐인 물건이지."
+      ],
+      [
+        "RogOfferJewellers",
+        "여기 홈을 좀 추가해 보지 않겠소? 그 불길한 금단의 젬을 박을 자리가 늘어날 테니!"
+      ],
+      [
+        "RogOfferFusings",
+        "포식의 호러 턱이 든 상자가 있소. '연식'은 불분명하지만, 쓸모가 있을 거요."
+      ],
+      [
+        "RogOfferChaos",
+        "이건 아예 싹 손을 봐야겠소. 한번 해 보겠소?"
+      ],
+      [
+        "RogOfferVaal",
+        "인생은 한 번뿐이라 하지 않소! 모험을 해 보시오!"
+      ],
+      [
+        "RogOfferAddModLucky",
+        "운수 좋은 날이군, 유배자!"
+      ],
+      [
+        "RogOfferRerollSuffixes",
+        "이 물건의 꽁무니에 내 룬 망치를 대도 되겠소? 설마 더 나빠지기야 하겠소?"
+      ],
+      [
+        "RogOfferRerollPrefixes",
+        "이 물건의 머리 부분을 망치로 때리면 인챈트를 조금 손볼 수 있을 것 같소."
+      ],
+      [
+        "RogOfferMaxOneMod",
+        "조그맣게 룬 문자를 새기면 쓸 만한 효과가 생길지도 모르오."
+      ],
+      [
+        "RogOfferDivineAllMods",
+        "적당한 곳에 조그맣게 룬을 새기면 어마어마한 물건이 나올지도 모르겠는데..."
+      ],
+      [
+        "RogOfferBlessedOrb",
+        "이건 조금 망가졌군. 고쳐 볼 수는 있겠지만 나도 대장장이는 아니라오."
+      ],
+      [
+        "RogOfferRemoveLowestLevelMod",
+        "무효화 룬을 살살 새기면 이 물건의 질이 확 좋아지겠는데."
+      ],
+      [
+        "RogOfferRemoveXLowestLevelMods",
+        "이 녀석은 좀 엉망이군. 무효화 룬을 여러 개 새겨 드릴까?"
+      ],
+      [
+        "RogOfferAddAPrefix",
+        "장비에 황금 키메랄 피를 한 방울 떨어뜨리면 신기한 일이 일어난다오..."
+      ],
+      [
+        "RogOfferAddAPrefixXTimes",
+        "최근에 희귀한 황금 키메랄 피가 한 상자 들어왔소. 대박을 한번 노려 보시겠소?"
+      ],
+      [
+        "RogOfferAddASuffix",
+        "장비에 검은 키메랄의 피를 떨어뜨려 본 적이 있소? 나는 그런 적이 있는데, 해 볼 만하다오. 믿어 보시오."
+      ],
+      [
+        "RogOfferAddASuffixXTimes",
+        "오늘은 검은 키메랄의 피가 병째로 있소. 잘하면 아주 잘될 수도 있다오."
+      ],
+      [
+        "RogOffersToAddUpToMaximumMods",
+        "유배자여, 당신이 마음에 드오. 그래서 고급 거래를 제안할까 한다오. 단골 손님들에게만 제안하는 것이니 비결은 묻지 마시오!"
+      ],
+      [
+        "RogOfferApplyIncubator",
+        "투자를 할 줄 아는 사람 같군. 장기적인 이득을 중시하는 모양인데, 관심 있소?"
+      ],
+      [
+        "RogOfferApplyCatalyst",
+        "현지의 지인 하나가 촉매 역할을 하는 가루를 발견했다는데 돌아오다가 죽어 버렸소. 그래서 이게 무엇인지 잘은 모르오. 장신구에 한번 써 보겠소? 아무리 잘못돼도 아예 못쓰게 되진 않겠지... 장담은 못 하겠지만."
+      ],
+      [
+        "RogOfferTwentyQuality",
+        "대닉이 물건을 끼워 팔아야 한다 하오. 탓하려면 나 말고 대닉을 탓하시오. 그냥 일일 뿐이니까. 어떻소, <i>{친구?}"
+      ],
+      [
+        "RogOfferAnoint",
+        "상해 버리기 직전인 귀한 성유가 있다오. 그냥 낭비하는 것보다는 싼값에 써 보는 게 좋을 텐데. 관심 있소?"
+      ],
+      [
+        "RogRerollInventoryRandom",
+        "물건이야 언제나 더 있소."
+      ],
+      [
+        "RogRerollInventory2",
+        "물건이야 언제나 더 있소."
+      ],
+      [
+        "RogRerollInventory3",
+        "물건이야 언제나 더 있소."
+      ],
+      [
+        "RogRerollInventory4",
+        "고급품에 관심이 있는 모양이군요."
+      ],
+      [
+        "RogRerollInventory5",
+        "고급품에 관심이 있는 모양이군요."
+      ],
+      [
+        "RogRerollInventory6",
+        "고급품에 관심이 있는 모양이군요."
+      ],
+      [
+        "RogRerollInventory7",
+        "재고가 조금 더 있소."
+      ],
+      [
+        "RogRerollInventory8",
+        "재고가 조금 더 있소."
+      ],
+      [
+        "RogRerollInventory9",
+        "재고가 조금 더 있소."
+      ],
+      [
+        "RogRerollInventory10",
+        "이 고철로 당신 모습의 조각상을 만들어 주겠소."
+      ],
+      [
+        "RogSubsequentApproachShoutRandom",
+        "살아 있었군요!"
+      ],
+      [
+        "RogSubsequentApproachShout2",
+        "살아 있었군요!"
+      ],
+      [
+        "RogSubsequentApproachShout3",
+        "살아 있었군요!"
+      ],
+      [
+        "RogSubsequentApproachShout4",
+        "하나 더 있소!"
+      ],
+      [
+        "RogSubsequentApproachShout5",
+        "하나 더 있소!"
+      ],
+      [
+        "RogSubsequentApproachShout6",
+        "하나 더 있소!"
+      ],
+      [
+        "RogSubsequentApproachShout7",
+        "주변에 괴물들이 있으니 서두르시오!"
+      ],
+      [
+        "RogSubsequentApproachShout8",
+        "주변에 괴물들이 있으니 서두르시오!"
+      ],
+      [
+        "RogSubsequentApproachShout9",
+        "주변에 괴물들이 있으니 서두르시오!"
+      ],
+      [
+        "RogHitsDetonatorRandom",
+        "내가 폭발시킬 테니 기다려 보시오!"
+      ],
+      [
+        "RogHitsDetonator2",
+        "내가 폭발시킬 테니 기다려 보시오!"
+      ],
+      [
+        "RogHitsDetonator3",
+        "내가 폭발시킬 테니 기다려 보시오!"
+      ],
+      [
+        "RogOrdersHirelingHitDetonatorRandom",
+        "누가 저 기폭 장치 좀 누르시오!"
+      ],
+      [
+        "RogOrdersHirelingHitDetonator2",
+        "누가 저 기폭 장치 좀 누르시오!"
+      ],
+      [
+        "RogBombPlacedGenericRandom",
+        "좋은 자리군요!"
+      ],
+      [
+        "RogBombPlacedGeneric2",
+        "좋은 자리군요!"
+      ],
+      [
+        "RogBombPlacedMonstersRandom",
+        "거긴 괴물들이 도사리고 있소..."
+      ],
+      [
+        "RogBombPlacedMonsters2",
+        "거긴 괴물들이 도사리고 있소..."
+      ],
+      [
+        "RogBombPlacedMonsters3",
+        "나라면 거기는 가까이 가지 않겠소."
+      ],
+      [
+        "RogBombPlacedMonsters4",
+        "나라면 거기는 가까이 가지 않겠소."
+      ],
+      [
+        "RogBombPlacedMonsters5",
+        "그러다간 죽은 자가 일어날 거요."
+      ],
+      [
+        "RogBombPlacedMonsters6",
+        "그러다간 죽은 자가 일어날 거요."
+      ],
+      [
+        "RogBombPlacedRemnantRandom",
+        "제대로 알고 하는 일이길 바라오!"
+      ],
+      [
+        "RogBombPlacedRemnant2",
+        "제대로 알고 하는 일이길 바라오!"
+      ],
+      [
+        "RogBombPlacedRemnant3",
+        "위험해 보이오만!"
+      ],
+      [
+        "RogBombPlacedRemnant4",
+        "위험해 보이오만!"
+      ],
+      [
+        "RogBombPlacedRemnant5",
+        "정말 거기 설치해도 괜찮겠소?"
+      ],
+      [
+        "RogBombPlacedRemnant6",
+        "정말 거기 설치해도 괜찮겠소?"
+      ],
+      [
+        "RogBombPlacedTreasureRandom",
+        "과연 무엇을 발굴하게 될지..."
+      ],
+      [
+        "RogBombPlacedTreasure2",
+        "과연 무엇을 발굴하게 될지..."
+      ],
+      [
+        "RogBombPlacedTreasure3",
+        "옳지! 보물을 찾아보시오!"
+      ],
+      [
+        "RogBombPlacedTreasure4",
+        "옳지! 보물을 찾아보시오!"
+      ],
+      [
+        "RogBombPlacedTreasure5",
+        "고대 조각품이 나오면 좋겠군!"
+      ],
+      [
+        "RogBombPlacedTreasure6",
+        "고대 유물이 나왔으면 좋겠군."
+      ],
+      [
+        "RogAllBombsPlacedRandom",
+        "준비됐소?"
+      ],
+      [
+        "RogAllBombsPlaced2",
+        "준비됐소?"
+      ],
+      [
+        "RogAllBombsPlaced3",
+        "그게 다요."
+      ],
+      [
+        "RogAllBombsPlaced4",
+        "그게 다요."
+      ],
+      [
+        "RogAllBombsPlaced5",
+        "폭파할 때인 것 같소?"
+      ],
+      [
+        "RogAllBombsPlaced6",
+        "폭파할 때인 것 같소?"
+      ],
+      [
+        "RogCombatLineRandom",
+        "안 돼!"
+      ],
+      [
+        "RogCombatLine2",
+        "안 돼!"
+      ],
+      [
+        "RogCombatLine3",
+        "가까이 오지 마!"
+      ],
+      [
+        "RogCombatLine4",
+        "가까이 오지 마!"
+      ],
+      [
+        "RogCombatLine5",
+        "사람 살려!"
+      ],
+      [
+        "RogCombatLine6",
+        "사람 살려!"
+      ],
+      [
+        "RogCombatLine7",
+        ""
+      ],
+      [
+        "RogCombatLine8",
+        ""
+      ],
+      [
+        "RogCombatLine9",
+        "건드리지 마!"
+      ],
+      [
+        "RogCombatLine10",
+        "건드리지 마!"
+      ],
+      [
+        "RogPartingShout",
+        "다음으로는 대닉을 만날지도 모르겠는데, 내가 당신 이야기를 해 두겠소."
+      ],
+      [
+        "RogGossipTujen",
+        "그 친구만큼 의리 있는 친구를 만나긴 힘들 거요. 그는 인정하려 들지 않겠지만 그의 몸에 있는 흉터나 부상은 다 우리를 위해 몸을 날려 공격을 막다 생긴 것이거든. 그 친구가 아니었으면 그위넨은 몸 반쪽이 뭉개졌을 테고 나는 다리 하나가 없을 거요... 그런데 투젠이 우리 앞을 막아섰지. 내가 여기서 그나마 안심하고 일을 할 수 있는 건 그 친구 덕분이오."
+      ],
+      [
+        "RogGossipGwennen",
+        "절대 거짓말을 하지 않는 여자요. 듣고 싶은 대로 들으시오."
+      ],
+      [
+        "RogGossipDannig",
+        "우리의 카리스마 넘치는 대장 말이군. 그 직책에 어울리는 남자라오. 매사 앞에 나서서 이끌지. 나는 멀리서 안전하게 전방을 지원하는 편을 선호하는데, 대장은 큰 인물답게 그런 나를 봐준다오. 나도 여행과 모험은 할 만큼 했는데, 그럴 때마다 사람들은 나를 무장시키고 전투 훈련을 지키려고 하더군. 그래야만 명성을 얻을 수 있다면서 말이오... 하지만 나는 세계에서 가장 유명한 병참 전문가가 되는 것이 목표라오. 이름만 대면 아는 바로 그 로그가 식량과 장비를 어찌나 신속하고 안정적으로 조달하는지, 양편의 전사들을 공히 감탄시키고 승리를 불렀다는 이야기가 널리 전해지게 될 거요. 대닉은 그것도 가치 있는 꿈이라고 하더군. 참 좋은 친구라오."
+      ],
+      [
+        "RogGossipTheKing",
+        "아아... 나는... 그 이야기는 하고 싶지 않소. 칼구르의 왕에 대한 말을 입에 올릴 때는 명예와 존경을 담아야만 하오. 만약 불경을 저지른다면... <i>{그분의 귀에 들어갈 거요.}"
+      ],
+      [
+        "RogGossipTheOrderOfTheChalice",
+        "나는 우트레드와 성배단의 최후를 알아내겠다고 명예에 걸고 맹세했소. 성배단의 징표와 룬을 지닌 물건이라면 무엇이든 사들이겠소. 초창기 레이클라스트로 떠난 배에 탔던 사제단이자 교단이었는데, 별을 읽고 신비로운 힘들의 작용을 해석했다오. 그래서 연금술, 기계, 룬에 조예가 깊었지. 나도 항상 성배단에 합류하고 싶었다오. 연구실에 틀어박혀 연구를 하며 세월을 보내는 것도 괜찮을 듯했거든."
+      ],
+      [
+        "RogGossipUhtred",
+        "수천 년 전 마지막으로 고향에 전해진 전갈은, 우트레드를 부정적으로 표현했다오. 그를 배신자라 하는 사람도 있었지만, 구체적인 내용은 듬성하고 일관성이 없었다오. 나는 그의 오명을 씻거나... 아예 그에게 낙인을 찍으려고 왔소. 진실은 무엇보다 중요한 법이니."
+      ],
+      [
+        "RogGossipUhtredAndStory",
+        "우트레드가 배신자였던 것 같긴 하지만, 왠지 이야기가 아직 완성되지 않았다는 느낌이 든다오. 이 소식을 고향에 전하기 전에 이야기를 마저 밝혀 주겠소, 유배자? 이건... 내게는 중요한 일이라오."
+      ],
+      [
+        "RogGossipUhtredDefeatedStoryIncomplete",
+        "우트레드가 마침내 안식에 들었단 말이오? 그렇군. 이로써 고대 영웅의 고통이 끝이 나기는 했군요. 나는 우트레드가 고향으로 돌려보냈던 아들 오웬의 후손이라오. 나의 조상이 어둠 속에서 계속 고통받고 있진 않을 거라 생각하니 마음이 한결 가볍소."
+      ],
+      [
+        "RogGossipUhtredDefeatedStoryComplete",
+        "우트레드가 트리스켈리온의 불길을 가지고 있지 않았다면, 그는 배신자라 아니라오. 물론 의심스러운 일을 많이 벌이기는 하였으나, 내가 판단하기에 그 속뜻만큼은 옳았다오. 이제 당신이 모은 물건들을 고향으로 보내, 우트레드의 이름이 경멸이 아닌, 경의를 받도록 하겠소.\r\n\r\n고맙소, 친구. 덕분에 우리 역사... 아니, 나의 역사를 제대로 알게 됐소. 나는 사실 우트레드가 고향으로 돌려보냈던 아들 오웬의 후손이라오. 당신 덕분에 우리 혈통의 오점을 씻을 수 있었소. 이것으로 고향에서는 힘의 균형이 바뀔지도 모르겠군..."
+      ],
+      [
+        "RogGossipOlrothAndUhtredDefeatedStoryComplete",
+        "대닉에게 올로스를 만나 함께 쓰러뜨렸다고 전해 들었소! 틀림없이 시대의 전투였겠군!\r\n\r\n그런데 여전히 이해가 안 가는 부분이 있소. 우트레드가 트리스켈리온의 불길을 가지고 있지 않았다면, 올로스가 훔친 것이 아니겠소? 대닉 말로는 올로스에게는 불길이 없었다고 하는데... 그렇다면 누가 가져갔단 말이오? 그 운명의 날에 누가 배를 불태우고 혼자 떠나갔단 말이오? 이상하오. 왠지 찜찜하단 말이오, 유배자. 그때의 사건들 뒤에서... 누군가, 아니면 <i>{뭔가}가 흔적 없이 움직이고 있었다는 불길한 느낌이 든다오... 우리에게는 진실의 작은 조각들만이 있을 뿐이고, 우리가 서로에게 말하는 것이 곧 역사라는 이야기가 생각나는군요. 우리는 <i>{하나뿐인} 진실을 발굴한 것이 아니라, 여러 진실 <i>{중에 하나}를 발굴했을 뿐인 거요. 실로 충격이로군. 조상들이 아주 멀게만 느껴진다오.\r\n\r\n어쨌든 우리는 이대로 계속 가는 수밖에 없소, 친구."
+      ],
+      [
+        "RogReopenDealRandom",
+        "내 제안은 아직 유효하다오."
+      ],
+      [
+        "RogReopenDeal2",
+        "내 제안은 아직 유효하다오."
+      ],
+      [
+        "RogReopenDeal3",
+        "내 제안은 아직 유효하다오."
+      ],
+      [
+        "VoranaEmerge",
+        "이 땅이 정화될 때까지 쉬지 않으리라!"
+      ],
+      [
+        "VoranaPerishRandom",
+        "사라져라!"
+      ],
+      [
+        "VoranaPerish2",
+        "사라져라!"
+      ],
+      [
+        "VoranaPerish3",
+        "사라져라!"
+      ],
+      [
+        "VoranaDeathWindRandom",
+        "죽음의 바람이여!"
+      ],
+      [
+        "VoranaDeathWindRandom2",
+        "죽음의 바람이여!"
+      ],
+      [
+        "VoranaDeathWindRandom3",
+        "죽음의 바람이여!"
+      ],
+      [
+        "VoranaFallBeforeMeRandom",
+        "내 앞에 쓰러져라!"
+      ],
+      [
+        "VoranaFallBeforeMe2",
+        "내 앞에 쓰러져라!"
+      ],
+      [
+        "VoranaFallBeforeMe3",
+        "내 앞에 쓰러져라!"
+      ],
+      [
+        "VoranaCutYouDownRandom",
+        "베어 주마!"
+      ],
+      [
+        "VoranaCutYouDown2",
+        "베어 주마!"
+      ],
+      [
+        "VoranaCutYouDown3",
+        "베어 주마!"
+      ],
+      [
+        "VoranaForTheKingRandom",
+        "왕을 위하여!"
+      ],
+      [
+        "VoranaForTheKing2",
+        "왕을 위하여!"
+      ],
+      [
+        "VoranaForTheKing3",
+        "왕을 위하여!"
+      ],
+      [
+        "VoranaToTheDeathRandom",
+        "죽음을 위하여!"
+      ],
+      [
+        "VoranaToTheDeath2",
+        "죽음을 위하여!"
+      ],
+      [
+        "VoranaToTheDeath3",
+        "죽음을 위하여!"
+      ],
+      [
+        "VoranaCullRandom",
+        "쓰러져라!"
+      ],
+      [
+        "VoranaCull2",
+        "쓰러져라!"
+      ],
+      [
+        "VoranaCull3",
+        "쓰러져라!"
+      ],
+      [
+        "VoranaCull4",
+        "쓰러져라!"
+      ],
+      [
+        "VoranaCull5",
+        "쓰러져라!"
+      ],
+      [
+        "VoranaReapRandom",
+        "수확이다!"
+      ],
+      [
+        "VoranaReap2",
+        "수확이다!"
+      ],
+      [
+        "VoranaReap3",
+        "수확이다!"
+      ],
+      [
+        "VoranaReap4",
+        "수확이다!"
+      ],
+      [
+        "VoranaReap5",
+        "수확이다!"
+      ],
+      [
+        "VoranaReap6",
+        "찢어져라!"
+      ],
+      [
+        "VoranaReap7",
+        "찢어져라!"
+      ],
+      [
+        "VoranaReap8",
+        "찢어져라!"
+      ],
+      [
+        "VoranaReap9",
+        "찢어져라!"
+      ],
+      [
+        "VoranaReap10",
+        "검은 낫이여!"
+      ],
+      [
+        "VoranaReap11",
+        "검은 낫이여!"
+      ],
+      [
+        "VoranaReap12",
+        "검은 낫이여!"
+      ],
+      [
+        "VoranaDefeatRandom",
+        "내가 무엇으로 변한 것인가...?"
+      ],
+      [
+        "VoranaDefeat2",
+        "별들은... 파멸을 부를 뿐…"
+      ],
+      [
+        "VoranaDefeat3",
+        "별들은... 파멸을 부를 뿐…"
+      ],
+      [
+        "VoranaDefeat4",
+        "메드베드..."
+      ],
+      [
+        "VoranaDefeat5",
+        "메드베드..."
+      ],
+      [
+        "VoranaScytheRandom",
+        "낫이여!"
+      ],
+      [
+        "VoranaScythe2",
+        "낫이여!"
+      ],
+      [
+        "VoranaScythe3",
+        "낫이여!"
+      ],
+      [
+        "VoranaScythe4",
+        "낫이여!"
+      ],
+      [
+        "VoranaDarkScytheRandom",
+        "어둠의 낫이여!"
+      ],
+      [
+        "VoranaDarkScythe2",
+        "어둠의 낫이여!"
+      ],
+      [
+        "VoranaDarkScythe3",
+        "어둠의 낫이여!"
+      ],
+      [
+        "VoranaDarkScythe4",
+        "어둠의 낫이여!"
+      ],
+      [
+        "VoranaBloodreapRandom",
+        "피 수확!"
+      ],
+      [
+        "VoranaBloodreap2",
+        "피 수확!"
+      ],
+      [
+        "VoranaBloodreap3",
+        "피 수확!"
+      ],
+      [
+        "VoranaBloodreap4",
+        "피 수확!"
+      ],
+      [
+        "VoranaColdIronRandom",
+        "차디찬 무쇠여!"
+      ],
+      [
+        "VoranaColdIron2",
+        "차디찬 무쇠여!"
+      ],
+      [
+        "VoranaColdIron3",
+        "차디찬 무쇠여!"
+      ],
+      [
+        "VoranaMedvedRandom",
+        "메드베드..."
+      ],
+      [
+        "VoranaMedved2",
+        "메드베드..."
+      ],
+      [
+        "VoranaTheStarsRandom",
+        "별들은... 파멸을 부를 뿐..."
+      ],
+      [
+        "VoranaTheStars2",
+        "별들은... 파멸을 부를 뿐..."
+      ],
+      [
+        "UhtredFourOrbAttackRandom",
+        "헛일 마라!"
+      ],
+      [
+        "UhtredFourOrbAttack1",
+        "헛일 마라!"
+      ],
+      [
+        "UhtredFourOrbAttack2",
+        "헛일 마라!"
+      ],
+      [
+        "UhtredFourOrbAttack3",
+        "헛일 마라!"
+      ],
+      [
+        "UhtredDeathRandom",
+        "죽음은... 탈출구가 아니다..."
+      ],
+      [
+        "UhtredDeath1",
+        "죽음은... 탈출구가 아니다..."
+      ],
+      [
+        "UhtredDeath2",
+        "올로스가... 살아 있어..."
+      ],
+      [
+        "UhtredDeath3",
+        "올로스가... 살아 있어..."
+      ],
+      [
+        "UhtredDiveRandom",
+        "우주 앞에 떨어라!"
+      ],
+      [
+        "UhtredDive1",
+        "우주 앞에 떨어라!"
+      ],
+      [
+        "UhtredDive2",
+        "별들이 우리를 배반한다!"
+      ],
+      [
+        "UhtredDive3",
+        "별들이 우리를 배반한다!"
+      ],
+      [
+        "UhtredDive4",
+        "우리는 아무것도 아니다."
+      ],
+      [
+        "UhtredDive5",
+        "우리는 아무것도 아니다."
+      ],
+      [
+        "UhtredIntro",
+        "나는 저 너머를 보았다!"
+      ],
+      [
+        "UhtredOBeamRandom",
+        "도망칠 수 없다!"
+      ],
+      [
+        "UhtredOBeam1",
+        "도망칠 수 없다!"
+      ],
+      [
+        "UhtredOBeam2",
+        "도망칠 수 없다!"
+      ],
+      [
+        "UhtredSweepRandom",
+        "포기해라!"
+      ],
+      [
+        "UhtredSweep1",
+        "포기해라!"
+      ],
+      [
+        "UhtredSweep2",
+        "포기해라!"
+      ],
+      [
+        "UhtredDefiantRandom",
+        "건방진 것!"
+      ],
+      [
+        "UhtredDefiant1",
+        "건방진 것!"
+      ],
+      [
+        "UhtredDefiant2",
+        "건방진 것!"
+      ],
+      [
+        "UhtredDefiant3",
+        "건방진 것!"
+      ],
+      [
+        "GwennenIntroWitch",
+        "드디어 폭발물이나 괴물이 없는 곳에서 이야기를 나눌 수 있게 됐군... 난 그위넨이야. 도박사지. 하지만 도박은 단순한 놀이가 아니야. 아주 진지한 일이라고. 이길 거라고 믿어야만 이길 수 있어. 그게 바로 이 인생의 섭리지. 무슨 말인지 알겠어? 다 생각하기 나름이라는 거야. 그러니까 나랑 도박할 때는 돈을 잃어도 전부 당신 탓이라는 걸 명심해. 믿음이 부족했을 뿐인 거지."
+      ],
+      [
+        "GwennenIntroScion",
+        "드디어 폭발물이나 괴물이 없는 곳에서 이야기를 나눌 수 있게 됐군... 난 그위넨이야. 도박사지. 하지만 도박은 단순한 놀이가 아니야. 아주 진지한 일이라고. 이길 거라고 믿어야만 이길 수 있어. 그게 바로 이 인생의 섭리지. 무슨 말인지 알겠어? 다 생각하기 나름이라는 거야. 그러니까 나랑 도박할 때는 돈을 잃어도 전부 당신 탓이라는 걸 명심해. 믿음이 부족했을 뿐인 거지."
+      ],
+      [
+        "GwennenIntroRanger",
+        "강단 있는 사람 같아 보이는군. 난 그위넨이야. 나도 열렬하게 믿는 게 있지만, 내가 숭배하는 건 바로 운이야. 내가 위험 속으로 뛰어든 건 <i>{내가} 그러고 싶었기 때문이야. 명령 따위에는 관심 없어. 당신도 마찬가지라는 데 돈이라도 걸 수 있어. 행동과 믿음이 일치하면 못 할 일이 없지. 심지어 도박에서 따는 것도 말이야. 당신이 딸 거라는 데도 돈을 걸 수 있어. 어때? 어디 한번 운을 시험해보겠어?"
+      ],
+      [
+        "GwennenIntroDuelist",
+        "드디어 폭발물이나 괴물이 없는 곳에서 이야기를 나눌 수 있게 됐군... 난 그위넨이야. 도박사지. 하지만 도박은 단순한 놀이가 아니야. 아주 진지한 일이라고. 이길 거라고 믿어야만 이길 수 있어. 그게 바로 이 인생의 섭리지. 무슨 말인지 알겠어? 다 생각하기 나름이라는 거야. 그러니까 나랑 도박할 때는 돈을 잃어도 전부 당신 탓이라는 걸 명심해. 믿음이 부족했을 뿐인 거지."
+      ],
+      [
+        "GwennenIntroShadow",
+        "드디어 폭발물이나 괴물이 없는 곳에서 이야기를 나눌 수 있게 됐군... 난 그위넨이야. 도박사지. 하지만 도박은 단순한 놀이가 아니야. 아주 진지한 일이라고. 이길 거라고 믿어야만 이길 수 있어. 그게 바로 이 인생의 섭리지. 무슨 말인지 알겠어? 다 생각하기 나름이라는 거야. 그러니까 나랑 도박할 때는 돈을 잃어도 전부 당신 탓이라는 걸 명심해. 믿음이 부족했을 뿐인 거지."
+      ],
+      [
+        "GwennenIntroTemplar",
+        "난 믿음이 굳건한 사람은 어느 대륙에서나 알아볼 수 있어. 내 이름은 그위넨이야. 나도 당신처럼 대의에 헌신하고 있지만, 내 종교는 바로 운이지. 난 틀림없이 죽을 것 같은 상황에서도 죽지 않을 거라는 <i>{확신이 있었기에} 살아남을 수 있었어. 당신과 당신의 기도도 마찬가지겠지. 인생이라는 건 생각나기 나름이란 말이야. 당신과 거래를 하면 필시 내가 돈을 잃겠지. 당신은 도박할 때 기도를 올릴 테니까 말이야. 그게 반칙이라고는 생각 안 해. 오히려 존경스러운 일이지. 우린 잘 맞을 것 같아."
+      ],
+      [
+        "GwennenIntroMarauder",
+        "드디어 폭발물이나 괴물이 없는 곳에서 이야기를 나눌 수 있게 됐군... 난 그위넨이야. 도박사지. 하지만 도박은 단순한 놀이가 아니야. 아주 진지한 일이라고. 이길 거라고 믿어야만 이길 수 있어. 그게 바로 이 인생의 섭리지. 무슨 말인지 알겠어? 다 생각하기 나름이라는 거야. 그러니까 나랑 도박할 때는 돈을 잃어도 전부 당신 탓이라는 걸 명심해. 믿음이 부족했을 뿐인 거지."
+      ],
+      [
+        "GwennenRerollInventoryRandom",
+        "물건은 더 있어."
+      ],
+      [
+        "GwennenRerollInventory2",
+        "물건은 더 있어."
+      ],
+      [
+        "GwennenRerollInventory3",
+        "물건은 더 있어."
+      ],
+      [
+        "GwennenRerollInventory4",
+        "그냥 이대로 섞기만 한 다음에 물건이 바뀌었다고 할까나."
+      ],
+      [
+        "GwennenRerollInventory5",
+        "그냥 이대로 섞기만 한 다음에 물건이 바뀌었다고 할까나."
+      ],
+      [
+        "GwennenRerollInventory6",
+        "그냥 이대로 섞기만 한 다음에 물건이 바뀌었다고 할까나."
+      ],
+      [
+        "GwennenRerollInventory7",
+        "또 뭐가 있더라? 흠..."
+      ],
+      [
+        "GwennenRerollInventory8",
+        "또 뭐가 있더라? 흠..."
+      ],
+      [
+        "GwennenRerollInventory9",
+        "또 뭐가 있더라? 흠..."
+      ],
+      [
+        "GwennenApproachShoutRandom",
+        "또 왔네, 현지인!"
+      ],
+      [
+        "GwennenApproachShout2",
+        "또 왔네, 현지인!"
+      ],
+      [
+        "GwennenApproachShout3",
+        "또 왔네, 현지인!"
+      ],
+      [
+        "GwennenApproachShout4",
+        "오늘은 내가 운수가 좋은 날이군!"
+      ],
+      [
+        "GwennenApproachShout5",
+        "오늘은 내가 운수가 좋은 날이군!"
+      ],
+      [
+        "GwennenApproachShout6",
+        "오늘은 내가 운수가 좋은 날이군!"
+      ],
+      [
+        "GwennenApproachShout7",
+        "드디어 왔군! 어서 와!"
+      ],
+      [
+        "GwennenApproachShout8",
+        "드디어 왔군! 어서 와!"
+      ],
+      [
+        "GwennenApproachShout9",
+        "드디어 왔군! 어서 와!"
+      ],
+      [
+        "GwennenDetonatingRandom",
+        "이건 내가 맡을게!"
+      ],
+      [
+        "GwennenDetonating2",
+        "이건 내가 맡을게!"
+      ],
+      [
+        "GwennenDetonating3",
+        "이건 내가 맡을게!"
+      ],
+      [
+        "GwennenOrderHirelingDetonateRandom",
+        "터뜨려!"
+      ],
+      [
+        "GwennenOrderHirelingDetonate2",
+        "터뜨려!"
+      ],
+      [
+        "GwennenOrderHirelingDetonate3",
+        "터뜨려!"
+      ],
+      [
+        "GwennenBombPlacedGenericRandom",
+        "잘 찍었네."
+      ],
+      [
+        "GwennenBombPlacedGeneric2",
+        "잘 찍었네."
+      ],
+      [
+        "GwennenBombPlacedGeneric3",
+        "잘 찍었네."
+      ],
+      [
+        "GwennenBombPlacedMonstersRandom",
+        "싸울 수밖에 없겠군."
+      ],
+      [
+        "GwennenBombPlacedMonsters2",
+        "싸울 수밖에 없겠군."
+      ],
+      [
+        "GwennenBombPlacedMonsters3",
+        "싸울 수밖에 없겠군."
+      ],
+      [
+        "GwennenBombPlacedMonsters4",
+        "당신, 일부러 망자를 깨우는 건 아니겠지?"
+      ],
+      [
+        "GwennenBombPlacedMonsters5",
+        "당신, 일부러 망자를 깨우는 건 아니겠지?"
+      ],
+      [
+        "GwennenBombPlacedMonsters6",
+        "당신, 일부러 망자를 깨우는 건 아니겠지?"
+      ],
+      [
+        "GwennenBombPlacedMonsters7",
+        "자, 간다..."
+      ],
+      [
+        "GwennenBombPlacedMonsters8",
+        "자, 간다..."
+      ],
+      [
+        "GwennenBombPlacedMonsters9",
+        "자, 간다..."
+      ],
+      [
+        "GwennenBombPlacedRiskRandom",
+        "좋아! 더 흥미진진하게 만들어 보자고!"
+      ],
+      [
+        "GwennenBombPlacedRisk2",
+        "좋아! 더 흥미진진하게 만들어 보자고!"
+      ],
+      [
+        "GwennenBombPlacedRisk3",
+        "좋아! 더 흥미진진하게 만들어 보자고!"
+      ],
+      [
+        "GwennenBombPlacedRisk4",
+        "우리 목숨을 걸고 도박이라도 하는 거야? 하하하!"
+      ],
+      [
+        "GwennenBombPlacedRisk5",
+        "우리 목숨을 걸고 도박이라도 하는 거야? 하하!"
+      ],
+      [
+        "GwennenBombPlacedRisk6",
+        "우리 목숨을 걸고 도박이라도 하는 거야? 하하!"
+      ],
+      [
+        "GwennenBombPlacedRisk7",
+        "모험은 언제든 환영이야."
+      ],
+      [
+        "GwennenBombPlacedRisk8",
+        "모험은 언제든 환영이야."
+      ],
+      [
+        "GwennenBombPlacedRisk9",
+        "모험은 언제든 환영이야."
+      ],
+      [
+        "GwennenBombPlacedTreasureRandom",
+        "보물이라면 늘 찬성이지."
+      ],
+      [
+        "GwennenBombPlacedTreasure2",
+        "보물이라면 늘 찬성이지."
+      ],
+      [
+        "GwennenBombPlacedTreasure3",
+        "보물이라면 늘 찬성이지."
+      ],
+      [
+        "GwennenBombPlacedTreasure4",
+        "저 보물 안에 뭐가 들어 있을지 몰라!"
+      ],
+      [
+        "GwennenBombPlacedTreasure5",
+        "저 보물 안에 뭐가 들어 있을지 몰라!"
+      ],
+      [
+        "GwennenBombPlacedTreasure6",
+        "저 보물 안에 뭐가 들어 있을지 몰라!"
+      ],
+      [
+        "GwennenBombPlacedTreasure7",
+        "심봤다!"
+      ],
+      [
+        "GwennenBombPlacedTreasure8",
+        "심봤다!"
+      ],
+      [
+        "GwennenBombPlacedTreasure9",
+        "심봤다!"
+      ],
+      [
+        "GwennenAllBombsPlacedRandom",
+        "준비됐어!"
+      ],
+      [
+        "GwennenAllBombsPlaced2",
+        "준비됐어."
+      ],
+      [
+        "GwennenAllBombsPlaced3",
+        "준비됐어!"
+      ],
+      [
+        "GwennenAllBombsPlaced4",
+        "지시만 내려!"
+      ],
+      [
+        "GwennenAllBombsPlaced5",
+        "지시만 내려!"
+      ],
+      [
+        "GwennenAllBombsPlaced6",
+        "지시만 내려!"
+      ],
+      [
+        "GwennenAllBombsPlaced7",
+        "터진다!"
+      ],
+      [
+        "GwennenAllBombsPlaced8",
+        "터진다!"
+      ],
+      [
+        "GwennenAllBombsPlaced9",
+        "터진다!"
+      ],
+      [
+        "GwennenCombatLineRandom",
+        "행운이시여, 저를 보살피소서!"
+      ],
+      [
+        "GwennenCombatLine2",
+        "행운이시여, 저를 보살피소서!"
+      ],
+      [
+        "GwennenCombatLine3",
+        "행운이시여, 저를 보살피소서!"
+      ],
+      [
+        "GwennenCombatLine4",
+        "하!"
+      ],
+      [
+        "GwennenCombatLine5",
+        "하!"
+      ],
+      [
+        "GwennenCombatLine6",
+        "하!"
+      ],
+      [
+        "GwennenCombatLine7",
+        "어림도 없지!"
+      ],
+      [
+        "GwennenCombatLine8",
+        "어림도 없지!"
+      ],
+      [
+        "GwennenCombatLine9",
+        "어림도 없지!"
+      ],
+      [
+        "GwennenCombatLine10",
+        "칼구르를 위하여!"
+      ],
+      [
+        "GwennenCombatLine11",
+        "칼구르를 위하여!"
+      ],
+      [
+        "GwennenCombatLine12",
+        "칼구르를 위하여!"
+      ],
+      [
+        "GwennenCombatLine13",
+        "꿈도 꾸지 마!"
+      ],
+      [
+        "GwennenCombatLine14",
+        "꿈도 꾸지 마!"
+      ],
+      [
+        "GwennenCombatLine15",
+        "꿈도 꾸지 마!"
+      ],
+      [
+        "GwennenGossipTujen",
+        "우리는 오랫동안 함께 작전을 수행했어. 투젠은 많이 고생했지만 굳건하게 견디고 있지. 솔직히 말하면 어쩜 그렇게 변함없이 쾌활한 건지 모르겠다니까. 여기서 팔이나 다리를 하나만 더 잃으면 몸에 살보다 금속이 많아질 텐데 말이야..."
+      ],
+      [
+        "GwennenGossipRog",
+        "좋은 사람이야. 로그가 만드는 조각상 봤어? 우리 넷은 그 조각상들을 사용해서 로그가 개발해 낸 이상하지만 재미있는 게임을 하곤 해. 주사위를 계속 굴려야 하는 점이 특히 마음에 들지. 내가 또 주사위하면 사족을 못 쓰잖아."
+      ],
+      [
+        "GwennenGossipDannig",
+        "우리의 용감한 지도자는 이 세상을 현실보다 아름답게 보고 있지. 그의 눈에 당신이나 나는 보이지 않아, 유배자. 영웅들이 보이지. 거창한 신화와 세상을 바꾸는 용기가 보인다고. 괜히 환상을 깨지는 마. 그가 보는 세계가 현실이 아니라는 건 알지만, 나도 그런 세계에서 살고 싶거든."
+      ],
+      [
+        "GwennenGossipLuckOne",
+        "봉기가 실패했을 때 나는 진심을 다해 간청한 적이 있었어. 화살이 하늘을 가르며 날아오고 있었지. 팔이 꼼짝도 하지 않는 상태라, 제때 피하지 못할 게 분명했어. 난 죽은 목숨이었지. 그런데 운이 내 진심 어린 청에 응답했어. 역시 내 숨통을 노리고 날아오던 다른 화살이 첫 화살을 <i>{공중에서} 맞힌 거야. 두 화살 모두 방향을 바꾸더니 내 양쪽에 떨어졌지! 난 그때 운이란 이 세상에 실재하는 힘이라는 걸 처음으로 깨달았어."
+      ],
+      [
+        "GwennenGossipFailedRebellion",
+        "난 그런 말 한 적 없어. 잘못 들은 거야."
+      ],
+      [
+        "GwennenGossipLuckTwo",
+        "한... 전쟁에서... 나는 진심을 다해 간청한 적이 있었어. 화살이 하늘을 가르며 날아오고 있었지. 팔이 꼼짝도 하지 않는 상태라, 제때 피하지 못할 게 분명했어. 난 죽은 목숨이었지. 그런데 운이 내 진심 어린 청에 응답했어. 역시 내 숨통을 노리고 날아오던 다른 화살이 첫 화살을 <i>{공중에서} 맞힌 거야. 두 화살 모두 방향을 바꾸더니 내 양쪽에 떨어졌지! 난 그때 운이란 이 세상에 실재하는 힘이라는 걸 처음으로 깨달았어."
+      ],
+      [
+        "GwennenGossipTheKing",
+        "그런 질문을 하다니 자기 운을 과신하는군, 유배자. 그런 데 운을 낭비하지 마. 언젠가 세상의 운이 다 필요할 때가 찾아올 테니까."
+      ],
+      [
+        "GwennenGossipGods",
+        "'신'에 대해서는 들어본 적이 없지만, 그 신이라는 작자들이 군대를 이끌고 내 문 앞에 닥친다 한들 그들을 믿지는 않을 거야. 내 믿음은 이미 제자리를 찾았으니까."
+      ],
+      [
+        "GwennenGossipDruidsOfTheBrokenCircle",
+        "나는 도의상 메드베드와 끊어진 원의 드루이드의 운명을 알아내야 해. 그들은 과거를 들여다보면 미래를 내다볼 수 있다고 믿었지. 그게 정말이라면 개인적으로 갖고 싶은 능력이야. 돈방석에 앉을 수 있을 테니... 하지만 그게 정말 좋은 일일지는 모르겠어. 메드베드와 자연 신비술사들 생각대로 시간이 정말 원이라면, 우리는 삶을 영원히 반복할 운명인 것 아니겠어? 그게 사실이라면, 운이란 존재하지 않는 거겠지. 확률도 없고, 인간의 의지도 없고. 모든 삶은 그저 반복되는 연극일 뿐인 거야. 별로 내키지 않는 생각이야."
+      ],
+      [
+        "GwennenGossipMedved",
+        "그의 최후는 모르지만, 이곳에 도착한 후로 평화로운 태도를 버리고 강력한 쌍도끼를 들고 수련을 했다는 건 알아. 우린 바보가 아니야. 이곳 레이클라스트에서 망자가 일어나고 있는 건 우리도 알아. 만약 메드베드가 아직 있다면, 무척이나 위험한 존재일 거야. 운을 아껴 놨다가 그와 마주치면 사용하도록 해."
+      ],
+      [
+        "GwennenGossipMedvedStoryFound",
+        "그러니까 올로스가 레이클라스트의 금단의 마석을 사용하기 시작한 이후로 드루이드들이 과거를 들여다보는 능력을 잃어버렸다는 거군... 이상하네... 메드베드는 한밤중에 괴물들의 우두머리에게 일대일 대결을 신청하기 위해 어둠 속으로 사라졌고. 명예롭지만 어리석은 짓이야. 이 이야기는 이게 전부가 아닐 거야, 유배자. 당신이 전모를 알아내 주었으면 해."
+      ],
+      [
+        "GwennenGossipMedvedDefeatedStoryNotComplete",
+        "마침내 메드베드에게 안식을 안겨 주었군. 고마워. 나는 그가 최후를 맞기 전에 돌려보낸 딸 아네스트의 후손이야. 그래서 내 선조가 안식에 들기 전까지는 이곳을 떠날 수가 없었지. 이제 자유에 한 발짝 가까워진 거야."
+      ],
+      [
+        "GwennenGossipMedvedDefeatedStoryComplete",
+        "이제 이야기가 완성됐군. 메드베드는 고결하고 선한 영웅이었지만, 레이클라스트의 어둠 때문에 타락하고 광기로 내몰린 거야. 이제 그가 안식에 들었으니 나는 자유야. 트리스켈리온의 불길을 찾기만 하면 고향으로 돌아갈 수 있어.\r\n\r\n고마워. 나는 메드베드가 최후를 맞기 전에 돌려보낸 딸 아네스트의 후손이야. 그래서 메드베드의 행동은 곧 내 혈통의 명예지. 고향으로 돌아가면 그가 정체 모를 악의 우두머리에게 도전하려고 밤의 어둠 속으로 사라졌다는 것까지만 얘기할 거야. 칼구르인들도 그가 동족을 구하기 위해 싸우다 죽었다는 걸 알게 되겠지. 나머지는 굳이 알릴 필요 없어."
+      ],
+      [
+        "TujenIntroGeneralWitch",
+        "난 투젠이라고 해. 어둠의 기운을 풀풀 풍기는군 그래. 너와 함께 일하게 돼서 다행이야. 레이클라스트에서는 바로 그런 성질머리가 필요한 법이니."
+      ],
+      [
+        "TujenIntroGeneralScion",
+        "난 투젠이라고 해. 우리가 손에 흙을 묻히는 동안 너는 손에 피를 묻히는 거야. 이렇게 좋은 동맹이 또 어디 있겠어? 자, 그러면 어서 시작하자고."
+      ],
+      [
+        "TujenIntroGeneralRanger",
+        "난 투젠이라고 해. 우리가 손에 흙을 묻히는 동안 너는 손에 피를 묻히는 거야. 이렇게 좋은 동맹이 또 어디 있겠어? 자, 그러면 어서 시작하자고."
+      ],
+      [
+        "TujenIntroGeneralDuelist",
+        "난 투젠이라고 해. 우리가 손에 흙을 묻히는 동안 너는 손에 피를 묻히는 거야. 이렇게 좋은 동맹이 또 어디 있겠어? 자, 그러면 어서 시작하자고."
+      ],
+      [
+        "TujenIntroGeneralShadow",
+        "난 투젠이야. 기분 좋은 미소 아래 숨기고 있긴 하지만, 네 것만큼 살기등등한 칼날은 본 적이 없어. 평소 같았다면 너 같은 부류와는 멀찍이 거리를 두겠지만, 이곳 레이클라스트에서는 어느 정도 어둠이 필요한 법이지. 우린 잘 지낼 수 있을 것 같군."
+      ],
+      [
+        "TujenIntroGeneralTemplar",
+        "난 투젠이라고 해. 우리가 손에 흙을 묻히는 동안 너는 손에 피를 묻히는 거야. 이렇게 좋은 동맹이 또 어디 있겠어? 자, 그러면 어서 시작하자고."
+      ],
+      [
+        "TujenIntroMarauder",
+        "난 투젠이라고 해. 우리가 손에 흙을 묻히는 동안 너는 손에 피를 묻히는 거야. 이렇게 좋은 동맹이 또 어디 있겠어? 자, 그러면 어서 시작하자고."
+      ],
+      [
+        "TujenApproachShoutRandom",
+        "어이! 이쪽이야!"
+      ],
+      [
+        "TujenApproachShout2",
+        "어이! 이쪽이야!"
+      ],
+      [
+        "TujenApproachShout3",
+        "현지인! 도와줘!"
+      ],
+      [
+        "TujenApproachShout4",
+        "현지인! 도와줘!"
+      ],
+      [
+        "TujenApproachShout5",
+        "어서 이리 와 봐. 시간이 없어!"
+      ],
+      [
+        "TujenApproachShout6",
+        "어서 이리 와 봐. 시간이 없어!"
+      ],
+      [
+        "TujenPartingShout",
+        "로그는 이 근처에 있어. 네가 갈 거라고 전해 둘게!"
+      ],
+      [
+        "TujenRerollInventoryRandom",
+        "그래, 좀 더 있어."
+      ],
+      [
+        "TujenRerollInventory2",
+        "그래, 좀 더 있어."
+      ],
+      [
+        "TujenRerollInventory3",
+        "이 이국의 동전은 정말 마음에 든다니까."
+      ],
+      [
+        "TujenRerollInventory4",
+        "이 이국의 동전은 정말 마음에 든다니까."
+      ],
+      [
+        "TujenRerollInventory5",
+        "이 동전 정말 반짝이지 않아?"
+      ],
+      [
+        "TujenRerollInventory6",
+        "이 동전 정말 반짝이지 않아?"
+      ],
+      [
+        "TujenHittingDetonatorRandom",
+        "내가 할게!"
+      ],
+      [
+        "TujenHittingDetonator2",
+        "내가 할게!"
+      ],
+      [
+        "TujenOrderingSquireRandom",
+        "그럼 가봐, 종자."
+      ],
+      [
+        "TujenOrderingSquire2",
+        "그럼 가봐, 종자."
+      ],
+      [
+        "TujenBombPlacedGenericRandom",
+        "그래, 그래."
+      ],
+      [
+        "TujenBombPlacedGeneric2",
+        "그래, 그래."
+      ],
+      [
+        "TujenBombPlacedMonstersRandom",
+        "일부러 싸움을 벌이는 건가?"
+      ],
+      [
+        "TujenBombPlacedMonsters2",
+        "일부러 싸움을 벌이는 건가?"
+      ],
+      [
+        "TujenBombPlacedMonsters3",
+        "전투인가!"
+      ],
+      [
+        "TujenBombPlacedMonsters4",
+        "전투인가!"
+      ],
+      [
+        "TujenBombPlacedMonsters5",
+        "전투 준비 됐어."
+      ],
+      [
+        "TujenBombPlacedMonsters6",
+        "전투 준비 됐어."
+      ],
+      [
+        "TujenBombPlacedRiskRandom",
+        "위험한 선택이군."
+      ],
+      [
+        "TujenBombPlacedRisk2",
+        "위험한 선택이군."
+      ],
+      [
+        "TujenBombPlacedRisk3",
+        "흥미로워지겠어."
+      ],
+      [
+        "TujenBombPlacedRisk4",
+        "흥미로워지겠어."
+      ],
+      [
+        "TujenBombPlacedRisk5",
+        "내가 남은 팔다리마저 잃는 꼴을 보고 싶어 안달이 났군."
+      ],
+      [
+        "TujenBombPlacedRisk6",
+        "내가 남은 팔다리마저 잃는 꼴을 보고 싶어 안달이 났군."
+      ],
+      [
+        "TujenBombPlacedTreasureRandom",
+        "보물을 찾을 수 있다면 이 정도는 할 수 있지."
+      ],
+      [
+        "TujenBombPlacedTreasure2",
+        "보물을 찾을 수 있다면 이 정도는 할 수 있지."
+      ],
+      [
+        "TujenBombPlacedTreasure3",
+        "보물 상자를 긁어 모을 속셈인가?"
+      ],
+      [
+        "TujenBombPlacedTreasure4",
+        "보물 상자를 긁어 모을 속셈인가?"
+      ],
+      [
+        "TujenBombPlacedTreasure5",
+        "고대의 보물을 노리고 있군?"
+      ],
+      [
+        "TujenBombPlacedTreasure6",
+        "고대의 보물을 노리고 있군?"
+      ],
+      [
+        "TujenAllBombsPlacedRandom",
+        "전부 설치했어."
+      ],
+      [
+        "TujenAllBombsPlaced2",
+        "전부 설치했어."
+      ],
+      [
+        "TujenAllBombsPlaced3",
+        "그럼 시작해 볼까?"
+      ],
+      [
+        "TujenAllBombsPlaced4",
+        "그럼 시작해 볼까?"
+      ],
+      [
+        "TujenAllBombsPlaced5",
+        "준비됐어."
+      ],
+      [
+        "TujenAllBombsPlaced6",
+        "준비됐어."
+      ],
+      [
+        "TujenCombatLineRandom",
+        "네 눈알을 긁어내 주마!"
+      ],
+      [
+        "TujenCombatLine2",
+        "네 눈알을 긁어내 주마!"
+      ],
+      [
+        "TujenCombatLine3",
+        "물러서!"
+      ],
+      [
+        "TujenCombatLine4",
+        "물러서!"
+      ],
+      [
+        "TujenCombatLine5",
+        "내가 있는 한 어림도 없다!"
+      ],
+      [
+        "TujenCombatLine6",
+        "내가 있는 한 어림도 없다!"
+      ],
+      [
+        "TujenCombatLine7",
+        "칼구르를 위하여!"
+      ],
+      [
+        "TujenCombatLine8",
+        "칼구르를 위하여!"
+      ],
+      [
+        "TujenCombatLine9",
+        "하!"
+      ],
+      [
+        "TujenCombatLine10",
+        "하!"
+      ],
+      [
+        "TujenPlayerDoesNotHaggleRandom",
+        "그냥 이대로 사고 싶다면야 그렇게 해."
+      ],
+      [
+        "TujenPlayerDoesNotHaggle2",
+        "그냥 이대로 사고 싶다면야 그렇게 해."
+      ],
+      [
+        "TujenPlayerDoesNotHaggle3",
+        "깎으려고 해 보지도 않는 거야?"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle4",
+        "깎으려고 해 보지도 않는 거야?"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle5",
+        "처음 부른 값을 받아들이면 재미없잖아!"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle6",
+        "처음 부른 값을 받아들이면 재미없잖아!"
+      ],
+      [
+        "TujenPlayerOverpaysRandom",
+        "흥정이라는 게 뭔지 모르는 거지? 응?"
+      ],
+      [
+        "TujenPlayerOverpays2",
+        "흥정이라는 게 뭔지 모르는 거지? 응?"
+      ],
+      [
+        "TujenPlayerOverpays3",
+        "아무 이유도 없이... 바가지를 쓰겠다고?"
+      ],
+      [
+        "TujenPlayerOverpays4",
+        "아무 이유도 없이... 바가지를 쓰겠다고?"
+      ],
+      [
+        "TujenHighChanceToAcceptAcceptedRandom",
+        "합당해 보이는군."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted2",
+        "합당해 보이는군."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted3",
+        "좋은 거래였어."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted4",
+        "좋은 거래였어."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted5",
+        "좋아, 안 될 것 없지."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted6",
+        "좋아, 안 될 것 없지."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted7",
+        "나는 좋아."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted8",
+        "나는 좋아."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted9",
+        "그렇게 하지."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted10",
+        "그렇게 하지."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted11",
+        "다음에 또 거래하자고."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted12",
+        "다음에 또 거래하자고."
+      ],
+      [
+        "TujenHighChanceToAcceptRejectedRandom",
+        "아직 잘 모르겠는데."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected2",
+        "아직 잘 모르겠는데."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected3",
+        "좀 더 흥정해보자고."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected4",
+        "좀 더 흥정해보자고."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected5",
+        "흥정이 좀 하고 싶은데."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected6",
+        "흥정이 좀 하고 싶은데."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected7",
+        "타당한 제안이군. 하지만 싫어."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected8",
+        "타당한 제안이군. 하지만 싫어."
+      ],
+      [
+        "TujenMediumChanceToAcceptAcceptedRandom",
+        "흠... 아... 알겠어."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted2",
+        "흠... 아... 알겠어."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted3",
+        "그래."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted4",
+        "그래."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted5",
+        "만족스럽지도 않지만 불만족스럽지도 않은 거래군."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted6",
+        "만족스럽지도 않지만 불만족스럽지도 않은 거래군."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted7",
+        "좋아."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted8",
+        "좋아."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted9",
+        "그거면 됐어. 완전 성공은 아니지만 그거면 됐어."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted10",
+        "그거면 됐어. 완전 성공은 아니지만 그거면 됐어."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejectedRandom",
+        "내가 원하는 가격과 차이가 좀 있군."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected2",
+        "내가 원하는 가격과 차이가 좀 있군."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected3",
+        "다시 생각해 봐, 친구."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected4",
+        "다시 생각해 봐, 친구."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected5",
+        "조금 낮지 않아?"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected6",
+        "조금 낮지 않아?"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected7",
+        "더 좋은 타협안을 찾을 수 있으면 좋겠군."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected8",
+        "더 좋은 타협안을 찾을 수 있으면 좋겠군."
+      ],
+      [
+        "TujenLowChanceToAcceptAcceptedRandom",
+        "에라, 기분이다."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted2",
+        "에라, 기분이다."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted3",
+        "오늘 기분 좋아서 봐준 줄 알아."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted4",
+        "오늘 기분 좋아서 봐준 줄 알아."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted5",
+        "우리에게 해 준 일을 생각하면 이 정도는 양보해야겠지."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted6",
+        "우리에게 해 준 일을 생각하면 이 정도는 양보해야겠지."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted7",
+        "이러면 안 되지만... 좋아."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted8",
+        "이러면 안 되지만... 좋아."
+      ],
+      [
+        "TujenLowChanceToAcceptRejectedRandom",
+        "너, 겨우 이 정도였어?"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected2",
+        "너, 겨우 이 정도였어?"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected3",
+        "선 넘지 마, 친구."
+      ],
+      [
+        "TujenLowChanceToAcceptRejected4",
+        "선 넘지 마, 친구."
+      ],
+      [
+        "TujenLowChanceToAcceptRejected5",
+        "그것보다 훨씬 값어치가 나가는 물건이라고!"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected6",
+        "그것보다 훨씬 값어치가 나가는 물건이라고!"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected7",
+        "그 값이면 흥정하느라 쓴 시간이 아까울 정도야!"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected8",
+        "그 값이면 흥정하느라 쓴 시간이 아까울 정도야!"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected9",
+        "그렇게는 안 되지."
+      ],
+      [
+        "TujenLowChanceToAcceptRejected10",
+        "그렇게는 안 되지."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAcceptedRandom",
+        "휴. 가지고 가버려."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted2",
+        "휴. 가지고 가버려."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted3",
+        "눈 뜨고 코 베였군!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted4",
+        "눈 뜨고 코 베였군!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted5",
+        "우리 우정을 이렇게 이용해 먹다니."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted6",
+        "우리 우정을 이렇게 이용해 먹다니."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted7",
+        "내가 평생 본 최고의 거간꾼이군."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted8",
+        "내가 평생 본 최고의 거간꾼이군."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted9",
+        "궁지에 몰렸군. 알았어, 받아들이지."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted10",
+        "궁지에 몰렸군. 알았어, 받아들이지."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejectedRandom",
+        "지금 나랑 한번 해보자는 거야?"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected2",
+        "지금 나랑 한번 해보자는 거야?"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected3",
+        "농담은 그만해."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected4",
+        "농담은 그만해."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected5",
+        "씨알도 안 먹힐 소리 하지 마."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected6",
+        "씨알도 안 먹힐 소리 하지 마."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected7",
+        "그렇게 싸게는 안 돼!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected8",
+        "그렇게 싸게는 안 돼!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected9",
+        "나도 먹고는 살아야지!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected10",
+        "나도 먹고는 살아야지!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected11",
+        "말이 되는 소리를 해야지!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected12",
+        "말이 되는 소리를 해야지!"
+      ],
+      [
+        "TujenPlayerOfferedOneRandom",
+        "한 개? 고작 한 개라고?"
+      ],
+      [
+        "TujenPlayerOfferedOne2",
+        "한 개? 고작 한 개라고?"
+      ],
+      [
+        "TujenRemovesItemRandom",
+        "사람 피곤하게 만드네. 그냥 내가 가져야겠어."
+      ],
+      [
+        "TujenRemovesItem2",
+        "사람 피곤하게 만드네. 그냥 내가 가져야겠어."
+      ],
+      [
+        "TujenRemovesItem3",
+        "흥정이 아니라 말싸움이 되어버렸군. 난 물러날게."
+      ],
+      [
+        "TujenRemovesItem4",
+        "흥정이 아니라 말싸움이 되어버렸군. 난 물러날게."
+      ],
+      [
+        "TujenRemovesItem5",
+        "이대로 가면 나는 명예까지 잃겠어. 여기까지 하지."
+      ],
+      [
+        "TujenRemovesItem6",
+        "이대로 가면 나는 명예까지 잃겠어. 여기까지 하지."
+      ],
+      [
+        "TujenRemovesItem7",
+        "됐어. 이건 그냥 내가 가질게."
+      ],
+      [
+        "TujenRemovesItem8",
+        "됐어. 이건 그냥 내가 가질게."
+      ],
+      [
+        "TujenCounterOfferRemainsSameRandom",
+        "안 돼. 그냥 안 돼."
+      ],
+      [
+        "TujenCounterOfferRemainsSame2",
+        "안 돼. 그냥 안 돼."
+      ],
+      [
+        "TujenCounterOfferRemainsSame3",
+        "그것보다는 나은 제안을 해봐."
+      ],
+      [
+        "TujenCounterOfferRemainsSame4",
+        "그것보다는 나은 제안을 해봐."
+      ],
+      [
+        "TujenCounterOfferRemainsSame5",
+        "내 제안은 아직 유효해."
+      ],
+      [
+        "TujenCounterOfferRemainsSame6",
+        "내 제안은 아직 유효해."
+      ],
+      [
+        "TujenCounterOfferRemainsSame7",
+        "더 깎아 주진 않을 거야!"
+      ],
+      [
+        "TujenCounterOfferRemainsSame8",
+        "더 깎아 주진 않을 거야!"
+      ],
+      [
+        "TujenPlayerCannotCarryRandom",
+        "우선 공간을 마련해야겠는걸."
+      ],
+      [
+        "TujenPlayerCannotCarry2",
+        "우선 공간을 마련해야겠는걸."
+      ],
+      [
+        "TujenPlayerCannotCarry3",
+        "어디 넣을 곳도 없잖아!"
+      ],
+      [
+        "TujenPlayerCannotCarry4",
+        "어디 넣을 곳도 없잖아!"
+      ],
+      [
+        "TujenPlayerCannotAffordRandom",
+        "그럴 돈도 없잖아!"
+      ],
+      [
+        "TujenPlayerCannotAfford2",
+        "그럴 돈도 없잖아!"
+      ],
+      [
+        "TujenPlayerCannotAfford3",
+        "가진 것보다 큰돈을 불렀잖아!"
+      ],
+      [
+        "TujenPlayerCannotAfford4",
+        "가진 것보다 큰돈을 불렀잖아!"
+      ],
+      [
+        "TujenGossipBlackScytheMercenaries",
+        "난 한 가지 특정한 역할을 수행 중이야. 고대의 폭도 무리를 찾아 땅을 헤집고 있지. 바로 검은 낫 용병단이라는 녀석들이야. 그 용병단의 설립자이자 무척 영웅적인 전사인 보라나는 내 가문과 혈연으로 맺어진 관계였어. 고향으로 돌아가기 전에 그 여자가 어떻게 되었는지 알아내야 해."
+      ],
+      [
+        "TujenGossipVorana",
+        "그녀는 무시무시하고 강력한 전사였지. 캐디건 3세는 보라나를 왕가의 전사로 삼으려 했지만, 그녀는 그를 데리러 온 사람들을 전부 때려눕혔어. 결국 왕은 보라나를 뜻대로 하는 건 <i>{불가능}하다는 걸 깨닫고 그녀에게 용병 계약서를 줬지. 하고 싶은 대로 임무를 수행할 자유를 보장받은 그녀는 칼구르에 여러 차례 대승을 안겨 줬어. 나는 자신만의 길을 걷는 이들을 존중하지.\r\n\r\n그녀가 레이클라스트에서 어떤 최후를 맞았는지는 알려지지 않았지만, 그녀가 여전히 돌아다니고 있다는 예감이 들어. 그렇게 열정적인 영혼은 전설에 남을 싸움 없이는 사라지지 않기 마련이지."
+      ],
+      [
+        "TujenGossipRog",
+        "로그의 병참 능력이 없었다면 실패했을 작전이 한두 개가 아니야. 우리는 진흙, 비, 눈, 모래를 뚫고 걸었지만, 밥만큼은 늘 배불리 먹었지. 전쟁의 기반은 바로 병참이야. 우리가 그걸 모를 거라고는 생각하지 마."
+      ],
+      [
+        "TujenGossipGwennen",
+        "그위넨은 내 먼 친척이야. 그래서 난 최대한 그위넨을 지켜 주려 하지. 근데 걔는 세상에 대해 이상한 생각을 품고 있어. 믿음이 사건의 결과를 결정할 수 있다나 뭐라나. 정말 그랬다면 지난번 작전에서 패배하지도 않았겠지."
+      ],
+      [
+        "TujenGossipDannig",
+        "대닉은 좋은 사람이지만 이중적이야. 한편으로는 포부가 큰 몽상가이지만, 다른 한편으로는 냉소적인 현실주의자이지. 나는 그를 따라서라면 세상 끝까지도 갈 수 있어... 그랬다가 이곳에 오게 된 거고."
+      ],
+      [
+        "TujenGossipTheKalguur",
+        "우린 긍지 높은 민족이지만, 그렇지 않은 민족이 어디 있겠어? 우리는 용기를 신중하게 사용해서 암울한 현실과 맞선다는 게 차이점이지. 혈통에는 면면히 이어지는 명성과 업적의 기록이 담겨 있어. 우리가 하는 일은 자신을 위해 하는 것이 아니라 자식들을 위해 하는 거야. 난 아직 자식은 없지만 말이야. 그래도 희망을 가져야지."
+      ],
+      [
+        "TujenGossipTheKingOne",
+        "날씨 참 좋지?"
+      ],
+      [
+        "TujenGossipTheKingTwo",
+        "레이클라스트는 위험한 곳이야. 너, 이야깃거리가 많게 생겼는데."
+      ],
+      [
+        "TujenGossipTheKingThree",
+        "눈치도 없어? 그만 좀 물어!"
+      ],
+      [
+        "TujenGossipVoranaStoryFound",
+        "이곳 레이클라스트에 왔던 우리 민족은 암울한 운명을 맞이했군. 한편으로는 보라나가 이 미쳐 돌아가는 대륙을 단신으로 정복했다고 믿고 싶지만, 여전히 괴물들이 잔뜩 있는 걸 보면 그녀가 승리하지 못한 거겠지. 그런데 우리 민족이 동굴로 탈출하려 했다고? 나머지 이야기도 알아내야 해!"
+      ],
+      [
+        "TujenGossipVoranaDefeatedStoryNotComplete",
+        "보라나를 물리쳤다고? 놀라운 동시에 겸허해지는군. 나는 그녀가 최후를 맞기 전 고향으로 돌려보낸 딸, 아네스트의 후손이야. 너는 내 조상에게 안식을 가져다 준 거지. 고마워."
+      ],
+      [
+        "TujenGossipVoranaDefeatedStoryComplete",
+        "이제 검은 낫 보라나의 이야기가 완성되었어. 전쟁으로 점철된 삶을 살더니, 역시 전쟁 속에서 최후를 맞이했군. 보라나의 딸 아네스트의 후손으로서, 내 혈통의 역사에서 빠진 부분을 채울 수 있게 되었어. 고향으로 돌아가면 보라나가 마지막 불꽃을 불사르며 영광스러운 죽음을 맞이했다고 알릴 거야. 혈혈단신으로 괴물이 득실대는 대륙 전체와 전쟁을 벌이면서 말이지.\r\n\r\n그녀가 불사의 괴물이 되었다는 사실은 빼자고. 알겠지?"
+      ],
+      [
+        "TujenGossipUhtredDefeatedStoryComplete",
+        "네가 찾은 문헌에 의하면, 보라나가 최후의 항전을 펼치는 동안 레이클라스트에 있던 나머지 칼구르인들은 힘이 깃든 고대의 장소를 통해 탈출하려 했던 모양이야. 그곳에는 우트레드가 기다리고 있었지... 그 후에 무슨 일이 일어났는지는 이제 우리도 알게 됐고. 우트레드 역시 광기의 타락에 굴복하고 말았어. 분명 그가 문턱에서 한 명도 빠짐없이 죽였겠지만, 그를 돌파해서 탈출한 사람이 있었으면 좋겠군.\r\n\r\n하지만 아직 궁금한 점이 있어. 우트레드는 처음 마석이 부정하다고 주장했던 이들 중 한 명이잖아. 우리가 찾은 기록에 의하면 한 번도 마석을 사용한 적도 없고. 그러면 언제, 왜 광기에 빠진 걸까? 대체 어떤 광경을 목격했길래 정신이 붕괴한 걸까?"
+      ],
+      [
+        "TujenExclaimsAboutVorana",
+        "보라나야!"
+      ],
+      [
+        "OlrothAssaultRandom",
+        "공격!"
+      ],
+      [
+        "OlrothAssault2",
+        "공격!"
+      ],
+      [
+        "OlrothAssault3",
+        "공격!"
+      ],
+      [
+        "OlrothBurnRandom",
+        "불타라!"
+      ],
+      [
+        "OlrothBurn2",
+        "불타라!"
+      ],
+      [
+        "OlrothBurn3",
+        "불타라!"
+      ],
+      [
+        "OlrothIAmTheDoomRandom",
+        "내가 곧 너의 파멸이다!"
+      ],
+      [
+        "OlrothIAmTheDoom2",
+        "내가 곧 너의 파멸이다!"
+      ],
+      [
+        "OlrothIAmTheDoom3",
+        "내가 곧 너의 파멸이다!"
+      ],
+      [
+        "OlrothHoldTheLineRandom",
+        "전선을 유지하라!"
+      ],
+      [
+        "OlrothHoldTheLine2",
+        "전선을 유지하라!"
+      ],
+      [
+        "OlrothHoldTheLine3",
+        "전선을 유지하라!"
+      ],
+      [
+        "OlrothICannotYieldRandom",
+        "포기할 수 없다!"
+      ],
+      [
+        "OlrothICannotYield2",
+        "포기할 수 없다!"
+      ],
+      [
+        "OlrothIHaveBecomeTheDarknessRandom",
+        "나는 어둠 그 자체가 되었다..."
+      ],
+      [
+        "OlrothIHaveBecomeTheDarkness2",
+        "나는 어둠 그 자체가 되었다..."
+      ],
+      [
+        "OlrothIHaveBecomeTheDarkness3",
+        "나는 어둠 그 자체가 되었다..."
+      ],
+      [
+        "OlrothIWillNeverYieldRandom",
+        "절대 포기하지 않는다!"
+      ],
+      [
+        "OlrothIWillNeverYield2",
+        "절대 포기하지 않는다!"
+      ],
+      [
+        "OlrothIWillNeverYield3",
+        "절대 포기하지 않는다!"
+      ],
+      [
+        "OlrothIWillNeverYield4",
+        "절대 포기하지 않는다!"
+      ],
+      [
+        "OlrothIWillNeverYield5",
+        "절대 포기하지 않는다!"
+      ],
+      [
+        "OlrothIWillNeverYield6",
+        "절대 포기하지 않는다!"
+      ],
+      [
+        "OlrothNeverRandom",
+        "패배란 없다!"
+      ],
+      [
+        "OlrothNever2",
+        "패배란 없다!"
+      ],
+      [
+        "OlrothNever3",
+        "패배란 없다!"
+      ],
+      [
+        "OlrothNever4",
+        "국왕 폐하를 위하여!"
+      ],
+      [
+        "OlrothNever5",
+        "국왕 폐하를 위하여!"
+      ],
+      [
+        "OlrothNever6",
+        "국왕 폐하를 위하여!"
+      ],
+      [
+        "OlrothPurifyRandom",
+        "정화되어라!"
+      ],
+      [
+        "OlrothPurify2",
+        "정화되어라!"
+      ],
+      [
+        "OlrothPurify3",
+        "정화되어라!"
+      ],
+      [
+        "OlrothStarfireRandom",
+        "별이 너를 태우리라!"
+      ],
+      [
+        "OlrothStarfire2",
+        "별이 너를 태우리라!"
+      ],
+      [
+        "OlrothStarfire3",
+        "별이 너를 태우리라!"
+      ],
+      [
+        "OlrothTheCurseRandom",
+        "산속에서... 저주가 나타났다..."
+      ],
+      [
+        "OlrothTheCurse2",
+        "산속에서... 저주가 나타났다..."
+      ],
+      [
+        "OlrothTheCurse3",
+        "산속에서... 저주가 나타났다..."
+      ],
+      [
+        "OlrothTraitorRandom",
+        "배신자!"
+      ],
+      [
+        "OlrothTraitor2",
+        "배신자!"
+      ],
+      [
+        "OlrothTraitor3",
+        "배신자!"
+      ],
+      [
+        "OlrothTripleBladeRandom",
+        "삼중 칼날!"
+      ],
+      [
+        "OlrothTripleBlade2",
+        "삼중 칼날!"
+      ],
+      [
+        "OlrothTripleBlade3",
+        "삼중 칼날!"
+      ],
+      [
+        "OlrothWastelandRandom",
+        "황무지!"
+      ],
+      [
+        "OlrothWasteland2",
+        "황무지!"
+      ],
+      [
+        "OlrothWasteland3",
+        "황무지!"
+      ],
+      [
+        "OlrothWhoDares",
+        "누가... 감히?"
+      ],
+      [
+        "OlrothYouveDoomedUsAllRandom",
+        "네가 우리 모두를 파멸로 몰아넣었다!"
+      ],
+      [
+        "OlrothYouveDoomedUsAll2",
+        "네가 우리 모두를 파멸로 몰아넣었다!"
+      ],
+      [
+        "OlrothYouveDoomedUsAll3",
+        "네가 우리 모두를 파멸로 몰아넣었다!"
+      ],
+      [
+        "OlrothYouWillFail",
+        "너는 실패하리라!"
+      ],
+      [
+        "OlrothDarknessAtLast",
+        "마침내... 어둠이..."
+      ],
+      [
+        "OlrothICannotDieRandom",
+        "나는... 죽지 않는다..."
+      ],
+      [
+        "OlrothICannotDie2",
+        "나는... 죽지 않는다..."
+      ],
+      [
+        "MedvedIntroRandom",
+        "나는 이미 너의 패배를 보았다."
+      ],
+      [
+        "MedvedIntro2",
+        "나는 이미 너의 패배를 보았다."
+      ],
+      [
+        "MedvedIntro3",
+        "나는 이미 너의 패배를 보았다."
+      ],
+      [
+        "MedvedSwarmRandom",
+        "득시글대라!"
+      ],
+      [
+        "MedvedSwarm2",
+        "득시글대라!"
+      ],
+      [
+        "MedvedSwarm3",
+        "득시글대라!"
+      ],
+      [
+        "MedvedSummonHealerRandom",
+        "날 도와라!"
+      ],
+      [
+        "MedvedSummonHealer2",
+        "날 도와라!"
+      ],
+      [
+        "MedvedSummonHealer3",
+        "날 도와라!"
+      ],
+      [
+        "MedvedSummonBuffRandom",
+        "신념은 모든 것을 압도한다!"
+      ],
+      [
+        "MedvedSummonBuff2",
+        "신념은 모든 것을 압도한다!"
+      ],
+      [
+        "MedvedSummonBuff3",
+        "신념은 모든 것을 압도한다!"
+      ],
+      [
+        "MedvedSummonBuff4",
+        "신념은 모든 것을 압도한다!"
+      ],
+      [
+        "MedvedSummonAreaDenialRandom",
+        "금지된 힘이여!"
+      ],
+      [
+        "MedvedSummonAreaDenial2",
+        "금지된 힘이여!"
+      ],
+      [
+        "MedvedSummonAreaDenial3",
+        "금지된 힘이여!"
+      ],
+      [
+        "MedvedComboAttackRandom",
+        "처형인!"
+      ],
+      [
+        "MedvedComboAttack2",
+        "처형인!"
+      ],
+      [
+        "MedvedComboAttack3",
+        "처형인!"
+      ],
+      [
+        "MedvedComboAttack4",
+        "처형인!"
+      ],
+      [
+        "MedvedComboAttack5",
+        "심장 꺼내기!"
+      ],
+      [
+        "MedvedComboAttack6",
+        "심장 꺼내기!"
+      ],
+      [
+        "MedvedComboAttack7",
+        "심장 꺼내기!"
+      ],
+      [
+        "MedvedComboAttack8",
+        "심장 꺼내기!"
+      ],
+      [
+        "MedvedComboAttack9",
+        "사지 절단!"
+      ],
+      [
+        "MedvedComboAttack10",
+        "사지 절단!"
+      ],
+      [
+        "MedvedComboAttack11",
+        "사지 절단!"
+      ],
+      [
+        "MedvedComboAttack12",
+        "사지 절단!"
+      ],
+      [
+        "MedvedComboAttack13",
+        "도끼날!"
+      ],
+      [
+        "MedvedComboAttack14",
+        "도끼날!"
+      ],
+      [
+        "MedvedForthekingRandom",
+        "국왕 폐하를 위하여!"
+      ],
+      [
+        "MedvedFortheking2",
+        "국왕 폐하를 위하여!"
+      ],
+      [
+        "MedvedFortheking3",
+        "국왕 폐하를 위하여!"
+      ],
+      [
+        "MedvedFortheking4",
+        "국왕 폐하를 위하여!"
+      ],
+      [
+        "MedvedDeathRandom",
+        "네가... 원을 끊었구나..."
+      ],
+      [
+        "MedvedDeath2",
+        "네가... 원을 끊었구나..."
+      ],
+      [
+        "MedvedDeath3",
+        "그들은 거울 주위에... 사원을 지었다..."
+      ],
+      [
+        "MedvedDeath4",
+        "밤하늘을 피하기 위해... 땅 밑으로..."
+      ],
+      [
+        "TujenEncounterCompleteRandom",
+        "내가 있는 한 어림없다!"
+      ],
+      [
+        "TujenEncounterComplete2",
+        "내가 있는 한 어림없다!"
+      ],
+      [
+        "TujenEncounterComplete3",
+        "칼구르를 위하여!"
+      ],
+      [
+        "TujenEncounterComplete4",
+        "칼구르를 위하여!"
+      ],
+      [
+        "TujenEncounterComplete5",
+        "하!"
+      ],
+      [
+        "TujenEncounterComplete6",
+        "하!"
+      ],
+      [
+        "GwennenEncounterCompleteRandom",
+        "하!"
+      ],
+      [
+        "GwennenEncounterComplete2",
+        "하!"
+      ],
+      [
+        "GwennenEncounterComplete3",
+        "하!"
+      ],
+      [
+        "GwennenEncounterComplete4",
+        "어림없지!"
+      ],
+      [
+        "GwennenEncounterComplete5",
+        "어림없지!"
+      ],
+      [
+        "GwennenEncounterComplete6",
+        "어림없지!"
+      ],
+      [
+        "GwennenEncounterComplete7",
+        "칼구르를 위하여!"
+      ],
+      [
+        "GwennenEncounterComplete8",
+        "칼구르를 위하여!"
+      ],
+      [
+        "GwennenEncounterComplete9",
+        "칼구르를 위하여!"
+      ],
+      [
+        "GwennenEncounterComplete10",
+        "꿈도 꾸지 마!"
+      ],
+      [
+        "GwennenEncounterComplete11",
+        "꿈도 꾸지 마!"
+      ],
+      [
+        "GwennenEncounterComplete12",
+        "꿈도 꾸지 마!"
+      ],
+      [
+        "RogEncounterCompleteRandom",
+        "몸조심하시오!"
+      ],
+      [
+        "RogEncounterComplete2",
+        "몸조심하시오!"
+      ],
+      [
+        "RogEncounterComplete3",
+        "몸조심하시오!"
+      ],
+      [
+        "DannigEncounterCompleteRandom",
+        "영광스럽도다!"
+      ],
+      [
+        "DannigEncounterComplete2",
+        "영광스럽도다!"
+      ],
+      [
+        "DannigEncounterComplete3",
+        "영광스럽도다!"
+      ],
+      [
+        "DannigEncounterComplete4",
+        "하!"
+      ],
+      [
+        "DannigEncounterComplete5",
+        "하!"
+      ],
+      [
+        "DannigEncounterComplete6",
+        "하!"
       ]
     ]
   },
@@ -56350,15 +60018,7 @@
         "사냥의 대가 토라"
       ],
       [
-        "Metadata/NPC/Missions/Hideout/DexDemo",
-        "사냥의 대가 토라"
-      ],
-      [
         "Metadata/NPC/Missions/Hideout/Int",
-        "망자의 대가 카타리나"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/IntDemo",
         "망자의 대가 카타리나"
       ],
       [
@@ -56366,15 +60026,7 @@
         "갑옷의 대가 하쿠"
       ],
       [
-        "Metadata/NPC/Missions/Hideout/StrDemo",
-        "갑옷의 대가 하쿠"
-      ],
-      [
         "Metadata/NPC/Missions/Hideout/DexInt",
-        "암살의 대가 보리치"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/DexIntDemo",
         "암살의 대가 보리치"
       ],
       [
@@ -56382,15 +60034,7 @@
         "무기의 대가 베이건"
       ],
       [
-        "Metadata/NPC/Missions/Hideout/StrDexDemo",
-        "무기의 대가 베이건"
-      ],
-      [
         "Metadata/NPC/Missions/Hideout/StrInt",
-        "전승의 대가 엘레온"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/StrIntDemo",
         "전승의 대가 엘레온"
       ],
       [
@@ -56403,10 +60047,6 @@
       ],
       [
         "Metadata/NPC/Missions/Hideout/PvP",
-        "투기장의 대가 레오"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/PvPDemo",
         "투기장의 대가 레오"
       ],
       [
@@ -57866,6 +61506,14 @@
         "시련의 대가"
       ],
       [
+        "Metadata/Monsters/LeagueDelve/CityBosses/DelveVaalCityBoss",
+        "눈먼 자, 아후아토틀리"
+      ],
+      [
+        "Metadata/Monsters/LeagueDelve/CityBosses/DelveProtoVaalCityBoss",
+        "수정의 왕 아울"
+      ],
+      [
         "Metadata/Monsters/LeagueUltimatum/TrialMaster/TrialMasterBoss",
         "시련의 대가"
       ],
@@ -57874,8 +61522,72 @@
         "하시나"
       ],
       [
+        "Metadata/NPC/League/Expedition/Saga",
+        "전사 시인 대닉"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/Gambler",
+        "도박사 그위넨"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/Haggler",
+        "거간꾼 투젠"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/Dealer",
+        "중개인 로그"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionDannig",
+        "대닉"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionGwennen_",
+        "그위넨"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionTujen",
+        "투젠"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog",
+        "로그"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/SagaHideout",
+        "전사 시인 대닉"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/GamblerHideout",
+        "도박사 그위넨"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/HagglerHideout",
+        "거간꾼 투젠"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/DealerHideout",
+        "중개인 로그"
+      ],
+      [
         "RoyaleAnnouncer",
         "배틀로열 해설자"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/ReaperBoss",
+        "최후의 보루 보라나"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/Uhtred",
+        "우트레드"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/Olroth",
+        "몰락의 기원 올로스"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/Medved",
+        "메드베드"
       ]
     ]
   }

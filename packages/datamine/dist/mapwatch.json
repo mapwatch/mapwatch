@@ -6702,13 +6702,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Lookout.dds",
-        "Lira Arthain",
+        "Tirn's End",
         [
-          4,
-          7,
-          10,
-          12,
-          14
+          0,
+          0,
+          0,
+          0,
+          15
         ],
         1074
       ],
@@ -6723,13 +6723,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Beach.dds",
-        "Lex Ejoris",
+        "Glennach Cairns",
         [
-          0,
-          0,
-          0,
-          14,
-          16
+          1,
+          4,
+          8,
+          10,
+          14
         ],
         1075
       ],
@@ -6746,11 +6746,11 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Graveyard.dds",
         "Glennach Cairns",
         [
-          3,
-          7,
-          10,
-          12,
-          15
+          2,
+          5,
+          9,
+          11,
+          14
         ],
         1076
       ],
@@ -6765,13 +6765,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Dungeon.dds",
-        "Lex Ejoris",
+        "New Vastir",
         [
           0,
-          9,
-          12,
-          14,
-          16
+          0,
+          0,
+          0,
+          15
         ],
         1077
       ],
@@ -6786,13 +6786,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Alleyways.dds",
-        "Lex Ejoris",
+        "New Vastir",
         [
           0,
-          8,
+          0,
           12,
-          13,
-          15
+          14,
+          16
         ],
         1078
       ],
@@ -6807,13 +6807,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Pen.dds",
-        "Valdo's Rest",
+        "Haewark Hamlet",
         [
-          1,
           4,
-          8,
-          10,
-          14
+          7,
+          11,
+          13,
+          15
         ],
         1079
       ],
@@ -6828,12 +6828,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Desert.dds",
-        "New Vastir",
+        "Haewark Hamlet",
         [
-          4,
+          5,
           8,
-          11,
           12,
+          13,
           15
         ],
         1080
@@ -6849,11 +6849,11 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/AridLake.dds",
-        "Valdo's Rest",
+        "Tirn's End",
         [
-          3,
+          2,
           6,
-          10,
+          9,
           11,
           14
         ],
@@ -6870,13 +6870,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Cavern.dds",
-        "Lira Arthain",
+        "Tirn's End",
         [
           0,
           0,
-          11,
-          13,
-          15
+          0,
+          12,
+          14
         ],
         1082
       ],
@@ -6891,13 +6891,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Marshes.dds",
-        "Lira Arthain",
+        "Glennach Cairns",
         [
-          4,
-          7,
-          10,
-          12,
-          15
+          2,
+          6,
+          9,
+          11,
+          14
         ],
         1083
       ],
@@ -6912,13 +6912,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Iceberg.dds",
-        "Glennach Cairns",
+        "Lex Proxima",
         [
-          4,
-          8,
+          2,
+          5,
+          9,
           11,
-          13,
-          16
+          14
         ],
         1084
       ],
@@ -6933,13 +6933,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Cage.dds",
-        "Glennach Cairns",
+        "Lex Proxima",
         [
-          4,
-          7,
+          2,
+          5,
+          9,
           11,
-          14,
-          16
+          14
         ],
         1085
       ],
@@ -6954,13 +6954,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/FungalCaverns.dds",
-        "Haewark Hamlet",
+        "Lex Ejoris",
         [
-          0,
-          0,
-          11,
-          13,
-          15
+          4,
+          7,
+          10,
+          12,
+          14
         ],
         1086
       ],
@@ -6975,13 +6975,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Excavation.dds",
-        "Haewark Hamlet",
+        "Valdo's Rest",
         [
           0,
           0,
-          0,
-          14,
-          16
+          9,
+          11,
+          14
         ],
         1087
       ],
@@ -6996,13 +6996,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SulphurWastes.dds",
-        "Haewark Hamlet",
+        "Lex Proxima",
         [
-          4,
-          7,
-          10,
-          12,
-          14
+          0,
+          0,
+          0,
+          0,
+          15
         ],
         1088
       ],
@@ -7017,13 +7017,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DryPeninsula.dds",
-        "Lex Proxima",
+        "Glennach Cairns",
         [
-          2,
-          5,
-          9,
+          4,
+          7,
           11,
-          14
+          13,
+          16
         ],
         1089
       ],
@@ -7038,11 +7038,11 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Quay.dds",
-        "Tirn's End",
+        "Valdo's Rest",
         [
           0,
-          0,
-          0,
+          7,
+          9,
           11,
           14
         ],
@@ -7059,13 +7059,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/BurialChambers.dds",
-        "Lex Ejoris",
+        "New Vastir",
         [
           0,
           0,
           0,
           0,
-          16
+          15
         ],
         1091
       ],
@@ -7080,13 +7080,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Cells.dds",
-        "Lex Ejoris",
+        "Haewark Hamlet",
         [
-          5,
-          8,
-          11,
-          12,
-          15
+          0,
+          0,
+          0,
+          0,
+          16
         ],
         1092
       ],
@@ -7101,13 +7101,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Arcade.dds",
-        "Glennach Cairns",
+        "Haewark Hamlet",
         [
-          1,
-          4,
-          8,
-          10,
-          14
+          0,
+          0,
+          0,
+          0,
+          15
         ],
         1093
       ],
@@ -7122,13 +7122,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CitySquare.dds",
-        "Valdo's Rest",
+        "Lex Ejoris",
         [
-          0,
-          0,
-          0,
-          0,
-          14
+          5,
+          8,
+          12,
+          14,
+          16
         ],
         1094
       ],
@@ -7143,11 +7143,11 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Antiquary.dds",
-        "New Vastir",
+        "Haewark Hamlet",
         [
           0,
-          9,
-          12,
+          0,
+          11,
           13,
           15
         ],
@@ -7164,13 +7164,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Courthouse.dds",
-        "Lira Arthain",
+        "Glennach Cairns",
         [
           4,
           8,
-          11,
+          12,
           13,
-          15
+          16
         ],
         1096
       ],
@@ -7185,13 +7185,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Strand.dds",
-        "New Vastir",
+        "Glennach Cairns",
         [
-          3,
+          4,
           7,
-          10,
-          12,
-          14
+          11,
+          13,
+          15
         ],
         1097
       ],
@@ -7206,13 +7206,13 @@
         false,
         false,
         "Art/2DItems/Maps/UniqueMapEye.dds",
-        "New Vastir",
+        "Glennach Cairns",
         [
-          3,
+          4,
           7,
-          10,
-          12,
-          14
+          11,
+          13,
+          15
         ],
         1098
       ],
@@ -7227,13 +7227,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Chateau.dds",
-        "Tirn's End",
+        "Haewark Hamlet",
         [
-          0,
           5,
           9,
-          11,
-          14
+          12,
+          14,
+          16
         ],
         1099
       ],
@@ -7248,13 +7248,13 @@
         false,
         false,
         "Art/2DItems/Maps/PerandusManor.dds",
-        "Tirn's End",
+        "Haewark Hamlet",
         [
-          0,
           5,
           9,
-          11,
-          14
+          12,
+          14,
+          16
         ],
         1100
       ],
@@ -7269,12 +7269,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Grotto.dds",
-        "Glennach Cairns",
+        "Valdo's Rest",
         [
-          2,
-          5,
-          9,
-          11,
+          0,
+          0,
+          8,
+          10,
           14
         ],
         1101
@@ -7292,10 +7292,10 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Glacier.dds",
         "Lex Proxima",
         [
-          3,
-          6,
-          10,
-          11,
+          0,
+          0,
+          0,
+          0,
           14
         ],
         1102
@@ -7311,10 +7311,10 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Volcano.dds",
-        "Lex Proxima",
+        "Glennach Cairns",
         [
-          2,
-          6,
+          0,
+          5,
           9,
           11,
           14
@@ -7332,13 +7332,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Beacon.dds",
-        "Lira Arthain",
+        "New Vastir",
         [
-          5,
-          9,
-          12,
-          14,
-          16
+          4,
+          8,
+          11,
+          13,
+          15
         ],
         1104
       ],
@@ -7353,13 +7353,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Canyon.dds",
-        "Valdo's Rest",
+        "Glennach Cairns",
         [
           3,
-          7,
+          6,
           10,
-          12,
-          15
+          11,
+          14
         ],
         1105
       ],
@@ -7374,13 +7374,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Baths.dds",
-        "Lex Ejoris",
+        "Valdo's Rest",
         [
           0,
           0,
-          11,
-          13,
-          15
+          0,
+          0,
+          14
         ],
         1106
       ],
@@ -7395,12 +7395,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Corrosion.dds",
-        "Lex Proxima",
+        "Glennach Cairns",
         [
-          3,
-          6,
-          10,
-          12,
+          0,
+          0,
+          0,
+          0,
           14
         ],
         1107
@@ -7416,10 +7416,10 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Chambers.dds",
-        "Glennach Cairns",
+        "Lex Proxima",
         [
-          0,
-          5,
+          2,
+          6,
           9,
           11,
           14
@@ -7437,13 +7437,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Maze.dds",
-        "Valdo's Rest",
+        "Lex Proxima",
         [
-          0,
-          0,
-          0,
-          13,
-          16
+          3,
+          7,
+          10,
+          11,
+          14
         ],
         1109
       ],
@@ -7458,13 +7458,13 @@
         false,
         false,
         "Art/2DItems/Maps/Doryanis.dds",
-        "Valdo's Rest",
+        "Lex Proxima",
         [
-          0,
-          0,
-          0,
-          13,
-          16
+          3,
+          7,
+          10,
+          11,
+          14
         ],
         1110
       ],
@@ -7479,13 +7479,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Channel.dds",
-        "Haewark Hamlet",
+        "Valdo's Rest",
         [
+          1,
           4,
-          7,
-          11,
-          13,
-          15
+          8,
+          10,
+          14
         ],
         1111
       ],
@@ -7500,12 +7500,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Sewer.dds",
-        "Lira Arthain",
+        "Haewark Hamlet",
         [
-          3,
+          4,
           7,
-          10,
           11,
+          12,
           14
         ],
         1112
@@ -7521,13 +7521,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/VaalCity.dds",
-        "Glennach Cairns",
+        "Valdo's Rest",
         [
           3,
-          6,
+          7,
           10,
-          11,
-          14
+          12,
+          15
         ],
         1113
       ],
@@ -7542,12 +7542,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/IvoryTemple.dds",
-        "Valdo's Rest",
+        "Lex Ejoris",
         [
-          0,
-          0,
-          0,
-          11,
+          3,
+          6,
+          10,
+          12,
           14
         ],
         1114
@@ -7563,13 +7563,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SpiderLair.dds",
-        "Glennach Cairns",
+        "Lira Arthain",
         [
-          0,
-          0,
-          9,
-          12,
-          14
+          4,
+          8,
+          11,
+          13,
+          15
         ],
         1115
       ],
@@ -7584,13 +7584,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Barrows.dds",
-        "Lira Arthain",
+        "New Vastir",
         [
-          0,
-          0,
-          0,
-          14,
-          16
+          3,
+          6,
+          9,
+          11,
+          14
         ],
         1116
       ],
@@ -7605,13 +7605,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Mausoleum.dds",
-        "Lira Arthain",
+        "Glennach Cairns",
         [
           0,
-          9,
-          12,
+          0,
+          0,
           13,
-          16
+          15
         ],
         1117
       ],
@@ -7626,10 +7626,10 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Fields.dds",
-        "Tirn's End",
+        "Glennach Cairns",
         [
           2,
-          5,
+          6,
           9,
           11,
           14
@@ -7647,13 +7647,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/JungleValley.dds",
-        "Lex Proxima",
+        "Glennach Cairns",
         [
-          1,
           4,
           8,
-          10,
-          14
+          11,
+          13,
+          16
         ],
         1119
       ],
@@ -7668,11 +7668,11 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Phantasmagoria.dds",
-        "Lex Proxima",
+        "Lex Ejoris",
         [
           0,
           0,
-          10,
+          0,
           12,
           14
         ],
@@ -7689,13 +7689,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Academy.dds",
-        "Lex Proxima",
+        "Valdo's Rest",
         [
-          4,
+          3,
           7,
+          10,
           11,
-          13,
-          16
+          14
         ],
         1121
       ],
@@ -7710,13 +7710,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Thicket.dds",
-        "Lex Proxima",
+        "Lira Arthain",
         [
           0,
-          0,
-          0,
-          0,
-          14
+          8,
+          11,
+          13,
+          15
         ],
         1122
       ],
@@ -7731,11 +7731,11 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Wharf.dds",
-        "Tirn's End",
+        "Valdo's Rest",
         [
-          2,
+          3,
           6,
-          9,
+          10,
           11,
           14
         ],
@@ -7752,13 +7752,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DryWoods.dds",
-        "Valdo's Rest",
+        "Lex Proxima",
         [
-          3,
+          4,
           7,
-          10,
           11,
-          14
+          13,
+          16
         ],
         1124
       ],
@@ -7773,13 +7773,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Atoll.dds",
-        "Haewark Hamlet",
+        "Tirn's End",
         [
+          0,
           5,
           9,
-          12,
-          14,
-          16
+          11,
+          14
         ],
         1125
       ],
@@ -7794,13 +7794,13 @@
         false,
         false,
         "Art/2DItems/Maps/MaelstromofChaos.dds",
-        "Haewark Hamlet",
+        "Tirn's End",
         [
+          0,
           5,
           9,
-          12,
-          14,
-          16
+          11,
+          14
         ],
         1126
       ],
@@ -7815,12 +7815,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Cemetery.dds",
-        "Haewark Hamlet",
+        "Tirn's End",
         [
-          3,
-          7,
-          10,
-          12,
+          2,
+          5,
+          9,
+          11,
           14
         ],
         1127
@@ -7836,12 +7836,12 @@
         false,
         false,
         "Art/2DItems/Maps/HallowedGround.dds",
-        "Haewark Hamlet",
+        "Tirn's End",
         [
-          3,
-          7,
-          10,
-          12,
+          2,
+          5,
+          9,
+          11,
           14
         ],
         1128
@@ -7857,13 +7857,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/UndergroundSea.dds",
-        "Lex Proxima",
+        "Valdo's Rest",
         [
-          2,
-          6,
-          9,
-          11,
-          14
+          0,
+          0,
+          0,
+          0,
+          16
         ],
         1129
       ],
@@ -7878,12 +7878,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Tribunal.dds",
-        "Lex Proxima",
+        "Tirn's End",
         [
-          2,
-          5,
-          9,
-          11,
+          0,
+          0,
+          0,
+          0,
           14
         ],
         1130
@@ -7899,13 +7899,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CorpseTrench.dds",
-        "Tirn's End",
+        "Lira Arthain",
         [
           0,
           0,
-          0,
-          12,
-          14
+          11,
+          13,
+          15
         ],
         1131
       ],
@@ -7920,13 +7920,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Crematorium.dds",
-        "Glennach Cairns",
+        "Lex Ejoris",
         [
-          3,
-          6,
-          10,
-          11,
-          14
+          0,
+          0,
+          0,
+          14,
+          16
         ],
         1132
       ],
@@ -7941,13 +7941,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Residence.dds",
-        "Glennach Cairns",
+        "New Vastir",
         [
           0,
           0,
           0,
-          0,
-          14
+          14,
+          16
         ],
         1133
       ],
@@ -7962,12 +7962,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Ramparts.dds",
-        "Haewark Hamlet",
+        "Lira Arthain",
         [
-          4,
+          3,
           7,
+          10,
           11,
-          12,
           14
         ],
         1134
@@ -7983,12 +7983,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Dunes.dds",
-        "New Vastir",
+        "Lex Ejoris",
         [
           4,
-          8,
+          7,
           11,
-          13,
+          12,
           15
         ],
         1135
@@ -8004,12 +8004,12 @@
         false,
         false,
         "Art/2DItems/Maps/PillarsOfVastiri.dds",
-        "New Vastir",
+        "Lex Ejoris",
         [
           4,
-          8,
+          7,
           11,
-          13,
+          12,
           15
         ],
         1136
@@ -8025,12 +8025,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Catacomb.dds",
-        "Lex Ejoris",
+        "New Vastir",
         [
           4,
-          7,
+          8,
           11,
-          12,
+          13,
           15
         ],
         1137
@@ -8046,12 +8046,12 @@
         false,
         false,
         "Art/2DItems/Maps/olmec.dds",
-        "Lex Ejoris",
+        "New Vastir",
         [
           4,
-          7,
+          8,
           11,
-          12,
+          13,
           15
         ],
         1138
@@ -8067,10 +8067,10 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/UndergroundRiver.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
-          2,
-          6,
+          0,
+          0,
           9,
           11,
           14
@@ -8088,10 +8088,10 @@
         false,
         false,
         "Art/2DItems/Maps/WolfMap.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
-          2,
-          6,
+          0,
+          0,
           9,
           11,
           14
@@ -8109,13 +8109,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Terrace.dds",
-        "Valdo's Rest",
+        "Lira Arthain",
         [
-          2,
-          6,
-          9,
-          11,
-          14
+          0,
+          0,
+          0,
+          0,
+          15
         ],
         1141
       ],
@@ -8130,13 +8130,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ArachnidNest.dds",
-        "Haewark Hamlet",
+        "Lex Ejoris",
         [
-          0,
-          0,
-          0,
-          0,
-          16
+          5,
+          8,
+          11,
+          12,
+          15
         ],
         1142
       ],
@@ -8151,13 +8151,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Bazaar.dds",
-        "Tirn's End",
+        "Lira Arthain",
         [
-          0,
-          0,
-          0,
-          0,
-          15
+          4,
+          7,
+          10,
+          12,
+          14
         ],
         1143
       ],
@@ -8172,13 +8172,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Laboratory.dds",
-        "New Vastir",
+        "Lira Arthain",
         [
-          3,
-          7,
-          10,
+          0,
+          0,
           12,
-          14
+          14,
+          16
         ],
         1144
       ],
@@ -8195,11 +8195,11 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Infestation.dds",
         "Glennach Cairns",
         [
-          2,
-          5,
-          9,
-          11,
-          14
+          3,
+          7,
+          10,
+          12,
+          15
         ],
         1145
       ],
@@ -8214,13 +8214,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/OvergrownRuin.dds",
-        "Lex Proxima",
+        "Lex Ejoris",
         [
-          3,
-          7,
-          10,
-          11,
-          14
+          0,
+          0,
+          0,
+          0,
+          15
         ],
         1146
       ],
@@ -8237,9 +8237,9 @@
         "Art/2DItems/Maps/Atlas2Maps/New/VaalPyramid.dds",
         "Lex Proxima",
         [
-          3,
-          7,
-          10,
+          2,
+          6,
+          9,
           11,
           14
         ],
@@ -8258,9 +8258,9 @@
         "Art/2DItems/Maps/UniqueMap1.dds",
         "Lex Proxima",
         [
-          3,
-          7,
-          10,
+          2,
+          6,
+          9,
           11,
           14
         ],
@@ -8279,11 +8279,11 @@
         "Art/2DItems/Maps/Atlas2Maps/New/Quarry.dds",
         "Lex Proxima",
         [
-          3,
-          7,
+          2,
+          6,
           10,
           12,
-          14
+          15
         ],
         1149
       ],
@@ -8298,13 +8298,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Armory.dds",
-        "Lex Ejoris",
+        "Lex Proxima",
         [
-          5,
-          8,
+          2,
+          6,
+          9,
           11,
-          13,
-          15
+          14
         ],
         1150
       ],
@@ -8319,13 +8319,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Courtyard.dds",
-        "Lex Proxima",
+        "Valdo's Rest",
         [
-          3,
-          7,
-          10,
-          11,
-          14
+          0,
+          0,
+          0,
+          13,
+          16
         ],
         1151
       ],
@@ -8340,13 +8340,13 @@
         false,
         false,
         "Art/2DItems/Maps/TheVinktarSquare.dds",
-        "Lex Proxima",
+        "Valdo's Rest",
         [
-          3,
-          7,
-          10,
-          11,
-          14
+          0,
+          0,
+          0,
+          13,
+          16
         ],
         1152
       ],
@@ -8361,12 +8361,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/MudGeyser.dds",
-        "Tirn's End",
+        "New Vastir",
         [
-          3,
-          6,
-          10,
+          5,
+          9,
           12,
+          14,
           16
         ],
         1153
@@ -8382,13 +8382,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Shore.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
-          3,
-          6,
-          10,
-          12,
-          14
+          0,
+          0,
+          0,
+          13,
+          16
         ],
         1154
       ],
@@ -8403,13 +8403,13 @@
         false,
         false,
         "Art/2DItems/Maps/FairgravesMap01.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
-          3,
-          6,
-          10,
-          12,
-          14
+          0,
+          0,
+          0,
+          13,
+          16
         ],
         1155
       ],
@@ -8424,10 +8424,10 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/TropicalIsland.dds",
-        "Glennach Cairns",
+        "Tirn's End",
         [
           2,
-          6,
+          5,
           9,
           11,
           14
@@ -8460,13 +8460,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/MineralPools.dds",
-        "Valdo's Rest",
+        "Haewark Hamlet",
         [
           0,
           0,
-          9,
-          11,
-          14
+          0,
+          14,
+          16
         ],
         1158
       ],
@@ -8481,12 +8481,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/LunarisTemple.dds",
-        "Tirn's End",
+        "Haewark Hamlet",
         [
-          2,
-          5,
-          9,
-          11,
+          3,
+          7,
+          10,
+          12,
           14
         ],
         1159
@@ -8502,12 +8502,12 @@
         false,
         false,
         "Art/2DItems/Maps/Celestial.dds",
-        "Tirn's End",
+        "Haewark Hamlet",
         [
-          2,
-          5,
-          9,
-          11,
+          3,
+          7,
+          10,
+          12,
           14
         ],
         1160
@@ -8523,13 +8523,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Sepulchre.dds",
-        "Lex Ejoris",
+        "Lira Arthain",
         [
-          0,
-          0,
-          0,
-          0,
-          14
+          3,
+          7,
+          10,
+          12,
+          15
         ],
         1161
       ],
@@ -8544,13 +8544,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Tower.dds",
-        "Glennach Cairns",
+        "Haewark Hamlet",
         [
-          2,
-          5,
-          9,
-          11,
-          14
+          0,
+          0,
+          0,
+          14,
+          16
         ],
         1162
       ],
@@ -8565,13 +8565,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/WastePool.dds",
-        "Lex Ejoris",
+        "Valdo's Rest",
         [
-          5,
-          8,
-          12,
-          14,
-          16
+          0,
+          0,
+          0,
+          0,
+          14
         ],
         1163
       ],
@@ -8586,13 +8586,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Plateau.dds",
-        "Glennach Cairns",
+        "Lira Arthain",
         [
           0,
-          0,
-          0,
+          9,
+          12,
           13,
-          15
+          16
         ],
         1164
       ],
@@ -8607,13 +8607,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Estuary.dds",
-        "Lira Arthain",
+        "Valdo's Rest",
         [
-          0,
-          0,
-          0,
-          0,
-          15
+          2,
+          6,
+          9,
+          11,
+          14
         ],
         1165
       ],
@@ -8628,13 +8628,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Vault.dds",
-        "New Vastir",
+        "Lex Ejoris",
         [
           0,
-          0,
-          0,
-          0,
-          15
+          9,
+          12,
+          14,
+          16
         ],
         1166
       ],
@@ -8649,12 +8649,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Temple.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
           3,
-          6,
+          7,
           10,
-          12,
+          11,
           14
         ],
         1167
@@ -8670,12 +8670,12 @@
         false,
         false,
         "Art/2DItems/Maps/PoorjoysAsylum.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
           3,
-          6,
+          7,
           10,
-          12,
+          11,
           14
         ],
         1168
@@ -8694,7 +8694,7 @@
         "Valdo's Rest",
         [
           2,
-          6,
+          5,
           9,
           11,
           14
@@ -8712,13 +8712,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Museum.dds",
-        "Glennach Cairns",
+        "New Vastir",
         [
-          4,
+          3,
           7,
-          11,
-          13,
-          15
+          10,
+          12,
+          14
         ],
         1170
       ],
@@ -8733,13 +8733,13 @@
         false,
         false,
         "Art/2DItems/Maps/PutridCloister.dds",
-        "Glennach Cairns",
+        "New Vastir",
         [
-          4,
+          3,
           7,
-          11,
-          13,
-          15
+          10,
+          12,
+          14
         ],
         1171
       ],
@@ -8754,13 +8754,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Scriptorium.dds",
-        "Glennach Cairns",
+        "Lira Arthain",
         [
           0,
           0,
           10,
-          13,
-          15
+          11,
+          14
         ],
         1172
       ],
@@ -8775,13 +8775,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Boulevard.dds",
-        "New Vastir",
+        "Lex Ejoris",
         [
           0,
-          0,
+          8,
           12,
-          14,
-          16
+          13,
+          15
         ],
         1173
       ],
@@ -8796,13 +8796,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Shipyard.dds",
-        "Lira Arthain",
+        "New Vastir",
         [
-          0,
-          0,
+          3,
+          7,
+          10,
           12,
-          14,
-          16
+          14
         ],
         1174
       ],
@@ -8817,12 +8817,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Belfry.dds",
-        "New Vastir",
+        "Haewark Hamlet",
         [
-          3,
-          6,
-          9,
-          11,
+          4,
+          7,
+          10,
+          12,
           14
         ],
         1175
@@ -8838,12 +8838,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Arachnid.dds",
-        "New Vastir",
+        "Lex Proxima",
         [
-          0,
-          0,
-          0,
-          0,
+          3,
+          6,
+          10,
+          12,
           15
         ],
         1176
@@ -8859,13 +8859,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Wasteland.dds",
-        "Glennach Cairns",
+        "Lira Arthain",
         [
           4,
           8,
-          12,
-          14,
-          16
+          11,
+          13,
+          15
         ],
         1177
       ],
@@ -8880,13 +8880,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Precinct.dds",
-        "Lira Arthain",
+        "Glennach Cairns",
         [
-          4,
-          8,
-          11,
-          13,
-          15
+          0,
+          0,
+          9,
+          12,
+          14
         ],
         1178
       ],
@@ -8901,13 +8901,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Bog.dds",
-        "Lex Ejoris",
+        "Lex Proxima",
         [
-          0,
-          0,
-          0,
-          0,
-          15
+          3,
+          7,
+          10,
+          11,
+          14
         ],
         1179
       ],
@@ -8922,13 +8922,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Pier.dds",
-        "Lira Arthain",
+        "Lex Ejoris",
         [
-          3,
-          7,
-          10,
-          12,
-          15
+          0,
+          0,
+          0,
+          0,
+          14
         ],
         1180
       ],
@@ -8943,13 +8943,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Crypt.dds",
-        "Lex Proxima",
+        "Tirn's End",
         [
-          0,
-          0,
-          0,
-          13,
-          16
+          3,
+          6,
+          10,
+          12,
+          14
         ],
         1181
       ],
@@ -8964,13 +8964,13 @@
         false,
         false,
         "Art/2DItems/Maps/UndeadSiege.dds",
-        "Lex Proxima",
+        "Tirn's End",
         [
-          0,
-          0,
-          0,
-          13,
-          16
+          3,
+          6,
+          10,
+          12,
+          14
         ],
         1182
       ],
@@ -8985,12 +8985,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Orchard.dds",
-        "Valdo's Rest",
+        "Glennach Cairns",
         [
           3,
           6,
           9,
-          11,
+          12,
           14
         ],
         1183
@@ -9006,13 +9006,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Promenade.dds",
-        "Valdo's Rest",
+        "Lex Ejoris",
         [
-          2,
-          5,
-          9,
+          4,
+          7,
           11,
-          14
+          12,
+          15
         ],
         1184
       ],
@@ -9045,7 +9045,7 @@
         "Valdo's Rest",
         [
           2,
-          5,
+          6,
           9,
           11,
           14
@@ -9063,13 +9063,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Colonnade.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
           0,
           0,
           0,
-          0,
-          15
+          11,
+          14
         ],
         1187
       ],
@@ -9084,13 +9084,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/PrimordialPool.dds",
-        "Lex Ejoris",
+        "Haewark Hamlet",
         [
-          4,
-          7,
-          10,
-          12,
-          14
+          0,
+          0,
+          11,
+          13,
+          15
         ],
         1188
       ],
@@ -9105,13 +9105,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SpiderForest.dds",
-        "Lex Proxima",
+        "Lex Ejoris",
         [
-          2,
-          6,
-          9,
+          5,
+          8,
           11,
-          14
+          13,
+          15
         ],
         1189
       ],
@@ -9126,13 +9126,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Coves.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
-          1,
-          4,
-          8,
-          10,
-          14
+          0,
+          0,
+          0,
+          13,
+          16
         ],
         1190
       ],
@@ -9147,13 +9147,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Waterways.dds",
-        "Haewark Hamlet",
+        "Tirn's End",
         [
           0,
-          7,
-          12,
-          14,
-          15
+          5,
+          9,
+          11,
+          14
         ],
         1191
       ],
@@ -9168,13 +9168,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Factory.dds",
-        "Tirn's End",
+        "Haewark Hamlet",
         [
-          3,
-          7,
-          10,
-          13,
-          16
+          0,
+          0,
+          0,
+          0,
+          15
         ],
         1192
       ],
@@ -9189,12 +9189,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Mesa.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
-          0,
-          0,
-          0,
-          0,
+          1,
+          4,
+          8,
+          10,
           14
         ],
         1193
@@ -9210,13 +9210,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Pit1.dds",
-        "New Vastir",
+        "Lex Ejoris",
         [
-          0,
-          0,
-          0,
-          0,
-          16
+          4,
+          7,
+          10,
+          12,
+          14
         ],
         1194
       ],
@@ -9231,12 +9231,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DefiledCathedral.dds",
-        "Lex Proxima",
+        "Haewark Hamlet",
         [
-          2,
+          3,
           6,
-          9,
-          11,
+          10,
+          12,
           14
         ],
         1196
@@ -9252,13 +9252,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Summit.dds",
-        "Haewark Hamlet",
+        "Glennach Cairns",
         [
-          0,
-          0,
-          0,
-          0,
-          15
+          3,
+          6,
+          10,
+          11,
+          14
         ],
         1197
       ],
@@ -9273,10 +9273,10 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/OvergrownShrine.dds",
-        "Lex Proxima",
+        "Tirn's End",
         [
-          0,
-          0,
+          2,
+          6,
           9,
           11,
           14
@@ -9294,10 +9294,10 @@
         false,
         false,
         "Art/2DItems/Maps/musicbox.dds",
-        "Lex Proxima",
+        "Tirn's End",
         [
-          0,
-          0,
+          2,
+          6,
           9,
           11,
           14
@@ -9315,13 +9315,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CastleRuins.dds",
-        "Lira Arthain",
+        "Glennach Cairns",
         [
           0,
           0,
-          0,
-          0,
-          15
+          9,
+          11,
+          14
         ],
         1200
       ],
@@ -9336,13 +9336,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CrystalOre.dds",
-        "Lex Ejoris",
+        "New Vastir",
         [
-          4,
-          7,
-          10,
-          12,
-          14
+          0,
+          0,
+          0,
+          0,
+          16
         ],
         1201
       ],
@@ -9357,12 +9357,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Villa.dds",
-        "Glennach Cairns",
+        "Valdo's Rest",
         [
           0,
           0,
-          0,
-          0,
+          10,
+          12,
           15
         ],
         1202
@@ -9378,12 +9378,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/PrimevalRuins.dds",
-        "Lira Arthain",
+        "Haewark Hamlet",
         [
-          3,
-          6,
-          10,
-          12,
+          0,
+          0,
+          0,
+          0,
           14
         ],
         1203
@@ -9399,13 +9399,13 @@
         false,
         false,
         "Art/2DItems/Maps/oba.dds",
-        "Lex Proxima",
+        "Valdo's Rest",
         [
-          2,
-          6,
-          9,
-          11,
-          14
+          0,
+          0,
+          0,
+          0,
+          16
         ],
         1204
       ],
@@ -9420,13 +9420,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Necropolis.dds",
-        "Valdo's Rest",
+        "Tirn's End",
         [
-          0,
-          0,
-          0,
-          0,
-          16
+          3,
+          6,
+          10,
+          12,
+          14
         ],
         1205
       ],
@@ -9441,13 +9441,13 @@
         false,
         false,
         "Art/2DItems/Maps/DeathandTaxes.dds",
-        "Valdo's Rest",
+        "Tirn's End",
         [
-          0,
-          0,
-          0,
-          0,
-          16
+          3,
+          6,
+          10,
+          12,
+          14
         ],
         1206
       ],
@@ -9462,13 +9462,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Racecourse.dds",
-        "Lira Arthain",
+        "Lex Proxima",
         [
-          0,
-          8,
+          3,
+          6,
+          10,
           11,
-          13,
-          15
+          14
         ],
         1207
       ],
@@ -9483,13 +9483,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Abyss.dds",
-        "Haewark Hamlet",
+        "Glennach Cairns",
         [
-          0,
-          0,
-          0,
-          14,
-          16
+          2,
+          5,
+          9,
+          11,
+          14
         ],
         1208
       ],
@@ -9504,12 +9504,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Ghetto.dds",
-        "Valdo's Rest",
+        "Glennach Cairns",
         [
           0,
           0,
-          10,
-          12,
+          0,
+          0,
           15
         ],
         1209
@@ -9525,13 +9525,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Park.dds",
-        "Lex Proxima",
+        "Tirn's End",
         [
-          0,
-          0,
-          0,
-          13,
-          16
+          1,
+          4,
+          8,
+          10,
+          14
         ],
         1210
       ],
@@ -9546,12 +9546,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Malformation.dds",
-        "Glennach Cairns",
+        "Lex Proxima",
         [
           0,
-          6,
-          10,
-          12,
+          5,
+          9,
+          11,
           14
         ],
         1211
@@ -9567,13 +9567,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/HighGardens.dds",
-        "Haewark Hamlet",
+        "Tirn's End",
         [
-          0,
-          0,
-          0,
-          0,
-          15
+          3,
+          7,
+          10,
+          13,
+          16
         ],
         1212
       ],
@@ -9588,12 +9588,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Shrine.dds",
-        "New Vastir",
+        "Tirn's End",
         [
-          5,
-          9,
+          3,
+          6,
+          10,
           12,
-          14,
           16
         ],
         1213
@@ -9609,13 +9609,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Arsenal.dds",
-        "Lex Ejoris",
+        "Valdo's Rest",
         [
-          4,
-          7,
+          2,
+          5,
+          9,
           11,
-          12,
-          15
+          14
         ],
         1214
       ],
@@ -9630,13 +9630,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Oasis.dds",
-        "Tirn's End",
+        "Haewark Hamlet",
         [
           0,
-          5,
-          9,
-          11,
-          14
+          7,
+          12,
+          14,
+          15
         ],
         1215
       ],
@@ -9651,12 +9651,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Core.dds",
-        "Haewark Hamlet",
+        "Lira Arthain",
         [
-          0,
-          0,
-          0,
-          0,
+          3,
+          6,
+          10,
+          12,
           14
         ],
         1216
@@ -9672,13 +9672,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Colosseum.dds",
-        "New Vastir",
+        "Glennach Cairns",
         [
           0,
           0,
           0,
-          14,
-          16
+          0,
+          14
         ],
         1217
       ],
@@ -9693,12 +9693,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SulphurVents.dds",
-        "Glennach Cairns",
+        "Lex Proxima",
         [
-          0,
-          0,
-          0,
-          0,
+          3,
+          6,
+          10,
+          12,
           14
         ],
         1218
@@ -9714,11 +9714,11 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DarkForest.dds",
-        "Valdo's Rest",
+        "Tirn's End",
         [
           0,
-          7,
-          9,
+          0,
+          0,
           11,
           14
         ],
@@ -9735,13 +9735,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Sanctuary.dds",
-        "New Vastir",
+        "Lira Arthain",
         [
-          4,
-          8,
-          11,
-          13,
-          15
+          5,
+          9,
+          12,
+          14,
+          16
         ],
         1220
       ],
@@ -9756,12 +9756,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Plaza.dds",
-        "Haewark Hamlet",
+        "Lex Proxima",
         [
-          3,
+          2,
           6,
-          10,
-          12,
+          9,
+          11,
           14
         ],
         1221
@@ -9777,11 +9777,11 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Dig.dds",
-        "Lex Ejoris",
+        "Lex Proxima",
         [
           0,
           0,
-          0,
+          10,
           12,
           14
         ],
@@ -9798,12 +9798,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Palace.dds",
-        "Haewark Hamlet",
+        "New Vastir",
         [
-          5,
+          4,
           8,
+          11,
           12,
-          13,
           15
         ],
         1223
@@ -9819,13 +9819,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Corpse.dds",
-        "Lex Proxima",
+        "Lira Arthain",
         [
           0,
           0,
           0,
-          0,
-          15
+          14,
+          16
         ],
         1224
       ],
@@ -9840,12 +9840,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Basilica.dds",
-        "Glennach Cairns",
+        "Valdo's Rest",
         [
           3,
           6,
           9,
-          12,
+          11,
           14
         ],
         1225
@@ -9861,13 +9861,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SunkenCity.dds",
-        "Glennach Cairns",
+        "Lira Arthain",
         [
-          2,
-          6,
-          9,
-          11,
-          14
+          4,
+          7,
+          10,
+          12,
+          15
         ],
         1226
       ],
@@ -9882,12 +9882,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Reef.dds",
-        "Lex Proxima",
+        "New Vastir",
         [
-          3,
-          6,
-          10,
-          12,
+          0,
+          0,
+          0,
+          0,
           15
         ],
         1227
@@ -9903,12 +9903,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Carcass.dds",
-        "Lex Proxima",
+        "Glennach Cairns",
         [
           0,
-          5,
-          9,
-          11,
+          6,
+          10,
+          12,
           14
         ],
         1228
@@ -10080,12 +10080,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DesertShipGraveyard.dds",
-        "Valdo's Rest",
+        "Glennach Cairns",
         [
-          0,
-          0,
-          8,
-          10,
+          2,
+          5,
+          9,
+          11,
           14
         ],
         1240
@@ -10101,13 +10101,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Stagnation.dds",
-        "Glennach Cairns",
+        "Lira Arthain",
         [
           0,
           0,
-          9,
-          11,
-          14
+          0,
+          0,
+          15
         ],
         1242
       ],
@@ -10122,13 +10122,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Bramblefall.dds",
-        "Valdo's Rest",
+        "Lex Ejoris",
         [
           0,
           0,
-          0,
-          0,
-          14
+          11,
+          13,
+          15
         ],
         1243
       ],
@@ -10145,11 +10145,11 @@
         "Art/2DItems/Maps/Atlas2Maps/New/FrozenCabins.dds",
         "Lex Proxima",
         [
-          2,
-          6,
+          3,
+          7,
           10,
           12,
-          15
+          14
         ],
         1244
       ],
@@ -10164,11 +10164,11 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Burn.dds",
-        "Haewark Hamlet",
+        "New Vastir",
         [
           0,
-          0,
-          11,
+          9,
+          12,
           13,
           15
         ],
@@ -10185,13 +10185,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CrimsonTownship.dds",
-        "Lex Proxima",
+        "Tirn's End",
         [
           0,
-          0,
-          0,
-          12,
-          15
+          6,
+          9,
+          11,
+          14
         ],
         1247
       ],
@@ -10206,12 +10206,12 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ForkingRiver.dds",
-        "Lex Ejoris",
+        "Valdo's Rest",
         [
-          3,
-          6,
-          10,
-          12,
+          0,
+          0,
+          0,
+          11,
           14
         ],
         1248
@@ -10227,13 +10227,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ThaumaturgyDungeon.dds",
-        "New Vastir",
+        "Lex Ejoris",
         [
           0,
           0,
           0,
           0,
-          15
+          16
         ],
         1249
       ],
@@ -10248,13 +10248,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ColdRiver.dds",
-        "Lex Proxima",
+        "Tirn's End",
         [
           0,
           0,
           0,
-          11,
-          14
+          0,
+          15
         ],
         1250
       ],
@@ -10269,13 +10269,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ForbiddenWoods.dds",
-        "Lira Arthain",
+        "Glennach Cairns",
         [
           0,
           0,
           10,
-          11,
-          14
+          13,
+          15
         ],
         1251
       ],
@@ -10290,13 +10290,13 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/RobotTunnelSilo.dds",
-        "Tirn's End",
+        "Lex Proxima",
         [
           0,
-          6,
-          9,
-          11,
-          14
+          0,
+          0,
+          12,
+          15
         ],
         1252
       ],
@@ -13896,7 +13896,7 @@
         "DroxThreeStoneEncounterOne": "Broach the anarchy you helped create.",
         "DroxThreeStoneEncounterTwo": "Without law, strength reigns supreme.",
         "DroxThreeStoneEncounterThree": "Ha! To the victor shall go the spoils.",
-        "DroxThreeStoneFleeing": "You have not yet witnessed... the peak of my power....",
+        "DroxThreeStoneFleeing": "You have not yet witnessed... the peak of my power...",
         "DroxFourStoneEncounter1a": "Ah, my favourite trespasser returns!",
         "DroxFourStoneEncounter1b": "Hahaha! Kill and steal to your heart's content. There is no law here.",
         "DroxFourStoneEncounter1c": "Anarchy is the only law here now, trespasser.",
@@ -13937,7 +13937,7 @@
         "AlHezminThreeStoneEncounterTwo": "Yes, I understand now. You're a spectre out of the mists of the Atlas, sent to torment me.",
         "AlHezminThreeStoneEncounterThree": "I will unmake you, whatever you are.",
         "AlHezminThreeStoneFleeing": "Not... possible...",
-        "AlHezminFourStoneEncounter1a": "Why are you doing this? Leave me be, foul dream! ",
+        "AlHezminFourStoneEncounter1a": "Why are you doing this? Leave me be, foul dream!",
         "AlHezminFourStoneEncounter1b": "In pursuit of my lauded fortress, no doubt. It's always the same.",
         "AlHezminFourStoneEncounter1c": "Home is a dream. I no longer remember why I fight.",
         "AlHezminFourStoneEncounter2a": "Have we done this before? I'm having the strangest sense of repetition.",
@@ -14030,12 +14030,12 @@
         "BaranFourStoneFightd": "I am the Fire of Creation, and I shall purify your soul.",
         "BaranFourStoneFighte": "I shall cast you into a pit of infinite tortures.",
         "BaranFourStoneStoryDeathTalk": "Kirac... sent you? You must keep him out of the Atlas... I cannot be saved... he will find only his own doom, endlessly pursuing my rescue... he will end up... like me...\r\n\r\nTell Zana... she was right... to seal us away... Sirus must never... be...",
-        "BaranFourStoneDeatha": "Tell Zana... ... ...<italic>{demons}... ",
+        "BaranFourStoneDeatha": "Tell Zana... ... ...<italic>{demons}...",
         "BaranFourStoneDeathb": "... tell my brother... that I cannot be saved...",
         "BaranFourStoneDeathc": "Keep Kirac... out of the Atlas... at all costs...",
         "BaranFourStoneDeathd": "A brief moment of sanity... it never lasts...",
         "BaranResponseToSirus0": "The lamb has woken the lion, and damned us all.",
-        "BaranResponseToSirus2": "You've awoken the slumbering giant, Exile. ",
+        "BaranResponseToSirus2": "You've awoken the slumbering giant, Exile.",
         "BaranResponseToSirus3": "Even God fears the wrath of Sirus.",
         "BaranResponseToSirus4": "There are some beyond even God's judgement.",
         "BaranResponseToSirus5": "If Sirus casts his eyes upon you, not even your soul shall remain.",
@@ -14090,7 +14090,7 @@
         "TullinaAgilityThree": "I'll handle it.",
         "TullinaAgilityFour": "I'm not charging you enough.",
         "TullinaAgilityFive": "Okay, Tullina, just like you practised.",
-        "TullinaAgilitySix": "Careful... Careful... ",
+        "TullinaAgilitySix": "Careful... Careful...",
         "TullinaDisarmTrapOne": "I see what they've done here...",
         "TullinaDisarmTrapTwo": "Hmph. Who falls for this?",
         "TullinaDisarmTrapThree": "Huh. Ah. I see.",
@@ -14104,7 +14104,7 @@
         "TullinaLockpickFive": "I can do it, but it won't be quick.",
         "TullinaLockpickSix": "Sure. Just be patient.",
         "TullinaAgilityLoudOne": "Just get it done.",
-        "TullinaAgilityLoudTwo": "I'm on it! ",
+        "TullinaAgilityLoudTwo": "I'm on it!",
         "TullinaAgilityLoudThree": "Power through, Tullina!",
         "TullinaAgilityLoudFour": "Now? So unprofessional!",
         "TullinaAgilityLoudFive": "This is what you've been training for!",
@@ -14117,11 +14117,11 @@
         "TullinaTrapDisarmLoudSix": "Wish we'd sorted this before we had to run!",
         "TullinaLockpickLoudOne": "Fine. Fine!",
         "TullinaLockpickLoudTwo": "I've got this one!",
-        "TullinaLockpickLoudThree": "On it! ",
+        "TullinaLockpickLoudThree": "On it!",
         "TullinaLockpickLoudFour": "This is going to take some time!",
         "TullinaLockpickLoudFive": "Just keep us safe while I work!",
         "TullinaLockpickLoudSix": "You just make sure we're all still alive when I'm done.",
-        "TibbsForcingObstacleOne": "Right. ",
+        "TibbsForcingObstacleOne": "Right.",
         "TibbsForcingObstacleTwo": "On it, boss.",
         "TibbsForcingObstacleThree": "Easy.",
         "TibbsForcingObstacleFour": "Lemme jus' get this outta the way for ya.",
@@ -14149,7 +14149,7 @@
         "KarstPerceptionTwo": "What are you hiding...",
         "KarstPerceptionThree": "Something's not right...",
         "KarstPerceptionFour": "Let's see... anything standing out?",
-        "KarstPerceptionFive": "What do we have here? ",
+        "KarstPerceptionFive": "What do we have here?",
         "KarstPerceptionSix": "They're hiding something. I know it.",
         "KarstVaultcrackingOne": "I'll crack it open.",
         "KarstVaultcrackingTwo": "What are you hiding, eh?",
@@ -14165,7 +14165,7 @@
         "KarstLockPickLoudSix": "You do your job, I'll do mine!",
         "KarstPerceptionLoudOne": "Focus, Karst! Focus!",
         "KarstPerceptionLoudTwo": "Nothing's--... There!",
-        "KarstPerceptionLoudThree": "Ehh... Errrr.... Eh?!",
+        "KarstPerceptionLoudThree": "Ehh... Errrr... Eh?!",
         "KarstPerceptionLoudFour": "I can't see--... wait, what's that!?",
         "KarstPerceptionLoudFive": "Horrible time to just be standing 'round!",
         "KarstPerceptionLoudSix": "Something... Something... Gotta be something.",
@@ -14275,13 +14275,13 @@
         "GiannaEngineerLoudFive": "If this breaks, we'll improvise!",
         "GiannaEngineerLoudSix": "This sort of thing always breaks when everyone's watching!",
         "VinderiVaultBreakingOne": "Huh. Not too hard.",
-        "VinderiVaultBreakingTwo": "Cheap piece of junk anyway. ",
+        "VinderiVaultBreakingTwo": "Cheap piece of junk anyway.",
         "VinderiVaultBreakingThree": "Let's pop this little sucker open.",
         "VinderiVaultBreakingFour": "Hmm, tricky, but not impossible.",
         "VinderiVaultBreakingFive": "Haven't come across this make before. Well, let's give it a go.",
         "VinderiVaultBreakingSix": "Ooh. Solidly built. Open up to me. It's okay, be vulnerable.",
         "VinderiEngineeringOne": "Now, how do I work this thing again?",
-        "VinderiEngineeringTwo": "Con-fangled dang contraptions. ",
+        "VinderiEngineeringTwo": "Con-fangled dang contraptions.",
         "VinderiEngineeringThree": "You don't expect me to jump, do you?",
         "VinderiEngineeringFour": "I have the thing for this somewhere...",
         "VinderiEngineeringFive": "I did bring the thing. Did I? Thought I did...",
@@ -14301,7 +14301,7 @@
         "VinderiVaultBreakingLoudOne": "You sure?! Okay...!",
         "VinderiVaultBreakingLoudTwo": "Really? Now?!",
         "VinderiVaultBreakingLoudThree": "Gods, you're serious...!",
-        "VinderiVaultBreakingLoudFour": "\"Vinderi, you're not busy running for your life are you?!\" ",
+        "VinderiVaultBreakingLoudFour": "\"Vinderi, you're not busy running for your life are you?!\"",
         "VinderiVaultBreakingLoudFive": "You're insane, you know that, right?!",
         "VinderiVaultBreakingLoudSix": "I don't work well under pressure!",
         "VinderiEngineeringLoudOne": "Where's the blasted thing!?",
@@ -14313,7 +14313,7 @@
         "VinderiDismantleTrapLoudOne": "This is meant to be DELICATE work!",
         "VinderiDismantleTrapLoudTwo": "The whole place is a damnable death trap!",
         "VinderiDismantleTrapLoudThree": "Wait! This thing's rigged to kill us!",
-        "VinderiDismantleTrapLoudFour": "Gods! You were planning to blunder into this thing! ",
+        "VinderiDismantleTrapLoudFour": "Gods! You were planning to blunder into this thing!",
         "VinderiDismantleTrapLoudFive": "Trap! Trap! Stop! There's a trap! A trap!",
         "VinderiDismantleTrapLoudSix": "This is exactly the sort of thing we should have handled earlier!",
         "VinderiDemolitionLoudOne": "",
@@ -14648,9 +14648,9 @@
         "TrialmasterChallengeChoiceMadeFireCrystalsFasterRandom": "The wind conspires with the flames.",
         "TrialmasterChallengeChoiceMadeFireCrystalsFaster2": "The wind conspires with the flames.",
         "TrialmasterChallengeChoiceMadeFireCrystalsFaster3": "The wind conspires with the flames.",
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster4": "The flames race toward you. ",
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster5": "The flames race toward you. ",
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster6": "The flames race toward you. ",
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster4": "The flames race toward you.",
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster5": "The flames race toward you.",
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster6": "The flames race toward you.",
         "TrialmasterChallengeChoiceMadeFireCrystalsThirdRandom": "Flames beget more flames.",
         "TrialmasterChallengeChoiceMadeFireCrystalsThird2": "Flames beget more flames.",
         "TrialmasterChallengeChoiceMadeFireCrystalsThird3": "Flames beget more flames.",
@@ -14958,8 +14958,8 @@
         "TrialmasterMoodPlayerWonTwoToFourWins2": "Impressive, challenger.",
         "TrialmasterMoodPlayerWonTwoToFourWins3": "Your series of victories continues.",
         "TrialmasterMoodPlayerWonTwoToFourWins4": "Your series of victories continues.",
-        "TrialmasterMoodPlayerWonTwoToFourWins5": "Luck can only carry you so far....",
-        "TrialmasterMoodPlayerWonTwoToFourWins6": "Luck can only carry you so far....",
+        "TrialmasterMoodPlayerWonTwoToFourWins5": "Luck can only carry you so far...",
+        "TrialmasterMoodPlayerWonTwoToFourWins6": "Luck can only carry you so far...",
         "TrialmasterMoodPlayerWonTwoToFourWins7": "For now, the victor remains the victor!",
         "TrialmasterMoodPlayerWonTwoToFourWins8": "For now, the victor remains the victor!",
         "TrialmasterMoodPlayerWonTwoToFourWins9": "Not bad... for a mortal.",
@@ -16707,9 +16707,9 @@
         "TrialmasterChallengeChoiceMadeFireCrystalsFasterRandom": "Le vent conspire avec les flammes.",
         "TrialmasterChallengeChoiceMadeFireCrystalsFaster2": "Le vent conspire avec les flammes.",
         "TrialmasterChallengeChoiceMadeFireCrystalsFaster3": "Le vent conspire avec les flammes.",
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster4": "<if:MS>{Les flammes se précipitent sur vous.}<elif:FS>{ }",
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster5": "<if:MS>{Les flammes se précipitent sur vous.}<elif:FS>{ }",
-        "TrialmasterChallengeChoiceMadeFireCrystalsFaster6": "<if:MS>{Les flammes se précipitent sur vous.}<elif:FS>{ }",
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster4": "Les flammes se précipitent sur vous.",
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster5": "Les flammes se précipitent sur vous.",
+        "TrialmasterChallengeChoiceMadeFireCrystalsFaster6": "Les flammes se précipitent sur vous.",
         "TrialmasterChallengeChoiceMadeFireCrystalsThirdRandom": "Les flammes engendrent encore plus de flammes.",
         "TrialmasterChallengeChoiceMadeFireCrystalsThird2": "Les flammes engendrent encore plus de flammes.",
         "TrialmasterChallengeChoiceMadeFireCrystalsThird3": "Les flammes engendrent encore plus de flammes.",
@@ -17017,8 +17017,8 @@
         "TrialmasterMoodPlayerWonTwoToFourWins2": "<if:MS>{Vous m'impressionnez, combattant.}<elif:FS>{Vous m'impressionnez, combattante.}",
         "TrialmasterMoodPlayerWonTwoToFourWins3": "Votre série de victoires se poursuit.",
         "TrialmasterMoodPlayerWonTwoToFourWins4": "Votre série de victoires se poursuit.",
-        "TrialmasterMoodPlayerWonTwoToFourWins5": "<if:MS>{Vous ne pourrez vous fier à la chance éternellement.}<elif:FS>{ }",
-        "TrialmasterMoodPlayerWonTwoToFourWins6": "<if:MS>{Vous ne pourrez vous fier à la chance éternellement.}<elif:FS>{ }",
+        "TrialmasterMoodPlayerWonTwoToFourWins5": "Vous ne pourrez vous fier à la chance éternellement.",
+        "TrialmasterMoodPlayerWonTwoToFourWins6": "Vous ne pourrez vous fier à la chance éternellement.",
         "TrialmasterMoodPlayerWonTwoToFourWins7": "Pour l'instant, le vainqueur demeure le vainqueur !",
         "TrialmasterMoodPlayerWonTwoToFourWins8": "Pour l'instant, le vainqueur demeure le vainqueur !",
         "TrialmasterMoodPlayerWonTwoToFourWins9": "<if:MS>{Pas mal… pour un mortel.}<elif:FS>{Pas mal… pour une mortelle.}",
@@ -23036,7 +23036,7 @@
         "TrialmasterPlayerTookRewardLastTimeRoundOne6": "Isso vai ser rápido...",
         "TrialmasterPlayerTookRewardLastTimeRoundOne7": "Como você vai superar esta última performance incrível?",
         "TrialmasterPlayerTookRewardLastTimeRoundOne8": "Como você vai superar esta última performance incrível?",
-        "TrialmasterPlayerTookRewardLastTimeRoundTwoRandom": "Eu espero sinceramente que você dure mais do que duas rodadas.",
+        "TrialmasterPlayerTookRewardLastTimeRoundTwoRandom": "Como você vai superar esta última performance incrível?",
         "TrialmasterPlayerTookRewardLastTimeRoundTwo2": "Eu espero sinceramente que você esteja planejando durar mais que duas rodadas. ",
         "TrialmasterPlayerTookRewardLastTimeRoundTwo3": "Vá até pelo menos a terceira rodada desta vez. ",
         "TrialmasterPlayerTookRewardLastTimeRoundTwo4": "Vá até pelo menos a terceira rodada desta vez. ",
@@ -23132,8 +23132,8 @@
         "TrialmasterMoodBeginOneWin9": "Você ganhou. Uma vez. Não fique se achando. ",
         "TrialmasterMoodBeginTwoToFourWinsRandom": "Sua série de vitórias acabará aqui. ",
         "TrialmasterMoodBeginTwoToFourWins2": "Sua série de vitórias acabará aqui. ",
-        "TrialmasterMoodBeginTwoToFourWins3": "Você esta ganhando, mas será que pode continuar?",
-        "TrialmasterMoodBeginTwoToFourWins4": "Você esta ganhando, mas será que pode continuar?",
+        "TrialmasterMoodBeginTwoToFourWins3": "Você estpa ganhando, mas será que pode continuar?",
+        "TrialmasterMoodBeginTwoToFourWins4": "Você estpa ganhando, mas será que pode continuar?",
         "TrialmasterMoodBeginTwoToFourWins5": "Espero que você tenha gostado de sua breve sequência de vitórias.",
         "TrialmasterMoodBeginTwoToFourWins6": "Espero que você tenha gostado de sua breve sequência de vitórias.",
         "TrialmasterMoodBeginTwoToFourWins7": "Espero que você tenha gostado de sua breve sequência de vitórias.",
@@ -23210,9 +23210,9 @@
         "TrialmasterMoodPlayerWonFiveOrMoreWins6": "Como você continua ganhano?!",
         "TrialmasterMoodPlayerWonFiveOrMoreWins7": "Eu suspeito que estou sendo feito de idiota!",
         "TrialmasterMoodPlayerWonFiveOrMoreWins8": "Eu suspeito que estou sendo feito de idiota!",
-        "TrialmasterMoodPlayerWonFiveOrMoreWins9": "Eu deveria ter me tornado um sacerdote de Yaomac...",
-        "TrialmasterMoodPlayerWonFiveOrMoreWins10": "Eu deveria ter me tornado um sacerdote de Yaomac...",
-        "TrialmasterMoodPlayerWonFiveOrMoreWins11": "Eu deveria ter me tornado um sacerdote de Yaomac...",
+        "TrialmasterMoodPlayerWonFiveOrMoreWins9": "Eu deveria ter me tornado um padre de Yaomac em vez disso...",
+        "TrialmasterMoodPlayerWonFiveOrMoreWins10": "Eu deveria ter me tornado um padre de Yaomac em vez disso...",
+        "TrialmasterMoodPlayerWonFiveOrMoreWins11": "Eu deveria ter me tornado um padre de Yaomac em vez disso...",
         "TrialmasterMoodPlayerWonFiveOrMoreWins12": "Você ganhou... de novo. ",
         "TrialmasterMoodPlayerWonFiveOrMoreWins13": "Você ganhou... de novo. ",
         "TrialmasterMoodPlayerWonFiveOrMoreWins14": "Você ganhou... de novo. ",
@@ -23270,8 +23270,8 @@
         "TrialmasterMoodPlayerLostTwoToFourWins10": "A sorte não lhe favorece mais. ",
         "TrialmasterMoodPlayerLostTwoToFourWins11": "Era inevitável. ",
         "TrialmasterMoodPlayerLostTwoToFourWins12": "Era inevitável. ",
-        "TrialmasterMoodPlayerLostTwoToFourWins13": "Seu caminho até a grandiosidade fez uma séria curva em direção ao penhasco. ",
-        "TrialmasterMoodPlayerLostTwoToFourWins14": "Seu caminho até a grandiosidade fez uma séria curva em direção ao penhasco. ",
+        "TrialmasterMoodPlayerLostTwoToFourWins13": "Seu caminho até a grandiosidade fez uma séria curva em diração ao penhasco. ",
+        "TrialmasterMoodPlayerLostTwoToFourWins14": "Seu caminho até a grandiosidade fez uma séria curva em diração ao penhasco. ",
         "TrialmasterMoodPlayerLostFiveOrMoreWinsRandom": "Não há verginha na derrota. Bom... um pouco. ",
         "TrialmasterMoodPlayerLostFiveOrMoreWins2": "Não há verginha na derrota. Bom... um pouco. ",
         "TrialmasterMoodPlayerLostFiveOrMoreWins3": "Você não sai mais vitorioso.",
@@ -29217,7 +29217,7 @@
         "DroxThreeStoneEncounterOne": "ฝ่า​เข้า​มา​ใน​อนาธิปไตย​ที่​เจ้า​สร้าง​ขึ้น",
         "DroxThreeStoneEncounterTwo": "ยาม​ไร้​กฎหมาย ความแข็งแกร่ง​ย่อมเป็นใหญ่",
         "DroxThreeStoneEncounterThree": "ฮ่า! ผู้ชนะย่อมได้ทรัพย์",
-        "DroxThreeStoneFleeing": "เจ้า​ยัง​ไม่​เคย​เป็นพยาน​... ต่อพลัง​ขั้น​สูงสุด​ของ​ข้า​...",
+        "DroxThreeStoneFleeing": "เจ้า​ยัง​ไม่​เคยได้เห็น​... พลัง​ขั้น​สูงสุด​ของ​ข้า​...",
         "DroxFourStoneEncounter1a": "อา ผู้​รุกราน​คน​โปรด​ของ​ข้า​กลับ​มา​แล้ว​!",
         "DroxFourStoneEncounter1b": "ฮ่า​ฮ่า​ฮ่า​! ฆ่า​แล้ว​ลัก​ขโมย​ให้​เต็ม​ที่​เลย ที่​นี่​ไม่มี​กฎหมาย",
         "DroxFourStoneEncounter1c": "ที่​นี่​มี​เพียง​อนาธิปไตย​เป็น​กฎหมาย ​ผู้​รุกราน",
@@ -29356,7 +29356,7 @@
         "BaranFourStoneDeathc": "อย่า​ให้พี่คิรัค​... เข้า​มา​ใน​สมุด​แผนที่... ใน​ทุก​วิถีทาง​...",
         "BaranFourStoneDeathd": "การ​มีสติเพียง​ชั่ว​ครู่... มัน​ไม่เคย​อยู่ได้ยืนยาว​...",
         "BaranResponseToSirus0": "ลูก​แกะ​ปลุก​สิงโตให้ตื่น ​นำ​หายนะ​มา​สู่เรา​ทุก​คน",
-        "BaranResponseToSirus2": "เจ้า​ได้ปลุก​ยักษ์ที่หลับ​ไหล​ขึ้น​มา​แล้ว เอ็ก​ไซล์",
+        "BaranResponseToSirus2": "เจ้า​ได้ปลุก​ยักษ์ที่หลับใหล​ขึ้น​มา​แล้ว เอ็ก​ไซล์",
         "BaranResponseToSirus3": "กระทั่ง​พระเจ้า​ก็กลัว​เกรง​ความ​โกรธ​เคือง​ของท่าน​ไซ​รัส",
         "BaranResponseToSirus4": "มีบาง​สิ่ง​ที่อยู่ภายนอก​การ​ตัดสิน​ของ​พระเจ้า",
         "BaranResponseToSirus5": "หากท่าน​ไซ​รัส​จับ​จ้อง​มายัง​เจ้า เจ้า​ย่อม​สูญสิ้น​กระทั่ง​วิญญาณ",

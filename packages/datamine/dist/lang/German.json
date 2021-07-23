@@ -8092,7 +8092,7 @@
         "Baumwurzeln blockieren Euren Weg. \r\nVielleicht könnt Ihr sie später öffnen."
       ],
       [
-        "InsteractErrorUndyingBlockage",
+        "InteractErrorUndyingBlockage",
         "Der Weg ist versperrt."
       ],
       [
@@ -9086,6 +9086,18 @@
       [
         "RoyaleMatchEndedTeam",
         "{0} und {1} haben das Match gewonnen!"
+      ],
+      [
+        "TradeNoteBlacklistedCharactersError",
+        "Deine Handels-Notiz enthält ungültige Zeichen. Bitte versuche es erneut."
+      ],
+      [
+        "ExpeditionDetonatorNotInstanceOwner",
+        "Nur der Spieler, der die Instanz erstellt hat, kann mit Sprengstoff oder dem Zünder interagieren."
+      ],
+      [
+        "ActionTemporarilyDisabled",
+        "This action has been temporarily disabled."
       ]
     ]
   },
@@ -12722,15 +12734,51 @@
       ],
       [
         "BrutusIntro2",
-        "Euer Verbrechen: Unbefugtes Betreten. Das Urteil: Tod!"
+        "Das Klopfen Eures verängstigten Herzens hallt von diesen Steinen wider."
       ],
       [
         "BrutusIntro3",
-        "Ihr werdet mein Leid kennenlernen. Kommt und teilt es mit mir!"
+        "Euer Verbrechen: Unbefugtes Betreten. Das Urteil: Tod!"
       ],
       [
         "BrutusIntro4",
+        "Euer Verbrechen: Unbefugtes Betreten. Das Urteil: Tod!"
+      ],
+      [
+        "BrutusIntro5",
+        "Ihr werdet mein Leid kennenlernen. Kommt und teilt es mit mir!"
+      ],
+      [
+        "BrutusIntro6",
         "Ihr haltet mich für schrecklich? Ich werde Euch zeigen, was wahrer Schrecken ist ..."
+      ],
+      [
+        "BrutusIntro7",
+        "Ihr haltet mich für schrecklich? Ich werde Euch zeigen, was wahrer Schrecken ist ..."
+      ],
+      [
+        "BrutusChainRandom",
+        "Kommt."
+      ],
+      [
+        "BrutusChain2",
+        "Kommt."
+      ],
+      [
+        "BrutusChain3",
+        "Kommt."
+      ],
+      [
+        "BrutusChain4",
+        "Lasst mich Euch umarmen."
+      ],
+      [
+        "BrutusChain5",
+        "Lasst mich Euch umarmen."
+      ],
+      [
+        "BrutusChain6",
+        "Lasst mich Euch umarmen."
       ],
       [
         "MalachaiIntro1",
@@ -16978,7 +17026,7 @@
       ],
       [
         "EinharEpicPoem",
-        "Manche Bestien sind gelb,\r\nmanche rot,\r\nalle Bestien sind dumm,\r\naber nützlich, wenn tot."
+        "Manche Bestien sind gelb,\r\nmanche sind rot,\r\nalle Bestien sind dumm,\r\naber nützlich, wenn tot."
       ],
       [
         "AlvaIntroduction",
@@ -33381,7 +33429,7 @@
         "Obwohl Aufträge den Ring am Leben halten, sind wir erfahrene Profis, und erfahrene Profis testen gerne die Grenzen ihrer Möglichkeiten. Der Ring ist in den Besitz einiger Grundrisse gekommen, an dessen Standorten Gegenstände mit besonderem Wert aufbewahrt werden. Da diese Standorte gut gesichert sind, erfordert es ein eingespieltes Team, um diese Art von Job zu erledigen.\r\n\r\nDer Boss stellt die Grundrisse für diese hochgesicherten Standorte und die notwendigen Ressourcen gerne zur Verfügung ... aber das hat seinen Preis. Schließt Aufträge ab, verdient Euch Signa und Ihr werdet diese Dienste schon bald in Anspruch nehmen können."
       ],
       [
-        "KuraiTheBoss  ",
+        "KuraiTheBoss",
         "Der Boss ist ein außergewöhnlich beschäftigter Mann, weshalb ich dafür sorge, dass seine Befehle ausgeführt und die Mitglieder ihren entsprechenden Aufgaben zugewiesen werden. Ich agiere also sozusagen als sein Verwalter. Sprecht mich einfach an, falls Ihr Probleme habt, und ich sorge dafür, dass der Boss davon erfährt, sobald er Zeit hat."
       ],
       [
@@ -33446,7 +33494,7 @@
       ],
       [
         "KuraiContractTwoVicToKuraiFour",
-        "Kurai, Kurai, Kurai ... Denkt Ihr nicht, dass Ihr unfair seid? Schließlich seid Ihr in mein Zuhause eingebrochen und nahmt mir etwas, das für mich großen Wert hat. \"Ewiglich\", eine erste Ausgabe, von Victario höchstpersönlich signiert. Meine Eltern, mögen sie in Frieden ruhen, waren von seiner Arbeit so begeistert, dass sie mich nach ihm benannten! Seid Ihr mir nicht eine Form von .... Wiedergutmachung schuldig?"
+        "Kurai, Kurai, Kurai ... Denkt Ihr nicht, dass Ihr unfair seid? Schließlich seid Ihr in mein Zuhause eingebrochen und nahmt mir etwas, das für mich großen Wert hat. \"Ewiglich\", eine erste Ausgabe, von Victario höchstpersönlich signiert. Meine Eltern, mögen sie in Frieden ruhen, waren von seiner Arbeit so begeistert, dass sie mich nach ihm benannten! Seid Ihr mir nicht eine Form von ... Wiedergutmachung schuldig?"
       ],
       [
         "KuraiContractTwoKuraiToVicFour",
@@ -44505,7 +44553,7 @@
         "Wir sind ein Fleisch, aber zwei Geiste, zwei Körper. Wir sind verwandt, beide geboren aus der verwirrten Anarchie der Leere, aber wir teilen nicht denselben Erschaffer. Sie ist mein Mündel und Sie ist mein Gefängnis. Ich bin Ihr Beschützer und ich bin Ihr Diener."
       ],
       [
-        "EnvoyGreetingT1MavenRandom",
+        "EnvoyGreetingT1MavenOne",
         "<if:MS>{Sie kämpften mit solch einer Wildheit, um den Baum zu schützen, der Ihr Nest beherbergte.  Jetzt brennen die Wälder, Rauchschwaden ziehen durch die Luft und das Flattern Ihrer Flügel treibt das Feuer weiter auf Sie zu. Das Feuer kommt, Wanderer und es wird uns alle verzehren.}<elif:FS>{Sie kämpften mit solch einer Wildheit, um den Baum zu schützen, der Ihr Nest beherbergte.  Jetzt brennen die Wälder, Rauchschwaden ziehen durch die Luft und das Flattern Ihrer Flügel treibt das Feuer weiter auf Sie zu. Das Feuer kommt, Wanderin und es wird uns alle verzehren.}"
       ],
       [
@@ -44537,7 +44585,7 @@
         "Sie riefen nach der Milch ihrer Mutter und sie wurde Ihnen zuteil. Sie tanzten verzückt im nährenden Regen, lechzten nach Luft in dem verworrenen Amnion und fielen einer nach dem anderen im selbstsüchtigen Gerangel ums Überleben."
       ],
       [
-        "EnvoyGreetingT2MavenRandom",
+        "EnvoyGreetingT2MavenOne",
         "<if:MS>{Manchmal beneide ich Euch, Wanderer. Ihr handelt im Dienste des Überlebens. Ihr verfolgt ein Ziel, beschützt eine zerbrechliche Existenz. Euer Verstand wird von der Realität bestürmt, dass Ihr nichts weiter seid als Staub, der über einer endlosen Wüste verweht. Dennoch schützt er sich mit Hoffnung. Eine hauchdünne Lüge, die es auf ihre Weise vermag, der vernichtenden Wahrheit der Hoffnungslosigkeit Einhalt zu gebieten.}<elif:FS>{Manchmal beneide ich Euch, Wanderin. Ihr handelt im Dienste des Überlebens. Ihr verfolgt ein Ziel, beschützt eine zerbrechliche Existenz. Euer Verstand wird von der Realität bestürmt, dass Ihr nichts weiter seid als Staub, der über einer endlosen Wüste verweht. Dennoch schützt er sich mit Hoffnung. Eine hauchdünne Lüge, die es auf ihre Weise vermag, der vernichtenden Wahrheit der Hoffnungslosigkeit Einhalt zu gebieten.}"
       ],
       [
@@ -44565,7 +44613,7 @@
         "Die Sterne beobachten voller Neid, wie das Leben in jeden offenen Raum eindringt und ihn umgibt, ein Kreislauf von Leben und Tod, der so dynamisch wie rhythmisch ist, während die Sterne selbst brennen, unablässig und unveränderlich für unendlich viele Lebensspannen. "
       ],
       [
-        "EnvoyGreetingT3MavenRandom",
+        "EnvoyGreetingT3MavenOne",
         "Die Fesseln der Zeit ziehen alles Leben, wie Hunde an ihrer Leine, zu demselben Endpunkt. Dennoch folgen sie freudig springend, immer im festen Glauben, dass ihr Herr ihr Bestes im Sinn hat."
       ],
       [
@@ -44605,7 +44653,7 @@
         "Ich wurde in die Dunkelheit geführt und man gab mir eine Fackel mit einer Flamme aus Zorn, um mir den Weg zu Ihr zu weisen. Ich fühlte Ihren Sog, fühlte wie die Feuer größer wurden und mein Gesicht leckten und peitschten. Ich wurde von der Reise verzehrt und als leere Hülle in Ihre Obhut gestoßen, um Sie zu beschützen, Ihr Einhalt zu gebieten und Sie nie zu verlassen. Dies sollte meine unermessliche Strafe sein."
       ],
       [
-        "EnvoyGreetingT4MavenRandom",
+        "EnvoyGreetingT4MavenOne",
         "Jede Nacht kam die Stille und trieb alle Gedanken an eine Flucht in die tintenschwarze See. Ich sah meine Hoffnungen ertrinken, sah, wie sie leblos und schlaff an den Strand gespült wurden, wo sie den scharfkantigen Sand schmückten wie in Verzückung vom Leib gerissene Kleider. "
       ],
       [
@@ -44625,7 +44673,7 @@
         "Ich versuchte, diejenigen zu zählen, die Ihr durch die Barriere folgten, aber es gelang keinem oder diejenigen, die sie überwanden, zerfielen im Licht zu Staub. Dies war die Pflicht eines einzelnen, Wache zu halten, als der Keim aufging und das Rohe und Ungeformte in der Hitze der vergehenden Zeit geschmiedet wurde. Meiner Strafe würde ich nicht so leicht entkommen."
       ],
       [
-        "EnvoyGreetingT5MavenRandom",
+        "EnvoyGreetingT5MavenOne",
         "Das Versprechen des Träumers wurde sofort erfüllt, auch wenn wir es nicht wussten. Seine Ankunft machte sich zuerst als Flüstern in unserem Geist bemerkbar das, einmal geäußert, alle anderen Gedanken erfasste. Aber eine Ewigkeit wird vergehen, bevor wir Sein Feuer spüren werden."
       ],
       [
@@ -45426,11 +45474,11 @@
       ],
       [
         "MavenTier1SpaceVines4",
-        "Zuschlagen!"
+        "Schlagt zu!"
       ],
       [
         "MavenTier1SpaceVines5",
-        "Zuschlagen!"
+        "Schlagt zu!"
       ],
       [
         "MavenTier1SpaceInfuseWeaponsRandom",
@@ -55701,6 +55749,162 @@
         "Zeit, dies zu beenden!"
       ],
       [
+        "DelveVaalCityBossIntroRandom",
+        "Xictep cutlotl!"
+      ],
+      [
+        "DelveVaalCityBossIntro2",
+        "Xictep cutlotl!"
+      ],
+      [
+        "DelveVaalCityBossIntro3",
+        "Xictep cutlotl!"
+      ],
+      [
+        "DelveVaalCityBossIntro4",
+        "Xictep cutlotl!"
+      ],
+      [
+        "DelveVaalCityBossIntro5",
+        "Xictep cutlotl!"
+      ],
+      [
+        "DelveVaalCityBossIntro6",
+        "Xictep cutlotl!"
+      ],
+      [
+        "DelveVaalCityBossIntro7",
+        "Tatlat Atziri!"
+      ],
+      [
+        "DelveVaalCityBossIntro8",
+        "Tatlat Atziri!"
+      ],
+      [
+        "DelveVaalCityBossIntro9",
+        "Tatlat Atziri!"
+      ],
+      [
+        "DelveVaalCityBossIntro10",
+        "Tatlat Atziri!"
+      ],
+      [
+        "DelveVaalCityBossIntro11",
+        "Tatlat Atziri!"
+      ],
+      [
+        "DelveVaalCityBossIntro12",
+        "Vaal a xomaplat!"
+      ],
+      [
+        "DelveVaalCityBossIntro13",
+        "Vaal a xomaplat!"
+      ],
+      [
+        "DelveVaalCityBossIntro14",
+        "Vaal a xomaplat!"
+      ],
+      [
+        "DelveVaalCityBossIntro15",
+        "Vaal a xomaplat!"
+      ],
+      [
+        "DelveVaalCityBossDeathRandom",
+        "Atzi-... ah-..."
+      ],
+      [
+        "DelveVaalCityBossDeath2",
+        "Atzi-... ah-..."
+      ],
+      [
+        "DelveVaalCityBossDeath3",
+        "Opil... Vaal..."
+      ],
+      [
+        "DelveVaalCityBossDeath4",
+        "Opil... Vaal..."
+      ],
+      [
+        "DelveVaalCityBossDeath5",
+        "Opil... Vaal..."
+      ],
+      [
+        "DelveVaalCityBossDeath6",
+        "Opil... Vaal..."
+      ],
+      [
+        "DelveVaalCityBossDeath7",
+        "Tocab--... atla-..."
+      ],
+      [
+        "DelveVaalCityBossDeath8",
+        "Tocab--... atla-..."
+      ],
+      [
+        "DelveVaalCityBossDeath9",
+        "Tocab--... atla-..."
+      ],
+      [
+        "DelveVaalCityBossSkillARandom",
+        "Zahua moti!"
+      ],
+      [
+        "DelveVaalCityBossSkillA2",
+        "Zahua moti!"
+      ],
+      [
+        "DelveVaalCityBossSkillA3",
+        "Zahua moti!"
+      ],
+      [
+        "DelveVaalCityBossSkillBRandom",
+        "Azcado!"
+      ],
+      [
+        "DelveVaalCityBossSkillB2",
+        "Azcado!"
+      ],
+      [
+        "DelveVaalCityBossSkillB3",
+        "Azcado!"
+      ],
+      [
+        "DelveVaalCityBossSkillCRandom",
+        "Quiquate!"
+      ],
+      [
+        "DelveVaalCityBossSkillC2",
+        "Quiquate!"
+      ],
+      [
+        "DelveVaalCityBossSkillC3",
+        "Quiquate!"
+      ],
+      [
+        "DelveVaalCityBossSkillDRandom",
+        "Huatatl!"
+      ],
+      [
+        "DelveVaalCityBossSkillD2",
+        "Huatatl!"
+      ],
+      [
+        "DelveVaalCityBossSkillD3",
+        "Huatatl!"
+      ],
+      [
+        "DelveVaalCityBossSkillD4",
+        "Huatatl!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntroRandom",
+        "Uor al-Nahm!"
+      ],
+      [
+        "DelveProtoVaalCityBossDeathRandom",
+        "Am-... amta..."
+      ],
+      [
         "TrialmasterPlayerTookRewardRandom",
         "Die sichere Wahl."
       ],
@@ -55711,6 +55915,138 @@
       [
         "TrialmasterPlayerTookReward3",
         "So sei es, auch wenn es enttäuschend ist."
+      ],
+      [
+        "DelveProtoVaalCityBossIntro2",
+        "Uor al-Nahm!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro3",
+        "Uor al-Nahm!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro4",
+        "Uor al-Nahm!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro5",
+        "Uor al-Nahm!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro6",
+        "Habra Ahn!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro7",
+        "Habra Ahn!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro8",
+        "Habra Ahn!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro9",
+        "Habra Ahn!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro10",
+        "Utem Zazul!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro11",
+        "Utem Zazul!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro12",
+        "Utem Zazul!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro13",
+        "Hatem ahk Aul!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro14",
+        "Hatem ahk Aul!"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro15",
+        "Hatem ahk Aul!"
+      ],
+      [
+        "DelveProtoVaalCityBossDeath2",
+        "Am-... amta..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath3",
+        "Am-... amta..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath4",
+        "Zurra... sha..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath5",
+        "Zurra... sha..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath6",
+        "Zurra... sha..."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath7",
+        "Ahkbo tel... zar."
+      ],
+      [
+        "DelveProtoVaalCityBossDeath8",
+        "Ahkbo tel... zar."
+      ],
+      [
+        "DelveProtoVaalCityBossSkillARandom",
+        "Hur-nak!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillA2",
+        "Hur-nak!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillA3",
+        "Hur-nak!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillBRandom",
+        "Zem Zamarr!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillB2",
+        "Zem Zamarr!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillB3",
+        "Zem Zamarr!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillCRandom",
+        "Otemba!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillC2",
+        "Otemba!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillC3",
+        "Otemba!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillDRandom",
+        "Azu Azar!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillD2",
+        "Azu Azar!"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillD3",
+        "Azu Azar!"
       ],
       [
         "HasinaPetIdleRandom",
@@ -55811,6 +56147,3338 @@
       [
         "RoyaleAnnouncerVictorious",
         ""
+      ],
+      [
+        "EnvoyRandomFinalSayingRandom",
+        "Sie... kommen."
+      ],
+      [
+        "EnvoyRandomFinalSaying2",
+        "Sie... kommen."
+      ],
+      [
+        "EnvoyRandomFinalSaying3",
+        "Sie... kommen."
+      ],
+      [
+        "DannigOnExpeditionMap",
+        "Unsere Expeditionen sind eine private Frage der Ehre. Lass uns darüber lieber in Deinem Versteck reden. "
+      ],
+      [
+        "TujenRandomMap",
+        "[DNT] Random map exile!"
+      ],
+      [
+        "TujenRareIntBoots",
+        "[DNT] Rare int boots exile?"
+      ],
+      [
+        "TujenRegretStack20",
+        "[DNT] Stack of 20 regrets i think, exile."
+      ],
+      [
+        "TujenRegalStack5",
+        "[DNT] Stack of 5 regals you'll never use, exile?"
+      ],
+      [
+        "TujenDivineStack4",
+        "[DNT] Stack of 4 divines, exile!"
+      ],
+      [
+        "TujenMirrorStack2",
+        "[DNT] Oh my god it's a stack of 2 mirrors exile"
+      ],
+      [
+        "GamblerCurrencyVeryLowMagicRarityEquipment",
+        "Kein Risiko, keine Belohnung."
+      ],
+      [
+        "GamblerCurrencyVeryLowRareRarityEquipment",
+        "Das könnte nützlich sein?"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentOne",
+        "Wenigstens ist es nicht Nichts!"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentTwo",
+        "Das ist doch schon Etwas!"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentThree",
+        "Das sieht faszinierend aus!"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentFour",
+        "Du hast daran geglaubt und dein Glaube hat sich ausgezahlt!"
+      ],
+      [
+        "GamblerCurrencyVeryLowDivineUniqueCommentOne",
+        "Wow! Ich habe keine Ahnung, was das ist! Aber wenigstens war es billig!"
+      ],
+      [
+        "GamblerCurrencyVeryLowHeadhunter",
+        "Glückwunsch! Du hast das große Los gezogen! Ich habe schon immer gewusst, dass du mal Glück haben wirst!"
+      ],
+      [
+        "GamblerCurrencyVeryLowEquipmentSpecialLow",
+        "Eigenartig... aber wenigstens hast du nicht viel dafür bezahlt."
+      ],
+      [
+        "GamblerCurrencyVeryLowEquipmentSpecialMid",
+        "Ein anständiger Gewinn, würde ich sagen."
+      ],
+      [
+        "GamblerCurrencyVeryLowEquipmentSpecialHigh",
+        "Das ist ein ziemlich interessantes Teil! Und es war billig!"
+      ],
+      [
+        "GamblerCurrencyLowMagicRarityEquipment",
+        "Tja, man bekommt, was man bezahlt!"
+      ],
+      [
+        "GamblerCurrencyLowRareRarityEquipment",
+        "Wenigstens ist es hübsch."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentFive",
+        "Hmm. Das könnte in gewissen Situationen nützlich sein. "
+      ],
+      [
+        "GamblerCurrencyUniqueCommentSix",
+        "Eine anständige Beute!"
+      ],
+      [
+        "GamblerCurrencyLowDivineUniqueCommentTwo",
+        "Ich bin froh, dass Du mir das Ding abgenommen hast. Ich kann es nicht ausstehen."
+      ],
+      [
+        "GamblerCurrencyLowHeadhunter",
+        "Unglaublich! Ich hätte dafür wirklich mehr verlangen sollen!"
+      ],
+      [
+        "GamblerCurrencyLowEquipmentSpecialLow",
+        "Kaum Risiko, merkwürdige Ausrüstung. Alltag beim Glücksspiel."
+      ],
+      [
+        "GamblerCurrencyLowEquipmentSpecialMid",
+        "Wie faszinierend! Und Du hast nicht mal viel dafür bezahlt."
+      ],
+      [
+        "GamblerCurrencyLowEquipmentSpecialHigh",
+        "Das nenne ich einen anständigen Gewinn!"
+      ],
+      [
+        "GamblerCurrencyMediumMagicRarityEquipment",
+        "Das nächste Mal hast Du mehr Glück."
+      ],
+      [
+        "GamblerCurrencyMediumRareRarityEquipment",
+        "Bei dieser Art von Ausrüstung weiß man nie. Vielleicht wird es Dir jemand abkaufen."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentSeven",
+        "Bei diesem Ding spüre ich keine Begeisterung von Deiner Seite. "
+      ],
+      [
+        "GamblerCurrencyUniqueCommentEight",
+        "Das sieht sehr gut aus."
+      ],
+      [
+        "GamblerCurrencyMediumDivineUniqueCommentThree",
+        "Artefakte, die mit Deinen \"Göttern\" in Zusammenhang stehen, machen mich misstrauisch."
+      ],
+      [
+        "GamblerCurrencyMediumHeadhunter",
+        "Ja! Du hast es geschafft! Heute war das Glück auf Deiner Seite!"
+      ],
+      [
+        "GamblerCurrencyMediumEquipmentSpecialLow",
+        "Auf Wraeclast gibt es die merkwürdigsten Dinge..."
+      ],
+      [
+        "GamblerCurrencyMediumEquipmentSpecialMid",
+        "Es scheint, als hätte sich Dein Glaube an das Glück bezahlt gemacht."
+      ],
+      [
+        "GamblerCurrencyMediumEquipmentSpecialHigh",
+        "Du wirst beim Glücksspiel immer besser!"
+      ],
+      [
+        "GamblerCurrencyHighMagicRarityEquipment",
+        "Autsch."
+      ],
+      [
+        "GamblerCurrencyHighRareRarityEquipment",
+        "Du musst stärker daran glauben."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentNine",
+        "...sehr schön."
+      ],
+      [
+        "GamblerCurrencyUniqueCommentTen",
+        "Hmm. Du bist ein teures Risiko eingegangen, aber das könnte tatsächlich etwas... wert sein?"
+      ],
+      [
+        "GamblerCurrencyHighDivineUniqueCommentFour",
+        "Bist Du Dir sicher, dass diese \"göttliche\" Ausrüstung ihren Preis wert ist?"
+      ],
+      [
+        "GamblerCurrencyHighHeadhunter",
+        "Das sieht ganz brauchbar aus, gelinde gesagt."
+      ],
+      [
+        "GamblerCurrencyHighEquipmentSpecialLow",
+        "Unbekannte Gerätschaften zu hohen Preisen. Das ist der Reiz des Glücksspiels."
+      ],
+      [
+        "GamblerCurrencyHighEquipmentSpecialMid",
+        "Nicht schlecht für das Risiko, das Du eingegangen bist."
+      ],
+      [
+        "GamblerCurrencyHighEquipmentSpecialHigh",
+        "Großes Risiko, große Belohnung!"
+      ],
+      [
+        "GamblerCurrencyVeryHighHeadhunter",
+        "Hast Du gerade vor Freude gequietscht?"
+      ],
+      [
+        "GamblerCurrencyVeryHighRareLeatherBeltWithLife",
+        "Du hast nicht fest genug daran geglaubt. Mehr Glück beim nächsten Mal."
+      ],
+      [
+        "GwennenTutorialShout",
+        "<if:MS>{Du da! Einheimischer! Komm her!}<elif:FS>{Du da! Einheimische! Komm her!}"
+      ],
+      [
+        "GwennenTutorialIntro",
+        "<if:MS>{Ich wette, selbst so ein Hinterwäldler wie Du würde gerne ein paar Explosionen sehen. Mach Dir noch keine Gedanken, warum wir Zeug in die Luft jagen. Dazu kommen wir später.\r\n\r\nIch war so frei und habe die Orte markiert, an denen sich möglicherweise Schätze befinden – und Gefahren. Ich bin großzügig – Du kannst aussuchen, was wir entdecken wollen, weil ich begierig bin zu sehen, was für eine Art von Glück Du hast. Ich bleibe hier zurück. So weit zurück wie nur möglich.\r\n\r\nLege die Sprengsätze in einer Kette aus. Wir werden eine großartige Vorstellung liefern.}<elif:FS>{Ich wette, selbst so eine Hinterwäldlerin wie Du würde gerne ein paar Explosionen sehen. Mach Dir noch keine Gedanken, warum wir Zeug in die Luft jagen. Dazu kommen wir später.\r\n\r\nIch war so frei und habe die Orte markiert, an denen sich möglicherweise Schätze befinden – und Gefahren. Ich bin großzügig – Du kannst aussuchen, was wir entdecken wollen, weil ich begierig bin zu sehen, was für eine Art von Glück Du hast. Ich bleibe hier zurück. So weit zurück wie nur möglich.\r\n\r\nLege die Sprengsätze in einer Kette aus. Wir werden eine großartige Vorstellung liefern.}"
+      ],
+      [
+        "GwennenTutorialPlayerPlacesFirstExplosive",
+        "Versuche, mit der Zündschnur so weit wie möglich zu gehen."
+      ],
+      [
+        "GwennenTutorialPlayerWalksTooFarAway",
+        "Nicht so weit!"
+      ],
+      [
+        "GwennenTutorialPlayerPlacesSecondExplosive",
+        "Weiter! Geh weiter. Weg von mir."
+      ],
+      [
+        "GwennenTutorialPlayerPlacesThirdExplosive",
+        "Alles platziert. Sollen wir sie zünden?"
+      ],
+      [
+        "GwennenTutorialDetonating",
+        "Ich sollte vielleicht noch erwähnen... das könnte Monster an die Oberfläche bringen!"
+      ],
+      [
+        "GwennenTutorialMonstersAppearing",
+        "Du wirst mit ihnen schon fertig!"
+      ],
+      [
+        "GwennenTutorialMoreMonstersAppearing",
+        "<if:MS>{Schnapp sie Dir, Dörfler!}<elif:FS>{Schnapp sie Dir, Dörflerin!}"
+      ],
+      [
+        "GwennenTutorialAllMonstersDead",
+        "Du hast es geschafft?... Du hast es geschafft! Die meisten Landeier, die ich für diese Aufgabe auflese, halten nicht lange durch."
+      ],
+      [
+        "GwennenTutorialTalkAfter",
+        "<if:MS>{Hah, ja, ich hätte die Gefahr ehrlicher beschreiben können... aber, verstehst Du, die Leute nehmen den Job nicht an wenn ich erwähne, dass die umgegrabene Erde voller tödlicher Kreaturen ist. Ein ziemlich schlimmes Land hast Du da, Einheimischer. Es ist erstaunlich, dass überhaupt jemand überlebt. Was allerdings zu dem Grund führt, aus dem ich ursprünglich hergekommen bin... aber das musst Du Dannig fragen, falls Du ihn findest.\r\n\r\nÜbrigens, wenn Du gerne ein Risiko eingehst, ich hätte da so ein paar Dinge, die ich freigelegt habe und die für Dich vielleicht von Interesse sein könnten.}<elif:FS>{Hah, ja, ich hätte die Gefahr ehrlicher beschreiben können... aber, verstehst Du, die Leute nehmen den Job nicht an wenn ich erwähne, dass die umgegrabene Erde voller tödlicher Kreaturen ist. Ein ziemlich schlimmes Land hast Du da, Einheimische. Es ist erstaunlich, dass überhaupt jemand überlebt. Was allerdings zu dem Grund führt, aus dem ich ursprünglich hergekommen bin... aber das musst Du Dannig fragen, falls Du ihn findest. \r\n\r\nÜbrigens, wenn Du gerne ein Risiko eingehst, ich hätte da so ein paar Dinge, die ich freigelegt habe und die für Dich vielleicht von Interesse sein könnten.}"
+      ],
+      [
+        "GwennenTutorialPartingShoutForTutorialTwo",
+        "Falls Du Tujen siehst, sag ihm, ich habe Dich geschickt!"
+      ],
+      [
+        "GwennenTutorialPartingShout",
+        "Ich bringe das hier zu Ende. Auf ein baldiges Wiedersehen!"
+      ],
+      [
+        "GwennenTutorialTwoShout",
+        "<if:MS>{Ich habe hier etwas Besonderes für dich gefunden, Dörfler!}<elif:FS>{Ich habe hier etwas Besonderes für dich gefunden, Dörflerin!}"
+      ],
+      [
+        "GwennenTutorialTwoIntro",
+        "Überreste alter Zivilisationen gibt es auf diesem Kontinent zuhauf. Anscheinend wirken auf einige dieser Relikte noch geheimnisvolle Einflüsse. Es ist ein bisschen riskant, einen zu zerstören und seine Energien freizusetzen, aber die Belohnung könnte es wert sein.\r\n\r\nAlles, was nach der Zerstörung eines Relikts an die Oberfläche kommt, ist ein wenig verändert. Warum platzierst Du nicht eine Sprengladung in der Nähe von dem da drüben? Lass uns rausfinden, was passiert."
+      ],
+      [
+        "GwennenTutorialPlayerPlacesExplosiveNotNearRemnant",
+        "Platziere eine Sprengladung in der Nähe des Relikts!"
+      ],
+      [
+        "GwennenTutorialTwoFailure",
+        "Diese Anordnung von Sprengladungen wird dieses Relikt nicht einmal ankratzen! Na ja, dann versuchen wir es später noch einmal."
+      ],
+      [
+        "GwennenTutorialPlayerPlacesExplosiveNearRemnant",
+        "Gut, das sollte reichen."
+      ],
+      [
+        "GwennenTutorialEnragedMonstersAppearing",
+        "Ich sollte vielleicht noch erwähnen... das könnte die Monster reizen!"
+      ],
+      [
+        "GwennenTutorialTwoAllMonstersDead",
+        "<if:MS>{Siehst Du, Verbannter? Das Zerstören von Relikten ist ein riskantes Unterfangen, aber Du hast es eindeutig im Griff.}<elif:FS>{Siehst Du, Verbannte? Das Zerstören von Relikten ist ein riskantes Unterfangen, aber Du hast es eindeutig im Griff.}"
+      ],
+      [
+        "GwennenTutorialTwoTalkAfter",
+        "Es scheint also, als ob die Zerstörung alter Relikte alles verändert, was wir danach an die Oberfläche befördern – beides, Schätze und Monster. Es ist ein Glücksspiel und Du weißt, dass ich dafür immer zu haben bin. Solange Du bereit bist, Dich um die Folgen zu kümmern... mit Gewalt."
+      ],
+      [
+        "DannigTrailerLookingAtExpedition",
+        "Diese Übersetzung ist ein bisschen anstrengend. Offensichtlich war der Erinnerer dieser Expedition ein Neuling. Nüchterne Listen mit Landmarken, die der Treck passiert hat... Besondere Hügel, Flüsse, ein Gebirgszug... Die Schlachten beschreibt er allerdings ausführlich. Seite um Seite mit Arbalestenbolzen, die 'in den Nacken und Herzen von Untoten in exotischen Kleidern Halt fanden.' Anscheinend waren junge Männer schon vor tausenden von Jahren die gleichen blutgierigen Welpen. \r\n\r\nAufgrund der Beschreibung könnte es sich um eine Stätte der Vaal handeln, auch wenn er bei ihrer Kleidung nicht ins Detail geht. Die Verwendung von Arbalesten deutet auf die Schwarze Sense hin. Es gibt ein paar Orte, die zu den Details in diesem Logbuch passen könnten. Was meinst Du?"
+      ],
+      [
+        "DannigIntroGeneralWitch",
+        "Du bist nichts als Haut und Knochen, Verbannte, aber Du hast es bis hierher geschafft. Offensichtlich musst Du einiges an Talent haben. Würdest Du Deine Fertigkeiten in den Dienst einer Frage der Ehre stellen?"
+      ],
+      [
+        "DannigIntroGeneralScion",
+        "Du bist nichts als Haut und Knochen, Verbannte, aber Du hast es bis hierher geschafft. Offensichtlich musst Du einiges an Talent haben. Würdest Du Deine Fertigkeiten in den Dienst einer Frage der Ehre stellen?"
+      ],
+      [
+        "DannigIntroGeneralRanger",
+        "Du bist nichts als Haut und Knochen, Verbannte, aber Du hast es bis hierher geschafft. Offensichtlich musst Du einiges an Talent haben. Würdest Du Deine Fertigkeiten in den Dienst einer Frage der Ehre stellen?"
+      ],
+      [
+        "DannigIntroGeneralDuelist",
+        "Du bist nichts als Haut und Knochen, Verbannter, aber Du hast es bis hierher geschafft. Offensichtlich musst Du einiges an Talent haben. Würdest Du Deine Fertigkeiten in den Dienst einer Frage der Ehre stellen?"
+      ],
+      [
+        "DannigIntroGeneralShadow",
+        "Du bist nichts als Haut und Knochen, Verbannter, aber Du hast es bis hierher geschafft. Offensichtlich musst Du einiges an Talent haben. Würdest Du Deine Fertigkeiten in den Dienst einer Frage der Ehre stellen?"
+      ],
+      [
+        "DannigIntroGeneralTemplar",
+        "Du bist nichts als Haut und Knochen, Verbannter, aber Du hast es bis hierher geschafft. Offensichtlich musst Du einiges an Talent haben. Würdest Du Deine Fertigkeiten in den Dienst einer Frage der Ehre stellen?"
+      ],
+      [
+        "DannigIntroMarauder",
+        "Aha, ein Krieger wie ich! Du und ich, wir müssen am Lagerfeuer die Geschichten unserer mutigen Vorfahren erzählen! Aber zuerst habe ich eine Bitte. Eine Frage der Ehre. Ich glaube, dass Du hierfür genau der Richtige bist."
+      ],
+      [
+        "DannigNotHelping",
+        "Es wird Zeit, dass Du Dir Dein Brot verdienst. Du führst den Kampf."
+      ],
+      [
+        "DannigApproachShoutRandom",
+        "Sei gegrüßt!"
+      ],
+      [
+        "DannigApproachShout2",
+        "Sei gegrüßt!"
+      ],
+      [
+        "DannigApproachShout3",
+        "Sei gegrüßt!"
+      ],
+      [
+        "DannigDetonationRandom",
+        "Ja!"
+      ],
+      [
+        "DannigDetonation2",
+        "Ja!"
+      ],
+      [
+        "DannigDetonation3",
+        "Ja!"
+      ],
+      [
+        "DannigDetonation4",
+        "Wunderschön!"
+      ],
+      [
+        "DannigDetonation5",
+        "Wunderschön!"
+      ],
+      [
+        "DannigDetonation6",
+        "Wunderschön!"
+      ],
+      [
+        "DannigDetonation7",
+        "Einen Schritt näher."
+      ],
+      [
+        "DannigDetonation8",
+        "Einen Schritt näher."
+      ],
+      [
+        "DannigDetonation9",
+        "Einen Schritt näher."
+      ],
+      [
+        "DannigBombPlacementRiskRandom",
+        "Ich sehe, Du nimmst eine ernsthafte Gefahr in Kauf..."
+      ],
+      [
+        "DannigBombPlacementRisk2",
+        "Ich sehe, Du nimmst eine ernsthafte Gefahr in Kauf..."
+      ],
+      [
+        "DannigBombPlacementRisk3",
+        "Ich sehe, Du nimmst eine ernsthafte Gefahr in Kauf..."
+      ],
+      [
+        "DannigBombPlacementRisk4",
+        "Bist Du Dir bei der hier sicher? Scheint riskant zu sein."
+      ],
+      [
+        "DannigBombPlacementRisk5",
+        "Bist Du Dir bei der hier sicher? Scheint riskant zu sein."
+      ],
+      [
+        "DannigBombPlacementRisk6",
+        "Bist Du Dir bei der hier sicher? Scheint riskant zu sein."
+      ],
+      [
+        "DannigBombPlacementTreasureRandom",
+        "Das wird ein paar schöne Stücke an die Luft befördern."
+      ],
+      [
+        "DannigBombPlacementTreasure2",
+        "Das wird ein paar schöne Stücke an die Luft befördern."
+      ],
+      [
+        "DannigBombPlacementTreasure3",
+        "Das wird ein paar schöne Stücke an die Luft befördern."
+      ],
+      [
+        "DannigBombPlacementTreasure4",
+        "Ah, Du bist auf Schätze aus!"
+      ],
+      [
+        "DannigBombPlacementTreasure5",
+        "Ah, Du bist auf Schätze aus!"
+      ],
+      [
+        "DannigBombPlacementTreasure6",
+        "Ah, Du bist auf Schätze aus!"
+      ],
+      [
+        "DannigBombPlacementDangerRandom",
+        "Das wird sicher in einem Kampf enden..."
+      ],
+      [
+        "DannigBombPlacementDanger2",
+        "Das wird sicher in einem Kampf enden..."
+      ],
+      [
+        "DannigBombPlacementDanger3",
+        "Das wird sicher in einem Kampf enden..."
+      ],
+      [
+        "DannigBombPlacementDanger4",
+        "Da schlummern so einige Gefahren..."
+      ],
+      [
+        "DannigBombPlacementDanger5",
+        "Da schlummern so einige Gefahren..."
+      ],
+      [
+        "DannigBombPlacementDanger6",
+        "Da schlummern so einige Gefahren..."
+      ],
+      [
+        "DannigAllBombsPlacedRandom",
+        "Bereit?"
+      ],
+      [
+        "DannigAllBombsPlaced2",
+        "Bereit?"
+      ],
+      [
+        "DannigAllBombsPlaced3",
+        "Bereit?"
+      ],
+      [
+        "DannigAllBombsPlaced4",
+        "Das wär's also."
+      ],
+      [
+        "DannigAllBombsPlaced5",
+        "Das wär's also."
+      ],
+      [
+        "DannigAllBombsPlaced6",
+        "Das wär's also."
+      ],
+      [
+        "DannigAllBombsPlaced7",
+        "Bereit, wenn Du es bist."
+      ],
+      [
+        "DannigAllBombsPlaced8",
+        "Bereit, wenn Du es bist."
+      ],
+      [
+        "DannigAllBombsPlaced9",
+        "Bereit, wenn Du es bist."
+      ],
+      [
+        "DannigDoingDetonationRandom",
+        "Zündung!"
+      ],
+      [
+        "DannigDoingDetonation2",
+        "Zündung!"
+      ],
+      [
+        "DannigDoingDetonation3",
+        "Zündung!"
+      ],
+      [
+        "DannigDoingDetonation4",
+        "Zündung!"
+      ],
+      [
+        "DannigDoingDetonation5",
+        "Zündung!"
+      ],
+      [
+        "DannigOrdersSquireDetonateRandom",
+        "<if:MS>{Gehilfe! Zündung!}<elif:FS>{Gehilfin! Zündung!}"
+      ],
+      [
+        "DannigOrdersSquireDetonate2",
+        "<if:MS>{Gehilfe! Zündung!}<elif:FS>{Gehilfin! Zündung!}"
+      ],
+      [
+        "DannigOrdersSquireDetonate3",
+        "<if:MS>{Gehilfe! Zündung!}<elif:FS>{Gehilfin! Zündung!}"
+      ],
+      [
+        "DannigExplainsExchanging",
+        "Manche Relikte sind wichtiger als andere. Wenn Du irgendetwas von den Rittern der Sonne gefunden hast, dann nehme ich es im Tausch für Dinge, die du den anderen verkaufen kannst."
+      ],
+      [
+        "DannigExplainsExchangingAlternate",
+        "Meine Aufgabe ist es, Nachforschungen über die Ritter der Sonne anzustellen und ihre Artefakte in meinen Besitz zu bringen. Ich bin bereit, andere, weniger bedeutende Artefakte für die ihren einzutauschen."
+      ],
+      [
+        "DanningRerollInventoryRandom",
+        "Mal sehen, was ich sonst noch so habe..."
+      ],
+      [
+        "DanningRerollInventory2",
+        "Mal sehen, was ich sonst noch so habe..."
+      ],
+      [
+        "DanningRerollInventory3",
+        "Mal sehen, was ich sonst noch so habe..."
+      ],
+      [
+        "DanningRerollInventory4",
+        "Ich kann bestimmt noch irgendwo ein paar andere Dinge zusammensuchen."
+      ],
+      [
+        "DanningRerollInventory5",
+        "Ich kann bestimmt noch irgendwo ein paar andere Dinge zusammensuchen."
+      ],
+      [
+        "DanningRerollInventory6",
+        "Ich kann bestimmt noch irgendwo ein paar andere Dinge zusammensuchen."
+      ],
+      [
+        "DanningRerollInventory7",
+        "Interessiert Dich vielleicht etwas anderes?"
+      ],
+      [
+        "DanningRerollInventory8",
+        "Interessiert Dich vielleicht etwas anderes?"
+      ],
+      [
+        "DanningRerollInventory9",
+        "Interessiert Dich vielleicht etwas anderes?"
+      ],
+      [
+        "DannigOlrothFightTombOpened",
+        "Darunter liegt die Triskelion-Flamme! Ich kann ihre Macht spüren!"
+      ],
+      [
+        "DannigOlrothFightFlameSeen",
+        "Das ist es! Wir haben es endlich gefunden!"
+      ],
+      [
+        "DannigOlrothAwakens",
+        "<if:MS>{Verbannter! Er bewegt sich!}<elif:FS>{Verbannte! Er bewegt sich!}"
+      ],
+      [
+        "DannigOlrothDefeatedFirst",
+        "Lass uns die Flamme holen, solange er noch liegt!"
+      ],
+      [
+        "DannigOlrothDamageFlameFirst",
+        "Wir können ihn nicht auf direktem Weg besiegen. Benutze ein paar Sprengsätze, um die Flamme zu beschädigen!"
+      ],
+      [
+        "DannigOlrothDefeatedSecond",
+        "Es ist immer noch nicht vorbei!"
+      ],
+      [
+        "DannigOlrothDefeatedDamageFlameSecond",
+        "Nimm nochmal den Sprengstoff! Beschädige die Triskelion-Flamme! "
+      ],
+      [
+        "DannigOlrothFightEnd",
+        "Die Flamme wurde zerstört... aber wenigstens kann Olroth jetzt in Frieden ruhen."
+      ],
+      [
+        "DannigOlrothFightEpilogueCommentary",
+        "Erzähle den anderen nicht, dass wir die Flamme vernichtet haben. Sie verlieren sonst die Hoffnung. Bei dieser Aufgabe geht es um die Reise, nicht das Ziel."
+      ],
+      [
+        "DanningHowAboutYourHideout",
+        "Wir suchen nach einer sicheren und abgelegenen Ausgangsbasis. Falls Du ein Versteck hast, dann wäre das ideal. Wir können von dort aus unsere Expeditionen planen. "
+      ],
+      [
+        "DannigReinvitedToHideout",
+        "Du bist ganz schön launisch, aber in Ordnung."
+      ],
+      [
+        "DannigLogbookKnightsOfTheSun",
+        "<if:MS>{Die Erinnerer der Ritter der Sonne schrieben oft sehr blumig. Weiß eigentlich überhaupt jemand genau, was ein 'Grund' ist? Der hier hat es <i>{dreimal} verwendet, um ein Tal, eine Lichtung und eine Wiese zu beschreiben. Sei ein bisschen genauer, Chronist! Was ich konnte, habe ich bei diesem Logbuch entschlüsselt. Deine Entscheidung, Verbannter.}<elif:FS>{Die Erinnerer der Ritter der Sonne schrieben oft sehr blumig. Weiß eigentlich überhaupt jemand genau, was ein 'Grund' ist? Der hier hat es <i>{dreimal} verwendet, um ein Tal, eine Lichtung und eine Wiese zu beschreiben. Sei ein bisschen genauer, Chronist! Was ich konnte, habe ich bei diesem Logbuch entschlüsselt. Deine Entscheidung, Verbannte.}"
+      ],
+      [
+        "DannigLogbookBlackScytheMercenaries",
+        "<if:MS>{Ein Logbuch der Schwarzen Sense erkennt man immer auf den ersten Blick. Voll von martialischen Details und exquisiten Beschreibungen brutaler Kämpfe, strategischer Entscheidungen – und Voranas mordgieriger Eleganz auf dem Schlachtfeld. Leider kommen die nützlichen logistischen Wegmarkierungen ein wenig zu kurz. Da ist Deine Vermutung so gut wie meine, Verbannter.}<elif:FS>{Ein Logbuch der Schwarzen Sense erkennt man immer auf den ersten Blick. Voll von martialischen Details und exquisiten Beschreibungen brutaler Kämpfe, strategischer Entscheidungen - und Voranas mordgieriger Eleganz auf dem Schlachtfeld. Leider kommen die nützlichen logistischen Wegmarkierungen ein wenig zu kurz. Da ist Deine Vermutung so gut wie meine, Verbannte.}"
+      ],
+      [
+        "DannigLogbookDruidsOfTheBrokenCircle",
+        "<if:MS>{Dies ist auf eine sanfte Art verstörend, aber Logbücher, die von den Erinnerern der Druiden geschrieben wurden, beschreiben natürliches Gelände sowohl als was es einmal <i>{gewesen} ist, als auch als was es <i>{eines Tages sein könnte}. Ich habe festgestellt, dass diese Logbücher am genauesten der heutigen Landschaft entsprechen. Aber sie konnten doch nicht wirklich die Zukunft durch einen Blick in die Vergangenheit sehen? Sie waren einfach nur Naturgelehrte. Ja, Wissenschaft, durchdrungen von Mystizismus... Eine Ausrede, die meine Seele beruhigt. Sollen wir ihre Vorhersagen überprüfen, Verbannter?     }<elif:FS>{Dies ist auf eine sanfte Art verstörend, aber Logbücher, die von den Erinnerern der Druiden geschrieben wurden, beschreiben natürliches Gelände sowohl als was es einmal <i>{gewesen} ist, als auch als was es <i>{eines Tages sein könnte}. Ich habe festgestellt, dass diese Logbücher am genauesten der heutigen Landschaft entsprechen. Aber sie konnten doch nicht wirklich die Zukunft durch einen Blick in die Vergangenheit sehen? Sie waren einfach nur Naturgelehrte. Ja, Wissenschaft, durchdrungen von Mystizismus... Eine Ausrede, die meine Seele beruhigt. Sollen wir ihre Vorhersagen überprüfen, Verbannte?     }"
+      ],
+      [
+        "DannigLogbookOrderOfTheChalice",
+        "<if:MS>{Uhtred und seine Priester hatten ihre eigenen geheimen Pläne. Es ist schwierig, einen Text aus einem übermäßig frommen Logbuch zu entschlüsseln, der vielleicht noch nicht einmal der Wahrheit entspricht. Nichts gegen Religion, nur gegen die bombastische Wortwahl. Alles ist 'rein' und 'sternenklar' und 'schimmernd'. Daraus eine Fährte abzuleiten ist ziemlich frustrierend. Es wird mindestens eine Stätte des Ordens des Kelches erwähnt. Welchen Weg sollen wir einschlagen, Verbannter?}<elif:FS>{Uhtred und seine Priester hatten ihre eigenen geheimen Pläne. Es ist schwierig, einen Text aus einem übermäßig frommen Logbuch zu entschlüsseln, der vielleicht noch nicht einmal der Wahrheit entspricht. Nichts gegen Religion, nur gegen die bombastische Wortwahl. Alles ist 'rein' und 'sternenklar' und 'schimmernd'. Daraus eine Fährte abzuleiten ist ziemlich frustrierend. Es wird mindestens eine Stätte des Ordens des Kelches erwähnt. Welchen Weg sollen wir einschlagen, Verbannte?}"
+      ],
+      [
+        "DannigLogbookMaraketh",
+        "<if:MS>{Ich weiß nicht viel über die Maraketh, aber nach den Landmarken in diesem Logbuch müssen wir vielleicht eine ihrer alten Stätten betreten. Ich denke, wir kommen damit durch, wenn wir uns beeilen. Es ist Deine Entscheidung, Verbannter.  }<elif:FS>{Ich weiß nicht viel über die Maraketh, aber nach den Landmarken in diesem Logbuch müssen wir vielleicht eine ihrer alten Stätten betreten. Ich denke, wir kommen damit durch, wenn wir uns beeilen. Es ist Deine Entscheidung, Verbannte.  }"
+      ],
+      [
+        "DannigLogbookVaal",
+        "Ich bin eigentlich kein Schatzsucher, aber das hier führt sogar mich in Versuchung. Das Logbuch beschreibt Berge von Gold, gefunden in Vaal-Städten voller untoter Gestalten in bunten Gewändern. Berg von Gold. Berge... von Gold... Glaubst Du, sie sind noch da? Lass es uns herausfinden. Es sei denn, Du möchtest aus irgendeinem Grund zu einem anderen, weniger interessanten Ort reisen..."
+      ],
+      [
+        "DannigLogbookKarui",
+        "<if:MS>{Diese Expedition könnte uns durch eine Stätte der Karui führen. Diese ehrbewussten Leute würde ich gerne einmal kennenlernen. Ich habe mein ganzes Leben mit der Suche nach Ansehen verbracht, daher finde ich ihren Kodex faszinierend. Sollen wir so viel wie möglich darüber lernen, Verbannter?}<elif:FS>{Diese Expedition könnte uns durch eine Stätte der Karui führen. Diese ehrbewussten Leute würde ich gerne einmal kennenlernen. Ich habe mein ganzes Leben mit der Suche nach Ansehen verbracht, daher finde ich ihren Kodex faszinierend. Sollen wir so viel wie möglich darüber lernen, Verbannte?}"
+      ],
+      [
+        "DannigLogbookEternalEmpire",
+        "<if:MS>{Ich finde dieses Ewige Kaiserreich faszinierend. Ich würde sie nicht unbedingt \"Ewige\" nennen, da sie inzwischen alle tot sind, aber weil so viele von ihnen noch als Untote umherwandern, war der Name vielleicht doch ganz passend. Hast Du Lust, eine ihrer alten Stätten zu erforschen, Verbannter?}<elif:FS>{Ich finde dieses Ewige Kaiserreich faszinierend. Ich würde sie nicht unbedingt \"Ewige\" nennen, da sie inzwischen alle tot sind, aber weil so viele von ihnen noch als Untote umherwandern, war der Name vielleicht doch ganz passend. Hast Du Lust, eine ihrer alten Stätten zu erforschen, Verbannte?}"
+      ],
+      [
+        "DannigLogbookOriathan",
+        "<if:MS>{Die Oriather waren nicht sehr freundlich zu uns. Diese Expedition führt uns vielleicht durch einen ihrer Orte und ich hätte gute Lust, ihn mit Absicht ein bisschen weiter zu entweihen. Lust auf ein wenig Vandalismus, Verbannter?}<elif:FS>{Die Oriather waren nicht sehr freundlich zu uns. Diese Expedition führt uns vielleicht durch einen ihrer Orte und ich hätte gute Lust, ihn mit Absicht ein bisschen weiter zu entweihen. Lust auf ein wenig Vandalismus, Verbannte?}"
+      ],
+      [
+        "DannigLogbookSiren",
+        "<if:MS>{Die landschaftlichen Hinweise in diesem Logbuch könnten uns möglicherweise an einen Ort führen, der einst von Sirenen bewohnt wurde. Klingt für mich nach einem Märchen, aber Märchen enthalten in der Regel ein Körnchen Wahrheit. Vielleicht stopfe ich mir einfach was in die Ohren, um ihrem angeblich so verführerischen Gesang zu entgehen. Dann könnten wir nachsehen und die Wahrheit herausfinden. Was hältst Du davon, Verbannter?}<elif:FS>{Die landschaftlichen Hinweise in diesem Logbuch könnten uns möglicherweise an einen Ort führen, der einst von Sirenen bewohnt wurde. Klingt für mich nach einem Märchen, aber Märchen enthalten in der Regel ein Körnchen Wahrheit. Vielleicht stopfe ich mir einfach was in die Ohren, um ihrem angeblich so verführerischen Gesang zu entgehen. Dann könnten wir nachsehen und die Wahrheit herausfinden. Was hältst Du davon, Verbannte?}"
+      ],
+      [
+        "DannigLogbookMonkeyTribe",
+        "<if:MS>{Falls ich dieses Logbuch richtig übersetze, dann haben sie einen Stamm... von Affen getroffen?... Der mit Handzeichen kommunizieren konnte. Sie konnten handeln und hatten sogar ihre eigenen Statuen von uns unbekannten Göttern. Ich werde von den Wundern und Gefahren Wraeclasts immer wieder verblüfft, aber das hier finde ich ein wenig unglaubwürdig. Sollen wir dieser Behauptung auf den Grund gehen, Verbannter?}<elif:FS>{Falls ich dieses Logbuch richtig übersetze, dann haben sie einen Stamm... von Affen getroffen?... Der mit Handzeichen kommunizieren konnte. Sie konnten handeln und hatten sogar ihre eigenen Statuen von uns unbekannten Göttern. Ich werde von den Wundern und Gefahren Wraeclasts immer wieder verblüfft, aber das hier finde ich ein wenig unglaubwürdig. Sollen wir dieser Behauptung auf den Grund gehen, Verbannte?}"
+      ],
+      [
+        "DannigLogbookLostMen",
+        "<if:MS>{Ich bin mir nicht sicher, ob ich verstehe, was ich übersetze. Mindestens einer der Orte, die in diesem Logbuch erwähnt werden, gehörte einem Stamm von 'Männern ohne Namen', die die Knochen einer bestimmten, schon lange toten Bestie verehrten, deren Beschreibung für mich keinen Sinn ergibt. Dein Kontinent ist schon merkwürdig. Interesse daran, diese Gegend zu erforschen, Verbannter?}<elif:FS>{Ich bin mir nicht sicher, ob ich verstehe, was ich übersetze. Mindestens einer der Orte, die in diesem Logbuch erwähnt werden, gehörte einem Stamm von 'Männern ohne Namen', die die Knochen einer bestimmten, schon lange toten Bestie verehrten, deren Beschreibung für mich keinen Sinn ergibt. Dein Kontinent ist schon merkwürdig. Interesse daran, diese Gegend zu erforschen, Verbannte?}"
+      ],
+      [
+        "DannigLogbookVaalPlusBlackScythe",
+        "Diese Übersetzung ist ein bisschen anstrengend. Offensichtlich war der Erinnerer dieser Expedition ein Neuling. Nüchterne Listen mit Landmarken, die der Treck passiert hat... Besondere Hügel, Flüsse, ein Gebirgszug... Die Schlachten beschreibt er allerdings ausführlich. Seite um Seite mit Arbalestenbolzen, die 'in den Nacken und Herzen von Untoten in exotischen Kleidern Halt fanden.' Anscheinend waren junge Männer schon vor tausenden von Jahren die gleichen blutgierigen Welpen. \r\n\r\nAufgrund der Beschreibung könnte es sich um eine Stätte der Vaal handeln, auch wenn er bei ihrer Kleidung nicht ins Detail geht. Die Verwendung von Arbalesten deutet auf die Schwarze Sense hin. Es gibt ein paar Orte, die zu den Details in diesem Logbuch passen könnten. Was meinst Du?"
+      ],
+      [
+        "DannigLogbookVaalPlusKnights",
+        "Die Ritter der Sonne waren die Ersten, die die verfluchten Städte der Vaal erkundeten. Dieses Logbuch stammt aus jenen frühen Tagen, gleich nachdem sie Wraeclast erreicht hatten und das Imperium fanden – glorreich, strahlend... und voll mit Untoten. Ich kann mir nicht vorstellen, was für ein grauenhaftes Ereignis eine ganze Zivilisation auf einmal ausgelöscht hat. Und ich bin mir nicht sicher, ob ich es wissen möchte. "
+      ],
+      [
+        "DannigLogbookVaalPlusOrder",
+        "<if:MS>{Dieses Logbuch enthält eine ziemlich detaillierte Erörterung von Uhtreds Erlass, dass die Machtgemmen unrein waren und nicht berührt werden durften. Diese Gemmen wurden oft auf – oder <i>{in} – den torkelnden Toten gesehen, die das stumme Kaiserreich der Vaal bevölkerten und die Verbindung war eindeutig. Erstaunlich, dass meine Leute diese Lektion so schnell gelernt haben, aber Du... tja, Du weißt mehr über Gemmen, als ich. Was sollen wir tun, Verbannter?}<elif:FS>{Dieses Logbuch enthält eine ziemlich detaillierte Erörterung von Uhtreds Erlass, dass die Machtgemmen unrein waren und nicht berührt werden durften. Diese Gemmen wurden oft auf – oder <i>{in} – den torkelnden Toten gesehen, die das stumme Kaiserreich der Vaal bevölkerten und die Verbindung war eindeutig. Erstaunlich, dass meine Leute diese Lektion so schnell gelernt haben, aber Du... tja, Du weißt mehr über Gemmen, als ich. Was sollen wir tun, Verbannte? }"
+      ],
+      [
+        "DannigLogbookVaalPlusDruids",
+        "<if:MS>{Dieses Logbuch... Ich glaube nicht, dass ich wiedergeben kann, was ich gelesen habe. Die Druiden des Gebrochenen Zirkels behaupteten die Fähigkeit zu besitzen, in die Vergangenheit zu sehen, daher haben sie natürlich versucht, des Schicksal des Kaiserreichs der Vaal zu verstehen, das sich tot und leer über ganz Wraeclast erstreckte. Dieses Logbuch...\r\n\r\nNein. Ich kann mich der Angst stellen. Wenn du es befiehlst, dann werden wir gehen, Verbannter. }<elif:FS>{Dieses Logbuch... Ich glaube nicht, dass ich wiedergeben kann, was ich gelesen habe. Die Druiden des Gebrochenen Zirkels behaupteten die Fähigkeit zu besitzen, in die Vergangenheit zu sehen, daher haben sie natürlich versucht, des Schicksal des Kaiserreichs der Vaal zu verstehen, das sich tot und leer über ganz Wraeclast erstreckte. Dieses Logbuch...\r\n\r\nNein. Ich kann mich der Angst stellen. Wenn du es befiehlst, dann werden wir gehen, Verbannte. }"
+      ],
+      [
+        "DannigLogbookGeneric",
+        "Die in diesem Logbuch beschriebenen Landmarken passen zu nichts von besonderer Bedeutung auf unseren heutigen Karten. Die Landschaft hat sich über die Jahrhunderte zu sehr verändert. Ich kann bestenfalls nur raten. Möchtest Du ein Ziel auswählen?"
+      ],
+      [
+        "DannigLogbookOlroth",
+        "<if:MS>{Das ist unglaublich! Wir haben es vielleicht endlich gefunden! Dieses Logbuch enthält mehrere letzte Notizen von einem Erinnerer, der verzweifelt versucht hat herauszufinden, wohin ihr größter Anführer gegangen sein könnte. Ausgehend von dem Text scheint es, dass einer dieser Orte vielleicht die letzte Ruhestätte von Olroth höchstselbst sein könnte!\r\n\r\n Wollen wir uns in eine Legende begeben, Verbannter?}<elif:FS>{Das ist unglaublich! Wir haben es vielleicht endlich gefunden! Dieses Logbuch enthält mehrere letzte Notizen von einem Erinnerer, der verzweifelt versucht hat herauszufinden, wohin ihr größter Anführer gegangen sein könnte. Ausgehend von dem Text scheint es, dass einer dieser Orte vielleicht die letzte Ruhestätte von Olroth höchstselbst sein könnte!\r\n\r\n Wollen wir uns in eine Legende begeben, Verbannte?}"
+      ],
+      [
+        "DannigLogbookVorana",
+        "<if:MS>{Es scheint, als wäre ein unerfahrener Erinnerer Voranas Spur der Verwüstung während ihrer letzten Schlacht gefolgt. Wir könnten den Weg durch das Gelände, das er beschreibt, nachvollziehen und so vielleicht ihre letzte Ruhestätte finden. \r\n\r\nEhrlich gesagt zögere ich ein bisschen, das zu tun. Nach allem, was man hört, war sie Zeit ihres Lebens eine furchteinflößende Kriegerin. Im Tod könnte sie selbst Euren Talenten überlegen sein. Ich überlasse Dir die Wahl, Verbannter.}<elif:FS>{Es scheint, als wäre ein unerfahrener Erinnerer Voranas Spur der Verwüstung während ihrer letzten Schlacht gefolgt. Wir könnten den Weg durch das Gelände, das er beschreibt, nachvollziehen und so vielleicht ihre letzte Ruhestätte finden. \r\n\r\nEhrlich gesagt zögere ich ein bisschen, das zu tun. Nach allem, was man hört, war sie Zeit ihres Lebens eine furchteinflößende Kriegerin. Im Tod könnte sie selbst Euren Talenten überlegen sein. Ich überlasse Dir die Wahl, Verbannte.}"
+      ],
+      [
+        "DannigLogbookMedved",
+        "<if:MS>{Medved war der geheimnisvollste der vier großen Helden. Seine Naturmystiker haben viele geschützte Zufluchtsorte in der Wildnis unterhalten. Auch wenn er durch Wraeclasts Dunkelheit den Verstand verloren hat, könnte er diese Schutzorte für niederträchtige Zwecke benutzt haben. Die Details in diesem Logbuch könnten uns zu seinem vermuteten Aufenthaltsort führen. Deine Entscheidung, Verbannter. }<elif:FS>{Medved war der geheimnisvollste der vier großen Helden. Seine Naturmystiker haben viele geschützte Zufluchtsorte in der Wildnis unterhalten. Auch wenn er durch Wraeclasts Dunkelheit den Verstand verloren hat, könnte er diese Schutzorte für niederträchtige Zwecke benutzt haben. Die Details in diesem Logbuch könnten uns zu seinem vermuteten Aufenthaltsort führen. Deine Entscheidung, Verbannte. }"
+      ],
+      [
+        "DannigLogbookUhtred",
+        "<if:MS>{In den letzten Tagen der Geschichte unserer Leute hier, floh der Erste Erinnerer mit den übriggebliebenen Überlebenden in einem verzweifelten Versuch, dem kommenden Untergang zu entgehen. Das ist sein Logbuch, Verbannter! Es scheint, als hätte der Orden des Kelches etwas gefunden... ein unbekanntes Artefakt... Er wusste nur, dass selbst die ältesten Männer seine Macht erkannten und um es einen Schrein errichteten. \r\n\r\nZu diesem Schrein flüchtete Uhtred, um dem Zorn Voranas zu entgehen. Die Überlebenden erwarteten, ihn hier zu treffen, aber die Einträge brechen kurz vor dem Erreichen des Ziels ab. Sollen wir ihren Schritten folgen? }<elif:FS>{In den letzten Tagen der Geschichte unserer Leute hier, floh der Erste Erinnerer mit den übriggebliebenen Überlebenden in einem verzweifelten Versuch, dem kommenden Untergang zu entgehen. Das ist sein Logbuch, Verbannte! Es scheint, als hätte der Orden des Kelchs etwas gefunden... ein unbekanntes Artefakt... Er wusste nur, dass selbst die ältesten Männer seine Macht erkannten und um es einen Schrein errichteten. \r\n\r\nZu diesem Schrein flüchtete Uhtred, um dem Zorn Voranas zu entgehen. Die Überlebenden erwarteten, ihn hier zu treffen, aber die Einträge brechen kurz vor dem Erreichen des Ziels ab. Sollen wir ihren Schritten folgen? }"
+      ],
+      [
+        "DannigGossipOrigin",
+        "Wir gehören zu den Kalguur. Wir verbringen unsere Existenz damit, im Schlamm und Dreck des sterblichen Lebens nach etwas Ruhm zu scharren. Manche finden ihn auf dem Schlachtfeld, manche durch Dienste. Andere melden sich freiwillig, um für eine unmögliche Aufgabe bis an den Rand der bekannten Welt zu segeln. Unsere Entscheidungen bestimmen, wer wir sind und was wir werden, hallt in den Legenden wider. "
+      ],
+      [
+        "DannigGossipRunes",
+        "Im Grunde fangen und formen die Runen auf unserer Rüstung das Sternenlicht. Klingt poetisch, aber lass Dich nicht täuschen. Die Schmiede der Kalguur haben aus diesen Runen Werkzeuge des Todes gemacht, sobald sie entdeckten, dass sie Pfeile zwingen konnten, ihr Ziel zu finden und Klingen dazu, tiefer einzudringen. Die besten Schmiede wurden 'Erschaffer' genannt und brachten Werke von einzigartiger Genialität hervor. Es gab nicht vieler solcher Relikte, aber das war auch gar nicht nötig. "
+      ],
+      [
+        "DannigGossipTriskelionFlame",
+        "Das mächtigste Artefakt aus den uns bekannten Geschichten wurde vor tausenden von Jahren von der ersten Expedition auf diesen Kontinent gebracht. Die Lieder erzählen, wie es das Böse einäscherte, unreine Felder reinigte und jene mit bösen Absichten fernhielt. So ein Relikt könnten wir in diesen unruhigen Zeiten wahrlich gut gebrauchen... aber um es zu finden, müssen wir den Spuren dieser vergangenen Seelen folgen. Nur sie können uns das unbekannte Schicksal der Triskelion-Flamme verraten."
+      ],
+      [
+        "DannigGossipGems",
+        "<if:MS>{Ich glaube, dass <i>{du} glaubst, diese bunten Gemmen würden Dir Macht verleihen, Verbannter. Ich habe eine davon angefasst und sogar versucht sie zu 'aktivieren', so wie es dieser Tarkleigh beschrieben hat, aber es hat sich nicht das Geringste getan. Nenn mich skeptisch, aber so wie ich das sehe, hast Du die Macht bereits die ganze Zeit in Dir getragen. }<elif:FS>{Ich glaube, dass <i>{du} glaubst, diese bunten Gemmen würden Dir Macht verleihen, Verbannte. Ich habe eine davon angefasst und sogar versucht sie zu 'aktivieren', so wie es dieser Tarkleigh beschrieben hat, aber es hat sich nicht das Geringste getan. Nenn mich skeptisch, aber so wie ich das sehe, hast Du die Macht bereits die ganze Zeit in Dir getragen. }"
+      ],
+      [
+        "DannigGossipGods",
+        "Bevor ich meinen Fuß auf dieses Land gesetzt habe, habe ich noch nie von dieser \"Götter\"-Sache gehört, aber ich kenne mindestens einen... <i<{Mann}... dem es gefallen würde, ein Gott zu sein. Am besten erwähnen wir \"Göttlichkeit\" nicht gegenüber denen zu Hause."
+      ],
+      [
+        "DannigGossipTheKing",
+        "Ich werde nicht über die Angelegenheit mit diesem... <i>{Mann} reden."
+      ],
+      [
+        "DannigSagaBeforeArrival",
+        "Es war unmöglich, die wahre Bedeutung dieses Omens zu entschlüsseln, aber niemand konnte bestreiten, dass es geschehen war. Das  Land bebte, die Nachtwolken flohen, die Menschen zitterten und versteckten sich, Sterne zogen ihre Spur über den Himmel, um unsere Wälder dort in Brand zu stecken, wo sie niedergingen und eine blutrote Sonne erhob sich am Horizont. So stark war der Schein, dass der Halbmond voll und rot wurde. "
+      ],
+      [
+        "DannigSagaTheJourneyI",
+        "Etwas Wundersames und Schreckliches war geschehen und so beauftragte König Cadigan der Dritte eine Expedition an den Rand des Horizonts, geführt von unseren größten Kriegern und der Triskelion-Flamme zu ihrem Schutz. Durch meine Pflicht an die Flamme gebunden, nahm ich als Erster Erinnerer teil. Wir machten uns binnen eines Monats auf den Weg."
+      ],
+      [
+        "DannigSagaTheJourneyII",
+        "Die schon verloren geglaubte Fahrt über wilde und wütende Meere dauerte fast zwei Jahreszeiten, in denen wir selten den Himmel zwischen schwarzen Wolken, durchsetzt mit blutroten Blitzen, sahen. Wir konnten weder den Regen trinken, noch die Fische essen, bevor die Flamme das Wasser und das Fleisch gereinigt hatte. Selbst dann blieb ein Gefühl der Leere. Unsere Vorräte waren verbraucht und unsere Männer hungrig, als endlich in der Ferne Land in Sicht kam."
+      ],
+      [
+        "DannigSagaArrivalI",
+        "Der erste Fuß, der dieses Land betrat, wurde von unsichtbaren Kiefern unter dem Sand zermalmt. Vorzeichen sind selten so eindeutig. Wir zogen einen grausigen Pfad durch die Dünen und drängten die Kreaturen des Wassers zurück. Nur um auf grauenhafte Schrecken zu treffen, die zwischen den Bäumen umherwankten. Jeder Schritt wurde mit Blut bezahlt."
+      ],
+      [
+        "DannigSagaArrivalII",
+        "In der siebten Nacht teilten sich die düsteren Wolken für eine Weile und unsere gesegneten Sterne traten hervor. Olroth stellte die Triskelion-Flamme in der Mitte unserer Befestigungen auf. Damit waren die Rituale zur Errichtung des Schutzwalls vollzogen und wir erhielten etwas Schutz. Von dort stammte alles, wie eine Blüte unter dem Dach eines Baumes."
+      ],
+      [
+        "DannigSagaArrivalIII",
+        "Als die Ritter der Sonne weiter in das Landesinnere vordrangen, fanden wir die Überreste eines gewaltigen Reiches, das dem unseres Heimatlandes gleichkam. Unzählige Körper lagen verbrannt auf der Erde, aber andere wollten nicht ruhen. Viele waren mit glitzernden Gemmen geschmückt, die das Auge auf sich zogen und uns lockten. Diese Scheusale, die noch umherwanderten, trugen diese Gemmen oft eingebettet in ihre Gliedmaßen. Als Uhtred dies sah, erklärte er diese Kristalle für unrein. Keiner unter uns wollte darüber streiten."
+      ],
+      [
+        "DannigSagaArrivalIV",
+        "Riesige Berge von Gold lagen überall in diesem toten Kaiserreich und sie wurden oft von den gefährlichsten und am opulentesten gekleideten dieser Untoten bewacht. Selbst in ihrem missgestaltetem Zustand lauerten diese Adligen und Priester in der Nähe ihrer Schätze, nicht Willens aufzugeben, was ihnen mehr bedeutet hatte als das eigene Leben. Sie waren nicht auf den Straßen gestorben so wie diejenigen, die versucht hatten zu fliehen. Sie hatten ihre Tempel verschlossen und verbarrikadiert und damit ihre eigenen Gräber versiegelt."
+      ],
+      [
+        "DannigSagaArrivalV",
+        "Die Adligen von Utzaal hatten ihre eigenen Wasserkanäle geöffnet und sich mit Absicht ertränkt. Nicht als ein Akt der Gnade, sondern um Möchtegern-Plünderer zu ärgern. Ein Reich, regiert von Wahnsinnigen. Ihre Gehässigkeit war jedoch erfolgreich, denn wir konnten die tödlichen Gewässer nicht trockenlegen. Ihre Schätze würden für alle Zeiten verloren sein. Die anderen Städte erwiesen sich allerdings als eine langsame und stetige Quelle von Reichtum jenseits aller Vorstellungskraft."
+      ],
+      [
+        "DannigSagaColonisationI",
+        "Für König Cadigan den Dritten war dieses Land eine offene Schatzkammer. Zuerst kamen die Handwerker, bald folgten Schiffe voller Händler und Freien Männern. Frauen und Kinder folgten ihnen natürlich und im dritten Jahr wurde das erste Dorf gegründet. Alles wuchs und gedieh, solange die Triskelion-Flamme hell brannte. Aber bald waren wir zu viele, als dass alle vollständig im Kreis der Gnade ihres Schutzes bleiben konnten."
+      ],
+      [
+        "DannigSagaColonisationII",
+        "Die Söldner der Schwarzen Sense, unter dem Kommando von Vorana, entwickelten Strategien zur Verteidigung und zum Erlegen von Gegnern, die das Territorium, das wir beschützen konnten, ausweiteten. Entscheidend war dabei die Distanz. Durch die Verwendung von Armbrüsten und indem sie hinter starken Mauern blieben, konnten ihre Männer die Schreckensgestalten eine nach der anderen ins Visier nehmen und sie in Stücke reißen, bis sie sich nicht mehr bewegten. Wir hatten die Kühnheit zu glauben, diesen verlassenen Kontinent mit solch einfachen und banalen Mitteln zähmen zu können. In diesem Jahr wurden zehn weitere Dörfer gegründet. "
+      ],
+      [
+        "DannigSagaColonisationIII",
+        "Wir begannen mit den Männern aus den Bergen und von den Inseln entlang ferner Routen zu handeln, auch wenn wir keine gemeinsame Sprache hatten und einander nicht verstehen konnten. Ich habe einige der Lieder der Männer von den Inseln aufgeschrieben, um sie später zu entschlüsseln und ich habe unter den Gebirgsmännern Überlebende des gefallenen Reiches getroffen."
+      ],
+      [
+        "DannigSagaColonisationIV",
+        "Kein einziger der wenigen Überlebenden des gefallenen Kaiserreichs trug Gemmen, wie wir sie bei den Untoten gesehen hatten. Als ich den Umriss einer Gemme in den Dreck malte, setzte eine große Panik ein und wir wurden aus den Bergen verbannt. Als König Cadigan der Dritte dies hörte, verbannte er offiziell die Kristalle und keine durften erworben oder in die Heimat geschickt werden."
+      ],
+      [
+        "DannigSagaDarknessDescendsI",
+        "Als in der Heimat König Cadigan der Vierte den Thron bestieg, waren wir schon zu viele Dörfer, um sie vollständig zu zählen. Dissidenten, Ausgestoßene, religiöse Splittergruppen und verlorene Seelen waren alle gekommen, um sich in einem neuen Land ein neues Leben aufzubauen und keiner von ihnen hegte den Wunsch, sich bei den Rittern zu melden. Diese entlegenen Enklaven litten zuerst unter den neuen Schrecken und das oft still und heimlich, weil sie der Außenwelt gegenüber nicht zugeben wollten, dass sie sich Gefahren gegenüber sahen, mit denen sie nicht alleine fertig werden konnten."
+      ],
+      [
+        "DannigSagaDarknessDescendsII",
+        "Jeder Mann oder jede Frau, die an den Außengrenzen fiel, wurde zu einer neuen untoten Kreatur, die in der Nacht lauerte. Die Triskelion-Flamme hatte den Fluch des Landes nicht aufgehoben, sie hatte ihn nur in Schach gehalten. Die Tode unserer Leute stärkten den Fluch."
+      ],
+      [
+        "DannigSagaDarknessDescendsIII",
+        "Medveds Naturmystiker verkündeten, dass sie einen Atemhauch oder eine Dunstschwade gesehen hatten, die einen Mann bei seinem Tod verließ und nur sichtbar war, wenn diese Mann in der Nähe einer dieser verbotenen Gemmen starb und nur, während der Hauch zu ihr hingezogen wurde. Medved folgerte, dass alle Menschen eine Art von Essenz besitzen mussten, die sich noch dem Verständnis entzog. Wegen dieser Aussage erklärte Uhtred ihn zu einem Gotteslästerer und hatte vor, ihn und seinen Orden in die Randgebiete zu verbannen. Medved zahlte eine hohe Summe, um dem Exil zu entgehen und die Sache wurde beigelegt."
+      ],
+      [
+        "DannigSagaDarknessDescendsIV",
+        "Im Winter jenen Jahres kehrten Karawanen und Boten, die zu den Randgebieten entsendet wurden, nicht mehr zurück. Olroth führte die Ritter der Sonne durch die kalten Wälder und Hügel, um sie zu suchen. Sie fanden heraus, dass die Männer an den Außengrenzen viele der ihren verloren hatten und von bisher unbekannten Schrecken heimgesucht wurden."
+      ],
+      [
+        "DannigSagaDarknessDescendsV",
+        "Olroth und seine Ritter evakuierten die Grenzgebiete und steckten die Wälder dort in Brand. Von den südlichen Flüssen bis zu den Nördlichen Sandwüsten brannte eine riesige Flammenlinie. Niemand wollte über den Grund einer so drastischen Tat reden. Nach seiner Rückkehr vergrößerte Olroth den Einfluss der Triskelion-Flamme, auch wenn die Barriere aus Sternenlicht durch die Ausdehnung auf ein so großes Gebiet viel schwächer sein würde. Es war nötig, um die Dörfer zu schützen. Olroth der Edelmütige zog sich oft in die Einsamkeit zurück und wurde bekannt als Olroth der Grimmige."
+      ],
+      [
+        "DannigSagaOlrothsJournalI",
+        "Was für ein grausamer Frühling dies ist! Zur Dunkelheit des Mondes hat der Augenlose Feind eine weitere der unseren geholt. Sie war eine junge Frau, auserwählt, um nach ihrer zweiten Initiation das Training zur Kriegerin zu beginnen. Viele fielen durch die Gräuel dieses verfluchten Landes in den frühen Tagen, aber ich dachte, wir hätten die Dunkelheit mit unseren Ritualen zur Reinigung bezwungen. \r\n\r\nIch hatte mich geirrt. Das Anbauen unvergifteter Lebensmittel ist nicht dasselbe, wie die Sicherheit vor den Ausgeburten der Nacht zu gewährleisten. Es ist, als ob das Land selbst aus unseren Siegen lernt und Kreaturen hervorbringt, die unsere Verteidigung umgehen. "
+      ],
+      [
+        "DannigSagaOlrothsJournalII",
+        "Medved und seine Naturmystiker haben eine neue Taktik entwickelt, eine Strategie, die ihnen ihr Glaube zuvor verboten hatte. Er beobachtete die Gabe der Schrecken, schnell zu wachsen und sich zu verändern und er wies darauf hin, dass unser Fehler darin lag, die Aufgabe nicht abzuschließen.\r\n\r\nAls wir bis auf die zähesten der missgestalteten Vorniculia alle abgeschlachtet hatten, brachten die Überlebenden mehr von ihrer Art hervor – mit einer angeborenen Tödlichkeit. Um einen echten Sieg zu erringen und unsere wachsenden Städte zu beschützen, müssen wir ganze Bruten auslöschen. Wir müssen ein Stück der Natur vollständig entfernen. Alles andere führt nur dazu, dass sich die Schlinge des Verderbens weiter zuzieht."
+      ],
+      [
+        "DannigSagaOlrothsJournalIII",
+        "Die Vorniculia wurden vollständig vernichtet und werden dieses Land nicht länger mit ihren schädlichen Giften beflecken. Es gibt unzählige andere Geschöpfe der Nacht, die in den Schatten dieses verfluchten Landes lauern, aber auch ein kleiner Sieg ist ein Sieg. Die Fähigkeiten meiner Ritter und Voranas Männern reichten aus, um zu verhindern, dass Leben bei den Waldbränden und in ihrer Hitze verloren gingen. Es ist ein seltener Tag, an dem es keinen Grund zur Trauer gibt.\r\n\r\nMeine Gedanken wenden sich meiner unerfüllten Pflicht zu. Der Augenlose Feind ist der einzige seiner Art, den ich gesehen habe. Ich muss sicherstellen, dass auch er durch Flamme und Schwert aus dieser Welt verschwindet."
+      ],
+      [
+        "DannigSagaOlrothsJournalIV",
+        "Die Hälfte der Ritter der Sonne liegt über die Hügel und Spuren auf der Jagd nach dem Augenlosen Feind verstreut. Ich habe mit meinem Schwert seinen Nacken direkt getroffen, aber die Wunde blutete nicht. Es ist kein Lebewesen. Mit seinen zahllosen, waffengleichen Zähnen schlingt es nicht, um durch das Essen zu überleben, sondern, um sich an den Schreien seiner Opfer zu ergötzen. Ich habe es in den zweifachen Leeren gesehen, die in seinem verrottenden Gesicht sitzen. Es... hat mich angelächelt, ... als es meinen Knappen in zwei Hälften zerbiss.\r\n\r\nDie Flammen der Lebenden fanden keinen Halt. Die Waffen der Lebenden ließen kein Blut fließen. Ich werde gezwungen, das Verbotene zu erwägen. Medved und seine Naturmystiker haben ihre Kardinaltugend beiseite gewischt, um das Überleben hier möglich zu machen und jetzt muss ich das Gleiche tun. Die Männer aus den Bergen haben uns vor den Machtgemmen gewarnt, aber jetzt glaube ich, dass wir keine Wahl haben..."
+      ],
+      [
+        "DannigSagaOlrothsJournalV",
+        "Aufregend! Spannend! Ich wanderte alleine hinaus in die Nacht, mit einem vormals nutzlosen Schwert, dessen Knauf jetzt eine der verbotenen Gemmen zierte. Diesmal kehrte ich mit dem Kopf des Feindes zurück, noch immer mit dem Grinsen des Moments seines endgültigen Todes, nun jedoch besiegt. Die Gemme glühte mit dem Feuer meiner Wut und sandte einen Strahl aus Sternenlicht aus, das aus einem verfehlten Schnitt einen tödlichen Treffer machte. \r\n\r\nWir waren Dummköpfe, weil wir uns diese Macht vorenthielten. Zu viele unserer Leute haben durch diesen Fehler gelitten. Sobald die Morgendämmerung die Spitzen der Bäume berührt, werde ich den überlebenden Rittern der Sonne befehlen, nach weiteren dieser verbotenen Gemmen zu suchen. Es ist an der Zeit, dieses Land zu erobern und für alle Zeiten sicher zu machen. "
+      ],
+      [
+        "DannigSagaTheBrokenCircleI",
+        "In dem Sommer, in dem die Ritter der Sonne begannen, die verbotenen Gemmen auf ihren Waffen und Rüstungen anzubringen, wandte sich Medved von den Druiden des Zirkels an das Volk. \"Die Zukunftsvergangenheit hat sich hinter Wolken versteckt. Die Wahrsage-Teiche in diesem Land sind häufig noch mit blutroten Nebeln behaftet, aber dies ist etwas Neues. Seit der Nacht, in der Olroth alleine auszog, kann ich nicht länger in die Vergangenheit blicken. Und daher ist die Zukunft unbekannt.\" Danach war sein Orden als die Druiden des Gebrochenen Zirkels bekannt."
+      ],
+      [
+        "DannigSagaTheBrokenCircleII",
+        "Eine Frau, das Gesicht von einer Kapuze verhüllt, sprach Medved auf dem Platz an, unter der Pike mit dem Kopf des Augenlosen Feindes. \"Habt Ihr also Euren Glauben verloren, Hoher Druide?\"\r\n\r\nMedved antwortete, \"Ein Mann, der die Vergangenheit nicht studiert, ist gezwungen, sie zu wiederholen. Aber ein Mann, der die Vergangenheit nicht studieren kann, hat überhaupt keine Zukunft. Der Zirkel ist gebrochen.\"\r\n\r\nDie Frau schlug ihre Kapuze zurück und gab sich als Vorana zu erkennen, die Anführerin der Schwarzen Sense. Sie antwortete, \"Dann greift zu den Waffen und wir werden uns einen Weg über die Kluft zwischen Vergangenheit und Zukunft erkämpfen.\"\r\n\r\nMedved nahm ihr Geschenk von zwei Äxten an und begann, seinen Orden für die Schlacht zu trainieren. Die Stiele der beiden Äxte waren mit Gemmen besetzt, die gewaltige Macht verliehen."
+      ],
+      [
+        "DannigSagaTheBrokenCircleIII",
+        "Die Druiden des Gebrochenen Zirkels und die Söldner der Schwarzen Sense führten ihre Truppen in die Grenzgebiete, um den Rittern der Sonne zu helfen, die die Hälfte ihrer Männer auf der Jagd nach dem Augenlosen Feind verloren hatten. Die Barriere aus Sternenlicht war überdehnt und schwach, aber die mit neuer Kraft ausgestatteten Krieger nutzten die Macht der Gemmen, um die nachtschleichenden Schrecken in Schach zu halten. Die Pattsituation bestand für mehrere Jahreszeiten, während derer viele Helden durch ihre Taten berühmt wurden. Annest, die Tochter von Medved und Vorana, wurde zurück in die Heimat geschickt, um in Sicherheit aufzuwachsen. Olroths Sohn, für den die Zeit seiner ersten Initiation fast gekommen war, begleitete sie als ihr Beschützer."
+      ],
+      [
+        "DannigSagaTheBrokenCircleIV",
+        "Furcht kroch durch die Reihen, als das Undenkbare geschah: Unter den Schreckensgestalten erhob sich ein Anführer, fähig zu intelligenten Taten und Zielen. Die Kreaturen begannen dort anzugreifen, wo die Barriere aus Sternenlicht am schwächsten war, oder wo keine Patrouillen marschierten. Von einer furchtbaren Vorahnung ergriffen, die er niemandem mitteilen wollte, schickte Medved einen Boten in die Dunkelheit. Dem Boten wurde es erlaubt, lebendig und mit einem Pergament zurückzukehren. Die darauf geschriebenen Worte schienen die Befürchtungen Medveds zu bestätigen, und er ging hinaus in die Nacht, um den neuen Anführer der Feinde herauszufordern. Er kehrte nicht zurück."
+      ],
+      [
+        "DannigSagaThePriesthoodI",
+        "Zum Zeitpunkt von Medveds Verschwinden hatten die Priester überall Augen und Ohren. Der Hohepriester Uhtred vermutete Verrat und ließ neue Mitglieder heimlich das Kommen und Gehen der anderen Anführer überwachen. Sie fanden heraus, dass, nachdem er den ganzen Tag ohne Unterlass bis zur Erschöpfung gekämpft hatte, Olroth der Grimmige sich in die Abgeschiedenheit zurückzog. Nach einiger Zeit verschwand er dann durch eine andere Tür und schlich, ohne beobachtet zu werden, in die Nacht hinaus. Bei diesen Exkursionen waren seine Augen geschlossen, als ob er schlafen würde."
+      ],
+      [
+        "DannigSagaThePriesthoodII",
+        "Uhtred schmiedete viele verschlagene Pläne und schickte währenddessen seinen Sohn Owen in die Heimat, damit er nicht Ziel einer Vergeltung werden konnte. Eine Wochen nach dem Ende der Ernte wartete ein Dutzend Priester in der abendlichen Kälte vor seinem Turm auf Olroth. Sie hatten Dolche des Sakraments und stachen mit ihnen auf Olroth in seinem schlafwandelnden Zustand ein. Er wurde einundsiebzig Mal verwundet und fiel. Vorana stieß wie ein schwarzer Wind herab und enthauptete die Zwölf mit einem Streich."
+      ],
+      [
+        "DannigSagaThePriesthoodIII",
+        "Olroth wurde auf eine Bahre gelegt und mit Kräutern, Medizin und Bandagen versorgt. Das Volk schrie nach dem Blut der Priesterschaft, aber Uhtred behauptete, nichts von den zwölf Verrätern zu wissen. Der größte Anführer des Volkes lag auf der Schwelle des Todes. Sie umgaben ihn mit Glas, um zu verhindern, dass sein Atem entwich."
+      ],
+      [
+        "DannigSagaThePriesthoodIV",
+        "Eine Frau, das Gesicht von einer Kapuze verhüllt, sprach Uhtred auf dem Platz an, unter der Pike mit dem Kopf des Augenlosen Feindes. \"Was glaubst Du, aus welchem Grund haben Deine Priester Olroth angegriffen?\"\r\n\r\nUhtred antwortete, \"Was glaubst Du, warum sich Olroth in die Dunkelheit davonstahl? Er ist der neue Anführer der missgestalteten Schrecken. Am Tag kämpft er für uns und bei Nacht für sie.\"\r\n\r\nDie Frau schlug ihre Kapuze zurück und gab sich als Vorana zu erkennen, die Anführerin der Schwarzen Sense. Sie antwortete, \"Für diese Worte sollte ich Dich an Ort und Stelle töten.\"\r\n\r\nMit einer Sense an seiner Kehle antwortete Uhtred, \"Töte mich in einer Woche, wenn Du willst. Wenn der Feind Ordnung und Antrieb verliert, während Olroth unter Glas liegt, dann wirst Du die Wahrheit meiner Worte erkennen.\"\r\n\r\nVorana versprach, \"Ich werde Dich an den Kopf des Augenlosen Feindes hier verfüttern, wenn Du Dich irrst.\"\r\n\r\nDann ging sie davon. Der Feind verlor nicht seine Ordnung oder seinen Antrieb in dieser Woche und Uhtred versteckte sich in einer uralten Stätte der Macht."
+      ],
+      [
+        "DannigSagaTheLastToFallI",
+        "In der Woche, in der Vorana ihren Schwur leistete, erhob sich ein neuer Anführer unter den Schrecken. Er führte zwei Äxte und suchte nach den berühmt gewordenen Helden, um sie zu einem Duell herauszufordern. Er tötete zweiundvierzig, einen in jeder Nacht. Als Vorana dieser Abscheulichkeit gegenüber stand, wurde ihr bewusst, dass dies ihr geliebter Medved war, aber sie konnte es nicht glauben. Sie befahl einen vollständigen Rückzug und weigerte sich, die Herausforderung anzunehmen. Zwei Dörfer wurden zerstört. "
+      ],
+      [
+        "DannigSagaTheLastToFallII",
+        "Nachdem sie eingesehen hatte, dass Uhtred im Recht gewesen war, als er schlecht von großen Männern gesprochen hatte, schickte sie Boten, um mit ihm zu reden. Ein Plan wurde geschmiedet, um die Triskelion-Flamme anzurufen und die Barriere aus Sternenlicht zurückzuziehen. Sie sollte ein paar Dörfer vollständig beschützen, anstatt der ganzen Region nur schwachen Schutz zu bieten. "
+      ],
+      [
+        "DannigSagaTheLastToFallIII",
+        "In den Kerndörfern drängten sich die Menschen und die bedrängten Krieger der Ritter der Sonne, der Schwarzen Sense und des Gebrochenen Zirkels hatten sich alle zurückgezogen. Die Barriere aus Sternenlicht wich nicht zurück. Stattdessen verschwand sie. Hastig begab sich Vorana zum Altar der Triskelion-Flamme, aber fand sie nicht vor. Die Schiffe im Hafen waren alle verbrannt und versenkt worden, bis auf eines, das ausgelaufen war. \r\n\r\nSie rief dem Volk zu, \"Uhtred der Verräter hat die Flamme gestohlen!\"\r\n\r\nDie Menschen heulten vor Verzweiflung, als sich die Schrecken von allen Seiten näherten. Ohne die Barriere aus Sternenlicht gab es keinen Schutz. Die Kerndörfer wurden zu einem befestigten Grab, verteidigt mit Mauern und Eisen, aber unentrinnbar. Viele von uns zogen sich zu Olroths Ruhestätte zurück, nur um seinen Glassarg zersplittert vorzufinden. Er hat sich erhoben und wir müssen glauben, dass er dort draußen in der Dunkelheit kämpft, um uns zu retten, egal was Uhtred der Verräter behauptet hat. "
+      ],
+      [
+        "DannigSagaTheLastToFallIV",
+        "Vorana sandte Boten zu den Menschen der Inseln und der Berge, um sie um Hilfe zu bitten, aber ihr Schicksal war unbekannt. Die Verteidiger waren tapfer, aber ohne die Flamme konnte keine neue Nahrung gereinigt werden. Eine Hungersnot brach herein und die Jahreszeiten wollten einfach nicht langsamer vergehen. Dünn und ausgezehrt begriff Vorana, dass Warten den Tod bedeutete. Sie wusste, dass es einen Weg gab, ihre Macht zu vergrößern und so führte sie das verbotene Ritual durch und setzte sich Gemmen in ihr eigenes Fleisch."
+      ],
+      [
+        "DannigSagaTheLastToFallV",
+        "Anschließend erhob sie sich und begab sich jenseits der Mauer, wo jeder große Schwung ihrer Sense dem Tod eine reiche Ernte unter den Nachtschrecken bescherte. Sie hatten ihrer Macht nichts entgegenzusetzen. Sie rief uns zu, \"Ich werde nicht ruhen, bis auch die letzte dieser Abscheulichkeiten tot auf dem Boden liegt!\"\r\n\r\nEinige unter uns glauben, dass sie höchstselbst jedes Monster in diesem verfluchten Land abschlachten kann. Andere sind nicht so idealistisch. Falls Vorana nicht zurückkommt, dann gibt es immer noch einen Ausweg, einen den wir zuvor nicht zu riskieren gewagt haben, versteckt unter der Erde und älter als die Urahnen.... Wir müssen die Hoffnung am Leben halten. Dies ist nicht das Ende für unser Volk in diesem Land. Die Nacht bricht an, aber es wird eine Morgendämmerung geben."
+      ],
+      [
+        "RogNoDealAvailable",
+        "Ich nehme an, dass ich das nicht für Dich einpacken muss."
+      ],
+      [
+        "RogTakeDealRandom",
+        "Kein Grund, das für Dich einzupacken, nehme ich an?"
+      ],
+      [
+        "RogTakeDeal2",
+        "Ich nehme an, dass ich das nicht für Dich einpacken muss."
+      ],
+      [
+        "RogTakeDeal3",
+        "Wir profitieren beide."
+      ],
+      [
+        "RogTakeDeal4",
+        "Wir profitieren beide."
+      ],
+      [
+        "RogTakeDeal5",
+        "Guter Deal."
+      ],
+      [
+        "RogTakeDeal6",
+        "Guter Deal."
+      ],
+      [
+        "RogTakeDeal7",
+        "Hoffentlich hilft das."
+      ],
+      [
+        "RogTakeDeal8",
+        "Ich hoffe, das hilft."
+      ],
+      [
+        "RogTakeDeal9",
+        "Das war's."
+      ],
+      [
+        "RogTakeDeal10",
+        "Das war's."
+      ],
+      [
+        "RogTakeDeal11",
+        "Betrachte dich versorgt und ausgestattet."
+      ],
+      [
+        "RogTakeDeal12",
+        "Betrachte dich versorgt und ausgestattet."
+      ],
+      [
+        "RogTakeDeal13",
+        "Du wirst es sinnvoll nutzen, hoffe ich?"
+      ],
+      [
+        "RogTakeDeal14",
+        "Du wirst es sinnvoll nutzen, hoffe ich?"
+      ],
+      [
+        "RogTakeItemRandom",
+        "So, bitte sehr."
+      ],
+      [
+        "RogTakeItem2",
+        "So, bitte sehr."
+      ],
+      [
+        "RogIntroWitch",
+        "Ich bin Rog. Spezialist für Nachschub und Planung. Ich weiß nicht, wie Du hier draußen alleine überlebt hast, aber ich werde alles tun, um Dich mit meinen Versorgungsfähigkeiten zu unterstützen! Aus dem Rückraum. Weit weg vom Kampf."
+      ],
+      [
+        "RogIntroScion",
+        "Ich bin Rog. Tujen sagte, du würdest hierher kommen. Er sagte, Du seist gebildet, ehrgeizig. Du wirst für das kämpfen, was richtig ist, das weiß ich einfach. Nachschub und Planung sind mein Metier. Ich unterstütze Dich gerne mit meinen Versorgungsfähigkeiten. Möchtest Du ein paar meiner Angebote ansehen?"
+      ],
+      [
+        "RogIntroRanger",
+        "Ich bin Rog. Spezialist für Nachschub und Planung. Ich weiß nicht, wie Du hier draußen alleine überlebt hast, aber ich werde alles tun, um Dich mit meinen Versorgungsfähigkeiten zu unterstützen! Aus dem Rückraum. Weit weg vom Kampf."
+      ],
+      [
+        "RogIntroDuelist",
+        "<if:MS>{Ich bin Rog. Gwennen sagte, Du wärst auf dem Weg hierher! Sie sagte, Du hättest ganz schön was drauf. Du bist die Art von Mann, die sich Monstern mit Tapferkeit und Geschick stellt, oder? Ich selbst ziehe es vor, Kämpfe zu vermeiden. Dieser Kontinent ist voller Gefahren. Nachschub und Planung sind mein Metier, also unterstütze ich Dich gerne im Kampf mit meinen Versorgungsfähigkeiten. Möchtest Du ein paar meiner Angebote ansehen?}<elif:FS>{Ich bin Rog. Gwennen sagte, Du wärst auf dem Weg hierher! Sie sagte, Du hättest ganz schön was drauf. Du bist die Art von Frau, die sich Monstern mit Tapferkeit und Geschick stellt, oder? Ich selbst ziehe es vor, Kämpfe zu vermeiden. Dieser Kontinent ist voller Gefahren. Nachschub und Planung sind mein Metier, also unterstütze ich Dich gerne im Kampf mit meinen Versorgungsfähigkeiten. Möchtest Du ein paar meiner Angebote ansehen?}"
+      ],
+      [
+        "RogIntroShadow",
+        "Ich bin Rog. Spezialist für Nachschub und Planung. Ich weiß nicht, wie Du hier draußen alleine überlebt hast, aber ich werde alles tun, um Dich mit meinen Versorgungsfähigkeiten zu unterstützen! Aus dem Rückraum. Weit weg vom Kampf."
+      ],
+      [
+        "RogIntroTemplar",
+        "Ich bin Rog. Spezialist für Nachschub und Planung. Ich weiß nicht, wie Du hier draußen alleine überlebt hast, aber ich werde alles tun, um Dich mit meinen Versorgungsfähigkeiten zu unterstützen! Aus dem Rückraum. Weit weg vom Kampf."
+      ],
+      [
+        "RogIntroMarauder",
+        "Ich bin Rog. Spezialist für Nachschub und Planung. Ich weiß nicht, wie Du hier draußen alleine überlebt hast, aber ich werde alles tun, um Dich mit meinen Versorgungsfähigkeiten zu unterstützen! Aus dem Rückraum. Weit weg vom Kampf."
+      ],
+      [
+        "RogFirstApproachShoutRandom",
+        "Hallo allerseits!"
+      ],
+      [
+        "RogFirstApproachShout2",
+        "Hallo allerseits!"
+      ],
+      [
+        "RogFirstApproachShout3",
+        "Hallo allerseits!"
+      ],
+      [
+        "RogFirstApproachShout4",
+        "Hallo allerseits!"
+      ],
+      [
+        "RogOfferGenericRandom",
+        "Ich könnte das verbessern, sofern Du möchtest ..."
+      ],
+      [
+        "RogOfferGeneric2",
+        "Ich könnte das verbessern, sofern Du möchtest ..."
+      ],
+      [
+        "RogOfferGeneric3",
+        "Darf ich Dir eine Aufwertung gegen eine geringe Gebühr anbieten?"
+      ],
+      [
+        "RogOfferGeneric4",
+        "Darf ich Dir eine Aufwertung gegen eine geringe Gebühr anbieten?"
+      ],
+      [
+        "RogOfferDialogueWhiteSockets",
+        "Ich könnte mit meinem Messer etwas von der Farbe abkratzen..."
+      ],
+      [
+        "RogOfferDialogueRedSockets",
+        "Vielleicht würde Rot bei Dir besser funktionieren? Ich zerkleinere einfach ein bisschen getrocknetes Dornenwolfherz und trage das Pulver auf."
+      ],
+      [
+        "RogOfferDialogueGreenSockets",
+        "Brauchst Du vielleicht ein wenig Grün darauf? Ich habe eine seltene Säure, die, wie ich festgestellt habe, eine Wirkung auf die merkwürdige Ausrüstung dieses Reichs hat."
+      ],
+      [
+        "RogOfferDialogueBlueSockets",
+        "Das würde mit einem Schuss Blau besser aussehen. Ich habe ein einzigartiges kleines mechanisches Artefakt, das diese Aufgabe erfüllen kann."
+      ],
+      [
+        "RogOfferJewellers",
+        "Vielleicht sollten wir versuchen, mehr Fassungen hinzuzufügen? Du könntest am Ende mehr Plätze für diese ominösen verbotenen Gemmen haben!"
+      ],
+      [
+        "RogOfferFusings",
+        "Habe hier eine Ladung mit Unterkiefern von Gefräßigen Schrecken. Der \"Jahrgang\" ist mir nicht bekannt, aber einen Versuch ist es wert."
+      ],
+      [
+        "RogOfferChaos",
+        "Dies hier müsste generalüberholt werden. Sollen wir einen Versuch starten?"
+      ],
+      [
+        "RogOfferVaal",
+        "Wie sagt man so schön: Man lebt nur einmal! Riskiere etwas!"
+      ],
+      [
+        "RogOfferAddModLucky",
+        "<if:MS>{Es ist Dein Glückstag, Verbannter!}<elif:FS>{Es ist Dein Glückstag, Verbannte!}"
+      ],
+      [
+        "RogOfferRerollSuffixes",
+        "Erlaube mir, dass ich mich mit meinem Runenhammer am unteren Ende zu schaffen mache. Schlimmer kann's sowieso nicht mehr werden, oder?"
+      ],
+      [
+        "RogOfferRerollPrefixes",
+        "Ich habe das Gefühl, wenn ich vom oberen Ende hämmere, könnte ich einige der Verzauberungen ein wenig beeinflussen."
+      ],
+      [
+        "RogOfferMaxOneMod",
+        "Eine kleine geätzte Rune könnte hier eine positive Wirkung haben."
+      ],
+      [
+        "RogOfferDivineAllMods",
+        "Ein paar kleine Runen an den richtigen Stellen könnten hier Wunder bewirken."
+      ],
+      [
+        "RogOfferBlessedOrb",
+        "Das hier ist ein bisschen ramponiert. Ich könnte versuchen, es zu reparieren, aber ich bin kein Schmied."
+      ],
+      [
+        "RogOfferRemoveLowestLevelMod",
+        "Eine sorgfältig angewandte Rune der Annullierung könnte Wunder für die Gesamtqualität dieses Gegenstands bewirken."
+      ],
+      [
+        "RogOfferRemoveXLowestLevelMods",
+        "Das ist ziemlich chaotisch. Soll ich mehrere Runen der Annullierung darauf gravieren?"
+      ],
+      [
+        "RogOfferAddAPrefix",
+        "Etwas ganz Interessantes passiert, wenn man einen Tropfen goldenes Chimärenblut auf einen Gegenstand aufträgt..."
+      ],
+      [
+        "RogOfferAddAPrefixXTimes",
+        "Ich habe kürzlich eine ganze Ladung seltenes goldenes Chimärenblut erhalten. Sollen wir sprichwörtlich \"nach Gold greifen\"?"
+      ],
+      [
+        "RogOfferAddASuffix",
+        "Hast du schon einmal einen Tropfen schwarzes Chimärenblut auf ein Stück Ausrüstung aufgetragen? Ich schon. Das ist es wert, glaub mir."
+      ],
+      [
+        "RogOfferAddASuffixXTimes",
+        "Ich habe heute eine ganze Phiole schwarzes Chimärenblut auf Lager. Könnte sich für Dich voll auszahlen."
+      ],
+      [
+        "RogOffersToAddUpToMaximumMods",
+        "<if:MS>{Ich mag Dich, Verbannter. Deshalb biete ich Dir das beste Angebot an, das es nur für meine Lieblingskunden gibt. Frage mich nur nicht, wie ich das mache!}<elif:FS>{Ich mag Dich, Verbannte. Deshalb biete ich Dir das beste Angebot an, das es nur für meine Lieblingskunden gibt. Frage mich nur nicht, wie ich das mache!}"
+      ],
+      [
+        "RogOfferApplyIncubator",
+        "<if:MS>{Du bist ein Investor. Das sehe ich. Du hast ein Auge für eine langfristige Rendite. Interessiert?}<elif:FS>{Du bist eine Investorin. Das sehe ich. Du hast ein Auge für eine langfristige Rendite. Interessiert?}"
+      ],
+      [
+        "RogOfferApplyCatalyst",
+        "Einer meiner lokalen Kontakte hat etwas katalytischen Staub gefunden, aber er ist auf dem Rückweg gestorben, daher weiß ich nicht, um welche Art es sich handelt. Sollen wir versuchen, Deinen Schmuck zu verbessern? Kann nichts Schlimmes passieren ... glaube ich."
+      ],
+      [
+        "RogOfferTwentyQuality",
+        "<if:MS>{Dannig sagt, ich muss Dir was aufschwatzen. Gib nicht mir die Schuld, sondern ihm. Es ist nur der Job. Wie wär's, <i>{Freund?}}<elif:FS>{Dannig sagt, ich muss Dir was aufschwatzen. Gib nicht mir die Schuld, sondern ihm. Es ist nur der Job. Wie wär's, <i>{Freundin?}}"
+      ],
+      [
+        "RogOfferAnoint",
+        "Ich habe etwas exotisches Öl, das kurz davor ist, schlecht zu werden. Es hier billig zu verwenden, scheint mir besser, als es verkommen zu lassen. Interessiert?"
+      ],
+      [
+        "RogRerollInventoryRandom",
+        "Ich habe immer mehr davon."
+      ],
+      [
+        "RogRerollInventory2",
+        "Ich habe immer mehr davon."
+      ],
+      [
+        "RogRerollInventory3",
+        "Ich habe immer mehr davon."
+      ],
+      [
+        "RogRerollInventory4",
+        "Du willst die besten Angebote, wie ich sehe."
+      ],
+      [
+        "RogRerollInventory5",
+        "Du willst die besten Angebote, wie ich sehe."
+      ],
+      [
+        "RogRerollInventory6",
+        "Du willst die besten Angebote, wie ich sehe."
+      ],
+      [
+        "RogRerollInventory7",
+        "Das hab ich noch auf Lager."
+      ],
+      [
+        "RogRerollInventory8",
+        "Das hab ich noch auf Lager."
+      ],
+      [
+        "RogRerollInventory9",
+        "Das hab ich noch auf Lager."
+      ],
+      [
+        "RogRerollInventory10",
+        "Ich werde eine Figur von Dir aus diesem Schrott machen."
+      ],
+      [
+        "RogSubsequentApproachShoutRandom",
+        "Du bist am Leben!"
+      ],
+      [
+        "RogSubsequentApproachShout2",
+        "Du bist am Leben!"
+      ],
+      [
+        "RogSubsequentApproachShout3",
+        "Du bist am Leben!"
+      ],
+      [
+        "RogSubsequentApproachShout4",
+        "Ich habe noch eines für Dich!"
+      ],
+      [
+        "RogSubsequentApproachShout5",
+        "Ich habe noch eines für Dich!"
+      ],
+      [
+        "RogSubsequentApproachShout6",
+        "Ich habe noch eines für Dich!"
+      ],
+      [
+        "RogSubsequentApproachShout7",
+        "Schnell, es sind Monster unterwegs!"
+      ],
+      [
+        "RogSubsequentApproachShout8",
+        "Schnell, es sind Monster unterwegs!"
+      ],
+      [
+        "RogSubsequentApproachShout9",
+        "Schnell, es sind Monster unterwegs!"
+      ],
+      [
+        "RogHitsDetonatorRandom",
+        "Ich sprenge sie, festhalten!"
+      ],
+      [
+        "RogHitsDetonator2",
+        "Ich sprenge sie, festhalten!"
+      ],
+      [
+        "RogHitsDetonator3",
+        "Ich sprenge sie, festhalten!"
+      ],
+      [
+        "RogOrdersHirelingHitDetonatorRandom",
+        "Jemand muss den Zünder betätigen!"
+      ],
+      [
+        "RogOrdersHirelingHitDetonator2",
+        "Jemand muss den Zünder betätigen!"
+      ],
+      [
+        "RogBombPlacedGenericRandom",
+        "Gute Stelle!"
+      ],
+      [
+        "RogBombPlacedGeneric2",
+        "Gute Stelle!"
+      ],
+      [
+        "RogBombPlacedMonstersRandom",
+        "Da lauern Monster ..."
+      ],
+      [
+        "RogBombPlacedMonsters2",
+        "Da lauern Monster ..."
+      ],
+      [
+        "RogBombPlacedMonsters3",
+        "Davon würde ich absehen."
+      ],
+      [
+        "RogBombPlacedMonsters4",
+        "Davon würde ich absehen."
+      ],
+      [
+        "RogBombPlacedMonsters5",
+        "Das wird die Toten wecken."
+      ],
+      [
+        "RogBombPlacedMonsters6",
+        "Das wird die Toten wecken."
+      ],
+      [
+        "RogBombPlacedRemnantRandom",
+        "Ich hoffe, Du weißt, was Du tust!"
+      ],
+      [
+        "RogBombPlacedRemnant2",
+        "Ich hoffe, Du weißt, was Du tust!"
+      ],
+      [
+        "RogBombPlacedRemnant3",
+        "Scheint riskant zu sein!"
+      ],
+      [
+        "RogBombPlacedRemnant4",
+        "Scheint riskant zu sein!"
+      ],
+      [
+        "RogBombPlacedRemnant5",
+        "Bist Du Dir mit der Platzierung sicher?"
+      ],
+      [
+        "RogBombPlacedRemnant6",
+        "Bist Du Dir mit der Platzierung sicher?"
+      ],
+      [
+        "RogBombPlacedTreasureRandom",
+        "Ich frage mich, was Du ausgraben wirst ..."
+      ],
+      [
+        "RogBombPlacedTreasure2",
+        "Ich frage mich, was Du ausgraben wirst ..."
+      ],
+      [
+        "RogBombPlacedTreasure3",
+        "Ja, geh auf Schatzsuche!"
+      ],
+      [
+        "RogBombPlacedTreasure4",
+        "Ja, geh auf Schatzsuche!"
+      ],
+      [
+        "RogBombPlacedTreasure5",
+        "Hoffentlich förderst Du einige antike Figuren zu Tage!"
+      ],
+      [
+        "RogBombPlacedTreasure6",
+        "Hoffentlich förderst Du einige antike Figuren zu Tage!"
+      ],
+      [
+        "RogAllBombsPlacedRandom",
+        "Bereit?"
+      ],
+      [
+        "RogAllBombsPlaced2",
+        "Bereit?"
+      ],
+      [
+        "RogAllBombsPlaced3",
+        "Das waren alle."
+      ],
+      [
+        "RogAllBombsPlaced4",
+        "Das waren alle."
+      ],
+      [
+        "RogAllBombsPlaced5",
+        "Zeit für die Detonation?"
+      ],
+      [
+        "RogAllBombsPlaced6",
+        "Zeit für die Detonation?"
+      ],
+      [
+        "RogCombatLineRandom",
+        "Nein!"
+      ],
+      [
+        "RogCombatLine2",
+        "Nein!"
+      ],
+      [
+        "RogCombatLine3",
+        "Halt Dich fern!"
+      ],
+      [
+        "RogCombatLine4",
+        "Halt Dich fern!"
+      ],
+      [
+        "RogCombatLine5",
+        "Hilf mir!"
+      ],
+      [
+        "RogCombatLine6",
+        "Hilf mir!"
+      ],
+      [
+        "RogCombatLine7",
+        ""
+      ],
+      [
+        "RogCombatLine8",
+        ""
+      ],
+      [
+        "RogCombatLine9",
+        "Fass mich nicht an!"
+      ],
+      [
+        "RogCombatLine10",
+        "Fass mich nicht an!"
+      ],
+      [
+        "RogPartingShout",
+        "Vielleicht triffst Du Dannig als Nächstes. Ich werde ihn über Dich informieren."
+      ],
+      [
+        "RogGossipTujen",
+        "Er ist der loyalste Freund, den man je finden wird. Er würde es nie zugeben, aber alle seine Narben und Verletzungen sind das Ergebnis davon, dass er für einen von uns in die Bresche sprang. Eigentlich sollte Gwennen halb verstümmelt sein und mir ein Bein fehlen... aber Tujen sprang dazwischen. Ich fühle mich nur sicher genug, meinen Job zu machen, weil er in der Nähe ist."
+      ],
+      [
+        "RogGossipGwennen",
+        "<if:MS>{Sie wird Dich niemals anlügen, Verbannter. Interpretiere das, wie Du willst.}<elif:FS>{Sie wird Dich niemals anlügen, Verbannte. Interpretiere das, wie du willst.}"
+      ],
+      [
+        "RogGossipDannig",
+        "Unser charismatischer Anführer ist ein Mann, der seiner Position würdig ist. Er übernimmt die Front, die Führung. Ich ziehe es vor, die Dinge aus sicherer Entfernung zu unterstützen, und er, der großartige Mann, der er ist, lässt mich das tun. Ich war auf vielen Missionen und Feldzügen, und sie versuchen immer wieder, mich zu bewaffnen und für den Kampf auszubilden, und sagen mir, dass dies der einzige Weg sei, um Ruhm zu erlangen... aber ich will der erste berühmte Nachschubmeister der Welt sein. Dieser Rog, werden sie sagen, hat Essen und Trinken und Ausrüstung so schnell und zuverlässig herbeigeschafft, dass es die Krieger auf beiden Seiten verblüffte und half, den Sieg davonzutragen. Dannig sagt mir, dass dies ein würdiger Traum ist, den ich verfolgen sollte. Er ist ein guter Freund."
+      ],
+      [
+        "RogGossipTheKing",
+        "Oh ... ich ... bitte frage mich nicht nach ihm. Er ist der König der Kalguur, und es gibt verschiedene Ebenen des Respekts, die ihm gebühren... sollten wir von ihm sprechen. Wenn wir ihn nicht respektieren ... <i>{wird er es merken.}"
+      ],
+      [
+        "RogGossipTheOrderOfTheChalice",
+        "Ich bin durch Ehre verpflichtet, das Schicksal von Uhtred und das des Ordens des Kelches zu ergründen. Ich tausche gegen alle Reliquien mit ihren Zeichen und Runen, die Du findest. Sie waren die Erste Priesterschaft und der Orden, der mit den ersten Schiffen nach Wraeclast kam. Sie interpretierten die Sterne und das Wirken geheimnisvoller Kräfte, wie Alchemie, Maschinen und Runen. Ich wollte schon immer dem Orden beitreten. Mir gefällt die Vorstellung, meine Tage abgeschieden in einem Labor zu verbringen und zu forschen."
+      ],
+      [
+        "RogGossipUhtred",
+        "Vor Tausenden von Jahren, stellte die letzte in der Heimat angekommene Kunde Uhtred in einem ziemlich negativen Licht dar. Manche nannten ihn einen Verräter, aber Details waren spärlich und vage. Ich bin hier, um seinen Namen reinzuwaschen ... oder ihn zu verdammen. Die Wahrheit steht über allem."
+      ],
+      [
+        "RogGossipUhtredAndStory",
+        "<if:MS>{Es klingt sicherlich so, als wäre Uhtred tatsächlich ein Verräter gewesen, aber ich habe das Gefühl, dass die Geschichte noch nicht vollständig ist. Würdest Du den Rest herausfinden, bevor ich die Kunde nach Hause schicke, Verbannter? Es ist ... eine wichtige Angelegenheit für mich.}<elif:FS>{Es klingt sicherlich so, als wäre Uhtred tatsächlich ein Verräter gewesen, aber ich habe das Gefühl, dass die Geschichte noch nicht vollständig ist. Würdest Du den Rest herausfinden, bevor ich die Kunde nach Hause schicke, Verbannte? Es ist ... eine wichtige Angelegenheit für mich.}"
+      ],
+      [
+        "RogGossipUhtredDefeatedStoryIncomplete",
+        "Uhtred wurde endlich zur Strecke gebracht? Ich verstehe. Wenigstens haben wir die Leiden eines unserer alten Helden beendet. Ich stamme von Owen ab, dem Sohn, den Uhtred in Sicherheit schickte. Es beruhigt mich zu wissen, dass einer meiner Vorfahren nicht in der Dunkelheit weiter leiden muss."
+      ],
+      [
+        "RogGossipUhtredDefeatedStoryComplete",
+        "Wenn Uhtred die Triskelion-Flamme nicht hatte, dann war er kein Verräter. Er hat viele fragwürdige Taten begangen, sicher, aber soweit ich das beurteile, geschah dies aus guten Gründen. Ich werde das, was Du gesammelt hast, zurück in die Heimat schicken, um sicherzustellen, dass sein Name geehrt und nicht verhöhnt wird.\r\n\r\nDanke, mein Freund. Du hast ein Stück unserer Geschichte erhellt ... meiner Geschichte, um genau zu sein. Ich stamme von Owen ab, dem Sohn, den Uhtred in Sicherheit schickte. Du hast einen schwarzen Fleck in unserem Stammbaum beseitigt. Das könnte das Machtgleichgewicht in der Heimat verändern ..."
+      ],
+      [
+        "RogGossipOlrothAndUhtredDefeatedStoryComplete",
+        "<if:MS>{Dannig hat uns erzählt, dass Du Olroth begegnet bist und ihr ihn gemeinsam besiegt habt! Ein Kampf für die Ewigkeit, kein Zweifel!\r\n\r\nDoch ich bleibe verwirrt. Wenn Uhtred die Triskelion-Flamme nicht hatte, dann muss Olroth sie gestohlen haben. Dannig besteht darauf, dass Olroth die Flamme nicht hatte, also ... wer stahl sie? Wer verbrannte die Boote und segelte an jenem letzten schicksalhaften Tag fort? Etwas stimmt da nicht. Ich habe da ein ganz komisches Gefühl, Verbannter. Es hinterlässt in mir eine ungute Vorahnung, dass sich jemand oder <i>{etwas} durch diese Ereignisse bewegt hat, ohne eine Spur zu hinterlassen. Es erinnert mich daran, dass wir nur kleine Fetzen des wahren Bildes haben, und dass unsere Geschichte nur das ist, was wir uns gegenseitig erzählen. Wir haben nicht <i>{die} Wahrheit zu Tage gefördert, nur <i>{eine} Wahrheit, und ich bin erschüttert und isoliert von meinen Vorfahren.\r\n\r\nAlles, was wir tun können, ist, weiterzumachen, mein Freund.}<elif:FS>{Dannig hat uns erzählt, dass Du Olroth begegnet bist und ihr ihn gemeinsam besiegt habt! Ein Kampf für die Ewigkeit, kein Zweifel!\r\n\r\nDoch ich bleibe verwirrt. Wenn Uhtred die Triskelion-Flamme nicht hatte, dann muss Olroth sie gestohlen haben. Dannig besteht darauf, dass Olroth die Flamme nicht hatte, also ... wer stahl sie? Wer verbrannte die Boote und segelte an jenem letzten schicksalhaften Tag fort? Etwas stimmt da nicht. Ich habe da ein ganz komisches Gefühl, Verbannte. Es hinterlässt in mir eine ungute Vorahnung, dass sich jemand oder <i>{etwas} durch diese Ereignisse bewegt hat, ohne eine Spur zu hinterlassen. Es erinnert mich daran, dass wir nur kleine Fetzen des wahren Bildes haben, und dass unsere Geschichte nur das ist, was wir uns gegenseitig erzählen. Wir haben nicht <i>{die} Wahrheit zu Tage gefördert, nur <i>{eine} Wahrheit, und ich bin erschüttert und isoliert von meinen Vorfahren.\r\n\r\nAlles, was wir tun können, ist, weiterzumachen, meine Freundin.}"
+      ],
+      [
+        "RogReopenDealRandom",
+        "Unser Geschäft bleibt eine Option."
+      ],
+      [
+        "RogReopenDeal2",
+        "Unser Geschäft bleibt eine Option."
+      ],
+      [
+        "RogReopenDeal3",
+        "Unser Geschäft bleibt eine Option."
+      ],
+      [
+        "VoranaEmerge",
+        "Ich werde nicht ruhen, bis dieses Land gesäubert ist!"
+      ],
+      [
+        "VoranaPerishRandom",
+        "Stirb!"
+      ],
+      [
+        "VoranaPerish2",
+        "Stirb!"
+      ],
+      [
+        "VoranaPerish3",
+        "Stirb!"
+      ],
+      [
+        "VoranaDeathWindRandom",
+        "Todeswind!"
+      ],
+      [
+        "VoranaDeathWindRandom2",
+        "Todeswind!"
+      ],
+      [
+        "VoranaDeathWindRandom3",
+        "Todeswind!"
+      ],
+      [
+        "VoranaFallBeforeMeRandom",
+        "Falle vor mir nieder!"
+      ],
+      [
+        "VoranaFallBeforeMe2",
+        "Falle vor mir nieder!"
+      ],
+      [
+        "VoranaFallBeforeMe3",
+        "Falle vor mir nieder!"
+      ],
+      [
+        "VoranaCutYouDownRandom",
+        "Ich werde dich niedermähen!"
+      ],
+      [
+        "VoranaCutYouDown2",
+        "Ich werde dich niedermähen!"
+      ],
+      [
+        "VoranaCutYouDown3",
+        "Ich werde dich niedermähen!"
+      ],
+      [
+        "VoranaForTheKingRandom",
+        "Für den König!"
+      ],
+      [
+        "VoranaForTheKing2",
+        "Für den König!"
+      ],
+      [
+        "VoranaForTheKing3",
+        "Für den König!"
+      ],
+      [
+        "VoranaToTheDeathRandom",
+        "Bis zum Tod!"
+      ],
+      [
+        "VoranaToTheDeath2",
+        "Bis zum Tod!"
+      ],
+      [
+        "VoranaToTheDeath3",
+        "Bis zum Tod!"
+      ],
+      [
+        "VoranaCullRandom",
+        "Töten!"
+      ],
+      [
+        "VoranaCull2",
+        "Töten!"
+      ],
+      [
+        "VoranaCull3",
+        "Töten!"
+      ],
+      [
+        "VoranaCull4",
+        "Töten!"
+      ],
+      [
+        "VoranaCull5",
+        "Töten!"
+      ],
+      [
+        "VoranaReapRandom",
+        "Zerfleischen!"
+      ],
+      [
+        "VoranaReap2",
+        "Zerfleischen!"
+      ],
+      [
+        "VoranaReap3",
+        "Zerfleischen!"
+      ],
+      [
+        "VoranaReap4",
+        "Zerfleischen!"
+      ],
+      [
+        "VoranaReap5",
+        "Zerfleischen!"
+      ],
+      [
+        "VoranaReap6",
+        "Zerreißen!"
+      ],
+      [
+        "VoranaReap7",
+        "Zerreißen!"
+      ],
+      [
+        "VoranaReap8",
+        "Zerreißen!"
+      ],
+      [
+        "VoranaReap9",
+        "Zerreißen!"
+      ],
+      [
+        "VoranaReap10",
+        "Schwarze Sense!"
+      ],
+      [
+        "VoranaReap11",
+        "Schwarze Sense!"
+      ],
+      [
+        "VoranaReap12",
+        "Schwarze Sense!"
+      ],
+      [
+        "VoranaDefeatRandom",
+        "Was ist aus mir geworden...?"
+      ],
+      [
+        "VoranaDefeat2",
+        "Die Sterne... bringen nur Unheil..."
+      ],
+      [
+        "VoranaDefeat3",
+        "Die Sterne... bringen nur Unheil..."
+      ],
+      [
+        "VoranaDefeat4",
+        "Medved..."
+      ],
+      [
+        "VoranaDefeat5",
+        "Medved..."
+      ],
+      [
+        "VoranaScytheRandom",
+        "Sense!"
+      ],
+      [
+        "VoranaScythe2",
+        "Sense!"
+      ],
+      [
+        "VoranaScythe3",
+        "Sense!"
+      ],
+      [
+        "VoranaScythe4",
+        "Sense!"
+      ],
+      [
+        "VoranaDarkScytheRandom",
+        "Dunkle Sense!"
+      ],
+      [
+        "VoranaDarkScythe2",
+        "Dunkle Sense!"
+      ],
+      [
+        "VoranaDarkScythe3",
+        "Dunkle Sense!"
+      ],
+      [
+        "VoranaDarkScythe4",
+        "Dunkle Sense!"
+      ],
+      [
+        "VoranaBloodreapRandom",
+        "Bluternte!"
+      ],
+      [
+        "VoranaBloodreap2",
+        "Bluternte!"
+      ],
+      [
+        "VoranaBloodreap3",
+        "Bluternte!"
+      ],
+      [
+        "VoranaBloodreap4",
+        "Bluternte!"
+      ],
+      [
+        "VoranaColdIronRandom",
+        "Kaltes Eisen!"
+      ],
+      [
+        "VoranaColdIron2",
+        "Kaltes Eisen!"
+      ],
+      [
+        "VoranaColdIron3",
+        "Kaltes Eisen!"
+      ],
+      [
+        "VoranaMedvedRandom",
+        "Medved..."
+      ],
+      [
+        "VoranaMedved2",
+        "Medved..."
+      ],
+      [
+        "VoranaTheStarsRandom",
+        "Die Sterne... bringen nur Unheil..."
+      ],
+      [
+        "VoranaTheStars2",
+        "Die Sterne... bringen nur Unheil..."
+      ],
+      [
+        "UhtredFourOrbAttackRandom",
+        "Zwecklos!"
+      ],
+      [
+        "UhtredFourOrbAttack1",
+        "Zwecklos!"
+      ],
+      [
+        "UhtredFourOrbAttack2",
+        "Zwecklos!"
+      ],
+      [
+        "UhtredFourOrbAttack3",
+        "Zwecklos!"
+      ],
+      [
+        "UhtredDeathRandom",
+        "Der Tod ist... kein Entkommen..."
+      ],
+      [
+        "UhtredDeath1",
+        "Der Tod ist... kein Entkommen..."
+      ],
+      [
+        "UhtredDeath2",
+        "Olroth... lebt..."
+      ],
+      [
+        "UhtredDeath3",
+        "Olroth... lebt..."
+      ],
+      [
+        "UhtredDiveRandom",
+        "Fürchte den Kosmos!"
+      ],
+      [
+        "UhtredDive1",
+        "Fürchte den Kosmos!"
+      ],
+      [
+        "UhtredDive2",
+        "Die Sterne verraten uns!"
+      ],
+      [
+        "UhtredDive3",
+        "Die Sterne verraten uns!"
+      ],
+      [
+        "UhtredDive4",
+        "Wir sind nichts."
+      ],
+      [
+        "UhtredDive5",
+        "Wir sind nichts."
+      ],
+      [
+        "UhtredIntro",
+        "Ich habe darüber hinaus gesehen!"
+      ],
+      [
+        "UhtredOBeamRandom",
+        "Kein Entrinnen!"
+      ],
+      [
+        "UhtredOBeam1",
+        "Kein Entrinnen!"
+      ],
+      [
+        "UhtredOBeam2",
+        "Kein Entrinnen!"
+      ],
+      [
+        "UhtredSweepRandom",
+        "Gib nach!"
+      ],
+      [
+        "UhtredSweep1",
+        "Gib nach!"
+      ],
+      [
+        "UhtredSweep2",
+        "Gib nach!"
+      ],
+      [
+        "UhtredDefiantRandom",
+        "Trotziger Welpe!"
+      ],
+      [
+        "UhtredDefiant1",
+        "Trotziger Welpe!"
+      ],
+      [
+        "UhtredDefiant2",
+        "Trotziger Welpe!"
+      ],
+      [
+        "UhtredDefiant3",
+        "Trotziger Welpe!"
+      ],
+      [
+        "GwennenIntroWitch",
+        "Jetzt, wo wir eine Gelegenheit haben, ohne Sprengstoff und Monster um uns herum zu reden... Ich bin Gwennen. Glück ist mein Spiel. Aber es ist kein Spiel. Es ist eine todernste Sache. Du musst daran glauben, dass Du gewinnst, oder Du wirst es nicht. Das ist die Natur dieses Lebens, verstehst Du? Es ist das, was Du daraus machst. Wenn du also mit mir spielst, sei Dir bewusst, dass es Deine Schuld ist, wenn Du verlierst. Du hast nur nicht fest genug daran geglaubt."
+      ],
+      [
+        "GwennenIntroScion",
+        "Jetzt, wo wir eine Gelegenheit haben, ohne Sprengstoff und Monster um uns herum zu reden... Ich bin Gwennen. Glück ist mein Spiel. Aber es ist kein Spiel. Es ist eine todernste Sache. Du musst daran glauben, dass Du gewinnst, oder Du wirst es nicht. Das ist die Natur dieses Lebens, verstehst Du? Es ist das, was Du daraus machst. Wenn Du also mit mir spielst, sei Dir bewusst, dass es Deine Schuld ist, wenn Du verlierst. Du hast nur nicht fest genug daran geglaubt."
+      ],
+      [
+        "GwennenIntroRanger",
+        "Du bist eine Frau mit eiserner Entschlossenheit. Das kann ich bestätigen. Ich bin Gwennen. Ich habe auch etwas, an das ich inbrünstig glaube, aber meine Religion ist das Glück. Ich stürzte mich kopfüber in die Gefahr, weil ich es so wollte, ohne Rücksicht auf Befehle, und ich wette, bei Dir ist es genauso. Wenn Deine Handlungen und Überzeugungen übereinstimmen, kannst Du alles tun. Sogar beim Glücksspiel gewinnen. Und ich wette, das wirst Du auch. Willst Du Dein Glück versuchen?"
+      ],
+      [
+        "GwennenIntroDuelist",
+        "Jetzt, wo wir eine Gelegenheit haben, ohne Sprengstoff und Monster um uns herum zu reden... Ich bin Gwennen. Glück ist mein Spiel. Aber es ist kein Spiel. Es ist eine todernste Sache. Du musst daran glauben, dass Du gewinnst, oder Du wirst es nicht. Das ist die Natur dieses Lebens, verstehst Du? Es ist das, was Du daraus machst. Wenn Du also mit mir spielst, sei Dir bewusst, dass es Deine Schuld ist, wenn Du verlierst. Du hast nur nicht fest genug daran geglaubt."
+      ],
+      [
+        "GwennenIntroShadow",
+        "Jetzt, wo wir eine Gelegenheit haben, ohne Sprengstoff und Monster um uns herum zu reden... Ich bin Gwennen. Glück ist mein Spiel. Aber es ist kein Spiel. Es ist eine todernste Sache. Du musst daran glauben, dass Du gewinnst, oder Du wirst es nicht. Das ist die Natur dieses Lebens, verstehst Du? Es ist das, was Du daraus machst. Wenn Du also mit mir spielst, sei Dir bewusst, dass es Deine Schuld ist, wenn Du verlierst. Du hast nur nicht fest genug daran geglaubt."
+      ],
+      [
+        "GwennenIntroTemplar",
+        "Ich erkenne einen Mann des Glaubens auf jedem Kontinent. Ich bin Gwennen. Ich bin einer Sache verpflichtet, wie Du, aber meine Religion ist das Glück. Ich habe tödliche Situationen überstanden, die ich nicht hätte überleben dürfen, nur weil ich wusste, dass ich es schaffen würde. Ich nehme an, das gilt auch Dich und Deine Gebete. Dieses Leben ist das, was wir daraus machen. Ich wette, ich werde bei unseren Transaktionen verlieren, da Du beten wirst, während Du spielst. Ich halte es nicht für Betrug. Ich halte es für bewundernswert. Wir werden gut miteinander auskommen."
+      ],
+      [
+        "GwennenIntroMarauder",
+        "Jetzt, wo wir eine Gelegenheit haben, ohne Sprengstoff und Monster um uns herum zu reden... Ich bin Gwennen. Glück ist mein Spiel. Aber es ist kein Spiel. Es ist eine todernste Sache. Du musst daran glauben, dass Du gewinnst, oder Du wirst es nicht. Das ist die Natur dieses Lebens, verstehst Du? Es ist das, was Du daraus machst. Wenn Du also mit mir spielst, sei Dir bewusst, dass es Deine Schuld ist, wenn Du verlierst. Du hast nur nicht fest genug daran geglaubt."
+      ],
+      [
+        "GwennenRerollInventoryRandom",
+        "Ich habe noch ein paar mehr."
+      ],
+      [
+        "GwennenRerollInventory2",
+        "Ich habe noch ein paar mehr."
+      ],
+      [
+        "GwennenRerollInventory3",
+        "Ich habe noch ein paar mehr."
+      ],
+      [
+        "GwennenRerollInventory4",
+        "Vielleicht mische ich die einfach und sage Dir, dass sie anders sind."
+      ],
+      [
+        "GwennenRerollInventory5",
+        "Vielleicht mische ich die einfach und sage Dir, dass sie anders sind."
+      ],
+      [
+        "GwennenRerollInventory6",
+        "Vielleicht mische ich die einfach und sage Dir, dass sie anders sind."
+      ],
+      [
+        "GwennenRerollInventory7",
+        "Was habe ich sonst noch? Hmm..."
+      ],
+      [
+        "GwennenRerollInventory8",
+        "Was habe ich sonst noch? Hmm..."
+      ],
+      [
+        "GwennenRerollInventory9",
+        "Was habe ich sonst noch? Hmm..."
+      ],
+      [
+        "GwennenApproachShoutRandom",
+        "<if:MS>{Nochmals Hallo, Einheimischer!}<elif:FS>{Nochmals Hallo, Einheimische!}"
+      ],
+      [
+        "GwennenApproachShout2",
+        "<if:MS>{Nochmals Hallo, Einheimischer!}<elif:FS>{Nochmals Hallo, Einheimische!}"
+      ],
+      [
+        "GwennenApproachShout3",
+        "<if:MS>{Nochmals Hallo, Einheimischer!}<elif:FS>{Nochmals Hallo, Einheimische!}"
+      ],
+      [
+        "GwennenApproachShout4",
+        "Heute ist mein Glückstag!"
+      ],
+      [
+        "GwennenApproachShout5",
+        "Heute ist mein Glückstag!"
+      ],
+      [
+        "GwennenApproachShout6",
+        "Heute ist mein Glückstag!"
+      ],
+      [
+        "GwennenApproachShout7",
+        "Endlich! Komm schon!"
+      ],
+      [
+        "GwennenApproachShout8",
+        "Endlich! Komm schon!"
+      ],
+      [
+        "GwennenApproachShout9",
+        "Endlich! Komm schon!"
+      ],
+      [
+        "GwennenDetonatingRandom",
+        "Ich hab's im Griff!"
+      ],
+      [
+        "GwennenDetonating2",
+        "Ich hab's im Griff!"
+      ],
+      [
+        "GwennenDetonating3",
+        "Ich hab's im Griff!"
+      ],
+      [
+        "GwennenOrderHirelingDetonateRandom",
+        "Mach schon!"
+      ],
+      [
+        "GwennenOrderHirelingDetonate2",
+        "Mach schon!"
+      ],
+      [
+        "GwennenOrderHirelingDetonate3",
+        "Mach schon!"
+      ],
+      [
+        "GwennenBombPlacedGenericRandom",
+        "Ein Glückstreffer."
+      ],
+      [
+        "GwennenBombPlacedGeneric2",
+        "Ein Glückstreffer."
+      ],
+      [
+        "GwennenBombPlacedGeneric3",
+        "Ein Glückstreffer."
+      ],
+      [
+        "GwennenBombPlacedMonstersRandom",
+        "Dann auf in den Kampf."
+      ],
+      [
+        "GwennenBombPlacedMonsters2",
+        "Dann auf in den Kampf."
+      ],
+      [
+        "GwennenBombPlacedMonsters3",
+        "Dann auf in den Kampf."
+      ],
+      [
+        "GwennenBombPlacedMonsters4",
+        "Weckst Du die Toten absichtlich auf?"
+      ],
+      [
+        "GwennenBombPlacedMonsters5",
+        "Weckst Du die Toten absichtlich auf?"
+      ],
+      [
+        "GwennenBombPlacedMonsters6",
+        "Weckst Du die Toten absichtlich auf?"
+      ],
+      [
+        "GwennenBombPlacedMonsters7",
+        "Jetzt geht's los..."
+      ],
+      [
+        "GwennenBombPlacedMonsters8",
+        "Jetzt geht's los..."
+      ],
+      [
+        "GwennenBombPlacedMonsters9",
+        "Jetzt geht's los..."
+      ],
+      [
+        "GwennenBombPlacedRiskRandom",
+        "Ja! Ein wenig Nervenkitzel schadet nie!"
+      ],
+      [
+        "GwennenBombPlacedRisk2",
+        "Ja! Ein wenig Nervenkitzel schadet nie!"
+      ],
+      [
+        "GwennenBombPlacedRisk3",
+        "Ja! Ein wenig Nervenkitzel schadet nie!"
+      ],
+      [
+        "GwennenBombPlacedRisk4",
+        "Spielen wir mit unserem Leben? Hahaha!"
+      ],
+      [
+        "GwennenBombPlacedRisk5",
+        "Spielen wir mit unserem Leben? Hahaha!"
+      ],
+      [
+        "GwennenBombPlacedRisk6",
+        "Spielen wir mit unserem Leben! Hahaha!"
+      ],
+      [
+        "GwennenBombPlacedRisk7",
+        "Wer nicht wagt, der nicht gewinnt."
+      ],
+      [
+        "GwennenBombPlacedRisk8",
+        "Wer nicht wagt, der nicht gewinnt."
+      ],
+      [
+        "GwennenBombPlacedRisk9",
+        "Wer nicht wagt, der nicht gewinnt."
+      ],
+      [
+        "GwennenBombPlacedTreasureRandom",
+        "Ich würde niemals Nein zu einem Schatz sagen."
+      ],
+      [
+        "GwennenBombPlacedTreasure2",
+        "Ich würde niemals Nein zu einem Schatz sagen."
+      ],
+      [
+        "GwennenBombPlacedTreasure3",
+        "Ich würde niemals Nein zu einem Schatz sagen."
+      ],
+      [
+        "GwennenBombPlacedTreasure4",
+        "In diesem Schatz könnte alles sein!"
+      ],
+      [
+        "GwennenBombPlacedTreasure5",
+        "In diesem Schatz könnte alles sein!"
+      ],
+      [
+        "GwennenBombPlacedTreasure6",
+        "In diesem Schatz könnte alles sein!"
+      ],
+      [
+        "GwennenBombPlacedTreasure7",
+        "Jackpot!"
+      ],
+      [
+        "GwennenBombPlacedTreasure8",
+        "Jackpot!"
+      ],
+      [
+        "GwennenBombPlacedTreasure9",
+        "Jackpot!"
+      ],
+      [
+        "GwennenAllBombsPlacedRandom",
+        "Bereit!"
+      ],
+      [
+        "GwennenAllBombsPlaced2",
+        "Bereit!"
+      ],
+      [
+        "GwennenAllBombsPlaced3",
+        "Bereit!"
+      ],
+      [
+        "GwennenAllBombsPlaced4",
+        "Gib den Befehl!"
+      ],
+      [
+        "GwennenAllBombsPlaced5",
+        "Gib den Befehl!"
+      ],
+      [
+        "GwennenAllBombsPlaced6",
+        "Gib den Befehl!"
+      ],
+      [
+        "GwennenAllBombsPlaced7",
+        "Festhalten!"
+      ],
+      [
+        "GwennenAllBombsPlaced8",
+        "Festhalten!"
+      ],
+      [
+        "GwennenAllBombsPlaced9",
+        "Festhalten!"
+      ],
+      [
+        "GwennenCombatLineRandom",
+        "Glück sei mir hold!"
+      ],
+      [
+        "GwennenCombatLine2",
+        "Glück sei mir hold!"
+      ],
+      [
+        "GwennenCombatLine3",
+        "Glück sei mir hold!"
+      ],
+      [
+        "GwennenCombatLine4",
+        "Ha!"
+      ],
+      [
+        "GwennenCombatLine5",
+        "Ha!"
+      ],
+      [
+        "GwennenCombatLine6",
+        "Ha!"
+      ],
+      [
+        "GwennenCombatLine7",
+        "Nicht heute!"
+      ],
+      [
+        "GwennenCombatLine8",
+        "Nicht heute!"
+      ],
+      [
+        "GwennenCombatLine9",
+        "Nicht heute!"
+      ],
+      [
+        "GwennenCombatLine10",
+        "Für die Kalguur!"
+      ],
+      [
+        "GwennenCombatLine11",
+        "Für die Kalguur!"
+      ],
+      [
+        "GwennenCombatLine12",
+        "Für die Kalguur!"
+      ],
+      [
+        "GwennenCombatLine13",
+        "Keine Chance!"
+      ],
+      [
+        "GwennenCombatLine14",
+        "Keine Chance!"
+      ],
+      [
+        "GwennenCombatLine15",
+        "Keine Chance!"
+      ],
+      [
+        "GwennenGossipTujen",
+        "Wir haben viele Jahre lang zusammen gekämpft. Es hat ihm viel abverlangt, aber er macht tapfer weiter. Ich weiß nicht, wie er so fröhlich bleiben kann, ehrlich gesagt. Wenn er noch ein Körperteil verliert, wird er mehr Metall als Mensch sein..."
+      ],
+      [
+        "GwennenGossipRog",
+        "Er ist ein Schatz. Hast du die Figuren gesehen, die er schnitzt? Wir vier benutzen sie, um dieses herrlich seltsame Spiel zu spielen, das er sich ausgedacht hat. Ich liebe es, weil wir so oft würfeln können, und, nun ja, Du kennst mich ja."
+      ],
+      [
+        "GwennenGossipDannig",
+        "<if:MS>{Unser unerschrockener Anführer glaubt an eine bessere Welt als die, die wirklich ist. Er sieht nicht Dich und mich, Verbannter. Er sieht Helden. Er sieht grandiose Mythen und weltverändernde Tapferkeit. Zerstöre diese Vorstellungen nicht. Ich will in der Welt leben, die er sieht, auch wenn ich weiß, dass sie nicht real ist.}<elif:FS>{Unser unerschrockener Anführer glaubt an eine bessere Welt als die, die wirklich ist. Er sieht nicht Dich und mich, Verbannte. Er sieht Helden. Er sieht grandiose Mythen und weltverändernde Tapferkeit. Zerstöre diese Vorstellungen nicht. Ich will in der Welt leben, die er sieht, auch wenn ich weiß, dass sie nicht real ist.}"
+      ],
+      [
+        "GwennenGossipLuckOne",
+        "Während der gescheiterten Rebellion habe ich einmal aus vollem Herzen geschrien. Ein Pfeil zischte durch die Luft. Mein Arm war eingeklemmt, und ich wusste, dass ich nicht mehr rechtzeitig ausweichen konnte. Ich war eine tote Frau. Aber das Glück erhörte meine innige Bitte. Ein weiterer Pfeil, ebenfalls auf einer mörderischen Bahn, traf den ersten <i>{in der Luft}, und beide wurden abgelenkt und landeten stattdessen auf beiden Seiten neben mir! Das war das erste Mal, dass ich wusste, dass der Zufall selbst eine echte Kraft in dieser Welt war."
+      ],
+      [
+        "GwennenGossipFailedRebellion",
+        "Das habe ich nicht gesagt. Du musst Dich wohl verhört haben."
+      ],
+      [
+        "GwennenGossipLuckTwo",
+        "Während... eines nicht näher spezifizierten Krieges... habe ich einmal aus vollem Herzen geschrien. Ein Pfeil zischte durch die Luft. Mein Arm war eingeklemmt, und ich wusste, dass ich nicht mehr rechtzeitig ausweichen konnte. Ich war eine tote Frau. Aber das Glück erhörte meine innige Bitte. Ein weiterer Pfeil, ebenfalls auf einer mörderischen Bahn, traf den ersten <i>{in der Luft}, und beide wurden abgelenkt und landeten stattdessen auf beiden Seiten neben mir! Das war das erste Mal, dass ich wusste, dass der Zufall selbst eine echte Kraft in dieser Welt war."
+      ],
+      [
+        "GwennenGossipTheKing",
+        "<if:MS>{Du strapazierst Dein Glück mit solchen Fragen, Verbannter. Verschwende es nicht. Du wirst jedes Quäntchen Glück brauchen, wenn die Zeit gekommen ist.}<elif:FS>{Du strapazierst Dein Glück mit solchen Fragen, Verbannte. Verschwende es nicht. Du wirst jedes Quäntchen Glück brauchen, wenn die Zeit gekommen ist.}"
+      ],
+      [
+        "GwennenGossipGods",
+        "Ich habe noch nie etwas von \"Göttern\" gehört, aber ich weiß, dass ich mich nicht auf sie verlassen würde, selbst wenn sie mit einer Armee vor meiner Tür stünden. Ich habe meinen Glauben bereits dort gefestigt, wo er hingehört."
+      ],
+      [
+        "GwennenGossipDruidsOfTheBrokenCircle",
+        "Ich habe die Pflicht, das Schicksal von Medved und den Druiden des Gebrochenen Zirkels zu ergründen. Sie glaubten, sie könnten in die Zukunft sehen, indem sie in die Vergangenheit blicken. Hypothetisch gesehen, ist das eine Macht, die ich sehr gerne hätte, aus Gründen des Zufalls und des Profits... aber ich bin mir nicht sicher, ob ich will, dass es wahr ist. Wenn Medved und seine Naturmystiker recht hatten und die Zeit wirklich ein Kreis ist, sind wir dann nicht alle dazu verdammt, unser Leben immer und immer wieder für die Ewigkeit zu wiederholen? Wenn das die Wahrheit ist, dann gibt es kein Glück. Kein Zufall, kein menschlicher Wille. Das ganze Leben ist nur ein Bühnenstück, das sich immer und immer wieder wiederholt. Ich glaube nicht, dass mir dieser Gedanke gefällt."
+      ],
+      [
+        "GwennenGossipMedved",
+        "Sein endgültiges Schicksal war unbekannt, aber ich weiß, dass er seine friedliche Art ablegte und mit zwei mächtigen Äxten trainierte, nachdem er hier angekommen war. Wir sind keine Narren. Wir sehen, dass die Toten hier auf Wraeclast auferstehen. Wenn Medved immer noch da draußen ist, wird er extrem gefährlich sein. Spare Dein Glück und nutze es gegen ihn, wenn Du ihn findest."
+      ],
+      [
+        "GwennenGossipMedvedStoryFound",
+        "<if:MS>{Also haben die Druiden die Fähigkeit verloren, in die Vergangenheit zu blicken, nachdem Olroth begann, Wraeclasts verbotene Gemmen zu benutzen... wie seltsam... und Medved machte sich auf den Weg in die Dunkelheit der Nacht, um den Anführer der Kreaturen zu einem Kampf herauszufordern, kein Zweifel. Ehrenhaft, aber töricht. Es gibt noch mehr zu dieser Geschichte, Verbannter. Ich hoffe, Du kannst sie finden.}<elif:FS>{Also haben die Druiden die Fähigkeit verloren, in die Vergangenheit zu blicken, nachdem Olroth begann, Wraeclasts verbotene Gemmen zu benutzen... wie seltsam... und Medved machte sich auf den Weg in die Dunkelheit der Nacht, um den Anführer der Kreaturen zu einem Kampf herauszufordern, kein Zweifel. Ehrenhaft, aber töricht. Es gibt noch mehr zu dieser Geschichte, Verbannte. Ich hoffe, Du kannst sie finden.}"
+      ],
+      [
+        "GwennenGossipMedvedDefeatedStoryNotComplete",
+        "Du hast Medved nach all dieser Zeit die ewige Ruhe gewährt. Ich danke Dir. Ich stamme von Annest ab, der Tochter, die er vor dem Ende weggeschickt hat, also könnte ich nie von hier weggehen, ohne den Frieden meines Vorfahren sicherzustellen. Das ist ein weiterer Schritt in Richtung Freiheit."
+      ],
+      [
+        "GwennenGossipMedvedDefeatedStoryComplete",
+        "Die Geschichte ist nun vollständig. Medved war ein edler und wohlgesonnener Held, aber die Dunkelheit von Wraeclast verderbte ihn und machte ihn wahnsinnig. Nun, da er in Frieden ruht, bin ich frei. Sobald wir die Triskelion-Flamme gefunden haben, kann ich nach Hause zurückkehren.\r\n\r\nIch muss Dir dafür danken. Ich stamme von Annest ab, der Tochter, die Medved vor dem Ende weggeschickt hat, also sind seine Taten ein Zeichen für die Ehre meiner Abstammung. Wenn wir nach Hause zurückkehren, werde ich die Geschichte mit seiner Reise in die Nacht beenden, bei der er den unsichtbaren Anführer des Bösen herausfordern wollte. Die Kalguur werden wissen, dass er im Kampf starb, um sein Volk zu retten. Der Rest muss nicht erzählt werden."
+      ],
+      [
+        "TujenIntroGeneralWitch",
+        "Der Name ist Tujen. Du hast die Aura der Dunkelheit. Freut mich, mit Dir zu arbeiten. Das ist genau die Art von Temperament, die dieses Wraeclast verlangt."
+      ],
+      [
+        "TujenIntroGeneralScion",
+        "Der Name ist Tujen. Du machst die Drecksarbeit, während wir die Ausgrabungen machen. Eine Allianz so gut wie jede andere. Na, dann wollen wir mal."
+      ],
+      [
+        "TujenIntroGeneralRanger",
+        "Der Name ist Tujen. Du machst die Drecksarbeit, während wir die Ausgrabungen machen. Eine Allianz so gut wie jede andere. Na, dann wollen wir mal."
+      ],
+      [
+        "TujenIntroGeneralDuelist",
+        "Der Name ist Tujen. Du machst die Drecksarbeit, während wir die Ausgrabungen machen. Eine Allianz so gut wie jede andere. Na, dann wollen wir mal."
+      ],
+      [
+        "TujenIntroGeneralShadow",
+        "Tujen mein Name. Du bist so mörderisch, wie ich es noch nie gesehen habe, auch wenn Du es mit einem freundlichen Lächeln versteckst. Normalerweise würde ich mich von jemandem wie Dir fernhalten, aber dieses Wraeclast verlangt ein wenig Dunkelheit. Wir werden gut miteinander auskommen."
+      ],
+      [
+        "TujenIntroGeneralTemplar",
+        "Der Name ist Tujen. Du machst die Drecksarbeit, während wir die Ausgrabungen machen. Eine Allianz so gut wie jede andere. Na, dann wollen wir mal."
+      ],
+      [
+        "TujenIntroMarauder",
+        "Der Name ist Tujen. Du machst die Drecksarbeit, während wir die Ausgrabungen machen. Eine Allianz so gut wie jede andere. Na, dann wollen wir mal."
+      ],
+      [
+        "TujenApproachShoutRandom",
+        "Oi! Hier drüben!"
+      ],
+      [
+        "TujenApproachShout2",
+        "Oi! Hier drüben!"
+      ],
+      [
+        "TujenApproachShout3",
+        "<if:MS>{Einheimischer! Ich brauche Deine Hilfe!}<elif:FS>{Einheimische! Ich brauche Deine Hilfe!}"
+      ],
+      [
+        "TujenApproachShout4",
+        "<if:MS>{Einheimischer! Ich brauche Deine Hilfe!}<elif:FS>{Einheimische! Ich brauche Deine Hilfe!}"
+      ],
+      [
+        "TujenApproachShout5",
+        "Mach schon, habe nicht den ganzen Tag Zeit!"
+      ],
+      [
+        "TujenApproachShout6",
+        "Mach schon, habe nicht den ganzen Tag Zeit!"
+      ],
+      [
+        "TujenPartingShout",
+        "Rog ist hier irgendwo. Ich schicke eine Nachricht voraus, dass du auf dem Weg bist!"
+      ],
+      [
+        "TujenRerollInventoryRandom",
+        "Ich hab noch mehr, ja."
+      ],
+      [
+        "TujenRerollInventory2",
+        "Ich hab noch mehr, ja."
+      ],
+      [
+        "TujenRerollInventory3",
+        "Ich liebe diese exotischen Münzen einfach."
+      ],
+      [
+        "TujenRerollInventory4",
+        "Ich liebe diese exotischen Münzen einfach."
+      ],
+      [
+        "TujenRerollInventory5",
+        "Glänzende Münzen, nicht wahr?"
+      ],
+      [
+        "TujenRerollInventory6",
+        "Glänzende Münzen, nicht wahr?"
+      ],
+      [
+        "TujenHittingDetonatorRandom",
+        "Ich kann es schaffen!"
+      ],
+      [
+        "TujenHittingDetonator2",
+        "Ich kann es schaffen!"
+      ],
+      [
+        "TujenOrderingSquireRandom",
+        "<if:MS>{Na dann los, Gehilfe.}<elif:FS>{Na dann los, Gehilfin.}"
+      ],
+      [
+        "TujenOrderingSquire2",
+        "<if:MS>{Na dann los, Gehilfe.}<elif:FS>{Na dann los, Gehilfin.}"
+      ],
+      [
+        "TujenBombPlacedGenericRandom",
+        "Aye, aye."
+      ],
+      [
+        "TujenBombPlacedGeneric2",
+        "Aye, aye."
+      ],
+      [
+        "TujenBombPlacedMonstersRandom",
+        "Einen Streit anzetteln, was?"
+      ],
+      [
+        "TujenBombPlacedMonsters2",
+        "Einen Streit anzetteln, was?"
+      ],
+      [
+        "TujenBombPlacedMonsters3",
+        "Eine Schlacht können sie haben!"
+      ],
+      [
+        "TujenBombPlacedMonsters4",
+        "Eine Schlacht können sie haben!"
+      ],
+      [
+        "TujenBombPlacedMonsters5",
+        "Bereit zum Kampf."
+      ],
+      [
+        "TujenBombPlacedMonsters6",
+        "Bereit zum Kampf."
+      ],
+      [
+        "TujenBombPlacedRiskRandom",
+        "Riskante Entscheidung."
+      ],
+      [
+        "TujenBombPlacedRisk2",
+        "Riskante Entscheidung."
+      ],
+      [
+        "TujenBombPlacedRisk3",
+        "Das sollte die Dinge interessant machen."
+      ],
+      [
+        "TujenBombPlacedRisk4",
+        "Das sollte die Dinge interessant machen."
+      ],
+      [
+        "TujenBombPlacedRisk5",
+        "Du möchtest wohl, dass ich noch ein Glied verliere, was?"
+      ],
+      [
+        "TujenBombPlacedRisk6",
+        "Du möchtest wohl, dass ich noch ein Glied verliere, was?"
+      ],
+      [
+        "TujenBombPlacedTreasureRandom",
+        "Der Schatz wird es wert sein."
+      ],
+      [
+        "TujenBombPlacedTreasure2",
+        "Der Schatz wird es wert sein."
+      ],
+      [
+        "TujenBombPlacedTreasure3",
+        "Suchst Du nach ein paar Schatztruhen?"
+      ],
+      [
+        "TujenBombPlacedTreasure4",
+        "Suchst Du nach ein paar Schatztruhen?"
+      ],
+      [
+        "TujenBombPlacedTreasure5",
+        "Du willst ein bisschen von dem alten Schatz, was?"
+      ],
+      [
+        "TujenBombPlacedTreasure6",
+        "Du willst ein bisschen von dem alten Schatz, was?"
+      ],
+      [
+        "TujenAllBombsPlacedRandom",
+        "Alles platziert."
+      ],
+      [
+        "TujenAllBombsPlaced2",
+        "Alles platziert."
+      ],
+      [
+        "TujenAllBombsPlaced3",
+        "Wollen wir?"
+      ],
+      [
+        "TujenAllBombsPlaced4",
+        "Wollen wir?"
+      ],
+      [
+        "TujenAllBombsPlaced5",
+        "Bereit."
+      ],
+      [
+        "TujenAllBombsPlaced6",
+        "Bereit."
+      ],
+      [
+        "TujenCombatLineRandom",
+        "Da kratzt sich doch einer die Augen aus!"
+      ],
+      [
+        "TujenCombatLine2",
+        "Da kratzt sich doch einer die Augen aus!"
+      ],
+      [
+        "TujenCombatLine3",
+        "Zurück!"
+      ],
+      [
+        "TujenCombatLine4",
+        "Zurück!"
+      ],
+      [
+        "TujenCombatLine5",
+        "Nicht mit mir!"
+      ],
+      [
+        "TujenCombatLine6",
+        "Nicht mit mir!"
+      ],
+      [
+        "TujenCombatLine7",
+        "Für die Kalguur!"
+      ],
+      [
+        "TujenCombatLine8",
+        "Für die Kalguur!"
+      ],
+      [
+        "TujenCombatLine9",
+        "Ha!"
+      ],
+      [
+        "TujenCombatLine10",
+        "Ha!"
+      ],
+      [
+        "TujenPlayerDoesNotHaggleRandom",
+        "Wenn Du es einfach so kaufen willst, gut."
+      ],
+      [
+        "TujenPlayerDoesNotHaggle2",
+        "Wenn Du es einfach so kaufen willst, gut."
+      ],
+      [
+        "TujenPlayerDoesNotHaggle3",
+        "Du versuchst nicht mal zu feilschen?"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle4",
+        "Du versuchst nicht mal zu feilschen?"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle5",
+        "Es ist langweilig, wenn Du mein erstes Angebot annimmst!"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle6",
+        "Es ist langweilig, wenn Du mein erstes Angebot annimmst!"
+      ],
+      [
+        "TujenPlayerOverpaysRandom",
+        "Das mit diesem Feilschen verstehst Du nicht wirklich, oder?"
+      ],
+      [
+        "TujenPlayerOverpays2",
+        "Das mit diesem Feilschen verstehst Du nicht wirklich, oder?"
+      ],
+      [
+        "TujenPlayerOverpays3",
+        "Du... willst ohne Grund mehr bezahlen?"
+      ],
+      [
+        "TujenPlayerOverpays4",
+        "Du... willst ohne Grund mehr bezahlen?"
+      ],
+      [
+        "TujenHighChanceToAcceptAcceptedRandom",
+        "Klingt angemessen."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted2",
+        "Klingt angemessen."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted3",
+        "War mir ein Vergnügen, mit Dir Geschäfte zu machen."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted4",
+        "War mir ein Vergnügen, mit Dir Geschäfte zu machen."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted5",
+        "Sicher, warum nicht?"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted6",
+        "Sicher, warum nicht?"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted7",
+        "Das ist ein \"Ja\" meinerseits."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted8",
+        "Das ist ein \"Ja\" meinerseits."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted9",
+        "Nehm ich so."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted10",
+        "Nehm ich so."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted11",
+        "Immer ein Vergnügen."
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted12",
+        "Immer ein Vergnügen."
+      ],
+      [
+        "TujenHighChanceToAcceptRejectedRandom",
+        "Ich bin noch nicht überzeugt."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected2",
+        "Ich bin noch nicht überzeugt."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected3",
+        "Lass uns noch ein bisschen feilschen."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected4",
+        "Lass uns noch ein bisschen feilschen."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected5",
+        "Ich bin in Feilsch-Laune."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected6",
+        "Ich bin in Feilsch-Laune."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected7",
+        "Sehr vernünftig, aber nein."
+      ],
+      [
+        "TujenHighChanceToAcceptRejected8",
+        "Sehr vernünftig, aber nein."
+      ],
+      [
+        "TujenMediumChanceToAcceptAcceptedRandom",
+        "Hmm... ahh... gut."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted2",
+        "Hmm... ahh... gut."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted3",
+        "Okay."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted4",
+        "Okay."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted5",
+        "Darüber bin ich weder glücklich noch unzufrieden."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted6",
+        "Darüber bin ich weder glücklich noch unzufrieden."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted7",
+        "Klingt fair."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted8",
+        "Klingt fair."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted9",
+        "Das reicht. Es ist kein Gewinn, aber es reicht."
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted10",
+        "Das reicht. Es ist kein Gewinn, aber es reicht."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejectedRandom",
+        "Nicht ganz das, wonach ich gesucht habe."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected2",
+        "Nicht ganz das, wonach ich gesucht habe."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected3",
+        "<if:MS>{Versuch's noch mal, mein Freund.}<elif:FS>{Versuch's noch mal, meine Freundin.}"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected4",
+        "<if:MS>{Versuch's noch mal, mein Freund.}<elif:FS>{Versuch's noch mal, meine Freundin.}"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected5",
+        "Ein bisschen niedrig, denkst Du nicht auch?"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected6",
+        "Ein bisschen niedrig, denkst Du nicht auch?"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected7",
+        "Ich denke, wir können einen besseren Kompromiss erzielen."
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected8",
+        "Ich denke, wir können einen besseren Kompromiss erzielen."
+      ],
+      [
+        "TujenLowChanceToAcceptAcceptedRandom",
+        "Ich fühle mich etwas großzügig."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted2",
+        "Ich fühle mich etwas großzügig."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted3",
+        "Du hast mich an einem guten Tag erwischt."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted4",
+        "Du hast mich an einem guten Tag erwischt."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted5",
+        "Für alles, was Du für uns getan hast, schenke ich Dir das hier."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted6",
+        "Für alles, was Du für uns getan hast, schenke ich Dir das hier."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted7",
+        "Ich sollte nicht, aber... gut."
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted8",
+        "Ich sollte nicht, aber... gut."
+      ],
+      [
+        "TujenLowChanceToAcceptRejectedRandom",
+        "Ich glaube wirklich, dass Du das besser kannst."
+      ],
+      [
+        "TujenLowChanceToAcceptRejected2",
+        "Ich glaube wirklich, dass Du das besser kannst."
+      ],
+      [
+        "TujenLowChanceToAcceptRejected3",
+        "<if:MS>{Du treibst es ein bisschen zu weit, Freund.}<elif:FS>{Du treibst es ein bisschen zu weit, Freundin.}"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected4",
+        "<if:MS>{Du treibst es ein bisschen zu weit, Freund.}<elif:FS>{Du treibst es ein bisschen zu weit, Freundin.}"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected5",
+        "Es ist viel mehr wert als das!"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected6",
+        "Es ist viel mehr wert als das!"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected7",
+        "Das ist kaum meine Zeit wert, die ich mit Handeln verbringe!"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected8",
+        "Das ist kaum meine Zeit wert, die ich mit Handeln verbringe!"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected9",
+        "Das glaube ich nicht."
+      ],
+      [
+        "TujenLowChanceToAcceptRejected10",
+        "Das glaube ich nicht."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAcceptedRandom",
+        "Ugh. Nimm es und geh."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted2",
+        "Ugh. Nimm es und geh."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted3",
+        "Du nimmst mich aus wie einen Weihnachts-Rhoa!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted4",
+        "Du nimmst mich aus wie einen Weihnachts-Rhoa!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted5",
+        "Du nutzt unsere Freundschaft aus, das tust Du."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted6",
+        "Du nutzt unsere Freundschaft aus, das tust Du."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted7",
+        "<if:MS>{Du bist verdammt nochmal der beste Feilscher, den ich je gesehen habe.}<elif:FS>{Du bist verdammt nochmal die beste Feilscherin, die ich je gesehen habe.}"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted8",
+        "<if:MS>{Du bist verdammt nochmal der beste Feilscher, den ich je gesehen habe.}<elif:FS>{Du bist verdammt nochmal die beste Feilscherin, die ich je gesehen habe.}"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted9",
+        "Ich bin in der Klemme. Gut, ich nehme es an."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted10",
+        "Ich bin in der Klemme. Gut, ich nehme es an."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejectedRandom",
+        "Willst du mich auf den Arm nehmen?"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected2",
+        "Willst du mich auf den Arm nehmen?"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected3",
+        "Das ist nicht Dein Ernst."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected4",
+        "Das ist nicht Dein Ernst."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected5",
+        "Du bist ein Arsch."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected6",
+        "Du bist ein Arsch."
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected7",
+        "So weit kann ich nicht runtergehen!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected8",
+        "So weit kann ich nicht runtergehen!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected9",
+        "Ein Mann muss seinen Lebensunterhalt verdienen!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected10",
+        "Ein Mann muss seinen Lebensunterhalt verdienen!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected11",
+        "Sei vernünftig!"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected12",
+        "Sei vernünftig!"
+      ],
+      [
+        "TujenPlayerOfferedOneRandom",
+        "EINES? Nur EINES?"
+      ],
+      [
+        "TujenPlayerOfferedOne2",
+        "EINES? Nur EINES?"
+      ],
+      [
+        "TujenRemovesItemRandom",
+        "Du hast mich geschafft. Ich werde es einfach behalten."
+      ],
+      [
+        "TujenRemovesItem2",
+        "Du hast mich geschafft. Ich werde es einfach behalten."
+      ],
+      [
+        "TujenRemovesItem3",
+        "Das ist jetzt mehr Geplänkel als Gefeilsche. Ich passe."
+      ],
+      [
+        "TujenRemovesItem4",
+        "Das ist jetzt mehr Geplänkel als Gefeilsche. Ich passe."
+      ],
+      [
+        "TujenRemovesItem5",
+        "Wenn wir so weitermachen, beleidigst Du meine Ehre. Also beende ich das hier."
+      ],
+      [
+        "TujenRemovesItem6",
+        "Wenn wir so weitermachen, beleidigst Du meine Ehre. Also beende ich das hier."
+      ],
+      [
+        "TujenRemovesItem7",
+        "Genug davon. Ich behalte es, danke."
+      ],
+      [
+        "TujenRemovesItem8",
+        "Genug davon. Ich behalte es, danke."
+      ],
+      [
+        "TujenCounterOfferRemainsSameRandom",
+        "Nein. Einfach Nein."
+      ],
+      [
+        "TujenCounterOfferRemainsSame2",
+        "Nein. Einfach Nein."
+      ],
+      [
+        "TujenCounterOfferRemainsSame3",
+        "Ich denke, dass Du das besser kannst."
+      ],
+      [
+        "TujenCounterOfferRemainsSame4",
+        "Ich denke, dass Du das besser kannst."
+      ],
+      [
+        "TujenCounterOfferRemainsSame5",
+        "Mein Angebot bleibt bestehen"
+      ],
+      [
+        "TujenCounterOfferRemainsSame6",
+        "Mein Angebot bleibt bestehen"
+      ],
+      [
+        "TujenCounterOfferRemainsSame7",
+        "Ich werde nicht tiefer gehen!"
+      ],
+      [
+        "TujenCounterOfferRemainsSame8",
+        "Ich werde nicht tiefer gehen!"
+      ],
+      [
+        "TujenPlayerCannotCarryRandom",
+        "Du musst erst mal Platz schaffen"
+      ],
+      [
+        "TujenPlayerCannotCarry2",
+        "Du musst erst mal Platz schaffen"
+      ],
+      [
+        "TujenPlayerCannotCarry3",
+        "Du kannst das nicht mal tragen!"
+      ],
+      [
+        "TujenPlayerCannotCarry4",
+        "Du kannst das nicht mal tragen!"
+      ],
+      [
+        "TujenPlayerCannotAffordRandom",
+        "Du hast nicht genug, um das zu bezahlen!"
+      ],
+      [
+        "TujenPlayerCannotAfford2",
+        "Du hast nicht genug, um das zu bezahlen!"
+      ],
+      [
+        "TujenPlayerCannotAfford3",
+        "Du bietest mehr an, als Du hast!"
+      ],
+      [
+        "TujenPlayerCannotAfford4",
+        "Du bietest mehr an, als Du hast!"
+      ],
+      [
+        "TujenGossipBlackScytheMercenaries",
+        "Ich habe einen bestimmten Auftrag, siehst Du? Ich kratze den Boden auf, auf der Suche nach einer alten Schlägertruppe. Sie wurden die Söldner der Schwarzen Sense genannt. Ihre Gründerin, eine besonders heldenhafte Kriegerin namens Vorana, teilte Verbindungen zu meiner Blutlinie. Bevor ich nach Hause gehen kann, muss ich herausfinden, was mit ihr passiert ist."
+      ],
+      [
+        "TujenGossipVorana",
+        "Sie war eine furchterregende und unbändige Kriegerin. König Cadigan der Dritte versuchte, sie in den Dienst der Krone zu stellen, aber sie legte jeden Mann um, der geschickt wurde, um sie zu holen. Schließlich erkannte er, dass sie nicht zu kontrollieren war, und gab ihr stattdessen eine Söldner-Charta. Da sie die Freiheit hatte, so zu handeln, wie sie wollte, errang sie viele große Siege für die Kalguur. Ich respektiere diejenigen, die ihren eigenen Weg gehen.\r\n\r\nIhr Schicksal hier auf Wraeclast war unbekannt, aber ich habe das Gefühl, dass sie immer noch umherstreift. Ein brennender Geist wie ihrer geht nie ohne einen legendären Kampf unter."
+      ],
+      [
+        "TujenGossipRog",
+        "Ohne sein logistisches Geschick wäre so mancher Feldzug gescheitert. Wir sind durch Schlamm, Regen, Schnee und Sand gewandert und haben trotzdem immer gut gegessen. Das ist die wahre Grundlage des Krieges, wohlgemerkt. Logistik. Denke nicht, wir wüssten das nicht."
+      ],
+      [
+        "TujenGossipGwennen",
+        "Sie ist eine ferne Cousine meinerseits, also tue ich, was ich kann, um sie zu beschützen. Sie hat allerdings ein paar seltsame Ansichten von der Welt. Sie denkt, der Glaube kann die Ereignisse beeinflussen. Wenn er das könnte, wären wir nicht besiegt worden während... unseres letzten Feldzugs."
+      ],
+      [
+        "TujenGossipDannig",
+        "Er ist ein guter Mann. Ein Mann aus zwei Welten. Teils ein aufstrebender Träumer, teils ein zynischer Realist. Ich werde ihm bis ans Ende der Welt folgen, was Du weißt, weil ich es schon getan habe... und hier sind wir."
+      ],
+      [
+        "TujenGossipTheKalguur",
+        "Wir sind ein stolzes Volk, aber sind sie das nicht alle? Der Unterschied besteht darin, dass wir uns gegen die düsteren Realitäten des Lebens durch den klugen Einsatz von Tapferkeit und Mut wehren. Die eigene Abstammung trägt eine fortlaufende Auflistung von Ruhm und Errungenschaften mit sich. Wir tun das nicht für uns, sondern für unsere Kinder, sollten wir sie eines Tages haben. Die Hoffnung stirbt zuletzt."
+      ],
+      [
+        "TujenGossipTheKingOne",
+        "Schönes Wetter haben wir hier, nicht wahr?"
+      ],
+      [
+        "TujenGossipTheKingTwo",
+        "Wraeclast ist ein Stück gefährlich. Du hast sicherlich eine spannende Geschichte auf Lager."
+      ],
+      [
+        "TujenGossipTheKingThree",
+        "Du verstehst die Spielregeln wohl nicht? Hör auf zu fragen!"
+      ],
+      [
+        "TujenGossipVoranaStoryFound",
+        "Ein grausames Schicksal ereilte unser Volk hier in Wraeclast. Ein Teil von mir möchte glauben, dass Vorana es alleine mit diesem verrückten Kontinent aufgenommen hat, aber wir sind jetzt hier und es wimmelt immer noch von Monstern, also denke ich, dass wir beide wissen, dass sie sich nicht durchgesetzt hat. Aber unsere Leute versuchten, durch eine Art Höhle zu fliehen? Wir müssen den Rest herausfinden!"
+      ],
+      [
+        "TujenGossipVoranaDefeatedStoryNotComplete",
+        "Du hast Vorana besiegt? Ich bin erstaunt und beschämt. Ich bin ein Nachkomme von Annest, der Tochter, die sie vor dem Ende ins Heimatland schickte. Du hast einer meiner Vorfahren Frieden gegeben. Ich bin Dir dankbar."
+      ],
+      [
+        "TujenGossipVoranaDefeatedStoryComplete",
+        "Nun ist die Geschichte von Vorana von der Schwarzen Sense vollständig. Sie starb, wie sie lebte: indem sie Krieg führte. Als Nachkomme von Annest, Voranas Tochter, füllt dies eine Lücke in der Geschichte meines Volkes. Wenn wir nach Hause zurückkehren, werden die Kalguur erfahren, dass Vorana mit Ruhmesglanz untergegangen ist und selbst einen Krieg gegen einen ganzen Kontinent von Monstern geführt hat.\r\n\r\nWir lassen einfach den Teil aus, in dem sie eine unsterbliche Abscheulichkeit wurde, ok?"
+      ],
+      [
+        "TujenGossipUhtredDefeatedStoryComplete",
+        "Nach dem, was Du herausgefunden hast, versuchte der Rest unseres Volkes hier auf Wraeclast, durch eine uralte Stätte der Macht zu fliehen, während Vorana ein letztes Gefecht führte. Uhtred wartete dort auf sie. Und jetzt wissen wir, was passiert ist. Auch er verfiel dem verderbenden Wahnsinn. Er muss sie alle an der Schwelle erschlagen haben, obwohl ich hoffe, dass einige an ihm vorbeikamen und entkommen konnten.\r\n\r\nDie Frage, die sich mir allerdings stellt: Uhtred war derjenige, der die Gemmen zuerst für unrein erklärte. Nach den Berichten, die wir gefunden haben, hat er sie nie benutzt. Wie ist er dann dem Wahnsinn verfallen? Was hat er erlebt, das ihm den Verstand raubte?"
+      ],
+      [
+        "TujenExclaimsAboutVorana",
+        "Es ist Vorana persönlich!"
+      ],
+      [
+        "OlrothAssaultRandom",
+        "Angriff!"
+      ],
+      [
+        "OlrothAssault2",
+        "Angriff!"
+      ],
+      [
+        "OlrothAssault3",
+        "Angriff!"
+      ],
+      [
+        "OlrothBurnRandom",
+        "Brenne!"
+      ],
+      [
+        "OlrothBurn2",
+        "Brenne!"
+      ],
+      [
+        "OlrothBurn3",
+        "Brenne!"
+      ],
+      [
+        "OlrothIAmTheDoomRandom",
+        "Ich bin der Untergang, der an die Tür klopft!"
+      ],
+      [
+        "OlrothIAmTheDoom2",
+        "Ich bin der Untergang, der an die Tür klopft!"
+      ],
+      [
+        "OlrothIAmTheDoom3",
+        "Ich bin der Untergang, der an die Tür klopft!"
+      ],
+      [
+        "OlrothHoldTheLineRandom",
+        "Haltet die Stellung!"
+      ],
+      [
+        "OlrothHoldTheLine2",
+        "Haltet die Stellung!"
+      ],
+      [
+        "OlrothHoldTheLine3",
+        "Haltet die Stellung!"
+      ],
+      [
+        "OlrothICannotYieldRandom",
+        "Ich kann mich nicht ergeben!"
+      ],
+      [
+        "OlrothICannotYield2",
+        "Ich kann mich nicht ergeben!"
+      ],
+      [
+        "OlrothIHaveBecomeTheDarknessRandom",
+        "Ich bin die Dunkelheit geworden..."
+      ],
+      [
+        "OlrothIHaveBecomeTheDarkness2",
+        "Ich bin die Dunkelheit geworden..."
+      ],
+      [
+        "OlrothIHaveBecomeTheDarkness3",
+        "Ich bin die Dunkelheit geworden..."
+      ],
+      [
+        "OlrothIWillNeverYieldRandom",
+        "Ich werde mich nie ergeben!"
+      ],
+      [
+        "OlrothIWillNeverYield2",
+        "Ich werde mich nie ergeben!"
+      ],
+      [
+        "OlrothIWillNeverYield3",
+        "Ich werde mich nie ergeben!"
+      ],
+      [
+        "OlrothIWillNeverYield4",
+        "Ich werde mich nie ergeben!"
+      ],
+      [
+        "OlrothIWillNeverYield5",
+        "Ich werde mich nie ergeben!"
+      ],
+      [
+        "OlrothIWillNeverYield6",
+        "Ich werde mich nie ergeben!"
+      ],
+      [
+        "OlrothNeverRandom",
+        "Niemals!"
+      ],
+      [
+        "OlrothNever2",
+        "Niemals!"
+      ],
+      [
+        "OlrothNever3",
+        "Niemals!"
+      ],
+      [
+        "OlrothNever4",
+        "Für den König!"
+      ],
+      [
+        "OlrothNever5",
+        "Für den König!"
+      ],
+      [
+        "OlrothNever6",
+        "Für den König!"
+      ],
+      [
+        "OlrothPurifyRandom",
+        "Reinige!"
+      ],
+      [
+        "OlrothPurify2",
+        "Reinige!"
+      ],
+      [
+        "OlrothPurify3",
+        "Reinige!"
+      ],
+      [
+        "OlrothStarfireRandom",
+        "Sternenfeuer!"
+      ],
+      [
+        "OlrothStarfire2",
+        "Sternenfeuer!"
+      ],
+      [
+        "OlrothStarfire3",
+        "Sternenfeuer!"
+      ],
+      [
+        "OlrothTheCurseRandom",
+        "Der Fluch... stammt von dem Berg..."
+      ],
+      [
+        "OlrothTheCurse2",
+        "Der Fluch... stammt von dem Berg..."
+      ],
+      [
+        "OlrothTheCurse3",
+        "Der Fluch... stammt von dem Berg..."
+      ],
+      [
+        "OlrothTraitorRandom",
+        "Verräter!"
+      ],
+      [
+        "OlrothTraitor2",
+        "Verräter!"
+      ],
+      [
+        "OlrothTraitor3",
+        "Verräter!"
+      ],
+      [
+        "OlrothTripleBladeRandom",
+        "Dreifache Klinge!"
+      ],
+      [
+        "OlrothTripleBlade2",
+        "Dreifache Klinge!"
+      ],
+      [
+        "OlrothTripleBlade3",
+        "Dreifache Klinge!"
+      ],
+      [
+        "OlrothWastelandRandom",
+        "Ödland!"
+      ],
+      [
+        "OlrothWasteland2",
+        "Ödland!"
+      ],
+      [
+        "OlrothWasteland3",
+        "Ödland!"
+      ],
+      [
+        "OlrothWhoDares",
+        "Wer... wagt es?"
+      ],
+      [
+        "OlrothYouveDoomedUsAllRandom",
+        "Du hast uns alle dem Untergang geweiht!"
+      ],
+      [
+        "OlrothYouveDoomedUsAll2",
+        "Du hast uns alle dem Untergang geweiht!"
+      ],
+      [
+        "OlrothYouveDoomedUsAll3",
+        "Du hast uns alle dem Untergang geweiht!"
+      ],
+      [
+        "OlrothYouWillFail",
+        "Du wirst versagen!"
+      ],
+      [
+        "OlrothDarknessAtLast",
+        "Endlich... Dunkelheit..."
+      ],
+      [
+        "OlrothICannotDieRandom",
+        "Ich kann nicht... sterben..."
+      ],
+      [
+        "OlrothICannotDie2",
+        "Ich kann nicht... sterben..."
+      ],
+      [
+        "MedvedIntroRandom",
+        "Ich habe Dich diese Schlacht bereits verlieren sehen."
+      ],
+      [
+        "MedvedIntro2",
+        "Ich habe Dich diese Schlacht bereits verlieren sehen."
+      ],
+      [
+        "MedvedIntro3",
+        "ich habe Dich diese Schlacht bereits verlieren sehen."
+      ],
+      [
+        "MedvedSwarmRandom",
+        "Schwärmt aus!"
+      ],
+      [
+        "MedvedSwarm2",
+        "Schwärmt aus!"
+      ],
+      [
+        "MedvedSwarm3",
+        "Schwärmt aus!"
+      ],
+      [
+        "MedvedSummonHealerRandom",
+        "Helft mir!"
+      ],
+      [
+        "MedvedSummonHealer2",
+        "Helft mir!"
+      ],
+      [
+        "MedvedSummonHealer3",
+        "Helft mir!"
+      ],
+      [
+        "MedvedSummonBuffRandom",
+        "Glaube obsiegt!"
+      ],
+      [
+        "MedvedSummonBuff2",
+        "Glaube obsiegt!"
+      ],
+      [
+        "MedvedSummonBuff3",
+        "Glaube obsiegt!"
+      ],
+      [
+        "MedvedSummonBuff4",
+        "Glaube obsiegt!"
+      ],
+      [
+        "MedvedSummonAreaDenialRandom",
+        "Verbotene Macht!"
+      ],
+      [
+        "MedvedSummonAreaDenial2",
+        "Verbotene Macht!"
+      ],
+      [
+        "MedvedSummonAreaDenial3",
+        "Verbotene Macht!"
+      ],
+      [
+        "MedvedComboAttackRandom",
+        "Enthaupter!"
+      ],
+      [
+        "MedvedComboAttack2",
+        "Enthaupter!"
+      ],
+      [
+        "MedvedComboAttack3",
+        "Enthaupter!"
+      ],
+      [
+        "MedvedComboAttack4",
+        "Enthaupter!"
+      ],
+      [
+        "MedvedComboAttack5",
+        "Herzstopper!"
+      ],
+      [
+        "MedvedComboAttack6",
+        "Herzstopper!"
+      ],
+      [
+        "MedvedComboAttack7",
+        "Herzstopper!"
+      ],
+      [
+        "MedvedComboAttack8",
+        "Herzstopper!"
+      ],
+      [
+        "MedvedComboAttack9",
+        "Beinschlitzer!"
+      ],
+      [
+        "MedvedComboAttack10",
+        "Beinschlitzer!"
+      ],
+      [
+        "MedvedComboAttack11",
+        "Beinschlitzer!"
+      ],
+      [
+        "MedvedComboAttack12",
+        "Beinschlitzer!"
+      ],
+      [
+        "MedvedComboAttack13",
+        "Axtbiss!"
+      ],
+      [
+        "MedvedComboAttack14",
+        "Axtbiss!"
+      ],
+      [
+        "MedvedForthekingRandom",
+        "Für den König!"
+      ],
+      [
+        "MedvedFortheking2",
+        "Für den König!"
+      ],
+      [
+        "MedvedFortheking3",
+        "Für den König!"
+      ],
+      [
+        "MedvedFortheking4",
+        "Für den König!"
+      ],
+      [
+        "MedvedDeathRandom",
+        "Du hast... den Zirkel zerbrochen..."
+      ],
+      [
+        "MedvedDeath2",
+        "Du hast... den Zirkel zerbrochen..."
+      ],
+      [
+        "MedvedDeath3",
+        "Sie haben einen Tempel gebaut... um einen Spiegel..."
+      ],
+      [
+        "MedvedDeath4",
+        "Unter der Erde... um sich vor dem Nachthimmel zu verstecken..."
+      ],
+      [
+        "TujenEncounterCompleteRandom",
+        "Nicht mit mir!"
+      ],
+      [
+        "TujenEncounterComplete2",
+        "Nicht mit mir!"
+      ],
+      [
+        "TujenEncounterComplete3",
+        "Für die Kalguur!"
+      ],
+      [
+        "TujenEncounterComplete4",
+        "Für die Kalguur!"
+      ],
+      [
+        "TujenEncounterComplete5",
+        "Ha!"
+      ],
+      [
+        "TujenEncounterComplete6",
+        "Ha!"
+      ],
+      [
+        "GwennenEncounterCompleteRandom",
+        "Ha!"
+      ],
+      [
+        "GwennenEncounterComplete2",
+        "Ha!"
+      ],
+      [
+        "GwennenEncounterComplete3",
+        "Ha!"
+      ],
+      [
+        "GwennenEncounterComplete4",
+        "Nicht am heutigen Tag!"
+      ],
+      [
+        "GwennenEncounterComplete5",
+        "Nicht am heutigen Tag!"
+      ],
+      [
+        "GwennenEncounterComplete6",
+        "Nicht am heutigen Tag!"
+      ],
+      [
+        "GwennenEncounterComplete7",
+        "Für die Kalguur!"
+      ],
+      [
+        "GwennenEncounterComplete8",
+        "Für die Kalguur!"
+      ],
+      [
+        "GwennenEncounterComplete9",
+        "Für die Kalguur!"
+      ],
+      [
+        "GwennenEncounterComplete10",
+        "Auf keinen Fall!"
+      ],
+      [
+        "GwennenEncounterComplete11",
+        "Auf keinen Fall!"
+      ],
+      [
+        "GwennenEncounterComplete12",
+        "Auf keinen Fall!"
+      ],
+      [
+        "RogEncounterCompleteRandom",
+        "Pass auf Dich auf!"
+      ],
+      [
+        "RogEncounterComplete2",
+        "Pass auf Dich auf!"
+      ],
+      [
+        "RogEncounterComplete3",
+        "Pass auf Dich auf!"
+      ],
+      [
+        "DannigEncounterCompleteRandom",
+        "Herrlich!"
+      ],
+      [
+        "DannigEncounterComplete2",
+        "Herrlich!"
+      ],
+      [
+        "DannigEncounterComplete3",
+        "Herrlich!"
+      ],
+      [
+        "DannigEncounterComplete4",
+        "Ha!"
+      ],
+      [
+        "DannigEncounterComplete5",
+        "Ha!"
+      ],
+      [
+        "DannigEncounterComplete6",
+        "Ha!"
       ]
     ]
   },
@@ -56350,15 +60018,7 @@
         "Tora, Meisterin der Jagd"
       ],
       [
-        "Metadata/NPC/Missions/Hideout/DexDemo",
-        "Tora, Meisterin der Jagd"
-      ],
-      [
         "Metadata/NPC/Missions/Hideout/Int",
-        "Catarina, Meisterin der Toten"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/IntDemo",
         "Catarina, Meisterin der Toten"
       ],
       [
@@ -56366,15 +60026,7 @@
         "Haku, Rüstungsmeister"
       ],
       [
-        "Metadata/NPC/Missions/Hideout/StrDemo",
-        "Haku, Rüstungsmeister"
-      ],
-      [
         "Metadata/NPC/Missions/Hideout/DexInt",
-        "Vorici, Meister-Assassine"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/DexIntDemo",
         "Vorici, Meister-Assassine"
       ],
       [
@@ -56382,15 +60034,7 @@
         "Vagan, Waffenmeister"
       ],
       [
-        "Metadata/NPC/Missions/Hideout/StrDexDemo",
-        "Vagan, Waffenmeister"
-      ],
-      [
         "Metadata/NPC/Missions/Hideout/StrInt",
-        "Elreon, Meister der Überlieferung"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/StrIntDemo",
         "Elreon, Meister der Überlieferung"
       ],
       [
@@ -56403,10 +60047,6 @@
       ],
       [
         "Metadata/NPC/Missions/Hideout/PvP",
-        "Leo, Meister der Arena"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/PvPDemo",
         "Leo, Meister der Arena"
       ],
       [
@@ -57866,6 +61506,14 @@
         "Der Prüfungsmeister"
       ],
       [
+        "Metadata/Monsters/LeagueDelve/CityBosses/DelveVaalCityBoss",
+        "Ahuatotli der Blinde"
+      ],
+      [
+        "Metadata/Monsters/LeagueDelve/CityBosses/DelveProtoVaalCityBoss",
+        "Aul der Kristallkönig"
+      ],
+      [
         "Metadata/Monsters/LeagueUltimatum/TrialMaster/TrialMasterBoss",
         "Der Prüfungsmeister"
       ],
@@ -57874,8 +61522,72 @@
         "Hasina"
       ],
       [
+        "Metadata/NPC/League/Expedition/Saga",
+        "Dannig, Krieger-Skalde"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/Gambler",
+        "Gwennen die Spielerin"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/Haggler",
+        "Tujen der Feilscher"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/Dealer",
+        "Rog der Händler"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionDannig",
+        "Dannig"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionGwennen_",
+        "Gwennen"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionTujen",
+        "Tujen"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog",
+        "Rog"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/SagaHideout",
+        "Dannig, Krieger-Skalde"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/GamblerHideout",
+        "Gwennen die Spielerin"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/HagglerHideout",
+        "Tujen der Feilscher"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/DealerHideout",
+        "Rog der Händler"
+      ],
+      [
         "RoyaleAnnouncer",
         "Royale-Sprecher"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/ReaperBoss",
+        "Vorana, Letzte der Gefallenen"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/Uhtred",
+        "Uhtred"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/Olroth",
+        "Olroth, Ursprung des Falls"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/Medved",
+        "Medved"
       ]
     ]
   }

@@ -8092,8 +8092,8 @@
         "Raízes de árvore bloqueiam seu caminho.\r\nTalvez elas possam ser abertas mais tarde."
       ],
       [
-        "InsteractErrorUndyingBlockage",
-        "O caminho está bloqueado."
+        "InteractErrorUndyingBlockage",
+        "A passagem está bloqueada."
       ],
       [
         "InteractErrorLocked",
@@ -9086,6 +9086,18 @@
       [
         "RoyaleMatchEndedTeam",
         "{0} e {1} venceram a partida!"
+      ],
+      [
+        "TradeNoteBlacklistedCharactersError",
+        "Sua Nota de Comércio contém caracteres ilegais, por favor tente novamente."
+      ],
+      [
+        "ExpeditionDetonatorNotInstanceOwner",
+        "Somente o jogador dono da instância pode interagir com explosivos ou com o detonador."
+      ],
+      [
+        "ActionTemporarilyDisabled",
+        "This action has been temporarily disabled."
       ]
     ]
   },
@@ -12722,15 +12734,51 @@
       ],
       [
         "BrutusIntro2",
-        "Seu crime, a intrusão. Sua sentença, a morte!"
+        "<if:MS>{Seu coração assustado ecoa dessas pedras.}<elif:FS>{ }"
       ],
       [
         "BrutusIntro3",
-        "Você conhecerá minha miséria. Venha, e compartilhe-a comigo."
+        "<if:MS>{Seu crime, a intrusão. Sua sentença, a morte!}<elif:FS>{ }"
       ],
       [
         "BrutusIntro4",
-        "Você acha que sou um horror? Eu te mostrarei o verdadeiro horror..."
+        "<if:MS>{Seu crime, a intrusão. Sua sentença, a morte!}<elif:FS>{ }"
+      ],
+      [
+        "BrutusIntro5",
+        "<if:MS>{Você sentirá a minha angústia. Venha dividi-la comigo. }<elif:FS>{ }"
+      ],
+      [
+        "BrutusIntro6",
+        "<if:MS>{Você acha que sou um horror? Eu te mostrarei o verdadeiro horror...}<elif:FS>{ }"
+      ],
+      [
+        "BrutusIntro7",
+        "<if:MS>{Você acha que sou um horror? Eu te mostrarei o verdadeiro horror...}<elif:FS>{ }"
+      ],
+      [
+        "BrutusChainRandom",
+        "<if:MS>{Venha.}<elif:FS>{ }"
+      ],
+      [
+        "BrutusChain2",
+        "<if:MS>{Venha.}<elif:FS>{ }"
+      ],
+      [
+        "BrutusChain3",
+        "<if:MS>{Venha.}<elif:FS>{ }"
+      ],
+      [
+        "BrutusChain4",
+        "<if:MS>{Deixe-me abraçar você. }<elif:FS>{ }"
+      ],
+      [
+        "BrutusChain5",
+        "<if:MS>{Deixe-me abraçar você. }<elif:FS>{ }"
+      ],
+      [
+        "BrutusChain6",
+        "<if:MS>{Deixe-me abraçar você. }<elif:FS>{ }"
       ],
       [
         "MalachaiIntro1",
@@ -15002,7 +15050,7 @@
       ],
       [
         "TarkleighNessaQuest",
-        "Nessa... Eu a vi uma noite, correndo pela Costa, andando em direção ao Lamaçal. Chamei ela... Mas ela sequer virou a cabeça. Talvez ela não tenha me ouvido, talvez ela não quisesse ter ouvido, eu não faço ideia. Eu tentei correr atrás dela mas ela sumiu na escuridão antes que meus pés sequer tocassem a areia.\r\n\r\nEntão eu a rastreei, até o Lamaçal, é foi lá que seus rastros... simplesmente sumiram. Sem sinal de encontrar alguém ou alguma coisa, sem sinal de luta. É como se em um momento ela estivesse correndo e no outro... sumisse.\r\n\r\nOlha, eu ouvi algumas coisas, sobre o que você fez. Coisas que imploram por crença. Agora, você pode fazer isso. Por favor, encontre Nessa. Traga de volta a nós."
+        "<if:MS>{Nessa... Eu a vi uma noite, correndo pela Costa, andando em direção ao Lamaçal. Chamei por ela... Mas ela sequer virou a cabeça. Talvez ela não tenha me ouvido, talvez ela não quisesse ter ouvido, eu não faço ideia. Eu tentei correr atrás dela mas ela sumiu na escuridão antes que meus pés tivessem tocado a areia.\r\n\r\nEntão eu a rastreei, até o Lamaçal, é foi lá que seus rastros... simplesmente sumiram. Nenhum sinal de que ela encontrou alguém ou alguma coisa, nenhum sinal de luta. É como se em um momento ela estivesse correndo e no outro... sumisse.\r\n\r\nOlha, eu ouvi algumas coisas, sobre o que você fez. Coisas difíceis de acreditar. Então, você pode fazer isso. Por favor, encontre Nessa. Traga ela de volta para nós.}<elif:FS>{ }"
       ],
       [
         "TarkleighNessaMermaid",
@@ -16226,7 +16274,7 @@
       ],
       [
         "LaniBannonQuest",
-        "Eu vejo seus olhos, exilado. Você está imaginando o porque de eu estar aqui ao invés de estar na Torre do Vigia. Eu te direi a horrível verdade. A torre caiu para os dispositivos infernais de Kitava. Aquela bruxa, Vilenta, é a culpata. Ela abaixou nossa escada secreta e liderou os cultistas de Kitava direto às nossas camas.\r\n\r\nBannon e eu mal escapamos com nossas vidas. Juntos, nós passamos pelas hordas mas não valeu de nada. Eles nos cercaram. Bannon criou uma distração que permitiu que eu fugisse. Da última vez que eu o vi, ele estava empoleirado em cima dos telhados, segurando nossos inimigos, mas eu não sei quanto tempo ele durará.\r\n\r\nCaso esteja indo naquela direção, talvez você possa encontrá-lo e trazê-lo de volta para mim. Eu venho... me simpatizando por aquele Templário, o fogo de Ngamahu queima dentro de seu ventre, não seria bom para nós nessa guerra aquele fogo se estinguisse."
+        "<if:MS>{Eu vejo seus olhos, exilado. Você está imaginando o porque de eu estar aqui ao invés de estar na Torre do Vigia. Eu te direi a horrível verdade. A torre caiu para os dispositivos infernais de Kitava. Aquela bruxa, Vilenta, é a culpata. Ela abaixou nossa escada secreta e liderou os cultistas de Kitava direto às nossas camas.\r\n\r\nBannon e eu mal escapamos com nossas vidas. Juntos, nós passamos pelas hordas mas não valeu de nada. Eles nos cercaram. Bannon criou uma distração que permitiu que eu fugisse. Da última vez que eu o vi, ele estava empoleirado em cima dos telhados, segurando nossos inimigos, mas eu não sei quanto tempo ele durará.\r\n\r\nCaso esteja indo naquela direção, talvez você possa encontrá-lo e trazê-lo de volta para mim. Eu venho... me simpatizando por aquele Templário, o fogo de Ngamahu queima dentro de seu ventre, não seria bom para nós nessa guerra aquele fogo se estinguisse.}<elif:FS>{ }"
       ],
       [
         "LaniBannonReward",
@@ -33381,8 +33429,8 @@
         "Apesar dos Contratos permitirem que o Círculo continue sua atividade, nós somos profissionais habilidosos, e profissionais habilidosos querem testar os limites de suas habilidades. O Círculo obteve os layouts e localizações conhecidas por conter objetiso de alto valor. Naturalmente, estas localizações são altamente protegidas e patrulhadas e para conseguir terminar uma tarefa em tal local, uma equipe será necessária.\r\n\r\nO Chefe se alegra em fornecer as plantas para estes locais altamente seguros e acesso às habilidades e recursos necessários para limpar tal local... por um valor. Complete contratos, ganhe Insígnias e você conseguirá utilizar tais serviços."
       ],
       [
-        "KuraiTheBoss  ",
-        "O Chefe é um homem extraordinariamente ocupado, então eu decreto suas ordens e aloco tarefas aos membros quando necessário em seu lugar. Eu sou, para todos os propósitos, seu administrador. Se você tiver qualquer problema, por favor traga-o até mim e eu o discutirei com O Chefe quando ele estiver disponível."
+        "KuraiTheBoss",
+        "<if:MS>{O Chefe é um homem extraordinariamente ocupado, então eu decreto suas ordens e distribuo tarefas aos membros conforme necessário em seu nome. Eu sou, para todos os efeitos, sua administradora. Se você tiver qualquer problema, leve-o até mim e posso falar com O Chefe quando ele estiver disponível.}<elif:FS>{ }"
       ],
       [
         "KuraiVoxTwins",
@@ -41986,7 +42034,7 @@
       ],
       [
         "NenetAboutPlainsOfVastiri",
-        "<if:MS>{É uma mentira elegante, o nome: as 'Planícies' de Vastiri. Eu só conheço como um deserto severo, uma terra devastada cheia de pedras quebradas, areia carmin e terra salgada. Aqueles que chamam de 'Planícies' vê a terra como ela era há milhares de anos atrás. Estão iludidos. Mas quem sou eu pra julgar? Ainda acredito em algum dia encontrar um lar, mesmo com um rosto como o meu. Talvez todos nós precisamos de algumas ilusões para ficarmos sãos. Qual é o seu sabor preferido de loucura, Exilado?}<elif:FS>{É uma mentira elegante, o nome: as 'Planícies' de Vastiri. Eu só conheço como um deserto severo, uma terra devastada cheia de pedras quebradas, areia carmin e terra salgada. Aqueles que chamam de 'Planícies' vê a terra como ela era há milhares de anos atrás. Estão iludidos. Mas quem sou eu pra julgar? Ainda acredito em algum dia encontrar um lar, mesmo com um rosto como o meu. Talvez todos nós precisamos de algumas ilusões para ficarmos sãos. Qual é o seu sabor preferido de loucura, Exilada?}"
+        "<if:MS>{É uma mentira elegante, o nome: as 'Planícies' de Vastiri. Eu só conheço como um deserto severo, uma terra devastada cheia de pedras quebradas, areia carmin e terra salgada. Aqueles que chamam de 'Planícies' veem a terra como ela era há milhares de anos atrás. Estão iludidos.\r\n\r\nMas quem sou eu para julgar? Ainda acredito em algum dia encontrar um lar, mesmo com um rosto como o meu. Talvez todos nós precisamos de algumas ilusões para ficarmos sãos. Qual é o seu sabor preferido de loucura, Exilado?}<elif:FS>{É uma mentira elegante, o nome: as 'Planícies' de Vastiri. Eu só conheço como um deserto severo, uma terra devastada cheia de pedras quebradas, areia carmin e terra salgada. Aqueles que chamam de 'Planícies' veem a terra como ela era há milhares de anos atrás. Estão iludidos.\r\n\r\nMas quem sou eu para julgar? Ainda acredito em algum dia encontrar um lar, mesmo com um rosto como o meu. Talvez todos nós precisamos de algumas ilusões para ficarmos sãos. Qual é o seu sabor preferido de loucura, Exilada?}"
       ],
       [
         "NenetAboutStrangeVoice",
@@ -44505,7 +44553,7 @@
         "Somos uma só carne, mas duas mentes, dois corpos. Somos família, ambos nascidos da anarquia emaranhada do vazio, mas não compartilhamos o mesmo criador. Ela é minha guarda e minha prisão. Eu sou seu protetor, e sou seu servo."
       ],
       [
-        "EnvoyGreetingT1MavenRandom",
+        "EnvoyGreetingT1MavenOne",
         "Eles lutaram com ferocidade para proteger a árvore que segurava seus ninhos. Agora a mata queima, e a fumaça se levanta no ar, e o bater de suas asas apenas aumenta as chamas. O fogo se aproxima, Nômade, e irá consumir todos nós. "
       ],
       [
@@ -44537,7 +44585,7 @@
         "Eles clamaram pelo leite da mãe e foi dado. Eles dançaram extasiados sob a chuva nutritiva, sufocando no âmnio emaranhado, caindo um a um na luta egoísta pela sobrevivência."
       ],
       [
-        "EnvoyGreetingT2MavenRandom",
+        "EnvoyGreetingT2MavenOne",
         "Às vezes eu lhe invejo, Nômade. Você age em prol da sobrevivência. Você anda com propósito, para proteger uma existência frágil. Sua mente é agredida pela realidade de que você é um grão de areia à deriva num deserto sem fim. Ainda assim, protegido por esperança. Uma farça frágil que segura a  verdade devastadora de desesperança do mesmo jeito. "
       ],
       [
@@ -44565,7 +44613,7 @@
         "As estrelas olham com inveja enquanto a vida envolve cada lugar aberto, um ciclo de nascimento e morte é tão dinâmico quanto rítimico, enquanto as estrelas queimam incessantemente e imutáveis por incontáveis vidas. A eternidade é estagnação e a estagnação é um tormento."
       ],
       [
-        "EnvoyGreetingT3MavenRandom",
+        "EnvoyGreetingT3MavenOne",
         "A corda do tempo puxa toda a vida, como cães em coleiras, para o mesmo fim. Ainda assim, eles galopam alegremente, sempre acreditando que seu mestre tem as melhores intenções. "
       ],
       [
@@ -44605,7 +44653,7 @@
         "Fui conduzido para a escuridão e recebi uma tocha acesa e furiosa para guiar meu caminho até ela. Eu a senti puxar, senti o fogo crescer, lambendo e açoitando meu rosto. Fui consumido pela viagem e lançado aos seus cuidados como uma concha oca, para protegê-la, limitá-la e nunca deixá-la. Esta seria minha punição mais longa."
       ],
       [
-        "EnvoyGreetingT4MavenRandom",
+        "EnvoyGreetingT4MavenOne",
         "Cada noite o silêncio vinha e levava embora para o mar negro todos os pensamentos de liberdade. Vi minhas esperanças se afogarem, chegarem quebradas e mortas na beira da praia, adornando as areias afiadas como roupas largadas, negligenciadas e abandonadas. "
       ],
       [
@@ -44625,7 +44673,7 @@
         "Eu tentei contar quantos a seguiram através da barreira, mas nenhum conseguiu, ou todos que tentaram se tornaram pó na luz. Isso era o dever de apenas um, manter a vigília enquanto o nascence amadurecia e o cru e sem forma era forjado no calor da passagem do tempo. Não seria tão fácil escapar da minha punição."
       ],
       [
-        "EnvoyGreetingT5MavenRandom",
+        "EnvoyGreetingT5MavenOne",
         "A promessa do Sonhador foi finalmente cumprida, ainda que não soubéssemos disso. Sua chegada foi anunciada primeiramente como um suspiro em nossas mentes que, uma vez proferido, absorveu todos os outros pensamentos. Porém, uma eternidade passará antes que possamos sentir seu fogo. "
       ],
       [
@@ -54674,7 +54722,7 @@
       ],
       [
         "TrialmasterPlayerTookRewardLastTimeRoundTwoRandom",
-        "Eu espero sinceramente que você dure mais do que duas rodadas."
+        "Como você vai superar esta última performance incrível?"
       ],
       [
         "TrialmasterPlayerTookRewardLastTimeRoundTwo2",
@@ -55058,11 +55106,11 @@
       ],
       [
         "TrialmasterMoodBeginTwoToFourWins3",
-        "Você esta ganhando, mas será que pode continuar?"
+        "Você estpa ganhando, mas será que pode continuar?"
       ],
       [
         "TrialmasterMoodBeginTwoToFourWins4",
-        "Você esta ganhando, mas será que pode continuar?"
+        "Você estpa ganhando, mas será que pode continuar?"
       ],
       [
         "TrialmasterMoodBeginTwoToFourWins5",
@@ -55370,15 +55418,15 @@
       ],
       [
         "TrialmasterMoodPlayerWonFiveOrMoreWins9",
-        "Eu deveria ter me tornado um sacerdote de Yaomac..."
+        "Eu deveria ter me tornado um padre de Yaomac em vez disso..."
       ],
       [
         "TrialmasterMoodPlayerWonFiveOrMoreWins10",
-        "Eu deveria ter me tornado um sacerdote de Yaomac..."
+        "Eu deveria ter me tornado um padre de Yaomac em vez disso..."
       ],
       [
         "TrialmasterMoodPlayerWonFiveOrMoreWins11",
-        "Eu deveria ter me tornado um sacerdote de Yaomac..."
+        "Eu deveria ter me tornado um padre de Yaomac em vez disso..."
       ],
       [
         "TrialmasterMoodPlayerWonFiveOrMoreWins12",
@@ -55610,11 +55658,11 @@
       ],
       [
         "TrialmasterMoodPlayerLostTwoToFourWins13",
-        "Seu caminho até a grandiosidade fez uma séria curva em direção ao penhasco. "
+        "Seu caminho até a grandiosidade fez uma séria curva em diração ao penhasco. "
       ],
       [
         "TrialmasterMoodPlayerLostTwoToFourWins14",
-        "Seu caminho até a grandiosidade fez uma séria curva em direção ao penhasco. "
+        "Seu caminho até a grandiosidade fez uma séria curva em diração ao penhasco. "
       ],
       [
         "TrialmasterMoodPlayerLostFiveOrMoreWinsRandom",
@@ -55701,6 +55749,162 @@
         "Hora de acaba com isso!"
       ],
       [
+        "DelveVaalCityBossIntroRandom",
+        "<if:MS>{Xictep cutlotl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro2",
+        "<if:MS>{Xictep cutlotl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro3",
+        "<if:MS>{Xictep cutlotl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro4",
+        "<if:MS>{Xictep cutlotl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro5",
+        "<if:MS>{Xictep cutlotl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro6",
+        "<if:MS>{Xictep cutlotl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro7",
+        "<if:MS>{Tatlat Atziri!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro8",
+        "<if:MS>{Tatlat Atziri!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro9",
+        "<if:MS>{Tatlat Atziri!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro10",
+        "<if:MS>{Tatlat Atziri!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro11",
+        "<if:MS>{Tatlat Atziri!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro12",
+        "<if:MS>{Vaal a xomaplat!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro13",
+        "<if:MS>{Vaal a xomaplat!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro14",
+        "<if:MS>{Vaal a xomaplat!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossIntro15",
+        "<if:MS>{Vaal a xomaplat!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossDeathRandom",
+        "<if:MS>{Atzi-... ah-...}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossDeath2",
+        "<if:MS>{Atzi-... ah-...}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossDeath3",
+        "<if:MS>{Opil... Vaal...}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossDeath4",
+        "<if:MS>{Opil... Vaal...}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossDeath5",
+        "<if:MS>{Opil... Vaal...}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossDeath6",
+        "<if:MS>{Opil... Vaal...}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossDeath7",
+        "<if:MS>{Tocab--... atla-...}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossDeath8",
+        "<if:MS>{Tocab--... atla-...}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossDeath9",
+        "<if:MS>{Tocab--... atla-...}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillARandom",
+        "<if:MS>{Zahua moti!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillA2",
+        "<if:MS>{Zahua moti!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillA3",
+        "<if:MS>{Zahua moti!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillBRandom",
+        "<if:MS>{Azcado!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillB2",
+        "<if:MS>{Azcado!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillB3",
+        "<if:MS>{Azcado!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillCRandom",
+        "<if:MS>{Quiquate!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillC2",
+        "<if:MS>{Quiquate!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillC3",
+        "<if:MS>{Quiquate!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillDRandom",
+        "<if:MS>{Huatatl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillD2",
+        "<if:MS>{Huatatl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillD3",
+        "<if:MS>{Huatatl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveVaalCityBossSkillD4",
+        "<if:MS>{Huatatl!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntroRandom",
+        "<if:MS>{Uor al-Nahm!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossDeathRandom",
+        "<if:MS>{Am-... amta...}<elif:FS>{ }"
+      ],
+      [
         "TrialmasterPlayerTookRewardRandom",
         "A escolha segura. "
       ],
@@ -55711,6 +55915,138 @@
       [
         "TrialmasterPlayerTookReward3",
         "Assim será, por mais decepcionante que seja. "
+      ],
+      [
+        "DelveProtoVaalCityBossIntro2",
+        "<if:MS>{Uor al-Nahm!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro3",
+        "<if:MS>{Uor al-Nahm!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro4",
+        "<if:MS>{Uor al-Nahm!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro5",
+        "<if:MS>{Uor al-Nahm!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro6",
+        "<if:MS>{Habra Ahn!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro7",
+        "<if:MS>{Habra Ahn!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro8",
+        "<if:MS>{Habra Ahn!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro9",
+        "<if:MS>{Habra Ahn!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro10",
+        "<if:MS>{Utem Zazul!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro11",
+        "<if:MS>{Utem Zazul!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro12",
+        "<if:MS>{Utem Zazul!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro13",
+        "<if:MS>{Hatem ahk Aul!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro14",
+        "<if:MS>{Hatem ahk Aul!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossIntro15",
+        "<if:MS>{Hatem ahk Aul!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossDeath2",
+        "<if:MS>{Am-... amta...}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossDeath3",
+        "<if:MS>{Am-... amta...}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossDeath4",
+        "<if:MS>{Zurra... sha...}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossDeath5",
+        "<if:MS>{Zurra... sha...}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossDeath6",
+        "<if:MS>{Zurra... sha...}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossDeath7",
+        "<if:MS>{Ahkbo tel... zar.}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossDeath8",
+        "<if:MS>{Ahkbo tel... zar.}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillARandom",
+        "<if:MS>{Hur-nak!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillA2",
+        "<if:MS>{Hur-nak!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillA3",
+        "<if:MS>{Hur-nak!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillBRandom",
+        "<if:MS>{Zem Zamarr!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillB2",
+        "<if:MS>{Zem Zamarr!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillB3",
+        "<if:MS>{Zem Zamarr!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillCRandom",
+        "<if:MS>{Otemba!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillC2",
+        "<if:MS>{Otemba!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillC3",
+        "<if:MS>{Otemba!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillDRandom",
+        "<if:MS>{Azu Azar!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillD2",
+        "<if:MS>{Azu Azar!}<elif:FS>{ }"
+      ],
+      [
+        "DelveProtoVaalCityBossSkillD3",
+        "<if:MS>{Azu Azar!}<elif:FS>{ }"
       ],
       [
         "HasinaPetIdleRandom",
@@ -55811,6 +56147,3338 @@
       [
         "RoyaleAnnouncerVictorious",
         ""
+      ],
+      [
+        "EnvoyRandomFinalSayingRandom",
+        "<if:MS>{Eles... estão vindo.}<elif:FS>{ }"
+      ],
+      [
+        "EnvoyRandomFinalSaying2",
+        "<if:MS>{Eles... estão vindo.}<elif:FS>{ }"
+      ],
+      [
+        "EnvoyRandomFinalSaying3",
+        "<if:MS>{Eles... estão vindo.}<elif:FS>{ }"
+      ],
+      [
+        "DannigOnExpeditionMap",
+        "<if:MS>{Nossas expedições são uma questão de honra, particular. Vamos discutir isso no seu Refúgio.}<elif:FS>{ }"
+      ],
+      [
+        "TujenRandomMap",
+        "[DNT] Random map exile!"
+      ],
+      [
+        "TujenRareIntBoots",
+        "[DNT] Rare int boots exile?"
+      ],
+      [
+        "TujenRegretStack20",
+        "[DNT] Stack of 20 regrets i think, exile."
+      ],
+      [
+        "TujenRegalStack5",
+        "[DNT] Stack of 5 regals you'll never use, exile?"
+      ],
+      [
+        "TujenDivineStack4",
+        "[DNT] Stack of 4 divines, exile!"
+      ],
+      [
+        "TujenMirrorStack2",
+        "[DNT] Oh my god it's a stack of 2 mirrors exile"
+      ],
+      [
+        "GamblerCurrencyVeryLowMagicRarityEquipment",
+        "<if:MS>{Sem risco, sem recompensa. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyVeryLowRareRarityEquipment",
+        "<if:MS>{Isso pode ser útil?}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentOne",
+        "<if:MS>{Pelo menos, é alguma coisa!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentTwo",
+        "<if:MS>{Já é alguma coisa!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentThree",
+        "<if:MS>{Isso parece intrigante!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentFour",
+        "<if:MS>{Você acreditou, e sua crença valeu a pena!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyVeryLowDivineUniqueCommentOne",
+        "<if:MS>{Wow! Não faço a mínima ideia do que fazer com isso. Mas pelo menos você pagou barato!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyVeryLowHeadhunter",
+        "<if:MS>{Parabéns! Você ganhou na loteria! Sempre soube que você teria boa sorte. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyVeryLowEquipmentSpecialLow",
+        "<if:MS>{Curioso... pelo menos você não pagou muito por isso. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyVeryLowEquipmentSpecialMid",
+        "<if:MS>{Eu diria que é um pagamento decente. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyVeryLowEquipmentSpecialHigh",
+        "<if:MS>{Um equipamento bem interessante, esse aí! E foi barato!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyLowMagicRarityEquipment",
+        "<if:MS>{Você recebe o que você paga, eu suponho!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyLowRareRarityEquipment",
+        "<if:MS>{Pelo menos é bonito. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentFive",
+        "<if:MS>{Hmm. Pode ser útil em certas situações. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentSix",
+        "<if:MS>{Um prêmio decente!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyLowDivineUniqueCommentTwo",
+        "<if:MS>{Fico feliz que tenha me livrado disso. Eu não gosto. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyLowHeadhunter",
+        "<if:MS>{Incrível! Eu deveria mesmo ter cobrado mais por esse aí!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyLowEquipmentSpecialLow",
+        "<if:MS>{Baixo risco, equipamento estranho. Apenas mais um dia de apostas. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyLowEquipmentSpecialMid",
+        "<if:MS>{Que interessante! E não foi muito caro também. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyLowEquipmentSpecialHigh",
+        "<if:MS>{Ah, isso é um prêmio decente!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyMediumMagicRarityEquipment",
+        "<if:MS>{Mais sorte na próxima vez. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyMediumRareRarityEquipment",
+        "<if:MS>{Nunca se sabe com esse tipo de equipamento. Talvez alguém troque com você. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentSeven",
+        "<if:MS>{Não estou sentindo que você ficou feliz com esse aqui. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentEight",
+        "<if:MS>{Isso parece bem legal.}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyMediumDivineUniqueCommentThree",
+        "<if:MS>{Artefatos relacionados a esses seus \"deuses\" me deixam desconfiado...}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyMediumHeadhunter",
+        "<if:MS>{Isso! Você conseguiu! A sorte lhe favoreceu hoje!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyMediumEquipmentSpecialLow",
+        "<if:MS>{Wraeclast tem um equipamento estranho desse...}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyMediumEquipmentSpecialMid",
+        "<if:MS>{Parece que a sua fé na sorte valeu a pena.}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyMediumEquipmentSpecialHigh",
+        "<if:MS>{Você está ficando bom em apostas!}<elif:FS>{Você está ficando boa em apostas!}"
+      ],
+      [
+        "GamblerCurrencyHighMagicRarityEquipment",
+        "<if:MS>{Ouch.}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyHighRareRarityEquipment",
+        "<if:MS>{Você precisa ter mais fé. }<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentNine",
+        "<if:MS>{...legal.}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyUniqueCommentTen",
+        "<if:MS>{Hmm. Um risco alto esse que você correu, mas isso pode ser... alguma coisa?}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyHighDivineUniqueCommentFour",
+        "<if:MS>{Tem certeza que esse material \"divino\" vale tudo isso que você pagou?}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyHighHeadhunter",
+        "<if:MS>{Isso parece bem útil, no mínimo!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyHighEquipmentSpecialLow",
+        "<if:MS>{Equipamento estranho por um alto preço. Essa é a beleza da aposta.}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyHighEquipmentSpecialMid",
+        "<if:MS>{Nada mal, para o risco que você escolheu.}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyHighEquipmentSpecialHigh",
+        "<if:MS>{Risco alto recompensa alta!}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyVeryHighHeadhunter",
+        "<if:MS>{Você por um acaso gritou de alegria?}<elif:FS>{ }"
+      ],
+      [
+        "GamblerCurrencyVeryHighRareLeatherBeltWithLife",
+        "<if:MS>{Você não teve fé suficiente. Mais sorte na próxima vez.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialShout",
+        "<if:MS>{Você aí! Nativo! Venha aqui!}<elif:FS>{Você aí! Nativa! Venha aqui!}"
+      ],
+      [
+        "GwennenTutorialIntro",
+        "<if:MS>{Aposto que um caipira como você ficaria ansioso para ver algumas explosões. Não se preocupe ainda com o motivo de estarmos explodindo coisas. Já vou explicar.\r\n\r\nEu fui em frente e marquei os locais de prováveis tesouros e perigos. Considere-me magnânimo - você pode escolher o que descobriremos, pois estou ansioso para ver que tipo de sorte você possui. Eu vou esperar aqui. O mais longe possível.\r\n\r\nOrganize uma série de dispositivos. Faremos uma exibição excelente e poderosa. }<elif:FS>{Aposto que uma caipira como você ficaria ansiosa para ver algumas explosões. Não se preocupe ainda com o motivo de estarmos explodindo coisas. Já vou explicar.\r\n\r\nEu fui em frente e marquei os locais de prováveis tesouros e perigos. Considere-me magnânimo - você pode escolher o que descobriremos, pois estou ansioso para ver que tipo de sorte você possui. Eu vou esperar aqui. O mais longe possível.\r\n\r\nOrganize uma série de dispositivos. Faremos uma exibição excelente e poderosa. }"
+      ],
+      [
+        "GwennenTutorialPlayerPlacesFirstExplosive",
+        "<if:MS>{Tente ir o mais longe possível com o cabo de detonação.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialPlayerWalksTooFarAway",
+        "<if:MS>{Não tão longe!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialPlayerPlacesSecondExplosive",
+        "<if:MS>{Mais longe! Segue em frente. Longe de mim. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialPlayerPlacesThirdExplosive",
+        "<if:MS>{Tudo certo. Vamos acender?}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialDetonating",
+        "<if:MS>{Eu deveria mencionar... Isso pode desenterrar monstros!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialMonstersAppearing",
+        "<if:MS>{Você consegue derrotá-los!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialMoreMonstersAppearing",
+        "<if:MS>{Pega eles, nativo!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialAllMonstersDead",
+        "<if:MS>{Você conseguiu? ...você conseguiu! A maioria dos nativos que pego para esse trabalho não duram tanto tempo.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialTalkAfter",
+        "<if:MS>{Hah, sim, eu poderia ter sido mais sincero sobre o perigo... Mas beja bem, as pessoas não aceitam o trabalho quando eu menciono que a terra revirada é cheia de criaturas mortais. É uma terra bem terrível essa que vocês tem aqui, nativo. Incrível como alguém consegue sobreviver aqui. Embora isso explique de fato por que estou aqui, pra começo de conversa... mas você vai ter que perguntar sobre isso para Dannig, se você encontrá-lo.\r\n\r\nA propósito, se você gosta de um pouco de risco, tenho algumas coisas que desenterrei que podem ser interessantes para você... }<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialPartingShoutForTutorialTwo",
+        "<if:MS>{ Se você ver Tujen, diga a ele que eu te enviei!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialPartingShout",
+        "<if:MS>{Vou terminar aqui. Vejo você em breve!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialTwoShout",
+        "<if:MS>{Achei uma coisa especial para você aqui, nativo!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialTwoIntro",
+        "<if:MS>{Ruínas de civilizações antigas abundam neste continente. Aparentemente, algumas das ruínas ainda têm influências misteriosas. É um pouco arriscado destruir uma e liberar suas energias, mas a recompensa pode valer a pena.\r\n\r\nTudo o que é desenterrado depois que uma ruína é destruída surge um pouco diferente. Por que você não coloca um explosivo perto daquela ali? Vamos ver o que acontece.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialPlayerPlacesExplosiveNotNearRemnant",
+        "<if:MS>{Coloque um explosivo próximo da ruína!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialTwoFailure",
+        "<if:MS>{Esse esquema de explosivos não vai nem arranhar a ruína! Bem, vamos tentar novamente mais tarde.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialPlayerPlacesExplosiveNearRemnant",
+        "<if:MS>{Ótimo, isso vai dar jeito. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialEnragedMonstersAppearing",
+        "<if:MS>{Eu deveria dizer... Isso pode enfurecer os monstros!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialTwoAllMonstersDead",
+        "<if:MS>{Aqui, Exilado! Destruir ruínas é um empreendimento arriscado, mas você pode claramente lidar com isso.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenTutorialTwoTalkAfter",
+        "<if:MS>{Então parece que a destruição de ruínas antigas altera tudo o que desenterramos posteriormente - tesouros e monstros. É uma aposta e você sabe que estou sempre disposto a isso. Contanto que você esteja pronto para lidar com as consequências... com violência.}<elif:FS>{ }"
+      ],
+      [
+        "DannigTrailerLookingAtExpedition",
+        "<if:MS>{A tradução é difícil nesse aqui. O Escrivão dessa expedição claramente era um novato. Listas prosaicas de pontos de referência transmitidos na jornada... colinas notáveis, rios, uma cadeia de montanhas... ele fala muito sobre as batalhas, no entanto. Páginas e mais páginas de flechas de bestas 'encontrando espaço nos pescoços e corações de cambaleantes vestidos de forma exótica'. Os jovens ainda eram os mesmos filhotes sanguinários milhares de anos atrás, ao que parece.\r\n\r\nPode ser um local Vaal, com base nessa descrição, embora ele não entre em detalhes sobre as roupas deles. O uso de bestas parece ser trabalho dos Foices Negras. Existem alguns locais que podem caber nos detalhes deste diário de bordo. O que você acha?}<elif:FS>{ }"
+      ],
+      [
+        "DannigIntroGeneralWitch",
+        "<if:MS>{Você é só pele e osso, Exilado, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}<elif:FS>{Você é só pele e osso, Exilada, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}"
+      ],
+      [
+        "DannigIntroGeneralScion",
+        "<if:MS>{Você é só pele e osso, Exilado, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}<elif:FS>{Você é só pele e osso, Exilada, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}"
+      ],
+      [
+        "DannigIntroGeneralRanger",
+        "<if:MS>{Você é só pele e osso, Exilado, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}<elif:FS>{Você é só pele e osso, Exilada, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}"
+      ],
+      [
+        "DannigIntroGeneralDuelist",
+        "<if:MS>{Você é só pele e osso, Exilado, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}<elif:FS>{Você é só pele e osso, Exilada, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}"
+      ],
+      [
+        "DannigIntroGeneralShadow",
+        "<if:MS>{Você é só pele e osso, Exilado, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}<elif:FS>{Você é só pele e osso, Exilada, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}"
+      ],
+      [
+        "DannigIntroGeneralTemplar",
+        "<if:MS>{Você é só pele e osso, Exilado, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}<elif:FS>{Você é só pele e osso, Exilada, mas você chegou até aqui. Obviamente, você deve ter algum talento. Gostaria de disponibilizar suas habilidades para uma questão de honra?}"
+      ],
+      [
+        "DannigIntroMarauder",
+        "<if:MS>{Ah, um colega guerreiro! Você e eu deveríamos dividir histórias sobre bravura ancestral à luz de uma fogueira. Mas, primeiro, tenho um pedido. Uma questão de honra. Acredito que você seja bem adequado para isso. }<elif:FS>{Ah, uma colega guerreira! Você e eu deveríamos dividir histórias sobre bravura ancestral à luz de uma fogueira. Mas, primeiro, tenho um pedido. Uma questão de honra. Acredito que você seja bem adequada para isso. }"
+      ],
+      [
+        "DannigNotHelping",
+        "<if:MS>{Hora de fazer por merecer. Você cuida da luta.}<elif:FS>{ }"
+      ],
+      [
+        "DannigApproachShoutRandom",
+        "<if:MS>{Hail!}<elif:FS>{ }"
+      ],
+      [
+        "DannigApproachShout2",
+        "<if:MS>{Hail!}<elif:FS>{ }"
+      ],
+      [
+        "DannigApproachShout3",
+        "<if:MS>{Hail!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDetonationRandom",
+        "<if:MS>{Sim!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDetonation2",
+        "<if:MS>{Sim!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDetonation3",
+        "<if:MS>{Sim!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDetonation4",
+        "<if:MS>{Lindo!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDetonation5",
+        "<if:MS>{Lindo!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDetonation6",
+        "<if:MS>{Lindo!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDetonation7",
+        "<if:MS>{Um passo mais perto. }<elif:FS>{ }"
+      ],
+      [
+        "DannigDetonation8",
+        "<if:MS>{Um passo mais perto. }<elif:FS>{ }"
+      ],
+      [
+        "DannigDetonation9",
+        "<if:MS>{Um passo mais perto. }<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementRiskRandom",
+        "<if:MS>{Vejo que corre um sério perigo...}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementRisk2",
+        "<if:MS>{Vejo que corre um sério perigo...}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementRisk3",
+        "<if:MS>{Vejo que corre um sério perigo...}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementRisk4",
+        "<if:MS>{Tem certeza disso? Parece arriscado.}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementRisk5",
+        "<if:MS>{Tem certeza disso? Parece arriscado.}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementRisk6",
+        "<if:MS>{Tem certeza disso? Parece arriscado.}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementTreasureRandom",
+        "<if:MS>{Esse vai trazer umas bugingangas valiosas.}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementTreasure2",
+        "<if:MS>{Esse vai trazer umas bugingangas valiosas.}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementTreasure3",
+        "<if:MS>{Esse vai trazer umas bugingangas valiosas.}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementTreasure4",
+        "<if:MS>{Ah, você está atrás de tesouros!}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementTreasure5",
+        "<if:MS>{Ah, você está atrás de tesouros!}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementTreasure6",
+        "<if:MS>{Ah, você está atrás de tesouros!}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementDangerRandom",
+        "<if:MS>{Isso certamente vai trazer uma briga...}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementDanger2",
+        "<if:MS>{Isso certamente vai trazer uma briga...}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementDanger3",
+        "<if:MS>{Isso certamente vai trazer uma briga...}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementDanger4",
+        "<if:MS>{Muitos perigos adormecidos ali...}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementDanger5",
+        "<if:MS>{Muitos perigos adormecidos ali...}<elif:FS>{ }"
+      ],
+      [
+        "DannigBombPlacementDanger6",
+        "<if:MS>{Muitos perigos adormecidos ali...}<elif:FS>{ }"
+      ],
+      [
+        "DannigAllBombsPlacedRandom",
+        "<if:MS>{Pronto?}<elif:FS>{ }"
+      ],
+      [
+        "DannigAllBombsPlaced2",
+        "<if:MS>{Pronto?}<elif:FS>{ }"
+      ],
+      [
+        "DannigAllBombsPlaced3",
+        "<if:MS>{Pronto?}<elif:FS>{ }"
+      ],
+      [
+        "DannigAllBombsPlaced4",
+        "<if:MS>{É isso aí, então.}<elif:FS>{ }"
+      ],
+      [
+        "DannigAllBombsPlaced5",
+        "<if:MS>{É isso aí, então.}<elif:FS>{ }"
+      ],
+      [
+        "DannigAllBombsPlaced6",
+        "<if:MS>{É isso aí, então.}<elif:FS>{ }"
+      ],
+      [
+        "DannigAllBombsPlaced7",
+        "<if:MS>{Pronto quando você estiver. }<elif:FS>{ }"
+      ],
+      [
+        "DannigAllBombsPlaced8",
+        "<if:MS>{Pronto quando você estiver. }<elif:FS>{ }"
+      ],
+      [
+        "DannigAllBombsPlaced9",
+        "<if:MS>{Pronto quando você estiver. }<elif:FS>{ }"
+      ],
+      [
+        "DannigDoingDetonationRandom",
+        "<if:MS>{Explosões chegando!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDoingDetonation2",
+        "<if:MS>{Explosões chegando!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDoingDetonation3",
+        "<if:MS>{Explosões chegando!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDoingDetonation4",
+        "<if:MS>{Explosões chegando!}<elif:FS>{ }"
+      ],
+      [
+        "DannigDoingDetonation5",
+        "<if:MS>{Explosões chegando!}<elif:FS>{ }"
+      ],
+      [
+        "DannigOrdersSquireDetonateRandom",
+        "<if:MS>{Escudeiro! Detonar!}<elif:FS>{ }"
+      ],
+      [
+        "DannigOrdersSquireDetonate2",
+        "<if:MS>{Escudeiro! Detonar!}<elif:FS>{ }"
+      ],
+      [
+        "DannigOrdersSquireDetonate3",
+        "<if:MS>{Escudeiro! Detonar!}<elif:FS>{ }"
+      ],
+      [
+        "DannigExplainsExchanging",
+        "<if:MS>{Algumas relíquias são mais importantes que outras. Se você encontrou alguma coisa dos Cavaleiros do Sol, vou pegar em troca do que os outros negociaram.}<elif:FS>{ }"
+      ],
+      [
+        "DannigExplainsExchangingAlternate",
+        "<if:MS>{Minha missão é investigar os Cavaleiros do Sol e adquirir suas relíquias. Estou disposto a trocar outras relíquias menos importantes pelas deles. }<elif:FS>{ }"
+      ],
+      [
+        "DanningRerollInventoryRandom",
+        "<if:MS>{Vamos ver o que mais temos aqui...}<elif:FS>{ }"
+      ],
+      [
+        "DanningRerollInventory2",
+        "<if:MS>{Vamos ver o que mais temos aqui...}<elif:FS>{ }"
+      ],
+      [
+        "DanningRerollInventory3",
+        "<if:MS>{Vamos ver o que mais temos aqui...}<elif:FS>{ }"
+      ],
+      [
+        "DanningRerollInventory4",
+        "<if:MS>{Posso arranjar mais algumas opções.}<elif:FS>{ }"
+      ],
+      [
+        "DanningRerollInventory5",
+        "<if:MS>{Posso arranjar mais algumas opções.}<elif:FS>{ }"
+      ],
+      [
+        "DanningRerollInventory6",
+        "<if:MS>{Posso arranjar mais algumas opções.}<elif:FS>{ }"
+      ],
+      [
+        "DanningRerollInventory7",
+        "<if:MS>{Tem interesse em outra coisa, hein?}<elif:FS>{ }"
+      ],
+      [
+        "DanningRerollInventory8",
+        "<if:MS>{Tem interesse em outra coisa, hein?}<elif:FS>{ }"
+      ],
+      [
+        "DanningRerollInventory9",
+        "<if:MS>{Tem interesse em outra coisa, hein?}<elif:FS>{ }"
+      ],
+      [
+        "DannigOlrothFightTombOpened",
+        "<if:MS>{A Chama Triskelion está abaixo! Posso sentir seu poder!}<elif:FS>{ }"
+      ],
+      [
+        "DannigOlrothFightFlameSeen",
+        "<if:MS>{É isso! Finalmente encontramos!}<elif:FS>{ }"
+      ],
+      [
+        "DannigOlrothAwakens",
+        "<if:MS>{Exilado! Ele se mexe!}<elif:FS>{Exilada! Ele se mexe!}"
+      ],
+      [
+        "DannigOlrothDefeatedFirst",
+        "<if:MS>{Enquanto ele está abatido, vamos pegar a Chama!}<elif:FS>{ }"
+      ],
+      [
+        "DannigOlrothDamageFlameFirst",
+        "<if:MS>{Não podemos derrotá-lo diretamente. Use explosivos para danificar a Chama!}<elif:FS>{ }"
+      ],
+      [
+        "DannigOlrothDefeatedSecond",
+        "<if:MS>{Ainda não acabou!}<elif:FS>{ }"
+      ],
+      [
+        "DannigOlrothDefeatedDamageFlameSecond",
+        "<if:MS>{Use os explosivos novamente! Danifique a Chama Triskelion!}<elif:FS>{ }"
+      ],
+      [
+        "DannigOlrothFightEnd",
+        "<if:MS>{A Chama foi destruída... Mas, pelo menos, Olroth pode finalmente descansar. }<elif:FS>{ }"
+      ],
+      [
+        "DannigOlrothFightEpilogueCommentary",
+        "<if:MS>{Não conte aos outros que destruímos a Chama. Eles perderão as esperanças. Esta missão é sore a jornada, não o destino. }<elif:FS>{ }"
+      ],
+      [
+        "DanningHowAboutYourHideout",
+        "<if:MS>{Procuramos uma base de operações que seja segura e isolada. Seria ideal se você tivesse um refúgio. Podemos planejar nossas expedições por lá. }<elif:FS>{ }"
+      ],
+      [
+        "DannigReinvitedToHideout",
+        "<if:MS>{Você é bem instável, mas tudo bem.}<elif:FS>{ }"
+      ],
+      [
+        "DannigLogbookKnightsOfTheSun",
+        "<if:MS>{Escribas ligados aos Cavaleiros do Sol costumavam ser exageradamente poéticos. Alguém aqui sabe o que é um 'prado'? Essa palavra é usada <i>{três vezes} para descrever um vale, uma clareira e uma campina. Seja específico, cronista! Decifrei tudo que podia nesse diário de bordo. Esse aqui é por sua conta, Exilado.  }<elif:FS>{Escribas ligados aos Cavaleiros do Sol costumavam ser exageradamente poéticos. Alguém aqui sabe o que é um 'prado'? Essa palavra é usada <i>{três vezes} para descrever um vale, uma clareira e uma campina. Seja específico, cronista! Decifrei tudo que podia nesse diário de bordo. Esse aqui é por sua conta, Exilada.  }"
+      ],
+      [
+        "DannigLogbookBlackScytheMercenaries",
+        "<if:MS>{Sempre dá pra identificar um diário de bordo de um Foice Negra. Cheio de detalhes marciais e descrições elaboradas de combates violentos, decisões estratégicas, e a graça assassina de Vorana no campo de batalha. Apesar disso, não tem muitos marcadores logísticos úteis. }<elif:FS>{ }"
+      ],
+      [
+        "DannigLogbookDruidsOfTheBrokenCircle",
+        "<if:MS>{Isso é levemente perturbador, mas os diários de bordo escritos pelos Escribas Druidas frequentemente descrevem terrenos naturais pelo que <i>{eram}, bem como o que <i>{poderiam vir a ser}. Acredito que esses diários de bordo se aproximam bem mais das paisagens que vemos hoje. Eles não podiam, de fato, ver o futuro ao olhar para o passado, será? Eles eram simplesmente especialistas em natureza. Sim, ciência envolta em misticismo... uma desculpa que conforta minha alma. Vamos testar seus palpites, Exilado?}<elif:FS>{Isso é levemente perturbador, mas os diários de bordo escritos pelos Escribas Druidas frequentemente descrevem terrenos naturais pelo que <i>{eram}, bem como o que <i>{poderiam vir a ser}. Acredito que esses diários de bordo se aproximam bem mais das paisagens que vemos hoje. Eles não podiam, de fato, ver o futuro ao olhar para o passado, será? Eles eram simplesmente especialistas em natureza. Sim, ciência envolta em misticismo... uma desculpa que conforta minha alma. Vamos testar seus palpites, Exilada?}"
+      ],
+      [
+        "DannigLogbookOrderOfTheChalice",
+        "<if:MS>{Uhtred e seus padres tinham seus próprios objetivos secretos. É difícil decifrar diários de bordo com textos altamente religiosos que podem nem ser verdadeiros. Sem críticas à religião, só às suas escolhas bombásticas de palavras. Tudo é 'puro' e 'estrelado' e 'reluzente'. Faz com que seja bem frustrante a montagem de uma trilha. Há pelo menos um local da Ordem do Cálice mencionado. O que devemos perseguir, Exilado?}<elif:FS>{Uhtred e seus padres tinham seus próprios objetivos secretos. É difícil decifrar diários de bordo com textos altamente religiosos que podem nem ser verdadeiros. Sem críticas à religião, só às suas escolhas bombásticas de palavras. Tudo é 'puro' e 'estrelado' e 'reluzente'. Faz com que seja bem frustrante a montagem de uma trilha. Há pelo menos um local da Ordem do Cálice mencionado. O que devemos perseguir, Exilada?}"
+      ],
+      [
+        "DannigLogbookMaraketh",
+        "<if:MS>{Não sei muito sobre os Maraketh, mas os marcos terrenos desse diário de bordo pode indicar que nós estamos pisando em um de seus locais antigos. Acho que podemos fugir se formos rápidos. Você que sabe, Exilado. }<elif:FS>{Não sei muito sobre os Maraketh, mas os marcos terrenos desse diário de bordo pode indicar que nós estamos pisando em um de seus locais antigos. Acho que podemos fugir se formos rápidos. Você que sabe, Exilada. }"
+      ],
+      [
+        "DannigLogbookVaal",
+        "<if:MS>{Não sou um caçador de tesouros por natureza, mas esse é tentador até pra mim. O diário de bordo descreve montanhas de ouro encontradas em cidades Vaal cheias de coisas coloridas. Montanhas de ouro. Montanhas... de ouro... Você acha que ainda estão lá? Vamos descobrir. A menos que você queira viajar para outros locais menos interessantes por algum motivo...}<elif:FS>{ }"
+      ],
+      [
+        "DannigLogbookKarui",
+        "<if:MS>{Esta expedição pode nos levar a um local Karui. Bem, este é um povo honrado que eu gostaria muito de conhecer. Passei minha vida em busca de renome, então o Caminho deles me intriga. Devemos aprender tudo que pudermos, Exilado?}<elif:FS>{Esta expedição pode nos levar a um local Karui. Bem, este é um povo honrado que eu gostaria muito de conhecer. Passei minha vida em busca de renome, então o Caminho deles me intriga. Devemos aprender tudo que pudermos, Exilada?}"
+      ],
+      [
+        "DannigLogbookEternalEmpire",
+        "<if:MS>{Esse Império Eterno me deixa intrigado. Eu não chamaria exatamente de Eternos, já que estão mortos agora, mas já que tantos deles ainda andam por aí aos pedaços, talvez foram nomeados adequadamente. Quer explorar um de seus locais antigos, Exilado?}<elif:FS>{Esse Império Eterno me deixa intrigado. Eu não chamaria exatamente de Eternos, já que estão mortos agora, mas já que tantos deles ainda andam por aí aos pedaços, talvez foram nomeados adequadamente. Quer explorar um de seus locais antigos, Exilada?}"
+      ],
+      [
+        "DannigLogbookOriathan",
+        "<if:MS>{Os Oriathianos não foram muito amigáveis conosco. Esta expedição pode nos levar a um dos locais deles, e estou pensando em profanar um pouco mais de propósito. Interessado em uma destruição, Exilado?}<elif:FS>{Os Oriathianos não foram muito amigáveis conosco. Esta expedição pode nos levar a um dos locais deles, e estou pensando em profanar um pouco mais de propósito. Interessada em uma destruição, Exilada?}"
+      ],
+      [
+        "DannigLogbookSiren",
+        "<if:MS>{As pistas terrenas deste diário de bordo podem nos levar a um local antes habitado por Sereias. Parece um mito para mim, mas os mitos geralmente contêm um fundo de verdade. Talvez eu encha meus ouvidos para evitar suas canções supostamente encantadoras. Poderíamos então investigar e ver a verdade por nós mesmos. O que você acha, Exilado?}<elif:FS>{As pistas terrenas deste diário de bordo podem nos levar a um local antes habitado por Sereias. Parece um mito para mim, mas os mitos geralmente contêm um fundo de verdade. Talvez eu encha meus ouvidos para evitar suas canções supostamente encantadoras. Poderíamos então investigar e ver a verdade por nós mesmos. O que você acha, Exilada?}"
+      ],
+      [
+        "DannigLogbookMonkeyTribe",
+        "<if:MS>{Se estou traduzindo este diário de bordo corretamente, eles parecem ter conhecido uma tribo de... macacos?... que podiam se comunicar através de gestos. Eles eram capazes de comercializar e até tinham suas próprias estátuas de divindades desconhecidas. Tenho ficado continuamente surpreso com as maravilhas e perigos de Wraeclast, mas este ainda parece um pouco inacreditável para mim. Devemos investigar essas alegações, Exilado?}<elif:FS>{Se estou traduzindo este diário corretamente, eles parecem ter conhecido uma tribo de... macacos?... que podiam se comunicar através de gestos. Eles eram capazes de comercializar e até tinham suas próprias estátuas de divindades desconhecidas. Tenho ficado continuamente surpreso com as maravilhas e perigos de Wraeclast, mas este ainda parece um pouco inacreditável para mim. Devemos investigar essas alegações, Exilada?}"
+      ],
+      [
+        "DannigLogbookLostMen",
+        "<if:MS>{Não tenho certeza se entendi o que estou traduzindo. Pelo menos um dos locais mencionados neste diário de bordo pertencia a uma tribo de 'homens sem nome' que cultuavam os ossos de um tipo específico de besta morta há muito tempo, cuja descrição não faz sentido para mim. Seu continente é estranho. Interessado em explorar essa área, Exilado?}<elif:FS>{Não tenho certeza se entendi o que estou traduzindo. Pelo menos um dos locais mencionados neste diário de bordo pertencia a uma tribo de 'homens sem nome' que cultuavam os ossos de um tipo específico de besta morta há muito tempo, cuja descrição não faz sentido para mim. Seu continente é estranho. Interessada em explorar essa área, Exilada?}"
+      ],
+      [
+        "DannigLogbookVaalPlusBlackScythe",
+        "<if:MS>{A tradução é difícil nesse aqui. O Escriba dessa expedição claramente era um novato. Listas prosaicas de pontos de referência transmitidos na jornada... colinas notáveis, rios, uma cadeia de montanhas... ele fala muito sobre as batalhas, no entanto. Páginas e mais páginas de flechas de bestas 'encontrando espaço nos pescoços e corações de cambaleantes vestidos de forma exótica'. Os jovens ainda eram os mesmos filhotes sanguinários milhares de anos atrás, ao que parece.\r\n\r\nPode ser um local Vaal, com base nessa descrição, embora ele não entre em detalhes sobre as roupas deles. O uso de bestas parece ser trabalho dos Foices Negras. Existem alguns locais que podem caber nos detalhes deste diário de bordo. O que você acha?}<elif:FS>{ }"
+      ],
+      [
+        "DannigLogbookVaalPlusKnights",
+        "<if:MS>{Foram os Cavaleiros do Sol que exploraram as cidades amaldiçoadas dos Vaal. Este diário de bordo era desses primeiros dias, logo depois que eles chegaram a Wraeclast e encontraram aquele império glorioso, brilhante... E cheio de mortos vivos. Não consigo nem imaginar que evento horroroso deve ter sido a morte de uma civilização inteira de uma vez só. Não tenho certeza se quero saber.\r\n\r\nVamos seguir seus passos, Exilado?}<elif:FS>{Foram os Cavaleiros do Sol que exploraram as cidades amaldiçoadas dos Vaal. Este diário de bordo era desses primeiros dias, logo depois que eles chegaram a Wraeclast e encontraram aquele império glorioso, brilhante... E cheio de mortos vivos. Não consigo nem imaginar que evento horroroso deve ter sido a morte de uma civilização inteira de uma vez só. Não tenho certeza se quero saber.\r\n\r\nVamos seguir seus passos, Exilada?}"
+      ],
+      [
+        "DannigLogbookVaalPlusOrder",
+        "<if:MS>{ Este diário de bordo  contém uma discussão bastante detalhada da declaração de Uhtred de que as gemas da virtude eram impuras e não deviam ser tocadas. Essas joias eram frequentemente vistas nos - ou<i> {dentro} - dos mortos vivos que habitavam o silencioso império Vaal, e a conexão era clara. Estranho que meu povo tenha aprendido essa lição tão rapidamente, mas você... bem, você conhece as joias melhor do que eu. O que devemos fazer, Exilado?}<elif:FS>{ Este diário contém uma discussão bastante detalhada da declaração de Uhtred de que as gemas da virtude eram impuras e não deviam ser tocadas. Essas joias eram frequentemente vistas nos - ou<i> {dentro} - dos mortos vivos que habitavam o silencioso império Vaal, e a conexão era clara. Estranho que meu povo tenha aprendido essa lição tão rapidamente, mas você... bem, você conhece as joias melhor do que eu. O que devemos fazer, Exilada?}"
+      ],
+      [
+        "DannigLogbookVaalPlusDruids",
+        "<if:MS>{Este diário de bordo... Eu não acho que posso repetir o que li. Os Druidas do Círculo Quebrado alegaram ter a habilidade de olhar para o passado, então é claro que eles tentaram entender o destino do Império Vaal que jazia morto e vazio em Wraeclast. Este diário...\r\n\r\nNão. Eu posso enfrentar o medo. Se você der a ordem, nós iremos, Exilado.}<elif:FS>{\"Este diário... Eu não acho que posso repetir o que li. Os Druidas do Círculo Quebrado alegaram ter a habilidade de olhar para o passado, então é claro que eles tentaram entender o destino do Império Vaal que jazia morto e vazio em Wraeclast. Este diário...\r\n\r\nNão. Eu posso enfrentar o medo. Se você der a ordem, nós iremos, Exilada.}"
+      ],
+      [
+        "DannigLogbookGeneric",
+        "<if:MS>{Os pontos de referência descritos neste diário de bordo não correspondem a nada particularmente notável em nossos mapas atuais. O terreno mudou muito ao longo dos séculos. Na melhor das hipóteses, estou fazendo suposições aqui. Você se importa em escolher um destino?}<elif:FS>{ }"
+      ],
+      [
+        "DannigLogbookOlroth",
+        "<if:MS>{Que incrível! Acho que finalmente encontramos! Este diário de bordo contém várias notas finais de um Escriba tentando desesperadamente descobrir onde seu maior líder pode ter ido. Pelo texto, parece que um desses locais pode conter o lugar de descanso final do próprio Olroth!\r\n\r\nImporta-se de adentrar na lenda comigo, Exolado?}<elif:FS>{Que incrível! Acho que finalmente encontramos! Este diário contém várias notas finais de um Escriba tentando desesperadamente descobrir onde seu maior líder pode ter ido. Pelo texto, parece que um desses locais pode conter o lugar de descanso final do próprio Olroth!\r\n\r\nImporta-se de adentrar na lenda comigo, Exolada?}"
+      ],
+      [
+        "DannigLogbookVorana",
+        "<if:MS>{Parece que um Escriba novato seguiu o caminho da carnificina de Vorana durante sua última resistência. Poderíamos refazer os passos através do terreno que ele descreve, e talvez encontrar seu lugar de descanso final.\r\n\r\nPara ser honesto, estou um pouco hesitante em fazer isso. Ela foi uma guerreira temível em vida, segundo todos os relatos. Na morte, ela pode estar além de seus talentos. A escolha é sua, Exilado.}<elif:FS>{Parece que um Escriba novato seguiu o caminho da carnificina de Vorana durante sua última resistência. Poderíamos refazer os passos através do terreno que ele descreve, e talvez encontrar seu lugar de descanso final.\r\n\r\nPara ser honesto, estou um pouco hesitante em fazer isso. Ela foi uma guerreira temível em vida, segundo todos os relatos. Na morte, ela pode estar além de seus talentos. A escolha é sua, Exilada.}"
+      ],
+      [
+        "DannigLogbookMedved",
+        "<if:MS>{Dos quatro grandes heróis, Medved foi o mais misterioso. Sua natureza mística mantinha muitos santuários protegidos na selva. Mesmo que ele tenha perdido seus sentidos graças à escuridão de Wraeclast, ele ainda pode ter usado aqueles paraísos para fins malignos. Os detalhes deste diário de bordo podem nos levar ao local suspeito. Depende de você, Exilado.}<elif:FS>{Dos quatro grandes heróis, Medved foi o mais misterioso. Sua natureza mística mantinha muitos santuários protegidos na selva. Mesmo que ele tenha perdido seus sentidos graças à escuridão de Wraeclast, ele ainda pode ter usado aqueles paraísos para fins malignos. Os detalhes deste diário de bordo podem nos levar ao local suspeito. Depende de você, Exilada.}"
+      ],
+      [
+        "DannigLogbookUhtred",
+        "<if:MS>{Nos últimos dias da história de nosso povo aqui, o Primeiro Escriba fugiu com os sobreviventes restantes em uma tentativa desesperada de escapar da condenação que se aproximava. Este é seu diário de bordo, Exilado! Aparentemente, a Ordem do Cálice encontrou algo... algum artefato desconhecido... tudo o que ele sabia era que mesmo os homens mais velhos reconheceram seu poder e construíram um santuário ao redor dele.\r\n\r\nFoi para aquele santuário que Uhtred fugiu para escapar da ira de Vorana. Os sobreviventes esperavam encontrá-lo lá, mas a escrita para um pouco antes do destino. Devemos refazer seus passos? }<elif:FS>{Nos últimos dias da história de nosso povo aqui, o Primeiro Escriba fugiu com os sobreviventes restantes em uma tentativa desesperada de escapar da condenação que se aproximava. Este é seu diário de bordo, Exilada! Aparentemente, a Ordem do Cálice encontrou algo... algum artefato desconhecido... tudo o que ele sabia era que mesmo os homens mais velhos reconheceram seu poder e construíram um santuário ao redor dele.\r\n\r\nFoi para aquele santuário que Uhtred fugiu para escapar da ira de Vorana. Os sobreviventes esperavam encontrá-lo lá, mas a escrita para um pouco antes do destino. Devemos refazer seus passos? }"
+      ],
+      [
+        "DannigGossipOrigin",
+        "<if:MS>{Nós somos dos Kalguur. A nossa existência é passada vasculhando a lama e a sujeira da vida mortal em busca de restos de renome. Alguns o encontram no campo de batalha. Alguns o encontram em serviço. Outros se oferecem para navegar até o limite do mundo conhecido em uma busca impossível. As escolhas que fazemos determinam o que somos e o que nos tornamos ecoa em uma lenda.}<elif:FS>{ }"
+      ],
+      [
+        "DannigGossipRunes",
+        "<if:MS>{As runas em nossa armadura, essencialmente, capturam e se moldam como a luz das estrelas. Parece poético, mas não se engane. Os ferreiros dos Kalguur colocaram essas runas à serviço da matança há muito tempo, assim que descobriram que podiam obrigar flechas a encontrarem seu alvo e as lâminas a morder mais fundo. Os maiores ferreiros tornaram-se conhecidos como artistas e produziram obras de uma genialidade singular. Não havia muitas dessas relíquias, mas não precisava haver.}<elif:FS>{ }"
+      ],
+      [
+        "DannigGossipTriskelionFlame",
+        "<if:MS>{O artefato mais poderoso de nossos contos conhecidos foi trazido a este continente pela primeira expedição há milhares de anos. As canções falam sobre ele incinerando o mal, purificando campos contaminados e afastando os mal intencionados. Certamente seria últil uma relíquia como essa agora, nestes tempos difíceis... mas para encontrá-la, teremos que refazer os passos daquelas almas longínquas. Só eles podem nos dizer o destino desconhecido da Chama Triskelion.}<elif:FS>{ }"
+      ],
+      [
+        "DannigGossipGems",
+        "<if:MS>{Eu acredito que <i> {você} acredita que essas joias coloridas lhe dão poder, Exilado. Eu lidei com uma delas, até tentei 'ativá-la' da maneira que aquele nativo, Tarkleigh, descreveu, mas não fez nada. Me chame de cético, mas para mim, parece que o poder estava dentro de você o tempo todo.}<elif:FS>{ }"
+      ],
+      [
+        "DannigGossipGods",
+        "<if:MS>{Nunca ouvi falar dessa coisa de 'deuses' antes de pôr os pés aqui, mas conheço pelo menos um... <i> {homem}... que se enxerga como um deus. É melhor não mencionarmos a Divindade para o pessoal lá de casa. }<elif:FS>{ }"
+      ],
+      [
+        "DannigGossipTheKing",
+        "<if:MS>{Não vou falar sobre esse... <i> {homem}.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaBeforeArrival",
+        "<if:MS>{Era impossível decifrar o verdadeiro significado da profecia, mas ninguém podia negar que havia acontecido. A terra estremeceu, as nuvens noturnas fugiram, as pessoas tremeram e se esconderam, trilhas estelares se arquearam no céu para incendiar nossas florestas onde caíam, e um sol carmesim surgiu no horizonte. Tal era o poder do brilho, que  a meia lua ficou cheia e avermelhada.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheJourneyI",
+        "<if:MS>{Algo maravilhoso e terrível tinha acontecido, então o Rei Cadigan III ordenou uma expedição em direção àquele horizonte, liderada por nossos maiores guerreiros e carregando a Chama Triskelion para proteção. Vinculado à Chama por dever, me inscrevi como Primeiro Escriba. Partimos dentro de um mês.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheJourneyII",
+        "<if:MS>{A jornada perdida através de mares turbulentos e agitados levou quase duas temporadas, durante as quais raramente víamos o céu através das nuvens negras cercadas por raios carmesim. Não podíamos beber a chuva, nem comer os peixes, até que a Chama limpasse a água e purificasse a carne. Mesmo assim, o sustento era insuficiente. Nossos suprimentos haviam se esgotado e nossos homens estavam famintos quando a terra surgiu à distância.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaArrivalI",
+        "<if:MS>{O primeiro pé colocado nesta terra foi esmagado por mandíbulas invisíveis sob a areia. Profecias raramente são claras. Abrimos um caminho terrível pelas dunas, afastando as criaturas da água, apenas para encontrar horrores horríveis cambaleando entre as árvores. Cada passo tinha um custo em sangue.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaArrivalII",
+        "<if:MS>{Na sétima noite, as nuvens sombrias finalmente se separaram por um tempo, e nossas benditas estrelas emergiram. Olroth fincou a Chama Triskelion no centro de nossas fortificações. Ao terminar os rituais para fazer a barreira, ganhamos uma pequena medida de segurança. A partir daí, tudo brotou, como uma flor sob o abraço de uma árvore.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaArrivalIII",
+        "<if:MS>{À medida em que os Cavaleiros do Sol adentravam a terra, encontramos os restos de um enorme império que tornou-se rival do de nossa terra natal. Incontáveis corpos estavam carbonizados, mas incontáveis outros se recusavam a descansar. Muitos estavam adornados com joias brilhantes que nos atraíam e chamavam nossa atenção. Essas abominações que ainda andavam muitas vezes traziam as joias dentro de seus próprios membros. Vendo isso, Uhtred declarou esses cristais impuros. Nenhum de nós quis discutir.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaArrivalIV",
+        "<if:MS>{Vastas montanhas de ouro espalhadas por todo o império morto, muitas vezes guardadas pelos mais perigosos e mais opulentamente vestidos dos imortais. Mesmo em seu estado monstruoso, esses nobres e sacerdotes espreitavam perto dos tesouros, não querendo desistir do que significava mais para eles do que suas próprias vidas. Eles não morreram nas ruas como aqueles que tentaram fugir. Eles haviam trancado e barricado seus templos, selando-se em seus próprios túmulos.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaArrivalV",
+        "<if:MS>{Os nobres de Utzaal abriram seus próprios caminhos na água e se afogaram propositalmente, não por misericórdia, mas para irritar os saqueadores em potencial. Este tinha sido um império governado por loucos. Seu despeito foi bem sucedido, pois não podíamos drenar as águas mortais. Seus tesouros permaneceriam perdidos para sempre. As outras cidades, no entanto, provaram ser uma fonte lenta e constante de riqueza além do que poderíamos imaginar. }<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaColonisationI",
+        "<if:MS>{O Rei Cadigan Terceiro considerou esta nova terra e seus tesouros uma recompensa aberta. Os artesãos chegaram primeiro, logo seguidos por navios lotados de mercadores e homens livres. As mulheres e crianças naturalmente vieram junto, e, no terceiro ano, a primeira carta constitutiva da aldeia foi estabelecida. Tudo seria próspero enquanto a Chama Triskelion brilhasse, mas não demorou muito para que fôssemos demais para permanecer totalmente dentro da graça de sua proteção.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaColonisationII",
+        "<if:MS>{Os mercenários da Foice Negra, sob o comando de Vorana, desenvolveram estratégias de defesa e abate que expandiram o território que poderíamos proteger. A distância era a chave. Empunhando bestas e permanecendo atrás de paredes robustas, seus homens podiam ferir horrores um de cada vez, rasgando-os em pedaços até que não se movessem mais. Tivemos a audácia de acreditar que poderíamos dominar este continente abandonado por meios tão simples e mundanos. Mais dez aldeias foram estabelecidas naquele ano.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaColonisationIII",
+        "<if:MS>{O comércio começou com os homens das ilhas e das montanhas ao longo de rotas distantes, embora não falássemos nenhum idioma e não conseguíssemos nos entender. Gravei algumas das canções dos homens da ilha para decifrar no futuro e encontrei sobreviventes do império caído entre os homens das montanhas.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaColonisationIV",
+        "<if:MS>{No final, os poucos sobreviventes do império caído não carregavam nenhuma das joias que vimos nos mortos-vivos. Quando desenhei a forma de uma gema na terra, surgiu um grande pânico e fomos banidos das montanhas. Ao ouvir isso, o Rei Cadigan o Terceiro baniu oficialmente os cristais, e nenhum foi adquirido ou enviado para a terra natal.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaDarknessDescendsI",
+        "<if:MS>{No momento em que o Rei Cadigan, o Quarto, chegou ao poder na pátria, éramos tantos vilarejos que ficava difícil contar. Dissidentes, párias, facções religiosas e homens perdidos vieram todos para construir novas vidas em uma nova terra, e não desejavam se reportar aos Cavaleiros. Foram esses enclaves remotos que sofreram o primeiro dos novos horrores, muitas vezes em silêncio, sem vontade de admitir para estranhos que estavam enfrentando perigos que não poderiam derrotar por conta própria.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaDarknessDescendsII",
+        "<if:MS>{Cada homem ou mulher que caía na periferia se tornava outra criatura morta-viva à espreita na noite. A maldição da terra não foi eliminada pela Chama Triskelion, apenas mantida sob controle. As mortes de nosso povo fortaleceram a maldição.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaDarknessDescendsIII",
+        "<if:MS>{Os místicos da natureza de Medved anunciaram que encontraram um sopro ou vapor que deixou um homem após sua morte, visível apenas quando aquele homem morreu perto de uma das joias proibidas, e apenas quando o vapor foi atraído por ela. Medved declarou que todos os homens deveriam possuir alguma essência ainda não compreendida. Por isso, Uhtred o declarou um blasfemador e estava decidido a banir sua ordem para a periferia. Medved pagou uma grande quantia para evitar esse exílio e o assunto foi resolvido.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaDarknessDescendsIV",
+        "<if:MS>{No inverno daquele ano, caravanas e corredores enviados para as periferias não voltaram mais. Olroth levou os Cavaleiros do Sol através das florestas e colinas frias para procurá-los. Descobriu-se que muitos dos homens das periferias haviam sido mortos e muitos outros foram assediados por horrores nunca antes vistos.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaDarknessDescendsV",
+        "<if:MS>{Olroth e seus cavaleiros evacuaram as periferias e incendiaram as florestas de lá. Dos rios do sul às areias do norte, uma vasta linha de chamas queimava. Ninguém quis falar sobre o motivo dessa ação drástica. Após seu retorno, Olroth expandiu a influência da Chama Triskelion, embora a barreira da luz das estrelas fosse muito mais fraca em um território tão vasto. Era preciso proteger as aldeias. Olroth, o Valente, frequentemente se recolhia à reclusão e tornou-se conhecido como Olroth, o Sinistro.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaOlrothsJournalI",
+        "<if:MS>{Que primavera decadente! No anoitecer da lua, o Demônio dos Olhos Vazios levou outro de nós. Esta era uma jovem mulher preparada para começar o treinamento de guerreiro em sua Segunda Passagem. Muitos foram derrotados pelos horrores desta maldita terra nos primeiros dias, mas eu acreditava que havíamos dominado a escuridão com nossos rituais de purificação.\r\n\r\nEu estava errado. Cultivar alimentos não envenenados não é o mesmo que garantir a segurança contra os andarilhos da noite. É como se a própria terra estivesse aprendendo com nossas vitórias, modificando as criaturas de maneiras que subvertia nossas defesas. }<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaOlrothsJournalII",
+        "<if:MS>{Uma nova tática de guerra foi elaborada por Medved e seus místicos da natureza, uma estratégia anteriormente proibida por suas crenças. Ele observou a capacidade dos horrores aqui de crescer e mudar rapidamente e sugeriu que nosso erro estava na incompletude de nossa tarefa.\r\n\r\nQuando abatemos todos, exceto os mais resistentes dos distorcidos Vorniculia, os que permaneceram geraram mais de sua laia com letalidade herdada. Para garantir uma verdadeira vitória e proteger nossas cidades florescentes, deveríamos eliminar a existência de raças inteiras. Deveríamos amputar um pedaço da natureza inteiramente. Qualquer coisa a menos só serviria para apertar ainda mais o torno da desgraça.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaOlrothsJournalIII",
+        "<if:MS>{Os Vorniculia estão todos mortos e não mancharão mais esta terra com seus venenos nocivos. Existem incontáveis outros andarilhos noturnos à espreita nas sombras desta terra amaldiçoada, mas uma pequena vitória ainda é uma vitória. A habilidade de meus cavaleiros e dos homens de Vorana era grande o suficiente para que nenhuma vida fosse perdida na queima da floresta e da charneca. Não há motivo para lamentar este dia raro.\r\n\r\nMeus pensamentos se voltam para meu dever inacabado. O Demônio de Olhos Vazios é o único de sua espécie que já vi. Devo garantir que também desaparece deste mundo ao comando da tocha e da lâmina.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaOlrothsJournalIV",
+        "<if:MS>{Metade dos Cavaleiros do Sol estava espalhada pelas colinas e trilhas na caça ao Demônio de Olhos Vazios. Eu acertei um golpe direto com minha espada contra seu pescoço, mas a ferida não sangrou. Não era uma coisa viva. Ele se deliciava com seus incontáveis dentes enormes, não para sobreviver comendo, mas para desfrutar dos gritos de suas vítimas. Eu vi isso nos vazios gêmeos de seu rosto apodrecido. Ele... sorriu para mim... ao morder meu escudo e quebrá-lo em duas partes.\r\n\r\nA chama mortal não encontrou nenhum ponto de apoio. O armamento mortal não tirou sangue. Fui levado a considerar o proibido. Medved e seus místicos da natureza deixaram de lado sua virtude primária para tornar possível a sobrevivência aqui, e agora devia fazer o mesmo. Os homens da montanha nos alertaram contra as joias do poder, mas eu acreditava que não havia escolha... }<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaOlrothsJournalV",
+        "<if:MS>{Divertido! Apaixonante! Viajei noite adentro sozinho, uma gema proibida incrustada no punho da minha espada anteriormente inútil. Desta vez, voltei com a cabeça do Demônio, que ainda sorria na morte final, morte agora que eu conquistara. A gema brilhou com a luz da minha fúria, lançando um raio de luz das estrelas que transformou um corte perdido em um golpe mortal e cortante.\r\n\r\nEstávamos  sendo tolos em negar esse poder. Muitos de nosso povo sofreram por esse erro. Quando o brilho da manhã atingisse o topo das árvores, iria comandar os Cavaleiros do Sol sobreviventes para procurarem mais joias proibidas. Era hora de conquistar esta terra e torná-la segura para sempre. }<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheBrokenCircleI",
+        "<if:MS>{No verão em que os Cavaleiros do Sol começaram a afixar as joias proibidas em suas armas e armaduras, Medved dos Druidas do Círculo foi para o meio do povo. \"O futuro-passado ficou nublado. Poços de vidência nesta terra muitas vezes permanecem manchados com névoa carmesim, mas isso é algo novo. Na noite em que Olroth partiu sozinho, eu não pude mais ver o passado. Portanto, o futuro é desconhecido.\" Posteriormente, sua ordem tornou-se conhecida como Druidas do Círculo Quebrado.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheBrokenCircleII",
+        "<if:MS>{Uma mulher encapuzada falou com Medved na praça, sob a lança que segurava a cabeça do Demônio de Olhos Vazios. \"Você perdeu sua fé, então, Alto Druida?\" \"\r\n\r\nMedved respondeu: \" Um homem que não estuda o passado não pode escapar de repeti-lo, e um homem que não pode estudar o passado não tem futuro. O Círculo foi Quebrado.\"\r\n\r\nA mulher então levantou seu capuz e se revelou como Vorana, líder dos Foices Negras. Ela respondeu: \"Pegue as armas, então, e vamos lutar para atravessar a lacuna entre o passado e o futuro.\"\r\n\r\nMedved aceitou de presente dois machados e começou a treinar sua ordem para a batalha. Os dois machados tinham joias fixadas ao longo das alças, que ofereciam um poder tremendo. }<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheBrokenCircleIII",
+        "<if:MS>{Os Druidas do Círculo Quebrado e os mercenários da Foice Negra reuniram suas forças perto das periferias, ajudando os Cavaleiros do Sol, que haviam perdido metade de seu número na caça ao Demônio de Olhos Vazios. A barreira da luz das estrelas estava estendida e fraca, mas os guerreiros recém-empoderados usavam o poder das joias para manter os horrores noturnos à distância. Um impasse mantido por várias estações, durante o qual muitos grandes heróis ganharam destaque por seus feitos. Annest, filha de Medved e Vorana, foi enviada de volta à terra natal para ser criada em segurança. O filho de Olroth, se aproximando de sua Primeira Passagem, foi com ela como seu guardião.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheBrokenCircleIV",
+        "<if:MS>{O medo foi arrebatador quando o impensável aconteceu: um líder surgiu entre os horrores distorcidos, capaz de ações e direção inteligentes. As criaturas começaram a atacar onde a barreira da luz das estrelas era mais fraca ou onde as patrulhas não cruzaram. Possuído por algum pensamento horrível que ele não compartilhou, Medved enviou um mensageiro para a escuridão. O mensageiro foi autorizado a voltar vivo com um pergaminho. As palavras escritas nele pareciam confirmar os temores de Medved, e ele viajou noite adentro para desafiar o novo líder do inimigo. Ele não voltou.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaThePriesthoodI",
+        "<if:MS>{Os sacerdotes tinham olhos e ouvidos em todos os lugares na época do desaparecimento de Medved. O Alto Sacerdote Uhtred suspeitava de traição e mantinha os iniciados observando silenciosamente as idas e vindas de outros líderes. Eles descobriram que, após cada dia gasto lutando incansavelmente até a exaustão total, Olroth, o Sinistro, voltava para sua reclusão. Então, depois de algum tempo, ele saía por outra porta, escapulindo noite adentro sem ser observado. Nessas excursões, seus olhos ficavam fechados, como se ele estivesse dormindo.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaThePriesthoodII",
+        "<if:MS>{Uhtred fez muitos planos tortuosos, durante os quais enviou seu filho Owen para a terra natal para evitar retaliação. Uma semana depois da colheita, no frio da noite, uma dúzia de padres esperava Olroth do lado de fora de sua fortaleza. Eles usaram adagas do sacramento para apunhalar Olroth em seu estado de sonambulismo. Ele foi ferido setenta e uma vezes e caiu. Vorana entrou como um vento negro e removeu as cabeças dos doze em um golpe.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaThePriesthoodIII",
+        "<if:MS>{Olroth foi colocado sobre um esquife e acompanhado de remédios, bandagens e ervas. O povo clamava pelo sangue do sacerdócio, mas Uhtred alegou não ter conhecimento desses doze traidores. O maior líder do povo estava à beira da morte. Eles o envolveram em vidro para evitar que seu fôlego escapasse.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaThePriesthoodIV",
+        "<if:MS>{Uma mulher encapuzada falou com Uhtred na praça, sob a lança que segurava a cabeça do Demônio de Olhos Vazios. \"Por que você acha que seus sacerdotes atacaram Olroth?\"\r\n\r\nUhtred respondeu: \"Por que você acha que Olroth estava se escondendo na escuridão? Ele é o novo líder dos horrores distorcidos. De dia, ele luta por nós, e à noite, por eles.\"\r\n\r\nA mulher então levantou seu capuz e se revelou como Vorana, líder dos Foices Negras. Ela respondeu: \"Por estas palavras, eu deveria matá-lo bem aqui.\"\r\n\r\nCom uma foice na garganta, Uhtred respondeu: \"Mate-me em uma semana, se desejar. Se o inimigo se tornar desorganizado e apático enquanto Olroth está no vidro, então você saberá a verdade de minhas palavras.\"\r\n\r\nVorana prometeu, \" Eu irei alimentá-lo para a cabeça do Demônio de Olhos Vazios, aqui, se você estiver errado.\"\r\n\r\nEntão ela partiu. O inimigo não ficou desorganizado ou apático naquela semana, e Uhtred se escondeu em um antigo local de poder.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheLastToFallI",
+        "<if:MS>{Na semana em que Vorana fez seu juramento, um novo líder entre os horrores surgiu. Ele empunhava dois machados e buscava os heróis que se destacavam, desafiando-os para o combate pessoal. Ele matou quarenta e dois, um a cada noite. Quando Vorana enfrentou esta abominação, ela entendeu que era seu amado Medved, mas não podia acreditar. Ela ordenou uma retirada total e se recusou a responder ao desafio. Duas aldeias foram destruídas.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheLastToFallII",
+        "<if:MS>{Compreendendo que Uhtred estava certo ao falar mal dos grandes homens, ela enviou um mensageiro para falar com ele. Um plano foi elaborado para invocar a Chama Triskelion e afastar a barreira de luz das estrelas. Ele poderia proteger com segurança algumas aldeias completas, ao invés de toda a região, porém fracamente. Todas as pessoas sobreviventes foram evacuadas para as terras centrais, e Vorana encontrou os rituais apropriados no diário de Olroth para ajustar a Chama. E isto, ela enviou a Uhtred por um mensageiro.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheLastToFallIII",
+        "<if:MS>{As aldeias centrais estavam lotadas, e os guerreiros sitiados dos Cavaleiros do Sol, dos Foices Negras e do Círculo Quebrado haviam recuado. A barreira de luz das estrelas não recuou. Em vez disso, ela desapareceu. Com pressa, Vorana foi para o altar da Chama de Triskelion, mas descobriu que estava desaparecida. Os navios no porto foram todos queimados e afundados também, exceto um, que havia partido.\r\n\r\nPara o povo, ela gritou: \"Uhtred, o Traidor, pegou a Chama!\"\r\n\r\nAs pessoas choraram em desespero enquanto os horrores se aproximavam de todos os lados. Sem a barreira de luz das estrelas, não havia proteção. As aldeias centrais tornaram-se uma fortaleza de túmulos, defendida por muro e por ferro, mas inscapável. Muitos de nós recuamos para o local de descanso de Olroth, apenas para descobrir sua caixa de vidro estilhaçada. Ele se levantou, e queríamos acreditar que ele estava no escuro lutando para nos salvar, não importa o que Uhtred, o Traidor, teria afirmado. }<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheLastToFallIV",
+        "<if:MS>{Vorana enviou mensageiros para os homens da ilha e para os homens das montanhas em busca de ajuda, mas seu destino era desconhecido. Os defensores eram valentes, mas o novo alimento não podia ser purificado sem a Chama. A fome se instalou e as estações se recusaram a retardar sua passagem. Magra e definhando, Vorana percebeu que esperar significava morte. Ela sabia que havia uma maneira de aumentar seu poder, então ela realizou o ritual proibido e colocou joias dentro de sua própria carne.}<elif:FS>{ }"
+      ],
+      [
+        "DannigSagaTheLastToFallV",
+        "<if:MS>{Ela se levantou, então, e saiu das paredes, colhendo morte entre os horrores noturnos com cada grande balanço de suas foices. Eles não podiam resistir ao seu poder. Ela nos chamou, \"Eu não vou descansar até que todas as abominações estejam mortas!\"\r\n\r\nAlguns entre nós acreditam que ela pode matar pessoalmente todos os monstros desta terra abandonada. Outros não são tão idealistas. Se Vorana não retornar, ainda há uma saída, uma que não ousamos arriscar antes, escondida sob a terra e mais velha que os homens mais velhos... Devemos manter viva a esperança. Este não é o fim de nosso povo nesta terra. A noite cai, mas vai amanhecer. }<elif:FS>{ }"
+      ],
+      [
+        "RogNoDealAvailable",
+        "<if:MS>{Presumo que você não queira embalar isso pra levar.}<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDealRandom",
+        "<if:MS>{Presumo que você não queira embalar isso pra levar.}<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal2",
+        "<if:MS>{Presumo que você não queira embalar isso pra levar.}<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal3",
+        "<if:MS>{Nós dois ganhamos. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal4",
+        "<if:MS>{Nós dois ganhamos. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal5",
+        "<if:MS>{Bom negócio. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal6",
+        "<if:MS>{Bom negócio. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal7",
+        "<if:MS>{Espero que isso ajude. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal8",
+        "<if:MS>{Espero que isso ajude. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal9",
+        "<if:MS>{Aqui está. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal10",
+        "<if:MS>{Aqui está. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal11",
+        "<if:MS>{Considere-se fornecido e equipado. }<elif:FS>{Considere-se fornecida e equipada.}"
+      ],
+      [
+        "RogTakeDeal12",
+        "<if:MS>{Considere-se fornecido e equipado. }<elif:FS>{Considere-se fornecida e equipada.}"
+      ],
+      [
+        "RogTakeDeal13",
+        "<if:MS>{Espero que você use bem isso. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeDeal14",
+        "<if:MS>{Espero que você use bem isso. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeItemRandom",
+        "<if:MS>{Aqui está. }<elif:FS>{ }"
+      ],
+      [
+        "RogTakeItem2",
+        "<if:MS>{Aqui está. }<elif:FS>{ }"
+      ],
+      [
+        "RogIntroWitch",
+        "<if:MS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinho, mas farei o que puder para apoiá-lo com minhas habilidades com suprimentos! De longe. Longe do combate.}<elif:FS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinha, mas farei o que puder para apoiá-la com minhas habilidades com suprimentos! De longe. Longe do combate.}"
+      ],
+      [
+        "RogIntroScion",
+        "<if:MS>{Sou Rog. Tujen disse que você viria para cá! Disse que você é educado, ambicioso. Você vai lutar pelo que é certo, eu sei disso. Sou especialista em logística e planejamento, portanto, fico feliz em apoiá-lo com minhas habilidades de abastecimento.  Gostaria de verificar algumas das minhas ofertas?}<elif:FS>{Sou Rog. Tujen disse que você viria para cá! Disse que você é educada, ambiciosa. Você vai lutar pelo que é certo, eu sei disso. Sou especialista em logística e planejamento, portanto, fico feliz em apoiá-la com minhas habilidades de abastecimento.  Gostaria de verificar algumas das minhas ofertas?}"
+      ],
+      [
+        "RogIntroRanger",
+        "<if:MS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinho, mas farei o que puder para apoiá-lo com minhas habilidades com suprimentos! De longe. Longe do combate.}<elif:FS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinha, mas farei o que puder para apoiá-la com minhas habilidades com suprimentos! De longe. Longe do combate.}"
+      ],
+      [
+        "RogIntroDuelist",
+        "<if:MS>{Sou Rog. Gwennen disse que você viria para cá! Disse que você tem um talento e tanto. Você é o tipo de homem que enfrenta monstros com bravura e habilidade, não é? Eu mesmo prefiro evitar lutar. Este continente está repleto de perigos. Sou especialista em logística e planejamento, então estou feliz em apoiar sua luta com minhas habilidades de abastecimento. Gostaria de verificar algumas das minhas ofertas?}<elif:FS>{Sou Rog. Gwennen disse que você viria para cá! Disse que você tem um talento e tanto. Você é o tipo de mulher ]que enfrenta monstros com bravura e habilidade, não é? Eu mesmo prefiro evitar lutar. Este continente está repleto de perigos. Sou especialista em logística e planejamento, então estou feliz em apoiar sua luta com minhas habilidades de abastecimento. Gostaria de verificar algumas das minhas ofertas?}"
+      ],
+      [
+        "RogIntroShadow",
+        "<if:MS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinho, mas farei o que puder para apoiá-lo com minhas habilidades com suprimentos! De longe. Longe do combate.}<elif:FS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinha, mas farei o que puder para apoiá-la com minhas habilidades com suprimentos! De longe. Longe do combate.}"
+      ],
+      [
+        "RogIntroTemplar",
+        "<if:MS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinho, mas farei o que puder para apoiá-lo com minhas habilidades com suprimentos! De longe. Longe do combate.}<elif:FS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinha, mas farei o que puder para apoiá-la com minhas habilidades com suprimentos! De longe. Longe do combate.}"
+      ],
+      [
+        "RogIntroMarauder",
+        "<if:MS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinho, mas farei o que puder para apoiá-lo com minhas habilidades com suprimentos! De longe. Longe do combate.}<elif:FS>{Sou Rog. Sou especialista em logística e planejamento. Não sei como você sobreviveu aqui sozinha, mas farei o que puder para apoiá-la com minhas habilidades com suprimentos! De longe. Longe do combate.}"
+      ],
+      [
+        "RogFirstApproachShoutRandom",
+        "<if:MS>{Olá!}<elif:FS>{ }"
+      ],
+      [
+        "RogFirstApproachShout2",
+        "<if:MS>{Olá!}<elif:FS>{ }"
+      ],
+      [
+        "RogFirstApproachShout3",
+        "<if:MS>{Olá!}<elif:FS>{ }"
+      ],
+      [
+        "RogFirstApproachShout4",
+        "<if:MS>{Olá!}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferGenericRandom",
+        "<if:MS>{Posso melhorar isso se você quiser...}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferGeneric2",
+        "<if:MS>{Posso melhorar isso se você quiser...}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferGeneric3",
+        "<if:MS>{Quer fazer uma atualização por uma taxa simbólica?}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferGeneric4",
+        "<if:MS>{Quer fazer uma atualização por uma taxa simbólica?}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferDialogueWhiteSockets",
+        "<if:MS>{Acho que posso arranhar a tinta com a minha faca...}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferDialogueRedSockets",
+        "<if:MS>{Talvez vermelho fique melhor em você? Vou esmagar um pouco do coração de Lobidínio seco e aplicar o pó.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferDialogueGreenSockets",
+        "<if:MS>{Você precisa de um pouco de verde nisso? Tenho um ácido raro que percebi que tem efeito no estranho equipamento deste reino.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferDialogueBlueSockets",
+        "<if:MS>{Isso ficaria melhor com um toque de azul. Eu tenho um pequeno artefato mecânico único que pode realizar o trabalho.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferJewellers",
+        "<if:MS>{Vamos tentar adicionar mais encaixes a isso, talvez? Você pode acabar com mais espaço para essas joias proibidas sinistras!}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferFusings",
+        "<if:MS>{Tenho uma caixa de mandíbulas de Horror Devorador aqui. Não tenho certeza da 'safra', por assim dizer, mas pode funcionar para você. }<elif:FS>{ }"
+      ],
+      [
+        "RogOfferChaos",
+        "<if:MS>{Esse aqui precisa de uma revisão total. Vamos tentar melhorar?}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferVaal",
+        "<if:MS>{Como dizem, você só vive uma vez! Arrisque-se!}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferAddModLucky",
+        "<if:MS>{É seu dia de sorte, Exilado!}<elif:FS>{É seu dia de sorte, Exilada!}"
+      ],
+      [
+        "RogOfferRerollSuffixes",
+        "<if:MS>{Permita-me levar meu martelo com runas até o fim dessa coisa. Não pode ficar pior, certo?}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferRerollPrefixes",
+        "<if:MS>{Tenho a sensação de que, se eu martelar na frente dessa coisa, posso derrubar um pouco alguns de seus encantamentos.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferMaxOneMod",
+        "<if:MS>{Uma pequena runa gravada pode ter um efeito benéfico aqui.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferDivineAllMods",
+        "<if:MS>{Algumas pequenas runas nos lugares certos podem fazer maravilhas aqui.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferBlessedOrb",
+        "<if:MS>{Este está meio surrado. Eu poderia tentar consertá-lo, mas não sou ferreiro.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferRemoveLowestLevelMod",
+        "<if:MS>{Uma runa de anulação cuidadosamente aplicada pode fazer maravilhas pela qualidade geral deste produto.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferRemoveXLowestLevelMods",
+        "<if:MS>{Este é muito confuso. Devo gravar várias runas de anulação nele?}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferAddAPrefix",
+        "<if:MS>{Algo muito interessante acontece quando você aplica uma gota de sangue de Quimera Dourada em um equipamento...}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferAddAPrefixXTimes",
+        "<if:MS>{Recentemente, recebi uma remessa completa de sangue raro de Quimera Dourada. Vamos 'buscar ouro', por assim dizer?}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferAddASuffix",
+        "<if:MS>{Você já colocou uma gota de sangue de Quimera Prea  em um equipamento? Eu já. Vale a pena, confie em mim.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferAddASuffixXTimes",
+        "<if:MS>{Tenho um frasco inteiro de sangue Quimera Preta em estoque hoje. Pode dar muito certo pra você.}<elif:FS>{ }"
+      ],
+      [
+        "RogOffersToAddUpToMaximumMods",
+        "<if:MS>{Eu gosto de você, Exilado. Por isso vou te oferecer uma oferta premium, apenas para o meu cliente preferidl. Só não pergunta como eu faço isso!}<elif:FS>{Eu gosto de você, Exilada. Por isso vou te oferecer uma oferta premium, apenas para o meu cliente preferidl. Só não pergunta como eu faço isso!}"
+      ],
+      [
+        "RogOfferApplyIncubator",
+        "<if:MS>{Você é um investidor. Dá pra saber. Você está de olho em uma recompensa de longo prazo. Interessado?}<elif:FS>{Você é um investidor. Dá pra saber. Você está de olho em uma recompensa de longo prazo. Interessada?}"
+      ],
+      [
+        "RogOfferApplyCatalyst",
+        "<if:MS>{Um dos meus contatos locais encontrou um pouco de poeira catalítica, mas ele morreu no caminho de volta, então não sei de que tipo é. Devemos tentar melhorar suas joias? Não da pra estragar isso... eu acho.}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferTwentyQuality",
+        "<if:MS>{Dannig disse que preciso vender mais caro para você. Não me culpe, culpe ele. É apenas o trabalho. Que tal, <i> {amigo?}}<elif:FS>{ }"
+      ],
+      [
+        "RogOfferAnoint",
+        "<if:MS>{Tenho um óleo exótico que está estragando. Vendê-lo barato parece melhor do que desperdiçá-lo. Interessado?}<elif:FS>{Tenho um óleo exótico que está estragando. Vendê-lo barato parece melhor do que desperdiçá-lo. Interessada?}"
+      ],
+      [
+        "RogRerollInventoryRandom",
+        "<if:MS>{Sempre tenho mais.}<elif:FS>{ }"
+      ],
+      [
+        "RogRerollInventory2",
+        "<if:MS>{Sempre tenho mais.}<elif:FS>{ }"
+      ],
+      [
+        "RogRerollInventory3",
+        "<if:MS>{Sempre tenho mais.}<elif:FS>{ }"
+      ],
+      [
+        "RogRerollInventory4",
+        "<if:MS>{Você quer os acordos premium, né.}<elif:FS>{ }"
+      ],
+      [
+        "RogRerollInventory5",
+        "<if:MS>{Você quer os acordos premium, né.}<elif:FS>{ }"
+      ],
+      [
+        "RogRerollInventory6",
+        "<if:MS>{Você quer os acordos premium, né.}<elif:FS>{ }"
+      ],
+      [
+        "RogRerollInventory7",
+        "<if:MS>{Um estoque um pouco maior.}<elif:FS>{ }"
+      ],
+      [
+        "RogRerollInventory8",
+        "<if:MS>{Um estoque um pouco maior.}<elif:FS>{ }"
+      ],
+      [
+        "RogRerollInventory9",
+        "<if:MS>{Um estoque um pouco maior.}<elif:FS>{ }"
+      ],
+      [
+        "RogRerollInventory10",
+        "<if:MS>{Vou fazer uma imagem de você com esse ferro velho!}<elif:FS>{ }"
+      ],
+      [
+        "RogSubsequentApproachShoutRandom",
+        "<if:MS>{Você está vivo!}<elif:FS>{Você está viva!}"
+      ],
+      [
+        "RogSubsequentApproachShout2",
+        "<if:MS>{Você está vivo!}<elif:FS>{Você está viva!}"
+      ],
+      [
+        "RogSubsequentApproachShout3",
+        "<if:MS>{Você está vivo!}<elif:FS>{Você está viva!}"
+      ],
+      [
+        "RogSubsequentApproachShout4",
+        "<if:MS>{Tenho outro pra você!}<elif:FS>{ }"
+      ],
+      [
+        "RogSubsequentApproachShout5",
+        "<if:MS>{Tenho outro pra você!}<elif:FS>{ }"
+      ],
+      [
+        "RogSubsequentApproachShout6",
+        "<if:MS>{Tenho outro pra você!}<elif:FS>{ }"
+      ],
+      [
+        "RogSubsequentApproachShout7",
+        "<if:MS>{Depressa, tem monstros por aí!}<elif:FS>{ }"
+      ],
+      [
+        "RogSubsequentApproachShout8",
+        "<if:MS>{Depressa, tem monstros por aí!}<elif:FS>{ }"
+      ],
+      [
+        "RogSubsequentApproachShout9",
+        "<if:MS>{Depressa, tem monstros por aí!}<elif:FS>{ }"
+      ],
+      [
+        "RogHitsDetonatorRandom",
+        "<if:MS>{Vou explodi-los, pera aí!}<elif:FS>{ }"
+      ],
+      [
+        "RogHitsDetonator2",
+        "<if:MS>{Vou explodi-los, pera aí!}<elif:FS>{ }"
+      ],
+      [
+        "RogHitsDetonator3",
+        "<if:MS>{Vou explodi-los, pera aí!}<elif:FS>{ }"
+      ],
+      [
+        "RogOrdersHirelingHitDetonatorRandom",
+        "<if:MS>{Alguém aperta o detonador!}<elif:FS>{ }"
+      ],
+      [
+        "RogOrdersHirelingHitDetonator2",
+        "<if:MS>{Alguém aperta o detonador!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedGenericRandom",
+        "<if:MS>{Aí é um bom lugar!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedGeneric2",
+        "<if:MS>{Aí é um bom lugar!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedMonstersRandom",
+        "<if:MS>{Os monstros esperam quietos ali...}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedMonsters2",
+        "<if:MS>{Os monstros esperam quietos ali...}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedMonsters3",
+        "<if:MS>{Eu me afastaria desse aí.}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedMonsters4",
+        "<if:MS>{Eu me afastaria desse aí.}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedMonsters5",
+        "<if:MS>{Isso vai despertar os mortos.}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedMonsters6",
+        "<if:MS>{Isso vai despertar os mortos.}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedRemnantRandom",
+        "<if:MS>{Espero que você saiba o que está fazendo!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedRemnant2",
+        "<if:MS>{Espero que você saiba o que está fazendo!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedRemnant3",
+        "<if:MS>{Parece arriscado!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedRemnant4",
+        "<if:MS>{Parece arriscado!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedRemnant5",
+        "<if:MS>{Tem certeza que vai colocar aí?}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedRemnant6",
+        "<if:MS>{Tem certeza que vai colocar aí?}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedTreasureRandom",
+        "<if:MS>{Imagino o que você vai desenterrar...}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedTreasure2",
+        "<if:MS>{Imagino o que você vai desenterrar...}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedTreasure3",
+        "<if:MS>{Sim, vá atrás do tesouro!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedTreasure4",
+        "<if:MS>{Sim, vá atrás do tesouro!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedTreasure5",
+        "<if:MS>{Espero que você desenterre umas figurinhas antigas!}<elif:FS>{ }"
+      ],
+      [
+        "RogBombPlacedTreasure6",
+        "<if:MS>{Espero que você desenterre umas figurinhas antigas!}<elif:FS>{ }"
+      ],
+      [
+        "RogAllBombsPlacedRandom",
+        "<if:MS>{Tudo certo?}<elif:FS>{ }"
+      ],
+      [
+        "RogAllBombsPlaced2",
+        "<if:MS>{Tudo certo?}<elif:FS>{ }"
+      ],
+      [
+        "RogAllBombsPlaced3",
+        "<if:MS>{Isso é tudo. }<elif:FS>{ }"
+      ],
+      [
+        "RogAllBombsPlaced4",
+        "<if:MS>{Isso é tudo. }<elif:FS>{ }"
+      ],
+      [
+        "RogAllBombsPlaced5",
+        "<if:MS>{Hora de explodir?}<elif:FS>{ }"
+      ],
+      [
+        "RogAllBombsPlaced6",
+        "<if:MS>{Hora de explodir?}<elif:FS>{ }"
+      ],
+      [
+        "RogCombatLineRandom",
+        "<if:MS>{Não!}<elif:FS>{ }"
+      ],
+      [
+        "RogCombatLine2",
+        "<if:MS>{Não!}<elif:FS>{ }"
+      ],
+      [
+        "RogCombatLine3",
+        "<if:MS>{Fique longe!}<elif:FS>{ }"
+      ],
+      [
+        "RogCombatLine4",
+        "<if:MS>{Fique longe!}<elif:FS>{ }"
+      ],
+      [
+        "RogCombatLine5",
+        "<if:MS>{Ajuda!}<elif:FS>{ }"
+      ],
+      [
+        "RogCombatLine6",
+        "<if:MS>{Ajuda!}<elif:FS>{ }"
+      ],
+      [
+        "RogCombatLine7",
+        ""
+      ],
+      [
+        "RogCombatLine8",
+        ""
+      ],
+      [
+        "RogCombatLine9",
+        "<if:MS>{Não me toque!}<elif:FS>{ }"
+      ],
+      [
+        "RogCombatLine10",
+        "<if:MS>{Não me toque!}<elif:FS>{ }"
+      ],
+      [
+        "RogPartingShout",
+        "<if:MS>{Talvez você encontre o Dannig da próxima bez. Vou falar de você pra ele.}<elif:FS>{ }"
+      ],
+      [
+        "RogGossipTujen",
+        "<if:MS>{Ele é o amigo mais leal que você vai encontrar. Ele nunca admitiria, mas todas as suas cicatrizes e ferimentos são o resultado de pular na frente para levar um golpe por um de nós. Por deuses, Gwennen deveria ser meio quebrada, e eu deveria estar sem uma perna... mas Tujen saltou no meio. Só me sinto seguro o suficiente para fazer meu trabalho porque ele está por perto.}<elif:FS>{ }"
+      ],
+      [
+        "RogGossipGwennen",
+        "<if:MS>{Ela nunca mentirá pra você, Exilado. Entenda isso como quiser. }<elif:FS>{Ela nunca mentirá pra você, Exilada. Entenda isso como quiser. }"
+      ],
+      [
+        "RogGossipDannig",
+        "<if:MS>{Nosso líder carismático é um homem digno de sua posição. Ele assume a frente, a liderança. Prefiro apoiar as coisas de uma distância segura, e ele, grande homem que é, me deixa fazer assim. Eu estive em vária missões e campanhas, e eles continuam tentando me armar e treinar para lutar, me dizendo que era a única maneira de encontrar renome... mas pretendo ser o primeiro mestre de suprimentos famoso do mundo . Aquele Rog, eles dirão, trouxe comida, bebida e equipamento tão prontamente e tão consistentemente que surpreendeu os guerreiros de ambos os lados e ajudou a vencer o dia. Dannig me disse que este é um sonho que vale a pena perseguir. Ele é um bom amigo.}<elif:FS>{ }"
+      ],
+      [
+        "RogGossipTheKing",
+        "<if:MS>{Oh... eu... por favor, não me pergunte sobre ele. Ele é o Rei dos Kalguur, e há honras e níveis de respeito que ele merece... Ao falarmos dele. Se o desrespeitarmos... <i> {ele saberá.}}<elif:FS>{ }"
+      ],
+      [
+        "RogGossipTheOrderOfTheChalice",
+        "<if:MS>{É meu dever de honra descobrir o destino de Uhtred e da Ordem do Cálice. Vou trocá-lo por quaisquer relíquias que você encontrar com suas marcas e runas. Eles eram o sacerdócio primário e a ordem religiosa que foi com os navios iniciais para Wraeclast. Eles interpretaram as estrelas e o funcionamento de forças misteriosas, como alquimia, máquinas e runas. Sempre quis entrar para a Ordem. Gosto muito da ideia de passar meus dias isolado em um laboratório fazendo pesquisas.}<elif:FS>{ }"
+      ],
+      [
+        "RogGossipUhtred",
+        "<if:MS>{Milhares de anos atrás, as últimas notícias que chegaram à pátria colocaram Uhtred sob uma luz bastante negativa. Alguns o chamavam de traidor, mas os detalhes eram esparsos e confusos. Estou aqui para limpar seu nome... ou condená-lo. A verdade está acima de tudo.}<elif:FS>{ }"
+      ],
+      [
+        "RogGossipUhtredAndStory",
+        "<if:MS>{Certamente parece que Uhtred era de fato um traidor, mas sinto que a história ainda não está completa. Antes de enviar essa notícia para casa, você descobriria o resto, Exilado? É... uma questão importante para mim.}<elif:FS>{Certamente parece que Uhtred era de fato um traidor, mas sinto que a história ainda não está completa. Antes de enviar essa notícia para casa, você descobriria o resto, Exilada? É... uma questão importante para mim.}"
+      ],
+      [
+        "RogGossipUhtredDefeatedStoryIncomplete",
+        "<if:MS>{Uhtred finalmente foi colocado para descansar? Eu entendo. No mínimo, acabamos com o sofrimento de um de nossos antigos heróis. Sou descendente de Owen, o filho de Uhtred mandado de volta para ficar em segurança, por isso me emociona saber que um de meus ancestrais não está nas trevas em contínuo sofrimento.}<elif:FS>{ }"
+      ],
+      [
+        "RogGossipUhtredDefeatedStoryComplete",
+        "<if:MS>{Se Uhtred não tinha a Chama Triskelion, então ele não era um traidor. Ele realizou muitos atos questionáveis, com certeza, mas pelo que posso dizer, eles foram feitos pelos motivos certos. Mandarei o que você reuniu de volta ao pátria para garantir que seu nome seja honrado, não desprezado.\r\n\r\nObrigado, amigo. Você iluminou um pedaço de nossa história... minha história, na verdade. Sou descendente de Owen, o filho Uhtred enviado de volta para ficar em segurança. Você limpou uma marca negra em nossa linhagem. Isso pode mudar o equilíbrio de poder na minha terra...}<elif:FS>{Se Uhtred não tinha a Chama Triskelion, então ele não era um traidor. Ele realizou muitos atos questionáveis, com certeza, mas pelo que posso dizer, eles foram feitos pelos motivos certos. Mandarei o que você reuniu de volta ao pátria para garantir que seu nome seja honrado, não desprezado.\r\n\r\nObrigado, amiga. Você iluminou um pedaço de nossa história... minha história, na verdade. Sou descendente de Owen, o filho Uhtred enviado de volta para ficar em segurança. Você limpou uma marca negra em nossa linhagem. Isso pode mudar o equilíbrio de poder na minha terra...}"
+      ],
+      [
+        "RogGossipOlrothAndUhtredDefeatedStoryComplete",
+        "<if:MS>{Dannig nos contou que você encontrou Olroth e que vocês o derrotaram juntos! Uma batalha para entrar na história, sem dúvida!\r\n\r\nNo entanto, continuo confuso. Se Uhtred não tinha a Chama Triskelion, então foi Olroth quem a roubou. Dannig insiste que a Chama não estava com Olroth, então... quem a pegou? Quem queimou os barcos e partiu naquele último dia fatídico? Algo está errado. Não gosto dessa sensação, Exilado. Isso me deixa com a sensação sinistra de que havia alguém - ou <i> {algo} - passando por essa história sem deixar rastros... isso me lembra que temos apenas pequenos fragmentos da verdadeira imagem, e que nossa história é apenas o que dizemos um ao outro. Não desenterramos <i> {a} verdade, apenas <i> {uma} verdade, e estou abalado e isolado de meus antepassados.\r\n\r\nTudo o que podemos fazer é continuar, meu amigo. }<elif:FS>{Dannig nos contou que você encontrou Olroth e que vocês o derrotaram juntos! Uma batalha para entrar na história, sem dúvida!\r\n\r\nNo entanto, continuo confuso. Se Uhtred não tinha a Chama Triskelion, então foi Olroth quem a roubou. Dannig insiste que a Chama não estava com Olroth, então... quem a pegou? Quem queimou os barcos e partiu naquele último dia fatídico? Algo está errado. Não gosto dessa sensação, Exilada. Isso me deixa com a sensação sinistra de que havia alguém - ou <i> {algo} - passando por essa história sem deixar rastros... isso me lembra que temos apenas pequenos fragmentos da verdadeira imagem, e que nossa história é apenas o que dizemos um ao outro. Não desenterramos <i> {a} verdade, apenas <i> {uma} verdade, e estou abalado e isolado de meus antepassados.\r\n\r\nTudo o que podemos fazer é continuar, minha amiga.}"
+      ],
+      [
+        "RogReopenDealRandom",
+        "<if:MS>{Nosso acordo continua na mesa. }<elif:FS>{ }"
+      ],
+      [
+        "RogReopenDeal2",
+        "<if:MS>{Nosso acordo continua na mesa. }<elif:FS>{ }"
+      ],
+      [
+        "RogReopenDeal3",
+        "<if:MS>{Nosso acordo continua na mesa. }<elif:FS>{ }"
+      ],
+      [
+        "VoranaEmerge",
+        "<if:MS>{Não descansarei até que essa terra seja purificada!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaPerishRandom",
+        "<if:MS>{Morra!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaPerish2",
+        "<if:MS>{Morra!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaPerish3",
+        "<if:MS>{Morra!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDeathWindRandom",
+        "<if:MS>{Vento mortal!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDeathWindRandom2",
+        "<if:MS>{Vento mortal!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDeathWindRandom3",
+        "<if:MS>{Vento mortal!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaFallBeforeMeRandom",
+        "<if:MS>{Caia diante de mim!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaFallBeforeMe2",
+        "<if:MS>{Caia diante de mim!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaFallBeforeMe3",
+        "<if:MS>{Caia diante de mim!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaCutYouDownRandom",
+        "<if:MS>{Eu irei de derrubar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaCutYouDown2",
+        "<if:MS>{Eu irei de derrubar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaCutYouDown3",
+        "<if:MS>{Eu irei de derrubar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaForTheKingRandom",
+        "<if:MS>{Pelo Rei!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaForTheKing2",
+        "<if:MS>{Pelo Rei!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaForTheKing3",
+        "<if:MS>{Pelo Rei!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaToTheDeathRandom",
+        "<if:MS>{Até a morte!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaToTheDeath2",
+        "<if:MS>{Até a morte!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaToTheDeath3",
+        "<if:MS>{Até a morte!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaCullRandom",
+        "<if:MS>{Abate!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaCull2",
+        "<if:MS>{Abate!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaCull3",
+        "<if:MS>{Abate!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaCull4",
+        "<if:MS>{Abate!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaCull5",
+        "<if:MS>{Abate!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReapRandom",
+        "<if:MS>{Ceifar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap2",
+        "<if:MS>{Ceifar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap3",
+        "<if:MS>{Ceifar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap4",
+        "<if:MS>{Ceifar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap5",
+        "<if:MS>{Ceifar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap6",
+        "<if:MS>{Rasgar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap7",
+        "<if:MS>{Rasgar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap8",
+        "<if:MS>{Rasgar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap9",
+        "<if:MS>{Rasgar!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap10",
+        "<if:MS>{Foice Negra!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap11",
+        "<if:MS>{Foice Negra!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaReap12",
+        "<if:MS>{Foice Negra!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDefeatRandom",
+        "<if:MS>{O que eu... Me tornei?}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDefeat2",
+        "<if:MS>{As estrelas... Só trazem desgraça...}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDefeat3",
+        "<if:MS>{As estrelas... Só trazem desgraça...}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDefeat4",
+        "<if:MS>{Medved...}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDefeat5",
+        "<if:MS>{Medved...}<elif:FS>{ }"
+      ],
+      [
+        "VoranaScytheRandom",
+        "<if:MS>{Foice!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaScythe2",
+        "<if:MS>{Foice!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaScythe3",
+        "<if:MS>{Foice!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaScythe4",
+        "<if:MS>{Foice!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDarkScytheRandom",
+        "<if:MS>{Foice Sombria!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDarkScythe2",
+        "<if:MS>{Foice Sombria!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDarkScythe3",
+        "<if:MS>{Foice Sombria!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaDarkScythe4",
+        "<if:MS>{Foice Sombria!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaBloodreapRandom",
+        "<if:MS>{Corte sangrento!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaBloodreap2",
+        "<if:MS>{Corte sangrento!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaBloodreap3",
+        "<if:MS>{Corte sangrento!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaBloodreap4",
+        "<if:MS>{Corte sangrento!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaColdIronRandom",
+        "<if:MS>{Ferro frio!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaColdIron2",
+        "<if:MS>{Ferro frio!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaColdIron3",
+        "<if:MS>{Ferro frio!}<elif:FS>{ }"
+      ],
+      [
+        "VoranaMedvedRandom",
+        "<if:MS>{Medved...}<elif:FS>{ }"
+      ],
+      [
+        "VoranaMedved2",
+        "<if:MS>{Medved...}<elif:FS>{ }"
+      ],
+      [
+        "VoranaTheStarsRandom",
+        "<if:MS>{As estrelas... Só trazem desgraça...}<elif:FS>{ }"
+      ],
+      [
+        "VoranaTheStars2",
+        "<if:MS>{As estrelas... Só trazem desgraça...}<elif:FS>{ }"
+      ],
+      [
+        "UhtredFourOrbAttackRandom",
+        "<if:MS>{Inútil!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredFourOrbAttack1",
+        "<if:MS>{Inútil!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredFourOrbAttack2",
+        "<if:MS>{Inútil!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredFourOrbAttack3",
+        "<if:MS>{Inútil!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDeathRandom",
+        "<if:MS>{A morte não é... Um escape...}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDeath1",
+        "<if:MS>{A morte não é... Um escape...}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDeath2",
+        "<if:MS>{Olroth... Vive...}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDeath3",
+        "<if:MS>{Olroth... Vive...}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDiveRandom",
+        "<if:MS>{Tema o cosmos!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDive1",
+        "<if:MS>{Tema o cosmos!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDive2",
+        "<if:MS>{As estrelas nos traem!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDive3",
+        "<if:MS>{As estrelas nos traem!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDive4",
+        "<if:MS>{Nós somos nada.}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDive5",
+        "<if:MS>{Nós somos nada.}<elif:FS>{ }"
+      ],
+      [
+        "UhtredIntro",
+        "<if:MS>{Eu já vi além!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredOBeamRandom",
+        "<if:MS>{Sem saída!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredOBeam1",
+        "<if:MS>{Sem saída!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredOBeam2",
+        "<if:MS>{Sem saída!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredSweepRandom",
+        "<if:MS>{Desista!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredSweep1",
+        "<if:MS>{Desista!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredSweep2",
+        "<if:MS>{Desista!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDefiantRandom",
+        "<if:MS>{Cão insolente!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDefiant1",
+        "<if:MS>{Cão insolente!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDefiant2",
+        "<if:MS>{Cão insolente!}<elif:FS>{ }"
+      ],
+      [
+        "UhtredDefiant3",
+        "<if:MS>{Cão insolente!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenIntroWitch",
+        "<if:MS>{Agora que temos a chance de conversar sem explosivos e monstros ao nosso redor... Sou Gwennen. Sorte é meu jogo. Mas não é um jogo. É muito sério. Você tem que acreditar que vai ganhar, ou não vai. Essa é a natureza desta vida, entendeu? É o que você faz dele. Portanto, quando jogar comigo, saiba que é sua culpa se perder. Você simplesmente não acreditou o suficiente.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenIntroScion",
+        "<if:MS>{Agora que temos a chance de conversar sem explosivos e monstros ao nosso redor... Sou Gwennen. Sorte é meu jogo. Mas não é um jogo. É muito sério. Você tem que acreditar que vai ganhar, ou não vai. Essa é a natureza desta vida, entendeu? É o que você faz dele. Portanto, quando jogar comigo, saiba que é sua culpa se perder. Você simplesmente não acreditou o suficiente.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenIntroRanger",
+        "<if:MS>{Você é uma mulher determinada. Eu posso perceber. Eu sou Gwennen. Também tenho algo em que acredito fervorosamente, mas minha religião é sorte. Mergulhei de cabeça no perigo porque era o que <i>{eu} queria fazer, as ordens que se danem, e aposto que você é igual. Quando suas ações e crenças se alinham, você pode fazer qualquer coisa. Até mesmo ganhar nas apostas. O que eu aposto que você vai fazer. Quer tentar a sorte?}<elif:FS>{ }"
+      ],
+      [
+        "GwennenIntroDuelist",
+        "<if:MS>{Agora que temos a chance de conversar sem explosivos e monstros ao nosso redor... Sou Gwennen. Sorte é meu jogo. Mas não é um jogo. É muito sério. Você tem que acreditar que vai ganhar, ou não vai. Essa é a natureza desta vida, entendeu? É o que você faz dele. Portanto, quando jogar comigo, saiba que é sua culpa se perder. Você simplesmente não acreditou o suficiente.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenIntroShadow",
+        "<if:MS>{Agora que temos a chance de conversar sem explosivos e monstros ao nosso redor... Sou Gwennen. Sorte é meu jogo. Mas não é um jogo. É muito sério. Você tem que acreditar que vai ganhar, ou não vai. Essa é a natureza desta vida, entendeu? É o que você faz dele. Portanto, quando jogar comigo, saiba que é sua culpa se perder. Você simplesmente não acreditou o suficiente.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenIntroTemplar",
+        "<if:MS>{Reconheço um homem de fé em qualquer continente. Eu sou Gwennen. Sou dedicada a uma causa, como você, mas minha religião é sorte. Já passei por situações mortais às quais não tsobrevivi simplesmente porque <i>{sabia} que iria. Presumo que seja o mesmo para você e suas orações. Esta vida é o que fazemos dela. Aposto que vou perder em nossas transações, já que você vai orar enquanto joga. Não considero trapaça. Eu considero isso admirável. Nós vamos nos dar bem.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenIntroMarauder",
+        "<if:MS>{Agora que temos a chance de conversar sem explosivos e monstros ao nosso redor... Sou Gwennen. Sorte é meu jogo. Mas não é um jogo. É muito sério. Você tem que acreditar que vai ganhar, ou não vai. Essa é a natureza desta vida, entendeu? É o que você faz dele. Portanto, quando jogar comigo, saiba que é sua culpa se perder. Você simplesmente não acreditou o suficiente.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenRerollInventoryRandom",
+        "<if:MS>{Tenho mais alguns.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenRerollInventory2",
+        "<if:MS>{Tenho mais alguns.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenRerollInventory3",
+        "<if:MS>{Tenho mais alguns.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenRerollInventory4",
+        "<if:MS>{Acho que posso apenas embaralhar isso aqui e dizer a você que são diferentes. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenRerollInventory5",
+        "<if:MS>{Acho que posso apenas embaralhar isso aqui e dizer a você que são diferentes. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenRerollInventory6",
+        "<if:MS>{Acho que posso apenas embaralhar isso aqui e dizer a você que são diferentes. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenRerollInventory7",
+        "<if:MS>{O que mais eu tenho? Hmm...}<elif:FS>{ }"
+      ],
+      [
+        "GwennenRerollInventory8",
+        "<if:MS>{O que mais eu tenho? Hmm...}<elif:FS>{ }"
+      ],
+      [
+        "GwennenRerollInventory9",
+        "<if:MS>{O que mais eu tenho? Hmm...}<elif:FS>{ }"
+      ],
+      [
+        "GwennenApproachShoutRandom",
+        "<if:MS>{Olá novamente, nativo!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenApproachShout2",
+        "<if:MS>{Olá novamente, nativo!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenApproachShout3",
+        "<if:MS>{Olá novamente, nativo!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenApproachShout4",
+        "<if:MS>{É meu dia de sorte!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenApproachShout5",
+        "<if:MS>{É meu dia de sorte!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenApproachShout6",
+        "<if:MS>{É meu dia de sorte!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenApproachShout7",
+        "<if:MS>{Finalmente! Vamos!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenApproachShout8",
+        "<if:MS>{Finalmente! Vamos!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenApproachShout9",
+        "<if:MS>{Finalmente! Vamos!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenDetonatingRandom",
+        "<if:MS>{Pode deixar!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenDetonating2",
+        "<if:MS>{Pode deixar!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenDetonating3",
+        "<if:MS>{Pode deixar!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenOrderHirelingDetonateRandom",
+        "<if:MS>{Manda ver!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenOrderHirelingDetonate2",
+        "<if:MS>{Manda ver!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenOrderHirelingDetonate3",
+        "<if:MS>{Manda ver!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedGenericRandom",
+        "<if:MS>{Deu sorte.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedGeneric2",
+        "<if:MS>{Deu sorte.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedGeneric3",
+        "<if:MS>{Deu sorte.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedMonstersRandom",
+        "<if:MS>{Hora da briga, então.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedMonsters2",
+        "<if:MS>{Hora da briga, então.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedMonsters3",
+        "<if:MS>{Hora da briga, então.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedMonsters4",
+        "<if:MS>{Você está propositalmente perturbando os mortos?}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedMonsters5",
+        "<if:MS>{Você está propositalmente perturbando os mortos?}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedMonsters6",
+        "<if:MS>{Você está propositalmente perturbando os mortos?}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedMonsters7",
+        "<if:MS>{Lá vamos nós...}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedMonsters8",
+        "<if:MS>{Lá vamos nós...}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedMonsters9",
+        "<if:MS>{Lá vamos nós...}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedRiskRandom",
+        "<if:MS>{Isso! Coloca emoção!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedRisk2",
+        "<if:MS>{Isso! Coloca emoção!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedRisk3",
+        "<if:MS>{Isso! Coloca emoção!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedRisk4",
+        "<if:MS>{Jogando com as nossas vidas? Hahaha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedRisk5",
+        "<if:MS>{Jogando com as nossas vidas? Hahaha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedRisk6",
+        "<if:MS>{Jogando com as nossas vidas? Hahaha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedRisk7",
+        "<if:MS>{Eu adoro uma coisa arriscada. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedRisk8",
+        "<if:MS>{Eu adoro uma coisa arriscada. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedRisk9",
+        "<if:MS>{Eu adoro uma coisa arriscada. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedTreasureRandom",
+        "<if:MS>{Nunca recuso um tesouro.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedTreasure2",
+        "<if:MS>{Nunca recuso um tesouro.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedTreasure3",
+        "<if:MS>{Nunca recuso um tesouro.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedTreasure4",
+        "<if:MS>{Pode ter qualquer coisa nesse tesouro!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedTreasure5",
+        "<if:MS>{Pode ter qualquer coisa nesse tesouro!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedTreasure6",
+        "<if:MS>{Pode ter qualquer coisa nesse tesouro!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedTreasure7",
+        "<if:MS>{Bingo!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedTreasure8",
+        "<if:MS>{Bingo!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenBombPlacedTreasure9",
+        "<if:MS>{Bingo!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenAllBombsPlacedRandom",
+        "<if:MS>{Pronto!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenAllBombsPlaced2",
+        "<if:MS>{Pronto!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenAllBombsPlaced3",
+        "<if:MS>{Pronto!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenAllBombsPlaced4",
+        "<if:MS>{É só falar quando!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenAllBombsPlaced5",
+        "<if:MS>{É só falar quando!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenAllBombsPlaced6",
+        "<if:MS>{É só falar quando!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenAllBombsPlaced7",
+        "<if:MS>{Tá pronto!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenAllBombsPlaced8",
+        "<if:MS>{Tá pronto!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenAllBombsPlaced9",
+        "<if:MS>{Tá pronto!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLineRandom",
+        "<if:MS>{Graças à sorte!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine2",
+        "<if:MS>{Graças à sorte!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine3",
+        "<if:MS>{Graças à sorte!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine4",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine5",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine6",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine7",
+        "<if:MS>{Hoje não!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine8",
+        "<if:MS>{Hoje não!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine9",
+        "<if:MS>{Hoje não!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine10",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine11",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine12",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine13",
+        "<if:MS>{Sem chance!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine14",
+        "<if:MS>{Sem chance!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenCombatLine15",
+        "<if:MS>{Sem chance!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipTujen",
+        "<if:MS>{Fazemos missões juntos há muitos anos. É um grande fardo para ele, mas ele segue em frente. Não sei como ele continua tão alegre, honestamente. Se ele perder outro membro, será mais metal do que homem...}<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipRog",
+        "<if:MS>{Ele é um amor. Você viu as estatuetas que ele esculpiu? Nós quatro as usamos para jogar um agradável e estranho jogo que ele criou. Eu adoro porque rolamos muitos dados e, bem, você me conhece.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipDannig",
+        "<if:MS>{Nosso intrépido líder acredita em um mundo melhor do que o que realmente é. Ele não vê você e eu, Exilado. Ele vê heróis. Ele vê mitos grandiosos e uma bravura que mudará o mundo. Não desmereça essa ideia. Quero viver no mundo que ele vê, mesmo sabendo que não é real.}<elif:FS>{Nosso intrépido líder acredita em um mundo melhor do que o que realmente é. Ele não vê você e eu, Exilada. Ele vê heróis. Ele vê mitos grandiosos e uma bravura que mudará o mundo. Não desmereça essa ideia. Quero viver no mundo que ele vê, mesmo sabendo que não é real.}"
+      ],
+      [
+        "GwennenGossipLuckOne",
+        "<if:MS>{Durante a rebelião falida, certa vez gritei com toda força. Uma flecha estava voando pelo ar. Meu braço estava preso e eu sabia que não conseguiria sair do caminho a tempo. Eu era uma mulher morta. Mas a Sorte respondeu ao meu sincero pedido. Outra flecha, também em um caminho assassino, atingiu a primeira <i>{no ar}, e ambas foram divertidas, caindo uma em cada lado de mim! Foi a primeira vez que soube que a própria Chance era uma força real neste mundo.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipFailedRebellion",
+        "<if:MS>{Eu não disse isso. Você deve ter ouvido errado. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipLuckTwo",
+        "<if:MS>{Durante... uma guerra inespecífica... certa vez gritei com toda força. Uma flecha estava voando pelo ar. Meu braço estava preso e eu sabia que não conseguiria sair do caminho a tempo. Eu era uma mulher morta. Mas a Sorte respondeu ao meu sincero pedido. Outra flecha, também em um caminho assassino, atingiu a primeira <i>{no ar}, e ambas foram divertidas, caindo uma em cada lado de mim! Foi a primeira vez que soube que a própria Chance era uma força real neste mundo.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipTheKing",
+        "<if:MS>{Você está abusando da sua sorte com essas perguntas, Exilado. Não gaste ela. Você precisará de cada pedacinho de sorte possível quando chegar a hora. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipGods",
+        "<if:MS>{Nunca ouvi sobre 'deuses', mas seu que eu não colocaria a minha fé neles mesmo que eles aparecessem na minha porta com um exército. Minhas crenças já são sólidas. }<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipDruidsOfTheBrokenCircle",
+        "<if:MS>{É uma questão de honra descobrir o destino de Medved e dos Druidas do Círculo Quebrado. Eles acreditavam que podiam ver o futuro examinando o passado. Hipoteticamente, esse é um poder que eu gostaria muito de ter, por razões de sorte e lucro... mas não tenho certeza se quero que seja verdade. Se Medved e seus místicos da natureza estavam certos e o tempo realmente é um círculo, não estaríamos todos condenados a repetir nossas vidas indefinidamente pela eternidade? Se isso for verdade, então não há sorte. Sem sorte, sem vontade humana. Toda a vida é apenas uma encenação que se repete continuamente. Acho que não gosto dessa ideia.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipMedved",
+        "<if:MS>{Seu destino final é desconhecido, mas sei que ele abandonou os caminhos pacíficos e treinou com dois machados poderosos depois que chegou aqui. Não somos tolos. Vemos que os mortos ressuscitam aqui em Wraeclast. Se Medved ainda estiver lá fora, ele será extremamente perigoso. Conserve a sua sorte e use-a contra ele, se o encontrar.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipMedvedStoryFound",
+        "<if:MS>{Então, os Druidas perderam a habilidade de ver o passado depois que Olroth começou a usar as joias proibidas de Wraeclast... que estranho... e Medved partiu pela escuridão da noite para desafiar o líder das criaturas para uma batalha frente a frente, sem dúvida. Honrado, mas tolo. Há mais nesta história, Exilado. Espero que você possa encontrar.}<elif:FS>{Então, os Druidas perderam a habilidade de ver o passado depois que Olroth começou a usar as joias proibidas de Wraeclast... que estranho... e Medved partiu pela escuridão da noite para desafiar o líder das criaturas para uma batalha frente a frente, sem dúvida. Honrado, mas tolo. Há mais nesta história, Exilada. Espero que você possa encontrar.}"
+      ],
+      [
+        "GwennenGossipMedvedDefeatedStoryNotComplete",
+        "<if:MS>{Você colocou Medved para descansar depois de todo esse tempo. Obrigada. Eu sou descendente de Annest, a filha que ele mandou embora antes do fim, então eu nunca poderia sair daqui sem garantir a paz para meus ancestrais. Esse é mais um passo em direção à liberdade.}<elif:FS>{ }"
+      ],
+      [
+        "GwennenGossipMedvedDefeatedStoryComplete",
+        "<if:MS>{A história agora está completa. Medved era um herói nobre e bem-intencionado, mas a escuridão de Wraeclast o corrompeu e o levou à loucura. Agora que ele foi colocado para descansar, estou livre. Assim que encontrarmos a Chama Triskelion, posso voltar para casa.\r\n\r\nDevo te agradecer por isso. Eu sou descendente de Annest, a filha que Medved mandou embora antes do fim, então suas ações marcam a honra da minha linhagem. Quando voltarmos para casa, encerrarei a história em sua jornada noite adentro para desafiar o líder invisível do mal. Os Kalguur saberão que ele morreu em combate tentando salvar seu povo. O resto não precisa ser contado. }<elif:FS>{ }"
+      ],
+      [
+        "TujenIntroGeneralWitch",
+        "<if:MS>{O nome é Tujen. Você tem uma aura bem sombria. Prazer em trabalhar contigo. É esse o tipo de gente que Wraeclast exige. }<elif:FS>{ }"
+      ],
+      [
+        "TujenIntroGeneralScion",
+        "<if:MS>{O nome é Tujen. Você vai fazer o trabalho sujo enquanto nós cavamos. É um acordo tão bom quanto qualquer outro. Bom, assim espero. }<elif:FS>{ }"
+      ],
+      [
+        "TujenIntroGeneralRanger",
+        "<if:MS>{O nome é Tujen. Você vai fazer o trabalho sujo enquanto nós cavamos. É um acordo tão bom quanto qualquer outro. Bom, assim espero. }<elif:FS>{ }"
+      ],
+      [
+        "TujenIntroGeneralDuelist",
+        "<if:MS>{O nome é Tujen. Você vai fazer o trabalho sujo enquanto nós cavamos. É um acordo tão bom quanto qualquer outro. Bom, assim espero. }<elif:FS>{ }"
+      ],
+      [
+        "TujenIntroGeneralShadow",
+        "<if:MS>{O nome é Tujen. Você tem a essência mais assassina que já vi, ainda que você esconda com um sorriso bonito. Normalmente eu ficaria bem longe de alguém como você, mas Wraeclast demanda um pouco de escuridão. Vamos nos dar muito bem.}<elif:FS>{ }"
+      ],
+      [
+        "TujenIntroGeneralTemplar",
+        "<if:MS>{O nome é Tujen. Você vai fazer o trabalho sujo enquanto nós cavamos. É um acordo tão bom quanto qualquer outro. Bom, assim espero. }<elif:FS>{ }"
+      ],
+      [
+        "TujenIntroMarauder",
+        "<if:MS>{O nome é Tujen. Você vai fazer o trabalho sujo enquanto nós cavamos. É um acordo tão bom quanto qualquer outro. Bom, assim espero. }<elif:FS>{ }"
+      ],
+      [
+        "TujenApproachShoutRandom",
+        "<if:MS>{Oi! Aqui!}<elif:FS>{ }"
+      ],
+      [
+        "TujenApproachShout2",
+        "<if:MS>{Oi! Aqui!}<elif:FS>{ }"
+      ],
+      [
+        "TujenApproachShout3",
+        "<if:MS>{Nativo! Preciso de ajuda!}<elif:FS>{ }"
+      ],
+      [
+        "TujenApproachShout4",
+        "<if:MS>{Nativo! Preciso de ajuda!}<elif:FS>{ }"
+      ],
+      [
+        "TujenApproachShout5",
+        "<if:MS>{Anda logo, não tenho o dia todo!}<elif:FS>{ }"
+      ],
+      [
+        "TujenApproachShout6",
+        "<if:MS>{Anda logo, não tenho o dia todo!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPartingShout",
+        "<if:MS>{O Rog está em algum lugar por aqui. Vou avisar que você está a caminho!}<elif:FS>{ }"
+      ],
+      [
+        "TujenRerollInventoryRandom",
+        "<if:MS>{Tenho mais, sim.}<elif:FS>{ }"
+      ],
+      [
+        "TujenRerollInventory2",
+        "<if:MS>{Tenho mais, sim.}<elif:FS>{ }"
+      ],
+      [
+        "TujenRerollInventory3",
+        "<if:MS>{Adoro essas moedas exóticas. }<elif:FS>{ }"
+      ],
+      [
+        "TujenRerollInventory4",
+        "<if:MS>{Adoro essas moedas exóticas. }<elif:FS>{ }"
+      ],
+      [
+        "TujenRerollInventory5",
+        "<if:MS>{Essas moedas são brilhantes, né?}<elif:FS>{ }"
+      ],
+      [
+        "TujenRerollInventory6",
+        "<if:MS>{Essas moedas são brilhantes, né?}<elif:FS>{ }"
+      ],
+      [
+        "TujenHittingDetonatorRandom",
+        "<if:MS>{Deixa comigo!}<elif:FS>{ }"
+      ],
+      [
+        "TujenHittingDetonator2",
+        "<if:MS>{Deixa comigo!}<elif:FS>{ }"
+      ],
+      [
+        "TujenOrderingSquireRandom",
+        "<if:MS>{Vai nessa então, escudeiro. }<elif:FS>{ }"
+      ],
+      [
+        "TujenOrderingSquire2",
+        "<if:MS>{Vai nessa então, escudeiro. }<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedGenericRandom",
+        "<if:MS>{Aye, aye.}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedGeneric2",
+        "<if:MS>{Aye, aye.}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedMonstersRandom",
+        "<if:MS>{Tá se coçando por uma briga, né?}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedMonsters2",
+        "<if:MS>{Tá se coçando por uma briga, né?}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedMonsters3",
+        "<if:MS>{Será uma batalha então!}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedMonsters4",
+        "<if:MS>{Será uma batalha então!}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedMonsters5",
+        "<if:MS>{Tudo pronto para combate. }<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedMonsters6",
+        "<if:MS>{Tudo pronto para combate. }<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedRiskRandom",
+        "<if:MS>{Escolha arriscada. }<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedRisk2",
+        "<if:MS>{Escolha arriscada. }<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedRisk3",
+        "<if:MS>{Isso deve deixar as coisas interessantes.}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedRisk4",
+        "<if:MS>{Isso deve deixar as coisas interessantes.}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedRisk5",
+        "<if:MS>{Tá doido pra me ver perder outro membro, né?}<elif:FS>{Tá doida pra me ver perder outro membro, né?}"
+      ],
+      [
+        "TujenBombPlacedRisk6",
+        "<if:MS>{Tá doido pra me ver perder outro membro, né?}<elif:FS>{Tá doida pra me ver perder outro membro, né?}"
+      ],
+      [
+        "TujenBombPlacedTreasureRandom",
+        "<if:MS>{Vale a pena pelo tesouro. }<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedTreasure2",
+        "<if:MS>{Vale a pena pelo tesouro. }<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedTreasure3",
+        "<if:MS>{Vasculhando uns baús de tesouro?}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedTreasure4",
+        "<if:MS>{Vasculhando uns baús de tesouro?}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedTreasure5",
+        "<if:MS>{Tá atrás de uns tesouros ancestrais, né?}<elif:FS>{ }"
+      ],
+      [
+        "TujenBombPlacedTreasure6",
+        "<if:MS>{Tá atrás de uns tesouros ancestrais, né?}<elif:FS>{ }"
+      ],
+      [
+        "TujenAllBombsPlacedRandom",
+        "<if:MS>{Tudo certo. }<elif:FS>{ }"
+      ],
+      [
+        "TujenAllBombsPlaced2",
+        "<if:MS>{Tudo certo.}<elif:FS>{ }"
+      ],
+      [
+        "TujenAllBombsPlaced3",
+        "<if:MS>{Vamos?}<elif:FS>{ }"
+      ],
+      [
+        "TujenAllBombsPlaced4",
+        "<if:MS>{Vamos?}<elif:FS>{ }"
+      ],
+      [
+        "TujenAllBombsPlaced5",
+        "<if:MS>{Pronto.}<elif:FS>{ }"
+      ],
+      [
+        "TujenAllBombsPlaced6",
+        "<if:MS>{Pronto.}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLineRandom",
+        "<if:MS>{Vou arrancar seus olhos!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLine2",
+        "<if:MS>{Vou arrancar seus olhos!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLine3",
+        "<if:MS>{Atrás!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLine4",
+        "<if:MS>{Atrás!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLine5",
+        "<if:MS>{Não enquanto eu estiver aqui!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLine6",
+        "<if:MS>{Não enquanto eu estiver aqui!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLine7",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLine8",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLine9",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCombatLine10",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerDoesNotHaggleRandom",
+        "<if:MS>{Se você quiser simplesmente chegar assim e comprar, por mim tudo bem.}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle2",
+        "<if:MS>{Se você quiser simplesmente chegar assim e comprar, por mim tudo bem.}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle3",
+        "<if:MS>{Vai nem tentar pechinchar?}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle4",
+        "<if:MS>{Vai nem tentar pechinchar?}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle5",
+        "<if:MS>{É chato quando você aceita minha primeira oferta!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerDoesNotHaggle6",
+        "<if:MS>{É chato quando você aceita minha primeira oferta!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerOverpaysRandom",
+        "<if:MS>{Você não entende muito bem desse negócio de pechinchar né?}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerOverpays2",
+        "<if:MS>{Você não entende muito bem desse negócio de pechinchar né?}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerOverpays3",
+        "<if:MS>{Você... Simplesmente quer pagar a mais?}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerOverpays4",
+        "<if:MS>{Você... Simplesmente quer pagar a mais?}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAcceptedRandom",
+        "<if:MS>{Parece razoável.}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted2",
+        "<if:MS>{Parece razoável.}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted3",
+        "<if:MS>{Foi um prazer negociar com você.}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted4",
+        "<if:MS>{Foi um prazer negociar com você.}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted5",
+        "<if:MS>{Claro, por que não?}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted6",
+        "<if:MS>{Claro, por que não?}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted7",
+        "<if:MS>{Isso foi um 'sim' meu. }<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted8",
+        "<if:MS>{Isso foi um 'sim' meu. }<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted9",
+        "<if:MS>{Aceito.}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted10",
+        "<if:MS>{Aceito.}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted11",
+        "<if:MS>{Sempre um prazer. }<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptAccepted12",
+        "<if:MS>{Sempre um prazer. }<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptRejectedRandom",
+        "<if:MS>{Ainda não me convenceu.}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptRejected2",
+        "<if:MS>{Ainda não me convenceu.}<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptRejected3",
+        "<if:MS>{Vamos pechinchar um pouco mais. }<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptRejected4",
+        "<if:MS>{Vamos pechinchar um pouco mais. }<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptRejected5",
+        "<if:MS>{Estou afim de pechinchar. }<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptRejected6",
+        "<if:MS>{Estou afim de pechinchar. }<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptRejected7",
+        "<if:MS>{Bem razoável, mas não. }<elif:FS>{ }"
+      ],
+      [
+        "TujenHighChanceToAcceptRejected8",
+        "<if:MS>{Bem razoável, mas não. }<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAcceptedRandom",
+        "<if:MS>{Hmm... Ahh... Tá bem.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted2",
+        "<if:MS>{Hmm... Ahh... Tá bem.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted3",
+        "<if:MS>{Ok.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted4",
+        "<if:MS>{Ok.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted5",
+        "<if:MS>{Não tô exatamente feliz, mas também não sou um Zangado.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted6",
+        "<if:MS>{Não tô exatamente feliz, mas também não sou um Zangado.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted7",
+        "<if:MS>{Justo.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted8",
+        "<if:MS>{Justo.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted9",
+        "<if:MS>{Vai servir. Não é uma vitória, mas vai servir. }<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptAccepted10",
+        "<if:MS>{Vai servir. Não é uma vitória, mas vai servir. }<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejectedRandom",
+        "<if:MS>{Não é exatamente o que procuro.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected2",
+        "<if:MS>{Não é exatamente o que procuro.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected3",
+        "<if:MS>{Tenta de novo, colega.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected4",
+        "<if:MS>{Tenta de novo, colega.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected5",
+        "<if:MS>{É um pouco de menos, não acha?}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected6",
+        "<if:MS>{É um pouco de menos, não acha?}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected7",
+        "<if:MS>{Acho que podemos chegar a um acordo melhor.}<elif:FS>{ }"
+      ],
+      [
+        "TujenMediumChanceToAcceptRejected8",
+        "<if:MS>{Acho que podemos chegar a um acordo melhor.}<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptAcceptedRandom",
+        "<if:MS>{Acho que tô me sentindo generoso. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted2",
+        "<if:MS>{Acho que tô me sentindo generoso. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted3",
+        "<if:MS>{Você me pegou em um bom dia. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted4",
+        "<if:MS>{Você me pegou em um bom dia. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted5",
+        "<if:MS>{Por tudo que você fez por nós, vou te dar esse aqui.}<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted6",
+        "<if:MS>{Por tudo que você fez por nós, vou te dar esse aqui.}<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted7",
+        "<if:MS>{Eu não deveria, mas... Tá bem. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptAccepted8",
+        "<if:MS>{Eu não deveria, mas... Tá bem. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejectedRandom",
+        "<if:MS>{Eu realmente acho que você pode oferecer mais. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected2",
+        "<if:MS>{Eu realmente acho que você pode oferecer mais. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected3",
+        "<if:MS>{Você tá abusando, colega. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected4",
+        "<if:MS>{Você tá abusando, colega. }<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected5",
+        "<if:MS>{Vale muito mais do que isso!}<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected6",
+        "<if:MS>{Vale muito mais do que isso!}<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected7",
+        "<if:MS>{Isso não vale nem o tempo que tô perdendo pechinchando!}<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected8",
+        "<if:MS>{Isso não vale nem o tempo que tô perdendo pechinchando!}<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected9",
+        "<if:MS>{Eu acho que não.}<elif:FS>{ }"
+      ],
+      [
+        "TujenLowChanceToAcceptRejected10",
+        "<if:MS>{Eu acho que não.}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAcceptedRandom",
+        "<if:MS>{Ugh. Pega e vaza. }<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted2",
+        "<if:MS>{Ugh. Pega e vaza. }<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted3",
+        "<if:MS>{Você tá me metendo a faca!}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted4",
+        "<if:MS>{Você tá me metendo a faca!}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted5",
+        "<if:MS>{Se aproveitando da nossa amizade, você está. }<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted6",
+        "<if:MS>{Se aproveitando da nossa amizade, você está. }<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted7",
+        "<if:MS>{Você é o melhor pechinchador que eu já vi. }<elif:FS>{Você é a melhor pechinchadora que eu já vi. }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted8",
+        "<if:MS>{Você é o melhor pechinchador que eu já vi. }<elif:FS>{Você é a melhor pechinchadora que eu já vi. }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted9",
+        "<if:MS>{Encurralado estou. Tá bem, eu aceito. }<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptAccepted10",
+        "<if:MS>{Encurralado estou. Tá bem, eu aceito. }<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejectedRandom",
+        "<if:MS>{Tá de sacanagem comigo?}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected2",
+        "<if:MS>{Tá de sacanagem comigo?}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected3",
+        "<if:MS>{Você não tá falando sério.}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected4",
+        "<if:MS>{Você não tá falando sério.}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected5",
+        "<if:MS>{Deixa de ser cretino.}<elif:FS>{Deixa de ser cretina.}"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected6",
+        "<if:MS>{Deixa de ser cretino.}<elif:FS>{Deixa de ser cretina.}"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected7",
+        "<if:MS>{Não posso aceitar tão pouco!}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected8",
+        "<if:MS>{Não posso aceitar tão pouco!}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected9",
+        "<if:MS>{Eu tenho que comer!}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected10",
+        "<if:MS>{Eu tenho que comer!}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected11",
+        "<if:MS>{Seja razoável!}<elif:FS>{ }"
+      ],
+      [
+        "TujenExtremelyLowChanceToAcceptRejected12",
+        "<if:MS>{Seja razoável!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerOfferedOneRandom",
+        "<if:MS>{UM? Só UM?}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerOfferedOne2",
+        "<if:MS>{UM? Só UM?}<elif:FS>{ }"
+      ],
+      [
+        "TujenRemovesItemRandom",
+        "<if:MS>{Você me cansou. Vou guardar pra mim.}<elif:FS>{ }"
+      ],
+      [
+        "TujenRemovesItem2",
+        "<if:MS>{Você me cansou. Vou guardar pra mim.}<elif:FS>{ }"
+      ],
+      [
+        "TujenRemovesItem3",
+        "<if:MS>{Isso já passou da pechincha pra discussão. Esquece. }<elif:FS>{ }"
+      ],
+      [
+        "TujenRemovesItem4",
+        "<if:MS>{Isso já passou da pechincha pra discussão. Esquece. }<elif:FS>{ }"
+      ],
+      [
+        "TujenRemovesItem5",
+        "<if:MS>{Se continuarmos assim, você ofenderá minha honra. Então tô colocando um ponto final. }<elif:FS>{ }"
+      ],
+      [
+        "TujenRemovesItem6",
+        "<if:MS>{Se continuarmos assim, você ofenderá minha honra. Então tô colocando um ponto final. }<elif:FS>{ }"
+      ],
+      [
+        "TujenRemovesItem7",
+        "<if:MS>{Chega disso. Vou guardar, obrigado.}<elif:FS>{ }"
+      ],
+      [
+        "TujenRemovesItem8",
+        "<if:MS>{Chega disso. Vou guardar, obrigado.}<elif:FS>{ }"
+      ],
+      [
+        "TujenCounterOfferRemainsSameRandom",
+        "<if:MS>{Não. Um puro e simples não. }<elif:FS>{ }"
+      ],
+      [
+        "TujenCounterOfferRemainsSame2",
+        "<if:MS>{Não. Um puro e simples não. }<elif:FS>{ }"
+      ],
+      [
+        "TujenCounterOfferRemainsSame3",
+        "<if:MS>{Acho que você pode oferecer mais. }<elif:FS>{ }"
+      ],
+      [
+        "TujenCounterOfferRemainsSame4",
+        "<if:MS>{Acho que você pode oferecer mais. }<elif:FS>{ }"
+      ],
+      [
+        "TujenCounterOfferRemainsSame5",
+        "<if:MS>{Minha oferta ainda está na mesa. }<elif:FS>{ }"
+      ],
+      [
+        "TujenCounterOfferRemainsSame6",
+        "<if:MS>{Minha oferta ainda está na mesa. }<elif:FS>{ }"
+      ],
+      [
+        "TujenCounterOfferRemainsSame7",
+        "<if:MS>{Eu não vou abaixar mais!}<elif:FS>{ }"
+      ],
+      [
+        "TujenCounterOfferRemainsSame8",
+        "<if:MS>{Eu não vou abaixar mais!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerCannotCarryRandom",
+        "<if:MS>{Você vai precisar abrir espaço antes.}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerCannotCarry2",
+        "<if:MS>{Você vai precisar abrir espaço antes.}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerCannotCarry3",
+        "<if:MS>{Você não consegue nem carregar isso!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerCannotCarry4",
+        "<if:MS>{Você não consegue nem carregar isso!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerCannotAffordRandom",
+        "<if:MS>{Você não pode pagar por isso!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerCannotAfford2",
+        "<if:MS>{Você não pode pagar por isso!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerCannotAfford3",
+        "<if:MS>{Você está oferecendo mais do que tem!}<elif:FS>{ }"
+      ],
+      [
+        "TujenPlayerCannotAfford4",
+        "<if:MS>{Você está oferecendo mais do que tem!}<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipBlackScytheMercenaries",
+        "<if:MS>{Tenho um propósito particular, entende? Estou coletando informações a respeito de um antigo grupo bem desordeiro. Eles eram chamados de Mercenários da Foice Negra. Sua fundadora, uma guerreira particularmente valente chamada Vorana, compartilha laços com minha linhagem. Antes de ir para casa, preciso descobrir o que aconteceu com ela.}<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipVorana",
+        "<if:MS>{Ela era uma guerreira temível e irreprimível. O Rei Cadigan Terceiro tentou prender seu serviço à Coroa, mas ela derrubou todos os homens enviados para levá-la. Eventualmente, ele percebeu que ela não podia <i>{ser} controlada, e então ele deu a ela uma Carta Mercenária. Dada a liberdade de operar da maneira que queria, ela conquistou muitas grandes vitórias para os Kalguur. Eu respeito aqueles que fazem o seu próprio caminho.\r\n\r\nSeu destino aqui em Wraeclast é desconhecido, mas tenho a sensação de que ela ainda está por aí. Um espírito ardente como esse nunca desiste sem uma luta lendária. }<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipRog",
+        "<if:MS>{Muitas missões teriam falhado se não fosse por suas habilidades logísticas. Caminhamos pela lama, chuva, neve e areia e, ainda assim, comemos com vontade o tempo todo. É a verdadeira base da guerra, entenda. Logística. Não pense que não sabemos disso.}<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipGwennen",
+        "<if:MS>{Ela é uma prima distante minha, então faço o que posso para protegê-la. Mas ela tem umas ideias estranhas sobre o mundo. Acha que a crença pode moldar os eventos. Se pudesse, não teríamos sido derrotados durante... nossa última missão.}<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipDannig",
+        "<if:MS>{Ele é um bom homem. Um homem de dois mundos. Em parte aspirante a sonhador, em parte realista cínico. Vou segui-lo até o fim do mundo, e você sabe disso porque eu já o fiz... E aqui estamos. }<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipTheKalguur",
+        "<if:MS>{Somos um povo orgulhoso, mas qual que não é? A diferença é que trabalhamos contra as realidades sombrias da vida por meio da aplicação judiciosa de bravura e coragem. A linhagem de uma pessoa carrega consigo uma contagem contínua de renome e realizações. Não fazemos isso por nós mesmos, mas por nossos filhos, se um dia os tivermos. Espero ter algum dia.}<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipTheKingOne",
+        "<if:MS>{Que clima agradável o de hoje, né?}<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipTheKingTwo",
+        "<if:MS>{Wraeclast é bem perigosa. Imagino que você tenha histórias e tanto para contar.}<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipTheKingThree",
+        "<if:MS>{Você não entende regras sociais? Pare de perguntar!}<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipVoranaStoryFound",
+        "<if:MS>{Um destino cruel caiu sobre nosso povo aqui em Wraeclast. Parte de mim quer acreditar que Vorana conquistou todo este continente louco sozinha, mas nós estamos aqui agora, e ainda está infestado de monstros, então eu acho que nós dois sabemos que ela não ganhou a luta. Mas nosso povo tentou fugir por algum tipo de caverna? Precisamos descobrir o resto!}<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipVoranaDefeatedStoryNotComplete",
+        "<if:MS>{Você derrotou Vorana? Estou maravilhado e agradecido. Sou descendente de Annest, a filha que ela mandou para a terra natal antes do fim. Você deu paz a um de meus ancestrais. Receba a minha gratidão. }<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipVoranaDefeatedStoryComplete",
+        "<if:MS>{Agora a história de Vorana dos Foices Negras está completa. Ela morreu como viveu: fazendo a guerra. Como descendente de Annest, filha de Vorana, isso preenche uma lacuna na história da minha linhagem. Quando voltarmos para casa, eu me certificarei de que os Kalguur saibam que Vorana caiu em uma labareda de glória, encarando sozinha uma guerra pessoal contra um continente inteiro de monstros.\r\n\r\nVamos apenas deixar de fora a parte em que ela se tornou uma abominação imortal, certo? }<elif:FS>{ }"
+      ],
+      [
+        "TujenGossipUhtredDefeatedStoryComplete",
+        "<if:MS>{De acordo com o que você descobriu, enquanto Vorana lutava até o fim, o resto do nosso povo aqui em Wraeclast tentou escapar por algum antigo local de poder. Uhtred estava lá esperando por eles... e agora sabemos o que aconteceu. Ele também sucumbiu à loucura da corrupção. Ele deve ter matado todos eles na entrada, embora eu espere que alguns tenham passado por ele e escapado.\r\n\r\nA questão que permanece comigo, no entanto: foi Uhtred quem primeiramente declarou as joias como impuras. Ele nunca as usou, pelos relatos que encontramos. Como, então, ele enlouqueceu? O que ele testemunhou que quebrou sua mente? }<elif:FS>{ }"
+      ],
+      [
+        "TujenExclaimsAboutVorana",
+        "<if:MS>{É Vorana em carne e osso!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothAssaultRandom",
+        "<if:MS>{Atacar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothAssault2",
+        "<if:MS>{Atacar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothAssault3",
+        "<if:MS>{Atacar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothBurnRandom",
+        "<if:MS>{Queimar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothBurn2",
+        "<if:MS>{Queimar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothBurn3",
+        "<if:MS>{Queimar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIAmTheDoomRandom",
+        "<if:MS>{Eu sou a destruição à porta!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIAmTheDoom2",
+        "<if:MS>{Eu sou a destruição à porta!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIAmTheDoom3",
+        "<if:MS>{Eu sou a destruição à porta!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothHoldTheLineRandom",
+        "<if:MS>{Aguenta firme!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothHoldTheLine2",
+        "<if:MS>{Aguenta firme!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothHoldTheLine3",
+        "<if:MS>{Aguenta firme!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothICannotYieldRandom",
+        "<if:MS>{Não posso recuar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothICannotYield2",
+        "<if:MS>{Não posso recuar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIHaveBecomeTheDarknessRandom",
+        "<if:MS>{Eu me tornei a escuridão...}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIHaveBecomeTheDarkness2",
+        "<if:MS>{Eu me tornei a escuridão...}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIHaveBecomeTheDarkness3",
+        "<if:MS>{Eu me tornei a escuridão...}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIWillNeverYieldRandom",
+        "<if:MS>{Eu jamais sucumbirei!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIWillNeverYield2",
+        "<if:MS>{Eu jamais sucumbirei!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIWillNeverYield3",
+        "<if:MS>{Eu jamais sucumbirei!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIWillNeverYield4",
+        "<if:MS>{Eu jamais sucumbirei!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIWillNeverYield5",
+        "<if:MS>{Eu jamais sucumbirei!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothIWillNeverYield6",
+        "<if:MS>{Eu jamais sucumbirei!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothNeverRandom",
+        "<if:MS>{Jamais!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothNever2",
+        "<if:MS>{Jamais!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothNever3",
+        "<if:MS>{Jamais!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothNever4",
+        "<if:MS>{Pelo rei!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothNever5",
+        "<if:MS>{Pelo rei!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothNever6",
+        "<if:MS>{Pelo rei!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothPurifyRandom",
+        "<if:MS>{Purificar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothPurify2",
+        "<if:MS>{Purificar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothPurify3",
+        "<if:MS>{Purificar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothStarfireRandom",
+        "<if:MS>{Fogo estelar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothStarfire2",
+        "<if:MS>{Fogo estelar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothStarfire3",
+        "<if:MS>{Fogo estelar!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothTheCurseRandom",
+        "<if:MS>{A maldição... Surgiu da montanha...}<elif:FS>{ }"
+      ],
+      [
+        "OlrothTheCurse2",
+        "<if:MS>{A maldição... Surgiu da montanha...}<elif:FS>{ }"
+      ],
+      [
+        "OlrothTheCurse3",
+        "<if:MS>{A maldição... Surgiu da montanha...}<elif:FS>{ }"
+      ],
+      [
+        "OlrothTraitorRandom",
+        "<if:MS>{Traidor!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothTraitor2",
+        "<if:MS>{Traidor!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothTraitor3",
+        "<if:MS>{Traidor!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothTripleBladeRandom",
+        "<if:MS>{Lâmina tripla!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothTripleBlade2",
+        "<if:MS>{Lâmina tripla!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothTripleBlade3",
+        "<if:MS>{Lâmina tripla!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothWastelandRandom",
+        "<if:MS>{Terra abandonada!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothWasteland2",
+        "<if:MS>{Terra abandonada!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothWasteland3",
+        "<if:MS>{Terra abandonada!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothWhoDares",
+        "<if:MS>{Quem... Se atreve?}<elif:FS>{ }"
+      ],
+      [
+        "OlrothYouveDoomedUsAllRandom",
+        "<if:MS>{Você condenou todos nós!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothYouveDoomedUsAll2",
+        "<if:MS>{Você condenou todos nós!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothYouveDoomedUsAll3",
+        "<if:MS>{Você condenou todos nós!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothYouWillFail",
+        "<if:MS>{Você falhará!}<elif:FS>{ }"
+      ],
+      [
+        "OlrothDarknessAtLast",
+        "<if:MS>{Escuridão... Finalmente...}<elif:FS>{ }"
+      ],
+      [
+        "OlrothICannotDieRandom",
+        "<if:MS>{Eu não posso... Morrer...}<elif:FS>{ }"
+      ],
+      [
+        "OlrothICannotDie2",
+        "<if:MS>{Eu não posso... Morrer...}<elif:FS>{ }"
+      ],
+      [
+        "MedvedIntroRandom",
+        "<if:MS>{Eu já vi você perder esta batalha.}<elif:FS>{ }"
+      ],
+      [
+        "MedvedIntro2",
+        "<if:MS>{Eu já vi você perder esta batalha.}<elif:FS>{ }"
+      ],
+      [
+        "MedvedIntro3",
+        "<if:MS>{Eu já vi você perder esta batalha.}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSwarmRandom",
+        "<if:MS>{Enxame!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSwarm2",
+        "<if:MS>{Enxame!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSwarm3",
+        "<if:MS>{Enxame!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonHealerRandom",
+        "<if:MS>{Ajude-me!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonHealer2",
+        "<if:MS>{Ajude-me!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonHealer3",
+        "<if:MS>{Ajude-me!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonBuffRandom",
+        "<if:MS>{A crença é arrebatadora!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonBuff2",
+        "<if:MS>{A crença é arrebatadora!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonBuff3",
+        "<if:MS>{A crença é arrebatadora!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonBuff4",
+        "<if:MS>{A crença é arrebatadora!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonAreaDenialRandom",
+        "<if:MS>{Poder proibido!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonAreaDenial2",
+        "<if:MS>{Poder proibido!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedSummonAreaDenial3",
+        "<if:MS>{Poder proibido!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttackRandom",
+        "<if:MS>{Guilhotina!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack2",
+        "<if:MS>{Guilhotina!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack3",
+        "<if:MS>{Guilhotina!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack4",
+        "<if:MS>{Guilhotina!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack5",
+        "<if:MS>{Dilacerador!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack6",
+        "<if:MS>{Dilacerador!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack7",
+        "<if:MS>{Dilacerador!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack8",
+        "<if:MS>{Dilacerador!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack9",
+        "<if:MS>{Corta-membros!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack10",
+        "<if:MS>{Corta-membros!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack11",
+        "<if:MS>{Corta-membros!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack12",
+        "<if:MS>{Corta-membros!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack13",
+        "<if:MS>{Machadada!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedComboAttack14",
+        "<if:MS>{Machadada!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedForthekingRandom",
+        "<if:MS>{Pelo rei!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedFortheking2",
+        "<if:MS>{Pelo rei!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedFortheking3",
+        "<if:MS>{Pelo rei!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedFortheking4",
+        "<if:MS>{Pelo rei!}<elif:FS>{ }"
+      ],
+      [
+        "MedvedDeathRandom",
+        "<if:MS>{Você... Quebrou o Círculo...}<elif:FS>{ }"
+      ],
+      [
+        "MedvedDeath2",
+        "<if:MS>{Você... Quebrou o Círculo...}<elif:FS>{ }"
+      ],
+      [
+        "MedvedDeath3",
+        "<if:MS>{Eles construíram um templo... Ao redor do espelho...}<elif:FS>{ }"
+      ],
+      [
+        "MedvedDeath4",
+        "<if:MS>{Abaixo da terra... Para se esconderem do céu escuro...}<elif:FS>{ }"
+      ],
+      [
+        "TujenEncounterCompleteRandom",
+        "<if:MS>{Comigo aqui não!}<elif:FS>{ }"
+      ],
+      [
+        "TujenEncounterComplete2",
+        "<if:MS>{Comigo aqui não!}<elif:FS>{ }"
+      ],
+      [
+        "TujenEncounterComplete3",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "TujenEncounterComplete4",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "TujenEncounterComplete5",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "TujenEncounterComplete6",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterCompleteRandom",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete2",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete3",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete4",
+        "<if:MS>{Hoje não!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete5",
+        "<if:MS>{Hoje não!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete6",
+        "<if:MS>{Hoje não!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete7",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete8",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete9",
+        "<if:MS>{Pelos Kalguur!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete10",
+        "<if:MS>{Sem chance!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete11",
+        "<if:MS>{Sem chance!}<elif:FS>{ }"
+      ],
+      [
+        "GwennenEncounterComplete12",
+        "<if:MS>{Sem chance!}<elif:FS>{ }"
+      ],
+      [
+        "RogEncounterCompleteRandom",
+        "<if:MS>{Se cuida!}<elif:FS>{ }"
+      ],
+      [
+        "RogEncounterComplete2",
+        "<if:MS>{Se cuida!}<elif:FS>{ }"
+      ],
+      [
+        "RogEncounterComplete3",
+        "<if:MS>{Se cuida!}<elif:FS>{ }"
+      ],
+      [
+        "DannigEncounterCompleteRandom",
+        "<if:MS>{Glorioso!}<elif:FS>{ }"
+      ],
+      [
+        "DannigEncounterComplete2",
+        "<if:MS>{Glorioso!}<elif:FS>{ }"
+      ],
+      [
+        "DannigEncounterComplete3",
+        "<if:MS>{Glorioso!}<elif:FS>{ }"
+      ],
+      [
+        "DannigEncounterComplete4",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "DannigEncounterComplete5",
+        "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "DannigEncounterComplete6",
+        "<if:MS>{Ha!}<elif:FS>{ }"
       ]
     ]
   },
@@ -56350,15 +60018,7 @@
         "Tora, Mestre da Caça"
       ],
       [
-        "Metadata/NPC/Missions/Hideout/DexDemo",
-        "Tora, Mestre da Caça"
-      ],
-      [
         "Metadata/NPC/Missions/Hideout/Int",
-        "Catarina, Mestre dos Mortos"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/IntDemo",
         "Catarina, Mestre dos Mortos"
       ],
       [
@@ -56366,15 +60026,7 @@
         "Haku, Mestre das Armaduras"
       ],
       [
-        "Metadata/NPC/Missions/Hideout/StrDemo",
-        "Haku, Mestre das Armaduras"
-      ],
-      [
         "Metadata/NPC/Missions/Hideout/DexInt",
-        "Vorici, Mestre Assassino"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/DexIntDemo",
         "Vorici, Mestre Assassino"
       ],
       [
@@ -56382,15 +60034,7 @@
         "Vagan, Mestre das Armas"
       ],
       [
-        "Metadata/NPC/Missions/Hideout/StrDexDemo",
-        "Vagan, Mestre das Armas"
-      ],
-      [
         "Metadata/NPC/Missions/Hideout/StrInt",
-        "Elreon, Mestre do Conhecimento"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/StrIntDemo",
         "Elreon, Mestre do Conhecimento"
       ],
       [
@@ -56403,10 +60047,6 @@
       ],
       [
         "Metadata/NPC/Missions/Hideout/PvP",
-        "Leo, Mestre da Arena"
-      ],
-      [
-        "Metadata/NPC/Missions/Hideout/PvPDemo",
         "Leo, Mestre da Arena"
       ],
       [
@@ -57866,6 +61506,14 @@
         "O Mestre das Provações"
       ],
       [
+        "Metadata/Monsters/LeagueDelve/CityBosses/DelveVaalCityBoss",
+        "Ahuatotli, o Cego"
+      ],
+      [
+        "Metadata/Monsters/LeagueDelve/CityBosses/DelveProtoVaalCityBoss",
+        "Aul, o Rei de Cristal"
+      ],
+      [
         "Metadata/Monsters/LeagueUltimatum/TrialMaster/TrialMasterBoss",
         "O Mestre das Provações"
       ],
@@ -57874,8 +61522,72 @@
         "Hasina"
       ],
       [
+        "Metadata/NPC/League/Expedition/Saga",
+        "Dannig, Guerreiro Skald"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/Gambler",
+        "Gwennen, a Apostadora"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/Haggler",
+        "Tujen, o Pechincheiro"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/Dealer",
+        "Rog, o Negociador"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionDannig",
+        "Dannig"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionGwennen_",
+        "Gwennen"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionTujen",
+        "Tujen"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog",
+        "Rog"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/SagaHideout",
+        "Dannig, Guerreiro Skald"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/GamblerHideout",
+        "Gwennen, a Apostadora"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/HagglerHideout",
+        "Tujen, o Pechincheiro"
+      ],
+      [
+        "Metadata/NPC/League/Expedition/DealerHideout",
+        "Rog, o Negociador"
+      ],
+      [
         "RoyaleAnnouncer",
         "Anunciador Royale"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/ReaperBoss",
+        "Vorana, Última a Cair"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/Uhtred",
+        "Uhtred"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/Olroth",
+        "Olroth, Origem da Queda"
+      ],
+      [
+        "Metadata/Monsters/LeagueExpedition/Medved",
+        "Medved"
       ]
     ]
   }
