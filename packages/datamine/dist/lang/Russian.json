@@ -8517,7 +8517,7 @@
       ],
       [
         "PantheonFailedToCreateSoulItem",
-        "Не удалось создать захваченную душу в машине картоходца."
+        "Не удалось создать захваченную душу в Машине картоходца."
       ],
       [
         "PantheonCannotConsumeVessel",
@@ -9066,6 +9066,26 @@
       [
         "UltimatumTrialStarted",
         "Вы не можете присоединиться к уже начатому испытанию."
+      ],
+      [
+        "RoyaleMatchEndedWonReward",
+        "Победа, победа, время обеда!\n В список ваших украшений для убежища добавлен жареный роа {0} уровня."
+      ],
+      [
+        "RoyaleMatchEndedWon",
+        "Победа, победа, время обеда!\n Следующее украшение для убежища через {0} побед."
+      ],
+      [
+        "RoyaleMatchEndedWonMax",
+        "Победа, победа, время обеда!"
+      ],
+      [
+        "RoyaleMatchEnded",
+        "{0} - победитель этого матча!"
+      ],
+      [
+        "RoyaleMatchEndedTeam",
+        "{0} и {1} победили в этом матче!"
       ]
     ]
   },
@@ -55759,6 +55779,38 @@
       [
         "HasinaPetSummon",
         ""
+      ],
+      [
+        "RoyaleAnnouncer5",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer4",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer3",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer2",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer1_",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerFight",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerDefeated",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerVictorious",
+        ""
       ]
     ]
   },
@@ -57820,6 +57872,10 @@
       [
         "Metadata/NPC/Hasina",
         "Хасина"
+      ],
+      [
+        "RoyaleAnnouncer",
+        "Комментатор Royale"
       ]
     ]
   }

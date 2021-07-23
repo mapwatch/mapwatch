@@ -9066,6 +9066,26 @@
       [
         "UltimatumTrialStarted",
         "이미 시작한 시련에는 입장할 수 없습니다."
+      ],
+      [
+        "RoyaleMatchEndedWonReward",
+        "이겼다! 오늘 저녁은 로아 만찬이다!\n {0} 등급 로아 만찬이 은신처 장식물에 추가되었습니다."
+      ],
+      [
+        "RoyaleMatchEndedWon",
+        "이겼다! 오늘 저녁은 로아 만찬이다!\n 다음 은신처 장식물 보상은 {0}승 후에 지급됩니다."
+      ],
+      [
+        "RoyaleMatchEndedWonMax",
+        "이겼다! 오늘 저녁은 로아 만찬이다!"
+      ],
+      [
+        "RoyaleMatchEnded",
+        "{0} 님이 승리했습니다!"
+      ],
+      [
+        "RoyaleMatchEndedTeam",
+        "{0} 님과 {1} 님이 승리했습니다!"
       ]
     ]
   },
@@ -55759,6 +55779,38 @@
       [
         "HasinaPetSummon",
         ""
+      ],
+      [
+        "RoyaleAnnouncer5",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer4",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer3",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer2",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer1_",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerFight",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerDefeated",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerVictorious",
+        ""
       ]
     ]
   },
@@ -57820,6 +57872,10 @@
       [
         "Metadata/NPC/Hasina",
         "하시나"
+      ],
+      [
+        "RoyaleAnnouncer",
+        "배틀로열 해설자"
       ]
     ]
   }

@@ -2828,10 +2828,7 @@
     },
     {
       "card": "The Lich",
-      "maps": [
-        "The Upper Prison",
-        "Bone Crypt Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Midnight Bargain\nCorrupted"
       }
@@ -4123,7 +4120,7 @@
         "Clouded Ridge",
         "Forgotten Oubliette",
         "Remote Gulch",
-        "Cremated Archives",
+        "Cremated Archives (Act 10)",
         "Narrow Ravine",
         "Mystical Clearing",
         "Covered-up Hollow",
@@ -4153,7 +4150,7 @@
         "Sealed Basement",
         "Secluded Canal",
         "Forbidden Archives",
-        "Cremated Archives",
+        "Cremated Archives (Act 5)",
         "Twisted Inquisitorium",
         "Deathly Chambers",
         "Restricted Collection",

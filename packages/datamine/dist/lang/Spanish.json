@@ -7425,7 +7425,7 @@
       ],
       [
         "MutedUntilSecondsConsole",
-        "Tu cuenta ha sido silenciada por un GM. Podrás hablar nuevamente en {0}. Si quieres discutir esto, envía un mensaje a \"Soporte\" desde la página web."
+        "Tu cuenta ha sido silenciada por un GM. Podrás hablar nuevamente en {0}. Si quieres discutir esto, envía un mensaje a \"Support\" desde la página web."
       ],
       [
         "ObaPlayerJoined",
@@ -9066,6 +9066,26 @@
       [
         "UltimatumTrialStarted",
         "No puedes unirte a una prueba que ya ha empezado."
+      ],
+      [
+        "RoyaleMatchEndedWonReward",
+        "¡Ganador, ganador, la Cena de rhoa es para el vencedor!\nSe ha agregado una Cena de rhoa de grado {0} a tus decoraciones de guarida."
+      ],
+      [
+        "RoyaleMatchEndedWon",
+        "¡Ganador, ganador, la Cena de rhoa es para el vencedor!\nRecibirás la siguiente decoración de guarida como recompensa en {0} victorias."
+      ],
+      [
+        "RoyaleMatchEndedWonMax",
+        "¡Ganador, ganador, la cena de rhoa es para el vencedor!"
+      ],
+      [
+        "RoyaleMatchEnded",
+        "¡{0} ha ganado la partida!"
+      ],
+      [
+        "RoyaleMatchEndedTeam",
+        "¡{0} y {1} han ganado la partida!"
       ]
     ]
   },
@@ -55759,6 +55779,38 @@
       [
         "HasinaPetSummon",
         ""
+      ],
+      [
+        "RoyaleAnnouncer5",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer4",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer3",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer2",
+        ""
+      ],
+      [
+        "RoyaleAnnouncer1_",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerFight",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerDefeated",
+        ""
+      ],
+      [
+        "RoyaleAnnouncerVictorious",
+        ""
       ]
     ]
   },
@@ -57820,6 +57872,10 @@
       [
         "Metadata/NPC/Hasina",
         "Hasina"
+      ],
+      [
+        "RoyaleAnnouncer",
+        "Narrador del Royale"
       ]
     ]
   }
