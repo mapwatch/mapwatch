@@ -3148,6 +3148,13 @@
       }
     },
     {
+      "card": "The Price of Prescience",
+      "maps": [],
+      "loot": {
+        "text": "Vaal Temple Map\nMap Tier: 16\nDelirium: 100%\nCorrupted"
+      }
+    },
+    {
       "card": "The Price of Protection",
       "maps": [],
       "loot": {
