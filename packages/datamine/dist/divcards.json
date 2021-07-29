@@ -1170,12 +1170,7 @@
     },
     {
       "card": "Perfection",
-      "maps": [
-        "Pit of the Chimera Map",
-        "Lair of the Hydra Map",
-        "Maze of the Minotaur Map",
-        "Forge of the Phoenix Map"
-      ],
+      "maps": [],
       "loot": {
         "text": "Jewellery\nItem Level: 100\nShaper Item"
       }
