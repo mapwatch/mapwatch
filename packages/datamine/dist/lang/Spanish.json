@@ -9097,7 +9097,7 @@
       ],
       [
         "ActionTemporarilyDisabled",
-        "This action has been temporarily disabled."
+        "Esta acción ha sido deshabilitada temporalmente."
       ]
     ]
   },
@@ -56354,7 +56354,7 @@
       ],
       [
         "GwennenTutorialIntro",
-        "Apuesto a que un pueblerino como tú estará deseando ver algunas explosiones. No importa por qué estamos haciendo explotar cosas, todavía. Ya llegaremos a eso.\r\n\r\nMe he adelantado y he marcado las ubicaciones donde podría haber tesoros y peligros. Considérame magnánimo. Puedes elegir lo que vamos a descubrir, ya que tengo ganas de ver qué tipo de suerte posees. Esperaré aquí atrás. Tan atrás como pueda.\r\n\r\nColoca una cadena de dispositivos. Crearemos una poderosa demostración."
+        "<if:MS>{Apuesto a que un pueblerino como tú estará deseando ver algunas explosiones. No importa por qué estamos haciendo explotar cosas, todavía. Ya llegaremos a eso.\r\n\r\nMe he adelantado y he marcado las ubicaciones donde podría haber tesoros y peligros. Considérame magnánima. Puedes elegir lo que vamos a descubrir, ya que tengo ganas de ver qué tipo de suerte posees. Esperaré aquí atrás. Tan atrás como pueda.\r\n\r\nColoca una cadena de dispositivos. Crearemos una poderosa demostración.}<elif:FS>{Apuesto a que una pueblerina como tú estará deseando ver algunas explosiones. No importa por qué estamos haciendo explotar cosas, todavía. Ya llegaremos a eso.\r\n\r\nMe he adelantado y he marcado las ubicaciones donde podría haber tesoros y peligros. Considérame magnánima. Puedes elegir lo que vamos a descubrir, ya que tengo ganas de ver qué tipo de suerte posees. Esperaré aquí atrás. Tan atrás como pueda.\r\n\r\nColoca una cadena de dispositivos. Crearemos una poderosa demostración.}"
       ],
       [
         "GwennenTutorialPlayerPlacesFirstExplosive",
@@ -56390,7 +56390,7 @@
       ],
       [
         "GwennenTutorialTalkAfter",
-        "<if:MS>{Ja, sí, podría haber sido más honesto sobre el peligro... pero verás, la gente no acepta el trabajo cuando menciono que la tierra removida está llena de criaturas letales. Esta región que tienen aquí es bastante terrible, lugareño. Es un milagro que alguien consiga sobrevivir. Aunque eso tiene que ver con la razón por la que estoy aquí en primer lugar... pero tendrás que preguntarle a Dannig sobre eso, si lo encuentras.\r\n\r\nPor cierto, si te gusta un poco el riesgo, tengo algunas cosas que he desenterrado que podrían interesarte...}<elif:FS>{Ja, sí, podría haber sido más honesto sobre el peligro... pero verás, la gente no acepta el trabajo cuando menciono que la tierra removida está llena de criaturas letales. Esta región que tienen aquí es bastante terrible, lugareña. Es un milagro que alguien consiga sobrevivir. Aunque eso tiene que ver con la razón por la que estoy aquí en primer lugar... pero tendrás que preguntarle a Dannig sobre eso, si lo encuentras.\r\n\r\nPor cierto, si te gusta un poco el riesgo, tengo algunas cosas que he desenterrado que podrían interesarte...}"
+        "<if:MS>{Ja, sí, podría haber sido más honesta sobre el peligro... pero verás, la gente no acepta el trabajo cuando menciono que la tierra removida está llena de criaturas letales. Esta región que tienen aquí es bastante terrible, lugareño. Es un milagro que alguien consiga sobrevivir. Aunque eso tiene que ver con la razón por la que estoy aquí en primer lugar... pero tendrás que preguntarle a Dannig sobre eso, si lo encuentras.\r\n\r\nPor cierto, si te gusta un poco el riesgo, tengo algunas cosas que he desenterrado que podrían interesarte...}<elif:FS>{Ja, sí, podría haber sido más honesta sobre el peligro... pero verás, la gente no acepta el trabajo cuando menciono que la tierra removida está llena de criaturas letales. Esta región que tienen aquí es bastante terrible, lugareña. Es un milagro que alguien consiga sobrevivir. Aunque eso tiene que ver con la razón por la que estoy aquí en primer lugar... pero tendrás que preguntarle a Dannig sobre eso, si lo encuentras.\r\n\r\nPor cierto, si te gusta un poco el riesgo, tengo algunas cosas que he desenterrado que podrían interesarte...}"
       ],
       [
         "GwennenTutorialPartingShoutForTutorialTwo",
