@@ -1856,7 +1856,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         284
@@ -1871,7 +1871,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         285
@@ -1886,7 +1886,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         286
@@ -1901,7 +1901,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         287
@@ -1916,7 +1916,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         288
@@ -1931,7 +1931,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         289
@@ -1946,7 +1946,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         290
@@ -1961,7 +1961,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         291
@@ -1976,7 +1976,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         292
@@ -1991,7 +1991,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/IncursionPortal.png",
+        "Art/2DItems/Maps/TempleMap.png",
         null,
         null,
         293
@@ -12950,7 +12950,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/MavenPortalEffect.png",
+        "Art/2DItems/Currency/AtlasRadiusTier4.png",
         null,
         null,
         1696
@@ -13868,7 +13868,11 @@
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "The Envoy",
         "Metadata/NPC/Epilogue/Maven": "The Maven",
-        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "The Trialmaster"
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "The Trialmaster",
+        "Metadata/NPC/League/Expedition/Saga": "Dannig, Warrior Skald",
+        "Metadata/NPC/League/Expedition/Gambler": "Gwennen, the Gambler",
+        "Metadata/NPC/League/Expedition/Haggler": "Tujen, the Haggler",
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "I see you, little mouse... you don't belong here. Run along!",
@@ -15927,7 +15931,11 @@
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "L'Émissaire",
         "Metadata/NPC/Epilogue/Maven": "La Prodige",
-        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "Le Maître des Épreuves"
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "Le Maître des Épreuves",
+        "Metadata/NPC/League/Expedition/Saga": "Dannig, le Guerrier scalde",
+        "Metadata/NPC/League/Expedition/Gambler": "Gwennen, la Parieuse",
+        "Metadata/NPC/League/Expedition/Haggler": "Tujen, le Marchandeur",
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "Je te vois, petite souris… tu n'as rien à faire ici. Du balais !",
@@ -17986,7 +17994,11 @@
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "Der Gesandte",
         "Metadata/NPC/Epilogue/Maven": "Die Seherin",
-        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "Der Prüfungsmeister"
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "Der Prüfungsmeister",
+        "Metadata/NPC/League/Expedition/Saga": "Dannig, Krieger-Skalde",
+        "Metadata/NPC/League/Expedition/Gambler": "Gwennen die Spielerin",
+        "Metadata/NPC/League/Expedition/Haggler": "Tujen der Feilscher",
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "Ich sehe dich, kleines Ungeziefer ... du hast hier nichts verloren. Scher dich fort!",
@@ -20045,7 +20057,11 @@
         "Metadata/NPC/League/Heist/TullinaFiance": "줄리우스 패로우",
         "Metadata/NPC/Epilogue/Envoy": "사절",
         "Metadata/NPC/Epilogue/Maven": "메이븐",
-        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "시련의 대가"
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "시련의 대가",
+        "Metadata/NPC/League/Expedition/Saga": "전사 시인 대닉",
+        "Metadata/NPC/League/Expedition/Gambler": "도박사 그위넨",
+        "Metadata/NPC/League/Expedition/Haggler": "거간꾼 투젠",
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "로그"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "네가 보이는구나, 생쥐. 이 세상에 속하지 않은 자여, 썩 물러가거라!",
@@ -22104,7 +22120,11 @@
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "O Enviado",
         "Metadata/NPC/Epilogue/Maven": "A Maven",
-        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "O Mestre das Provações"
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "O Mestre das Provações",
+        "Metadata/NPC/League/Expedition/Saga": "Dannig, Guerreiro Skald",
+        "Metadata/NPC/League/Expedition/Gambler": "Gwennen, a Apostadora",
+        "Metadata/NPC/League/Expedition/Haggler": "Tujen, o Pechincheiro",
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "<if:MS>{Bem-vindo ao crisol da criação. A bigorna em qual os mundos foram forjados.}<elif:FS>{Bem-vinda ao crisol da criação. A bigorna em qual os mundos foram forjados.}",
@@ -24163,7 +24183,11 @@
         "Metadata/NPC/League/Heist/TullinaFiance": "Юлий Фарроу",
         "Metadata/NPC/Epilogue/Envoy": "Посланник",
         "Metadata/NPC/Epilogue/Maven": "Мейвен",
-        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "Мастер испытаний"
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "Мастер испытаний",
+        "Metadata/NPC/League/Expedition/Saga": "Дэнниг, воин и скальд",
+        "Metadata/NPC/League/Expedition/Gambler": "Гвеннен, спекулянтка",
+        "Metadata/NPC/League/Expedition/Haggler": "Туджин, торгаш",
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Рог"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "Я тебя вижу, мышонок... Тебе здесь не место. Убирайся!",
@@ -27130,7 +27154,11 @@
         "Metadata/NPC/League/Heist/TullinaFiance": "Julius Farrow",
         "Metadata/NPC/Epilogue/Envoy": "El Emisario",
         "Metadata/NPC/Epilogue/Maven": "La Especialista",
-        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "El Maestro de pruebas"
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "El Maestro de pruebas",
+        "Metadata/NPC/League/Expedition/Saga": "Dannig, Guerrero escaldo",
+        "Metadata/NPC/League/Expedition/Gambler": "Gwennen, la Apostadora",
+        "Metadata/NPC/League/Expedition/Haggler": "Tujen, el Regateador",
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "<if:MS>{Te veo, ratoncito... no perteneces aquí. ¡Sigue tu camino!}<elif:FS>{Te veo, ratoncita... no perteneces aquí. ¡Sigue tu camino!}",
@@ -29189,7 +29217,11 @@
         "Metadata/NPC/League/Heist/TullinaFiance": "จูเลียส แฟร์โรว์",
         "Metadata/NPC/Epilogue/Envoy": "ราชทูต",
         "Metadata/NPC/Epilogue/Maven": "เมเวน",
-        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "ผู้คุมบททดสอบ"
+        "Metadata/NPC/League/Ultimatum/UltimatumNPC": "ผู้คุมบททดสอบ",
+        "Metadata/NPC/League/Expedition/Saga": "แดนนิก กวีนักรบ",
+        "Metadata/NPC/League/Expedition/Gambler": "เกว็นเน็น นักพนัน",
+        "Metadata/NPC/League/Expedition/Haggler": "ทูเจน ผู้ต่อราคา",
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "ร็อก"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "ข้าเห็นเจ้าแล้วเจ้าหนูน้อย เจ้าไม่ใช่คนที่นี่ ไปซะไป!",
