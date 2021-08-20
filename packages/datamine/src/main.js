@@ -98,7 +98,8 @@ const nonAtlasMaps = {
   "BetrayalSafeHouseCaravan": "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
   "BetrayalSafeHouseLaboratory": "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png",
   // maven
-  "MavenHub": "Art/2DItems/Effects/Portals/MavenPortalEffect.png",
+  // "MavenHub": "Art/2DItems/Effects/Portals/MavenPortalEffect.png",
+  "MavenHub": "Art/2DItems/Currency/AtlasRadiusTier4.png",
   // 3.14
   "HarvestLeagueBoss": "Art/2DItems/Maps/OshabiMap.png",
   "UltimatumArena": "Art/2DItems/Maps/UltimatumTrialBase.png",
@@ -117,7 +118,8 @@ function nonAtlasMapIcon(id) {
   // sometimes with a trailing underscore just to mess us up.
   // No idea why it needs multiple ids, but it makes no difference
   if (id.startsWith("Incursion_Temple")) {
-    return "Art/2DItems/Effects/Portals/IncursionPortal.png"
+    // return "Art/2DItems/Effects/Portals/IncursionPortal.png"
+    return "Art/2DItems/Maps/TempleMap.png"
   }
   // Heist contracts. I can't find a way to associate heist zones to their item icon, so we'll do it by hand
   if (id.startsWith("HeistBunker")) {

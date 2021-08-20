@@ -368,12 +368,11 @@ table.encounters {
 }
 
 /* Thanks, poedb! https://poedb.tw/us/Ultimatum#MinimapIcons */
-.ultimatum-minimap.minimap {
+/* https://web.poecdn.com/image/Art/2DArt/minimap/player.png */
+/* 32px * 14 cols */
+.minimap {
   display: inline-block;
   background-image: url("https://web.poecdn.com/image/Art/2DArt/minimap/player.png");
-  /* background-position: -256px -1280px; */
-  background-position: -8em -40em;
-  /* 32px * 14 */
   /* background-size: 448px auto; */
   background-size: 14em auto;
 
@@ -382,6 +381,17 @@ table.encounters {
   height: 1em;
   font-size: 150%;
   margin-right: 0.2em;
+}
+.ultimatum-minimap.minimap {
+  /* (old) background-position: -256px -1280px; */
+  background-position: -11em -40em;
+}
+.harvest-minimap.minimap {
+  /* background-position: -256px -1280px; */
+  background-position: -9em -40em;
+}
+.incursion-minimap.minimap {
+  background-position: -13em -2em;
 }
 
 img.trialmaster-mod {

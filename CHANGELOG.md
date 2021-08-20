@@ -4,6 +4,10 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-08-20
+- Excluded Royale from league buttons.
+- Fixed some broken encounter icons.
+
 ## 2021-06-19
 - Fixed a bug preventing Mapwatch from reading Russian language logs.
 

@@ -89,8 +89,8 @@ labTrialUrl =
 labTrial : Html msg
 labTrial =
     -- sideArea { name = "trial", url = "Art/2DItems/Maps/Labyrinth.png" }
-    -- sideArea { name = "trial", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardLabyrinth.png" }
-    sideArea { name = "trial big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLabyrinth.png?scale=1" }
+    -- sideArea { name = "trial big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLabyrinth.png?scale=1" }
+    sideArea { name = "trial", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardLabyrinth.png" }
 
 
 abyss : Html msg
@@ -141,7 +141,8 @@ einhar =
 
 alva : Html msg
 alva =
-    sideArea { name = "alva med-icon", url = "Art/2DItems/Effects/Portals/IncursionPortal.png" }
+    -- sideArea { name = "alva med-icon", url = "Art/2DItems/Effects/Portals/IncursionPortal.png" }
+    div [ class "incursion-minimap minimap" ] []
 
 
 niko : Html msg
@@ -300,17 +301,21 @@ divCard =
 
 envoy : Html msg
 envoy =
-    sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+    -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+    sideArea { name = "envoy med-icon", url = "Art/2DItems/Currency/AtlasRadiusTier4.png?scale=1" }
 
 
 maven : Html msg
 maven =
-    sideArea { name = "maven med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+    -- sideArea { name = "maven med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+    sideArea { name = "maven med-icon", url = "Art/2DItems/Currency/AtlasRadiusTier4.png?scale=1" }
 
 
 harvest : Html msg
 harvest =
-    sideArea { name = "harvest big-icon", url = "Art/2DItems/Effects/Portals/HarvestPortal.png?scale=1" }
+    -- sideArea { name = "harvest big-icon", url = "Art/2DItems/Effects/Portals/HarvestPortal.png?scale=1" }
+    -- sideArea { name = "harvest big-icon", url = "Art/2DItems/Maps/OshabiMap.png?scale=1" }
+    div [ class "harvest-minimap minimap" ] []
 
 
 trialmaster : Html msg
