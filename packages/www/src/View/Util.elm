@@ -113,7 +113,7 @@ filterLeagueButtons =
     Dict.Extra.groupBy (.startAt >> Time.posixToMillis)
         >> Dict.values
         >> List.filterMap (List.Extra.minimumBy (.id >> String.length))
-        >> List.filter (\l -> l.id /= "Standard")
+        >> List.filter (\l -> l.id /= "Standard" && not (String.contains "Royale" l.id))
 
 
 hidePreLeagueButtons : List League -> QueryDict -> Route -> List (Html msg)
