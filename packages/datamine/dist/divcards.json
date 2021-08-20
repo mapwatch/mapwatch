@@ -47,6 +47,13 @@
       }
     },
     {
+      "card": "A Sea of Blue",
+      "maps": [],
+      "loot": {
+        "text": "13x Orb of Alteration"
+      }
+    },
+    {
       "card": "Abandoned Wealth",
       "maps": [
         "Arsenal Map",
@@ -88,6 +95,13 @@
       "maps": [],
       "loot": {
         "text": "Delve Item"
+      }
+    },
+    {
+      "card": "Ambitious Obsession",
+      "maps": [],
+      "loot": {
+        "text": "Skittering Delirium Orb"
       }
     },
     {
@@ -161,13 +175,6 @@
       "maps": [],
       "loot": {
         "text": "Queen's Sacrifice"
-      }
-    },
-    {
-      "card": "Blessing of God",
-      "maps": [],
-      "loot": {
-        "text": "Elreon's Jewellery\nItem Level: 85"
       }
     },
     {
@@ -313,6 +320,13 @@
       }
     },
     {
+      "card": "Costly Curio",
+      "maps": [],
+      "loot": {
+        "text": "Item\nDouble-Influenced Item"
+      }
+    },
+    {
       "card": "Council of Cats",
       "maps": [
         "Hunter's Ambush"
@@ -381,6 +395,13 @@
       "maps": [],
       "loot": {
         "text": "Level 21 Trap Gem\nQuality: +23%\nCorrupted"
+      }
+    },
+    {
+      "card": "Dementophobia",
+      "maps": [],
+      "loot": {
+        "text": "10x Delirium Orb"
       }
     },
     {
@@ -887,6 +908,15 @@
       }
     },
     {
+      "card": "Lachrymal Necrosis",
+      "maps": [
+        "The Desecrated Chambers"
+      ],
+      "loot": {
+        "text": "Jewel\nImplicit Modifier:\nCorrupted Blood cannot be inflicted on you\nCorrupted"
+      }
+    },
+    {
       "card": "Lantador's Lost Love",
       "maps": [
         "The Twilight Strand (Act 6)",
@@ -1383,6 +1413,13 @@
       }
     },
     {
+      "card": "Terrible Secret of Space",
+      "maps": [],
+      "loot": {
+        "text": "Level 21 Golem Gem\nAny Quality Type: +23%\nCorrupted"
+      }
+    },
+    {
       "card": "The Academic",
       "maps": [],
       "loot": {
@@ -1545,6 +1582,13 @@
       ],
       "loot": {
         "text": "Chin Sol"
+      }
+    },
+    {
+      "card": "The Blessing of Moosh",
+      "maps": [],
+      "loot": {
+        "text": "Item\nLabyrinth Enchantment"
       }
     },
     {
@@ -1976,6 +2020,13 @@
       ],
       "loot": {
         "text": "Uber Elder Fragment"
+      }
+    },
+    {
+      "card": "The Emptiness",
+      "maps": [],
+      "loot": {
+        "text": "Vaal Breach\nQuality: +6%\nCorrupted"
       }
     },
     {
@@ -2822,6 +2873,13 @@
       }
     },
     {
+      "card": "The Last Supper",
+      "maps": [],
+      "loot": {
+        "text": "Bino's Kitchen Knife"
+      }
+    },
+    {
       "card": "The Lich",
       "maps": [],
       "loot": {
@@ -2970,6 +3028,13 @@
       }
     },
     {
+      "card": "The Mind's Eyes",
+      "maps": [],
+      "loot": {
+        "text": "Astral Projector"
+      }
+    },
+    {
       "card": "The Mountain",
       "maps": [
         "The Ascent",
@@ -3017,6 +3082,13 @@
       "maps": [],
       "loot": {
         "text": "Shavronne's Wrappings"
+      }
+    },
+    {
+      "card": "The Offspring",
+      "maps": [],
+      "loot": {
+        "text": "Ryslatha's Coil"
       }
     },
     {
