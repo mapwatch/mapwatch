@@ -8053,7 +8053,7 @@
       ],
       [
         "HardcoreDeathAnnouncement",
-        "{0} (Niveau {1}) est mort à la {2}e place du classement."
+        "{0} (Niveau {1}) vient de mourir à la {2}e place du classement."
       ],
       [
         "InteractErrorIncaBossSpawner",
@@ -9097,7 +9097,7 @@
       ],
       [
         "ActionTemporarilyDisabled",
-        "This action has been temporarily disabled."
+        "Cette action a été temporairement désactivée."
       ]
     ]
   },
@@ -44626,7 +44626,7 @@
       ],
       [
         "EnvoyGreetingT3Maven4",
-        "J'ai posé les yeux sur les grandes cimes de feu et de lumière, je les ai vues s'effriter et se faire dévorer par le ciel noir. J'ai entendu le chœur des ténèbres chanter tandis que cet être buvait tout son soûl avant d'abandonner ce monde qu'il avait réduit à l'état de coquille glacée et sans vie. Tel était le présent qu'il m'offrait à moi, son serviteur éternel : celui de marcher parmi les innombrables morts figés dans un hurlement silencieux afin d'être le témoin de son œuvre."
+        "J'ai posé les yeux sur les grandes cimes de feu et de lumière, je les ai vues s'effriter et se faire dévorer par le ciel noir. J'ai entendu le chœur des ténèbres chanter alors même qu'elles buvaient tout leur soûl avant d'abandonner ce monde dorénavant réduit à l'état de coquille glacée et sans vie. Tel était le présent qu'elles m'offraient à moi, leur serviteur éternel : celui de marcher parmi les innombrables morts figés dans un hurlement silencieux afin de faire de moi le témoin de leur œuvre."
       ],
       [
         "EnvoyGreetingT3Maven5",
