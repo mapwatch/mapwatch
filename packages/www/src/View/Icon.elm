@@ -321,3 +321,27 @@ harvest =
 trialmaster : Html msg
 trialmaster =
     div [ class "ultimatum-minimap minimap" ] []
+
+
+gwennen : Html msg
+gwennen =
+    -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+    sideArea { name = "gwennen expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/DruidsOfTheWebHeraldryIcon.png?scale=1" }
+
+
+tujen : Html msg
+tujen =
+    -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+    sideArea { name = "tujen expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/BlackSwordMercenariesHeraldryIcon.png?scale=1" }
+
+
+rog : Html msg
+rog =
+    -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+    sideArea { name = "rog expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/OrderOfTheChaliceHeraldryIcon.png?scale=1" }
+
+
+dannig : Html msg
+dannig =
+    -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
+    sideArea { name = "dannig expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/KnightsOfTheWolfHeraldryIcon.png?scale=1" }

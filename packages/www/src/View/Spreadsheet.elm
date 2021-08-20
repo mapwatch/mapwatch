@@ -162,6 +162,10 @@ viewEncountersRows tally =
     , { count = tally.maven, label = "The Maven" }
     , { count = tally.sirusInvasions, label = "Sirus Invasions" }
     , { count = tally.trialmaster, label = "The Trialmaster" }
+    , { count = tally.gwennen, label = "Gwennen, the Gambler" }
+    , { count = tally.tujen, label = "Tujen, the Haggler" }
+    , { count = tally.rog, label = "Rog, the Dealer" }
+    , { count = tally.dannig, label = "Dannig, Warrior Skald" }
     ]
         |> List.sortBy .count
         |> List.reverse

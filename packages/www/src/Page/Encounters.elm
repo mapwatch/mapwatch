@@ -268,6 +268,10 @@ listEncounterTally query tally =
         , entry tally.sirusInvasions "npc:sirus" [ View.Icon.sirus, text "Sirus Invasions" ]
         , entry tally.maven "npc:the maven" [ View.Icon.maven, text "The Maven" ]
         , entry tally.trialmaster "npc:the trialmaster" [ View.Icon.trialmaster, text "The Trialmaster" ]
+        , entry tally.gwennen "npc:gwennen" [ View.Icon.gwennen, text "Gwennen, the Gambler" ]
+        , entry tally.tujen "npc:tujen" [ View.Icon.tujen, text "Tujen, the Haggler" ]
+        , entry tally.rog "npc:rog" [ View.Icon.rog, text "Rog, the Dealer" ]
+        , entry tally.dannig "npc:dannig" [ View.Icon.dannig, text "Dannig, Warrior Skald" ]
         ]
             |> List.filter (\r -> r.count > 0)
             |> List.sortBy .count

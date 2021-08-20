@@ -216,6 +216,13 @@ const exportedNPCs = Object.assign({}, ...[
   "Metadata/NPC/Epilogue/Maven",
   // the trialmaster
   "Metadata/NPC/League/Ultimatum/UltimatumNPC",
+  "Metadata/NPC/League/Expedition/Gambler",
+  "Metadata/NPC/League/Expedition/Haggler",
+  // strangely, Rog's in-game messages don't have a title suffix the way damn near every other NPC in the game does.
+  // "Rog", not "Rog, the Dealer". Worried that the short name will cause false positives, but let's see how it goes...
+  // "Metadata/NPC/League/Expedition/Dealer",
+  "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog",
+  "Metadata/NPC/League/Expedition/Saga",
 ].map(name => ({[name]: true})))
 function isNPCIdExported(raw) {
   return !!exportedNPCs[raw.Id]

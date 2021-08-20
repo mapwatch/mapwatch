@@ -5,6 +5,7 @@ All substantial Mapwatch website changes.
 ---
 
 ## 2021-08-20
+- Expedition NPCs are now tracked.
 - Excluded Royale from league buttons.
 - Fixed some broken encounter icons.
 

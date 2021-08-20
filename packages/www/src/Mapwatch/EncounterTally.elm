@@ -51,12 +51,16 @@ type alias EncounterTally =
     , trialmasterAbandoned : Int
     , trialmasterBosses : Int
     , trialmasterBossRolls : Int
+    , gwennen : Int
+    , tujen : Int
+    , rog : Int
+    , dannig : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -164,6 +168,10 @@ tallyNpcs npcs tally =
         , maven = Dict.get NpcId.maven counts |> Maybe.withDefault 0
         , oshabi = Dict.get NpcId.oshabi counts |> Maybe.withDefault 0
         , sirusInvasions = Dict.get NpcId.sirus counts |> Maybe.withDefault 0
+        , gwennen = Dict.get NpcId.gwennen counts |> Maybe.withDefault 0
+        , tujen = Dict.get NpcId.tujen counts |> Maybe.withDefault 0
+        , rog = Dict.get NpcId.rog counts |> Maybe.withDefault 0
+        , dannig = Dict.get NpcId.dannig counts |> Maybe.withDefault 0
 
         -- , trialmaster = Dict.get NpcId.trialmaster counts |> Maybe.withDefault 0
     }

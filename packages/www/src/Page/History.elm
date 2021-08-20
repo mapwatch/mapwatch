@@ -702,6 +702,18 @@ viewNpcText query loadedAt npcId =
     else if npcId == NpcId.sirus then
         [ View.Icon.sirus, text "Sirus, Awakener of Worlds" ]
 
+    else if npcId == NpcId.gwennen then
+        [ View.Icon.gwennen, text "Gwennen, the Gambler" ]
+
+    else if npcId == NpcId.tujen then
+        [ View.Icon.tujen, text "Tujen, the Haggler" ]
+
+    else if npcId == NpcId.rog then
+        [ View.Icon.rog, text "Rog, the Dealer" ]
+
+    else if npcId == NpcId.dannig then
+        [ View.Icon.dannig, text "Dannig, Warrior Skald" ]
+
     else
         []
 

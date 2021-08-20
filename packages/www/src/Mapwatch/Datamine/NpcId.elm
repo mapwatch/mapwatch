@@ -175,3 +175,20 @@ oshabi =
 
 trialmaster =
     "Metadata/NPC/League/Ultimatum/UltimatumNPC"
+
+
+gwennen =
+    "Metadata/NPC/League/Expedition/Gambler"
+
+
+tujen =
+    "Metadata/NPC/League/Expedition/Haggler"
+
+
+rog =
+    -- "Metadata/NPC/League/Expedition/Dealer"
+    "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog"
+
+
+dannig =
+    "Metadata/NPC/League/Expedition/Saga"
