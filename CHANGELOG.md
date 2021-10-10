@@ -4,6 +4,11 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-10-10
+- Built the infrastructure needed to translate Mapwatch to non-English languages.
+  - [Want to help translate Mapwatch to your language?](https://github.com/mapwatch/mapwatch/blob/master/TRANSLATING.md)
+  - We've been able to parse non-English log files for a while. This is for the Mapwatch user interface.
+
 ## 2021-08-20
 - Expedition NPCs are now tracked.
 - Excluded Royale from league buttons.

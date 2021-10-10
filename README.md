@@ -84,9 +84,11 @@ This has been pretty uncommon, in my experience. It could be more or less common
 
 ### Will Mapwatch work if I run PoE in a language other than English?
 
-Yes! Mapwatch itself is English-only, but you can play Path of Exile in any language - Mapwatch should be able to understand your Client.txt.
+Yes! ~~Mapwatch itself is English-only, but~~ you can play Path of Exile in any language - Mapwatch should be able to understand your Client.txt.
 
 If your language seems broken, please file a bug. I usually test Mapwatch in English, but I want to know if your language isn't working!
+
+[Want to help translate Mapwatch to your language?](TRANSLATING.md)
 
 ### [My Harvest encounter rate seems low?](https://github.com/mapwatch/mapwatch/issues/183)
 
