@@ -4,6 +4,7 @@ import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import Localization.Mapwatch as L
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
@@ -76,25 +77,25 @@ viewMain model =
 
         hideEarlierButton =
             a [ class "button", Route.href (QueryDict.insertPosix Route.keys.after model.now model.query) Route.Timer ]
-                [ View.Icon.fas "eye-slash", text " Hide earlier maps" ]
+                [ View.Icon.fas "eye-slash", text " ", span [ L.timerHideEarlier ] [] ]
 
         ( sessname, runs, sessionButtons ) =
             case after of
                 Nothing ->
-                    ( "today"
+                    ( L.timerDoneToday
                     , RunSort.filterToday model.tz model.now model.mapwatch.runs
                     , hideEarlierButton
                         :: View.Util.hidePreLeagueButtons model.mapwatch.datamine.leagues model.query model.route
                     )
 
                 Just _ ->
-                    ( "this session"
+                    ( L.timerDoneThisSession
                     , RunSort.filterBetween { before = Nothing, after = after } model.mapwatch.runs
                     , [ a [ class "button", Route.href (Dict.remove Route.keys.after model.query) Route.Timer ]
-                            [ View.Icon.fas "eye", text " Unhide all" ]
+                            [ View.Icon.fas "eye", text " ", span [ L.timerUnhide ] [] ]
                       , hideEarlierButton
                       , a [ class "button", Route.href (QueryDict.insertPosix Route.keys.before model.now model.query) Route.History ]
-                            [ View.Icon.fas "camera", text " Snapshot history" ]
+                            [ View.Icon.fas "camera", text " ", span [ L.timerSnapshot ] [] ]
                       ]
                     )
 
@@ -106,18 +107,9 @@ viewMain model =
                 [ tbody [] (List.concat <| List.map (Page.History.viewHistoryRun model { showDate = False, loadedAt = model.loadedAt } goalDuration) <| history)
                 , tfoot []
                     [ tr []
-                        [ td [ colspan 12 ]
-                            (if Feature.isActive Feature.ConquerorStatus model.query then
-                                [ viewConquerorsState model.query (Conqueror.createState (Maybe.Extra.toList run ++ model.mapwatch.runs)) ]
-
-                             else
-                                []
-                            )
-                        ]
-                    , tr []
                         [ td [ colspan 12, class "timer-links" ]
-                            [ a [ Route.href model.query Route.History ] [ View.Icon.fas "history", text " History" ]
-                            , a [ Route.href model.query Route.Overlay ] [ View.Icon.fas "align-justify", text " Overlay" ]
+                            [ a [ Route.href model.query Route.History ] [ View.Icon.fas "history", text " ", span [ L.timerHistory ] [] ]
+                            , a [ Route.href model.query Route.Overlay ] [ View.Icon.fas "align-justify", text " ", span [ L.timerOverlay ] [] ]
                             ]
                         ]
                     ]
@@ -128,7 +120,7 @@ viewMain model =
                 Just run_ ->
                     ( Just run_.duration.all
                     , goalDuration run_
-                    , [ td [ style "vertical-align" "top" ] [ text "Mapping in: " ]
+                    , [ td [ style "vertical-align" "top", L.timerIn ] []
                       , td [] <|
                             case run_.address.worldArea of
                                 Nothing ->
@@ -141,7 +133,7 @@ viewMain model =
                                     [ View.Home.viewRun model.query run_
                                     , span []
                                         [ text " ("
-                                        , a [ target "_blank", href <| Datamine.wikiUrl model.mapwatch.datamine w ] [ text "wiki" ]
+                                        , a [ target "_blank", href <| Datamine.wikiUrl model.mapwatch.datamine w, L.timerMapWiki ] []
                                         , text ")"
                                         ]
                                     , View.Drops.view model.query model.mapwatch.datamine w
@@ -152,7 +144,7 @@ viewMain model =
                 Nothing ->
                     ( Nothing
                     , Nothing
-                    , [ td [] [ text "Not mapping" ]
+                    , [ td [ L.timerNotMapping ] []
                       , td [] []
                       ]
                     )
@@ -169,7 +161,7 @@ viewMain model =
             [ tbody []
                 [ tr [] mappingNow
                 , tr []
-                    [ td [] [ text "Last entered: " ]
+                    [ td [ L.timerLastEntered ] []
                     , td []
                         [ View.Home.viewMaybeInstance model.query <| Maybe.map .val model.mapwatch.instance
                         , small [ style "opacity" "0.5" ]
@@ -179,7 +171,7 @@ viewMain model =
                             ]
                         ]
                     ]
-                , tr [] [ td [] [ text <| "Maps done " ++ sessname ++ ": " ], td [] [ text <| String.fromInt <| List.length runs ] ]
+                , tr [] [ td [ sessname ] [], td [] [ text <| String.fromInt <| List.length runs ] ]
                 , tr [ class "session-buttons" ] [ td [ colspan 2 ] sessionButtons ]
                 ]
             ]
@@ -199,72 +191,3 @@ viewTimer dur goal =
         , div [ class "sub-timer" ]
             [ div [] [ Page.History.viewDurationDelta dur goal ] ]
         ]
-
-
-viewConquerorsState : QueryDict -> Conqueror.State -> Html msg
-viewConquerorsState query state =
-    ul [ class "conquerors-state" ]
-        [ viewConquerorsStateEntry query state.baran Conqueror.Baran
-        , viewConquerorsStateEntry query state.veritania Conqueror.Veritania
-        , viewConquerorsStateEntry query state.alHezmin Conqueror.AlHezmin
-        , viewConquerorsStateEntry query state.drox Conqueror.Drox
-        ]
-
-
-viewConquerorsStateEntry : QueryDict -> Conqueror.State1 -> Conqueror.Id -> Html msg
-viewConquerorsStateEntry query state id =
-    let
-        href =
-            Route.href (Dict.insert Route.keys.search "eye of the storm|baran|veritania|al-hezmin|drox" query) Route.History
-
-        ( icon, name ) =
-            case id of
-                Conqueror.Baran ->
-                    ( View.Icon.baran, "Baran" )
-
-                Conqueror.Veritania ->
-                    ( View.Icon.veritania, "Veritania" )
-
-                Conqueror.AlHezmin ->
-                    ( View.Icon.alHezmin, "Al-Hezmin" )
-
-                Conqueror.Drox ->
-                    ( View.Icon.drox, "Drox" )
-
-        sightings : String
-        sightings =
-            (case state.region of
-                Nothing ->
-                    "\n\n"
-
-                Just r ->
-                    " in "
-                        ++ r
-                        ++ "\n\n"
-            )
-                ++ (if state.sightings == Set.empty then
-                        "Past sightings: none"
-
-                    else
-                        "Past sightings: " ++ (state.sightings |> Set.toList |> String.join ", ")
-                   )
-    in
-    case state.encounter of
-        Nothing ->
-            li [ title <| name ++ ": Unmet" ++ sightings ]
-                [ a [ href ]
-                    [ View.Icon.conquerorRegions id state, icon, text "0×", text name ]
-                ]
-
-        Just (Conqueror.Taunt n) ->
-            li [ title <| name ++ ": " ++ String.fromInt n ++ View.Util.pluralize " taunt" " taunts" n ++ sightings ]
-                [ a [ href ]
-                    [ View.Icon.conquerorRegions id state, icon, text (String.fromInt n ++ "×"), text name ]
-                ]
-
-        Just Conqueror.Fight ->
-            -- ☑
-            li [ title <| name ++ ": Fought" ++ sightings ]
-                [ a [ href ]
-                    [ View.Icon.conquerorRegions id state, icon, text "✔ ", text name ]
-                ]

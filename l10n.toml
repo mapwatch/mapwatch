@@ -1,0 +1,5 @@
+# Pontoon configuration
+# https://moz-l10n-config.readthedocs.io/en/latest/fileformat.html
+[[paths]]
+    reference = "packages/www/public/locales/en-US/*.ftl"
+    l10n = "packages/www/public/locales/*/*.ftl"

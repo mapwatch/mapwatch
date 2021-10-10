@@ -3,13 +3,12 @@ module View.Setup exposing (example, view, viewDownloadLink)
 import AppPlatform
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
-import Html.Events as E exposing (..)
+import Html.Events exposing (..)
 import Json.Decode as Decode
-import Model as Model exposing (Msg(..), OkModel)
-import Route exposing (Route)
-import Route.Feature as Feature exposing (Feature)
-import Route.QueryDict as QueryDict exposing (QueryDict)
-import View.Icon
+import Localization.Mapwatch as L
+import Model exposing (Msg(..), OkModel)
+import Route
+import Route.Feature as Feature
 import View.Volume
 
 
@@ -23,20 +22,12 @@ viewDownloadLink model =
     if Feature.isActive Feature.DownloadLink model.query && not (AppPlatform.isElectron model || Feature.getBackendName model.query == Just "www-nativefs") then
         div [ class "electron-download" ] <|
             -- [ span [] [ View.Icon.fas "exclamation-triangle" ]
-            [ div []
-                [ text "New: "
-                , b []
-                    [ a [ Route.downloadMapwatchHref ]
-                        [ text "download Mapwatch" ]
-                    ]
-                , text " to see your maps updated while you play!"
+            [ div [ L.setupDownloadHeader ]
+                [ a [ A.attribute "data-l10n-name" "link", Route.downloadMapwatchHref ] []
                 ]
             , div []
-                [ small []
-                    [ text " (Sadly, updates while you play will soon be "
-                    , a [ target "_blank", Route.fileWatchingHref ]
-                        [ text "unavailable" ]
-                    , text " in all web browsers.) "
+                [ small [ L.setupDownloadSubheader ]
+                    [ a [ A.attribute "data-l10n-name" "link", Route.fileWatchingHref ] []
                     ]
                 ]
             ]
@@ -63,39 +54,27 @@ view model =
     -- H.form [ onSubmit StartWatching ]
     H.form
         [ style "display" display ]
-        [ p []
-            [ text "Give me your "
-            , a [ target "_blank", href "https://www.pathofexile.com" ] [ text "Path of Exile" ]
-            , text " "
-            , code [] [ text "Client.txt" ]
-            , text " file, and I'll give you some statistics about your recent mapping activity. "
+        [ p [ L.setupDesc1 ]
+            [ a [ A.attribute "data-l10n-name" "link", target "_blank", href "https://www.pathofexile.com" ] []
             ]
-        , p []
-            ([ text "Then, " ]
-                ++ (case ( AppPlatform.isElectron model, Feature.isActive Feature.DownloadLink model.query ) of
-                        ( True, _ ) ->
-                            -- electron - no link necessary, electron always live-updates
-                            []
+        , if AppPlatform.isElectron model then
+            -- electron - no link necessary, electron always live-updates
+            p [ L.setupDesc2Www ] []
 
-                        ( False, True ) ->
-                            -- www, download-link - link to the mapwatch app
-                            [ a [ Route.downloadMapwatchHref ] [ text "if you're using the Mapwatch app" ], text ", " ]
-
-                        ( False, False ) ->
-                            -- www, no-download-link - chrome still works for now
-                            [ a [ target "_blank", href "https://chrome.google.com" ] [ text "if you're using Google Chrome" ], text ", " ]
-                   )
-                ++ [ text "leave me open while you play - I'll keep watching, no need to upload again. " ]
-            )
+          else
+            -- www, download-link - link to the mapwatch app
+            p [ L.setupDesc2Electron ]
+                [ a [ A.attribute "data-l10n-name" "link", Route.downloadMapwatchHref ] []
+                ]
         , p []
-            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href <| "/?example=" ++ example.file ++ example.query ]) [ text "Run an example now!" ]
+            [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href <| "/?example=" ++ example.file ++ example.query, L.setupExample ]) []
             ]
         , viewDownloadLink model
         , hr [] []
-        , p []
-            [ text "Analyze only the last "
-            , input
-                [ type_ "number"
+        , p [ L.setupFormMaxSize ]
+            [ input
+                [ A.attribute "data-l10n-name" "input"
+                , type_ "number"
                 , value <| String.fromInt model.maxSize
                 , onInput InputMaxSize
                 , A.min "0"
@@ -103,7 +82,6 @@ view model =
                 , tabindex 1
                 ]
                 []
-            , text " MB of history"
             ]
         , div [] <| viewFileSelector model
         , View.Volume.view model
@@ -123,33 +101,21 @@ view model =
 viewFileSelector : OkModel -> List (Html Msg)
 viewFileSelector model =
     if Feature.getBackendName model.query == Just "www-nativefs" then
-        [ text "Client.txt: "
+        [ span [ L.setupFormFileLabel ] []
         , button
-            [ type_ "button"
+            [ L.setupFormNativefsButton
+            , type_ "button"
             , onClick FileSelector
             ]
-            [ text "Choose File" ]
-        , div []
-            [ text "Hint - "
-            , a [ target "_blank", Route.fileWatchingHref ] [ text "read this first!" ]
-            , text " This "
-            , code [] [ text "nativefs" ]
-            , text " version of Mapwatch needs some extra work."
+            []
+        , div [ L.setupFormNativefsHint1 ]
+            [ a [ A.attribute "data-l10n-name" "link", target "_blank", Route.fileWatchingHref ] []
             ]
-        , div []
-            [ text "If you've set things up properly, the file I need is here, near your item filters:"
-            , br [] []
-            , code [] [ text "C:\\Users\\%USERNAME%\\Documents\\My Games\\Path of Exile\\mapwatch.erosson.org---Client.txt" ]
+        , div [ L.setupFormNativefsHint2 ] []
+        , div [ L.setupFormNativefsHint3 ]
+            [ a [ A.attribute "data-l10n-name" "link-www", href "https://mapwatch.erosson.org" ] []
+            , a [ A.attribute "data-l10n-name" "link-download", target "_blank", Route.downloadMapwatchHref ] []
             ]
-        , div []
-            [ text "Alternately, "
-            , a [ href "https://mapwatch.erosson.org" ] [ text "use the original web version of Mapwatch" ]
-            , text " (with no updates while you play), or "
-            , a [ target "_blank", Route.downloadMapwatchHref ] [ text "download Mapwatch" ]
-            , text "."
-            ]
-        , br [] []
-        , br [] []
         ]
 
     else
@@ -157,7 +123,7 @@ viewFileSelector model =
             id_ =
                 "clientTxt"
         in
-        [ text "Client.txt: "
+        [ span [ L.setupFormFileLabel ] []
         , input
             [ type_ "file"
             , id id_
@@ -166,10 +132,10 @@ viewFileSelector model =
             ]
             []
         , div []
-            [ text "Hint - the file I need is usually in one of these places:"
+            [ span [ L.setupFormFileHint ] []
             , br [] []
-            , code [] [ text "C:\\Program Files (x86)\\Grinding Gear Games\\Path of Exile\\logs\\Client.txt" ]
+            , code [ L.setupFormFileHintPath1 ] []
             , br [] []
-            , code [] [ text "C:\\Steam\\steamapps\\common\\Path of Exile\\logs\\Client.txt" ]
+            , code [ L.setupFormFileHintPath2 ] []
             ]
         ]

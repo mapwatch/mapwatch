@@ -1,4 +1,5 @@
-#!/bin/bash -eux
+#!/usr/bin/env bash
+set -eux
 (cd ../rss && yarn build)
 mkdir -p tmp
 echo `printf %06d $(git rev-list --count HEAD)`-`git describe --always --dirty` > tmp/version.txt

@@ -1,13 +1,12 @@
 module View.Drops exposing (empty, view)
 
-import Array exposing (Array)
-import Dict exposing (Dict)
-import Html as H exposing (..)
-import Html.Attributes as A exposing (..)
-import Html.Events as E exposing (..)
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
+import Localization.Mapwatch as L
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
-import Route.Feature as Feature exposing (Feature)
-import Route.QueryDict as QueryDict exposing (QueryDict)
+import Route.Feature as Feature
+import Route.QueryDict exposing (QueryDict)
 import View.Icon
 
 
@@ -29,12 +28,7 @@ view query dm w =
 
             ( ab, divs ) ->
                 details []
-                    [ summary []
-                        [ text <| String.fromInt <| List.length ab
-                        , text " regional items, "
-                        , text <| String.fromInt <| List.length divs
-                        , text " cards"
-                        ]
+                    [ summary (L.timerDrops { regionalItems = toFloat <| List.length ab, divs = toFloat <| List.length divs }) []
                     , ul [ class "world-area-drops" ]
                         ((ab
                             |> List.map

@@ -16,7 +16,6 @@ sitewide feature flags. This module sacrifices Elm's type-safety to do that.
 -}
 
 import Dict exposing (Dict)
-import Dict.Extra
 import ISO8601
 import Maybe.Extra
 import Set exposing (Set)

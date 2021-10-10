@@ -1,21 +1,18 @@
 module Page.Maps exposing (GroupedRuns, applySort, groupRuns, view)
 
-import Dict exposing (Dict)
+import Dict
 import Html as H exposing (..)
-import Html.Attributes as A exposing (..)
-import Html.Events as E exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
+import Localization.Mapwatch as L
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
-import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Sort as RunSort
 import Maybe.Extra
-import Model as Model exposing (Msg(..), OkModel)
-import Page.History
-import Route exposing (Route)
+import Model exposing (Msg(..), OkModel)
+import Route
 import Route.QueryDict as QueryDict exposing (QueryDict)
-import Set exposing (Set)
-import Time exposing (Posix)
 import View.Home
 import View.Icon
 import View.Nav
@@ -137,7 +134,7 @@ viewMain model =
                 |> List.map (viewMap model.query)
     in
     div []
-        [ View.Util.viewSearch [ placeholder "map name" ] model.query
+        [ View.Util.viewSearch model.query
         , View.Util.viewDateSearch model.mapwatch.datamine.leagues model.query model.route
         , table [ class "by-map" ]
             [ thead [] [ header model.query ]
@@ -147,11 +144,11 @@ viewMain model =
 
 
 groupRuns : Datamine -> List MapRun -> List GroupedRuns
-groupRuns dm =
+groupRuns _ =
     RunSort.groupByMap
         >> Dict.toList
         >> List.filterMap
-            (\( id, runGroup ) ->
+            (\( _, runGroup ) ->
                 case runGroup of
                     [] ->
                         Nothing
@@ -171,18 +168,18 @@ groupRuns dm =
 header : QueryDict -> Html msg
 header query =
     let
-        cell : String -> String -> Html msg
+        cell : String -> H.Attribute msg -> Html msg
         cell col label =
-            th [] [ a [ headerHref query col ] [ text label ] ]
+            th [] [ a [ headerHref query col, label ] [] ]
     in
     tr []
-        [ cell "name" "Name"
-        , cell "region" "Region"
-        , cell "tier" "Tier"
-        , cell "meandur" "Average"
-        , cell "portals" "Portals"
-        , cell "runs" "# Runs"
-        , cell "bestdur" "Best"
+        [ cell "name" L.mapsThName
+        , cell "region" L.mapsThRegion
+        , cell "tier" L.mapsThTier
+        , cell "meandur" L.mapsThMean
+        , cell "portals" L.mapsThPortals
+        , cell "runs" L.mapsThCount
+        , cell "bestdur" L.mapsThBest
         ]
 
 
@@ -208,18 +205,16 @@ viewMap query { name, worldArea, runs } =
     tr []
         [ td [ class "zone" ] [ viewMapName query name worldArea ]
         , td [] [ viewRegionName query worldArea ]
-        , td []
-            (case Datamine.tier worldArea of
-                Nothing ->
-                    []
+        , case Datamine.tier worldArea of
+            Nothing ->
+                td [] []
 
-                Just tier ->
-                    [ text <| "(T" ++ String.fromInt tier ++ ")" ]
-            )
-        , td [] [ text <| View.Home.formatDuration mean.duration.mainMap ++ " per map" ]
-        , td [] [ text <| String.fromFloat (View.Util.roundToPlaces 2 mean.portals) ++ View.Util.pluralize " portal" " portals" mean.portals ]
-        , td [] [ text <| "×" ++ String.fromInt num ++ " runs." ]
-        , td [] [ text <| Maybe.Extra.unwrap "--:--" View.Home.formatDuration best.mainMap ++ " per map" ]
+            Just tier ->
+                td (L.mapsTdTier { n = toFloat tier }) []
+        , td (L.mapsTdMean { time = View.Home.formatDuration mean.duration.mainMap }) []
+        , td (L.mapsTdPortals { n = mean.portals }) []
+        , td (L.mapsTdCount { n = toFloat num }) []
+        , td [] [ text <| Maybe.Extra.unwrap "--:--" View.Home.formatDuration best.mainMap ]
         ]
 
 

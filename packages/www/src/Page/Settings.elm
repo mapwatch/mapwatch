@@ -1,10 +1,11 @@
 module Page.Settings exposing (view)
 
-import Html as H exposing (..)
+import Html exposing (..)
 import Html.Attributes as A exposing (..)
-import Html.Events as E exposing (..)
+import Html.Events exposing (..)
+import Localization.Mapwatch as L
 import Model exposing (Msg, OkModel)
-import Route exposing (Route)
+import Route
 import View.Home
 import View.Nav
 import View.Volume
@@ -16,8 +17,8 @@ view model =
         [ View.Home.viewHeader model
         , View.Nav.view model
         , View.Volume.view model
-        , button [ onClick (Model.Reset (Just Route.Timer)) ] [ text "Analyze another Client.txt log file" ]
-        , p [] [ text "Mapwatch is open source! ", a [ target "_blank", href "https://www.github.com/mapwatch/mapwatch" ] [ text "View the source code." ] ]
-        , p [] [ a [ Route.href model.query Route.Privacy ] [ text "Mapwatch Privacy Policy" ] ]
+        , button [ onClick (Model.Reset (Just Route.Timer)), L.settingsReset ] []
+        , p [ L.settingsSource ] [ a [ A.attribute "data-l10n-name" "link", target "_blank", href "https://www.github.com/mapwatch/mapwatch" ] [] ]
+        , p [] [ a [ Route.href model.query Route.Privacy, L.settingsPrivacy ] [] ]
         , div [ class "debug-link" ] [ a [ Route.href model.query Route.Debug ] [ text "secret debugging tools" ] ]
         ]

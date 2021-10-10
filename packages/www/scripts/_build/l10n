@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -eux
+pwd
+fluent-typesafe --format=elm --out=./gen ./public/localization/en-US

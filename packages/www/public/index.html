@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,17 +13,25 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.jpeg">
     <link rel="canonical" href="https://mapwatch.erosson.org">
-    <title>PoE Mapwatch</title>
+    <title data-l10n-id="title"></title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119582500-1"></script>
     <script src="https://apis.google.com/js/api.js"></script>
 
     <!-- https://web.dev/native-file-system/#origin-trial -->
-    <meta http-equiv="origin-trial" content="ArwOSf1wxufOmu1S9F3lqpdU5vBZaii6ntaUfKvTjNRL1E537S1NbgPoVsPfcWunE84BW+PHONsHr+jt1wcxHAcAAABeeyJvcmlnaW4iOiJodHRwczovL21hcHdhdGNoLmVyb3Nzb24ub3JnOjQ0MyIsImZlYXR1cmUiOiJOYXRpdmVGaWxlU3lzdGVtIiwiZXhwaXJ5IjoxNTg5MzI3OTk5fQ==">
+    <meta http-equiv="origin-trial"
+        content="ArwOSf1wxufOmu1S9F3lqpdU5vBZaii6ntaUfKvTjNRL1E537S1NbgPoVsPfcWunE84BW+PHONsHr+jt1wcxHAcAAABeeyJvcmlnaW4iOiJodHRwczovL21hcHdhdGNoLmVyb3Nzb24ub3JnOjQ0MyIsImZlYXR1cmUiOiJOYXRpdmVGaWxlU3lzdGVtIiwiZXhwaXJ5IjoxNTg5MzI3OTk5fQ==">
+
+    <!-- @fluent/web -->
+    <meta name="defaultLanguage" content="en-US">
+    <meta name="availableLanguages" content="en-US">
+    <link rel="localization" href="%PUBLIC_URL%/localization/{locale}/mapwatch.ftl">
 </head>
+
 <body>
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
 </body>
+
 </html>

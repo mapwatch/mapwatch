@@ -3,6 +3,7 @@ module Page.HistoryTSV exposing (view)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
+import Localization.Mapwatch as L
 import Mapwatch
 import Model exposing (Msg, OkModel)
 import Page.History
@@ -42,16 +43,12 @@ viewMain model =
             Page.History.listRuns model
     in
     div []
-        [ p []
-            [ text "Copy and paste the "
-            , b [] [ text "Tab-Separated Values" ]
-            , text " below into your favorite spreadsheet application."
-            ]
-        , div [] [ text "History: " ]
+        [ p [ L.historyTsvHeader ] []
+        , div [ L.historyTsvHistory ] []
         , textarea [ readonly True, rows 40, cols 100 ] [ viewSheet <| Spreadsheet.viewHistory model runs ]
-        , div [] [ text "Maps: " ]
+        , div [ L.historyTsvMaps ] []
         , textarea [ readonly True, rows 40, cols 100 ] [ viewSheet <| Spreadsheet.viewMaps model runs ]
-        , div [] [ text "Encounters: " ]
+        , div [ L.historyTsvEncounters ] []
         , textarea [ readonly True, rows 40, cols 100 ] [ viewSheet <| Spreadsheet.viewEncounters model runs ]
         ]
 

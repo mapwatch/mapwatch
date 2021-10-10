@@ -1,14 +1,16 @@
+import 'regenerator-runtime' // for @fluent/web
+import '@fluent/web'
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'sakura.css/css/sakura-vader.css';
 import './main.css';
-import {Elm} from './Main.elm';
+import { Elm } from './Main.elm';
 import * as registerServiceWorker from './registerServiceWorker';
 import * as analytics from './analytics'
 import * as gsheets from './gsheets'
 import * as util from './util'
-import {BrowserBackend} from './browserBackend'
-import {BrowserNativeFSBackend} from './browserNativeFSBackend'
-import {MemoryBackend} from './memoryBackend'
+import { BrowserBackend } from './browserBackend'
+import { BrowserNativeFSBackend } from './browserNativeFSBackend'
+import { MemoryBackend } from './memoryBackend'
 import datamine from './datamine'
 import changelog from '!!raw-loader!../../../CHANGELOG.md'
 import privacy from '!!raw-loader!../../../PRIVACY.md'
@@ -26,7 +28,7 @@ import '!!file-loader?name=version.txt!../tmp/version.txt'
 // for data sent to Elm: no risk of getting timezones involved that way.
 
 const SETTINGS_KEY = 'mapwatch'
-const MB = Math.pow(2,20)
+const MB = Math.pow(2, 20)
 
 function main() {
   if (window.electronPreloadError) {
@@ -39,8 +41,8 @@ function main() {
   const backend = createBackend(qs)
   const settings = new Settings(SETTINGS_KEY, window.localStorage)
   const electronFlags = window.electronFlags || null
-  const flags = createFlags({backend, settings, qs, electronFlags})
-  const app = Elm.Main.init({flags})
+  const flags = createFlags({ backend, settings, qs, electronFlags })
+  const app = Elm.Main.init({ flags })
 
   const analyticsFlags = {
     backend: backend.platform,
@@ -50,7 +52,7 @@ function main() {
   analytics.main(app, analyticsFlags)
   gsheets.main(app, backend.platform, version)
 
-  console.log('init', {backend, flags, electronFlags, analyticsFlags, datamine, qs})
+  console.log('init', { backend, flags, electronFlags, analyticsFlags, datamine, qs })
 
   let activeBackend = backend
   let localStorageWrapper = {
@@ -62,21 +64,21 @@ function main() {
   }
   if (qs.example) {
     fetchExample(qs)
-    .then(text => {
-      // logReader.processFile(app, MemoryBackend(text), "history:example")
-      activeBackend = MemoryBackend(text)
-      console.log('example', activeBackend)
-      app.ports.logOpened.send({date: Date.now(), size: activeBackend.size()})
-    })
+      .then(text => {
+        // logReader.processFile(app, MemoryBackend(text), "history:example")
+        activeBackend = MemoryBackend(text)
+        console.log('example', activeBackend)
+        app.ports.logOpened.send({ date: Date.now(), size: activeBackend.size() })
+      })
   }
   else {
     backend.autoOpen(20 * MB, localStorageWrapper)
-    .then(opened => {
-      if (opened) {
-        // logReader.processFile(app, backend, "history")
-        app.ports.logOpened.send({date: Date.now(), size: backend.size()})
-      }
-    })
+      .then(opened => {
+        if (opened) {
+          // logReader.processFile(app, backend, "history")
+          app.ports.logOpened.send({ date: Date.now(), size: backend.size() })
+        }
+      })
   }
   app.ports.fileSelector.subscribe(config => {
     console.log('selector', backend)
@@ -93,23 +95,23 @@ function main() {
     return file => {
       activeBackend = backend
       backend.open(file, maxSize, localStorageWrapper)
-      .then(() => {
-        // logReader.processFile(app, backend, "history")
-        app.ports.logOpened.send({date: Date.now(), size: backend.size()})
-      })
+        .then(() => {
+          // logReader.processFile(app, backend, "history")
+          app.ports.logOpened.send({ date: Date.now(), size: backend.size() })
+        })
     }
   }
-  app.ports.logSliceReq.subscribe(({position, length}) => {
+  app.ports.logSliceReq.subscribe(({ position, length }) => {
     // console.log('logSliceReq', activeBackend)
     activeBackend.slice(position, length)
-    .then(value => app.ports.logSlice.send({date: Date.now(), position, length, value}))
+      .then(value => app.ports.logSlice.send({ date: Date.now(), position, length, value }))
   })
-  app.ports.logSlicePageReq.subscribe(({position, length}) => {
+  app.ports.logSlicePageReq.subscribe(({ position, length }) => {
     // console.log('logSlicePageReq', activeBackend)
     activeBackend.slice(position, length)
-    .then(value => app.ports.logSlicePage.send({date: Date.now(), position, length, value}))
+      .then(value => app.ports.logSlicePage.send({ date: Date.now(), position, length, value }))
   })
-  activeBackend.onChange(change => app.ports.logChanged.send({date: Date.now(), ...change}))
+  activeBackend.onChange(change => app.ports.logChanged.send({ date: Date.now(), ...change }))
 
   const speechCapable = !!window.speechSynthesis && !!window.SpeechSynthesisUtterance
   app.ports.sendSettings.subscribe(s => {
@@ -163,12 +165,12 @@ class Settings {
     this.storage.removeItem(this.key)
   }
 }
-function createFlags({backend, settings, qs, electronFlags}) {
+function createFlags({ backend, settings, qs, electronFlags }) {
   const loadedAt = Date.now()
   const tickStart = isNaN(parseInt(qs.tickStart)) ? null : parseInt(qs.tickStart)
   const tickOffset = tickStart ? loadedAt - tickStart : 0
   const logtz = isNaN(parseFloat(qs.logtz)) ? null : parseFloat(qs.logtz)
-  if (tickOffset) console.log('tickOffset set:', {tickOffset, tickStart, tickStartDate: new Date(tickStart)})
+  if (tickOffset) console.log('tickOffset set:', { tickOffset, tickStart, tickStartDate: new Date(tickStart) })
   return {
     loadedAt,
     tickOffset,
@@ -188,17 +190,17 @@ function fetchExample(qs) {
   console.log("fetching example file: ", qs.example, qs)
   // show a progress spinner, even when we don't know the size yet
   // var sendProgress = logReader.progressSender(app, flags.loadedAt, "history:example")(0, 0, flags.loadedAt)
-  return fetch("./examples/"+qs.example)
-  .then(res => {
-    if (res.status < 200 || res.status >= 300) {
-      return Promise.reject("non-200 status: "+res.status)
-    }
-    return res.blob()
-  })
-  .then(blob => blob.text())
-  .catch(function(err) {
-    console.error("Error fetching example:", err)
-  })
+  return fetch("./examples/" + qs.example)
+    .then(res => {
+      if (res.status < 200 || res.status >= 300) {
+        return Promise.reject("non-200 status: " + res.status)
+      }
+      return res.blob()
+    })
+    .then(blob => blob.text())
+    .catch(function (err) {
+      console.error("Error fetching example:", err)
+    })
 }
 
 function say(args) {

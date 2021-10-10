@@ -34,12 +34,12 @@ type Feature
     | Speech
     | DownloadLink
     | GSheets
-    | ConquerorStatus
     | Backend
     | HeistNpcs
     | Drops
     | LogSlice
     | AFKDuration
+    | DebugLocalization
 
 
 type alias QueryString =
@@ -52,12 +52,12 @@ list =
     , Speech
     , DownloadLink
     , GSheets
-    , ConquerorStatus
     , Backend
     , HeistNpcs
     , Drops
     , LogSlice
     , AFKDuration
+    , DebugLocalization
     ]
 
 
@@ -81,9 +81,6 @@ config feature =
         GSheets ->
             FeatureConfig feature "gsheets" True
 
-        ConquerorStatus ->
-            FeatureConfig feature "conquerorStatus" False
-
         Backend ->
             FeatureConfig feature "backend" False
 
@@ -98,6 +95,9 @@ config feature =
 
         AFKDuration ->
             FeatureConfig feature "afkDuration" False
+
+        DebugLocalization ->
+            FeatureConfig feature "debugLocalization" False
 
 
 byString : Dict String FeatureConfig
@@ -166,11 +166,6 @@ boolToString b =
 
     else
         "0"
-
-
-isDefault : Feature -> QueryString -> Bool
-isDefault f q =
-    isActive f q == defaultValue f
 
 
 filterDefaults : QueryString -> QueryString

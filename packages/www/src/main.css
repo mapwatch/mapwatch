@@ -1,3 +1,7 @@
+.debug-localization [data-l10n-id] {
+  background-color: red;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -8,9 +12,6 @@ html, body {
 }
 h1.title {
   display: inline;
-}
-h1.title a {
-  /* color: inherit; */
 }
 
 table, tr, td, th, thead, tfoot, tbody {

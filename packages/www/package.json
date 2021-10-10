@@ -5,16 +5,20 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "_build:version": "bash scripts/_build/version",
-    "build": "yarn _build:version && elm-app build",
-    "start": "yarn _build:version && bash -c \"ELM_DEBUGGER=false elm-app start\"",
-    "test": "node ./tests/Fixture/build.js && elm-app test",
+    "dev": "bash scripts/_build/version && bash scripts/_build/l10n",
+    "build": "yarn dev && elm-app build",
+    "start": "yarn dev && bash -c \"ELM_DEBUGGER=false elm-app start\"",
+    "test": "yarn dev && node ./tests/Fixture/build.js && elm-app test",
     "clean": "rm -rf build tmp"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@fluent/web": "^0.2.1",
+    "regenerator-runtime": "^0.13.9"
+  },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "create-elm-app": "^5.8.0",
+    "fluent-typesafe": "erosson/fluent-typesafe#master",
     "raw-loader": "^4.0.1",
     "rimraf": "^3.0.0",
     "sakura.css": "^1.0.0",

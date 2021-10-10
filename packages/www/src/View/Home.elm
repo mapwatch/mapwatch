@@ -19,27 +19,22 @@ module View.Home exposing
 -- TODO: This used to be its own page. Now it's a graveyard of functions that get
 -- called from other pages. I should really clean it up and find these a new home.
 
-import Dict
-import Html as H exposing (..)
+import Html exposing (..)
 import Html.Attributes as A exposing (..)
-import Html.Events as E exposing (..)
+import Html.Events exposing (..)
 import ISO8601
-import Mapwatch as Mapwatch exposing (Model, Msg(..))
-import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
+import Localization.Mapwatch as L
+import Mapwatch as Mapwatch exposing (Msg(..))
+import Mapwatch.Datamine as Datamine exposing (WorldArea)
 import Mapwatch.Instance as Instance exposing (Instance)
-import Mapwatch.LogLine as LogLine
-import Mapwatch.MapRun as MapRun exposing (MapRun)
-import Mapwatch.Visit as Visit
+import Mapwatch.MapRun exposing (MapRun)
 import Maybe.Extra
 import Model exposing (OkModel)
-import Route exposing (Route)
-import Route.QueryDict as QueryDict exposing (QueryDict)
-import Set exposing (Set)
+import Route
+import Route.QueryDict exposing (QueryDict)
 import Time exposing (Posix)
 import TimedReadline exposing (Progress)
 import View.Icon as Icon
-import View.Nav
-import View.Setup
 import View.Util
 
 
@@ -126,9 +121,8 @@ formatDuration dur =
         s =
             abs <| remainderBy (truncate time.minute) dur // truncate time.second
 
-        ms =
-            abs <| remainderBy (truncate time.second) dur
-
+        -- ms =
+        -- abs <| remainderBy (truncate time.second) dur
         pad0 : Int -> Int -> String
         pad0 length =
             String.fromInt
@@ -192,7 +186,7 @@ formatBytes b =
 viewProgress : Progress -> Html msg
 viewProgress p =
     if p.isDone then
-        div [] [ br [] [], text <| "Processed " ++ formatBytes p.max ++ " in " ++ String.fromFloat (toFloat p.durationMillis / 1000) ++ "s" ]
+        div [] [ br [] [], span (L.processedBytes { bytes = formatBytes p.max, dur = toFloat p.durationMillis / 1000 }) [] ]
 
     else
         div []
@@ -295,13 +289,13 @@ viewSideAreaName query instance =
                     span [] [ label ]
 
                 else
-                    span [] [ Icon.zana, text "Zana (", label, text ")" ]
+                    span [] [ Icon.zana, span [ L.sideAreaZana ] [], text " (", label, text ")" ]
 
             else if w.isVaalArea then
-                span [] [ Icon.vaal, text "Vaal side area (", label, text ")" ]
+                span [] [ Icon.vaal, span [ L.sideAreaVaal ] [], text " (", label, text ")" ]
 
             else if w.isLabTrial then
-                span [] [ Icon.labTrial, text "Labyrinth trial (", label, text ")" ]
+                span [] [ Icon.labTrial, span [ L.sideAreaTrial ] [], text " (", label, text ")" ]
 
             else if w.isAbyssalDepths then
                 span [] [ Icon.abyss, label ]
@@ -325,13 +319,15 @@ viewHeader model =
     div []
         [ h1 [ class "title" ]
             [ maskedText "["
+            , text " "
 
             -- , a [ href "./" ] [ Icon.fas "tachometer-alt", text " Mapwatch" ]
-            , a [ Route.href model.query Route.Timer ] [ text " Mapwatch" ]
+            , a [ L.navHeader, Route.href model.query Route.Timer ] []
             , maskedText <| "](" ++ selfUrl ++ ")"
             ]
         , small []
-            [ text " - automatically time your Path of Exile map clears"
+            [ text " "
+            , span [ L.navSubheader ] []
             , case model.flags.electronFlags |> Maybe.map .version of
                 Nothing ->
                     text ""

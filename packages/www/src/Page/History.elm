@@ -4,24 +4,22 @@ import Dict exposing (Dict)
 import Html as H exposing (..)
 import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
-import ISO8601
+import Localization.Mapwatch as L
 import Mapwatch
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
-import Mapwatch.Instance as Instance exposing (Address, Instance)
-import Mapwatch.LogLine as LogLine
+import Mapwatch.Instance as Instance exposing (Address)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Mapwatch.MapRun.Sort as RunSort
 import Mapwatch.MapRun.Trialmaster as Trialmaster
-import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
+import Mapwatch.RawMapRun as RawMapRun
 import Maybe.Extra
 import Model exposing (Msg(..), OkModel)
 import Page.NotFound
 import Random exposing (Generator)
-import Regex
-import Route exposing (Route)
-import Route.Feature as Feature exposing (Feature)
+import Route
+import Route.Feature as Feature
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Set exposing (Set)
 import Time exposing (Posix)
@@ -122,21 +120,23 @@ viewMain model =
     in
     div []
         [ div []
-            [ View.Util.viewSearch [ placeholder "area name" ] model.query
+            [ View.Util.viewSearch model.query
             , View.Util.viewDateSearch model.mapwatch.datamine.leagues model.query model.route
             , View.Util.viewGoalForm model.query
             , viewExactSearchResult model.mapwatch.datamine model.query
             ]
         , div []
-            (if Feature.isActive Feature.GSheets model.query then
-                [ text "Export as: "
-                , a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " TSV spreadsheet" ]
-                , text " | "
-                , a [ Route.href model.query Route.GSheets ] [ View.Icon.fab "google-drive", text " Google Sheets (BETA)" ]
-                ]
+            ([ span [ L.historyExport ] []
+             , a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " ", span [ L.historyExportTsv ] [] ]
+             ]
+                ++ (if Feature.isActive Feature.GSheets model.query then
+                        [ text " | "
+                        , a [ Route.href model.query Route.GSheets ] [ View.Icon.fab "google-drive", text " ", span [ L.historyExportGoogle ] [] ]
+                        ]
 
-             else
-                [ a [ Route.href model.query Route.HistoryTSV ] [ View.Icon.fas "table", text " Export as TSV spreadsheet" ] ]
+                    else
+                        []
+                   )
             )
         , viewStatsTable model.query model.tz model.now runs
         , viewHistoryTable runs model
@@ -165,7 +165,7 @@ viewExactSearchResult dm query =
                                 ]
                             , span []
                                 [ text " ("
-                                , a [ target "_blank", href <| Datamine.wikiUrl dm w ] [ text "wiki" ]
+                                , a [ target "_blank", href <| Datamine.wikiUrl dm w, L.timerMapWiki ] []
                                 , text ")"
                                 ]
                             ]
@@ -180,12 +180,12 @@ viewStatsTable query tz now runs =
             (case ( QueryDict.getPosix Route.keys.after query, QueryDict.getPosix Route.keys.before query ) of
                 ( Nothing, Nothing ) ->
                     List.concat
-                        [ viewStatsRows (text "Today") (runs |> RunSort.filterToday tz now |> MapRun.aggregate)
-                        , viewStatsRows (text "All-time") (runs |> MapRun.aggregate)
+                        [ viewStatsRows (span [ L.historySummaryToday ] []) (runs |> RunSort.filterToday tz now |> MapRun.aggregate)
+                        , viewStatsRows (span [ L.historySummaryAlltime ] []) (runs |> MapRun.aggregate)
                         ]
 
                 ( a, b ) ->
-                    viewStatsRows (text "This session") (runs |> RunSort.filterBetween { before = b, after = a } |> MapRun.aggregate)
+                    viewStatsRows (span [ L.historySummarySession ] []) (runs |> RunSort.filterBetween { before = b, after = a } |> MapRun.aggregate)
             )
         ]
 
@@ -194,17 +194,17 @@ viewStatsRows : Html msg -> MapRun.Aggregate -> List (Html msg)
 viewStatsRows title runs =
     [ tr []
         [ th [ class "title" ] [ title ]
-        , td [ colspan 10, class "maps-completed" ] [ text <| String.fromInt runs.num ++ View.Util.pluralize " map" " maps" runs.num ++ " completed" ]
+        , td ([ colspan 10, class "maps-completed" ] ++ L.historySummaryCount { n = toFloat runs.num }) []
         ]
     , tr []
         ([ td [] []
-         , td [] [ text "Average time per map" ]
+         , td [ L.historySummaryThMean ] []
          ]
             ++ viewDurationAggregate runs.mean
         )
     , tr []
         ([ td [] []
-         , td [] [ text "Total time" ]
+         , td [ L.historySummaryThTotal ] []
          ]
             ++ viewDurationAggregate { portals = toFloat runs.total.portals, duration = runs.total.duration }
         )
@@ -258,11 +258,11 @@ viewPaginator query numItems =
                 ( span [], span [] )
     in
     div [ class "paginator" ]
-        [ firstLink [ View.Icon.fas "fast-backward", text " First" ]
-        , prevLink [ View.Icon.fas "step-backward", text " Prev" ]
-        , span [] [ text <| String.fromInt firstVisItem ++ " - " ++ String.fromInt lastVisItem ++ " of " ++ String.fromInt numItems ]
-        , nextLink [ text "Next ", View.Icon.fas "step-forward" ]
-        , lastLink [ text "Last ", View.Icon.fas "fast-forward" ]
+        [ firstLink [ View.Icon.fas "fast-backward", text " ", span [ L.historyPageFirst ] [] ]
+        , prevLink [ View.Icon.fas "step-backward", text " ", span [ L.historyPagePrev ] [] ]
+        , span [] [ span (L.historyPageCount { first = toFloat firstVisItem, last = toFloat lastVisItem, count = toFloat numItems }) [] ]
+        , nextLink [ span [ L.historyPageNext ] [], text " ", View.Icon.fas "step-forward" ]
+        , lastLink [ span [ L.historyPageLast ] [], text " ", View.Icon.fas "fast-forward" ]
         ]
 
 
@@ -440,17 +440,12 @@ viewTrialmasterRow { showDate } root state =
         body =
             if state.isBossFight then
                 [ View.Icon.trialmaster
-                , text "Trialmaster boss fight: "
-                , text result
+                , span (L.npcTrialmasterBoss { result = result }) []
                 ]
 
             else
                 [ View.Icon.trialmaster
-                , text "The Trialmaster: "
-                , text result
-                , text " ("
-                , text <| String.fromInt rounds
-                , text ")"
+                , span (L.npcTrialmaster { result = result, n = toFloat rounds }) []
                 ]
 
         sideIcon =
@@ -458,7 +453,7 @@ viewTrialmasterRow { showDate } root state =
                 []
 
             else
-                [ span [ title "Encountered this NPC in a side area" ] [ View.Icon.zana ] ]
+                [ span [ L.historyNpcSideArea ] [ View.Icon.zana ] ]
     in
     tr [ class "npctext-area" ]
         ((if showDate then
@@ -518,9 +513,9 @@ viewRunDurations goal run =
         [ if run.isAbandoned then
             span
                 [ class "abandoned-run-duration"
-                , title "Map run abandoned - you went offline without returning to town first!\n\nSadly, when you go offline without returning to town, Mapwatch cannot know how long you spent in the map. Times shown here will be wrong.\n\nSee also https://github.com/mapwatch/mapwatch/issues/66"
+                , L.historyRunAbandoned
                 ]
-                [ text "???" ]
+                []
 
           else
             viewDuration run.duration.all
@@ -533,21 +528,21 @@ viewRunDurations goal run =
 viewDurationTail : { a | portals : Float, duration : MapRun.Durations } -> List (Html msg)
 viewDurationTail { portals, duration } =
     [ td [ class "dur" ] [ text " = " ]
-    , td [ class "dur" ] [ viewDuration duration.mainMap, text " in map " ]
+    , td [ class "dur" ] [ text " ", span (L.historyDurMap { dur = View.Home.formatDuration duration.mainMap }) [], text " " ]
     , td [ class "dur" ] [ text " + " ]
-    , td [ class "dur" ] [ viewDuration duration.town, text " in town " ]
+    , td [ class "dur" ] [ text " ", span (L.historyDurTown { dur = View.Home.formatDuration duration.town }) [], text " " ]
     ]
         ++ (if duration.sides > 0 then
                 [ td [ class "dur" ] [ text " + " ]
-                , td [ class "dur" ] [ viewDuration duration.sides, text " in sides" ]
+                , td [ class "dur" ] [ text " ", span (L.historyDurSides { dur = View.Home.formatDuration duration.sides }) [], text " " ]
                 ]
 
             else
                 [ td [ class "dur" ] [], td [ class "dur" ] [] ]
            )
-        ++ [ td [ class "portals" ] [ text <| String.fromFloat (View.Util.roundToPlaces 2 portals) ++ View.Util.pluralize " portal" " portals" portals ]
+        ++ [ td [ class "portals" ] [ span (L.historyDurPortals { n = portals }) [] ]
            , td [ class "town-pct" ]
-                [ text <| String.fromInt (clamp 0 100 <| floor <| 100 * (toFloat duration.town / Basics.max 1 (toFloat duration.all))) ++ "% in town" ]
+                [ span (L.historyDurTownPct { pct = toFloat <| clamp 0 100 <| floor <| 100 * (toFloat duration.town / Basics.max 1 (toFloat duration.all)) }) [] ]
            ]
 
 
@@ -565,7 +560,7 @@ viewHistoryMainRow ({ tz, query } as m) { showDate } goal r =
             []
          )
             ++ [ td [ class "zone" ] [ View.Home.viewRun query r ]
-               , td [ title <| "Searchable text for this run: \n\n" ++ RunSort.searchString m.mapwatch.datamine r ]
+               , td (L.historySearchable { searchable = RunSort.searchString m.mapwatch.datamine r })
                     [ View.Home.viewRegion query r.address.worldArea ]
                ]
             ++ viewRunDurations goal r
@@ -608,7 +603,7 @@ viewHistoryNpcTextRow query config rootNpcs ( npcId, texts ) =
                             []
 
                         else
-                            [ span [ title "Encountered this NPC in a side area" ] [ View.Icon.zana ] ]
+                            [ span [ L.historyNpcSideArea ] [ View.Icon.zana ] ]
                 in
                 Just <| viewHistoryNpcTextRow_ query config texts <| sideIcon ++ body
 
@@ -636,21 +631,25 @@ viewHistoryNpcTextRow_ query { showDate, loadedAt } texts body =
 
 viewNpcText : QueryDict -> Posix -> String -> List (Html msg)
 viewNpcText query loadedAt npcId =
+    let
+        t attr =
+            span [ attr ] []
+    in
     if npcId == NpcId.einhar then
-        [ View.Icon.einhar, text "Einhar, Beastmaster" ]
+        [ View.Icon.einhar, t L.npcEinhar ]
 
     else if npcId == NpcId.alva then
-        [ View.Icon.alva, text "Alva, Master Explorer" ]
+        [ View.Icon.alva, t L.npcAlva ]
 
     else if npcId == NpcId.niko then
-        [ View.Icon.niko, text "Niko, Master of the Depths" ]
+        [ View.Icon.niko, t L.npcNiko ]
 
     else if npcId == NpcId.betrayalGroup then
         -- else if npcId == NpcId.jun then
-        [ View.Icon.jun, text "Jun, Veiled Master" ]
+        [ View.Icon.jun, t L.npcJun ]
 
     else if npcId == NpcId.cassia then
-        [ View.Icon.cassia, text "Sister Cassia" ]
+        [ View.Icon.cassia, t L.npcCassia ]
         -- Don't show Tane during Metamorph league
         -- Actually, his voicing is so inconsistent that we can't show him after metamorph league either!
         -- else if npcId == NpcId.tane then
@@ -658,75 +657,75 @@ viewNpcText query loadedAt npcId =
         -- Don't show conquerors, they have their own special function
 
     else if npcId == NpcId.delirium then
-        [ View.Icon.delirium, text "Delirium Mirror" ]
+        [ View.Icon.delirium, t L.npcDelirium ]
 
     else if npcId == NpcId.legionGeneralGroup then
-        [ View.Icon.legion, text "Legion General" ]
+        [ View.Icon.legion, t L.npcLegionGeneral ]
 
     else if npcId == NpcId.karst then
-        [ View.Icon.karst, text "Karst, the Lockpick" ]
+        [ View.Icon.karst, t L.npcKarst ]
 
     else if npcId == NpcId.niles then
-        [ View.Icon.niles, text "Niles, the Interrogator" ]
+        [ View.Icon.niles, t L.npcNiles ]
 
     else if npcId == NpcId.huck then
-        [ View.Icon.huck, text "Huck, the Soldier" ]
+        [ View.Icon.huck, t L.npcHuck ]
 
     else if npcId == NpcId.tibbs then
-        [ View.Icon.tibbs, text "Tibbs, the Giant" ]
+        [ View.Icon.tibbs, t L.npcTibbs ]
 
     else if npcId == NpcId.nenet then
-        [ View.Icon.nenet, text "Nenet, the Scout" ]
+        [ View.Icon.nenet, t L.npcNenet ]
 
     else if npcId == NpcId.vinderi then
-        [ View.Icon.vinderi, text "Vinderi, the Dismantler" ]
+        [ View.Icon.vinderi, t L.npcVinderi ]
 
     else if npcId == NpcId.tortilla then
-        [ View.Icon.tortilla, text <| tortillaName loadedAt ++ ", the Catburglar" ]
+        [ View.Icon.tortilla, span (tortillaName loadedAt) [] ]
 
     else if npcId == NpcId.gianna then
-        [ View.Icon.gianna, text "Gianna, the Master of Disguise" ]
+        [ View.Icon.gianna, t L.npcGianna ]
 
     else if npcId == NpcId.isla then
-        [ View.Icon.isla, text "Isla, the Engineer" ]
+        [ View.Icon.isla, t L.npcIsla ]
 
     else if npcId == NpcId.envoy then
-        [ View.Icon.envoy, text "The Envoy" ]
+        [ View.Icon.envoy, t L.npcEnvoy ]
 
     else if npcId == NpcId.maven then
-        [ View.Icon.maven, text "The Maven" ]
+        [ View.Icon.maven, t L.npcMaven ]
 
     else if npcId == NpcId.oshabi then
-        [ View.Icon.harvest, text "Oshabi" ]
+        [ View.Icon.harvest, t L.npcOshabi ]
 
     else if npcId == NpcId.sirus then
-        [ View.Icon.sirus, text "Sirus, Awakener of Worlds" ]
+        [ View.Icon.sirus, t L.npcSirus ]
 
     else if npcId == NpcId.gwennen then
-        [ View.Icon.gwennen, text "Gwennen, the Gambler" ]
+        [ View.Icon.gwennen, t L.npcGwennen ]
 
     else if npcId == NpcId.tujen then
-        [ View.Icon.tujen, text "Tujen, the Haggler" ]
+        [ View.Icon.tujen, t L.npcTujen ]
 
     else if npcId == NpcId.rog then
-        [ View.Icon.rog, text "Rog, the Dealer" ]
+        [ View.Icon.rog, t L.npcRog ]
 
     else if npcId == NpcId.dannig then
-        [ View.Icon.dannig, text "Dannig, Warrior Skald" ]
+        [ View.Icon.dannig, t L.npcDannig ]
 
     else
         []
 
 
-tortillaName : Posix -> String
+tortillaName : Posix -> List (H.Attribute msg)
 tortillaName loadedAt =
     -- https://www.reddit.com/r/pathofexile/comments/iwbvt2/got_it_good/
     -- memes are serious business
     let
-        gen : Generator (Generator String)
+        gen : Generator (Generator (List (H.Attribute msg)))
         gen =
             Random.weighted
-                ( 65, Random.constant "Tullina" )
+                ( 65, Random.constant [ L.npcTullina ] )
                 [ ( 35
                   , Random.uniform
                         "Tutu"
@@ -741,6 +740,7 @@ tortillaName loadedAt =
                         , "Leelee"
                         , "Tony"
                         ]
+                        |> Random.map (\n -> L.npcTortilla { name = n })
                   )
                 ]
     in
@@ -761,25 +761,25 @@ viewConquerorRow { showDate } npcSays ( id, encounter ) =
         label =
             case id of
                 Conqueror.Baran ->
-                    [ View.Icon.baran, text "Baran, the Crusader" ]
+                    [ View.Icon.baran, span [ L.npcBaran ] [] ]
 
                 Conqueror.Veritania ->
-                    [ View.Icon.veritania, text "Veritania, the Redeemer" ]
+                    [ View.Icon.veritania, span [ L.npcVeritania ] [] ]
 
                 Conqueror.AlHezmin ->
-                    [ View.Icon.alHezmin, text "Al-Hezmin, the Hunter" ]
+                    [ View.Icon.alHezmin, span [ L.npcAlhezmin ] [] ]
 
                 Conqueror.Drox ->
-                    [ View.Icon.drox, text "Drox, the Warlord" ]
+                    [ View.Icon.drox, span [ L.npcDrox ] [] ]
 
         body : List (Html msg)
         body =
             case encounter of
                 Conqueror.Taunt n ->
-                    label ++ [ text <| ": Taunt " ++ String.fromInt n ]
+                    label ++ [ span (L.npcConquerorTaunt { n = toFloat n }) [] ]
 
                 Conqueror.Fight ->
-                    label ++ [ text ": Fight" ]
+                    label ++ [ span [ L.npcConquerorFight ] [] ]
     in
     tr [ class "npctext-area" ]
         ((if showDate then

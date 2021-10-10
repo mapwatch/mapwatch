@@ -1,15 +1,14 @@
 module View.Icon exposing (..)
 
-import Html as H exposing (..)
-import Html.Attributes as A exposing (..)
-import Html.Events as E exposing (..)
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Json.Encode as Json
-import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
-import Mapwatch.MapRun as MapRun exposing (MapRun)
+import Mapwatch.Datamine as Datamine exposing (WorldArea)
+import Mapwatch.MapRun exposing (MapRun)
 import Mapwatch.MapRun.Conqueror as Conqueror
 import Maybe.Extra
-import Regex
-import Set exposing (Set)
+import Set
 import View.Icon.Svg
 
 

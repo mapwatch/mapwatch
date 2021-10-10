@@ -1,4 +1,4 @@
-module View.Util exposing (escapeSearch, hidePreLeagueButtons, insertSearch, pluralize, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
+module View.Util exposing (escapeSearch, hidePreLeagueButtons, insertSearch, roundToPlaces, viewDateSearch, viewGoalForm, viewSearch)
 
 import Dict exposing (Dict)
 import Dict.Extra
@@ -7,6 +7,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import ISO8601
 import List.Extra
+import Localization.Mapwatch as L
 import Mapwatch exposing (Model, Msg)
 import Mapwatch.Datamine exposing (League)
 import Model exposing (Msg)
@@ -23,8 +24,8 @@ roundToPlaces p n =
     (n * (10 ^ p) |> round |> toFloat) / (10 ^ p)
 
 
-viewSearch : List (Attribute Msg) -> QueryDict -> Html Msg
-viewSearch attrs query =
+viewSearch : QueryDict -> Html Msg
+viewSearch query =
     let
         search =
             Dict.get Route.keys.search query
@@ -32,15 +33,14 @@ viewSearch attrs query =
         msg s =
             Dict.insert Route.keys.search s query |> Model.Search
     in
-    span [ class "search-form search-text", title "To see searchable text for a map-run, hover over its region on the history screen.\nSearch accepts regular expressions." ]
+    span [ class "search-form search-text", L.searchHover ]
         [ input
-            ([ value <| Maybe.withDefault "" search
-             , type_ "text"
-             , tabindex 1
-             , onInput msg
-             ]
-                ++ attrs
-            )
+            [ value <| Maybe.withDefault "" search
+            , type_ "text"
+            , tabindex 1
+            , onInput msg
+            , L.searchInput
+            ]
             []
         , Icon.fas "search"
         ]
@@ -53,13 +53,13 @@ viewGoalForm query =
             goal =
                 Dict.get Route.keys.goal query
 
-            sessionName =
+            ( bestOption, meanOption ) =
                 case QueryDict.getPosix Route.keys.after query of
                     Just _ ->
-                        "session"
+                        ( L.searchGoalBestSession, L.searchGoalMeanSession )
 
                     Nothing ->
-                        "today's"
+                        ( L.searchGoalBestToday, L.searchGoalMeanToday )
 
             ( optExactly, exactly ) =
                 goal
@@ -69,7 +69,7 @@ viewGoalForm query =
                                 Nothing
 
                             else
-                                Just ( [ selected True ], [ input [ type_ "text", onInput msg, value dur, placeholder "\"5:00\" or \"300\" or \"5m 0s\"" ] [] ] )
+                                Just ( [ selected True ], [ input [ type_ "text", onInput msg, value dur, L.searchGoalExactlyInput ] [] ] )
                         )
                     |> Maybe.withDefault ( [], [] )
 
@@ -83,27 +83,18 @@ viewGoalForm query =
         in
         span [ class "search-form search-goal" ]
             [ select [ onInput msg ]
-                [ option [ selected <| goal == Nothing || goal == Just "none", value "none" ] [ text "No time goal" ]
-                , option [ selected <| goal == Just "best-session", value "best-session" ] [ text <| "Goal: " ++ sessionName ++ " best" ]
-                , option [ selected <| goal == Just "best", value "best" ] [ text <| "Goal: all-time best" ]
-                , option [ selected <| goal == Just "mean-session", value "mean-session" ] [ text <| "Goal: " ++ sessionName ++ " average" ]
-                , option [ selected <| goal == Just "mean", value "mean" ] [ text <| "Goal: all-time average" ]
-                , option (optExactly ++ [ value "" ]) [ text "Goal: exactly..." ]
+                [ option [ selected <| goal == Nothing || goal == Just "none", value "none", L.searchGoalNone ] []
+                , option [ selected <| goal == Just "best-session", value "best-session", bestOption ] []
+                , option [ selected <| goal == Just "best", value "best", L.searchGoalBestEver ] []
+                , option [ selected <| goal == Just "mean-session", value "mean-session", meanOption ] []
+                , option [ selected <| goal == Just "mean", value "mean", L.searchGoalMeanEver ] []
+                , option (optExactly ++ [ value "", L.searchGoalExactly ]) []
                 ]
             , span [] exactly
             ]
 
     else
         span [] []
-
-
-pluralize : String -> String -> number -> String
-pluralize one other n =
-    if n == 1 then
-        one
-
-    else
-        other
 
 
 filterLeagueButtons : List League -> List League
@@ -126,7 +117,7 @@ hidePreLeagueButtons leagues query route =
                     [ class "button"
                     , Route.href (Dict.insert Route.keys.after (l.startAt |> ISO8601.fromPosix |> ISO8601.toString) query) route
                     ]
-                    [ Icon.fas "calendar", text <| " Hide pre-" ++ l.id ++ " maps" ]
+                    [ Icon.fas "calendar", text " ", span (L.timerHideLeague { league = l.id }) [] ]
             )
 
 
@@ -139,7 +130,7 @@ viewDateSearch leagues query route =
                     hidePreLeagueButtons leagues query route
 
                 Just _ ->
-                    [ a [ class "button", Route.href (Dict.remove Route.keys.after query) route ] [ Icon.fas "eye", text " Unhide all maps" ]
+                    [ a [ class "button", Route.href (Dict.remove Route.keys.after query) route ] [ Icon.fas "eye", text " ", span [ L.timerUnhide ] [] ]
                     ]
     in
     span [ class "search-form search-date" ] buttons

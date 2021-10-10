@@ -1,9 +1,8 @@
 module Main exposing (main)
 
-import AppPlatform
 import Browser
-import Html as H exposing (..)
-import Mapwatch
+import Html exposing (..)
+import Html.Attributes as A
 import Model exposing (Model, Msg)
 import Page.Changelog
 import Page.Debug
@@ -21,6 +20,7 @@ import Page.Privacy
 import Page.Settings
 import Page.Timer
 import Route exposing (Route(..))
+import Route.Feature as Feature
 
 
 main =
@@ -36,7 +36,7 @@ main =
 
 view : Model -> Browser.Document Msg
 view model =
-    { title = "PoE Mapwatch", body = [ viewBody model ] }
+    { title = "", body = [ viewBody model ] }
 
 
 viewBody : Model -> Html Msg
@@ -46,48 +46,59 @@ viewBody rmodel =
             pre [] [ text err ]
 
         Ok model ->
-            case model.route of
-                History ->
-                    Page.History.view model
+            let
+                v =
+                    case model.route of
+                        History ->
+                            Page.History.view model
 
-                HistoryTSV ->
-                    Page.HistoryTSV.view model
+                        HistoryTSV ->
+                            Page.HistoryTSV.view model
 
-                GSheets ->
-                    Page.GSheets.view model
+                        GSheets ->
+                            Page.GSheets.view model
 
-                Maps ->
-                    Page.Maps.view model
+                        Maps ->
+                            Page.Maps.view model
 
-                Encounters ->
-                    Page.Encounters.view model
+                        Encounters ->
+                            Page.Encounters.view model
 
-                Timer ->
-                    Page.Timer.view model
+                        Timer ->
+                            Page.Timer.view model
 
-                Overlay ->
-                    Page.Overlay.view model
+                        Overlay ->
+                            Page.Overlay.view model
 
-                Debug ->
-                    Page.Debug.view model
+                        Debug ->
+                            Page.Debug.view model
 
-                DebugDumpLines ->
-                    Page.DumpLines.view model
+                        DebugDumpLines ->
+                            Page.DumpLines.view model
 
-                DebugDatamine ->
-                    Page.DebugDatamine.view model.query model.mapwatch.datamine
+                        DebugDatamine ->
+                            Page.DebugDatamine.view model.query model.mapwatch.datamine
 
-                Changelog ->
-                    Page.Changelog.view model
+                        Changelog ->
+                            Page.Changelog.view model
 
-                Privacy ->
-                    Page.Privacy.view model
+                        Privacy ->
+                            Page.Privacy.view model
 
-                Settings ->
-                    Page.Settings.view model
+                        Settings ->
+                            Page.Settings.view model
 
-                LogSlice posStart posEnd ->
-                    Page.LogSlice.view posStart posEnd model
+                        LogSlice posStart posEnd ->
+                            Page.LogSlice.view posStart posEnd model
 
-                NotFound loc ->
-                    Page.NotFound.view model
+                        NotFound loc ->
+                            Page.NotFound.view model
+            in
+            div
+                (if Feature.isActive Feature.DebugLocalization model.query then
+                    [ A.class "debug-localization" ]
+
+                 else
+                    []
+                )
+                [ v ]

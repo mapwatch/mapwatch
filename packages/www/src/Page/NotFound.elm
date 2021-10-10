@@ -1,10 +1,10 @@
 module Page.NotFound exposing (view)
 
-import Html as H exposing (..)
-import Html.Attributes as A exposing (..)
-import Html.Events as E exposing (..)
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
+import Localization.Mapwatch as L
 import Model exposing (OkModel)
-import Route
 import View.Home
 import View.Nav
 
@@ -14,5 +14,5 @@ view model =
     div [ class "main" ]
         [ View.Home.viewHeader model
         , View.Nav.view model
-        , text "404"
+        , span [ L.notFound ] []
         ]
