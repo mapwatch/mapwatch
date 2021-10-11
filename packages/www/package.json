@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "bash scripts/_build/version && bash scripts/_build/l10n",
     "build": "yarn dev && elm-app build",
-    "start": "yarn dev && bash -c \"ELM_DEBUGGER=false elm-app start\"",
+    "start": "concurrently --kill-others \"yarn dev --watch\" \"bash -c 'ELM_DEBUGGER=false elm-app start'\"",
     "test": "yarn dev && node ./tests/Fixture/build.js && elm-app test",
     "clean": "rm -rf build tmp"
   },
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "concurrently": "^6.3.0",
     "create-elm-app": "^5.8.0",
     "fluent-typesafe": "erosson/fluent-typesafe#master",
     "raw-loader": "^4.0.1",

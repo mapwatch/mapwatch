@@ -250,7 +250,7 @@ listEncounterTally query tally =
             [ View.Icon.harvest, t L.encounterOshabi ]
             -- https://github.com/mapwatch/mapwatch/issues/183
             [ span [ L.encounterOshabiWarn ]
-                [ a [ A.attribute "data-l10n-name" "link", target "_blank", href "https://github.com/mapwatch/mapwatch#my-harvest-encounter-rate-seems-low" ] []
+                [ a [ L.name_ "link", target "_blank", href "https://github.com/mapwatch/mapwatch#my-harvest-encounter-rate-seems-low" ] []
                 ]
             ]
         , entry tally.heartOfTheGrove "heartOfTheGrove" [ View.Icon.harvest, t L.encounterHeartGrove ]
@@ -291,7 +291,7 @@ listEncounterTally query tally =
             "trialmaster-boss"
             [ View.Icon.trialmaster, t L.encounterTrialmasterBoss ]
             [ span [ L.encounterTrialmasterBossWarn ]
-                [ a [ A.attribute "data-l10n-name" "link", target "_blank", href "https://old.reddit.com/r/pathofexile/comments/n4ahe0/3141b_patch_notes/gwuktc9/" ] []
+                [ a [ L.name_ "link", target "_blank", href "https://old.reddit.com/r/pathofexile/comments/n4ahe0/3141b_patch_notes/gwuktc9/" ] []
                 ]
             ]
         ]

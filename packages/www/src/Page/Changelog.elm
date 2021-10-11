@@ -17,11 +17,11 @@ view model =
     div [ class "main" ]
         [ View.Home.viewHeader model
         , View.Nav.view model
-        , p [ L.settingsSource ] [ a [ A.attribute "data-l10n-name" "link", target "_blank", href "https://www.github.com/mapwatch/mapwatch" ] [] ]
+        , p [ L.settingsSource ] [ a [ L.name_ "link", target "_blank", href "https://www.github.com/mapwatch/mapwatch" ] [] ]
         , p [ L.changelogReport ]
-            [ a [ A.attribute "data-l10n-name" "link-keybase", href "https://keybase.io/erosson", target "_blank" ] []
-            , a [ A.attribute "data-l10n-name" "link-issue", href "https://github.com/mapwatch/mapwatch/issues/new", target "_blank" ] []
-            , a [ A.attribute "data-l10n-name" "link-reddit", href "https://www.reddit.com/u/kawaritai", target "_blank" ] []
+            [ a [ L.name_ "link-keybase", href "https://keybase.io/erosson", target "_blank" ] []
+            , a [ L.name_ "link-issue", href "https://github.com/mapwatch/mapwatch/issues/new", target "_blank" ] []
+            , a [ L.name_ "link-reddit", href "https://www.reddit.com/u/kawaritai", target "_blank" ] []
             ]
         , p [ L.changelogApp ]
             [ a [ Route.appReleasesHref, target "_blank" ] []

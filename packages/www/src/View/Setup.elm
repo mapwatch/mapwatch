@@ -23,11 +23,11 @@ viewDownloadLink model =
         div [ class "electron-download" ] <|
             -- [ span [] [ View.Icon.fas "exclamation-triangle" ]
             [ div [ L.setupDownloadHeader ]
-                [ a [ A.attribute "data-l10n-name" "link", Route.downloadMapwatchHref ] []
+                [ a [ L.name_ "link", Route.downloadMapwatchHref ] []
                 ]
             , div []
                 [ small [ L.setupDownloadSubheader ]
-                    [ a [ A.attribute "data-l10n-name" "link", Route.fileWatchingHref ] []
+                    [ a [ L.name_ "link", Route.fileWatchingHref ] []
                     ]
                 ]
             ]
@@ -55,7 +55,7 @@ view model =
     H.form
         [ style "display" display ]
         [ p [ L.setupDesc1 ]
-            [ a [ A.attribute "data-l10n-name" "link", target "_blank", href "https://www.pathofexile.com" ] []
+            [ a [ L.name_ "link", target "_blank", href "https://www.pathofexile.com" ] []
             ]
         , if AppPlatform.isElectron model then
             -- electron - no link necessary, electron always live-updates
@@ -64,7 +64,7 @@ view model =
           else
             -- www, download-link - link to the mapwatch app
             p [ L.setupDesc2Electron ]
-                [ a [ A.attribute "data-l10n-name" "link", Route.downloadMapwatchHref ] []
+                [ a [ L.name_ "link", Route.downloadMapwatchHref ] []
                 ]
         , p []
             [ a (AppPlatform.ifElectron model [] [ target "_blank" ] ++ [ href <| "/?example=" ++ example.file ++ example.query, L.setupExample ]) []
@@ -73,7 +73,7 @@ view model =
         , hr [] []
         , p [ L.setupFormMaxSize ]
             [ input
-                [ A.attribute "data-l10n-name" "input"
+                [ L.name_ "input"
                 , type_ "number"
                 , value <| String.fromInt model.maxSize
                 , onInput InputMaxSize
@@ -109,12 +109,12 @@ viewFileSelector model =
             ]
             []
         , div [ L.setupFormNativefsHint1 ]
-            [ a [ A.attribute "data-l10n-name" "link", target "_blank", Route.fileWatchingHref ] []
+            [ a [ L.name_ "link", target "_blank", Route.fileWatchingHref ] []
             ]
         , div [ L.setupFormNativefsHint2 ] []
         , div [ L.setupFormNativefsHint3 ]
-            [ a [ A.attribute "data-l10n-name" "link-www", href "https://mapwatch.erosson.org" ] []
-            , a [ A.attribute "data-l10n-name" "link-download", target "_blank", Route.downloadMapwatchHref ] []
+            [ a [ L.name_ "link-www", href "https://mapwatch.erosson.org" ] []
+            , a [ L.name_ "link-download", target "_blank", Route.downloadMapwatchHref ] []
             ]
         ]
 

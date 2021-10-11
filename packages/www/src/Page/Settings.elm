@@ -18,7 +18,7 @@ view model =
         , View.Nav.view model
         , View.Volume.view model
         , button [ onClick (Model.Reset (Just Route.Timer)), L.settingsReset ] []
-        , p [ L.settingsSource ] [ a [ A.attribute "data-l10n-name" "link", target "_blank", href "https://www.github.com/mapwatch/mapwatch" ] [] ]
+        , p [ L.settingsSource ] [ a [ L.name_ "link", target "_blank", href "https://www.github.com/mapwatch/mapwatch" ] [] ]
         , p [] [ a [ Route.href model.query Route.Privacy, L.settingsPrivacy ] [] ]
         , div [ class "debug-link" ] [ a [ Route.href model.query Route.Debug ] [ text "secret debugging tools" ] ]
         ]
