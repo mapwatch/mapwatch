@@ -3,9 +3,9 @@ const path = require('path')
 const argv = require('minimist')(process.argv)
 const child_process = require('child_process')
 const os = require('os')
-const {autoUpdater} = require('electron-updater')
+const { autoUpdater } = require('electron-updater')
 const log = require('electron-log')
-const {URL} = require('url')
+const { URL } = require('url')
 log.transports.file.level = 'debug'
 
 function main() {
@@ -48,7 +48,7 @@ function main() {
       enableRemoteModule: false,
       nodeIntegration: false,
       contextIsolation: true,
-      additionalArguments: [JSON.stringify({version: electron.app.getVersion()})],
+      additionalArguments: [`--mapwatchElectronFlags=${JSON.stringify({ version: electron.app.getVersion() })}`],
     }
   })
   win.setMenuBarVisibility(false)
@@ -57,13 +57,13 @@ function main() {
     const www = child_process.exec('elm-app start --no-browser', {
       // cwd: path.join(__dirname, "node_modules/@mapwatch/www"),
       cwd: "../www",
-      env: {...process.env, ELM_DEBUGGER: false},
+      env: { ...process.env, ELM_DEBUGGER: false },
     })
     // TODO: watch output for "You can now view www in the browser." before loading
     www.stdout.on('data', data => process.stdout.write(data.toString()))
     www.stderr.on('data', data => process.stderr.write(data.toString()))
     www.stderr.on('exit', code => {
-      if (code) console.error('www: yarn start failed ('+code+')')
+      if (code) console.error('www: yarn start failed (' + code + ')')
       electron.app.quit()
     })
     electron.app.on('quit', () => {
@@ -90,7 +90,7 @@ function main() {
 
   // finally, load the app itself
   const url = argv.app_url || 'https://mapwatch.erosson.org'
-  console.log({url})
+  console.log({ url })
   win.loadURL(url)
 }
 function kill(ps) {
