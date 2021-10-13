@@ -3180,7 +3180,7 @@
       ],
       [
         "MapTier5_4",
-        "Champ du repos"
+        "Sépultures"
       ],
       [
         "MapTier5_5",
@@ -3492,7 +3492,7 @@
       ],
       [
         "Map2Tier5_4",
-        "Champ du repos"
+        "Sépultures"
       ],
       [
         "Map2Tier5_5",
@@ -3808,7 +3808,7 @@
       ],
       [
         "MapAtlasGraveyard",
-        "Champ du repos"
+        "Sépultures"
       ],
       [
         "MapAtlasPhantasmagoria",
@@ -4340,7 +4340,7 @@
       ],
       [
         "MapWorldsGraveyard",
-        "Champ du repos"
+        "Sépultures"
       ],
       [
         "MapWorldsDungeon",
@@ -5036,7 +5036,7 @@
       ],
       [
         "MapWorldsColdRiver_",
-        "Rivière glaciale"
+        "Rivière gelée"
       ],
       [
         "MapWorldsForbiddenWoods",
@@ -5045,6 +5045,10 @@
       [
         "MapWorldsSilo",
         "Silo"
+      ],
+      [
+        "MapWorldsBeachLanding",
+        "Plage du débarquement"
       ],
       [
         "MapWorldsElder_Desert",
@@ -5424,7 +5428,7 @@
       ],
       [
         "ExileRoyale",
-        "PATH OF EXILE ROYALE"
+        "Path of Exile Royale"
       ],
       [
         "EndlessLedge1",
@@ -6360,11 +6364,19 @@
       ],
       [
         "HideoutHasina",
-        "Repaire de l'Hasina"
+        "Repaire de la Taverne"
       ],
       [
         "HideoutAzuriteCave",
         "Repaire de la Caverne d'Azurite"
+      ],
+      [
+        "HideoutSynthesisHub",
+        "Repaire de synthèse"
+      ],
+      [
+        "HideoutVeritaniaArena",
+        "Repaire de la Rédemptrice"
       ],
       [
         "pvpTown",
@@ -6853,6 +6865,118 @@
       [
         "UltimatumBossArena",
         "La Tour des Calvaires"
+      ],
+      [
+        "ExpeditionBattlegroundGraves",
+        "Champ de tombes"
+      ],
+      [
+        "ExpeditionKaruiWargraves",
+        "Tombes militaires karuies"
+      ],
+      [
+        "ExpeditionBluffs",
+        "Falaises"
+      ],
+      [
+        "ExpeditionRottingTemple",
+        "Temple pourrissant"
+      ],
+      [
+        "ExpeditionShipwreckReef",
+        "Récif des naufragés"
+      ],
+      [
+        "ExpeditionCemetery",
+        "Cimetière"
+      ],
+      [
+        "ExpeditionSarnSlums",
+        "Bas-quartiers de Sarn"
+      ],
+      [
+        "ExpeditionDriedRiverbed",
+        "Rivière asséchée"
+      ],
+      [
+        "ExpeditionMountainside",
+        "Flanc de montagne"
+      ],
+      [
+        "ExpeditionForestRuins",
+        "Ruines de la forêt"
+      ],
+      [
+        "ExpeditionVaalTemple",
+        "Temple vaal"
+      ],
+      [
+        "ExpeditionUtzaalOutskirts",
+        "Périphérie d'Utzaal"
+      ],
+      [
+        "ExpeditionDesertRuins",
+        "Ruines du désert"
+      ],
+      [
+        "ExpeditionScrublands",
+        "Brousse"
+      ],
+      [
+        "ExpeditionVolcano",
+        "Île volcanique"
+      ],
+      [
+        "ExpeditionArenaUhtred",
+        "Autel préhistorique"
+      ],
+      [
+        "ExpeditionArenaOlroth",
+        "Bastion runique"
+      ],
+      [
+        "ExpeditionCryptArchers",
+        "Redoute fortifiée"
+      ],
+      [
+        "ExpeditionSubareaSewers",
+        "Caniveau toxique"
+      ],
+      [
+        "ExpeditionUndergroundSand",
+        "Vestiges sablonneux"
+      ],
+      [
+        "ExpeditionCryptSarcophagi",
+        "Tombeau héroïque"
+      ],
+      [
+        "ExpeditionPirateCave",
+        "Cavité spectrale"
+      ],
+      [
+        "ExpeditionForgottenGrotto",
+        "Grotte oubliée"
+      ],
+      [
+        "ExpeditionSubareaFungiDungeon",
+        "Bosquet champignonneux"
+      ],
+      [
+        "ExpeditionBait",
+        "Bassin envoûtant"
+      ],
+      [
+        "ExpeditionSealedVault",
+        "Sanctuaire perdu"
+      ],
+      [
+        "ExpeditionSubareaSpiderNest",
+        "Chambre grouillante"
+      ],
+      [
+        "ExpeditionHeavyMetal",
+        "[DNT] Kalguur Tileset Test"
       ]
     ]
   },
@@ -59494,7 +59618,7 @@
         "key_offset": 0,
         "enum": null,
         "unique": true,
-        "file_path": true,
+        "file_path": false,
         "file_ext": null,
         "display": null,
         "display_type": "{0}",

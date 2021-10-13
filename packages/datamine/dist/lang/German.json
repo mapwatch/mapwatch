@@ -5047,6 +5047,10 @@
         "Silo"
       ],
       [
+        "MapWorldsBeachLanding",
+        "Strandlandung"
+      ],
+      [
         "MapWorldsElder_Desert",
         "Wüste des Vergessens"
       ],
@@ -5424,7 +5428,7 @@
       ],
       [
         "ExileRoyale",
-        "PATH OF EXILE ROYALE"
+        "Path of Exile Royale"
       ],
       [
         "EndlessLedge1",
@@ -6360,11 +6364,19 @@
       ],
       [
         "HideoutHasina",
-        "Hasina Hideout"
+        "Versteckte Taverne"
       ],
       [
         "HideoutAzuriteCave",
         "Versteckte Azurithöhle"
+      ],
+      [
+        "HideoutSynthesisHub",
+        "Synthetisches Versteck"
+      ],
+      [
+        "HideoutVeritaniaArena",
+        "Versteck der Erlöserin"
       ],
       [
         "pvpTown",
@@ -6853,6 +6865,118 @@
       [
         "UltimatumBossArena",
         "Der Turm der Qualen"
+      ],
+      [
+        "ExpeditionBattlegroundGraves",
+        "Schlachtfeld-Gräber"
+      ],
+      [
+        "ExpeditionKaruiWargraves",
+        "Karui-Kriegsgräber"
+      ],
+      [
+        "ExpeditionBluffs",
+        "Klippen"
+      ],
+      [
+        "ExpeditionRottingTemple",
+        "Verrottender Tempel"
+      ],
+      [
+        "ExpeditionShipwreckReef",
+        "Schiffswrack-Riff"
+      ],
+      [
+        "ExpeditionCemetery",
+        "Friedhof"
+      ],
+      [
+        "ExpeditionSarnSlums",
+        "Armenviertel von Sarn"
+      ],
+      [
+        "ExpeditionDriedRiverbed",
+        "Ausgetrocknetes Flussbett"
+      ],
+      [
+        "ExpeditionMountainside",
+        "Berghang"
+      ],
+      [
+        "ExpeditionForestRuins",
+        "Waldruinen"
+      ],
+      [
+        "ExpeditionVaalTemple",
+        "Vaal-Tempel"
+      ],
+      [
+        "ExpeditionUtzaalOutskirts",
+        "Randgebiet von Utzaal"
+      ],
+      [
+        "ExpeditionDesertRuins",
+        "Wüstenruinen"
+      ],
+      [
+        "ExpeditionScrublands",
+        "Buschland"
+      ],
+      [
+        "ExpeditionVolcano",
+        "Vulkaninsel"
+      ],
+      [
+        "ExpeditionArenaUhtred",
+        "Schrein des Vorboten"
+      ],
+      [
+        "ExpeditionArenaOlroth",
+        "Runenfestung"
+      ],
+      [
+        "ExpeditionCryptArchers",
+        "Befestigte Schanze"
+      ],
+      [
+        "ExpeditionSubareaSewers",
+        "Giftige Kanäle"
+      ],
+      [
+        "ExpeditionUndergroundSand",
+        "Sandige Überreste"
+      ],
+      [
+        "ExpeditionCryptSarcophagi",
+        "Heldengrab"
+      ],
+      [
+        "ExpeditionPirateCave",
+        "Spektrale Höhle"
+      ],
+      [
+        "ExpeditionForgottenGrotto",
+        "Vergessene Grotte"
+      ],
+      [
+        "ExpeditionSubareaFungiDungeon",
+        "Pilzbewachsenes Dickicht"
+      ],
+      [
+        "ExpeditionBait",
+        "Verlockender Pool"
+      ],
+      [
+        "ExpeditionSealedVault",
+        "Verlorene Grabstätte"
+      ],
+      [
+        "ExpeditionSubareaSpiderNest",
+        "Kammer des Zitterns"
+      ],
+      [
+        "ExpeditionHeavyMetal",
+        "[DNT] Kalguur Tileset Test"
       ]
     ]
   },
@@ -59494,7 +59618,7 @@
         "key_offset": 0,
         "enum": null,
         "unique": true,
-        "file_path": true,
+        "file_path": false,
         "file_ext": null,
         "display": null,
         "display_type": "{0}",
