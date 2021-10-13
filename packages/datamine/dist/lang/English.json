@@ -5047,6 +5047,10 @@
         "Silo"
       ],
       [
+        "MapWorldsBeachLanding",
+        "Beach Landing"
+      ],
+      [
         "MapWorldsElder_Desert",
         "Desert of Dementia"
       ],
@@ -5424,7 +5428,7 @@
       ],
       [
         "ExileRoyale",
-        "PATH OF EXILE ROYALE"
+        "Path of Exile Royale"
       ],
       [
         "EndlessLedge1",
@@ -6360,11 +6364,19 @@
       ],
       [
         "HideoutHasina",
-        "Hasina Hideout"
+        "Tavern Hideout"
       ],
       [
         "HideoutAzuriteCave",
         "Azurite Cavern Hideout"
+      ],
+      [
+        "HideoutSynthesisHub",
+        "Synthetic Hideout"
+      ],
+      [
+        "HideoutVeritaniaArena",
+        "Redeemer's Hideout"
       ],
       [
         "pvpTown",
@@ -6853,6 +6865,118 @@
       [
         "UltimatumBossArena",
         "The Tower of Ordeals"
+      ],
+      [
+        "ExpeditionBattlegroundGraves",
+        "Battleground Graves"
+      ],
+      [
+        "ExpeditionKaruiWargraves",
+        "Karui Wargraves"
+      ],
+      [
+        "ExpeditionBluffs",
+        "Bluffs"
+      ],
+      [
+        "ExpeditionRottingTemple",
+        "Rotting Temple"
+      ],
+      [
+        "ExpeditionShipwreckReef",
+        "Shipwreck Reef"
+      ],
+      [
+        "ExpeditionCemetery",
+        "Cemetery"
+      ],
+      [
+        "ExpeditionSarnSlums",
+        "Sarn Slums"
+      ],
+      [
+        "ExpeditionDriedRiverbed",
+        "Dried Riverbed"
+      ],
+      [
+        "ExpeditionMountainside",
+        "Mountainside"
+      ],
+      [
+        "ExpeditionForestRuins",
+        "Forest Ruins"
+      ],
+      [
+        "ExpeditionVaalTemple",
+        "Vaal Temple"
+      ],
+      [
+        "ExpeditionUtzaalOutskirts",
+        "Utzaal Outskirts"
+      ],
+      [
+        "ExpeditionDesertRuins",
+        "Desert Ruins"
+      ],
+      [
+        "ExpeditionScrublands",
+        "Scrublands"
+      ],
+      [
+        "ExpeditionVolcano",
+        "Volcanic Island"
+      ],
+      [
+        "ExpeditionArenaUhtred",
+        "Precursor Shrine"
+      ],
+      [
+        "ExpeditionArenaOlroth",
+        "Runic Stronghold"
+      ],
+      [
+        "ExpeditionCryptArchers",
+        "Fortified Redoubt"
+      ],
+      [
+        "ExpeditionSubareaSewers",
+        "Noxious Gutter"
+      ],
+      [
+        "ExpeditionUndergroundSand",
+        "Sandy Vestige"
+      ],
+      [
+        "ExpeditionCryptSarcophagi",
+        "Heroic Tomb"
+      ],
+      [
+        "ExpeditionPirateCave",
+        "Spectral Hollow"
+      ],
+      [
+        "ExpeditionForgottenGrotto",
+        "Forgotten Grotto"
+      ],
+      [
+        "ExpeditionSubareaFungiDungeon",
+        "Mushroom Thicket"
+      ],
+      [
+        "ExpeditionBait",
+        "Alluring Pool"
+      ],
+      [
+        "ExpeditionSealedVault",
+        "Lost Sanctum"
+      ],
+      [
+        "ExpeditionSubareaSpiderNest",
+        "Chittering Chamber"
+      ],
+      [
+        "ExpeditionHeavyMetal",
+        "[DNT] Kalguur Tileset Test"
       ]
     ]
   },
@@ -59494,7 +59618,7 @@
         "key_offset": 0,
         "enum": null,
         "unique": true,
-        "file_path": true,
+        "file_path": false,
         "file_ext": null,
         "display": null,
         "display_type": "{0}",

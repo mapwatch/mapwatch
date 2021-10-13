@@ -5047,6 +5047,10 @@
         "Silo"
       ],
       [
+        "MapWorldsBeachLanding",
+        "Desembarco en la playa"
+      ],
+      [
         "MapWorldsElder_Desert",
         "Desierto de Demencia"
       ],
@@ -5424,7 +5428,7 @@
       ],
       [
         "ExileRoyale",
-        "PATH OF EXILE ROYALE"
+        "Path of Exile Royale"
       ],
       [
         "EndlessLedge1",
@@ -6360,11 +6364,19 @@
       ],
       [
         "HideoutHasina",
-        "Guarida de Hasina"
+        "Guarida de taberna"
       ],
       [
         "HideoutAzuriteCave",
         "Guarida de Azurita"
+      ],
+      [
+        "HideoutSynthesisHub",
+        "Guarida Sintética"
+      ],
+      [
+        "HideoutVeritaniaArena",
+        "Guarida de la Redentora"
       ],
       [
         "pvpTown",
@@ -6853,6 +6865,118 @@
       [
         "UltimatumBossArena",
         "La torre de los calvarios"
+      ],
+      [
+        "ExpeditionBattlegroundGraves",
+        "Tumbas del campo de batalla"
+      ],
+      [
+        "ExpeditionKaruiWargraves",
+        "Sepulturas de guerra karui"
+      ],
+      [
+        "ExpeditionBluffs",
+        "Peñascos"
+      ],
+      [
+        "ExpeditionRottingTemple",
+        "Templo putrefacto"
+      ],
+      [
+        "ExpeditionShipwreckReef",
+        "Arrecife de naufragios"
+      ],
+      [
+        "ExpeditionCemetery",
+        "Cementerio"
+      ],
+      [
+        "ExpeditionSarnSlums",
+        "Barriadas de Sarn"
+      ],
+      [
+        "ExpeditionDriedRiverbed",
+        "Lecho seco"
+      ],
+      [
+        "ExpeditionMountainside",
+        "Ladera de la montaña"
+      ],
+      [
+        "ExpeditionForestRuins",
+        "Ruinas del bosque"
+      ],
+      [
+        "ExpeditionVaalTemple",
+        "Templo vaal"
+      ],
+      [
+        "ExpeditionUtzaalOutskirts",
+        "Afueras de Utzaal"
+      ],
+      [
+        "ExpeditionDesertRuins",
+        "Ruinas desérticas"
+      ],
+      [
+        "ExpeditionScrublands",
+        "Matorrales"
+      ],
+      [
+        "ExpeditionVolcano",
+        "Isla volcánica"
+      ],
+      [
+        "ExpeditionArenaUhtred",
+        "Santuario precursor"
+      ],
+      [
+        "ExpeditionArenaOlroth",
+        "Fortaleza rúnica"
+      ],
+      [
+        "ExpeditionCryptArchers",
+        "Reducto fortificado"
+      ],
+      [
+        "ExpeditionSubareaSewers",
+        "Canaleta nociva"
+      ],
+      [
+        "ExpeditionUndergroundSand",
+        "Vestigio arenoso"
+      ],
+      [
+        "ExpeditionCryptSarcophagi",
+        "Tumba heróica"
+      ],
+      [
+        "ExpeditionPirateCave",
+        "Hondonada espectral"
+      ],
+      [
+        "ExpeditionForgottenGrotto",
+        "Gruta olvidada"
+      ],
+      [
+        "ExpeditionSubareaFungiDungeon",
+        "Matorral fúngico"
+      ],
+      [
+        "ExpeditionBait",
+        "Laguna atrayente"
+      ],
+      [
+        "ExpeditionSealedVault",
+        "Sagrario perdido"
+      ],
+      [
+        "ExpeditionSubareaSpiderNest",
+        "Cámara arácnida"
+      ],
+      [
+        "ExpeditionHeavyMetal",
+        "[DNT] Kalguur Tileset Test"
       ]
     ]
   },
@@ -59494,7 +59618,7 @@
         "key_offset": 0,
         "enum": null,
         "unique": true,
-        "file_path": true,
+        "file_path": false,
         "file_ext": null,
         "display": null,
         "display_type": "{0}",

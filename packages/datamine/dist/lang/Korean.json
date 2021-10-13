@@ -5047,6 +5047,10 @@
         "곡물 창고"
       ],
       [
+        "MapWorldsBeachLanding",
+        "해변 상륙지"
+      ],
+      [
         "MapWorldsElder_Desert",
         "광기의 사막"
       ],
@@ -5424,7 +5428,7 @@
       ],
       [
         "ExileRoyale",
-        "패스 오브 엑자일 로열"
+        "패스 오브 엑자일 배틀로열"
       ],
       [
         "EndlessLedge1",
@@ -6360,11 +6364,19 @@
       ],
       [
         "HideoutHasina",
-        "하시나 은신처"
+        "선술집 은신처"
       ],
       [
         "HideoutAzuriteCave",
         "남동석 암굴 은신처"
+      ],
+      [
+        "HideoutSynthesisHub",
+        "결합의 은신처"
+      ],
+      [
+        "HideoutVeritaniaArena",
+        "대속자의 은신처"
       ],
       [
         "pvpTown",
@@ -6853,6 +6865,118 @@
       [
         "UltimatumBossArena",
         "시련의 탑"
+      ],
+      [
+        "ExpeditionBattlegroundGraves",
+        "전장 무덤"
+      ],
+      [
+        "ExpeditionKaruiWargraves",
+        "카루이 전쟁 무덤"
+      ],
+      [
+        "ExpeditionBluffs",
+        "절벽"
+      ],
+      [
+        "ExpeditionRottingTemple",
+        "썩어가는 사원"
+      ],
+      [
+        "ExpeditionShipwreckReef",
+        "난파선 암초"
+      ],
+      [
+        "ExpeditionCemetery",
+        "공동묘지"
+      ],
+      [
+        "ExpeditionSarnSlums",
+        "사안 빈민가"
+      ],
+      [
+        "ExpeditionDriedRiverbed",
+        "말라붙은 강바닥"
+      ],
+      [
+        "ExpeditionMountainside",
+        "산비탈"
+      ],
+      [
+        "ExpeditionForestRuins",
+        "숲 폐허"
+      ],
+      [
+        "ExpeditionVaalTemple",
+        "바알 사원"
+      ],
+      [
+        "ExpeditionUtzaalOutskirts",
+        "웃자알 외곽"
+      ],
+      [
+        "ExpeditionDesertRuins",
+        "사막 폐허"
+      ],
+      [
+        "ExpeditionScrublands",
+        "관목지"
+      ],
+      [
+        "ExpeditionVolcano",
+        "화산섬"
+      ],
+      [
+        "ExpeditionArenaUhtred",
+        "선도자의 성소(Precursor Shrine)"
+      ],
+      [
+        "ExpeditionArenaOlroth",
+        "룬 요새(Runic Stronghold)"
+      ],
+      [
+        "ExpeditionCryptArchers",
+        "견고한 보루(Fortified Redoubt)"
+      ],
+      [
+        "ExpeditionSubareaSewers",
+        "유독성 시궁창(Noxious Gutter)"
+      ],
+      [
+        "ExpeditionUndergroundSand",
+        "모래의 자취(Sandy Vestige)"
+      ],
+      [
+        "ExpeditionCryptSarcophagi",
+        "영웅의 무덤(Heroic Tomb)"
+      ],
+      [
+        "ExpeditionPirateCave",
+        "유령의 동혈(Spectral Hollow)"
+      ],
+      [
+        "ExpeditionForgottenGrotto",
+        "잊힌 석굴(Forgotten Grotto)"
+      ],
+      [
+        "ExpeditionSubareaFungiDungeon",
+        "버섯 잡목림(Mushroom Thicket)"
+      ],
+      [
+        "ExpeditionBait",
+        "매혹적인 웅덩이(Alluring Pool)"
+      ],
+      [
+        "ExpeditionSealedVault",
+        "잃어버린 성지(Lost Sanctum)"
+      ],
+      [
+        "ExpeditionSubareaSpiderNest",
+        "지저귀는 방(Chittering Chamber)"
+      ],
+      [
+        "ExpeditionHeavyMetal",
+        "[DNT] Kalguur Tileset Test"
       ]
     ]
   },
@@ -59494,7 +59618,7 @@
         "key_offset": 0,
         "enum": null,
         "unique": true,
-        "file_path": true,
+        "file_path": false,
         "file_ext": null,
         "display": null,
         "display_type": "{0}",
