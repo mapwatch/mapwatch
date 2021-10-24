@@ -7149,11 +7149,15 @@
       ],
       [
         "PartyPromotionRequired",
-        "Você não pode executar esta operação porque você não é um membro promovido do grupo"
+        "Você não pode executar esta operação porque você não é o líder do grupo"
       ],
       [
         "PartyDoesNotExist",
         "O grupo não existe."
+      ],
+      [
+        "PartyLeaderOnlyCanOpenMapPortals",
+        "Apenas o Líder do Grupo pode abrir Portais para Mapas. O Líder do Grupo pode promover outros jogadores para Líder do Grupo na IU do Grupo."
       ],
       [
         "ServiceDoesNotExist",
@@ -8296,10 +8300,6 @@
         "Você não tem uma missão diária aberta."
       ],
       [
-        "MissionComplete",
-        "Missão Completa. Você ganhou {0} de favor com o Mestre."
-      ],
-      [
         "GrandmasterSaved",
         "O arquivo Grão-Mestre foi salvo. A equipe da Grinding Gear Games será notificada."
       ],
@@ -8334,6 +8334,14 @@
       [
         "ErrorNotInHideout",
         "Você deve estar em seu Refúgio para fazer isso."
+      ],
+      [
+        "ErrorHideoutSuperceded",
+        "Modificações de Refúgio atualmente estão desabilitadas. Por favor crie uma nova instância de Refúgio e tente novamente."
+      ],
+      [
+        "ErrorCannotModifyGuildHideout",
+        "Você não tem permissão para modificar o Refúgio da Guilda."
       ],
       [
         "ClaimCraftingBenchSuccess",
@@ -8732,10 +8740,6 @@
         "Este jogador não possui um Viveiro."
       ],
       [
-        "MasterBonusExpUpdate",
-        "Recebido {1} de reputação e favor bônus por {0}"
-      ],
-      [
         "MicrotransactionNotAvailableInLeague",
         "Você não pode comprar essa microtransação nesta liga."
       ],
@@ -8886,6 +8890,10 @@
       [
         "FailedToReclaimSomeHideoutDoodads",
         "Falha ao recuperar um ou mais itens de refúgio. Por favor crie uma nova instância de refúgio e tente novamente."
+      ],
+      [
+        "FailedToLoadHideoutDoodads",
+        "Falha ao carregar a lista de itens do Refúgio."
       ],
       [
         "HideoutImportWarningGeneric",
@@ -9222,6 +9230,22 @@
       [
         "ActionTemporarilyDisabled",
         "Esta ação foi desabilitada temporáriamente."
+      ],
+      [
+        "CannotAccessGuildHideout",
+        "Você não pode acessar o Refúgio da Guilda desse jogador porque não é membro de sua Guilda."
+      ],
+      [
+        "SettingDeliveryDetailsFailed",
+        "Falha ao configurar os Detalhes de Entrega:"
+      ],
+      [
+        "ExpeditionCurrencyNotification",
+        "Adicionado {0}x {1} ao seu Armário Expedition"
+      ],
+      [
+        "GuildStashDisabled",
+        "O baú da guilda foi desabilitado temporariamente."
       ]
     ]
   },
@@ -15726,7 +15750,7 @@
       ],
       [
         "MaramoaOnMoonOrb",
-        "Eu venho acompanhado de perto aquele exilado bajulador que chama a si mesmo 'O Entardecer'. Entardecer carregou o Orbe da Lua para dentro do templo Lunaris e não voltou com ele, não que eu tenha visto.\r\n\r\nSem dúvida ele se agarra aquele Orbe como se fosse o peito nutritivo da sua mãe adotiva. Se você quiser desmamá-lo, e colocar aquele orbe aos pés desolados de sua mãe, pode ser que vejamos a queda da própria lua."
+        "Eu venho acompanhado de perto aquele exilado bajulador que chama a si mesmo 'O Entardecer'. Entardecer carregou o Orbe da Lua para dentro do Templo Lunaris e não voltou com ele, não que eu tenha visto.\r\n\r\nSem dúvida ele se agarra aquele Orbe como se fosse o peito nutritivo da sua mãe adotiva. Se você quiser desmamá-lo, e colocar aquele orbe aos pés desolados de sua mãe, pode ser que vejamos a queda da própria lua."
       ],
       [
         "MaramoaOnOrbs",
@@ -30906,7 +30930,7 @@
       ],
       [
         "DroxFourStoneEncounter3a",
-        "Sangue e tripas!"
+        "Tripas e sangue!"
       ],
       [
         "DroxFourStoneEncounter3b",
@@ -59603,6 +59627,106 @@
       [
         "DannigEncounterComplete6",
         "<if:MS>{Ha!}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCIntroduction",
+        "Não há tempo. Eu estou fraco demais para sustentar o Crisol Sangrento. Pegue-o… tome seu poder para si."
+      ],
+      [
+        "HellscapeNPCDeliverDreamFurnace",
+        "Você encontrou a Fornalha dos Sonhos? Ela foi uma invenção com destino incerto de uma época mais esperançosa. Ela só nos trouxe tristeza… mas talvez, em suas mãos, as coisas possam ser diferentes."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleInstalled",
+        "Ele gosta do seu gosto. O ferimento ao redor nunca vai ser curar completamente, porque o Crisol é voraz. Você tem que alimentá-lo com o que faz de melhor: derramar sangue. Se não fizer isso, ele vai querer o seu sangue.\r\n\r\nNão temos tempo. Vá, ative o Crisol Sangrento. Entre no Pesadelo. Descubra a verdade horrível por si só."
+      ],
+      [
+        "HellscapeNPCMoreInformation",
+        "Entende agora, não é? O Castigo tem números e fome infinitos. Eu lutei contra eles pela maior parte da minha vida, e nunca consegui mais do que apenas viver mais que… todo mundo. O Crisol é seu agora. Você precisa carregá-lo na guerra. Quando você os atacar nas terras devastadas, poderá roubar um pouco de seu poder. O Crisol absorverá a Corrupção daqueles que você matar. Faça o que for necessário."
+      ],
+      [
+        "HellscapeNPCDemonFaction",
+        "Aquelas criaturas horríveis… Eu olho para eles e me pergunto… que parte deles pensa? Alguns não têm nem cabeça. Alguns são só garras ou bocas monstruosas… e se eles não pensarem de forma alguma? E se alguma outra coisa pensar por eles, e eles são só drones? Esmagar algumas formigas na superfície não causa nenhum dano na colmeia subterrânea..."
+      ],
+      [
+        "HellscapeNPCFleshFaction",
+        "A fome por carne. Essa é sua motivação principal. Eles parecem ser capazes de pensar, mas nunca consegui me comunicar com eles. Creio que não teria muito a dizer para um coelho, se eu estivesse com fome…"
+      ],
+      [
+        "HellscapeNPCPaleFaction",
+        "Os demônios pálidos são cegos, mas isso só os torna mais perigosos. Eles têm outras formas de encontrar suas vítimas… eles são especialmente atraídos para o cheio do medo. Porém, eles ainda vão te sentir, não importa o que aconteça."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleGossip",
+        "<if:MS>{Eles estão lá for a, Exilado. Os demônios. Eles destroem e pilham e consomem tudo ao nosso redor, isso enquanto conversamos. Você ainda não pode vê-los… mas vai conseguir. O Crisol Sangrento te levará até eles, e talvez esse seu talento para a matança possa fazer a diferença...}<elif:FS>{Eles estão lá for a, Exilada. Os demônios. Eles destroem e pilham e consomem tudo ao nosso redor, isso enquanto conversamos. Você ainda não os pode ver… mas poderá. Eles só não chegaram nesta Wraeclast ainda. O Crisol Sangrento o levará até eles, e talvez esse seu talento para a matança possa nos dar um pouco de tempo...}"
+      ],
+      [
+        "HellscapeNPCChaos",
+        "O Crisol Sangrento representa um pacto entre a entidade conhecida como Caos e as linhagens dos Altos Sacerdotes Vaal, forjada há muito tempo atrás no alto da loucura do império. Eu sou o último que restou desta linhagem, então se eu morrer, o Crisol deixará de funcionar. É por isso que você precisa continuar no meu lugar."
+      ],
+      [
+        "HellscapeNPCOtherWraeclasts",
+        "Por inúmeras vezes eu vi o trabalho dos homens ser reduzido a nada sob a maré colossal de horror. Em todas as Mudanças, eu só vi uma Wraeclast sobreviver. Era um mundo dominado pela sombra do Alto Templário Venarius. Você não vai querer ir até lá, acredite.\r\n\r\nEstamos sozinhos."
+      ],
+      [
+        "HellscapeNPCGreetingShout",
+        "Exilado! Rápido!"
+      ],
+      [
+        "HellscapeNPCVisceraCauldron",
+        "Ah, o Caldeirão de Vísceras. Fique parado. Posso implantá-lo em você. Não ligue para a dor, ele está apenas… criando espaço. Fato curioso, uma pessoa pode viver uma vida normal com apenas um rim. Ou apenas um pulmão. Você nunca vai saber o que a tecnologia Vaal vai te custar..."
+      ],
+      [
+        "SkadiPetIdleRandom",
+        ""
+      ],
+      [
+        "SkadiPetIdle2",
+        ""
+      ],
+      [
+        "SkadiPetIdle3",
+        ""
+      ],
+      [
+        "SkadiPetIdle4",
+        ""
+      ],
+      [
+        "SkadiPetIdle5",
+        ""
+      ],
+      [
+        "SkadiPetIdle6",
+        ""
+      ],
+      [
+        "SkadiPetDismiss",
+        ""
+      ],
+      [
+        "SkadiPetExaltedOrb",
+        ""
+      ],
+      [
+        "SkadiPetToHideout",
+        ""
+      ],
+      [
+        "SkadiPetUniqueKill",
+        ""
+      ],
+      [
+        "SkadiPetMirrorDrop",
+        ""
+      ],
+      [
+        "SkadiPetPlayerDeath",
+        ""
+      ],
+      [
+        "SkadiPetSummon",
+        ""
       ]
     ]
   },
@@ -61230,14 +61354,6 @@
         "Tane Octavius"
       ],
       [
-        "Metadata/NPC/League/Harvest/HarvestNPC",
-        "Oshabi"
-      ],
-      [
-        "Metadata/NPC/League/Harvest/HarvestNPCGarden",
-        "Oshabi"
-      ],
-      [
         "Metadata/NPC/League/Harvest/HarvestNPCGardenTutorial",
         "Oshabi"
       ],
@@ -61712,6 +61828,22 @@
       [
         "Metadata/Monsters/LeagueExpedition/Medved",
         "Medved"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPC",
+        "O Último a Morrer"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCWild",
+        "O Último a Morrer"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCHideout",
+        "O Último a Morrer"
+      ],
+      [
+        "Metadata/NPC/Skadi",
+        "Skadi"
       ]
     ]
   }

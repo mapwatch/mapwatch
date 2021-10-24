@@ -6702,14 +6702,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Lookout.dds",
-        "Tirn's End",
-        [
-          0,
-          0,
-          0,
-          0,
-          15
-        ],
+        null,
+        null,
         1074
       ],
       [
@@ -6723,14 +6717,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Beach.dds",
-        "Glennach Cairns",
-        [
-          1,
-          4,
-          8,
-          10,
-          14
-        ],
+        null,
+        null,
         1075
       ],
       [
@@ -6744,36 +6732,9 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Graveyard.dds",
-        "Glennach Cairns",
-        [
-          2,
-          5,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1076
-      ],
-      [
-        "MapWorldsDungeon",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Dungeon.dds",
-        "New Vastir",
-        [
-          0,
-          0,
-          0,
-          0,
-          15
-        ],
-        1077
       ],
       [
         "MapWorldsAlleyways",
@@ -6786,14 +6747,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Alleyways.dds",
-        "New Vastir",
-        [
-          0,
-          0,
-          12,
-          14,
-          16
-        ],
+        null,
+        null,
         1078
       ],
       [
@@ -6806,14 +6761,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Pen.dds",
-        "Haewark Hamlet",
+        "Art/2DItems/Maps/Atlas2Maps/New/Lookout.dds",
+        "Glennach Cairns",
         [
-          4,
-          7,
-          11,
-          13,
-          15
+          0,
+          0,
+          0,
+          0,
+          14
         ],
         1079
       ],
@@ -6828,14 +6783,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Desert.dds",
-        "Haewark Hamlet",
-        [
-          5,
-          8,
-          12,
-          13,
-          15
-        ],
+        null,
+        null,
         1080
       ],
       [
@@ -6849,14 +6798,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/AridLake.dds",
-        "Tirn's End",
-        [
-          2,
-          6,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1081
       ],
       [
@@ -6869,13 +6812,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Cavern.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Dungeon.dds",
+        "Haewark Hamlet",
         [
-          0,
-          0,
-          0,
-          12,
+          1,
+          4,
+          8,
+          10,
           14
         ],
         1082
@@ -6890,14 +6833,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Marshes.dds",
-        "Glennach Cairns",
+        "Art/2DItems/Maps/Atlas2Maps/New/Alleyways.dds",
+        "Haewark Hamlet",
         [
-          2,
-          6,
-          9,
-          11,
-          14
+          0,
+          0,
+          0,
+          0,
+          16
         ],
         1083
       ],
@@ -6912,14 +6855,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Iceberg.dds",
-        "Lex Proxima",
-        [
-          2,
-          5,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1084
       ],
       [
@@ -6932,10 +6869,10 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Cage.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Desert.dds",
+        "Haewark Hamlet",
         [
-          2,
+          0,
           5,
           9,
           11,
@@ -6953,13 +6890,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/FungalCaverns.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/AridLake.dds",
+        "Valdo's Rest",
         [
-          4,
-          7,
-          10,
-          12,
+          2,
+          6,
+          9,
+          11,
           14
         ],
         1086
@@ -6974,14 +6911,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Excavation.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Cavern.dds",
         "Valdo's Rest",
         [
-          0,
-          0,
-          9,
+          4,
+          7,
           11,
-          14
+          13,
+          16
         ],
         1087
       ],
@@ -6996,14 +6933,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SulphurWastes.dds",
-        "Lex Proxima",
-        [
-          0,
-          0,
-          0,
-          0,
-          15
-        ],
+        null,
+        null,
         1088
       ],
       [
@@ -7017,14 +6948,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DryPeninsula.dds",
-        "Glennach Cairns",
-        [
-          4,
-          7,
-          11,
-          13,
-          16
-        ],
+        null,
+        null,
         1089
       ],
       [
@@ -7038,14 +6963,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Quay.dds",
-        "Valdo's Rest",
-        [
-          0,
-          7,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1090
       ],
       [
@@ -7058,14 +6977,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/BurialChambers.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/Atlas2Maps/New/FungalCaverns.dds",
+        "Lira Arthain",
         [
           0,
           0,
-          0,
-          0,
-          15
+          9,
+          11,
+          14
         ],
         1091
       ],
@@ -7080,14 +6999,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Cells.dds",
-        "Haewark Hamlet",
-        [
-          0,
-          0,
-          0,
-          0,
-          16
-        ],
+        null,
+        null,
         1092
       ],
       [
@@ -7100,13 +7013,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Arcade.dds",
-        "Haewark Hamlet",
+        "Art/2DItems/Maps/Atlas2Maps/New/SulphurWastes.dds",
+        "Valdo's Rest",
         [
-          0,
-          0,
-          0,
-          0,
+          5,
+          8,
+          11,
+          12,
           15
         ],
         1093
@@ -7122,14 +7035,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CitySquare.dds",
-        "Lex Ejoris",
-        [
-          5,
-          8,
-          12,
-          14,
-          16
-        ],
+        null,
+        null,
         1094
       ],
       [
@@ -7142,14 +7049,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Antiquary.dds",
-        "Haewark Hamlet",
+        "Art/2DItems/Maps/Atlas2Maps/New/Quay.dds",
+        "Glennach Cairns",
         [
-          0,
-          0,
+          3,
+          6,
+          9,
           11,
-          13,
-          15
+          14
         ],
         1095
       ],
@@ -7164,14 +7071,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Courthouse.dds",
-        "Glennach Cairns",
-        [
-          4,
-          8,
-          12,
-          13,
-          16
-        ],
+        null,
+        null,
         1096
       ],
       [
@@ -7184,14 +7085,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Strand.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Cells.dds",
         "Glennach Cairns",
         [
-          4,
-          7,
-          11,
+          0,
+          0,
+          0,
           13,
-          15
+          16
         ],
         1097
       ],
@@ -7205,14 +7106,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/UniqueMapEye.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Arcade.dds",
         "Glennach Cairns",
         [
-          4,
-          7,
-          11,
+          0,
+          0,
+          12,
           13,
-          15
+          16
         ],
         1098
       ],
@@ -7227,14 +7128,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Chateau.dds",
-        "Haewark Hamlet",
-        [
-          5,
-          9,
-          12,
-          14,
-          16
-        ],
+        null,
+        null,
         1099
       ],
       [
@@ -7247,14 +7142,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/PerandusManor.dds",
-        "Haewark Hamlet",
+        "Art/2DItems/Maps/Atlas2Maps/New/Antiquary.dds",
+        "Glennach Cairns",
         [
-          5,
+          0,
+          0,
           9,
           12,
-          14,
-          16
+          15
         ],
         1100
       ],
@@ -7269,14 +7164,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Grotto.dds",
-        "Valdo's Rest",
-        [
-          0,
-          0,
-          8,
-          10,
-          14
-        ],
+        null,
+        null,
         1101
       ],
       [
@@ -7289,13 +7178,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Glacier.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Strand.dds",
+        "Valdo's Rest",
         [
-          0,
-          0,
-          0,
-          0,
+          2,
+          6,
+          9,
+          11,
           14
         ],
         1102
@@ -7310,11 +7199,11 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Volcano.dds",
-        "Glennach Cairns",
+        "Art/2DItems/Maps/UniqueMapEye.dds",
+        "Valdo's Rest",
         [
-          0,
-          5,
+          2,
+          6,
           9,
           11,
           14
@@ -7331,14 +7220,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Beacon.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/Atlas2Maps/New/Chateau.dds",
+        "Valdo's Rest",
         [
-          4,
-          8,
+          3,
+          7,
+          10,
           11,
-          13,
-          15
+          14
         ],
         1104
       ],
@@ -7352,15 +7241,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Canyon.dds",
-        "Glennach Cairns",
-        [
-          3,
-          6,
-          10,
-          11,
-          14
-        ],
+        "Art/2DItems/Maps/PerandusManor.dds",
+        null,
+        null,
         1105
       ],
       [
@@ -7373,13 +7256,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Baths.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/Grotto.dds",
+        "Lira Arthain",
         [
-          0,
-          0,
-          0,
-          0,
+          4,
+          6,
+          10,
+          12,
           14
         ],
         1106
@@ -7394,37 +7277,16 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Corrosion.dds",
-        "Glennach Cairns",
+        "Art/2DItems/Maps/Atlas2Maps/New/Glacier.dds",
+        "Lira Arthain",
         [
-          0,
-          0,
-          0,
-          0,
-          14
+          5,
+          9,
+          12,
+          13,
+          16
         ],
         1107
-      ],
-      [
-        "MapWorldsHauntedMansion",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Chambers.dds",
-        "Lex Proxima",
-        [
-          2,
-          6,
-          9,
-          11,
-          14
-        ],
-        1108
       ],
       [
         "MapWorldsMaze",
@@ -7436,14 +7298,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Maze.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Beacon.dds",
+        "Haewark Hamlet",
         [
           3,
-          7,
+          6,
           10,
-          11,
-          14
+          12,
+          15
         ],
         1109
       ],
@@ -7457,12 +7319,12 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Doryanis.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Canyon.dds",
+        "Haewark Hamlet",
         [
-          3,
-          7,
-          10,
+          2,
+          5,
+          9,
           11,
           14
         ],
@@ -7478,14 +7340,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Channel.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/Baths.dds",
+        "Lira Arthain",
         [
-          1,
-          4,
+          0,
           8,
-          10,
-          14
+          11,
+          13,
+          16
         ],
         1111
       ],
@@ -7499,14 +7361,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Sewer.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Corrosion.dds",
         "Haewark Hamlet",
         [
-          4,
-          7,
-          11,
-          12,
-          14
+          0,
+          0,
+          0,
+          0,
+          15
         ],
         1112
       ],
@@ -7520,14 +7382,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/VaalCity.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/Chambers.dds",
+        "Glennach Cairns",
         [
-          3,
-          7,
+          1,
+          4,
+          8,
           10,
-          12,
-          15
+          14
         ],
         1113
       ],
@@ -7541,14 +7403,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/IvoryTemple.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/Maze.dds",
+        "Haewark Hamlet",
         [
-          3,
-          6,
-          10,
+          5,
+          9,
           12,
-          14
+          13,
+          16
         ],
         1114
       ],
@@ -7562,14 +7424,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/SpiderLair.dds",
-        "Lira Arthain",
+        "Art/2DItems/Maps/Doryanis.dds",
+        "Haewark Hamlet",
         [
-          4,
-          8,
-          11,
+          5,
+          9,
+          12,
           13,
-          15
+          16
         ],
         1115
       ],
@@ -7584,14 +7446,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Barrows.dds",
-        "New Vastir",
-        [
-          3,
-          6,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1116
       ],
       [
@@ -7604,14 +7460,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Mausoleum.dds",
-        "Glennach Cairns",
+        "Art/2DItems/Maps/Atlas2Maps/New/Sewer.dds",
+        "Lira Arthain",
         [
           0,
           0,
-          0,
-          13,
-          15
+          9,
+          11,
+          14
         ],
         1117
       ],
@@ -7625,12 +7481,12 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Fields.dds",
-        "Glennach Cairns",
+        "Art/2DItems/Maps/Atlas2Maps/New/VaalCity.dds",
+        "Lira Arthain",
         [
-          2,
-          6,
-          9,
+          3,
+          7,
+          10,
           11,
           14
         ],
@@ -7647,14 +7503,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/JungleValley.dds",
-        "Glennach Cairns",
-        [
-          4,
-          8,
-          11,
-          13,
-          16
-        ],
+        null,
+        null,
         1119
       ],
       [
@@ -7667,13 +7517,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Phantasmagoria.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/SpiderLair.dds",
+        "Valdo's Rest",
         [
-          0,
-          0,
-          0,
-          12,
+          3,
+          6,
+          10,
+          11,
           14
         ],
         1120
@@ -7688,12 +7538,12 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Academy.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/Barrows.dds",
+        "Lira Arthain",
         [
-          3,
+          0,
           7,
-          10,
+          9,
           11,
           14
         ],
@@ -7709,14 +7559,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Thicket.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Mausoleum.dds",
         "Lira Arthain",
         [
-          0,
-          8,
+          4,
+          6,
           11,
-          13,
-          15
+          12,
+          16
         ],
         1122
       ],
@@ -7730,14 +7580,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Wharf.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/Fields.dds",
+        "Glennach Cairns",
         [
-          3,
-          6,
-          10,
-          11,
-          14
+          0,
+          0,
+          0,
+          0,
+          16
         ],
         1123
       ],
@@ -7752,14 +7602,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DryWoods.dds",
-        "Lex Proxima",
-        [
-          4,
-          7,
-          11,
-          13,
-          16
-        ],
+        null,
+        null,
         1124
       ],
       [
@@ -7773,36 +7617,9 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Atoll.dds",
-        "Tirn's End",
-        [
-          0,
-          5,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1125
-      ],
-      [
-        "MapWorldsAtollUnique",
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/MaelstromofChaos.dds",
-        "Tirn's End",
-        [
-          0,
-          5,
-          9,
-          11,
-          14
-        ],
-        1126
       ],
       [
         "MapWorldsCemetery",
@@ -7814,13 +7631,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Cemetery.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Thicket.dds",
+        "Lira Arthain",
         [
-          2,
-          5,
-          9,
-          11,
+          0,
+          0,
+          0,
+          0,
           14
         ],
         1127
@@ -7835,14 +7652,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/HallowedGround.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Wharf.dds",
+        "Valdo's Rest",
         [
-          2,
-          5,
-          9,
-          11,
-          14
+          4,
+          8,
+          12,
+          13,
+          16
         ],
         1128
       ],
@@ -7856,14 +7673,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/UndergroundSea.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/DryWoods.dds",
+        "Haewark Hamlet",
         [
           0,
           0,
           0,
-          0,
-          16
+          12,
+          14
         ],
         1129
       ],
@@ -7877,13 +7694,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Tribunal.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Atoll.dds",
+        "Haewark Hamlet",
         [
-          0,
-          0,
-          0,
-          0,
+          3,
+          7,
+          10,
+          12,
           14
         ],
         1130
@@ -7898,14 +7715,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/CorpseTrench.dds",
-        "Lira Arthain",
+        "Art/2DItems/Maps/MaelstromofChaos.dds",
+        "Haewark Hamlet",
         [
-          0,
-          0,
-          11,
-          13,
-          15
+          3,
+          7,
+          10,
+          12,
+          14
         ],
         1131
       ],
@@ -7919,14 +7736,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Crematorium.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/Cemetery.dds",
+        "Valdo's Rest",
         [
-          0,
-          0,
-          0,
-          14,
-          16
+          4,
+          7,
+          11,
+          12,
+          15
         ],
         1132
       ],
@@ -7940,14 +7757,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Residence.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/HallowedGround.dds",
+        "Valdo's Rest",
         [
-          0,
-          0,
-          0,
-          14,
-          16
+          4,
+          7,
+          11,
+          12,
+          15
         ],
         1133
       ],
@@ -7961,14 +7778,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Ramparts.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/UndergroundSea.dds",
         "Lira Arthain",
         [
-          3,
-          7,
-          10,
-          11,
-          14
+          0,
+          0,
+          0,
+          13,
+          16
         ],
         1134
       ],
@@ -7983,99 +7800,9 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Dunes.dds",
-        "Lex Ejoris",
-        [
-          4,
-          7,
-          11,
-          12,
-          15
-        ],
+        null,
+        null,
         1135
-      ],
-      [
-        "MapWorldsDunesUnique",
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/PillarsOfVastiri.dds",
-        "Lex Ejoris",
-        [
-          4,
-          7,
-          11,
-          12,
-          15
-        ],
-        1136
-      ],
-      [
-        "MapWorldsBoneCrypt",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Catacomb.dds",
-        "New Vastir",
-        [
-          4,
-          8,
-          11,
-          13,
-          15
-        ],
-        1137
-      ],
-      [
-        "MapWorldsBoneCryptUnique",
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/olmec.dds",
-        "New Vastir",
-        [
-          4,
-          8,
-          11,
-          13,
-          15
-        ],
-        1138
-      ],
-      [
-        "MapWorldsUndergroundRiver",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/UndergroundRiver.dds",
-        "Lex Proxima",
-        [
-          0,
-          0,
-          9,
-          11,
-          14
-        ],
-        1139
       ],
       [
         "MapWorldsUndergroundRiverUnique",
@@ -8087,11 +7814,11 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/WolfMap.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Dunes.dds",
+        "Haewark Hamlet",
         [
-          0,
-          0,
+          2,
+          5,
           9,
           11,
           14
@@ -8108,14 +7835,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Terrace.dds",
-        "Lira Arthain",
+        "Art/2DItems/Maps/PillarsOfVastiri.dds",
+        "Haewark Hamlet",
         [
-          0,
-          0,
-          0,
-          0,
-          15
+          2,
+          5,
+          9,
+          11,
+          14
         ],
         1141
       ],
@@ -8129,14 +7856,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/ArachnidNest.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/Catacomb.dds",
+        "Haewark Hamlet",
         [
-          5,
-          8,
-          11,
+          3,
+          6,
+          10,
           12,
-          15
+          14
         ],
         1142
       ],
@@ -8150,11 +7877,11 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Bazaar.dds",
-        "Lira Arthain",
+        "Art/2DItems/Maps/olmec.dds",
+        "Haewark Hamlet",
         [
-          4,
-          7,
+          3,
+          6,
           10,
           12,
           14
@@ -8171,14 +7898,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Laboratory.dds",
-        "Lira Arthain",
+        "Art/2DItems/Maps/Atlas2Maps/New/UndergroundRiver.dds",
+        "Haewark Hamlet",
         [
-          0,
-          0,
-          12,
-          14,
-          16
+          2,
+          6,
+          9,
+          11,
+          14
         ],
         1144
       ],
@@ -8192,14 +7919,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Infestation.dds",
-        "Glennach Cairns",
+        "Art/2DItems/Maps/WolfMap.dds",
+        "Haewark Hamlet",
         [
-          3,
-          7,
-          10,
-          12,
-          15
+          2,
+          6,
+          9,
+          11,
+          14
         ],
         1145
       ],
@@ -8213,14 +7940,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/OvergrownRuin.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/Terrace.dds",
+        "Glennach Cairns",
         [
-          0,
-          0,
-          0,
-          0,
-          15
+          2,
+          5,
+          9,
+          11,
+          14
         ],
         1146
       ],
@@ -8234,37 +7961,16 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/VaalPyramid.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/ArachnidNest.dds",
+        "Lira Arthain",
         [
-          2,
-          6,
-          9,
-          11,
-          14
+          0,
+          0,
+          0,
+          0,
+          16
         ],
         1147
-      ],
-      [
-        "MapWorldsVaalPyramidUnique",
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/UniqueMap1.dds",
-        "Lex Proxima",
-        [
-          2,
-          6,
-          9,
-          11,
-          14
-        ],
-        1148
       ],
       [
         "MapWorldsGeode",
@@ -8276,14 +7982,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Quarry.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Laboratory.dds",
+        "Lira Arthain",
         [
           2,
-          6,
-          10,
-          12,
-          15
+          5,
+          9,
+          11,
+          14
         ],
         1149
       ],
@@ -8298,14 +8004,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Armory.dds",
-        "Lex Proxima",
-        [
-          2,
-          6,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1150
       ],
       [
@@ -8318,12 +8018,12 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Courtyard.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/OvergrownRuin.dds",
+        "Haewark Hamlet",
         [
-          0,
-          0,
-          0,
+          4,
+          8,
+          11,
           13,
           16
         ],
@@ -8339,14 +8039,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/TheVinktarSquare.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/VaalPyramid.dds",
+        "Glennach Cairns",
         [
-          0,
-          0,
-          0,
+          4,
+          7,
+          11,
           13,
-          16
+          15
         ],
         1152
       ],
@@ -8360,14 +8060,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/MudGeyser.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/UniqueMap1.dds",
+        "Glennach Cairns",
         [
-          5,
-          9,
-          12,
-          14,
-          16
+          4,
+          7,
+          11,
+          13,
+          15
         ],
         1153
       ],
@@ -8382,14 +8082,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Shore.dds",
-        "Lex Proxima",
-        [
-          0,
-          0,
-          0,
-          13,
-          16
-        ],
+        null,
+        null,
         1154
       ],
       [
@@ -8402,14 +8096,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/FairgravesMap01.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Armory.dds",
+        "Valdo's Rest",
         [
           0,
           0,
-          0,
+          11,
           13,
-          16
+          15
         ],
         1155
       ],
@@ -8423,12 +8117,12 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/TropicalIsland.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Courtyard.dds",
+        "Lira Arthain",
         [
-          2,
-          5,
-          9,
+          3,
+          7,
+          10,
           11,
           14
         ],
@@ -8444,9 +8138,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/UniqueMap2.dds",
-        null,
-        null,
+        "Art/2DItems/Maps/TheVinktarSquare.dds",
+        "Lira Arthain",
+        [
+          3,
+          7,
+          10,
+          11,
+          14
+        ],
         1157
       ],
       [
@@ -8459,14 +8159,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/MineralPools.dds",
-        "Haewark Hamlet",
+        "Art/2DItems/Maps/Atlas2Maps/New/MudGeyser.dds",
+        "Lira Arthain",
         [
-          0,
-          0,
-          0,
-          14,
-          16
+          3,
+          7,
+          10,
+          11,
+          14
         ],
         1158
       ],
@@ -8480,13 +8180,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/LunarisTemple.dds",
-        "Haewark Hamlet",
+        "Art/2DItems/Maps/Atlas2Maps/New/Shore.dds",
+        "Lira Arthain",
         [
-          3,
-          7,
-          10,
-          12,
+          0,
+          0,
+          0,
+          0,
           14
         ],
         1159
@@ -8501,13 +8201,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Celestial.dds",
-        "Haewark Hamlet",
+        "Art/2DItems/Maps/FairgravesMap01.dds",
+        "Lira Arthain",
         [
-          3,
-          7,
-          10,
-          12,
+          0,
+          0,
+          0,
+          0,
           14
         ],
         1160
@@ -8522,14 +8222,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Sepulchre.dds",
-        "Lira Arthain",
+        "Art/2DItems/Maps/Atlas2Maps/New/TropicalIsland.dds",
+        "Glennach Cairns",
         [
           3,
-          7,
+          6,
           10,
-          12,
-          15
+          11,
+          14
         ],
         1161
       ],
@@ -8543,15 +8243,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Tower.dds",
-        "Haewark Hamlet",
-        [
-          0,
-          0,
-          0,
-          14,
-          16
-        ],
+        "Art/2DItems/Maps/UniqueMap2.dds",
+        null,
+        null,
         1162
       ],
       [
@@ -8564,14 +8258,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/WastePool.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/MineralPools.dds",
+        "Lira Arthain",
         [
-          0,
-          0,
-          0,
-          0,
-          14
+          4,
+          7,
+          10,
+          12,
+          15
         ],
         1163
       ],
@@ -8585,14 +8279,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Plateau.dds",
-        "Lira Arthain",
+        "Art/2DItems/Maps/Atlas2Maps/New/LunarisTemple.dds",
+        "Haewark Hamlet",
         [
           0,
+          6,
           9,
-          12,
-          13,
-          16
+          11,
+          14
         ],
         1164
       ],
@@ -8606,10 +8300,10 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Estuary.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Celestial.dds",
+        "Haewark Hamlet",
         [
-          2,
+          0,
           6,
           9,
           11,
@@ -8627,13 +8321,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Vault.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/Sepulchre.dds",
+        "Valdo's Rest",
         [
           0,
-          9,
+          0,
+          0,
           12,
-          14,
           16
         ],
         1166
@@ -8648,13 +8342,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Temple.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Tower.dds",
+        "Valdo's Rest",
         [
           3,
-          7,
+          6,
           10,
-          11,
+          12,
           14
         ],
         1167
@@ -8669,13 +8363,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/PoorjoysAsylum.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/WastePool.dds",
+        "Haewark Hamlet",
         [
           3,
-          7,
+          6,
           10,
-          11,
+          12,
           14
         ],
         1168
@@ -8690,14 +8384,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Arena.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/Plateau.dds",
+        "Glennach Cairns",
         [
-          2,
-          5,
-          9,
-          11,
-          14
+          0,
+          0,
+          0,
+          0,
+          15
         ],
         1169
       ],
@@ -8711,13 +8405,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Museum.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/Atlas2Maps/New/Estuary.dds",
+        "Valdo's Rest",
         [
-          3,
-          7,
+          1,
+          4,
+          8,
           10,
-          12,
           14
         ],
         1170
@@ -8732,14 +8426,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/PutridCloister.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/Atlas2Maps/New/Vault.dds",
+        "Lira Arthain",
         [
-          3,
-          7,
-          10,
-          12,
-          14
+          4,
+          8,
+          11,
+          13,
+          15
         ],
         1171
       ],
@@ -8753,12 +8447,12 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Scriptorium.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Temple.dds",
         "Lira Arthain",
         [
           0,
           0,
-          10,
+          0,
           11,
           14
         ],
@@ -8774,14 +8468,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Boulevard.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/PoorjoysAsylum.dds",
+        "Lira Arthain",
         [
           0,
-          8,
-          12,
-          13,
-          15
+          0,
+          0,
+          11,
+          14
         ],
         1173
       ],
@@ -8796,14 +8490,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Shipyard.dds",
-        "New Vastir",
-        [
-          3,
-          7,
-          10,
-          12,
-          14
-        ],
+        null,
+        null,
         1174
       ],
       [
@@ -8816,11 +8504,11 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Belfry.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Museum.dds",
         "Haewark Hamlet",
         [
-          4,
-          7,
+          3,
+          6,
           10,
           12,
           14
@@ -8837,37 +8525,16 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Arachnid.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/PutridCloister.dds",
+        "Haewark Hamlet",
         [
           3,
           6,
           10,
           12,
-          15
+          14
         ],
         1176
-      ],
-      [
-        "MapWorldsWasteland",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Wasteland.dds",
-        "Lira Arthain",
-        [
-          4,
-          8,
-          11,
-          13,
-          15
-        ],
-        1177
       ],
       [
         "MapWorldsPrecinct",
@@ -8879,13 +8546,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Precinct.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Boulevard.dds",
         "Glennach Cairns",
         [
           0,
-          0,
+          5,
           9,
-          12,
+          11,
           14
         ],
         1178
@@ -8901,14 +8568,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Bog.dds",
-        "Lex Proxima",
-        [
-          3,
-          7,
-          10,
-          11,
-          14
-        ],
+        null,
+        null,
         1179
       ],
       [
@@ -8922,14 +8583,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Pier.dds",
-        "Lex Ejoris",
-        [
-          0,
-          0,
-          0,
-          0,
-          14
-        ],
+        null,
+        null,
         1180
       ],
       [
@@ -8943,14 +8598,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Crypt.dds",
-        "Tirn's End",
-        [
-          3,
-          6,
-          10,
-          12,
-          14
-        ],
+        null,
+        null,
         1181
       ],
       [
@@ -8963,13 +8612,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/UndeadSiege.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Wasteland.dds",
+        "Lira Arthain",
         [
           3,
-          6,
+          5,
           10,
-          12,
+          11,
           14
         ],
         1182
@@ -8985,14 +8634,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Orchard.dds",
-        "Glennach Cairns",
-        [
-          3,
-          6,
-          9,
-          12,
-          14
-        ],
+        null,
+        null,
         1183
       ],
       [
@@ -9005,31 +8648,16 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Promenade.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/Bog.dds",
+        "Lira Arthain",
         [
-          4,
-          7,
-          11,
-          12,
-          15
+          0,
+          0,
+          0,
+          13,
+          16
         ],
         1184
-      ],
-      [
-        "MapWorldsPromenadeUnique",
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/HallOfGrandmasters.dds",
-        null,
-        null,
-        1185
       ],
       [
         "MapWorldsLair",
@@ -9041,13 +8669,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Lair.dds",
-        "Valdo's Rest",
+        "Art/2DItems/Maps/Atlas2Maps/New/Crypt.dds",
+        "Glennach Cairns",
         [
-          2,
-          6,
-          9,
-          11,
+          3,
+          7,
+          10,
+          12,
           14
         ],
         1186
@@ -9062,13 +8690,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Colonnade.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/UndeadSiege.dds",
+        "Glennach Cairns",
         [
-          0,
-          0,
-          0,
-          11,
+          3,
+          7,
+          10,
+          12,
           14
         ],
         1187
@@ -9083,11 +8711,11 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/PrimordialPool.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Orchard.dds",
         "Haewark Hamlet",
         [
-          0,
-          0,
+          4,
+          8,
           11,
           13,
           15
@@ -9104,14 +8732,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/SpiderForest.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/Promenade.dds",
+        "Valdo's Rest",
         [
           5,
-          8,
+          9,
           11,
           13,
-          15
+          16
         ],
         1189
       ],
@@ -9125,15 +8753,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Coves.dds",
-        "Lex Proxima",
-        [
-          0,
-          0,
-          0,
-          13,
-          16
-        ],
+        "Art/2DItems/Maps/HallOfGrandmasters.dds",
+        null,
+        null,
         1190
       ],
       [
@@ -9146,58 +8768,16 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Waterways.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Lair.dds",
+        "Valdo's Rest",
         [
-          0,
-          5,
-          9,
-          11,
+          4,
+          7,
+          10,
+          12,
           14
         ],
         1191
-      ],
-      [
-        "MapWorldsFactory",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Factory.dds",
-        "Haewark Hamlet",
-        [
-          0,
-          0,
-          0,
-          0,
-          15
-        ],
-        1192
-      ],
-      [
-        "MapWorldsMesa",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Mesa.dds",
-        "Lex Proxima",
-        [
-          1,
-          4,
-          8,
-          10,
-          14
-        ],
-        1193
       ],
       [
         "MapWorldsPit",
@@ -9209,14 +8789,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Pit1.dds",
-        "Lex Ejoris",
+        "Art/2DItems/Maps/Atlas2Maps/New/SpiderForest.dds",
+        "Haewark Hamlet",
         [
           4,
           7,
           10,
           12,
-          14
+          15
         ],
         1194
       ],
@@ -9230,13 +8810,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/DefiledCathedral.dds",
-        "Haewark Hamlet",
+        "Art/2DItems/Maps/Atlas2Maps/New/Waterways.dds",
+        "Glennach Cairns",
         [
-          3,
-          6,
-          10,
-          12,
+          2,
+          5,
+          9,
+          11,
           14
         ],
         1196
@@ -9252,14 +8832,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Summit.dds",
-        "Glennach Cairns",
-        [
-          3,
-          6,
-          10,
-          11,
-          14
-        ],
+        null,
+        null,
         1197
       ],
       [
@@ -9273,14 +8847,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/OvergrownShrine.dds",
-        "Tirn's End",
-        [
-          2,
-          6,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1198
       ],
       [
@@ -9293,8 +8861,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/musicbox.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Pit1.dds",
+        "Lira Arthain",
         [
           2,
           6,
@@ -9315,14 +8883,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CastleRuins.dds",
-        "Glennach Cairns",
-        [
-          0,
-          0,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1200
       ],
       [
@@ -9335,14 +8897,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/CrystalOre.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/Atlas2Maps/New/DefiledCathedral.dds",
+        "Lira Arthain",
         [
           0,
           0,
           0,
           0,
-          16
+          14
         ],
         1201
       ],
@@ -9356,19 +8918,91 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Villa.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Summit.dds",
         "Valdo's Rest",
         [
           0,
           0,
-          10,
-          12,
-          15
+          0,
+          0,
+          16
         ],
         1202
       ],
       [
         "MapWorldsTortureChamber",
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/Atlas2Maps/New/OvergrownShrine.dds",
+        "Valdo's Rest",
+        [
+          0,
+          0,
+          9,
+          11,
+          14
+        ],
+        1203
+      ],
+      [
+        "MapWorldsTortureChamberUnique",
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/musicbox.dds",
+        "Valdo's Rest",
+        [
+          0,
+          0,
+          9,
+          11,
+          14
+        ],
+        1204
+      ],
+      [
+        "MapWorldsNecropolis",
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/Atlas2Maps/New/Necropolis.dds",
+        null,
+        null,
+        1205
+      ],
+      [
+        "MapWorldsRacecourse_",
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/Atlas2Maps/New/Racecourse.dds",
+        null,
+        null,
+        1207
+      ],
+      [
+        "MapWorldsCaldera",
         false,
         false,
         true,
@@ -9384,112 +9018,7 @@
           0,
           0,
           0,
-          14
-        ],
-        1203
-      ],
-      [
-        "MapWorldsTortureChamberUnique",
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/oba.dds",
-        "Valdo's Rest",
-        [
-          0,
-          0,
-          0,
-          0,
-          16
-        ],
-        1204
-      ],
-      [
-        "MapWorldsNecropolis",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Necropolis.dds",
-        "Tirn's End",
-        [
-          3,
-          6,
-          10,
-          12,
-          14
-        ],
-        1205
-      ],
-      [
-        "MapWorldsNecropolisUnique",
-        false,
-        false,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/DeathandTaxes.dds",
-        "Tirn's End",
-        [
-          3,
-          6,
-          10,
-          12,
-          14
-        ],
-        1206
-      ],
-      [
-        "MapWorldsRacecourse_",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Racecourse.dds",
-        "Lex Proxima",
-        [
-          3,
-          6,
-          10,
-          11,
-          14
-        ],
-        1207
-      ],
-      [
-        "MapWorldsCaldera",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Abyss.dds",
-        "Glennach Cairns",
-        [
-          2,
-          5,
-          9,
-          11,
-          14
+          15
         ],
         1208
       ],
@@ -9503,14 +9032,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Ghetto.dds",
-        "Glennach Cairns",
+        "Art/2DItems/Maps/oba.dds",
+        "Lira Arthain",
         [
           0,
           0,
           0,
-          0,
-          15
+          13,
+          16
         ],
         1209
       ],
@@ -9524,14 +9053,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Park.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Necropolis.dds",
+        "Glennach Cairns",
         [
-          1,
-          4,
+          5,
           8,
-          10,
-          14
+          11,
+          13,
+          16
         ],
         1210
       ],
@@ -9545,14 +9074,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Malformation.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/DeathandTaxes.dds",
+        "Glennach Cairns",
         [
-          0,
           5,
-          9,
+          8,
           11,
-          14
+          13,
+          16
         ],
         1211
       ],
@@ -9566,14 +9095,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/HighGardens.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Racecourse.dds",
+        "Lira Arthain",
         [
           3,
-          7,
-          10,
-          13,
-          16
+          6,
+          11,
+          12,
+          15
         ],
         1212
       ],
@@ -9587,14 +9116,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Shrine.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Abyss.dds",
+        "Valdo's Rest",
         [
           3,
-          6,
+          7,
           10,
-          12,
-          16
+          11,
+          14
         ],
         1213
       ],
@@ -9608,13 +9137,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Arsenal.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Ghetto.dds",
         "Valdo's Rest",
         [
-          2,
-          5,
-          9,
-          11,
+          3,
+          6,
+          10,
+          12,
           14
         ],
         1214
@@ -9629,13 +9158,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Oasis.dds",
-        "Haewark Hamlet",
+        "Art/2DItems/Maps/Atlas2Maps/New/Park.dds",
+        "Glennach Cairns",
         [
           0,
-          7,
-          12,
-          14,
+          0,
+          0,
+          0,
           15
         ],
         1215
@@ -9650,14 +9179,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Core.dds",
-        "Lira Arthain",
+        "Art/2DItems/Maps/Atlas2Maps/New/Malformation.dds",
+        "Glennach Cairns",
         [
-          3,
-          6,
-          10,
+          0,
+          9,
           12,
-          14
+          13,
+          15
         ],
         1216
       ],
@@ -9671,7 +9200,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Colosseum.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/HighGardens.dds",
         "Glennach Cairns",
         [
           0,
@@ -9693,14 +9222,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SulphurVents.dds",
-        "Lex Proxima",
-        [
-          3,
-          6,
-          10,
-          12,
-          14
-        ],
+        null,
+        null,
         1218
       ],
       [
@@ -9713,13 +9236,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/DarkForest.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Arsenal.dds",
+        "Lira Arthain",
         [
           0,
           0,
           0,
-          11,
+          0,
           14
         ],
         1219
@@ -9735,14 +9258,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Sanctuary.dds",
-        "Lira Arthain",
-        [
-          5,
-          9,
-          12,
-          14,
-          16
-        ],
+        null,
+        null,
         1220
       ],
       [
@@ -9755,12 +9272,12 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Plaza.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Core.dds",
+        "Valdo's Rest",
         [
-          2,
+          3,
           6,
-          9,
+          10,
           11,
           14
         ],
@@ -9776,14 +9293,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Dig.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/Colosseum.dds",
+        "Haewark Hamlet",
         [
-          0,
-          0,
-          10,
-          12,
-          14
+          3,
+          7,
+          11,
+          13,
+          15
         ],
         1222
       ],
@@ -9797,14 +9314,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Palace.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/Atlas2Maps/New/SulphurVents.dds",
+        "Haewark Hamlet",
         [
-          4,
-          8,
-          11,
-          12,
-          15
+          0,
+          0,
+          0,
+          13,
+          16
         ],
         1223
       ],
@@ -9818,14 +9335,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Corpse.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/DarkForest.dds",
         "Lira Arthain",
         [
           0,
           0,
           0,
-          14,
-          16
+          11,
+          14
         ],
         1224
       ],
@@ -9839,13 +9356,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Basilica.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Sanctuary.dds",
         "Valdo's Rest",
         [
-          3,
-          6,
-          9,
-          11,
+          0,
+          0,
+          0,
+          0,
           14
         ],
         1225
@@ -9860,14 +9377,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/SunkenCity.dds",
-        "Lira Arthain",
+        "Art/2DItems/Maps/Atlas2Maps/New/Plaza.dds",
+        "Haewark Hamlet",
         [
-          4,
-          7,
-          10,
-          12,
-          15
+          2,
+          6,
+          9,
+          11,
+          14
         ],
         1226
       ],
@@ -9881,14 +9398,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Reef.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/Atlas2Maps/New/Dig.dds",
+        "Haewark Hamlet",
         [
           0,
-          0,
-          0,
-          0,
-          15
+          6,
+          9,
+          11,
+          14
         ],
         1227
       ],
@@ -9902,14 +9419,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Carcass.dds",
+        "Art/2DItems/Maps/Atlas2Maps/New/Palace.dds",
         "Glennach Cairns",
         [
           0,
-          6,
-          10,
+          0,
+          0,
           12,
-          14
+          15
         ],
         1228
       ],
@@ -9923,9 +9440,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Chimera.dds",
-        null,
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Corpse.dds",
+        "Haewark Hamlet",
+        [
+          0,
+          0,
+          0,
+          0,
+          14
+        ],
         1229
       ],
       [
@@ -9938,9 +9461,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Hydra.dds",
-        null,
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Basilica.dds",
+        "Valdo's Rest",
+        [
+          0,
+          0,
+          0,
+          13,
+          16
+        ],
         1230
       ],
       [
@@ -9953,9 +9482,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Phoenix.dds",
-        null,
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/SunkenCity.dds",
+        "Valdo's Rest",
+        [
+          0,
+          0,
+          0,
+          12,
+          14
+        ],
         1231
       ],
       [
@@ -9968,9 +9503,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Minotaur.dds",
-        null,
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Reef.dds",
+        "Glennach Cairns",
+        [
+          2,
+          6,
+          9,
+          11,
+          14
+        ],
         1232
       ],
       [
@@ -9984,8 +9525,14 @@
         false,
         false,
         "Art/2DItems/Maps/ShaperComplete.png",
-        null,
-        null,
+        "Glennach Cairns",
+        [
+          3,
+          7,
+          10,
+          12,
+          14
+        ],
         1233
       ],
       [
@@ -9999,14 +9546,8 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/VaalTempleBase.dds",
-        "Lex Proxima",
-        [
-          0,
-          0,
-          0,
-          0,
-          16
-        ],
+        null,
+        null,
         1234
       ],
       [
@@ -10064,9 +9605,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/HarbingerUber.dds",
-        null,
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/VaalTempleBase.dds",
+        "Valdo's Rest",
+        [
+          0,
+          0,
+          0,
+          0,
+          16
+        ],
         1239
       ],
       [
@@ -10080,15 +9627,24 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DesertShipGraveyard.dds",
-        "Glennach Cairns",
-        [
-          2,
-          5,
-          9,
-          11,
-          14
-        ],
+        null,
+        null,
         1240
+      ],
+      [
+        "MapWorldsSteppes",
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/HarbingerWhite.dds",
+        null,
+        null,
+        1241
       ],
       [
         "MapWorldsStagnation",
@@ -10100,15 +9656,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Stagnation.dds",
-        "Lira Arthain",
-        [
-          0,
-          0,
-          0,
-          0,
-          15
-        ],
+        "Art/2DItems/Maps/HarbingerYellow.dds",
+        null,
+        null,
         1242
       ],
       [
@@ -10121,15 +9671,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Bramblefall.dds",
-        "Lex Ejoris",
-        [
-          0,
-          0,
-          11,
-          13,
-          15
-        ],
+        "Art/2DItems/Maps/HarbingerRed.dds",
+        null,
+        null,
         1243
       ],
       [
@@ -10142,19 +9686,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/FrozenCabins.dds",
-        "Lex Proxima",
-        [
-          3,
-          7,
-          10,
-          12,
-          14
-        ],
+        "Art/2DItems/Maps/HarbingerUber.dds",
+        null,
+        null,
         1244
       ],
       [
-        "MapWorldsGraveTrough",
+        "MapWorldsHarbingerPrison",
         false,
         false,
         true,
@@ -10163,16 +9701,16 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Burn.dds",
-        "New Vastir",
+        "Art/2DItems/Maps/Atlas2Maps/New/DesertShipGraveyard.dds",
+        "Valdo's Rest",
         [
-          0,
-          9,
-          12,
-          13,
-          15
+          2,
+          6,
+          10,
+          11,
+          14
         ],
-        1246
+        1245
       ],
       [
         "MapWorldsCrimsonTownship",
@@ -10184,13 +9722,13 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/CrimsonTownship.dds",
-        "Tirn's End",
+        "Art/2DItems/Maps/Atlas2Maps/New/Stagnation.dds",
+        "Lira Arthain",
         [
-          0,
-          6,
-          9,
-          11,
+          1,
+          4,
+          8,
+          10,
           14
         ],
         1247
@@ -10206,57 +9744,9 @@
         false,
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ForkingRiver.dds",
-        "Valdo's Rest",
-        [
-          0,
-          0,
-          0,
-          11,
-          14
-        ],
+        null,
+        null,
         1248
-      ],
-      [
-        "MapWorldsFoundry",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/ThaumaturgyDungeon.dds",
-        "Lex Ejoris",
-        [
-          0,
-          0,
-          0,
-          0,
-          16
-        ],
-        1249
-      ],
-      [
-        "MapWorldsColdRiver_",
-        false,
-        false,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        "Art/2DItems/Maps/Atlas2Maps/New/ColdRiver.dds",
-        "Tirn's End",
-        [
-          0,
-          0,
-          0,
-          0,
-          15
-        ],
-        1250
       ],
       [
         "MapWorldsForbiddenWoods",
@@ -10268,14 +9758,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/ForbiddenWoods.dds",
-        "Glennach Cairns",
+        "Art/2DItems/Maps/Atlas2Maps/New/Burn.dds",
+        "Valdo's Rest",
         [
           0,
-          0,
-          10,
-          13,
-          15
+          5,
+          9,
+          11,
+          14
         ],
         1251
       ],
@@ -10289,16 +9779,100 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/RobotTunnelSilo.dds",
-        "Lex Proxima",
+        "Art/2DItems/Maps/Atlas2Maps/New/CrimsonTownship.dds",
+        "Valdo's Rest",
+        [
+          0,
+          0,
+          10,
+          12,
+          14
+        ],
+        1252
+      ],
+      [
+        "MapWorldsBeachLanding",
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/Atlas2Maps/New/ForkingRiver.dds",
+        "Haewark Hamlet",
         [
           0,
           0,
           0,
+          11,
+          14
+        ],
+        1253
+      ],
+      [
+        "MapWorldsElder_Desert",
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/Atlas2Maps/New/ThaumaturgyDungeon.dds",
+        "Glennach Cairns",
+        [
+          3,
+          6,
+          10,
+          11,
+          14
+        ],
+        1254
+      ],
+      [
+        "MapWorldsElder_Sulphur",
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/Atlas2Maps/New/ForbiddenWoods.dds",
+        "Lira Arthain",
+        [
+          3,
+          7,
+          10,
+          12,
+          14
+        ],
+        1256
+      ],
+      [
+        "MapWorldsElder_Reliquary",
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Maps/Atlas2Maps/New/RobotTunnelSilo.dds",
+        "Glennach Cairns",
+        [
+          4,
+          8,
+          11,
           12,
           15
         ],
-        1252
+        1257
       ],
       [
         "MapWorldsElderArena",
@@ -13488,7 +13062,6 @@
         "MapWorldsLookout": "Lookout",
         "MapWorldsBeach": "Beach",
         "MapWorldsGraveyard": "Graveyard",
-        "MapWorldsDungeon": "Dungeon",
         "MapWorldsAlleyways": "Alleyways",
         "MapWorldsPen": "Pen",
         "MapWorldsDesert": "Desert",
@@ -13519,7 +13092,6 @@
         "MapWorldsCanyon": "Canyon",
         "MapWorldsConservatory": "Conservatory",
         "MapWorldsSulphurVents": "Sulphur Vents",
-        "MapWorldsHauntedMansion": "Haunted Mansion",
         "MapWorldsMaze": "Maze",
         "MapWorldsMazeUnique": "Doryani's Machinarium",
         "MapWorldsChannel": "Channel",
@@ -13537,7 +13109,6 @@
         "MapWorldsWharf": "Wharf",
         "MapWorldsAshenWood": "Ashen Wood",
         "MapWorldsAtoll": "Atoll",
-        "MapWorldsAtollUnique": "Maelström of Chaos",
         "MapWorldsCemetery": "Cemetery",
         "MapWorldsCemeteryUnique": "Hallowed Ground",
         "MapWorldsUndergroundSea": "Underground Sea",
@@ -13547,10 +13118,6 @@
         "MapWorldsResidence": "Residence",
         "MapWorldsRamparts": "Ramparts",
         "MapWorldsDunes": "Dunes",
-        "MapWorldsDunesUnique": "Pillars of Arun",
-        "MapWorldsBoneCrypt": "Bone Crypt",
-        "MapWorldsBoneCryptUnique": "Olmec's Sanctum",
-        "MapWorldsUndergroundRiver": "Underground River",
         "MapWorldsUndergroundRiverUnique": "Caer Blaidd, Wolfpack's Den",
         "MapWorldsGardens": "Gardens",
         "MapWorldsArachnidNest": "Arachnid Nest",
@@ -13559,7 +13126,6 @@
         "MapWorldsInfestedValley": "Infested Valley",
         "MapWorldsOvergrownRuin": "Overgrown Ruin",
         "MapWorldsVaalPyramid": "Vaal Pyramid",
-        "MapWorldsVaalPyramidUnique": "Vaults of Atziri",
         "MapWorldsGeode": "Geode",
         "MapWorldsArmoury": "Armoury",
         "MapWorldsCourtyard": "Courtyard",
@@ -13588,7 +13154,6 @@
         "MapWorldsShipyard": "Shipyard",
         "MapWorldsBelfry": "Belfry",
         "MapWorldsArachnidTomb": "Arachnid Tomb",
-        "MapWorldsWasteland": "Wasteland",
         "MapWorldsPrecinct": "Precinct",
         "MapWorldsBog": "Bog",
         "MapWorldsPier": "Pier",
@@ -13596,15 +13161,12 @@
         "MapWorldsCursedCryptUnique": "The Coward's Trial",
         "MapWorldsOrchard": "Orchard",
         "MapWorldsPromenade": "Promenade",
-        "MapWorldsPromenadeUnique": "The Hall of Grandmasters",
         "MapWorldsLair": "Lair",
         "MapWorldsColonnade": "Colonnade",
         "MapWorldsPrimordialPool": "Primordial Pool",
         "MapWorldsSpiderForest": "Spider Forest",
         "MapWorldsCoves": "Coves",
         "MapWorldsWaterways": "Waterways",
-        "MapWorldsFactory": "Factory",
-        "MapWorldsMesa": "Mesa",
         "MapWorldsPit": "Pit",
         "MapWorldsDefiledCathedral": "Defiled Cathedral",
         "MapWorldsSummit": "Summit",
@@ -13616,7 +13178,6 @@
         "MapWorldsTortureChamber": "Primordial Blocks",
         "MapWorldsTortureChamberUnique": "Oba's Cursed Trove",
         "MapWorldsNecropolis": "Necropolis",
-        "MapWorldsNecropolisUnique": "Death and Taxes",
         "MapWorldsRacecourse_": "Racecourse",
         "MapWorldsCaldera": "Caldera",
         "MapWorldsGhetto": "Ghetto",
@@ -13650,16 +13211,19 @@
         "MapWorldsHarbingerHigh": "The Beachhead",
         "MapWorldsHarbingerUber": "Infused Beachhead",
         "MapWorldsDrySea": "Dry Sea",
+        "MapWorldsSteppes": "Steppes",
         "MapWorldsStagnation": "Stagnation",
         "MapWorldsBrambleValley": "Bramble Valley",
         "MapWorldsFrozenCabins": "Frozen Cabins",
-        "MapWorldsGraveTrough": "Grave Trough",
+        "MapWorldsHarbingerPrison": "Harbinger Prison",
         "MapWorldsCrimsonTownship": "Crimson Township",
         "MapWorldsForkingRiver": "Forking River",
-        "MapWorldsFoundry": "Foundry",
-        "MapWorldsColdRiver_": "Cold River",
         "MapWorldsForbiddenWoods": "Forbidden Woods",
         "MapWorldsSilo": "Silo",
+        "MapWorldsBeachLanding": "Beach Landing",
+        "MapWorldsElder_Desert": "Desert of Dementia",
+        "MapWorldsElder_Sulphur": "Wastes of Lunacy",
+        "MapWorldsElder_Reliquary": "Pits of Sorrow",
         "MapWorldsElderArena": "Absence of Value and Meaning",
         "MapWorldsElderArenaUber": "The Shaper's Realm",
         "AbyssLeague": "Abyssal Depths",
@@ -13876,7 +13440,6 @@
         "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "Viper Napuatzi",
         "Metadata/Monsters/Masters/BlightBuilderWild": "Sister Cassia",
         "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
-        "Metadata/NPC/League/Harvest/HarvestNPC": "Oshabi",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, the Crusader",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, the Redeemer",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, the Hunter",
@@ -15553,7 +15116,6 @@
         "MapWorldsLookout": "Poste d'observation",
         "MapWorldsBeach": "Plage",
         "MapWorldsGraveyard": "Sépultures",
-        "MapWorldsDungeon": "Donjon",
         "MapWorldsAlleyways": "Ruelles",
         "MapWorldsPen": "Enclos",
         "MapWorldsDesert": "Désert",
@@ -15584,7 +15146,6 @@
         "MapWorldsCanyon": "Canyon",
         "MapWorldsConservatory": "Atrium",
         "MapWorldsSulphurVents": "Geysers de soufre",
-        "MapWorldsHauntedMansion": "Manoir hanté",
         "MapWorldsMaze": "Dédale",
         "MapWorldsMazeUnique": "Le Machinarium de Doryani",
         "MapWorldsChannel": "Canal",
@@ -15602,7 +15163,6 @@
         "MapWorldsWharf": "Embarcadère",
         "MapWorldsAshenWood": "Bois cendreux",
         "MapWorldsAtoll": "Atoll",
-        "MapWorldsAtollUnique": "Le Maelström du chaos",
         "MapWorldsCemetery": "Cimetière",
         "MapWorldsCemeteryUnique": "Terreurs nocturnes",
         "MapWorldsUndergroundSea": "Mer souterraine",
@@ -15612,10 +15172,6 @@
         "MapWorldsResidence": "Résidence",
         "MapWorldsRamparts": "Remparts",
         "MapWorldsDunes": "Dunes",
-        "MapWorldsDunesUnique": "Les Piliers d'Arun",
-        "MapWorldsBoneCrypt": "Crypte à ossements",
-        "MapWorldsBoneCryptUnique": "Le Sanctuaire d'Olmec",
-        "MapWorldsUndergroundRiver": "Rivière souterraine",
         "MapWorldsUndergroundRiverUnique": "Caer Blaidd, la Tanière de la meute",
         "MapWorldsGardens": "Jardins",
         "MapWorldsArachnidNest": "Nid d'arachnides",
@@ -15624,7 +15180,6 @@
         "MapWorldsInfestedValley": "Vallée infestée",
         "MapWorldsOvergrownRuin": "Ruine abandonnée",
         "MapWorldsVaalPyramid": "Pyramide vaal",
-        "MapWorldsVaalPyramidUnique": "La Salle des coffres d'Atziri",
         "MapWorldsGeode": "Géode",
         "MapWorldsArmoury": "Armurerie",
         "MapWorldsCourtyard": "Cour",
@@ -15653,7 +15208,6 @@
         "MapWorldsShipyard": "Chantier naval",
         "MapWorldsBelfry": "Beffroi",
         "MapWorldsArachnidTomb": "Tombeau arachnide",
-        "MapWorldsWasteland": "Terre désolée",
         "MapWorldsPrecinct": "Quartier",
         "MapWorldsBog": "Tourbière",
         "MapWorldsPier": "Jetée",
@@ -15661,15 +15215,12 @@
         "MapWorldsCursedCryptUnique": "L'Épreuve du couard",
         "MapWorldsOrchard": "Verger",
         "MapWorldsPromenade": "Esplanade",
-        "MapWorldsPromenadeUnique": "L'Assemblée des Grands maîtres",
         "MapWorldsLair": "Antre",
         "MapWorldsColonnade": "Colonnades",
         "MapWorldsPrimordialPool": "Bassin primordial",
         "MapWorldsSpiderForest": "Forêt aux araignées",
         "MapWorldsCoves": "Crique",
         "MapWorldsWaterways": "Aqueduc",
-        "MapWorldsFactory": "Fabrique",
-        "MapWorldsMesa": "Mesa",
         "MapWorldsPit": "Fosse",
         "MapWorldsDefiledCathedral": "Cathédrale profanée",
         "MapWorldsSummit": "Sommet",
@@ -15681,7 +15232,6 @@
         "MapWorldsTortureChamber": "Vestiges primordiaux",
         "MapWorldsTortureChamberUnique": "Le Trésor maudit d'Oba",
         "MapWorldsNecropolis": "Nécropole",
-        "MapWorldsNecropolisUnique": "La Mort et les Impôts",
         "MapWorldsRacecourse_": "Champ de courses",
         "MapWorldsCaldera": "Caldeira",
         "MapWorldsGhetto": "Ghetto",
@@ -15715,16 +15265,19 @@
         "MapWorldsHarbingerHigh": "La Tête de pont",
         "MapWorldsHarbingerUber": "La Tête de pont",
         "MapWorldsDrySea": "Mer asséchée",
+        "MapWorldsSteppes": "Steppes",
         "MapWorldsStagnation": "Stagnation",
         "MapWorldsBrambleValley": "Vallée roncière",
         "MapWorldsFrozenCabins": "Huttes gelées",
-        "MapWorldsGraveTrough": "Thalweg macabre",
+        "MapWorldsHarbingerPrison": "Prison des Précurseurs",
         "MapWorldsCrimsonTownship": "Commune pourpre",
         "MapWorldsForkingRiver": "Bras de rivière",
-        "MapWorldsFoundry": "Fonderie",
-        "MapWorldsColdRiver_": "Rivière gelée",
         "MapWorldsForbiddenWoods": "Bois interdits",
         "MapWorldsSilo": "Silo",
+        "MapWorldsBeachLanding": "Plage du débarquement",
+        "MapWorldsElder_Desert": "Le Désert de la Psychose",
+        "MapWorldsElder_Sulphur": "Les Étendues de la Démence",
+        "MapWorldsElder_Reliquary": "Le Puits du Chagrin",
         "MapWorldsElderArena": "L'Absence d'Importance et de Raison d'être",
         "MapWorldsElderArenaUber": "Le Royaume du Façonneur",
         "AbyssLeague": "Profondeurs abyssales",
@@ -15941,7 +15494,6 @@
         "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "Napuatzi la Vipère",
         "Metadata/Monsters/Masters/BlightBuilderWild": "Sœur Cassia",
         "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
-        "Metadata/NPC/League/Harvest/HarvestNPC": "Oshabi",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, le Croisé",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Véritania, la Rédemptrice",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, le Chasseur",
@@ -17618,7 +17170,6 @@
         "MapWorldsLookout": "Ausguck",
         "MapWorldsBeach": "Strand",
         "MapWorldsGraveyard": "Friedhof",
-        "MapWorldsDungeon": "Verlies",
         "MapWorldsAlleyways": "Gassen",
         "MapWorldsPen": "Pferch",
         "MapWorldsDesert": "Wüste",
@@ -17649,7 +17200,6 @@
         "MapWorldsCanyon": "Schlucht",
         "MapWorldsConservatory": "Konservatorium",
         "MapWorldsSulphurVents": "Schwefelquellen",
-        "MapWorldsHauntedMansion": "Geistervilla",
         "MapWorldsMaze": "Irrgarten",
         "MapWorldsMazeUnique": "Doryanis Machinarium",
         "MapWorldsChannel": "Kanal",
@@ -17667,7 +17217,6 @@
         "MapWorldsWharf": "Hafen",
         "MapWorldsAshenWood": "Vertrockneter Wald",
         "MapWorldsAtoll": "Atoll",
-        "MapWorldsAtollUnique": "Mahlstrom des Chaos",
         "MapWorldsCemetery": "Fleischacker",
         "MapWorldsCemeteryUnique": "Nacht des Grauens",
         "MapWorldsUndergroundSea": "Unterirdischer See",
@@ -17677,10 +17226,6 @@
         "MapWorldsResidence": "Residenz",
         "MapWorldsRamparts": "Befestigungen",
         "MapWorldsDunes": "Dünen",
-        "MapWorldsDunesUnique": "Säulen von Arun",
-        "MapWorldsBoneCrypt": "Knochenkrypta",
-        "MapWorldsBoneCryptUnique": "Olmecs Heiligtum",
-        "MapWorldsUndergroundRiver": "Unterirdischer Fluss",
         "MapWorldsUndergroundRiverUnique": "Caer Blaidd – Wolfrudelhöhle",
         "MapWorldsGardens": "Gärten",
         "MapWorldsArachnidNest": "Arachnidennest",
@@ -17689,7 +17234,6 @@
         "MapWorldsInfestedValley": "Verseuchtes Tal",
         "MapWorldsOvergrownRuin": "Verwilderte Ruine",
         "MapWorldsVaalPyramid": "Vaal-Pyramide",
-        "MapWorldsVaalPyramidUnique": "Atziris Gewölbe",
         "MapWorldsGeode": "Geode",
         "MapWorldsArmoury": "Waffenkammer",
         "MapWorldsCourtyard": "Hofgarten",
@@ -17718,7 +17262,6 @@
         "MapWorldsShipyard": "Werft",
         "MapWorldsBelfry": "Glockenturm",
         "MapWorldsArachnidTomb": "Arachnidengruft",
-        "MapWorldsWasteland": "Ödland",
         "MapWorldsPrecinct": "Stadtviertel",
         "MapWorldsBog": "Sumpf",
         "MapWorldsPier": "Pier",
@@ -17726,15 +17269,12 @@
         "MapWorldsCursedCryptUnique": "Die Prüfung des Feiglings",
         "MapWorldsOrchard": "Obstgarten",
         "MapWorldsPromenade": "Promenade",
-        "MapWorldsPromenadeUnique": "Die Halle der Großmeister",
         "MapWorldsLair": "Lager",
         "MapWorldsColonnade": "Kolonnade",
         "MapWorldsPrimordialPool": "Urbecken",
         "MapWorldsSpiderForest": "Spinnenwald",
         "MapWorldsCoves": "Buchten",
         "MapWorldsWaterways": "Wasserwege",
-        "MapWorldsFactory": "Manufaktur",
-        "MapWorldsMesa": "Hochebene",
         "MapWorldsPit": "Grube",
         "MapWorldsDefiledCathedral": "Entweihte Kathedrale",
         "MapWorldsSummit": "Gipfel",
@@ -17746,7 +17286,6 @@
         "MapWorldsTortureChamber": "Urzeitliche Ruinen",
         "MapWorldsTortureChamberUnique": "Obas verfluchter Schatz",
         "MapWorldsNecropolis": "Totenstadt",
-        "MapWorldsNecropolisUnique": "Der sichere Tod",
         "MapWorldsRacecourse_": "Rennbahn",
         "MapWorldsCaldera": "Caldera",
         "MapWorldsGhetto": "Elendsviertel",
@@ -17780,16 +17319,19 @@
         "MapWorldsHarbingerHigh": "Der Brückenkopf",
         "MapWorldsHarbingerUber": "Verstärkter Brückenkopf",
         "MapWorldsDrySea": "Trockenes Meer",
+        "MapWorldsSteppes": "Steppen",
         "MapWorldsStagnation": "Sumpftal",
         "MapWorldsBrambleValley": "Dornental",
         "MapWorldsFrozenCabins": "Gefrorene Hütten",
-        "MapWorldsGraveTrough": "Grabmulde",
+        "MapWorldsHarbingerPrison": "Gefängnis der Vorboten",
         "MapWorldsCrimsonTownship": "Die Purpurne Gemeinde",
         "MapWorldsForkingRiver": "Flussgabelung",
-        "MapWorldsFoundry": "Gießerei",
-        "MapWorldsColdRiver_": "Kalter Fluss",
         "MapWorldsForbiddenWoods": "Verbotene Wälder",
         "MapWorldsSilo": "Silo",
+        "MapWorldsBeachLanding": "Strandlandung",
+        "MapWorldsElder_Desert": "Wüste des Vergessens",
+        "MapWorldsElder_Sulphur": "Ödlande des Irrsinns",
+        "MapWorldsElder_Reliquary": "Gruben des Leids",
         "MapWorldsElderArena": "Die Bedeutungslosigkeit",
         "MapWorldsElderArenaUber": "Das Reich des Schöpfers",
         "AbyssLeague": "Abgründige Tiefen",
@@ -18006,7 +17548,6 @@
         "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "Viper Napuatzi",
         "Metadata/Monsters/Masters/BlightBuilderWild": "Schwester Cassia",
         "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
-        "Metadata/NPC/League/Harvest/HarvestNPC": "Oshabi",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran der Kreuzritter",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania die Erlöserin",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin der Jäger",
@@ -19683,7 +19224,6 @@
         "MapWorldsLookout": "전망대",
         "MapWorldsBeach": "해변",
         "MapWorldsGraveyard": "묘지",
-        "MapWorldsDungeon": "던전",
         "MapWorldsAlleyways": "골목길",
         "MapWorldsPen": "우리",
         "MapWorldsDesert": "사막",
@@ -19714,7 +19254,6 @@
         "MapWorldsCanyon": "협곡",
         "MapWorldsConservatory": "온실",
         "MapWorldsSulphurVents": "유황 분출구",
-        "MapWorldsHauntedMansion": "으스스한 대저택",
         "MapWorldsMaze": "미로",
         "MapWorldsMazeUnique": "도리아니의 기계실(Doryani's Machinarium)",
         "MapWorldsChannel": "물길",
@@ -19732,7 +19271,6 @@
         "MapWorldsWharf": "부두",
         "MapWorldsAshenWood": "잿빛 숲",
         "MapWorldsAtoll": "산호섬",
-        "MapWorldsAtollUnique": "혼돈의 마엘스트롬(Maelström of Chaos)",
         "MapWorldsCemetery": "공동묘지",
         "MapWorldsCemeteryUnique": "거룩한 대지(Hallowed Ground)",
         "MapWorldsUndergroundSea": "지하 해양",
@@ -19742,10 +19280,6 @@
         "MapWorldsResidence": "주택",
         "MapWorldsRamparts": "성벽",
         "MapWorldsDunes": "사구",
-        "MapWorldsDunesUnique": "아룬의 기둥(Pillars of Arun)",
-        "MapWorldsBoneCrypt": "뼈 지하실",
-        "MapWorldsBoneCryptUnique": "올멕의 지성소(Olmec's Sanctum)",
-        "MapWorldsUndergroundRiver": "지하 강",
         "MapWorldsUndergroundRiverUnique": "캐어블레이드 늑대의 소굴(Caer Blaidd, Wolfpack's Den)",
         "MapWorldsGardens": "정원",
         "MapWorldsArachnidNest": "거미류 둥지",
@@ -19754,7 +19288,6 @@
         "MapWorldsInfestedValley": "감염된 계곡",
         "MapWorldsOvergrownRuin": "무성한 유적",
         "MapWorldsVaalPyramid": "바알 피라미드",
-        "MapWorldsVaalPyramidUnique": "앗지리의 금고실(Vaults of Atziri)",
         "MapWorldsGeode": "정동석",
         "MapWorldsArmoury": "갑주 창고",
         "MapWorldsCourtyard": "안뜰",
@@ -19783,7 +19316,6 @@
         "MapWorldsShipyard": "조선소",
         "MapWorldsBelfry": "종탑",
         "MapWorldsArachnidTomb": "거미류 무덤",
-        "MapWorldsWasteland": "황무지",
         "MapWorldsPrecinct": "구획",
         "MapWorldsBog": "습지대",
         "MapWorldsPier": "선창",
@@ -19791,15 +19323,12 @@
         "MapWorldsCursedCryptUnique": "겁쟁이의 시험(The Coward's Trial)",
         "MapWorldsOrchard": "과수원",
         "MapWorldsPromenade": "산책로",
-        "MapWorldsPromenadeUnique": "명인의 전당(Hall of Grandmasters)",
         "MapWorldsLair": "소굴",
         "MapWorldsColonnade": "가로수",
         "MapWorldsPrimordialPool": "태고의 웅덩이",
         "MapWorldsSpiderForest": "거미 숲",
         "MapWorldsCoves": "만",
         "MapWorldsWaterways": "수로",
-        "MapWorldsFactory": "공장",
-        "MapWorldsMesa": "메사",
         "MapWorldsPit": "구덩이",
         "MapWorldsDefiledCathedral": "더럽혀진 대성당",
         "MapWorldsSummit": "꼭대기",
@@ -19811,7 +19340,6 @@
         "MapWorldsTortureChamber": "태고의 구역",
         "MapWorldsTortureChamberUnique": "오바의 저주받은 전리품(Oba's Cursed Trove)",
         "MapWorldsNecropolis": "매장지",
-        "MapWorldsNecropolisUnique": "죽음과 의무(Death and Taxes)",
         "MapWorldsRacecourse_": "경주장",
         "MapWorldsCaldera": "칼데라",
         "MapWorldsGhetto": "빈민촌",
@@ -19845,16 +19373,19 @@
         "MapWorldsHarbingerHigh": "교두보",
         "MapWorldsHarbingerUber": "주입된 교두보",
         "MapWorldsDrySea": "메마른 바다",
+        "MapWorldsSteppes": "아열대 초원",
         "MapWorldsStagnation": "침체지",
         "MapWorldsBrambleValley": "가시나무 계곡",
         "MapWorldsFrozenCabins": "얼어붙은 오막",
-        "MapWorldsGraveTrough": "무덤 고랑",
+        "MapWorldsHarbingerPrison": "선구자 수용소",
         "MapWorldsCrimsonTownship": "진홍색 마을",
         "MapWorldsForkingRiver": "갈라진 강",
-        "MapWorldsFoundry": "주조소",
-        "MapWorldsColdRiver_": "차가운 강",
         "MapWorldsForbiddenWoods": "금단의 숲",
         "MapWorldsSilo": "곡물 창고",
+        "MapWorldsBeachLanding": "해변 상륙지",
+        "MapWorldsElder_Desert": "광기의 사막",
+        "MapWorldsElder_Sulphur": "착란의 황무지",
+        "MapWorldsElder_Reliquary": "슬픔의 구덩이",
         "MapWorldsElderArena": "가치와 의미의 상실",
         "MapWorldsElderArenaUber": "쉐이퍼의 영역",
         "AbyssLeague": "심연 지하",
@@ -20071,7 +19602,6 @@
         "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "바이퍼 나푸앗지",
         "Metadata/Monsters/Masters/BlightBuilderWild": "수녀 카시아",
         "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "테인 옥타비우스",
-        "Metadata/NPC/League/Harvest/HarvestNPC": "오샤비",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "십자군 바란",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "대속자 베리타니아",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "사냥꾼 알-헤즈민",
@@ -21748,7 +21278,6 @@
         "MapWorldsLookout": "Posto de Vigia",
         "MapWorldsBeach": "Praia",
         "MapWorldsGraveyard": "Sepulcrário",
-        "MapWorldsDungeon": "Masmorra",
         "MapWorldsAlleyways": "Becos",
         "MapWorldsPen": "Estábulo",
         "MapWorldsDesert": "Deserto",
@@ -21779,7 +21308,6 @@
         "MapWorldsCanyon": "Cânion",
         "MapWorldsConservatory": "Conservatório",
         "MapWorldsSulphurVents": "Aberturas de Enxofre",
-        "MapWorldsHauntedMansion": "Mansão Assombrada",
         "MapWorldsMaze": "Dédalo",
         "MapWorldsMazeUnique": "Maquinário de Doryani",
         "MapWorldsChannel": "Canal",
@@ -21797,7 +21325,6 @@
         "MapWorldsWharf": "Cais",
         "MapWorldsAshenWood": "Mata Cinzenta",
         "MapWorldsAtoll": "Atoleiro",
-        "MapWorldsAtollUnique": "Vórtice do Caos",
         "MapWorldsCemetery": "Cemitério",
         "MapWorldsCemeteryUnique": "Terra Sagrada",
         "MapWorldsUndergroundSea": "Mar Subterrâneo",
@@ -21807,10 +21334,6 @@
         "MapWorldsResidence": "Residência",
         "MapWorldsRamparts": "Fortaleza",
         "MapWorldsDunes": "Dunas",
-        "MapWorldsDunesUnique": "Pilares de Arun",
-        "MapWorldsBoneCrypt": "Cripta de Ossos",
-        "MapWorldsBoneCryptUnique": "Santuário Olmeca",
-        "MapWorldsUndergroundRiver": "Rio Subterrâneo",
         "MapWorldsUndergroundRiverUnique": "Caer Blaidd, Toca dos Lobos",
         "MapWorldsGardens": "Jardins",
         "MapWorldsArachnidNest": "Ninho Aracnídeo",
@@ -21819,7 +21342,6 @@
         "MapWorldsInfestedValley": "Vale Infestado",
         "MapWorldsOvergrownRuin": "Ruína Coberta",
         "MapWorldsVaalPyramid": "Pirâmide Vaal",
-        "MapWorldsVaalPyramidUnique": "Relíquias de Atziri",
         "MapWorldsGeode": "Geodo",
         "MapWorldsArmoury": "Armaria",
         "MapWorldsCourtyard": "Pátio",
@@ -21848,7 +21370,6 @@
         "MapWorldsShipyard": "Estaleiro",
         "MapWorldsBelfry": "Campanário",
         "MapWorldsArachnidTomb": "Tumba Aracnídea",
-        "MapWorldsWasteland": "Devastação",
         "MapWorldsPrecinct": "Precinto",
         "MapWorldsBog": "Brejo",
         "MapWorldsPier": "Píer",
@@ -21856,15 +21377,12 @@
         "MapWorldsCursedCryptUnique": "O Julgamento do Covarde",
         "MapWorldsOrchard": "Pomar",
         "MapWorldsPromenade": "Esplanada",
-        "MapWorldsPromenadeUnique": "Salão dos Grão-Mestres",
         "MapWorldsLair": "Covil",
         "MapWorldsColonnade": "Colunata",
         "MapWorldsPrimordialPool": "Lamaçal Primordial",
         "MapWorldsSpiderForest": "Floresta da Aranha",
         "MapWorldsCoves": "Enseadas",
         "MapWorldsWaterways": "Canais",
-        "MapWorldsFactory": "Fábrica",
-        "MapWorldsMesa": "Mesa",
         "MapWorldsPit": "Fosso",
         "MapWorldsDefiledCathedral": "Catedral Profanada",
         "MapWorldsSummit": "Cume",
@@ -21876,7 +21394,6 @@
         "MapWorldsTortureChamber": "Câmara de Tortura",
         "MapWorldsTortureChamberUnique": "Tesouro Maldito de Oba",
         "MapWorldsNecropolis": "Necrópole",
-        "MapWorldsNecropolisUnique": "Morte e Impostos",
         "MapWorldsRacecourse_": "Hipódromo",
         "MapWorldsCaldera": "Caldeira Vulcânica",
         "MapWorldsGhetto": "Gueto",
@@ -21910,16 +21427,19 @@
         "MapWorldsHarbingerHigh": "Cabeça de Ponte",
         "MapWorldsHarbingerUber": "Cabeça de Ponte Infundida",
         "MapWorldsDrySea": "Oceano Seco",
+        "MapWorldsSteppes": "Estepes",
         "MapWorldsStagnation": "Estagnação",
         "MapWorldsBrambleValley": "Vale Espinhento",
         "MapWorldsFrozenCabins": "Cabinetes Congelados",
-        "MapWorldsGraveTrough": "Túmulo Fechado",
+        "MapWorldsHarbingerPrison": "Prisão dos Emissários",
         "MapWorldsCrimsonTownship": "Cidadela Carmesim",
         "MapWorldsForkingRiver": "Rio Bifurcado",
-        "MapWorldsFoundry": "Fundação",
-        "MapWorldsColdRiver_": "Rio Frio",
         "MapWorldsForbiddenWoods": "Floresta Proibida",
         "MapWorldsSilo": "Silo",
+        "MapWorldsBeachLanding": "Chegada à Praia",
+        "MapWorldsElder_Desert": "Deserto do Esquecimento",
+        "MapWorldsElder_Sulphur": "Resquícios da Loucura",
+        "MapWorldsElder_Reliquary": "Covas da Tristeza",
         "MapWorldsElderArena": "Ausência de Valor e Importância",
         "MapWorldsElderArenaUber": "O Reino do Criador",
         "AbyssLeague": "Profundezas Abissais",
@@ -22136,7 +21656,6 @@
         "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "Víbora Napuatzi",
         "Metadata/Monsters/Masters/BlightBuilderWild": "Irmã Cassia",
         "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
-        "Metadata/NPC/League/Harvest/HarvestNPC": "Oshabi",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, o Cruzado",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, a Redentora",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, o Caçador",
@@ -22199,7 +21718,7 @@
         "DroxFourStoneEncounter2a": "Hahaha! Liberdade gloriosa. Violência. Morte! Esta é a nossa terra prometida.",
         "DroxFourStoneEncounter2b": "Eu estive ansioso pelo seu retorno. Quantos você matou desde que nos vivmos pela última vez?",
         "DroxFourStoneEncounter2c": "Vamos derramar sangue e tripas sobre os picos e vales enevoados deste reino sem lei!",
-        "DroxFourStoneEncounter3a": "Sangue e tripas!",
+        "DroxFourStoneEncounter3a": "Tripas e sangue!",
         "DroxFourStoneEncounter3b": "Faça uma visita à minha fortaleza, invasor. Veja o que você criou.",
         "DroxFourStoneFighta": "Matar você será completamente satisfatório.",
         "DroxFourStoneFightb": "Eu esmagarei todos que se opuserem às minhas vontades!",
@@ -23813,7 +23332,6 @@
         "MapWorldsLookout": "Обзорная площадка",
         "MapWorldsBeach": "Пляж",
         "MapWorldsGraveyard": "Кладбище",
-        "MapWorldsDungeon": "Подземелье",
         "MapWorldsAlleyways": "Переулок",
         "MapWorldsPen": "Загон",
         "MapWorldsDesert": "Пустыня",
@@ -23844,7 +23362,6 @@
         "MapWorldsCanyon": "Ущелье",
         "MapWorldsConservatory": "Зимний сад",
         "MapWorldsSulphurVents": "Серное озеро",
-        "MapWorldsHauntedMansion": "Дом с привидениями",
         "MapWorldsMaze": "Лабиринт",
         "MapWorldsMazeUnique": "Машинариум Дориани",
         "MapWorldsChannel": "Канал",
@@ -23862,7 +23379,6 @@
         "MapWorldsWharf": "Пристань",
         "MapWorldsAshenWood": "Пепельный лес",
         "MapWorldsAtoll": "Атолл",
-        "MapWorldsAtollUnique": "Вихрь хаоса",
         "MapWorldsCemetery": "Погост",
         "MapWorldsCemeteryUnique": "Священные земли",
         "MapWorldsUndergroundSea": "Подземное море",
@@ -23872,10 +23388,6 @@
         "MapWorldsResidence": "Резиденция",
         "MapWorldsRamparts": "Бастион",
         "MapWorldsDunes": "Дюны",
-        "MapWorldsDunesUnique": "Столпы Арун",
-        "MapWorldsBoneCrypt": "Гробница",
-        "MapWorldsBoneCryptUnique": "Святилище Ольмека",
-        "MapWorldsUndergroundRiver": "Подземная река",
         "MapWorldsUndergroundRiverUnique": "Caer Blaidd, логово стаи",
         "MapWorldsGardens": "Сады",
         "MapWorldsArachnidNest": "Гнездо пауков",
@@ -23884,7 +23396,6 @@
         "MapWorldsInfestedValley": "Заражённая долина",
         "MapWorldsOvergrownRuin": "Заросшие руины",
         "MapWorldsVaalPyramid": "Пирамида ваал",
-        "MapWorldsVaalPyramidUnique": "Сокровищница Атзири",
         "MapWorldsGeode": "Жеода",
         "MapWorldsArmoury": "Оружейная",
         "MapWorldsCourtyard": "Подворье",
@@ -23913,7 +23424,6 @@
         "MapWorldsShipyard": "Верфь",
         "MapWorldsBelfry": "Колокольня",
         "MapWorldsArachnidTomb": "Паучья гробница",
-        "MapWorldsWasteland": "Пустошь",
         "MapWorldsPrecinct": "Окрестности",
         "MapWorldsBog": "Трясина",
         "MapWorldsPier": "Причал",
@@ -23921,15 +23431,12 @@
         "MapWorldsCursedCryptUnique": "Испытание труса",
         "MapWorldsOrchard": "Фруктовые сады",
         "MapWorldsPromenade": "Прогулочный парк",
-        "MapWorldsPromenadeUnique": "Зал великих мастеров",
         "MapWorldsLair": "Логово",
         "MapWorldsColonnade": "Колоннада",
         "MapWorldsPrimordialPool": "Древнее озеро",
         "MapWorldsSpiderForest": "Паучий лес",
         "MapWorldsCoves": "Бухта",
         "MapWorldsWaterways": "Водотоки",
-        "MapWorldsFactory": "Фактория",
-        "MapWorldsMesa": "Плоский холм",
         "MapWorldsPit": "Яма",
         "MapWorldsDefiledCathedral": "Осквернённый собор",
         "MapWorldsSummit": "Вершина",
@@ -23941,7 +23448,6 @@
         "MapWorldsTortureChamber": "Первобытное поселение",
         "MapWorldsTortureChamberUnique": "Проклятый клад Обы",
         "MapWorldsNecropolis": "Некрополь",
-        "MapWorldsNecropolisUnique": "Смерть и налоги",
         "MapWorldsRacecourse_": "Ипподром",
         "MapWorldsCaldera": "Кальдера",
         "MapWorldsGhetto": "Хибары",
@@ -23975,16 +23481,19 @@
         "MapWorldsHarbingerHigh": "Плацдарм",
         "MapWorldsHarbingerUber": "Усиленный Плацдарм",
         "MapWorldsDrySea": "Высохшее море",
+        "MapWorldsSteppes": "Степи",
         "MapWorldsStagnation": "Застой",
         "MapWorldsBrambleValley": "Колючая долина",
         "MapWorldsFrozenCabins": "Замёрзшие хижины",
-        "MapWorldsGraveTrough": "Могильная низина",
+        "MapWorldsHarbingerPrison": "Тюрьма Предвестника",
         "MapWorldsCrimsonTownship": "Кровавая община",
         "MapWorldsForkingRiver": "Речная развилка",
-        "MapWorldsFoundry": "Литейная",
-        "MapWorldsColdRiver_": "Холодная река",
         "MapWorldsForbiddenWoods": "Запретные леса",
         "MapWorldsSilo": "Зернохранилище",
+        "MapWorldsBeachLanding": "Пристанище на берегу",
+        "MapWorldsElder_Desert": "Пустыня сумасшествия",
+        "MapWorldsElder_Sulphur": "Пустоши помешательства",
+        "MapWorldsElder_Reliquary": "Ямы печали",
         "MapWorldsElderArena": "Отсутствие значимости и смысла",
         "MapWorldsElderArenaUber": "Владения Создателя",
         "AbyssLeague": "Глубины Бездны",
@@ -24201,7 +23710,6 @@
         "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "Гадюка Напуаци",
         "Metadata/Monsters/Masters/BlightBuilderWild": "Сестра Кассия",
         "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Танэ Октавиус",
-        "Metadata/NPC/League/Harvest/HarvestNPC": "Ошаби",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Бэран, Крестоносец",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Веритания, Избавительница",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Аль-Хезмин, Охотник",
@@ -25877,7 +25385,6 @@
         "MapWorldsLookout": "危墙之地",
         "MapWorldsBeach": "危岩海滩",
         "MapWorldsGraveyard": "堕影墓场",
-        "MapWorldsDungeon": "禁魂炎狱",
         "MapWorldsAlleyways": "危城巷弄",
         "MapWorldsPen": "隐晦牢狱",
         "MapWorldsDesert": "贫瘠之地",
@@ -25908,7 +25415,6 @@
         "MapWorldsCanyon": "炙阳峡谷",
         "MapWorldsConservatory": "古塔内堂",
         "MapWorldsSulphurVents": "硫磺蚀岸",
-        "MapWorldsHauntedMansion": "幽魂宅邸",
         "MapWorldsMaze": "冥神之域",
         "MapWorldsMazeUnique": "多利亚尼的迷城",
         "MapWorldsChannel": "秘密通道",
@@ -25926,7 +25432,6 @@
         "MapWorldsWharf": "毒牙海港",
         "MapWorldsAshenWood": "旱木林地",
         "MapWorldsAtoll": "滨海山丘",
-        "MapWorldsAtollUnique": "混沌之渊",
         "MapWorldsCemetery": "晨曦墓地",
         "MapWorldsCemeteryUnique": "魔诅之域",
         "MapWorldsUndergroundSea": "滨海幽穴",
@@ -25936,10 +25441,6 @@
         "MapWorldsResidence": "神主居所",
         "MapWorldsRamparts": "奇迹之墙",
         "MapWorldsDunes": "暮色沙丘",
-        "MapWorldsDunesUnique": "阿尔伦神柱",
-        "MapWorldsBoneCrypt": "古石陵墓",
-        "MapWorldsBoneCryptUnique": "远古之印",
-        "MapWorldsUndergroundRiver": "地底之河",
         "MapWorldsUndergroundRiverUnique": "塞尔.布雷德狼穴",
         "MapWorldsGardens": "花园迷宫",
         "MapWorldsArachnidNest": "异蛛巢穴",
@@ -25948,7 +25449,6 @@
         "MapWorldsInfestedValley": "疫源林谷",
         "MapWorldsOvergrownRuin": "长草遗迹",
         "MapWorldsVaalPyramid": "瓦尔金字塔",
-        "MapWorldsVaalPyramidUnique": "阿兹里的秘宝库",
         "MapWorldsGeode": "水晶洞穴",
         "MapWorldsArmoury": "装备库",
         "MapWorldsCourtyard": "奇术之庭",
@@ -25977,7 +25477,6 @@
         "MapWorldsShipyard": "炽炎船坞",
         "MapWorldsBelfry": "钟楼",
         "MapWorldsArachnidTomb": "灵虫墓穴",
-        "MapWorldsWasteland": "荒地",
         "MapWorldsPrecinct": "苦行之域",
         "MapWorldsBog": "瘴气泥沼",
         "MapWorldsPier": "怒浪之港",
@@ -25985,15 +25484,12 @@
         "MapWorldsCursedCryptUnique": "懦者的试验",
         "MapWorldsOrchard": "密林果园",
         "MapWorldsPromenade": "月色回廊",
-        "MapWorldsPromenadeUnique": "元帅殿堂",
         "MapWorldsLair": "巢穴",
         "MapWorldsColonnade": "激战柱廊",
         "MapWorldsPrimordialPool": "起源之池",
         "MapWorldsSpiderForest": "巨蛛之林",
         "MapWorldsCoves": "疾风峡湾",
         "MapWorldsWaterways": "危机水道",
-        "MapWorldsFactory": "工厂遗迹",
-        "MapWorldsMesa": "赤红山地",
         "MapWorldsPit": "巨坑",
         "MapWorldsDefiledCathedral": "不洁教堂",
         "MapWorldsSummit": "寒顶之巅",
@@ -26005,7 +25501,6 @@
         "MapWorldsTortureChamber": "远古街区",
         "MapWorldsTortureChamberUnique": "欧霸的咒怨宝库",
         "MapWorldsNecropolis": "魔影墓场",
-        "MapWorldsNecropolisUnique": "亡者之财",
         "MapWorldsRacecourse_": "巨型竞技场",
         "MapWorldsCaldera": "寂灵之渊",
         "MapWorldsGhetto": "赤贫居所",
@@ -26037,8 +25532,12 @@
         "MapWorldsHarbingerLow": "降临之地",
         "MapWorldsHarbingerMid": "降临之地",
         "MapWorldsHarbingerHigh": "降临之地",
+        "MapWorldsSteppes": "干燥草原",
         "MapWorldsStagnation": "停滞区",
         "MapWorldsFrozenCabins": "冻结之舱",
+        "MapWorldsElder_Desert": "愚昧沙漠",
+        "MapWorldsElder_Sulphur": "失疯废墟",
+        "MapWorldsElder_Reliquary": "悲伤坑道",
         "MapWorldsElderArena": "缥缈幻境",
         "MapWorldsElderArenaUber": "创世之境",
         "AbyssLeague": "绝望深渊",
@@ -26786,7 +26285,6 @@
         "MapWorldsLookout": "Puesto de Observación",
         "MapWorldsBeach": "Playa",
         "MapWorldsGraveyard": "Cementerio",
-        "MapWorldsDungeon": "Mazmorra",
         "MapWorldsAlleyways": "Callejones",
         "MapWorldsPen": "Corral",
         "MapWorldsDesert": "Desierto",
@@ -26817,7 +26315,6 @@
         "MapWorldsCanyon": "Cañón",
         "MapWorldsConservatory": "Conservatorio",
         "MapWorldsSulphurVents": "Fumarolas de Azufre",
-        "MapWorldsHauntedMansion": "Mansión Embrujada",
         "MapWorldsMaze": "Laberinto",
         "MapWorldsMazeUnique": "Taller de Máquinas de Doryani",
         "MapWorldsChannel": "Cauce",
@@ -26835,7 +26332,6 @@
         "MapWorldsWharf": "Embarcadero",
         "MapWorldsAshenWood": "Bosque Pálido",
         "MapWorldsAtoll": "Atolón",
-        "MapWorldsAtollUnique": "Vorágine de Caos",
         "MapWorldsCemetery": "Camposanto",
         "MapWorldsCemeteryUnique": "Una Noche de Terror",
         "MapWorldsUndergroundSea": "Mar Subterráneo",
@@ -26845,10 +26341,6 @@
         "MapWorldsResidence": "Residencia",
         "MapWorldsRamparts": "Murallas",
         "MapWorldsDunes": "Dunas",
-        "MapWorldsDunesUnique": "Pilares de Arun",
-        "MapWorldsBoneCrypt": "Cripta de Hueso",
-        "MapWorldsBoneCryptUnique": "Santuario de Olmec",
-        "MapWorldsUndergroundRiver": "Río Subterráneo",
         "MapWorldsUndergroundRiverUnique": "Caer Blaidd, Madriguera de Lobos",
         "MapWorldsGardens": "Jardines",
         "MapWorldsArachnidNest": "Nido Arácnido",
@@ -26857,7 +26349,6 @@
         "MapWorldsInfestedValley": "Valle Infestado",
         "MapWorldsOvergrownRuin": "Ruinas Descuidadas",
         "MapWorldsVaalPyramid": "Pirámide Vaal",
-        "MapWorldsVaalPyramidUnique": "Cámaras de Atziri",
         "MapWorldsGeode": "Geoda",
         "MapWorldsArmoury": "Armería",
         "MapWorldsCourtyard": "Patio",
@@ -26886,7 +26377,6 @@
         "MapWorldsShipyard": "Astillero",
         "MapWorldsBelfry": "Campanario",
         "MapWorldsArachnidTomb": "Tumba Arácnida",
-        "MapWorldsWasteland": "Páramo",
         "MapWorldsPrecinct": "Recinto",
         "MapWorldsBog": "Ciénaga",
         "MapWorldsPier": "Muelle",
@@ -26894,15 +26384,12 @@
         "MapWorldsCursedCryptUnique": "La Prueba del Cobarde",
         "MapWorldsOrchard": "Huerto",
         "MapWorldsPromenade": "Rambla",
-        "MapWorldsPromenadeUnique": "Salón de los Grandes Maestros",
         "MapWorldsLair": "Guarida",
         "MapWorldsColonnade": "Columnata",
         "MapWorldsPrimordialPool": "Charca Primordial",
         "MapWorldsSpiderForest": "Bosque de Arañas",
         "MapWorldsCoves": "Caletas",
         "MapWorldsWaterways": "Canales",
-        "MapWorldsFactory": "Fábrica",
-        "MapWorldsMesa": "Mesa",
         "MapWorldsPit": "Hoyo",
         "MapWorldsDefiledCathedral": "Catedral Profanada",
         "MapWorldsSummit": "Cima",
@@ -26914,7 +26401,6 @@
         "MapWorldsTortureChamber": "Bloques Primordiales",
         "MapWorldsTortureChamberUnique": "Tesoro Embrujado de Oba",
         "MapWorldsNecropolis": "Necrópolis",
-        "MapWorldsNecropolisUnique": "Muerte e Impuestos",
         "MapWorldsRacecourse_": "Estadio",
         "MapWorldsCaldera": "Caldera",
         "MapWorldsGhetto": "Gueto",
@@ -26948,16 +26434,19 @@
         "MapWorldsHarbingerHigh": "La Cabecera de la Playa",
         "MapWorldsHarbingerUber": "La Cabecera de la Playa imbuída",
         "MapWorldsDrySea": "Mar seco",
+        "MapWorldsSteppes": "Estepas",
         "MapWorldsStagnation": "Estancamiento",
         "MapWorldsBrambleValley": "Valle de zarzales",
         "MapWorldsFrozenCabins": "Cabinas congeladas",
-        "MapWorldsGraveTrough": "Hondonada fúnebre",
+        "MapWorldsHarbingerPrison": "Prisión de heraldos",
         "MapWorldsCrimsonTownship": "Poblado carmesí",
         "MapWorldsForkingRiver": "Río bifurcado",
-        "MapWorldsFoundry": "Fundición",
-        "MapWorldsColdRiver_": "Río gélido",
         "MapWorldsForbiddenWoods": "Bosque prohibido",
         "MapWorldsSilo": "Silo",
+        "MapWorldsBeachLanding": "Desembarco en la playa",
+        "MapWorldsElder_Desert": "Desierto de Demencia",
+        "MapWorldsElder_Sulphur": "Desechos de Locura",
+        "MapWorldsElder_Reliquary": "Pozos de Angustia",
         "MapWorldsElderArena": "Ausencia de Valor y Significado",
         "MapWorldsElderArenaUber": "El Reino del Creador",
         "AbyssLeague": "Profundidades Abisales",
@@ -27174,7 +26663,6 @@
         "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "Viper Napuatzi",
         "Metadata/Monsters/Masters/BlightBuilderWild": "Hermana Cassia",
         "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "Tane Octavius",
-        "Metadata/NPC/League/Harvest/HarvestNPC": "Oshabi",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "Baran, el Cruzado",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "Veritania, la Redentora",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "Al-Hezmin, el Cazador",
@@ -28851,7 +28339,6 @@
         "MapWorldsLookout": "Lookout",
         "MapWorldsBeach": "Beach",
         "MapWorldsGraveyard": "Graveyard",
-        "MapWorldsDungeon": "Dungeon",
         "MapWorldsAlleyways": "Alleyways",
         "MapWorldsPen": "Pen",
         "MapWorldsDesert": "Desert",
@@ -28882,7 +28369,6 @@
         "MapWorldsCanyon": "Canyon",
         "MapWorldsConservatory": "Conservatory",
         "MapWorldsSulphurVents": "Sulphur Vents",
-        "MapWorldsHauntedMansion": "Haunted Mansion",
         "MapWorldsMaze": "Maze",
         "MapWorldsMazeUnique": "Doryani's Machinarium",
         "MapWorldsChannel": "Channel",
@@ -28900,7 +28386,6 @@
         "MapWorldsWharf": "Wharf",
         "MapWorldsAshenWood": "Ashen Wood",
         "MapWorldsAtoll": "Atoll",
-        "MapWorldsAtollUnique": "Maelström of Chaos",
         "MapWorldsCemetery": "Cemetery",
         "MapWorldsCemeteryUnique": "Hallowed Ground",
         "MapWorldsUndergroundSea": "Underground Sea",
@@ -28910,10 +28395,6 @@
         "MapWorldsResidence": "Residence",
         "MapWorldsRamparts": "Ramparts",
         "MapWorldsDunes": "Dunes",
-        "MapWorldsDunesUnique": "Pillars of Arun",
-        "MapWorldsBoneCrypt": "Bone Crypt",
-        "MapWorldsBoneCryptUnique": "Olmec's Sanctum",
-        "MapWorldsUndergroundRiver": "Underground River",
         "MapWorldsUndergroundRiverUnique": "Caer Blaidd, Wolfpack's Den",
         "MapWorldsGardens": "Gardens",
         "MapWorldsArachnidNest": "Arachnid Nest",
@@ -28922,7 +28403,6 @@
         "MapWorldsInfestedValley": "Infested Valley",
         "MapWorldsOvergrownRuin": "Overgrown Ruin",
         "MapWorldsVaalPyramid": "Vaal Pyramid",
-        "MapWorldsVaalPyramidUnique": "Vaults of Atziri",
         "MapWorldsGeode": "Geode",
         "MapWorldsArmoury": "Armoury",
         "MapWorldsCourtyard": "Courtyard",
@@ -28951,7 +28431,6 @@
         "MapWorldsShipyard": "Shipyard",
         "MapWorldsBelfry": "Belfry",
         "MapWorldsArachnidTomb": "Arachnid Tomb",
-        "MapWorldsWasteland": "Wasteland",
         "MapWorldsPrecinct": "Precinct",
         "MapWorldsBog": "Bog",
         "MapWorldsPier": "Pier",
@@ -28959,15 +28438,12 @@
         "MapWorldsCursedCryptUnique": "The Coward's Trial",
         "MapWorldsOrchard": "Orchard",
         "MapWorldsPromenade": "Promenade",
-        "MapWorldsPromenadeUnique": "The Hall of Grandmasters",
         "MapWorldsLair": "Lair",
         "MapWorldsColonnade": "Colonnade",
         "MapWorldsPrimordialPool": "Primordial Pool",
         "MapWorldsSpiderForest": "Spider Forest",
         "MapWorldsCoves": "Coves",
         "MapWorldsWaterways": "Waterways",
-        "MapWorldsFactory": "Factory",
-        "MapWorldsMesa": "Mesa",
         "MapWorldsPit": "Pit",
         "MapWorldsDefiledCathedral": "Defiled Cathedral",
         "MapWorldsSummit": "Summit",
@@ -28979,7 +28455,6 @@
         "MapWorldsTortureChamber": "Primordial Blocks",
         "MapWorldsTortureChamberUnique": "Oba's Cursed Trove",
         "MapWorldsNecropolis": "Necropolis",
-        "MapWorldsNecropolisUnique": "Death and Taxes",
         "MapWorldsRacecourse_": "Racecourse",
         "MapWorldsCaldera": "Caldera",
         "MapWorldsGhetto": "Ghetto",
@@ -29013,16 +28488,19 @@
         "MapWorldsHarbingerHigh": "The Beachhead",
         "MapWorldsHarbingerUber": "Infused Beachhead",
         "MapWorldsDrySea": "Dry Sea",
+        "MapWorldsSteppes": "Steppes",
         "MapWorldsStagnation": "Stagnation",
         "MapWorldsBrambleValley": "Bramble Valley",
         "MapWorldsFrozenCabins": "Frozen Cabins",
-        "MapWorldsGraveTrough": "Grave Trough",
+        "MapWorldsHarbingerPrison": "Harbinger Prison",
         "MapWorldsCrimsonTownship": "Crimson Township",
         "MapWorldsForkingRiver": "Forking River",
-        "MapWorldsFoundry": "Foundry",
-        "MapWorldsColdRiver_": "Cold River",
         "MapWorldsForbiddenWoods": "Forbidden Woods",
         "MapWorldsSilo": "Silo",
+        "MapWorldsBeachLanding": "Beach Landing",
+        "MapWorldsElder_Desert": "ทะเลทรายอันวิกลจริต",
+        "MapWorldsElder_Sulphur": "แดนร้างอันสิ้นสติ",
+        "MapWorldsElder_Reliquary": "หลุมอันชอกช้ำ",
         "MapWorldsElderArena": "สูญสิ้นซึ่งคุณค่าความหมาย",
         "MapWorldsElderArenaUber": "ดินแดนของเชปเปอร์",
         "AbyssLeague": "เบื้องลึกอะบิส",
@@ -29239,7 +28717,6 @@
         "Metadata/Monsters/LegionLeague/LegionVaalGeneral": "อสรพิษ นาปวดซี",
         "Metadata/Monsters/Masters/BlightBuilderWild": "แม่ชีแคสเซีย",
         "Metadata/NPC/League/Metamorphosis/MetamorphosisNPC": "ทาเน อ็อกเทเวียส",
-        "Metadata/NPC/League/Harvest/HarvestNPC": "โอชาบิ",
         "Metadata/Monsters/AtlasExiles/AtlasExile1": "บาราน ผู้พิชิตอธรรม",
         "Metadata/Monsters/AtlasExiles/AtlasExile2": "เวริทาเนีย ผู้พิชิตบาป",
         "Metadata/Monsters/AtlasExiles/AtlasExile3": "อัล-เฮซมิน ผู้พิชิตเหยื่อ",

@@ -7149,11 +7149,15 @@
       ],
       [
         "PartyPromotionRequired",
-        "No puedes realizar esta operación porque no eres un miembro promovido del grupo."
+        "No puedes realizar esta operación porque no eres el líder del grupo."
       ],
       [
         "PartyDoesNotExist",
         "El grupo no existe."
+      ],
+      [
+        "PartyLeaderOnlyCanOpenMapPortals",
+        "Solo el líder del grupo puede abrir portales a los mapas. El líder del grupo puede promover a otros jugadores para que se conviertan en líder en la IU de los grupos."
       ],
       [
         "ServiceDoesNotExist",
@@ -8296,10 +8300,6 @@
         "No tienes abierta una misión diaria."
       ],
       [
-        "MissionComplete",
-        "Misión Completa. Has conseguido {0} de favor de maestro."
-      ],
-      [
         "GrandmasterSaved",
         "El archivo Gran Maestro ha sido guardado. El personal de Grinding Gear Games será notificado."
       ],
@@ -8333,11 +8333,19 @@
       ],
       [
         "ErrorNotInHideout",
-        "Debes estar en tu Guarida para hacer esto."
+        "Debes estar en tu guarida para hacer esto."
+      ],
+      [
+        "ErrorHideoutSuperceded",
+        "Las modificaciones de guarida están desactivadas actualmente. Crea una nueva instancia de guarida y vuelve a intentarlo."
+      ],
+      [
+        "ErrorCannotModifyGuildHideout",
+        "No tienes permisos para modificar la guarida de la hermandad."
       ],
       [
         "ClaimCraftingBenchSuccess",
-        "Agregando una mesa de fabricación al alijo de la Guarida."
+        "Agregando una mesa de fabricación al alijo de la guarida."
       ],
       [
         "CharacterIsPVPOnly",
@@ -8533,7 +8541,7 @@
       ],
       [
         "NoOffersOnYourOwnItems",
-        "No puedes realizar una oferta sobre este objetos porque ya lo posees."
+        "No puedes realizar una oferta sobre este objeto porque ya lo posees."
       ],
       [
         "PublicListingLockedDueToLevel",
@@ -8732,10 +8740,6 @@
         "Ese jugador no tiene un Animalario."
       ],
       [
-        "MasterBonusExpUpdate",
-        "Has ganado {1} de reputación y favor extra por {0}"
-      ],
-      [
         "MicrotransactionNotAvailableInLeague",
         "No tienes permitido comprar esta microtransacción en esta liga."
       ],
@@ -8886,6 +8890,10 @@
       [
         "FailedToReclaimSomeHideoutDoodads",
         "No se han podido reclamar uno o más objetos de guarida. Por favor crea una nueva instancia de guarida e inténtalo de nuevo."
+      ],
+      [
+        "FailedToLoadHideoutDoodads",
+        "Error al cargar la lista de decoraciones de la guarida."
       ],
       [
         "HideoutImportWarningGeneric",
@@ -9222,6 +9230,22 @@
       [
         "ActionTemporarilyDisabled",
         "Esta acción ha sido deshabilitada temporalmente."
+      ],
+      [
+        "CannotAccessGuildHideout",
+        "No puedes acceder a la guarida de la hermandad de este jugador porque no eres un miembro de su hermandad."
+      ],
+      [
+        "SettingDeliveryDetailsFailed",
+        "Hubo un error al establecer los detalles del envío: "
+      ],
+      [
+        "ExpeditionCurrencyNotification",
+        "Se agregó {0}x {1} a tu Armario de Expedition"
+      ],
+      [
+        "GuildStashDisabled",
+        "El alijo de hermandad ha sido temporalmente deshabilitado."
       ]
     ]
   },
@@ -10266,23 +10290,23 @@
       ],
       [
         "GrigorIntroWorried2",
-        "No te acerques, Bruja. Mi nombre es Grigor y, como puedes ver, ya he tenido suficiente con tu clase.\r\n\r\nAsí que una vez que hayas terminado de admirar el trabajo de tu hermandad, dirige esos helados orbes que traes por ojos hacia el este. Una muchacha de cabello cobrizo y su novio. Están desaparecidos, y pueden estar necesitando tua más \"útiles\" talentos."
+        "No te acerques, Bruja. Mi nombre es Grigor y, como puedes ver, ya he tenido suficiente con tu clase.\r\n\r\nAsí que una vez que hayas terminado de admirar el trabajo de tu hermandad, dirige esos helados orbes que traes por ojos hacia el este. Una muchacha de cabello cobrizo y su novio. Están desaparecidos, y podrían necesitar tus talentos más \"útiles\"."
       ],
       [
         "GrigorIntroClarissa",
-        "<if:MS>{Mantente a distancia, exiliado. Mi nombre es Grigor, y una vez que hayas terminado de deleitar tus ojos con mi corrupta imagen, dirige tus elegantes ojos hacia el este.\r\n\r\nSí, trajiste a Clarissa a casa, y de nuevo me fastidia con su lástima. Hay un límite en la cantidad de sopa y flores que un hombre puede recibir. Para ser una criminal, Clarissa tiene un centroextrañamente blando.\r\n\r\nDe cualquier modo, no me gustaría ver cómo se endurece su corazón. Intenta encontrar a su novio perdido. Con él cerca, Clarissa no tiene mucho tiempo para molestarme.}<elif:FS>{Mantente a distancia, exiliada. Mi nombre es Grigor, y una vez que hayas terminado de deleitar tus ojos con mi corrupta imagen, dirige tus elegantes ojos hacia el este.\r\n\r\nSí, trajiste a Clarissa a casa, y de nuevo me fastidia con su lástima. Hay un límite en la cantidad de sopa y flores que un hombre puede recibir. Para ser una criminal, Clarissa tiene un centroextrañamente blando.\r\n\r\nDe cualquier modo, no me gustaría ver cómo se endurece su corazón. Intenta encontrar a su novio perdido. Con él cerca, Clarissa no tiene mucho tiempo para molestarme.}"
+        "<if:MS>{Mantente a distancia, exiliado. Mi nombre es Grigor, y una vez que hayas terminado de deleitar tus ojos con mi corrupta imagen, dirige tus elegantes ojos hacia el este.\r\n\r\nSí, trajiste a Clarissa a casa, y de nuevo me fastidia con su lástima. Hay un límite en la cantidad de sopa y flores que un hombre puede recibir. Para ser una criminal, Clarissa tiene un centro extrañamente blando.\r\n\r\nDe cualquier modo, no me gustaría ver cómo se endurece su corazón. Intenta encontrar a su novio perdido. Con él cerca, Clarissa no tiene mucho tiempo para molestarme.}<elif:FS>{Mantente a distancia, exiliada. Mi nombre es Grigor, y una vez que hayas terminado de deleitar tus ojos con mi corrupta imagen, dirige tus elegantes ojos hacia el este.\r\n\r\nSí, trajiste a Clarissa a casa, y de nuevo me fastidia con su lástima. Hay un límite en la cantidad de sopa y flores que un hombre puede recibir. Para ser una criminal, Clarissa tiene un centro extrañamente blando.\r\n\r\nDe cualquier modo, no me gustaría ver cómo se endurece su corazón. Intenta encontrar a su novio perdido. Con él cerca, Clarissa no tiene mucho tiempo para molestarme.}"
       ],
       [
         "GrigorIntroClarissa2",
-        "No te acerques, Bruja. Mi nombre es Grigor y, como puedes ver, ya he tenido suficiente con tu clase.\r\n\r\nAsí que una vez que hayas terminado de admirar el trabajo de tu hermandad, dirige esos helados orbes que traes por ojos hacia el este.\r\n\r\nSí, trajiste a Clarissa a casa, y de nuevo me fastidia con su lástima. Hay un límite en la cantidad de sopa y flores que un hombre puede recibir. Para ser una criminal, Clarissa tiene un centroextrañamente blando.\r\n\r\nDe cualquier modo, no me gustaría ver cómo se endurece su corazón. Usa esos turbios talentos que posees para algo que valga la pena. Encuentra a Tolman, su novio perdido. Prueba que me equivoco con respecto a tu clase."
+        "No te acerques, Bruja. Mi nombre es Grigor y, como puedes ver, ya he tenido suficiente con tu clase.\r\n\r\nAsí que una vez que hayas terminado de admirar el trabajo de tu hermandad, dirige esos helados orbes que traes por ojos hacia el este.\r\n\r\nSí, trajiste a Clarissa a casa, y de nuevo me fastidia con su lástima. Hay un límite en la cantidad de sopa y flores que un hombre puede recibir. Para ser una criminal, Clarissa tiene un centro extrañamente blando.\r\n\r\nDe cualquier modo, no me gustaría ver cómo se endurece su corazón. Usa esos turbios talentos que posees para algo que valga la pena. Encuentra a Tolman, su novio perdido. Prueba que me equivoco con respecto a tu clase."
       ],
       [
         "GrigorCongrats",
-        "Ya no sueño mientras duermo. Tengo una pesadilla, la misma una y otra vez. El Espejo. Nunca es mi reflejo el que me devuelve la mirada.\r\n\r\nLa primera vez que ese espejo apareció frente a mí, vi a Kole. Un violador de Oriath con quien tuve la desgracia de compartir una celda en la empalizada de Gravicius. Piedad lo tomó para sus experimentos y esa noche, vi su trabajo mientras dormía.\r\n\r\nEsta vez, vi a Tolman. Piel curtida hasta parecer cuero. Órganos reducidos a cáscaras. Sangre goteando a través de su esqueleto como polvo rojo en un reloj de arena. Ese espejo es un regalo de Piedad hacia mi.\r\n\r\nAl menos no veré a Clarissa la próxima vez que lo mire. Asegúrate de que no te vea a ti."
+        "Ya no sueño mientras duermo. Tengo una pesadilla, la misma una y otra vez. El Espejo. Nunca es mi reflejo el que me devuelve la mirada.\r\n\r\nLa primera vez que ese espejo apareció frente a mí, vi a Kole. Un violador de Oriath con quien tuve la desgracia de compartir una celda en la empalizada de Gravicius. Piedad lo tomó para sus experimentos y esa noche, vi su trabajo mientras dormía.\r\n\r\nEsta vez, vi a Tolman. Piel curtida hasta parecer cuero. Órganos reducidos a cáscaras. Sangre goteando a través de su esqueleto como polvo rojo en un reloj de arena. Ese espejo es un regalo de Piedad hacia mí.\r\n\r\nAl menos no veré a Clarissa la próxima vez que lo mire. Asegúrate de que no te vea a ti."
       ],
       [
         "GrigorCongrats2",
-        "Escucha con atención, Bruja. Gracias a tu hermana de artes, Piedad, ya no sueño mientras duermo. Solo tengo pesadillas. La misma pesadilla una y otra vez. El Espejo. Nunca es mi reflejo el que me devuelve la mirada.\r\n\r\nLa primera vez que ese espejo apareció frente a mí, vi a Kole. Un violador de Oriath con quien tuve la desgracia de compartir una celda en la empalizada de Gravicius. Piedad lo tomó para sus experimentos y esa noche, vi su trabajo mientras dormía.\r\n\r\nEsta vez, vi a Tolman. Piel curtida hasta parecer cuero. Órganos reducidos a cáscaras. Sangre goteando a través de su esqueleto como polvo rojo en un reloj de arena. Ese espejo es un regalo de Piedad hacia mi.\r\n\r\nAl menos no veré a Clarissa la próxima vez que lo mire. Y solo por ese motivo, espero que tampoco seas tú."
+        "Escucha con atención, Bruja. Gracias a tu hermana de artes, Piedad, ya no sueño mientras duermo. Solo tengo pesadillas. La misma pesadilla una y otra vez. El Espejo. Nunca es mi reflejo el que me devuelve la mirada.\r\n\r\nLa primera vez que ese espejo apareció frente a mí, vi a Kole. Un violador de Oriath con quien tuve la desgracia de compartir una celda en la empalizada de Gravicius. Piedad lo tomó para sus experimentos y esa noche, vi su trabajo mientras dormía.\r\n\r\nEsta vez, vi a Tolman. Piel curtida hasta parecer cuero. Órganos reducidos a cáscaras. Sangre goteando a través de su esqueleto como polvo rojo en un reloj de arena. Ese espejo es un regalo de Piedad hacia mí.\r\n\r\nAl menos no veré a Clarissa la próxima vez que lo mire. Y solo por ese motivo, espero que tampoco seas tú."
       ],
       [
         "GrigorOnMaramoa",
@@ -10294,7 +10318,7 @@
       ],
       [
         "GrigorQueenQuest",
-        "Atravesé la mitad de este continente abandonado por una oda. Se llama <italic>{De Joyas y Eternidad}.\r\n\r\n<italic>{Por promesas brillantes}\r\n<italic>{De joyas y eternidad,}\r\n<italic>{La Reina Gemita entregó su corazón}\r\n<italic>{Y su cuerpo}\r\n<italic>{Al Rey de las Sombras}\r\n<italic>{Por un día más bajo el sol,}\r\n<italic>{El último día bajo el sol.}\r\n\r\nEsa es solo una parte del poema completo. \"La Reina Gemita\" vivió, y es el enigma detrás de la caida de los Ezomitas y de los Eternos. Ve al Templo de Solaris en el noreste. Encuentra los restos de la Reina Gemita antes que Piedad... y destrúyelos."
+        "Atravesé la mitad de este continente abandonado por una oda. Se llama <italic>{De Joyas y Eternidad}.\r\n\r\n<italic>{Por promesas brillantes}\r\n<italic>{De joyas y eternidad,}\r\n<italic>{La Reina Gemita entregó su corazón}\r\n<italic>{Y su cuerpo}\r\n<italic>{Al Rey de las Sombras}\r\n<italic>{Por un día más bajo el sol,}\r\n<italic>{El último día bajo el sol.}\r\n\r\nEsa es solo una parte del poema completo. \"La Reina Gemita\" vivió, y es el enigma detrás de la caída de los Ezomitas y de los Eternos. Ve al Templo de Solaris en el noreste. Encuentra los restos de la Reina Gemita antes que Piedad... y destrúyelos."
       ],
       [
         "GrigorOnEzomytes",
@@ -10318,11 +10342,11 @@
       ],
       [
         "GrigorPietyDead",
-        "<if:MS>{Desafortunadamente, Piedad era un simple títere de una fuerza mayor. Cortaste los hilos, pero el titiritero perdura: Dominus.\r\n\r\nEscuché a los Guardias Negros hablar sobre la llave que tomaste. Es la única llave al Cetro de Dios, en el límite norte del campamento de los Guardias Negros. Solo a Piedad le permitían tenerla.\r\n\r\nDominus llegó a su laboratorio en la cima de la torre mediante un sistema de poleas sobre la pared exterior. Tendrás la entrada prohubida a ese lugar, y no he oído de nadie, ni siquiera Piedad, que haya podido entrar o salir de los niveles inferiores.\r\n\r\nVe con cuidado, exiliado. No puedo imaginar qué puede haber dentro de esa torre si hasta Piedad y Dominus tuvieron miedo de caminar por allí.}<elif:FS>{Desafortunadamente, Piedad era un simple títere de una fuerza mayor. Cortaste los hilos, pero el titiritero perdura: Dominus.\r\n\r\nEscuché a los Guardias Negros hablar sobre la llave que tomaste. Es la única llave al Cetro de Dios, en el límite norte del campamento de los Guardias Negros. Solo a Piedad le permitían tenerla.\r\n\r\nDominus llegó a su laboratorio en la cima de la torre mediante un sistema de poleas sobre la pared exterior. Tendrás la entrada prohubida a ese lugar, y no he oído de nadie, ni siquiera Piedad, que haya podido entrar o salir de los niveles inferiores.\r\n\r\nVe con cuidado, exiliada. No puedo imaginar qué puede haber dentro de esa torre si hasta Piedad y Dominus tuvieron miedo de caminar por allí.}"
+        "<if:MS>{Desafortunadamente, Piedad era un simple títere de una fuerza mayor. Cortaste los hilos, pero el titiritero perdura: Dominus.\r\n\r\nEscuché a los Guardias Negros hablar sobre la llave que tomaste. Es la única llave al Cetro de Dios, en el límite norte del campamento de los Guardias Negros. Solo a Piedad le permitían tenerla.\r\n\r\nDominus llegó a su laboratorio en la cima de la torre mediante un sistema de poleas sobre la pared exterior. Tendrás la entrada prohibida a ese lugar, y no he oído de nadie, ni siquiera Piedad, que haya podido entrar o salir de los niveles inferiores.\r\n\r\nVe con cuidado, exiliado. No puedo imaginar qué puede haber dentro de esa torre si hasta Piedad y Dominus tuvieron miedo de caminar por allí.}<elif:FS>{Desafortunadamente, Piedad era un simple títere de una fuerza mayor. Cortaste los hilos, pero el titiritero perdura: Dominus.\r\n\r\nEscuché a los Guardias Negros hablar sobre la llave que tomaste. Es la única llave al Cetro de Dios, en el límite norte del campamento de los Guardias Negros. Solo a Piedad le permitían tenerla.\r\n\r\nDominus llegó a su laboratorio en la cima de la torre mediante un sistema de poleas sobre la pared exterior. Tendrás la entrada prohibida a ese lugar, y no he oído de nadie, ni siquiera Piedad, que haya podido entrar o salir de los niveles inferiores.\r\n\r\nVe con cuidado, exiliada. No puedo imaginar qué puede haber dentro de esa torre si hasta Piedad y Dominus tuvieron miedo de caminar por allí.}"
       ],
       [
         "GrigorPietyDeadKey",
-        "<if:MS>{Desafortunadamente, Piedad era un simple títere de una fuerza mayor. Cortaste los hilos, pero el titiritero perdura: Dominus.\r\n\r\n¿Tienes la llave de Piedad? ¿No? Escuché a los Guardias Negros hablar sobre ella. Es la única llave al Cetro de Dios, en el límite norte del campamento de los Guardias Negros. Solo a Piedad le permitían tenerla.\r\n\r\nDominus llegó a su laboratorio en la cima de la torre mediante un sistema de poleas sobre la pared exterior. Tendrás la entrada prohubida a ese lugar, y no he oído de nadie, ni siquiera Piedad, que haya podido entrar o salir de los niveles inferiores.\r\n\r\nSi encuentras la llave, ve con cuidado, exiliado. No puedo imaginar qué puede haber dentro de esa torre si hasta Piedad y Dominus tuvieron miedo de caminar por allí.}<elif:FS>{Desafortunadamente, Piedad era un simple títere de una fuerza mayor. Cortaste los hilos, pero el titiritero perdura: Dominus.\r\n\r\n¿Tienes la llave de Piedad? ¿No? Escuché a los Guardias Negros hablar sobre ella. Es la única llave al Cetro de Dios, en el límite norte del campamento de los Guardias Negros. Solo a Piedad le permitían tenerla.\r\n\r\nDominus llegó a su laboratorio en la cima de la torre mediante un sistema de poleas sobre la pared exterior. Tendrás la entrada prohubida a ese lugar, y no he oído de nadie, ni siquiera Piedad, que haya podido entrar o salir de los niveles inferiores.\r\n\r\nSi encuentras la llave, ve con cuidado, exiliada. No puedo imaginar qué puede haber dentro de esa torre si hasta Piedad y Dominus tuvieron miedo de caminar por allí.}"
+        "<if:MS>{Desafortunadamente, Piedad era un simple títere de una fuerza mayor. Cortaste los hilos, pero el titiritero perdura: Dominus.\r\n\r\n¿Tienes la llave de Piedad? ¿No? Escuché a los Guardias Negros hablar sobre ella. Es la única llave al Cetro de Dios, en el límite norte del campamento de los Guardias Negros. Solo a Piedad le permitían tenerla.\r\n\r\nDominus llegó a su laboratorio en la cima de la torre mediante un sistema de poleas sobre la pared exterior. Tendrás la entrada prohibida a ese lugar, y no he oído de nadie, ni siquiera Piedad, que haya podido entrar o salir de los niveles inferiores.\r\n\r\nSi encuentras la llave, ve con cuidado, exiliado. No puedo imaginar qué puede haber dentro de esa torre si hasta Piedad y Dominus tuvieron miedo de caminar por allí.}<elif:FS>{Desafortunadamente, Piedad era un simple títere de una fuerza mayor. Cortaste los hilos, pero el titiritero perdura: Dominus.\r\n\r\n¿Tienes la llave de Piedad? ¿No? Escuché a los Guardias Negros hablar sobre ella. Es la única llave al Cetro de Dios, en el límite norte del campamento de los Guardias Negros. Solo a Piedad le permitían tenerla.\r\n\r\nDominus llegó a su laboratorio en la cima de la torre mediante un sistema de poleas sobre la pared exterior. Tendrás la entrada prohibida a ese lugar, y no he oído de nadie, ni siquiera Piedad, que haya podido entrar o salir de los niveles inferiores.\r\n\r\nSi encuentras la llave, ve con cuidado, exiliada. No puedo imaginar qué puede haber dentro de esa torre si hasta Piedad y Dominus tuvieron miedo de caminar por allí.}"
       ],
       [
         "GrigorOnVictario",
@@ -10334,11 +10358,11 @@
       ],
       [
         "GrigorOnSolaris",
-        "Traté de penetrar en el Templo de Solaris en el noreste. Casi logro que me maten las Cintas ensangrentadas que custodian el lugar. Son tapices flotantes bizarros; criaturas de tela y taumaturgia. Afortunadamente, algunos legionarios se pusieron en el camino. Mientras las Cintas los destripaban yo corrí... directo hacia Gravicius.\r\n\r\nMe arrastró a través del puente hacia el Templo de Lunaris en el oeste, y me puso al \"amable ciudado\" de Piedad. No dijo nada durante todo ese tiempo. Yo no era más que un botín de guerra para él."
+        "Traté de penetrar en el Templo de Solaris en el noreste. Casi logro que me maten las Cintas ensangrentadas que custodian el lugar. Son tapices flotantes bizarros; criaturas de tela y taumaturgia. Afortunadamente, algunos legionarios se pusieron en el camino. Mientras las Cintas los destripaban yo corrí... directo hacia Gravicius.\r\n\r\nMe arrastró a través del puente hacia el Templo de Lunaris en el oeste, y me puso al \"amable cuidado\" de Piedad. No dijo nada durante todo ese tiempo. Yo no era más que un botín de guerra para él."
       ],
       [
         "GrigorPietyQuest",
-        "Más allá de todo lo que has hecho, dejar vivir a Piedad es amenazar la existencia de todo ser vivo en este continente.\r\n\r\nMira al oeste del campamento de Gravicius. Encontrarás a Piedad en el Templo de Lunaris, escondiéndose derás de sus profanaciones."
+        "Más allá de todo lo que has hecho, dejar vivir a Piedad es amenazar la existencia de todo ser vivo en este continente.\r\n\r\nMira al oeste del campamento de Gravicius. Encontrarás a Piedad en el Templo de Lunaris, escondiéndose detrás de sus profanaciones."
       ],
       [
         "GrigorLunaris",
@@ -10358,7 +10382,7 @@
       ],
       [
         "MaramoaPreoccupied3",
-        "Tienes el caminar y la gracia de una mujer que conoce a la Muerte íntimamente. Los hombres nacen con ese conocimiento. Nosotras debemos ganárnoslo. Sí, podríamos hablar de muchas cosas pero no tenemos tiempo ahora. Nuestra muchacha más joven, Clarissa, fue a la ciudad a recolectar suministros con su tonto novio, Tolman. Ya se están demorando.\r\n\r\n¿Nos ayudarás, Cazadora? ¿Puedes encontrar a Clarissa y a Tolman antes de que los encuentren los Guardias Negros?"
+        "Tienes el caminar y la gracia de una mujer que conoce a la Muerte íntimamente. Los hombres nacen con ese conocimiento. Nosotras debemos ganárnoslo. Sí, podríamos hablar de muchas cosas, pero no tenemos tiempo ahora. Nuestra muchacha más joven, Clarissa, fue a la ciudad a recolectar suministros con su tonto novio, Tolman. Ya se están demorando.\r\n\r\n¿Nos ayudarás, Cazadora? ¿Puedes encontrar a Clarissa y a Tolman antes de que los encuentren los Guardias Negros?"
       ],
       [
         "MaramoaOnBlackgaurds",
@@ -10370,15 +10394,15 @@
       ],
       [
         "MaramoaClarissaClue",
-        "<if:MS>{Maramoa Patua te agradece, exiliado, por traer a Clarissa de vuelta con nosoros. Es el corazón amable de este lugar, un espíritu capaz de amar en este páramo de odio.\r\n\r\nSin embargo, ese corazón amable está en juego. Tolman es muy poco para Clarissa, pero ella no sonreirá hasta que él esté a su lado.}<elif:FS>{Maramoa Patua te agradece, exiliada, por traer a Clarissa de vuelta con nosoros. Es el corazón amable de este lugar, un espíritu capaz de amar en este páramo de odio.\r\n\r\nSin embargo, ese corazón amable está en juego. Tolman es muy poco para Clarissa, pero ella no sonreirá hasta que él esté a su lado.}"
+        "<if:MS>{Maramoa Patua te agradece, exiliado, por traer a Clarissa de vuelta con nosotros. Es el corazón amable de este lugar, un espíritu capaz de amar en este páramo de odio.\r\n\r\nSin embargo, ese corazón amable está en juego. Tolman es muy poco para Clarissa, pero ella no sonreirá hasta que él esté a su lado.}<elif:FS>{Maramoa Patua te agradece, exiliada, por traer a Clarissa de vuelta con nosotros. Es el corazón amable de este lugar, un espíritu capaz de amar en este páramo de odio.\r\n\r\nSin embargo, ese corazón amable está en juego. Tolman es muy poco para Clarissa, pero ella no sonreirá hasta que él esté a su lado.}"
       ],
       [
         "MaramoaClarissaClue2",
-        "Maramoa Patua te agradece, hijo de Ngakuramakoi, por traer a Clarissa de vuelta con nosoros. Es el corazón amable de este lugar, un espíritu capaz de amar en este páramo de odio.\r\n\r\nSin embargo, ese corazón amable está en juego. Tolman es muy poco para Clarissa, pero ella no sonreirá hasta que él esté a su lado.\r\n\r\nHay días en que he cuestionado a los Ancestros. ¿Por qué me traerían aquí a Wraeclast, tan lejos de todo lo que amo?\r\n\r\nVerte aquí justifica su decisión. Es fácil ser Karui cuando estás rodeado de Karui, pero seguir la Tradición Karui en el reino de Kitava, esa es la verdadera prueba de un guerrero.\r\n\r\nY como dicta nuestro destino, nuestro llamado demanda nuestro sudor y nuestra sangre, todos los días y en todo momento. Ayúdanos, primo. Ayúdanos encontrando a Tolman."
+        "Maramoa Patua te agradece, hijo de Ngakuramakoi, por traer a Clarissa de vuelta con nosotros. Es el corazón amable de este lugar, un espíritu capaz de amar en este páramo de odio.\r\n\r\nSin embargo, ese corazón amable está en juego. Tolman es muy poco para Clarissa, pero ella no sonreirá hasta que él esté a su lado.\r\n\r\nHay días en que he cuestionado a los Ancestros. ¿Por qué me traerían aquí a Wraeclast, tan lejos de todo lo que amo?\r\n\r\nVerte aquí justifica su decisión. Es fácil ser Karui cuando estás rodeado de Karui, pero seguir la Tradición Karui en el reino de Kitava, esa es la verdadera prueba de un guerrero.\r\n\r\nY como dicta nuestro destino, nuestro llamado demanda nuestro sudor y nuestra sangre, todos los días y en todo momento. Ayúdanos, primo. Ayúdanos encontrando a Tolman."
       ],
       [
         "MaramoaClarissaClue3",
-        "Maramoa Patua te agradece por traer a Clarissa de vuelta con nosotros. Es el corazón amable de este lugar, un espíritu capaz de amar en este páramo de odio.\r\n\r\nSin embargo, ese corazón amable está en juego. Tolman es muy poco para Clarissa, pero ella no sonreirá hasta que él esté a su lado.\r\n\r\nTienes el caminar y la gracia de una mujer que conoce a la Muerte íntimamente. Los hombres nacen con ese conocimiento. Nosotras debemos ganárnoslo.\r\n\r\nAsí que de una mujer a otra, te pido ayuda, Cazadora. Por favor, encuentra a Tolman por nosotros."
+        "Maramoa Patua te agradece por traer a Clarissa de vuelta con nosotros. Es el corazón amable de este lugar, un espíritu capaz de amar en este páramo de odio.\r\n\r\nSin embargo, ese corazón amable está en juego. Tolman es muy poco para Clarissa, pero ella no sonreirá hasta que él esté a su lado.\r\n\r\nTienes el caminar y la gracia de una mujer que conoce a la Muerte íntimamente. Los hombres nacen con ese conocimiento. Nosotras debemos ganárnoslo.\r\n\r\nAsí que, de una mujer a otra, te pido ayuda, Cazadora. Por favor, encuentra a Tolman por nosotros."
       ],
       [
         "MaramoaClarissaReward",
@@ -10390,7 +10414,7 @@
       ],
       [
         "MaramoaOnHargan",
-        "Hargan es un hombre de muchas afirmaciones, y esas afirmaciones rara vez bailan al mismo ritmo. La mentira es una sentencia de muerte en Ngamakanui, por lo que me criaron como una hija de la Verdad. Hargan es hijo del egoismo. No es un guerrero ni un cantante del espíritu; es un <italic>{korangi}. No conozco la palabra correcta en el idioma de Oriath, pero en Karui significa \"aquel que gana guerras con promesas falsas\"."
+        "Hargan es un hombre de muchas afirmaciones, y esas afirmaciones rara vez bailan al mismo ritmo. La mentira es una sentencia de muerte en Ngamakanui, por lo que me criaron como una hija de la Verdad. Hargan es hijo del egoísmo. No es un guerrero ni un cantante del espíritu; es un <italic>{korangi}. No conozco la palabra correcta en el idioma de Oriath, pero en Karui significa \"aquel que gana guerras con promesas falsas\"."
       ],
       [
         "MaramoaOnGrigor",
@@ -10430,7 +10454,7 @@
       ],
       [
         "MaramoaOnStench",
-        "Encontraste un modo de llegar al otro lado. Bien, pero no te acerques más por favor. Alcantarilla con un toque de no muerto rostizado... es una poderosa fragancia. Asegúrate de pararte a contravieno de la carpa de Gravicius cuando llegues al Barracón. No querrás perder el elemento sorpresa."
+        "Encontraste un modo de llegar al otro lado. Bien, pero no te acerques más por favor. Alcantarilla con un toque de no muerto rostizado... es una poderosa fragancia. Asegúrate de pararte a contraviento de la carpa de Gravicius cuando llegues al Barracón. No querrás perder el elemento sorpresa."
       ],
       [
         "MaramoaOnPiety",
@@ -10510,7 +10534,7 @@
       ],
       [
         "ClarissaOnGrigor",
-        "Nadie debería pasar por lo que pasó Grigor. Lo ayudo lo más que puedo, pero es orgulloso... y está bien que lo sea.\r\n\r\nSobrevivió a lo que ha destruído... a demasiados de nosotros."
+        "Nadie debería pasar por lo que pasó Grigor. Lo ayudo lo más que puedo, pero es orgulloso... y está bien que lo sea.\r\n\r\nSobrevivió a lo que ha destruido... a demasiados de nosotros."
       ],
       [
         "ClarissaOnKeys",
@@ -10534,7 +10558,7 @@
       ],
       [
         "ClarissaGraviciusDead",
-        "Gravicius cenó con nosotros en una ocasión. Fue antes de que las deudas de mi padre en las apuestas lo sobrepsaran. Cené con él nuevamente, en la prisión de Teópolis, la noche antes de mi exilio. No fue muy educado ese día...\r\n\r\nGracias. Ya puedo dejar atrás esa memoria."
+        "Gravicius cenó con nosotros en una ocasión. Fue antes de que las deudas de mi padre en las apuestas lo sobrepasaran. Cené con él nuevamente, en la prisión de Teópolis, la noche antes de mi exilio. No fue muy educado ese día...\r\n\r\nGracias. Ya puedo dejar atrás esa memoria."
       ],
       [
         "ClarissaOnCataclysm",
@@ -10614,7 +10638,7 @@
       ],
       [
         "ShavronneDiary",
-        "Los bárbaros Karui siguen avanzando hacia nosotros. Lioneye está muerto, su legión ha sido masacrada junto con cada hombre, mujer y niño Eterno desde la Vigilancia de Lioneye hasta el pie de Axiom. Si se hace necesario, retrocederemos a través de la Puerta del Prisionero y levantaré mi barricada detrás nuestro.\r\n\r\nAún así, nuestra salvación está aquí. Los tiempos difíciles requieren hazañas heróicas, y gracias a mis artes nuestro Señor Brutus se levantará para defendernos. Que las secas arenas aplaquen su sed con sangre Karui cuando nuestro poderoso Guardián haga caer su sentencia sobre ellos."
+        "Los bárbaros Karui siguen avanzando hacia nosotros. Lioneye está muerto, su legión ha sido masacrada junto con cada hombre, mujer y niño Eterno desde la Vigilancia de Lioneye hasta el pie de Axiom. Si se hace necesario, retrocederemos a través de la Puerta del Prisionero y levantaré mi barricada detrás nuestro.\r\n\r\nAun así, nuestra salvación está aquí. Los tiempos difíciles requieren hazañas heroicas, y gracias a mis artes nuestro Señor Brutus se levantará para defendernos. Que las secas arenas aplaquen su sed con sangre Karui cuando nuestro poderoso Guardián haga caer su sentencia sobre ellos."
       ],
       [
         "ArteriLetter",
@@ -10642,7 +10666,7 @@
       ],
       [
         "HelenaOnDominus",
-        "Creía que Dóminus era un líder con visión, con propósito. El hombre que resucitaría al Imperio Eterno. En la realidad, Dóminus solo quiere poder... el negro, taumatúrgico poder encerrado en las Gemas de Virtud. Desea crear un nuevo imperio a su imágen y semejanza. Bebía cada noche para tratar de borrar esa imágen de mi mente. Aún sigue ahí."
+        "Creía que Dóminus era un líder con visión, con propósito. El hombre que resucitaría al Imperio Eterno. En la realidad, Dóminus solo quiere poder... el negro, taumatúrgico poder encerrado en las Gemas de Virtud. Desea crear un nuevo imperio a su imagen y semejanza. Bebía cada noche para tratar de borrar esa imagen de mi mente. Aún sigue ahí."
       ],
       [
         "HelenaOnPassage",
@@ -10658,11 +10682,11 @@
       ],
       [
         "HelenaOnBalefulGem",
-        "De acuerdo a sus notas, la Gema Funesta fue un subproducto de los intentos de Malígaro de mejorar las ya formidables cualidades de las gemas de virtud. Fue un miserable fracaso, peor Malígaro no era del tipo que desperdicia sus atrocidades.\r\n\r\nAl combinar la Gema Funesta con el veneno extraído de uno de sus sujetos arácnidos, preparó algo llamado \"Elixir Negro\". Orgullosamente, lo proclamó \"el más potente veneno que existe\" hasta que fue robado por un hombre llamado Victario.\r\n\r\nFue interesante en cierto modo leer las intenciones de Malígaro para con Victario una vez que lo capturó. Retorcidas... y sin embargo no puedo criticar la creatividad del Inquisidor."
+        "De acuerdo con sus notas, la Gema Funesta fue un subproducto de los intentos de Malígaro de mejorar las ya formidables cualidades de las gemas de virtud. Fue un miserable fracaso, peor Malígaro no era del tipo que desperdicia sus atrocidades.\r\n\r\nAl combinar la Gema Funesta con el veneno extraído de uno de sus sujetos arácnidos, preparó algo llamado \"Elixir Negro\". Orgullosamente, lo proclamó \"el más potente veneno que existe\" hasta que fue robado por un hombre llamado Victario.\r\n\r\nFue interesante en cierto modo leer las intenciones de Malígaro para con Victario una vez que lo capturó. Retorcidas... y sin embargo no puedo criticar la creatividad del Inquisidor."
       ],
       [
         "HelenaOnLorrata",
-        "Piedad hubiera estado de acuerdo con la teoría de Eramir sobre la ruina al noroeste. Los Vaal eran una poderosa civilización que precedía incluso al Imperio Eterno, y Piedad tenía gran interés en ver qué juguetes podían haber dejado los Vaal con los que ella pudiera jugar dentro de esas puertas de piedra. Sin embargo, no pudimos abrirlas. No con ese árbol gigante apretándolas entre sus raíces.\r\n\r\nAhora tienes la solución a ese problema, o mejor dicho, una enfermedad útil. Usa la Púa para inyectar el calibric extantia de la Gema Funesta en las raíces. Un día de estos, Piedad encontrará el modo de entrar a las ruinas. Es necesario que entres primero."
+        "Piedad hubiera estado de acuerdo con la teoría de Eramir sobre la ruina al noroeste. Los Vaal eran una poderosa civilización que precedía incluso al Imperio Eterno, y Piedad tenía gran interés en ver qué juguetes podían haber dejado los Vaal con los que ella pudiera jugar dentro de esas puertas de piedra. Sin embargo, no pudimos abrirlas. No con ese árbol gigante apretándolas entre sus raíces.\r\n\r\nAhora tienes la solución a ese problema o, mejor dicho, una enfermedad útil. Usa la Púa para inyectar el calibric extantia de la Gema Funesta en las raíces. Un día de estos, Piedad encontrará el modo de entrar a las ruinas. Es necesario que entres primero."
       ],
       [
         "HelenaOnDarkness",
@@ -10670,7 +10694,7 @@
       ],
       [
         "HelenaPyramidClue",
-        "Una montaña con cuatro lados escarpados construída por el hombre... es una pirámide. Arquitectura Vaal.\r\n\r\nHe recorrido mucho del campo con Piedad y no he visto nada como eso. De cualquier modo, la historia tiene el hábito de enterrar a sus muertos. Quizá sería bueno que mires hacia abajo en lugar de hacia arriba."
+        "Una montaña con cuatro lados escarpados construida por el hombre... es una pirámide. Arquitectura Vaal.\r\n\r\nHe recorrido mucho del campo con Piedad y no he visto nada como eso. De cualquier modo, la historia tiene el hábito de enterrar a sus muertos. Quizá sería bueno que mires hacia abajo en lugar de hacia arriba."
       ],
       [
         "HelenaOnLight",
@@ -10794,7 +10818,7 @@
       ],
       [
         "PietyIntroPrison4",
-        "La ignoracia te trajo aquí, hermana. Al único lugar donde tus talentos pueden crecer libremente y ser realmente temidos."
+        "La ignorancia te trajo aquí, hermana. Al único lugar donde tus talentos pueden crecer libremente y ser realmente temidos."
       ],
       [
         "PietyIntroPrison5",
@@ -10854,7 +10878,7 @@
       ],
       [
         "PietyIntroSins4",
-        "El fracaso duele, hermana. Y aún así el dolor es el mejor maestro."
+        "El fracaso duele, hermana. Y aun así el dolor es el mejor maestro."
       ],
       [
         "PietyIntroSins5",
@@ -10878,11 +10902,11 @@
       ],
       [
         "SiosaPageQuest",
-        "<if:MS>{En circunstancias más mundanas sería absurdo pedirte esto, a ti que eres un completo extraño, pero ya que no se en qué siglo volveré a ver otro par de manos de carne y hueso...\r\n\r\nHay una puerta, ¿sabes?, escondida detrás de los estantes, que lleva a los Archivos. Allí es donde Icius Perandus escondió sus Páginas Doradas. ¿Entiendes lo enloquecedor que es eso para mí? No, claro que no. Es ridículo que... bien, alcanza con decir que están fuera de mi alcance.\r\n\r\nSon cuatro textos Vaal, con información histórica invaluable. Por favor, encuentra las Páginas Doradas de mi amigo y tráemelas. Serás recompensado. Lo juro ante los Ancestros.}<elif:FS>{En circunstancias más mundanas sería absurdo pedirte esto, a ti que eres una completa extraña, pero ya que no se en qué siglo volveré a ver otro par de manos de carne y hueso...\r\n\r\nHay una puerta, ¿sabes?, escondida detrás de los estantes, que lleva a los Archivos. Allí es donde Icius Perandus escondió sus Páginas Doradas. ¿Entiendes lo enloquecedor que es eso para mí? No, claro que no. Es ridículo que... bien, alcanza con decir que están fuera de mi alcance.\r\n\r\nSon cuatro textos Vaal, con información histórica invaluable. Por favor, encuentra las Páginas Doradas de mi amigo y tráemelas. Serás recompensada. Lo juro ante los Ancestros.}"
+        "<if:MS>{En circunstancias más mundanas sería absurdo pedirte esto, a ti que eres un completo extraño, pero ya que no sé en qué siglo volveré a ver otro par de manos de carne y hueso...\r\n\r\nHay una puerta, ¿sabes?, escondida detrás de los estantes, que lleva a los Archivos. Allí es donde Icius Perandus escondió sus Páginas Doradas. ¿Entiendes lo enloquecedor que es eso para mí? No, claro que no. Es ridículo que... bien, alcanza con decir que están fuera de mi alcance.\r\n\r\nSon cuatro textos Vaal, con información histórica invaluable. Por favor, encuentra las Páginas Doradas de mi amigo y tráemelas. Serás recompensado. Lo juro ante los Ancestros.}<elif:FS>{En circunstancias más mundanas sería absurdo pedirte esto, a ti que eres una completa extraña, pero ya que no sé en qué siglo volveré a ver otro par de manos de carne y hueso...\r\n\r\nHay una puerta, ¿sabes?, escondida detrás de los estantes, que lleva a los Archivos. Allí es donde Icius Perandus escondió sus Páginas Doradas. ¿Entiendes lo enloquecedor que es eso para mí? No, claro que no. Es ridículo que... bien, alcanza con decir que están fuera de mi alcance.\r\n\r\nSon cuatro textos Vaal, con información histórica invaluable. Por favor, encuentra las Páginas Doradas de mi amigo y tráemelas. Serás recompensada. Lo juro ante los Ancestros.}"
       ],
       [
         "SiosaPagesDelivered",
-        "Por los Ancestros, qué bueno es ver palabras frescas frente a mi.\r\n\r\nAhora bien, mis habilidades de traducción no son como las de Icius. Puedo hacer una mera paráfrasis, como mucho. Pero un poco de conocimiento es mejor que nada, ¿no es así?\r\n\r\nEmpecemos."
+        "Por los Ancestros, qué bueno es ver palabras frescas frente a mí.\r\n\r\nAhora bien, mis habilidades de traducción no son como las de Icius. Puedo hacer una mera paráfrasis, como mucho. Pero un poco de conocimiento es mejor que nada, ¿no es así?\r\n\r\nEmpecemos."
       ],
       [
         "SiosaPagesReward",
@@ -10890,7 +10914,7 @@
       ],
       [
         "SiosaOnArchives",
-        "Es Tradición Karui observar a la naturaleza en su hábitat natural. El pez sin el agua ya no es un pez. Es la cena.\r\n\r\nLos Eternos no lo veían de es forma. Un Eterno atrapa el pescado, lo evisceran, lo preservan y lo colocan en una caja. Recién en ese momento un Eterno siente que realmente entiende al pez."
+        "Es Tradición Karui observar a la naturaleza en su hábitat natural. El pez sin el agua ya no es un pez. Es la cena.\r\n\r\nLos Eternos no lo veían de esa forma. Un Eterno atrapa el pescado, lo evisceran, lo preservan y lo colocan en una caja. Recién en ese momento un Eterno siente que realmente entiende al pez."
       ],
       [
         "SiosaTranslation1",
@@ -10902,7 +10926,7 @@
       ],
       [
         "SiosaTranslation3",
-        "Oh, vaya, esta línea es aterradoramente clara:\r\n\r\n<i>{Nuestra Reina está muerta. Doryani está muerta. Tantos han caído. Tantos han cambiado.}\r\n\r\nEl siguiente texto es casi indescifrable. Practicamente zumba de agitación. Déjame ver... puedo entender las palabras \"dormir\", \"pesadilla\" y... \"la Bestia\", sea lo que sea eso. Nuestro historiador finaliza con:\r\n\r\n<i>{Hemos triunfado donde nuestros antepasados no pudieron. Nos hemos fallado a nosotros mismos.}\r\n\r\nNo necesito imaginar la caída de los Vaal. Vi la pesadilla con mis propios ojos."
+        "Oh, vaya, esta línea es aterradoramente clara:\r\n\r\n<i>{Nuestra Reina está muerta. Doryani está muerta. Tantos han caído. Tantos han cambiado.}\r\n\r\nEl siguiente texto es casi indescifrable. Prácticamente zumba de agitación. Déjame ver... puedo entender las palabras \"dormir\", \"pesadilla\" y... \"la Bestia\", sea lo que sea eso. Nuestro historiador finaliza con:\r\n\r\n<i>{Hemos triunfado donde nuestros antepasados no pudieron. Nos hemos fallado a nosotros mismos.}\r\n\r\nNo necesito imaginar la caída de los Vaal. Vi la pesadilla con mis propios ojos."
       ],
       [
         "SiosaTranslation4",
@@ -10926,7 +10950,7 @@
       ],
       [
         "SiosaOnCataclysm",
-        "Sarn cayó en el transcurso de una hora, no más. Una tempestad sugió desde las montañas y devoró a la ciudad, con lo que el día se hundió en oscuridad.\r\n\r\nVi locura en los ojos de mis colegas. Observé cómo los hombres más racionales del Imperio parloteaban, babeaban y se mataban los unos a los otros.\r\n\r\nFui testigo de cómo Trinian, nuestro Intelecto Primigenio gemita, fue devorado por el fulgor de su gema craneal ardiente y se marchitó como una uva al sol, hasta convertirse en una cosa desecada y hambrienta.\r\n\r\nVi a las montañas escupir fuego en Ngamakanui. Vi olas tan altas como árboles y vientos que aplastaban a guerreros y a muros por igual. La naturaleza es la naturaleza.\r\n\r\nNo había nada natural en el cataclismo. "
+        "Sarn cayó en el transcurso de una hora, no más. Una tempestad surgió desde las montañas y devoró a la ciudad, con lo que el día se hundió en oscuridad.\r\n\r\nVi locura en los ojos de mis colegas. Observé cómo los hombres más racionales del Imperio parloteaban, babeaban y se mataban los unos a los otros.\r\n\r\nFui testigo de cómo Trinian, nuestro Intelecto Primigenio gemita, fue devorado por el fulgor de su gema craneal ardiente y se marchitó como una uva al sol, hasta convertirse en una cosa desecada y hambrienta.\r\n\r\nVi a las montañas escupir fuego en Ngamakanui. Vi olas tan altas como árboles y vientos que aplastaban a guerreros y a muros por igual. La naturaleza es la naturaleza.\r\n\r\nNo había nada natural en el cataclismo. "
       ],
       [
         "Fairgraves2Introduction",
@@ -10934,7 +10958,7 @@
       ],
       [
         "Fairgraves2HopeQuest",
-        "<if:MS>{Estás interesado, ¿verdad? ¡Espléndido!\r\n\r\nA cambio, tengo un regalo o dos que puedo entregarte con un chasquido de mis translúcidos dedos.\r\n\r\nTodo lo que necesito es que me proveas una vasija de cristal y una jugosa fruta, dos objetos humildes que se encuentran agónicamente fuiera del alcance de un hombre en mi... peculiar situación.}<elif:FS>{Estás interesada, ¿verdad? ¡Espléndido!\r\n\r\nA cambio, tengo un regalo o dos que puedo entregarte con un chasquido de mis translúcidos dedos.\r\n\r\nTodo lo que necesito es que me proveas una vasija de cristal y una jugosa fruta, dos objetos humildes que se encuentran agónicamente fuiera del alcance de un hombre en mi... peculiar situación.}"
+        "<if:MS>{Estás interesado, ¿verdad? ¡Espléndido!\r\n\r\nA cambio, tengo un regalo o dos que puedo entregarte con un chasquido de mis translúcidos dedos.\r\n\r\nTodo lo que necesito es que me proveas una vasija de cristal y una jugosa fruta, dos objetos humildes que se encuentran agónicamente fuera del alcance de un hombre en mi... peculiar situación.}<elif:FS>{Estás interesada, ¿verdad? ¡Espléndido!\r\n\r\nA cambio, tengo un regalo o dos que puedo entregarte con un chasquido de mis translúcidos dedos.\r\n\r\nTodo lo que necesito es que me proveas una vasija de cristal y una jugosa fruta, dos objetos humildes que se encuentran agónicamente fuera del alcance de un hombre en mi... peculiar situación.}"
       ],
       [
         "Fairgraves2Delivered",
@@ -10990,7 +11014,7 @@
       ],
       [
         "BeachEncampmentNote3",
-        "<b>{Lothar de Wetherdale}\r\n\r\nHas pecado contra tu Dios y tu Prójimo. Has sido una vasija voluntaria para albergar los siguientes Pecados.\r\n\r\n<b>{Envidia Civil}\r\n\r\n<i>{Cuatro cargos por minar la autoridad de los Templarios\r\n\r\nUn cargo por difamar a un Templario de la Máas Alta Reverencia}\r\n\r\nDios me ha encomendado tu redención. Por la presente, eres Exiliado a Wraeclast, donde, esperamos, logres arrepentirte de tus Pecados y alcances la paz con tu amado Padre.\r\n\r\n- Alto Templario Dóminus"
+        "<b>{Lothar de Wetherdale}\r\n\r\nHas pecado contra tu Dios y tu Prójimo. Has sido una vasija voluntaria para albergar los siguientes Pecados.\r\n\r\n<b>{Envidia Civil}\r\n\r\n<i>{Cuatro cargos por minar la autoridad de los Templarios\r\n\r\nUn cargo por difamar a un Templario de la Más Alta Reverencia}\r\n\r\nDios me ha encomendado tu redención. Por la presente, eres Exiliado a Wraeclast, donde, esperamos, logres arrepentirte de tus Pecados y alcances la paz con tu amado Padre.\r\n\r\n- Alto Templario Dóminus"
       ],
       [
         "BeachEncampmentNote4",
@@ -11010,7 +11034,7 @@
       ],
       [
         "BeachEncampmentNote8",
-        "<b>{Kraityn de Teópolis}\r\n\r\nHas pecado contra tu Dios y tu Prójimo. Has sido una vasija voluntaria para albergar los siguientes Pecados.\r\n\r\n<b>{Avaricia Ilegal}\r\n\r\n<i>{Dos cargos por Robo de Propiedad de la Iglesia\r\n\r\nSiete cargos por Robo de Propiedad Privada\r\n\r\nNueve cargos por Extorsión a través de Amenazas de Daño Mortal\r\n\r\nCuatro cargos por Robo Armado}\r\n\r\n<b>{Pereza Monetaria}\r\n\r\n<i>{No tener intención de obtener una Ocupación de Valor para la Sociedad\r\n\r\nAtraer a Ciudadanos hacia conductas de naturaleza Lasciva y Depravada}\r\n\r\n<b>{Envidia Civil}\r\n\r\n<i>{Dos cargos por Chantaje a un Oficial de la Inglesia\r\n\r\nOcho cargos por Intento de Corrupción sobre un Miembro de la Legión de Ébano\r\n\r\nDos cargos por Incitar al Pueblo hacia Conductas Libertinas}\r\n\r\n<b>{Vanidad Ilegal}\r\n\r\n<i>{Dieciocho cargos por Abuso Verbal contra un Oficial de la Iglesia\r\n\r\nVeintisiete cargos por Abuso Verbal contra un Oficial de la Legión de Ébano\r\n\r\nOcho cargos por promover Públicamente Prácticas Ilegales y Libidinosas}\r\n\r\n<b>{Gula Narcótica}\r\n\r\n<i>{Trece cargos por Suministrar sustancias Narcóticas\r\n\r\nCuatro cargos por Cultivar sustancias Narcóticas\r\n\r\nUn cargo por Obscenidad en Público bajo la Influencia de sustancias Narcóticas}\r\n\r\n<b>{Lujuria Monetaria}\r\n\r\n<i>{Nueve cargos por Proxenetismo\r\n\r\nDos cargos por Dirigir un Burdel\r\n\r\nSeis cargos por Prostitución que involucran Actos Profanos y Degradantes}\r\n\r\n<b>{Ira Mercantil}\r\n\r\n<i>{Once cargos por Homicidio simple con Ganancia Monetaria\r\n\r\nCuatro cargos por Homicidio de un Oficial de la Legión de Ébano con Ganancia Monetaria\r\n\r\nDos cargos de Homicidio Episcopal con Ganancia Monetaria\r\n\r\nUn cargo por Matricidio con Ganancia Monetaria}\r\n\r\nDios me ha encomendado tu redención. Por la presente, eres Exiliado a Wraeclast, donde, esperamos, logres arrepentirte de tus Pecados y alcances la paz con tu amado Padre.\r\n\r\n- Alto Templario Dóminus"
+        "<b>{Kraityn de Teópolis}\r\n\r\nHas pecado contra tu Dios y tu Prójimo. Has sido una vasija voluntaria para albergar los siguientes Pecados.\r\n\r\n<b>{Avaricia Ilegal}\r\n\r\n<i>{Dos cargos por Robo de Propiedad de la Iglesia\r\n\r\nSiete cargos por Robo de Propiedad Privada\r\n\r\nNueve cargos por Extorsión a través de Amenazas de Daño Mortal\r\n\r\nCuatro cargos por Robo Armado}\r\n\r\n<b>{Pereza Monetaria}\r\n\r\n<i>{No tener intención de obtener una Ocupación de Valor para la Sociedad\r\n\r\nAtraer a Ciudadanos hacia conductas de naturaleza Lasciva y Depravada}\r\n\r\n<b>{Envidia Civil}\r\n\r\n<i>{Dos cargos por Chantaje a un Oficial de la Iglesia\r\n\r\nOcho cargos por Intento de Corrupción sobre un Miembro de la Legión de Ébano\r\n\r\nDos cargos por Incitar al Pueblo hacia Conductas Libertinas}\r\n\r\n<b>{Vanidad Ilegal}\r\n\r\n<i>{Dieciocho cargos por Abuso Verbal contra un Oficial de la Iglesia\r\n\r\nVeintisiete cargos por Abuso Verbal contra un Oficial de la Legión de Ébano\r\n\r\nOcho cargos por promover Públicamente Prácticas Ilegales y Libidinosas}\r\n\r\n<b>{Gula Narcótica}\r\n\r\n<i>{Trece cargos por Suministrar sustancias Narcóticas\r\n\r\nCuatro cargos por Cultivar sustancias Narcóticas\r\n\r\nUn cargo por Obscenidad en Público bajo la Influencia de sustancias Narcóticas}\r\n\r\n<b>{Lujuria Monetaria}\r\n\r\n<i>{Nueve cargos por Proxenetismo\r\n\r\nDos cargos por Dirigir un Burdel\r\n\r\nSeis cargos por Prostitución que involucran Actos Profanos y Degradantes}\r\n\r\n<b>{Ira Mercantil}\r\n\r\n<i>{Once cargos por Homicidio simple con Ganancia Monetaria\r\n\r\nCuatro cargos por Homicidio de un Oficial de la Legión de Ébano con Ganancia Monetaria\r\n\r\nDos cargos de Homicidio Episcopal con Ganancia Monetaria\r\n\r\nUn cargo por Matricidio con Ganancia Monetaria}\r\n\r\nDios me ha encomendado tu redención. Por la presente, eres Exiliado a Wraeclast, donde, esperamos, logres arrepentirte de tus Pecados y alcances la paz con tu amado Padre.\r\n\r\n- Alto Templario Dóminus"
       ],
       [
         "BeachEncampmentNote9",
@@ -11030,7 +11054,7 @@
       ],
       [
         "BeachEncampmentNote13",
-        "<b>{Maitlin of Theopolis}\r\n\r\nHas pecado contra tu Dios y tu Prójimo. Has sido una vasija voluntaria para albergar los siguientes Pecados.\r\n\r\n<b>{Pereza Disciplinaria}\r\n\r\n<i>{Un cargo por Negligencia seguido de Daño Físico\r\n\r\nUn cagro por Negligencia seguida de Daño Patrimonial}\r\n\r\nDios me ha encomendado tu redención. Por la presente, eres Exiliado a Wraeclast, donde, esperamos, logres arrepentirte de tus Pecados y alcances la paz con tu amado Padre.\r\n\r\n- Alto Templario Dóminus"
+        "<b>{Maitlin de Theopolis}\r\n\r\nHas pecado contra tu Dios y tu Prójimo. Has sido una vasija voluntaria para albergar los siguientes Pecados.\r\n\r\n<b>{Pereza Disciplinaria}\r\n\r\n<i>{Un cargo por Negligencia seguido de Daño Físico\r\n\r\nUn cargo por Negligencia seguido de Daño Patrimonial}\r\n\r\nDios me ha encomendado tu redención. Por la presente, eres Exiliado a Wraeclast, donde, esperamos, logres arrepentirte de tus Pecados y alcances la paz con tu amado Padre.\r\n\r\n- Alto Templario Dóminus"
       ],
       [
         "BeachEncampmentNote14",
@@ -11042,7 +11066,7 @@
       ],
       [
         "KaruiStone1",
-        "La canoa de Kaom golpeó estas arenas con la fuerza del destino. A sus espaldas, la más grande horda de guerra guerra de la historia Karui aplacó el salvaje mar a medida que sus canoas llegaban a tierra, una a una.\r\n\r\nLos Gemitas de Lioneye nos recibieron con metal brillante y palabras osadas. Las flechas de Hyrri marchitaron su orgullo. Las hachas de Kaom silenciaron su desesperación. Marceus Lioneye luchó con valor, hasta el último momento. Kaom lo honró con un lugar en su cinturón.\r\n\r\nKaom le ha mostrado a Wraeclast la fuerza Karui. Kaom le enseñará a Wraeclast la Tradición Karui."
+        "La canoa de Kaom golpeó estas arenas con la fuerza del destino. A sus espaldas, la más grande horda de guerra de la historia Karui aplacó el salvaje mar a medida que sus canoas llegaban a tierra, una a una.\r\n\r\nLos Gemitas de Lioneye nos recibieron con metal brillante y palabras osadas. Las flechas de Hyrri marchitaron su orgullo. Las hachas de Kaom silenciaron su desesperación. Marceus Lioneye luchó con valor, hasta el último momento. Kaom lo honró con un lugar en su cinturón.\r\n\r\nKaom le ha mostrado a Wraeclast la fuerza Karui. Kaom le enseñará a Wraeclast la Tradición Karui."
       ],
       [
         "KaruiStone2",
@@ -11270,7 +11294,7 @@
       ],
       [
         "VaalLetter4",
-        "\"Soy solo una vulgar imágen de nuestra Reina de Belleza Infinita. Muero hoy para que los Vaal puedan disfrutar de su Resplandor mañana.\""
+        "\"Soy solo una vulgar imagen de nuestra Reina de Belleza Infinita. Muero hoy para que los Vaal puedan disfrutar de su Resplandor mañana.\""
       ],
       [
         "VaalLetter5",
@@ -11346,7 +11370,7 @@
       ],
       [
         "DiallaGemQuest",
-        "¿Sabes, No-Cucaracha? Si hubiese aceptado mi lugar, mi lugar en el rapto, la Bestia no sería ni más ni menos, no existiría. Mi egoismo le hizo cosquillas a la imaginación de la Bestia, que se llevó el mundo que conocí entre sus carcajadas.\r\n\r\n Sin embargo, he tenido mucho tiempo para pensar durante mi soledad. Mucho tiempo para hacerme preguntas. Me pregunto si el Rapto realmente necesita alimentarse de una Reina Gemita.\r\n\r\nQuizá algo más pueda hacerla babear sus catastróficos jugos. Algo como... ¡sopa de ojos!\r\n\r\nEl Ojo de la Furia. El Ojo del Deseo. Bellas gemas para nuestros bellos diseños. Pero, ¿dónde pueden estar? No te preocupes, tengo algunas suposiciones.\r\n\r\nKaom, el Soberano de la Matanza. Aún perdura y sufre sus delirios aquí en las salas de la pesadilla. La furia es todo lo que Kaom conoce, así que Furia es lo que debe tener.\r\n\r\nDaresso, Rey de Espadas. Condenado por el Deseo. ¿Aunque no lo estamos todos? Está aquí abajo también, y la maldición del Deseo sigue en sus manos.\r\n\r\nVe, No-Cucaracha. Tráeme las joyas de la corona para que podamos despertar el Rapto y ¡finalmente ponerle acabar con esta fastidiosa Bestia!"
+        "¿Sabes, No-Cucaracha? Si hubiese aceptado mi lugar, mi lugar en el rapto, la Bestia no sería ni más ni menos, no existiría. Mi egoísmo le hizo cosquillas a la imaginación de la Bestia, que se llevó el mundo que conocí entre sus carcajadas.\r\n\r\n Sin embargo, he tenido mucho tiempo para pensar durante mi soledad. Mucho tiempo para hacerme preguntas. Me pregunto si el Rapto realmente necesita alimentarse de una Reina Gemita.\r\n\r\nQuizá algo más pueda hacerla babear sus catastróficos jugos. Algo como... ¡sopa de ojos!\r\n\r\nEl Ojo de la Furia. El Ojo del Deseo. Bellas gemas para nuestros bellos diseños. Pero, ¿dónde pueden estar? No te preocupes, tengo algunas suposiciones.\r\n\r\nKaom, el Soberano de la Matanza. Aún perdura y sufre sus delirios aquí en las salas de la pesadilla. La furia es todo lo que Kaom conoce, así que Furia es lo que debe tener.\r\n\r\nDaresso, Rey de Espadas. Condenado por el Deseo. ¿Aunque no lo estamos todos? Está aquí abajo también, y la maldición del Deseo sigue en sus manos.\r\n\r\nVe, No-Cucaracha. Tráeme las joyas de la corona para que podamos despertar el Rapto y ¡finalmente ponerle acabar con esta fastidiosa Bestia!"
       ],
       [
         "DiallaKaomGem",
@@ -12686,7 +12710,7 @@
       ],
       [
         "TasuniOnCataclysm",
-        "A los Espectros no les interesan las palabras. Hablas en pesadilla es hablar en emoción y en imágen... en pensamiento.\r\n\r\nVeo y siento la oscuridad, y de esa forma es como sé que el cataclismo no fue un accidente. Sus imágenes rebasan de intención, están muy embebidas en satisfacción.\r\n\r\nLa satisfacción de Malachai. Malachai devastó a mi gente y destruyó al Imperio Eterno por una razón. Para colocarse donde está ahora, dentro del Corazón Negro de la Bestia."
+        "A los Espectros no les interesan las palabras. Hablas en pesadilla es hablar en emoción y en imagen... en pensamiento.\r\n\r\nVeo y siento la oscuridad, y de esa forma es como sé que el cataclismo no fue un accidente. Sus imágenes rebasan de intención, están muy embebidas en satisfacción.\r\n\r\nLa satisfacción de Malachai. Malachai devastó a mi gente y destruyó al Imperio Eterno por una razón. Para colocarse donde está ahora, dentro del Corazón Negro de la Bestia."
       ],
       [
         "TasuniOnGodlessThree",
@@ -28546,7 +28570,7 @@
       ],
       [
         "ZanaSynthMemoryLibraryC",
-        "Tantos libros han sido destruídos por los problemas de Wraeclast a través de los años. Algún día espero poder ayudar a reconstruir las bibliotecas de Oriath con conocimiento nuevo."
+        "Tantos libros han sido destruidos por los problemas de Wraeclast a través de los años. Algún día espero poder ayudar a reconstruir las bibliotecas de Oriath con conocimiento nuevo."
       ],
       [
         "ZanaSynthMemoryLunarisA",
@@ -32086,7 +32110,7 @@
       ],
       [
         "SirusGlyph3",
-        "Hemos arrinconado a nuestro enemigo en el corazón del Atlas. Siento mucho dolor por Zana. Su padre quedó atrapado en medio de toda esta debacle, y no veo posible que salga vivo.\r\n\r\nDrox ha estado inusualmente callado todo el día. Al-Hezmin ha estado revisando sus suministros una y otra vez. Baran y Veritania ni siquiera han discutido. Todos sabemos que estos pueden ser nuestros últimos momentos de vida.\r\n\r\nPasé tanto tiempo buscando riqueza y notoriedad... Dioses, si tan solo pudiera volver el tiempo atrás. Sin ninguna finalidad, sin propósito más allá de mi propio egoismo... Cuánto tiempo perdido.\r\n\r\nSi mañana sobrevivo, le diré a ella cómo me siento."
+        "Hemos arrinconado a nuestro enemigo en el corazón del Atlas. Siento mucho dolor por Zana. Su padre quedó atrapado en medio de toda esta debacle, y no veo posible que salga vivo.\r\n\r\nDrox ha estado inusualmente callado todo el día. Al-Hezmin ha estado revisando sus suministros una y otra vez. Baran y Veritania ni siquiera han discutido. Todos sabemos que estos pueden ser nuestros últimos momentos de vida.\r\n\r\nPasé tanto tiempo buscando riqueza y notoriedad... Dioses, si tan solo pudiera volver el tiempo atrás. Sin ninguna finalidad, sin propósito más allá de mi propio egoísmo... Cuánto tiempo perdido.\r\n\r\nSi mañana sobrevivo, le diré a ella cómo me siento."
       ],
       [
         "SirusGlyph4",
@@ -59603,6 +59627,106 @@
       [
         "DannigEncounterComplete6",
         "¡Ja!"
+      ],
+      [
+        "HellscapeNPCIntroduction",
+        "Ya no tengo tiempo. Estoy demasiado débil para mantener el Crisol de sangre. Tómalo… aduéñate de su poder."
+      ],
+      [
+        "HellscapeNPCDeliverDreamFurnace",
+        "¿Encontraste la Fragua de los sueños? Era una invención condenada de una época donde había más esperanza. Solo nos trajo dolor… pero quizás, en tus manos, las cosas sean diferentes."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleInstalled",
+        "<if:MS>{Le agrada tu sabor. La herida que está alrededor nunca sanará completamente, porque el Crisol está hambriento. Debes alimentarlo con lo que haces mejor: derramar sangre. Si no lo haces, querrá tomar la tuya.\r\n\r\nYa no hay tiempo. Ve, activa el Crisol de sangre.  Viaja hacia la Pesadilla. Descubre la horrible verdad por ti mismo.}<elif:FS>{Le agrada tu sabor. La herida que está alrededor nunca sanará completamente, porque el Crisol está hambriento. Debes alimentarlo con lo que haces mejor: derramar sangre. Si no lo haces, querrá tomar la tuya.\r\n\r\nYa no hay tiempo. Ve, activa el Crisol de sangre.  Viaja hacia la Pesadilla. Descubre la horrible verdad por ti misma.}"
+      ],
+      [
+        "HellscapeNPCMoreInformation",
+        "¿Lo ves ahora, cierto? Los demonios de la Calamidad son incontables, y su hambre es infinita. He luchado contra ellos durante la mayor parte de mi vida, y no he logrado nada más que sobrevivir… más que todos los demás. El Crisol es tuyo ahora. Debes continuar la guerra. Cuando los ataques en las tierras devastadas, podrás robar algo de su sangre. Haz lo que sabes que debes hacer."
+      ],
+      [
+        "HellscapeNPCDemonFaction",
+        "Esas horripilantes criaturas… Las miro y pienso, ¿con qué piensan? Algunos no tienen cabezas. Algunos son solo monstruosas fauces o bocas… ¿Y si ni siquiera piensan? ¿Y si hay otro ente pensando, y ellos son solo esclavos? Aplastar hormigas en la superficie no daña en absoluto al nido subterráneo..."
+      ],
+      [
+        "HellscapeNPCFleshFaction",
+        "Están ansiosos por devorar carne. Es su impulso primario. Parecen capaces de pensar, pero nunca he podido comunicarme con ellos. Supongo que yo tampoco tendría mucho que decirle a un conejo si estuviera hambrienta…"
+      ],
+      [
+        "HellscapeNPCPaleFaction",
+        "Los demonios pálidos son ciegos, pero eso solo los vuelve más peligrosos. Tienen otros modos de encontrar a sus víctimas: los atrae especialmente el olor del miedo. Podrán sentirte, sin importar lo que pase."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleGossip",
+        "<if:MS>{Están allí afuera, exiliado. Los demonios. Devastando, saqueando y consumiendo todo a nuestro alrededor, incluso ahora mientras hablamos. No puedes verlos aún… pero lo harás. El Crisol de sangre te llevará hacia ellos, y quizá tu talento para matar pueda hacer que ganemos algo de tiempo...}<elif:FS>{Están allí afuera, exiliada. Los demonios. Devastando, saqueando y consumiendo todo a nuestro alrededor, incluso ahora mientras hablamos. No puedes verlos aún… pero lo harás. El Crisol de sangre te llevará hacia ellos, y quizá tu talento para matar pueda hacer que ganemos algo de tiempo...}"
+      ],
+      [
+        "HellscapeNPCChaos",
+        "El Crisol de sangre representa un pacto entre la entidad conocida como Caos y las líneas de sangre de los Altos sacerdotes de los vaal, forjado hace mucho tiempo en el auge de la locura del imperio. Soy la única que queda de la última línea de sangre, así que, si muero, el Crisol dejará de funcionar. Por eso debes continuar en mi lugar."
+      ],
+      [
+        "HellscapeNPCOtherWraeclasts",
+        "Incontables veces he visto las obras de los hombres reducidas a nada bajo una colosal ola de horror. Cambié de mundo muchísimas veces, y solo vi un Wraeclast sobrevivir. Era un mundo dominado por la sombra del Alto Templario Venarius. Créeme, no quieres ir allí.\r\n\r\nEstamos solos en esto."
+      ],
+      [
+        "HellscapeNPCGreetingShout",
+        "<if:MS>{¡Exiliado! ¡Apresúrate!}<elif:FS>{¡Exiliada! ¡Apresúrate!}"
+      ],
+      [
+        "HellscapeNPCVisceraCauldron",
+        "<if:MS>{Ah, el Caldero de vísceras. Quédate quieto. Puedo implantarlo en tu interior. No te preocupes por el dolor… solo se está abriendo paso. Esto no tiene nada que ver, pero una persona puede vivir normalmente con un solo riñón. O con un solo pulmón. Nunca sabes cuánto te costará la tecnología vaal...}<elif:FS>{Ah, el Caldero de vísceras. Quédate quieta. Puedo implantarlo en tu interior.  No te preocupes por el dolor… solo se está abriendo paso. Esto no tiene nada que ver, pero una persona puede vivir normalmente con un solo riñón. O con un solo pulmón. Nunca sabes cuánto te costará la tecnología vaal...}"
+      ],
+      [
+        "SkadiPetIdleRandom",
+        ""
+      ],
+      [
+        "SkadiPetIdle2",
+        ""
+      ],
+      [
+        "SkadiPetIdle3",
+        ""
+      ],
+      [
+        "SkadiPetIdle4",
+        ""
+      ],
+      [
+        "SkadiPetIdle5",
+        ""
+      ],
+      [
+        "SkadiPetIdle6",
+        ""
+      ],
+      [
+        "SkadiPetDismiss",
+        ""
+      ],
+      [
+        "SkadiPetExaltedOrb",
+        ""
+      ],
+      [
+        "SkadiPetToHideout",
+        ""
+      ],
+      [
+        "SkadiPetUniqueKill",
+        ""
+      ],
+      [
+        "SkadiPetMirrorDrop",
+        ""
+      ],
+      [
+        "SkadiPetPlayerDeath",
+        ""
+      ],
+      [
+        "SkadiPetSummon",
+        ""
       ]
     ]
   },
@@ -61230,14 +61354,6 @@
         "Tane Octavius"
       ],
       [
-        "Metadata/NPC/League/Harvest/HarvestNPC",
-        "Oshabi"
-      ],
-      [
-        "Metadata/NPC/League/Harvest/HarvestNPCGarden",
-        "Oshabi"
-      ],
-      [
         "Metadata/NPC/League/Harvest/HarvestNPCGardenTutorial",
         "Oshabi"
       ],
@@ -61712,6 +61828,22 @@
       [
         "Metadata/Monsters/LeagueExpedition/Medved",
         "Medved"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPC",
+        "La última en morir"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCWild",
+        "La última en morir"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCHideout",
+        "La última en morir"
+      ],
+      [
+        "Metadata/NPC/Skadi",
+        "Skadi"
       ]
     ]
   }
