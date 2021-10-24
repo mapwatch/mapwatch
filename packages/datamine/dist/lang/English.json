@@ -7149,11 +7149,15 @@
       ],
       [
         "PartyPromotionRequired",
-        "You cannot perform this operation because you are not a promoted party member"
+        "You cannot perform this operation because you are not the party leader"
       ],
       [
         "PartyDoesNotExist",
         "The party does not exist."
+      ],
+      [
+        "PartyLeaderOnlyCanOpenMapPortals",
+        "Only the Party Leader may open Map Portals. The Party Leader can promote other players to Party Leader from the Party UI."
       ],
       [
         "ServiceDoesNotExist",
@@ -8296,10 +8300,6 @@
         "You don't have a daily mission open."
       ],
       [
-        "MissionComplete",
-        "Mission Complete. You have gained {0} Master favour."
-      ],
-      [
         "GrandmasterSaved",
         "Grandmaster file has been saved. Grinding Gear Games staff will be notified."
       ],
@@ -8334,6 +8334,14 @@
       [
         "ErrorNotInHideout",
         "You must be in your Hideout to do this."
+      ],
+      [
+        "ErrorHideoutSuperceded",
+        "Hideout modifications are currently disabled. Please create a new Hideout instance and try again."
+      ],
+      [
+        "ErrorCannotModifyGuildHideout",
+        "You do not have permission to modify the Guild Hideout."
       ],
       [
         "ClaimCraftingBenchSuccess",
@@ -8732,10 +8740,6 @@
         "That player does not have a Menagerie."
       ],
       [
-        "MasterBonusExpUpdate",
-        "Gained {1} bonus reputation and favour for {0}"
-      ],
-      [
         "MicrotransactionNotAvailableInLeague",
         "You are not allowed to buy this microtransaction in this league."
       ],
@@ -8886,6 +8890,10 @@
       [
         "FailedToReclaimSomeHideoutDoodads",
         "Failed to reclaim one or more Hideout doodads. Please create a new Hideout instance and try again."
+      ],
+      [
+        "FailedToLoadHideoutDoodads",
+        "Failed to load Hideout doodad list."
       ],
       [
         "HideoutImportWarningGeneric",
@@ -9222,6 +9230,22 @@
       [
         "ActionTemporarilyDisabled",
         "This action has been temporarily disabled."
+      ],
+      [
+        "CannotAccessGuildHideout",
+        "You cannot access that player's Guild Hideout because you are not a member of their Guild."
+      ],
+      [
+        "SettingDeliveryDetailsFailed",
+        "Failed to set Delivery Details: "
+      ],
+      [
+        "ExpeditionCurrencyNotification",
+        "Added {0}x {1} to your Expedition Locker"
+      ],
+      [
+        "GuildStashDisabled",
+        "The guild stash has been temporarily disabled."
       ]
     ]
   },
@@ -15726,7 +15750,7 @@
       ],
       [
         "MaramoaOnMoonOrb",
-        "I've been keeping a close eye on that exile-turned-sycophant who calls himself, 'The Dusk'. Dusk carried the Moon Orb into the Lunaris and has not returned with it, not as far as I have seen.\r\n\r\nNo doubt he clings to that orb like it's his adopted mother's own nurturing breast. If you were to wean him from the teat, and place that orb at the bereft mother's feet, we may yet see the moon itself fall."
+        "I've been keeping a close eye on that exile-turned-sycophant who calls himself, 'The Dusk'. Dusk carried the Moon Orb into the Lunaris Temple and has not returned with it, not as far as I have seen.\r\n\r\nNo doubt he clings to that orb like it's his adopted mother's own nurturing breast. If you were to wean him from the teat, and place that orb at the bereft mother's feet, we may yet see the moon itself fall."
       ],
       [
         "MaramoaOnOrbs",
@@ -34626,7 +34650,7 @@
       ],
       [
         "IntroductionNenetNenetToExileTwo",
-        "I can see a man's heart beat it's last from a distance of two thrown stones."
+        "I can see a man's heart beat its last from a distance of two thrown stones."
       ],
       [
         "IntroductionNenetTullinaToExileThree",
@@ -59603,6 +59627,106 @@
       [
         "DannigEncounterComplete6",
         "Ha!"
+      ],
+      [
+        "HellscapeNPCIntroduction",
+        "There's no time. I've become too weak to sustain the Blood Crucible. Take it... make its power your own."
+      ],
+      [
+        "HellscapeNPCDeliverDreamFurnace",
+        "You found the Dream Furnace? It was an ill-fated invention from a more hopeful time. It brought us only sorrow... but perhaps, in your hands, things will go differently."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleInstalled",
+        "It likes the taste of you. The wound around it will never fully heal, because the Crucible is hungry. You've got to feed it with what you do best: spilling blood. If you don't, it'll thirst for yours.\r\n\r\nWe are out of time. Go, activate the Blood Crucible. Shift into the Nightmare. Discover the horrible truth for yourself."
+      ],
+      [
+        "HellscapeNPCMoreInformation",
+        "You see now, don't you? The Scourge are countless in number and infinite in hunger. I've fought them for most of my life, and accomplished nothing except outliving... everyone else. The Crucible is yours now. You must carry on the war. When you assault them in the ravaged lands, you can steal some of their power. The Crucible will absorb the Corruption of those you slay. Do what you know you must."
+      ],
+      [
+        "HellscapeNPCDemonFaction",
+        "Those horrific creatures... I look at them and I wonder... what part of them thinks? Some don't have heads. Some are just monstrous claws or mouths... what if they don't think at all? What if something else does the thinking, and they're just drones? Stomping a few ants on the surface does nothing to harm the underground hive..."
+      ],
+      [
+        "HellscapeNPCFleshFaction",
+        "They hunger for flesh. That's their primary drive. They do seem capable of thought, but I've never been able to communicate with them. I suppose I wouldn't have much to say to a rabbit if I was starving..."
+      ],
+      [
+        "HellscapeNPCPaleFaction",
+        "The pale demons are blind, but that just makes them more dangerous. They have other ways of finding their victims... they are especially drawn to the smell of fear. They'll still sense you, though, no matter what."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleGossip",
+        "They're out there, Exile. The demons. They're ravaging and pillaging and consuming all around us, even as we speak. You can't see them yet... but you will. The Blood Crucible will take you to them, and perhaps that killing talent of yours can make a difference."
+      ],
+      [
+        "HellscapeNPCChaos",
+        "The Blood Crucible represents a pact between the entity known as Chaos and the bloodlines of the High Priests of the Vaal, forged long ago in the height of the empire's madness. I am the last of the sole remaining bloodline, so if I die, the Crucible will cease to function. That is why you must continue on in my place."
+      ],
+      [
+        "HellscapeNPCOtherWraeclasts",
+        "Countless times, I have seen the works of man reduced to nothing under a colossal tide of horror. Through countless Shifts, I only saw one Wraeclast survive. It was a world dominated by the shade of High Templar Venarius. You don't want to go there, believe me.\r\n\r\nWe're on our own."
+      ],
+      [
+        "HellscapeNPCGreetingShout",
+        "Exile! Hurry!"
+      ],
+      [
+        "HellscapeNPCVisceraCauldron",
+        "Ah, the Viscera Cauldron. Hold still. I can implant it inside you. Never mind the pain, it's only... making room. Unrelated fact, a person can live a normal life with just one kidney. Or just one lung. You never know what Vaal technology will cost you..."
+      ],
+      [
+        "SkadiPetIdleRandom",
+        ""
+      ],
+      [
+        "SkadiPetIdle2",
+        ""
+      ],
+      [
+        "SkadiPetIdle3",
+        ""
+      ],
+      [
+        "SkadiPetIdle4",
+        ""
+      ],
+      [
+        "SkadiPetIdle5",
+        ""
+      ],
+      [
+        "SkadiPetIdle6",
+        ""
+      ],
+      [
+        "SkadiPetDismiss",
+        ""
+      ],
+      [
+        "SkadiPetExaltedOrb",
+        ""
+      ],
+      [
+        "SkadiPetToHideout",
+        ""
+      ],
+      [
+        "SkadiPetUniqueKill",
+        ""
+      ],
+      [
+        "SkadiPetMirrorDrop",
+        ""
+      ],
+      [
+        "SkadiPetPlayerDeath",
+        ""
+      ],
+      [
+        "SkadiPetSummon",
+        ""
       ]
     ]
   },
@@ -61230,14 +61354,6 @@
         "Tane Octavius"
       ],
       [
-        "Metadata/NPC/League/Harvest/HarvestNPC",
-        "Oshabi"
-      ],
-      [
-        "Metadata/NPC/League/Harvest/HarvestNPCGarden",
-        "Oshabi"
-      ],
-      [
         "Metadata/NPC/League/Harvest/HarvestNPCGardenTutorial",
         "Oshabi"
       ],
@@ -61712,6 +61828,22 @@
       [
         "Metadata/Monsters/LeagueExpedition/Medved",
         "Medved"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPC",
+        "The Last to Die"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCWild",
+        "The Last to Die"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCHideout",
+        "The Last to Die"
+      ],
+      [
+        "Metadata/NPC/Skadi",
+        "Skadi"
       ]
     ]
   }

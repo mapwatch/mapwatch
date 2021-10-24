@@ -7149,11 +7149,15 @@
       ],
       [
         "PartyPromotionRequired",
-        "파티원이 승격했기 때문에 해당 작업을 실행할 수 없습니다."
+        "파티장이 아니기 때문에 해당 작업을 실행할 수 없습니다."
       ],
       [
         "PartyDoesNotExist",
         "존재하지 않는 파티입니다."
+      ],
+      [
+        "PartyLeaderOnlyCanOpenMapPortals",
+        "파티장만 지도 포탈을 열 수 있습니다. 또한 파티장만이 파티 UI를 통해 다른 플레이어를 파티장으로 승격시킬 수 있습니다."
       ],
       [
         "ServiceDoesNotExist",
@@ -8296,10 +8300,6 @@
         "개방된 일일 임무가 없습니다."
       ],
       [
-        "MissionComplete",
-        "임무 완료. 대가의 호의를 {0}점 획득했습니다."
-      ],
-      [
         "GrandmasterSaved",
         "명인 파일이 저장되었습니다. Grinding Gear Games 직원에게 알림을 보냅니다."
       ],
@@ -8334,6 +8334,14 @@
       [
         "ErrorNotInHideout",
         "은신처에서만 할 수 있는 행동입니다."
+      ],
+      [
+        "ErrorHideoutSuperceded",
+        "현재 은신처 변경이 불가능합니다. 새로운 은신처 인스턴스를 만들어서 다시 시도해 주십시오."
+      ],
+      [
+        "ErrorCannotModifyGuildHideout",
+        "길드 은신처를 변경할 권한이 없습니다."
       ],
       [
         "ClaimCraftingBenchSuccess",
@@ -8732,10 +8740,6 @@
         "야수관이 없는 플레이어입니다."
       ],
       [
-        "MasterBonusExpUpdate",
-        "추가 명성 {1}와(과) 호의 {0}을(를) 획득했습니다."
-      ],
-      [
         "MicrotransactionNotAvailableInLeague",
         "본 리그에서는 해당 포인트 아이템을 구입할 수 없습니다."
       ],
@@ -8886,6 +8890,10 @@
       [
         "FailedToReclaimSomeHideoutDoodads",
         "은신처 장식물을 한 개 이상 되찾지 못했습니다. 새로운 은신처 인스턴스를 만들어서 다시 시도해 주십시오."
+      ],
+      [
+        "FailedToLoadHideoutDoodads",
+        "은신처 장식물 목록을 불러오는 데 실패했습니다."
       ],
       [
         "HideoutImportWarningGeneric",
@@ -9222,6 +9230,22 @@
       [
         "ActionTemporarilyDisabled",
         "이 행동은 일시적으로 사용할 수 없습니다"
+      ],
+      [
+        "CannotAccessGuildHideout",
+        "해당 길드의 회원이 아니므로 플레이어의 길드 은신처에 들어갈 수 없습니다."
+      ],
+      [
+        "SettingDeliveryDetailsFailed",
+        "배송 정보 설정 실패:"
+      ],
+      [
+        "ExpeditionCurrencyNotification",
+        "탐험 사물함에 {1} {0}개가 추가되었습니다."
+      ],
+      [
+        "GuildStashDisabled",
+        "길드 보관함을 일시적으로 사용할 수 없습니다."
       ]
     ]
   },
@@ -59603,6 +59627,106 @@
       [
         "DannigEncounterComplete6",
         "하!"
+      ],
+      [
+        "HellscapeNPCIntroduction",
+        "시간이 없어. 내겐 피 도가니를 유지할 힘이 남아있지 않다. 이걸 받아라... 그리고 그 힘을 네 것으로 만들어라."
+      ],
+      [
+        "HellscapeNPCDeliverDreamFurnace",
+        "꿈 용광로를 찾았다고? 그건 희망이 있던 시절의 불운한 발명품이었지. 그 장치는 우리에게 오직 슬픔만을 불러왔어... 하지만 네가 사용하면 다른 결과가 나올지도 모르겠군."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleInstalled",
+        "네 맛이 마음에 든 모양이군. 도가니가 굶주려 있으니, 그 주위의 상처는 절대 아물지 않을 거야. 도가니의 허기를 채우려면 네 장기를 발휘해서 적의 피를 쏟아야 해. 그러지 않으면 그것이 네 피를 갈구할 테니까.\r\n\r\n시간이 없어. 어서 가서 피 도가니를 작동해. 악몽으로 전이하는 거야. 끔찍한 진실을 직접 확인해보라고."
+      ],
+      [
+        "HellscapeNPCMoreInformation",
+        "이젠 너도 알겠지? 스컬지의 수는 무량하고, 그들의 허기는 무한해. 난 거의 평생을 바쳐 녀석들과 싸웠지만 기껏 이룬 것이라고는... 내 세계에서 마지막까지 살아남았다는 것뿐이야. 이젠 네가 이 전쟁을 이어가야 해. 유린당한 세계에서 놈들을 공격하면 그들의 힘을 훔칠 수 있어. 도가니가 네가 처치한 적들의 타락을 흡수할 거다. 네 의무를 다해라, 유배자."
+      ],
+      [
+        "HellscapeNPCDemonFaction",
+        "저 끔찍한 괴물들을 보면... 이런 의문이 생겨... 저들은 어떤 부위로 생각하는 걸까? 머리가 없는 녀석들도 있고, 어떤 녀석들은 흉측한 발톱이나 입밖에 없지... 사고력이 아예 없는 건 아닐까? 생각은 다른 존재가 맡고, 저들은 그저 이성이 없는 일벌레들일 뿐이라면? 지표면의 일개미 몇 마리를 짓밟아봤자 지하의 개미집에는 아무런 피해도 없는 법이지..."
+      ],
+      [
+        "HellscapeNPCFleshFaction",
+        "놈들은 살점에 굶주려 있지. 그게 그들의 주된 행동 동기야. 음... 이성이 있는 것 같기는 하지만 아직 의사소통에 성공한 적은 한 번도 없어. 나라도 굶주린 상태에서 토끼와 말을 하고 싶진 않겠지만..."
+      ],
+      [
+        "HellscapeNPCPaleFaction",
+        "창백한 악마들은 앞을 볼 수 없지만 그래서 더욱 위험하지. 녀석들은 다른 수단으로 먹잇감을 찾을 수 있어... 그중에서도 공포의 냄새에 가장 이끌리지. 그렇다고 해도, 놈들은 여전히 널 감지할 수 있어."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleGossip",
+        "놈들이 저 밖에 있어, 유배자. 악마들 말이야. 우리가 이렇게 이야기를 나누는 와중에도 우리 주변의 모든 것을 파괴하고, 약탈하고, 먹어 치우고 있지. 아직은 안 보이겠지만... 곧 보게 될 거야. 피 도가니가 널 그들에게 데려다 줄 거야. 그리고 네 살육의 재능이라면 뭔가 해낼 수 있을지도 몰라."
+      ],
+      [
+        "HellscapeNPCChaos",
+        "피 도가니는 혼돈이라는 존재와 바알의 고위 사제 가문 사이의 계약을 상징해. 그 계약은 바알 제국의 광기가 극에 달했던 그 옛날 맺어졌지. 나는 그 가문의 유일한 생존자야. 즉, 내가 죽으면 도가니도 작동을 멈춘다는 뜻이지. 바로 그렇기 때문에 네가 내 싸움을 이어받아야 하는 거야."
+      ],
+      [
+        "HellscapeNPCOtherWraeclasts",
+        "나는 인류의 업적들이 어마어마한 공포의 물결 아래 먼지가 되어 사라지는 걸 수도 없이 목격했어. 나는 셀 수 없을 만큼 많이 전이했지만, 유일하게 그 괴물 무리를 막아낸 레이클라스트는 고위 템플러 베나리우스의 쉐이드가 지배하는 곳이었지. 그곳은 가지 않는 게 좋아.\r\n\r\n우릴 도와줄 수 있는 건 아무도 없어."
+      ],
+      [
+        "HellscapeNPCGreetingShout",
+        "유배자! 서둘러!"
+      ],
+      [
+        "HellscapeNPCVisceraCauldron",
+        "아, 내장 가마솥이군. 이걸 네 안에 이식해줄 테니 잠깐 가만있어 봐. 고통스러워도 무시해. 그저... 그게 자리를 만들고 있는 거니까. 전혀 관련 없는 얘기지만, 인간은 콩팥이 하나밖에 없어도 평범하게 살아갈 수 있어. 허파도 마찬가지고. 바알 기술을 사용했을 때의 대가가 무엇인지는 알 수가 없는 법이지..."
+      ],
+      [
+        "SkadiPetIdleRandom",
+        ""
+      ],
+      [
+        "SkadiPetIdle2",
+        ""
+      ],
+      [
+        "SkadiPetIdle3",
+        ""
+      ],
+      [
+        "SkadiPetIdle4",
+        ""
+      ],
+      [
+        "SkadiPetIdle5",
+        ""
+      ],
+      [
+        "SkadiPetIdle6",
+        ""
+      ],
+      [
+        "SkadiPetDismiss",
+        ""
+      ],
+      [
+        "SkadiPetExaltedOrb",
+        ""
+      ],
+      [
+        "SkadiPetToHideout",
+        ""
+      ],
+      [
+        "SkadiPetUniqueKill",
+        ""
+      ],
+      [
+        "SkadiPetMirrorDrop",
+        ""
+      ],
+      [
+        "SkadiPetPlayerDeath",
+        ""
+      ],
+      [
+        "SkadiPetSummon",
+        ""
       ]
     ]
   },
@@ -61230,14 +61354,6 @@
         "테인 옥타비우스"
       ],
       [
-        "Metadata/NPC/League/Harvest/HarvestNPC",
-        "오샤비"
-      ],
-      [
-        "Metadata/NPC/League/Harvest/HarvestNPCGarden",
-        "오샤비"
-      ],
-      [
         "Metadata/NPC/League/Harvest/HarvestNPCGardenTutorial",
         "오샤비"
       ],
@@ -61712,6 +61828,22 @@
       [
         "Metadata/Monsters/LeagueExpedition/Medved",
         "메드베드"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPC",
+        "최후에 죽는 자"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCWild",
+        "최후에 죽는 자"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCHideout",
+        "최후에 죽는 자"
+      ],
+      [
+        "Metadata/NPC/Skadi",
+        "스카디"
       ]
     ]
   }

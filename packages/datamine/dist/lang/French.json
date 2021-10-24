@@ -7021,7 +7021,7 @@
       ],
       [
         "AccountNameInvalid",
-        "Le nom de compte doit comporter au moins 3 caractères. Seuls les caractères a-z, 0-9 et _ sont autorisés."
+        "Le nom du compte doit comporter au moins 3 caractères. Seuls les caractères a-z, 0-9 et _ sont autorisés."
       ],
       [
         "EmailInvalid",
@@ -7149,11 +7149,15 @@
       ],
       [
         "PartyPromotionRequired",
-        "Vous ne pouvez pas effectuer cette opération : vous devez avoir le statut de groupe adéquat."
+        "Seul le chef du groupe peut effectuer cette action."
       ],
       [
         "PartyDoesNotExist",
         "Ce groupe n'existe pas."
+      ],
+      [
+        "PartyLeaderOnlyCanOpenMapPortals",
+        "Seul le chef du groupe peut ouvrir des Portails de Carte. Le chef du groupe peut nommer d'autres joueurs au poste de chef du groupe à partir de l'interface du groupe."
       ],
       [
         "ServiceDoesNotExist",
@@ -7161,7 +7165,7 @@
       ],
       [
         "CommandInvalid",
-        "Le service ne répond pas à cette commande ou vous avez commis une erreur de syntaxe."
+        "Le service ne répond pas à cette commande, ou vous avez commis une erreur de syntaxe."
       ],
       [
         "DestinationUnreachable",
@@ -7553,11 +7557,11 @@
       ],
       [
         "ObaPlayerJoined",
-        "Tu es soit courageux, soit stupide de penser que tu peux prendre mon trésor et t'en tirer comme ça. Quoi qu'il en soit, bravo !"
+        "Soit tu as du courage, soit tu es stupide de penser que tu peux prendre mon trésor et t'en tirer comme ça. Quoi qu'il en soit, je te félicite !"
       ],
       [
         "ObaDoorUnlocked",
-        "Continue, exilé, et prends ce que tu peux tant que tu le peux."
+        "Continue, exilé, et prends ce que tu peux tant que tu le peux..."
       ],
       [
         "ObaBeginDeathCount",
@@ -8296,10 +8300,6 @@
         "Vous n'avez pas de mission quotidienne en cours."
       ],
       [
-        "MissionComplete",
-        "Mission accomplie. Vous avez obtenu {0} de Faveur de Maître."
-      ],
-      [
         "GrandmasterSaved",
         "Le fichier de Grand maître a été sauvegardé. Le personnel de Grinding Gear Games sera notifié."
       ],
@@ -8334,6 +8334,14 @@
       [
         "ErrorNotInHideout",
         "Vous devez être dans votre Repaire pour exécuter cette action."
+      ],
+      [
+        "ErrorHideoutSuperceded",
+        "Les modifications de Repaire sont actuellement désactivées. Veuillez réessayer en créant d'abord une nouvelle instance de ce Repaire."
+      ],
+      [
+        "ErrorCannotModifyGuildHideout",
+        "Vous n'avez pas l'autorisation de modifier le Repaire de la guilde."
       ],
       [
         "ClaimCraftingBenchSuccess",
@@ -8732,10 +8740,6 @@
         "Ce joueur n'a pas de Ménagerie."
       ],
       [
-        "MasterBonusExpUpdate",
-        "Vous avez obtenu {1} de réputation et de faveur bonus auprès de {0}."
-      ],
-      [
         "MicrotransactionNotAvailableInLeague",
         "L'achat de cette microtransaction n'est pas autorisé dans cette ligue."
       ],
@@ -8886,6 +8890,10 @@
       [
         "FailedToReclaimSomeHideoutDoodads",
         "Récupération d'éléments de Repaire échouée. Veuillez créer une nouvelle instance de Repaire, puis réessayez."
+      ],
+      [
+        "FailedToLoadHideoutDoodads",
+        "Échec lors du chargement de la liste des éléments du Repaire."
       ],
       [
         "HideoutImportWarningGeneric",
@@ -9222,6 +9230,22 @@
       [
         "ActionTemporarilyDisabled",
         "Cette action a été temporairement désactivée."
+      ],
+      [
+        "CannotAccessGuildHideout",
+        "Vous ne pouvez pas accéder au Repaire de Guilde de ce joueur, car vous ne faites pas partie de sa Guilde."
+      ],
+      [
+        "SettingDeliveryDetailsFailed",
+        "Impossible de paramétrer les infos de livraison :"
+      ],
+      [
+        "ExpeditionCurrencyNotification",
+        "Des objets viennent d'être ajoutés à votre Casier d'Expédition : {1} x{0}"
+      ],
+      [
+        "GuildStashDisabled",
+        "La réserve de guilde a été temporairement désactivée."
       ]
     ]
   },
@@ -14826,7 +14850,7 @@
       ],
       [
         "LaniTormentQuest",
-        "Lorsque Kitava aura ingurgité le dernier morceau de chair et qu'il aura sucé le dernier bout de moelle des Oriathéens, il tournera son regard affamé sur Ngamakanui et le reste de l'Archipel karui.\r\n\r\nComme tu le sais, les Karuis ne se laisseront pas faire, mais ils auront besoin de toute l'aide dont ils pourront disposer. Et je connais trois trésors qui pourraient faire pencher la balance en notre faveur.\r\n\r\nLes trésors en question ont été emportés par les Templiers lorsque ceux-ci ont attaqué Ngamakanui : un fouet tressé à partir des cheveux de Hinekora, une dent que Tukohama a arrachée de sa propre bouche et un hameçon qui fut autrefois la mandibule de Valako. Ensemble, on les appelle les « Tourments de Kitava », et ils reposent dans le Reliquaire qui borde le Square d'Oriath. Je les ai vus de mes propres yeux lorsque je suis allée porter des messages aux savants là-bas.\r\n\r\nJe t'en conjure, va au Reliquaire récupérer ces trésors avant que les enfants de Kitava ne s'en occupent."
+        "Lorsque Kitava aura ingurgité le dernier morceau de chair et qu'il aura sucé le dernier bout de moelle des Oriathéens, il tournera son regard affamé sur Ngamakanui et le reste de l'Archipel karui.\r\n\r\nComme tu le sais, les Karuis ne se laisseront pas faire, mais ils auront besoin de toute l'aide dont ils pourront disposer. Et je connais trois trésors qui pourraient faire pencher la balance en notre faveur.\r\n\r\nLes trésors en question ont été emportés par les Templiers lorsque ceux-ci ont attaqué Ngamakanui : un fouet tressé à partir des cheveux d'Hinekora, une dent que Tukohama a arrachée de sa propre bouche et un hameçon qui fut autrefois la mandibule de Valako. Ensemble, on les appelle les « Tourments de Kitava », et ils reposent dans le Reliquaire qui borde le Square d'Oriath. Je les ai vus de mes propres yeux lorsque je suis allée porter des messages aux savants là-bas.\r\n\r\nJe t'en conjure, va au Reliquaire récupérer ces trésors avant que les enfants de Kitava ne s'en occupent."
       ],
       [
         "LaniTormentReward",
@@ -18754,7 +18778,7 @@
       ],
       [
         "VaganOfferBargainFive",
-        "J'ai la réputation d'être loquace, mais je sais aussi écouter mon prochain. Si vous m'épargnez, je pourrais me laisser convaincre de combiner ces deux passe-temps en un joli petit tout qui ne devrait pas vous déplaire."
+        "J'ai pour réputation d'être loquace, mais je sais aussi écouter mon prochain. Si vous m'épargnez, je pourrais me laisser convaincre de combiner ces deux passe-temps en un joli petit tout qui ne devrait pas vous déplaire."
       ],
       [
         "VaganOfferBargainSix",
@@ -30734,7 +30758,7 @@
       ],
       [
         "ZanaOnNavali",
-        "Si ce n'était de l'exactitude surprenante de ses prédictions à Wraeclast, j'aurais pensé que Navali était aussi folle que les exilés qui sont actuellement confinés à l'Atlas. Par expérience, quiconque prétend connaître l'avenir a une case en moins ou essaie de vous duper.\r\n\r\nCependant, je ne peux m'empêcher de remettre ses motivations en question… Elle affirme être un agent de Hinekora. Or, même les dieux les plus bienveillants ont la fâcheuse tendance à semer le chaos absolu. Alors, imaginez un dieu de la Mort…"
+        "Si ce n'était de l'exactitude surprenante de ses prédictions à Wraeclast, j'aurais pensé que Navali était aussi folle que les exilés qui sont actuellement confinés à l'Atlas. Par expérience, quiconque prétend connaître l'avenir a une case en moins ou essaie de vous duper.\r\n\r\nCependant, je ne peux m'empêcher de remettre ses motivations en question… Elle affirme être un agent d'Hinekora. Or, même les dieux les plus bienveillants ont la fâcheuse tendance à semer le chaos absolu. Alors, imaginez un dieu de la Mort…"
       ],
       [
         "ZanaOnJun",
@@ -35174,11 +35198,11 @@
       ],
       [
         "SelectionBanterTullinaToVinderiFour",
-        "Je ne comprends--"
+        "Je ne comprends p..."
       ],
       [
         "SelectionBanterTullinaVinderiReplyFour",
-        "Cela m'y fait penser ! Est-ce que je t'ai dit que je venais juste de parler avec Tullina ? Elle a dit salut. "
+        "Ah, d'ailleurs ! Je t'ai dit que je venais juste de parler avec Tullina ? Elle te passe le bonjour. "
       ],
       [
         "SelectionBanterTullinaToNenet",
@@ -38022,31 +38046,31 @@
       ],
       [
         "EntryBanterIslaToKarst",
-        "J'ai un nouveau mot pour vous, Karst : taciturne. C'est l'inverse de « loquace »."
+        "J'ai un nouveau mot pour vous, Karst. C'est « taciturne ». C'est l'inverse de loquace."
       ],
       [
         "EntryBanterIslaKarstReply",
-        "Ah, d'accord. Donc si on rate le casse, on est taciturne."
+        "Ah, d'accord. Donc on est taciturne si on foire le casse."
       ],
       [
         "EntryBanterVinderiToKarst",
-        "Comment ça ?… Ah, d'accord. Je vois."
+        "Comment ça ?…"
       ],
       [
         "EntryBanterVinderiKarstReply",
-        "Puisque c'est l'inverse de « le casse »."
+        "Bah, vu que c'est l'inverse de « le casse »."
       ],
       [
         "EntryBanterVinderiToKarstTwo",
-        "« Loquace », Karst."
+        "Non, Karst. Loquace ."
       ],
       [
         "EntryBanterVinderiKarstReplyTwo",
-        "C'est ce que j'ai dit."
+        "Ben, c'est ce que j'ai dit."
       ],
       [
         "EntryBanterVinderiToKarstThree",
-        "Loquace."
+        "Non. Loquace."
       ],
       [
         "EntryBanterNenetToKarst",
@@ -59603,6 +59627,106 @@
       [
         "DannigEncounterComplete6",
         "<if:MS>{Ha !}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCIntroduction",
+        "<if:MS>{Le temps presse. Je suis trop affaiblie pour supporter le Creuset sanglant plus longtemps. Prenez-le... et appropriez-vous son pouvoir.}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCDeliverDreamFurnace",
+        "<if:MS>{Vous avez trouvé la Fournaise onirique ? Il s'agit d'une invention funeste issue d'une époque plus optimiste. La Fournaise ne nous aura apporté que le malheur... Mais maintenant qu'elle est entre vos mains, peut-être que les choses se passeront différemment.}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCBloodCrucibleInstalled",
+        "<if:MS>{Il semble vous trouver à son goût... Étant vorace, le Creuset laisse une blessure qui ne guérira jamais tout à fait. Vous devez le nourrir en faisant ce en quoi vous excellez, c'est-à-dire répandre le sang. À défaut de quoi il s'abreuvera du vôtre.\r\n\r\nNous n'avons plus de temps. Vite, activez le Creuset sanglant. Passez du côté du Cauchemar. Découvrez l'horrible vérité par vous-même.}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCMoreInformation",
+        "<if:MS>{Vous comprenez maintenant, n'est-ce pas ? Les Souillés sont innombrables et sont rongés par une faim infinie. J'ai passé le plus clair de mon existence à les combattre ; or mon seul accomplissement se résume à... avoir survécu plus longtemps que tous les autres. Le Creuset vous appartient désormais. Vous devez poursuivre cette guerre. En allant les attaquer sur les terres ravagées, vous pourrez leur voler un peu de leur pouvoir. Le Creuset se chargera d'absorber la Corruption de ceux que vous éliminerez. Faites ce que vous savez être nécessaire.}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCDemonFaction",
+        "<if:MS>{Ces créatures horribles... Quand je les regarde, je ne peux m'empêcher de me demander : comment réfléchissent-elles ? Certaines n'ont même pas de tête. Certaines ne sont qu'un amas monstrueux de griffes ou de gueules... Et si elles en étaient incapables ? Peut-être que quelque chose d'autre le fait à leur place, et qu'elles ne sont en fait rien de plus que des automates ? Écraser une poignée de fourmis à la surface n'endommage en rien la colonie qui grouille sous terre...}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCFleshFaction",
+        "<if:MS>{Ils sont affamés de chair. C'est leur pulsion première. Ils semblent capables de réfléchir, mais je n'ai jamais réussi à communiquer avec eux. J'imagine que je n'aurais moi-même pas grand-chose à dire à un lapin si j'avais le ventre vide...}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCPaleFaction",
+        "<if:MS>{Les démons pâles sont aveugles, mais ça ne les rend que plus dangereux. En effet, ils possèdent d'autres moyens pour repérer leurs victimes... Ils sont d'ailleurs particulièrement attirés par l'odeur de la peur. Mais ils vous détecteront quoi qu'il advienne.}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCBloodCrucibleGossip",
+        "<if:MS>{Ils sont là, exilé. Les démons. Ils ravagent, pillent et consument tout ce qui nous entoure alors que nous parlons. Vous ne pouvez pas encore les voir... mais ça viendra. Le Creuset sanglant vous guidera jusqu'à eux ; peut-être que votre don pour le carnage saura faire la différence.}<elif:FS>{Ils sont là, exilée. Les démons. Ils ravagent, pillent et consument tout ce qui nous entoure alors que nous parlons. Vous ne pouvez pas encore les voir... mais ça viendra. Le Creuset sanglant vous guidera jusqu'à eux ; peut-être que votre don pour le carnage saura faire la différence.}"
+      ],
+      [
+        "HellscapeNPCChaos",
+        "<if:MS>{Le Creuset sanglant est le fruit d'un pacte passé entre l'entité connue sous le nom de Chaos et les lignées des Grands prêtres vaal, conclu il y a longtemps, à l'apogée de la folie de l'empire. Je suis la dernière descendante de l'ultime lignée encore existante ; si je meurs, le Creuset cessera de fonctionner. Voilà pourquoi vous devez prendre la relève.}<elif:FS>{ }"
+      ],
+      [
+        "HellscapeNPCOtherWraeclasts",
+        "<if:MS>{Trop souvent, j'ai vu l'œuvre des hommes réduite à néant par de colossaux raz-de-marée d'horreurs. De toutes les versions parallèles de Wraeclast que j'ai parcourues, la seule qui leur aura jamais tenu tête fut celle régentée par un reflet du Haut templier Vénarius. Et vous ne voulez pas aller là-bas, croyez-moi.\r\n\r\nNous sommes livrés à nous-mêmes.}<elif:FS>{Trop souvent, j'ai vu l'œuvre des hommes réduite à néant par de colossaux raz-de-marée d'horreurs. De toutes les versions parallèles de Wraeclast que j'ai parcourues, la seule qui leur aura jamais tenu tête fut celle régentée par un reflet du Haut templier Vénarius. Et vous ne voulez pas aller là-bas, croyez-moi.\r\n\r\nNous sommes livrées à nous-mêmes.}"
+      ],
+      [
+        "HellscapeNPCGreetingShout",
+        "<if:MS>{Exilé ! Dépêchez-vous !}<elif:FS>{Exilée ! Dépêchez-vous !}"
+      ],
+      [
+        "HellscapeNPCVisceraCauldron",
+        "<if:MS>{Ah, le Chaudron à viscères. Restez immobile, je vais vous l'implanter. Ne portez pas attention à la douleur, elle signifie seulement que le Chaudron... se met à son aise. Ça n'a pas vraiment de rapport, mais sachez qu'une personne peut vivre une vie normale avec un seul rein. Ou un seul poumon. On ne sait jamais ce que la technologie vaal peut nous coûter...}<elif:FS>{ }"
+      ],
+      [
+        "SkadiPetIdleRandom",
+        ""
+      ],
+      [
+        "SkadiPetIdle2",
+        ""
+      ],
+      [
+        "SkadiPetIdle3",
+        ""
+      ],
+      [
+        "SkadiPetIdle4",
+        ""
+      ],
+      [
+        "SkadiPetIdle5",
+        ""
+      ],
+      [
+        "SkadiPetIdle6",
+        ""
+      ],
+      [
+        "SkadiPetDismiss",
+        ""
+      ],
+      [
+        "SkadiPetExaltedOrb",
+        ""
+      ],
+      [
+        "SkadiPetToHideout",
+        ""
+      ],
+      [
+        "SkadiPetUniqueKill",
+        ""
+      ],
+      [
+        "SkadiPetMirrorDrop",
+        ""
+      ],
+      [
+        "SkadiPetPlayerDeath",
+        ""
+      ],
+      [
+        "SkadiPetSummon",
+        ""
       ]
     ]
   },
@@ -61230,14 +61354,6 @@
         "Tane Octavius"
       ],
       [
-        "Metadata/NPC/League/Harvest/HarvestNPC",
-        "Oshabi"
-      ],
-      [
-        "Metadata/NPC/League/Harvest/HarvestNPCGarden",
-        "Oshabi"
-      ],
-      [
         "Metadata/NPC/League/Harvest/HarvestNPCGardenTutorial",
         "Oshabi"
       ],
@@ -61712,6 +61828,22 @@
       [
         "Metadata/Monsters/LeagueExpedition/Medved",
         "Medved"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPC",
+        "La Dernière à périr"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCWild",
+        "La Dernière à périr"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCHideout",
+        "La Dernière à périr"
+      ],
+      [
+        "Metadata/NPC/Skadi",
+        "Skadi"
       ]
     ]
   }

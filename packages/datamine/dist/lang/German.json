@@ -7149,11 +7149,15 @@
       ],
       [
         "PartyPromotionRequired",
-        "Du kannst diese Aktion nicht ausführen, da du kein befördertes Gruppenmitglied bist."
+        "Du kannst diese Aktion nicht ausführen, da du nicht der Gruppenanführer bist."
       ],
       [
         "PartyDoesNotExist",
         "Diese Gruppe existiert nicht."
+      ],
+      [
+        "PartyLeaderOnlyCanOpenMapPortals",
+        "Only the Party Leader may open Map Portals. The Party Leader can promote other players to Party Leader from the Party UI."
       ],
       [
         "ServiceDoesNotExist",
@@ -8296,10 +8300,6 @@
         "Du hast keine Tagesmission aktiviert."
       ],
       [
-        "MissionComplete",
-        "Mission abgeschlossen. Ihr habt von diesem Meister {0} Gunst erhalten."
-      ],
-      [
         "GrandmasterSaved",
         "Großmeister-Datei wurde gespeichert. Mitarbeiter von Grinding Gear Games werden benachrichtigt."
       ],
@@ -8334,6 +8334,14 @@
       [
         "ErrorNotInHideout",
         "Hierfür musst du in deinem Versteck sein."
+      ],
+      [
+        "ErrorHideoutSuperceded",
+        "Das Verändern des Verstecks ist derzeit deaktiviert. Bitte erstelle eine neue Versteck-Instanz und versuche es erneut."
+      ],
+      [
+        "ErrorCannotModifyGuildHideout",
+        "Du hast keine Berechtigung, das Gildenversteck zu verändern."
       ],
       [
         "ClaimCraftingBenchSuccess",
@@ -8732,10 +8740,6 @@
         "Dieser Spieler verfügt über keine Menagerie."
       ],
       [
-        "MasterBonusExpUpdate",
-        "Ihr habt für {0} {1} zusätzlichen Ruf und Gunst erhalten."
-      ],
-      [
         "MicrotransactionNotAvailableInLeague",
         "Diese Mikrotransaktion kann in dieser Liga nicht gekauft werden."
       ],
@@ -8886,6 +8890,10 @@
       [
         "FailedToReclaimSomeHideoutDoodads",
         "Fehler beim Entfernen einer oder mehrerer Versteck-Dekorationen. Bitte erstelle eine neue Versteck-Instanz und versuche es erneut."
+      ],
+      [
+        "FailedToLoadHideoutDoodads",
+        "Fehler beim Laden der Liste mit Versteck-Dekorationen."
       ],
       [
         "HideoutImportWarningGeneric",
@@ -9222,6 +9230,22 @@
       [
         "ActionTemporarilyDisabled",
         "Diese Aktion wurde temporär deaktiviert."
+      ],
+      [
+        "CannotAccessGuildHideout",
+        "Du kannst das Gildenversteck dieses Spielers nicht betreten, da du kein Mitglied dieser Gilde bist."
+      ],
+      [
+        "SettingDeliveryDetailsFailed",
+        "Fehler bei der Übernahme der Lieferinformationen:"
+      ],
+      [
+        "ExpeditionCurrencyNotification",
+        "Wurde deinem Expedition-Schließfach hinzugefügt: {0}x {1}"
+      ],
+      [
+        "GuildStashDisabled",
+        "The guild stash has been temporarily disabled."
       ]
     ]
   },
@@ -59603,6 +59627,106 @@
       [
         "DannigEncounterComplete6",
         "Ha!"
+      ],
+      [
+        "HellscapeNPCIntroduction",
+        "Wir haben keine Zeit mehr. Ich bin zu schwach geworden, um das Blutsiegel aufrechtzuerhalten. Nehmt es... macht seine Kraft zu Eurer eigenen."
+      ],
+      [
+        "HellscapeNPCDeliverDreamFurnace",
+        "Ihr habt die Traumschmiede gefunden? Eine unselige Erfindung aus einer hoffnungsvolleren Zeit. Sie hat uns nur Leid gebracht... aber nun, da sie in Euren Händen ist, werden sich die Dinge vielleicht ändern."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleInstalled",
+        "Es ist auf den Geschmack gekommen. Die Wunde wird niemals vollständig heilen, denn das Siegel ist hungrig. Ihr müsst es durch das nähren, was Ihr am besten könnt: dem Vergießen von Blut. Tut Ihr das nicht, so wird es nach dem Euren dürsten.\r\n\r\nWir haben keine Zeit mehr. Geht, aktiviert das Blutsiegel. Wechselt in den Albtraum. Seht die furchtbare Wahrheit mit eigenen Augen."
+      ],
+      [
+        "HellscapeNPCMoreInformation",
+        "Ihr versteht es jetzt, nicht wahr? Die Scourge sind ohne Zahl und haben einen unstillbaren Hunger. Ich habe die meiste Zeit meines Lebens gegen sie gekämpft und nichts erreicht, außer... länger als alle anderen zu überleben. Das Siegel gehört jetzt Euch. Ihr müsst den Krieg fortsetzen. Wenn Ihr sie in den verwüsteten Landen angreift, könnt Ihr etwas von ihrer Macht stehlen. Das Siegel wird die Verderbtheit derer absorbieren, die Ihr tötet. Ihr wisst, was Ihr zu tun habt."
+      ],
+      [
+        "HellscapeNPCDemonFaction",
+        "Diese grauenhaften Kreaturen... Ich sehe sie an und frage mich... welcher Teil von ihnen denkt? Einige haben keine Köpfe. Manche bestehen nur aus monströsen Klauen oder Mäulern... was, wenn sie überhaupt nicht denken? Was, wenn etwas anderes das Denken übernimmt und sie nur Drohnen sind? Das Zertreten einiger Ameisen an der Oberfläche fügt dem Bau im Boden keinen Schaden zu..."
+      ],
+      [
+        "HellscapeNPCFleshFaction",
+        "Sie gieren nach Fleisch. Das ist ihr Hauptantrieb. Sie scheinen in der Lage zu sein, zu denken, aber es ist mir nie gelungen, mit ihnen zu kommunizieren. Ich glaube, es gäbe nicht viel, das ich einem Kaninchen zu sagen hätte, wenn ich kurz vor dem Verhungern wäre."
+      ],
+      [
+        "HellscapeNPCPaleFaction",
+        "Die bleichen Dämonen sind blind, aber das macht sie nur gefährlicher. Sie finden ihre Opfer auf andere Weise... Sie werden insbesondere von dem Geruch der Angst angezogen. Doch egal was geschieht, sie werden Euch immer wahrnehmen."
+      ],
+      [
+        "HellscapeNPCBloodCrucibleGossip",
+        "<if:MS>{Sie sind dort draußen, Verbannter. Die Dämonen. Sie verwüsten und plündern und verschlingen alles um uns herum, sogar in diesem Augenblick. Ihr könnt sie jetzt noch nicht sehen... aber das wird sich ändern. Das Blutsiegel wird Euch zu ihnen führen und vielleicht kann Euer Talent für das Töten etwas bewirken.}<elif:FS>{Sie sind dort draußen, Verbannte. Die Dämonen. Sie verwüsten und plündern und verschlingen alles um uns herum, sogar in diesem Augenblick. Ihr könnt sie jetzt noch nicht sehen... aber das wird sich ändern. Das Blutsiegel wird Euch zu ihnen führen und vielleicht kann Euer Talent für das Töten etwas bewirken.}"
+      ],
+      [
+        "HellscapeNPCChaos",
+        "Das Blutsiegel steht für einen Pakt zwischen dem als \"Chaos\" bekannten Wesen und den Blutlinien der Hohepriester der Vaal, der vor langer Zeit geschmiedet wurde, als sich das Kaiserreich auf dem Gipfel des Wahnsinns befand. Ich bin die Letzte der einzigen noch bestehenden Blutlinie. Wenn ich sterbe, dann wird das Blutsiegel nicht länger funktionieren. Deshalb müsst Ihr den Kampf an meiner statt weiterführen."
+      ],
+      [
+        "HellscapeNPCOtherWraeclasts",
+        "Unzählige Male habe ich gesehen, wie die Werke der Menschen von einer Flutwelle des Schreckens hinweggespült wurden. Bei den zahllosen Wechseln in die Albträume habe ich nur ein Wraeclast gesehen, das überlebt hat. Es war eine Welt, die von dem Schattengeist des Hohen Templers Venarius beherrscht wurde... Aber dorthin wollt Ihr nicht gehen, glaubt mir. \r\n\r\nWir sind auf uns alleine gestellt. "
+      ],
+      [
+        "HellscapeNPCGreetingShout",
+        "<if:MS>{Verbannter, beeilt Euch!}<elif:FS>{Verbannte, beeilt Euch!}"
+      ],
+      [
+        "HellscapeNPCVisceraCauldron",
+        "Ah, die Eingeweidepresse. Haltet still. Ich kann sie Euch einsetzen. Beachtet den Schmerz einfach nicht, sie... verschafft sich nur Platz. Und nebenbei erwähnt, eine Person kann auch mit nur einer Niere ein völlig normales Leben führen. Oder mit nur einem Lungenflügel. Man weiß nie, welchen Preis Vaal-Technologie von einem verlangt."
+      ],
+      [
+        "SkadiPetIdleRandom",
+        ""
+      ],
+      [
+        "SkadiPetIdle2",
+        ""
+      ],
+      [
+        "SkadiPetIdle3",
+        ""
+      ],
+      [
+        "SkadiPetIdle4",
+        ""
+      ],
+      [
+        "SkadiPetIdle5",
+        ""
+      ],
+      [
+        "SkadiPetIdle6",
+        ""
+      ],
+      [
+        "SkadiPetDismiss",
+        ""
+      ],
+      [
+        "SkadiPetExaltedOrb",
+        ""
+      ],
+      [
+        "SkadiPetToHideout",
+        ""
+      ],
+      [
+        "SkadiPetUniqueKill",
+        ""
+      ],
+      [
+        "SkadiPetMirrorDrop",
+        ""
+      ],
+      [
+        "SkadiPetPlayerDeath",
+        ""
+      ],
+      [
+        "SkadiPetSummon",
+        ""
       ]
     ]
   },
@@ -61230,14 +61354,6 @@
         "Tane Octavius"
       ],
       [
-        "Metadata/NPC/League/Harvest/HarvestNPC",
-        "Oshabi"
-      ],
-      [
-        "Metadata/NPC/League/Harvest/HarvestNPCGarden",
-        "Oshabi"
-      ],
-      [
         "Metadata/NPC/League/Harvest/HarvestNPCGardenTutorial",
         "Oshabi"
       ],
@@ -61712,6 +61828,22 @@
       [
         "Metadata/Monsters/LeagueExpedition/Medved",
         "Medved"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPC",
+        "Stirbt Zuletzt"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCWild",
+        "Stirbt Zuletzt"
+      ],
+      [
+        "Metadata/NPC/League/Hellscape/HellscapeNPCHideout",
+        "Stirbt Zuletzt"
+      ],
+      [
+        "Metadata/NPC/Skadi",
+        "Skadi"
       ]
     ]
   }
