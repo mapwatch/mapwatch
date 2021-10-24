@@ -10313,7 +10313,7 @@
         "Art/2DItems/Maps/ElderComplete.png",
         null,
         null,
-        1265
+        1266
       ],
       [
         "MapWorldsElderArenaUber",
@@ -10328,7 +10328,7 @@
         "Art/2DItems/Maps/UberElderComplete.png",
         null,
         null,
-        1266
+        1267
       ],
       [
         "AbyssLeague",
@@ -10343,7 +10343,7 @@
         null,
         null,
         null,
-        1267
+        1268
       ],
       [
         "AbyssLeague2",
@@ -10358,7 +10358,7 @@
         null,
         null,
         null,
-        1268
+        1269
       ],
       [
         "AbyssLeagueBoss",
@@ -10373,7 +10373,7 @@
         null,
         null,
         null,
-        1269
+        1270
       ],
       [
         "AbyssLeagueBoss2",
@@ -10388,7 +10388,7 @@
         null,
         null,
         null,
-        1270
+        1271
       ],
       [
         "AbyssLeagueBoss3",
@@ -10403,7 +10403,7 @@
         null,
         null,
         null,
-        1271
+        1272
       ],
       [
         "LegionLeague",
@@ -10418,7 +10418,7 @@
         "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLegion.png",
         null,
         null,
-        1276
+        1277
       ],
       [
         "HarvestLeagueBoss",
@@ -10433,7 +10433,7 @@
         "Art/2DItems/Maps/OshabiMap.png",
         null,
         null,
-        1282
+        1283
       ],
       [
         "Hideout4_3",
@@ -10448,7 +10448,7 @@
         null,
         null,
         null,
-        1484
+        1485
       ],
       [
         "Hideout5_3",
@@ -10463,7 +10463,7 @@
         null,
         null,
         null,
-        1485
+        1486
       ],
       [
         "Hideout11_3",
@@ -10478,7 +10478,7 @@
         null,
         null,
         null,
-        1486
+        1487
       ],
       [
         "Hideout12_3",
@@ -10493,7 +10493,7 @@
         null,
         null,
         null,
-        1487
+        1488
       ],
       [
         "Hideout13_3",
@@ -10508,7 +10508,7 @@
         null,
         null,
         null,
-        1488
+        1489
       ],
       [
         "Hideout16_3",
@@ -10523,7 +10523,7 @@
         null,
         null,
         null,
-        1489
+        1490
       ],
       [
         "Hideout17_3",
@@ -10538,7 +10538,7 @@
         null,
         null,
         null,
-        1490
+        1491
       ],
       [
         "Hideout24_1",
@@ -10553,7 +10553,7 @@
         null,
         null,
         null,
-        1491
+        1492
       ],
       [
         "Hideout61_3",
@@ -10568,7 +10568,7 @@
         null,
         null,
         null,
-        1492
+        1493
       ],
       [
         "HideoutArch",
@@ -10583,7 +10583,7 @@
         null,
         null,
         null,
-        1493
+        1494
       ],
       [
         "HideoutCoral",
@@ -10598,7 +10598,7 @@
         null,
         null,
         null,
-        1496
+        1497
       ],
       [
         "HideoutShapersRealm",
@@ -10613,7 +10613,7 @@
         null,
         null,
         null,
-        1497
+        1498
       ],
       [
         "HideoutCave",
@@ -10628,7 +10628,7 @@
         null,
         null,
         null,
-        1498
+        1499
       ],
       [
         "HideoutPrisonTower",
@@ -10643,7 +10643,7 @@
         null,
         null,
         null,
-        1499
+        1500
       ],
       [
         "HideoutBaths",
@@ -10658,7 +10658,7 @@
         null,
         null,
         null,
-        1501
+        1502
       ],
       [
         "HideoutOssuary",
@@ -10673,7 +10673,7 @@
         null,
         null,
         null,
-        1503
+        1504
       ],
       [
         "HideoutCourts",
@@ -10688,7 +10688,7 @@
         null,
         null,
         null,
-        1505
+        1506
       ],
       [
         "HideoutCauseway",
@@ -10703,7 +10703,7 @@
         null,
         null,
         null,
-        1507
+        1508
       ],
       [
         "HideoutHighGardens",
@@ -10718,7 +10718,7 @@
         null,
         null,
         null,
-        1509
+        1510
       ],
       [
         "HideoutShipgraveyard",
@@ -10733,7 +10733,7 @@
         null,
         null,
         null,
-        1511
+        1512
       ],
       [
         "HideoutForest",
@@ -10748,7 +10748,7 @@
         null,
         null,
         null,
-        1513
+        1514
       ],
       [
         "HideoutSewer",
@@ -10763,7 +10763,7 @@
         null,
         null,
         null,
-        1515
+        1516
       ],
       [
         "HideoutSpace",
@@ -10778,7 +10778,7 @@
         null,
         null,
         null,
-        1516
+        1517
       ],
       [
         "HideoutArenaGraveyardTrio",
@@ -10793,7 +10793,7 @@
         null,
         null,
         null,
-        1517
+        1518
       ],
       [
         "HideoutMine",
@@ -10808,7 +10808,7 @@
         null,
         null,
         null,
-        1519
+        1520
       ],
       [
         "HideoutRuinedTemple",
@@ -10823,7 +10823,7 @@
         null,
         null,
         null,
-        1521
+        1522
       ],
       [
         "HideoutOasis",
@@ -10838,7 +10838,7 @@
         null,
         null,
         null,
-        1523
+        1524
       ],
       [
         "HideoutPillarsOfArun",
@@ -10853,7 +10853,7 @@
         null,
         null,
         null,
-        1524
+        1525
       ],
       [
         "HideoutAtziriArena",
@@ -10868,7 +10868,7 @@
         null,
         null,
         null,
-        1525
+        1526
       ],
       [
         "HideoutInnocenceArena",
@@ -10883,7 +10883,7 @@
         null,
         null,
         null,
-        1526
+        1527
       ],
       [
         "HideoutShaperArena",
@@ -10898,7 +10898,7 @@
         null,
         null,
         null,
-        1527
+        1528
       ],
       [
         "HideoutKaomArena",
@@ -10913,7 +10913,7 @@
         null,
         null,
         null,
-        1528
+        1529
       ],
       [
         "HideoutDaressoArena",
@@ -10928,7 +10928,7 @@
         null,
         null,
         null,
-        1529
+        1530
       ],
       [
         "HideoutDominusArena",
@@ -10943,7 +10943,7 @@
         null,
         null,
         null,
-        1530
+        1531
       ],
       [
         "HideoutPietyArena",
@@ -10958,7 +10958,7 @@
         null,
         null,
         null,
-        1531
+        1532
       ],
       [
         "HideoutLunarisSolarisArena",
@@ -10973,7 +10973,7 @@
         null,
         null,
         null,
-        1532
+        1533
       ],
       [
         "HideoutKitavaArenaAct10",
@@ -10988,7 +10988,7 @@
         null,
         null,
         null,
-        1533
+        1534
       ],
       [
         "HideoutTemplarLab",
@@ -11003,7 +11003,7 @@
         null,
         null,
         null,
-        1534
+        1535
       ],
       [
         "HideoutSlum",
@@ -11018,7 +11018,7 @@
         null,
         null,
         null,
-        1535
+        1536
       ],
       [
         "HideoutBeach",
@@ -11033,7 +11033,7 @@
         null,
         null,
         null,
-        1537
+        1538
       ],
       [
         "HideoutFellshrine",
@@ -11048,7 +11048,7 @@
         null,
         null,
         null,
-        1539
+        1540
       ],
       [
         "HideoutBattleground",
@@ -11063,7 +11063,7 @@
         null,
         null,
         null,
-        1541
+        1542
       ],
       [
         "HideoutLibrary",
@@ -11078,7 +11078,7 @@
         null,
         null,
         null,
-        1543
+        1544
       ],
       [
         "HideoutSolaris",
@@ -11093,7 +11093,7 @@
         null,
         null,
         null,
-        1545
+        1546
       ],
       [
         "HideoutGardens",
@@ -11108,7 +11108,7 @@
         null,
         null,
         null,
-        1547
+        1548
       ],
       [
         "HideoutIceberg",
@@ -11123,7 +11123,7 @@
         null,
         null,
         null,
-        1549
+        1550
       ],
       [
         "HideoutCrimsonTemple",
@@ -11138,7 +11138,7 @@
         null,
         null,
         null,
-        1551
+        1552
       ],
       [
         "HideoutTwilightTemple",
@@ -11153,7 +11153,7 @@
         null,
         null,
         null,
-        1553
+        1554
       ],
       [
         "HideoutMountain",
@@ -11168,7 +11168,7 @@
         null,
         null,
         null,
-        1555
+        1556
       ],
       [
         "HideoutHaunted",
@@ -11183,7 +11183,7 @@
         null,
         null,
         null,
-        1557
+        1558
       ],
       [
         "HideoutMoonTemple",
@@ -11198,7 +11198,7 @@
         null,
         null,
         null,
-        1559
+        1560
       ],
       [
         "HideoutPrimevalRuins",
@@ -11213,7 +11213,7 @@
         null,
         null,
         null,
-        1561
+        1562
       ],
       [
         "HideoutDoomguard",
@@ -11228,7 +11228,7 @@
         null,
         null,
         null,
-        1563
+        1564
       ],
       [
         "HideoutSunspire",
@@ -11243,7 +11243,7 @@
         null,
         null,
         null,
-        1564
+        1565
       ],
       [
         "HideoutDarkwood",
@@ -11258,7 +11258,7 @@
         null,
         null,
         null,
-        1565
+        1566
       ],
       [
         "HideoutArenaElder",
@@ -11273,7 +11273,7 @@
         null,
         null,
         null,
-        1566
+        1567
       ],
       [
         "HideoutChiyouSpring",
@@ -11288,7 +11288,7 @@
         null,
         null,
         null,
-        1567
+        1568
       ],
       [
         "HideoutBlankAbyss",
@@ -11303,7 +11303,7 @@
         null,
         null,
         null,
-        1568
+        1569
       ],
       [
         "HideoutBlankCity",
@@ -11318,7 +11318,7 @@
         null,
         null,
         null,
-        1569
+        1570
       ],
       [
         "HideoutBlankClouds",
@@ -11333,7 +11333,7 @@
         null,
         null,
         null,
-        1570
+        1571
       ],
       [
         "HideoutBlankDesert",
@@ -11348,7 +11348,7 @@
         null,
         null,
         null,
-        1571
+        1572
       ],
       [
         "HideoutBlankDirt",
@@ -11363,7 +11363,7 @@
         null,
         null,
         null,
-        1572
+        1573
       ],
       [
         "HideoutBlankGrass",
@@ -11378,7 +11378,7 @@
         null,
         null,
         null,
-        1573
+        1574
       ],
       [
         "HideoutBlankSea",
@@ -11393,7 +11393,7 @@
         null,
         null,
         null,
-        1574
+        1575
       ],
       [
         "HideoutBlankSnow",
@@ -11408,7 +11408,7 @@
         null,
         null,
         null,
-        1575
+        1576
       ],
       [
         "HideoutThaumaturgy",
@@ -11423,7 +11423,7 @@
         null,
         null,
         null,
-        1576
+        1577
       ],
       [
         "HideoutYaochi",
@@ -11438,7 +11438,7 @@
         null,
         null,
         null,
-        1577
+        1578
       ],
       [
         "HideoutHumanoidPet",
@@ -11453,7 +11453,7 @@
         null,
         null,
         null,
-        1578
+        1579
       ],
       [
         "HideoutRitualLeague",
@@ -11468,7 +11468,7 @@
         null,
         null,
         null,
-        1579
+        1580
       ],
       [
         "HideoutArenaMaven",
@@ -11483,7 +11483,7 @@
         null,
         null,
         null,
-        1580
+        1581
       ],
       [
         "HideoutHasina",
@@ -11498,7 +11498,7 @@
         null,
         null,
         null,
-        1581
+        1582
       ],
       [
         "HideoutAzuriteCave",
@@ -11513,7 +11513,37 @@
         null,
         null,
         null,
-        1582
+        1583
+      ],
+      [
+        "HideoutSynthesisHub",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1584
+      ],
+      [
+        "HideoutVeritaniaArena",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null,
+        1585
       ],
       [
         "pvpTown",
@@ -11528,7 +11558,7 @@
         null,
         null,
         null,
-        1583
+        1586
       ],
       [
         "AtlasExilesBoss5",
@@ -11543,7 +11573,7 @@
         "Art/2DItems/Currency/Strongholds/WatchstoneIridescent.png",
         null,
         null,
-        1601
+        1604
       ],
       [
         "AfflictionTown6",
@@ -11558,7 +11588,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1602
+        1605
       ],
       [
         "AfflictionTown4",
@@ -11573,7 +11603,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1603
+        1606
       ],
       [
         "AfflictionTown7",
@@ -11588,7 +11618,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1604
+        1607
       ],
       [
         "AfflictionTown8",
@@ -11603,7 +11633,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1605
+        1608
       ],
       [
         "AfflictionTown10",
@@ -11618,7 +11648,7 @@
         "Art/2DItems/Maps/DeliriumFragment.png",
         null,
         null,
-        1606
+        1609
       ],
       [
         "HeistCinematic",
@@ -11633,7 +11663,7 @@
         null,
         null,
         null,
-        1607
+        1610
       ],
       [
         "HeistHub",
@@ -11648,7 +11678,7 @@
         null,
         null,
         null,
-        1608
+        1611
       ],
       [
         "HeistBunker1",
@@ -11663,7 +11693,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1609
+        1612
       ],
       [
         "HeistBunker2",
@@ -11678,7 +11708,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1610
+        1613
       ],
       [
         "HeistBunker3",
@@ -11693,7 +11723,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1611
+        1614
       ],
       [
         "HeistBunker4",
@@ -11708,7 +11738,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1612
+        1615
       ],
       [
         "HeistBunker5",
@@ -11723,7 +11753,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1613
+        1616
       ],
       [
         "HeistBunker6",
@@ -11738,7 +11768,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1614
+        1617
       ],
       [
         "HeistBunker7",
@@ -11753,7 +11783,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1615
+        1618
       ],
       [
         "HeistBunker8",
@@ -11768,7 +11798,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1616
+        1619
       ],
       [
         "HeistBunker9",
@@ -11783,7 +11813,7 @@
         "Art/2DItems/Currency/Heist/ContractItem.png",
         null,
         null,
-        1617
+        1620
       ],
       [
         "HeistMines1",
@@ -11798,7 +11828,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1618
+        1621
       ],
       [
         "HeistMines2",
@@ -11813,7 +11843,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1619
+        1622
       ],
       [
         "HeistMines3",
@@ -11828,7 +11858,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1620
+        1623
       ],
       [
         "HeistMines4",
@@ -11843,7 +11873,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1621
+        1624
       ],
       [
         "HeistMines5",
@@ -11858,7 +11888,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1622
+        1625
       ],
       [
         "HeistMines6",
@@ -11873,7 +11903,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1623
+        1626
       ],
       [
         "HeistMines7",
@@ -11888,7 +11918,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1624
+        1627
       ],
       [
         "HeistMines8",
@@ -11903,7 +11933,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1625
+        1628
       ],
       [
         "HeistMines9",
@@ -11918,7 +11948,7 @@
         "Art/2DItems/Currency/Heist/ContractItem2.png",
         null,
         null,
-        1626
+        1629
       ],
       [
         "HeistDungeon1",
@@ -11933,7 +11963,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1627
+        1630
       ],
       [
         "HeistDungeon2",
@@ -11948,7 +11978,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1628
+        1631
       ],
       [
         "HeistDungeon3",
@@ -11963,7 +11993,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1629
+        1632
       ],
       [
         "HeistDungeon4",
@@ -11978,7 +12008,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1630
+        1633
       ],
       [
         "HeistDungeon5",
@@ -11993,7 +12023,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1631
+        1634
       ],
       [
         "HeistDungeon6",
@@ -12008,7 +12038,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1632
+        1635
       ],
       [
         "HeistDungeon7",
@@ -12023,7 +12053,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1633
+        1636
       ],
       [
         "HeistDungeon8",
@@ -12038,7 +12068,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1634
+        1637
       ],
       [
         "HeistDungeon9",
@@ -12053,7 +12083,7 @@
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
         null,
-        1635
+        1638
       ],
       [
         "HeistReliquary1",
@@ -12068,7 +12098,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1636
+        1639
       ],
       [
         "HeistReliquary2",
@@ -12083,7 +12113,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1637
+        1640
       ],
       [
         "HeistReliquary3",
@@ -12098,7 +12128,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1638
+        1641
       ],
       [
         "HeistReliquary4",
@@ -12113,7 +12143,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1639
+        1642
       ],
       [
         "HeistReliquary5",
@@ -12128,7 +12158,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1640
+        1643
       ],
       [
         "HeistReliquary6",
@@ -12143,7 +12173,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1641
+        1644
       ],
       [
         "HeistReliquary7",
@@ -12158,7 +12188,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1642
+        1645
       ],
       [
         "HeistReliquary8",
@@ -12173,7 +12203,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1643
+        1646
       ],
       [
         "HeistReliquary9",
@@ -12188,7 +12218,7 @@
         "Art/2DItems/Currency/Heist/ContractItem4.png",
         null,
         null,
-        1644
+        1647
       ],
       [
         "HeistLibrary1",
@@ -12203,7 +12233,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1645
+        1648
       ],
       [
         "HeistLibrary2",
@@ -12218,7 +12248,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1646
+        1649
       ],
       [
         "HeistLibrary3",
@@ -12233,7 +12263,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1647
+        1650
       ],
       [
         "HeistLibrary4_",
@@ -12248,7 +12278,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1648
+        1651
       ],
       [
         "HeistLibrary5",
@@ -12263,7 +12293,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1649
+        1652
       ],
       [
         "HeistLibrary6",
@@ -12278,7 +12308,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1650
+        1653
       ],
       [
         "HeistLibrary7",
@@ -12293,7 +12323,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1651
+        1654
       ],
       [
         "HeistLibrary8_",
@@ -12308,7 +12338,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1652
+        1655
       ],
       [
         "HeistLibrary9",
@@ -12323,7 +12353,7 @@
         "Art/2DItems/Currency/Heist/ContractItem5.png",
         null,
         null,
-        1653
+        1656
       ],
       [
         "HeistRobotTunnels1",
@@ -12338,7 +12368,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1654
+        1657
       ],
       [
         "HeistRobotTunnels2",
@@ -12353,7 +12383,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1655
+        1658
       ],
       [
         "HeistRobotTunnels3",
@@ -12368,7 +12398,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1656
+        1659
       ],
       [
         "HeistRobotTunnels4",
@@ -12383,7 +12413,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1657
+        1660
       ],
       [
         "HeistRobotTunnels5",
@@ -12398,7 +12428,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1658
+        1661
       ],
       [
         "HeistRobotTunnels6",
@@ -12413,7 +12443,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1659
+        1662
       ],
       [
         "HeistRobotTunnels7",
@@ -12428,7 +12458,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1660
+        1663
       ],
       [
         "HeistRobotTunnels8",
@@ -12443,7 +12473,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1661
+        1664
       ],
       [
         "HeistRobotTunnels9",
@@ -12458,7 +12488,7 @@
         "Art/2DItems/Currency/Heist/ContractItem6.png",
         null,
         null,
-        1662
+        1665
       ],
       [
         "HeistSewers1",
@@ -12473,7 +12503,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1663
+        1666
       ],
       [
         "HeistSewers2",
@@ -12488,7 +12518,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1664
+        1667
       ],
       [
         "HeistSewers3",
@@ -12503,7 +12533,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1665
+        1668
       ],
       [
         "HeistSewers4",
@@ -12518,7 +12548,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1666
+        1669
       ],
       [
         "HeistSewers5",
@@ -12533,7 +12563,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1667
+        1670
       ],
       [
         "HeistSewers6",
@@ -12548,7 +12578,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1668
+        1671
       ],
       [
         "HeistSewers7",
@@ -12563,7 +12593,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1669
+        1672
       ],
       [
         "HeistSewers8",
@@ -12578,7 +12608,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1670
+        1673
       ],
       [
         "HeistSewers9",
@@ -12593,7 +12623,7 @@
         "Art/2DItems/Currency/Heist/ContractItem7.png",
         null,
         null,
-        1671
+        1674
       ],
       [
         "HeistCourts1",
@@ -12608,7 +12638,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1672
+        1675
       ],
       [
         "HeistCourts2",
@@ -12623,7 +12653,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1673
+        1676
       ],
       [
         "HeistCourts3",
@@ -12638,7 +12668,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1674
+        1677
       ],
       [
         "HeistCourts4",
@@ -12653,7 +12683,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1675
+        1678
       ],
       [
         "HeistCourts5",
@@ -12668,7 +12698,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1676
+        1679
       ],
       [
         "HeistCourts6",
@@ -12683,7 +12713,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1677
+        1680
       ],
       [
         "HeistCourts7",
@@ -12698,7 +12728,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1678
+        1681
       ],
       [
         "HeistCourts8",
@@ -12713,7 +12743,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1679
+        1682
       ],
       [
         "HeistCourts9_",
@@ -12728,7 +12758,7 @@
         "Art/2DItems/Currency/Heist/ContractItem8.png",
         null,
         null,
-        1680
+        1683
       ],
       [
         "HeistMansion1",
@@ -12743,7 +12773,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1681
+        1684
       ],
       [
         "HeistMansion2",
@@ -12758,7 +12788,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1682
+        1685
       ],
       [
         "HeistMansion3",
@@ -12773,7 +12803,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1683
+        1686
       ],
       [
         "HeistMansion4",
@@ -12788,7 +12818,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1684
+        1687
       ],
       [
         "HeistMansion5",
@@ -12803,7 +12833,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1685
+        1688
       ],
       [
         "HeistMansion6",
@@ -12818,7 +12848,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1686
+        1689
       ],
       [
         "HeistMansion7",
@@ -12833,7 +12863,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1687
+        1690
       ],
       [
         "HeistMansion8",
@@ -12848,7 +12878,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1688
+        1691
       ],
       [
         "HeistMansion9",
@@ -12863,7 +12893,7 @@
         "Art/2DItems/Currency/Heist/ContractItem9.png",
         null,
         null,
-        1689
+        1692
       ],
       [
         "HeistBoss_AdmiralDarnaw",
@@ -12878,7 +12908,7 @@
         "Art/2DItems/Currency/Heist/AdmiralDarnawFightContract.dds",
         null,
         null,
-        1690
+        1693
       ],
       [
         "HeistBoss_FreidrichTarollo",
@@ -12893,7 +12923,7 @@
         "Art/2DItems/Currency/Heist/SlaveMerchantFightContract.dds",
         null,
         null,
-        1691
+        1694
       ],
       [
         "HeistBoss_Jamanra",
@@ -12908,7 +12938,7 @@
         "Art/2DItems/Currency/Heist/JamanraFightContract.dds",
         null,
         null,
-        1692
+        1695
       ],
       [
         "HeistBoss_Nashta",
@@ -12923,7 +12953,7 @@
         "Art/2DItems/Currency/Heist/UsurperFightContract.dds",
         null,
         null,
-        1693
+        1696
       ],
       [
         "HeistBoss_TheUnbreakable",
@@ -12938,7 +12968,7 @@
         "Art/2DItems/Currency/Heist/UnbreakableFightContract.dds",
         null,
         null,
-        1695
+        1698
       ],
       [
         "MavenHub",
@@ -12953,7 +12983,7 @@
         "Art/2DItems/Currency/AtlasRadiusTier4.png",
         null,
         null,
-        1696
+        1699
       ],
       [
         "UltimatumArena",
@@ -12968,7 +12998,7 @@
         "Art/2DItems/Maps/UltimatumTrialBase.png",
         null,
         null,
-        1702
+        1705
       ],
       [
         "UltimatumArenaEndgame",
@@ -12983,7 +13013,7 @@
         "Art/2DItems/Maps/UltimatumTrialBase.png",
         null,
         null,
-        1703
+        1706
       ],
       [
         "UltimatumBossArena",
@@ -12998,7 +13028,7 @@
         "Art/2DItems/Maps/UltimatumTrialBase.png",
         null,
         null,
-        1704
+        1707
       ]
     ]
   },
@@ -13709,8 +13739,10 @@
         "HideoutHumanoidPet": "Humanoid Pet Hideout",
         "HideoutRitualLeague": "Ritualist's Hideout",
         "HideoutArenaMaven": "Crucible Hideout",
-        "HideoutHasina": "Hasina Hideout",
+        "HideoutHasina": "Tavern Hideout",
         "HideoutAzuriteCave": "Azurite Cavern Hideout",
+        "HideoutSynthesisHub": "Synthetic Hideout",
+        "HideoutVeritaniaArena": "Redeemer's Hideout",
         "pvpTown": "Sarn Arena Staging Area",
         "AtlasExilesBoss5": "Eye of the Storm",
         "AfflictionTown6": "Lunacy's Watch",
@@ -15520,7 +15552,7 @@
         "BreachBossLightning": "Domaine d'Esh",
         "MapWorldsLookout": "Poste d'observation",
         "MapWorldsBeach": "Plage",
-        "MapWorldsGraveyard": "Champ du repos",
+        "MapWorldsGraveyard": "Sépultures",
         "MapWorldsDungeon": "Donjon",
         "MapWorldsAlleyways": "Ruelles",
         "MapWorldsPen": "Enclos",
@@ -15690,7 +15722,7 @@
         "MapWorldsCrimsonTownship": "Commune pourpre",
         "MapWorldsForkingRiver": "Bras de rivière",
         "MapWorldsFoundry": "Fonderie",
-        "MapWorldsColdRiver_": "Rivière glaciale",
+        "MapWorldsColdRiver_": "Rivière gelée",
         "MapWorldsForbiddenWoods": "Bois interdits",
         "MapWorldsSilo": "Silo",
         "MapWorldsElderArena": "L'Absence d'Importance et de Raison d'être",
@@ -15772,8 +15804,10 @@
         "HideoutHumanoidPet": "Repaire de Familiers humanoïdes",
         "HideoutRitualLeague": "Repaire du Ritualiste",
         "HideoutArenaMaven": "Repaire du Creuset",
-        "HideoutHasina": "Repaire de l'Hasina",
+        "HideoutHasina": "Repaire de la Taverne",
         "HideoutAzuriteCave": "Repaire de la Caverne d'Azurite",
+        "HideoutSynthesisHub": "Repaire de synthèse",
+        "HideoutVeritaniaArena": "Repaire de la Rédemptrice",
         "pvpTown": "Scène de l'arène de Sarn",
         "AtlasExilesBoss5": "L'Œil du cyclone",
         "AfflictionTown6": "Le Guet de l'Œil accusateur",
@@ -17835,8 +17869,10 @@
         "HideoutHumanoidPet": "Humanoid Pet Hideout",
         "HideoutRitualLeague": "Rituelles Versteck",
         "HideoutArenaMaven": "Verstecktes Astrolabium",
-        "HideoutHasina": "Hasina Hideout",
+        "HideoutHasina": "Versteckte Taverne",
         "HideoutAzuriteCave": "Versteckte Azurithöhle",
+        "HideoutSynthesisHub": "Synthetisches Versteck",
+        "HideoutVeritaniaArena": "Versteck der Erlöserin",
         "pvpTown": "Sarn-Arena, Sammelplatz",
         "AtlasExilesBoss5": "Auge des Sturms",
         "AfflictionTown6": "Löwenauges Wahn",
@@ -19898,8 +19934,10 @@
         "HideoutHumanoidPet": "인간형 애완동물 은신처",
         "HideoutRitualLeague": "의식술사의 은신처(Ritualist's Hideout)",
         "HideoutArenaMaven": "혹독한 시련의 은신처",
-        "HideoutHasina": "하시나 은신처",
+        "HideoutHasina": "선술집 은신처",
         "HideoutAzuriteCave": "남동석 암굴 은신처",
+        "HideoutSynthesisHub": "결합의 은신처",
+        "HideoutVeritaniaArena": "대속자의 은신처",
         "pvpTown": "사안 투기장",
         "AtlasExilesBoss5": "태풍의 눈",
         "AfflictionTown6": "광기의 초소",
@@ -21961,8 +21999,10 @@
         "HideoutHumanoidPet": "Refúgio Mascote Humanóide",
         "HideoutRitualLeague": "Refúgio Ritualístico",
         "HideoutArenaMaven": "Refúgio Crisol",
-        "HideoutHasina": "Refúgio Hasina",
+        "HideoutHasina": "Refúgio da Taverna",
         "HideoutAzuriteCave": "Refúgio Caverna de Azurita",
+        "HideoutSynthesisHub": "Refúgio Sintético",
+        "HideoutVeritaniaArena": "Refúgio da Redentora",
         "pvpTown": "Área de Testes da Arena de Sarn",
         "AtlasExilesBoss5": "Olho da Tempestade",
         "AfflictionTown6": "Vigia da Loucura",
@@ -24024,8 +24064,10 @@
         "HideoutHumanoidPet": "Убежище гуманоидов",
         "HideoutRitualLeague": "Убежище ритуалиста",
         "HideoutArenaMaven": "Убежище горнила",
-        "HideoutHasina": "Убежище Хасины",
+        "HideoutHasina": "Убежище в таверне",
         "HideoutAzuriteCave": "Азуритовое убежище",
+        "HideoutSynthesisHub": "Синтетическое убежище",
+        "HideoutVeritaniaArena": "Убежище Избавительницы",
         "pvpTown": "Внутренние помещения арены Сарна",
         "AtlasExilesBoss5": "Око Шторма",
         "AfflictionTown6": "Застава безумия",
@@ -26995,8 +27037,10 @@
         "HideoutHumanoidPet": "Guarida de mascota humanoide",
         "HideoutRitualLeague": "Guarida del ritualista",
         "HideoutArenaMaven": "Guarida de crisol",
-        "HideoutHasina": "Guarida de Hasina",
+        "HideoutHasina": "Guarida de taberna",
         "HideoutAzuriteCave": "Guarida de Azurita",
+        "HideoutSynthesisHub": "Guarida Sintética",
+        "HideoutVeritaniaArena": "Guarida de la Redentora",
         "pvpTown": "Área de Preparación de la Arena de Sarn",
         "AtlasExilesBoss5": "El ojo de la tormenta",
         "AfflictionTown6": "Vigilia de la locura",
@@ -28359,18 +28403,18 @@
         "AFKModeDisabled": "ปิดโหมด AFK แล้ว"
       },
       "worldAreas": {
-        "1_1_town": "Lioneye's Watch",
-        "1_2_town": "The Forest Encampment",
-        "1_3_town": "The Sarn Encampment",
-        "1_4_town": "Highgate",
-        "1_5_town": "Overseer's Tower",
-        "2_6_town": "Lioneye's Watch",
-        "2_7_town": "The Bridge Encampment",
-        "2_8_town": "The Sarn Encampment",
-        "2_9_town": "Highgate",
-        "2_10_town": "Oriath Docks",
-        "2_11_town": "Oriath",
-        "2_11_endgame_town": "Karui Shores",
+        "1_1_town": "หอสังเกตการณ์ไลออนอาย",
+        "1_2_town": "ค่ายพงไพร",
+        "1_3_town": "ค่ายซาร์น",
+        "1_4_town": "ไฮเกท",
+        "1_5_town": "หอคอยผู้คุมขัง",
+        "2_6_town": "หอสังเกตการณ์ไลออนอาย",
+        "2_7_town": "ค่ายสะพาน",
+        "2_8_town": "ค่ายซาร์น",
+        "2_9_town": "ไฮเกท",
+        "2_10_town": "ท่าเรือโอริอาท",
+        "2_11_town": "โอริอาท",
+        "2_11_endgame_town": "ชายฝั่งคารุย",
         "1_SideArea1_1": "Strange Sinkhole",
         "1_SideArea1_2": "Concealed Cavity",
         "1_SideArea1_3": "Sunken Shingle",
@@ -28480,7 +28524,7 @@
         "MapSideAreaIceValley": "Isolated Sound",
         "MapSideAreaLavaTunnel": "Suffocating Fissure",
         "MapSideAreaIceForest": "Frozen Springs",
-        "3_ProphecyBoss": "The Pale Court",
+        "3_ProphecyBoss": "ศาลสีซีด",
         "Incursion_Temple1": "วิหารแอ็ทโซแอทล์",
         "Incursion_Temple2": "วิหารแอ็ทโซแอทล์",
         "Incursion_Temple3": "วิหารแอ็ทโซแอทล์",
@@ -28491,319 +28535,319 @@
         "Incursion_Temple8": "วิหารแอ็ทโซแอทล์",
         "Incursion_Temple9": "วิหารแอ็ทโซแอทล์",
         "Incursion_Temple10": "วิหารแอ็ทโซแอทล์",
-        "BetrayalSafeHouseFortress": "Syndicate Hideout",
-        "BetrayalSafeHouseAssassins": "Syndicate Hideout",
-        "BetrayalSafeHouseCaravan": "Syndicate Hideout",
-        "BetrayalSafeHouseLaboratory": "Syndicate Hideout",
+        "BetrayalSafeHouseFortress": "ที่ซ่อนองค์กร",
+        "BetrayalSafeHouseAssassins": "ที่ซ่อนองค์กร",
+        "BetrayalSafeHouseCaravan": "ที่ซ่อนองค์กร",
+        "BetrayalSafeHouseLaboratory": "ที่ซ่อนองค์กร",
         "BetrayalMastermindFight": "รังของผู้บงการ",
         "Synthesis_MapBoss": "แกนความทรงจำ",
         "Synthesis_MapGuardian1": "ความทรงจำที่ห่างไกลที่ถูกแก้ไข",
         "Synthesis_MapGuardian2": "ความทรงจำที่ห่างไกลที่ถูกแต่งเติม",
         "Synthesis_MapGuardian3": "ความทรงจำที่ห่างไกลที่ถูกบิดเบือน",
         "Synthesis_MapGuardian4": "ความทรงจำที่ห่างไกลที่ถูกเขียนใหม่",
-        "1_Labyrinth_AirlockClean": "Aspirants' Plaza",
-        "1_Labyrinth_C_end": "Sepulchre Annex",
-        "1_Labyrinth_C_end_bottleneck": "Sepulchre Annex",
-        "1_Labyrinth_C_straight": "Sepulchre Passage",
-        "1_Labyrinth_C_straight_bottleneck": "Sepulchre Passage",
-        "1_Labyrinth_C_branch": "Sepulchre Halls",
-        "1_Labyrinth_C_branch_bottleneck_1": "Sepulchre Halls",
-        "1_Labyrinth_C_branch_bottleneck_2": "Sepulchre Halls",
-        "1_Labyrinth_C_branch_door": "Sepulchre Halls",
-        "1_Labyrinth_C_quad": "Sepulchre Atrium",
-        "1_Labyrinth_C_quad_bottleneck": "Sepulchre Atrium",
-        "1_Labyrinth_C_quad_door": "Sepulchre Atrium",
-        "1_Labyrinth_P_end": "Sanitorium Annex",
-        "1_Labyrinth_P_end_bottleneck": "Sanitorium Annex",
-        "1_Labyrinth_P_straight": "Sanitorium Passage",
-        "1_Labyrinth_P_straight_bottleneck": "Sanitorium Passage",
-        "1_Labyrinth_P_branch": "Sanitorium Halls",
-        "1_Labyrinth_P_branch_bottleneck_1": "Sanitorium Halls",
-        "1_Labyrinth_P_branch_bottleneck_2": "Sanitorium Halls",
-        "1_Labyrinth_P_branch_door": "Sanitorium Halls",
-        "1_Labyrinth_P_quad": "Sanitorium Atrium",
-        "1_Labyrinth_P_quad_bottleneck": "Sanitorium Atrium",
-        "1_Labyrinth_P_quad_door": "Sanitorium Atrium",
-        "1_Labyrinth_EH_end": "Mansion Annex",
-        "1_Labyrinth_EH_end_bottleneck": "Mansion Annex",
-        "1_Labyrinth_EH_straight_#": "Mansion Passage",
-        "1_Labyrinth_EH_straight_bottleneck": "Mansion Passage",
-        "1_Labyrinth_EH_branch": "Mansion Halls",
-        "1_Labyrinth_EH_branch_bottleneck_1": "Mansion Halls",
-        "1_Labyrinth_EH_branch_bottleneck_2": "Mansion Halls",
-        "1_Labyrinth_EH_branch_door": "Mansion Halls",
-        "1_Labyrinth_EH_quad": "Mansion Atrium",
-        "1_Labyrinth_EH_quad_bottleneck": "Mansion Atrium",
-        "1_Labyrinth_EH_quad_door_#": "Mansion Atrium",
-        "1_Labyrinth_EH_block_branch": "Mansion Halls",
-        "1_Labyrinth_RT_end": "Basilica Annex",
-        "1_Labyrinth_RT_end_bottleneck": "Basilica Annex",
-        "1_Labyrinth_RT_straight": "Basilica Passage",
-        "1_Labyrinth_RT_straight_bottleneck": "Basilica Passage",
-        "1_Labyrinth_RT_branch": "Basilica Halls",
-        "1_Labyrinth_RT_branch_bottleneck_1": "Basilica Halls",
-        "1_Labyrinth_RT_branch_bottleneck_2": "Basilica Halls",
-        "1_Labyrinth_RT_branch_door": "Basilica Halls",
-        "1_Labyrinth_RT_quad_#": "Basilica Atrium",
-        "1_Labyrinth_RT_quad_bottleneck": "Basilica Atrium",
-        "1_Labyrinth_RT_quad_door": "Basilica Atrium",
-        "1_Labyrinth_DG_end": "Domain Enclosure",
-        "1_Labyrinth_DG_end_bottleneck_#": "Domain Enclosure",
-        "1_Labyrinth_DG_straight": "Domain Path",
-        "1_Labyrinth_DG_straight_bottleneck": "Domain Path",
-        "1_Labyrinth_DG_branch": "Domain Walkways",
-        "1_Labyrinth_DG_branch_bottleneck_1_#": "Domain Walkways",
-        "1_Labyrinth_DG_branch_bottleneck_2": "Domain Walkways",
-        "1_Labyrinth_DG_branch_door": "Domain Walkways",
-        "1_Labyrinth_DG_quad": "Domain Crossing",
-        "1_Labyrinth_DG_quad_bottleneck": "Domain Crossing",
-        "1_Labyrinth_DG_quad_door": "Domain Crossing",
-        "1_Labyrinth_OH_end": "Estate Enclosure",
-        "1_Labyrinth_OH_end_bottleneck": "Estate Enclosure",
-        "1_Labyrinth_OH_straight": "Estate Path",
-        "1_Labyrinth_OH_straight_bottleneck": "Estate Path",
-        "1_Labyrinth_OH_branch": "Estate Walkways",
-        "1_Labyrinth_OH_branch_bottleneck_1": "Estate Walkways",
-        "1_Labyrinth_OH_branch_bottleneck_2": "Estate Walkways",
-        "1_Labyrinth_OH_branch_door": "Estate Walkways",
-        "1_Labyrinth_OH_quad_#": "Estate Crossing",
-        "1_Labyrinth_OH_quad_bottleneck": "Estate Crossing",
-        "1_Labyrinth_OH_quad_door_#": "Estate Crossing",
-        "1_Labyrinth_boss_1": "Aspirant's Trial",
-        "1_Labyrinth_boss_2": "Aspirant's Trial",
-        "1_Labyrinth_boss_3": "Aspirant's Trial",
-        "1_Labyrinth_boss_1_end": "Aspirant's Trial",
-        "1_Labyrinth_boss_2_end": "Aspirant's Trial",
-        "1_Labyrinth_boss_3_end_#": "Aspirant's Trial",
-        "2_Labyrinth_C_end": "Sepulchre Annex",
-        "2_Labyrinth_C_end_bottleneck": "Sepulchre Annex",
-        "2_Labyrinth_C_straight": "Sepulchre Passage",
-        "2_Labyrinth_C_straight_bottleneck": "Sepulchre Passage",
-        "2_Labyrinth_C_branch": "Sepulchre Halls",
-        "2_Labyrinth_C_branch_bottleneck_1": "Sepulchre Halls",
-        "2_Labyrinth_C_branch_bottleneck_2": "Sepulchre Halls",
-        "2_Labyrinth_C_branch_door": "Sepulchre Halls",
-        "2_Labyrinth_C_quad": "Sepulchre Atrium",
-        "2_Labyrinth_C_quad_bottleneck": "Sepulchre Atrium",
-        "2_Labyrinth_C_quad_door": "Sepulchre Atrium",
-        "2_Labyrinth_P_end": "Sanitorium Annex",
-        "2_Labyrinth_P_end_bottleneck": "Sanitorium Annex",
-        "2_Labyrinth_P_straight": "Sanitorium Passage",
-        "2_Labyrinth_P_straight_bottleneck": "Sanitorium Passage",
-        "2_Labyrinth_P_branch": "Sanitorium Halls",
-        "2_Labyrinth_P_branch_bottleneck_1": "Sanitorium Halls",
-        "2_Labyrinth_P_branch_bottleneck_2": "Sanitorium Halls",
-        "2_Labyrinth_P_branch_door": "Sanitorium Halls",
-        "2_Labyrinth_P_quad": "Sanitorium Atrium",
-        "2_Labyrinth_P_quad_bottleneck": "Sanitorium Atrium",
-        "2_Labyrinth_P_quad_door": "Sanitorium Atrium",
-        "2_Labyrinth_EH_end": "Mansion Annex",
-        "2_Labyrinth_EH_end_bottleneck": "Mansion Annex",
-        "2_Labyrinth_EH_straight_#": "Mansion Passage",
-        "2_Labyrinth_EH_straight_bottleneck": "Mansion Passage",
-        "2_Labyrinth_EH_branch": "Mansion Halls",
-        "2_Labyrinth_EH_branch_bottleneck_1": "Mansion Halls",
-        "2_Labyrinth_EH_branch_bottleneck_2": "Mansion Halls",
-        "2_Labyrinth_EH_branch_door": "Mansion Halls",
-        "2_Labyrinth_EH_quad": "Mansion Atrium",
-        "2_Labyrinth_EH_quad_bottleneck": "Mansion Atrium",
-        "2_Labyrinth_EH_quad_door_#": "Mansion Atrium",
-        "2_Labyrinth_RT_end": "Basilica Annex",
-        "2_Labyrinth_RT_end_bottleneck": "Basilica Annex",
-        "2_Labyrinth_RT_straight": "Basilica Passage",
-        "2_Labyrinth_RT_straight_bottleneck": "Basilica Passage",
-        "2_Labyrinth_RT_branch": "Basilica Halls",
-        "2_Labyrinth_RT_branch_bottleneck_1": "Basilica Halls",
-        "2_Labyrinth_RT_branch_bottleneck_2": "Basilica Halls",
-        "2_Labyrinth_RT_branch_door": "Basilica Halls",
-        "2_Labyrinth_RT_quad_#": "Basilica Atrium",
-        "2_Labyrinth_RT_quad_bottleneck": "Basilica Atrium",
-        "2_Labyrinth_RT_quad_door": "Basilica Atrium",
-        "2_Labyrinth_DG_end": "Domain Enclosure",
-        "2_Labyrinth_DG_end_bottleneck_#": "Domain Enclosure",
-        "2_Labyrinth_DG_straight": "Domain Path",
-        "2_Labyrinth_DG_straight_bottleneck": "Domain Path",
-        "2_Labyrinth_DG_branch": "Domain Walkways",
-        "2_Labyrinth_DG_branch_bottleneck_1_#": "Domain Walkways",
-        "2_Labyrinth_DG_branch_bottleneck_2": "Domain Walkways",
-        "2_Labyrinth_DG_branch_door": "Domain Walkways",
-        "2_Labyrinth_DG_quad": "Domain Crossing",
-        "2_Labyrinth_DG_quad_bottleneck": "Domain Crossing",
-        "2_Labyrinth_DG_quad_door": "Domain Crossing",
-        "2_Labyrinth_OH_end": "Estate Enclosure",
-        "2_Labyrinth_OH_end_bottleneck": "Estate Enclosure",
-        "2_Labyrinth_OH_straight": "Estate Path",
-        "2_Labyrinth_OH_straight_bottleneck": "Estate Path",
-        "2_Labyrinth_OH_branch": "Estate Walkways",
-        "2_Labyrinth_OH_branch_bottleneck_1": "Estate Walkways",
-        "2_Labyrinth_OH_branch_bottleneck_2": "Estate Walkways",
-        "2_Labyrinth_OH_branch_door": "Estate Walkways",
-        "2_Labyrinth_OH_quad_#": "Estate Crossing",
-        "2_Labyrinth_OH_quad_bottleneck": "Estate Crossing",
-        "2_Labyrinth_OH_quad_door_#": "Estate Crossing",
-        "2_Labyrinth_boss_1": "Aspirant's Trial",
-        "2_Labyrinth_boss_2": "Aspirant's Trial",
-        "2_Labyrinth_boss_3": "Aspirant's Trial",
-        "2_Labyrinth_boss_1_end": "Aspirant's Trial",
-        "2_Labyrinth_boss_2_end": "Aspirant's Trial",
-        "2_Labyrinth_boss_3_end_#": "Aspirant's Trial",
-        "3_Labyrinth_C_end": "Sepulchre Annex",
-        "3_Labyrinth_C_end_bottleneck": "Sepulchre Annex",
-        "3_Labyrinth_C_straight": "Sepulchre Passage",
-        "3_Labyrinth_C_straight_bottleneck": "Sepulchre Passage",
-        "3_Labyrinth_C_branch": "Sepulchre Halls",
-        "3_Labyrinth_C_branch_bottleneck_1": "Sepulchre Halls",
-        "3_Labyrinth_C_branch_bottleneck_2": "Sepulchre Halls",
-        "3_Labyrinth_C_branch_door": "Sepulchre Halls",
-        "3_Labyrinth_C_quad": "Sepulchre Atrium",
-        "3_Labyrinth_C_quad_bottleneck": "Sepulchre Atrium",
-        "3_Labyrinth_C_quad_door": "Sepulchre Atrium",
-        "3_Labyrinth_P_end": "Sanitorium Annex",
-        "3_Labyrinth_P_end_bottleneck": "Sanitorium Annex",
-        "3_Labyrinth_P_straight": "Sanitorium Passage",
-        "3_Labyrinth_P_straight_bottleneck": "Sanitorium Passage",
-        "3_Labyrinth_P_branch": "Sanitorium Halls",
-        "3_Labyrinth_P_branch_bottleneck_1": "Sanitorium Halls",
-        "3_Labyrinth_P_branch_bottleneck_2": "Sanitorium Halls",
-        "3_Labyrinth_P_branch_door": "Sanitorium Halls",
-        "3_Labyrinth_P_quad": "Sanitorium Atrium",
-        "3_Labyrinth_P_quad_bottleneck": "Sanitorium Atrium",
-        "3_Labyrinth_P_quad_door": "Sanitorium Atrium",
-        "3_Labyrinth_EH_end": "Mansion Annex",
-        "3_Labyrinth_EH_end_bottleneck": "Mansion Annex",
-        "3_Labyrinth_EH_straight_#": "Mansion Passage",
-        "3_Labyrinth_EH_straight_bottleneck": "Mansion Passage",
-        "3_Labyrinth_EH_branch": "Mansion Halls",
-        "3_Labyrinth_EH_branch_bottleneck_1": "Mansion Halls",
-        "3_Labyrinth_EH_branch_bottleneck_2": "Mansion Halls",
-        "3_Labyrinth_EH_branch_door": "Mansion Halls",
-        "3_Labyrinth_EH_quad": "Mansion Atrium",
-        "3_Labyrinth_EH_quad_bottleneck": "Mansion Atrium",
-        "3_Labyrinth_EH_quad_door_#": "Mansion Atrium",
-        "3_Labyrinth_RT_end": "Basilica Annex",
-        "3_Labyrinth_RT_end_bottleneck": "Basilica Annex",
-        "3_Labyrinth_RT_straight": "Basilica Passage",
-        "3_Labyrinth_RT_straight_bottleneck": "Basilica Passage",
-        "3_Labyrinth_RT_branch": "Basilica Halls",
-        "3_Labyrinth_RT_branch_bottleneck_1": "Basilica Halls",
-        "3_Labyrinth_RT_branch_bottleneck_2": "Basilica Halls",
-        "3_Labyrinth_RT_branch_door": "Basilica Halls",
-        "3_Labyrinth_RT_quad_#": "Basilica Atrium",
-        "3_Labyrinth_RT_quad_bottleneck": "Basilica Atrium",
-        "3_Labyrinth_RT_quad_door": "Basilica Atrium",
-        "3_Labyrinth_DG_end": "Domain Enclosure",
-        "3_Labyrinth_DG_end_bottleneck_#": "Domain Enclosure",
-        "3_Labyrinth_DG_straight": "Domain Path",
-        "3_Labyrinth_DG_straight_bottleneck": "Domain Path",
-        "3_Labyrinth_DG_branch": "Domain Walkways",
-        "3_Labyrinth_DG_branch_bottleneck_1_#": "Domain Walkways",
-        "3_Labyrinth_DG_branch_bottleneck_2": "Domain Walkways",
-        "3_Labyrinth_DG_branch_door": "Domain Walkways",
-        "3_Labyrinth_DG_quad": "Domain Crossing",
-        "3_Labyrinth_DG_quad_bottleneck": "Domain Crossing",
-        "3_Labyrinth_DG_quad_door": "Domain Crossing",
-        "3_Labyrinth_OH_end": "Estate Enclosure",
-        "3_Labyrinth_OH_end_bottleneck": "Estate Enclosure",
-        "3_Labyrinth_OH_straight": "Estate Path",
-        "3_Labyrinth_OH_straight_bottleneck": "Estate Path",
-        "3_Labyrinth_OH_branch": "Estate Walkways",
-        "3_Labyrinth_OH_branch_bottleneck_1": "Estate Walkways",
-        "3_Labyrinth_OH_branch_bottleneck_2": "Estate Walkways",
-        "3_Labyrinth_OH_branch_door": "Estate Walkways",
-        "3_Labyrinth_OH_quad_#": "Estate Crossing",
-        "3_Labyrinth_OH_quad_bottleneck": "Estate Crossing",
-        "3_Labyrinth_OH_quad_door_#": "Estate Crossing",
-        "3_Labyrinth_boss_1": "Aspirant's Trial",
-        "3_Labyrinth_boss_2": "Aspirant's Trial",
-        "3_Labyrinth_boss_3": "Aspirant's Trial",
-        "3_Labyrinth_boss_1_end": "Aspirant's Trial",
-        "3_Labyrinth_boss_2_end_#": "Aspirant's Trial",
-        "3_Labyrinth_boss_3_end": "Aspirant's Trial",
-        "EndGame_Labyrinth_C_end": "Sepulchre Annex",
-        "EndGame_Labyrinth_C_end_bottleneck": "Sepulchre Annex",
-        "EndGame_Labyrinth_C_straight": "Sepulchre Passage",
-        "EndGame_Labyrinth_C_straight_bottleneck": "Sepulchre Passage",
-        "EndGame_Labyrinth_C_branch": "Sepulchre Halls",
-        "EndGame_Labyrinth_C_branch_bottleneck_1": "Sepulchre Halls",
-        "EndGame_Labyrinth_C_branch_bottleneck_2": "Sepulchre Halls",
-        "EndGame_Labyrinth_C_branch_door": "Sepulchre Halls",
-        "EndGame_Labyrinth_C_quad": "Sepulchre Atrium",
-        "EndGame_Labyrinth_C_quad_bottleneck": "Sepulchre Atrium",
-        "EndGame_Labyrinth_C_quad_door": "Sepulchre Atrium",
-        "EndGame_Labyrinth_P_end": "Sanitorium Annex",
-        "EndGame_Labyrinth_P_end_bottleneck": "Sanitorium Annex",
-        "EndGame_Labyrinth_P_straight": "Sanitorium Passage",
-        "EndGame_Labyrinth_P_straight_bottleneck": "Sanitorium Passage",
-        "EndGame_Labyrinth_P_branch": "Sanitorium Halls",
-        "EndGame_Labyrinth_P_branch_bottleneck_1": "Sanitorium Halls",
-        "EndGame_Labyrinth_P_branch_bottleneck_2": "Sanitorium Halls",
-        "EndGame_Labyrinth_P_branch_door": "Sanitorium Halls",
-        "EndGame_Labyrinth_P_quad": "Sanitorium Atrium",
-        "EndGame_Labyrinth_P_quad_bottleneck": "Sanitorium Atrium",
-        "EndGame_Labyrinth_P_quad_door": "Sanitorium Atrium",
-        "EndGame_Labyrinth_EH_end": "Mansion Annex",
-        "EndGame_Labyrinth_EH_end_bottleneck": "Mansion Annex",
-        "EndGame_Labyrinth_EH_straight_#": "Mansion Passage",
-        "EndGame_Labyrinth_EH_straight_bottleneck": "Mansion Passage",
-        "EndGame_Labyrinth_EH_branch": "Mansion Halls",
-        "EndGame_Labyrinth_EH_branch_bottleneck_1": "Mansion Halls",
-        "EndGame_Labyrinth_EH_branch_bottleneck_2": "Mansion Halls",
-        "EndGame_Labyrinth_EH_branch_door": "Mansion Halls",
-        "EndGame_Labyrinth_EH_quad": "Mansion Atrium",
-        "EndGame_Labyrinth_EH_quad_bottleneck": "Mansion Atrium",
-        "EndGame_Labyrinth_EH_quad_door_#": "Mansion Atrium",
-        "EndGame_Labyrinth_RT_end": "Basilica Annex",
-        "EndGame_Labyrinth_RT_end_bottleneck": "Basilica Annex",
-        "EndGame_Labyrinth_RT_straight": "Basilica Passage",
-        "EndGame_Labyrinth_RT_straight_bottleneck": "Basilica Passage",
-        "EndGame_Labyrinth_RT_branch": "Basilica Halls",
-        "EndGame_Labyrinth_RT_branch_bottleneck_1": "Basilica Halls",
-        "EndGame_Labyrinth_RT_branch_bottleneck_2": "Basilica Halls",
-        "EndGame_Labyrinth_RT_branch_door": "Basilica Halls",
-        "EndGame_Labyrinth_RT_quad_#": "Basilica Atrium",
-        "EndGame_Labyrinth_RT_quad_bottleneck": "Basilica Atrium",
-        "EndGame_Labyrinth_RT_quad_door": "Basilica Atrium",
-        "EndGame_Labyrinth_DG_end": "Domain Enclosure",
-        "EndGame_Labyrinth_DG_end_bottleneck_#": "Domain Enclosure",
-        "EndGame_Labyrinth_DG_straight": "Domain Path",
-        "EndGame_Labyrinth_DG_straight_bottleneck": "Domain Path",
-        "EndGame_Labyrinth_DG_branch": "Domain Walkways",
-        "EndGame_Labyrinth_DG_branch_bottleneck_1_#": "Domain Walkways",
-        "EndGame_Labyrinth_DG_branch_bottleneck_2": "Domain Walkways",
-        "EndGame_Labyrinth_DG_branch_door": "Domain Walkways",
-        "EndGame_Labyrinth_DG_quad": "Domain Crossing",
-        "EndGame_Labyrinth_DG_quad_bottleneck": "Domain Crossing",
-        "EndGame_Labyrinth_DG_quad_door": "Domain Crossing",
-        "EndGame_Labyrinth_OH_end": "Estate Enclosure",
-        "EndGame_Labyrinth_OH_end_bottleneck": "Estate Enclosure",
-        "EndGame_Labyrinth_OH_straight": "Estate Path",
-        "EndGame_Labyrinth_OH_straight_bottleneck": "Estate Path",
-        "EndGame_Labyrinth_OH_branch": "Estate Walkways",
-        "EndGame_Labyrinth_OH_branch_bottleneck_1": "Estate Walkways",
-        "EndGame_Labyrinth_OH_branch_bottleneck_2": "Estate Walkways",
-        "EndGame_Labyrinth_OH_branch_door": "Estate Walkways",
-        "EndGame_Labyrinth_OH_quad_#": "Estate Crossing",
-        "EndGame_Labyrinth_OH_quad_bottleneck": "Estate Crossing",
-        "EndGame_Labyrinth_OH_quad_door_#": "Estate Crossing",
-        "EndGame_Labyrinth_boss_1": "Aspirant's Trial",
-        "EndGame_Labyrinth_boss_2": "Aspirant's Trial",
-        "EndGame_Labyrinth_boss_3": "Aspirant's Trial",
-        "EndGame_Labyrinth_boss_1_end": "Aspirant's Trial",
-        "EndGame_Labyrinth_boss_2_end": "Aspirant's Trial",
-        "EndGame_Labyrinth_boss_3_end": "Aspirant's Trial",
-        "EndGame_Labyrinth_trials_sawblades_#": "Trial of Crippling Grief",
-        "EndGame_Labyrinth_trials_lava_#": "Trial of Burning Rage",
-        "EndGame_Labyrinth_trials_spinners": "Trial of Swirling Fear",
-        "EndGame_Labyrinth_trials_spikes": "Trial of Piercing Truth",
-        "EndGame_Labyrinth_trials_arrows": "Trial of Stinging Doubt",
-        "EndGame_Labyrinth_trials_roombas": "Trial of Lingering Pain",
-        "MapAtziri1": "The Apex of Sacrifice",
-        "MapAtziri2": "The Alluring Abyss",
-        "BreachBossPhysical": "Uul-Netol's Domain",
-        "BreachBossChaos": "Chayula's Domain",
-        "BreachBossFire": "Xoph's Domain",
-        "BreachBossCold": "Tul's Domain",
-        "BreachBossLightning": "Esh's Domain",
+        "1_Labyrinth_AirlockClean": "ลานของผู้ใฝ่อำนาจ",
+        "1_Labyrinth_C_end": "สุสานส่วนเสริม",
+        "1_Labyrinth_C_end_bottleneck": "สุสานส่วนเสริม",
+        "1_Labyrinth_C_straight": "ทางผ่านสุสาน",
+        "1_Labyrinth_C_straight_bottleneck": "ทางผ่านสุสาน",
+        "1_Labyrinth_C_branch": "ห้องโถงสุสาน",
+        "1_Labyrinth_C_branch_bottleneck_1": "ห้องโถงสุสาน",
+        "1_Labyrinth_C_branch_bottleneck_2": "ห้องโถงสุสาน",
+        "1_Labyrinth_C_branch_door": "ห้องโถงสุสาน",
+        "1_Labyrinth_C_quad": "ใจกลางสุสาน",
+        "1_Labyrinth_C_quad_bottleneck": "ใจกลางสุสาน",
+        "1_Labyrinth_C_quad_door": "ใจกลางสุสาน",
+        "1_Labyrinth_P_end": "สถานพักฟื้นส่วนเสริม",
+        "1_Labyrinth_P_end_bottleneck": "สถานพักฟื้นส่วนเสริม",
+        "1_Labyrinth_P_straight": "ทางผ่านสถานพักฟื้น",
+        "1_Labyrinth_P_straight_bottleneck": "ทางผ่านสถานพักฟื้น",
+        "1_Labyrinth_P_branch": "ห้องโถงสถานพักฟื้น",
+        "1_Labyrinth_P_branch_bottleneck_1": "ห้องโถงสถานพักฟื้น",
+        "1_Labyrinth_P_branch_bottleneck_2": "ห้องโถงสถานพักฟื้น",
+        "1_Labyrinth_P_branch_door": "ห้องโถงสถานพักฟื้น",
+        "1_Labyrinth_P_quad": "ใจกลางสถานพักฟื้น",
+        "1_Labyrinth_P_quad_bottleneck": "ใจกลางสถานพักฟื้น",
+        "1_Labyrinth_P_quad_door": "ใจกลางสถานพักฟื้น",
+        "1_Labyrinth_EH_end": "แมนชั่นส่วนเสริม",
+        "1_Labyrinth_EH_end_bottleneck": "แมนชั่นส่วนเสริม",
+        "1_Labyrinth_EH_straight_#": "ทางผ่านแมนชั่น",
+        "1_Labyrinth_EH_straight_bottleneck": "ทางผ่านแมนชั่น",
+        "1_Labyrinth_EH_branch": "ห้องโถงแมนชั่น",
+        "1_Labyrinth_EH_branch_bottleneck_1": "ห้องโถงแมนชั่น",
+        "1_Labyrinth_EH_branch_bottleneck_2": "ห้องโถงแมนชั่น",
+        "1_Labyrinth_EH_branch_door": "ห้องโถงแมนชั่น",
+        "1_Labyrinth_EH_quad": "ใจกลางแมนชั่น",
+        "1_Labyrinth_EH_quad_bottleneck": "ใจกลางแมนชั่น",
+        "1_Labyrinth_EH_quad_door_#": "ใจกลางแมนชั่น",
+        "1_Labyrinth_EH_block_branch": "ห้องโถงแมนชั่น",
+        "1_Labyrinth_RT_end": "โบสถ์ส่วนเสริม",
+        "1_Labyrinth_RT_end_bottleneck": "โบสถ์ส่วนเสริม",
+        "1_Labyrinth_RT_straight": "ทางผ่านโบสถ์",
+        "1_Labyrinth_RT_straight_bottleneck": "ทางผ่านโบสถ์",
+        "1_Labyrinth_RT_branch": "ห้องโถงโบสถ์",
+        "1_Labyrinth_RT_branch_bottleneck_1": "ห้องโถงโบสถ์",
+        "1_Labyrinth_RT_branch_bottleneck_2": "ห้องโถงโบสถ์",
+        "1_Labyrinth_RT_branch_door": "ห้องโถงโบสถ์",
+        "1_Labyrinth_RT_quad_#": "ใจกลางโบสถ์",
+        "1_Labyrinth_RT_quad_bottleneck": "ใจกลางโบสถ์",
+        "1_Labyrinth_RT_quad_door": "ใจกลางโบสถ์",
+        "1_Labyrinth_DG_end": "ที่ดินปิดล้อม",
+        "1_Labyrinth_DG_end_bottleneck_#": "ที่ดินปิดล้อม",
+        "1_Labyrinth_DG_straight": "เส้นทางที่ดิน",
+        "1_Labyrinth_DG_straight_bottleneck": "เส้นทางที่ดิน",
+        "1_Labyrinth_DG_branch": "ทางเดินที่ดิน",
+        "1_Labyrinth_DG_branch_bottleneck_1_#": "ทางเดินที่ดิน",
+        "1_Labyrinth_DG_branch_bottleneck_2": "ทางเดินที่ดิน",
+        "1_Labyrinth_DG_branch_door": "ทางเดินที่ดิน",
+        "1_Labyrinth_DG_quad": "ทางข้ามที่ดิน",
+        "1_Labyrinth_DG_quad_bottleneck": "ทางข้ามที่ดิน",
+        "1_Labyrinth_DG_quad_door": "ทางข้ามที่ดิน",
+        "1_Labyrinth_OH_end": "คฤหาสน์ปิดล้อม",
+        "1_Labyrinth_OH_end_bottleneck": "คฤหาสน์ปิดล้อม",
+        "1_Labyrinth_OH_straight": "เส้นทางคฤหาสน์",
+        "1_Labyrinth_OH_straight_bottleneck": "เส้นทางคฤหาสน์",
+        "1_Labyrinth_OH_branch": "ทางเดินคฤหาสน์",
+        "1_Labyrinth_OH_branch_bottleneck_1": "ทางเดินคฤหาสน์",
+        "1_Labyrinth_OH_branch_bottleneck_2": "ทางเดินคฤหาสน์",
+        "1_Labyrinth_OH_branch_door": "ทางเดินคฤหาสน์",
+        "1_Labyrinth_OH_quad_#": "ทางข้ามคฤหาสน์",
+        "1_Labyrinth_OH_quad_bottleneck": "ทางข้ามคฤหาสน์",
+        "1_Labyrinth_OH_quad_door_#": "ทางข้ามคฤหาสน์",
+        "1_Labyrinth_boss_1": "บททดสอบของผู้ใฝ่อำนาจ",
+        "1_Labyrinth_boss_2": "บททดสอบของผู้ใฝ่อำนาจ",
+        "1_Labyrinth_boss_3": "บททดสอบของผู้ใฝ่อำนาจ",
+        "1_Labyrinth_boss_1_end": "บททดสอบของผู้ใฝ่อำนาจ",
+        "1_Labyrinth_boss_2_end": "บททดสอบของผู้ใฝ่อำนาจ",
+        "1_Labyrinth_boss_3_end_#": "บททดสอบของผู้ใฝ่อำนาจ",
+        "2_Labyrinth_C_end": "สุสานส่วนเสริม",
+        "2_Labyrinth_C_end_bottleneck": "สุสานส่วนเสริม",
+        "2_Labyrinth_C_straight": "ทางผ่านสุสาน",
+        "2_Labyrinth_C_straight_bottleneck": "ทางผ่านสุสาน",
+        "2_Labyrinth_C_branch": "ห้องโถงสุสาน",
+        "2_Labyrinth_C_branch_bottleneck_1": "ห้องโถงสุสาน",
+        "2_Labyrinth_C_branch_bottleneck_2": "ห้องโถงสุสาน",
+        "2_Labyrinth_C_branch_door": "ห้องโถงสุสาน",
+        "2_Labyrinth_C_quad": "ใจกลางสุสาน",
+        "2_Labyrinth_C_quad_bottleneck": "ใจกลางสุสาน",
+        "2_Labyrinth_C_quad_door": "ใจกลางสุสาน",
+        "2_Labyrinth_P_end": "สถานพักฟื้นส่วนเสริม",
+        "2_Labyrinth_P_end_bottleneck": "สถานพักฟื้นส่วนเสริม",
+        "2_Labyrinth_P_straight": "ทางผ่านสถานพักฟื้น",
+        "2_Labyrinth_P_straight_bottleneck": "ทางผ่านสถานพักฟื้น",
+        "2_Labyrinth_P_branch": "ห้องโถงสถานพักฟื้น",
+        "2_Labyrinth_P_branch_bottleneck_1": "ห้องโถงสถานพักฟื้น",
+        "2_Labyrinth_P_branch_bottleneck_2": "ห้องโถงสถานพักฟื้น",
+        "2_Labyrinth_P_branch_door": "ห้องโถงสถานพักฟื้น",
+        "2_Labyrinth_P_quad": "ใจกลางสถานพักฟื้น",
+        "2_Labyrinth_P_quad_bottleneck": "ใจกลางสถานพักฟื้น",
+        "2_Labyrinth_P_quad_door": "ใจกลางสถานพักฟื้น",
+        "2_Labyrinth_EH_end": "แมนชั่นส่วนเสริม",
+        "2_Labyrinth_EH_end_bottleneck": "แมนชั่นส่วนเสริม",
+        "2_Labyrinth_EH_straight_#": "ทางผ่านแมนชั่น",
+        "2_Labyrinth_EH_straight_bottleneck": "ทางผ่านแมนชั่น",
+        "2_Labyrinth_EH_branch": "ห้องโถงแมนชั่น",
+        "2_Labyrinth_EH_branch_bottleneck_1": "ห้องโถงแมนชั่น",
+        "2_Labyrinth_EH_branch_bottleneck_2": "ห้องโถงแมนชั่น",
+        "2_Labyrinth_EH_branch_door": "ห้องโถงแมนชั่น",
+        "2_Labyrinth_EH_quad": "ใจกลางแมนชั่น",
+        "2_Labyrinth_EH_quad_bottleneck": "ใจกลางแมนชั่น",
+        "2_Labyrinth_EH_quad_door_#": "ใจกลางแมนชั่น",
+        "2_Labyrinth_RT_end": "โบสถ์ส่วนเสริม",
+        "2_Labyrinth_RT_end_bottleneck": "โบสถ์ส่วนเสริม",
+        "2_Labyrinth_RT_straight": "ทางผ่านโบสถ์",
+        "2_Labyrinth_RT_straight_bottleneck": "ทางผ่านโบสถ์",
+        "2_Labyrinth_RT_branch": "ห้องโถงโบสถ์",
+        "2_Labyrinth_RT_branch_bottleneck_1": "ห้องโถงโบสถ์",
+        "2_Labyrinth_RT_branch_bottleneck_2": "ห้องโถงโบสถ์",
+        "2_Labyrinth_RT_branch_door": "ห้องโถงโบสถ์",
+        "2_Labyrinth_RT_quad_#": "ใจกลางโบสถ์",
+        "2_Labyrinth_RT_quad_bottleneck": "ใจกลางโบสถ์",
+        "2_Labyrinth_RT_quad_door": "ใจกลางโบสถ์",
+        "2_Labyrinth_DG_end": "ที่ดินปิดล้อม",
+        "2_Labyrinth_DG_end_bottleneck_#": "ที่ดินปิดล้อม",
+        "2_Labyrinth_DG_straight": "เส้นทางที่ดิน",
+        "2_Labyrinth_DG_straight_bottleneck": "เส้นทางที่ดิน",
+        "2_Labyrinth_DG_branch": "ทางเดินที่ดิน",
+        "2_Labyrinth_DG_branch_bottleneck_1_#": "ทางเดินที่ดิน",
+        "2_Labyrinth_DG_branch_bottleneck_2": "ทางเดินที่ดิน",
+        "2_Labyrinth_DG_branch_door": "ทางเดินที่ดิน",
+        "2_Labyrinth_DG_quad": "ทางข้ามที่ดิน",
+        "2_Labyrinth_DG_quad_bottleneck": "ทางข้ามที่ดิน",
+        "2_Labyrinth_DG_quad_door": "ทางข้ามที่ดิน",
+        "2_Labyrinth_OH_end": "คฤหาสน์ปิดล้อม",
+        "2_Labyrinth_OH_end_bottleneck": "คฤหาสน์ปิดล้อม",
+        "2_Labyrinth_OH_straight": "เส้นทางคฤหาสน์",
+        "2_Labyrinth_OH_straight_bottleneck": "เส้นทางคฤหาสน์",
+        "2_Labyrinth_OH_branch": "ทางเดินคฤหาสน์",
+        "2_Labyrinth_OH_branch_bottleneck_1": "ทางเดินคฤหาสน์",
+        "2_Labyrinth_OH_branch_bottleneck_2": "ทางเดินคฤหาสน์",
+        "2_Labyrinth_OH_branch_door": "ทางเดินคฤหาสน์",
+        "2_Labyrinth_OH_quad_#": "ทางข้ามคฤหาสน์",
+        "2_Labyrinth_OH_quad_bottleneck": "ทางข้ามคฤหาสน์",
+        "2_Labyrinth_OH_quad_door_#": "ทางข้ามคฤหาสน์",
+        "2_Labyrinth_boss_1": "บททดสอบของผู้ใฝ่อำนาจ",
+        "2_Labyrinth_boss_2": "บททดสอบของผู้ใฝ่อำนาจ",
+        "2_Labyrinth_boss_3": "บททดสอบของผู้ใฝ่อำนาจ",
+        "2_Labyrinth_boss_1_end": "บททดสอบของผู้ใฝ่อำนาจ",
+        "2_Labyrinth_boss_2_end": "บททดสอบของผู้ใฝ่อำนาจ",
+        "2_Labyrinth_boss_3_end_#": "บททดสอบของผู้ใฝ่อำนาจ",
+        "3_Labyrinth_C_end": "สุสานส่วนเสริม",
+        "3_Labyrinth_C_end_bottleneck": "สุสานส่วนเสริม",
+        "3_Labyrinth_C_straight": "ทางผ่านสุสาน",
+        "3_Labyrinth_C_straight_bottleneck": "ทางผ่านสุสาน",
+        "3_Labyrinth_C_branch": "ห้องโถงสุสาน",
+        "3_Labyrinth_C_branch_bottleneck_1": "ห้องโถงสุสาน",
+        "3_Labyrinth_C_branch_bottleneck_2": "ห้องโถงสุสาน",
+        "3_Labyrinth_C_branch_door": "ห้องโถงสุสาน",
+        "3_Labyrinth_C_quad": "ใจกลางสุสาน",
+        "3_Labyrinth_C_quad_bottleneck": "ใจกลางสุสาน",
+        "3_Labyrinth_C_quad_door": "ใจกลางสุสาน",
+        "3_Labyrinth_P_end": "สถานพักฟื้นส่วนเสริม",
+        "3_Labyrinth_P_end_bottleneck": "สถานพักฟื้นส่วนเสริม",
+        "3_Labyrinth_P_straight": "ทางผ่านสถานพักฟื้น",
+        "3_Labyrinth_P_straight_bottleneck": "ทางผ่านสถานพักฟื้น",
+        "3_Labyrinth_P_branch": "ห้องโถงสถานพักฟื้น",
+        "3_Labyrinth_P_branch_bottleneck_1": "ห้องโถงสถานพักฟื้น",
+        "3_Labyrinth_P_branch_bottleneck_2": "ห้องโถงสถานพักฟื้น",
+        "3_Labyrinth_P_branch_door": "ห้องโถงสถานพักฟื้น",
+        "3_Labyrinth_P_quad": "ใจกลางสถานพักฟื้น",
+        "3_Labyrinth_P_quad_bottleneck": "ใจกลางสถานพักฟื้น",
+        "3_Labyrinth_P_quad_door": "ใจกลางสถานพักฟื้น",
+        "3_Labyrinth_EH_end": "แมนชั่นส่วนเสริม",
+        "3_Labyrinth_EH_end_bottleneck": "แมนชั่นส่วนเสริม",
+        "3_Labyrinth_EH_straight_#": "ทางผ่านแมนชั่น",
+        "3_Labyrinth_EH_straight_bottleneck": "ทางผ่านแมนชั่น",
+        "3_Labyrinth_EH_branch": "ห้องโถงแมนชั่น",
+        "3_Labyrinth_EH_branch_bottleneck_1": "ห้องโถงแมนชั่น",
+        "3_Labyrinth_EH_branch_bottleneck_2": "ห้องโถงแมนชั่น",
+        "3_Labyrinth_EH_branch_door": "ห้องโถงแมนชั่น",
+        "3_Labyrinth_EH_quad": "ใจกลางแมนชั่น",
+        "3_Labyrinth_EH_quad_bottleneck": "ใจกลางแมนชั่น",
+        "3_Labyrinth_EH_quad_door_#": "ใจกลางแมนชั่น",
+        "3_Labyrinth_RT_end": "โบสถ์ส่วนเสริม",
+        "3_Labyrinth_RT_end_bottleneck": "โบสถ์ส่วนเสริม",
+        "3_Labyrinth_RT_straight": "ทางผ่านโบสถ์",
+        "3_Labyrinth_RT_straight_bottleneck": "ทางผ่านโบสถ์",
+        "3_Labyrinth_RT_branch": "ห้องโถงโบสถ์",
+        "3_Labyrinth_RT_branch_bottleneck_1": "ห้องโถงโบสถ์",
+        "3_Labyrinth_RT_branch_bottleneck_2": "ห้องโถงโบสถ์",
+        "3_Labyrinth_RT_branch_door": "ห้องโถงโบสถ์",
+        "3_Labyrinth_RT_quad_#": "ใจกลางโบสถ์",
+        "3_Labyrinth_RT_quad_bottleneck": "ใจกลางโบสถ์",
+        "3_Labyrinth_RT_quad_door": "ใจกลางโบสถ์",
+        "3_Labyrinth_DG_end": "ที่ดินปิดล้อม",
+        "3_Labyrinth_DG_end_bottleneck_#": "ที่ดินปิดล้อม",
+        "3_Labyrinth_DG_straight": "เส้นทางที่ดิน",
+        "3_Labyrinth_DG_straight_bottleneck": "เส้นทางที่ดิน",
+        "3_Labyrinth_DG_branch": "ทางเดินที่ดิน",
+        "3_Labyrinth_DG_branch_bottleneck_1_#": "ทางเดินที่ดิน",
+        "3_Labyrinth_DG_branch_bottleneck_2": "ทางเดินที่ดิน",
+        "3_Labyrinth_DG_branch_door": "ทางเดินที่ดิน",
+        "3_Labyrinth_DG_quad": "ทางข้ามที่ดิน",
+        "3_Labyrinth_DG_quad_bottleneck": "ทางข้ามที่ดิน",
+        "3_Labyrinth_DG_quad_door": "ทางข้ามที่ดิน",
+        "3_Labyrinth_OH_end": "คฤหาสน์ปิดล้อม",
+        "3_Labyrinth_OH_end_bottleneck": "คฤหาสน์ปิดล้อม",
+        "3_Labyrinth_OH_straight": "เส้นทางคฤหาสน์",
+        "3_Labyrinth_OH_straight_bottleneck": "เส้นทางคฤหาสน์",
+        "3_Labyrinth_OH_branch": "ทางเดินคฤหาสน์",
+        "3_Labyrinth_OH_branch_bottleneck_1": "ทางเดินคฤหาสน์",
+        "3_Labyrinth_OH_branch_bottleneck_2": "ทางเดินคฤหาสน์",
+        "3_Labyrinth_OH_branch_door": "ทางเดินคฤหาสน์",
+        "3_Labyrinth_OH_quad_#": "ทางข้ามคฤหาสน์",
+        "3_Labyrinth_OH_quad_bottleneck": "ทางข้ามคฤหาสน์",
+        "3_Labyrinth_OH_quad_door_#": "ทางข้ามคฤหาสน์",
+        "3_Labyrinth_boss_1": "บททดสอบของผู้ใฝ่อำนาจ",
+        "3_Labyrinth_boss_2": "บททดสอบของผู้ใฝ่อำนาจ",
+        "3_Labyrinth_boss_3": "บททดสอบของผู้ใฝ่อำนาจ",
+        "3_Labyrinth_boss_1_end": "บททดสอบของผู้ใฝ่อำนาจ",
+        "3_Labyrinth_boss_2_end_#": "บททดสอบของผู้ใฝ่อำนาจ",
+        "3_Labyrinth_boss_3_end": "บททดสอบของผู้ใฝ่อำนาจ",
+        "EndGame_Labyrinth_C_end": "สุสานส่วนเสริม",
+        "EndGame_Labyrinth_C_end_bottleneck": "สุสานส่วนเสริม",
+        "EndGame_Labyrinth_C_straight": "ทางผ่านสุสาน",
+        "EndGame_Labyrinth_C_straight_bottleneck": "ทางผ่านสุสาน",
+        "EndGame_Labyrinth_C_branch": "ห้องโถงสุสาน",
+        "EndGame_Labyrinth_C_branch_bottleneck_1": "ห้องโถงสุสาน",
+        "EndGame_Labyrinth_C_branch_bottleneck_2": "ห้องโถงสุสาน",
+        "EndGame_Labyrinth_C_branch_door": "ห้องโถงสุสาน",
+        "EndGame_Labyrinth_C_quad": "ใจกลางสุสาน",
+        "EndGame_Labyrinth_C_quad_bottleneck": "ใจกลางสุสาน",
+        "EndGame_Labyrinth_C_quad_door": "ใจกลางสุสาน",
+        "EndGame_Labyrinth_P_end": "สถานพักฟื้นส่วนเสริม",
+        "EndGame_Labyrinth_P_end_bottleneck": "สถานพักฟื้นส่วนเสริม",
+        "EndGame_Labyrinth_P_straight": "ทางผ่านสถานพักฟื้น",
+        "EndGame_Labyrinth_P_straight_bottleneck": "ทางผ่านสถานพักฟื้น",
+        "EndGame_Labyrinth_P_branch": "ห้องโถงสถานพักฟื้น",
+        "EndGame_Labyrinth_P_branch_bottleneck_1": "ห้องโถงสถานพักฟื้น",
+        "EndGame_Labyrinth_P_branch_bottleneck_2": "ห้องโถงสถานพักฟื้น",
+        "EndGame_Labyrinth_P_branch_door": "ห้องโถงสถานพักฟื้น",
+        "EndGame_Labyrinth_P_quad": "ใจกลางสถานพักฟื้น",
+        "EndGame_Labyrinth_P_quad_bottleneck": "ใจกลางสถานพักฟื้น",
+        "EndGame_Labyrinth_P_quad_door": "ใจกลางสถานพักฟื้น",
+        "EndGame_Labyrinth_EH_end": "แมนชั่นส่วนเสริม",
+        "EndGame_Labyrinth_EH_end_bottleneck": "แมนชั่นส่วนเสริม",
+        "EndGame_Labyrinth_EH_straight_#": "ทางผ่านแมนชั่น",
+        "EndGame_Labyrinth_EH_straight_bottleneck": "ทางผ่านแมนชั่น",
+        "EndGame_Labyrinth_EH_branch": "ห้องโถงแมนชั่น",
+        "EndGame_Labyrinth_EH_branch_bottleneck_1": "ห้องโถงแมนชั่น",
+        "EndGame_Labyrinth_EH_branch_bottleneck_2": "ห้องโถงแมนชั่น",
+        "EndGame_Labyrinth_EH_branch_door": "ห้องโถงแมนชั่น",
+        "EndGame_Labyrinth_EH_quad": "ใจกลางแมนชั่น",
+        "EndGame_Labyrinth_EH_quad_bottleneck": "ใจกลางแมนชั่น",
+        "EndGame_Labyrinth_EH_quad_door_#": "ใจกลางแมนชั่น",
+        "EndGame_Labyrinth_RT_end": "โบสถ์ส่วนเสริม",
+        "EndGame_Labyrinth_RT_end_bottleneck": "โบสถ์ส่วนเสริม",
+        "EndGame_Labyrinth_RT_straight": "ทางผ่านโบสถ์",
+        "EndGame_Labyrinth_RT_straight_bottleneck": "ทางผ่านโบสถ์",
+        "EndGame_Labyrinth_RT_branch": "ห้องโถงโบสถ์",
+        "EndGame_Labyrinth_RT_branch_bottleneck_1": "ห้องโถงโบสถ์",
+        "EndGame_Labyrinth_RT_branch_bottleneck_2": "ห้องโถงโบสถ์",
+        "EndGame_Labyrinth_RT_branch_door": "ห้องโถงโบสถ์",
+        "EndGame_Labyrinth_RT_quad_#": "ใจกลางโบสถ์",
+        "EndGame_Labyrinth_RT_quad_bottleneck": "ใจกลางโบสถ์",
+        "EndGame_Labyrinth_RT_quad_door": "ใจกลางโบสถ์",
+        "EndGame_Labyrinth_DG_end": "ที่ดินปิดล้อม",
+        "EndGame_Labyrinth_DG_end_bottleneck_#": "ที่ดินปิดล้อม",
+        "EndGame_Labyrinth_DG_straight": "เส้นทางที่ดิน",
+        "EndGame_Labyrinth_DG_straight_bottleneck": "เส้นทางที่ดิน",
+        "EndGame_Labyrinth_DG_branch": "ทางเดินที่ดิน",
+        "EndGame_Labyrinth_DG_branch_bottleneck_1_#": "ทางเดินที่ดิน",
+        "EndGame_Labyrinth_DG_branch_bottleneck_2": "ทางเดินที่ดิน",
+        "EndGame_Labyrinth_DG_branch_door": "ทางเดินที่ดิน",
+        "EndGame_Labyrinth_DG_quad": "ทางข้ามที่ดิน",
+        "EndGame_Labyrinth_DG_quad_bottleneck": "ทางข้ามที่ดิน",
+        "EndGame_Labyrinth_DG_quad_door": "ทางข้ามที่ดิน",
+        "EndGame_Labyrinth_OH_end": "คฤหาสน์ปิดล้อม",
+        "EndGame_Labyrinth_OH_end_bottleneck": "คฤหาสน์ปิดล้อม",
+        "EndGame_Labyrinth_OH_straight": "เส้นทางคฤหาสน์",
+        "EndGame_Labyrinth_OH_straight_bottleneck": "เส้นทางคฤหาสน์",
+        "EndGame_Labyrinth_OH_branch": "ทางเดินคฤหาสน์",
+        "EndGame_Labyrinth_OH_branch_bottleneck_1": "ทางเดินคฤหาสน์",
+        "EndGame_Labyrinth_OH_branch_bottleneck_2": "ทางเดินคฤหาสน์",
+        "EndGame_Labyrinth_OH_branch_door": "ทางเดินคฤหาสน์",
+        "EndGame_Labyrinth_OH_quad_#": "ทางข้ามคฤหาสน์",
+        "EndGame_Labyrinth_OH_quad_bottleneck": "ทางข้ามคฤหาสน์",
+        "EndGame_Labyrinth_OH_quad_door_#": "ทางข้ามคฤหาสน์",
+        "EndGame_Labyrinth_boss_1": "บททดสอบของผู้ใฝ่อำนาจ",
+        "EndGame_Labyrinth_boss_2": "บททดสอบของผู้ใฝ่อำนาจ",
+        "EndGame_Labyrinth_boss_3": "บททดสอบของผู้ใฝ่อำนาจ",
+        "EndGame_Labyrinth_boss_1_end": "บททดสอบของผู้ใฝ่อำนาจ",
+        "EndGame_Labyrinth_boss_2_end": "บททดสอบของผู้ใฝ่อำนาจ",
+        "EndGame_Labyrinth_boss_3_end": "บททดสอบของผู้ใฝ่อำนาจ",
+        "EndGame_Labyrinth_trials_sawblades_#": "บททดสอบความโทมนัสอันบั่นทอน",
+        "EndGame_Labyrinth_trials_lava_#": "บททดสอบความเดือดดาลอันลุกไหม้",
+        "EndGame_Labyrinth_trials_spinners": "บททดสอบความกลัวอันหมุนวน",
+        "EndGame_Labyrinth_trials_spikes": "บททดสอบความจริงอันทิ่มแทง",
+        "EndGame_Labyrinth_trials_arrows": "บททดสอบความแคลงใจอันเจ็บแสบ",
+        "EndGame_Labyrinth_trials_roombas": "บททดสอบความเจ็บปวดอันยืนยง",
+        "MapAtziri1": "ยอดแห่งการสังเวย",
+        "MapAtziri2": "เบื้องลึกอันลุ่มหลง",
+        "BreachBossPhysical": "แดนของอูล-เนโทล",
+        "BreachBossChaos": "แดนของชายูล่า",
+        "BreachBossFire": "แดนของซอปห์",
+        "BreachBossCold": "แดนของทุล",
+        "BreachBossLightning": "แดนของเอช",
         "MapWorldsLookout": "Lookout",
         "MapWorldsBeach": "Beach",
         "MapWorldsGraveyard": "Graveyard",
@@ -28962,7 +29006,7 @@
         "MapWorldsHydra": "Lair of the Hydra",
         "MapWorldsPhoenix": "Forge of the Phoenix",
         "MapWorldsMinotaur": "Maze of the Minotaur",
-        "MapWorldsShapersRealm": "The Shaper's Realm",
+        "MapWorldsShapersRealm": "ดินแดนของเชปเปอร์",
         "MapWorldsVaalTemple": "Vaal Temple",
         "MapWorldsHarbingerLow": "The Beachhead",
         "MapWorldsHarbingerMid": "The Beachhead",
@@ -28980,13 +29024,13 @@
         "MapWorldsForbiddenWoods": "Forbidden Woods",
         "MapWorldsSilo": "Silo",
         "MapWorldsElderArena": "สูญสิ้นซึ่งคุณค่าความหมาย",
-        "MapWorldsElderArenaUber": "The Shaper's Realm",
-        "AbyssLeague": "Abyssal Depths",
-        "AbyssLeague2": "Abyssal Depths",
-        "AbyssLeagueBoss": "Abyssal Depths",
-        "AbyssLeagueBoss2": "Abyssal Depths",
-        "AbyssLeagueBoss3": "Abyssal Depths",
-        "LegionLeague": "แดนแห่งความขัดแย้งชั่วกัปชั่วกัลป์",
+        "MapWorldsElderArenaUber": "ดินแดนของเชปเปอร์",
+        "AbyssLeague": "เบื้องลึกอะบิส",
+        "AbyssLeague2": "เบื้องลึกอะบิส",
+        "AbyssLeagueBoss": "เบื้องลึกอะบิส",
+        "AbyssLeagueBoss2": "เบื้องลึกอะบิส",
+        "AbyssLeagueBoss3": "เบื้องลึกอะบิส",
+        "LegionLeague": "แดนแห่งความขัดแย้งเหนือกาลเวลา",
         "HarvestLeagueBoss": "สวนศักดิ์สิทธิ์",
         "Hideout4_3": "ที่ซ่อน Cavernous",
         "Hideout5_3": "ที่ซ่อน Forsaken",
@@ -29020,12 +29064,12 @@
         "HideoutInnocenceArena": "ที่ซ่อน Innocent",
         "HideoutShaperArena": "ที่ซ่อน Shaped",
         "HideoutKaomArena": "ที่ซ่อน Furious",
-        "HideoutDaressoArena": "ที่ซ่อน Champion's",
+        "HideoutDaressoArena": "ที่ซ่อน Champion",
         "HideoutDominusArena": "ที่ซ่อน Indomitable",
         "HideoutPietyArena": "ที่ซ่อน Morbid",
         "HideoutLunarisSolarisArena": "ที่ซ่อน Eclipsed",
         "HideoutKitavaArenaAct10": "ที่ซ่อน Ravenous",
-        "HideoutTemplarLab": "ที่ซ่อน Cartographer's",
+        "HideoutTemplarLab": "ที่ซ่อน Cartographer",
         "HideoutSlum": "ที่ซ่อน Backstreet",
         "HideoutBeach": "ที่ซ่อน Coastal",
         "HideoutFellshrine": "ที่ซ่อน Unearthed",
@@ -29058,15 +29102,17 @@
         "HideoutHumanoidPet": "ที่ซ่อน Humanoid Pet",
         "HideoutRitualLeague": "ที่ซ่อน Ritualist",
         "HideoutArenaMaven": "ที่ซ่อน Crucible",
-        "HideoutHasina": "ที่ซ่อน Hasina",
+        "HideoutHasina": "ที่ซ่อน Tavern",
         "HideoutAzuriteCave": "ที่ซ่อน Azurite Cavern",
+        "HideoutSynthesisHub": "ที่ซ่อน Synthetic",
+        "HideoutVeritaniaArena": "ที่ซ่อน Redeemer",
         "pvpTown": "Sarn Arena Staging Area",
-        "AtlasExilesBoss5": "Eye of the Storm",
-        "AfflictionTown6": "Lunacy's Watch",
-        "AfflictionTown4": "Hysteriagate",
-        "AfflictionTown7": "The Bridge Enraptured",
-        "AfflictionTown8": "The Syndrome Encampment",
-        "AfflictionTown10": "Oriath Delusion",
+        "AtlasExilesBoss5": "ใจกลางพายุ",
+        "AfflictionTown6": "หอสังเกตการณ์สิ้นสติ",
+        "AfflictionTown4": "เกทวิปลาส",
+        "AfflictionTown7": "สะพานต้องมนต์",
+        "AfflictionTown8": "ค่ายซินโดรม",
+        "AfflictionTown10": "ภาพหลอนโอริอาท",
         "HeistCinematic": "[UNUSED] Cinematic",
         "HeistHub": "ท่าเรือโจร",
         "HeistBunker1": "บังเกอร์",
@@ -29150,7 +29196,7 @@
         "HeistMansion7": "แมนชั่น",
         "HeistMansion8": "แมนชั่น",
         "HeistMansion9": "แมนชั่น",
-        "HeistBoss_AdmiralDarnaw": "บริเวณที่ดาร์นาวขึ้นบก",
+        "HeistBoss_AdmiralDarnaw": "บริเวณที่ดานอร์ขึ้นบก",
         "HeistBoss_FreidrichTarollo": "หลุมทิ้งร่าง",
         "HeistBoss_Jamanra": "สุสานของผู้ถูกเนรเทศ",
         "HeistBoss_Nashta": "ค่ายที่ถูกปล้นสะดม",

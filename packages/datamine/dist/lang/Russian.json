@@ -5047,6 +5047,10 @@
         "Зернохранилище"
       ],
       [
+        "MapWorldsBeachLanding",
+        "Пристанище на берегу"
+      ],
+      [
         "MapWorldsElder_Desert",
         "Пустыня сумасшествия"
       ],
@@ -5424,7 +5428,7 @@
       ],
       [
         "ExileRoyale",
-        "Осквернённый рай"
+        "Path of Exile Royale"
       ],
       [
         "EndlessLedge1",
@@ -6360,11 +6364,19 @@
       ],
       [
         "HideoutHasina",
-        "Убежище Хасины"
+        "Убежище в таверне"
       ],
       [
         "HideoutAzuriteCave",
         "Азуритовое убежище"
+      ],
+      [
+        "HideoutSynthesisHub",
+        "Синтетическое убежище"
+      ],
+      [
+        "HideoutVeritaniaArena",
+        "Убежище Избавительницы"
       ],
       [
         "pvpTown",
@@ -6853,6 +6865,118 @@
       [
         "UltimatumBossArena",
         "Башня испытаний"
+      ],
+      [
+        "ExpeditionBattlegroundGraves",
+        "Захоронение на поле боя"
+      ],
+      [
+        "ExpeditionKaruiWargraves",
+        "Могилы воинов каруи"
+      ],
+      [
+        "ExpeditionBluffs",
+        "Откосы"
+      ],
+      [
+        "ExpeditionRottingTemple",
+        "Гниющий храм"
+      ],
+      [
+        "ExpeditionShipwreckReef",
+        "Риф разбитых кораблей"
+      ],
+      [
+        "ExpeditionCemetery",
+        "Погост"
+      ],
+      [
+        "ExpeditionSarnSlums",
+        "Трущобы Сарна"
+      ],
+      [
+        "ExpeditionDriedRiverbed",
+        "Высохшее русло"
+      ],
+      [
+        "ExpeditionMountainside",
+        "Горный склон"
+      ],
+      [
+        "ExpeditionForestRuins",
+        "Развалины в лесу"
+      ],
+      [
+        "ExpeditionVaalTemple",
+        "Храм ваал"
+      ],
+      [
+        "ExpeditionUtzaalOutskirts",
+        "Окраины Утцааля"
+      ],
+      [
+        "ExpeditionDesertRuins",
+        "Пустынные руины"
+      ],
+      [
+        "ExpeditionScrublands",
+        "Заросли кустарника"
+      ],
+      [
+        "ExpeditionVolcano",
+        "Вулканический остров"
+      ],
+      [
+        "ExpeditionArenaUhtred",
+        "Святыня предтеч"
+      ],
+      [
+        "ExpeditionArenaOlroth",
+        "Рунная крепость"
+      ],
+      [
+        "ExpeditionCryptArchers",
+        "Укреплённый редут"
+      ],
+      [
+        "ExpeditionSubareaSewers",
+        "Ядовитая канава"
+      ],
+      [
+        "ExpeditionUndergroundSand",
+        "Песчаные останки"
+      ],
+      [
+        "ExpeditionCryptSarcophagi",
+        "Гробница героев"
+      ],
+      [
+        "ExpeditionPirateCave",
+        "Призрачная лощина"
+      ],
+      [
+        "ExpeditionForgottenGrotto",
+        "Забытый грот"
+      ],
+      [
+        "ExpeditionSubareaFungiDungeon",
+        "Грибная чаща"
+      ],
+      [
+        "ExpeditionBait",
+        "Манящий пруд"
+      ],
+      [
+        "ExpeditionSealedVault",
+        "Затерянное святилище"
+      ],
+      [
+        "ExpeditionSubareaSpiderNest",
+        "Шелестящие покои"
+      ],
+      [
+        "ExpeditionHeavyMetal",
+        "[DNT] Kalguur Tileset Test"
       ]
     ]
   },
@@ -59494,7 +59618,7 @@
         "key_offset": 0,
         "enum": null,
         "unique": true,
-        "file_path": true,
+        "file_path": false,
         "file_ext": null,
         "display": null,
         "display_type": "{0}",

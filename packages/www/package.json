@@ -5,10 +5,12 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
+    "prepare": "yarn test:fixture",
     "dev": "bash scripts/_build/version && bash scripts/_build/l10n",
     "build": "yarn dev && elm-app build",
     "start": "concurrently --kill-others \"yarn dev --watch\" \"bash -c 'ELM_DEBUGGER=false elm-app start'\"",
-    "test": "yarn dev && node ./tests/Fixture/build.js && elm-app test",
+    "test:fixture": "node ./tests/Fixture/build.js",
+    "test": "yarn dev && yarn test:fixture && elm-app test",
     "clean": "rm -rf build tmp"
   },
   "dependencies": {
