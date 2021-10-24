@@ -11,10 +11,10 @@ POE_VERSION=`node --eval="console.log(require('$JSON_PATH/version.json').version
 curl -fL "https://poedat.erosson.org/pypoe/v1/tree/$POE_VERSION/lang.json" -o "$JSON_PATH/lang.json"
 for DAT in `node --eval="Object.keys(require('./src/schema/main.json')).forEach(k => console.log(k))"`; do
   # curl -fL "https://poedat.erosson.org/pypoe/v1/tree/$POE_VERSION/default/$DAT.min.json" -o "$JSON_PATH/default/$DAT.json"
-  # quick hack to make 3.15 work; we don't have a working WorldAreas schema just yet
+  # quick hack to make 3.16 work; we don't have a working WorldAreas schema just yet
   v=$POE_VERSION
   if [[ "$DAT" == "WorldAreas.dat" ]]; then
-    v="3.14.3"
+    v="3.15.3d"
   fi
   curl -fL "https://poedat.erosson.org/pypoe/v1/tree/$v/default/$DAT.min.json" -o "$JSON_PATH/default/$DAT.json"
 done
@@ -22,10 +22,10 @@ for LANG in `node --eval="require('$JSON_PATH/lang.json').forEach(l => console.l
   mkdir -p "$JSON_PATH/$LANG"
   for DAT in `node --eval="Object.keys(require('./src/schema/lang.json')).forEach(k => console.log(k))"`; do
     #curl -fL "https://poedat.erosson.org/pypoe/v1/tree/$POE_VERSION/$LANG/$DAT.min.json" -o "$JSON_PATH/$LANG/$DAT.json"
-    # quick hack to make 3.15 work; we don't have a working WorldAreas schema just yet
+    # quick hack to make 3.16 work; we don't have a working WorldAreas schema just yet
     v=$POE_VERSION
     if [[ "$DAT" == "WorldAreas.dat" ]]; then
-      v="3.14.3"
+      v="3.15.3d"
     fi
     curl -fL "https://poedat.erosson.org/pypoe/v1/tree/$v/$LANG/$DAT.min.json" -o "$JSON_PATH/$LANG/$DAT.json"
   done
