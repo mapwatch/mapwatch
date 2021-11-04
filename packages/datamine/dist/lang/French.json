@@ -7157,7 +7157,7 @@
       ],
       [
         "PartyLeaderOnlyCanOpenMapPortals",
-        "Seul le chef du groupe peut ouvrir des Portails de Carte. Le chef du groupe peut nommer d'autres joueurs au poste de chef du groupe à partir de l'interface du groupe."
+        "Seul le chef du groupe peut ouvrir des portails de Carte. Il peut également nommer un autre membre du groupe en tant que chef depuis la fenêtre Groupe."
       ],
       [
         "ServiceDoesNotExist",
@@ -7733,7 +7733,7 @@
       ],
       [
         "PlayerSlain",
-        "{0} a succombé."
+        "{0} vient de mourir."
       ],
       [
         "NoCharacterSpecified",
@@ -9245,7 +9245,7 @@
       ],
       [
         "GuildStashDisabled",
-        "La réserve de guilde a été temporairement désactivée."
+        "La Réserve de Guilde est temporairement désactivée."
       ]
     ]
   },
@@ -56294,6 +56294,18 @@
       ],
       [
         "RoyaleAnnouncerVictorious",
+        ""
+      ],
+      [
+        "RoyalAnnouncerChallengeBrute",
+        ""
+      ],
+      [
+        "RoyalAnnouncerLooseBrute",
+        ""
+      ],
+      [
+        "RoyalAnnouncerDefeatedBrute",
         ""
       ],
       [
