@@ -7157,7 +7157,7 @@
       ],
       [
         "PartyLeaderOnlyCanOpenMapPortals",
-        "Only the Party Leader may open Map Portals. The Party Leader can promote other players to Party Leader from the Party UI."
+        "Nur der Gruppenanführer kann Kartenportale öffnen. Der Gruppenanführer kann andere Spieler über die Gruppen-Benutzeroberfläche zum Gruppenanführer machen."
       ],
       [
         "ServiceDoesNotExist",
@@ -9245,7 +9245,7 @@
       ],
       [
         "GuildStashDisabled",
-        "The guild stash has been temporarily disabled."
+        "Die Gildentruhe wurde temporär deaktiviert."
       ]
     ]
   },
@@ -56294,6 +56294,18 @@
       ],
       [
         "RoyaleAnnouncerVictorious",
+        ""
+      ],
+      [
+        "RoyalAnnouncerChallengeBrute",
+        ""
+      ],
+      [
+        "RoyalAnnouncerLooseBrute",
+        ""
+      ],
+      [
+        "RoyalAnnouncerDefeatedBrute",
         ""
       ],
       [
