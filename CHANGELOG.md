@@ -6,6 +6,7 @@ All substantial Mapwatch website changes.
 
 ## 2021-11-10
 - Fixed broken side area icons.
+- Replaced gamepedia wiki links with poedb.
 
 ## 2021-10-10
 - Built the infrastructure needed to translate Mapwatch to non-English languages.

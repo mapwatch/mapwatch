@@ -34,7 +34,10 @@ view query dm w =
                             |> List.map
                                 (\b ->
                                     li []
-                                        [ a [ target "_blank", href ("https://pathofexile.gamepedia.com/" ++ b) ]
+                                        [ a [ target "_blank"
+                                            -- , href ("https://pathofexile.gamepedia.com/" ++ b)
+                                            , href ("https://poedb.tw/us/" ++ String.replace " " "_" b)
+                                            ]
                                             [ text b ]
                                         ]
                                 )
@@ -43,7 +46,10 @@ view query dm w =
                                     |> List.map
                                         (\card ->
                                             li []
-                                                [ a [ target "_blank", href ("https://pathofexile.gamepedia.com/" ++ card.name) ]
+                                                [ a [ target "_blank"
+                                                    -- , href ("https://pathofexile.gamepedia.com/" ++ card.name)
+                                                    , href ("https://poedb.tw/us/" ++ String.replace " " "_" card.name)
+                                                    ]
                                                     [ View.Icon.divCard, text card.name ]
                                                 , text " ("
                                                 , text card.loot

@@ -322,7 +322,8 @@ wikiExceptions =
 
 wikiUrl : Datamine -> WorldArea -> String
 wikiUrl dm w =
-    "https://pathofexile.gamepedia.com/" ++ wikiPath dm w
+    -- "https://pathofexile.gamepedia.com/" ++ wikiPath dm w
+    "https://poedb.tw/us/" ++ (String.replace " " "_" <| wikiPath dm w)
 
 
 atlasBases : Datamine -> WorldArea -> List String
