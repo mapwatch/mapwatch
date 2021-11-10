@@ -6,14 +6,10 @@ import Svg.Attributes as A exposing (..)
 
 
 type alias Regions =
-    { topLeftOutside : Maybe RegionStatus
-    , topLeftInside : Maybe RegionStatus
-    , topRightOutside : Maybe RegionStatus
-    , topRightInside : Maybe RegionStatus
-    , bottomLeftOutside : Maybe RegionStatus
-    , bottomLeftInside : Maybe RegionStatus
-    , bottomRightOutside : Maybe RegionStatus
-    , bottomRightInside : Maybe RegionStatus
+    { topLeft : Maybe RegionStatus
+    , topRight : Maybe RegionStatus
+    , bottomLeft : Maybe RegionStatus
+    , bottomRight : Maybe RegionStatus
     }
 
 
@@ -29,7 +25,7 @@ type RegionStatus
 
 init : Maybe RegionStatus -> Regions
 init s =
-    Regions s s s s s s s s
+    Regions s s s s
 
 
 empty : Regions
@@ -41,28 +37,26 @@ applyRegionName : String -> Maybe RegionStatus -> Regions -> Regions
 applyRegionName name status rs =
     case name of
         "Haewark Hamlet" ->
-            { rs | topLeftOutside = status }
-
-        "Tirn's End" ->
-            { rs | topLeftInside = status }
-
-        "Lex Ejoris" ->
-            { rs | topRightOutside = status }
-
-        "Lex Proxima" ->
-            { rs | topRightInside = status }
-
-        "New Vastir" ->
-            { rs | bottomLeftOutside = status }
+            { rs | topLeft = status }
 
         "Glennach Cairns" ->
-            { rs | bottomLeftInside = status }
+            { rs | bottomLeft = status }
 
         "Lira Arthain" ->
-            { rs | bottomRightOutside = status }
+            { rs | bottomRight = status }
 
         "Valdo's Rest" ->
-            { rs | bottomRightInside = status }
+            { rs | topRight = status }
+
+        -- legacy
+        -- "Tirn's End" ->
+        --     { rs | topLeft = status }
+        -- "Lex Ejoris" ->
+        --     { rs | topRight = status }
+        -- "Lex Proxima" ->
+        --     { rs | topRight = status }
+        -- "New Vastir" ->
+        --     { rs | bottomLeft = status }
 
         _ ->
             rs
@@ -71,14 +65,12 @@ applyRegionName name status rs =
 regions : Regions -> Html msg
 regions r =
     svg [ class "icon-region", viewBox "0 0 2 2" ]
-        [ polygon [ points "0,0 1,0 0,1", class "outer", focus r.topLeftOutside ] []
-        , polygon [ points "1,1 1,0 0,1", class "inner", focus r.topLeftInside ] []
-        , polygon [ points "2,0 1,0 2,1", class "outer", focus r.topRightOutside ] []
-        , polygon [ points "1,1 1,0 2,1", class "inner", focus r.topRightInside ] []
-        , polygon [ points "0,2 1,2 0,1", class "outer", focus r.bottomLeftOutside ] []
-        , polygon [ points "1,1 1,2 0,1", class "inner", focus r.bottomLeftInside ] []
-        , polygon [ points "2,2 1,2 2,1", class "outer", focus r.bottomRightOutside ] []
-        , polygon [ points "1,1 1,2 2,1", class "inner", focus r.bottomRightInside ] []
+        [ polygon [ points "0,0 2,0 2,2 0,2", class "border" ] []
+
+        , polygon [ points "0,0 1,0 1,1 0,1", class "outer", focus r.topLeft ] []
+        , polygon [ points "2,0 1,0 1,1 2,1", class "outer", focus r.topRight ] []
+        , polygon [ points "0,2 1,2 1,1 0,1", class "outer", focus r.bottomLeft ] []
+        , polygon [ points "2,2 1,2 1,1 2,1", class "outer", focus r.bottomRight ] []
         ]
 
 
