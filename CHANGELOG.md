@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2021-11-10
+- Fixed broken side area icons.
+
 ## 2021-10-10
 - Built the infrastructure needed to translate Mapwatch to non-English languages.
   - [Want to help translate Mapwatch to your language?](https://github.com/mapwatch/mapwatch/blob/master/TRANSLATING.md)

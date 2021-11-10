@@ -41,9 +41,17 @@ runMap run =
 
 justMap : MapIconArgs a -> WorldArea -> Maybe (Html msg)
 justMap args world =
-    world
-        |> Datamine.imgSrc args
-        |> Maybe.map (\src_ -> img [ class <| "map-icon map-icon-" ++ world.id, src src_ ] [])
+    case world.id of
+        -- a few special cases
+        "BetrayalSafeHouseFortress" -> Just jun
+        "BetrayalSafeHouseAssassins" -> Just jun
+        "BetrayalSafeHouseCaravan" -> Just jun
+        "BetrayalSafeHouseLaboratory" -> Just jun
+        "BetrayalMastermindFight" -> Just jun
+        _ ->
+            world
+                |> Datamine.imgSrc args
+                |> Maybe.map (\src_ -> img [ class <| "map-icon map-icon-" ++ world.id, src src_ ] [])
 
 
 map : MapIconArgs a -> Maybe WorldArea -> Maybe (Html msg)
@@ -70,14 +78,16 @@ vaal : Html msg
 vaal =
     -- sideArea { name = "vaal", url = "Art/2DItems/Maps/Vaal01.png" }
     -- sideArea { name = "vaal", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardFragments.png" }
-    sideArea { name = "vaal big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedFragments.png?scale=1" }
+    -- sideArea { name = "vaal big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedFragments.png?scale=1" }
+    div [ class "vaal-minimap minimap" ] []
 
 
 zana : Html msg
 zana =
     -- sideArea { name = "zana", url = "Art/2DItems/Hideout/Interactive/CartographyDevice.png" }
     -- sideArea { name = "zana", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardMaps.png" }
-    sideArea { name = "zana big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedMaps.png?scale=1" }
+    -- sideArea { name = "zana big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedMaps.png?scale=1" }
+    div [ class "zana-minimap minimap" ] []
 
 
 labTrialUrl : String
@@ -89,7 +99,8 @@ labTrial : Html msg
 labTrial =
     -- sideArea { name = "trial", url = "Art/2DItems/Maps/Labyrinth.png" }
     -- sideArea { name = "trial big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLabyrinth.png?scale=1" }
-    sideArea { name = "trial", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardLabyrinth.png" }
+    -- sideArea { name = "trial", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardLabyrinth.png" }
+    div [ class "lab-minimap minimap" ] []
 
 
 abyss : Html msg
@@ -135,7 +146,8 @@ blightedMap =
 
 einhar : Html msg
 einhar =
-    sideArea { name = "einhar med-icon", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardBestiary.png?scale=1" }
+    -- sideArea { name = "einhar med-icon", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardBestiary.png?scale=1" }
+    div [ class "bestiary-minimap minimap" ] []
 
 
 alva : Html msg
@@ -147,20 +159,23 @@ alva =
 niko : Html msg
 niko =
     -- sideArea { name = "niko", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardFossils.png?scale=1" }
-    sideArea { name = "niko big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedFossils.png?scale=1" }
+    -- sideArea { name = "niko big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedFossils.png?scale=1" }
+    div [ class "delve-minimap minimap" ] []
 
 
 jun : Html msg
 jun =
     -- sideArea { name = "jun", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardScarabs.png?scale=1" }
-    sideArea { name = "jun big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png?scale=1" }
+    -- sideArea { name = "jun big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedScarabs.png?scale=1" }
+    div [ class "betrayal-minimap minimap" ] []
 
 
 cassia : Html msg
 cassia =
     -- sideArea { name = "cassia", url = "Art/2DArt/UIImages/InGame/Blight/BuildButtonDefault.png?scale=1" }
     -- sideArea { name = "cassia", url = "Art/2DItems/Currency/Oils/GoldenOil.png?scale=1" }
-    sideArea { name = "cassia big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedBlight.png?scale=1" }
+    -- sideArea { name = "cassia big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedBlight.png?scale=1" }
+    div [ class "blight-minimap minimap" ] []
 
 
 tane : Html msg
@@ -170,12 +185,14 @@ tane =
 
 legion : Html msg
 legion =
-    sideArea { name = "legion big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLegion.png?scale=1" }
+    -- sideArea { name = "legion big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLegion.png?scale=1" }
+    div [ class "legion-minimap minimap" ] []
 
 
 delirium : Html msg
 delirium =
-    sideArea { name = "delirium big-icon", url = "Art/2DItems/Maps/DeliriumSplinter.png?scale=1" }
+    -- sideArea { name = "delirium big-icon", url = "Art/2DItems/Maps/DeliriumSplinter.png?scale=1" }
+    div [ class "delirium-minimap minimap" ] []
 
 
 region : Maybe WorldArea -> Html msg
@@ -325,22 +342,26 @@ trialmaster =
 gwennen : Html msg
 gwennen =
     -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
-    sideArea { name = "gwennen expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/DruidsOfTheWebHeraldryIcon.png?scale=1" }
+    -- sideArea { name = "gwennen expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/DruidsOfTheWebHeraldryIcon.png?scale=1" }
+    div [ class "expedition-minimap minimap" ] []
 
 
 tujen : Html msg
 tujen =
     -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
-    sideArea { name = "tujen expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/BlackSwordMercenariesHeraldryIcon.png?scale=1" }
+    -- sideArea { name = "tujen expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/BlackSwordMercenariesHeraldryIcon.png?scale=1" }
+    div [ class "expedition-minimap minimap" ] []
 
 
 rog : Html msg
 rog =
     -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
-    sideArea { name = "rog expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/OrderOfTheChaliceHeraldryIcon.png?scale=1" }
+    -- sideArea { name = "rog expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/OrderOfTheChaliceHeraldryIcon.png?scale=1" }
+    div [ class "expedition-minimap minimap" ] []
 
 
 dannig : Html msg
 dannig =
     -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
-    sideArea { name = "dannig expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/KnightsOfTheWolfHeraldryIcon.png?scale=1" }
+    -- sideArea { name = "dannig expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/KnightsOfTheWolfHeraldryIcon.png?scale=1" }
+    div [ class "expedition-minimap minimap" ] []

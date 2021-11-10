@@ -373,7 +373,8 @@ table.encounters {
 /* 32px * 14 cols */
 .minimap {
   display: inline-block;
-  background-image: url("https://web.poecdn.com/image/Art/2DArt/minimap/player.png");
+  /* background-image: url("https://web.poecdn.com/image/Art/2DArt/minimap/player.png"); */
+  background-image: url("https://i.imgur.com/asZCj9T.png");
   /* background-size: 448px auto; */
   background-size: 14em auto;
 
@@ -393,6 +394,41 @@ table.encounters {
 }
 .incursion-minimap.minimap {
   background-position: -13em -2em;
+}
+.bestiary-minimap.minimap {
+  background-position: -6em -2em;
+}
+.delve-minimap.minimap {
+  background-position: -3em -3em;
+  /* background-position: -0em -11em; */
+}
+.lab-minimap.minimap {
+  background-position: -5em -1em;
+}
+.blight-minimap.minimap {
+  background-position: -13em -13em;
+}
+.delirium-minimap.minimap {
+  background-position: -1em -15em;
+}
+.maps-minimap.minimap {
+  background-position: -13em -38em;
+}
+.zana-minimap.minimap {
+  /* background-position: -13em -38em; */
+  background-position: -9em -11em;
+}
+.vaal-minimap.minimap {
+  background-position: -9em -1em;
+}
+.betrayal-minimap.minimap {
+  background-position: -5em -11em;
+}
+.expedition-minimap.minimap {
+  background-position: -2em -41em;
+}
+.legion-minimap.minimap {
+  background-position: -3em -12em;
 }
 
 img.trialmaster-mod {
