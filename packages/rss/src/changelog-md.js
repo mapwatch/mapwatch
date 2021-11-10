@@ -1,5 +1,5 @@
 const _ = require('lodash/fp')
-const marked = require('marked')
+const { marked } = require('marked')
 
 function splitBody(text, splitter="\n") {
   const n = text.indexOf("\n")
