@@ -6,7 +6,7 @@ All substantial Mapwatch website changes.
 
 ## 2021-11-17
 - Ritual encounters are now tracked.
-  - Thanks to [Perotti28](https://github.com/Perotti28) for letting me know this was possible!
+  - Thanks to [Perotti28](https://github.com/Perotti28/RitualReminder) for letting me know this was possible!
 - Added an audio reminder to spend your Ritual tribute. You'll hear "did you spend your Ritual tribute?" when returning to town after clearing 3 or more Rituals.
   - Mapwatch cannot detect if you've *actually* spent your Ritual tribute, so there will be some false positives. If you forget as often as I do, it's totally worth it.
 
