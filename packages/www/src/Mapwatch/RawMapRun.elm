@@ -37,6 +37,7 @@ type alias RawMapRun =
     , isAbandoned : Bool
     , positionStart : Int
     , positionEnd : Int
+    , rituals : Int
     }
 
 
@@ -67,6 +68,7 @@ create addr startedAt npcSays posStart posEnd =
             , isAbandoned = False
             , positionStart = posStart
             , positionEnd = posEnd
+            , rituals = 0
             }
 
     else
@@ -238,6 +240,9 @@ updateNPCText line instance state =
                             NpcEncounter says addr line.date
                     in
                     state |> Maybe.map (\run -> { run | npcSays = run.npcSays |> pushNpcEncounter encounter })
+
+                LogLine.RitualFindClosestObject ->
+                    state |> Maybe.map (\run -> { run | rituals = run.rituals + 1 })
 
                 _ ->
                     state

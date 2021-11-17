@@ -166,6 +166,7 @@ viewEncountersRows tally =
     , { count = tally.tujen, label = "Tujen, the Haggler" }
     , { count = tally.rog, label = "Rog, the Dealer" }
     , { count = tally.dannig, label = "Dannig, Warrior Skald" }
+    , { count = tally.ritual, label = "Ritual" }
     ]
         |> List.sortBy .count
         |> List.reverse
@@ -227,6 +228,7 @@ viewHistoryHeaders model =
     , "Vaal"
     , "Lab Trial"
     , "Abyssal Depths"
+    , "Ritual"
     , "Abandoned Map Run"
 
     -- this one goes last
@@ -269,6 +271,7 @@ viewHistoryRow model i run =
     , run |> viewSideArea .isVaalArea
     , run |> viewSideArea .isLabTrial
     , run |> viewSideArea .isAbyssalDepths |> (/=) CellEmpty |> CellBool
+    , run.rituals |> CellInt
     , CellBool run.isAbandoned
     ]
 

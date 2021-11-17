@@ -4,6 +4,7 @@ import Json.Encode as E
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
+import Mapwatch.Visit as Visit
 import Maybe.Extra
 import Settings exposing (Settings)
 import Time
@@ -43,8 +44,9 @@ progressComplete settings name =
         Nothing
 
 
-joinInstance : Settings -> Bool -> RawMapRun.State -> Maybe MapRun -> Maybe Speech
-joinInstance settings isHistoryDone runState lastRun =
+joinInstance : Settings -> Bool -> Instance -> RawMapRun.State -> Maybe MapRun -> Maybe Speech
+joinInstance settings isHistoryDone instance runState lastRun =
+    -- if True || isHistoryDone then
     if isHistoryDone then
         let
             text : Maybe String
@@ -57,8 +59,12 @@ joinInstance settings isHistoryDone runState lastRun =
                                 "mapwatch now starting " ++ r.address.zone ++ ". " |> Just
 
                             _ ->
-                                -- a run is still happening
-                                Nothing
+                                -- a run is still happening. We might want to nag them about ritual
+                                if r.rituals >= 3 && Instance.isTown instance then
+                                    "mapwatch reminder: did you spend your ritual tribute?" |> Just
+
+                                else
+                                    Nothing
 
                     ( Nothing, _ ) ->
                         -- non-map -> non-map, or we're in a non-map zone

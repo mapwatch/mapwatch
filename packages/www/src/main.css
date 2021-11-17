@@ -393,6 +393,10 @@ table.encounters {
   /* background-position: -256px -1280px; */
   background-position: -9em -40em;
 }
+.ritual-minimap.minimap {
+  /* background-position: -256px -1280px; */
+  background-position: -8em -40em;
+}
 .incursion-minimap.minimap {
   background-position: -13em -2em;
 }

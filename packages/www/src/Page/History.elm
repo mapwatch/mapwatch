@@ -375,8 +375,9 @@ viewHistoryRun ({ query, tz } as m) config goals r =
                 |> Maybe.Extra.toList
             , r.trialmaster
                 |> List.map (viewTrialmasterRow config r.address)
+            , r.rituals |> viewRitualRow query config
             , if r.isHeartOfTheGrove then
-                [ viewHistoryNpcTextRow_ query config (Dict.get NpcId.oshabi r.npcSays |> Maybe.withDefault []) [ View.Icon.harvest, text "Heart of the Grove" ] ]
+                [ viewHistoryNpcTextRow_ query config (Dict.get NpcId.oshabi r.npcSays |> Maybe.withDefault []) [ View.Icon.harvest, span [ L.historyHeartOfTheGrove ] [] ] ]
 
               else
                 []
@@ -388,6 +389,34 @@ viewHistoryRun ({ query, tz } as m) config goals r =
                 |> Dict.toList
                 |> List.filterMap (viewHistoryNpcTextRow query config r.rootNpcs)
             ]
+
+
+viewRitualRow : QueryDict -> HistoryRowConfig -> Int -> List (Html msg)
+viewRitualRow query { showDate } count =
+    if count > 0 then
+        [ tr [ class "npctext-area" ]
+            ((if showDate then
+                [ td [ class "date" ] [] ]
+
+              else
+                []
+             )
+                ++ [ td [] []
+                   , td [] []
+                   , td [ colspan 7 ]
+                        [ View.Icon.ritual
+                        , span (L.historyRitual { n = toFloat count }) []
+                        ]
+                   , td [ class "side-dur" ]
+                        []
+                   , td [ class "portals" ] []
+                   , td [ class "town-pct" ] []
+                   ]
+            )
+        ]
+
+    else
+        []
 
 
 viewAfkDurationRow : QueryDict -> HistoryRowConfig -> Int -> List (Html msg)
@@ -403,7 +432,7 @@ viewAfkDurationRow query { showDate } durationAfk =
                 ++ [ td [] []
                    , td [] []
                    , td [ colspan 7 ]
-                        [ text "AFK mode: " ]
+                        [ span [ L.historyAfkMode ] [] ]
                    , td [ class "side-dur" ]
                         [ text "-", viewDuration durationAfk ]
                    , td [ class "portals" ] []

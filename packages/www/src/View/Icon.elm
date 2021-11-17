@@ -43,11 +43,21 @@ justMap : MapIconArgs a -> WorldArea -> Maybe (Html msg)
 justMap args world =
     case world.id of
         -- a few special cases
-        "BetrayalSafeHouseFortress" -> Just jun
-        "BetrayalSafeHouseAssassins" -> Just jun
-        "BetrayalSafeHouseCaravan" -> Just jun
-        "BetrayalSafeHouseLaboratory" -> Just jun
-        "BetrayalMastermindFight" -> Just jun
+        "BetrayalSafeHouseFortress" ->
+            Just jun
+
+        "BetrayalSafeHouseAssassins" ->
+            Just jun
+
+        "BetrayalSafeHouseCaravan" ->
+            Just jun
+
+        "BetrayalSafeHouseLaboratory" ->
+            Just jun
+
+        "BetrayalMastermindFight" ->
+            Just jun
+
         _ ->
             world
                 |> Datamine.imgSrc args
@@ -332,6 +342,11 @@ harvest =
     -- sideArea { name = "harvest big-icon", url = "Art/2DItems/Effects/Portals/HarvestPortal.png?scale=1" }
     -- sideArea { name = "harvest big-icon", url = "Art/2DItems/Maps/OshabiMap.png?scale=1" }
     div [ class "harvest-minimap minimap" ] []
+
+
+ritual : Html msg
+ritual =
+    div [ class "ritual-minimap minimap" ] []
 
 
 trialmaster : Html msg

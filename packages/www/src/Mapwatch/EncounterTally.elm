@@ -55,12 +55,13 @@ type alias EncounterTally =
     , tujen : Int
     , rog : Int
     , dannig : Int
+    , ritual : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -144,6 +145,7 @@ fromMapRuns runs =
         , trialmasterLost = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Lost)
         , trialmasterRetreated = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Retreated)
         , trialmasterAbandoned = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Abandoned)
+        , ritual = runs |> List.Extra.count (\r -> r.rituals > 0)
     }
         |> tallyNpcs npcs
         |> (\t -> { t | oshabi = t.oshabi - hearts |> max 0 })

@@ -490,6 +490,11 @@ searchString dm r =
                 else
                     Just t
            )
+    , if r.rituals > 0 then
+        "ritual:" ++ String.fromInt r.rituals |> Just
+
+      else
+        Nothing
     ]
         ++ (r.npcSays |> Dict.keys |> List.map (\id -> npcName id dm))
         ++ (r.sideAreas |> Dict.values |> List.map (Tuple.first >> sideAreaSearchString dm >> Just))

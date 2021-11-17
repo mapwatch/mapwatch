@@ -140,7 +140,7 @@ sendJoinInstance settings isHistoryDone date instance visit runState lastRun =
             , ( "instance", encodeInstance instance )
             , ( "lastVisit", visit |> Maybe.Extra.unwrap Encode.null encodeVisit )
             , ( "lastMapRun", lastRun |> Maybe.Extra.unwrap Encode.null encodeMapRun )
-            , ( "say", Speech.joinInstance settings isHistoryDone runState lastRun |> Maybe.Extra.unwrap Encode.null Speech.encoder )
+            , ( "say", Speech.joinInstance settings isHistoryDone instance runState lastRun |> Maybe.Extra.unwrap Encode.null Speech.encoder )
             ]
 
 

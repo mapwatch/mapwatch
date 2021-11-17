@@ -262,6 +262,7 @@ listEncounterTally query tally =
         , entry tally.tujen "npc:tujen" [ View.Icon.tujen, t L.encounterTujen ]
         , entry tally.rog "npc:rog" [ View.Icon.rog, t L.encounterRog ]
         , entry tally.dannig "npc:dannig" [ View.Icon.dannig, t L.encounterDannig ]
+        , entry tally.ritual "ritual:" [ View.Icon.ritual, t L.encounterRitual ]
         ]
             |> List.filter (\r -> r.count > 0)
             |> List.sortBy .count

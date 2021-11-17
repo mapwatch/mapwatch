@@ -45,6 +45,7 @@ type Info
     | YouHaveEntered String
     | NPCSays NPCSaysData
     | AFKMode Bool
+    | RitualFindClosestObject
 
 
 type alias NPCSaysData =
@@ -98,54 +99,60 @@ parseInfo dm raw =
         Just Opening
 
     else
-        case info |> String.indexes "] " |> List.head |> Maybe.map (\i -> String.dropLeft (i + 2) info) of
-            Nothing ->
-                Nothing
+        info
+            |> String.indexes "] "
+            |> List.head
+            |> Maybe.map (\i -> String.dropLeft (i + 2) info)
+            |> Maybe.andThen
+                (\body ->
+                    if body == "FindClosestObject found no nearby object" then
+                        Just RitualFindClosestObject
 
-            Just body ->
-                case Util.String.unwrap "Connecting to instance server at " "" body of
-                    Just addr ->
-                        ConnectingToInstanceServer addr |> Just
+                    else
+                        case Util.String.unwrap "Connecting to instance server at " "" body of
+                            Just addr ->
+                                ConnectingToInstanceServer addr |> Just
 
-                    Nothing ->
-                        case Dict.get body dm.npcText of
-                            Just { npcName, npcId, textId } ->
-                                NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = textId }
-                                    |> Just
-
-                            -- |> Debug.log "npcsays"
                             Nothing ->
-                                case parseInfoEntered dm body of
+                                case Dict.get body dm.npcText of
+                                    Just { npcName, npcId, textId } ->
+                                        NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = textId }
+                                            |> Just
+
+                                    -- |> Debug.log "npcsays"
                                     Nothing ->
-                                        -- NPCSays, but we don't have matching NPCText.
-                                        -- Usually this is because we don't care what they're saying,
-                                        -- just that they're saying anything.
-                                        case
-                                            body
-                                                |> String.split ":"
-                                                |> List.head
-                                                |> Maybe.andThen (\name -> Dict.get name dm.unindex.npcs |> Maybe.map (Tuple.pair name))
-                                                -- conqueror dialogue must match exactly to be processed - speaker alone isn't enough
-                                                |> Maybe.Extra.filter (\( _, npcId ) -> not <| Set.member npcId NpcId.conquerors)
-                                        of
-                                            Just ( npcName, npcId ) ->
-                                                -- TODO: textId="" instead of a maybe-type is a bit sketchy
-                                                NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = "" } |> Just
-
+                                        case parseInfoEntered dm body of
                                             Nothing ->
-                                                if dm.afkModeEnabled body then
-                                                    AFKMode True |> Just
+                                                -- NPCSays, but we don't have matching NPCText.
+                                                -- Usually this is because we don't care what they're saying,
+                                                -- just that they're saying anything.
+                                                case
+                                                    body
+                                                        |> String.split ":"
+                                                        |> List.head
+                                                        |> Maybe.andThen (\name -> Dict.get name dm.unindex.npcs |> Maybe.map (Tuple.pair name))
+                                                        -- conqueror dialogue must match exactly to be processed - speaker alone isn't enough
+                                                        |> Maybe.Extra.filter (\( _, npcId ) -> not <| Set.member npcId NpcId.conquerors)
+                                                of
+                                                    Just ( npcName, npcId ) ->
+                                                        -- TODO: textId="" instead of a maybe-type is a bit sketchy
+                                                        NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = "" } |> Just
 
-                                                else
-                                                    case Dict.get (String.dropLeft 2 body) dm.unindex.backendErrors of
-                                                        Just "AFKModeDisabled" ->
-                                                            AFKMode False |> Just
+                                                    Nothing ->
+                                                        if dm.afkModeEnabled body then
+                                                            AFKMode True |> Just
 
-                                                        _ ->
-                                                            Nothing
+                                                        else
+                                                            case Dict.get (String.dropLeft 2 body) dm.unindex.backendErrors of
+                                                                Just "AFKModeDisabled" ->
+                                                                    AFKMode False |> Just
 
-                                    entered ->
-                                        entered
+                                                                _ ->
+                                                                    Nothing
+
+                                            entered ->
+                                                entered
+                )
 
 
 parseInfoEntered : Datamine -> String -> Maybe Info

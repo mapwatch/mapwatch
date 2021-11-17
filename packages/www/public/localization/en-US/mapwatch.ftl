@@ -136,6 +136,7 @@ encounter-trialmasters-retreated = Trialmasters retreated
 encounter-trialmasters-incomplete = Trialmasters incomplete
 encounter-trialmaster-boss = Trialmaster boss fights *
 encounter-trialmaster-boss-warn = <a data-l10n-name="link">Trialmaster boss fight rate</a> depends on map level, which Mapwatch cannot track.
+encounter-ritual = Ritual
 
 ## https://mapwatch.erosson.org/#/maps
 maps-th-name = Name
@@ -198,6 +199,9 @@ history-run-abandoned = ???
         Sadly, when you go offline without returning to town, Mapwatch cannot know how long you spent in the map. Times shown here will be wrong.
         
         See also https://github.com/mapwatch/mapwatch/issues/66
+history-afk-mode = AFK mode:
+history-ritual = Ritual ({NUMBER($n)})
+history-heart-of-the-grove = Heart of the Grove
 
 ## https://mapwatch.erosson.org/#/history/tsv > encounter types
 npc-einhar = Einhar, Beastmaster

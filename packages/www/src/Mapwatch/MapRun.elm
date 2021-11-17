@@ -50,6 +50,7 @@ type alias MapRun =
     -- isGrandHeist: True, False (heist contract), or Null (not a heist)
     , isGrandHeist : Maybe Bool
     , isHeartOfTheGrove : Bool
+    , rituals : Int
     }
 
 
@@ -216,6 +217,7 @@ fromRaw dm raw =
                 |> List.sum
         , afk = raw.visits |> List.map Visit.durationAfk |> List.sum
         }
+    , rituals = raw.rituals
     }
 
 
