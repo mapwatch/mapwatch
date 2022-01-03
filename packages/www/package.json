@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "concurrently": "^6.3.0",
+    "concurrently": "^7.0.0",
     "create-elm-app": "^5.8.0",
     "fluent-typesafe": "erosson/fluent-typesafe#master",
     "raw-loader": "^4.0.1",
