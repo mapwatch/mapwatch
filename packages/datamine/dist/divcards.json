@@ -2383,6 +2383,13 @@
       }
     },
     {
+      "card": "The Fox in the Brambles",
+      "maps": [],
+      "loot": {
+        "text": "Bramblejack\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
       "card": "The Gambler",
       "maps": [
         "Ancient Reliquary",
@@ -3951,8 +3958,7 @@
     {
       "card": "The Wind",
       "maps": [
-        "Atoll Map",
-        "Jungle Valley Map"
+        "Atoll Map"
       ],
       "loot": {
         "text": "Windripper"

@@ -9246,6 +9246,14 @@
       [
         "GuildStashDisabled",
         "La Réserve de Guilde est temporairement désactivée."
+      ],
+      [
+        "OperationCancelled",
+        "Opération annulée."
+      ],
+      [
+        "ConvertMapsPartialSuccess",
+        "Certaines Cartes n'ont pas pu être converties par manque de place, ou parce qu'aucune conversion valable n'a été trouvée."
       ]
     ]
   },

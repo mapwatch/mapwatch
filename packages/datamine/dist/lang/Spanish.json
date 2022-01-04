@@ -9246,6 +9246,14 @@
       [
         "GuildStashDisabled",
         "El alijo de hermandad ha sido temporalmente deshabilitado."
+      ],
+      [
+        "OperationCancelled",
+        "Operación cancelada."
+      ],
+      [
+        "ConvertMapsPartialSuccess",
+        "No se pudieron convertir algunos mapas, o bien por falta de espacio, o bien porque no se encontró una conversión válida."
       ]
     ]
   },
@@ -17970,7 +17978,7 @@
       ],
       [
         "JunOrtoiTheForbiddenVault",
-        "A mi akhara, a mi gente, hace mucho tiempo se le encomendó la tarea de proteger a la gente de Wraeclast de sí mismos. Existen muchos arterfactos de gran poder, tú ya te has topado con algunos de ellos en tus viajes. Pero hay algunos artefactos tan poderosos que su uso pondría al mundo en peligro. Artefactos como los Cuernos de Kulemak. Nosotros, la Orden de los Djinn, existíamos para custodiar tal poder y mantenerlo en secreto. Es mejor que el mundo se olvide de estos artefactos y de nosotros, en lugar de tener que luchar por el control de un poder que no hay esperanza de controlar."
+        "A mi akhara, a mi gente, hace mucho tiempo se le encomendó la tarea de proteger a la gente de Wraeclast de sí mismos. Existen muchos artefactos de gran poder, tú ya te has topado con algunos de ellos en tus viajes. Pero hay algunos artefactos tan poderosos que su uso pondría al mundo en peligro. Artefactos como los Cuernos de Kulemak. Nosotros, la Orden de los Djinn, existíamos para custodiar tal poder y mantenerlo en secreto. Es mejor que el mundo se olvide de estos artefactos y de nosotros, en lugar de tener que luchar por el control de un poder que no hay esperanza de controlar."
       ],
       [
         "JunOrtoiTheOrderOfTheDjinn",

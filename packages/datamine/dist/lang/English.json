@@ -9246,6 +9246,14 @@
       [
         "GuildStashDisabled",
         "The guild stash has been temporarily disabled."
+      ],
+      [
+        "OperationCancelled",
+        "Operation cancelled."
+      ],
+      [
+        "ConvertMapsPartialSuccess",
+        "Some maps could not be converted either due to lack of space, or no valid conversion found."
       ]
     ]
   },
