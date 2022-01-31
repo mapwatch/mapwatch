@@ -9246,6 +9246,14 @@
       [
         "GuildStashDisabled",
         "길드 보관함을 일시적으로 사용할 수 없습니다."
+      ],
+      [
+        "OperationCancelled",
+        "작업이 취소되었습니다."
+      ],
+      [
+        "ConvertMapsPartialSuccess",
+        "공간이 부족하여 일부 지도를 변환할 수 없거나, 변환 가능한 지도를 찾을 수 없습니다."
       ]
     ]
   },

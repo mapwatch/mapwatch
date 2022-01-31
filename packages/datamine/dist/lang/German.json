@@ -9246,6 +9246,14 @@
       [
         "GuildStashDisabled",
         "Die Gildentruhe wurde temporär deaktiviert."
+      ],
+      [
+        "OperationCancelled",
+        "Vorgang abgebrochen."
+      ],
+      [
+        "ConvertMapsPartialSuccess",
+        "Einige Karten konnten aufgrund von nicht ausreichendem Platz nicht umgewandelt werden oder es gab keine passenden Karten zum Umwandeln."
       ]
     ]
   },

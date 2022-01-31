@@ -9246,6 +9246,14 @@
       [
         "GuildStashDisabled",
         "O baú da guilda foi desabilitado temporariamente."
+      ],
+      [
+        "OperationCancelled",
+        "Operação cancelada."
+      ],
+      [
+        "ConvertMapsPartialSuccess",
+        "Alguns mapas não puderam ser convertidos devido a falta de espaço, ou nenhuma conversão válida encontrada."
       ]
     ]
   },
