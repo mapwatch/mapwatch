@@ -100,9 +100,10 @@ zana =
     div [ class "zana-minimap minimap" ] []
 
 
-labTrialUrl : String
-labTrialUrl =
-    Datamine.imgCdn ++ "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLabyrinth.png?scale=1"
+
+-- labTrialUrl : String
+-- labTrialUrl =
+--     Datamine.imgCdn ++ "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLabyrinth.png?scale=1"
 
 
 labTrial : Html msg
@@ -116,7 +117,8 @@ labTrial =
 abyss : Html msg
 abyss =
     -- sideArea { name = "abyss", url = "Art/2DArt/UIImages/InGame/Legion/LegionRewardAbyss.png" }
-    sideArea { name = "abyss big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedAbyss.png?scale=1" }
+    -- sideArea { name = "abyss big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedAbyss.png?scale=1" }
+    div [ class "abyss-minimap minimap" ] []
 
 
 baran : Html msg
@@ -186,11 +188,6 @@ cassia =
     -- sideArea { name = "cassia", url = "Art/2DItems/Currency/Oils/GoldenOil.png?scale=1" }
     -- sideArea { name = "cassia big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedBlight.png?scale=1" }
     div [ class "blight-minimap minimap" ] []
-
-
-tane : Html msg
-tane =
-    sideArea { name = "tane big-icon", url = "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedMetamorph.png?scale=1" }
 
 
 legion : Html msg

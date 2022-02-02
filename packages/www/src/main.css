@@ -435,6 +435,9 @@ table.encounters {
 .legion-minimap.minimap {
   background-position: -3em -12em;
 }
+.abyss-minimap.minimap {
+  background-position: -13em -0em;
+}
 
 img.trialmaster-mod {
   height: 1.5em;

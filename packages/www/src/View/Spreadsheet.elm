@@ -91,7 +91,8 @@ viewMapsRow : Int -> Page.Maps.GroupedRuns -> List Cell
 viewMapsRow i row =
     [ i + 1 |> CellInt
     , if row.worldArea.isLabyrinth then
-        CellIcon View.Icon.labTrialUrl
+        -- CellIcon View.Icon.labTrialUrl
+        CellEmpty
 
       else
         row.worldArea
