@@ -1,5 +1,7 @@
 {
   "name": "mapwatch",
+  "license": "GPL-3.0",
+  "private": true,
   "scripts": {
     "prepare": "lerna run prepare --ignore @mapwatch/electron --stream",
     "tf:init": "terraform init",
@@ -18,8 +20,9 @@
     "clean": "lerna run clean --stream && rimraf *.log",
     "clean:npm": "yarn clean && lerna exec 'rimraf ./node_modules' --stream && rimraf ./node_modules"
   },
-  "license": "GPL-3.0",
-  "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "workspaces": {
     "//nohoist": "./packages/electron needs all production packages non-hoisted for its build step",
     "nohoist": [
