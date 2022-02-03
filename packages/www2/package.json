@@ -1,0 +1,31 @@
+{
+    "name": "@mapwatch/www2",
+    "version": "1.0.0",
+    "source": "public/index.html",
+    "license": "GPL-3.0",
+    "private": true,
+    "scripts": {
+        "prepare": "yarn test:fixture",
+        "dev": "bash scripts/_build/version && bash scripts/_build/copy-static && bash scripts/_build/l10n",
+        "start": "concurrently --kill-others \"yarn dev --watch\" \"elm-spa watch\" \"parcel\" ",
+        "build": "yarn dev && elm-spa build && parcel build",
+        "test:fixture": "node ./tests/Fixture/build.js",
+        "test": "yarn dev && yarn test:fixture && elm-app test",
+        "clean": "rm -rf dist tmp"
+    },
+    "parcelIgnore": [
+        "/localization/{locale}/mapwatch.ftl"
+    ],
+    "dependencies": {
+        "@fluent/web": "^0.2.1"
+    },
+    "devDependencies": {
+        "@parcel/packager-raw-url": "^2.2.1",
+        "@parcel/transformer-elm": "^2.2.1",
+        "@parcel/transformer-webmanifest": "^2.2.1",
+        "elm": "^0.19.1-5",
+        "elm-spa": "^6.0.4",
+        "parcel": "^2.2.1",
+        "parcel-resolver-ignore": "^2.0.0"
+    }
+}

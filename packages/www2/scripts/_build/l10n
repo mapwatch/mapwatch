@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -eux
+fluent-typesafe --format=elm --out=./gen ./public/localization/en-US "$@"

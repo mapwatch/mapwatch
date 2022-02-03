@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -eux
+cd "`dirname "$0"`/../.."
+
+rm -rf ./dist/
+mkdir -p ./dist/
+cp -r public/* ../../CHANGELOG.md ../../PRIVACY.md ../rss/dist/rss.xml tmp/version.txt ./dist/
