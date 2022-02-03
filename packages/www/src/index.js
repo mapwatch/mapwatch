@@ -2,8 +2,7 @@ import '@fluent/web'
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'sakura.css/css/sakura-vader.css';
 import './main.css';
-// import { Elm } from '../.elm-spa/defaults/Main.elm';
-import { Elm } from './Main.elm';
+import { Elm } from '../.elm-spa/defaults/Main.elm';
 import * as analytics from './analytics'
 import * as gsheets from './gsheets'
 import * as util from './util'
