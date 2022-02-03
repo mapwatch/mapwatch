@@ -1,4 +1,3 @@
-// import 'regenerator-runtime' // for @fluent/web
 import '@fluent/web'
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'sakura.css/css/sakura-vader.css';
