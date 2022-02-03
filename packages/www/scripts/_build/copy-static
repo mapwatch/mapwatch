@@ -4,5 +4,14 @@ cd "`dirname "$0"`/../.."
 
 rm -rf ./dist/examples ./dist/localization
 mkdir -p ./dist/
-cp -r public/* ../../CHANGELOG.md ../../PRIVACY.md ../rss/dist/rss.xml tmp/version.txt ./dist/
-rm dist/index.html
+cp -r \
+    public/examples \
+    public/localization \
+    public/*.jpeg \
+    public/*.svg \
+    public/*.json \
+    ../../CHANGELOG.md \
+    ../../PRIVACY.md \
+    ../rss/dist/rss.xml \
+    tmp/version.txt \
+    ./dist/
