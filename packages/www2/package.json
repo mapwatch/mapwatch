@@ -7,7 +7,7 @@
     "scripts": {
         "prepare": "yarn test:fixture",
         "dev": "bash scripts/_build/version && bash scripts/_build/copy-static && bash scripts/_build/l10n",
-        "start": "concurrently --kill-others \"yarn dev --watch\" \"elm-spa watch\" \"parcel\" ",
+        "start": "concurrently --kill-others \"yarn dev --watch\" \"elm-spa watch\" \"PARCEL_ELM_NO_DEBUG=1 parcel\" ",
         "build": "yarn dev && elm-spa build && parcel build",
         "test:fixture": "node ./tests/Fixture/build.js",
         "test": "yarn dev && yarn test:fixture && elm-app test",

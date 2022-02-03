@@ -3,7 +3,8 @@ import '@fluent/web'
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'sakura.css/css/sakura-vader.css';
 import './main.css';
-import { Elm } from '../.elm-spa/defaults/Main.elm';
+// import { Elm } from '../.elm-spa/defaults/Main.elm';
+import { Elm } from './Main.elm';
 import * as analytics from './analytics'
 import * as gsheets from './gsheets'
 import * as util from './util'
@@ -11,12 +12,16 @@ import { BrowserBackend } from './browserBackend'
 import { BrowserNativeFSBackend } from './browserNativeFSBackend'
 import { MemoryBackend } from './memoryBackend'
 import datamine from './datamine'
+import fs from 'fs'
 
-// https://parceljs.org/languages/javascript/#url-dependencies
-const changelog = new URL('../../../CHANGELOG.md', import.meta.url)
-const privacy = new URL('../../../PRIVACY.md', import.meta.url)
+// import these as raw text during parcel builds.
+// https://parceljs.org/features/node-emulation/#inlining-fs.readfilesync
+const changelog = fs.readFileSync(__dirname + '/../dist/CHANGELOG.md', 'utf8')
+const privacy = fs.readFileSync(__dirname + '/../dist/PRIVACY.md', 'utf8')
 // version.txt is created by by `yarn _build:version`
-const version = new URL('../tmp/version.txt', import.meta.url)
+const version = fs.readFileSync(__dirname + '/../dist/version.txt', 'utf8')
+// console.log({ changelog, privacy, version })
+
 
 // Be careful with timezones throughout this file. Use Date.now(), not new Date(),
 // for data sent to Elm: no risk of getting timezones involved that way.

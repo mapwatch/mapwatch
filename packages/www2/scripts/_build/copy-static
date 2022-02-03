@@ -2,6 +2,6 @@
 set -eux
 cd "`dirname "$0"`/../.."
 
-rm -rf ./dist/
+rm -rf ./dist/examples ./dist/localization
 mkdir -p ./dist/
 cp -r public/* ../../CHANGELOG.md ../../PRIVACY.md ../rss/dist/rss.xml tmp/version.txt ./dist/
