@@ -8,7 +8,7 @@
         "setup": "bash scripts/_build/version && bash scripts/_build/copy-static",
         "l10n": "bash scripts/_build/l10n",
         "start": "yarn setup && concurrently --kill-others \"yarn l10n --watch\" \"PARCEL_ELM_NO_DEBUG=1 parcel\" ",
-        "build": "yarn setup && yarn l10n && parcel build",
+        "build": "yarn setup && yarn l10n && parcel build --dist-dir=build",
         "test:fixture": "node ./tests/Fixture/build.js",
         "test": "yarn setup && yarn l10n && yarn test:fixture && elm-app test",
         "clean": "rm -rf dist tmp"
@@ -20,12 +20,15 @@
         "@fluent/web": "^0.2.1"
     },
     "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4",
         "@parcel/packager-raw-url": "^2.2.1",
         "@parcel/transformer-elm": "^2.2.1",
         "@parcel/transformer-webmanifest": "^2.2.1",
         "concurrently": "^7.0.0",
         "elm": "^0.19.1-5",
+        "fluent-typesafe": "erosson/fluent-typesafe#master",
         "parcel": "^2.2.1",
-        "parcel-resolver-ignore": "^2.0.0"
+        "parcel-resolver-ignore": "^2.0.0",
+        "sakura.css": "^1.3.1"
     }
 }

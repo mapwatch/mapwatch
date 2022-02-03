@@ -3,6 +3,7 @@
 elm-stuff
 node_modules
 dist
+build
 
 # Pre-build generated files
 tmp/
