@@ -10,7 +10,7 @@
         "start": "yarn setup && concurrently --kill-others \"yarn l10n --watch\" \"PARCEL_ELM_NO_DEBUG=1 parcel\" ",
         "build": "yarn setup && yarn l10n && parcel build --dist-dir=build",
         "test:fixture": "node ./tests/Fixture/build.js",
-        "test": "yarn setup && yarn l10n && yarn test:fixture && elm-app test",
+        "test": "yarn setup && yarn l10n && yarn test:fixture && elm-test",
         "clean": "rm -rf dist tmp"
     },
     "parcelIgnore": [
@@ -26,6 +26,7 @@
         "@parcel/transformer-webmanifest": "^2.2.1",
         "concurrently": "^7.0.0",
         "elm": "^0.19.1-5",
+        "elm-test": "^0.19.1-revision7",
         "fluent-typesafe": "erosson/fluent-typesafe#master",
         "parcel": "^2.2.1",
         "parcel-resolver-ignore": "^2.0.0",
