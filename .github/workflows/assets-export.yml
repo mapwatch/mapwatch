@@ -19,7 +19,7 @@ jobs:
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
       - uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16.x
 
       - run: yarn install --frozen-lockfile
       # no need to check versions first, it's a quick build
