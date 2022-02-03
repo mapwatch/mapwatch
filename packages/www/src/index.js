@@ -1,10 +1,10 @@
-import 'regenerator-runtime' // for @fluent/web
+// import 'regenerator-runtime' // for @fluent/web
 import '@fluent/web'
 import '@fortawesome/fontawesome-free/css/all.css';
 import 'sakura.css/css/sakura-vader.css';
 import './main.css';
+// import { Elm } from '../.elm-spa/defaults/Main.elm';
 import { Elm } from './Main.elm';
-import * as registerServiceWorker from './registerServiceWorker';
 import * as analytics from './analytics'
 import * as gsheets from './gsheets'
 import * as util from './util'
@@ -12,17 +12,16 @@ import { BrowserBackend } from './browserBackend'
 import { BrowserNativeFSBackend } from './browserNativeFSBackend'
 import { MemoryBackend } from './memoryBackend'
 import datamine from './datamine'
-import changelog from '!!raw-loader!../../../CHANGELOG.md'
-import privacy from '!!raw-loader!../../../PRIVACY.md'
+import fs from 'fs'
+
+// import these as raw text during parcel builds.
+// https://parceljs.org/features/node-emulation/#inlining-fs.readfilesync
+const changelog = fs.readFileSync(__dirname + '/../dist/CHANGELOG.md', 'utf8')
+const privacy = fs.readFileSync(__dirname + '/../dist/PRIVACY.md', 'utf8')
 // version.txt is created by by `yarn _build:version`
-import version from '!!raw-loader!../tmp/version.txt'
-// file-loader copies things into the website's static files; for example,
-// this makes https://erosson.mapwatch.org/CHANGELOG.md work. Sort of like how
-// `cp ... ./build/` in `yarn build` might work, but this also works in dev.
-import '!!file-loader?name=CHANGELOG.md!../../../CHANGELOG.md'
-import '!!file-loader?name=PRIVACY.md!../../../PRIVACY.md'
-import '!!file-loader?name=rss.xml!../../rss/dist/rss.xml'
-import '!!file-loader?name=version.txt!../tmp/version.txt'
+const version = fs.readFileSync(__dirname + '/../dist/version.txt', 'utf8')
+// console.log({ changelog, privacy, version })
+
 
 // Be careful with timezones throughout this file. Use Date.now(), not new Date(),
 // for data sent to Elm: no risk of getting timezones involved that way.
@@ -214,4 +213,9 @@ function say(args) {
 }
 
 main()
-registerServiceWorker.unregister()
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.ready.then(registration => {
+    registration.unregister();
+  });
+}
