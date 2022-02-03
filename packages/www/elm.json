@@ -2,8 +2,6 @@
     "type": "application",
     "source-directories": [
         "gen",
-        ".elm-spa/defaults",
-        ".elm-spa/generated",
         "src"
     ],
     "elm-version": "0.19.1",
@@ -28,8 +26,7 @@
             "elm-explorations/markdown": "1.0.0",
             "justinmimbs/time-extra": "1.1.0",
             "jweir/elm-iso8601": "7.0.0",
-            "krisajenkins/remotedata": "6.0.1",
-            "ryannhg/elm-spa": "6.0.0"
+            "krisajenkins/remotedata": "6.0.1"
         },
         "indirect": {
             "elm/file": "1.0.5",
