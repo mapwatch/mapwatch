@@ -5,11 +5,14 @@ tasks:
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
+  # create-elm-app
   - port: 3000
-    onOpen: open-preview
+    onOpen: open-browser
+  # parcel
+  - port: 1234
+    onOpen: open-browser
 
 vscode:
   extensions:
     - elmtooling.elm-ls-vscode
     - gamunu.vscode-yarn
-
