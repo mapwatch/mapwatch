@@ -36,7 +36,7 @@
   "dependencies": {
     "chokidar": "^3.3.1",
     "electron-log": "^4.1.1",
-    "electron-updater": "^4.2.0",
+    "electron-updater": "^5.0.5",
     "lodash": "^4.17.15",
     "minimist": "^1.2.5",
     "regedit": "^5.0.0"
