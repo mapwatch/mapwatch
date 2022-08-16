@@ -87,6 +87,7 @@ type alias WorldArea =
     , isLabyrinth : Bool
     , isAbyssalDepths : Bool
     , itemVisualId : Maybe String
+    , poedbMapIcon : Maybe String
     , atlasRegion : Maybe String
     , tiers : Maybe (List Int)
     }
@@ -226,24 +227,28 @@ type alias MapIconArgs a =
 
 imgSrc : MapIconArgs a -> WorldArea -> Maybe String
 imgSrc args w =
-    w.itemVisualId
-        |> Maybe.map
-            (String.replace ".dds" ".png"
-                >> (\path ->
-                        if args.isGrandHeist |> Maybe.withDefault False then
-                            String.replace "ContractItem" "BlueprintNotApproved" path
+    if Maybe.Extra.isJust w.poedbMapIcon then
+        w.poedbMapIcon
 
-                        else
-                            path
-                   )
-                >> (\path ->
-                        imgCdn
-                            ++ path
-                            ++ "?w=1&h=1&scale=1&mn=6&mt="
-                            ++ String.fromInt (tier w |> Maybe.withDefault 0)
-                            ++ boolQuery "&mb" args.isBlightedMap
-                   )
-            )
+    else
+        (w.itemVisualId
+            |> Maybe.map
+                (String.replace ".dds" ".png"
+                    >> (\path ->
+                            if args.isGrandHeist |> Maybe.withDefault False then
+                                String.replace "ContractItem" "BlueprintNotApproved" path
+
+                            else
+                                path
+                       )
+                    >> (\path ->
+                            imgCdn
+                                ++ path
+                                ++ "?w=1&h=1&scale=1&mn=6&mt="
+                                ++ String.fromInt (tier w |> Maybe.withDefault 0)
+                                ++ boolQuery "&mb" args.isBlightedMap
+                       )
+                ))
 
 
 boolQuery : String -> Bool -> String
@@ -601,10 +606,11 @@ worldAreasDecoder =
         (D.index 6 D.bool)
         |> D.andThen
             (\w ->
-                D.map5 w
+                D.map6 w
                     (D.index 7 D.bool)
                     (D.index 8 D.bool)
                     (D.index 9 (D.maybe D.string))
+                    (D.index 11 (D.maybe D.string))
                     (D.succeed Nothing)
                     (D.index 10 (D.maybe (D.list D.int)))
             )

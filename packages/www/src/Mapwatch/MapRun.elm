@@ -280,6 +280,7 @@ labyrinthWorldArea =
     { id = "__mapwatch:TheLabyrinth"
     , isLabyrinth = True
     , itemVisualId = Just "Art/2DArt/UIImages/InGame/Metamorphosis/rewardsymbols/ChestUnopenedLabyrinth.png?scale=1"
+    , poedbMapIcon = Nothing
 
     --
     , isTown = False

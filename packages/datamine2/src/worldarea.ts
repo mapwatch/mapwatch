@@ -11,6 +11,7 @@ export interface WorldArea {
     _IsLabyrinth: boolean
     _IsAbyssalDepths: boolean
     ItemVisualIdentity: string | null
+    _PoedbMapIcon: string | null
     Tiers: null | [number, number, number, number, number]
 }
 export const headers: (keyof WorldArea)[] = [
@@ -25,6 +26,7 @@ export const headers: (keyof WorldArea)[] = [
     "_IsAbyssalDepths",
     "ItemVisualIdentity",
     "Tiers",
+    "_PoedbMapIcon"
 ]
 
 export function filter(w: WorldArea): boolean {
@@ -54,11 +56,14 @@ export function build(w: input.WorldArea, i: input.Input): WorldArea {
     const _IsLabyrinth = w.Id.includes('_Labyrinth_') && !w.Id.includes("_Labyrinth_Airlock") && !_IsLabTrial
     const _IsAbyssalDepths = w.Id.startsWith('AbyssLeague')
     const Tiers: null | [number, number, number, number, number] = a ? [a.Tier0, a.Tier1, a.Tier2, a.Tier3, a.Tier4] : null
+
+    const name: string = i.lang['English'].worldAreasById[w.Id].Name
+    const _PoedbMapIcon: null | string = (i.mapIconsByName[name] || i.mapIconsByName[`${name} Map`])?.icon
     const ItemVisualIdentity = nonAtlasMapIcon(w)
         || i.itemVisualIdentityByIndex[u?.ItemVisualIdentityKey]?.DDSFile
         || i.itemVisualIdentityByIndex[a?.ItemVisualIdentityKey]?.DDSFile
         || (w.Id.startsWith('MapWorlds') ? i.itemVisualIdentityByIndex[w._index]?.DDSFile : null)
-    return { ...w, _IsLabTrial, _IsLabyrinth, _IsAbyssalDepths, Tiers, ItemVisualIdentity }
+    return { ...w, _IsLabTrial, _IsLabyrinth, _IsAbyssalDepths, Tiers, ItemVisualIdentity, _PoedbMapIcon }
 }
 // Fragment maps, league boss areas, and Sirus don't seem to have a flag to
 // easily distinguish them, nor do they have a field that says how to visualize.

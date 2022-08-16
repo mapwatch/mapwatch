@@ -11,6 +11,10 @@ git clone https://github.com/SnosMe/poe-dat-viewer third-party/poe-dat-viewer ||
 yarn tsc
 rm -rf build/data
 
+alias node="node --enable-source-maps"
+node build/scrape-divcards.js > dist/divcards.json
+node build/scrape-poedb-map-icons.js > dist/poedb-map-icons.json
+
 # actually export .dat files with pdv
 node build/pdv.js --version `cat third-party/latest.txt` --config src/main.json --output build/data/main
 node build/pdv.js --version `cat third-party/latest.txt` --config src/lang.json --output build/data/lang
@@ -20,5 +24,3 @@ node build/mapwatch-from-pdv.js > dist/mapwatch.json
 
 wget 'https://api.pathofexile.com/leagues?type=main' -O dist/leagues.json
 echo "{\"patch\":\"`cat third-party/latest.txt`\"}" > dist/version.json
-
-node build/divcards.js > dist/divcards.json

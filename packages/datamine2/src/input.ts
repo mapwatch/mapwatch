@@ -13,6 +13,7 @@ export interface Input {
     ultimatumModifiers: UltimatumModifier[]
     uniqueMaps: UniqueMap[]
     worldAreas: WorldArea[]
+    mapIcons: MapIcon[]
 
     lang: {[name: string]: Lang}
 
@@ -21,6 +22,7 @@ export interface Input {
     atlasNodesByWorldArea: {[key: number]: AtlasNode}
     uniqueMapsByWorldArea: {[key: number]: UniqueMap}
     itemVisualIdentityByIndex: {[key: number]: ItemVisualIdentity}
+    mapIconsByName: {[key: string]: MapIcon}
 }
 
 export interface Lang {
@@ -28,6 +30,8 @@ export interface Lang {
     npcs: NPC[]
     npcTextAudio: NPCTextAudio[]
     worldAreas: WorldAreaLang[]
+
+    worldAreasById: {[id: string]: WorldAreaLang}
 }
 
 export const AtlasNode = t.type({
@@ -41,6 +45,12 @@ export const AtlasNode = t.type({
     DDSFile: t.string,
 })
 export type AtlasNode = t.TypeOf<typeof AtlasNode>
+
+export const MapIcon = t.type({
+    name: t.string,
+    icon: t.string,
+})
+export type MapIcon = t.TypeOf<typeof MapIcon>
 
 export const BackendError = t.type({
     Id: t.string,
@@ -102,9 +112,10 @@ export type WorldAreaLang = t.TypeOf<typeof WorldAreaLang>
 const DATA_DIR = `${__dirname}/../build/data`
 const DATA_MAIN = `${DATA_DIR}/main/English`
 const DATA_LANG = `${DATA_DIR}/lang`
+const DIST_DIR = `${__dirname}/../dist`
 
 export async function load(): Promise<Input> {
-    const [atlasNodes, itemVisualIdentity, ultimatumModifiers, uniqueMaps, worldAreas, lang] = await Promise.all([
+    const [atlasNodes, itemVisualIdentity, ultimatumModifiers, uniqueMaps, worldAreas, mapIcons, lang] = await Promise.all([
         loadFile(`${DATA_MAIN}/AtlasNode.json`, AtlasNode),
         // loadFile(`${DATA_MAIN}/BackendErrors.json`, BackendError),
         loadFile(`${DATA_MAIN}/ItemVisualIdentity.json`, ItemVisualIdentity),
@@ -113,6 +124,7 @@ export async function load(): Promise<Input> {
         loadFile(`${DATA_MAIN}/UltimatumModifiers.json`, UltimatumModifier),
         loadFile(`${DATA_MAIN}/UniqueMaps.json`, UniqueMap),
         loadFile(`${DATA_MAIN}/WorldAreas.json`, WorldArea),
+        loadFile(`${DIST_DIR}/poedb-map-icons.json`, MapIcon),
         (async () => {
             const langs = await fs.readdir(`${DATA_LANG}`)
             return Object.fromEntries(await Promise.all(langs.map(
@@ -126,7 +138,8 @@ export async function load(): Promise<Input> {
     const atlasNodesByWorldArea = Object.fromEntries(atlasNodes.map(a => [a.WorldAreasKey, a]))
     const uniqueMapsByWorldArea = Object.fromEntries(uniqueMaps.map(a => [a.WorldAreasKey, a]))
     const itemVisualIdentityByIndex = Object.fromEntries(itemVisualIdentity.map(a => [a._index, a]))
-    return {atlasNodes, itemVisualIdentity, ultimatumModifiers, uniqueMaps, worldAreas, lang, worldAreasById, worldAreasByIndex, atlasNodesByWorldArea, uniqueMapsByWorldArea, itemVisualIdentityByIndex}
+    const mapIconsByName = Object.fromEntries(mapIcons.map(a => [a.name, a]))
+    return {atlasNodes, itemVisualIdentity, ultimatumModifiers, uniqueMaps, worldAreas, mapIcons, lang, worldAreasById, worldAreasByIndex, atlasNodesByWorldArea, uniqueMapsByWorldArea, itemVisualIdentityByIndex, mapIconsByName}
 }
 
 async function loadLang(lang: string): Promise<Lang> {
@@ -136,7 +149,8 @@ async function loadLang(lang: string): Promise<Lang> {
         loadFile(`${DATA_LANG}/${lang}/NPCTextAudio.json`, NPCTextAudio),
         loadFile(`${DATA_LANG}/${lang}/WorldAreas.json`, WorldAreaLang),
     ])
-    return {backendErrors, npcs, npcTextAudio, worldAreas}
+    const worldAreasById = Object.fromEntries(worldAreas.map(w => [w.Id, w]))
+    return {backendErrors, npcs, npcTextAudio, worldAreas, worldAreasById}
 }
 
 async function loadFile<A>(path: string, codec: t.Type<A>): Promise<A[]> {
@@ -150,7 +164,7 @@ async function loadFile<A>(path: string, codec: t.Type<A>): Promise<A[]> {
     )
     if (left.length) {
         console.error(left)
-        throw new Error(`failed to parse ${path}: ${left}`)
+        throw new Error(`failed to parse ${path}: ${left[0]}`)
     }
     return right
 }
