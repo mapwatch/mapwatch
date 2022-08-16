@@ -31,7 +31,7 @@ async function main() {
     const args = parse()
     await writeConfig(args)
     await fs.rm(`${PDV_LIB}/tables`, {recursive: true, force: true})
-    const {stdout, stderr} = await util.promisify(child_process.exec)(`node ${PDV_LIB}/src/cli.js`, {cwd: PDV_LIB})
+    const {stdout, stderr} = await util.promisify(child_process.exec)(`node ${PDV_LIB}/cli.js`, {cwd: PDV_LIB})
     console.log(stdout, stderr)
     await fs.mkdir(`${args.output}/..`, {recursive: true})
     await fs.rename(`${PDV_LIB}/tables`, args.output)
