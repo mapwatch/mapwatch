@@ -534,18 +534,18 @@ decoder =
         (D.at [ "datamine", "lang" ] langDecoder)
         (D.at [ "leagues" ] leaguesDecoder)
         (D.at [ "wiki", "divcards", "data" ] divCardsDecoder)
-        (D.at [ "ultimatum" ] ultimatumDecoder)
+        (D.at [ "datamine", "ultimatum" ] ultimatumDecoder)
         |> D.andThen resultToDecoder
 
 
 ultimatumDecoder : D.Decoder (List UltimatumModifier)
 ultimatumDecoder =
     D.map5 UltimatumModifier
-        (D.field "id" D.string)
-        (D.field "name" D.string)
-        (D.field "icon" D.string)
-        (D.field "tier" D.int)
-        (D.field "description" D.string)
+        (D.field "Id" D.string)
+        (D.field "Name" D.string)
+        (D.field "Icon" D.string)
+        (D.field "Tier" D.int)
+        (D.field "Description" D.string)
         |> D.list
 
 

@@ -7,6 +7,7 @@ export interface Output {
         header: string[]
         data: unknown[][]
     }
+    ultimatum: input.UltimatumModifier[]
     lang: {[name: string]: Lang}
 }
 
@@ -15,7 +16,7 @@ export function build(ws: WorldArea[], lang: {[name: string]: Lang}, i: input.In
         header: wa_headers,
         data: ws.map(worldAreaToRow),
     }
-    return {worldAreas, lang}
+    return {worldAreas, lang, ultimatum: i.ultimatumModifiers}
 }
 
 function worldAreaToRow(w: WorldArea): unknown[] {

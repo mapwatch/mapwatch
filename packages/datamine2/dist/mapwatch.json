@@ -32459,5 +32459,551 @@
         "UltimatumBossArena": "磨難之塔"
       }
     }
-  }
+  },
+  "ultimatum": [
+    {
+      "_index": 0,
+      "Id": "ChaosCloudDaemon1",
+      "Name": "Choking Miasma",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/ChokingMiasma",
+      "Tier": 1,
+      "Description": "A cloud that deals Chaos Damage over Time will follow you"
+    },
+    {
+      "_index": 1,
+      "Id": "ChaosCloudDaemon2",
+      "Name": "Choking Miasma II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/ChokingMiasma",
+      "Tier": 2,
+      "Description": "A large cloud that deals Chaos Damage over Time will follow you"
+    },
+    {
+      "_index": 2,
+      "Id": "ChaosCloudDaemon3",
+      "Name": "Choking Miasma III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/ChokingMiasma",
+      "Tier": 3,
+      "Description": "A large and fast cloud that deals Chaos Damage over Time will follow you"
+    },
+    {
+      "_index": 3,
+      "Id": "LightningRuneDaemon1",
+      "Name": "Stormcaller Runes",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/StormcallerRunes",
+      "Tier": 1,
+      "Description": "Runes will appear that will call deadly Lightning storms if you remain in them"
+    },
+    {
+      "_index": 4,
+      "Id": "LightningRuneDaemon2",
+      "Name": "Stormcaller Runes II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/StormcallerRunes",
+      "Tier": 2,
+      "Description": "Large runes will appear that will call deadly Lightning storms if you remain in them"
+    },
+    {
+      "_index": 5,
+      "Id": "LightningRuneDaemon3",
+      "Name": "Stormcaller Runes III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/StormcallerRunes",
+      "Tier": 3,
+      "Description": "Many large runes will appear that will call deadly Lightning storms if you remain in them"
+    },
+    {
+      "_index": 6,
+      "Id": "LightningRuneDaemon1Trial",
+      "Name": "Stormcaller Runes",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/StormcallerRunes",
+      "Tier": 1,
+      "Description": "Runes will appear that will call deadly Lightning storms if you remain in them"
+    },
+    {
+      "_index": 7,
+      "Id": "LightningRuneDaemon2Trial",
+      "Name": "Stormcaller Runes II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/StormcallerRunes",
+      "Tier": 2,
+      "Description": "Large runes will appear that will call deadly Lightning storms if you remain in them"
+    },
+    {
+      "_index": 8,
+      "Id": "FlamespitterDaemon1",
+      "Name": "Raging Dead",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Flamethrower",
+      "Tier": 1,
+      "Description": "Skulls will appear that spit Fire if you remain near them"
+    },
+    {
+      "_index": 9,
+      "Id": "FlamespitterDaemon2",
+      "Name": "Raging Dead II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Flamethrower",
+      "Tier": 2,
+      "Description": "Many skulls will appear that spit Fire if you remain near them"
+    },
+    {
+      "_index": 10,
+      "Id": "FlamespitterDaemon3",
+      "Name": "Raging Dead III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Flamethrower",
+      "Tier": 3,
+      "Description": "Many skulls will appear that pursue you and spit Fire when near you"
+    },
+    {
+      "_index": 11,
+      "Id": "FlamespitterDaemon1Trial",
+      "Name": "Raging Dead",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Flamethrower",
+      "Tier": 1,
+      "Description": "Skulls will appear that spit Fire if you remain near them"
+    },
+    {
+      "_index": 12,
+      "Id": "FlamespitterDaemon2Trial",
+      "Name": "Raging Dead II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Flamethrower",
+      "Tier": 2,
+      "Description": "Many skulls will appear that spit Fire if you remain near them"
+    },
+    {
+      "_index": 13,
+      "Id": "FlamespitterDaemon3Trial",
+      "Name": "Raging Dead III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Flamethrower",
+      "Tier": 3,
+      "Description": "Many skulls will appear that pursue you and spit Fire when near you"
+    },
+    {
+      "_index": 14,
+      "Id": "FrostInfectionDaemon1",
+      "Name": "Blistering Cold",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/FrostInfection",
+      "Tier": 1,
+      "Description": "Frozen pustules will periodically appear and explode when you approach"
+    },
+    {
+      "_index": 15,
+      "Id": "FrostInfectionDaemon2",
+      "Name": "Blistering Cold II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/FrostInfection",
+      "Tier": 2,
+      "Description": "Many frozen pustules will periodically appear and rapidly explode when you approach"
+    },
+    {
+      "_index": 16,
+      "Id": "FrostInfectionDaemon3",
+      "Name": "Blistering Cold III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/FrostInfection",
+      "Tier": 3,
+      "Description": "Many frozen pustules will periodically appear, chill you, and rapidly explode when you approach"
+    },
+    {
+      "_index": 17,
+      "Id": "GraveyardDaemon1",
+      "Name": "Restless Ground",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/RestlessDead",
+      "Tier": 1,
+      "Description": "Patches of Unhallowed Ground will appear that Hinder players and cause slain Monsters to resurrect as Phantasms"
+    },
+    {
+      "_index": 18,
+      "Id": "GraveyardDaemon2",
+      "Name": "Restless Ground II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/RestlessDead",
+      "Tier": 2,
+      "Description": "Many patches of Unhallowed Ground will appear that Hinder players and cause slain Monsters to resurrect as Phantasms"
+    },
+    {
+      "_index": 19,
+      "Id": "GraveyardDaemon3",
+      "Name": "Restless Ground III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/RestlessDeadRuin",
+      "Tier": 3,
+      "Description": "Many patches of Unhallowed Ground will appear that Hinder players and cause slain Monsters to resurrect as Ruin-inflicting Phantasms\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 20,
+      "Id": "GraveyardDaemon1Trial",
+      "Name": "Restless Ground",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/RestlessDead",
+      "Tier": 1,
+      "Description": "Patches of Unhallowed Ground will appear that Hinder players and cause slain Monsters to resurrect as Phantasms"
+    },
+    {
+      "_index": 21,
+      "Id": "GraveyardDaemon2Trial",
+      "Name": "Restless Ground II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/RestlessDead",
+      "Tier": 2,
+      "Description": "Many patches of Unhallowed Ground will appear that Hinder players and cause slain Monsters to resurrect as Phantasms"
+    },
+    {
+      "_index": 22,
+      "Id": "GraveyardDaemon3Trial",
+      "Name": "Restless Ground III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/RestlessDeadRuin",
+      "Tier": 3,
+      "Description": "Many patches of Unhallowed Ground will appear that Hinder players and cause slain Monsters to resurrect as Ruin-inflicting Phantasms\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 23,
+      "Id": "RevenantDaemon1",
+      "Name": "Stalking Ruin",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Revenant",
+      "Tier": 1,
+      "Description": "An invulnerable shade stalks you, inflicting Ruin with its Melee Attacks\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 24,
+      "Id": "RevenantDaemon2",
+      "Name": "Stalking Ruin II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Revenant",
+      "Tier": 2,
+      "Description": "An invulnerable shade stalks you, gaining speed and inflicting Ruin with Melee Attacks and Spells\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 25,
+      "Id": "RevenantDaemon3",
+      "Name": "Stalking Ruin III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Revenant",
+      "Tier": 3,
+      "Description": "An invulnerable shade stalks you, gaining further speed and inflicting Ruin with Melee Attacks and powerful Spells\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 26,
+      "Id": "SawbladeDaemon1",
+      "Name": "Razor Dance",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Sawblade",
+      "Tier": 1,
+      "Description": "Blades will periodically appear and fly at you, applying Corrupted Blood on Hit"
+    },
+    {
+      "_index": 27,
+      "Id": "SawbladeDaemon2",
+      "Name": "Razor Dance II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Sawblade",
+      "Tier": 2,
+      "Description": "Many blades will periodically appear and fly at you, applying Corrupted Blood on Hit"
+    },
+    {
+      "_index": 28,
+      "Id": "SawbladeDaemon3",
+      "Name": "Razor Dance III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/Sawblade",
+      "Tier": 3,
+      "Description": "Swarms of blades will periodically appear and fly at you, applying Corrupted Blood on Hit"
+    },
+    {
+      "_index": 29,
+      "Id": "PhysTotemDaemon",
+      "Name": "Totem of Costly Might",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/PhysicalTotem",
+      "Tier": 1,
+      "Description": "An invulnerable Totem will appear that imbues both its allies and its enemies with Speed and powerful Physical Damage benefits, but causes enemies to take 10% of their maximum Life and Energy Shield as Physical Damage per second"
+    },
+    {
+      "_index": 30,
+      "Id": "EleTotemDaemon",
+      "Name": "Totem of Costly Potency",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/ElementalTotem",
+      "Tier": 1,
+      "Description": "An invulnerable Totem will appear that imbues both its allies and its enemies with Speed and powerful Elemental Damage benefits, but causes enemies to take 15% of their maximum Life and Energy Shield as Fire Damage per second"
+    },
+    {
+      "_index": 31,
+      "Id": "BossTrialMaster",
+      "Name": "The Trialmaster",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/EncounterDaemonEffect",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 32,
+      "Id": "Radius1",
+      "Name": "Limited Arena",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/CantLeaveArea",
+      "Tier": 1,
+      "Description": "The encounter area will be much smaller"
+    },
+    {
+      "_index": 33,
+      "Id": "MonstersApplyRuin1",
+      "Name": "Ruin",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/MonsterAppliesRuin",
+      "Tier": 1,
+      "Description": "A Monster type will apply Ruin with its special ability\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 34,
+      "Id": "MonstersApplyRuin2",
+      "Name": "Ruin II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/MonsterAppliesRuin",
+      "Tier": 2,
+      "Description": "A Monster type will apply double Ruin with its special ability\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 35,
+      "Id": "MonstersApplyRuin3",
+      "Name": "Ruin III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/MonsterAppliesRuin",
+      "Tier": 3,
+      "Description": "Two Monster types will apply double Ruin with their special abilities\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 36,
+      "Id": "MonstersApplyRuinLow1",
+      "Name": "Ruin",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/MonsterAppliesRuin",
+      "Tier": 1,
+      "Description": "A Monster type will apply Ruin with its special ability\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 37,
+      "Id": "MonstersApplyRuinLow2",
+      "Name": "Ruin II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/MonsterAppliesRuin",
+      "Tier": 2,
+      "Description": "A Monster type will apply double Ruin with its special ability\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 38,
+      "Id": "MonstersApplyRuinLow3",
+      "Name": "Ruin III",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/MonsterAppliesRuin",
+      "Tier": 3,
+      "Description": "Two Monster types will apply double Ruin with their special abilities\r\nFail on reaching 7 Ruin"
+    },
+    {
+      "_index": 39,
+      "Id": "PlayerDebuffRecoveryReduction1",
+      "Name": "Reduced Recovery",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/ReducedRecovery",
+      "Tier": 1,
+      "Description": "30% Reduced Life, Mana, and Energy Shield Recovery Rate"
+    },
+    {
+      "_index": 40,
+      "Id": "PlayerDebuffRecoveryReduction2",
+      "Name": "Reduced Recovery II",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/ReducedRecovery",
+      "Tier": 2,
+      "Description": "60% Reduced Life, Mana, and Energy Shield Recovery Rate"
+    },
+    {
+      "_index": 41,
+      "Id": "PlayerDebuffAreaAndProjectileSpeed",
+      "Name": "Lessened Reach",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/LessenedReach",
+      "Tier": 1,
+      "Description": "Players have 50% less Area of Effect and Projectile Speed"
+    },
+    {
+      "_index": 42,
+      "Id": "PlayerDebuffBuffsExpireFaster",
+      "Name": "Buffs Expire Faster",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/BuffsExpireFaster",
+      "Tier": 1,
+      "Description": "Buffs expire three times faster on players"
+    },
+    {
+      "_index": 43,
+      "Id": "PlayerDebuffCooldownSpeed",
+      "Name": "Less Cooldown recovery",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/LessCooldownRecovery",
+      "Tier": 1,
+      "Description": "Cooldowns take five times longer to recharge"
+    },
+    {
+      "_index": 44,
+      "Id": "PlayerDebuffIncreasingVulnerability",
+      "Name": "Escalating Damage Taken",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/EscalatingDamageTaken",
+      "Tier": 1,
+      "Description": "For the remainder of the encounter, damage taken will slowly increase by 1% per second, up to 50%"
+    },
+    {
+      "_index": 45,
+      "Id": "MonsterBuffAcceleratingSpeed",
+      "Name": "Escalating Monster Speed",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/EscalatingMonsterSpeed",
+      "Tier": 1,
+      "Description": "All Monsters gain 2.5% increased attack, cast, and movement speed per second they are alive, up to 50%"
+    },
+    {
+      "_index": 46,
+      "Id": "MonsterBuffNonChaosDamageToAddAsChaosDamage",
+      "Name": "Bonus Chaos Damage",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/ChaoticTouch",
+      "Tier": 1,
+      "Description": "Monsters deal 30% of Physical Damage Added as Chaos Damage"
+    },
+    {
+      "_index": 47,
+      "Id": "PlayerDebuffExtraCriticalRolls",
+      "Name": "Unlucky Criticals",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/UnluckyCrits",
+      "Tier": 1,
+      "Description": "Your Critical Strike Chance is Unlucky"
+    },
+    {
+      "_index": 48,
+      "Id": "PlayerDebuffHinderedMsOnFlaskUse",
+      "Name": "Hindering Flasks",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/HinderingFlasks",
+      "Tier": 1,
+      "Description": "Using a Flask Hinders you by 50% for 4 seconds"
+    },
+    {
+      "_index": 49,
+      "Id": "PlayerDebuffCancelFlaskEffectOnFlaskUse",
+      "Name": "Limited Flasks",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/LimitedFlasks",
+      "Tier": 1,
+      "Description": "Using a Flask removes any existing Flask effects"
+    },
+    {
+      "_index": 50,
+      "Id": "PlayerDebuffCursesandNonDamagingAilmentsReflectedToSelf",
+      "Name": "Ailment and Curse Reflection",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/CurseAilmentReflection",
+      "Tier": 1,
+      "Description": "Curses and Non-damaging Ailments you apply are Reflected"
+    },
+    {
+      "_index": 51,
+      "Id": "PlayerDebuffSelfLightningDamageOnSkillUseManaSpentOnCostLow",
+      "Name": "Lightning Damage from Mana Costs",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/LightningDamageFromMana",
+      "Tier": 1,
+      "Description": "Take 50% of Mana costs as Lightning Damage"
+    },
+    {
+      "_index": 52,
+      "Id": "PlayerDebuffSelfLightningDamageOnSkillUseManaSpentOnCostMid",
+      "Name": "Lightning Damage from Mana Costs",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/LightningDamageFromMana",
+      "Tier": 1,
+      "Description": "Take 200% of Mana costs as Lightning Damage"
+    },
+    {
+      "_index": 53,
+      "Id": "PlayerDebuffSelfLightningDamageOnSkillUseManaSpentOnCostHigh",
+      "Name": "Lightning Damage from Mana Costs",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/LightningDamageFromMana",
+      "Tier": 1,
+      "Description": "Take 1000% of Mana costs as Lightning Damage"
+    },
+    {
+      "_index": 54,
+      "Id": "PlayerDebuffRandomProjectileDirection",
+      "Name": "Random Projectiles",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/ScatteredProjectiles",
+      "Tier": 1,
+      "Description": "Your Projectiles fly in random directions\r\nMonsters fire additional Projectiles"
+    },
+    {
+      "_index": 55,
+      "Id": "PlayerDebuffAurasAffectAllies",
+      "Name": "Treacherous Auras",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/SharedAuras",
+      "Tier": 1,
+      "Description": "Your Auras that affect Allies also affect Enemies"
+    },
+    {
+      "_index": 56,
+      "Id": "PlayerDebuffUltimatumDealNoDamageFor2SecondEvery8Seconds",
+      "Name": "Occasional Impotence",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/OccasionalImpotence",
+      "Tier": 1,
+      "Description": "You and your Minions deal no damage for 2 seconds every 8 seconds"
+    },
+    {
+      "_index": 57,
+      "Id": "PlayerDebuffUltimatumLoseChargesEverySecond",
+      "Name": "Siphoned Charges",
+      "Icon": "Art/2DArt/UIImages/InGame/Ultimatum/Icons/SiphonedCharges",
+      "Tier": 1,
+      "Description": "Lose a Power, Frenzy, and Endurance Charge every second\r\nMonsters gain Power, Frenzy, and Endurance Charges on hit"
+    },
+    {
+      "_index": 58,
+      "Id": "GolemCrawlerSpawner",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 59,
+      "Id": "UltimatumWave2MonsterDamageLife",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 60,
+      "Id": "UltimatumWave3MonsterDamageLife",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 61,
+      "Id": "UltimatumWave4MonsterDamageLife",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 62,
+      "Id": "UltimatumWave5MonsterDamageLife",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 63,
+      "Id": "UltimatumWave6MonsterDamageLife",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 64,
+      "Id": "UltimatumWave7MonsterDamageLife",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 65,
+      "Id": "UltimatumWave8MonsterDamageLife",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 66,
+      "Id": "UltimatumWave9MonsterDamageLife",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    },
+    {
+      "_index": 67,
+      "Id": "SpookySupplementSpawner",
+      "Name": "",
+      "Icon": "",
+      "Tier": 1,
+      "Description": ""
+    }
+  ]
 }
