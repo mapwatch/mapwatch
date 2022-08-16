@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2022-08-16
+- Game data is now pulled using [poe-dat-viewer](https://snosme.github.io/poe-dat-viewer/), instead of PyPoE (RIP). Things should generally be much more up-to-date now.
+
 ## 2021-11-17
 - Ritual encounters are now tracked.
   - Thanks to [Perotti28](https://github.com/Perotti28/RitualReminder) for letting me know this was possible!
