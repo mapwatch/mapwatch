@@ -24,7 +24,7 @@
             "elm-community/maybe-extra": "5.3.0",
             "elm-community/result-extra": "2.4.0",
             "elm-explorations/markdown": "1.0.0",
-            "justinmimbs/time-extra": "1.1.0",
+            "justinmimbs/time-extra": "1.1.1",
             "jweir/elm-iso8601": "7.0.1",
             "krisajenkins/remotedata": "6.0.1"
         },
