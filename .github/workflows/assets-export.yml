@@ -33,6 +33,8 @@ jobs:
       - run: git diff-index HEAD
       - run: git diff-index --quiet HEAD -- || echo "PYPOE_JSON_DIFF=1" | tee $GITHUB_ENV
       # Run the build only if the poe version number has changed
+      - if: ${{ github.event.inputs.force-build }}
+        run: echo 'build forced'
       - if: ${{ github.event.inputs.force-build || env.PYPOE_JSON_DIFF != '' }}
         working-directory: ./packages/datamine2
         run: yarn run dist
