@@ -6,6 +6,7 @@ All substantial Mapwatch website changes.
 
 ## 2022-08-16
 - Game data is now pulled using [poe-dat-viewer](https://snosme.github.io/poe-dat-viewer/), instead of PyPoE (RIP). Things should generally be much more up-to-date now.
+- Fixed this league's map icons.
 
 ## 2021-11-17
 - Ritual encounters are now tracked.
