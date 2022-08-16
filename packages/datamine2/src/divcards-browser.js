@@ -24,5 +24,5 @@ function process(row) {
 }
 // console.log($('#firstHeading')[0].innerHTML)
 wikiTableCells($('.wikitable')[0])
-// console.log(JSON.stringify(wikiTableCells($('.wikitable')[0]), null, 2))
-console.log(JSON.stringify(wikiTableCells($('.wikitable')[0])))
+console.log(JSON.stringify(wikiTableCells($('.wikitable')[0]), null, 2))
+// console.log(JSON.stringify(wikiTableCells($('.wikitable')[0])))
