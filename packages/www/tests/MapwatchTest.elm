@@ -3,6 +3,7 @@ module MapwatchTest exposing (..)
 import Dict exposing (Dict)
 import Expect
 import Fixture exposing (datamine)
+import Fixture.Examples as Examples
 import Mapwatch exposing (Model)
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Instance as Instance exposing (Address)
