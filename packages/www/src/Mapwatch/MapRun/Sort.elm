@@ -433,7 +433,7 @@ searchString dm r =
                 else if r.isBlightedMap then
                     "blighted-map: " ++ r.address.zone
 
-                else if Maybe.Extra.isJust worldArea.atlasRegion || Set.member worldArea.id shaperGuardianMaps then
+                else if String.startsWith "MapWorlds" worldArea.id || Set.member worldArea.id shaperGuardianMaps then
                     "normal-map: " ++ r.address.zone
 
                 else

@@ -1,0 +1,18 @@
+{
+  "name": "@mapwatch/datamine2",
+  "version": "1.0.0",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "dist": "./scripts/dist.sh"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.7.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "fp-ts": "^2.12.2",
+    "io-ts": "^2.2.17"
+  }
+}

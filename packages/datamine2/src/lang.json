@@ -1,0 +1,34 @@
+{
+  "patch": "REPLACEME",
+  "files": [],
+  "tables": [
+    {
+      "name": "WorldAreas",
+      "columns": [
+        "Id",
+        "Name"
+      ]
+    },
+    {
+      "name": "BackendErrors",
+      "columns": [
+        "Id",
+        "Text"
+      ]
+    },
+    {
+      "name": "NPCTextAudio",
+      "columns": [
+        "Id",
+        "Text"
+      ]
+    },
+    {
+      "name": "NPCs",
+      "columns": [
+        "Id",
+        "Name"
+      ]
+    }
+  ]
+}

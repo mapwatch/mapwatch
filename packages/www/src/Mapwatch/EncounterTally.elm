@@ -87,7 +87,7 @@ fromMapRuns runs =
                 |> List.filter
                     (.address
                         >> .worldArea
-                        >> Maybe.Extra.unwrap False (\w -> not w.isUniqueMapArea && (Maybe.Extra.isJust w.atlasRegion || Set.member w.id shaperGuardianMaps))
+                        >> Maybe.Extra.unwrap False (\w -> not w.isUniqueMapArea && (String.startsWith "MapWorlds" w.id || Set.member w.id shaperGuardianMaps))
                     )
 
         maps : List Address

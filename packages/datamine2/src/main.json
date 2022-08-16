@@ -1,0 +1,78 @@
+{
+  "patch": "REPLACEME",
+  "translations": [
+    "English"
+  ],
+  "files": [],
+  "tables": [
+    {
+      "name": "AtlasNode",
+      "columns": [
+        "WorldAreasKey",
+        "Tier0",
+        "Tier1",
+        "Tier2",
+        "Tier3",
+        "Tier4",
+        "DDSFile",
+        "ItemVisualIdentityKey"
+      ]
+    },
+    {
+      "name": "ItemVisualIdentity",
+      "columns": [
+        "Id",
+        "DDSFile"
+      ]
+    },
+    {
+      "name": "UniqueMaps",
+      "columns": [
+        "ItemVisualIdentityKey",
+        "WorldAreasKey"
+      ]
+    },
+    {
+      "name": "WorldAreas",
+      "columns": [
+        "Id",
+        "IsTown",
+        "IsHideout",
+        "IsVaalArea",
+        "IsMapArea",
+        "IsUniqueMapArea"
+      ]
+    },
+    {
+      "name": "BackendErrors",
+      "columns": [
+        "Id",
+        "Text"
+      ]
+    },
+    {
+      "name": "NPCTextAudio",
+      "columns": [
+        "Id",
+        "Text"
+      ]
+    },
+    {
+      "name": "NPCs",
+      "columns": [
+        "Id",
+        "Name"
+      ]
+    },
+    {
+      "name": "UltimatumModifiers",
+      "columns": [
+        "Id",
+        "Name",
+        "Icon",
+        "Tier",
+        "Description"
+      ]
+    }
+  ]
+}

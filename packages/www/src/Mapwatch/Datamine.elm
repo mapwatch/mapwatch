@@ -625,7 +625,7 @@ worldAreasDecoder =
                     (D.index 7 D.bool)
                     (D.index 8 D.bool)
                     (D.index 9 (D.maybe D.string))
-                    (D.index 10 (D.maybe D.string))
-                    (D.index 11 (D.maybe (D.list D.int)))
+                    (D.succeed Nothing)
+                    (D.index 10 (D.maybe (D.list D.int)))
             )
         |> D.array

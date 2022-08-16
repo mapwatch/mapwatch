@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "rootDir": "src"
+  },
+  "include": ["src"]
+}
