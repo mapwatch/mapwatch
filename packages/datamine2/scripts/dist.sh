@@ -20,3 +20,5 @@ node build/mapwatch-from-pdv.js > dist/mapwatch.json
 
 wget 'https://api.pathofexile.com/leagues?type=main' -O dist/leagues.json
 echo "{\"patch\":\"`cat third-party/latest.txt`\"}" > dist/version.json
+
+node build/divcards.js > dist/divcards.json
