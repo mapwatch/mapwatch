@@ -193,7 +193,6 @@ update datamine line state =
         LogLine.YouHaveEntered zone_ ->
             case state.next of
                 Connecting addr ->
-                    let _ = Debug.log "entered" <| (zone_, Datamine.worldAreaFromName zone_ datamine) in
                     -- step 2
                     { state
                         | val =
