@@ -90,7 +90,6 @@ datamine =
     Datamine.createDatamine_ Array.empty
         Dict.empty
         []
-        Dict.empty
         []
         []
         Dict.empty

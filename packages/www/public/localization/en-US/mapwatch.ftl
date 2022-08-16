@@ -70,7 +70,7 @@ notify-email = Email notifications
 ## https://mapwatch.erosson.org/#/timer
 timer-in = Mapping in:
 timer-map-wiki = wiki
-timer-drops = {NUMBER($regionalItems)} regional items, {NUMBER($divs)} cards
+timer-drops = {NUMBER($divs)} divination cards
 timer-last-entered = Last entered:
 timer-done-today = Maps done today:
 timer-done-this-session = Maps done this session:

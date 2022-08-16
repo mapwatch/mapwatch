@@ -21,41 +21,29 @@ view query dm w =
         empty
 
     else
-        case ( Datamine.atlasBases dm w, Datamine.divCards dm w ) of
-            ( [], [] ) ->
+        case Datamine.divCards dm w of
+            [] ->
                 -- instead of removing the element, this preserves its open/closed state
                 empty
 
-            ( ab, divs ) ->
+            divs ->
                 details []
-                    [ summary (L.timerDrops { regionalItems = toFloat <| List.length ab, divs = toFloat <| List.length divs }) []
-                    , ul [ class "world-area-drops" ]
-                        ((ab
-                            |> List.map
-                                (\b ->
-                                    li []
-                                        [ a [ target "_blank"
-                                            -- , href ("https://pathofexile.gamepedia.com/" ++ b)
-                                            , href ("https://poedb.tw/us/" ++ String.replace " " "_" b)
-                                            ]
-                                            [ text b ]
+                    [ summary (L.timerDrops { divs = toFloat <| List.length divs }) []
+                    , divs
+                        |> List.map
+                            (\card ->
+                                li []
+                                    [ a
+                                        [ target "_blank"
+
+                                        -- , href ("https://pathofexile.gamepedia.com/" ++ card.name)
+                                        , href ("https://poedb.tw/us/" ++ String.replace " " "_" card.name)
                                         ]
-                                )
-                         )
-                            ++ (divs
-                                    |> List.map
-                                        (\card ->
-                                            li []
-                                                [ a [ target "_blank"
-                                                    -- , href ("https://pathofexile.gamepedia.com/" ++ card.name)
-                                                    , href ("https://poedb.tw/us/" ++ String.replace " " "_" card.name)
-                                                    ]
-                                                    [ View.Icon.divCard, text card.name ]
-                                                , text " ("
-                                                , text card.loot
-                                                , text ")"
-                                                ]
-                                        )
-                               )
-                        )
+                                        [ View.Icon.divCard, text card.name ]
+                                    , text " ("
+                                    , text card.loot
+                                    , text ")"
+                                    ]
+                            )
+                        |> ul [ class "world-area-drops" ]
                     ]

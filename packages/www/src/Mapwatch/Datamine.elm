@@ -4,7 +4,6 @@ module Mapwatch.Datamine exposing
     , MapIconArgs
     , UltimatumModifier
     , WorldArea
-    , atlasBases
     , createDatamine_
     , decoder
     , defaultAtlasRegion
@@ -50,7 +49,6 @@ type alias Datamine =
     , youHaveEntered : String -> Maybe String
     , afkModeEnabled : String -> Bool
     , leagues : List League
-    , atlasbase : Dict String (List String)
     , divcards : List DivCard
     , divcardsByMapName : Dict String (List DivCard)
     , npcText : Dict String NpcTextEntry
@@ -326,13 +324,6 @@ wikiUrl dm w =
     "https://poedb.tw/us/" ++ (String.replace " " "_" <| wikiPath dm w)
 
 
-atlasBases : Datamine -> WorldArea -> List String
-atlasBases dm w =
-    w.atlasRegion
-        |> Maybe.andThen (\r -> Dict.get r dm.atlasbase)
-        |> Maybe.withDefault []
-
-
 divCards : Datamine -> WorldArea -> List DivCard
 divCards dm w =
     case dm.lang |> Dict.get defaultLang |> Maybe.andThen (.index >> .worldAreas >> Dict.get w.id) of
@@ -349,13 +340,13 @@ divCards dm w =
 -- Parsing
 
 
-createDatamine : Array WorldArea -> Dict String Lang -> List League -> Dict String (List String) -> List DivCard -> List UltimatumModifier -> Result String Datamine
-createDatamine ws ls leagues atlasBase divCards_ ultimatumModifiers =
-    Result.map (createDatamine_ ws ls leagues atlasBase divCards_ ultimatumModifiers)
+createDatamine : Array WorldArea -> Dict String Lang -> List League -> List DivCard -> List UltimatumModifier -> Result String Datamine
+createDatamine ws ls leagues divCards_ ultimatumModifiers =
+    Result.map (createDatamine_ ws ls leagues divCards_ ultimatumModifiers)
         (createNPCText ls)
 
 
-createDatamine_ ws ls leagues atlasBase divCards_ ultimatumModifiers npcText =
+createDatamine_ ws ls leagues divCards_ ultimatumModifiers npcText =
     let
         worldAreasById =
             ws |> Array.toList |> List.map (\w -> ( w.id, w )) |> Dict.fromList
@@ -368,7 +359,6 @@ createDatamine_ ws ls leagues atlasBase divCards_ ultimatumModifiers npcText =
                 (createYouHaveEntered ls)
                 (createAfkModeEnabled ls)
                 leagues
-                atlasBase
                 divCards_
                 -- div cards by map name
                 (divCards_
@@ -538,11 +528,10 @@ createNPCTextSet lang npcId npcTextFilter =
 
 decoder : D.Decoder Datamine
 decoder =
-    D.map6 createDatamine
+    D.map5 createDatamine
         (D.at [ "datamine", "worldAreas", "data" ] worldAreasDecoder)
         (D.at [ "datamine", "lang" ] langDecoder)
         (D.at [ "leagues" ] leaguesDecoder)
-        (D.at [ "wiki", "atlasbase", "data" ] atlasBaseDecoder)
         (D.at [ "wiki", "divcards", "data" ] divCardsDecoder)
         (D.at [ "ultimatum" ] ultimatumDecoder)
         |> D.andThen resultToDecoder
@@ -565,16 +554,6 @@ leaguesDecoder =
         (D.field "id" D.string)
         (D.field "registerAt" <| D.andThen (resultToDecoder << Result.map ISO8601.toPosix << ISO8601.fromString) D.string)
         |> D.list
-
-
-atlasBaseDecoder : D.Decoder (Dict String (List String))
-atlasBaseDecoder =
-    D.map2 Tuple.pair
-        (D.field "region" D.string)
-        (D.at [ "loot", "red" ] <| D.map List.Extra.unique <| D.list D.string)
-        |> D.list
-        |> D.map Dict.fromList
-        |> identity
 
 
 divCardsDecoder : D.Decoder (List DivCard)
