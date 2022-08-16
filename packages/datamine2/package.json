@@ -4,7 +4,8 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "dist": "./scripts/dist.sh"
+    "dist": "./scripts/dist.sh",
+    "version": "./scripts/version.sh"
   },
   "devDependencies": {
     "@types/minimist": "^1.2.2",
