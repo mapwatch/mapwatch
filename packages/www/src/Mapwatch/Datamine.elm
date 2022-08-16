@@ -321,7 +321,8 @@ wikiExceptions =
 wikiUrl : Datamine -> WorldArea -> String
 wikiUrl dm w =
     -- "https://pathofexile.gamepedia.com/" ++ wikiPath dm w
-    "https://poedb.tw/us/" ++ (String.replace " " "_" <| wikiPath dm w)
+    -- "https://poedb.tw/us/" ++ (String.replace " " "_" <| wikiPath dm w)
+    "https://www.poewiki.net/wiki/" ++ (String.replace " " "_" <| wikiPath dm w)
 
 
 divCards : Datamine -> WorldArea -> List DivCard
