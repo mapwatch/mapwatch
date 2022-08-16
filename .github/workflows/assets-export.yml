@@ -26,14 +26,14 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - working-directory: ./packages/datamine2
-        run: yarn version
+        run: yarn run version
 
       - run: echo "POE_VERSION=`cat packages/datamine2/dist/version.txt`" | tee $GITHUB_ENV
       - run: git diff-index --quiet HEAD -- || echo "PYPOE_JSON_DIFF=1" | tee $GITHUB_ENV
       # Run the build only if the poe version number has changed
       - if: ${{ github.event.inputs.force-build || env.PYPOE_JSON_DIFF != '' }}
         working-directory: ./packages/datamine2
-        run: yarn dist
+        run: yarn run dist
       # - run: git diff
       # - run: git diff-index HEAD
       # - run: git diff-index --quiet HEAD -- || echo "PYPOE_JSON_DIFF=1" | tee $GITHUB_ENV
