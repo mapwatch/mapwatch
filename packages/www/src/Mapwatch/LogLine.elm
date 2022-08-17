@@ -46,6 +46,11 @@ type Info
     | NPCSays NPCSaysData
     | AFKMode Bool
     | RitualFindClosestObject
+    | GeneratingArea GeneratingAreaData
+
+
+type alias GeneratingAreaData =
+    { level : Int, worldAreaId : String, seed : Int }
 
 
 type alias NPCSaysData =
@@ -89,6 +94,47 @@ positionEnd line =
     line.position + String.length line.raw
 
 
+maybeIf : Bool -> a -> Maybe a
+maybeIf pred val =
+    if pred then
+        Just val
+
+    else
+        Nothing
+
+
+parseBody : Datamine -> String -> Maybe Info
+parseBody dm =
+    -- parse a logline body, after the date and initial `]`
+    Maybe.Extra.oneOf
+        [ \body -> maybeIf (body == "FindClosestObject found no nearby object") RitualFindClosestObject
+        , Util.String.unwrap "Connecting to instance server at " "" >> Maybe.map ConnectingToInstanceServer
+
+        -- NPCSays, like `some-npc: some npcTextAudio`
+        , \body -> Dict.get body dm.npcText |> Maybe.map (\{ npcName, npcId, textId } -> NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = textId })
+
+        -- `You have entered <world-area-name>.` in every language
+        , dm.youHaveEntered >> Maybe.map YouHaveEntered
+        , parseGeneratingArea >> Result.toMaybe >> Maybe.map GeneratingArea
+        , \body ->
+            -- NPCSays, but we don't have matching NPCText.
+            -- Usually this is because we don't care what they're saying,
+            -- just that they're saying anything.
+            body
+                |> String.split ":"
+                |> List.head
+                |> Maybe.andThen (\name -> Dict.get name dm.unindex.npcs |> Maybe.map (Tuple.pair name))
+                -- conqueror dialogue must match exactly to be processed - speaker alone isn't enough
+                |> Maybe.Extra.filter (\( _, npcId ) -> not <| Set.member npcId NpcId.conquerors)
+                -- TODO: textId="" instead of a maybe-type is a bit sketchy
+                |> Maybe.map (\( npcName, npcId ) -> NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = "" })
+
+        -- afk on/off
+        , \body -> maybeIf (dm.afkModeEnabled body) (AFKMode True)
+        , \body -> maybeIf (Dict.get (String.dropLeft 2 body) dm.unindex.backendErrors == Just "AFKModeDisabled") (AFKMode False)
+        ]
+
+
 parseInfo : Datamine -> String -> Maybe Info
 parseInfo dm raw =
     let
@@ -103,61 +149,7 @@ parseInfo dm raw =
             |> String.indexes "] "
             |> List.head
             |> Maybe.map (\i -> String.dropLeft (i + 2) info)
-            |> Maybe.andThen
-                (\body ->
-                    if body == "FindClosestObject found no nearby object" then
-                        Just RitualFindClosestObject
-
-                    else
-                        case Util.String.unwrap "Connecting to instance server at " "" body of
-                            Just addr ->
-                                ConnectingToInstanceServer addr |> Just
-
-                            Nothing ->
-                                case Dict.get body dm.npcText of
-                                    Just { npcName, npcId, textId } ->
-                                        NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = textId }
-                                            |> Just
-
-                                    -- |> Debug.log "npcsays"
-                                    Nothing ->
-                                        case parseInfoEntered dm body of
-                                            Nothing ->
-                                                -- NPCSays, but we don't have matching NPCText.
-                                                -- Usually this is because we don't care what they're saying,
-                                                -- just that they're saying anything.
-                                                case
-                                                    body
-                                                        |> String.split ":"
-                                                        |> List.head
-                                                        |> Maybe.andThen (\name -> Dict.get name dm.unindex.npcs |> Maybe.map (Tuple.pair name))
-                                                        -- conqueror dialogue must match exactly to be processed - speaker alone isn't enough
-                                                        |> Maybe.Extra.filter (\( _, npcId ) -> not <| Set.member npcId NpcId.conquerors)
-                                                of
-                                                    Just ( npcName, npcId ) ->
-                                                        -- TODO: textId="" instead of a maybe-type is a bit sketchy
-                                                        NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = "" } |> Just
-
-                                                    Nothing ->
-                                                        if dm.afkModeEnabled body then
-                                                            AFKMode True |> Just
-
-                                                        else
-                                                            case Dict.get (String.dropLeft 2 body) dm.unindex.backendErrors of
-                                                                Just "AFKModeDisabled" ->
-                                                                    AFKMode False |> Just
-
-                                                                _ ->
-                                                                    Nothing
-
-                                            entered ->
-                                                entered
-                )
-
-
-parseInfoEntered : Datamine -> String -> Maybe Info
-parseInfoEntered dm =
-    dm.youHaveEntered >> Maybe.map YouHaveEntered
+            |> Maybe.andThen (parseBody dm)
 
 
 {-| like "2018/05/13 16:05:37 "
@@ -168,6 +160,26 @@ that's even uglier.
 -}
 dateRegex =
     "^(\\d{4})/(\\d{2})/(\\d{2}) (\\d{2}):(\\d{2}):(\\d{2}) " |> Regex.fromString |> Maybe.withDefault Regex.never
+
+
+{-| like "Generating level 83 area "MapWorldsGrotto" with seed 2049423767"
+-}
+generatingAreaRegex =
+    "Generating level (\\d+) area \"([^\\\"]+)\" with seed (\\d+)" |> Regex.fromString |> Maybe.withDefault Regex.never
+
+
+parseGeneratingArea : String -> Result String GeneratingAreaData
+parseGeneratingArea raw =
+    case raw |> Regex.findAtMost 1 generatingAreaRegex |> List.head |> Maybe.map .submatches of
+        Just ((Just level) :: (Just worldAreaId) :: (Just seed) :: []) ->
+            Maybe.map3 GeneratingAreaData
+                (String.toInt level)
+                (Just worldAreaId)
+                (String.toInt seed)
+                |> Result.fromMaybe ("generating-area logline has invalid components: " ++ String.join "," [ level, worldAreaId, seed ])
+
+        _ ->
+            Err "not a generating-area logline"
 
 
 {-| it's the same length every time
