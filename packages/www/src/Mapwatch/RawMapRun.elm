@@ -7,7 +7,7 @@ module Mapwatch.RawMapRun exposing
     , duration
     , tick
     , update
-    , updateNPCText
+    , updateLogLine
     , updatedAt
     )
 
@@ -25,11 +25,13 @@ import Mapwatch.Debug
 import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Visit as Visit exposing (Visit)
+import Maybe.Extra
 import Time exposing (Posix)
 
 
 type alias RawMapRun =
     { address : Address
+    , level : Maybe Int
     , startedAt : Posix
     , portals : Int
     , npcSays : NpcEncounters
@@ -56,11 +58,12 @@ type alias NpcEncounter =
     }
 
 
-create : Address -> Posix -> NpcEncounters -> Int -> Int -> Maybe RawMapRun
-create addr startedAt npcSays posStart posEnd =
+create : Address -> Posix -> NpcEncounters -> Maybe Int -> Int -> Int -> Maybe RawMapRun
+create addr startedAt npcSays level posStart posEnd =
     if Instance.isMap (Instance.Instance addr) then
         Just
             { address = addr
+            , level = level
             , startedAt = startedAt
             , npcSays = npcSays
             , visits = []
@@ -179,7 +182,7 @@ update instance_ mvisit state =
                     if Instance.isMap instance_.val && Visit.isTown visit then
                         -- when not running, entering a map from town starts a run.
                         Instance.unwrap Nothing
-                            (\addr -> create addr instance_.joinedAt npcSays visit.positionStart visit.positionEnd)
+                            (\addr -> create addr instance_.joinedAt npcSays instance_.level visit.positionStart visit.positionEnd)
                             instance_.val
 
                     else
@@ -226,8 +229,8 @@ update instance_ mvisit state =
                         ( Just run, Nothing )
 
 
-updateNPCText : LogLine.Line -> Instance -> State -> State
-updateNPCText line instance state =
+updateLogLine : LogLine.Line -> Instance -> State -> State
+updateLogLine line instance state =
     case Instance.toAddress instance of
         Nothing ->
             state
@@ -244,7 +247,29 @@ updateNPCText line instance state =
                 LogLine.RitualFindClosestObject ->
                     state |> Maybe.map (\run -> { run | rituals = run.rituals + 1 })
 
-                _ ->
+                -- Ignore all others, but explicitly list them for exhaustiveness checks
+                LogLine.GeneratingArea gen ->
+                    state
+                        --|> Maybe.map
+                        --    (\run ->
+                        --        let _ = Debug.log ("gen: " ++ gen.worldAreaId) ((run.address.worldArea |> Maybe.map .id), run.visits) in
+                        --        if List.isEmpty run.visits || (run.address.worldArea |> Maybe.map .id) == Just gen.worldAreaId then
+                        --            { run | level = Maybe.Extra.or run.level (Just gen.level) }
+
+                        --        else
+                        --            run
+                        --    )
+
+                LogLine.Opening ->
+                    state
+
+                LogLine.ConnectingToInstanceServer _ ->
+                    state
+
+                LogLine.YouHaveEntered _ ->
+                    state
+
+                LogLine.AFKMode _ ->
                     state
 
 

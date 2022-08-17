@@ -62,6 +62,11 @@ type Instance
 type Builder
     = Empty
     | Connecting String
+    | GenArea GenAreaData
+
+
+type alias GenAreaData =
+    { address : String, level : Int, worldAreaId : String }
 
 
 type alias State =
@@ -70,6 +75,7 @@ type alias State =
     , next : Builder
     , afkVisit : List ( Posix, Posix )
     , afkStart : Maybe Posix
+    , level : Maybe Int
     , position : Int
     }
 
@@ -77,7 +83,14 @@ type alias State =
 init : Posix -> Int -> State
 init t pos =
     -- initial-date is awkward, only Nothing on init, but we need to be able to tell the difference
-    { val = MainMenu, joinedAt = t, next = Empty, afkVisit = [], afkStart = Nothing, position = pos }
+    { val = MainMenu
+    , joinedAt = t
+    , next = Empty
+    , afkVisit = []
+    , afkStart = Nothing
+    , position = pos
+    , level = Nothing
+    }
 
 
 toAddress : Instance -> Maybe Address
@@ -182,16 +195,52 @@ afkOff afkEnd state =
 update : Datamine -> LogLine.Line -> State -> State
 update datamine line state =
     case line.info of
-        -- it takes two loglines to build an instance:
+        -- it takes 2-3 loglines to build an instance:
         -- * "connecting to instance server (addr)"
+        -- * (optional) "generating level N area"
         -- * "you have entered (zone)"
         -- we need both zone and addr, split across two lines, so it takes two steps.
         LogLine.ConnectingToInstanceServer addr ->
             -- step 1
             { state | next = Connecting addr, position = line.position }
 
-        LogLine.YouHaveEntered zone_ ->
+        LogLine.GeneratingArea gen ->
+            -- step 2 (optional)
             case state.next of
+                Connecting addr ->
+                    { state | next = GenArea { address = addr, level = gen.level, worldAreaId = gen.worldAreaId } }
+
+                _ ->
+                    state
+
+        LogLine.YouHaveEntered zone_ ->
+            -- step 3
+            case state.next of
+                GenArea gen ->
+                    -- step 2
+                    let
+                        w =
+                            Datamine.worldAreaFromName zone_ datamine
+                    in
+                    { state
+                        | val =
+                            Instance
+                                { zone = zone_
+                                , addr = gen.address
+                                , worldArea = w
+                                }
+                        , level =
+                            if Maybe.map .id w == Just gen.worldAreaId then
+                                Just gen.level
+
+                            else
+                                Nothing
+                        , joinedAt = line.date
+                        , next = Empty
+                        , afkStart = Nothing
+                        , afkVisit = []
+                    }
+
                 Connecting addr ->
                     -- step 2
                     { state
@@ -227,6 +276,9 @@ update datamine line state =
                 _ ->
                     state
 
-        _ ->
-            -- ignore everything else
+        -- Ignore all others, but explicitly list them for exhaustiveness checks
+        LogLine.RitualFindClosestObject ->
+            state
+
+        LogLine.NPCSays _ ->
             state

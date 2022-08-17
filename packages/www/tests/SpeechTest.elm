@@ -72,6 +72,7 @@ emptyRaw =
     , positionStart = 69
     , positionEnd = 420
     , rituals = 0
+    , level = Nothing
     }
 
 

@@ -169,7 +169,7 @@ updateLine settings line ( model, cmds0 ) =
 
         ( runState, lastRun ) =
             RawMapRun.update instance visit model.runState
-                |> Tuple.mapBoth (RawMapRun.updateNPCText line instance.val) (Maybe.map (MapRun.fromRaw model.datamine))
+                |> Tuple.mapBoth (RawMapRun.updateLogLine line instance.val) (Maybe.map (MapRun.fromRaw model.datamine))
 
         runs : List MapRun
         runs =
