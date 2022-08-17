@@ -35,6 +35,7 @@ emptyRun =
     , updatedAt = Time.millisToPosix 0
     , trialmaster = []
     , rituals = 0
+    , level = Nothing
     }
 
 

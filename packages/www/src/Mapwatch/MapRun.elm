@@ -51,6 +51,7 @@ type alias MapRun =
     , isGrandHeist : Maybe Bool
     , isHeartOfTheGrove : Bool
     , rituals : Int
+    , level : Maybe Int
     }
 
 
@@ -218,6 +219,7 @@ fromRaw dm raw =
         , afk = raw.visits |> List.map Visit.durationAfk |> List.sum
         }
     , rituals = raw.rituals
+    , level = raw.level
     }
 
 
