@@ -77,6 +77,11 @@ all =
                     expectParseEquals
                         "2018/05/13 16:10:14 1801062 9b0 [INFO Client 1636] SomeJerkInLocalChat: 1801062 9b0 [INFO Client 1636] : You have entered The Twilight Strand."
                         (Err "logline not recognized")
+        , test "genarea" <|
+            \_ ->
+                expectParseEquals
+                    "2018/05/13 16:10:08 1795218 d8 [INFO Client 1636] Generating level 83 area \"MapWorldsGrotto\" with seed 2049423767"
+                    (Ok ( 1526227808000, LogLine.GeneratingArea {level=83, worldAreaId="MapWorldsGrotto", seed=2049423767} ))
             ]
         , describe "log filtering"
             [ test "filtered logs" <|
