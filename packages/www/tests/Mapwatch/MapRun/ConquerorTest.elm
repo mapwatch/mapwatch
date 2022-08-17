@@ -28,6 +28,7 @@ sirusAddr =
                 , isLabyrinth = False
                 , isAbyssalDepths = False
                 , itemVisualId = Nothing
+                , poedbMapIcon = Nothing
                 , atlasRegion = Nothing
                 , tiers = Nothing
                 }
