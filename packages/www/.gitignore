@@ -16,3 +16,4 @@ node_modules
 # Pre-build generated files
 tmp/
 gen/
+generated/

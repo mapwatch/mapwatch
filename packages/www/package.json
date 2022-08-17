@@ -9,6 +9,7 @@
     "dev": "bash scripts/_build/version && bash scripts/_build/l10n",
     "build": "yarn dev && elm-app build",
     "start": "concurrently --kill-others \"yarn dev --watch\" \"bash -c 'ELM_DEBUGGER=false elm-app start'\"",
+    "test:codegen": "mkdir -p codegen/build && node codegen/flags.js > codegen/build/flags.json && elm-codegen run --flags-from=codegen/build/flags.json",
     "test:fixture": "node ./tests/Fixture/build.js",
     "test": "yarn dev && yarn test:fixture && elm-app test",
     "clean": "rm -rf build tmp"
@@ -21,6 +22,7 @@
     "@fortawesome/fontawesome-free": "^6.1.2",
     "concurrently": "^7.0.0",
     "create-elm-app": "^5.8.0",
+    "elm-codegen": "^0.1.1",
     "fluent-typesafe": "erosson/fluent-typesafe#master",
     "raw-loader": "^4.0.1",
     "rimraf": "^3.0.0",
