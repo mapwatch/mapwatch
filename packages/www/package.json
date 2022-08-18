@@ -13,7 +13,7 @@
     "test:elm": "yarn elm-app test",
     "test:jest:pre": "mkdir -p tmp && cp -f src/JestMain.d.ts tmp/JestMain.d.ts && elm make src/JestMain.elm --output=tmp/JestMain.js",
     "test:jest": "jest",
-    "test": "yarn test:elm:pre && yarn test:elm && yarn test:jest:pre && yarn test:jest && yarn clean",
+    "test": "bash -c 'yarn test:elm:pre && yarn test:elm && yarn test:jest:pre && yarn test:jest && yarn clean'",
     "clean": "rm -rf build tmp"
   },
   "dependencies": {
