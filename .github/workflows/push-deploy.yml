@@ -50,7 +50,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 16.x
-      - run: yarn --frozen-lockfile
+      - run: yarn --frozen-lockfile --network-timeout 100000
       - run: yarn test
       - run: yarn build --ignore @mapwatch/electron2
       - name: Electron Builder Action
