@@ -154,6 +154,15 @@
       }
     },
     {
+      "card": "Astral Protection",
+      "maps": [
+        "Moon Temple Map"
+      ],
+      "loot": {
+        "text": "Shield\nShaper Item"
+      }
+    },
+    {
       "card": "Atziri's Arsenal",
       "maps": [
         "Vaults of Atziri"
@@ -169,6 +178,16 @@
       ],
       "loot": {
         "text": "Doryani's Fist\nCorrupted"
+      }
+    },
+    {
+      "card": "Azure Rage",
+      "maps": [
+        "Ashen Wood Map",
+        "Lava Lake Map"
+      ],
+      "loot": {
+        "text": "Punishing Map\nMap Tier: 16"
       }
     },
     {
@@ -273,6 +292,13 @@
       }
     },
     {
+      "card": "Broken Truce",
+      "maps": [],
+      "loot": {
+        "text": "Cold Iron Point"
+      }
+    },
+    {
       "card": "Brother's Stash",
       "maps": [
         "Cemetery Map",
@@ -366,6 +392,20 @@
       "maps": [],
       "loot": {
         "text": "Synthesis Item"
+      }
+    },
+    {
+      "card": "Checkmate",
+      "maps": [],
+      "loot": {
+        "text": "76x Simulacrum Splinter"
+      }
+    },
+    {
+      "card": "Choking Guilt",
+      "maps": [],
+      "loot": {
+        "text": "Stranglegasp"
       }
     },
     {
@@ -534,6 +574,13 @@
       }
     },
     {
+      "card": "Doryani's Epiphany",
+      "maps": [],
+      "loot": {
+        "text": "3x Regrading Lens"
+      }
+    },
+    {
       "card": "Draped in Dreams",
       "maps": [],
       "loot": {
@@ -621,6 +668,13 @@
       }
     },
     {
+      "card": "Endless Night",
+      "maps": [],
+      "loot": {
+        "text": "Maloney's Mechanism"
+      }
+    },
+    {
       "card": "Etched in Blood",
       "maps": [],
       "loot": {
@@ -664,6 +718,13 @@
       "maps": [],
       "loot": {
         "text": "Helmet\nDouble-Influenced Item\nItem Level: 100"
+      }
+    },
+    {
+      "card": "Gemcutter's Mercy",
+      "maps": [],
+      "loot": {
+        "text": "Exceptional Gem"
       }
     },
     {
@@ -937,6 +998,7 @@
       "maps": [
         "Beach Map",
         "Dungeon Map",
+        "Frozen Cabins Map",
         "Graveyard Map",
         "Jungle Valley Map",
         "Lookout Map"
@@ -1143,6 +1205,13 @@
       ],
       "loot": {
         "text": "Map\nMap Tier: 16\nUnidentified Corrupted"
+      }
+    },
+    {
+      "card": "Lethean Temptation",
+      "maps": [],
+      "loot": {
+        "text": "Nebulis"
       }
     },
     {
@@ -1763,6 +1832,13 @@
       }
     },
     {
+      "card": "Something Dark",
+      "maps": [],
+      "loot": {
+        "text": "Blueprint\nArea Level: 83\nFully Revealed"
+      }
+    },
+    {
       "card": "Struck by Lightning",
       "maps": [
         "Cemetery Map",
@@ -1984,6 +2060,7 @@
         "The Torched Courts (Act 5)",
         "The Ravaged Square",
         "The Torched Courts (Act 10)",
+        "The Desecrated Chambers",
         "Alleyways Map",
         "City Square Map",
         "Crimson Temple Map",
@@ -2230,6 +2307,7 @@
       "card": "The Chains that Bind",
       "maps": [
         "The Slave Pens",
+        "The Control Blocks",
         "Shavronne's Tower",
         "Cage Map",
         "Cells Map",
@@ -2841,6 +2919,13 @@
       }
     },
     {
+      "card": "The Enforcer",
+      "maps": [],
+      "loot": {
+        "text": "Spiked Gloves of the Conquest (Culling Strike)\nItem Level: 86\nWarlord Item"
+      }
+    },
+    {
       "card": "The Enlightened",
       "maps": [
         "Crimson Temple Map",
@@ -2967,6 +3052,8 @@
       "card": "The Flora's Gift",
       "maps": [
         "Ashen Wood Map",
+        "Bramble Valley Map",
+        "Dark Forest Map",
         "Jungle Valley Map",
         "Spider Forest Map",
         "Tropical Island Map"
@@ -3548,6 +3635,13 @@
       }
     },
     {
+      "card": "The Leviathan",
+      "maps": [],
+      "loot": {
+        "text": "Maven Item\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
       "card": "The Lich",
       "maps": [],
       "loot": {
@@ -3925,6 +4019,13 @@
       }
     },
     {
+      "card": "The Price of Devotion",
+      "maps": [],
+      "loot": {
+        "text": "Mageblood\nQuality: +20%\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
       "card": "The Price of Loyalty",
       "maps": [],
       "loot": {
@@ -4172,6 +4273,20 @@
       "maps": [],
       "loot": {
         "text": "10x Divine Orb"
+      }
+    },
+    {
+      "card": "The Shepherd's Sandals",
+      "maps": [],
+      "loot": {
+        "text": "Boots\nItem Level: 100\nTwo-Implicit\nCorrupted"
+      }
+    },
+    {
+      "card": "The Shieldbearer",
+      "maps": [],
+      "loot": {
+        "text": "The Squire"
       }
     },
     {
