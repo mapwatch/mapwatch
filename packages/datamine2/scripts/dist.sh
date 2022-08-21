@@ -6,7 +6,7 @@ cd "`dirname "$0"`/.."
 
 # prepare poe-dat-viewer (pdv), the dat file exporter
 git clone https://github.com/SnosMe/poe-dat-viewer third-party/poe-dat-viewer || true
-(cd third-party/poe-dat-viewer && git pull) || true
+(cd third-party/poe-dat-viewer && git pull && git checkout d4ab8484cf57cc6a580ce61e6818c10f4be7d731 && git clean -fd) || true
 (cd third-party/poe-dat-viewer/lib && yarn && yarn tsc)
 yarn tsc
 rm -rf build/data
