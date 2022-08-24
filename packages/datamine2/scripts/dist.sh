@@ -12,7 +12,7 @@ yarn tsc
 rm -rf build/data
 
 alias node="node --enable-source-maps"
-node build/scrape-divcards.js > dist/divcards.json
+node build/scrape-divcards2.js > dist/divcards2.json
 node build/scrape-poedb-map-icons.js > dist/poedb-map-icons.json
 
 # actually export .dat files with pdv
