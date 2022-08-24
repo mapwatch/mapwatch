@@ -41,9 +41,6 @@ view query dm w =
                                         , href ("https://www.poewiki.net/wiki/" ++ String.replace " " "_" card.name)
                                         ]
                                         [ View.Icon.divCard, text card.name ]
-                                    , text " ("
-                                    , text card.loot
-                                    , text ")"
                                     ]
                             )
                         |> ul [ class "world-area-drops" ]

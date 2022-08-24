@@ -67,7 +67,7 @@ type alias League =
 
 
 type alias DivCard =
-    { name : String, maps : List String, loot : String }
+    { name : String, maps : List String }
 
 
 type alias NpcTextEntry =
@@ -332,14 +332,9 @@ wikiUrl dm w =
 
 divCards : Datamine -> WorldArea -> List DivCard
 divCards dm w =
-    case dm.lang |> Dict.get defaultLang |> Maybe.andThen (.index >> .worldAreas >> Dict.get w.id) of
-        Nothing ->
-            []
-
-        Just name ->
-            Dict.get name dm.divcardsByMapName
-                |> Maybe.Extra.orElse (Dict.get (name ++ " Map") dm.divcardsByMapName)
-                |> Maybe.withDefault []
+    dm.divcardsByMapName
+        |> Dict.get w.id 
+        |> Maybe.withDefault []
 
 
 
@@ -538,7 +533,7 @@ decoder =
         (D.at [ "datamine", "worldAreas", "data" ] worldAreasDecoder)
         (D.at [ "datamine", "lang" ] langDecoder)
         (D.at [ "leagues" ] leaguesDecoder)
-        (D.at [ "wiki", "divcards", "data" ] divCardsDecoder)
+        (D.at [ "wiki", "divcards", "cargoquery" ] divCardsDecoder)
         (D.at [ "datamine", "ultimatum" ] ultimatumDecoder)
         |> D.andThen resultToDecoder
 
@@ -564,10 +559,11 @@ leaguesDecoder =
 
 divCardsDecoder : D.Decoder (List DivCard)
 divCardsDecoder =
-    D.map3 DivCard
-        (D.field "card" D.string)
-        (D.field "maps" <| D.list D.string)
-        (D.at [ "loot", "text" ] D.string)
+    D.map2 DivCard
+        (D.field "name" D.string)
+        (D.field "drop areas" (D.string |> D.map (String.split ",") )
+            |> D.maybe |> D.map (Maybe.withDefault []))
+        |> D.field "title"
         |> D.list
 
 
