@@ -143,7 +143,7 @@
     {
       "title": {
         "name": "Bijoux",
-        "drop areas": "MapWorldsFloodedMine,MapWorldsCrystalOre,MapWorldsDig"
+        "drop areas": "MapWorldsFloodedMine,MapWorldsCrystalOre,MapWorldsDig,MapWorldsExcavation"
       }
     },
     {
@@ -535,7 +535,7 @@
     {
       "title": {
         "name": "Home",
-        "drop areas": "MapWorldsTower,MapWorldsResidence,MapWorldsAlleyways,MapWorldsSunkenCity,MapWorldsArcade,MapWorldsCrimsonTownship,MapWorldsCitySquare,MapWorldsAncientCity"
+        "drop areas": "MapWorldsTower,MapWorldsResidence,MapWorldsAlleyways,MapWorldsSunkenCity,MapWorldsArcade,MapWorldsCrimsonTownship,MapWorldsCitySquare,MapWorldsAncientCity,MapWorldsChateau"
       }
     },
     {
@@ -931,7 +931,7 @@
     {
       "title": {
         "name": "The Apothecary",
-        "drop areas": "MapWorldsCrimsonTemple,MapWorldsCrimsonTownship"
+        "drop areas": "MapWorldsCrimsonTemple,MapWorldsCrimsonTownship,MapWorldsDefiledCathedral"
       }
     },
     {
@@ -1790,7 +1790,7 @@
     {
       "title": {
         "name": "The Poet",
-        "drop areas": "1_3_5,2_8_8,MapWorldsArcade,MapAtlasQuay,MapAtlasArcade,MapAtlasBazaar,MapWorldsAlleyways,MapWorldsBazaar"
+        "drop areas": "1_3_5,2_8_8,MapWorldsArcade,MapAtlasQuay,MapAtlasArcade,MapAtlasBazaar,MapWorldsAlleyways,MapWorldsBazaar,MapWorldsPort"
       }
     },
     {
@@ -1936,7 +1936,7 @@
     {
       "title": {
         "name": "The Scout",
-        "drop areas": "MapWorldsTropicalIsland,MapWorldsSpiderForest,MapWorldsAshenWood,MapWorldsForbiddenWoods,MapWorldsBrambleValley,MapWorldsJungleValley,MapWorldsRamparts,MapWorldsLair,MapWorldsDarkForest,MapWorldsThicket"
+        "drop areas": "MapWorldsTropicalIsland,MapWorldsSpiderForest,MapWorldsAshenWood,MapWorldsForbiddenWoods,MapWorldsBrambleValley,MapWorldsJungleValley,MapWorldsRamparts,MapWorldsLair,MapWorldsDarkForest,MapWorldsThicket,MapWorldsStagnation"
       }
     },
     {
