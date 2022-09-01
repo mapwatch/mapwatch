@@ -369,6 +369,10 @@ table.encounters {
   border-top: 1px inset grey;
 }
 
+img.trialmaster-mod {
+  height: 1.5em;
+}
+
 /* Thanks, poedb! https://poedb.tw/us/Ultimatum#MinimapIcons */
 /* https://web.poecdn.com/image/Art/2DArt/minimap/player.png */
 /* 32px * 14 cols */
@@ -438,7 +442,6 @@ table.encounters {
 .abyss-minimap.minimap {
   background-position: -13em -0em;
 }
-
-img.trialmaster-mod {
-  height: 1.5em;
+.heist-minimap.minimap {
+  background-position: -3em -38em;
 }

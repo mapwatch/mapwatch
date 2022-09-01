@@ -250,60 +250,74 @@ conquerorRegions id state =
     in
     View.Icon.Svg.regions regions
 
+heist : Html msg
+heist = 
+    div [ class "heist-minimap minimap" ] []
 
 karst : Html msg
 karst =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Karst.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Karst.png?scale=1" }
+    heist
 
 
 niles : Html msg
 niles =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Niles.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Niles.png?scale=1" }
+    heist
 
 
 huck : Html msg
 huck =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Huck.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Huck.png?scale=1" }
+    heist
 
 
 tibbs : Html msg
 tibbs =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Tibbs.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Tibbs.png?scale=1" }
+    heist
 
 
 nenet : Html msg
 nenet =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Nenet.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Nenet.png?scale=1" }
+    heist
 
 
 vinderi : Html msg
 vinderi =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Vinderi.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Vinderi.png?scale=1" }
+    heist
 
 
 tortilla : Html msg
 tortilla =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Tullina.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Tullina.png?scale=1" }
+    heist
 
 
 gianna : Html msg
 gianna =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Gianna.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Gianna.png?scale=1" }
+    heist
 
 
 isla : Html msg
 isla =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Isla.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Isla.png?scale=1" }
+    heist
 
 
 adiyah : Html msg
 adiyah =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Adiyah.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Adiyah.png?scale=1" }
+    heist
 
 
 kurai : Html msg
 kurai =
-    sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Kura.png?scale=1" }
+    -- sideArea { name = "heist-npc med-icon", url = "Art/2DArt/UIImages/InGame/NPCWindow/Portraits/Kura.png?scale=1" }
+    heist
 
 
 grandHeistGeneric : Html msg
