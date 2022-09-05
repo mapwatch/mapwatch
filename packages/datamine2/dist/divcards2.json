@@ -183,7 +183,7 @@
     {
       "title": {
         "name": "Boundless Realms",
-        "drop areas": "2_8_12_1,2_8_12_2,MapWorldsTemple,MapWorldsMoonTempleUnique,MapWorldsColdRiver_"
+        "drop areas": "2_8_12_1,2_8_12_2,MapWorldsTemple,MapWorldsMoonTempleUnique,MapWorldsColdRiver_,2_8_13"
       }
     },
     {
@@ -992,8 +992,7 @@
     },
     {
       "title": {
-        "name": "The Bear Woman",
-        "drop areas": "MapWorldsBarrows"
+        "name": "The Bear Woman"
       }
     },
     {
@@ -1301,7 +1300,7 @@
     {
       "title": {
         "name": "The Enlightened",
-        "drop areas": "MapWorldsCrimsonTemple,MapWorldsIvoryTemple,MapWorldsTemple,MapWorldsDefiledCathedral,MapWorldsLookout"
+        "drop areas": "MapWorldsCrimsonTemple,MapWorldsIvoryTemple,MapWorldsTemple,MapWorldsDefiledCathedral,MapWorldsLookout,MapWorldsBelfry"
       }
     },
     {
@@ -1615,7 +1614,7 @@
     {
       "title": {
         "name": "The Life Thief",
-        "drop areas": "MapWorldsCrimsonTemple,MapWorldsCitySquare,MapWorldsLookout,MapWorldsAlleyways,MapWorldsSilo"
+        "drop areas": "MapWorldsCrimsonTemple,MapWorldsCitySquare,MapWorldsLookout,MapWorldsAlleyways,MapWorldsSilo,MapWorldsDefiledCathedral"
       }
     },
     {
@@ -1953,7 +1952,7 @@
     {
       "title": {
         "name": "The Shepherd's Sandals",
-        "drop areas": "MapWorldsGrotto"
+        "drop areas": "MapWorldsGrotto,MapWorldsLair"
       }
     },
     {
@@ -2033,7 +2032,7 @@
     {
       "title": {
         "name": "The Sun",
-        "drop areas": "1_3_8_1,1_3_8_2,2_8_12_1,MapAtlasTemple,MapAtlasTempleUnique,MapWorldsMoonTempleUnique,MapWorldsTemple,MapWorldsColdRiver_"
+        "drop areas": "2_8_12_1,MapAtlasTemple,MapAtlasTempleUnique,MapWorldsMoonTempleUnique,MapWorldsTemple,MapWorldsColdRiver_,2_8_13"
       }
     },
     {
