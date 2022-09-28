@@ -250,9 +250,11 @@ conquerorRegions id state =
     in
     View.Icon.Svg.regions regions
 
+
 heist : Html msg
-heist = 
+heist =
     div [ class "heist-minimap minimap" ] []
+
 
 karst : Html msg
 karst =
@@ -391,3 +393,14 @@ dannig =
     -- sideArea { name = "envoy med-icon", url = "Art/2DItems/Effects/Portals/MavenPortalEffect.png?scale=1" }
     -- sideArea { name = "dannig expedition med-icon", url = "Art/2DArt/UIImages/InGame/Expedition/KnightsOfTheWolfHeraldryIcon.png?scale=1" }
     div [ class "expedition-minimap minimap" ] []
+
+
+exarch : Html msg
+exarch =
+    -- not a side-area icon, this is for the divcard-drops under the timer
+    img [ class "siege exarch side-icon", src "https://web.poecdn.com/protected/image/item/popup/searing-symbol.png?key=iiOWJvWHj8-0bH0e28X7Xw" ] []
+
+
+eater : Html msg
+eater =
+    img [ class "siege eater side-icon", src "https://web.poecdn.com/protected/image/item/popup/tangled-symbol.png?key=b-SVlhPy2jy-UJSTBaV2Cw" ] []

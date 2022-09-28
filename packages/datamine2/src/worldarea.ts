@@ -30,23 +30,23 @@ export const headers: (keyof WorldArea)[] = [
 ]
 
 export function filter(w: WorldArea): boolean {
-  // I'm interested in maps, towns, and hideouts. other zones - usually campaign stuff - don't matter to mapwatch
-  const criteria = w.IsMapArea
-    || w.IsUniqueMapArea
-    || w.IsTown
-    || w.IsHideout
-    || w.IsVaalArea
-    || w._IsLabTrial
-    || w._IsAbyssalDepths
-    // include heist maps. The Twins zone name is "Mansion", but it's expressed
-    // in these files as "The Den", which conflicts with the campaign zone, so exclude it.
-    // https://github.com/mapwatch/mapwatch/issues/119
-    || (w.Id.startsWith('Heist') && w.Id !== 'HeistBoss_Twins' && w.Id !== 'HeistHubEndless')
-    || !!nonAtlasMaps[w.Id]
-    || w.Id.includes("_Labyrinth_")
-  // it looks like maps with no visuals are either duplicates or boss arenas. Either way, not interested
-  const vis = w.ItemVisualIdentity || !w.IsMapArea
-  return !!(criteria && vis)
+    // I'm interested in maps, towns, and hideouts. other zones - usually campaign stuff - don't matter to mapwatch
+    const criteria = w.IsMapArea
+        || w.IsUniqueMapArea
+        || w.IsTown
+        || w.IsHideout
+        || w.IsVaalArea
+        || w._IsLabTrial
+        || w._IsAbyssalDepths
+        // include heist maps. The Twins zone name is "Mansion", but it's expressed
+        // in these files as "The Den", which conflicts with the campaign zone, so exclude it.
+        // https://github.com/mapwatch/mapwatch/issues/119
+        || (w.Id.startsWith('Heist') && w.Id !== 'HeistBoss_Twins' && w.Id !== 'HeistHubEndless')
+        || !!nonAtlasMaps[w.Id]
+        || w.Id.includes("_Labyrinth_")
+    // it looks like maps with no visuals are either duplicates or boss arenas. Either way, not interested
+    const vis = w.ItemVisualIdentity || !w.IsMapArea
+    return !!(criteria && vis)
 }
 export function build(w: input.WorldArea, i: input.Input): WorldArea {
     const a = i.atlasNodesByWorldArea[w._index]
@@ -99,6 +99,15 @@ const nonAtlasMaps: { [name: string]: string } = {
     "UltimatumArena": "Art/2DItems/Maps/UltimatumTrialBase.png",
     "UltimatumArenaEndgame": "Art/2DItems/Maps/UltimatumTrialBase.png",
     "UltimatumBossArena": "Art/2DItems/Maps/UltimatumTrialBase.png",
+    // 3.17: exarch and eater
+    // infinite hunger
+    "MapWorldsPrimordialBoss1": "https://web.poecdn.com/protected/image/item/popup/tangled-symbol.png?key=b-SVlhPy2jy-UJSTBaV2Cw",
+    // black star
+    "MapWorldsPrimordialBoss2": "https://web.poecdn.com/protected/image/item/popup/searing-symbol.png?key=iiOWJvWHj8-0bH0e28X7Xw",
+    // exarch
+    "MapWorldsPrimordialBoss3": "https://web.poecdn.com/protected/image/item/popup/searing-symbol.png?key=iiOWJvWHj8-0bH0e28X7Xw",
+    // eater
+    "MapWorldsPrimordialBoss4": "https://web.poecdn.com/protected/image/item/popup/tangled-symbol.png?key=b-SVlhPy2jy-UJSTBaV2Cw",
 }
 function nonAtlasMapIcon(w: input.WorldArea): string | null {
     if (w.Id in nonAtlasMaps) {

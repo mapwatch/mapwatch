@@ -7,7 +7,7 @@ const EXAMPLES_DIR = `${__dirname}/../../public/examples`
 async function buildExamples() {
     const filenames = await fs.readdir(EXAMPLES_DIR)
     const examples = await Promise.all(filenames.map(async file => {
-        const slug = file.replace(/\.txt$/, '').replace('-', '_')
+        const slug = file.replace(/\.txt$/, '').replace(/-/g, '_')
         const path = `${EXAMPLES_DIR}/${file}`
         const buf = await fs.readFile(path)
         const body = buf.toString()

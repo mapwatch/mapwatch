@@ -1,0 +1,335 @@
+# siege of the atlas: eater and exarch
+
+# hunger
+2022/08/21 13:40:06 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/21 13:40:06 ] Generating level 79 area "MapWorldsPrimordialBoss1" with seed 2269466674
+2022/08/21 13:40:07 ] : You have entered Seething Chyme.
+2022/08/21 13:40:10 ] The Maven: Atlas. Mine.
+2022/08/21 13:40:13 ] The Infinite Hunger: Foolish Maven, come to feed me her champion!
+2022/08/21 13:40:21 ] The Infinite Hunger: Slaughter!
+2022/08/21 13:40:25 ] The Infinite Hunger: Crush!
+2022/08/21 13:40:26 ] The Infinite Hunger: Melt!
+2022/08/21 13:40:42 ] The Infinite Hunger: Obliterate!
+2022/08/21 13:40:47 ] The Infinite Hunger: Hunger!
+2022/08/21 13:40:57 ] The Infinite Hunger: Hunger without end...
+2022/08/21 13:41:26 ] The Infinite Hunger: The Tangle will not be denied!
+2022/08/21 13:41:30 ] The Infinite Hunger: Feast!
+2022/08/21 13:41:32 ] The Infinite Hunger: Cull!
+2022/08/21 13:41:36 ] The Infinite Hunger: Crush!
+2022/08/21 13:41:37 ] The Infinite Hunger: Obliterate!
+2022/08/21 13:41:43 ] The Infinite Hunger: Melt!
+2022/08/21 13:41:47 ] The Infinite Hunger: Hunger!
+2022/08/21 13:41:58 ] The Infinite Hunger: Feast!
+2022/08/21 13:41:59 ] The Infinite Hunger: Obliterate!
+2022/08/21 13:42:05 ] The Infinite Hunger: Cull!
+2022/08/21 13:42:09 ] The Infinite Hunger: Crush!
+2022/08/21 13:42:10 ] The Infinite Hunger: Melt!
+2022/08/21 13:42:23 ] The Infinite Hunger: Obliterate!
+2022/08/21 13:42:24 ] The Infinite Hunger: Hunger without end...
+2022/08/21 13:42:35 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/21 13:42:36 ] The Infinite Hunger: A feast of muscle and bone!
+2022/08/21 13:42:42 ] Connecting to instance server at 999.999.999.1:6112
+2022/08/21 13:42:42 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/21 13:42:42 ] : You have entered Unearthed Hideout.
+2022/08/21 13:42:47 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/21 13:42:47 ] Generating level 79 area "MapWorldsPrimordialBoss1" with seed 2269466674
+2022/08/21 13:42:47 ] : You have entered Seething Chyme.
+2022/08/21 13:42:50 ] The Infinite Hunger: Melt!
+2022/08/21 13:42:54 ] The Infinite Hunger: The pain... never ends...
+2022/08/21 13:43:00 ] The Maven: Glorious bloodshed.
+2022/08/21 13:43:09 ] Connecting to instance server at 999.999.999.1:6112
+2022/08/21 13:43:09 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/21 13:43:10 ] : You have entered Unearthed Hideout.
+
+# blackstar
+2022/08/21 13:43:52 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/21 13:43:52 ] Generating level 79 area "MapWorldsPrimordialBoss2" with seed 302365007
+2022/08/21 13:43:53 ] : You have entered Polaric Void.
+2022/08/21 13:43:57 ] The Black Star: Maven! The Challenge begins! Your champion will fall.
+2022/08/21 13:44:02 ] The Maven: Atlas. Mine.
+2022/08/21 13:44:08 ] The Black Star: Replica!
+2022/08/21 13:44:10 ] The Black Star: Deep space!
+2022/08/21 13:44:13 ] The Black Star: Astral avalanche!
+2022/08/21 13:44:20 ] The Black Star: Your champion... has fallen.
+2022/08/21 13:44:20 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/21 13:44:22 ] Connecting to instance server at 999.999.999.1:6112
+2022/08/21 13:44:22 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/21 13:44:22 ] : You have entered Unearthed Hideout.
+2022/08/21 13:44:27 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/21 13:44:27 ] Generating level 79 area "MapWorldsPrimordialBoss2" with seed 302365007
+2022/08/21 13:44:27 ] : You have entered Polaric Void.
+2022/08/21 13:44:30 ] The Black Star: Star flare!
+2022/08/21 13:44:33 ] The Black Star: Solar storm!
+2022/08/21 13:44:41 ] The Black Star: Simulacrum!
+2022/08/21 13:44:44 ] The Black Star: Star flare!
+2022/08/21 13:44:46 ] The Black Star: Deep space!
+2022/08/21 13:44:50 ] The Black Star: Astral avalanche!
+2022/08/21 13:45:01 ] The Black Star: Solar storm!
+2022/08/21 13:45:13 ] The Black Star: Deep space!
+2022/08/21 13:45:15 ] The Black Star: Your champion... has fallen.
+2022/08/21 13:45:15 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/21 13:45:19 ] Connecting to instance server at 999.999.999.2:6112
+2022/08/21 13:45:19 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/21 13:45:19 ] : You have entered Unearthed Hideout.
+2022/08/21 13:45:24 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/21 13:45:24 ] Generating level 79 area "MapWorldsPrimordialBoss2" with seed 302365007
+2022/08/21 13:45:24 ] : You have entered Polaric Void.
+2022/08/21 13:45:28 ] The Black Star: Star flare!
+2022/08/21 13:45:30 ] The Black Star: Deep space!
+2022/08/21 13:45:31 ] The Black Star: Astral avalanche!
+2022/08/21 13:45:43 ] The Black Star: Solar storm!
+2022/08/21 13:45:48 ] The Black Star: The Cleansing Fire prevails...
+2022/08/21 13:45:48 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/21 13:45:49 ] Connecting to instance server at 999.999.999.3:6112
+2022/08/21 13:45:49 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/21 13:45:50 ] : You have entered Unearthed Hideout.
+2022/08/21 13:45:58 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/21 13:45:58 ] Generating level 79 area "MapWorldsPrimordialBoss2" with seed 302365007
+2022/08/21 13:45:58 ] : You have entered Polaric Void.
+2022/08/21 13:46:01 ] The Black Star: Star flare!
+2022/08/21 13:46:02 ] The Black Star: Simulacrum!
+2022/08/21 13:46:04 ] The Black Star: Deep space!
+2022/08/21 13:46:09 ] The Black Star: Astral avalanche!
+2022/08/21 13:46:17 ] The Black Star: The Cleansing Fire prevails...
+2022/08/21 13:46:17 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/21 13:46:18 ] Connecting to instance server at 999.999.999.3:6112
+2022/08/21 13:46:18 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/21 13:46:19 ] : You have entered Unearthed Hideout.
+2022/08/21 13:46:23 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/21 13:46:23 ] Generating level 79 area "MapWorldsPrimordialBoss2" with seed 302365007
+2022/08/21 13:46:24 ] : You have entered Polaric Void.
+2022/08/21 13:46:28 ] The Black Star: Solar storm!
+2022/08/21 13:46:36 ] The Black Star: Star flare!
+2022/08/21 13:46:37 ] The Black Star: Replica!
+2022/08/21 13:46:40 ] The Black Star: Astral avalanche!
+2022/08/21 13:46:54 ] The Black Star: Solar storm!
+2022/08/21 13:47:04 ] The Black Star: Deep space!
+2022/08/21 13:47:09 ] The Black Star: Astral avalanche!
+2022/08/21 13:47:22 ] The Black Star: The dark light fades...
+2022/08/21 13:47:25 ] The Maven: Shining violence.
+2022/08/21 13:47:57 ] Connecting to instance server at 999.999.999.4:6112
+2022/08/21 13:47:57 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/21 13:47:57 ] : You have entered Unearthed Hideout.
+
+# eater
+2022/08/22 01:18:13 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/22 01:18:13 ] Generating level 83 area "MapWorldsPrimordialBoss4" with seed 3519296054
+2022/08/22 01:18:14 ] : You have entered Absence of Symmetry and Harmony.
+2022/08/22 01:18:19 ] The Eater of Worlds: This is not a battle you can win, hatchling.
+2022/08/22 01:18:25 ] The Maven: I want to win this.
+2022/08/22 01:18:49 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:19:01 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:19:07 ] The Eater of Worlds: This realm's infinite delights belong to us now.
+2022/08/22 01:19:07 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/22 01:19:08 ] Connecting to instance server at 999.999.999.1:6112
+2022/08/22 01:19:09 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/22 01:19:09 ] : You have entered Unearthed Hideout.
+2022/08/22 01:19:17 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/22 01:19:17 ] Generating level 83 area "MapWorldsPrimordialBoss4" with seed 3519296054
+2022/08/22 01:19:18 ] : You have entered Absence of Symmetry and Harmony.
+2022/08/22 01:19:22 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:19:29 ] The Eater of Worlds: Hunger!
+2022/08/22 01:19:34 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:19:40 ] The Eater of Worlds: Perish!
+2022/08/22 01:19:45 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:19:49 ] The Eater of Worlds: Succumb!
+2022/08/22 01:19:53 ] The Eater of Worlds: Hunger!
+2022/08/22 01:19:58 ] The Eater of Worlds: Hunger!
+2022/08/22 01:20:02 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:20:06 ] The Eater of Worlds: Succumb!
+2022/08/22 01:20:14 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:20:18 ] The Eater of Worlds: Hunger!
+2022/08/22 01:20:22 ] The Eater of Worlds: Succumb!
+2022/08/22 01:20:25 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:20:30 ] The Eater of Worlds: Succumb!
+2022/08/22 01:20:38 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:20:42 ] The Eater of Worlds: Inescapable doom!
+2022/08/22 01:20:46 ] The Maven: My champion! Energise the spheres!
+2022/08/22 01:20:52 ] The Eater of Worlds: Consume!
+2022/08/22 01:20:53 ] The Eater of Worlds: This realm's infinite delights belong to us now.
+2022/08/22 01:20:53 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/22 01:20:53 ] The Eater of Worlds: All will be devoured.
+2022/08/22 01:20:54 ] Connecting to instance server at 999.999.999.2:6112
+2022/08/22 01:20:54 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/22 01:20:55 ] : You have entered Unearthed Hideout.
+2022/08/22 01:21:05 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/22 01:21:05 ] Generating level 83 area "MapWorldsPrimordialBoss4" with seed 3519296054
+2022/08/22 01:21:06 ] : You have entered Absence of Symmetry and Harmony.
+2022/08/22 01:21:09 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:21:14 ] The Eater of Worlds: Perish!
+2022/08/22 01:21:21 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:21:25 ] The Eater of Worlds: Succumb!
+2022/08/22 01:21:31 ] The Eater of Worlds: Hunger!
+2022/08/22 01:21:36 ] The Eater of Worlds: Inescapable doom!
+2022/08/22 01:21:46 ] The Eater of Worlds: Consume!
+2022/08/22 01:21:51 ] The Maven: Begone!
+2022/08/22 01:21:53 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:21:57 ] The Eater of Worlds: Succumb!
+2022/08/22 01:22:03 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:22:09 ] The Eater of Worlds: Succumb!
+2022/08/22 01:22:14 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:22:21 ] The Eater of Worlds: Succumb!
+2022/08/22 01:22:24 ] The Eater of Worlds: Inescapable doom!
+2022/08/22 01:22:28 ] The Maven: My champion! Energise the spheres!
+2022/08/22 01:22:34 ] The Eater of Worlds: Consume!
+2022/08/22 01:22:39 ] The Maven: Begone!
+2022/08/22 01:22:40 ] The Eater of Worlds: Succumb!
+2022/08/22 01:22:43 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:22:50 ] The Eater of Worlds: Perish!
+2022/08/22 01:22:53 ] The Eater of Worlds: Hunger!
+2022/08/22 01:22:58 ] The Eater of Worlds: Hunger!
+2022/08/22 01:23:02 ] The Eater of Worlds: Hunger!
+2022/08/22 01:23:06 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:23:10 ] The Eater of Worlds: Inescapable doom!
+2022/08/22 01:23:16 ] The Maven: My champion! Energise the spheres!
+2022/08/22 01:23:20 ] The Eater of Worlds: Consume!
+2022/08/22 01:23:25 ] The Maven: Begone!
+2022/08/22 01:23:27 ] The Eater of Worlds: Perish!
+2022/08/22 01:23:34 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:23:39 ] The Eater of Worlds: Hunger!
+2022/08/22 01:23:42 ] The Eater of Worlds: This realm's infinite delights belong to us now.
+2022/08/22 01:23:42 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/22 01:23:43 ] The Eater of Worlds: Hunger!
+2022/08/22 01:23:44 ] Connecting to instance server at 999.999.999.3:6112
+2022/08/22 01:23:44 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/22 01:23:45 ] : You have entered Unearthed Hideout.
+2022/08/22 01:23:50 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/22 01:23:50 ] Generating level 83 area "MapWorldsPrimordialBoss4" with seed 3519296054
+2022/08/22 01:23:50 ] : You have entered Absence of Symmetry and Harmony.
+2022/08/22 01:23:57 ] The Eater of Worlds: Perish!
+2022/08/22 01:24:00 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:24:05 ] The Eater of Worlds: Inescapable doom!
+2022/08/22 01:24:08 ] The Maven: My champion! Energise the spheres!
+2022/08/22 01:24:15 ] The Eater of Worlds: Consume!
+2022/08/22 01:24:18 ] The Maven: Begone!
+2022/08/22 01:24:19 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:24:27 ] The Eater of Worlds: Perish!
+2022/08/22 01:24:30 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:24:40 ] The Eater of Worlds: Perish!
+2022/08/22 01:24:45 ] The Eater of Worlds: Hunger!
+2022/08/22 01:24:49 ] The Eater of Worlds: Perish!
+2022/08/22 01:24:52 ] The Eater of Worlds: Inescapable doom!
+2022/08/22 01:24:55 ] The Maven: My champion! Energise the spheres!
+2022/08/22 01:25:02 ] The Eater of Worlds: Consume!
+2022/08/22 01:25:08 ] The Maven: Begone!
+2022/08/22 01:25:09 ] The Eater of Worlds: Succumb!
+2022/08/22 01:25:13 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:25:17 ] The Eater of Worlds: Perish!
+2022/08/22 01:25:24 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:25:31 ] The Eater of Worlds: Hunger!
+2022/08/22 01:25:35 ] The Eater of Worlds: Hunger!
+2022/08/22 01:25:39 ] The Eater of Worlds: Inescapable doom!
+2022/08/22 01:25:43 ] The Maven: My champion! Energise the spheres!
+2022/08/22 01:25:49 ] The Eater of Worlds: Consume!
+2022/08/22 01:25:54 ] The Maven: Begone!
+2022/08/22 01:25:55 ] The Eater of Worlds: Hunger!
+2022/08/22 01:26:00 ] The Eater of Worlds: Hunger!
+2022/08/22 01:26:03 ] The Eater of Worlds: This realm's infinite delights belong to us now.
+2022/08/22 01:26:03 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/22 01:26:05 ] Connecting to instance server at 999.999.999.4:6112
+2022/08/22 01:26:05 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/22 01:26:05 ] : You have entered Unearthed Hideout.
+2022/08/22 01:26:11 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/22 01:26:11 ] Generating level 83 area "MapWorldsPrimordialBoss4" with seed 3519296054
+2022/08/22 01:26:12 ] : You have entered Absence of Symmetry and Harmony.
+2022/08/22 01:26:15 ] The Eater of Worlds: Perish!
+2022/08/22 01:26:17 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:26:24 ] The Eater of Worlds: Succumb!
+2022/08/22 01:26:28 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:26:33 ] The Eater of Worlds: Succumb!
+2022/08/22 01:26:37 ] The Eater of Worlds: Inescapable doom!
+2022/08/22 01:26:40 ] The Maven: My champion! Energise the spheres!
+2022/08/22 01:26:47 ] The Eater of Worlds: Consume!
+2022/08/22 01:26:52 ] The Maven: Begone!
+2022/08/22 01:26:54 ] The Eater of Worlds: Hunger!
+2022/08/22 01:26:58 ] The Eater of Worlds: Hunger!
+2022/08/22 01:27:02 ] The Eater of Worlds: Hunger!
+2022/08/22 01:27:06 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:27:14 ] The Eater of Worlds: Hunger!
+2022/08/22 01:27:18 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:27:20 ] The Eater of Worlds: You deny us... escape from pain...
+2022/08/22 01:27:26 ] The Maven: Satisfaction. The Tangle roars. How impotent.
+2022/08/22 01:27:51 ] Connecting to instance server at 999.999.999.5:6112
+2022/08/22 01:27:52 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/22 01:27:52 ] : You have entered Unearthed Hideout.
+
+# exarch
+2022/08/22 01:38:00 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/22 01:38:00 ] Generating level 83 area "MapWorldsPrimordialBoss3" with seed 828960111
+2022/08/22 01:38:01 ] : You have entered Absence of Patience and Wisdom.
+2022/08/22 01:38:06 ] The Searing Exarch: Your absurd defiance ends here, hatchling.
+2022/08/22 01:38:13 ] The Maven: The Atlas must remain mine.
+2022/08/22 01:38:42 ] The Searing Exarch: Annihilation!
+2022/08/22 01:38:48 ] The Searing Exarch: Disintegration!
+2022/08/22 01:38:50 ] The Searing Exarch: Cleansing!
+2022/08/22 01:38:54 ] The Searing Exarch: Annihilation!
+2022/08/22 01:39:06 ] The Searing Exarch: Annihilation!
+2022/08/22 01:39:19 ] The Searing Exarch: Annihilation!
+2022/08/22 01:39:30 ] The Searing Exarch: Incineration!
+2022/08/22 01:39:37 ] The Searing Exarch: Annihilation!
+2022/08/22 01:39:41 ] The Searing Exarch: Disintegration!
+2022/08/22 01:39:44 ] The Searing Exarch: Cleansing!
+2022/08/22 01:39:49 ] The Searing Exarch: Annihilation!
+2022/08/22 01:39:53 ] The Searing Exarch: Incineration!
+2022/08/22 01:40:00 ] The Searing Exarch: Annihilation!
+2022/08/22 01:40:13 ] The Searing Exarch: Annihilation!
+2022/08/22 01:40:17 ] The Searing Exarch: Disintegration!
+2022/08/22 01:40:19 ] The Searing Exarch: Incineration!
+2022/08/22 01:40:25 ] The Searing Exarch: Cleansing!
+2022/08/22 01:40:27 ] The Searing Exarch: The fires of a thousand suns!
+2022/08/22 01:40:32 ] The Maven: I shall extinguish them all!
+2022/08/22 01:40:34 ] The Searing Exarch: You do not have the strength, hatchling.
+2022/08/22 01:40:39 ] The Maven: That may be, but I am not alone!
+2022/08/22 01:40:43 ] The Searing Exarch: How pathetic.
+2022/08/22 01:40:58 ] The Searing Exarch: Incineration!
+2022/08/22 01:41:05 ] The Searing Exarch: Disintegration!
+2022/08/22 01:41:07 ] The Searing Exarch: Cleansing!
+2022/08/22 01:41:21 ] The Searing Exarch: The fires of a thousand suns!
+2022/08/22 01:41:26 ] The Maven: I shall extinguish them all!
+2022/08/22 01:41:50 ] The Searing Exarch: Annihilation!
+2022/08/22 01:41:54 ] The Searing Exarch: Disintegration!
+2022/08/22 01:41:56 ] The Searing Exarch: Cleansing!
+2022/08/22 01:42:07 ] The Searing Exarch: Annihilation!
+2022/08/22 01:42:11 ] The Searing Exarch: The fires of a thousand suns!
+2022/08/22 01:42:16 ] The Maven: I shall extinguish them all!
+2022/08/22 01:42:32 ] The Searing Exarch: This realm shall be studied by flame for eternity.
+2022/08/22 01:42:32 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/22 01:42:33 ] Connecting to instance server at 999.999.999.1:6112
+2022/08/22 01:42:34 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/22 01:42:34 ] : You have entered Unearthed Hideout.
+2022/08/22 01:42:41 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/22 01:42:41 ] Generating level 83 area "MapWorldsPrimordialBoss3" with seed 828960111
+2022/08/22 01:42:42 ] : You have entered Absence of Patience and Wisdom.
+2022/08/22 01:42:44 ] The Searing Exarch: Annihilation!
+2022/08/22 01:42:51 ] The Searing Exarch: Incineration!
+2022/08/22 01:42:58 ] The Searing Exarch: Disintegration!
+2022/08/22 01:43:00 ] The Searing Exarch: Cleansing!
+2022/08/22 01:43:04 ] The Searing Exarch: Annihilation!
+2022/08/22 01:43:15 ] The Searing Exarch: Annihilation!
+2022/08/22 01:43:19 ] The Searing Exarch: Incineration!
+2022/08/22 01:43:25 ] The Searing Exarch: Annihilation!
+2022/08/22 01:43:34 ] The Searing Exarch: The fires of a thousand suns!
+2022/08/22 01:43:39 ] The Maven: I shall extinguish them all!
+2022/08/22 01:43:48 ] The Searing Exarch: This realm shall be studied by flame for eternity.
+2022/08/22 01:43:48 ] The Maven: No! I want the Atlas! It's mine!
+2022/08/22 01:43:49 ] Connecting to instance server at 999.999.999.2:6112
+2022/08/22 01:43:50 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/22 01:43:50 ] : You have entered Unearthed Hideout.
+2022/08/22 01:43:57 ] Connecting to instance server at 999.999.999.0:6112
+2022/08/22 01:43:57 ] Generating level 83 area "MapWorldsPrimordialBoss3" with seed 828960111
+2022/08/22 01:43:57 ] : You have entered Absence of Patience and Wisdom.
+2022/08/22 01:44:10 ] The Searing Exarch: Incineration!
+2022/08/22 01:44:16 ] The Searing Exarch: Disintegration!
+2022/08/22 01:44:19 ] The Searing Exarch: Cleansing!
+2022/08/22 01:44:22 ] The Searing Exarch: Annihilation!
+2022/08/22 01:44:32 ] The Searing Exarch: Incineration!
+2022/08/22 01:44:39 ] The Searing Exarch: Disintegration!
+2022/08/22 01:44:41 ] The Searing Exarch: Cleansing!
+2022/08/22 01:44:44 ] The Searing Exarch: Improbable...!
+2022/08/22 01:44:47 ] The Maven: Or at least... until the others arrive to challenge me for this realm...
+2022/08/22 01:45:51 ] Connecting to instance server at 999.999.999.3:6112
+2022/08/22 01:45:51 ] Generating level 60 area "HideoutFellshrine" with seed 1
+2022/08/22 01:45:52 ] : You have entered Unearthed Hideout.
+
+2022/08/22 01:45:53 ] Connecting to instance server at 999.999.999.3:6112
+2022/08/22 01:45:54 ] : You have entered EndTheEncounterPleaseAndThankYou.

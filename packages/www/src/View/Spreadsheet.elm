@@ -168,6 +168,10 @@ viewEncountersRows tally =
     , { count = tally.rog, label = "Rog, the Dealer" }
     , { count = tally.dannig, label = "Dannig, Warrior Skald" }
     , { count = tally.ritual, label = "Ritual" }
+    , { count = tally.hunger, label = "The Infinite Hunger" }
+    , { count = tally.blackstar, label = "The Black Star" }
+    , { count = tally.eater, label = "The Eater of Worlds" }
+    , { count = tally.exarch, label = "The Searing Exarch" }
     ]
         |> List.sortBy .count
         |> List.reverse

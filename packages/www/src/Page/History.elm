@@ -742,6 +742,18 @@ viewNpcText query loadedAt npcId =
     else if npcId == NpcId.dannig then
         [ View.Icon.dannig, t L.npcDannig ]
 
+    else if npcId == NpcId.blackstar then
+        [ View.Icon.exarch, t L.npcBlackstar ]
+
+    else if npcId == NpcId.exarch then
+        [ View.Icon.exarch, t L.npcExarch ]
+
+    else if npcId == NpcId.hunger then
+        [ View.Icon.eater, t L.npcHunger ]
+
+    else if npcId == NpcId.eater then
+        [ View.Icon.eater, t L.npcEater ]
+
     else
         []
 
