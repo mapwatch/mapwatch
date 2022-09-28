@@ -48,6 +48,8 @@ type alias Datamine =
     , unindex : LangIndex
     , youHaveEntered : String -> Maybe String
     , afkModeEnabled : String -> Bool
+    , playerSlain : String -> Maybe String
+    , playerSuicide : String -> Maybe String
     , leagues : List League
     , divcards : List DivCard
     , divcardsByMapName : Dict String (List DivCard)
@@ -363,6 +365,8 @@ createDatamine_ ws ls leagues divCards_ ultimatumModifiers npcText =
                 langIndexEmpty
                 (createYouHaveEntered ls)
                 (createAfkModeEnabled ls)
+                (createPlayerSlain ls)
+                (createPlayerSuicide ls)
                 leagues
                 divCards_
                 -- div cards by map name
@@ -410,16 +414,7 @@ createYouHaveEntered lang =
 
         unwrappers : List (String -> Maybe String)
         unwrappers =
-            strings
-                |> List.filterMap
-                    (\s ->
-                        case String.split "{0}" s of
-                            pre :: suf :: [] ->
-                                Just (Util.String.unwrap (": " ++ pre) suf)
-
-                            _ ->
-                                Nothing
-                    )
+            strings |> List.filterMap placeholderUnwrapper
     in
     \raw ->
         unwrappers |> Util.String.mapFirst (\fn -> fn raw) Maybe.Extra.isJust |> Maybe.Extra.join
@@ -450,6 +445,48 @@ createAfkModeEnabled lang =
                     )
     in
     \raw -> List.any (\fn -> fn raw) unwrappers
+
+
+{-| Parse "{0} has been slain."
+-}
+createPlayerSlain : Dict String Lang -> String -> Maybe String
+createPlayerSlain lang =
+    let
+        unwrappers : List (String -> Maybe String)
+        unwrappers =
+            lang
+                |> Dict.values
+                |> List.filterMap (\l -> Dict.get "PlayerSlain" l.index.backendErrors)
+                |> List.filterMap placeholderUnwrapper
+    in
+    \raw ->
+        unwrappers |> Util.String.mapFirst (\fn -> fn raw) Maybe.Extra.isJust |> Maybe.Extra.join
+
+
+{-| Parse "{0} has committed suicide."
+-}
+createPlayerSuicide : Dict String Lang -> String -> Maybe String
+createPlayerSuicide lang =
+    let
+        unwrappers : List (String -> Maybe String)
+        unwrappers =
+            lang
+                |> Dict.values
+                |> List.filterMap (\l -> Dict.get "PlayerSuicide" l.index.backendErrors)
+                |> List.filterMap placeholderUnwrapper
+    in
+    \raw ->
+        unwrappers |> Util.String.mapFirst (\fn -> fn raw) Maybe.Extra.isJust |> Maybe.Extra.join
+
+
+placeholderUnwrapper : String -> Maybe (String -> Maybe String)
+placeholderUnwrapper placeholder =
+    case String.split "{0}" placeholder of
+        pre :: suf :: [] ->
+            Just (Util.String.unwrap (": " ++ pre) suf)
+
+        _ ->
+            Nothing
 
 
 createNPCText : Dict String Lang -> Result String (Dict String NpcTextEntry)

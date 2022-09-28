@@ -81,6 +81,7 @@ viewMapsHeaders =
     , "Best"
     , "Total"
     , "Avg Portals"
+    , "Avg Deaths"
 
     -- this one goes last
     , "https://mapwatch.erosson.org"
@@ -111,6 +112,7 @@ viewMapsRow i row =
     , row.runs.best.mainMap |> Maybe.Extra.unwrap CellEmpty CellDuration
     , row.runs.total.duration.mainMap |> CellDuration
     , row.runs.mean.portals |> CellFloat
+    , row.runs.mean.deaths |> CellFloat
     ]
 
 
@@ -210,6 +212,7 @@ viewHistoryHeaders model =
     , "Town"
     , "Sides"
     , "Portals"
+    , "Deaths"
 
     -- denormalizing all the side areas/npcs below isn't ideal - but it's easier
     -- for most users to work without foreign keys, and it lets them copy-paste
@@ -257,6 +260,7 @@ viewHistoryRow model i run =
     , run.duration.town |> CellDuration
     , run.duration.sides |> CellDuration
     , run.portals |> CellInt
+    , run.deaths |> CellInt
     , run |> viewConqueror Conqueror.Baran
     , run |> viewConqueror Conqueror.Veritania
     , run |> viewConqueror Conqueror.AlHezmin

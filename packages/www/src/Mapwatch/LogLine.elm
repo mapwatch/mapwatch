@@ -47,6 +47,8 @@ type Info
     | AFKMode Bool
     | RitualFindClosestObject
     | GeneratingArea GeneratingAreaData
+    | PlayerSlain String
+    | PlayerSuicide String
 
 
 type alias GeneratingAreaData =
@@ -132,6 +134,10 @@ parseBody dm =
         -- afk on/off
         , \body -> maybeIf (dm.afkModeEnabled body) (AFKMode True)
         , \body -> maybeIf (Dict.get (String.dropLeft 2 body) dm.unindex.backendErrors == Just "AFKModeDisabled") (AFKMode False)
+
+        -- player death
+        , dm.playerSlain >> Maybe.map PlayerSlain
+        , dm.playerSuicide >> Maybe.map PlayerSuicide
         ]
 
 

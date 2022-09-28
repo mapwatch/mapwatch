@@ -75,10 +75,11 @@ type SortField
     | TimeTown
     | TimeSide
     | Portals
+    | Deaths
 
 
 sortFields =
-    [ Name, Region, TimeTotal, TimeMap, TimeTown, TimeSide, Portals, SortDate ]
+    [ Name, Region, TimeTotal, TimeMap, TimeTown, TimeSide, Portals, Deaths, SortDate ]
 
 
 type SortDir
@@ -120,6 +121,9 @@ stringifySortField field =
 
         Portals ->
             "portals"
+
+        Deaths ->
+            "deaths"
 
         SortDate ->
             "date"
@@ -229,6 +233,9 @@ sortParsed field dir runs =
 
                     Portals ->
                         List.sortBy .portals
+
+                    Deaths ->
+                        List.sortBy .deaths
                )
             |> (if dir == Desc then
                     List.reverse

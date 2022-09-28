@@ -144,18 +144,25 @@ maps-th-region = Region
 maps-th-tier = Tier
 maps-th-mean = Average
 maps-th-portals = Portals
+maps-th-deaths = Deaths
 maps-th-count = # Runs
 maps-th-best = Best
 
 maps-td-tier = (T{NUMBER($n)})
 maps-td-mean = {$time} per map
-maps-td-portals = {NUMBER($n)} {$n ->
-    [one] portal
-    *[other] portals
+maps-td-portals = {NUMBER($n) ->
+    [one] {NUMBER($n)} portal
+    *[other] {NUMBER($n)} portals
 }
-maps-td-count = ×{NUMBER($n)} {$n ->
-    [one] run
-    *[other] runs
+maps-td-deaths = {NUMBER($n) ->
+    [0] {""}
+    [zero] {""}
+    [one] {NUMBER($n)} death
+    *[other] {NUMBER($n)} deaths
+}
+maps-td-count = {NUMBER($n) ->
+    [one] ×{NUMBER($n)} run
+    *[other] ×{NUMBER($n)} runs
 }
 
 ## https://mapwatch.erosson.org/#/history
@@ -174,6 +181,12 @@ history-dur-sides = {$dur} in sides
 history-dur-portals = {NUMBER($n)} {$n ->
     [one] portal
     *[other] portals
+}
+history-dur-deaths = {NUMBER($n) ->
+    [0] {""}
+    [zero] {""}
+    [one] {NUMBER($n)} death
+    *[other] {NUMBER($n)} deaths
 }
 history-dur-town-pct = {NUMBER($pct)}% in town
 history-npc-side-area =

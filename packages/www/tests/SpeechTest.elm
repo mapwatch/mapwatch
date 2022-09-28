@@ -66,6 +66,7 @@ emptyRaw =
     { address = emptyAddr
     , startedAt = Time.millisToPosix 0
     , portals = 0
+    , deaths = 0
     , npcSays = Dict.empty
     , visits = []
     , isAbandoned = False

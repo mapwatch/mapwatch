@@ -26,6 +26,7 @@
 2022/08/21 13:42:10 ] The Infinite Hunger: Melt!
 2022/08/21 13:42:23 ] The Infinite Hunger: Obliterate!
 2022/08/21 13:42:24 ] The Infinite Hunger: Hunger without end...
+2022/08/21 13:42:35 ] : Anonymous has been slain.
 2022/08/21 13:42:35 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/21 13:42:36 ] The Infinite Hunger: A feast of muscle and bone!
 2022/08/21 13:42:42 ] Connecting to instance server at 999.999.999.1:6112
@@ -41,7 +42,7 @@
 2022/08/21 13:43:09 ] Generating level 60 area "HideoutFellshrine" with seed 1
 2022/08/21 13:43:10 ] : You have entered Unearthed Hideout.
 
-# blackstar
+# black star
 2022/08/21 13:43:52 ] Connecting to instance server at 999.999.999.0:6112
 2022/08/21 13:43:52 ] Generating level 79 area "MapWorldsPrimordialBoss2" with seed 302365007
 2022/08/21 13:43:53 ] : You have entered Polaric Void.
@@ -50,6 +51,7 @@
 2022/08/21 13:44:08 ] The Black Star: Replica!
 2022/08/21 13:44:10 ] The Black Star: Deep space!
 2022/08/21 13:44:13 ] The Black Star: Astral avalanche!
+2022/08/21 13:44:20 ] : Anonymous has been slain.
 2022/08/21 13:44:20 ] The Black Star: Your champion... has fallen.
 2022/08/21 13:44:20 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/21 13:44:22 ] Connecting to instance server at 999.999.999.1:6112
@@ -66,6 +68,7 @@
 2022/08/21 13:44:50 ] The Black Star: Astral avalanche!
 2022/08/21 13:45:01 ] The Black Star: Solar storm!
 2022/08/21 13:45:13 ] The Black Star: Deep space!
+2022/08/21 13:45:15 ] : Anonymous has been slain.
 2022/08/21 13:45:15 ] The Black Star: Your champion... has fallen.
 2022/08/21 13:45:15 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/21 13:45:19 ] Connecting to instance server at 999.999.999.2:6112
@@ -78,6 +81,7 @@
 2022/08/21 13:45:30 ] The Black Star: Deep space!
 2022/08/21 13:45:31 ] The Black Star: Astral avalanche!
 2022/08/21 13:45:43 ] The Black Star: Solar storm!
+2022/08/21 13:45:48 ] : Anonymous has been slain.
 2022/08/21 13:45:48 ] The Black Star: The Cleansing Fire prevails...
 2022/08/21 13:45:48 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/21 13:45:49 ] Connecting to instance server at 999.999.999.3:6112
@@ -90,6 +94,7 @@
 2022/08/21 13:46:02 ] The Black Star: Simulacrum!
 2022/08/21 13:46:04 ] The Black Star: Deep space!
 2022/08/21 13:46:09 ] The Black Star: Astral avalanche!
+2022/08/21 13:46:17 ] : Anonymous has been slain.
 2022/08/21 13:46:17 ] The Black Star: The Cleansing Fire prevails...
 2022/08/21 13:46:17 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/21 13:46:18 ] Connecting to instance server at 999.999.999.3:6112
@@ -119,6 +124,7 @@
 2022/08/22 01:18:25 ] The Maven: I want to win this.
 2022/08/22 01:18:49 ] The Eater of Worlds: Writhing mass!
 2022/08/22 01:19:01 ] The Eater of Worlds: Writhing mass!
+2022/08/22 01:19:06 ] : Anonymous has been slain.
 2022/08/22 01:19:07 ] The Eater of Worlds: This realm's infinite delights belong to us now.
 2022/08/22 01:19:07 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/22 01:19:08 ] Connecting to instance server at 999.999.999.1:6112
@@ -146,6 +152,7 @@
 2022/08/22 01:20:42 ] The Eater of Worlds: Inescapable doom!
 2022/08/22 01:20:46 ] The Maven: My champion! Energise the spheres!
 2022/08/22 01:20:52 ] The Eater of Worlds: Consume!
+2022/08/22 01:20:53 ] : Anonymous has been slain.
 2022/08/22 01:20:53 ] The Eater of Worlds: This realm's infinite delights belong to us now.
 2022/08/22 01:20:53 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/22 01:20:53 ] The Eater of Worlds: All will be devoured.
@@ -187,6 +194,7 @@
 2022/08/22 01:23:27 ] The Eater of Worlds: Perish!
 2022/08/22 01:23:34 ] The Eater of Worlds: Writhing mass!
 2022/08/22 01:23:39 ] The Eater of Worlds: Hunger!
+2022/08/22 01:23:42 ] : Anonymous has been slain.
 2022/08/22 01:23:42 ] The Eater of Worlds: This realm's infinite delights belong to us now.
 2022/08/22 01:23:42 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/22 01:23:43 ] The Eater of Worlds: Hunger!
@@ -224,6 +232,7 @@
 2022/08/22 01:25:54 ] The Maven: Begone!
 2022/08/22 01:25:55 ] The Eater of Worlds: Hunger!
 2022/08/22 01:26:00 ] The Eater of Worlds: Hunger!
+2022/08/22 01:26:03 ] : Anonymous has been slain.
 2022/08/22 01:26:03 ] The Eater of Worlds: This realm's infinite delights belong to us now.
 2022/08/22 01:26:03 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/22 01:26:05 ] Connecting to instance server at 999.999.999.4:6112
@@ -292,6 +301,7 @@
 2022/08/22 01:42:07 ] The Searing Exarch: Annihilation!
 2022/08/22 01:42:11 ] The Searing Exarch: The fires of a thousand suns!
 2022/08/22 01:42:16 ] The Maven: I shall extinguish them all!
+2022/08/22 01:42:32 ] : Anonymous has been slain.
 2022/08/22 01:42:32 ] The Searing Exarch: This realm shall be studied by flame for eternity.
 2022/08/22 01:42:32 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/22 01:42:33 ] Connecting to instance server at 999.999.999.1:6112
@@ -310,6 +320,7 @@
 2022/08/22 01:43:25 ] The Searing Exarch: Annihilation!
 2022/08/22 01:43:34 ] The Searing Exarch: The fires of a thousand suns!
 2022/08/22 01:43:39 ] The Maven: I shall extinguish them all!
+2022/08/22 01:43:48 ] : Anonymous has been slain.
 2022/08/22 01:43:48 ] The Searing Exarch: This realm shall be studied by flame for eternity.
 2022/08/22 01:43:48 ] The Maven: No! I want the Atlas! It's mine!
 2022/08/22 01:43:49 ] Connecting to instance server at 999.999.999.2:6112

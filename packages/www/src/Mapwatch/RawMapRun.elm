@@ -34,6 +34,7 @@ type alias RawMapRun =
     , level : Maybe Int
     , startedAt : Posix
     , portals : Int
+    , deaths : Int
     , npcSays : NpcEncounters
     , visits : List Visit
     , isAbandoned : Bool
@@ -68,6 +69,7 @@ create addr startedAt npcSays level posStart posEnd =
             , npcSays = npcSays
             , visits = []
             , portals = 1
+            , deaths = 0
             , isAbandoned = False
             , positionStart = posStart
             , positionEnd = posEnd
@@ -247,19 +249,24 @@ updateLogLine line instance state =
                 LogLine.RitualFindClosestObject ->
                     state |> Maybe.map (\run -> { run | rituals = run.rituals + 1 })
 
+                LogLine.PlayerSlain _ ->
+                    state |> Maybe.map (\run -> { run | deaths = run.deaths + 1 })
+
+                LogLine.PlayerSuicide _ ->
+                    state |> Maybe.map (\run -> { run | deaths = run.deaths + 1 })
+
                 -- Ignore all others, but explicitly list them for exhaustiveness checks
                 LogLine.GeneratingArea gen ->
                     state
-                        --|> Maybe.map
-                        --    (\run ->
-                        --        let _ = Debug.log ("gen: " ++ gen.worldAreaId) ((run.address.worldArea |> Maybe.map .id), run.visits) in
-                        --        if List.isEmpty run.visits || (run.address.worldArea |> Maybe.map .id) == Just gen.worldAreaId then
-                        --            { run | level = Maybe.Extra.or run.level (Just gen.level) }
 
-                        --        else
-                        --            run
-                        --    )
-
+                --|> Maybe.map
+                --    (\run ->
+                --        let _ = Debug.log ("gen: " ++ gen.worldAreaId) ((run.address.worldArea |> Maybe.map .id), run.visits) in
+                --        if List.isEmpty run.visits || (run.address.worldArea |> Maybe.map .id) == Just gen.worldAreaId then
+                --            { run | level = Maybe.Extra.or run.level (Just gen.level) }
+                --        else
+                --            run
+                --    )
                 LogLine.Opening ->
                     state
 

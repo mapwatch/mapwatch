@@ -282,3 +282,9 @@ update datamine line state =
 
         LogLine.NPCSays _ ->
             state
+
+        LogLine.PlayerSlain _ ->
+            state
+
+        LogLine.PlayerSuicide _ ->
+            state

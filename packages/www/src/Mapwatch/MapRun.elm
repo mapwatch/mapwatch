@@ -31,6 +31,7 @@ type alias MapRun =
     , startedAt : Posix
     , updatedAt : Posix
     , portals : Int
+    , deaths : Int
     , positionStart : Int
     , positionEnd : Int
 
@@ -70,8 +71,8 @@ type alias Durations =
 
 
 type alias Aggregate =
-    { mean : { duration : Durations, portals : Float }
-    , total : { duration : Durations, portals : Int }
+    { mean : { duration : Durations, portals : Float, deaths : Float }
+    , total : { duration : Durations, portals : Int, deaths : Int }
     , best : { all : Maybe Millis, mainMap : Maybe Millis }
     , num : Int
     }
@@ -103,9 +104,13 @@ aggregate runs0 =
 
         portals =
             runs |> List.map .portals |> List.sum
+
+        deaths =
+            runs |> List.map .deaths |> List.sum
     in
     { mean =
         { portals = toFloat portals / toFloat nmean
+        , deaths = toFloat deaths / toFloat nmean
         , duration =
             { all = totalDuration.all // nmean
             , town = totalDuration.town // nmean
@@ -117,6 +122,7 @@ aggregate runs0 =
         }
     , total =
         { portals = portals
+        , deaths = deaths
         , duration = totalDuration
         }
     , best =
@@ -180,6 +186,7 @@ fromRaw dm raw =
     , positionStart = raw.positionStart
     , positionEnd = raw.positionEnd
     , portals = raw.portals
+    , deaths = raw.deaths
     , isAbandoned = raw.isAbandoned
     , isBlightedMap = isBlightedMap raw
     , heistNpcs = heist

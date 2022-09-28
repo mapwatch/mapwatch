@@ -27,6 +27,7 @@ emptyRun =
     , isHeartOfTheGrove = False
     , npcSays = Dict.empty
     , portals = 0
+    , deaths = 0
     , positionEnd = 0
     , positionStart = 0
     , rootNpcs = Set.empty

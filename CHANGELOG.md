@@ -6,6 +6,7 @@ All substantial Mapwatch website changes.
 
 ## 2022-09-28
 - The Searing Exarch, Eater of Worlds, Black Star, and Infinite Hunger encounters are now tracked.
+- Your deaths per map are now tracked.
 
 ## 2022-08-16
 - Game data is now pulled using [poe-dat-viewer](https://snosme.github.io/poe-dat-viewer/), instead of PyPoE (RIP). Things should generally be much more up-to-date now.

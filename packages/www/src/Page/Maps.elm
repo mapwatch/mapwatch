@@ -178,6 +178,7 @@ header query =
         , cell "tier" L.mapsThTier
         , cell "meandur" L.mapsThMean
         , cell "portals" L.mapsThPortals
+        , cell "deaths" L.mapsThDeaths
         , cell "runs" L.mapsThCount
         , cell "bestdur" L.mapsThBest
         ]
@@ -213,6 +214,7 @@ viewMap query { name, worldArea, runs } =
                 td (L.mapsTdTier { n = toFloat tier }) []
         , td (L.mapsTdMean { time = View.Home.formatDuration mean.duration.mainMap }) []
         , td (L.mapsTdPortals { n = mean.portals }) []
+        , td (L.mapsTdDeaths { n = mean.deaths }) []
         , td (L.mapsTdCount { n = toFloat num }) []
         , td [] [ text <| Maybe.Extra.unwrap "--:--" View.Home.formatDuration best.mainMap ]
         ]

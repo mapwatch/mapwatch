@@ -12387,6 +12387,8 @@
     "English": {
       "backendErrors": {
         "EnteredArea": "You have entered {0}.",
+        "PlayerSuicide": "{0} has committed suicide.",
+        "PlayerSlain": "{0} has been slain.",
         "AFKModeEnabled": "AFK mode is now ON. Autoreply \"{0}\"",
         "AFKModeDisabled": "AFK mode is now OFF."
       },
@@ -14484,6 +14486,8 @@
     "French": {
       "backendErrors": {
         "EnteredArea": "Vous êtes à présent dans : {0}.",
+        "PlayerSuicide": "{0} a mis fin à ses jours.",
+        "PlayerSlain": "{0} vient de mourir.",
         "AFKModeEnabled": "Le mode Absent (AFK) est désormais activé. Réponse automatique : « {0} »",
         "AFKModeDisabled": "Le mode Absent (AFK) est désactivé."
       },
@@ -16581,6 +16585,8 @@
     "German": {
       "backendErrors": {
         "EnteredArea": "Ihr habt '{0}' betreten.",
+        "PlayerSuicide": "{0} hat Selbstmord begangen.",
+        "PlayerSlain": "{0} wurde getötet.",
         "AFKModeEnabled": "AFK-Modus ist nun AN. Automatische Antwort: '{0}'",
         "AFKModeDisabled": "AFK-Modus ist nun AUS."
       },
@@ -18678,6 +18684,8 @@
     "Japanese": {
       "backendErrors": {
         "EnteredArea": "あなたは{0}に入場しました。",
+        "PlayerSuicide": "{0}が自殺しました。",
+        "PlayerSlain": "{0}が死亡しました。",
         "AFKModeEnabled": "AFKモードがONになっています。自動応答 \"{0}\"",
         "AFKModeDisabled": "AFKモードはOFFになっています。"
       },
@@ -20775,6 +20783,8 @@
     "Korean": {
       "backendErrors": {
         "EnteredArea": "{0}에 진입했습니다.",
+        "PlayerSuicide": "{0} 님이 스스로 목숨을 끊었습니다.",
+        "PlayerSlain": "{0} 님이 사망했습니다.",
         "AFKModeEnabled": "자리 비움 모드를 설정했습니다. \"{0}\"을(를) 자동으로 답신합니다.",
         "AFKModeDisabled": "자리 비움 모드를 해제했습니다."
       },
@@ -22872,6 +22882,8 @@
     "Portuguese": {
       "backendErrors": {
         "EnteredArea": "Você entrou em: {0}",
+        "PlayerSuicide": "{0} cometeu suicídio.",
+        "PlayerSlain": "{0} foi morto.",
         "AFKModeEnabled": "Modo LDT Ativado. Reposta automática \"{0}\"",
         "AFKModeDisabled": "Modo LDT Desativado."
       },
@@ -24969,6 +24981,8 @@
     "Russian": {
       "backendErrors": {
         "EnteredArea": "Вы вошли в область {0}.",
+        "PlayerSuicide": "{0} покончил с собой",
+        "PlayerSlain": "{0} был повержен.",
         "AFKModeEnabled": "Режим \"отошёл\" включён. Авто-ответ \"{0}\".",
         "AFKModeDisabled": "Режим \"отошёл\" выключен."
       },
@@ -27066,6 +27080,8 @@
     "Spanish": {
       "backendErrors": {
         "EnteredArea": "Has entrado a {0}",
+        "PlayerSuicide": "{0} se ha suicidado.",
+        "PlayerSlain": "{0} ha muerto.",
         "AFKModeEnabled": "El modo Ausente está habilitado. Autorespuesta \"{0}\"",
         "AFKModeDisabled": "El modo Ausente está deshabilitado."
       },
@@ -29163,6 +29179,8 @@
     "Thai": {
       "backendErrors": {
         "EnteredArea": "คุณเข้าสู่ {0}",
+        "PlayerSuicide": "{0} ได้ฆ่าตัวตาย",
+        "PlayerSlain": "{0} ถูกสังหาร",
         "AFKModeEnabled": "เปิดโหมด AFK แล้ว ตอบกลับอัตโนมัติ \"{0}\"",
         "AFKModeDisabled": "ปิดโหมด AFK แล้ว"
       },
@@ -31260,6 +31278,8 @@
     "Traditional Chinese": {
       "backendErrors": {
         "EnteredArea": "你已進入：{0}。",
+        "PlayerSuicide": "{0} 自殺了。",
+        "PlayerSlain": "{0} 被殺死了。",
         "AFKModeEnabled": "暫離模式啟動。自動回覆 \"{0}\"",
         "AFKModeDisabled": "暫離模式關閉。"
       },

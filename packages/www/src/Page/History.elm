@@ -206,7 +206,11 @@ viewStatsRows title runs =
         ([ td [] []
          , td [ L.historySummaryThTotal ] []
          ]
-            ++ viewDurationAggregate { portals = toFloat runs.total.portals, duration = runs.total.duration }
+            ++ viewDurationAggregate
+                { portals = toFloat runs.total.portals
+                , deaths = toFloat runs.total.deaths
+                , duration = runs.total.duration
+                }
         )
     ]
 
@@ -344,6 +348,7 @@ viewHistoryHeader query sort =
         , th [] []
         , th [] [ link RunSort.TimeSide ]
         , th [] [ link RunSort.Portals ]
+        , th [] [ link RunSort.Deaths ]
         , th [] []
         ]
 
@@ -410,6 +415,7 @@ viewRitualRow query { showDate } count =
                    , td [ class "side-dur" ]
                         []
                    , td [ class "portals" ] []
+                   , td [ class "deaths" ] []
                    , td [ class "town-pct" ] []
                    ]
             )
@@ -436,6 +442,7 @@ viewAfkDurationRow query { showDate } durationAfk =
                    , td [ class "side-dur" ]
                         [ text "-", viewDuration durationAfk ]
                    , td [ class "portals" ] []
+                   , td [ class "deaths" ] []
                    , td [ class "town-pct" ] []
                    ]
             )
@@ -504,6 +511,7 @@ viewTrialmasterRow { showDate } root state =
                         |> Maybe.withDefault []
                     )
                , td [ class "portals" ] []
+               , td [ class "deaths" ] []
                , td [ class "town-pct" ] []
                ]
         )
@@ -530,7 +538,7 @@ viewTrialmasterMod mmod =
                 []
 
 
-viewDurationAggregate : { a | portals : Float, duration : MapRun.Durations } -> List (Html msg)
+viewDurationAggregate : { a | portals : Float, deaths : Float, duration : MapRun.Durations } -> List (Html msg)
 viewDurationAggregate a =
     [ td [ class "dur total-dur" ] [ viewDuration a.duration.all ] ]
         ++ viewDurationTail a
@@ -551,11 +559,11 @@ viewRunDurations goal run =
         ]
     , td [ class "dur delta-dur" ] [ viewDurationDelta (Just run.duration.all) goal ]
     ]
-        ++ viewDurationTail { portals = toFloat run.portals, duration = run.duration }
+        ++ viewDurationTail { portals = toFloat run.portals, deaths = toFloat run.deaths, duration = run.duration }
 
 
-viewDurationTail : { a | portals : Float, duration : MapRun.Durations } -> List (Html msg)
-viewDurationTail { portals, duration } =
+viewDurationTail : { a | portals : Float, deaths : Float, duration : MapRun.Durations } -> List (Html msg)
+viewDurationTail { portals, deaths, duration } =
     [ td [ class "dur" ] [ text " = " ]
     , td [ class "dur" ] [ text " ", span (L.historyDurMap { dur = View.Home.formatDuration duration.mainMap }) [], text " " ]
     , td [ class "dur" ] [ text " + " ]
@@ -570,6 +578,7 @@ viewDurationTail { portals, duration } =
                 [ td [ class "dur" ] [], td [ class "dur" ] [] ]
            )
         ++ [ td [ class "portals" ] [ span (L.historyDurPortals { n = portals }) [] ]
+           , td [ class "deaths" ] [ span (L.historyDurDeaths { n = deaths }) [] ]
            , td [ class "town-pct" ]
                 [ span (L.historyDurTownPct { pct = toFloat <| clamp 0 100 <| floor <| 100 * (toFloat duration.town / Basics.max 1 (toFloat duration.all)) }) [] ]
            ]
