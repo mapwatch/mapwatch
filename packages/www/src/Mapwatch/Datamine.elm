@@ -231,7 +231,7 @@ imgSrc args w =
         w.poedbMapIcon
 
     else
-        (w.itemVisualId
+        w.itemVisualId
             |> Maybe.map
                 (String.replace ".dds" ".png"
                     >> (\path ->
@@ -242,13 +242,17 @@ imgSrc args w =
                                 path
                        )
                     >> (\path ->
-                            imgCdn
-                                ++ path
-                                ++ "?w=1&h=1&scale=1&mn=6&mt="
-                                ++ String.fromInt (tier w |> Maybe.withDefault 0)
-                                ++ boolQuery "&mb" args.isBlightedMap
+                            if String.startsWith "https://" path then
+                                path
+
+                            else
+                                imgCdn
+                                    ++ path
+                                    ++ "?w=1&h=1&scale=1&mn=6&mt="
+                                    ++ String.fromInt (tier w |> Maybe.withDefault 0)
+                                    ++ boolQuery "&mb" args.isBlightedMap
                        )
-                ))
+                )
 
 
 boolQuery : String -> Bool -> String
@@ -333,7 +337,7 @@ wikiUrl dm w =
 divCards : Datamine -> WorldArea -> List DivCard
 divCards dm w =
     dm.divcardsByMapName
-        |> Dict.get w.id 
+        |> Dict.get w.id
         |> Maybe.withDefault []
 
 
@@ -561,8 +565,10 @@ divCardsDecoder : D.Decoder (List DivCard)
 divCardsDecoder =
     D.map2 DivCard
         (D.field "name" D.string)
-        (D.field "drop areas" (D.string |> D.map (String.split ",") )
-            |> D.maybe |> D.map (Maybe.withDefault []))
+        (D.field "drop areas" (D.string |> D.map (String.split ","))
+            |> D.maybe
+            |> D.map (Maybe.withDefault [])
+        )
         |> D.field "title"
         |> D.list
 
