@@ -65,12 +65,13 @@ testCases =
     , ( "grand-heist.txt", "#/history", "Heist-contract vs. Grand-heist" )
     , ( "shaper-uberelder.txt", "#/history", "Shaper vs Uber-Elder in \"The Shaper's Realm\"" )
     , ( "oshabi-boss.txt", "#/history", "Oshabi boss-fight vs. standard harvest" )
-    , ( "chinese-client.txt", "&tickStart=1526227994000&logtz=0#/history", "Chinese client test. BROKEN since ggpk reformat: https://github.com/mapwatch/mapwatch/issues/118" )
+    , ( "chinese-client.txt", "&tickStart=1526227994000&logtz=0#/history", "Chinese client test" )
     , ( "simulacrum.txt", "&tickStart=1526927461000&logtz=0#/history", "Simulacrum has a 60min timeout, other maps have 30min" )
     , ( "daylight-savings.txt", "&tickStart=1603996952265&logtz=0#/history", "DST" )
     , ( "short-client.txt", "#/history", "for testing text-to-speech" )
     , ( "issue235.txt", "#/history", "test case from https://github.com/mapwatch/mapwatch/issues/235" )
     , ( "ritual.txt", "#/history", "test case for ritual reminder" )
+    , ( "siege-eater-exarch.txt", "#/history", "test case for eater and exarch" )
     ]
 
 
