@@ -12450,7 +12450,11 @@
         "Metadata/NPC/League/Expedition/Saga": "Dannig, Warrior Skald",
         "Metadata/NPC/League/Expedition/Gambler": "Gwennen, the Gambler",
         "Metadata/NPC/League/Expedition/Haggler": "Tujen, the Haggler",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "The Black Star",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "The Searing Exarch",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "The Eater of Worlds",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "The Infinite Hunger"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "I see you, little mouse... you don't belong here. Run along!",
@@ -14543,7 +14547,11 @@
         "Metadata/NPC/League/Expedition/Saga": "Dannig, le Guerrier scalde",
         "Metadata/NPC/League/Expedition/Gambler": "Gwennen, la Parieuse",
         "Metadata/NPC/League/Expedition/Haggler": "Tujen, le Marchandeur",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "L'Astre noir",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "L'Exarque ardent",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Le Mangeur de mondes",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "La Faim infinie"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "Je te vois, petite souris… tu n'as rien à faire ici. Du balais !",
@@ -16636,7 +16644,11 @@
         "Metadata/NPC/League/Expedition/Saga": "Dannig, Krieger-Skalde",
         "Metadata/NPC/League/Expedition/Gambler": "Gwennen die Spielerin",
         "Metadata/NPC/League/Expedition/Haggler": "Tujen der Feilscher",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "Der Schwarze Stern",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "Der Brennende Exarch",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Der Weltenfresser",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "Der Unendliche Hunger"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "Ich sehe dich, kleines Ungeziefer ... du hast hier nichts verloren. Scher dich fort!",
@@ -18729,7 +18741,11 @@
         "Metadata/NPC/League/Expedition/Saga": "戦う吟唱詩人、ダニグ",
         "Metadata/NPC/League/Expedition/Gambler": "ギャンブラー、グウェネン",
         "Metadata/NPC/League/Expedition/Haggler": "値切り屋、トゥージェン",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "ログ"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "ログ",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "黒き星",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "灼熱の代行者",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "世界を喰らう者",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "果てなき渇望"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "I see you, little mouse... you don't belong here. Run along!",
@@ -20822,7 +20838,11 @@
         "Metadata/NPC/League/Expedition/Saga": "전사 시인 대닉",
         "Metadata/NPC/League/Expedition/Gambler": "도박사 그위넨",
         "Metadata/NPC/League/Expedition/Haggler": "거간꾼 투젠",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "로그"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "로그",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "검은 별",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "작열의 총주교",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "세계 포식자",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "무한한 허기"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "네가 보이는구나, 생쥐. 이 세상에 속하지 않은 자여, 썩 물러가거라!",
@@ -22915,7 +22935,11 @@
         "Metadata/NPC/League/Expedition/Saga": "Dannig, Guerreiro Skald",
         "Metadata/NPC/League/Expedition/Gambler": "Gwennen, a Apostadora",
         "Metadata/NPC/League/Expedition/Haggler": "Tujen, o Pechincheiro",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "A Estrela Negra",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "O Exarca Cauterizado",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "O Devorador de Mundos",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "A Fome Infinita"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "<if:MS>{Bem-vindo ao crisol da criação. A bigorna em qual os mundos foram forjados.}<elif:FS>{Bem-vinda ao crisol da criação. A bigorna em qual os mundos foram forjados.}",
@@ -25008,7 +25032,11 @@
         "Metadata/NPC/League/Expedition/Saga": "Дэнниг, воин и скальд",
         "Metadata/NPC/League/Expedition/Gambler": "Гвеннен, спекулянтка",
         "Metadata/NPC/League/Expedition/Haggler": "Туджин, торгаш",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Рог"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Рог",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "Чёрное солнце",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "Пламенный экзарх",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Пожиратель миров",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "Неутолимый голод"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "Я тебя вижу, мышонок... Тебе здесь не место. Убирайся!",
@@ -27101,7 +27129,11 @@
         "Metadata/NPC/League/Expedition/Saga": "Dannig, Guerrero escaldo",
         "Metadata/NPC/League/Expedition/Gambler": "Gwennen, la Apostadora",
         "Metadata/NPC/League/Expedition/Haggler": "Tujen, el Regateador",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "La Estrella negra",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "El Exarca abrasador",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "El Devorador de mundos",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "El Hambre infinita"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "<if:MS>{Te veo, ratoncito... no perteneces aquí. ¡Sigue tu camino!}<elif:FS>{Te veo, ratoncita... no perteneces aquí. ¡Sigue tu camino!}",
@@ -29194,7 +29226,11 @@
         "Metadata/NPC/League/Expedition/Saga": "แดนนิก กวีนักรบ",
         "Metadata/NPC/League/Expedition/Gambler": "เกว็นเน็น นักพนัน",
         "Metadata/NPC/League/Expedition/Haggler": "ทูเจน นักต่อราคา",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "ร็อก"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "ร็อก",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "ดวงดาวสีดำ",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "อุปราชอาบเพลิง",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "ผู้กลืนกินโลกา",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "ความหิวโหยไม่รู้สิ้น"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "ข้า​เห็น​เจ้า​แล้ว​เจ้า​หนู​น้อย... เจ้า​ไม่​เหมาะ​กับ​ที่​นี่ ไปซะไป!",
@@ -31287,7 +31323,11 @@
         "Metadata/NPC/League/Expedition/Saga": "戰鬥詩人．丹尼格",
         "Metadata/NPC/League/Expedition/Gambler": "賭徒．關南",
         "Metadata/NPC/League/Expedition/Haggler": "討價還價．圖貞",
-        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "羅格"
+        "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "羅格",
+        "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "黯星",
+        "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "灼烙總督",
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "吞噬天地",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "無盡渴望"
       },
       "npcTextAudio": {
         "ShaperMapShapersRealm": "歡迎來到塑者之域。創世的鐵砧，異界的創作皆於此誕生。",

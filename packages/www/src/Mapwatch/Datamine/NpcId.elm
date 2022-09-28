@@ -192,3 +192,23 @@ rog =
 
 dannig =
     "Metadata/NPC/League/Expedition/Saga"
+
+
+
+-- 3.17 siege of the atlas bosses
+
+
+blackstar =
+    "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss"
+
+
+exarch =
+    "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss"
+
+
+eater =
+    "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss"
+
+
+hunger =
+    "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss"

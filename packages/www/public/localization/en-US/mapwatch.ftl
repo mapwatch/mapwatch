@@ -240,6 +240,11 @@ npc-conqueror-fight = : Fight
 npc-trialmaster-boss = Trialmaster boss fight: {$result}
 npc-trialmaster = The Trialmaster: {$result} ({NUMBER($n)})
 
+npc-blackstar = The Black Star
+npc-exarch = The Searing Exarch
+npc-eater = The Eater of Worlds
+npc-hunger = The Infinite Hunger
+
 side-area-zana = Zana
 side-area-vaal = Vaal side area
 side-area-trial = Labyrinth trial

@@ -66,6 +66,15 @@ const exportedNPCs = new Set([
   // "Metadata/NPC/League/Expedition/Dealer",
   "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog",
   "Metadata/NPC/League/Expedition/Saga",
+  // 3.17: eater and exarch. We don't strictly need their dialogue, but it makes them searchable
+  // black star
+  "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss",
+  // exarch
+  "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss",
+  // eater
+  "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss",
+  // infinite hunger
+  "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss",
 ])
 function isNPCIdExported(i: input.NPC): boolean {
   return !!exportedNPCs.has(i.Id)
