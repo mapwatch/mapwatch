@@ -56,12 +56,16 @@ type alias EncounterTally =
     , rog : Int
     , dannig : Int
     , ritual : Int
+    , blackstar : Int
+    , exarch : Int
+    , hunger : Int
+    , eater : Int
     }
 
 
 empty : EncounterTally
 empty =
-    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+    EncounterTally 0 0 0 [] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 
 
@@ -128,7 +132,7 @@ fromMapRuns runs =
     { empty
         | blightedMaps = runs |> List.Extra.count .isBlightedMap
         , heartOfTheGrove = hearts
-        , uniqueMaps = maps |> List.filterMap .worldArea |> List.Extra.count .isUniqueMapArea
+        , uniqueMaps = maps |> List.filterMap .worldArea |> List.Extra.count (\w -> w.isUniqueMapArea && not (isSiegeOfTheAtlasBoss w))
         , conquerors = runs |> List.filterMap .conqueror |> List.Extra.count (\( conqueror, encounter ) -> encounter == Conqueror.Fight)
         , labyrinths = maps |> List.filterMap .worldArea |> List.Extra.count .isLabyrinth
         , grandHeists = grandHeists
@@ -145,11 +149,20 @@ fromMapRuns runs =
         , trialmasterLost = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Lost)
         , trialmasterRetreated = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Retreated)
         , trialmasterAbandoned = trialmasterOutcomes |> List.Extra.count ((==) DMTrialmaster.Abandoned)
+        , hunger = maps |> List.filterMap .worldArea |> List.Extra.count (\w -> w.id == "MapWorldsPrimordialBoss1")
+        , blackstar = maps |> List.filterMap .worldArea |> List.Extra.count (\w -> w.id == "MapWorldsPrimordialBoss2")
+        , exarch = maps |> List.filterMap .worldArea |> List.Extra.count (\w -> w.id == "MapWorldsPrimordialBoss3")
+        , eater = maps |> List.filterMap .worldArea |> List.Extra.count (\w -> w.id == "MapWorldsPrimordialBoss4")
         , ritual = runs |> List.Extra.count (\r -> r.rituals > 0)
     }
         |> tallyNpcs npcs
         |> (\t -> { t | oshabi = t.oshabi - hearts |> max 0 })
         |> tallySides sides
+
+
+isSiegeOfTheAtlasBoss : WorldArea -> Bool
+isSiegeOfTheAtlasBoss =
+    .id >> String.startsWith "MapWorldsPrimordialBoss"
 
 
 tallyNpcs : List NpcGroup -> EncounterTally -> EncounterTally

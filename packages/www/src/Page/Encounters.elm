@@ -276,6 +276,10 @@ listEncounterTally query tally =
         , nonMapEntry tally.blightedMaps "blighted" [ View.Icon.blightedMap, t L.encounterBlightedMaps ]
         , nonMapEntry tally.mavenCrucibles "id:MavenHub" [ View.Icon.maven, t L.encounterMavenHub ]
         , nonMapEntry tally.sirusFights "id:AtlasExilesBoss5" [ View.Icon.sirus, t L.encounterSirus ]
+        , nonMapEntry tally.hunger "id:MapWorldsPrimordialBoss1" [ View.Icon.eater, t L.npcHunger ]
+        , nonMapEntry tally.blackstar "id:MapWorldsPrimordialBoss2" [ View.Icon.exarch, t L.npcBlackstar ]
+        , nonMapEntry tally.eater "id:MapWorldsPrimordialBoss3" [ View.Icon.eater, t L.npcEater ]
+        , nonMapEntry tally.exarch "id:MapWorldsPrimordialBoss4" [ View.Icon.exarch, t L.npcExarch ]
         ]
             |> List.filter (\r -> r.count > 0)
             |> List.sortBy .count
