@@ -431,5 +431,10 @@ applyEntry mark entry =
                     0
               )
     , totalDeaths = entry.totalDeaths + mark.deaths
-    , minDeaths = entry.minDeaths |> Maybe.withDefault mark.deaths |> min mark.deaths |> Just
+    , minDeaths =
+        if mark.completed |> Maybe.withDefault False then
+            entry.minDeaths |> Maybe.withDefault mark.deaths |> min mark.deaths |> Just
+
+        else
+            entry.minDeaths
     }

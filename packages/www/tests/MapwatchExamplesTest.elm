@@ -61,7 +61,7 @@ all =
                         , List.filterMap .bossTally
                             >> Mapwatch.BossTally.aggregate
                             >> Expect.all
-                                [ .atziri >> .uber >> Expect.equal { runs = 0, minDeaths = Nothing, totalDeaths = 0 }
+                                [ .atziri >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
                                 , .eater >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
                                 , .eater >> .standard >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 4, totalDeaths = 4 }
                                 , .exarch >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
@@ -69,5 +69,20 @@ all =
                                 , .hunger >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 1, totalDeaths = 1 }
                                 , .blackstar >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 4, totalDeaths = 4 }
                                 ]
+                        ]
+        , test "bosses" <|
+            \_ ->
+                Fixture.Examples.bosses
+                    |> mapRuns
+                    |> List.filterMap .bossTally
+                    |> Mapwatch.BossTally.aggregate
+                    |> Expect.all
+                        [ .atziri >> .uber >> Expect.equal { runs = 1, completed = 0, minDeaths = Nothing, totalDeaths = 6 }
+                        , .eater >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
+                        , .eater >> .standard >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 4, totalDeaths = 4 }
+                        , .exarch >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
+                        , .exarch >> .standard >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 2, totalDeaths = 2 }
+                        , .hunger >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 1, totalDeaths = 1 }
+                        , .blackstar >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 4, totalDeaths = 4 }
                         ]
         ]
