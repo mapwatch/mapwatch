@@ -1,4 +1,25 @@
-module Mapwatch.BossTally exposing (BossEntry, BossMark, BossTally, State(..), UberBossEntry, aggregate, conquerors, fromMapRun, isDeathless, isUnvisited, isVictory, isVisited, shaperGuardians, state)
+module Mapwatch.BossTally exposing
+    ( BossEntry(..)
+    , BossMark
+    , BossTally
+    , Progress
+    , UberBossEntry
+    , aggregate
+    , entriesProgress
+    , entryProgress
+    , fromMapRun
+    , groupConquerors
+    , groupLesserEldritch
+    , groupPinnacle
+    , groupShaperGuardians
+    , groupUber
+    , isDeathless
+    , isLogoutless
+    , isUnvisited
+    , isVictory
+    , isVisited
+    , mergeEntries
+    )
 
 import Dict exposing (Dict)
 import Duration exposing (Millis)
@@ -48,12 +69,28 @@ type alias BossTally =
 
 {-| A boss encounter where we know if the boss dies
 -}
-type alias BossEntry =
-    { runs : Int
-    , completed : Int
-    , minDeaths : Maybe Int
-    , totalDeaths : Int
-    }
+type BossEntry
+    = Unvisited
+    | Visited VisitedData
+    | Victory VictoryData
+    | Deathless DeathlessData
+    | Logoutless LogoutlessData
+
+
+type alias VisitedData =
+    { achievedAt : Posix, count : Int }
+
+
+type alias VictoryData =
+    { achievedAt : Posix, count : Int, visited : VisitedData }
+
+
+type alias DeathlessData =
+    { achievedAt : Posix, count : Int, victory : VictoryData }
+
+
+type alias LogoutlessData =
+    { achievedAt : Posix, count : Int, deathless : DeathlessData }
 
 
 type alias UberBossEntry =
@@ -88,8 +125,8 @@ type alias BossMark =
     { boss : BossId
     , completed : Outcome
     , deaths : Int
-
-    -- , started : Posix
+    , logouts : Int
+    , startedAt : Posix
     }
 
 
@@ -104,7 +141,7 @@ empty =
     let
         e : BossEntry
         e =
-            BossEntry 0 0 Nothing 0
+            Unvisited
 
         ue : UberBossEntry
         ue =
@@ -113,70 +150,191 @@ empty =
     BossTally ue ue ue ue ue ue ue e e e e e e e e e e e e
 
 
-type State
-    = Unvisited
-    | Visited
-    | Victory
-      -- victory without logging out (no pre-victory portals). TODO implement
-      -- | Exitless
-    | Deathless
-
-
-state : BossEntry -> State
-state e =
-    if e.runs <= 0 then
-        Unvisited
-
-    else if e.completed <= 0 then
-        Visited
-
-    else
-        case e.minDeaths of
-            Just 0 ->
-                -- TODO implement exitless here
-                Deathless
-
-            _ ->
-                Victory
-
-
-isUnvisited : State -> Bool
+isUnvisited : BossEntry -> Bool
 isUnvisited =
     (==) Unvisited
 
 
-isVisited : State -> Bool
+visitedData : BossEntry -> Maybe VisitedData
+visitedData s =
+    case s of
+        Visited d ->
+            Just d
+
+        _ ->
+            s |> victoryData |> Maybe.map .visited
+
+
+isVisited : BossEntry -> Bool
 isVisited =
-    isUnvisited >> not
+    visitedData >> Maybe.Extra.isJust
 
 
-isVictory : State -> Bool
-isVictory s =
-    s == Victory || isDeathless s
+victoryData : BossEntry -> Maybe VictoryData
+victoryData s =
+    case s of
+        Victory d ->
+            Just d
+
+        _ ->
+            s |> deathlessData |> Maybe.map .victory
 
 
-isDeathless : State -> Bool
+isVictory : BossEntry -> Bool
+isVictory =
+    victoryData >> Maybe.Extra.isJust
+
+
+deathlessData : BossEntry -> Maybe DeathlessData
+deathlessData s =
+    case s of
+        Deathless d ->
+            Just d
+
+        _ ->
+            s |> logoutlessData |> Maybe.map .deathless
+
+
+isDeathless : BossEntry -> Bool
 isDeathless =
-    (==) Deathless
+    deathlessData >> Maybe.Extra.isJust
+
+
+logoutlessData : BossEntry -> Maybe LogoutlessData
+logoutlessData s =
+    case s of
+        Logoutless d ->
+            Just d
+
+        _ ->
+            Nothing
+
+
+isLogoutless : BossEntry -> Bool
+isLogoutless =
+    logoutlessData >> Maybe.Extra.isJust
+
+
+type alias Progress =
+    { percent : Float, completed : Int, possible : Int }
+
+
+progress : Int -> Int -> Progress
+progress completed possible =
+    Progress (toFloat (max 0 completed) / toFloat (max 1 possible)) completed possible
+
+
+mergeProgress : List Progress -> Progress
+mergeProgress ps =
+    progress (ps |> List.map .completed |> List.sum) (ps |> List.map .possible |> List.sum)
+
+
+entriesProgress : List BossEntry -> Progress
+entriesProgress =
+    List.map entryProgress >> mergeProgress
+
+
+entryProgress : BossEntry -> Progress
+entryProgress e =
+    let
+        p =
+            case e of
+                Unvisited ->
+                    0
+
+                Visited _ ->
+                    1
+
+                Victory _ ->
+                    2
+
+                Deathless _ ->
+                    3
+
+                Logoutless _ ->
+                    4
+    in
+    progress p 4
+
+
+mergeEntryPair : BossEntry -> BossEntry -> BossEntry
+mergeEntryPair a b =
+    case mergeData (visitedData a) (visitedData b) of
+        Nothing ->
+            Unvisited
+
+        Just visited ->
+            case mergeData (victoryData a) (victoryData b) of
+                Nothing ->
+                    Visited visited
+
+                Just victory_ ->
+                    let
+                        victory =
+                            { victory_ | visited = visited }
+                    in
+                    case mergeData (deathlessData a) (deathlessData b) of
+                        Nothing ->
+                            Victory victory
+
+                        Just deathless_ ->
+                            let
+                                deathless =
+                                    { deathless_ | victory = victory }
+                            in
+                            case mergeData (logoutlessData a) (logoutlessData b) of
+                                Nothing ->
+                                    Deathless deathless
+
+                                Just logoutless_ ->
+                                    Logoutless { logoutless_ | deathless = deathless }
+
+
+mergeData : Maybe { d | achievedAt : Posix, count : Int } -> Maybe { d | achievedAt : Posix, count : Int } -> Maybe { d | achievedAt : Posix, count : Int }
+mergeData ma mb =
+    case ( ma, mb ) of
+        ( Just a, Just b ) ->
+            Just
+                { a
+                    | count = a.count + b.count
+                    , achievedAt = min (Time.posixToMillis a.achievedAt) (Time.posixToMillis b.achievedAt) |> Time.millisToPosix
+                }
+
+        ( Nothing, b ) ->
+            b
+
+        ( a, Nothing ) ->
+            a
 
 
 mergeEntries : List BossEntry -> BossEntry
-mergeEntries es =
-    { runs = es |> List.map .runs |> List.sum
-    , completed = es |> List.map .completed |> List.sum
-    , minDeaths = es |> List.filterMap .minDeaths |> List.maximum
-    , totalDeaths = es |> List.map .totalDeaths |> List.sum
-    }
+mergeEntries =
+    List.foldl mergeEntryPair Unvisited
 
 
-shaperGuardians : BossTally -> BossEntry
-shaperGuardians t =
-    mergeEntries [ t.shaperChimera, t.shaperHydra, t.shaperMinotaur, t.shaperPhoenix ]
+groupShaperGuardians : BossTally -> List BossEntry
+groupShaperGuardians t =
+    [ t.shaperChimera, t.shaperHydra, t.shaperMinotaur, t.shaperPhoenix ]
 
 
-conquerors : BossTally -> BossEntry
-conquerors t =
-    mergeEntries [ t.baran, t.drox, t.veritania, t.alhezmin ]
+groupConquerors : BossTally -> List BossEntry
+groupConquerors t =
+    [ t.baran, t.drox, t.veritania, t.alhezmin ]
+
+
+groupLesserEldritch : BossTally -> List BossEntry
+groupLesserEldritch t =
+    [ t.shaper, t.elder, t.blackstar, t.hunger ]
+
+
+groupPinnacle : BossTally -> List BossEntry
+groupPinnacle t =
+    [ t.exarch.standard, t.eater.standard, t.maven.standard, t.venarius.standard, t.sirus.standard, t.uberelder.standard ]
+
+
+groupUber : BossTally -> List BossEntry
+groupUber t =
+    [ t.exarch.uber, t.eater.uber, t.maven.uber, t.venarius.uber, t.sirus.uber, t.uberelder.uber, t.atziri.uber ]
 
 
 aggregate : List BossMark -> BossTally
@@ -187,7 +345,31 @@ aggregate =
 fromMapRun : RawMapRun -> WorldArea -> Maybe BossMark
 fromMapRun run w =
     toMarkCompletion run w
-        |> Maybe.map (\( id, completed ) -> BossMark id completed run.deaths)
+        |> Maybe.map
+            (\( id, completed ) ->
+                let
+                    outcomeAt : Posix
+                    outcomeAt =
+                        case completed of
+                            Complete at ->
+                                at
+
+                            _ ->
+                                RawMapRun.updatedAt run
+
+                    countDuring : List Posix -> Int
+                    countDuring =
+                        List.map Time.posixToMillis
+                            >> List.filter (\t -> t >= Time.posixToMillis run.startedAt && t <= Time.posixToMillis outcomeAt)
+                            >> List.length
+                in
+                { boss = id
+                , completed = completed
+                , deaths = run.deathsAt |> countDuring
+                , logouts = run.portalsAt |> countDuring
+                , startedAt = run.startedAt
+                }
+            )
 
 
 toMarkCompletion : RawMapRun -> WorldArea -> Maybe ( BossId, Outcome )
@@ -465,30 +647,39 @@ applyUberEntry isUber mark entry =
         { entry | standard = applyEntry mark entry.standard }
 
 
+entryToMark : BossMark -> BossEntry
+entryToMark mark =
+    let
+        visited =
+            { achievedAt = mark.startedAt, count = 1 }
+    in
+    case mark.completed of
+        Complete completeAt ->
+            let
+                victory =
+                    { achievedAt = completeAt, count = 1, visited = visited }
+            in
+            if mark.deaths <= 0 then
+                let
+                    deathless =
+                        { achievedAt = completeAt, count = 1, victory = victory }
+                in
+                if mark.logouts <= 0 then
+                    Logoutless { achievedAt = completeAt, count = 1, deathless = deathless }
+
+                else
+                    Deathless deathless
+
+            else
+                Victory victory
+
+        _ ->
+            Visited visited
+
+
 applyEntry : BossMark -> BossEntry -> BossEntry
-applyEntry mark entry =
-    { runs = entry.runs + 1
-    , completed =
-        entry.completed
-            + (case mark.completed of
-                Complete _ ->
-                    1
-
-                Incomplete ->
-                    0
-
-                UnknownOutcome ->
-                    0
-              )
-    , totalDeaths = entry.totalDeaths + mark.deaths
-    , minDeaths =
-        case mark.completed of
-            Complete _ ->
-                entry.minDeaths |> Maybe.withDefault mark.deaths |> min mark.deaths |> Just
-
-            _ ->
-                entry.minDeaths
-    }
+applyEntry mark =
+    mergeEntryPair (entryToMark mark)
 
 
 valueIf : a -> a -> Bool -> a

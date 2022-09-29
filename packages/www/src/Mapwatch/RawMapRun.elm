@@ -4,7 +4,9 @@ module Mapwatch.RawMapRun exposing
     , RawMapRun
     , State
     , current
+    , deaths
     , duration
+    , portals
     , tick
     , update
     , updateLogLine
@@ -32,8 +34,8 @@ type alias RawMapRun =
     { address : Address
     , level : Maybe Int
     , startedAt : Posix
-    , portals : Int
-    , deaths : Int
+    , portalsAt : List Posix
+    , deathsAt : List Posix
     , npcSays : NpcEncounters
     , visits : List Visit
     , isAbandoned : Bool
@@ -67,8 +69,8 @@ create addr startedAt npcSays level posStart posEnd =
             , startedAt = startedAt
             , npcSays = npcSays
             , visits = []
-            , portals = 1
-            , deaths = 0
+            , portalsAt = []
+            , deathsAt = []
             , isAbandoned = False
             , positionStart = posStart
             , positionEnd = posEnd
@@ -77,6 +79,16 @@ create addr startedAt npcSays level posStart posEnd =
 
     else
         Nothing
+
+
+portals : RawMapRun -> Int
+portals =
+    .portalsAt >> List.length >> (+) 1
+
+
+deaths : RawMapRun -> Int
+deaths =
+    .deathsAt >> List.length
 
 
 duration : RawMapRun -> Millis
@@ -223,7 +235,7 @@ update instance_ mvisit state =
 
                     else if instance_.val == Instance.Instance run.address && Visit.isTown visit then
                         -- reentering the *same* map from town is a portal.
-                        ( Just { run | portals = run.portals + 1 }, Nothing )
+                        ( Just { run | portalsAt = instance_.joinedAt :: run.portalsAt }, Nothing )
 
                     else
                         -- the common case - just add the visit to the run
@@ -249,10 +261,10 @@ updateLogLine line instance state =
                     state |> Maybe.map (\run -> { run | rituals = run.rituals + 1 })
 
                 LogLine.PlayerSlain _ ->
-                    state |> Maybe.map (\run -> { run | deaths = run.deaths + 1 })
+                    state |> Maybe.map (\run -> { run | deathsAt = line.date :: run.deathsAt })
 
                 LogLine.PlayerSuicide _ ->
-                    state |> Maybe.map (\run -> { run | deaths = run.deaths + 1 })
+                    state |> Maybe.map (\run -> { run | deathsAt = line.date :: run.deathsAt })
 
                 -- Ignore all others, but explicitly list them for exhaustiveness checks
                 LogLine.GeneratingArea gen ->
