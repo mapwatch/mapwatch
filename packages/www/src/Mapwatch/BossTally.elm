@@ -1,15 +1,11 @@
 module Mapwatch.BossTally exposing (BossEntry, BossMark, BossTally, State(..), UberBossEntry, aggregate, conquerors, fromMapRun, isDeathless, isUnvisited, isVictory, isVisited, shaperGuardians, state)
 
 import Dict exposing (Dict)
-import Dict.Extra
 import Duration exposing (Millis)
-import List.Extra
 import Mapwatch.Datamine as Datamine exposing (WorldArea)
-import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
-import Mapwatch.Instance as Instance exposing (Address, Instance)
+import Mapwatch.Datamine.NpcId as NpcId
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
-import Set exposing (Set)
 
 
 type alias BossTally =
@@ -89,12 +85,18 @@ type BossId
 
 type alias BossMark =
     { boss : BossId
-    , completed : Maybe Bool
+    , completed : Outcome
     , deaths : Int
 
     -- TODO
     -- , time : Duration.Millis
     }
+
+
+type Outcome
+    = UnknownOutcome -- possible for quiet bosses that require maven for tracking
+    | Incomplete
+    | Complete
 
 
 empty : BossTally
@@ -188,7 +190,7 @@ fromMapRun run w =
         |> Maybe.map (\( id, completed ) -> BossMark id completed run.deaths)
 
 
-toMarkCompletion : RawMapRun -> WorldArea -> Maybe ( BossId, Maybe Bool )
+toMarkCompletion : RawMapRun -> WorldArea -> Maybe ( BossId, Outcome )
 toMarkCompletion run w =
     let
         is85 : Bool
@@ -198,96 +200,96 @@ toMarkCompletion run w =
     case w.id of
         "MapAtziri1" ->
             -- apex of sacrifice: tracking victory is impossible :(
-            Just ( Atziri False, Nothing )
+            Just ( Atziri False, UnknownOutcome )
 
         "MapAtziri2" ->
             -- alluring abyss: tracking victory is only possible with the maven
             Just
                 ( Atziri True
-                , run |> hasMavenVictoryTextId |> Just
+                , run |> outcomeMavenVictoryTextId
                 )
 
         "MapWorldsElderArena" ->
             -- tracking victory is only possible with the maven
             Just
                 ( Elder
-                , run |> hasMavenVictoryTextId |> Just
+                , run |> outcomeMavenVictoryTextId
                 )
 
         "MapWorldsElderArenaUber" ->
             -- tracking victory is only possible with the maven
             Just
                 ( UberElder is85
-                , run |> hasMavenVictoryTextId |> Just
+                , run |> outcomeMavenVictoryTextId
                 )
 
         "Synthesis_MapBoss" ->
             Just
                 ( Venarius is85
-                , run |> hasTextId ((==) "VenariusBossFightDepart") NpcId.venarius |> Just
+                , run |> outcomeTextId ((==) "VenariusBossFightDepart") NpcId.venarius
                 )
 
         "AtlasExilesBoss5" ->
             Just
                 ( Sirus is85
-                , run |> hasTextId (\s -> s == "SirusSimpleDeathLine" || String.startsWith "SirusComplexDeathLine" s) NpcId.sirus |> Just
+                , run |> outcomeTextId (\s -> s == "SirusSimpleDeathLine" || String.startsWith "SirusComplexDeathLine" s) NpcId.sirus
                 )
 
         "MavenBoss" ->
             Just
                 ( Maven is85
-                , run |> hasTextId (\s -> String.startsWith "MavenFinalFightRealises" s || String.startsWith "MavenFinalFightRepeatedRealises" s) NpcId.maven |> Just
+                , run |> outcomeTextId (\s -> String.startsWith "MavenFinalFightRealises" s || String.startsWith "MavenFinalFightRepeatedRealises" s) NpcId.maven
                 )
 
         "MapWorldsShapersRealm" ->
-            Just ( Shaper, countTextId (String.startsWith "ShaperBanish") NpcId.shaper run >= 3 |> Just )
+            Just ( Shaper, countTextId (String.startsWith "ShaperBanish") NpcId.shaper run >= 3 |> completeIf )
 
         "MapWorldsPrimordialBoss1" ->
             Just
                 ( Hunger
-                , run |> hasTextId (String.startsWith "DoomBossDefeated") NpcId.hunger |> Just
+                , run |> outcomeTextId (String.startsWith "DoomBossDefeated") NpcId.hunger
                 )
 
         "MapWorldsPrimordialBoss2" ->
             Just
                 ( BlackStar
-                , run |> hasTextId (String.startsWith "TheBlackStarDeath") NpcId.blackstar |> Just
+                , run |> outcomeTextId (String.startsWith "TheBlackStarDeath") NpcId.blackstar
                 )
 
         "MapWorldsPrimordialBoss3" ->
             Just
                 ( Exarch is85
-                , run |> hasTextId (String.startsWith "CleansingFireDefeated") NpcId.exarch |> Just
+                , run |> outcomeTextId (String.startsWith "CleansingFireDefeated") NpcId.exarch
                 )
 
         "MapWorldsPrimordialBoss4" ->
             Just
                 ( Eater is85
-                , run |> hasTextId (String.startsWith "ConsumeBossDefeated") NpcId.eater |> Just
+                , run |> outcomeTextId (String.startsWith "ConsumeBossDefeated") NpcId.eater
                 )
 
         "MapWorldsMinotaur" ->
             Just
                 ( ShaperMinotaur
-                , run |> hasTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper |> Just
+                , run |> outcomeTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper
                 )
 
         "MapWorldsChimera" ->
             Just
                 ( ShaperChimera
-                , run |> hasTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper |> Just
+                , run |> outcomeTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper
                 )
 
         "MapWorldsPhoenix" ->
             Just
                 ( ShaperPhoenix
-                , run |> hasTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper |> Just
+                , run |> outcomeTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper
                 )
 
         "MapWorldsHydra" ->
             Just
                 ( ShaperHydra
-                , run |> hasTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper |> Just
+                , run |> outcomeTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper
                 )
 
         _ ->
@@ -303,34 +305,60 @@ toMarkCompletion run w =
                 ( bossId, npcId, victoryPrefix ) :: _ ->
                     Just
                         ( bossId
-                        , run |> hasTextId (\s -> List.any (\v -> String.startsWith v s) victoryPrefix) npcId |> Just
+                        , run |> outcomeTextId (\s -> List.any (\v -> String.startsWith v s) victoryPrefix) npcId
                         )
 
                 [] ->
                     Nothing
 
 
+completeIf : Bool -> Outcome
+completeIf =
+    valueIf Complete Incomplete
+
+
+isMavenVictoryTextId : String -> Bool
+isMavenVictoryTextId s =
+    -- big bosses: shaper, elder...
+    String.startsWith "MavenTier5FirstOffAtlasBossVictory" s
+        || String.startsWith "MavenTier5OffAtlasBossVictory" s
+        || String.startsWith "MavenTier5OffAtlasInvitation" s
+        -- map bosses
+        || String.startsWith "MavenTier5BossVictory" s
+        || String.startsWith "MavenTier5Invitation" s
+
+
+outcomeMavenVictoryTextId : RawMapRun -> Outcome
+outcomeMavenVictoryTextId =
+    getTextIdOrDefault { missingNpcId = UnknownOutcome, missingTextId = Incomplete, success = always Complete } isMavenVictoryTextId NpcId.maven
+
+
+outcomeTextId : (String -> Bool) -> String -> RawMapRun -> Outcome
+outcomeTextId =
+    getTextIdOrDefault { missingNpcId = Incomplete, missingTextId = Incomplete, success = always Complete }
+
+
 hasTextId : (String -> Bool) -> String -> RawMapRun -> Bool
-hasTextId pred npcId run =
-    run.npcSays
-        |> Dict.get npcId
-        |> Maybe.map (List.filterMap (.says >> .textId) >> List.any pred)
-        |> Maybe.withDefault False
+hasTextId =
+    getTextIdOrDefault { missingNpcId = False, missingTextId = False, success = always True }
 
 
-hasMavenVictoryTextId : RawMapRun -> Bool
-hasMavenVictoryTextId =
-    hasTextId
-        (\s ->
-            -- big bosses: shaper, elder...
-            String.startsWith "MavenTier5FirstOffAtlasBossVictory" s
-                || String.startsWith "MavenTier5OffAtlasBossVictory" s
-                || String.startsWith "MavenTier5OffAtlasInvitation" s
-                -- map bosses
-                || String.startsWith "MavenTier5BossVictory" s
-                || String.startsWith "MavenTier5Invitation" s
-        )
-        NpcId.maven
+getTextId : (String -> Bool) -> String -> RawMapRun -> Maybe RawMapRun.NpcEncounter
+getTextId =
+    getTextIdOrDefault { missingNpcId = Nothing, missingTextId = Nothing, success = Just }
+
+
+getTextIdOrDefault : { missingNpcId : a, missingTextId : a, success : RawMapRun.NpcEncounter -> a } -> (String -> Bool) -> String -> RawMapRun -> a
+getTextIdOrDefault result pred npcId run =
+    case run.npcSays |> Dict.get npcId of
+        Nothing ->
+            result.missingNpcId
+
+        Just npcTexts ->
+            npcTexts
+                |> List.filter (.says >> .textId >> Maybe.map pred >> Maybe.withDefault False)
+                |> List.head
+                |> Maybe.Extra.unwrap result.missingTextId result.success
 
 
 countTextId : (String -> Bool) -> String -> RawMapRun -> Int
@@ -420,21 +448,29 @@ applyEntry mark entry =
     , completed =
         entry.completed
             + (case mark.completed of
-                Just True ->
+                Complete ->
                     1
 
-                Just False ->
+                Incomplete ->
                     0
 
-                Nothing ->
-                    -- no idea if it's completed. Possible for quiet bosses that need maven. Assume not-completed.
+                UnknownOutcome ->
                     0
               )
     , totalDeaths = entry.totalDeaths + mark.deaths
     , minDeaths =
-        if mark.completed |> Maybe.withDefault False then
+        if mark.completed == Complete then
             entry.minDeaths |> Maybe.withDefault mark.deaths |> min mark.deaths |> Just
 
         else
             entry.minDeaths
     }
+
+
+valueIf : a -> a -> Bool -> a
+valueIf t f pred =
+    if pred then
+        t
+
+    else
+        f
