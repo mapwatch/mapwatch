@@ -14,6 +14,7 @@ Frozen; cannot be modified. Lots of redundancy. Use RawMapRun for updates and lo
 
 import Dict exposing (Dict)
 import Duration exposing (Millis)
+import Mapwatch.BossTally as BossTally
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
@@ -53,6 +54,13 @@ type alias MapRun =
     , isHeartOfTheGrove : Bool
     , rituals : Int
     , level : Maybe Int
+    , bossTally : Maybe BossTally.BossMark
+    }
+
+
+type alias NPCSaysData =
+    { raw : String
+    , textId : Maybe String
     }
 
 
@@ -227,6 +235,7 @@ fromRaw dm raw =
         }
     , rituals = raw.rituals
     , level = raw.level
+    , bossTally = BossTally.fromMapRun raw
     }
 
 
@@ -247,8 +256,7 @@ toMapRunAddress dm ({ address } as raw) =
                     shaperSays =
                         Dict.get NpcId.shaper raw.npcSays
                             |> Maybe.withDefault []
-                            |> List.map (.says >> .textId)
-                            |> List.filter ((/=) "")
+                            |> List.filterMap (.says >> .textId)
                 in
                 if List.any ((==) "ShaperMapShapersRealm") shaperSays then
                     { address | worldArea = Dict.get "MapWorldsShapersRealm" dm.worldAreasById }
@@ -310,7 +318,7 @@ conquerorEncounterFromNpcs npcSays =
         |> List.filterMap
             (\id ->
                 Dict.get (Conqueror.npcFromId id) npcSays
-                    |> Maybe.andThen (List.map (.says >> .textId) >> Conqueror.encounter id)
+                    |> Maybe.andThen (List.map (.says >> .textId >> Maybe.withDefault "") >> Conqueror.encounter id)
                     |> Maybe.map (Tuple.pair id)
             )
         |> List.head
@@ -325,7 +333,7 @@ isBlightedMap run =
             run.npcSays
                 |> Dict.get NpcId.cassia
                 |> Maybe.withDefault []
-                |> List.filter (.says >> .textId >> String.startsWith "CassiaNewLane")
+                |> List.filter (.says >> .textId >> Maybe.withDefault "" >> String.startsWith "CassiaNewLane")
     in
     Dict.size run.npcSays == 1 && List.length newLanes >= 8
 
@@ -337,7 +345,7 @@ isHeartOfTheGrove =
     .npcSays
         >> Dict.get NpcId.oshabi
         >> Maybe.withDefault []
-        >> List.filter (.says >> .textId >> (\t -> String.startsWith "HarvestBoss" t || String.startsWith "HarvestReBoss" t))
+        >> List.filter (.says >> .textId >> Maybe.withDefault "" >> (\t -> String.startsWith "HarvestBoss" t || String.startsWith "HarvestReBoss" t))
         >> (\l -> List.length l > 0)
 
 
@@ -350,7 +358,7 @@ heistNpcs : RawMapRun -> Set NpcId
 heistNpcs =
     .npcSays
         >> Dict.filter (\k _ -> Set.member k NpcId.heistNpcs)
-        >> Dict.map (\_ -> List.filter (\enc -> enc.says.textId /= ""))
+        >> Dict.map (\_ -> List.filter (\enc -> enc.says.textId /= Nothing))
         >> Dict.filter (\_ -> List.isEmpty >> not)
         >> Dict.keys
         >> Set.fromList

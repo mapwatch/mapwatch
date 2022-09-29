@@ -526,6 +526,12 @@ createNPCText1 lang =
     , createNPCTextSet lang NpcId.gianna (Tuple.first >> (\s -> String.startsWith "Gianna" s || String.endsWith "Gianna" s))
     , createNPCTextSet lang NpcId.isla (Tuple.first >> String.startsWith "Isla")
     , createNPCTextSet lang NpcId.trialmaster (Tuple.first >> String.startsWith "Trialmaster")
+
+    -- siege
+    , createNPCTextSet lang NpcId.exarch (Tuple.first >> String.startsWith "CleansingFire")
+    , createNPCTextSet lang NpcId.eater (Tuple.first >> String.startsWith "ConsumeBoss")
+    , createNPCTextSet lang NpcId.hunger (Tuple.first >> String.startsWith "DoomBoss")
+    , createNPCTextSet lang NpcId.blackstar (Tuple.first >> String.startsWith "TheBlackStar")
     ]
         |> Result.Extra.combine
         |> Result.map List.concat

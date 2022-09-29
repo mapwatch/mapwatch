@@ -25,7 +25,6 @@ import Mapwatch.Debug
 import Mapwatch.Instance as Instance exposing (Address, Instance)
 import Mapwatch.LogLine as LogLine
 import Mapwatch.Visit as Visit exposing (Visit)
-import Maybe.Extra
 import Time exposing (Posix)
 
 

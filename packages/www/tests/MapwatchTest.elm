@@ -37,6 +37,7 @@ emptyRun =
     , trialmaster = []
     , rituals = 0
     , level = Nothing
+    , bossTally = Nothing
     }
 
 

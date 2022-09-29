@@ -4,6 +4,7 @@ import Dict exposing (Dict)
 import Dict.Extra
 import Duration exposing (Millis)
 import List.Extra
+import Mapwatch.BossTally
 import Mapwatch.Datamine as Datamine exposing (WorldArea)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Datamine.Trialmaster as DMTrialmaster

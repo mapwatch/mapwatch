@@ -59,7 +59,7 @@ type alias NPCSaysData =
     { raw : String
     , npcId : String
     , npcName : String
-    , textId : String
+    , textId : Maybe String
     }
 
 
@@ -113,7 +113,7 @@ parseBody dm =
         , Util.String.unwrap "Connecting to instance server at " "" >> Maybe.map ConnectingToInstanceServer
 
         -- NPCSays, like `some-npc: some npcTextAudio`
-        , \body -> Dict.get body dm.npcText |> Maybe.map (\{ npcName, npcId, textId } -> NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = textId })
+        , \body -> Dict.get body dm.npcText |> Maybe.map (\{ npcName, npcId, textId } -> NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = Just textId })
 
         -- `You have entered <world-area-name>.` in every language
         , dm.youHaveEntered >> Maybe.map YouHaveEntered
@@ -128,8 +128,7 @@ parseBody dm =
                 |> Maybe.andThen (\name -> Dict.get name dm.unindex.npcs |> Maybe.map (Tuple.pair name))
                 -- conqueror dialogue must match exactly to be processed - speaker alone isn't enough
                 |> Maybe.Extra.filter (\( _, npcId ) -> not <| Set.member npcId NpcId.conquerors)
-                -- TODO: textId="" instead of a maybe-type is a bit sketchy
-                |> Maybe.map (\( npcName, npcId ) -> NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = "" })
+                |> Maybe.map (\( npcName, npcId ) -> NPCSays { raw = body, npcName = npcName, npcId = npcId, textId = Nothing })
 
         -- afk on/off
         , \body -> maybeIf (dm.afkModeEnabled body) (AFKMode True)

@@ -66,7 +66,7 @@ const exportedNPCs = new Set([
     // "Metadata/NPC/League/Expedition/Dealer",
     "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog",
     "Metadata/NPC/League/Expedition/Saga",
-    // 3.17: eater and exarch. We don't strictly need their dialogue, but it makes them searchable
+    // 3.17: eater and exarch
     // black star
     "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss",
     // exarch
@@ -127,4 +127,9 @@ function isNPCTextExported(i: input.NPCTextAudio): boolean {
         || /^OshabiWhenFightEnds/.test(i.Id)
         // Trialmaster: very specific voicelines, lots we can analyze
         || /^Trialmaster/.test(i.Id)
+        // Exarch and eater
+        || /^CleansingFireDefeated/.test(i.Id)
+        || /^ConsumeBossDefeated/.test(i.Id)
+        || /^DoomBossDefeated/.test(i.Id)
+        || /^TheBlackStarDeath/.test(i.Id)
 }
