@@ -4,7 +4,7 @@ import Expect
 import Fixture exposing (datamine)
 import Fixture.Examples
 import Mapwatch
-import Mapwatch.BossTally
+import Mapwatch.BossTally as BossTally
 import Mapwatch.MapRun exposing (MapRun)
 import Mapwatch.MapRun.Sort as Sort
 import MapwatchTest exposing (address, crlfFix, emptyDuration, emptyRun)
@@ -59,15 +59,17 @@ all =
                         , Sort.search datamine "hunger" >> List.length >> Expect.equal 1
                         , Sort.search datamine "bogus" >> List.length >> Expect.equal 0
                         , List.filterMap .bossTally
-                            >> Mapwatch.BossTally.aggregate
+                            >> BossTally.aggregate
                             >> Expect.all
-                                [ .atziri >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
-                                , .eater >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
-                                , .eater >> .standard >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 4, totalDeaths = 4 }
-                                , .exarch >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
-                                , .exarch >> .standard >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 2, totalDeaths = 2 }
-                                , .hunger >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 1, totalDeaths = 1 }
-                                , .blackstar >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 4, totalDeaths = 4 }
+                                [ .atziri >> .uber >> BossTally.isUnvisited >> Expect.true "uber atziri unvisited"
+                                , .eater >> .uber >> BossTally.isUnvisited >> Expect.true "uber eater unvisited"
+                                , .eater >> .standard >> BossTally.isVictoryExact >> Expect.true "eater victory"
+                                , .exarch >> .uber >> BossTally.isUnvisited >> Expect.true "uber exarch unvisited"
+                                , .exarch >> .standard >> BossTally.isVictoryExact >> Expect.true "exarch victory"
+                                , .hunger >> BossTally.isVictoryExact >> Expect.true "hunger victory"
+                                , .blackstar >> BossTally.isVictoryExact >> Expect.true "blackstar victory"
+                                , .drox >> BossTally.isUnvisited >> Expect.true "drox unvisited"
+                                , .shaperHydra >> BossTally.isUnvisited >> Expect.true "hydra unvisited"
                                 ]
                         ]
         , test "bosses" <|
@@ -75,14 +77,19 @@ all =
                 Fixture.Examples.bosses
                     |> mapRuns
                     |> List.filterMap .bossTally
-                    |> Mapwatch.BossTally.aggregate
+                    |> BossTally.aggregate
                     |> Expect.all
-                        [ .atziri >> .uber >> Expect.equal { runs = 1, completed = 0, minDeaths = Nothing, totalDeaths = 6 }
-                        , .eater >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
-                        , .eater >> .standard >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 4, totalDeaths = 4 }
-                        , .exarch >> .uber >> Expect.equal { runs = 0, completed = 0, minDeaths = Nothing, totalDeaths = 0 }
-                        , .exarch >> .standard >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 2, totalDeaths = 2 }
-                        , .hunger >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 1, totalDeaths = 1 }
-                        , .blackstar >> Expect.equal { runs = 1, completed = 1, minDeaths = Just 4, totalDeaths = 4 }
+                        [ .atziri >> .uber >> BossTally.isVisitedExact >> Expect.true "uber atziri visited"
+                        , .eater >> .uber >> BossTally.isUnvisited >> Expect.true "uber eater unvisited"
+                        , .eater >> .standard >> BossTally.isVictoryExact >> Expect.true "eater victory"
+                        , .exarch >> .uber >> BossTally.isUnvisited >> Expect.true "uber exarch unvisited"
+                        , .exarch >> .standard >> BossTally.isVictoryExact >> Expect.true "exarch victory"
+                        , .hunger >> BossTally.isVictoryExact >> Expect.true "hunger victory"
+                        , .blackstar >> BossTally.isVictoryExact >> Expect.true "blackstar victory"
+
+                        -- baran's important to test, because we're matching multiline completion dialogue (his long "Kirac... sent you?" line)
+                        , .baran >> BossTally.isLogoutless >> Expect.true "baran logoutless"
+                        , .drox >> BossTally.isDeathlessExact >> Expect.true "drox deathless"
+                        , .shaperHydra >> BossTally.isLogoutless >> Expect.true "hydra logoutless"
                         ]
         ]

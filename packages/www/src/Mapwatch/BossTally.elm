@@ -14,10 +14,13 @@ module Mapwatch.BossTally exposing
     , groupShaperGuardians
     , groupUber
     , isDeathless
+    , isDeathlessExact
     , isLogoutless
     , isUnvisited
     , isVictory
+    , isVictoryExact
     , isVisited
+    , isVisitedExact
     , mergeEntries
     )
 
@@ -170,6 +173,16 @@ isVisited =
     visitedData >> Maybe.Extra.isJust
 
 
+isVisitedExact : BossEntry -> Bool
+isVisitedExact s =
+    case s of
+        Visited _ ->
+            True
+
+        _ ->
+            False
+
+
 victoryData : BossEntry -> Maybe VictoryData
 victoryData s =
     case s of
@@ -185,6 +198,16 @@ isVictory =
     victoryData >> Maybe.Extra.isJust
 
 
+isVictoryExact : BossEntry -> Bool
+isVictoryExact s =
+    case s of
+        Victory _ ->
+            True
+
+        _ ->
+            False
+
+
 deathlessData : BossEntry -> Maybe DeathlessData
 deathlessData s =
     case s of
@@ -198,6 +221,16 @@ deathlessData s =
 isDeathless : BossEntry -> Bool
 isDeathless =
     deathlessData >> Maybe.Extra.isJust
+
+
+isDeathlessExact : BossEntry -> Bool
+isDeathlessExact s =
+    case s of
+        Deathless _ ->
+            True
+
+        _ ->
+            False
 
 
 logoutlessData : BossEntry -> Maybe LogoutlessData

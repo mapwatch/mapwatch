@@ -65,8 +65,8 @@ emptyRaw : RawMapRun
 emptyRaw =
     { address = emptyAddr
     , startedAt = Time.millisToPosix 0
-    , portals = 0
-    , deaths = 0
+    , portalsAt = []
+    , deathsAt = []
     , npcSays = Dict.empty
     , visits = []
     , isAbandoned = False
