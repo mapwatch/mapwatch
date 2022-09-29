@@ -98,6 +98,7 @@ encounters-table-trialmaster-wins-name = Trialmaster wins + bosses
 encounters-table-trialmaster-wins-rate = % of {NUMBER($n)} trialmaster wins + bosses
 encounters-count = ×{NUMBER($n)}
 
+bosses-group-all = All Bosses
 bosses-group-pinnacle = Pinnacle Bosses
 bosses-group-uber = Uber Pinnacle Bosses
 bosses-atziri = Atziri, Queen of the Vaal: Apex of Sacrifice

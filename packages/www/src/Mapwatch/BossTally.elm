@@ -8,6 +8,7 @@ module Mapwatch.BossTally exposing
     , entriesProgress
     , entryProgress
     , fromMapRun
+    , groupAll
     , groupConquerors
     , groupLesserEldritch
     , groupPinnacle
@@ -368,6 +369,12 @@ groupPinnacle t =
 groupUber : BossTally -> List BossEntry
 groupUber t =
     [ t.exarch.uber, t.eater.uber, t.maven.uber, t.venarius.uber, t.sirus.uber, t.uberelder.uber, t.atziri.uber ]
+
+
+groupAll : BossTally -> List BossEntry
+groupAll t =
+    [ groupUber, groupPinnacle, groupLesserEldritch, groupConquerors, groupShaperGuardians ]
+        |> List.concatMap (\g -> g t)
 
 
 aggregate : List BossMark -> BossTally

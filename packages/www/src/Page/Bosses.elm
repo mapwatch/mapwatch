@@ -100,21 +100,21 @@ viewBossTally query tally =
             )
 
         -- shaper guardians
-        , tally |> BossTally.groupShaperGuardians |> viewBossEntries query L.bossesGroupShaperGuardians "shaper" |> tr []
+        , tally |> BossTally.groupShaperGuardians |> viewBossEntries query L.bossesGroupShaperGuardians |> tr []
         , tally.shaperChimera |> viewBossEntry query L.bossesShaperChimera "id:MapWorldsChimera" |> tr []
         , tally.shaperHydra |> viewBossEntry query L.bossesShaperHydra "id:MapWorldsHydra" |> tr []
         , tally.shaperMinotaur |> viewBossEntry query L.bossesShaperMinotaur "id:MapWorldsMinotaur" |> tr []
         , tally.shaperPhoenix |> viewBossEntry query L.bossesShaperPhoenix "id:MapWorldsPhoenix" |> tr []
 
         -- lesser conquerors
-        , tally |> BossTally.groupConquerors |> viewBossEntries query L.bossesGroupConquerors "conqueror:" |> tr []
+        , tally |> BossTally.groupConquerors |> viewBossEntries query L.bossesGroupConquerors |> tr []
         , tally.baran |> viewBossEntry query L.bossesBaran "conqueror:fight:baran" |> tr []
         , tally.veritania |> viewBossEntry query L.bossesVeritania "conqueror:fight:veritania" |> tr []
         , tally.alhezmin |> viewBossEntry query L.bossesAlhezmin "conqueror:fight:alHezmin" |> tr []
         , tally.drox |> viewBossEntry query L.bossesDrox "conqueror:fight:drox" |> tr []
 
         -- shaper, elder
-        , tally |> BossTally.groupLesserEldritch |> viewBossEntries query L.bossesGroupLesserEldritch "" |> tr []
+        , tally |> BossTally.groupLesserEldritch |> viewBossEntries query L.bossesGroupLesserEldritch |> tr []
 
         -- , tally.atziri.standard |> viewBossSighting query L.bossesAtziri "id:MapAtziri1" |> tr []
         , tally.shaper |> viewBossEntry query L.bossesShaper "id:MapWorldsShapersRealm" |> tr []
@@ -123,7 +123,7 @@ viewBossTally query tally =
         , tally.blackstar |> viewBossEntry query L.bossesBlackstar "id:MapWorldsPrimordialBoss2" |> tr []
 
         -- pinnacles
-        , tally |> BossTally.groupPinnacle |> viewBossEntries query L.bossesGroupPinnacle "" |> tr []
+        , tally |> BossTally.groupPinnacle |> viewBossEntries query L.bossesGroupPinnacle |> tr []
         , tally.exarch.standard |> viewBossEntry query L.bossesExarch "id:MapWorldsPrimordialBoss3" |> tr []
         , tally.eater.standard |> viewBossEntry query L.bossesEater "id:MapWorldsPrimordialBoss4" |> tr []
         , tally.venarius.standard |> viewBossEntry query L.bossesVenarius "id:Synthesis_MapBoss" |> tr []
@@ -133,7 +133,7 @@ viewBossTally query tally =
 
         -- uber pinnacles (and atziri)
         -- TODO: fix uber vs non-uber searches
-        , tally |> BossTally.groupUber |> viewBossEntries query L.bossesGroupUber "" |> tr []
+        , tally |> BossTally.groupUber |> viewBossEntries query L.bossesGroupUber |> tr []
         , tally.exarch.uber |> viewBossEntry query L.bossesUberExarch "id:MapWorldsPrimordialBoss3" |> tr []
         , tally.eater.uber |> viewBossEntry query L.bossesUberEater "id:MapWorldsPrimordialBoss4" |> tr []
         , tally.venarius.uber |> viewBossEntry query L.bossesUberVenarius "id:Synthesis_MapBoss" |> tr []
@@ -141,6 +141,7 @@ viewBossTally query tally =
         , tally.maven.uber |> viewBossEntry query L.bossesUberMaven "id:MavenBoss" |> tr []
         , tally.uberelder.uber |> viewBossEntry query L.bossesUberUberElder "id:MapWorldsElderArenaUber" |> tr []
         , tally.atziri.uber |> viewBossEntry query L.bossesUberAtziri "id:MapAtziri2" |> tr []
+        , tally |> BossTally.groupAll |> viewBossEntries query L.bossesGroupAll |> tr []
         ]
     ]
 
@@ -150,18 +151,15 @@ viewBossEntry query label search entry =
     viewBossProgressEntry query label search (BossTally.entryProgress entry) entry
 
 
-viewBossEntries : QueryDict -> H.Attribute msg -> String -> List BossTally.BossEntry -> List (Html msg)
-viewBossEntries query label search entries =
+viewBossEntries : QueryDict -> H.Attribute msg -> List BossTally.BossEntry -> List (Html msg)
+viewBossEntries query label entries =
     -- TODO: mergeEntries has bad behavior here! it ORs, but we want AND here.
     -- viewBossProgressEntry query label search (BossTally.entriesProgress entries) (BossTally.mergeEntries entries)
     let
-        href =
-            Route.href (query |> Dict.insert "q" search) Route.Encounters
-
         progress =
             BossTally.entriesProgress entries
     in
-    [ td [ style "text-align" "right" ] [ a [ href, label ] [] ]
+    [ td [ style "text-align" "right" ] [ span [ label ] [] ]
     , td [] [ viewProgress progress ]
     , td [] []
     , td [] []
@@ -202,6 +200,7 @@ viewProgress p =
     H.progress
         [ A.max <| String.fromInt p.possible
         , A.value <| String.fromInt p.completed
+        , A.title <| String.fromInt p.completed ++ "/" ++ String.fromInt p.possible
         ]
         []
 
