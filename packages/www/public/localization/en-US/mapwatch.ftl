@@ -98,6 +98,33 @@ encounters-table-trialmaster-wins-name = Trialmaster wins + bosses
 encounters-table-trialmaster-wins-rate = % of {NUMBER($n)} trialmaster wins + bosses
 encounters-count = ×{NUMBER($n)}
 
+bosses-atziri = Atziri, Queen of the Vaal: Apex of Sacrifice
+bosses-uber-atziri = Atziri, Queen of the Vaal: Alluring Abyss (Uber)
+bosses-uber-elder = The Elder in the Shaper's Realm
+bosses-uber-uber-elder = The Elder in the Shaper's Realm (Uber)
+bosses-venarius = High Templar Venarius
+bosses-uber-venarius = High Templar Venarius (Uber)
+bosses-maven = {npc-maven}
+bosses-uber-maven = {npc-maven} (Uber)
+bosses-sirus = {npc-sirus}
+bosses-uber-sirus = {npc-sirus} (Uber)
+bosses-eater = {npc-eater}
+bosses-uber-eater = {npc-eater} (Uber)
+bosses-exarch = {npc-exarch}
+bosses-uber-exarch = {npc-exarch} (Uber)
+bosses-baran = {npc-baran}
+bosses-veritania = {npc-veritania}
+bosses-alhezmin = {npc-alhezmin}
+bosses-drox = {npc-drox}
+bosses-hunger = {npc-hunger}
+bosses-blackstar = {npc-blackstar}
+bosses-shaper = The Shaper
+bosses-elder = The Elder
+bosses-shaper-chimera = Guardian of the Chimera
+bosses-shaper-hydra = Guardian of the Hydra
+bosses-shaper-minotaur = Guardian of the Minotaur
+bosses-shaper-phoenix = Guardian of the Phoenix
+
 ## https://mapwatch.erosson.org/#/encounters > encounter types
 encounter-abyssal = Abyssal Depths
 encounter-vaal = Vaal side areas

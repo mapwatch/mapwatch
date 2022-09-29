@@ -132,4 +132,6 @@ function isNPCTextExported(i: input.NPCTextAudio): boolean {
         || /^ConsumeBossDefeated/.test(i.Id)
         || /^DoomBossDefeated/.test(i.Id)
         || /^TheBlackStarDeath/.test(i.Id)
+        // Other boss defeats
+        || /^ShaperBanish/.test(i.Id)
 }

@@ -235,7 +235,7 @@ fromRaw dm raw =
         }
     , rituals = raw.rituals
     , level = raw.level
-    , bossTally = BossTally.fromMapRun raw
+    , bossTally = addr.worldArea |> Maybe.andThen (BossTally.fromMapRun raw)
     }
 
 

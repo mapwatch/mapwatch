@@ -527,6 +527,9 @@ createNPCText1 lang =
     , createNPCTextSet lang NpcId.isla (Tuple.first >> String.startsWith "Isla")
     , createNPCTextSet lang NpcId.trialmaster (Tuple.first >> String.startsWith "Trialmaster")
 
+    -- bosses
+    , createNPCTextSet lang NpcId.shaper (Tuple.first >> String.startsWith "Shaper")
+
     -- siege
     , createNPCTextSet lang NpcId.exarch (Tuple.first >> String.startsWith "CleansingFire")
     , createNPCTextSet lang NpcId.eater (Tuple.first >> String.startsWith "ConsumeBoss")

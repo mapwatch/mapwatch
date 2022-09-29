@@ -1,0 +1,363 @@
+2022/09/27 18:19:43 113311703 ca3a6737 [INFO Client 4100] Connecting to instance server at 173.233.139.220:6112
+2022/09/27 18:19:43 113311734 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 15ms
+2022/09/27 18:19:43 113311750 1186952b [DEBUG Client 4100] Generating level 84 area "MavenBoss" with seed 1299718464
+2022/09/27 18:19:43 113311906 f22b69a6 [INFO Client 4100] Tile hash: 4219928636
+2022/09/27 18:19:43 113311906 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:19:44 113312781 cff943d8 [INFO Client 4100] : You have entered Absence of Mercy and Empathy.
+2022/09/27 18:19:44 113312921 cff943d8 [INFO Client 4100] #<ZZÒZZ> ZeusWasABaitIllGoCold: Entropy Spiral, Two-Stone Ring accuracy or not ...
+2022/09/27 18:19:45 113313578 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:19:46 113315171 cff943d8 [INFO Client 4100] #AdiuvaEpilepsyWarning: Man, PoE does not like runescape also being open
+2022/09/27 18:19:49 113317734 cff943d8 [INFO Client 4100] #deadTurtle: but i have the ammy
+2022/09/27 18:19:49 113317765 cff943d8 [INFO Client 4100] #Coughy_and_Smooch: last league and this league taughtme not to gamble again
+2022/09/27 18:19:51 113319375 cff943d8 [INFO Client 4100] #AdiuvaEpilepsyWarning: Crashes within a minute lmao
+2022/09/27 18:19:51 113319687 cff943d8 [INFO Client 4100] The Maven: The prize piece comes to join...
+2022/09/27 18:19:53 113321671 cff943d8 [INFO Client 4100] The Maven: ...my collection.
+2022/09/27 18:19:53 113322093 cff943d8 [INFO Client 4100] #SeanxJohnson_LoK: Okay guess I'm mesa farming to turn over infinties
+2022/09/27 18:19:59 113328000 cff943d8 [INFO Client 4100] #deadTurtle: but u need alot of those ammys to brick them
+2022/09/27 18:20:27 113355625 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:20:40 113368859 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:20:48 113376375 cff943d8 [INFO Client 4100] #ChampionVin: noo Small Cluster Jewel
+2022/09/27 18:20:48 113376687 cff943d8 [INFO Client 4100] The Maven: Mine!
+2022/09/27 18:20:55 113383390 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:21:02 113390265 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:21:07 113395859 cff943d8 [INFO Client 4100] The Maven: Ugh!
+2022/09/27 18:21:09 113397828 cff943d8 [INFO Client 4100] The Maven: Pain will be returned tenfold.
+2022/09/27 18:21:14 113402828 cff943d8 [INFO Client 4100] The Maven: Space aligns.
+2022/09/27 18:21:21 113409359 cff943d8 [INFO Client 4100] The Maven: Behold, my collection...
+2022/09/27 18:21:34 113422750 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: The Wretched The Blessing of Moosh Glimmer of Hope
+2022/09/27 18:21:44 113432921 cff943d8 [INFO Client 4100] The Maven: I will have what I want!
+2022/09/27 18:21:47 113435421 cff943d8 [INFO Client 4100] The Maven: Death will not be an escape.
+2022/09/27 18:21:48 113436359 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: The Highwayman, Gold Ring Ascent From Flesh, Chain Belt Crown of Thorns, Vine Circlet
+2022/09/27 18:21:51 113440125 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: nice roll on the ring
+2022/09/27 18:21:58 113446937 cff943d8 [INFO Client 4100] The Maven: Scurry, scurry!
+2022/09/27 18:22:04 113452484 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:22:07 113455593 cff943d8 [INFO Client 4100] The Maven: Death made real.
+2022/09/27 18:22:15 113464000 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:22:17 113465546 cff943d8 [INFO Client 4100] #Sly_aPohxOnThee: nice, 2 for 4 Sacred Blossom
+2022/09/27 18:22:22 113471125 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:22:26 113474687 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: gz
+2022/09/27 18:22:32 113480296 cff943d8 [INFO Client 4100] The Maven: Death made real.
+2022/09/27 18:22:32 113480375 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:22:35 113483671 cff943d8 [INFO Client 4100] #Coughy_and_Smooch: gz
+2022/09/27 18:22:35 113484031 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:22:39 113487609 cff943d8 [INFO Client 4100] The Maven: Why?!
+2022/09/27 18:22:41 113489562 cff943d8 [INFO Client 4100] The Maven: Resistance will be punished.
+2022/09/27 18:22:46 113494578 cff943d8 [INFO Client 4100] The Maven: Time contorts.
+2022/09/27 18:22:52 113501078 cff943d8 [INFO Client 4100] The Maven: Scurry, scurry...
+2022/09/27 18:23:06 113514984 cff943d8 [INFO Client 4100] The Maven: My irritation is growing.
+2022/09/27 18:23:12 113521125 cff943d8 [INFO Client 4100] The Maven: Death will not be an escape.
+2022/09/27 18:23:27 113535906 cff943d8 [INFO Client 4100] The Maven: Scurry, scurry!
+2022/09/27 18:23:37 113546203 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:23:39 113547812 cff943d8 [INFO Client 4100] The Maven: Death made real.
+2022/09/27 18:23:43 113551734 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:23:51 113560046 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:24:00 113568968 cff943d8 [INFO Client 4100] The Maven: Death made real.
+2022/09/27 18:24:00 113569000 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:24:09 113577593 cff943d8 [INFO Client 4100] The Maven: Do what I say!
+2022/09/27 18:24:11 113579468 cff943d8 [INFO Client 4100] : UnhxppyThxughts has been slain.
+2022/09/27 18:24:11 113579468 cff943d8 [INFO Client 4100] The Maven: The prettiest piece makes the whole complete.
+2022/09/27 18:24:13 113581531 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:24:16 113584796 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:24:16 113584796 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:24:16 113584796 ca3a6737 [INFO Client 4100] Connecting to instance server at 173.233.139.228:6112
+2022/09/27 18:24:16 113584828 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 16ms
+2022/09/27 18:24:16 113584843 1186952b [DEBUG Client 4100] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 18:24:16 113584859 f22b69a6 [INFO Client 4100] Tile hash: 1041720784
+2022/09/27 18:24:16 113584859 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:24:17 113585312 cff943d8 [INFO Client 4100] : You have entered Celestial Nebula Hideout.
+2022/09/27 18:24:17 113585734 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:24:24 113592859 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:24:24 113592859 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:24:24 113592859 ca3a6737 [INFO Client 4100] Connecting to instance server at 173.233.139.220:6112
+2022/09/27 18:24:24 113592890 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 16ms
+2022/09/27 18:24:24 113592921 1186952b [DEBUG Client 4100] Generating level 84 area "MavenBoss" with seed 1299718464
+2022/09/27 18:24:24 113592921 f22b69a6 [INFO Client 4100] Tile hash: 4219928636
+2022/09/27 18:24:24 113592921 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:24:25 113593312 cff943d8 [INFO Client 4100] : You have entered Absence of Mercy and Empathy.
+2022/09/27 18:24:25 113593609 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:24:28 113596234 cff943d8 [INFO Client 4100] The Maven: Death will not be an escape.
+2022/09/27 18:24:42 113610750 cff943d8 [INFO Client 4100] The Maven: Scurry, scurry!
+2022/09/27 18:24:53 113621234 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:24:56 113624250 cff943d8 [INFO Client 4100] The Maven: Death made real.
+2022/09/27 18:24:56 113625046 cff943d8 [INFO Client 4100] The Maven: How?!
+2022/09/27 18:24:58 113627015 cff943d8 [INFO Client 4100] The Maven: Stop resisting.
+2022/09/27 18:25:03 113632031 cff943d8 [INFO Client 4100] The Maven: Reality bends.
+2022/09/27 18:25:10 113638531 cff943d8 [INFO Client 4100] The Maven: Punishment inescapable.
+2022/09/27 18:25:23 113651437 27f98d69 [CRIT Client 4100] Attempted to remove an effect pack, "Metadata/Particles/monster_effects/league_avatar/AvatarBuffs/lightning/buff.epk ", from animated object "Metadata/Monsters/LeagueHarvest/Blue/RavenBossMapBoss.ao" but the effect pack is not on the object.
+2022/09/27 18:25:29 113657734 cff943d8 [INFO Client 4100] The Maven: Arrogant toy!
+2022/09/27 18:25:34 113663046 cff943d8 [INFO Client 4100] The Maven: Death will not be an escape.
+2022/09/27 18:25:48 113676609 cff943d8 [INFO Client 4100] #Sly_aPohxOnThee: Highborn Staff Sacred Crystallised Lifeforce
+2022/09/27 18:25:49 113677562 cff943d8 [INFO Client 4100] The Maven: Scurry, scurry!
+2022/09/27 18:25:58 113686953 cff943d8 [INFO Client 4100] #Sly_aPohxOnThee: weird staff
+2022/09/27 18:26:02 113690703 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:26:10 113698953 cff943d8 [INFO Client 4100] The Maven: Take this!
+2022/09/27 18:26:11 113699343 cff943d8 [INFO Client 4100] : UnhxppyThxughts has been slain.
+2022/09/27 18:26:11 113699343 cff943d8 [INFO Client 4100] The Maven: The prettiest piece makes the whole complete.
+2022/09/27 18:26:15 113703359 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:26:15 113703359 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:26:15 113703359 ca3a6737 [INFO Client 4100] Connecting to instance server at 173.233.138.60:6112
+2022/09/27 18:26:15 113703390 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 16ms
+2022/09/27 18:26:15 113703421 1186952b [DEBUG Client 4100] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 18:26:15 113703421 f22b69a6 [INFO Client 4100] Tile hash: 1041720784
+2022/09/27 18:26:15 113703421 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:26:15 113703828 cff943d8 [INFO Client 4100] : You have entered Celestial Nebula Hideout.
+2022/09/27 18:26:16 113704234 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:26:20 113708859 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:26:20 113708859 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:26:20 113708859 ca3a6737 [INFO Client 4100] Connecting to instance server at 173.233.139.220:6112
+2022/09/27 18:26:20 113708890 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 16ms
+2022/09/27 18:26:20 113708921 1186952b [DEBUG Client 4100] Generating level 84 area "MavenBoss" with seed 1299718464
+2022/09/27 18:26:20 113708921 f22b69a6 [INFO Client 4100] Tile hash: 4219928636
+2022/09/27 18:26:20 113708921 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:26:21 113709296 cff943d8 [INFO Client 4100] : You have entered Absence of Mercy and Empathy.
+2022/09/27 18:26:21 113709593 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:26:27 113716078 cff943d8 [INFO Client 4100] #TurtleisFast: Vortex Impaler, Platinum Kris
+2022/09/27 18:26:35 113723328 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:26:35 113723734 cff943d8 [INFO Client 4100] #TurtleisFast: rf got an upgrade
+2022/09/27 18:26:43 113732125 cff943d8 [INFO Client 4100] The Maven: Death will not be an escape.
+2022/09/27 18:26:58 113746718 cff943d8 [INFO Client 4100] The Maven: Scurry, scurry!
+2022/09/27 18:27:07 113755546 cff943d8 [INFO Client 4100] : UnhxppyThxughts has been slain.
+2022/09/27 18:27:07 113755546 cff943d8 [INFO Client 4100] The Maven: The prettiest piece makes the whole complete.
+2022/09/27 18:27:10 113758312 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:27:10 113758312 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:27:10 113758312 ca3a6737 [INFO Client 4100] Connecting to instance server at 173.233.139.44:6112
+2022/09/27 18:27:10 113758343 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 16ms
+2022/09/27 18:27:10 113758359 1186952b [DEBUG Client 4100] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 18:27:10 113758375 f22b69a6 [INFO Client 4100] Tile hash: 1041720784
+2022/09/27 18:27:10 113758375 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:27:10 113758781 cff943d8 [INFO Client 4100] : You have entered Celestial Nebula Hideout.
+2022/09/27 18:27:10 113759125 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:27:14 113762906 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:27:14 113762921 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:27:14 113762921 ca3a6737 [INFO Client 4100] Connecting to instance server at 173.233.139.220:6112
+2022/09/27 18:27:14 113762953 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 0ms
+2022/09/27 18:27:14 113762968 1186952b [DEBUG Client 4100] Generating level 84 area "MavenBoss" with seed 1299718464
+2022/09/27 18:27:14 113762968 f22b69a6 [INFO Client 4100] Tile hash: 4219928636
+2022/09/27 18:27:14 113762968 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:27:15 113763375 cff943d8 [INFO Client 4100] : You have entered Absence of Mercy and Empathy.
+2022/09/27 18:27:15 113763703 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:27:16 113764750 cff943d8 [INFO Client 4100] #ChampionVin: is simu decent for the unique clusters or nah?
+2022/09/27 18:27:19 113767812 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:27:22 113770625 cff943d8 [INFO Client 4100] #Coughy_and_Smooch: spell damage cucking fire damage?
+2022/09/27 18:27:23 113771375 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: 21 forking and we're done
+2022/09/27 18:27:24 113772281 cff943d8 [INFO Client 4100] #Kaasper_PainChampion: did you kinda fuck up with the increased damage over time
+2022/09/27 18:27:26 113774515 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:27:28 113776562 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: no
+2022/09/27 18:27:29 113778109 cff943d8 [INFO Client 4100] #TurtleisFast: vin np
+2022/09/27 18:27:33 113781343 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: you cant drop unique cluster
+2022/09/27 18:27:33 113781453 cff943d8 [INFO Client 4100] #ChampionVin: saj
+2022/09/27 18:27:33 113781625 cff943d8 [INFO Client 4100] The Maven: Take this!
+2022/09/27 18:27:36 113784343 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: in simu
+2022/09/27 18:27:41 113789875 3797020c [WARN Client 4100] Client couldn't execute a triggered action from the server.
+action type id = 25863
+2022/09/27 18:27:41 113789875 3796fa48 [WARN Client 4100] Instant/Triggered actionwas serialized to the client, but the client failed to execute the action.
+skill_instance_id: 34818
+action_id: 46350
+object_id: 13420
+target_id: 10101
+flags: 129
+2022/09/27 18:27:42 113790656 cff943d8 [INFO Client 4100] #ChampionVin: maj
+2022/09/27 18:27:42 113790734 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: beside megalomaniac
+2022/09/27 18:27:43 113791484 cff943d8 [INFO Client 4100] #TurtleisFast: best is spam 40%
+2022/09/27 18:27:44 113792281 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:27:46 113794234 cff943d8 [INFO Client 4100] : UnhxppyThxughts has been slain.
+2022/09/27 18:27:46 113794234 cff943d8 [INFO Client 4100] The Maven: The prettiest piece makes the whole complete.
+2022/09/27 18:27:48 113796656 cff943d8 [INFO Client 4100] #TurtleisFast: n prayge
+2022/09/27 18:27:48 113797125 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:27:48 113797125 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:27:48 113797125 ca3a6737 [INFO Client 4100] Connecting to instance server at 169.55.97.186:6112
+2022/09/27 18:27:48 113797156 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 15ms
+2022/09/27 18:27:48 113797187 1186952b [DEBUG Client 4100] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 18:27:48 113797187 f22b69a6 [INFO Client 4100] Tile hash: 1041720784
+2022/09/27 18:27:48 113797187 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:27:49 113797609 cff943d8 [INFO Client 4100] : You have entered Celestial Nebula Hideout.
+2022/09/27 18:27:49 113797937 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:27:53 113801578 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:27:53 113801578 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:27:53 113801578 ca3a6737 [INFO Client 4100] Connecting to instance server at 173.233.139.220:6112
+2022/09/27 18:27:53 113801609 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 15ms
+2022/09/27 18:27:53 113801625 1186952b [DEBUG Client 4100] Generating level 84 area "MavenBoss" with seed 1299718464
+2022/09/27 18:27:53 113801640 f22b69a6 [INFO Client 4100] Tile hash: 4219928636
+2022/09/27 18:27:53 113801640 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:27:53 113802093 cff943d8 [INFO Client 4100] : You have entered Absence of Mercy and Empathy.
+2022/09/27 18:27:54 113802421 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:27:56 113804312 cff943d8 [INFO Client 4100] The Maven: Death will not be an escape.
+2022/09/27 18:27:56 113804343 cff943d8 [INFO Client 4100] #ChampionVin: I'm out of deli orbs :(
+2022/09/27 18:27:58 113806390 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: 60%*
+2022/09/27 18:28:01 113809437 cff943d8 [INFO Client 4100] #<~AWSM~> Divine_Orc: split personality is also delirium only?
+2022/09/27 18:28:01 113810062 cff943d8 [INFO Client 4100] #ChampionVin: what I have is 12 simus
+2022/09/27 18:28:05 113813390 cff943d8 [INFO Client 4100] #TurtleisFast: pathological
+2022/09/27 18:28:10 113818453 cff943d8 [INFO Client 4100] #Necrotch: Chaos Orb wow solaris touched! thanks for the divines chris!@
+2022/09/27 18:28:10 113818843 cff943d8 [INFO Client 4100] The Maven: Scurry, scurry!
+2022/09/27 18:28:11 113819265 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: 60% guarentee 2 boss
+2022/09/27 18:28:12 113821015 cff943d8 [INFO Client 4100] #TurtleisFast: when u low ket go 40
+2022/09/27 18:28:14 113822703 cff943d8 [INFO Client 4100] #<~AWSM~> Divine_Orc: simu i mean
+2022/09/27 18:28:20 113828578 cff943d8 [INFO Client 4100] : UnhxppyThxughts has been slain.
+2022/09/27 18:28:20 113828578 cff943d8 [INFO Client 4100] The Maven: My collection... is complete.
+2022/09/27 18:28:24 113832390 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:28:24 113832390 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:28:24 113832390 ca3a6737 [INFO Client 4100] Connecting to instance server at 169.55.97.186:6112
+2022/09/27 18:28:24 113832437 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 31ms
+2022/09/27 18:28:24 113832468 1186952b [DEBUG Client 4100] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 18:28:24 113832468 f22b69a6 [INFO Client 4100] Tile hash: 1041720784
+2022/09/27 18:28:24 113832468 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:28:24 113832921 cff943d8 [INFO Client 4100] : You have entered Celestial Nebula Hideout.
+2022/09/27 18:28:24 113833046 cff943d8 [INFO Client 4100] #Coughy_and_Smooch:  split personality megalomaniac and voices
+2022/09/27 18:28:24 113833046 cff943d8 [INFO Client 4100] #ChampionVin: I just did 40%
+2022/09/27 18:28:25 113833281 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:28:28 113836328 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:28:28 113836328 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:28:28 113836328 ca3a6737 [INFO Client 4100] Connecting to instance server at 173.233.139.220:6112
+2022/09/27 18:28:28 113836343 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 15ms
+2022/09/27 18:28:28 113836359 1186952b [DEBUG Client 4100] Generating level 84 area "MavenBoss" with seed 1299718464
+2022/09/27 18:28:28 113836359 f22b69a6 [INFO Client 4100] Tile hash: 4219928636
+2022/09/27 18:28:28 113836359 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:28:28 113836734 cff943d8 [INFO Client 4100] : You have entered Absence of Mercy and Empathy.
+2022/09/27 18:28:28 113837046 32759a9f [INFO Client 4100] [SHADER] Delay: ON
+2022/09/27 18:28:30 113838250 cff943d8 [INFO Client 4100] #TurtleisFast: he can run 3 map as opposed to 2
+2022/09/27 18:28:30 113839171 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:28:30 113839203 cff943d8 [INFO Client 4100] #ChampionVin: only missed double boss in 1 map
+2022/09/27 18:28:37 113845593 cff943d8 [INFO Client 4100] The Maven: Stand still!
+2022/09/27 18:28:46 113854625 cff943d8 [INFO Client 4100] The Maven: A cascade of pain!
+2022/09/27 18:28:48 113856609 cff943d8 [INFO Client 4100] The Maven: I require aid!
+2022/09/27 18:28:55 113863578 cff943d8 [INFO Client 4100] The Envoy: You force an intervention, Nomad. You have proved your might. You have proved your ignorance.
+2022/09/27 18:28:56 113864515 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: 40% is 80% for a second boss right
+2022/09/27 18:28:56 113864546 cff943d8 [INFO Client 4100] #ChampionVin: guess its just natural spawn farming now saj
+2022/09/27 18:29:02 113870546 cff943d8 [INFO Client 4100] The Maven: The toy refuses. The toy causes me pain. Is the toy... alive...?
+2022/09/27 18:29:05 113873953 cff943d8 [INFO Client 4100] #ChampionVin: 40% spawns both
+2022/09/27 18:29:06 113874953 cff943d8 [INFO Client 4100] #TurtleisFast: trinket contracts for orbs bro
+2022/09/27 18:29:11 113879875 cff943d8 [INFO Client 4100] The Maven: I apologize to the toy. I did not realise... you... were like me...
+2022/09/27 18:29:12 113880453 cff943d8 [INFO Client 4100] #TurtleisFast: blueprints*
+2022/09/27 18:29:13 113881625 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: 40% doesnt spawn both
+2022/09/27 18:29:19 113887750 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: 60% is 100% double boss
+2022/09/27 18:29:20 113889109 cff943d8 [INFO Client 4100] The Maven: I hope we can continue to play together.
+2022/09/27 18:29:24 113892765 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: 40% isnt guarantee
+2022/09/27 18:29:24 113892828 cff943d8 [INFO Client 4100] #ChampionVin: I just used 50 deli orbs. 40% does spawn both
+2022/09/27 18:29:35 113903609 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: its not 100%
+2022/09/27 18:29:45 113913718 cff943d8 [INFO Client 4100] #ChampionVin: yea no guarantee but 2 is more economical
+2022/09/27 18:29:49 113918000 cff943d8 [INFO Client 4100] #TurtleisFast: woah woah
+2022/09/27 18:29:50 113918437 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: 40% is 80% chance of second boss
+2022/09/27 18:29:56 113924343 cff943d8 [INFO Client 4100] #ChampionVin: I pretty much got both every time tho
+2022/09/27 18:29:56 113924765 cff943d8 [INFO Client 4100] #TurtleisFast: i maybe wrong
+2022/09/27 18:30:04 113932812 cff943d8 [INFO Client 4100] #TurtleisFast: but there no guaranteed deli boss
+2022/09/27 18:30:08 113936640 cff943d8 [INFO Client 4100] #TurtleisFast: even in 100
+2022/09/27 18:30:12 113940640 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: it is 100%
+2022/09/27 18:30:14 113942906 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: with the node
+2022/09/27 18:30:17 113945734 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: +60%
+2022/09/27 18:30:26 113954296 cff943d8 [INFO Client 4100] #<MRG> Кзтвгощи_вгггг: of double boss turtle
+2022/09/27 18:30:26 113954359 88a90480 [DEBUG Client 4100] Got Instance Details from login server
+2022/09/27 18:30:26 113954359 32759a9f [INFO Client 4100] [SHADER] Delay: OFF
+2022/09/27 18:30:26 113954359 ca3a6737 [INFO Client 4100] Connecting to instance server at 209.192.154.212:6112
+2022/09/27 18:30:26 113954390 ca3a4d51 [DEBUG Client 4100] Connect time to instance server was 16ms
+2022/09/27 18:30:26 113954406 1186952b [DEBUG Client 4100] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 18:30:26 113954421 f22b69a6 [INFO Client 4100] Tile hash: 1041720784
+2022/09/27 18:30:26 113954421 f22b69a7 [INFO Client 4100] Doodad hash: 0
+2022/09/27 18:30:26 113954828 cff943d8 [INFO Client 4100] : You have entered Celestial Nebula Hideout.
+
+# cortex
+2022/09/28 01:57:02 140750437 ca3a6737 [INFO Client 13864] Connecting to instance server at 173.233.139.84:6112
+2022/09/28 01:57:02 140750468 ca3a4d51 [DEBUG Client 13864] Connect time to instance server was 16ms
+2022/09/28 01:57:02 140750500 1186952b [DEBUG Client 13864] Generating level 83 area "Synthesis_MapBoss" with seed 1219411813
+2022/09/28 01:57:02 140751109 f22b69a6 [INFO Client 13864] Tile hash: 1561487820
+2022/09/28 01:57:02 140751109 f22b69a7 [INFO Client 13864] Doodad hash: 0
+2022/09/28 01:57:03 140751703 cff943d8 [INFO Client 13864] : You have entered Cortex.
+2022/09/28 01:57:04 140752328 32759a9f [INFO Client 13864] [SHADER] Delay: ON
+2022/09/28 01:57:05 140753781 cff943d8 [INFO Client 13864] #<Ðéø> ScottsTotsMirrored: gl
+2022/09/28 01:57:06 140754375 cff943d8 [INFO Client 13864] #PathlessSage: huh, PoB has Legacy of Fury listed as "Exclusive to: Ritual"
+2022/09/28 01:57:13 140761937 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: Forbidden Shako, Great Crown
+2022/09/28 01:57:53 140801531 cff943d8 [INFO Client 13864] #<[Y0L0]> Sappin_Hopium: The Admiral, Varnished Coat neat
+2022/09/28 01:58:04 140812328 cff943d8 [INFO Client 13864] #ItsThisOrTherapy: aye aye cap'n
+2022/09/28 01:58:39 140847796 cff943d8 [INFO Client 13864] #<[Y0L0]> Sappin_Hopium: it's so dumb that unique contracts don't count towards the 50 for the challenge
+2022/09/28 01:58:45 140853843 cff943d8 [INFO Client 13864] #<SSFYEP> FrostshockOvercharged: legacy of fury was added in ritual league
+2022/09/28 01:58:55 140863234 cff943d8 [INFO Client 13864] #<SSFYEP> FrostshockOvercharged: just let PoB play in the corner with its wooden blocks
+2022/09/28 01:59:33 140901562 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: Cortex, Synthesised Map
+2022/09/28 01:59:36 140905187 cff943d8 [INFO Client 13864] #KICKSERVEWIDE: gz
+2022/09/28 01:59:37 140905296 cff943d8 [INFO Client 13864] #<[Y0L0]> Sappin_Hopium: nice
+2022/09/28 01:59:39 140907296 cff943d8 [INFO Client 13864] #FIappingBird: nice
+2022/09/28 02:00:28 140957093 cff943d8 [INFO Client 13864] #AdiuvaEpilepsyWarning: Icefang Orbit, Iron Ring that looks neat
+2022/09/28 02:01:55 141043218 cff943d8 [INFO Client 13864] Venarius: What secrets are you hiding in that murderous mind of yours? Let's find out.
+2022/09/28 02:02:04 141053093 cff943d8 [INFO Client 13864] Venarius: Valdo had some ingenious designs hidden in his memories... observe!
+2022/09/28 02:02:19 141067515 cff943d8 [INFO Client 13864] Venarius: Wraeclast needs me!
+2022/09/28 02:02:25 141074015 cff943d8 [INFO Client 13864] Venarius: Darkness surrounds us!
+2022/09/28 02:02:31 141079953 cff943d8 [INFO Client 13864] Venarius: Valdo's designs were flawed.
+2022/09/28 02:02:35 141083937 cff943d8 [INFO Client 13864] Venarius: Do you remember dying here? You will.
+2022/09/28 02:02:39 141087437 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: Loath Stinger, Imperial Claw made a cool claw
+2022/09/28 02:02:42 141090781 cff943d8 [INFO Client 13864] Venarius: Be no more.
+2022/09/28 02:02:44 141092218 cff943d8 [INFO Client 13864] #<Ðéø> ScottsTotsMirrored: gratz
+2022/09/28 02:02:45 141094109 cff943d8 [INFO Client 13864] Venarius: Feel the pull of the void!
+2022/09/28 02:02:48 141096875 cff943d8 [INFO Client 13864] #KICKSERVEWIDE: nicee
+2022/09/28 02:02:49 141097609 cff943d8 [INFO Client 13864] #<Ðéø> ScottsTotsMirrored: very nice
+2022/09/28 02:02:49 141097703 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: gz
+2022/09/28 02:02:50 141098859 cff943d8 [INFO Client 13864] Venarius: Yes, that's it! Death sweeps in.
+2022/09/28 02:02:51 141100062 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: dude
+2022/09/28 02:02:57 141105265 cff943d8 [INFO Client 13864] Venarius: Burn away sin!
+2022/09/28 02:02:57 141106187 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: crit + stats hybrid
+2022/09/28 02:03:00 141108468 cff943d8 [INFO Client 13864] Venarius: What are you?
+2022/09/28 02:03:01 141110078 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: not plain crit craft
+2022/09/28 02:03:03 141111437 cff943d8 [INFO Client 13864] Venarius: In this, the realm of the past, I am King, and you will bow!
+2022/09/28 02:03:10 141118390 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: I dont have an ex rn
+2022/09/28 02:03:15 141123406 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: ew
+2022/09/28 02:03:20 141128218 cff943d8 [INFO Client 13864] #SpaceScorpionSaveMe: been slaming ?
+2022/09/28 02:03:35 141143703 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: I hit the fracture first try and the t2 attack speed first try
+2022/09/28 02:03:39 141148000 cff943d8 [INFO Client 13864] Venarius: This one is my own creation!
+2022/09/28 02:03:47 141156062 cff943d8 [INFO Client 13864] #ItsThisOrTherapy: im addicted to ex slamming this league
+2022/09/28 02:03:50 141158296 cff943d8 [INFO Client 13864] Venarius: Wraeclast needs me!
+2022/09/28 02:03:53 141162062 cff943d8 [INFO Client 13864] Venarius: Haha! Yes! Feed!
+2022/09/28 02:03:54 141163046 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: I have been ex slamming yes
+2022/09/28 02:03:58 141166875 cff943d8 [INFO Client 13864] #ItsThisOrTherapy: so satisfying hitting that t10 life regen
+2022/09/28 02:04:02 141170375 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: I need to spec harbingers again
+2022/09/28 02:04:03 141171531 cff943d8 [INFO Client 13864] #FIappingBird: Honour Song, Throat Stabber this are mine :D
+2022/09/28 02:04:03 141171953 cff943d8 [INFO Client 13864] Venarius: Obliterate sin!
+2022/09/28 02:04:08 141176468 cff943d8 [INFO Client 13864] #FIappingBird: sad lightning roll is bad
+2022/09/28 02:04:09 141177828 cff943d8 [INFO Client 13864] Venarius: Darkness surrounds us!
+2022/09/28 02:04:14 141182968 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: Fate Edge, Imperial Clawmy actual one
+2022/09/28 02:04:16 141185031 cff943d8 [INFO Client 13864] Venarius: Plenty more where that came from.
+2022/09/28 02:04:20 141189031 cff943d8 [INFO Client 13864] Venarius: Face your destruction!
+2022/09/28 02:04:25 141193750 cff943d8 [INFO Client 13864] Venarius: Burn away sin!
+2022/09/28 02:04:30 141199078 cff943d8 [INFO Client 13864] Venarius: Feel the pull of the void!
+2022/09/28 02:04:35 141203875 cff943d8 [INFO Client 13864] Venarius: Yes, that's it! Death sweeps in.
+2022/09/28 02:04:41 141209484 cff943d8 [INFO Client 13864] Venarius: Belief overwhelms!
+2022/09/28 02:04:45 141214125 cff943d8 [INFO Client 13864] Venarius: Sin surrounds you!
+2022/09/28 02:04:51 141219718 cff943d8 [INFO Client 13864] Venarius: Cleansing flames!
+2022/09/28 02:05:03 141232078 cff943d8 [INFO Client 13864] Venarius: Feel the pull of the void!
+2022/09/28 02:05:06 141234359 cff943d8 [INFO Client 13864] Venarius: No! Impossible! How!?
+2022/09/28 02:05:10 141238359 cff943d8 [INFO Client 13864] Venarius: This isn't over. This will never be over! I will unify humanity!
+2022/09/28 02:05:39 141267218 88a90480 [DEBUG Client 13864] Got Instance Details from login server
+2022/09/28 02:05:39 141267218 32759a9f [INFO Client 13864] [SHADER] Delay: OFF
+2022/09/28 02:05:39 141267218 ca3a6737 [INFO Client 13864] Connecting to instance server at 173.233.138.116:6112
+2022/09/28 02:05:39 141267250 ca3a4d51 [DEBUG Client 13864] Connect time to instance server was 16ms
+2022/09/28 02:05:39 141267265 1186952b [DEBUG Client 13864] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/28 02:05:39 141267281 f22b69a6 [INFO Client 13864] Tile hash: 1041720784
+2022/09/28 02:05:39 141267281 f22b69a7 [INFO Client 13864] Doodad hash: 0
+2022/09/28 02:05:39 141267750 cff943d8 [INFO Client 13864] : You have entered Celestial Nebula Hideout.
+2022/09/28 02:05:39 141268156 32759a9f [INFO Client 13864] [SHADER] Delay: ON
+2022/09/28 02:05:54 141282421 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: im still debating if I wanna do ls or venom gyre, I think getting pierce will be annoying for ls but it'll be stronger
+2022/09/28 02:06:17 141306140 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: VG is so annoying to play against bosses
+2022/09/28 02:06:27 141315671 cff943d8 [INFO Client 13864] : You have received an Atlas Skill Point.
+2022/09/28 02:06:27 141315671 cff943d8 [INFO Client 13864] : You have received 2 Atlas Passive Respec Points.
+2022/09/28 02:06:30 141318984 8da7eb3b [INFO Client 13864] Successfully allocated passive skill id: atlas_boss_1_4, name: Map Boss Rarity
+2022/09/28 02:06:40 141328812 cff943d8 [INFO Client 13864] #AnaHexBlastAGAIN: you can always craft pierce or take it on the tree
+2022/09/28 02:06:41 141329859 8da7ead9 [INFO Client 13864] Successfully unallocated passive skill id: atlas_ritual_2_1, name: Ritual Tribute Quantity
+2022/09/28 02:06:44 141332671 8da7eb3b [INFO Client 13864] Successfully allocated passive skill id: atlas_boss_1_3, name: Enriched Entities
+2022/09/28 02:06:47 141336171 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: I do need a bosser, my boneshatter character is not doing it for me
+2022/09/28 02:07:09 141357562 cff943d8 [INFO Client 13864] #FIappingBird: seismic trap
+2022/09/28 02:07:40 141388578 cff943d8 [INFO Client 13864] : Trade accepted.
+2022/09/28 02:07:54 141402640 cff943d8 [INFO Client 13864] #<SSFYEP> AmbyBole: The Dapper Prodigy
+2022/09/28 02:07:58 141406921 cff943d8 [INFO Client 13864] #KICKSERVEWIDE: int
+2022/09/28 02:08:01 141409625 cff943d8 [INFO Client 13864] #<SSFYEP> AmbyBole: Spidersilk Robe yep
+2022/09/28 02:08:08 141416281 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: I dont wanna split my resources for a third character though, I think ill just do ls raider
+2022/09/28 02:08:13 141421875 cff943d8 [INFO Client 13864] #KICKSERVEWIDE: chance scour into the covenant ez
+2022/09/28 02:08:45 141453281 cff943d8 [INFO Client 13864] #<Incubi> drstevebrule: if I have an interrogation should I use it on ls raider?
+2022/09/28 02:08:50 141458875 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: Dire Core, Mesa Mapx1 Altered Distant Memory, Synthesised Mapx1 Cortex, Synthesised Mapx1
+2022/09/28 02:08:52 141460687 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: bad cycle
+2022/09/28 02:09:02 141470281 cff943d8 [INFO Client 13864] #<MRG> Кзтвгощи_вгггг: Incandescent Invitation#100
+2022/09/28 02:09:14 141483156 cff943d8 [INFO Client 13864] #AnaHexBlastAGAIN: Divine Orb first map first mob of the day gg
+2022/09/28 02:09:52 141520875 cff943d8 [INFO Client 13864] #<Ðéø> ScottsTotsMirrored: gratz
+2022/09/28 02:09:58 141526453 cff943d8 [INFO Client 13864] #IHaveNoAssAndIMustShart: Einhar's Memory pausechamp?
+2022/09/28 02:10:03 141531687 cff943d8 [INFO Client 13864] #<Ðéø> ScottsTotsMirrored: ez groove
+2022/09/28 02:10:03 141531718 cff943d8 [INFO Client 13864] #IHaveNoAssAndIMustShart: Einhar's Memory of the Sacred Grove
+2022/09/28 02:10:05 141533734 cff943d8 [INFO Client 13864] #KICKSERVEWIDE: gz!
+2022/09/28 16:18:06 ***** LOG FILE OPENING *****
+
+2022/09/27 18:30:27 ] Connecting to instance server at 999.999.999.3:6112
+2022/09/27 18:30:28 113954828 cff943d8 [INFO Client 4100] : You have entered EndPleaseThanks.

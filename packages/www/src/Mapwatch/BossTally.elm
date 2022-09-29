@@ -1,4 +1,4 @@
-module Mapwatch.BossTally exposing (BossMark, BossTally, aggregate, fromMapRun)
+module Mapwatch.BossTally exposing (BossEntry, BossMark, BossSighting, BossTally, UberBossEntry, UberBossSighting, aggregate, fromMapRun)
 
 import Dict exposing (Dict)
 import Dict.Extra
@@ -14,7 +14,7 @@ import Set exposing (Set)
 
 type alias BossTally =
     { atziri : UberBossSighting
-    , uberelder : UberBossEntry
+    , uberelder : UberBossSighting
     , venarius : UberBossEntry
     , maven : UberBossEntry
     , sirus : UberBossEntry
@@ -35,7 +35,7 @@ type alias BossTally =
     -- partial shaper guardian tracking: we can identify their maps, but not their completion
     -- cannot track elder guardians at all: we can't even identify their maps, much less completion
     , shaper : BossEntry
-    , elder : BossEntry
+    , elder : BossSighting
     , shaperChimera : BossSighting
     , shaperHydra : BossSighting
     , shaperMinotaur : BossSighting
@@ -85,10 +85,19 @@ type
     -- TODO finish the list
     = Atziri Bool
     | UberElder Bool
+    | Venarius Bool
+    | Sirus Bool
+    | Maven Bool
     | Eater Bool
     | Exarch Bool
     | BlackStar
     | Hunger
+    | Shaper
+    | Elder
+    | Baran
+    | Veritania
+    | AlHezmin
+    | Drox
 
 
 type alias BossMark =
@@ -117,7 +126,7 @@ empty =
         us =
             UberBossSighting s s
     in
-    BossTally us ue ue ue ue ue ue e e e e e e e e s s s s
+    BossTally us us ue ue ue ue ue e e e e e e e s s s s s
 
 
 aggregate : List BossMark -> BossTally
@@ -125,29 +134,46 @@ aggregate =
     List.foldl applyMark empty
 
 
-fromMapRun : RawMapRun -> Maybe BossMark
-fromMapRun run =
-    run
-        |> toMarkCompletion
+fromMapRun : RawMapRun -> WorldArea -> Maybe BossMark
+fromMapRun run w =
+    toMarkCompletion run w
         |> Maybe.map (\( id, completed ) -> BossMark id completed run.deaths)
 
 
-toMarkCompletion : RawMapRun -> Maybe ( BossId, Maybe Bool )
-toMarkCompletion run =
+toMarkCompletion : RawMapRun -> WorldArea -> Maybe ( BossId, Maybe Bool )
+toMarkCompletion run w =
     let
         is85 : Bool
         is85 =
             Maybe.withDefault 0 run.level >= 85
     in
-    case run.address.worldArea |> Maybe.map .id |> Maybe.withDefault "" of
+    case w.id of
         "MapAtziri1" ->
             Just ( Atziri False, Nothing )
 
         "MapAtziri2" ->
             Just ( Atziri True, Nothing )
 
+        "MapWorldsElderArena" ->
+            Just ( Elder, Nothing )
+
         "MapWorldsElderArenaUber" ->
             Just ( UberElder is85, Nothing )
+
+        "Synthesis_MapBoss" ->
+            -- TODO
+            Just ( Venarius is85, Just False )
+
+        "AtlasExilesBoss5" ->
+            -- TODO
+            Just ( Sirus is85, Just False )
+
+        "MavenBoss" ->
+            -- TODO
+            Just ( Maven is85, Just False )
+
+        "MapWorldsShapersRealm" ->
+            Just ( Shaper, countTextId (String.startsWith "ShaperBanish") NpcId.shaper run >= 3 |> Just )
 
         "MapWorldsPrimordialBoss1" ->
             Just
@@ -180,10 +206,20 @@ toMarkCompletion run =
 hasTextId : (String -> Bool) -> String -> RawMapRun -> Bool
 hasTextId pred npcId run =
     run.npcSays
-        -- |> Debug.todo ("hastextid: " ++ npcId ++ Debug.toString (Dict.map (\_ -> List.map (.says >> (\x -> ( x.raw, x.textId )))) run.npcSays))
         |> Dict.get npcId
         |> Maybe.map (List.filterMap (.says >> .textId) >> List.any pred)
         |> Maybe.withDefault False
+
+
+countTextId : (String -> Bool) -> String -> RawMapRun -> Int
+countTextId pred npcId run =
+    run.npcSays
+        |> Dict.get npcId
+        |> Maybe.withDefault []
+        |> List.filterMap (.says >> .textId)
+        |> List.map pred
+        |> List.filter identity
+        |> List.length
 
 
 applyMark : BossMark -> BossTally -> BossTally
@@ -193,7 +229,16 @@ applyMark mark tally =
             { tally | atziri = tally.atziri |> applyUberSighting isUber mark }
 
         UberElder isUber ->
-            { tally | uberelder = tally.uberelder |> applyUberEntry isUber mark }
+            { tally | uberelder = tally.uberelder |> applyUberSighting isUber mark }
+
+        Venarius isUber ->
+            { tally | venarius = tally.venarius |> applyUberEntry isUber mark }
+
+        Maven isUber ->
+            { tally | maven = tally.maven |> applyUberEntry isUber mark }
+
+        Sirus isUber ->
+            { tally | sirus = tally.sirus |> applyUberEntry isUber mark }
 
         Exarch isUber ->
             { tally | exarch = tally.exarch |> applyUberEntry isUber mark }
@@ -206,6 +251,24 @@ applyMark mark tally =
 
         Hunger ->
             { tally | hunger = tally.hunger |> applyEntry mark }
+
+        Shaper ->
+            { tally | shaper = tally.shaper |> applyEntry mark }
+
+        Elder ->
+            { tally | elder = tally.elder |> applySighting mark }
+
+        Baran ->
+            { tally | baran = tally.baran |> applyEntry mark }
+
+        Veritania ->
+            { tally | veritania = tally.veritania |> applyEntry mark }
+
+        AlHezmin ->
+            { tally | alhezmin = tally.alhezmin |> applyEntry mark }
+
+        Drox ->
+            { tally | drox = tally.drox |> applyEntry mark }
 
 
 applyUberEntry : Bool -> BossMark -> UberBossEntry -> UberBossEntry
@@ -232,7 +295,7 @@ applyEntry mark entry =
                 Nothing ->
                     -- uh oh: BossEntry requires completion data, but this mark didn't provide it.
                     -- TODO integrate this with bossid?
-                    Debug.todo "BossEntry without completion data"
+                    Debug.todo ("BossEntry without completion data: " ++ Debug.toString mark.boss)
               )
     , totalDeaths = entry.totalDeaths + mark.deaths
     , minDeaths = entry.minDeaths |> Maybe.withDefault mark.deaths |> min mark.deaths |> Just
