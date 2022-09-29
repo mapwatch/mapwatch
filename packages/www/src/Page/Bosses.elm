@@ -6,6 +6,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Localization.Mapwatch as L
 import Mapwatch
+import Mapwatch.BossEntry as BossEntry exposing (BossEntry, Progress)
 import Mapwatch.BossTally as BossTally exposing (BossTally)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.EncounterTally as EncounterTally exposing (EncounterTally)
@@ -146,18 +147,18 @@ viewBossTally query tally =
     ]
 
 
-viewBossEntry : QueryDict -> H.Attribute msg -> String -> BossTally.BossEntry -> List (Html msg)
+viewBossEntry : QueryDict -> H.Attribute msg -> String -> BossEntry -> List (Html msg)
 viewBossEntry query label search entry =
-    viewBossProgressEntry query label search (BossTally.entryProgress entry) entry
+    viewBossProgressEntry query label search (BossEntry.progress entry) entry
 
 
-viewBossEntries : QueryDict -> H.Attribute msg -> List BossTally.BossEntry -> List (Html msg)
+viewBossEntries : QueryDict -> H.Attribute msg -> List BossEntry -> List (Html msg)
 viewBossEntries query label entries =
     -- TODO: mergeEntries has bad behavior here! it ORs, but we want AND here.
     -- viewBossProgressEntry query label search (BossTally.entriesProgress entries) (BossTally.mergeEntries entries)
     let
         progress =
-            BossTally.entriesProgress entries
+            BossEntry.progressList entries
     in
     [ td [ style "text-align" "right" ] [ span [ label ] [] ]
     , td [] [ viewProgress progress ]
@@ -168,7 +169,7 @@ viewBossEntries query label entries =
     ]
 
 
-viewBossProgressEntry : QueryDict -> H.Attribute msg -> String -> BossTally.Progress -> BossTally.BossEntry -> List (Html msg)
+viewBossProgressEntry : QueryDict -> H.Attribute msg -> String -> Progress -> BossEntry -> List (Html msg)
 viewBossProgressEntry query label search progress entry =
     let
         href =
@@ -176,10 +177,10 @@ viewBossProgressEntry query label search progress entry =
     in
     [ td [ style "text-align" "right" ] [ a [ href, label ] [] ]
     , td [] [ viewProgress progress ]
-    , td [ style "text-align" "center" ] [ entry |> BossTally.isVisited |> viewBool ]
-    , td [ style "text-align" "center" ] [ entry |> BossTally.isVictory |> viewBool ]
-    , td [ style "text-align" "center" ] [ entry |> BossTally.isDeathless |> viewBool ]
-    , td [ style "text-align" "center" ] [ entry |> BossTally.isLogoutless |> viewBool ]
+    , td [ style "text-align" "center" ] [ entry |> BossEntry.isVisited |> viewBool ]
+    , td [ style "text-align" "center" ] [ entry |> BossEntry.isVictory |> viewBool ]
+    , td [ style "text-align" "center" ] [ entry |> BossEntry.isDeathless |> viewBool ]
+    , td [ style "text-align" "center" ] [ entry |> BossEntry.isLogoutless |> viewBool ]
 
     -- , td [ style "text-align" "center" ] [ text "?" ]
     -- , td [] [ text <| String.fromInt entry.runs ]
@@ -195,7 +196,7 @@ viewBossProgressEntry query label search progress entry =
     ]
 
 
-viewProgress : BossTally.Progress -> Html msg
+viewProgress : Progress -> Html msg
 viewProgress p =
     H.progress
         [ A.max <| String.fromInt p.possible
