@@ -14,7 +14,8 @@ Frozen; cannot be modified. Lots of redundancy. Use RawMapRun for updates and lo
 
 import Dict exposing (Dict)
 import Duration exposing (Millis)
-import Mapwatch.BossTally as BossTally
+import Mapwatch.BossMark as BossMark exposing (BossMark)
+import Mapwatch.BossTally as BossTally exposing (BossTally)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcGroup, NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
@@ -54,7 +55,7 @@ type alias MapRun =
     , isHeartOfTheGrove : Bool
     , rituals : Int
     , level : Maybe Int
-    , bossTally : Maybe BossTally.BossMark
+    , bossTally : Maybe BossMark
     }
 
 
@@ -235,7 +236,7 @@ fromRaw dm raw =
         }
     , rituals = raw.rituals
     , level = raw.level
-    , bossTally = addr.worldArea |> Maybe.andThen (BossTally.fromMapRun raw)
+    , bossTally = addr.worldArea |> Maybe.andThen (BossMark.fromMapRun raw)
     }
 
 
