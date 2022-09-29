@@ -9,12 +9,16 @@ module Mapwatch.BossEntry exposing
     , isVictoryExact
     , isVisited
     , isVisitedExact
+    , jsonDecode
+    , jsonEncode
     , mergeList
     , mergePair
     , progress
     , progressList
     )
 
+import Json.Decode as D
+import Json.Encode as E
 import Maybe.Extra
 import Time exposing (Posix)
 
@@ -233,3 +237,142 @@ mergeData ma mb =
 mergeList : List BossEntry -> BossEntry
 mergeList =
     List.foldl mergePair Unvisited
+
+
+
+-- json encode, decode
+
+
+jsonEncode : BossEntry -> D.Value
+jsonEncode e =
+    case e of
+        Unvisited ->
+            E.object
+                [ ( "type", E.string "unvisited" )
+                ]
+
+        Visited d ->
+            E.object
+                [ ( "type", E.string "visited" )
+                , ( "data", jsonEncodeVisited d )
+                ]
+
+        Victory d ->
+            E.object
+                [ ( "type", E.string "victory" )
+                , ( "data", jsonEncodeVictory d )
+                ]
+
+        Deathless d ->
+            E.object
+                [ ( "type", E.string "deathless" )
+                , ( "data", jsonEncodeDeathless d )
+                ]
+
+        Logoutless d ->
+            E.object
+                [ ( "type", E.string "logoutless" )
+                , ( "data", jsonEncodeLogoutless d )
+                ]
+
+
+jsonEncodeVisited : VisitedData -> D.Value
+jsonEncodeVisited d =
+    E.object
+        [ ( "achievedAt", d.achievedAt |> jsonEncodePosix )
+        , ( "count", d.count |> E.int )
+        ]
+
+
+jsonEncodeVictory : VictoryData -> D.Value
+jsonEncodeVictory d =
+    E.object
+        [ ( "achievedAt", d.achievedAt |> jsonEncodePosix )
+        , ( "count", d.count |> E.int )
+        , ( "visited", d.visited |> jsonEncodeVisited )
+        ]
+
+
+jsonEncodeDeathless : DeathlessData -> D.Value
+jsonEncodeDeathless d =
+    E.object
+        [ ( "achievedAt", d.achievedAt |> jsonEncodePosix )
+        , ( "count", d.count |> E.int )
+        , ( "victory", d.victory |> jsonEncodeVictory )
+        ]
+
+
+jsonEncodeLogoutless : LogoutlessData -> D.Value
+jsonEncodeLogoutless d =
+    E.object
+        [ ( "achievedAt", d.achievedAt |> jsonEncodePosix )
+        , ( "count", d.count |> E.int )
+        , ( "deathless", d.deathless |> jsonEncodeDeathless )
+        ]
+
+
+jsonEncodePosix : Posix -> D.Value
+jsonEncodePosix =
+    Time.posixToMillis >> E.int
+
+
+jsonDecode : D.Decoder BossEntry
+jsonDecode =
+    D.andThen
+        (\type_ ->
+            case type_ of
+                "unvisited" ->
+                    Unvisited |> D.succeed
+
+                "visited" ->
+                    jsonDecodeVisited |> D.map Visited
+
+                "victory" ->
+                    jsonDecodeVictory |> D.map Victory
+
+                "deathless" ->
+                    jsonDecodeDeathless |> D.map Deathless
+
+                "logoutless" ->
+                    jsonDecodeLogoutless |> D.map Logoutless
+
+                _ ->
+                    "unrecognized type: " ++ type_ |> D.fail
+        )
+        (D.field "type" D.string)
+
+
+jsonDecodeVisited : D.Decoder VisitedData
+jsonDecodeVisited =
+    D.map2 VisitedData
+        (D.field "achievedAt" jsonDecodePosix)
+        (D.field "count" D.int)
+
+
+jsonDecodeVictory : D.Decoder VictoryData
+jsonDecodeVictory =
+    D.map3 VictoryData
+        (D.field "achievedAt" jsonDecodePosix)
+        (D.field "count" D.int)
+        (D.field "visited" jsonDecodeVisited)
+
+
+jsonDecodeDeathless : D.Decoder DeathlessData
+jsonDecodeDeathless =
+    D.map3 DeathlessData
+        (D.field "achievedAt" jsonDecodePosix)
+        (D.field "count" D.int)
+        (D.field "victory" jsonDecodeVictory)
+
+
+jsonDecodeLogoutless : D.Decoder LogoutlessData
+jsonDecodeLogoutless =
+    D.map3 LogoutlessData
+        (D.field "achievedAt" jsonDecodePosix)
+        (D.field "count" D.int)
+        (D.field "deathless" jsonDecodeDeathless)
+
+
+jsonDecodePosix : D.Decoder Posix
+jsonDecodePosix =
+    D.int |> D.map Time.millisToPosix
