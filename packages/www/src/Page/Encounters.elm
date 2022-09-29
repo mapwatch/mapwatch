@@ -84,7 +84,6 @@ viewMain model =
         , View.Util.viewDateSearch model.mapwatch.datamine.leagues model.query model.route
         , div [] <| viewMainDisclaimer
         , div [] <| viewEncounterTally model.query <| EncounterTally.fromMapRuns runs
-        , div [] <| viewBossTally model.query <| BossTally.aggregate <| List.filterMap .bossTally runs
         ]
 
 
@@ -94,81 +93,6 @@ viewMainDisclaimer =
         , p [ L.encountersDesc1 ] []
         , p [ L.encountersDesc2 ] []
         ]
-    ]
-
-
-viewBossTally : QueryDict -> BossTally -> List (Html msg)
-viewBossTally query tally =
-    [ table []
-        [ tr [] []
-        , tally.atziri.uber |> viewBossSighting query L.bossesUberAtziri "id:MapAtziri2" |> tr []
-        , tally.uberelder.uber |> viewBossSighting query L.bossesUberUberElder "" |> tr []
-        , tally.venarius.uber |> viewBossEntry query L.bossesUberVenarius "" |> tr []
-        , tally.maven.uber |> viewBossEntry query L.bossesUberMaven "" |> tr []
-        , tally.sirus.uber |> viewBossEntry query L.bossesUberSirus "" |> tr []
-        , tally.exarch.uber |> viewBossEntry query L.bossesUberExarch "" |> tr []
-        , tally.eater.uber |> viewBossEntry query L.bossesUberEater "" |> tr []
-        , tally.atziri.standard |> viewBossSighting query L.bossesAtziri "id:MapAtziri2" |> tr []
-        , tally.uberelder.standard |> viewBossSighting query L.bossesUberElder "id:MapWorldsElderArenaUber" |> tr []
-        , tally.venarius.standard |> viewBossEntry query L.bossesVenarius "" |> tr []
-        , tally.maven.standard |> viewBossEntry query L.bossesMaven "" |> tr []
-        , tally.sirus.standard |> viewBossEntry query L.bossesSirus "" |> tr []
-        , tally.exarch.standard |> viewBossEntry query L.bossesExarch "id:MapWorldsPrimordialBoss3" |> tr []
-        , tally.eater.standard |> viewBossEntry query L.bossesEater "id:MapWorldsPrimordialBoss4" |> tr []
-        , tally.hunger |> viewBossEntry query L.bossesHunger "id:MapWorldsPrimordialBoss1" |> tr []
-        , tally.blackstar |> viewBossEntry query L.bossesBlackstar "id:MapWorldsPrimordialBoss2" |> tr []
-        , tally.shaper |> viewBossEntry query L.bossesShaper "id:MapWorldsShapersRealm" |> tr []
-        , tally.elder |> viewBossSighting query L.bossesElder "id:MapWorldsElderArena" |> tr []
-        , tally.baran |> viewBossEntry query L.bossesBaran "" |> tr []
-        , tally.veritania |> viewBossEntry query L.bossesVeritania "" |> tr []
-        , tally.alhezmin |> viewBossEntry query L.bossesAlhezmin "" |> tr []
-        , tally.drox |> viewBossEntry query L.bossesDrox "" |> tr []
-        , tally.shaperChimera |> viewBossSighting query L.bossesShaperChimera "" |> tr []
-        , tally.shaperHydra |> viewBossSighting query L.bossesShaperHydra "" |> tr []
-        , tally.shaperMinotaur |> viewBossSighting query L.bossesShaperMinotaur "" |> tr []
-        , tally.shaperPhoenix |> viewBossSighting query L.bossesShaperPhoenix "" |> tr []
-        ]
-    ]
-
-
-viewBossEntry : QueryDict -> H.Attribute msg -> String -> BossTally.BossEntry -> List (Html msg)
-viewBossEntry query label search entry =
-    let
-        href =
-            Route.href (query |> Dict.insert "q" search) Route.Encounters
-    in
-    [ td [ style "text-align" "right" ] [ a [ href, label ] [] ]
-    , if entry.completed > 0 then
-        if Maybe.withDefault 999999 entry.minDeaths <= 0 then
-            td [ style "color" "green" ] [ text "✔✔" ]
-
-        else
-            td [ style "color" "yellow" ] [ text "✔" ]
-
-      else if entry.runs > 0 then
-        td [ style "color" "orange" ] [ text "✖✖" ]
-
-      else
-        td [ style "color" "red" ] [ text "✖" ]
-    , td [] [ text <| String.fromInt entry.runs ]
-    , td [] [ text <| String.fromInt entry.completed ]
-    , td [] [ text <| String.fromInt <| Maybe.withDefault 0 entry.minDeaths ]
-    , td [] [ text <| String.fromInt entry.totalDeaths ]
-    ]
-
-
-viewBossSighting : QueryDict -> H.Attribute msg -> String -> BossTally.BossSighting -> List (Html msg)
-viewBossSighting query label search entry =
-    let
-        href =
-            Route.href (query |> Dict.insert "q" search) Route.Encounters
-    in
-    [ td [ style "text-align" "right" ] [ a [ href, label ] [] ]
-    , td [] []
-    , td [] [ text <| String.fromInt entry.runs ]
-    , td [] []
-    , td [] [ text <| String.fromInt <| Maybe.withDefault 0 entry.minDeaths ]
-    , td [] [ text <| String.fromInt entry.totalDeaths ]
     ]
 
 

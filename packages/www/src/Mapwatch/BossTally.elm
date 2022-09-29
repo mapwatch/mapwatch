@@ -1,4 +1,4 @@
-module Mapwatch.BossTally exposing (BossEntry, BossMark, BossSighting, BossTally, UberBossEntry, UberBossSighting, aggregate, fromMapRun)
+module Mapwatch.BossTally exposing (BossEntry, BossMark, BossTally, State(..), UberBossEntry, aggregate, conquerors, fromMapRun, isDeathless, isUnvisited, isVictory, isVisited, shaperGuardians, state)
 
 import Dict exposing (Dict)
 import Dict.Extra
@@ -13,8 +13,8 @@ import Set exposing (Set)
 
 
 type alias BossTally =
-    { atziri : UberBossSighting
-    , uberelder : UberBossSighting
+    { atziri : UberBossEntry
+    , uberelder : UberBossEntry
     , venarius : UberBossEntry
     , maven : UberBossEntry
     , sirus : UberBossEntry
@@ -32,14 +32,14 @@ type alias BossTally =
     , hunger : BossEntry
 
     -- shaper, elder, guardians
-    -- partial shaper guardian tracking: we can identify their maps, but not their completion
+    -- elder is quiet, but maven makes it trackable
     -- cannot track elder guardians at all: we can't even identify their maps, much less completion
     , shaper : BossEntry
-    , elder : BossSighting
-    , shaperChimera : BossSighting
-    , shaperHydra : BossSighting
-    , shaperMinotaur : BossSighting
-    , shaperPhoenix : BossSighting
+    , elder : BossEntry
+    , shaperChimera : BossEntry
+    , shaperHydra : BossEntry
+    , shaperMinotaur : BossEntry
+    , shaperPhoenix : BossEntry
 
     -- TODO izaro + uber izaro?
     -- TODO bestiary?
@@ -65,24 +65,7 @@ type alias UberBossEntry =
     }
 
 
-{-| A boss encounter where cannot detect if the boss dies
--}
-type alias BossSighting =
-    { runs : Int
-    , minDeaths : Maybe Int
-    , totalDeaths : Int
-    }
-
-
-type alias UberBossSighting =
-    { standard : BossSighting
-    , uber : BossSighting
-    }
-
-
-type
-    BossId
-    -- TODO finish the list
+type BossId
     = Atziri Bool
     | UberElder Bool
     | Venarius Bool
@@ -98,12 +81,19 @@ type
     | Veritania
     | AlHezmin
     | Drox
+    | ShaperMinotaur
+    | ShaperChimera
+    | ShaperPhoenix
+    | ShaperHydra
 
 
 type alias BossMark =
     { boss : BossId
     , completed : Maybe Bool
     , deaths : Int
+
+    -- TODO
+    -- , time : Duration.Millis
     }
 
 
@@ -117,16 +107,74 @@ empty =
         ue : UberBossEntry
         ue =
             UberBossEntry e e
-
-        s : BossSighting
-        s =
-            BossSighting 0 Nothing 0
-
-        us : UberBossSighting
-        us =
-            UberBossSighting s s
     in
-    BossTally us us ue ue ue ue ue e e e e e e e s s s s s
+    BossTally ue ue ue ue ue ue ue e e e e e e e e e e e e
+
+
+type State
+    = Unvisited
+    | Visited
+    | Victory
+      -- victory without logging out (no pre-victory portals). TODO implement
+      -- | Exitless
+    | Deathless
+
+
+state : BossEntry -> State
+state e =
+    if e.runs <= 0 then
+        Unvisited
+
+    else if e.completed <= 0 then
+        Visited
+
+    else
+        case e.minDeaths of
+            Just 0 ->
+                -- TODO implement exitless here
+                Deathless
+
+            _ ->
+                Victory
+
+
+isUnvisited : State -> Bool
+isUnvisited =
+    (==) Unvisited
+
+
+isVisited : State -> Bool
+isVisited =
+    isUnvisited >> not
+
+
+isVictory : State -> Bool
+isVictory s =
+    s == Victory || isDeathless s
+
+
+isDeathless : State -> Bool
+isDeathless =
+    (==) Deathless
+
+
+mergeEntries : List BossEntry -> BossEntry
+mergeEntries es =
+    { runs = es |> List.map .runs |> List.sum
+    , completed = es |> List.map .completed |> List.sum
+    , minDeaths = es |> List.filterMap .minDeaths |> List.maximum
+    , totalDeaths = es |> List.map .totalDeaths |> List.sum
+    }
+
+
+shaperGuardians : BossTally -> BossEntry
+shaperGuardians t =
+    mergeEntries [ t.shaperChimera, t.shaperHydra, t.shaperMinotaur, t.shaperPhoenix ]
+
+
+conquerors : BossTally -> BossEntry
+conquerors t =
+    mergeEntries [ t.baran, t.drox, t.veritania, t.alhezmin ]
 
 
 aggregate : List BossMark -> BossTally
@@ -149,28 +197,47 @@ toMarkCompletion run w =
     in
     case w.id of
         "MapAtziri1" ->
+            -- apex of sacrifice: tracking victory is impossible :(
             Just ( Atziri False, Nothing )
 
         "MapAtziri2" ->
-            Just ( Atziri True, Nothing )
+            -- alluring abyss: tracking victory is only possible with the maven
+            Just
+                ( Atziri True
+                , run |> hasMavenVictoryTextId |> Just
+                )
 
         "MapWorldsElderArena" ->
-            Just ( Elder, Nothing )
+            -- tracking victory is only possible with the maven
+            Just
+                ( Elder
+                , run |> hasMavenVictoryTextId |> Just
+                )
 
         "MapWorldsElderArenaUber" ->
-            Just ( UberElder is85, Nothing )
+            -- tracking victory is only possible with the maven
+            Just
+                ( UberElder is85
+                , run |> hasMavenVictoryTextId |> Just
+                )
 
         "Synthesis_MapBoss" ->
-            -- TODO
-            Just ( Venarius is85, Just False )
+            Just
+                ( Venarius is85
+                , run |> hasTextId ((==) "VenariusBossFightDepart") NpcId.venarius |> Just
+                )
 
         "AtlasExilesBoss5" ->
-            -- TODO
-            Just ( Sirus is85, Just False )
+            Just
+                ( Sirus is85
+                , run |> hasTextId (\s -> s == "SirusSimpleDeathLine" || String.startsWith "SirusComplexDeathLine" s) NpcId.sirus |> Just
+                )
 
         "MavenBoss" ->
-            -- TODO
-            Just ( Maven is85, Just False )
+            Just
+                ( Maven is85
+                , run |> hasTextId (\s -> String.startsWith "MavenFinalFightRealises" s || String.startsWith "MavenFinalFightRepeatedRealises" s) NpcId.maven |> Just
+                )
 
         "MapWorldsShapersRealm" ->
             Just ( Shaper, countTextId (String.startsWith "ShaperBanish") NpcId.shaper run >= 3 |> Just )
@@ -199,8 +266,48 @@ toMarkCompletion run w =
                 , run |> hasTextId (String.startsWith "ConsumeBossDefeated") NpcId.eater |> Just
                 )
 
+        "MapWorldsMinotaur" ->
+            Just
+                ( ShaperMinotaur
+                , run |> hasTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper |> Just
+                )
+
+        "MapWorldsChimera" ->
+            Just
+                ( ShaperChimera
+                , run |> hasTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper |> Just
+                )
+
+        "MapWorldsPhoenix" ->
+            Just
+                ( ShaperPhoenix
+                , run |> hasTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper |> Just
+                )
+
+        "MapWorldsHydra" ->
+            Just
+                ( ShaperHydra
+                , run |> hasTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper |> Just
+                )
+
         _ ->
-            Nothing
+            let
+                conqNpcs =
+                    [ ( Baran, NpcId.baran, [ "BaranFourStoneDeath", "BaranFourStoneStoryDeath" ] )
+                    , ( AlHezmin, NpcId.alHezmin, [ "AlHezminFourStoneDeath" ] )
+                    , ( Veritania, NpcId.veritania, [ "VeritaniaFourStoneDeath" ] )
+                    , ( Drox, NpcId.drox, [ "DroxFourStoneDeath" ] )
+                    ]
+            in
+            case conqNpcs |> List.filter (\( _, npcId, _ ) -> run.npcSays |> Dict.member npcId) of
+                ( bossId, npcId, victoryPrefix ) :: _ ->
+                    Just
+                        ( bossId
+                        , run |> hasTextId (\s -> List.any (\v -> String.startsWith v s) victoryPrefix) npcId |> Just
+                        )
+
+                [] ->
+                    Nothing
 
 
 hasTextId : (String -> Bool) -> String -> RawMapRun -> Bool
@@ -209,6 +316,21 @@ hasTextId pred npcId run =
         |> Dict.get npcId
         |> Maybe.map (List.filterMap (.says >> .textId) >> List.any pred)
         |> Maybe.withDefault False
+
+
+hasMavenVictoryTextId : RawMapRun -> Bool
+hasMavenVictoryTextId =
+    hasTextId
+        (\s ->
+            -- big bosses: shaper, elder...
+            String.startsWith "MavenTier5FirstOffAtlasBossVictory" s
+                || String.startsWith "MavenTier5OffAtlasBossVictory" s
+                || String.startsWith "MavenTier5OffAtlasInvitation" s
+                -- map bosses
+                || String.startsWith "MavenTier5BossVictory" s
+                || String.startsWith "MavenTier5Invitation" s
+        )
+        NpcId.maven
 
 
 countTextId : (String -> Bool) -> String -> RawMapRun -> Int
@@ -226,10 +348,10 @@ applyMark : BossMark -> BossTally -> BossTally
 applyMark mark tally =
     case mark.boss of
         Atziri isUber ->
-            { tally | atziri = tally.atziri |> applyUberSighting isUber mark }
+            { tally | atziri = tally.atziri |> applyUberEntry isUber mark }
 
         UberElder isUber ->
-            { tally | uberelder = tally.uberelder |> applyUberSighting isUber mark }
+            { tally | uberelder = tally.uberelder |> applyUberEntry isUber mark }
 
         Venarius isUber ->
             { tally | venarius = tally.venarius |> applyUberEntry isUber mark }
@@ -256,7 +378,7 @@ applyMark mark tally =
             { tally | shaper = tally.shaper |> applyEntry mark }
 
         Elder ->
-            { tally | elder = tally.elder |> applySighting mark }
+            { tally | elder = tally.elder |> applyEntry mark }
 
         Baran ->
             { tally | baran = tally.baran |> applyEntry mark }
@@ -269,6 +391,18 @@ applyMark mark tally =
 
         Drox ->
             { tally | drox = tally.drox |> applyEntry mark }
+
+        ShaperMinotaur ->
+            { tally | shaperMinotaur = tally.shaperMinotaur |> applyEntry mark }
+
+        ShaperChimera ->
+            { tally | shaperChimera = tally.shaperChimera |> applyEntry mark }
+
+        ShaperPhoenix ->
+            { tally | shaperPhoenix = tally.shaperPhoenix |> applyEntry mark }
+
+        ShaperHydra ->
+            { tally | shaperHydra = tally.shaperHydra |> applyEntry mark }
 
 
 applyUberEntry : Bool -> BossMark -> UberBossEntry -> UberBossEntry
@@ -293,27 +427,9 @@ applyEntry mark entry =
                     0
 
                 Nothing ->
-                    -- uh oh: BossEntry requires completion data, but this mark didn't provide it.
-                    -- TODO integrate this with bossid?
-                    Debug.todo ("BossEntry without completion data: " ++ Debug.toString mark.boss)
+                    -- no idea if it's completed. Possible for quiet bosses that need maven. Assume not-completed.
+                    0
               )
-    , totalDeaths = entry.totalDeaths + mark.deaths
-    , minDeaths = entry.minDeaths |> Maybe.withDefault mark.deaths |> min mark.deaths |> Just
-    }
-
-
-applyUberSighting : Bool -> BossMark -> UberBossSighting -> UberBossSighting
-applyUberSighting isUber mark entry =
-    if isUber then
-        { entry | uber = applySighting mark entry.uber }
-
-    else
-        { entry | standard = applySighting mark entry.standard }
-
-
-applySighting : BossMark -> BossSighting -> BossSighting
-applySighting mark entry =
-    { runs = entry.runs + 1
     , totalDeaths = entry.totalDeaths + mark.deaths
     , minDeaths = entry.minDeaths |> Maybe.withDefault mark.deaths |> min mark.deaths |> Just
     }

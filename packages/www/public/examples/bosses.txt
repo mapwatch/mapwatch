@@ -1,9 +1,14 @@
 # test data containing all tracked bosses.
 #
-# TODO: all ubers
-# TODO: atziri
-# TODO: uber elder
-# TODO: cortex
+# wontfix: atziri, non-uber (maven can't witness and atziri is quiet, so victory cannot be tracked)
+# wontfix: elder guardians (not possible, sadly. maven announces guardian visit/victory, but can't track which guardian)
+# TODO: oshabi???
+# TODO: all ubers (or any one of the L85 ubers, at least - they're probably all similar)
+# TODO: uber atziri, with maven (sadly, can't track victory without maven)
+# TODO: uber elder, with maven (sadly, can't track victory without maven)
+# ✔ uber atziri, without maven, failure
+# ✔ cortex
+# ✔ uber elder, without maven
 # ✔ maven
 # ✔ sirus
 # ✔ exarch
@@ -14,8 +19,219 @@
 # ✔ elder (without maven)
 # ✔ elder (with maven - makes the fight trackable!)
 # ✔ lesser conquerors (all with maven)
-# TODO: shaper guardians
-# TODO: elder guardians
+# ✔ shaper guardians (all with maven)
+
+# uber atziri (failure)
+2022/09/27 19:07:43 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/27 19:07:43 ] Generating level 80 area "MapAtziri2" with seed 2044213909
+2022/09/27 19:07:45 ] : You have entered The Alluring Abyss.
+2022/09/27 19:10:51 ] : Anonymous has been slain.
+2022/09/27 19:10:54 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/27 19:10:54 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 19:10:55 ] : You have entered Celestial Nebula Hideout.
+2022/09/27 19:10:59 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/27 19:10:59 ] Generating level 80 area "MapAtziri2" with seed 2044213909
+2022/09/27 19:11:00 ] : You have entered The Alluring Abyss.
+2022/09/27 19:13:48 ] : Anonymous has been slain.
+2022/09/27 19:13:53 ] Connecting to instance server at 999.999.999.2:6112
+2022/09/27 19:13:53 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 19:13:54 ] : You have entered Celestial Nebula Hideout.
+2022/09/27 19:14:10 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/27 19:14:10 ] Generating level 80 area "MapAtziri2" with seed 2044213909
+2022/09/27 19:14:11 ] : You have entered The Alluring Abyss.
+2022/09/27 19:14:30 ] : Anonymous has been slain.
+2022/09/27 19:14:33 ] Connecting to instance server at 999.999.999.2:6112
+2022/09/27 19:14:33 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 19:14:33 ] : You have entered Celestial Nebula Hideout.
+2022/09/27 19:14:37 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/27 19:14:37 ] Generating level 80 area "MapAtziri2" with seed 2044213909
+2022/09/27 19:14:37 ] : You have entered The Alluring Abyss.
+2022/09/27 19:14:47 ] : Anonymous has been slain.
+2022/09/27 19:14:50 ] Connecting to instance server at 999.999.999.2:6112
+2022/09/27 19:14:50 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 19:14:50 ] : You have entered Celestial Nebula Hideout.
+2022/09/27 19:14:54 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/27 19:14:54 ] Generating level 80 area "MapAtziri2" with seed 2044213909
+2022/09/27 19:14:55 ] : You have entered The Alluring Abyss.
+2022/09/27 19:15:11 ] : Anonymous has been slain.
+2022/09/27 19:15:17 ] Connecting to instance server at 999.999.999.2:6112
+2022/09/27 19:15:17 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 19:15:18 ] : You have entered Celestial Nebula Hideout.
+2022/09/27 19:15:21 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/27 19:15:21 ] Generating level 80 area "MapAtziri2" with seed 2044213909
+2022/09/27 19:15:22 ] : You have entered The Alluring Abyss.
+2022/09/27 19:15:28 ] : Anonymous has been slain.
+2022/09/27 19:15:35 ] Connecting to instance server at 999.999.999.2:6112
+2022/09/27 19:15:35 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 19:15:35 ] : You have entered Celestial Nebula Hideout.
+
+# cortex
+2022/09/28 01:57:02 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/28 01:57:02 ] Generating level 83 area "Synthesis_MapBoss" with seed 1219411813
+2022/09/28 01:57:03 ] : You have entered Cortex.
+2022/09/28 02:01:55 ] Venarius: What secrets are you hiding in that murderous mind of yours? Let's find out.
+2022/09/28 02:02:04 ] Venarius: Valdo had some ingenious designs hidden in his memories... observe!
+2022/09/28 02:02:19 ] Venarius: Wraeclast needs me!
+2022/09/28 02:02:25 ] Venarius: Darkness surrounds us!
+2022/09/28 02:02:31 ] Venarius: Valdo's designs were flawed.
+2022/09/28 02:02:35 ] Venarius: Do you remember dying here? You will.
+2022/09/28 02:02:42 ] Venarius: Be no more.
+2022/09/28 02:02:45 ] Venarius: Feel the pull of the void!
+2022/09/28 02:02:50 ] Venarius: Yes, that's it! Death sweeps in.
+2022/09/28 02:02:57 ] Venarius: Burn away sin!
+2022/09/28 02:03:00 ] Venarius: What are you?
+2022/09/28 02:03:03 ] Venarius: In this, the realm of the past, I am King, and you will bow!
+2022/09/28 02:03:39 ] Venarius: This one is my own creation!
+2022/09/28 02:03:50 ] Venarius: Wraeclast needs me!
+2022/09/28 02:03:53 ] Venarius: Haha! Yes! Feed!
+2022/09/28 02:04:03 ] Venarius: Obliterate sin!
+2022/09/28 02:04:09 ] Venarius: Darkness surrounds us!
+2022/09/28 02:04:16 ] Venarius: Plenty more where that came from.
+2022/09/28 02:04:20 ] Venarius: Face your destruction!
+2022/09/28 02:04:25 ] Venarius: Burn away sin!
+2022/09/28 02:04:30 ] Venarius: Feel the pull of the void!
+2022/09/28 02:04:35 ] Venarius: Yes, that's it! Death sweeps in.
+2022/09/28 02:04:41 ] Venarius: Belief overwhelms!
+2022/09/28 02:04:45 ] Venarius: Sin surrounds you!
+2022/09/28 02:04:51 ] Venarius: Cleansing flames!
+2022/09/28 02:05:03 ] Venarius: Feel the pull of the void!
+2022/09/28 02:05:06 ] Venarius: No! Impossible! How!?
+2022/09/28 02:05:10 ] Venarius: This isn't over. This will never be over! I will unify humanity!
+2022/09/28 02:05:39 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/28 02:05:39 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/28 02:05:39 ] : You have entered Celestial Nebula Hideout.
+
+# shaper:minotaur
+2022/09/27 22:12:01 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/27 22:12:01 ] Generating level 83 area "MapWorldsMinotaur" with seed 1530573126
+2022/09/27 22:12:03 ] : You have entered Maze of the Minotaur.
+2022/09/27 22:12:03 ] The Shaper: One of my captors felt no emotion. He did not hesitate to inflict pain. Now all he feels is intense, unstoppable agony.
+2022/09/27 22:17:59 ] The Maven: I find the struggle for supremacy fascinating.
+2022/09/27 22:18:04 ] The Maven: None resist my entropy!
+2022/09/27 22:18:11 ] The Maven: Mortal flesh is so fallible...
+2022/09/27 22:18:18 ] The Maven: Grasp your mortality tightly.
+2022/09/27 22:18:25 ] The Maven: None resist my entropy!
+2022/09/27 22:18:26 ] The Maven: This Atlas has its delights.
+2022/09/27 22:18:26 ] The Shaper: This is the key to a crucible that stretches the sanity of the mind.
+2022/09/27 22:18:42 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/27 22:18:42 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 22:18:42 ] : You have entered Celestial Nebula Hideout.
+
+# shaper:phoenix
+2022/09/27 22:03:55 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/27 22:03:55 ] Generating level 83 area "MapWorldsPhoenix" with seed 1662337368
+2022/09/27 22:03:56 ] : You have entered Forge of the Phoenix.
+2022/09/27 22:03:56 ] The Shaper: One of my captors refused redemption. He did not see value in a new life. Now new life surrounds him.
+2022/09/27 22:04:24 ] FindClosestObject found no nearby object
+2022/09/27 22:05:10 ] FindClosestObject found no nearby object
+2022/09/27 22:06:12 ] The Envoy: Those I serve cast their eyes upon an endless, unchanging horizon, and have never had cause to look away. Without change, time passes like a tear in a stream. It is invisible, meaningless and insignificant to one with no beginning and no end. 
+2022/09/27 22:07:12 ] FindClosestObject found no nearby object
+2022/09/27 22:07:54 ] FindClosestObject found no nearby object
+2022/09/27 22:08:49 ] The Maven: This one will soon belong to me.
+2022/09/27 22:08:51 ] The Maven: The void protects its children.
+2022/09/27 22:08:59 ] The Maven: Grip of the infinite!
+2022/09/27 22:09:06 ] The Maven: Grasp your mortality tightly.
+2022/09/27 22:09:13 ] The Maven: The void protects its children.
+2022/09/27 22:09:20 ] The Maven: Grasp your mortality tightly.
+2022/09/27 22:09:27 ] The Maven: Struggle, or strangle!
+2022/09/27 22:09:34 ] The Shaper: This is the key to a crucible that stretches the sanity of the mind.
+2022/09/27 22:09:36 ] The Maven: I've assembled a challenge unlike any other!
+2022/09/27 22:10:41 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/27 22:10:41 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 22:10:42 ] : You have entered Celestial Nebula Hideout.
+
+# shaper:hydra
+2022/09/27 21:56:59 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/27 21:56:59 ] Generating level 83 area "MapWorldsHydra" with seed 3976652262
+2022/09/27 21:57:00 ] : You have entered Lair of the Hydra.
+2022/09/27 21:57:00 ] The Shaper: One of my captors wore many faces, yet kept her true face hidden. Now she cannot escape her true face.
+2022/09/27 21:57:25 ] FindClosestObject found no nearby object
+2022/09/27 22:00:00 ] FindClosestObject found no nearby object
+2022/09/27 22:00:31 ] FindClosestObject found no nearby object
+2022/09/27 22:01:30 ] The Maven: One shall murder the other.
+2022/09/27 22:01:33 ] The Maven: Resist the assault!
+2022/09/27 22:01:44 ] The Maven: Grasp your mortality tightly.
+2022/09/27 22:01:51 ] The Maven: Life is so brittle...
+2022/09/27 22:01:53 ] The Maven: Only one leaves... with me.
+2022/09/27 22:01:53 ] The Shaper: This is the key to a crucible that stretches the sanity of the mind.
+2022/09/27 22:01:58 ] FindClosestObject found no nearby object
+2022/09/27 22:03:05 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/27 22:03:05 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/27 22:03:06 ] : You have entered Celestial Nebula Hideout.
+
+# shaper:chimera
+2022/09/26 01:57:44 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/26 01:57:44 ] Generating level 83 area "MapWorldsChimera" with seed 2631251686
+2022/09/26 01:57:47 ] : You have entered Pit of the Chimera.
+2022/09/26 01:57:47 ] The Shaper: One of my captors hid a beast within his heart. Now his true self can be seen by all.
+2022/09/26 02:03:06 ] The Maven: Fight! Fight! Fight!
+2022/09/26 02:03:09 ] The Maven: Struggle, or strangle!
+2022/09/26 02:03:20 ] The Maven: Temporal tears!
+2022/09/26 02:03:27 ] The Maven: Struggle, or strangle!
+2022/09/26 02:03:39 ] The Maven: Struggle, or strangle!
+2022/09/26 02:03:52 ] The Maven: Struggle, or strangle!
+2022/09/26 02:03:59 ] The Maven: Shadow, rise and fight!
+2022/09/26 02:04:06 ] The Maven: Time bends to my will!
+2022/09/26 02:04:14 ] The Maven: Struggle, or strangle!
+2022/09/26 02:04:27 ] The Maven: Time bends to my will!
+2022/09/26 02:05:06 ] The Maven: Time bends to my will!
+2022/09/26 02:05:14 ] The Maven: Twin terrors!
+2022/09/26 02:05:21 ] The Maven: Struggle, or strangle!
+2022/09/26 02:05:29 ] The Maven: Temporal tears!
+2022/09/26 02:05:54 ] The Maven: Grip of the infinite!
+2022/09/26 02:06:05 ] The Maven: Twin terrors!
+2022/09/26 02:06:12 ] The Maven: Temporal tears!
+2022/09/26 02:06:20 ] The Maven: Struggle, or strangle!
+2022/09/26 02:06:21 ] The Maven: This Atlas has its delights.
+2022/09/26 02:06:21 ] The Shaper: This is the key to a crucible that stretches the sanity of the mind.
+2022/09/26 02:06:36 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/26 02:06:36 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/26 02:06:37 ] : You have entered Celestial Nebula Hideout.
+
+# uber elder
+2022/09/28 01:22:19 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/28 01:22:20 ] Generating level 84 area "MapWorldsElderArenaUber" with seed 1526165958
+2022/09/28 01:22:20 ] : You have entered The Shaper's Realm.
+2022/09/28 01:23:27 ] The Shaper: I may not remember... Ah!
+2022/09/28 01:23:39 ] The Shaper: Putrefy, rot, spoil and fester!
+2022/09/28 01:25:47 ] : Anonymous has been slain.
+2022/09/28 01:25:48 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/28 01:25:48 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/28 01:25:49 ] : You have entered Celestial Nebula Hideout.
+2022/09/28 01:25:54 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/28 01:25:54 ] Generating level 84 area "MapWorldsElderArenaUber" with seed 1526165958
+2022/09/28 01:25:54 ] : You have entered The Shaper's Realm.
+2022/09/28 01:26:08 ] : Anonymous has been slain.
+2022/09/28 01:26:11 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/28 01:26:11 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/28 01:26:11 ] : You have entered Celestial Nebula Hideout.
+2022/09/28 01:26:14 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/28 01:26:14 ] Generating level 84 area "MapWorldsElderArenaUber" with seed 1526165958
+2022/09/28 01:26:15 ] : You have entered The Shaper's Realm.
+2022/09/28 01:26:34 ] : Anonymous has been slain.
+2022/09/28 01:26:37 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/28 01:26:37 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/28 01:26:37 ] : You have entered Celestial Nebula Hideout.
+2022/09/28 01:26:40 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/28 01:26:40 ] Generating level 84 area "MapWorldsElderArenaUber" with seed 1526165958
+2022/09/28 01:26:41 ] : You have entered The Shaper's Realm.
+2022/09/28 01:27:00 ] : Anonymous has been slain.
+2022/09/28 01:27:02 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/28 01:27:02 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/28 01:27:02 ] : You have entered Celestial Nebula Hideout.
+2022/09/28 01:27:06 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/28 01:27:06 ] Generating level 84 area "MapWorldsElderArenaUber" with seed 1526165958
+2022/09/28 01:27:07 ] : You have entered The Shaper's Realm.
+2022/09/28 01:27:56 ] : Anonymous has been slain.
+2022/09/28 01:28:00 ] Connecting to instance server at 999.999.999.2:6112
+2022/09/28 01:28:00 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/28 01:28:00 ] : You have entered Celestial Nebula Hideout.
+2022/09/28 01:28:05 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/28 01:28:05 ] Generating level 84 area "MapWorldsElderArenaUber" with seed 1526165958
+2022/09/28 01:28:05 ] : You have entered The Shaper's Realm.
+2022/09/28 01:35:50 ] Connecting to instance server at 999.999.999.3:6112
+2022/09/28 01:35:50 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/28 01:35:50 ] : You have entered Celestial Nebula Hideout.
 
 # hunger
 2022/08/21 13:40:06 ] Connecting to instance server at 999.999.999.0:6112
@@ -453,6 +669,11 @@
 2022/08/22 23:20:03 ] The Maven: A vitality boon.
 2022/08/22 23:20:11 ] The Maven: Time's atrophy!
 2022/08/22 23:20:19 ] The Maven: Chasing death.
+2022/08/22 23:20:31 ] Baran, the Crusader: Kirac... sent you? You must keep him out of the Atlas... I cannot be saved... he will find only his own doom, endlessly pursuing my rescue... he will end up... like me...
+
+
+
+Tell Zana... she was right... to seal us away... Sirus must never... be...
 2022/08/22 23:22:52 ] Connecting to instance server at 999.999.999.1:6112
 2022/08/22 23:22:52 ] Generating level 60 area "HideoutFellshrine" with seed 1
 2022/08/22 23:22:52 ] : You have entered Unearthed Hideout.

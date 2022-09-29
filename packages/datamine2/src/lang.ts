@@ -66,6 +66,8 @@ const exportedNPCs = new Set([
     // "Metadata/NPC/League/Expedition/Dealer",
     "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog",
     "Metadata/NPC/League/Expedition/Saga",
+    // high templar venarius (cortex)
+    "Metadata/Monsters/LeagueSynthesis/SynthesisVenariusBoss",
     // 3.17: eater and exarch
     // black star
     "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss",
@@ -132,6 +134,22 @@ function isNPCTextExported(i: input.NPCTextAudio): boolean {
         || /^ConsumeBossDefeated/.test(i.Id)
         || /^DoomBossDefeated/.test(i.Id)
         || /^TheBlackStarDeath/.test(i.Id)
-        // Other boss defeats
+        // Other boss defeats:
+        // the shaper
         || /^ShaperBanish/.test(i.Id)
+        // cortex
+        || 'VenariusBossFightDepart' === i.Id
+        // maven
+        || /^MavenFinalFightRealises/.test(i.Id)
+        || /^MavenFinalFightApologi/.test(i.Id)
+        || /^MavenFinalFightInvites/.test(i.Id)
+        || /^MavenFinalFightRepeated/.test(i.Id)
+        // elder (and other bosses) with maven
+        || /^MavenTier5OffAtlas/.test(i.Id)
+        || /^MavenTier5FirstOffAtlas/.test(i.Id)
+        // sirus. Not sure the complex death lines are ever used, but it doesn't hurt
+        || 'SirusSimpleDeathLine' === i.Id
+        || /^SirusComplexDeathLine/.test(i.Id)
+        // shaper guardians. "this is the key to a crucible..."
+        || 'ShaperAtlasMapDrops' === i.Id
 }

@@ -4,6 +4,7 @@ import Browser
 import Html exposing (..)
 import Html.Attributes as A
 import Model exposing (Model, Msg)
+import Page.Bosses
 import Page.Changelog
 import Page.Debug
 import Page.DebugDatamine
@@ -63,6 +64,9 @@ viewBody rmodel =
 
                         Encounters ->
                             Page.Encounters.view model
+
+                        Bosses ->
+                            Page.Bosses.view model
 
                         Timer ->
                             Page.Timer.view model

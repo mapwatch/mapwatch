@@ -507,7 +507,6 @@ createNPCText1 : Lang -> Result String (List ( String, NpcTextEntry ))
 createNPCText1 lang =
     [ createNPCTextSet lang NpcId.baran (Tuple.first >> String.startsWith "Baran")
     , createNPCTextSet lang NpcId.veritania (Tuple.first >> String.startsWith "Veritania")
-    , createNPCTextSet lang NpcId.veritania (Tuple.first >> String.startsWith "Veritania")
     , createNPCTextSet lang NpcId.alHezmin (Tuple.first >> String.startsWith "AlHezmin")
     , createNPCTextSet lang NpcId.drox (Tuple.first >> String.startsWith "Drox")
     , createNPCTextSet lang NpcId.cassia (Tuple.first >> String.startsWith "Cassia")
@@ -529,6 +528,9 @@ createNPCText1 lang =
 
     -- bosses
     , createNPCTextSet lang NpcId.shaper (Tuple.first >> String.startsWith "Shaper")
+    , createNPCTextSet lang NpcId.venarius (Tuple.first >> String.startsWith "VenariusBossFight")
+    , createNPCTextSet lang NpcId.sirus (\( s, _ ) -> String.startsWith "SirusSimpleDeathLine" s || String.startsWith "SirusComplexDeathLine" s)
+    , createNPCTextSet lang NpcId.maven (\( s, _ ) -> String.startsWith "MavenFinalFightRealises" s || String.startsWith "MavenFinalFightRepeatedRealises" s || String.startsWith "MavenTier5" s)
 
     -- siege
     , createNPCTextSet lang NpcId.exarch (Tuple.first >> String.startsWith "CleansingFire")

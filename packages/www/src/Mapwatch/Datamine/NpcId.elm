@@ -99,6 +99,10 @@ shaper =
     "Metadata/NPC/Shaper"
 
 
+venarius =
+    "Metadata/Monsters/LeagueSynthesis/SynthesisVenariusBoss"
+
+
 
 -- heist
 
