@@ -6,6 +6,7 @@ import Mapwatch.Datamine as Datamine exposing (WorldArea)
 import Mapwatch.Datamine.NpcId as NpcId
 import Mapwatch.RawMapRun as RawMapRun exposing (RawMapRun)
 import Maybe.Extra
+import Time exposing (Posix)
 
 
 type alias BossTally =
@@ -88,15 +89,14 @@ type alias BossMark =
     , completed : Outcome
     , deaths : Int
 
-    -- TODO
-    -- , time : Duration.Millis
+    -- , started : Posix
     }
 
 
 type Outcome
     = UnknownOutcome -- possible for quiet bosses that require maven for tracking
     | Incomplete
-    | Complete
+    | Complete Posix
 
 
 empty : BossTally
@@ -242,7 +242,24 @@ toMarkCompletion run w =
                 )
 
         "MapWorldsShapersRealm" ->
-            Just ( Shaper, countTextId (String.startsWith "ShaperBanish") NpcId.shaper run >= 3 |> completeIf )
+            Just
+                ( Shaper
+                  -- shaper retreats 3 times, saying similar defeat text each time. The third one is our completion signal
+                , getTextIdsOrDefault
+                    { missingNpcId = Incomplete
+                    , missingTextId = Incomplete
+                    , success =
+                        \e es ->
+                            if List.length (e :: es) >= 3 then
+                                e :: es |> List.reverse |> List.head |> Maybe.withDefault e |> .date |> Complete
+
+                            else
+                                Incomplete
+                    }
+                    (String.startsWith "ShaperBanish")
+                    NpcId.shaper
+                    run
+                )
 
         "MapWorldsPrimordialBoss1" ->
             Just
@@ -312,11 +329,6 @@ toMarkCompletion run w =
                     Nothing
 
 
-completeIf : Bool -> Outcome
-completeIf =
-    valueIf Complete Incomplete
-
-
 isMavenVictoryTextId : String -> Bool
 isMavenVictoryTextId s =
     -- big bosses: shaper, elder...
@@ -330,12 +342,12 @@ isMavenVictoryTextId s =
 
 outcomeMavenVictoryTextId : RawMapRun -> Outcome
 outcomeMavenVictoryTextId =
-    getTextIdOrDefault { missingNpcId = UnknownOutcome, missingTextId = Incomplete, success = always Complete } isMavenVictoryTextId NpcId.maven
+    getTextIdOrDefault { missingNpcId = UnknownOutcome, missingTextId = Incomplete, success = .date >> Complete } isMavenVictoryTextId NpcId.maven
 
 
 outcomeTextId : (String -> Bool) -> String -> RawMapRun -> Outcome
 outcomeTextId =
-    getTextIdOrDefault { missingNpcId = Incomplete, missingTextId = Incomplete, success = always Complete }
+    getTextIdOrDefault { missingNpcId = Incomplete, missingTextId = Incomplete, success = .date >> Complete }
 
 
 hasTextId : (String -> Bool) -> String -> RawMapRun -> Bool
@@ -349,16 +361,27 @@ getTextId =
 
 
 getTextIdOrDefault : { missingNpcId : a, missingTextId : a, success : RawMapRun.NpcEncounter -> a } -> (String -> Bool) -> String -> RawMapRun -> a
-getTextIdOrDefault result pred npcId run =
+getTextIdOrDefault result =
+    getTextIdsOrDefault
+        { missingNpcId = result.missingNpcId
+        , missingTextId = result.missingTextId
+        , success = \e _ -> result.success e
+        }
+
+
+getTextIdsOrDefault : { missingNpcId : a, missingTextId : a, success : RawMapRun.NpcEncounter -> List RawMapRun.NpcEncounter -> a } -> (String -> Bool) -> String -> RawMapRun -> a
+getTextIdsOrDefault result pred npcId run =
     case run.npcSays |> Dict.get npcId of
         Nothing ->
             result.missingNpcId
 
         Just npcTexts ->
-            npcTexts
-                |> List.filter (.says >> .textId >> Maybe.map pred >> Maybe.withDefault False)
-                |> List.head
-                |> Maybe.Extra.unwrap result.missingTextId result.success
+            case npcTexts |> List.filter (.says >> .textId >> Maybe.map pred >> Maybe.withDefault False) of
+                head :: tail ->
+                    result.success head tail
+
+                [] ->
+                    result.missingTextId
 
 
 countTextId : (String -> Bool) -> String -> RawMapRun -> Int
@@ -448,7 +471,7 @@ applyEntry mark entry =
     , completed =
         entry.completed
             + (case mark.completed of
-                Complete ->
+                Complete _ ->
                     1
 
                 Incomplete ->
@@ -459,11 +482,12 @@ applyEntry mark entry =
               )
     , totalDeaths = entry.totalDeaths + mark.deaths
     , minDeaths =
-        if mark.completed == Complete then
-            entry.minDeaths |> Maybe.withDefault mark.deaths |> min mark.deaths |> Just
+        case mark.completed of
+            Complete _ ->
+                entry.minDeaths |> Maybe.withDefault mark.deaths |> min mark.deaths |> Just
 
-        else
-            entry.minDeaths
+            _ ->
+                entry.minDeaths
     }
 
 
