@@ -1,13 +1,20 @@
-module Mapwatch.BossTallyTest exposing (..)
+module Mapwatch.BossShareTest exposing (..)
 
 import Expect
 import Fuzz exposing (Fuzzer)
 import Json.Decode as D
 import Mapwatch.BossEntry as BossEntry exposing (BossEntry)
+import Mapwatch.BossShare as BossShare exposing (BossShare)
 import Mapwatch.BossTally as BossTally exposing (BossTally, UberBossEntry)
 import Random
 import Test exposing (..)
 import Time exposing (Posix)
+
+
+share : Fuzzer BossShare
+share =
+    Fuzz.map BossShare.create
+        tally
 
 
 tally : Fuzzer BossTally
@@ -82,11 +89,17 @@ positiveInt =
 
 all : Test
 all =
-    describe "BossTally"
-        [ fuzz tally "json encode/decode match" <|
+    describe "BossShare"
+        [ fuzz share "json encode/decode match" <|
             \t ->
                 t
-                    |> BossTally.jsonEncode
-                    |> D.decodeValue BossTally.jsonDecode
+                    |> BossShare.jsonEncode
+                    |> D.decodeValue BossShare.jsonDecode
+                    |> Expect.equal (Ok t)
+        , fuzz share "base64 encode/decode match" <|
+            \t ->
+                t
+                    |> BossShare.base64Encode
+                    |> BossShare.base64Decode
                     |> Expect.equal (Ok t)
         ]
