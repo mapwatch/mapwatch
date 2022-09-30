@@ -35,6 +35,7 @@ type Route
     | Maps
     | Encounters
     | Bosses
+    | SharedBosses String
     | Timer
     | Overlay
     | Changelog
@@ -102,6 +103,7 @@ parser =
         , P.map Maps <| P.s "map"
         , P.map Encounters <| P.s "encounter"
         , P.map Bosses <| P.s "bosses"
+        , P.map SharedBosses <| P.s "share" </> P.string
         , P.map Changelog <| P.s "changelog"
         , P.map Privacy <| P.s "privacy"
         , P.map Settings <| P.s "settings"
@@ -154,6 +156,9 @@ routeParts r =
 
         Bosses ->
             ( "/bosses", pageKeys.bosses )
+
+        SharedBosses code ->
+            ( "/share/" ++ code, pageKeys.other )
 
         Timer ->
             ( "", pageKeys.timer )

@@ -221,7 +221,6 @@ jsonEncodeUberEntry e =
 
 jsonDecode : D.Decoder BossTally
 jsonDecode =
-    -- TODO
     D.succeed BossTally
         |> P.required "atziri" jsonDecodeUberEntry
         |> P.required "uberelder" jsonDecodeUberEntry

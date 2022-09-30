@@ -98,6 +98,13 @@ encounters-table-trialmaster-wins-name = Trialmaster wins + bosses
 encounters-table-trialmaster-wins-rate = % of {NUMBER($n)} trialmaster wins + bosses
 encounters-count = ×{NUMBER($n)}
 
+bosses-header-name = Boss
+bosses-header-visited = Visited
+bosses-header-victory = Victory
+bosses-header-deathless = No deaths
+bosses-header-logoutless = No logouts
+bosses-share-button = Share a snapshot of your achievements
+
 bosses-group-all = All Bosses
 bosses-group-pinnacle = Pinnacle Bosses
 bosses-group-uber = Uber Pinnacle Bosses

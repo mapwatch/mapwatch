@@ -19,6 +19,7 @@ import Page.NotFound
 import Page.Overlay
 import Page.Privacy
 import Page.Settings
+import Page.SharedBosses
 import Page.Timer
 import Route exposing (Route(..))
 import Route.Feature as Feature
@@ -67,6 +68,9 @@ viewBody rmodel =
 
                         Bosses ->
                             Page.Bosses.view model
+
+                        SharedBosses code ->
+                            Page.SharedBosses.view code model
 
                         Timer ->
                             Page.Timer.view model

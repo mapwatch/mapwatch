@@ -27,7 +27,8 @@
             "elm-explorations/markdown": "1.0.0",
             "justinmimbs/time-extra": "1.1.1",
             "jweir/elm-iso8601": "7.0.1",
-            "krisajenkins/remotedata": "6.0.1"
+            "krisajenkins/remotedata": "6.0.1",
+            "truqu/elm-base64": "2.0.4"
         },
         "indirect": {
             "elm/file": "1.0.5",

@@ -1,4 +1,4 @@
-module Page.Bosses exposing (view)
+module Page.Bosses exposing (view, viewBossTally)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
@@ -7,6 +7,7 @@ import Html.Events as E exposing (..)
 import Localization.Mapwatch as L
 import Mapwatch
 import Mapwatch.BossEntry as BossEntry exposing (BossEntry, Progress)
+import Mapwatch.BossShare as BossShare
 import Mapwatch.BossTally as BossTally exposing (BossTally)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.EncounterTally as EncounterTally exposing (EncounterTally)
@@ -19,6 +20,7 @@ import Route.Feature as Feature exposing (Feature)
 import Route.QueryDict as QueryDict exposing (QueryDict)
 import Time exposing (Posix)
 import View.Home
+import View.Icon as Icon
 import View.Nav
 import View.Setup
 import View.Util
@@ -78,11 +80,23 @@ viewMain model =
                 |> List.filter (\r -> not r.isAbandoned)
                 |> applySearch model.mapwatch.datamine search
                 |> RunSort.filterBetween { before = before, after = after }
+
+        tally : BossTally
+        tally =
+            runs |> List.filterMap .bossTally |> BossTally.aggregate
     in
     div []
         [ View.Util.viewSearch model.query
         , View.Util.viewDateSearch model.mapwatch.datamine.leagues model.query model.route
-        , div [] <| viewBossTally model.query <| BossTally.aggregate <| List.filterMap .bossTally runs
+        , div []
+            [ a
+                [ class "button"
+                , target "_blank"
+                , Route.href Dict.empty <| Route.SharedBosses <| BossShare.base64Encode <| BossShare.create tally
+                ]
+                [ Icon.fas "share-nodes", text " ", span [ L.bossesShareButton ] [] ]
+            ]
+        , div [] <| viewBossTally model.query tally
         ]
 
 
@@ -90,14 +104,14 @@ viewBossTally : QueryDict -> BossTally -> List (Html msg)
 viewBossTally query tally =
     [ table []
         [ tr []
-            ([ "Boss"
-             , ""
-             , "Visited"
-             , "Victory"
-             , "No deaths"
-             , "No logouts"
+            ([ span [ L.bossesHeaderName ] []
+             , span [] []
+             , span [ L.bossesHeaderVisited ] []
+             , span [ L.bossesHeaderVictory ] []
+             , span [ L.bossesHeaderDeathless ] []
+             , span [ L.bossesHeaderLogoutless ] []
              ]
-                |> List.map (\s -> th [ style "text-align" "center" ] [ text s ])
+                |> List.map (\s -> th [ style "text-align" "center" ] [ s ])
             )
 
         -- shaper guardians
