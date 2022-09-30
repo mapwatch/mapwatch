@@ -124,6 +124,7 @@ bosses-group-lesser-eldritch = Atlas Bosses
 bosses-hunger = {npc-hunger}
 bosses-blackstar = {npc-blackstar}
 bosses-shaper = The Shaper
+bosses-uber-shaper = The Shaper (Uber)
 bosses-elder = The Elder (Witnessed)
 bosses-group-shaper-guardians = Shaper Guardians
 bosses-shaper-chimera = Guardian of the Chimera

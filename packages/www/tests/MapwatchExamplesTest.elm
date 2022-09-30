@@ -3,6 +3,7 @@ module MapwatchExamplesTest exposing (..)
 import Expect
 import Fixture exposing (datamine)
 import Fixture.Examples
+import Json.Decode as D
 import Mapwatch
 import Mapwatch.BossEntry as BossEntry
 import Mapwatch.BossTally as BossTally
@@ -71,6 +72,7 @@ all =
                                 , .blackstar >> BossEntry.isVictoryExact >> Expect.true "blackstar victory"
                                 , .drox >> BossEntry.isUnvisited >> Expect.true "drox unvisited"
                                 , .shaperHydra >> BossEntry.isUnvisited >> Expect.true "hydra unvisited"
+                                , \tally -> tally |> BossTally.jsonEncode |> D.decodeValue BossTally.jsonDecode |> Expect.equal (Ok tally)
                                 ]
                         ]
         , test "bosses" <|
@@ -92,5 +94,6 @@ all =
                         , .baran >> BossEntry.isLogoutless >> Expect.true "baran logoutless"
                         , .drox >> BossEntry.isDeathlessExact >> Expect.true "drox deathless"
                         , .shaperHydra >> BossEntry.isLogoutless >> Expect.true "hydra logoutless"
+                        , \tally -> tally |> BossTally.jsonEncode |> D.decodeValue BossTally.jsonDecode |> Expect.equal (Ok tally)
                         ]
         ]

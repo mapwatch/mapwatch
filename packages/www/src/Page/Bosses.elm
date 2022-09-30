@@ -118,7 +118,6 @@ viewBossTally query tally =
         , tally |> BossTally.groupLesserEldritch |> viewBossEntries query L.bossesGroupLesserEldritch |> tr []
 
         -- , tally.atziri.standard |> viewBossSighting query L.bossesAtziri "id:MapAtziri1" |> tr []
-        , tally.shaper |> viewBossEntry query L.bossesShaper "id:MapWorldsShapersRealm" |> tr []
         , tally.elder |> viewBossEntry query L.bossesElder "id:MapWorldsElderArena" |> tr []
         , tally.hunger |> viewBossEntry query L.bossesHunger "id:MapWorldsPrimordialBoss1" |> tr []
         , tally.blackstar |> viewBossEntry query L.bossesBlackstar "id:MapWorldsPrimordialBoss2" |> tr []
@@ -131,6 +130,7 @@ viewBossTally query tally =
         , tally.sirus.standard |> viewBossEntry query L.bossesSirus "id:AtlasExilesBoss5" |> tr []
         , tally.maven.standard |> viewBossEntry query L.bossesMaven "id:MavenBoss" |> tr []
         , tally.uberelder.standard |> viewBossEntry query L.bossesUberElder "id:MapWorldsElderArenaUber" |> tr []
+        , tally.shaper.standard |> viewBossEntry query L.bossesShaper "id:MapWorldsShapersRealm" |> tr []
 
         -- uber pinnacles (and atziri)
         -- TODO: fix uber vs non-uber searches
@@ -141,6 +141,7 @@ viewBossTally query tally =
         , tally.sirus.uber |> viewBossEntry query L.bossesUberSirus "id:AtlasExilesBoss5" |> tr []
         , tally.maven.uber |> viewBossEntry query L.bossesUberMaven "id:MavenBoss" |> tr []
         , tally.uberelder.uber |> viewBossEntry query L.bossesUberUberElder "id:MapWorldsElderArenaUber" |> tr []
+        , tally.shaper.uber |> viewBossEntry query L.bossesUberShaper "id:MapWorldsShapersRealm" |> tr []
         , tally.atziri.uber |> viewBossEntry query L.bossesUberAtziri "id:MapAtziri2" |> tr []
         , tally |> BossTally.groupAll |> viewBossEntries query L.bossesGroupAll |> tr []
         ]

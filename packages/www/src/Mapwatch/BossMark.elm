@@ -31,6 +31,7 @@ type Outcome
 type BossId
     = Atziri Bool
     | UberElder Bool
+    | Shaper Bool
     | Venarius Bool
     | Sirus Bool
     | Maven Bool
@@ -38,7 +39,6 @@ type BossId
     | Exarch Bool
     | BlackStar
     | Hunger
-    | Shaper
     | Elder
     | Baran
     | Veritania
@@ -133,7 +133,7 @@ toCompletion run w =
 
         "MapWorldsShapersRealm" ->
             Just
-                ( Shaper
+                ( Shaper is85
                   -- shaper retreats 3 times, saying similar defeat text each time. The third one is our completion signal
                 , getTextIdsOrDefault
                     { missingNpcId = Incomplete

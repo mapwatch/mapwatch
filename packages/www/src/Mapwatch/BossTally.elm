@@ -8,8 +8,13 @@ module Mapwatch.BossTally exposing
     , groupPinnacle
     , groupShaperGuardians
     , groupUber
+    , jsonDecode
+    , jsonEncode
     )
 
+import Json.Decode as D
+import Json.Decode.Pipeline as P
+import Json.Encode as E
 import Mapwatch.BossEntry as BossEntry exposing (BossEntry)
 import Mapwatch.BossMark as BossMark exposing (BossId(..), BossMark)
 
@@ -22,6 +27,7 @@ type alias BossTally =
     , sirus : UberBossEntry
     , exarch : UberBossEntry
     , eater : UberBossEntry
+    , shaper : UberBossEntry
 
     -- conquerors
     , baran : BossEntry
@@ -36,7 +42,6 @@ type alias BossTally =
     -- shaper, elder, guardians
     -- elder is quiet, but maven makes it trackable
     -- cannot track elder guardians at all: we can't even identify their maps, much less completion
-    , shaper : BossEntry
     , elder : BossEntry
     , shaperChimera : BossEntry
     , shaperHydra : BossEntry
@@ -68,7 +73,7 @@ empty =
         ue =
             UberBossEntry e e
     in
-    BossTally ue ue ue ue ue ue ue e e e e e e e e e e e e
+    BossTally ue ue ue ue ue ue ue ue e e e e e e e e e e e
 
 
 groupShaperGuardians : BossTally -> List BossEntry
@@ -83,17 +88,17 @@ groupConquerors t =
 
 groupLesserEldritch : BossTally -> List BossEntry
 groupLesserEldritch t =
-    [ t.shaper, t.elder, t.blackstar, t.hunger ]
+    [ t.elder, t.blackstar, t.hunger ]
 
 
 groupPinnacle : BossTally -> List BossEntry
 groupPinnacle t =
-    [ t.exarch.standard, t.eater.standard, t.maven.standard, t.venarius.standard, t.sirus.standard, t.uberelder.standard ]
+    [ t.exarch.standard, t.eater.standard, t.maven.standard, t.venarius.standard, t.sirus.standard, t.uberelder.standard, t.shaper.standard ]
 
 
 groupUber : BossTally -> List BossEntry
 groupUber t =
-    [ t.exarch.uber, t.eater.uber, t.maven.uber, t.venarius.uber, t.sirus.uber, t.uberelder.uber, t.atziri.uber ]
+    [ t.exarch.uber, t.eater.uber, t.maven.uber, t.venarius.uber, t.sirus.uber, t.uberelder.uber, t.shaper.uber, t.atziri.uber ]
 
 
 groupAll : BossTally -> List BossEntry
@@ -116,6 +121,9 @@ applyMark mark tally =
         UberElder isUber ->
             { tally | uberelder = tally.uberelder |> applyUberEntry isUber mark }
 
+        Shaper isUber ->
+            { tally | shaper = tally.shaper |> applyUberEntry isUber mark }
+
         Venarius isUber ->
             { tally | venarius = tally.venarius |> applyUberEntry isUber mark }
 
@@ -136,9 +144,6 @@ applyMark mark tally =
 
         Hunger ->
             { tally | hunger = tally.hunger |> BossMark.apply mark }
-
-        Shaper ->
-            { tally | shaper = tally.shaper |> BossMark.apply mark }
 
         Elder ->
             { tally | elder = tally.elder |> BossMark.apply mark }
@@ -175,3 +180,72 @@ applyUberEntry isUber mark entry =
 
     else
         { entry | standard = entry.standard |> BossMark.apply mark }
+
+
+
+-- json encode/decode
+
+
+jsonEncode : BossTally -> D.Value
+jsonEncode t =
+    E.object
+        [ ( "atziri", t.atziri |> jsonEncodeUberEntry )
+        , ( "uberelder", t.uberelder |> jsonEncodeUberEntry )
+        , ( "venarius", t.venarius |> jsonEncodeUberEntry )
+        , ( "maven", t.maven |> jsonEncodeUberEntry )
+        , ( "sirus", t.sirus |> jsonEncodeUberEntry )
+        , ( "exarch", t.exarch |> jsonEncodeUberEntry )
+        , ( "eater", t.eater |> jsonEncodeUberEntry )
+        , ( "shaper", t.shaper |> jsonEncodeUberEntry )
+        , ( "baran", t.baran |> BossEntry.jsonEncode )
+        , ( "veritania", t.veritania |> BossEntry.jsonEncode )
+        , ( "alhezmin", t.alhezmin |> BossEntry.jsonEncode )
+        , ( "drox", t.drox |> BossEntry.jsonEncode )
+        , ( "blackstar", t.blackstar |> BossEntry.jsonEncode )
+        , ( "hunger", t.hunger |> BossEntry.jsonEncode )
+        , ( "elder", t.elder |> BossEntry.jsonEncode )
+        , ( "shaperChimera", t.shaperChimera |> BossEntry.jsonEncode )
+        , ( "shaperHydra", t.shaperHydra |> BossEntry.jsonEncode )
+        , ( "shaperMinotaur", t.shaperMinotaur |> BossEntry.jsonEncode )
+        , ( "shaperPhoenix", t.shaperPhoenix |> BossEntry.jsonEncode )
+        ]
+
+
+jsonEncodeUberEntry : UberBossEntry -> D.Value
+jsonEncodeUberEntry e =
+    E.object
+        [ ( "standard", e.standard |> BossEntry.jsonEncode )
+        , ( "uber", e.uber |> BossEntry.jsonEncode )
+        ]
+
+
+jsonDecode : D.Decoder BossTally
+jsonDecode =
+    -- TODO
+    D.succeed BossTally
+        |> P.required "atziri" jsonDecodeUberEntry
+        |> P.required "uberelder" jsonDecodeUberEntry
+        |> P.required "venarius" jsonDecodeUberEntry
+        |> P.required "maven" jsonDecodeUberEntry
+        |> P.required "sirus" jsonDecodeUberEntry
+        |> P.required "exarch" jsonDecodeUberEntry
+        |> P.required "eater" jsonDecodeUberEntry
+        |> P.required "shaper" jsonDecodeUberEntry
+        |> P.required "baran" BossEntry.jsonDecode
+        |> P.required "veritania" BossEntry.jsonDecode
+        |> P.required "alhezmin" BossEntry.jsonDecode
+        |> P.required "drox" BossEntry.jsonDecode
+        |> P.required "blackstar" BossEntry.jsonDecode
+        |> P.required "hunger" BossEntry.jsonDecode
+        |> P.required "elder" BossEntry.jsonDecode
+        |> P.required "shaperChimera" BossEntry.jsonDecode
+        |> P.required "shaperHydra" BossEntry.jsonDecode
+        |> P.required "shaperMinotaur" BossEntry.jsonDecode
+        |> P.required "shaperPhoenix" BossEntry.jsonDecode
+
+
+jsonDecodeUberEntry : D.Decoder UberBossEntry
+jsonDecodeUberEntry =
+    D.succeed UberBossEntry
+        |> P.required "standard" BossEntry.jsonDecode
+        |> P.required "uber" BossEntry.jsonDecode

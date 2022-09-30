@@ -1,6 +1,10 @@
 module Mapwatch.BossEntry exposing
     ( BossEntry(..)
+    , DeathlessData
+    , LogoutlessData
     , Progress
+    , VictoryData
+    , VisitedData
     , isDeathless
     , isDeathlessExact
     , isLogoutless
@@ -325,16 +329,16 @@ jsonDecode =
                     Unvisited |> D.succeed
 
                 "visited" ->
-                    jsonDecodeVisited |> D.map Visited
+                    jsonDecodeVisited |> D.map Visited |> D.field "data"
 
                 "victory" ->
-                    jsonDecodeVictory |> D.map Victory
+                    jsonDecodeVictory |> D.map Victory |> D.field "data"
 
                 "deathless" ->
-                    jsonDecodeDeathless |> D.map Deathless
+                    jsonDecodeDeathless |> D.map Deathless |> D.field "data"
 
                 "logoutless" ->
-                    jsonDecodeLogoutless |> D.map Logoutless
+                    jsonDecodeLogoutless |> D.map Logoutless |> D.field "data"
 
                 _ ->
                     "unrecognized type: " ++ type_ |> D.fail
