@@ -103,6 +103,12 @@ bosses-header-visited = Visited
 bosses-header-victory = Victory
 bosses-header-deathless = No deaths
 bosses-header-logoutless = No logouts
+bosses-kills = {NUMBER($n) -> 
+    [0] {""}
+    [zero] {""}
+    [one] ×{NUMBER($n)} kill
+    *[other] ×{NUMBER($n)} kills
+}
 bosses-share-button = Share a snapshot of your achievements
 
 bosses-group-all = All Bosses
@@ -145,10 +151,6 @@ bosses-breach-tul = Tul, Creeping Avalanche (Witnessed)
 bosses-breach-uul = Uul-Netol, Unburdened Flesh (Witnessed)
 bosses-breach-chayula = Chayula, Who Dreamt (Witnessed)
 bosses-mastermind = The Syndicate Mastermind
-bosses-kills = {NUMBER($n) ->
-    [one] {NUMBER($n)} kill
-    *[other] {NUMBER($n)} kills
-}
 
 ## https://mapwatch.erosson.org/#/encounters > encounter types
 encounter-abyssal = Abyssal Depths

@@ -1,4 +1,4 @@
-module Page.Bosses exposing (view, viewBossTally)
+module Page.Bosses exposing (view, viewContent)
 
 import Dict exposing (Dict)
 import Html as H exposing (..)
@@ -14,6 +14,7 @@ import Mapwatch.EncounterTally as EncounterTally exposing (EncounterTally)
 import Mapwatch.Instance as Instance exposing (Instance)
 import Mapwatch.MapRun as MapRun exposing (MapRun)
 import Mapwatch.MapRun.Sort as RunSort
+import Maybe.Extra
 import Model as Model exposing (Msg(..), OkModel)
 import Route exposing (Route)
 import Route.Feature as Feature exposing (Feature)
@@ -89,16 +90,22 @@ viewMain model =
         [ View.Util.viewSearch model.query
         , View.Util.viewDateSearch model.mapwatch.datamine.leagues model.query model.route
         , div []
-            [ a
+            (a
                 [ class "button"
                 , target "_blank"
                 , Route.href Dict.empty <| Route.SharedBosses <| BossShare.base64Encode <| BossShare.create tally
                 ]
                 [ Icon.fas "share-nodes", text " ", span [ L.bossesShareButton ] [] ]
-            ]
-        , div [] <| viewAchievementsSummary model.query tally
-        , div [] <| viewBossTally model.query tally
+                :: viewContent model.query tally
+            )
         ]
+
+
+viewContent : QueryDict -> BossTally -> List (Html msg)
+viewContent query tally =
+    [ div [] <| viewAchievementsSummary query tally
+    , div [] <| viewBossTally query tally
+    ]
 
 
 viewAchievementsSummary : QueryDict -> BossTally -> List (Html msg)
@@ -204,11 +211,16 @@ viewBossEntries query label entries =
     -- TODO: mergeEntries has bad behavior here! it ORs, but we want AND here.
     -- viewBossProgressEntry query label search (BossTally.entriesProgress entries) (BossTally.mergeEntries entries)
     let
+        kills : Int
+        kills =
+            entries |> List.filterMap BossEntry.victoryData |> List.map .count |> List.sum
+
         progress =
             BossEntry.progressList entries
     in
     [ td [ style "text-align" "right" ] [ span [ label ] [] ]
     , td [ colspan 4 ] [ viewProgress progress ]
+    , td [] [ span ({ n = kills |> toFloat } |> L.bossesKills) [] ]
     ]
 
 
@@ -218,16 +230,21 @@ viewBossEntry query label search entry =
         progress =
             BossEntry.progress entry
 
+        kills : Int
+        kills =
+            entry |> BossEntry.victoryData |> Maybe.Extra.unwrap 0 .count
+
         href =
             Route.href (query |> Dict.insert "q" search) Route.Encounters
     in
     [ td [ style "text-align" "right" ] [ a [ href, label ] [] ]
 
     -- , td [ ] [ viewProgress progress ]
-    , td [ style "text-align" "center" ] [ entry |> BossEntry.isVisited |> viewBool, span [ L.bossesHeaderVisited ] [] ]
-    , td [ style "text-align" "center" ] [ entry |> BossEntry.isVictory |> viewBool, span [ L.bossesHeaderVictory ] [] ]
-    , td [ style "text-align" "center" ] [ entry |> BossEntry.isDeathless |> viewBool, span [ L.bossesHeaderDeathless ] [] ]
-    , td [ style "text-align" "center" ] [ entry |> BossEntry.isLogoutless |> viewBool, span [ L.bossesHeaderLogoutless ] [] ]
+    , td [] [ entry |> BossEntry.isVisited |> viewBool, span [ L.bossesHeaderVisited ] [] ]
+    , td [] [ entry |> BossEntry.isVictory |> viewBool, span [ L.bossesHeaderVictory ] [] ]
+    , td [] [ entry |> BossEntry.isDeathless |> viewBool, span [ L.bossesHeaderDeathless ] [] ]
+    , td [] [ entry |> BossEntry.isLogoutless |> viewBool, span [ L.bossesHeaderLogoutless ] [] ]
+    , td [] [ span ({ n = kills |> toFloat } |> L.bossesKills) [] ]
 
     -- , td [ style "text-align" "center" ] [ text "?" ]
     -- , td [] [ text <| String.fromInt entry.runs ]

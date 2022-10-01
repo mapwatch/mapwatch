@@ -47,5 +47,5 @@ viewBody code =
                 pre [] [ text err ]
 
             Ok share ->
-                share.tally |> Page.Bosses.viewBossTally Dict.empty |> div []
+                share.tally |> Page.Bosses.viewContent Dict.empty |> div []
         ]

@@ -5,6 +5,7 @@ module Mapwatch.BossEntry exposing
     , Progress
     , VictoryData
     , VisitedData
+    , deathlessData
     , isDeathless
     , isDeathlessExact
     , isLogoutless
@@ -15,10 +16,13 @@ module Mapwatch.BossEntry exposing
     , isVisitedExact
     , jsonDecode
     , jsonEncode
+    , logoutlessData
     , mergeList
     , mergePair
     , progress
     , progressList
+    , victoryData
+    , visitedData
     )
 
 import Json.Decode as D
