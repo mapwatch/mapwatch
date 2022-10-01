@@ -20,6 +20,117 @@
 # ✔ elder (with maven - makes the fight trackable!)
 # ✔ lesser conquerors (all with maven)
 # ✔ shaper guardians (all with maven)
+# ✔ mastermind
+# ✔ breachlords (with maven)
+
+# xoph
+2022/09/29 20:12:53 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/29 20:12:53 ] Generating level 70 area "BreachBossFire" with seed 2845426048
+2022/09/29 20:12:55 ] : You have entered Xoph's Domain.
+2022/09/29 20:15:29 ] The Maven: I've never seen anything like this... defeat it for me!
+2022/09/29 20:15:31 ] The Maven: Struggle, or strangle!
+2022/09/29 20:15:33 ] The Maven: Such a rare sight to behold. There must be more. Find them!
+2022/09/29 20:15:46 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/29 20:15:46 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/29 20:15:47 ] : You have entered Celestial Nebula Hideout.
+
+# tul
+2022/09/29 20:16:33 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/29 20:16:33 ] Generating level 70 area "BreachBossCold" with seed 1636944017
+2022/09/29 20:16:34 ] : You have entered Tul's Domain.
+2022/09/29 20:18:55 ] The Maven: There will be death...
+2022/09/29 20:18:58 ] The Maven: Grip of the infinite!
+2022/09/29 20:18:59 ] The Maven: Where has such a thing been hiding? I simply must see more.
+2022/09/29 20:19:09 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/29 20:19:09 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/29 20:19:09 ] : You have entered Celestial Nebula Hideout.
+
+# esh
+2022/09/29 20:19:35 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/29 20:19:35 ] Generating level 70 area "BreachBossLightning" with seed 3255060163
+2022/09/29 20:19:36 ] : You have entered Esh's Domain.
+2022/09/29 20:21:55 ] The Maven: Dissect it. Smear it across the ground.
+2022/09/29 20:21:57 ] The Maven: Time bends to my will!
+2022/09/29 20:21:58 ] The Maven: What a delightfully unusual struggle.
+2022/09/29 20:22:06 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/29 20:22:06 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/29 20:22:07 ] : You have entered Celestial Nebula Hideout.
+
+# uul-netol
+2022/09/29 20:22:38 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/29 20:22:39 ] Generating level 75 area "BreachBossPhysical" with seed 3981049977
+2022/09/29 20:22:39 ] : You have entered Uul-Netol's Domain.
+2022/09/29 20:24:56 ] The Maven: My excitement is immeasurable.
+2022/09/29 20:24:58 ] The Maven: A veil of safety and security.
+2022/09/29 20:25:00 ] The Maven: Where has such a thing been hiding? I simply must see more.
+2022/09/29 20:25:10 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/29 20:25:10 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/29 20:25:10 ] : You have entered Celestial Nebula Hideout.
+
+# mastermind
+2022/09/12 01:56:10 ] Connecting to instance server at 999.999.999.0:6112
+2022/09/12 01:56:10 ] Generating level 83 area "BetrayalMastermindFight" with seed 3398390308
+2022/09/12 01:56:14 ] : You have entered Mastermind's Lair.
+2022/09/12 01:56:15 ] Jun, Veiled Master: It can't be! This... this... it's the Forbidden Vault!
+2022/09/12 01:56:17 ] Catarina, Master of Undeath: You found me at last... Very resourceful, Jun. I too am resourceful. Witness.
+2022/09/12 01:56:27 ] Catarina, Master of Undeath: Mortal!
+2022/09/12 01:56:34 ] Catarina, Master of Undeath: Give in, Jun!
+2022/09/12 01:56:37 ] Jun, Veiled Master: No! Why...? My - my family! Please, no!
+2022/09/12 01:56:39 ] Catarina, Master of Undeath: Darkness swarms!
+2022/09/12 01:56:42 ] Catarina, Master of Undeath: Feel death's grip!
+2022/09/12 01:56:44 ] Catarina, Master of Undeath: Mortal!
+2022/09/12 01:56:48 ] Catarina, Master of Undeath: Darkness swarms!
+2022/09/12 01:56:51 ] Catarina, Master of Undeath: See? We are no different, you and I. We've both slain your pathetic little order. Though, they put up more of a fight the second time around.
+2022/09/12 01:56:56 ] Catarina, Master of Undeath: Feel death's grip!
+2022/09/12 01:57:01 ] Catarina, Master of Undeath: There's nothing that makes you feel so alive as death, is there...? Now, come to me Jun. Let us see what your soul is made of.
+2022/09/12 01:57:01 ] Jun, Veiled Master: No more games, Catarina. I'm going to kill you.
+2022/09/12 01:57:12 ] Jun, Veiled Master: We can't let her escape!
+2022/09/12 01:58:44 ] Catarina, Master of Undeath: Hundreds of dead, rotting soulless in the earth. What a meaningless waste. But your souls... yours will serve.
+2022/09/12 01:58:55 ] Catarina, Master of Undeath: Feel death's grip!
+2022/09/12 01:58:58 ] Catarina, Master of Undeath: Mortal!
+2022/09/12 01:59:01 ] Catarina, Master of Undeath: You try and try and try to break us, and yet the Syndicate is immortal. Do you think this will end any differently?
+2022/09/12 01:59:09 ] Jun, Veiled Master: I wouldn't be here if I didn't.
+2022/09/12 01:59:10 ] Catarina, Master of Undeath: Can you hear them, Aisling? The souls of those you mutilated scream for your death. At last, their wish is granted.
+2022/09/12 01:59:23 ] Catarina, Master of Undeath: Your soul burns for me!
+2022/09/12 01:59:51 ] Catarina, Master of Undeath: Kulemak!
+2022/09/12 01:59:53 ] Catarina, Master of Undeath: Mortal!
+2022/09/12 01:59:57 ] Catarina, Master of Undeath: Arise, my children.
+2022/09/12 01:59:58 ] Catarina, Master of Undeath: Death will never come for an immortal.
+2022/09/12 02:00:01 ] Jun, Veiled Master: You're no immortal. You're a thief. Nothing more.
+2022/09/12 02:00:03 ] Catarina, Master of Undeath: Feed!
+2022/09/12 02:00:19 ] Catarina, Master of Undeath: How many did you fruitlessly feed to your molten god, Redblade? Yours is one soul that'll remain out of its reach.
+2022/09/12 02:00:32 ] Catarina, Master of Undeath: Your soul burns for me!
+2022/09/12 02:00:44 ] Catarina, Master of Undeath: Your soul burns for me!
+2022/09/12 02:01:01 ] Catarina, Master of Undeath: Kulemak!
+2022/09/12 02:01:02 ] Catarina, Master of Undeath: Darkness swarms!
+2022/09/12 02:01:07 ] Catarina, Master of Undeath: Arise, my children.
+2022/09/12 02:01:13 ] Catarina, Master of Undeath: Feed!
+2022/09/12 02:01:14 ] Catarina, Master of Undeath: Mortal!
+2022/09/12 02:01:17 ] Catarina, Master of Undeath: Darkness swarms!
+2022/09/12 02:01:21 ] Catarina, Master of Undeath: Feel death's grip!
+2022/09/12 02:01:25 ] Catarina, Master of Undeath: Submit... Let our souls become entwined.
+2022/09/12 02:01:29 ] Jun, Veiled Master: We must persevere! Too much hinges on this!
+2022/09/12 02:01:33 ] Catarina, Master of Undeath: You were a potent soldier, Cameria, but our cause was never your cause. For your service, I give you what you never gave your victims - a quick death.
+2022/09/12 02:01:52 ] Catarina, Master of Undeath: Your soul burns for me!
+2022/09/12 02:02:08 ] Catarina, Master of Undeath: Your soul burns for me!
+2022/09/12 02:02:17 ] Catarina, Master of Undeath: Give your soul to me.
+2022/09/12 02:02:25 ] Catarina, Master of Undeath: Your soul burns for me!
+2022/09/12 02:02:30 ] Catarina, Master of Undeath: Kulemak!
+2022/09/12 02:02:31 ] Catarina, Master of Undeath: Arise, my children.
+2022/09/12 02:02:35 ] Catarina, Master of Undeath: Your hopeless cause will destroy you!
+2022/09/12 02:02:37 ] Catarina, Master of Undeath: Feed!
+2022/09/12 02:02:39 ] Jun, Veiled Master: My cause fuels me!
+2022/09/12 02:02:53 ] Catarina, Master of Undeath: You believe yourself to be purer than the others. Better than them. But death... death is the great equaliser, Rin.
+2022/09/12 02:03:11 ] Catarina, Master of Undeath: Your soul burns for me!
+2022/09/12 02:03:30 ] Catarina, Master of Undeath: Your soul burns for me!
+2022/09/12 02:03:36 ] Catarina, Master of Undeath: Give your soul to me.
+2022/09/12 02:03:51 ] Catarina, Master of Undeath: Give your soul to me.
+2022/09/12 02:04:06 ] Catarina, Master of Undeath: Don't do this, Exile. You can still join us. It's your chance to bring back anyone you've ever loved or cared about.
+2022/09/12 02:04:11 ] Catarina, Master of Undeath: Stop... I can bring them back. I can bring Jun's entire order back! Just give me-
+2022/09/12 02:04:18 ] Jun, Veiled Master: Shut up.
+2022/09/12 02:09:53 ] Connecting to instance server at 999.999.999.1:6112
+2022/09/12 02:09:53 ] Generating level 60 area "HideoutSpace" with seed 1
+2022/09/12 02:09:54 ] : You have entered Celestial Nebula Hideout.
 
 # uber atziri (failure)
 2022/09/27 19:07:43 ] Connecting to instance server at 999.999.999.0:6112

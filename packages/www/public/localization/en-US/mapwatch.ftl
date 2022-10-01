@@ -139,11 +139,16 @@ bosses-shaper-hydra = Guardian of the Hydra
 bosses-shaper-minotaur = Guardian of the Minotaur
 bosses-shaper-phoenix = Guardian of the Phoenix
 bosses-group-breachlords = Breachlords
-bosses-breach-xoph = Xoph, Dark Embers
-bosses-breach-esh = Esh, Forked Thought
-bosses-breach-tul = Tul, Creeping Avalanche
-bosses-breach-uul = Uul-Netol, Unburdened Flesh
-bosses-breach-chayula = Chayula, Who Dreamt
+bosses-breach-xoph = Xoph, Dark Embers (Witnessed)
+bosses-breach-esh = Esh, Forked Thought (Witnessed)
+bosses-breach-tul = Tul, Creeping Avalanche (Witnessed)
+bosses-breach-uul = Uul-Netol, Unburdened Flesh (Witnessed)
+bosses-breach-chayula = Chayula, Who Dreamt (Witnessed)
+bosses-mastermind = The Syndicate Mastermind
+bosses-kills = {NUMBER($n) ->
+    [one] {NUMBER($n)} kill
+    *[other] {NUMBER($n)} kills
+}
 
 ## https://mapwatch.erosson.org/#/encounters > encounter types
 encounter-abyssal = Abyssal Depths

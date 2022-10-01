@@ -48,6 +48,12 @@ type BossId
     | ShaperChimera
     | ShaperPhoenix
     | ShaperHydra
+    | BreachXoph
+    | BreachTul
+    | BreachEsh
+    | BreachUul
+    | BreachChayula
+    | Mastermind
 
 
 fromMapRun : RawMapRun -> WorldArea -> Maybe BossMark
@@ -197,6 +203,42 @@ toCompletion run w =
             Just
                 ( ShaperHydra
                 , run |> outcomeTextId ((==) "ShaperAtlasMapDrops") NpcId.shaper
+                )
+
+        "BreachBossFire" ->
+            Just
+                ( BreachXoph
+                , run |> outcomeMavenVictoryTextId
+                )
+
+        "BreachBossCold" ->
+            Just
+                ( BreachTul
+                , run |> outcomeMavenVictoryTextId
+                )
+
+        "BreachBossLightning" ->
+            Just
+                ( BreachEsh
+                , run |> outcomeMavenVictoryTextId
+                )
+
+        "BreachBossPhysical" ->
+            Just
+                ( BreachUul
+                , run |> outcomeMavenVictoryTextId
+                )
+
+        "BreachBossChaos" ->
+            Just
+                ( BreachChayula
+                , run |> outcomeMavenVictoryTextId
+                )
+
+        "BetrayalMastermindFight" ->
+            Just
+                ( Mastermind
+                , run |> outcomeTextId (String.startsWith "JunOnKillingCatarina") NpcId.betrayalGroup
                 )
 
         _ ->

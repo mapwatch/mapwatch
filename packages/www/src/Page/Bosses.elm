@@ -109,7 +109,7 @@ viewAchievementsSummary query tally =
         , tally |> BossTally.groupPinnacle |> viewAchievementsSummaryEntry L.bossesGroupPinnacle |> div [ class "entry" ]
         , tally |> BossTally.groupLesserEldritch |> viewAchievementsSummaryEntry L.bossesGroupLesserEldritch |> div [ class "entry" ]
         , tally |> BossTally.groupConquerors |> viewAchievementsSummaryEntry L.bossesGroupConquerors |> div [ class "entry" ]
-        , [] |> viewAchievementsSummaryEntry L.bossesGroupBreachlords |> div [ class "entry" ]
+        , tally |> BossTally.groupBreachlords |> viewAchievementsSummaryEntry L.bossesGroupBreachlords |> div [ class "entry" ]
         , tally |> BossTally.groupShaperGuardians |> viewAchievementsSummaryEntry L.bossesGroupShaperGuardians |> div [ class "entry" ]
         ]
     ]
@@ -150,6 +150,14 @@ viewBossTally query tally =
         , tally.shaperMinotaur |> viewBossEntry query L.bossesShaperMinotaur "id:MapWorldsMinotaur" |> tr []
         , tally.shaperPhoenix |> viewBossEntry query L.bossesShaperPhoenix "id:MapWorldsPhoenix" |> tr []
 
+        -- breach
+        , tally |> BossTally.groupBreachlords |> viewBossEntries query L.bossesGroupBreachlords |> tr []
+        , tally.breachXoph |> viewBossEntry query L.bossesBreachXoph "id:BreachBossFire" |> tr []
+        , tally.breachTul |> viewBossEntry query L.bossesBreachTul "id:BreachBossCold" |> tr []
+        , tally.breachEsh |> viewBossEntry query L.bossesBreachEsh "id:BreachBossLightning" |> tr []
+        , tally.breachUul |> viewBossEntry query L.bossesBreachUul "id:BreachBossPhysical" |> tr []
+        , tally.breachChayula |> viewBossEntry query L.bossesBreachChayula "id:BreachBossChaos" |> tr []
+
         -- lesser conquerors
         , tally |> BossTally.groupConquerors |> viewBossEntries query L.bossesGroupConquerors |> tr []
         , tally.baran |> viewBossEntry query L.bossesBaran "conqueror:fight:baran" |> tr []
@@ -164,6 +172,7 @@ viewBossTally query tally =
         , tally.elder |> viewBossEntry query L.bossesElder "id:MapWorldsElderArena" |> tr []
         , tally.hunger |> viewBossEntry query L.bossesHunger "id:MapWorldsPrimordialBoss1" |> tr []
         , tally.blackstar |> viewBossEntry query L.bossesBlackstar "id:MapWorldsPrimordialBoss2" |> tr []
+        , tally.mastermind |> viewBossEntry query L.bossesMastermind "id:BetrayalMastemind" |> tr []
 
         -- pinnacles
         , tally |> BossTally.groupPinnacle |> viewBossEntries query L.bossesGroupPinnacle |> tr []

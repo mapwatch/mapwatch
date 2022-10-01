@@ -531,6 +531,7 @@ createNPCText1 lang =
     , createNPCTextSet lang NpcId.venarius (Tuple.first >> String.startsWith "VenariusBossFight")
     , createNPCTextSet lang NpcId.sirus (\( s, _ ) -> String.startsWith "SirusSimpleDeathLine" s || String.startsWith "SirusComplexDeathLine" s)
     , createNPCTextSet lang NpcId.maven (\( s, _ ) -> String.startsWith "MavenFinalFightRealises" s || String.startsWith "MavenFinalFightRepeatedRealises" s || String.startsWith "MavenTier5" s)
+    , createNPCTextSet lang NpcId.jun (Tuple.first >> String.startsWith "JunOnKillingCatarina")
 
     -- siege
     , createNPCTextSet lang NpcId.exarch (Tuple.first >> String.startsWith "CleansingFire")

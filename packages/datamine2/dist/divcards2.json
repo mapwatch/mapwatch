@@ -461,7 +461,7 @@
     {
       "title": {
         "name": "From Bone to Ashes",
-        "drop areas": "MapWorldsStrand,MapWorldsCaldera,MapWorldsShore"
+        "drop areas": "MapWorldsStrand,MapWorldsCaldera,MapWorldsShore,MapWorldsLavaLake"
       }
     },
     {

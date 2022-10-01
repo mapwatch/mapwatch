@@ -94,6 +94,8 @@ all =
                         , .baran >> BossEntry.isLogoutless >> Expect.true "baran logoutless"
                         , .drox >> BossEntry.isDeathlessExact >> Expect.true "drox deathless"
                         , .shaperHydra >> BossEntry.isLogoutless >> Expect.true "hydra logoutless"
+                        , .breachXoph >> BossEntry.isLogoutless >> Expect.true "xoph logoutless"
+                        , .mastermind >> BossEntry.isLogoutless >> Expect.true "mastermind logoutless"
                         , \tally -> tally |> BossTally.jsonEncode |> D.decodeValue BossTally.jsonDecode |> Expect.equal (Ok tally)
                         ]
         ]

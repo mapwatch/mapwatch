@@ -39,6 +39,12 @@ tally =
         |> Fuzz.andMap entry
         |> Fuzz.andMap entry
         |> Fuzz.andMap entry
+        |> Fuzz.andMap entry
+        |> Fuzz.andMap entry
+        |> Fuzz.andMap entry
+        |> Fuzz.andMap entry
+        |> Fuzz.andMap entry
+        |> Fuzz.andMap entry
 
 
 uberEntry : Fuzzer UberBossEntry

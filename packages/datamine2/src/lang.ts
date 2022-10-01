@@ -152,4 +152,7 @@ function isNPCTextExported(i: input.NPCTextAudio): boolean {
         || /^SirusComplexDeathLine/.test(i.Id)
         // shaper guardians. "this is the key to a crucible..."
         || 'ShaperAtlasMapDrops' === i.Id
+        // mastermind death check
+        // || 'CatarinaDowned' === i.Id
+        || /^JunOnKillingCatarina/.test(i.Id)
 }

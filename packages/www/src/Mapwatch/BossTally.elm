@@ -3,6 +3,7 @@ module Mapwatch.BossTally exposing
     , UberBossEntry
     , aggregate
     , groupAll
+    , groupBreachlords
     , groupConquerors
     , groupLesserEldritch
     , groupPinnacle
@@ -48,11 +49,17 @@ type alias BossTally =
     , shaperMinotaur : BossEntry
     , shaperPhoenix : BossEntry
 
+    -- breach
+    , breachXoph : BossEntry
+    , breachTul : BossEntry
+    , breachEsh : BossEntry
+    , breachUul : BossEntry
+    , breachChayula : BossEntry
+
     -- TODO izaro + uber izaro?
     -- TODO bestiary?
-    -- TODO breachlords
     -- TODO synthesis "guardians"
-    -- TODO catarina
+    , mastermind : BossEntry
     }
 
 
@@ -73,7 +80,12 @@ empty =
         ue =
             UberBossEntry e e
     in
-    BossTally ue ue ue ue ue ue ue ue e e e e e e e e e e e
+    BossTally ue ue ue ue ue ue ue ue e e e e e e e e e e e e e e e e e
+
+
+groupBreachlords : BossTally -> List BossEntry
+groupBreachlords t =
+    [ t.breachXoph, t.breachTul, t.breachEsh, t.breachUul, t.breachChayula ]
 
 
 groupShaperGuardians : BossTally -> List BossEntry
@@ -88,7 +100,7 @@ groupConquerors t =
 
 groupLesserEldritch : BossTally -> List BossEntry
 groupLesserEldritch t =
-    [ t.elder, t.blackstar, t.hunger ]
+    [ t.elder, t.blackstar, t.hunger, t.mastermind ]
 
 
 groupPinnacle : BossTally -> List BossEntry
@@ -103,7 +115,7 @@ groupUber t =
 
 groupAll : BossTally -> List BossEntry
 groupAll t =
-    [ groupUber, groupPinnacle, groupLesserEldritch, groupConquerors, groupShaperGuardians ]
+    [ groupUber, groupPinnacle, groupLesserEldritch, groupConquerors, groupShaperGuardians, groupBreachlords ]
         |> List.concatMap (\g -> g t)
 
 
@@ -172,6 +184,24 @@ applyMark mark tally =
         ShaperHydra ->
             { tally | shaperHydra = tally.shaperHydra |> BossMark.apply mark }
 
+        BreachXoph ->
+            { tally | breachXoph = tally.breachXoph |> BossMark.apply mark }
+
+        BreachTul ->
+            { tally | breachTul = tally.breachTul |> BossMark.apply mark }
+
+        BreachEsh ->
+            { tally | breachEsh = tally.breachEsh |> BossMark.apply mark }
+
+        BreachUul ->
+            { tally | breachUul = tally.breachUul |> BossMark.apply mark }
+
+        BreachChayula ->
+            { tally | breachChayula = tally.breachChayula |> BossMark.apply mark }
+
+        Mastermind ->
+            { tally | mastermind = tally.mastermind |> BossMark.apply mark }
+
 
 applyUberEntry : Bool -> BossMark -> UberBossEntry -> UberBossEntry
 applyUberEntry isUber mark entry =
@@ -208,6 +238,12 @@ jsonEncode t =
         , ( "shaperHydra", t.shaperHydra |> BossEntry.jsonEncode )
         , ( "shaperMinotaur", t.shaperMinotaur |> BossEntry.jsonEncode )
         , ( "shaperPhoenix", t.shaperPhoenix |> BossEntry.jsonEncode )
+        , ( "breachXoph", t.breachXoph |> BossEntry.jsonEncode )
+        , ( "breachTul", t.breachTul |> BossEntry.jsonEncode )
+        , ( "breachEsh", t.breachEsh |> BossEntry.jsonEncode )
+        , ( "breachUul", t.breachUul |> BossEntry.jsonEncode )
+        , ( "breachChayula", t.breachChayula |> BossEntry.jsonEncode )
+        , ( "mastermind", t.mastermind |> BossEntry.jsonEncode )
         ]
 
 
@@ -241,6 +277,12 @@ jsonDecode =
         |> P.required "shaperHydra" BossEntry.jsonDecode
         |> P.required "shaperMinotaur" BossEntry.jsonDecode
         |> P.required "shaperPhoenix" BossEntry.jsonDecode
+        |> P.required "breachXoph" BossEntry.jsonDecode
+        |> P.required "breachTul" BossEntry.jsonDecode
+        |> P.required "breachEsh" BossEntry.jsonDecode
+        |> P.required "breachUul" BossEntry.jsonDecode
+        |> P.required "breachChayula" BossEntry.jsonDecode
+        |> P.required "mastermind" BossEntry.jsonDecode
 
 
 jsonDecodeUberEntry : D.Decoder UberBossEntry
