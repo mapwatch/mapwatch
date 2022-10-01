@@ -103,8 +103,10 @@ viewMain model =
 viewBossTally : QueryDict -> BossTally -> List (Html msg)
 viewBossTally query tally =
     [ table []
-        [ -- shaper guardians
-          tally |> BossTally.groupShaperGuardians |> viewBossEntries query L.bossesGroupShaperGuardians |> tr []
+        [ tally |> BossTally.groupAll |> viewBossEntries query L.bossesGroupAll |> tr []
+
+        -- shaper guardians
+        , tally |> BossTally.groupShaperGuardians |> viewBossEntries query L.bossesGroupShaperGuardians |> tr []
         , tally.shaperChimera |> viewBossEntry query L.bossesShaperChimera "id:MapWorldsChimera" |> tr []
         , tally.shaperHydra |> viewBossEntry query L.bossesShaperHydra "id:MapWorldsHydra" |> tr []
         , tally.shaperMinotaur |> viewBossEntry query L.bossesShaperMinotaur "id:MapWorldsMinotaur" |> tr []
@@ -146,7 +148,6 @@ viewBossTally query tally =
         , tally.uberelder.uber |> viewBossEntry query L.bossesUberUberElder "id:MapWorldsElderArenaUber" |> tr []
         , tally.shaper.uber |> viewBossEntry query L.bossesUberShaper "id:MapWorldsShapersRealm" |> tr []
         , tally.atziri.uber |> viewBossEntry query L.bossesUberAtziri "id:MapAtziri2" |> tr []
-        , tally |> BossTally.groupAll |> viewBossEntries query L.bossesGroupAll |> tr []
         ]
     ]
 
