@@ -103,19 +103,8 @@ viewMain model =
 viewBossTally : QueryDict -> BossTally -> List (Html msg)
 viewBossTally query tally =
     [ table []
-        [ tr []
-            ([ span [ L.bossesHeaderName ] []
-             , span [] []
-             , span [ L.bossesHeaderVisited ] []
-             , span [ L.bossesHeaderVictory ] []
-             , span [ L.bossesHeaderDeathless ] []
-             , span [ L.bossesHeaderLogoutless ] []
-             ]
-                |> List.map (\s -> th [ style "text-align" "center" ] [ s ])
-            )
-
-        -- shaper guardians
-        , tally |> BossTally.groupShaperGuardians |> viewBossEntries query L.bossesGroupShaperGuardians |> tr []
+        [ -- shaper guardians
+          tally |> BossTally.groupShaperGuardians |> viewBossEntries query L.bossesGroupShaperGuardians |> tr []
         , tally.shaperChimera |> viewBossEntry query L.bossesShaperChimera "id:MapWorldsChimera" |> tr []
         , tally.shaperHydra |> viewBossEntry query L.bossesShaperHydra "id:MapWorldsHydra" |> tr []
         , tally.shaperMinotaur |> viewBossEntry query L.bossesShaperMinotaur "id:MapWorldsMinotaur" |> tr []
@@ -162,11 +151,6 @@ viewBossTally query tally =
     ]
 
 
-viewBossEntry : QueryDict -> H.Attribute msg -> String -> BossEntry -> List (Html msg)
-viewBossEntry query label search entry =
-    viewBossProgressEntry query label search (BossEntry.progress entry) entry
-
-
 viewBossEntries : QueryDict -> H.Attribute msg -> List BossEntry -> List (Html msg)
 viewBossEntries query label entries =
     -- TODO: mergeEntries has bad behavior here! it ORs, but we want AND here.
@@ -176,26 +160,26 @@ viewBossEntries query label entries =
             BossEntry.progressList entries
     in
     [ td [ style "text-align" "right" ] [ span [ label ] [] ]
-    , td [] [ viewProgress progress ]
-    , td [] []
-    , td [] []
-    , td [] []
-    , td [] []
+    , td [ colspan 4 ] [ viewProgress progress ]
     ]
 
 
-viewBossProgressEntry : QueryDict -> H.Attribute msg -> String -> Progress -> BossEntry -> List (Html msg)
-viewBossProgressEntry query label search progress entry =
+viewBossEntry : QueryDict -> H.Attribute msg -> String -> BossEntry -> List (Html msg)
+viewBossEntry query label search entry =
     let
+        progress =
+            BossEntry.progress entry
+
         href =
             Route.href (query |> Dict.insert "q" search) Route.Encounters
     in
     [ td [ style "text-align" "right" ] [ a [ href, label ] [] ]
-    , td [] [ viewProgress progress ]
-    , td [ style "text-align" "center" ] [ entry |> BossEntry.isVisited |> viewBool ]
-    , td [ style "text-align" "center" ] [ entry |> BossEntry.isVictory |> viewBool ]
-    , td [ style "text-align" "center" ] [ entry |> BossEntry.isDeathless |> viewBool ]
-    , td [ style "text-align" "center" ] [ entry |> BossEntry.isLogoutless |> viewBool ]
+
+    -- , td [ ] [ viewProgress progress ]
+    , td [ style "text-align" "center" ] [ entry |> BossEntry.isVisited |> viewBool, span [ L.bossesHeaderVisited ] [] ]
+    , td [ style "text-align" "center" ] [ entry |> BossEntry.isVictory |> viewBool, span [ L.bossesHeaderVictory ] [] ]
+    , td [ style "text-align" "center" ] [ entry |> BossEntry.isDeathless |> viewBool, span [ L.bossesHeaderDeathless ] [] ]
+    , td [ style "text-align" "center" ] [ entry |> BossEntry.isLogoutless |> viewBool, span [ L.bossesHeaderLogoutless ] [] ]
 
     -- , td [ style "text-align" "center" ] [ text "?" ]
     -- , td [] [ text <| String.fromInt entry.runs ]
@@ -213,10 +197,11 @@ viewBossProgressEntry query label search progress entry =
 
 viewProgress : Progress -> Html msg
 viewProgress p =
-    H.progress
+    H.meter
         [ A.max <| String.fromInt p.possible
         , A.value <| String.fromInt p.completed
         , A.title <| String.fromInt p.completed ++ "/" ++ String.fromInt p.possible
+        , A.style "width" "100%"
         ]
         []
 
@@ -224,7 +209,7 @@ viewProgress p =
 viewBool : Bool -> Html msg
 viewBool b =
     if b then
-        span [ style "color" "green" ] [ text "✔" ]
+        span [ style "color" "green" ] [ text " ✔ " ]
 
     else
-        span [ style "color" "red" ] [ text "✖" ]
+        span [ style "color" "red" ] [ text " ✖ " ]
