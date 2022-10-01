@@ -122,7 +122,7 @@ bosses-eater = {npc-eater}
 bosses-uber-eater = {npc-eater} (Uber)
 bosses-exarch = {npc-exarch}
 bosses-uber-exarch = {npc-exarch} (Uber)
-bosses-group-conquerors = Lesser Conquerors of the Atlas
+bosses-group-conquerors = Conquerors of the Atlas
 bosses-baran = {npc-baran}
 bosses-veritania = {npc-veritania}
 bosses-alhezmin = {npc-alhezmin}
@@ -138,6 +138,12 @@ bosses-shaper-chimera = Guardian of the Chimera
 bosses-shaper-hydra = Guardian of the Hydra
 bosses-shaper-minotaur = Guardian of the Minotaur
 bosses-shaper-phoenix = Guardian of the Phoenix
+bosses-group-breachlords = Breachlords
+bosses-breach-xoph = Xoph, Dark Embers
+bosses-breach-esh = Esh, Forked Thought
+bosses-breach-tul = Tul, Creeping Avalanche
+bosses-breach-uul = Uul-Netol, Unburdened Flesh
+bosses-breach-chayula = Chayula, Who Dreamt
 
 ## https://mapwatch.erosson.org/#/encounters > encounter types
 encounter-abyssal = Abyssal Depths

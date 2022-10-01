@@ -96,8 +96,46 @@ viewMain model =
                 ]
                 [ Icon.fas "share-nodes", text " ", span [ L.bossesShareButton ] [] ]
             ]
+        , div [] <| viewAchievementsSummary model.query tally
         , div [] <| viewBossTally model.query tally
         ]
+
+
+viewAchievementsSummary : QueryDict -> BossTally -> List (Html msg)
+viewAchievementsSummary query tally =
+    [ div [ class "achievements-summary" ]
+        [ tally |> BossTally.groupAll |> viewAchievementsSummaryEntry L.bossesGroupAll |> div [ class "total" ]
+        , tally |> BossTally.groupUber |> viewAchievementsSummaryEntry L.bossesGroupUber |> div [ class "entry" ]
+        , tally |> BossTally.groupPinnacle |> viewAchievementsSummaryEntry L.bossesGroupPinnacle |> div [ class "entry" ]
+        , tally |> BossTally.groupLesserEldritch |> viewAchievementsSummaryEntry L.bossesGroupLesserEldritch |> div [ class "entry" ]
+        , tally |> BossTally.groupConquerors |> viewAchievementsSummaryEntry L.bossesGroupConquerors |> div [ class "entry" ]
+        , [] |> viewAchievementsSummaryEntry L.bossesGroupBreachlords |> div [ class "entry" ]
+        , tally |> BossTally.groupShaperGuardians |> viewAchievementsSummaryEntry L.bossesGroupShaperGuardians |> div [ class "entry" ]
+        ]
+    ]
+
+
+viewAchievementsSummaryEntry : H.Attribute msg -> List BossEntry -> List (Html msg)
+viewAchievementsSummaryEntry label entries =
+    let
+        progress =
+            BossEntry.progressList entries
+    in
+    --[ span [] <|
+    --    if progress.percent >= 1 then
+    --        [ viewBool True, span [ label ] [] ]
+    --    else
+    --        [ span [ label ] [], text ": ", text <| formatPercent progress.percent ]
+    [ span [ class "label", label ] []
+    , span [ class "percent" ]
+        [ if progress.percent >= 1 then
+            viewBool True
+
+          else
+            progress.percent |> formatPercent |> text
+        ]
+    , progress |> viewProgress
+    ]
 
 
 viewBossTally : QueryDict -> BossTally -> List (Html msg)
@@ -214,3 +252,8 @@ viewBool b =
 
     else
         span [ style "color" "red" ] [ text " ✖ " ]
+
+
+formatPercent : Float -> String
+formatPercent f =
+    (f * 100 |> floor |> String.fromInt) ++ "%"
