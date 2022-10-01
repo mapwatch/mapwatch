@@ -111,23 +111,23 @@ viewContent query tally =
 viewAchievementsSummary : QueryDict -> BossTally -> List (Html msg)
 viewAchievementsSummary query tally =
     [ div [ class "achievements-summary" ]
-        [ tally |> BossTally.groupAll |> viewAchievementsSummaryEntry L.bossesGroupAll |> div [ class "total" ]
-        , tally |> BossTally.groupUber |> viewAchievementsSummaryEntry L.bossesGroupUber |> div [ class "entry" ]
-        , tally |> BossTally.groupPinnacle |> viewAchievementsSummaryEntry L.bossesGroupPinnacle |> div [ class "entry" ]
-        , tally |> BossTally.groupLesserEldritch |> viewAchievementsSummaryEntry L.bossesGroupLesserEldritch |> div [ class "entry" ]
-        , tally |> BossTally.groupConquerors |> viewAchievementsSummaryEntry L.bossesGroupConquerors |> div [ class "entry" ]
-        , tally |> BossTally.groupBreachlords |> viewAchievementsSummaryEntry L.bossesGroupBreachlords |> div [ class "entry" ]
-        , tally |> BossTally.groupShaperGuardians |> viewAchievementsSummaryEntry L.bossesGroupShaperGuardians |> div [ class "entry" ]
+        [ tally |> BossTally.groupAll |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupAll |> div [ class "total" ]
+        , tally |> BossTally.groupUber |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupUber |> div [ class "entry" ]
+        , tally |> BossTally.groupPinnacle |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupPinnacle |> div [ class "entry" ]
+        , tally |> BossTally.groupLesserEldritch |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupLesserEldritch |> div [ class "entry" ]
+        , tally |> BossTally.groupConquerors |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupConquerors |> div [ class "entry" ]
+        , tally |> BossTally.groupBreachlords |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupBreachlords |> div [ class "entry" ]
+        , tally |> BossTally.groupShaperGuardians |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupShaperGuardians |> div [ class "entry" ]
+        , tally |> BossTally.groupAll |> BossEntry.progressVisited |> viewAchievementsSummaryEntry L.bossesHeaderVisited |> div [ class "entry" ]
+        , tally |> BossTally.groupAll |> BossEntry.progressVictory |> viewAchievementsSummaryEntry L.bossesHeaderVictory |> div [ class "entry" ]
+        , tally |> BossTally.groupAll |> BossEntry.progressDeathless |> viewAchievementsSummaryEntry L.bossesHeaderDeathless |> div [ class "entry" ]
+        , tally |> BossTally.groupAll |> BossEntry.progressLogoutless |> viewAchievementsSummaryEntry L.bossesHeaderLogoutless |> div [ class "entry" ]
         ]
     ]
 
 
-viewAchievementsSummaryEntry : H.Attribute msg -> List BossEntry -> List (Html msg)
-viewAchievementsSummaryEntry label entries =
-    let
-        progress =
-            BossEntry.progressList entries
-    in
+viewAchievementsSummaryEntry : H.Attribute msg -> Progress -> List (Html msg)
+viewAchievementsSummaryEntry label progress =
     --[ span [] <|
     --    if progress.percent >= 1 then
     --        [ viewBool True, span [ label ] [] ]

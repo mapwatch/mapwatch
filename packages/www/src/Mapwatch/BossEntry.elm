@@ -20,13 +20,18 @@ module Mapwatch.BossEntry exposing
     , mergeList
     , mergePair
     , progress
+    , progressDeathless
     , progressList
+    , progressLogoutless
+    , progressVictory
+    , progressVisited
     , victoryData
     , visitedData
     )
 
 import Json.Decode as D
 import Json.Encode as E
+import List.Extra
 import Maybe.Extra
 import Time exposing (Posix)
 
@@ -167,6 +172,31 @@ mergeProgress ps =
 progressList : List BossEntry -> Progress
 progressList =
     List.map progress >> mergeProgress
+
+
+progressMap : (BossEntry -> Bool) -> List BossEntry -> Progress
+progressMap fn es =
+    createProgress (es |> List.Extra.count fn) (es |> List.length)
+
+
+progressVisited : List BossEntry -> Progress
+progressVisited =
+    progressMap isVisited
+
+
+progressVictory : List BossEntry -> Progress
+progressVictory =
+    progressMap isVictory
+
+
+progressDeathless : List BossEntry -> Progress
+progressDeathless =
+    progressMap isDeathless
+
+
+progressLogoutless : List BossEntry -> Progress
+progressLogoutless =
+    progressMap isLogoutless
 
 
 progress : BossEntry -> Progress

@@ -57,7 +57,6 @@ applyRegionName name status rs =
         --     { rs | topRight = status }
         -- "New Vastir" ->
         --     { rs | bottomLeft = status }
-
         _ ->
             rs
 
@@ -66,7 +65,6 @@ regions : Regions -> Html msg
 regions r =
     svg [ class "icon-region", viewBox "0 0 2 2" ]
         [ polygon [ points "0,0 2,0 2,2 0,2", class "border" ] []
-
         , polygon [ points "0,0 1,0 1,1 0,1", class "outer", focus r.topLeft ] []
         , polygon [ points "2,0 1,0 1,1 2,1", class "outer", focus r.topRight ] []
         , polygon [ points "0,2 1,2 1,1 0,1", class "outer", focus r.bottomLeft ] []
