@@ -36,7 +36,7 @@ type BossEntry
 
 
 type alias VisitedData =
-    { achievedAt : Posix, count : Int }
+    { achievedAt : Posix }
 
 
 type alias VictoryData =
@@ -44,11 +44,11 @@ type alias VictoryData =
 
 
 type alias DeathlessData =
-    { achievedAt : Posix, count : Int, victory : VictoryData }
+    { achievedAt : Posix, victory : VictoryData }
 
 
 type alias LogoutlessData =
-    { achievedAt : Posix, count : Int, deathless : DeathlessData }
+    { achievedAt : Posix, deathless : DeathlessData }
 
 
 isUnvisited : BossEntry -> Bool
@@ -202,7 +202,10 @@ mergePair a b =
                 Just victory_ ->
                     let
                         victory =
-                            { victory_ | visited = visited }
+                            { victory_
+                                | visited = visited
+                                , count = (a |> victoryData |> Maybe.Extra.unwrap 0 .count) + (b |> victoryData |> Maybe.Extra.unwrap 0 .count)
+                            }
                     in
                     case mergeData (deathlessData a) (deathlessData b) of
                         Nothing ->
@@ -221,15 +224,12 @@ mergePair a b =
                                     Logoutless { logoutless_ | deathless = deathless }
 
 
-mergeData : Maybe { d | achievedAt : Posix, count : Int } -> Maybe { d | achievedAt : Posix, count : Int } -> Maybe { d | achievedAt : Posix, count : Int }
+mergeData : Maybe { d | achievedAt : Posix } -> Maybe { d | achievedAt : Posix } -> Maybe { d | achievedAt : Posix }
 mergeData ma mb =
     case ( ma, mb ) of
         ( Just a, Just b ) ->
             Just
-                { a
-                    | count = a.count + b.count
-                    , achievedAt = min (Time.posixToMillis a.achievedAt) (Time.posixToMillis b.achievedAt) |> Time.millisToPosix
-                }
+                { a | achievedAt = min (Time.posixToMillis a.achievedAt) (Time.posixToMillis b.achievedAt) |> Time.millisToPosix }
 
         ( Nothing, b ) ->
             b
@@ -251,68 +251,56 @@ jsonEncode : BossEntry -> D.Value
 jsonEncode e =
     case e of
         Unvisited ->
-            E.list identity
-                [ E.string "unvisited"
-                ]
+            [ E.string "unvisited" ]
+                |> E.list identity
 
         Visited d ->
-            E.list identity
-                [ E.string "visited"
-                , jsonEncodeVisited d
-                ]
+            E.string "visited"
+                :: jsonEncodeVisited d
+                |> E.list identity
 
         Victory d ->
-            E.list identity
-                [ E.string "victory"
-                , jsonEncodeVictory d
-                ]
+            E.string "victory"
+                :: jsonEncodeVictory d
+                |> E.list identity
 
         Deathless d ->
-            E.list identity
-                [ E.string "deathless"
-                , jsonEncodeDeathless d
-                ]
+            E.string "deathless"
+                :: jsonEncodeDeathless d
+                |> E.list identity
 
         Logoutless d ->
-            E.list identity
-                [ E.string "logoutless"
-                , jsonEncodeLogoutless d
-                ]
+            E.string "logoutless"
+                :: jsonEncodeLogoutless d
+                |> E.list identity
 
 
-jsonEncodeVisited : VisitedData -> D.Value
+jsonEncodeVisited : VisitedData -> List D.Value
 jsonEncodeVisited d =
-    E.list identity
-        [ d.achievedAt |> jsonEncodePosix
-        , d.count |> E.int
-        ]
+    [ d.achievedAt |> jsonEncodePosix
+    ]
 
 
-jsonEncodeVictory : VictoryData -> D.Value
+jsonEncodeVictory : VictoryData -> List D.Value
 jsonEncodeVictory d =
-    E.list identity
-        [ d.achievedAt |> jsonEncodePosix
-        , d.count |> E.int
-        , d.visited |> jsonEncodeVisited
-        ]
+    (d.visited |> jsonEncodeVisited)
+        ++ [ d.achievedAt |> jsonEncodePosix
+           , d.count |> E.int
+           ]
 
 
-jsonEncodeDeathless : DeathlessData -> D.Value
+jsonEncodeDeathless : DeathlessData -> List D.Value
 jsonEncodeDeathless d =
-    E.list identity
-        [ d.achievedAt |> jsonEncodePosix
-        , d.count |> E.int
-        , d.victory |> jsonEncodeVictory
-        ]
+    (d.victory |> jsonEncodeVictory)
+        ++ [ d.achievedAt |> jsonEncodePosix
+           ]
 
 
-jsonEncodeLogoutless : LogoutlessData -> D.Value
+jsonEncodeLogoutless : LogoutlessData -> List D.Value
 jsonEncodeLogoutless d =
-    E.list identity
-        [ d.achievedAt |> jsonEncodePosix
-        , d.count |> E.int
-        , d.deathless |> jsonEncodeDeathless
-        ]
+    (d.deathless |> jsonEncodeDeathless)
+        ++ [ d.achievedAt |> jsonEncodePosix
+           ]
 
 
 jsonEncodePosix : Posix -> D.Value
@@ -328,57 +316,50 @@ jsonDecode =
                 "unvisited" ->
                     Unvisited |> D.succeed
 
+                "visited" ->
+                    jsonDecodeVisited |> D.map Visited
+
+                "victory" ->
+                    jsonDecodeVictory |> D.map Victory
+
+                "deathless" ->
+                    jsonDecodeDeathless |> D.map Deathless
+
+                "logoutless" ->
+                    jsonDecodeLogoutless |> D.map Logoutless
+
                 _ ->
-                    (case type_ of
-                        "visited" ->
-                            jsonDecodeVisited |> D.map Visited
-
-                        "victory" ->
-                            jsonDecodeVictory |> D.map Victory
-
-                        "deathless" ->
-                            jsonDecodeDeathless |> D.map Deathless
-
-                        "logoutless" ->
-                            jsonDecodeLogoutless |> D.map Logoutless
-
-                        _ ->
-                            "unrecognized type: " ++ type_ |> D.fail
-                    )
-                        |> D.index 1
+                    "unrecognized type: " ++ type_ |> D.fail
         )
         (D.index 0 D.string)
 
 
 jsonDecodeVisited : D.Decoder VisitedData
 jsonDecodeVisited =
-    D.map2 VisitedData
-        (D.index 0 jsonDecodePosix)
-        (D.index 1 D.int)
+    D.map VisitedData
+        (D.index 1 jsonDecodePosix)
 
 
 jsonDecodeVictory : D.Decoder VictoryData
 jsonDecodeVictory =
     D.map3 VictoryData
-        (D.index 0 jsonDecodePosix)
-        (D.index 1 D.int)
-        (D.index 2 jsonDecodeVisited)
+        (D.index 2 jsonDecodePosix)
+        (D.index 3 D.int)
+        jsonDecodeVisited
 
 
 jsonDecodeDeathless : D.Decoder DeathlessData
 jsonDecodeDeathless =
-    D.map3 DeathlessData
-        (D.index 0 jsonDecodePosix)
-        (D.index 1 D.int)
-        (D.index 2 jsonDecodeVictory)
+    D.map2 DeathlessData
+        (D.index 4 jsonDecodePosix)
+        jsonDecodeVictory
 
 
 jsonDecodeLogoutless : D.Decoder LogoutlessData
 jsonDecodeLogoutless =
-    D.map3 LogoutlessData
-        (D.index 0 jsonDecodePosix)
-        (D.index 1 D.int)
-        (D.index 2 jsonDecodeDeathless)
+    D.map2 LogoutlessData
+        (D.index 5 jsonDecodePosix)
+        jsonDecodeDeathless
 
 
 jsonDecodePosix : D.Decoder Posix

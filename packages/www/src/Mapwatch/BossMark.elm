@@ -278,7 +278,7 @@ toEntry : BossMark -> BossEntry
 toEntry mark =
     let
         visited =
-            { achievedAt = mark.startedAt, count = 1 }
+            { achievedAt = mark.startedAt }
     in
     case mark.completed of
         Complete completeAt ->
@@ -289,10 +289,10 @@ toEntry mark =
             if mark.deaths <= 0 then
                 let
                     deathless =
-                        { achievedAt = completeAt, count = 1, victory = victory }
+                        { achievedAt = completeAt, victory = victory }
                 in
                 if mark.logouts <= 0 then
-                    BossEntry.Logoutless { achievedAt = completeAt, count = 1, deathless = deathless }
+                    BossEntry.Logoutless { achievedAt = completeAt, deathless = deathless }
 
                 else
                     BossEntry.Deathless deathless

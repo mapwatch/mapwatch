@@ -59,7 +59,7 @@ entry =
 
 visitedData : Fuzzer BossEntry.VisitedData
 visitedData =
-    Fuzz.map2 BossEntry.VisitedData timestamp positiveInt
+    Fuzz.map BossEntry.VisitedData timestamp
 
 
 victoryData : Fuzzer BossEntry.VictoryData
@@ -69,12 +69,12 @@ victoryData =
 
 deathlessData : Fuzzer BossEntry.DeathlessData
 deathlessData =
-    Fuzz.map3 BossEntry.DeathlessData timestamp positiveInt victoryData
+    Fuzz.map2 BossEntry.DeathlessData timestamp victoryData
 
 
 logoutlessData : Fuzzer BossEntry.LogoutlessData
 logoutlessData =
-    Fuzz.map3 BossEntry.LogoutlessData timestamp positiveInt deathlessData
+    Fuzz.map2 BossEntry.LogoutlessData timestamp deathlessData
 
 
 timestamp : Fuzzer Posix
