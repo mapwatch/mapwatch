@@ -3,6 +3,7 @@ module Mapwatch.BossMark exposing
     , BossMark
     , apply
     , fromMapRun
+    , searchableId
     )
 
 import Dict
@@ -349,3 +350,91 @@ toEntry mark =
 apply : BossMark -> BossEntry -> BossEntry
 apply mark =
     BossEntry.mergePair (toEntry mark)
+
+
+searchableId : BossId -> String
+searchableId b =
+    case b of
+        Atziri isUber ->
+            "Atziri-" ++ valueIf "Uber" "Standard" isUber
+
+        UberElder isUber ->
+            "UberElder-" ++ valueIf "Uber" "Standard" isUber
+
+        Shaper isUber ->
+            "Shaper-" ++ valueIf "Uber" "Standard" isUber
+
+        Venarius isUber ->
+            "Venarius-" ++ valueIf "Uber" "Standard" isUber
+
+        Sirus isUber ->
+            "Sirus-" ++ valueIf "Uber" "Standard" isUber
+
+        Maven isUber ->
+            "Maven-" ++ valueIf "Uber" "Standard" isUber
+
+        Eater isUber ->
+            "Eater-" ++ valueIf "Uber" "Standard" isUber
+
+        Exarch isUber ->
+            "Exarch-" ++ valueIf "Uber" "Standard" isUber
+
+        BlackStar ->
+            "BlackStar"
+
+        Hunger ->
+            "Hunger"
+
+        Elder ->
+            "Elder"
+
+        Baran ->
+            "Baran"
+
+        Veritania ->
+            "Veritania"
+
+        AlHezmin ->
+            "AlHezmin"
+
+        Drox ->
+            "Drox"
+
+        ShaperMinotaur ->
+            "ShaperMinotaur"
+
+        ShaperChimera ->
+            "ShaperChimera"
+
+        ShaperPhoenix ->
+            "ShaperPhoenix"
+
+        ShaperHydra ->
+            "ShaperHydra"
+
+        BreachXoph ->
+            "BreachXoph"
+
+        BreachTul ->
+            "BreachTul"
+
+        BreachEsh ->
+            "BreachEsh"
+
+        BreachUul ->
+            "BreachUul"
+
+        BreachChayula ->
+            "BreachChayula"
+
+        Mastermind ->
+            "Mastermind"
+
+
+valueIf : a -> a -> Bool -> a
+valueIf t f pred =
+    if pred then
+        t
+
+    else
+        f

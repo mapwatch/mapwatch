@@ -7,8 +7,9 @@ import Html.Events as E exposing (..)
 import Localization.Mapwatch as L
 import Mapwatch
 import Mapwatch.BossEntry as BossEntry exposing (BossEntry, Progress)
+import Mapwatch.BossMark as BossMark exposing (BossId(..))
 import Mapwatch.BossShare as BossShare
-import Mapwatch.BossTally as BossTally exposing (BossTally)
+import Mapwatch.BossTally as BossTally exposing (BossTally, Group(..))
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.EncounterTally as EncounterTally exposing (EncounterTally)
 import Mapwatch.Instance as Instance exposing (Instance)
@@ -104,6 +105,7 @@ viewMain model =
 viewContent : QueryDict -> BossTally -> List (Html msg)
 viewContent query tally =
     [ div [] <| viewAchievementsSummary query tally
+    , div [] <| viewDetailedTally query tally
     , div [] <| viewBossTally query tally
     ]
 
@@ -111,28 +113,37 @@ viewContent query tally =
 viewAchievementsSummary : QueryDict -> BossTally -> List (Html msg)
 viewAchievementsSummary query tally =
     [ div [ class "achievements-summary" ]
-        [ tally |> BossTally.groupAll |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupAll |> div [ class "total" ]
-        , tally |> BossTally.groupUber |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupUber |> div [ class "entry" ]
-        , tally |> BossTally.groupPinnacle |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupPinnacle |> div [ class "entry" ]
-        , tally |> BossTally.groupLesserEldritch |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupLesserEldritch |> div [ class "entry" ]
-        , tally |> BossTally.groupConquerors |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupConquerors |> div [ class "entry" ]
-        , tally |> BossTally.groupBreachlords |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupBreachlords |> div [ class "entry" ]
-        , tally |> BossTally.groupShaperGuardians |> BossEntry.progressList |> viewAchievementsSummaryEntry L.bossesGroupShaperGuardians |> div [ class "entry" ]
-        , tally |> BossTally.groupAll |> BossEntry.progressVisited |> viewAchievementsSummaryEntry L.bossesHeaderVisited |> div [ class "entry" ]
-        , tally |> BossTally.groupAll |> BossEntry.progressVictory |> viewAchievementsSummaryEntry L.bossesHeaderVictory |> div [ class "entry" ]
-        , tally |> BossTally.groupAll |> BossEntry.progressDeathless |> viewAchievementsSummaryEntry L.bossesHeaderDeathless |> div [ class "entry" ]
-        , tally |> BossTally.groupAll |> BossEntry.progressLogoutless |> viewAchievementsSummaryEntry L.bossesHeaderLogoutless |> div [ class "entry" ]
-        ]
+        ((tally |> BossTally.groupProgress All |> viewAchievementsSummaryEntry (groupLabel All) |> div [ class "total" ])
+            :: (BossTally.groups
+                    |> List.map
+                        (\g ->
+                            tally
+                                |> BossTally.groupProgress g
+                                |> viewAchievementsSummaryEntry (groupLabel g)
+                                |> div [ class "entry" ]
+                        )
+               )
+            ++ ([ ( BossEntry.progressVisited, L.bossesHeaderVisited )
+                , ( BossEntry.progressVictory, L.bossesHeaderVictory )
+                , ( BossEntry.progressDeathless, L.bossesHeaderDeathless )
+                , ( BossEntry.progressLogoutless, L.bossesHeaderLogoutless )
+                ]
+                    |> List.map
+                        (\( progressFn, label ) ->
+                            tally
+                                |> BossTally.toEntries
+                                |> List.map Tuple.second
+                                |> progressFn
+                                |> viewAchievementsSummaryEntry label
+                                |> div [ class "entry" ]
+                        )
+               )
+        )
     ]
 
 
 viewAchievementsSummaryEntry : H.Attribute msg -> Progress -> List (Html msg)
 viewAchievementsSummaryEntry label progress =
-    --[ span [] <|
-    --    if progress.percent >= 1 then
-    --        [ viewBool True, span [ label ] [] ]
-    --    else
-    --        [ span [ label ] [], text ": ", text <| formatPercent progress.percent ]
     [ span [ class "label", label ] []
     , span [ class "percent" ]
         [ if progress.percent >= 1 then
@@ -145,87 +156,50 @@ viewAchievementsSummaryEntry label progress =
     ]
 
 
+viewDetailedTally : QueryDict -> BossTally -> List (Html msg)
+viewDetailedTally query tally =
+    []
+
+
 viewBossTally : QueryDict -> BossTally -> List (Html msg)
 viewBossTally query tally =
     [ table []
-        [ tally |> BossTally.groupAll |> viewBossEntries query L.bossesGroupAll |> tr []
-
-        -- shaper guardians
-        , tally |> BossTally.groupShaperGuardians |> viewBossEntries query L.bossesGroupShaperGuardians |> tr []
-        , tally.shaperChimera |> viewBossEntry query L.bossesShaperChimera "id:MapWorldsChimera" |> tr []
-        , tally.shaperHydra |> viewBossEntry query L.bossesShaperHydra "id:MapWorldsHydra" |> tr []
-        , tally.shaperMinotaur |> viewBossEntry query L.bossesShaperMinotaur "id:MapWorldsMinotaur" |> tr []
-        , tally.shaperPhoenix |> viewBossEntry query L.bossesShaperPhoenix "id:MapWorldsPhoenix" |> tr []
-
-        -- breach
-        , tally |> BossTally.groupBreachlords |> viewBossEntries query L.bossesGroupBreachlords |> tr []
-        , tally.breachXoph |> viewBossEntry query L.bossesBreachXoph "id:BreachBossFire" |> tr []
-        , tally.breachTul |> viewBossEntry query L.bossesBreachTul "id:BreachBossCold" |> tr []
-        , tally.breachEsh |> viewBossEntry query L.bossesBreachEsh "id:BreachBossLightning" |> tr []
-        , tally.breachUul |> viewBossEntry query L.bossesBreachUul "id:BreachBossPhysical" |> tr []
-        , tally.breachChayula |> viewBossEntry query L.bossesBreachChayula "id:BreachBossChaos" |> tr []
-
-        -- lesser conquerors
-        , tally |> BossTally.groupConquerors |> viewBossEntries query L.bossesGroupConquerors |> tr []
-        , tally.baran |> viewBossEntry query L.bossesBaran "conqueror:fight:baran" |> tr []
-        , tally.veritania |> viewBossEntry query L.bossesVeritania "conqueror:fight:veritania" |> tr []
-        , tally.alhezmin |> viewBossEntry query L.bossesAlhezmin "conqueror:fight:alHezmin" |> tr []
-        , tally.drox |> viewBossEntry query L.bossesDrox "conqueror:fight:drox" |> tr []
-
-        -- shaper, elder
-        , tally |> BossTally.groupLesserEldritch |> viewBossEntries query L.bossesGroupLesserEldritch |> tr []
-
-        -- , tally.atziri.standard |> viewBossSighting query L.bossesAtziri "id:MapAtziri1" |> tr []
-        , tally.elder |> viewBossEntry query L.bossesElder "id:MapWorldsElderArena" |> tr []
-        , tally.hunger |> viewBossEntry query L.bossesHunger "id:MapWorldsPrimordialBoss1" |> tr []
-        , tally.blackstar |> viewBossEntry query L.bossesBlackstar "id:MapWorldsPrimordialBoss2" |> tr []
-        , tally.mastermind |> viewBossEntry query L.bossesMastermind "id:BetrayalMastemind" |> tr []
-
-        -- pinnacles
-        , tally |> BossTally.groupPinnacle |> viewBossEntries query L.bossesGroupPinnacle |> tr []
-        , tally.exarch.standard |> viewBossEntry query L.bossesExarch "id:MapWorldsPrimordialBoss3" |> tr []
-        , tally.eater.standard |> viewBossEntry query L.bossesEater "id:MapWorldsPrimordialBoss4" |> tr []
-        , tally.venarius.standard |> viewBossEntry query L.bossesVenarius "id:Synthesis_MapBoss" |> tr []
-        , tally.sirus.standard |> viewBossEntry query L.bossesSirus "id:AtlasExilesBoss5" |> tr []
-        , tally.maven.standard |> viewBossEntry query L.bossesMaven "id:MavenBoss" |> tr []
-        , tally.uberelder.standard |> viewBossEntry query L.bossesUberElder "id:MapWorldsElderArenaUber" |> tr []
-        , tally.shaper.standard |> viewBossEntry query L.bossesShaper "id:MapWorldsShapersRealm" |> tr []
-
-        -- uber pinnacles (and atziri)
-        -- TODO: fix uber vs non-uber searches
-        , tally |> BossTally.groupUber |> viewBossEntries query L.bossesGroupUber |> tr []
-        , tally.exarch.uber |> viewBossEntry query L.bossesUberExarch "id:MapWorldsPrimordialBoss3" |> tr []
-        , tally.eater.uber |> viewBossEntry query L.bossesUberEater "id:MapWorldsPrimordialBoss4" |> tr []
-        , tally.venarius.uber |> viewBossEntry query L.bossesUberVenarius "id:Synthesis_MapBoss" |> tr []
-        , tally.sirus.uber |> viewBossEntry query L.bossesUberSirus "id:AtlasExilesBoss5" |> tr []
-        , tally.maven.uber |> viewBossEntry query L.bossesUberMaven "id:MavenBoss" |> tr []
-        , tally.uberelder.uber |> viewBossEntry query L.bossesUberUberElder "id:MapWorldsElderArenaUber" |> tr []
-        , tally.shaper.uber |> viewBossEntry query L.bossesUberShaper "id:MapWorldsShapersRealm" |> tr []
-        , tally.atziri.uber |> viewBossEntry query L.bossesUberAtziri "id:MapAtziri2" |> tr []
-        ]
+        ((tally
+            |> BossTally.toEntries
+            |> List.map Tuple.second
+            |> viewBossGroup query All
+            |> tr []
+         )
+            :: (tally
+                    |> BossTally.toEntryGroups
+                    |> List.concatMap
+                        (\( g, es ) ->
+                            (es |> List.map Tuple.second |> viewBossGroup query g |> tr [])
+                                :: (es |> List.map (\( id, e ) -> e |> viewBossEntry query id |> tr []))
+                        )
+               )
+        )
     ]
 
 
-viewBossEntries : QueryDict -> H.Attribute msg -> List BossEntry -> List (Html msg)
-viewBossEntries query label entries =
-    -- TODO: mergeEntries has bad behavior here! it ORs, but we want AND here.
-    -- viewBossProgressEntry query label search (BossTally.entriesProgress entries) (BossTally.mergeEntries entries)
+viewBossGroup : QueryDict -> Group -> List BossEntry -> List (Html msg)
+viewBossGroup query id entries =
     let
         kills : Int
         kills =
             entries |> List.filterMap BossEntry.victoryData |> List.map .count |> List.sum
 
         progress =
-            BossEntry.progressList entries
+            entries |> BossEntry.progressList
     in
-    [ td [ style "text-align" "right" ] [ span [ label ] [] ]
+    [ td [ style "text-align" "right" ] [ span [ groupLabel id ] [] ]
     , td [ colspan 4 ] [ viewProgress progress ]
     , td [] [ span ({ n = kills |> toFloat } |> L.bossesKills) [] ]
     ]
 
 
-viewBossEntry : QueryDict -> H.Attribute msg -> String -> BossEntry -> List (Html msg)
-viewBossEntry query label search entry =
+viewBossEntry : QueryDict -> BossId -> BossEntry -> List (Html msg)
+viewBossEntry query id entry =
     let
         progress =
             BossEntry.progress entry
@@ -234,29 +208,18 @@ viewBossEntry query label search entry =
         kills =
             entry |> BossEntry.victoryData |> Maybe.Extra.unwrap 0 .count
 
-        href =
-            Route.href (query |> Dict.insert "q" search) Route.Encounters
-    in
-    [ td [ style "text-align" "right" ] [ a [ href, label ] [] ]
+        search =
+            "boss:" ++ BossMark.searchableId id
 
-    -- , td [ ] [ viewProgress progress ]
+        href =
+            Route.href (query |> Dict.insert "q" search) Route.History
+    in
+    [ td [ style "text-align" "right" ] [ a [ href, bossLabel id ] [] ]
     , td [] [ entry |> BossEntry.isVisited |> viewBool, span [ L.bossesHeaderVisited ] [] ]
     , td [] [ entry |> BossEntry.isVictory |> viewBool, span [ L.bossesHeaderVictory ] [] ]
     , td [] [ entry |> BossEntry.isDeathless |> viewBool, span [ L.bossesHeaderDeathless ] [] ]
     , td [] [ entry |> BossEntry.isLogoutless |> viewBool, span [ L.bossesHeaderLogoutless ] [] ]
     , td [] [ span ({ n = kills |> toFloat } |> L.bossesKills) [] ]
-
-    -- , td [ style "text-align" "center" ] [ text "?" ]
-    -- , td [] [ text <| String.fromInt entry.runs ]
-    --, td [ style "text-align" "center" ]
-    --    [ text <|
-    --        if entry.completed > 0 then
-    --            String.fromInt entry.completed
-    --        else
-    --            ""
-    --    ]
-    -- , td [] [ text <| String.fromInt <| Maybe.withDefault 0 entry.minDeaths ]
-    -- , td [] [ text <| String.fromInt entry.totalDeaths ]
     ]
 
 
@@ -283,3 +246,116 @@ viewBool b =
 formatPercent : Float -> String
 formatPercent f =
     (f * 100 |> floor |> String.fromInt) ++ "%"
+
+
+groupLabel : Group -> H.Attribute msg
+groupLabel id =
+    case id of
+        All ->
+            L.bossesGroupAll
+
+        Ubers ->
+            L.bossesGroupUbers
+
+        Pinnacles ->
+            L.bossesGroupPinnacles
+
+        Conquerors ->
+            L.bossesGroupConquerors
+
+        LesserEldritches ->
+            L.bossesGroupLesserEldritches
+
+        Breachlords ->
+            L.bossesGroupBreachlords
+
+        ShaperGuardians ->
+            L.bossesGroupShaperGuardians
+
+
+bossLabel : BossId -> H.Attribute msg
+bossLabel id =
+    case id of
+        Atziri isUber ->
+            valueIf L.bossesUberAtziri L.bossesAtziri isUber
+
+        UberElder isUber ->
+            valueIf L.bossesUberUberElder L.bossesUberElder isUber
+
+        Shaper isUber ->
+            valueIf L.bossesUberShaper L.bossesShaper isUber
+
+        Venarius isUber ->
+            valueIf L.bossesUberVenarius L.bossesVenarius isUber
+
+        Maven isUber ->
+            valueIf L.bossesUberMaven L.bossesMaven isUber
+
+        Sirus isUber ->
+            valueIf L.bossesUberSirus L.bossesSirus isUber
+
+        Exarch isUber ->
+            valueIf L.bossesUberExarch L.bossesExarch isUber
+
+        Eater isUber ->
+            valueIf L.bossesUberEater L.bossesEater isUber
+
+        BlackStar ->
+            L.bossesBlackstar
+
+        Hunger ->
+            L.bossesHunger
+
+        Elder ->
+            L.bossesElder
+
+        Baran ->
+            L.bossesBaran
+
+        Veritania ->
+            L.bossesVeritania
+
+        AlHezmin ->
+            L.bossesAlhezmin
+
+        Drox ->
+            L.bossesDrox
+
+        ShaperMinotaur ->
+            L.bossesShaperMinotaur
+
+        ShaperChimera ->
+            L.bossesShaperChimera
+
+        ShaperPhoenix ->
+            L.bossesShaperPhoenix
+
+        ShaperHydra ->
+            L.bossesShaperHydra
+
+        BreachXoph ->
+            L.bossesBreachXoph
+
+        BreachTul ->
+            L.bossesBreachTul
+
+        BreachEsh ->
+            L.bossesBreachEsh
+
+        BreachUul ->
+            L.bossesBreachUul
+
+        BreachChayula ->
+            L.bossesBreachChayula
+
+        Mastermind ->
+            L.bossesMastermind
+
+
+valueIf : a -> a -> Bool -> a
+valueIf t f pred =
+    if pred then
+        t
+
+    else
+        f

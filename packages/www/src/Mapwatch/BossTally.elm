@@ -1,16 +1,16 @@
 module Mapwatch.BossTally exposing
     ( BossTally
+    , Group(..)
     , UberBossEntry
     , aggregate
-    , groupAll
-    , groupBreachlords
-    , groupConquerors
-    , groupLesserEldritch
-    , groupPinnacle
-    , groupShaperGuardians
-    , groupUber
+    , entry
+    , groupBosses
+    , groupProgress
+    , groups
     , jsonDecode
     , jsonEncode
+    , toEntries
+    , toEntryGroups
     )
 
 import Json.Decode as D
@@ -83,45 +83,161 @@ empty =
     BossTally ue ue ue ue ue ue ue ue e e e e e e e e e e e e e e e e e
 
 
-groupBreachlords : BossTally -> List BossEntry
-groupBreachlords t =
-    [ t.breachXoph, t.breachTul, t.breachEsh, t.breachUul, t.breachChayula ]
+type Group
+    = All
+    | Breachlords
+    | ShaperGuardians
+    | Conquerors
+    | LesserEldritches
+    | Pinnacles
+    | Ubers
 
 
-groupShaperGuardians : BossTally -> List BossEntry
-groupShaperGuardians t =
-    [ t.shaperChimera, t.shaperHydra, t.shaperMinotaur, t.shaperPhoenix ]
+groups : List Group
+groups =
+    [ Breachlords, ShaperGuardians, Conquerors, LesserEldritches, Pinnacles, Ubers
+    ]
 
 
-groupConquerors : BossTally -> List BossEntry
-groupConquerors t =
-    [ t.baran, t.drox, t.veritania, t.alhezmin ]
+uberables : List (Bool -> BossId)
+uberables =
+    [ Exarch, Eater, Maven, Venarius, Sirus, UberElder, Shaper ]
 
 
-groupLesserEldritch : BossTally -> List BossEntry
-groupLesserEldritch t =
-    [ t.elder, t.blackstar, t.hunger, t.mastermind ]
+groupBosses : Group -> List BossId
+groupBosses g =
+    case g of
+        All ->
+            groups |> List.concatMap groupBosses
+
+        Ubers ->
+            (uberables |> List.map (\u -> u True)) ++ [ Atziri True ]
+
+        Pinnacles ->
+            uberables |> List.map (\u -> u False)
+
+        LesserEldritches ->
+            [ Elder, BlackStar, Hunger, Mastermind ]
+
+        Conquerors ->
+            [ Baran, AlHezmin, Veritania, Drox ]
+
+        Breachlords ->
+            [ BreachXoph, BreachTul, BreachEsh, BreachUul, BreachChayula ]
+
+        ShaperGuardians ->
+            [ ShaperChimera, ShaperHydra, ShaperPhoenix, ShaperMinotaur ]
 
 
-groupPinnacle : BossTally -> List BossEntry
-groupPinnacle t =
-    [ t.exarch.standard, t.eater.standard, t.maven.standard, t.venarius.standard, t.sirus.standard, t.uberelder.standard, t.shaper.standard ]
+groupProgress : Group -> BossTally -> BossEntry.Progress
+groupProgress g t =
+    g
+        |> groupBosses
+        |> List.map (\b -> entry b t)
+        |> BossEntry.progressList
 
 
-groupUber : BossTally -> List BossEntry
-groupUber t =
-    [ t.exarch.uber, t.eater.uber, t.maven.uber, t.venarius.uber, t.sirus.uber, t.uberelder.uber, t.shaper.uber, t.atziri.uber ]
+toEntryGroups : BossTally -> List ( Group, List ( BossId, BossEntry ) )
+toEntryGroups t =
+    groups |> List.map (\g -> ( g, g |> groupBosses |> List.map (\b -> ( b, entry b t )) ))
 
 
-groupAll : BossTally -> List BossEntry
-groupAll t =
-    [ groupUber, groupPinnacle, groupLesserEldritch, groupConquerors, groupShaperGuardians, groupBreachlords ]
-        |> List.concatMap (\g -> g t)
+toEntries : BossTally -> List ( BossId, BossEntry )
+toEntries =
+    toEntryGroups >> List.concatMap Tuple.second
 
 
 aggregate : List BossMark -> BossTally
 aggregate =
     List.foldl applyMark empty
+
+
+entry : BossId -> BossTally -> BossEntry
+entry id t =
+    case id of
+        Atziri isUber ->
+            entryUber isUber t.atziri
+
+        UberElder isUber ->
+            entryUber isUber t.uberelder
+
+        Shaper isUber ->
+            entryUber isUber t.shaper
+
+        Venarius isUber ->
+            entryUber isUber t.venarius
+
+        Maven isUber ->
+            entryUber isUber t.maven
+
+        Sirus isUber ->
+            entryUber isUber t.sirus
+
+        Exarch isUber ->
+            entryUber isUber t.exarch
+
+        Eater isUber ->
+            entryUber isUber t.eater
+
+        BlackStar ->
+            t.blackstar
+
+        Hunger ->
+            t.hunger
+
+        Elder ->
+            t.elder
+
+        Baran ->
+            t.baran
+
+        Veritania ->
+            t.veritania
+
+        AlHezmin ->
+            t.alhezmin
+
+        Drox ->
+            t.drox
+
+        ShaperMinotaur ->
+            t.shaperMinotaur
+
+        ShaperChimera ->
+            t.shaperChimera
+
+        ShaperPhoenix ->
+            t.shaperPhoenix
+
+        ShaperHydra ->
+            t.shaperHydra
+
+        BreachXoph ->
+            t.breachXoph
+
+        BreachTul ->
+            t.breachTul
+
+        BreachEsh ->
+            t.breachEsh
+
+        BreachUul ->
+            t.breachUul
+
+        BreachChayula ->
+            t.breachChayula
+
+        Mastermind ->
+            t.mastermind
+
+
+entryUber : Bool -> UberBossEntry -> BossEntry
+entryUber isUber =
+    if isUber then
+        .uber
+
+    else
+        .standard
 
 
 applyMark : BossMark -> BossTally -> BossTally
@@ -204,12 +320,12 @@ applyMark mark tally =
 
 
 applyUberEntry : Bool -> BossMark -> UberBossEntry -> UberBossEntry
-applyUberEntry isUber mark entry =
+applyUberEntry isUber mark e =
     if isUber then
-        { entry | uber = entry.uber |> BossMark.apply mark }
+        { e | uber = e.uber |> BossMark.apply mark }
 
     else
-        { entry | standard = entry.standard |> BossMark.apply mark }
+        { e | standard = e.standard |> BossMark.apply mark }
 
 
 
