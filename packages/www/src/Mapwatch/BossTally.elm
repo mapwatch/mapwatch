@@ -95,13 +95,25 @@ type Group
 
 groups : List Group
 groups =
-    [ Breachlords, ShaperGuardians, Conquerors, LesserEldritches, Pinnacles, Ubers
+    [ Breachlords
+    , ShaperGuardians
+    , Conquerors
+    , LesserEldritches
+    , Pinnacles
+    , Ubers
     ]
 
 
 uberables : List (Bool -> BossId)
 uberables =
-    [ Exarch, Eater, Maven, Venarius, Sirus, UberElder, Shaper ]
+    [ Exarch
+    , Eater
+    , Shaper
+    , Maven
+    , Venarius
+    , Sirus
+    , UberElder
+    ]
 
 
 groupBosses : Group -> List BossId
