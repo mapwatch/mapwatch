@@ -29,7 +29,8 @@
     },
     {
       "title": {
-        "name": "A Note in the Wind"
+        "name": "A Note in the Wind",
+        "drop areas": "MapWorldsDrySea,MapWorldsDunes,MapWorldsDesertSpring,2_9_4,MapWorldsDesert"
       }
     },
     {
@@ -58,7 +59,8 @@
     },
     {
       "title": {
-        "name": "Akil's Prophecy"
+        "name": "Akil's Prophecy",
+        "drop areas": "Incursion_Temple1"
       }
     },
     {
@@ -120,7 +122,7 @@
     {
       "title": {
         "name": "Azure Rage",
-        "drop areas": "MapWorldsFactory,MapWorldsAshenWood"
+        "drop areas": "MapWorldsFactory"
       }
     },
     {
@@ -143,7 +145,7 @@
     {
       "title": {
         "name": "Bijoux",
-        "drop areas": "MapWorldsFloodedMine,MapWorldsCrystalOre,MapWorldsDig,MapWorldsExcavation"
+        "drop areas": "MapWorldsFloodedMine,MapWorldsCrystalOre,MapWorldsDig,MapWorldsExcavation,MapWorldsGrotto"
       }
     },
     {
@@ -221,7 +223,7 @@
     {
       "title": {
         "name": "Buried Treasure",
-        "drop areas": "MapWorldsExcavation,MapWorldsFloodedMine,MapWorldsCrystalOre,MapWorldsGeode,MapWorldsDig"
+        "drop areas": "MapWorldsExcavation,MapWorldsFloodedMine,MapWorldsCrystalOre,MapWorldsGeode,MapWorldsDig,MapWorldsGrotto"
       }
     },
     {
@@ -484,13 +486,13 @@
     {
       "title": {
         "name": "Gift of Asenath",
-        "drop areas": "MapWorldsDig"
+        "drop areas": "MapWorldsDig,MapWorldsGrotto"
       }
     },
     {
       "title": {
         "name": "Gift of the Gemling Queen",
-        "drop areas": "2_9_7,2_9_8,MapWorldsCrystalOre,MapWorldsExcavation,MapWorldsDig,MapWorldsGeode,MapWorldsFloodedMine"
+        "drop areas": "2_9_7,2_9_8,MapWorldsCrystalOre,MapWorldsExcavation,MapWorldsDig,MapWorldsGeode,MapWorldsFloodedMine,MapWorldsGrotto"
       }
     },
     {
@@ -577,8 +579,7 @@
     },
     {
       "title": {
-        "name": "Immortal Resolve",
-        "drop areas": "MapWorldsVault,MapWorldsCarcass"
+        "name": "Immortal Resolve"
       }
     },
     {
@@ -611,7 +612,7 @@
     {
       "title": {
         "name": "Keeper's Corruption",
-        "drop areas": "BreachBossChaos"
+        "drop areas": "BreachBossChaos,BreachBossChaos2,BreachBossChaos3,BreachBossChaos4,BreachBossChaos5"
       }
     },
     {
@@ -730,7 +731,7 @@
     {
       "title": {
         "name": "Mitts",
-        "drop areas": "1_4_7,2_8_12_1,2_8_12_2,MapAtlasCore,MapAtlasTempleUnique,MapWorldsIceberg,MapWorldsSummit,MapWorldsFrozenCabins,MapWorldsForbiddenWoods,MapWorldsColdRiver_,MapWorldsGorge"
+        "drop areas": "1_4_7,2_8_12_1,2_8_12_2,MapAtlasCore,MapAtlasTempleUnique,MapWorldsIceberg,MapWorldsSummit,MapWorldsFrozenCabins,MapWorldsForbiddenWoods,MapWorldsColdRiver_,MapWorldsGorge,2_9_2"
       }
     },
     {
@@ -938,7 +939,7 @@
     {
       "title": {
         "name": "The Archmage's Right Hand",
-        "drop areas": "BreachBossChaos"
+        "drop areas": "BreachBossChaos,BreachBossChaos2,BreachBossChaos3,BreachBossChaos4,BreachBossChaos5"
       }
     },
     {
@@ -1244,8 +1245,7 @@
     },
     {
       "title": {
-        "name": "The Dreamland",
-        "drop areas": "MapWorldsLaboratory"
+        "name": "The Dreamland"
       }
     },
     {
@@ -1290,7 +1290,7 @@
     {
       "title": {
         "name": "The Endurance",
-        "drop areas": "1_4_3_1,1_4_3_2,1_4_3_3,2_9_7,2_9_8,MapAtlasCrystalOre,MapAtlasExcavation,MapAtlasQuarry,MapWorldsExcavation,MapWorldsGeode,MapWorldsCrystalOre,MapWorldsDig,MapWorldsFloodedMine"
+        "drop areas": "1_4_3_1,1_4_3_2,1_4_3_3,2_9_7,2_9_8,MapAtlasCrystalOre,MapAtlasExcavation,MapAtlasQuarry,MapWorldsExcavation,MapWorldsGeode,MapWorldsCrystalOre,MapWorldsDig,MapWorldsFloodedMine,MapWorldsGrotto"
       }
     },
     {
@@ -1642,7 +1642,7 @@
     {
       "title": {
         "name": "The Lord of Celebration",
-        "drop areas": "MapWorldsSiege,MapWorldsCrimsonTemple,MapWorldsResidence,MapWorldsIvoryTemple,MapWorldsCrimsonTownship,MapWorldsLaboratory,MapWorldsBasilica,MapWorldsPalace,MapWorldsConservatory,MapWorldsHauntedMansion,MapWorldsVault,MapWorldsVilla,MapWorldsChateau"
+        "drop areas": "MapWorldsSiege,MapWorldsCrimsonTemple,MapWorldsResidence,MapWorldsIvoryTemple,MapWorldsCrimsonTownship,MapWorldsLaboratory,MapWorldsBasilica,MapWorldsPalace,MapWorldsConservatory,MapWorldsHauntedMansion,MapWorldsVault,MapWorldsVilla,MapWorldsChateau,MapWorldsTemple"
       }
     },
     {
@@ -1709,13 +1709,13 @@
     {
       "title": {
         "name": "The Mountain",
-        "drop areas": "1_4_7,2_9_2,MapWorldsSummit,MapWorldsGorge"
+        "drop areas": "1_4_7,2_9_2,MapWorldsSummit,MapWorldsGorge,MapWorldsVolcano"
       }
     },
     {
       "title": {
         "name": "The Nurse",
-        "drop areas": "1_4_6_3,2_6_7_2,MapWorldsTower,MapWorldsCells,MapWorldsCore"
+        "drop areas": "1_4_6_3,2_6_7_2,MapWorldsTower,MapWorldsCells,MapWorldsCore,MapWorldsCarcass"
       }
     },
     {
@@ -1889,7 +1889,7 @@
     {
       "title": {
         "name": "The Road to Power",
-        "drop areas": "MapAtlasCastleRuins,MapAtlasOrchard,MapAtlasShore,MapAtlasDarkForest,MapWorldsCastleRuins,Map2Tier8_3,MapWorldsDarkForest,MapWorldsOrchard"
+        "drop areas": "MapAtlasCastleRuins,MapAtlasOrchard,MapAtlasShore,MapAtlasDarkForest,MapWorldsCastleRuins,MapWorldsDarkForest,MapWorldsOrchard,MapWorldsShore"
       }
     },
     {
@@ -1952,7 +1952,7 @@
     {
       "title": {
         "name": "The Shepherd's Sandals",
-        "drop areas": "MapWorldsGrotto,MapWorldsLair"
+        "drop areas": "MapWorldsGrotto,MapWorldsLair,MapWorldsBarrows"
       }
     },
     {
@@ -2242,7 +2242,7 @@
     {
       "title": {
         "name": "The Wolf",
-        "drop areas": "MapAtlasCavern,MapWorldsFloodedMine,MapWorldsCrystalOre,MapWorldsGeode,MapWorldsDig,MapWorldsExcavation"
+        "drop areas": "MapAtlasCavern,MapWorldsFloodedMine,MapWorldsCrystalOre,MapWorldsGeode,MapWorldsDig,MapWorldsExcavation,MapWorldsGrotto"
       }
     },
     {
@@ -2265,7 +2265,7 @@
     {
       "title": {
         "name": "The Wolverine",
-        "drop areas": "2_6_8,MapWorldsSummit,MapWorldsGorge"
+        "drop areas": "2_6_8,MapWorldsSummit,MapWorldsGorge,MapWorldsLair"
       }
     },
     {
@@ -2312,7 +2312,7 @@
     {
       "title": {
         "name": "Time-Lost Relic",
-        "drop areas": "MapWorldsFloodedMine,MapAtlasExcavation,MapWorldsCrystalOre,MapWorldsExcavation,MapWorldsGeode,MapWorldsDig,ExpeditionCemetery,ExpeditionMountainside,ExpeditionVolcano,ExpeditionBluffs,ExpeditionScrublands,ExpeditionDesertRuins,ExpeditionSarnSlums,ExpeditionBattlegroundGraves,ExpeditionShipwreckReef,ExpeditionForestRuins,ExpeditionRottingTemple,ExpeditionUtzaalOutskirts,ExpeditionKaruiWargraves,ExpeditionDriedRiverbed,ExpeditionVaalTemple"
+        "drop areas": "MapWorldsFloodedMine,MapAtlasExcavation,MapWorldsCrystalOre,MapWorldsExcavation,MapWorldsGeode,MapWorldsDig,MapWorldsGrotto,ExpeditionCemetery,ExpeditionMountainside,ExpeditionVolcano,ExpeditionBluffs,ExpeditionScrublands,ExpeditionDesertRuins,ExpeditionSarnSlums,ExpeditionBattlegroundGraves,ExpeditionShipwreckReef,ExpeditionForestRuins,ExpeditionRottingTemple,ExpeditionUtzaalOutskirts,ExpeditionKaruiWargraves,ExpeditionDriedRiverbed,ExpeditionVaalTemple"
       }
     },
     {
@@ -2368,7 +2368,8 @@
     },
     {
       "title": {
-        "name": "Vile Power"
+        "name": "Vile Power",
+        "drop areas": "2_9_10_2,MapWorldsCore,MapWorldsToxicSewer,MapWorldsWastePool,MapWorldsCarcass,MapWorldsPhantasmagoria,MapWorldsAcidLakes,MapWorldsMalformation"
       }
     },
     {
@@ -2385,13 +2386,13 @@
     {
       "title": {
         "name": "Volatile Power",
-        "drop areas": "1_4_3_3,1_4_3_1,1_4_3_2,2_9_7,2_9_8,MapAtlasCrystalOre,MapAtlasExcavation,MapAtlasQuarry,MapWorldsGeode,MapWorldsCrystalOre,MapWorldsExcavation,MapWorldsDig,MapWorldsFloodedMine"
+        "drop areas": "1_4_3_3,1_4_3_1,1_4_3_2,2_9_7,2_9_8,MapAtlasCrystalOre,MapAtlasExcavation,MapAtlasQuarry,MapWorldsGeode,MapWorldsCrystalOre,MapWorldsExcavation,MapWorldsDig,MapWorldsFloodedMine,MapWorldsGrotto"
       }
     },
     {
       "title": {
         "name": "Wealth and Power",
-        "drop areas": "MapWorldsMoonTemple"
+        "drop areas": "MapWorldsMoonTemple,MapWorldsColdRiver_"
       }
     },
     {

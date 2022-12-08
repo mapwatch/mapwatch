@@ -66,9 +66,7 @@ const exportedNPCs = new Set([
     // "Metadata/NPC/League/Expedition/Dealer",
     "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog",
     "Metadata/NPC/League/Expedition/Saga",
-    // high templar venarius (cortex)
-    "Metadata/Monsters/LeagueSynthesis/SynthesisVenariusBoss",
-    // 3.17: eater and exarch
+    // 3.17: eater and exarch. We don't strictly need their dialogue, but it makes them searchable
     // black star
     "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss",
     // exarch
@@ -129,30 +127,4 @@ function isNPCTextExported(i: input.NPCTextAudio): boolean {
         || /^OshabiWhenFightEnds/.test(i.Id)
         // Trialmaster: very specific voicelines, lots we can analyze
         || /^Trialmaster/.test(i.Id)
-        // Exarch and eater
-        || /^CleansingFireDefeated/.test(i.Id)
-        || /^ConsumeBossDefeated/.test(i.Id)
-        || /^DoomBossDefeated/.test(i.Id)
-        || /^TheBlackStarDeath/.test(i.Id)
-        // Other boss defeats:
-        // the shaper
-        || /^ShaperBanish/.test(i.Id)
-        // cortex
-        || 'VenariusBossFightDepart' === i.Id
-        // maven
-        || /^MavenFinalFightRealises/.test(i.Id)
-        || /^MavenFinalFightApologi/.test(i.Id)
-        || /^MavenFinalFightInvites/.test(i.Id)
-        || /^MavenFinalFightRepeated/.test(i.Id)
-        // elder (and other bosses) with maven
-        || /^MavenTier5OffAtlas/.test(i.Id)
-        || /^MavenTier5FirstOffAtlas/.test(i.Id)
-        // sirus. Not sure the complex death lines are ever used, but it doesn't hurt
-        || 'SirusSimpleDeathLine' === i.Id
-        || /^SirusComplexDeathLine/.test(i.Id)
-        // shaper guardians. "this is the key to a crucible..."
-        || 'ShaperAtlasMapDrops' === i.Id
-        // mastermind death check
-        // || 'CatarinaDowned' === i.Id
-        || /^JunOnKillingCatarina/.test(i.Id)
 }
