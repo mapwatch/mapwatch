@@ -1534,6 +1534,11 @@
     },
     {
       "title": {
+        "name": "The Insane Cat"
+      }
+    },
+    {
+      "title": {
         "name": "The Insatiable",
         "drop areas": "2_9_10_2,MapWorldsCarcass,MapWorldsCore"
       }
@@ -1630,8 +1635,7 @@
     },
     {
       "title": {
-        "name": "The Long Watch",
-        "drop areas": "MapWorldsTortureChamber,MapWorldsInfestedValley,MapWorldsIceberg,MapWorldsMineralPools,MapWorldsAlleyways,MapWorldsSiege,MapWorldsCastleRuins,MapWorldsArmoury,MapWorldsArachnidTomb,MapWorldsForkingRiver"
+        "name": "The Long Watch"
       }
     },
     {
@@ -2208,6 +2212,11 @@
       "title": {
         "name": "The Web",
         "drop areas": "MapAtlasJungleValley,MapAtlasArachnidNest,MapWorldsSpiderLair,MapWorldsArachnidTomb,MapWorldsArachnidNest,MapWorldsJungleValley,MapWorldsSunkenCity,MapWorldsToxicSewer"
+      }
+    },
+    {
+      "title": {
+        "name": "The Wedding Gift"
       }
     },
     {
