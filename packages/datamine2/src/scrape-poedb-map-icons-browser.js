@@ -7,16 +7,20 @@ function xpathList(xpath, root) {
   }
   return ret
 }
-function byHeaders(rows) {
-  const headers = Array.from(rows.shift().children).map(el => el.textContent)
-  return rows.map(row => {
+function byHeaders(headerRow, body) {
+  const headers = Array.from(headerRow.children).map(el => el.textContent)
+  return body.map(row => {
     return Object.fromEntries(headers.map((h, i) => [h, row.children[i]]))
   })
 }
 
-const rows = byHeaders(xpathList("//*[@id='MapsList']//tr"))
-const json = rows.map(row => ({
+const header = xpathList("//*[@id='MapsList']//thead//tr")[0]
+const body = xpathList("//*[@id='MapsList']//tbody//tr")
+const rows = byHeaders(header, body)
+const json = (rows
+.filter(row => row.Icon && row.Icon.children && row.Icon.children[0])
+.map(row => ({
   'name': row.Name.textContent,
   'icon': row.Icon.children[0].children[0].src,
-}))
+})))
 console.log(JSON.stringify(json, null, 2))
