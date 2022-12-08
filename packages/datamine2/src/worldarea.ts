@@ -94,6 +94,7 @@ const nonAtlasMaps: { [name: string]: string } = {
     // maven
     // "MavenHub": "Art/2DItems/Effects/Portals/MavenPortalEffect.png",
     "MavenHub": "Art/2DItems/Currency/AtlasRadiusTier4.png",
+    "MavenBoss": "Art/2DItems/Currency/AtlasRadiusTier4.png",
     // 3.14
     "HarvestLeagueBoss": "Art/2DItems/Maps/OshabiMap.png",
     "UltimatumArena": "Art/2DItems/Maps/UltimatumTrialBase.png",

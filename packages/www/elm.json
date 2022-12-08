@@ -7,6 +7,7 @@
     "elm-version": "0.19.1",
     "dependencies": {
         "direct": {
+            "NoRedInk/elm-json-decode-pipeline": "1.0.1",
             "elm/browser": "1.0.2",
             "elm/bytes": "1.0.8",
             "elm/core": "1.0.5",
@@ -26,7 +27,8 @@
             "elm-explorations/markdown": "1.0.0",
             "justinmimbs/time-extra": "1.1.1",
             "jweir/elm-iso8601": "7.0.1",
-            "krisajenkins/remotedata": "6.0.1"
+            "krisajenkins/remotedata": "6.0.1",
+            "truqu/elm-base64": "2.0.4"
         },
         "indirect": {
             "elm/file": "1.0.5",

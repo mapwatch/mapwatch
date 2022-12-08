@@ -600,6 +600,8 @@ viewHistoryMainRow ({ tz, query } as m) { showDate } goal r =
             ++ [ td [ class "zone" ] [ View.Home.viewRun query r ]
                , td (L.historySearchable { searchable = RunSort.searchString m.mapwatch.datamine r })
                     [ Maybe.Extra.unwrap (text "") (String.fromInt >> text) r.level ]
+
+               --    , td [] [ text <| Debug.toString r.bossTally ]
                ]
             ++ viewRunDurations goal r
         )

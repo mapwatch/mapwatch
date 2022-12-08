@@ -34,6 +34,8 @@ type Route
     | GSheets
     | Maps
     | Encounters
+    | Bosses
+    | SharedBosses String
     | Timer
     | Overlay
     | Changelog
@@ -100,6 +102,8 @@ parser =
         , P.map GSheets <| P.s "gsheets"
         , P.map Maps <| P.s "map"
         , P.map Encounters <| P.s "encounter"
+        , P.map Bosses <| P.s "bosses"
+        , P.map SharedBosses <| P.s "share" </> P.string
         , P.map Changelog <| P.s "changelog"
         , P.map Privacy <| P.s "privacy"
         , P.map Settings <| P.s "settings"
@@ -125,6 +129,7 @@ pageKeys =
     , historyTSV = [ "q", "o", "a", "b" ] |> Set.fromList |> Set.union Feature.set
     , map = [ "q", "o", "a", "b" ] |> Set.fromList |> Set.union Feature.set
     , encounter = [ "q", "a", "b" ] |> Set.fromList |> Set.union Feature.set
+    , bosses = [ "q", "a", "b" ] |> Set.fromList |> Set.union Feature.set
     , timer = [ "a", "g" ] |> Set.fromList |> Set.union Feature.set
     , overlay = [ "a" ] |> Set.fromList |> Set.union Feature.set
     , other = Feature.set
@@ -148,6 +153,12 @@ routeParts r =
 
         Encounters ->
             ( "/encounter", pageKeys.encounter )
+
+        Bosses ->
+            ( "/bosses", pageKeys.bosses )
+
+        SharedBosses code ->
+            ( "/share/" ++ code, pageKeys.other )
 
         Timer ->
             ( "", pageKeys.timer )

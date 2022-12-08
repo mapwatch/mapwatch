@@ -507,7 +507,6 @@ createNPCText1 : Lang -> Result String (List ( String, NpcTextEntry ))
 createNPCText1 lang =
     [ createNPCTextSet lang NpcId.baran (Tuple.first >> String.startsWith "Baran")
     , createNPCTextSet lang NpcId.veritania (Tuple.first >> String.startsWith "Veritania")
-    , createNPCTextSet lang NpcId.veritania (Tuple.first >> String.startsWith "Veritania")
     , createNPCTextSet lang NpcId.alHezmin (Tuple.first >> String.startsWith "AlHezmin")
     , createNPCTextSet lang NpcId.drox (Tuple.first >> String.startsWith "Drox")
     , createNPCTextSet lang NpcId.cassia (Tuple.first >> String.startsWith "Cassia")
@@ -526,6 +525,19 @@ createNPCText1 lang =
     , createNPCTextSet lang NpcId.gianna (Tuple.first >> (\s -> String.startsWith "Gianna" s || String.endsWith "Gianna" s))
     , createNPCTextSet lang NpcId.isla (Tuple.first >> String.startsWith "Isla")
     , createNPCTextSet lang NpcId.trialmaster (Tuple.first >> String.startsWith "Trialmaster")
+
+    -- bosses
+    , createNPCTextSet lang NpcId.shaper (Tuple.first >> String.startsWith "Shaper")
+    , createNPCTextSet lang NpcId.venarius (Tuple.first >> String.startsWith "VenariusBossFight")
+    , createNPCTextSet lang NpcId.sirus (\( s, _ ) -> String.startsWith "SirusSimpleDeathLine" s || String.startsWith "SirusComplexDeathLine" s)
+    , createNPCTextSet lang NpcId.maven (\( s, _ ) -> String.startsWith "MavenFinalFightRealises" s || String.startsWith "MavenFinalFightRepeatedRealises" s || String.startsWith "MavenTier5" s)
+    , createNPCTextSet lang NpcId.jun (Tuple.first >> String.startsWith "JunOnKillingCatarina")
+
+    -- siege
+    , createNPCTextSet lang NpcId.exarch (Tuple.first >> String.startsWith "CleansingFire")
+    , createNPCTextSet lang NpcId.eater (Tuple.first >> String.startsWith "ConsumeBoss")
+    , createNPCTextSet lang NpcId.hunger (Tuple.first >> String.startsWith "DoomBoss")
+    , createNPCTextSet lang NpcId.blackstar (Tuple.first >> String.startsWith "TheBlackStar")
     ]
         |> Result.Extra.combine
         |> Result.map List.concat

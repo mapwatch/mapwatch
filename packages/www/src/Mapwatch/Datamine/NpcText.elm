@@ -7,6 +7,7 @@ module Mapwatch.Datamine.NpcText exposing (parse)
 
 -}
 
+import List.Extra
 import Parser as P exposing ((|.), (|=), Parser)
 
 
@@ -15,6 +16,7 @@ type Token
     | Gendered String String
     | Italic String
     | Bold String
+    | Newline
 
 
 parse : String -> Result String (List String)
@@ -106,8 +108,16 @@ toString tokens =
 
                 Gendered m f ->
                     [ m :: accum, f :: accum ]
+
+                Newline ->
+                    [ accum ]
     in
-    tokens |> List.foldl fold [ [] ] |> List.map (List.reverse >> String.join "")
+    tokens
+        -- if some npctext has multiple lines, drop everything after the first line, as loglines don't include newlines.
+        -- That's good enough for matching everything we care about.
+        |> List.Extra.takeWhile (\t -> t /= Newline)
+        |> List.foldl fold [ [] ]
+        |> List.map (List.reverse >> String.join "")
 
 
 parser : P.Parser (List Token)
@@ -133,6 +143,7 @@ token =
         , bold
         , italic
         , gendered
+        , newline
         ]
 
 
@@ -146,7 +157,8 @@ plaintext =
             else
                 P.problem "empty string"
     in
-    P.chompUntilEndOr "<"
+    -- <, \n, \r
+    P.chompWhile (\c -> c /= '<' && c /= '\n' && c /= '\u{000D}')
         |> P.getChompedString
         |> P.andThen create
 
@@ -183,3 +195,10 @@ gendered =
         |. P.symbol "<elif:FS>{"
         |= (P.chompUntil "}" |> P.getChompedString)
         |. P.symbol "}"
+
+
+newline : P.Parser Token
+newline =
+    P.succeed Newline
+        -- \r\n
+        |. P.symbol "\u{000D}\n"

@@ -90,12 +90,12 @@ fromLines dm addr encounters =
         outcomeEncounter : Maybe ( NpcEncounter, DMTrialmaster.Outcome )
         outcomeEncounter =
             encounters
-                |> List.filterMap (\enc -> Dict.get enc.says.textId dm.ultimatumNpcTextIndex.outcomes |> Maybe.map (Tuple.pair enc))
+                |> List.filterMap (\enc -> Dict.get (enc.says.textId |> Maybe.withDefault "") dm.ultimatumNpcTextIndex.outcomes |> Maybe.map (Tuple.pair enc))
                 |> List.head
 
         modEncounters : List NpcEncounter
         modEncounters =
-            encounters |> List.filter (.says >> .textId >> String.startsWith DMTrialmaster.roundPrefix)
+            encounters |> List.filter (.says >> .textId >> Maybe.withDefault "" >> String.startsWith DMTrialmaster.roundPrefix)
 
         dur : Millis
         dur =
@@ -121,9 +121,9 @@ fromLines dm addr encounters =
             modEncounters
                 |> List.map
                     (\enc ->
-                        Dict.get enc.says.textId dm.ultimatumNpcTextIndex.modIds
+                        Dict.get (enc.says.textId |> Maybe.withDefault "") dm.ultimatumNpcTextIndex.modIds
                             |> Maybe.andThen (\modId -> Dict.get modId dm.ultimatumModifiersById)
-                            |> Result.fromMaybe enc.says.textId
+                            |> Result.fromMaybe (enc.says.textId |> Maybe.withDefault "")
                     )
 
         outcome =
@@ -143,5 +143,5 @@ fromLines dm addr encounters =
                 List.length mods >= 9
 
             _ ->
-                encounters |> List.map (.says >> .textId) |> List.member "TrialmasterCombatTransformation"
+                encounters |> List.map (.says >> .textId >> Maybe.withDefault "") |> List.member "TrialmasterCombatTransformation"
     }

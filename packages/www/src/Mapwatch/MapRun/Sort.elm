@@ -21,6 +21,7 @@ module Mapwatch.MapRun.Sort exposing
 import Dict exposing (Dict)
 import Dict.Extra
 import Duration exposing (Millis)
+import Mapwatch.BossMark as BossMark
 import Mapwatch.Datamine as Datamine exposing (Datamine)
 import Mapwatch.Datamine.NpcId as NpcId exposing (NpcId)
 import Mapwatch.Instance as Instance exposing (Address, Instance)
@@ -502,6 +503,7 @@ searchString dm r =
 
       else
         Nothing
+    , r.bossTally |> Maybe.map (.boss >> BossMark.searchableId >> (++) "boss:")
     ]
         ++ (r.npcSays |> Dict.keys |> List.map (\id -> npcName id dm))
         ++ (r.sideAreas |> Dict.values |> List.map (Tuple.first >> sideAreaSearchString dm >> Just))

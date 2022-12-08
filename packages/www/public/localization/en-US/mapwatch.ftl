@@ -98,6 +98,61 @@ encounters-table-trialmaster-wins-name = Trialmaster wins + bosses
 encounters-table-trialmaster-wins-rate = % of {NUMBER($n)} trialmaster wins + bosses
 encounters-count = ×{NUMBER($n)}
 
+bosses-header-name = Boss
+bosses-header-visited = Visited
+bosses-header-victory = Victory
+bosses-header-deathless = No deaths
+bosses-header-logoutless = No logouts
+bosses-kills = {NUMBER($n) -> 
+    [0] {""}
+    [zero] {""}
+    [one] ×{NUMBER($n)} kill
+    *[other] ×{NUMBER($n)} kills
+}
+bosses-share-button = Share a snapshot of your achievements
+bosses-beta = WARNING: This page is incomplete and unstable. Expect changes and bugs.
+
+bosses-group-all = All Bosses
+bosses-group-pinnacles = Pinnacle Bosses
+bosses-group-ubers = Uber Pinnacle Bosses
+bosses-atziri = Atziri, Queen of the Vaal: Apex of Sacrifice
+bosses-uber-atziri = The Alluring Abyss (Uber Atziri) (Witnessed)
+bosses-uber-elder = The Elder in the Shaper's Realm (Witnessed)
+bosses-uber-uber-elder = The Elder in the Shaper's Realm (Uber) (Witnessed)
+bosses-venarius = High Templar Venarius
+bosses-uber-venarius = High Templar Venarius (Uber)
+bosses-maven = {npc-maven}
+bosses-uber-maven = {npc-maven} (Uber)
+bosses-sirus = {npc-sirus}
+bosses-uber-sirus = {npc-sirus} (Uber)
+bosses-eater = {npc-eater}
+bosses-uber-eater = {npc-eater} (Uber)
+bosses-exarch = {npc-exarch}
+bosses-uber-exarch = {npc-exarch} (Uber)
+bosses-group-conquerors = Conquerors of the Atlas
+bosses-baran = {npc-baran}
+bosses-veritania = {npc-veritania}
+bosses-alhezmin = {npc-alhezmin}
+bosses-drox = {npc-drox}
+bosses-group-lesser-eldritches = Atlas Bosses
+bosses-hunger = {npc-hunger}
+bosses-blackstar = {npc-blackstar}
+bosses-shaper = The Shaper
+bosses-uber-shaper = The Shaper (Uber)
+bosses-elder = The Elder (Witnessed)
+bosses-group-shaper-guardians = Shaper Guardians
+bosses-shaper-chimera = Guardian of the Chimera
+bosses-shaper-hydra = Guardian of the Hydra
+bosses-shaper-minotaur = Guardian of the Minotaur
+bosses-shaper-phoenix = Guardian of the Phoenix
+bosses-group-breachlords = Breachlords
+bosses-breach-xoph = Xoph, Dark Embers (Witnessed)
+bosses-breach-esh = Esh, Forked Thought (Witnessed)
+bosses-breach-tul = Tul, Creeping Avalanche (Witnessed)
+bosses-breach-uul = Uul-Netol, Unburdened Flesh (Witnessed)
+bosses-breach-chayula = Chayula, Who Dreamt (Witnessed)
+bosses-mastermind = The Syndicate Mastermind
+
 ## https://mapwatch.erosson.org/#/encounters > encounter types
 encounter-abyssal = Abyssal Depths
 encounter-vaal = Vaal side areas

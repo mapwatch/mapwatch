@@ -6,6 +6,7 @@ import Html.Attributes as A exposing (..)
 import Html.Events as E exposing (..)
 import Localization.Mapwatch as L
 import Mapwatch
+import Mapwatch.BossTally as BossTally exposing (BossTally)
 import Mapwatch.Datamine as Datamine exposing (Datamine, WorldArea)
 import Mapwatch.EncounterTally as EncounterTally exposing (EncounterTally)
 import Mapwatch.Instance as Instance exposing (Instance)

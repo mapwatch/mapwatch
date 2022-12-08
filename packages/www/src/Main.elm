@@ -4,6 +4,7 @@ import Browser
 import Html exposing (..)
 import Html.Attributes as A
 import Model exposing (Model, Msg)
+import Page.Bosses
 import Page.Changelog
 import Page.Debug
 import Page.DebugDatamine
@@ -18,6 +19,7 @@ import Page.NotFound
 import Page.Overlay
 import Page.Privacy
 import Page.Settings
+import Page.SharedBosses
 import Page.Timer
 import Route exposing (Route(..))
 import Route.Feature as Feature
@@ -63,6 +65,12 @@ viewBody rmodel =
 
                         Encounters ->
                             Page.Encounters.view model
+
+                        Bosses ->
+                            Page.Bosses.view model
+
+                        SharedBosses code ->
+                            Page.SharedBosses.view code model
 
                         Timer ->
                             Page.Timer.view model
