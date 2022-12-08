@@ -40,8 +40,10 @@ view code model =
 viewBody : String -> Html Msg
 viewBody code =
     div []
-        [ text code
-        , div [] [ text <| String.fromInt <| String.length code ]
+        [ p [] [ b [ L.bossesBeta ] [] ]
+
+        -- , text code
+        -- , div [] [ text <| String.fromInt <| String.length code ]
         , case BossShare.base64Decode code of
             Err err ->
                 pre [] [ text err ]

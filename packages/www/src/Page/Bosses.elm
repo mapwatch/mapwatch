@@ -88,7 +88,8 @@ viewMain model =
             runs |> List.filterMap .bossTally |> BossTally.aggregate
     in
     div []
-        [ View.Util.viewSearch model.query
+        [ p [] [ b [ L.bossesBeta ] [] ]
+        , View.Util.viewSearch model.query
         , View.Util.viewDateSearch model.mapwatch.datamine.leagues model.query model.route
         , div []
             (a

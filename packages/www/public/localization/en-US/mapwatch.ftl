@@ -110,6 +110,7 @@ bosses-kills = {NUMBER($n) ->
     *[other] ×{NUMBER($n)} kills
 }
 bosses-share-button = Share a snapshot of your achievements
+bosses-beta = WARNING: This page is incomplete and unstable. Expect changes and bugs.
 
 bosses-group-all = All Bosses
 bosses-group-pinnacles = Pinnacle Bosses
