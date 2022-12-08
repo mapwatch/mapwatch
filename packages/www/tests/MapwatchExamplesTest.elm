@@ -63,15 +63,15 @@ all =
                         , List.filterMap .bossTally
                             >> BossTally.aggregate
                             >> Expect.all
-                                [ .atziri >> .uber >> BossEntry.isUnvisited >> Expect.true "uber atziri unvisited"
-                                , .eater >> .uber >> BossEntry.isUnvisited >> Expect.true "uber eater unvisited"
-                                , .eater >> .standard >> BossEntry.isVictoryExact >> Expect.true "eater victory"
-                                , .exarch >> .uber >> BossEntry.isUnvisited >> Expect.true "uber exarch unvisited"
-                                , .exarch >> .standard >> BossEntry.isVictoryExact >> Expect.true "exarch victory"
-                                , .hunger >> BossEntry.isVictoryExact >> Expect.true "hunger victory"
-                                , .blackstar >> BossEntry.isVictoryExact >> Expect.true "blackstar victory"
-                                , .drox >> BossEntry.isUnvisited >> Expect.true "drox unvisited"
-                                , .shaperHydra >> BossEntry.isUnvisited >> Expect.true "hydra unvisited"
+                                [ .atziri >> .uber >> BossEntry.isUnvisited >> Expect.equal True >> Expect.onFail "uber atziri unvisited"
+                                , .eater >> .uber >> BossEntry.isUnvisited >> Expect.equal True >> Expect.onFail "uber eater unvisited"
+                                , .eater >> .standard >> BossEntry.isVictoryExact >> Expect.equal True >> Expect.onFail "eater victory"
+                                , .exarch >> .uber >> BossEntry.isUnvisited >> Expect.equal True >> Expect.onFail "uber exarch unvisited"
+                                , .exarch >> .standard >> BossEntry.isVictoryExact >> Expect.equal True >> Expect.onFail "exarch victory"
+                                , .hunger >> BossEntry.isVictoryExact >> Expect.equal True >> Expect.onFail "hunger victory"
+                                , .blackstar >> BossEntry.isVictoryExact >> Expect.equal True >> Expect.onFail "blackstar victory"
+                                , .drox >> BossEntry.isUnvisited >> Expect.equal True >> Expect.onFail "drox unvisited"
+                                , .shaperHydra >> BossEntry.isUnvisited >> Expect.equal True >> Expect.onFail "hydra unvisited"
                                 , \tally -> tally |> BossTally.jsonEncode |> D.decodeValue BossTally.jsonDecode |> Expect.equal (Ok tally)
                                 ]
                         ]
@@ -82,20 +82,20 @@ all =
                     |> List.filterMap .bossTally
                     |> BossTally.aggregate
                     |> Expect.all
-                        [ .atziri >> .uber >> BossEntry.isVisitedExact >> Expect.true "uber atziri visited"
-                        , .eater >> .uber >> BossEntry.isUnvisited >> Expect.true "uber eater unvisited"
-                        , .eater >> .standard >> BossEntry.isVictoryExact >> Expect.true "eater victory"
-                        , .exarch >> .uber >> BossEntry.isUnvisited >> Expect.true "uber exarch unvisited"
-                        , .exarch >> .standard >> BossEntry.isVictoryExact >> Expect.true "exarch victory"
-                        , .hunger >> BossEntry.isVictoryExact >> Expect.true "hunger victory"
-                        , .blackstar >> BossEntry.isVictoryExact >> Expect.true "blackstar victory"
+                        [ .atziri >> .uber >> BossEntry.isVisitedExact >> Expect.equal True >> Expect.onFail "uber atziri visited"
+                        , .eater >> .uber >> BossEntry.isUnvisited >> Expect.equal True >> Expect.onFail "uber eater unvisited"
+                        , .eater >> .standard >> BossEntry.isVictoryExact >> Expect.equal True >> Expect.onFail "eater victory"
+                        , .exarch >> .uber >> BossEntry.isUnvisited >> Expect.equal True >> Expect.onFail "uber exarch unvisited"
+                        , .exarch >> .standard >> BossEntry.isVictoryExact >> Expect.equal True >> Expect.onFail "exarch victory"
+                        , .hunger >> BossEntry.isVictoryExact >> Expect.equal True >> Expect.onFail "hunger victory"
+                        , .blackstar >> BossEntry.isVictoryExact >> Expect.equal True >> Expect.onFail "blackstar victory"
 
                         -- baran's important to test, because we're matching multiline completion dialogue (his long "Kirac... sent you?" line)
-                        , .baran >> BossEntry.isLogoutless >> Expect.true "baran logoutless"
-                        , .drox >> BossEntry.isDeathlessExact >> Expect.true "drox deathless"
-                        , .shaperHydra >> BossEntry.isLogoutless >> Expect.true "hydra logoutless"
-                        , .breachXoph >> BossEntry.isLogoutless >> Expect.true "xoph logoutless"
-                        , .mastermind >> BossEntry.isLogoutless >> Expect.true "mastermind logoutless"
+                        , .baran >> BossEntry.isLogoutless >> Expect.equal True >> Expect.onFail "baran logoutless"
+                        , .drox >> BossEntry.isDeathlessExact >> Expect.equal True >> Expect.onFail "drox deathless"
+                        , .shaperHydra >> BossEntry.isLogoutless >> Expect.equal True >> Expect.onFail "hydra logoutless"
+                        , .breachXoph >> BossEntry.isLogoutless >> Expect.equal True >> Expect.onFail "xoph logoutless"
+                        , .mastermind >> BossEntry.isLogoutless >> Expect.equal True >> Expect.onFail "mastermind logoutless"
                         , \tally -> tally |> BossTally.jsonEncode |> D.decodeValue BossTally.jsonDecode |> Expect.equal (Ok tally)
                         ]
         ]
