@@ -39,7 +39,7 @@ all =
                                 ]
 
                     _ ->
-                        Expect.true "wrong number of runs" False
+                        Expect.fail "wrong number of runs"
         , test "chinese client" <|
             \_ ->
                 Fixture.Examples.chinese_client
