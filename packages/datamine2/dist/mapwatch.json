@@ -6255,9 +6255,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNportraits/CNDeadeye.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Lookout.dds",
+        [
+          10,
+          13,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Mb29rb3V0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjd9XQ/7c1f4a4995/Lookout.png?scale=1&mn=&mt=10"
       ],
       [
         "MapWorldsBeach",
@@ -6269,7 +6275,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNportraits/CNElementalist.dds",
+        "Art/2DItems/Effects/Weapon/weapon_imp.dds",
         null,
         null
       ],
@@ -6283,9 +6289,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNportraits/CNNecromancer.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Graveyard.dds",
+        [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9HcmF2ZXlhcmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjEzLCJtdCI6MTF9XQ/d5df73b95e/Graveyard.png?scale=1&mn=&mt=16"
       ],
       [
         "MapWorldsDungeon",
@@ -6299,13 +6311,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Dungeon.dds",
         [
-          4,
-          7,
+          8,
           11,
           15,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EdW5nZW9uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/bb2e7e0c9d/Dungeon.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EdW5nZW9uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/bb2e7e0c9d/Dungeon.png?scale=1&mn=&mt=8"
       ],
       [
         "MapWorldsAlleyways",
@@ -6319,13 +6331,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Alleyways.dds",
         [
-          11,
-          14,
-          16,
-          16,
+          2,
+          5,
+          9,
+          13,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BbGxleXdheXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTF9XQ/00f72a9afe/Alleyways.png?scale=1&mn=15&mt=11"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BbGxleXdheXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTF9XQ/00f72a9afe/Alleyways.png?scale=1&mn=&mt=2"
       ],
       [
         "MapWorldsPen",
@@ -6337,15 +6349,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Pen.dds",
-        [
-          13,
-          16,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QZW4iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTN9XQ/5cb73ef42e/Pen.png?scale=1&mn=15&mt=13"
+        "Art/2DItems/Effects/CNitems/CNportraits/CNDeadeye.dds",
+        null,
+        null
       ],
       [
         "MapWorldsDesert",
@@ -6365,7 +6371,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZXNlcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OX1d/c0a0c8cb90/Desert.png?scale=1&mn=15&mt=9"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZXNlcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OX1d/c0a0c8cb90/Desert.png?scale=1&mn=&mt=9"
       ],
       [
         "MapWorldsAridLake",
@@ -6377,15 +6383,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/AridLake.dds",
-        [
-          16,
-          16,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmlkTGFrZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNn1d/54e57d4caa/AridLake.png?scale=1&mn=15&mt=16"
+        "Art/2DItems/Effects/CNitems/CNportraits/CNNecromancer.dds",
+        null,
+        null
       ],
       [
         "MapWorldsFloodedMine",
@@ -6397,7 +6397,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/TencentBallIceFrame.dds",
+        "Art/2DItems/Effects/CNitems/CNportraits/CNOcculist.dds",
         null,
         null
       ],
@@ -6411,15 +6411,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Marshes.dds",
-        [
-          12,
-          15,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXJzaGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEyfV0/73f503fe75/Marshes.png?scale=1&mn=15&mt=12"
+        "Art/2DItems/Effects/CNitems/CNportraits/CNPathfinder.dds",
+        null,
+        null
       ],
       [
         "MapWorldsIceberg",
@@ -6431,9 +6425,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/TencentS3FashionFrame.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Iceberg.dds",
+        [
+          6,
+          9,
+          13,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9JY2ViZXJnIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxMywibXQiOjExfV0/50ee218cc5/Iceberg.png?scale=1&mn=&mt=6"
       ],
       [
         "MapWorldsCage",
@@ -6445,9 +6445,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/TencentS3HideOutFrame.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Cage.dds",
+        [
+          2,
+          5,
+          9,
+          13,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYWdlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjExfV0/bd80e576db/Cage.png?scale=1&mn=&mt=2"
       ],
       [
         "MapWorldsSprings",
@@ -6459,15 +6465,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/FungalCaverns.dds",
-        [
-          7,
-          10,
-          14,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9GdW5nYWxDYXZlcm5zIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjd9XQ/60cabeb621/FungalCaverns.png?scale=1&mn=15&mt=7"
+        "Art/2DItems/Effects/CNitems/CNframes/TencentBallLightningFrame.dds",
+        null,
+        null
       ],
       [
         "MapWorldsExcavation",
@@ -6479,15 +6479,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Excavation.dds",
-        [
-          2,
-          5,
-          9,
-          13,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9FeGNhdmF0aW9uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/23ea0bd154/Excavation.png?scale=1&mn=15&mt=2"
+        "Art/2DItems/Effects/CNitems/CNframes/TencentBallIceFrame.dds",
+        null,
+        null
       ],
       [
         "MapWorldsLeyline",
@@ -6501,13 +6495,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SulphurWastes.dds",
         [
-          10,
-          13,
-          16,
+          8,
+          11,
+          15,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdWxwaHVyV2FzdGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/9999e092a7/SulphurWastes.png?scale=1&mn=15&mt=10"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdWxwaHVyV2FzdGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/9999e092a7/SulphurWastes.png?scale=1&mn=&mt=8"
       ],
       [
         "MapWorldsPeninsula",
@@ -6521,13 +6515,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DryPeninsula.dds",
         [
-          11,
-          14,
-          16,
+          6,
+          9,
+          13,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EcnlQZW5pbnN1bGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTF9XQ/459569bb01/DryPeninsula.png?scale=1&mn=15&mt=11"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EcnlQZW5pbnN1bGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTF9XQ/459569bb01/DryPeninsula.png?scale=1&mn=&mt=6"
       ],
       [
         "MapWorldsPort",
@@ -6541,13 +6535,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Quay.dds",
         [
-          12,
-          15,
-          16,
-          16,
+          3,
+          6,
+          10,
+          14,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9RdWF5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEyfV0/4b003e4989/Quay.png?scale=1&mn=15&mt=12"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9RdWF5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEyfV0/4b003e4989/Quay.png?scale=1&mn=&mt=3"
       ],
       [
         "MapWorldsBurialChambers",
@@ -6559,9 +6553,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/1/1.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/BurialChambers.dds",
+        [
+          7,
+          10,
+          14,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CdXJpYWxDaGFtYmVycyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10IjoxNn1d/f66763c94f/BurialChambers.png?scale=1&mn=&mt=7"
       ],
       [
         "MapWorldsCells",
@@ -6573,15 +6573,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Cells.dds",
-        [
-          3,
-          6,
-          10,
-          14,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DZWxscyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjozfV0/a0c69a2251/Cells.png?scale=1&mn=15&mt=3"
+        "Art/2DItems/Effects/Frames/Tencent2YearsFrame.dds",
+        null,
+        null
       ],
       [
         "MapWorldsArcade",
@@ -6595,13 +6589,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Arcade.dds",
         [
-          15,
-          16,
+          9,
+          12,
           16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmNhZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTV9XQ/442887ef35/Arcade.png?scale=1&mn=15&mt=15"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmNhZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTV9XQ/442887ef35/Arcade.png?scale=1&mn=&mt=9"
       ],
       [
         "MapWorldsCitySquare",
@@ -6613,9 +6607,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/4/1.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/CitySquare.dds",
+        [
+          11,
+          14,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaXR5U3F1YXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjd9XQ/e11938ad90/CitySquare.png?scale=1&mn=&mt=11"
       ],
       [
         "MapWorldsRelicChambers",
@@ -6627,7 +6627,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/1.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/SupporterIconFrame155.dds",
         null,
         null
       ],
@@ -6641,9 +6641,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/1.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Courthouse.dds",
+        [
+          12,
+          15,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Courthouse.png?scale=1&mn=&mt=12"
       ],
       [
         "MapWorldsStrand",
@@ -6663,7 +6669,7 @@
           12,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdHJhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MX1d/f3b6ecf60d/Strand.png?scale=1&mn=15&mt=1"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdHJhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MX1d/f3b6ecf60d/Strand.png?scale=1&mn=&mt=1"
       ],
       [
         "MapWorldsStrandUnique",
@@ -6695,15 +6701,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Chateau.dds",
-        [
-          4,
-          7,
-          11,
-          15,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaGF0ZWF1IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/6d5b0cc5e0/Chateau.png?scale=1&mn=15&mt=4"
+        "Art/2DItems/Effects/CNitems/CNframes/4/1.dds",
+        null,
+        null
       ],
       [
         "MapWorldsChateauUnique",
@@ -6737,7 +6737,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Hcm90dG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTV9XQ/3e86d2fd61/Grotto.png?scale=1&mn=15&mt=15"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Hcm90dG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTV9XQ/3e86d2fd61/Grotto.png?scale=1&mn=&mt=15"
       ],
       [
         "MapWorldsGorge",
@@ -6749,7 +6749,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/2.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/7/1.dds",
         null,
         null
       ],
@@ -6763,9 +6763,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/2.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Volcano.dds",
+        [
+          6,
+          9,
+          13,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Wb2xjYW5vIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjN9XQ/c56249f136/Volcano.png?scale=1&mn=&mt=6"
       ],
       [
         "MapWorldsLighthouse",
@@ -6777,7 +6783,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/2.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/2/2.dds",
         null,
         null
       ],
@@ -6793,13 +6799,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Canyon.dds",
         [
-          8,
-          11,
-          15,
+          14,
+          16,
+          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYW55b24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OH1d/273c257fb9/Canyon.png?scale=1&mn=15&mt=8"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYW55b24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OH1d/273c257fb9/Canyon.png?scale=1&mn=&mt=14"
       ],
       [
         "MapWorldsConservatory",
@@ -6811,7 +6817,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/3.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/4/2.dds",
         null,
         null
       ],
@@ -6827,13 +6833,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Corrosion.dds",
         [
+          6,
+          9,
           13,
-          16,
-          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jyb3Npb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTN9XQ/9025e20e58/Corrosion.png?scale=1&mn=15&mt=13"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jyb3Npb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTN9XQ/9025e20e58/Corrosion.png?scale=1&mn=&mt=6"
       ],
       [
         "MapWorldsHauntedMansion",
@@ -6845,9 +6851,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/4/3.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Chambers.dds",
+        [
+          6,
+          9,
+          13,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaGFtYmVycyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTMsIm10IjoxNH1d/f266486a88/Chambers.png?scale=1&mn=&mt=6"
       ],
       [
         "MapWorldsMaze",
@@ -6861,13 +6873,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Maze.dds",
         [
-          8,
-          11,
-          15,
+          14,
+          16,
+          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXplIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjV9XQ/a67fe079d6/Maze.png?scale=1&mn=15&mt=8"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXplIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjV9XQ/a67fe079d6/Maze.png?scale=1&mn=&mt=14"
       ],
       [
         "MapWorldsMazeUnique",
@@ -6881,9 +6893,9 @@
         false,
         "Art/2DItems/Maps/Doryanis.dds",
         [
-          5,
-          8,
-          12,
+          14,
+          16,
+          16,
           16,
           16
         ],
@@ -6899,9 +6911,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/3.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Channel.dds",
+        [
+          13,
+          16,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaGFubmVsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxMywibXQiOjZ9XQ/1288b8d384/Channel.png?scale=1&mn=&mt=13"
       ],
       [
         "MapWorldsToxicSewer",
@@ -6913,9 +6931,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/1/4.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Sewer.dds",
+        [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TZXdlciIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10Ijo1fV0/13c54e0619/Sewer.png?scale=1&mn=&mt=16"
       ],
       [
         "MapWorldsAncientCity",
@@ -6929,13 +6953,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/VaalCity.dds",
         [
-          8,
-          11,
-          15,
+          16,
+          16,
+          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYWFsQ2l0eSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo4fV0/d4d3834833/VaalCity.png?scale=1&mn=15&mt=8"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYWFsQ2l0eSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo4fV0/d4d3834833/VaalCity.png?scale=1&mn=&mt=16"
       ],
       [
         "MapWorldsIvoryTemple",
@@ -6947,9 +6971,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/4.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/IvoryTemple.dds",
+        [
+          5,
+          8,
+          12,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Jdm9yeVRlbXBsZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10Ijo3fV0/cddb8eea00/IvoryTemple.png?scale=1&mn=&mt=5"
       ],
       [
         "MapWorldsSpiderLair",
@@ -6961,9 +6991,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/4/4.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/SpiderLair.dds",
+        [
+          4,
+          7,
+          11,
+          15,
+          16
+        ],
+        "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/SpiderLair.png?scale=1&mn=&mt=4"
       ],
       [
         "MapWorldsBarrows",
@@ -6975,15 +7011,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Barrows.dds",
-        [
-          8,
-          11,
-          15,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CYXJyb3dzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjh9XQ/f67ebb7754/Barrows.png?scale=1&mn=15&mt=8"
+        "Art/2DItems/Effects/CNitems/CNframes/7/3.dds",
+        null,
+        null
       ],
       [
         "MapWorldsMausoleum",
@@ -6997,13 +7027,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Mausoleum.dds",
         [
-          7,
-          10,
-          14,
-          16,
+          1,
+          4,
+          8,
+          12,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXVzb2xldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6N31d/e9bde9eade/Mausoleum.png?scale=1&mn=15&mt=7"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXVzb2xldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6N31d/e9bde9eade/Mausoleum.png?scale=1&mn=&mt=1"
       ],
       [
         "MapWorldsFields",
@@ -7015,7 +7045,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/4.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/2/4.dds",
         null,
         null
       ],
@@ -7029,15 +7059,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/JungleValley.dds",
-        [
-          6,
-          9,
-          13,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9KdW5nbGVWYWxsZXkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Nn1d/0127707652/JungleValley.png?scale=1&mn=15&mt=6"
+        "Art/2DItems/Effects/CNitems/CNframes/3/4.dds",
+        null,
+        null
       ],
       [
         "MapWorldsPhantasmagoria",
@@ -7051,13 +7075,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Phantasmagoria.dds",
         [
-          4,
-          7,
-          11,
-          15,
+          3,
+          6,
+          10,
+          14,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaGFudGFzbWFnb3JpYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/3230447c5e/Phantasmagoria.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaGFudGFzbWFnb3JpYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/3230447c5e/Phantasmagoria.png?scale=1&mn=&mt=3"
       ],
       [
         "MapWorldsAcademy",
@@ -7069,9 +7093,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/5.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Academy.dds",
+        [
+          8,
+          11,
+          15,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Academy.png?scale=1&mn=&mt=8"
       ],
       [
         "MapWorldsThicket",
@@ -7085,13 +7115,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Thicket.dds",
         [
-          2,
-          5,
-          9,
-          13,
+          4,
+          7,
+          11,
+          15,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UaGlja2V0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/5cbb53f746/Thicket.png?scale=1&mn=15&mt=2"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UaGlja2V0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/5cbb53f746/Thicket.png?scale=1&mn=&mt=4"
       ],
       [
         "MapWorldsWharf",
@@ -7103,15 +7133,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Wharf.dds",
-        [
-          5,
-          8,
-          12,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XaGFyZiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo1fV0/a552c79312/Wharf.png?scale=1&mn=15&mt=5"
+        "Art/2DItems/Effects/CNitems/CNframes/7/4.dds",
+        null,
+        null
       ],
       [
         "MapWorldsAshenWood",
@@ -7125,13 +7149,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DryWoods.dds",
         [
-          14,
+          15,
           16,
           16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EcnlXb29kcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNH1d/6b2961ee50/DryWoods.png?scale=1&mn=15&mt=14"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EcnlXb29kcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNH1d/6b2961ee50/DryWoods.png?scale=1&mn=&mt=15"
       ],
       [
         "MapWorldsAtoll",
@@ -7151,7 +7175,7 @@
           15,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BdG9sbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/34c3887c6c/Atoll.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BdG9sbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/34c3887c6c/Atoll.png?scale=1&mn=&mt=4"
       ],
       [
         "MapWorldsAtollUnique",
@@ -7191,7 +7215,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DZW1ldGVyeSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxMn1d/8900457b51/Cemetery.png?scale=1&mn=15&mt=12"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DZW1ldGVyeSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxMn1d/8900457b51/Cemetery.png?scale=1&mn=&mt=12"
       ],
       [
         "MapWorldsCemeteryUnique",
@@ -7231,7 +7255,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9VbmRlcmdyb3VuZFNlYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNH1d/614a5adbe6/UndergroundSea.png?scale=1&mn=15&mt=14"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9VbmRlcmdyb3VuZFNlYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNH1d/614a5adbe6/UndergroundSea.png?scale=1&mn=&mt=14"
       ],
       [
         "MapWorldsTribunal",
@@ -7245,13 +7269,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Tribunal.dds",
         [
-          5,
-          8,
-          12,
+          7,
+          10,
+          14,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UcmlidW5hbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo1fV0/56c2ccac22/Tribunal.png?scale=1&mn=15&mt=5"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UcmlidW5hbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo1fV0/56c2ccac22/Tribunal.png?scale=1&mn=&mt=7"
       ],
       [
         "MapWorldsCoralRuins",
@@ -7265,13 +7289,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CorpseTrench.dds",
         [
-          5,
-          8,
-          12,
-          16,
+          4,
+          7,
+          11,
+          15,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jwc2VUcmVuY2giLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/10d8d20ee4/CorpseTrench.png?scale=1&mn=15&mt=5"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jwc2VUcmVuY2giLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/10d8d20ee4/CorpseTrench.png?scale=1&mn=&mt=4"
       ],
       [
         "MapWorldsLavaChamber",
@@ -7283,15 +7307,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Crematorium.dds",
-        [
-          6,
-          9,
-          13,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DcmVtYXRvcml1bSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo2fV0/13264e1290/Crematorium.png?scale=1&mn=15&mt=6"
+        "Art/2DItems/Effects/CNitems/CNframes/2/6.dds",
+        null,
+        null
       ],
       [
         "MapWorldsResidence",
@@ -7305,13 +7323,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Residence.dds",
         [
-          9,
-          12,
-          16,
-          16,
+          4,
+          7,
+          11,
+          15,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SZXNpZGVuY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OX1d/ce6eae2072/Residence.png?scale=1&mn=15&mt=9"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SZXNpZGVuY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OX1d/ce6eae2072/Residence.png?scale=1&mn=&mt=4"
       ],
       [
         "MapWorldsRamparts",
@@ -7323,15 +7341,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Ramparts.dds",
-        [
-          16,
-          16,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SYW1wYXJ0cyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNn1d/70b9fb775f/Ramparts.png?scale=1&mn=15&mt=16"
+        "Art/2DItems/Effects/CNitems/CNframes/4/6.dds",
+        null,
+        null
       ],
       [
         "MapWorldsDunes",
@@ -7351,7 +7363,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EdW5lcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNX1d/bd8fea290f/Dunes.png?scale=1&mn=15&mt=15"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EdW5lcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNX1d/bd8fea290f/Dunes.png?scale=1&mn=&mt=15"
       ],
       [
         "MapWorldsDunesUnique",
@@ -7391,7 +7403,7 @@
           14,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXRhY29tYiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjozfV0/e4f43f8b6e/Catacomb.png?scale=1&mn=15&mt=3"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXRhY29tYiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjozfV0/e4f43f8b6e/Catacomb.png?scale=1&mn=&mt=3"
       ],
       [
         "MapWorldsBoneCryptUnique",
@@ -7431,7 +7443,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9VbmRlcmdyb3VuZFJpdmVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/e96a1e2012/UndergroundRiver.png?scale=1&mn=15&mt=10"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9VbmRlcmdyb3VuZFJpdmVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/e96a1e2012/UndergroundRiver.png?scale=1&mn=&mt=10"
       ],
       [
         "MapWorldsUndergroundRiverUnique",
@@ -7471,7 +7483,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UZXJyYWNlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/6a2f978d76/Terrace.png?scale=1&mn=15&mt=10"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UZXJyYWNlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/6a2f978d76/Terrace.png?scale=1&mn=&mt=10"
       ],
       [
         "MapWorldsArachnidNest",
@@ -7485,13 +7497,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ArachnidNest.dds",
         [
+          4,
           7,
-          10,
-          14,
-          16,
+          11,
+          15,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmFjaG5pZE5lc3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6N31d/552c8ce53f/ArachnidNest.png?scale=1&mn=15&mt=7"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmFjaG5pZE5lc3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6N31d/552c8ce53f/ArachnidNest.png?scale=1&mn=&mt=4"
       ],
       [
         "MapWorldsBazaar",
@@ -7503,9 +7515,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/4/8.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Bazaar.dds",
+        [
+          9,
+          12,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CYXphYXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE0LCJtdCI6NH1d/ad65581b42/Bazaar.png?scale=1&mn=&mt=9"
       ],
       [
         "MapWorldsLaboratory",
@@ -7519,13 +7537,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Laboratory.dds",
         [
-          4,
-          7,
-          11,
-          15,
+          5,
+          8,
+          12,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "MapWorldsInfestedValley",
@@ -7537,9 +7555,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/8.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Infestation.dds",
+        [
+          11,
+          14,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9JbmZlc3RhdGlvbiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10IjozfV0/b5804bc859/Infestation.png?scale=1&mn=&mt=11"
       ],
       [
         "MapWorldsOvergrownRuin",
@@ -7553,13 +7577,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/OvergrownRuin.dds",
         [
-          1,
-          4,
-          8,
-          12,
+          15,
+          16,
+          16,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PdmVyZ3Jvd25SdWluIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjF9XQ/e1af8d15d3/OvergrownRuin.png?scale=1&mn=15&mt=1"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PdmVyZ3Jvd25SdWluIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjF9XQ/e1af8d15d3/OvergrownRuin.png?scale=1&mn=&mt=15"
       ],
       [
         "MapWorldsVaalPyramid",
@@ -7579,7 +7603,7 @@
           15,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYWFsUHlyYW1pZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/74bc865aeb/VaalPyramid.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYWFsUHlyYW1pZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/74bc865aeb/VaalPyramid.png?scale=1&mn=&mt=4"
       ],
       [
         "MapWorldsVaalPyramidUnique",
@@ -7611,7 +7635,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/9.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/5/8.dds",
         null,
         null
       ],
@@ -7625,15 +7649,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Armory.dds",
-        [
-          14,
-          16,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Bcm1vcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTR9XQ/c3c2005579/Armory.png?scale=1&mn=15&mt=14"
+        "Art/2DItems/Effects/CNitems/CNframes/6/8.dds",
+        null,
+        null
       ],
       [
         "MapWorldsCourtyard",
@@ -7645,9 +7663,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/9.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Courtyard.dds",
+        [
+          5,
+          8,
+          12,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3VydHlhcmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6N31d/70196ed4a7/Courtyard.png?scale=1&mn=&mt=5"
       ],
       [
         "MapWorldsCourtyardUnique",
@@ -7661,9 +7685,9 @@
         false,
         "Art/2DItems/Maps/TheVinktarSquare.dds",
         [
-          7,
-          10,
-          14,
+          5,
+          8,
+          12,
           16,
           16
         ],
@@ -7679,15 +7703,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/MudGeyser.dds",
-        [
-          5,
-          8,
-          12,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NdWRHZXlzZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/9a66070fcc/MudGeyser.png?scale=1&mn=15&mt=5"
+        "Art/2DItems/Effects/CNitems/CNframes/2/9.dds",
+        null,
+        null
       ],
       [
         "MapWorldsShore",
@@ -7707,7 +7725,7 @@
           15,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaG9yZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/6401a8968e/Shore.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaG9yZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/6401a8968e/Shore.png?scale=1&mn=&mt=4"
       ],
       [
         "MapWorldsShoreUnique",
@@ -7739,7 +7757,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/10.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/5/9.dds",
         null,
         null
       ],
@@ -7767,9 +7785,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/10.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/MineralPools.dds",
+        [
+          7,
+          10,
+          14,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NaW5lcmFsUG9vbHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE0LCJtdCI6MTJ9XQ/e9a3cb9517/MineralPools.png?scale=1&mn=&mt=7"
       ],
       [
         "MapWorldsMoonTemple",
@@ -7789,7 +7813,7 @@
           13,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MdW5hcmlzVGVtcGxlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/da1dcd3aab/LunarisTemple.png?scale=1&mn=15&mt=2"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MdW5hcmlzVGVtcGxlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/da1dcd3aab/LunarisTemple.png?scale=1&mn=&mt=2"
       ],
       [
         "MapWorldsMoonTempleUnique",
@@ -7821,9 +7845,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/1/11.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Sepulchre.dds",
+        [
+          3,
+          6,
+          10,
+          14,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TZXB1bGNocmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE0LCJtdCI6N31d/c6cda05c48/Sepulchre.png?scale=1&mn=&mt=3"
       ],
       [
         "MapWorldsTower",
@@ -7835,7 +7865,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/11.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/4/10.dds",
         null,
         null
       ],
@@ -7849,15 +7879,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/WastePool.dds",
-        [
-          16,
-          16,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XYXN0ZVBvb2wiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTZ9XQ/3adf3f21f9/WastePool.png?scale=1&mn=15&mt=16"
+        "Art/2DItems/Effects/CNitems/CNframes/5/10.dds",
+        null,
+        null
       ],
       [
         "MapWorldsPlateau",
@@ -7871,13 +7895,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Plateau.dds",
         [
+          3,
           6,
-          9,
-          13,
-          16,
+          10,
+          14,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF0ZWF1IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjZ9XQ/64a776109f/Plateau.png?scale=1&mn=15&mt=6"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF0ZWF1IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjZ9XQ/64a776109f/Plateau.png?scale=1&mn=&mt=3"
       ],
       [
         "MapWorldsEstuary",
@@ -7889,9 +7913,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/11.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Estuary.dds",
+        [
+          8,
+          11,
+          15,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Fc3R1YXJ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxMywibXQiOjN9XQ/c78c703cee/Estuary.png?scale=1&mn=&mt=8"
       ],
       [
         "MapWorldsVault",
@@ -7903,15 +7933,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Vault.dds",
-        [
-          15,
-          16,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYXVsdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNX1d/0f99973a36/Vault.png?scale=1&mn=15&mt=15"
+        "Art/2DItems/Effects/CNitems/CNframes/1/11.dds",
+        null,
+        null
       ],
       [
         "MapWorldsTemple",
@@ -7931,7 +7955,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UZW1wbGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/fbbd97a082/Temple.png?scale=1&mn=15&mt=5"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UZW1wbGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/fbbd97a082/Temple.png?scale=1&mn=&mt=5"
       ],
       [
         "MapWorldsTempleUnique",
@@ -7963,15 +7987,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Arena.dds",
-        [
-          11,
-          14,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmVuYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxMX1d/3d897d50df/Arena.png?scale=1&mn=15&mt=11"
+        "Art/2DItems/Effects/CNitems/CNframes/4/11.dds",
+        null,
+        null
       ],
       [
         "MapWorldsMuseum",
@@ -7991,7 +8009,7 @@
           14,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NdXNldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6M31d/3273645a39/Museum.png?scale=1&mn=15&mt=3"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NdXNldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6M31d/3273645a39/Museum.png?scale=1&mn=&mt=3"
       ],
       [
         "MapWorldsMuseumUnique",
@@ -8023,7 +8041,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/12.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/7/11.dds",
         null,
         null
       ],
@@ -8037,7 +8055,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/12.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/12.dds",
         null,
         null
       ],
@@ -8051,9 +8069,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/12.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Shipyard.dds",
+        [
+          12,
+          15,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaGlweWFyZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTMsIm10Ijo4fV0/7c3ba5e9ce/Shipyard.png?scale=1&mn=&mt=12"
       ],
       [
         "MapWorldsBelfry",
@@ -8065,15 +8089,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Belfry.dds",
-        [
-          11,
-          14,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CZWxmcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTF9XQ/0d629edc10/Belfry.png?scale=1&mn=15&mt=11"
+        "Art/2DItems/Effects/CNitems/CNframes/3/12.dds",
+        null,
+        null
       ],
       [
         "MapWorldsArachnidTomb",
@@ -8087,13 +8105,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Arachnid.dds",
         [
-          6,
+          2,
+          5,
           9,
           13,
-          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmFjaG5pZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo2fV0/5a3a5937be/Arachnid.png?scale=1&mn=15&mt=6"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmFjaG5pZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo2fV0/5a3a5937be/Arachnid.png?scale=1&mn=&mt=2"
       ],
       [
         "MapWorldsWasteland",
@@ -8107,13 +8125,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Wasteland.dds",
         [
-          8,
           11,
-          15,
+          14,
+          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XYXN0ZWxhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OH1d/72b0ff885b/Wasteland.png?scale=1&mn=15&mt=8"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XYXN0ZWxhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OH1d/72b0ff885b/Wasteland.png?scale=1&mn=&mt=11"
       ],
       [
         "MapWorldsPrecinct",
@@ -8127,13 +8145,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Precinct.dds",
         [
-          11,
+          7,
+          10,
           14,
-          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QcmVjaW5jdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxMX1d/8f2cdf18bb/Precinct.png?scale=1&mn=15&mt=11"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QcmVjaW5jdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxMX1d/8f2cdf18bb/Precinct.png?scale=1&mn=&mt=7"
       ],
       [
         "MapWorldsBog",
@@ -8147,13 +8165,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Bog.dds",
         [
+          5,
           8,
-          11,
-          15,
+          12,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Cb2ciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OH1d/878fbb2aa6/Bog.png?scale=1&mn=15&mt=8"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Cb2ciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OH1d/878fbb2aa6/Bog.png?scale=1&mn=&mt=5"
       ],
       [
         "MapWorldsPier",
@@ -8167,13 +8185,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Pier.dds",
         [
-          9,
+          5,
+          8,
           12,
-          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaWVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjl9XQ/83d40620f9/Pier.png?scale=1&mn=15&mt=9"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaWVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjl9XQ/83d40620f9/Pier.png?scale=1&mn=&mt=5"
       ],
       [
         "MapWorldsCursedCrypt",
@@ -8193,7 +8211,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DcnlwdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxMn1d/a841f45750/Crypt.png?scale=1&mn=15&mt=12"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DcnlwdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxMn1d/a841f45750/Crypt.png?scale=1&mn=&mt=12"
       ],
       [
         "MapWorldsCursedCryptUnique",
@@ -8233,7 +8251,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PcmNoYXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEzfV0/959b177384/Orchard.png?scale=1&mn=15&mt=13"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PcmNoYXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEzfV0/959b177384/Orchard.png?scale=1&mn=&mt=13"
       ],
       [
         "MapWorldsPromenade",
@@ -8247,13 +8265,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Promenade.dds",
         [
-          12,
-          15,
-          16,
+          6,
+          9,
+          13,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Qcm9tZW5hZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTJ9XQ/cf185e8efd/Promenade.png?scale=1&mn=15&mt=12"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Qcm9tZW5hZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTJ9XQ/cf185e8efd/Promenade.png?scale=1&mn=&mt=6"
       ],
       [
         "MapWorldsPromenadeUnique",
@@ -8281,13 +8299,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Lair.dds",
         [
-          7,
-          10,
-          14,
+          13,
+          16,
+          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWlyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjd9XQ/533c709293/Lair.png?scale=1&mn=15&mt=7"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWlyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjd9XQ/533c709293/Lair.png?scale=1&mn=&mt=13"
       ],
       [
         "MapWorldsColonnade",
@@ -8301,13 +8319,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Colonnade.dds",
         [
-          7,
-          10,
-          14,
+          12,
+          15,
+          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xvbm5hZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6N31d/c55d95107b/Colonnade.png?scale=1&mn=15&mt=7"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xvbm5hZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6N31d/c55d95107b/Colonnade.png?scale=1&mn=&mt=12"
       ],
       [
         "MapWorldsPrimordialPool",
@@ -8321,13 +8339,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/PrimordialPool.dds",
         [
-          4,
-          7,
-          11,
-          15,
+          9,
+          12,
+          16,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Qcmltb3JkaWFsUG9vbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/daeec13766/PrimordialPool.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Qcmltb3JkaWFsUG9vbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo0fV0/daeec13766/PrimordialPool.png?scale=1&mn=&mt=9"
       ],
       [
         "MapWorldsSpiderForest",
@@ -8341,13 +8359,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SpiderForest.dds",
         [
-          6,
+          2,
+          5,
           9,
           13,
-          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TcGlkZXJGb3Jlc3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Nn1d/6b64ef4465/SpiderForest.png?scale=1&mn=15&mt=6"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TcGlkZXJGb3Jlc3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Nn1d/6b64ef4465/SpiderForest.png?scale=1&mn=&mt=2"
       ],
       [
         "MapWorldsCoves",
@@ -8359,9 +8377,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/15.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/Coves.dds",
+        [
+          3,
+          6,
+          10,
+          14,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3ZlcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTMsIm10Ijo1fV0/12eda8b9fb/Coves.png?scale=1&mn=&mt=3"
       ],
       [
         "MapWorldsWaterways",
@@ -8373,15 +8397,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Waterways.dds",
-        [
-          3,
-          6,
-          10,
-          14,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XYXRlcndheXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6M31d/9d6dcbc6b9/Waterways.png?scale=1&mn=15&mt=3"
+        "Art/2DItems/Effects/CNitems/CNframes/5/14.dds",
+        null,
+        null
       ],
       [
         "MapWorldsFactory",
@@ -8395,13 +8413,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Factory.dds",
         [
-          3,
-          6,
+          7,
           10,
           14,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9GYWN0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjN9XQ/8492ca59c0/Factory.png?scale=1&mn=15&mt=3"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9GYWN0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjN9XQ/8492ca59c0/Factory.png?scale=1&mn=&mt=7"
       ],
       [
         "MapWorldsMesa",
@@ -8415,13 +8433,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Mesa.dds",
         [
+          11,
           14,
-          16,
           16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NZXNhIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjE0fV0/ede01593df/Mesa.png?scale=1&mn=15&mt=14"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NZXNhIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjE0fV0/ede01593df/Mesa.png?scale=1&mn=&mt=11"
       ],
       [
         "MapWorldsPit",
@@ -8433,7 +8451,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/15.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/15.dds",
         null,
         null
       ],
@@ -8447,7 +8465,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/15.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/2/15.dds",
         null,
         null
       ],
@@ -8463,13 +8481,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DefiledCathedral.dds",
         [
-          3,
-          6,
           10,
-          14,
+          13,
+          16,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZWZpbGVkQ2F0aGVkcmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjN9XQ/422c1813d4/DefiledCathedral.png?scale=1&mn=15&mt=3"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZWZpbGVkQ2F0aGVkcmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjN9XQ/422c1813d4/DefiledCathedral.png?scale=1&mn=&mt=10"
       ],
       [
         "MapWorldsSummit",
@@ -8481,15 +8499,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Summit.dds",
-        [
-          7,
-          10,
-          14,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdW1taXQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6N31d/f3a0e86f82/Summit.png?scale=1&mn=15&mt=7"
+        "Art/2DItems/Effects/CNitems/CNframes/4/15.dds",
+        null,
+        null
       ],
       [
         "MapWorldsOvergrownShrine",
@@ -8509,7 +8521,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PdmVyZ3Jvd25TaHJpbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Nn1d/dcf1db40c3/OvergrownShrine.png?scale=1&mn=15&mt=6"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PdmVyZ3Jvd25TaHJpbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Nn1d/dcf1db40c3/OvergrownShrine.png?scale=1&mn=&mt=6"
       ],
       [
         "MapWorldsOvergrownShrineUnique",
@@ -8543,13 +8555,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CastleRuins.dds",
         [
-          11,
-          14,
-          16,
-          16,
+          2,
+          5,
+          9,
+          13,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXN0bGVSdWlucyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxMX1d/eb41045c54/CastleRuins.png?scale=1&mn=15&mt=11"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXN0bGVSdWlucyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxMX1d/eb41045c54/CastleRuins.png?scale=1&mn=&mt=2"
       ],
       [
         "MapWorldsCrystalOre",
@@ -8561,7 +8573,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/16.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/16.dds",
         null,
         null
       ],
@@ -8577,13 +8589,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Villa.dds",
         [
-          9,
-          12,
+          11,
+          14,
           16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WaWxsYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo5fV0/ba0962b600/Villa.png?scale=1&mn=15&mt=9"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WaWxsYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo5fV0/ba0962b600/Villa.png?scale=1&mn=&mt=11"
       ],
       [
         "MapWorldsTortureChamber",
@@ -8595,9 +8607,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/1/17.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/PrimevalRuins.dds",
+        [
+          8,
+          11,
+          15,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/PrimevalRuins.png?scale=1&mn=&mt=8"
       ],
       [
         "MapWorldsTortureChamberUnique",
@@ -8637,7 +8655,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9OZWNyb3BvbGlzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjd9XQ/75faa79977/Necropolis.png?scale=1&mn=15&mt=7"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9OZWNyb3BvbGlzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjd9XQ/75faa79977/Necropolis.png?scale=1&mn=&mt=7"
       ],
       [
         "MapWorldsNecropolisUnique",
@@ -8669,15 +8687,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Racecourse.dds",
-        [
-          10,
-          13,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SYWNlY291cnNlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/707f3eab94/Racecourse.png?scale=1&mn=15&mt=10"
+        "Art/2DItems/Effects/CNitems/CNframes/7/16.dds",
+        null,
+        null
       ],
       [
         "MapWorldsCaldera",
@@ -8697,7 +8709,7 @@
           14,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BYnlzcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjozfV0/6e46134416/Abyss.png?scale=1&mn=15&mt=3"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BYnlzcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjozfV0/6e46134416/Abyss.png?scale=1&mn=&mt=3"
       ],
       [
         "MapWorldsGhetto",
@@ -8711,13 +8723,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Ghetto.dds",
         [
-          8,
-          11,
-          15,
+          16,
+          16,
+          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9HaGV0dG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OH1d/8f76e65aa2/Ghetto.png?scale=1&mn=15&mt=8"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9HaGV0dG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OH1d/8f76e65aa2/Ghetto.png?scale=1&mn=&mt=16"
       ],
       [
         "MapWorldsPark",
@@ -8729,15 +8741,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Park.dds",
-        [
-          3,
-          6,
-          10,
-          14,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QYXJrIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjN9XQ/22e39153fd/Park.png?scale=1&mn=15&mt=3"
+        "Art/2DItems/Effects/CNitems/CNframes/3/17.dds",
+        null,
+        null
       ],
       [
         "MapWorldsMalformation",
@@ -8749,7 +8755,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/18.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/4/17.dds",
         null,
         null
       ],
@@ -8771,7 +8777,7 @@
           12,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9IaWdoR2FyZGVucyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxfV0/5d212d2b9a/HighGardens.png?scale=1&mn=15&mt=1"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9IaWdoR2FyZGVucyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxfV0/5d212d2b9a/HighGardens.png?scale=1&mn=&mt=1"
       ],
       [
         "MapWorldsShrine",
@@ -8785,13 +8791,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Shrine.dds",
         [
-          5,
-          8,
-          12,
+          13,
+          16,
+          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaHJpbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/13fe2df61b/Shrine.png?scale=1&mn=15&mt=5"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaHJpbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/13fe2df61b/Shrine.png?scale=1&mn=&mt=13"
       ],
       [
         "MapWorldsArsenal",
@@ -8805,13 +8811,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Arsenal.dds",
         [
-          13,
-          16,
-          16,
+          8,
+          11,
+          15,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcnNlbmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEzfV0/1907a5fe58/Arsenal.png?scale=1&mn=15&mt=13"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcnNlbmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEzfV0/1907a5fe58/Arsenal.png?scale=1&mn=&mt=8"
       ],
       [
         "MapWorldsDesertSpring",
@@ -8823,7 +8829,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/18.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/18.dds",
         null,
         null
       ],
@@ -8837,7 +8843,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/18.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/2/18.dds",
         null,
         null
       ],
@@ -8853,13 +8859,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Colosseum.dds",
         [
-          2,
-          5,
           9,
-          13,
+          12,
+          16,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xvc3NldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Mn1d/38040c70e2/Colosseum.png?scale=1&mn=15&mt=2"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xvc3NldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Mn1d/38040c70e2/Colosseum.png?scale=1&mn=&mt=9"
       ],
       [
         "MapWorldsAcidLakes",
@@ -8879,7 +8885,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdWxwaHVyVmVudHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/b8f78789ff/SulphurVents.png?scale=1&mn=15&mt=5"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdWxwaHVyVmVudHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/b8f78789ff/SulphurVents.png?scale=1&mn=&mt=5"
       ],
       [
         "MapWorldsDarkForest",
@@ -8893,13 +8899,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DarkForest.dds",
         [
-          2,
-          5,
           9,
-          13,
+          12,
+          16,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EYXJrRm9yZXN0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/85faead0c4/DarkForest.png?scale=1&mn=15&mt=2"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EYXJrRm9yZXN0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/85faead0c4/DarkForest.png?scale=1&mn=&mt=9"
       ],
       [
         "MapWorldsCrimsonTemple",
@@ -8919,7 +8925,7 @@
           13,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TYW5jdHVhcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Mn1d/6062c7f959/Sanctuary.png?scale=1&mn=15&mt=2"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TYW5jdHVhcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Mn1d/6062c7f959/Sanctuary.png?scale=1&mn=&mt=2"
       ],
       [
         "MapWorldsPlaza",
@@ -8933,13 +8939,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Plaza.dds",
         [
-          14,
+          13,
           16,
           16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF6YSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNH1d/f65d6fced8/Plaza.png?scale=1&mn=15&mt=14"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF6YSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNH1d/f65d6fced8/Plaza.png?scale=1&mn=&mt=13"
       ],
       [
         "MapWorldsDig",
@@ -8951,15 +8957,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Dig.dds",
-        [
-          9,
-          12,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EaWciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OX1d/5094325b04/Dig.png?scale=1&mn=15&mt=9"
+        "Art/2DItems/Effects/CNitems/CNframes/1/19.dds",
+        null,
+        null
       ],
       [
         "MapWorldsPalace",
@@ -8971,7 +8971,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/19.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/2/19.dds",
         null,
         null
       ],
@@ -8987,13 +8987,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Corpse.dds",
         [
-          13,
-          16,
-          16,
-          16,
+          1,
+          4,
+          8,
+          12,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jwc2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTN9XQ/05efca178d/Corpse.png?scale=1&mn=15&mt=13"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jwc2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTN9XQ/05efca178d/Corpse.png?scale=1&mn=&mt=1"
       ],
       [
         "MapWorldsBasilica",
@@ -9005,7 +9005,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/20.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/4/19.dds",
         null,
         null
       ],
@@ -9019,9 +9019,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/20.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/SunkenCity.dds",
+        [
+          14,
+          16,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdW5rZW5DaXR5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjEzfV0/26e71e54a0/SunkenCity.png?scale=1&mn=&mt=14"
       ],
       [
         "MapWorldsReef",
@@ -9033,7 +9039,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/4/20.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/6/19.dds",
         null,
         null
       ],
@@ -9049,13 +9055,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Carcass.dds",
         [
-          2,
-          5,
-          9,
-          13,
+          14,
+          16,
+          16,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXJjYXNzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/6f8d9e432e/Carcass.png?scale=1&mn=15&mt=2"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXJjYXNzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/6f8d9e432e/Carcass.png?scale=1&mn=&mt=14"
       ],
       [
         "MapWorldsChimera",
@@ -9075,7 +9081,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaGltZXJhIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjAsIm1pIjoxfV0/aa05d2ac9b/Chimera.png?scale=1&mn=15&mt=16"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaGltZXJhIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjAsIm1pIjoxfV0/aa05d2ac9b/Chimera.png?scale=1&mn=&mt=16"
       ],
       [
         "MapWorldsHydra",
@@ -9095,7 +9101,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9IeWRyYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjowfV0/d80b27344c/Hydra.png?scale=1&mn=15&mt=16"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9IeWRyYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjowfV0/d80b27344c/Hydra.png?scale=1&mn=&mt=16"
       ],
       [
         "MapWorldsPhoenix",
@@ -9115,7 +9121,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaG9lbml4IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjAsIm1pIjoxfV0/30ea633d9c/Phoenix.png?scale=1&mn=15&mt=16"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaG9lbml4IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjAsIm1pIjoxfV0/30ea633d9c/Phoenix.png?scale=1&mn=&mt=16"
       ],
       [
         "MapWorldsMinotaur",
@@ -9135,7 +9141,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NaW5vdGF1ciIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjowLCJtaSI6MX1d/73b1ef8d96/Minotaur.png?scale=1&mn=15&mt=16"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NaW5vdGF1ciIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjowLCJtaSI6MX1d/73b1ef8d96/Minotaur.png?scale=1&mn=&mt=16"
       ],
       [
         "MapWorldsShapersRealm",
@@ -9169,7 +9175,7 @@
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYWFsVGVtcGxlQmFzZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjowfV0/4c692176ec/VaalTempleBase.png?scale=1&mn=15"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYWFsVGVtcGxlQmFzZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjowfV0/4c692176ec/VaalTempleBase.png?scale=1&mn="
       ],
       [
         "MapWorldsHarbinger",
@@ -9181,7 +9187,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_1_5.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/7/20.dds",
         null,
         null
       ],
@@ -9253,13 +9259,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/DesertShipGraveyard.dds",
         [
-          6,
-          9,
-          13,
+          11,
+          14,
+          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZXNlcnRTaGlwR3JhdmV5YXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjZ9XQ/9c5daaaf5d/DesertShipGraveyard.png?scale=1&mn=15&mt=6"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZXNlcnRTaGlwR3JhdmV5YXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjZ9XQ/9c5daaaf5d/DesertShipGraveyard.png?scale=1&mn=&mt=11"
       ],
       [
         "MapWorldsSteppes",
@@ -9271,7 +9277,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_4.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_1_6.dds",
         null,
         null
       ],
@@ -9285,15 +9291,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Stagnation.dds",
-        [
-          10,
-          13,
-          16,
-          16,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdGFnbmF0aW9uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/0647875235/Stagnation.png?scale=1&mn=15&mt=10"
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_1_7.dds",
+        null,
+        null
       ],
       [
         "MapWorldsBrambleValley",
@@ -9305,15 +9305,9 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Bramblefall.dds",
-        [
-          2,
-          5,
-          9,
-          13,
-          16
-        ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CcmFtYmxlZmFsbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoyfV0/94564badd7/Bramblefall.png?scale=1&mn=15&mt=2"
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_1.dds",
+        null,
+        null
       ],
       [
         "MapWorldsFrozenCabins",
@@ -9327,13 +9321,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/FrozenCabins.dds",
         [
-          1,
-          4,
-          8,
-          12,
+          7,
+          10,
+          14,
+          16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gcm96ZW5DYWJpbnMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MX1d/f121b2973f/FrozenCabins.png?scale=1&mn=15&mt=1"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gcm96ZW5DYWJpbnMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MX1d/f121b2973f/FrozenCabins.png?scale=1&mn=&mt=7"
       ],
       [
         "MapWorldsHarbingerPrison",
@@ -9345,7 +9339,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_1.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_3.dds",
         null,
         null
       ],
@@ -9361,13 +9355,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Burn.dds",
         [
-          16,
-          16,
+          10,
+          13,
           16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CdXJuIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjE2fV0/44f4170e6f/Burn.png?scale=1&mn=15&mt=16"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CdXJuIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjE2fV0/44f4170e6f/Burn.png?scale=1&mn=&mt=10"
       ],
       [
         "MapWorldsCrimsonTownship",
@@ -9381,13 +9375,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CrimsonTownship.dds",
         [
-          5,
           8,
-          12,
+          11,
+          15,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Dcmltc29uVG93bnNoaXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/cb3cc4ca9b/CrimsonTownship.png?scale=1&mn=15&mt=5"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Dcmltc29uVG93bnNoaXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6NX1d/cb3cc4ca9b/CrimsonTownship.png?scale=1&mn=&mt=8"
       ],
       [
         "MapWorldsForkingRiver",
@@ -9401,13 +9395,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ForkingRiver.dds",
         [
-          15,
-          16,
-          16,
-          16,
+          2,
+          5,
+          9,
+          13,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gb3JraW5nUml2ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTV9XQ/1c4ea48f77/ForkingRiver.png?scale=1&mn=15&mt=15"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gb3JraW5nUml2ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTV9XQ/1c4ea48f77/ForkingRiver.png?scale=1&mn=&mt=2"
       ],
       [
         "MapWorldsFoundry",
@@ -9421,13 +9415,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ThaumaturgyDungeon.dds",
         [
-          9,
-          12,
+          15,
+          16,
           16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UaGF1bWF0dXJneUR1bmdlb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OX1d/0efc3cbd1e/ThaumaturgyDungeon.png?scale=1&mn=15&mt=9"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UaGF1bWF0dXJneUR1bmdlb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OX1d/0efc3cbd1e/ThaumaturgyDungeon.png?scale=1&mn=&mt=15"
       ],
       [
         "MapWorldsColdRiver_",
@@ -9441,13 +9435,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ColdRiver.dds",
         [
-          10,
-          13,
+          12,
+          15,
           16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xkUml2ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTB9XQ/31633b2a4e/ColdRiver.png?scale=1&mn=15&mt=10"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xkUml2ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTB9XQ/31633b2a4e/ColdRiver.png?scale=1&mn=&mt=12"
       ],
       [
         "MapWorldsForbiddenWoods",
@@ -9459,9 +9453,15 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_7.dds",
-        null,
-        null
+        "Art/2DItems/Maps/Atlas2Maps/New/ForbiddenWoods.dds",
+        [
+          10,
+          13,
+          16,
+          16,
+          16
+        ],
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gb3JiaWRkZW5Xb29kcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTMsIm10IjoxMH1d/0d9403427c/ForbiddenWoods.png?scale=1&mn=&mt=10"
       ],
       [
         "MapWorldsSilo",
@@ -9475,13 +9475,13 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/RobotTunnelSilo.dds",
         [
+          5,
+          8,
           12,
-          15,
-          16,
           16,
           16
         ],
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Sb2JvdFR1bm5lbFNpbG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTJ9XQ/dbf14a23b5/RobotTunnelSilo.png?scale=1&mn=15&mt=12"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Sb2JvdFR1bm5lbFNpbG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTJ9XQ/dbf14a23b5/RobotTunnelSilo.png?scale=1&mn=&mt=5"
       ],
       [
         "MapWorldsBeachLanding",
@@ -9493,7 +9493,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_2.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_4.dds",
         null,
         null
       ],
@@ -9507,7 +9507,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_3.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_5.dds",
         null,
         null
       ],
@@ -9521,7 +9521,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_4.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_6.dds",
         null,
         null
       ],
@@ -9535,7 +9535,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_5.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_7.dds",
         null,
         null
       ],
@@ -9549,7 +9549,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_6.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_1.dds",
         null,
         null
       ],
@@ -9563,7 +9563,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_7.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_2.dds",
         null,
         null
       ],
@@ -9577,7 +9577,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_5_1.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_3.dds",
         null,
         null
       ],
@@ -9591,7 +9591,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_5_2.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_4.dds",
         null,
         null
       ],
@@ -9605,7 +9605,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_5_3.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_5.dds",
         null,
         null
       ],
@@ -9619,7 +9619,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_5_4.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_6.dds",
         null,
         null
       ],
@@ -9633,7 +9633,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_5_5.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_4_7.dds",
         null,
         null
       ],
@@ -9647,7 +9647,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_5_6.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_5_1.dds",
         null,
         null
       ],
@@ -9661,7 +9661,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_5_7.dds",
+        "Art/2DItems/Effects/CNitems/CNBadges/Grade_5_2.dds",
         null,
         null
       ],
@@ -10982,6 +10982,20 @@
         null
       ],
       [
+        "HideoutCosmicAtlas",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null
+      ],
+      [
         "pvpTown",
         true,
         false,
@@ -11371,7 +11385,7 @@
         false,
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "HeistDungeon2",
@@ -11385,7 +11399,7 @@
         false,
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "HeistDungeon3",
@@ -11399,7 +11413,7 @@
         false,
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "HeistDungeon4",
@@ -11413,7 +11427,7 @@
         false,
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "HeistDungeon5",
@@ -11427,7 +11441,7 @@
         false,
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "HeistDungeon6",
@@ -11441,7 +11455,7 @@
         false,
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "HeistDungeon7",
@@ -11455,7 +11469,7 @@
         false,
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "HeistDungeon8",
@@ -11469,7 +11483,7 @@
         false,
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "HeistDungeon9",
@@ -11483,7 +11497,7 @@
         false,
         "Art/2DItems/Currency/Heist/ContractItem3.png",
         null,
-        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=15&mt=4"
+        "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/109e89814a/Laboratory.png?scale=1&mn=&mt=5"
       ],
       [
         "HeistReliquary1",
@@ -12470,8 +12484,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "The Black Star",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "The Searing Exarch",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "The Eater of Worlds",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "The Infinite Hunger"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "The Eater of Worlds"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "This is the key to a crucible that stretches the sanity of the mind.",
@@ -14499,6 +14512,7 @@
         "HideoutDark": "Ghost-lit Graveyard Hideout",
         "HideoutArenaBlackStar_": "Polaric Hideout",
         "HideoutArenaInfiniteHunger": "Seething Hideout",
+        "HideoutCosmicAtlas": "Atlas Hideout",
         "pvpTown": "Sarn Arena Staging Area",
         "AtlasExilesBoss5": "Eye of the Storm",
         "AfflictionTown6": "Lunacy's Watch",
@@ -14674,8 +14688,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "L'Astre noir",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "L'Exarque ardent",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Le Mangeur de mondes",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "La Faim infinie"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Le Mangeur de mondes"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Ceci est la clé d'une épreuve qui distend la santé de l'esprit.",
@@ -16703,6 +16716,7 @@
         "HideoutDark": "Repaire du Cimetière hanté",
         "HideoutArenaBlackStar_": "Repaire antipodique",
         "HideoutArenaInfiniteHunger": "Repaire agité",
+        "HideoutCosmicAtlas": "Repaire de l'Atlas",
         "pvpTown": "Scène de l'arène de Sarn",
         "AtlasExilesBoss5": "L'Œil du cyclone",
         "AfflictionTown6": "Le Guet de l'Œil accusateur",
@@ -16878,8 +16892,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "Der Schwarze Stern",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "Der Brennende Exarch",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Der Weltenfresser",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "Der Unendliche Hunger"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Der Weltenfresser"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Die ist der Schlüssel zu einem Zentrum, das die Sinne zu zerreißen droht.",
@@ -18907,6 +18920,7 @@
         "HideoutDark": "Geisterfriedhof-Versteck",
         "HideoutArenaBlackStar_": "Polarisierendes Versteck",
         "HideoutArenaInfiniteHunger": "Versteckter Sumpf",
+        "HideoutCosmicAtlas": "Atlas-Versteck",
         "pvpTown": "Sarn-Arena, Sammelplatz",
         "AtlasExilesBoss5": "Auge des Sturms",
         "AfflictionTown6": "Löwenauges Wahn",
@@ -19082,8 +19096,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "ログ",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "黒き星",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "灼熱の代行者",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "世界を喰らう者",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "果てなき渇望"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "世界を喰らう者"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "This is the key to a crucible that stretches the sanity of the mind.",
@@ -21111,6 +21124,7 @@
         "HideoutDark": "鬼火の墓場の隠れ家",
         "HideoutArenaBlackStar_": "対極の隠れ家",
         "HideoutArenaInfiniteHunger": "煮え滾る隠れ家",
+        "HideoutCosmicAtlas": "アトラスの隠れ家",
         "pvpTown": "サーンアリーナ集合地点",
         "AtlasExilesBoss5": "嵐の中心",
         "AfflictionTown6": "狂気の見張り場",
@@ -21286,8 +21300,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "로그",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "검은 별",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "작열의 총주교",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "세계 포식자",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "무한한 허기"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "세계 포식자"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "이것은 온전한 정신을 연장시켜 주는 도가니의 열쇠로다.",
@@ -23315,6 +23328,7 @@
         "HideoutDark": "유령이 밝힌 묘지 은신처",
         "HideoutArenaBlackStar_": "극성의 은신처",
         "HideoutArenaInfiniteHunger": "끓어오르는 은신처",
+        "HideoutCosmicAtlas": "아틀라스 은신처",
         "pvpTown": "사안 투기장",
         "AtlasExilesBoss5": "태풍의 눈",
         "AfflictionTown6": "광기의 초소",
@@ -23490,8 +23504,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "A Estrela Negra",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "O Exarca Cauterizado",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "O Devorador de Mundos",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "A Fome Infinita"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "O Devorador de Mundos"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Esta é a chave para um crisol que estende a sanidade da mente.",
@@ -25519,6 +25532,7 @@
         "HideoutDark": "Refúgio Cemitério Fantasmagórico",
         "HideoutArenaBlackStar_": "Refúgio Polar",
         "HideoutArenaInfiniteHunger": "Refúgio Fervente",
+        "HideoutCosmicAtlas": "Refúgio do Atlas",
         "pvpTown": "Área de Testes da Arena de Sarn",
         "AtlasExilesBoss5": "Olho da Tempestade",
         "AfflictionTown6": "Vigia da Loucura",
@@ -25694,8 +25708,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Рог",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "Чёрное солнце",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "Пламенный экзарх",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Пожиратель миров",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "Неутолимый голод"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Пожиратель миров"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Это ключ к тиглю, в котором здравомыслие обретает гибкость.",
@@ -27723,6 +27736,7 @@
         "HideoutDark": "Убежище на призрачном кладбище",
         "HideoutArenaBlackStar_": "Убежище на полюсе пустоты",
         "HideoutArenaInfiniteHunger": "Бурлящее убежище",
+        "HideoutCosmicAtlas": "Убежище в Атласе",
         "pvpTown": "Внутренние помещения арены Сарна",
         "AtlasExilesBoss5": "Око Шторма",
         "AfflictionTown6": "Застава безумия",
@@ -27898,8 +27912,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "La Estrella negra",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "El Exarca abrasador",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "El Devorador de mundos",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "El Hambre infinita"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "El Devorador de mundos"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Esta es la llave hacia un crisol que extiende la cordura de la mente.",
@@ -28031,7 +28044,7 @@
         "VeritaniaFourStoneFightc": "La verdad es fría. Déjame mostrarte.",
         "VeritaniaFourStoneFightd": "Creo que esta vez te torturaré.",
         "VeritaniaFourStoneFighte": "<if:MS>{¡Bienvenido! El tiempo no significa nada aquí. Tu dolor no tendrá fin.}<elif:FS>{¡Bienvenida! El tiempo no significa nada aquí. Tu dolor no tendrá fin.}",
-        "VeritaniaFourStoneDeatha": "El fin del cliclo de locura… hasta la próxima vez…",
+        "VeritaniaFourStoneDeatha": "El fin del ciclo de locura… hasta la próxima vez…",
         "VeritaniaFourStoneDeathb": "<if:MS>{Creí que era mejor que tú… pero tú y yo estamos hechos para bailar el vals juntos para siempre…}<elif:FS>{Creí que era mejor que tú… pero tú y yo estamos hechas para bailar el vals juntas para siempre…}",
         "VeritaniaFourStoneDeathc": "Mi único consuelo… es que no estoy sola en esta tortura… hasta pronto…",
         "VeritaniaFourStoneDeathd": "Tú te llevas la victoria, el deseo de tu corazón… el Atlas alimenta… tu adicción…",
@@ -29927,6 +29940,7 @@
         "HideoutDark": "Guarida Cementerio de luz fantasmal",
         "HideoutArenaBlackStar_": "Guarida polar",
         "HideoutArenaInfiniteHunger": "Guarida hirviente",
+        "HideoutCosmicAtlas": "Guarida del Atlas",
         "pvpTown": "Área de Preparación de la Arena de Sarn",
         "AtlasExilesBoss5": "El ojo de la tormenta",
         "AfflictionTown6": "Vigilia de la locura",
@@ -30102,8 +30116,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "ร็อก",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "ดวงดาวสีดำ",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "อุปราชอาบเพลิง",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "ผู้กลืนกินโลกา",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "ความหิวโหยไม่รู้สิ้น"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "ผู้กลืนกินโลกา"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "นี่​เป็น​กุญแจ​สำคัญ​สู่​เบ้าหลอม​ที่​บิดเบือน​จิตใจ",
@@ -32131,6 +32144,7 @@
         "HideoutDark": "ที่ซ่อนสุสานแสงผี",
         "HideoutArenaBlackStar_": "ที่ซ่อน Polaric",
         "HideoutArenaInfiniteHunger": "ที่ซ่อน Seething",
+        "HideoutCosmicAtlas": "ที่ซ่อน Atlas",
         "pvpTown": "Sarn Arena Staging Area",
         "AtlasExilesBoss5": "ใจกลางพายุ",
         "AfflictionTown6": "หอสังเกตการณ์สิ้นสติ",
@@ -32306,8 +32320,7 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "羅格",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "黯星",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "灼烙總督",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "吞噬天地",
-        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss": "無盡渴望"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "吞噬天地"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "這是一把鑰匙。開啟考驗心靈與理智最嚴苛試煉的一把鑰匙。",
@@ -34335,6 +34348,7 @@
         "HideoutDark": "藏身處 - 鬼魅陵墓",
         "HideoutArenaBlackStar_": "藏身處 - 極地",
         "HideoutArenaInfiniteHunger": "藏身處 - 沸騰之地",
+        "HideoutCosmicAtlas": "藏身處 - 輿圖",
         "pvpTown": "薩恩競技場 - 準備區域",
         "AtlasExilesBoss5": "暴風之眼",
         "AfflictionTown6": "狂魔之望",

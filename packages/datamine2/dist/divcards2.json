@@ -8,6 +8,11 @@
     },
     {
       "title": {
+        "name": "A Dusty Memory"
+      }
+    },
+    {
+      "title": {
         "name": "A Familiar Call"
       }
     },
@@ -65,6 +70,11 @@
     },
     {
       "title": {
+        "name": "Alivia's Grace"
+      }
+    },
+    {
+      "title": {
         "name": "Alluring Bounty",
         "drop areas": "MapAtziri1,MapAtziri2"
       }
@@ -117,6 +127,11 @@
       "title": {
         "name": "Audacity",
         "drop areas": "MapAtziri1"
+      }
+    },
+    {
+      "title": {
+        "name": "Auspicious Ambitions"
       }
     },
     {
@@ -372,6 +387,11 @@
     },
     {
       "title": {
+        "name": "Divine Beauty"
+      }
+    },
+    {
+      "title": {
         "name": "Divine Justice"
       }
     },
@@ -443,6 +463,11 @@
     {
       "title": {
         "name": "Eternal Bonds"
+      }
+    },
+    {
+      "title": {
+        "name": "Ever-Changing"
       }
     },
     {
@@ -703,6 +728,11 @@
       "title": {
         "name": "Magnum Opus",
         "drop areas": "Synthesis_MapGuardian1,Synthesis_MapGuardian2,Synthesis_MapGuardian3,Synthesis_MapGuardian4"
+      }
+    },
+    {
+      "title": {
+        "name": "Man With Bear"
       }
     },
     {
@@ -1307,7 +1337,7 @@
     {
       "title": {
         "name": "The Enthusiasts",
-        "drop areas": "MapWorldsMuseum"
+        "drop areas": "MapWorldsMuseum,MapWorldsAcademy"
       }
     },
     {
@@ -1359,6 +1389,11 @@
       "title": {
         "name": "The Fiend",
         "drop areas": "MapWorldsTempleUnique,MapAtlasShrine,Map2Tier14_2,MapWorldsShrine"
+      }
+    },
+    {
+      "title": {
+        "name": "The Finishing Touch"
       }
     },
     {
@@ -1877,6 +1912,12 @@
     {
       "title": {
         "name": "The Realm"
+      }
+    },
+    {
+      "title": {
+        "name": "The Return of the Rat",
+        "drop areas": "2_8_9"
       }
     },
     {
