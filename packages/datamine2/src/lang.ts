@@ -76,7 +76,7 @@ const exportedNPCs = new Set([
     // eater
     "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss",
     // infinite hunger
-    "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss",
+    "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_",
 ])
 function isNPCIdExported(i: input.NPC): boolean {
     return !!exportedNPCs.has(i.Id)

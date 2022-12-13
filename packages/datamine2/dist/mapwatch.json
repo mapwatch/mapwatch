@@ -12484,7 +12484,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "The Black Star",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "The Searing Exarch",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "The Eater of Worlds"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "The Eater of Worlds",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "The Infinite Hunger"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "This is the key to a crucible that stretches the sanity of the mind.",
@@ -14688,7 +14689,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "L'Astre noir",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "L'Exarque ardent",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Le Mangeur de mondes"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Le Mangeur de mondes",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "La Faim infinie"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Ceci est la clé d'une épreuve qui distend la santé de l'esprit.",
@@ -16892,7 +16894,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "Der Schwarze Stern",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "Der Brennende Exarch",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Der Weltenfresser"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Der Weltenfresser",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "Der Unendliche Hunger"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Die ist der Schlüssel zu einem Zentrum, das die Sinne zu zerreißen droht.",
@@ -19096,7 +19099,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "ログ",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "黒き星",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "灼熱の代行者",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "世界を喰らう者"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "世界を喰らう者",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "果てなき渇望"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "This is the key to a crucible that stretches the sanity of the mind.",
@@ -21300,7 +21304,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "로그",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "검은 별",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "작열의 총주교",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "세계 포식자"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "세계 포식자",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "무한한 허기"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "이것은 온전한 정신을 연장시켜 주는 도가니의 열쇠로다.",
@@ -23504,7 +23509,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "A Estrela Negra",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "O Exarca Cauterizado",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "O Devorador de Mundos"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "O Devorador de Mundos",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "A Fome Infinita"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Esta é a chave para um crisol que estende a sanidade da mente.",
@@ -25708,7 +25714,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Рог",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "Чёрное солнце",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "Пламенный экзарх",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Пожиратель миров"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "Пожиратель миров",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "Неутолимый голод"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Это ключ к тиглю, в котором здравомыслие обретает гибкость.",
@@ -27912,7 +27919,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "Rog",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "La Estrella negra",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "El Exarca abrasador",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "El Devorador de mundos"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "El Devorador de mundos",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "El Hambre infinita"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "Esta es la llave hacia un crisol que extiende la cordura de la mente.",
@@ -30116,7 +30124,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "ร็อก",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "ดวงดาวสีดำ",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "อุปราชอาบเพลิง",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "ผู้กลืนกินโลกา"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "ผู้กลืนกินโลกา",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "ความหิวโหยไม่รู้สิ้น"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "นี่​เป็น​กุญแจ​สำคัญ​สู่​เบ้าหลอม​ที่​บิดเบือน​จิตใจ",
@@ -32320,7 +32329,8 @@
         "Metadata/Monsters/LeagueExpedition/NPC/ExpeditionRog": "羅格",
         "Metadata/Monsters/AtlasInvaders/BlackStarMonsters/BlackStarBoss": "黯星",
         "Metadata/Monsters/AtlasInvaders/CleansingMonsters/CleansingBoss": "灼烙總督",
-        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "吞噬天地"
+        "Metadata/Monsters/AtlasInvaders/ConsumeMonsters/ConsumeBoss": "吞噬天地",
+        "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_": "無盡渴望"
       },
       "npcTextAudio": {
         "ShaperAtlasMapDrops": "這是一把鑰匙。開啟考驗心靈與理智最嚴苛試煉的一把鑰匙。",

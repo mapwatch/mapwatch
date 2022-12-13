@@ -215,4 +215,4 @@ eater =
 
 
 hunger =
-    "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss"
+    "Metadata/Monsters/AtlasInvaders/DoomMonsters/DoomBoss_"
