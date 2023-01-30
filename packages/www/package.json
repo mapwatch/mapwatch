@@ -23,7 +23,7 @@
     "create-elm-app": "^5.8.0",
     "fluent-typesafe": "erosson/fluent-typesafe#master",
     "raw-loader": "^4.0.1",
-    "rimraf": "^3.0.0",
+    "rimraf": "^4.1.2",
     "sakura.css": "^1.0.0",
     "scripty": "^2.0.0"
   }
