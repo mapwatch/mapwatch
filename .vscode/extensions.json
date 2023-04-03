@@ -1,6 +1,5 @@
 {
     "recommendations": [
-        "elmtooling.elm-ls-vscode",
-        "gamunu.vscode-yarn"
+        "ms-vscode-remote.remote-containers"
     ]
 }
