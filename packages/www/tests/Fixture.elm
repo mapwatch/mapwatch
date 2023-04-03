@@ -1,8 +1,8 @@
 module Fixture exposing (datamine, dictGetOrDie, ultimatumMod, worldArea)
 
 import Dict exposing (Dict)
-import Fixture.Json
 import Fixture.Examples
+import Fixture.Json
 import Json.Decode as D
 import Mapwatch.Datamine as Datamine exposing (Datamine, UltimatumModifier, WorldArea, langIndexEmpty)
 import Mapwatch.Datamine.Trialmaster as DMTrialmaster

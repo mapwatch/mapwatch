@@ -71,17 +71,19 @@ view model =
             ]
         , viewDownloadLink model
         , hr [] []
-        , p [ L.setupFormMaxSize ]
-            [ input
-                [ L.name_ "input"
+        , p []
+            [ span [ L.setupFormMaxSizePre ] []
+            , input
+                [ A.name "input"
                 , type_ "number"
                 , value <| String.fromInt model.maxSize
                 , onInput InputMaxSize
                 , A.min "0"
-                , A.max "100"
+                , A.max "200"
                 , tabindex 1
                 ]
                 []
+            , span [ L.setupFormMaxSizePost ] []
             ]
         , div [] <| viewFileSelector model
         , View.Volume.view model

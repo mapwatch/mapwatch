@@ -19,7 +19,9 @@ setup-desc-2-www = Then, <a data-l10n-name="link">if you're using the Mapwatch a
 setup-desc-2-electron = Then, leave me open while you play - I'll keep watching, no need to upload again.
 setup-example = Run an example now!
 
-setup-form-max-size = Analyze only the last <input data-l10n-name="input" /> MB of history
+# Splitting up messages like this is awful - but localization seems to break elm event bindings, and this is easier than digging into the root cause
+setup-form-max-size-pre = Analyze only the last 
+setup-form-max-size-post = MB of history
 setup-form-file-label = Client.txt:
 setup-form-file-hint = Hint - the file I need is usually in one of these places:
 setup-form-file-hint-path-1 = C:\Program Files (x86)\Grinding Gear Games\Path of Exile\logs\Client.txt

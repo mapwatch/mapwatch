@@ -4,6 +4,9 @@ All substantial Mapwatch website changes.
 
 ---
 
+## 2023-04-03
+- Changing the log file size now works properly. ("Analyze only the last 20 MB of history")
+
 ## 2022-09-28
 - The Searing Exarch, Eater of Worlds, Black Star, and Infinite Hunger encounters are now tracked.
 - Your deaths per map are now tracked.
