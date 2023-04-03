@@ -6,7 +6,7 @@ async function main() {
 const EXAMPLES_DIR = `${__dirname}/../../public/examples`
 async function buildExamples() {
     const filenames = await fs.readdir(EXAMPLES_DIR)
-    const examples = await Promise.all(filenames.filter(f => f !== 'big.txt').map(async file => {
+    const examples = await Promise.all(filenames.filter(f => f !== 'big.txt' || f.startsWith('.')).map(async file => {
         const slug = file.replace(/\.txt$/, '').replace(/-/g, '_')
         const path = `${EXAMPLES_DIR}/${file}`
         const buf = await fs.readFile(path)
