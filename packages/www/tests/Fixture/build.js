@@ -1,7 +1,7 @@
 const fs = require('fs/promises')
 
 async function main() {
-    return await Promise.all([buildExamples(), buildJson(), buildExampleOfSize('big.txt', 25)])
+    return await Promise.all([buildExamples(), buildJson(), buildExampleOfSize('big.txt', 45)])
 }
 const EXAMPLES_DIR = `${__dirname}/../../public/examples`
 async function buildExamples() {
