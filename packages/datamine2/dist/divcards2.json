@@ -2,6 +2,11 @@
   "cargoquery": [
     {
       "title": {
+        "name": "A Chilling Wind"
+      }
+    },
+    {
+      "title": {
         "name": "A Dab of Ink",
         "drop areas": "1_3_17_1,MapWorldsScriptorium,MapWorldsMuseum,MapWorldsAcademy"
       }
@@ -218,6 +223,11 @@
     {
       "title": {
         "name": "Broken Truce"
+      }
+    },
+    {
+      "title": {
+        "name": "Brother's Gift"
       }
     },
     {
@@ -738,6 +748,11 @@
     },
     {
       "title": {
+        "name": "Matryoshka"
+      }
+    },
+    {
+      "title": {
         "name": "Mawr Blaidd",
         "drop areas": "MapAtlasDarkForest,MapWorldsDarkForest,MapWorldsForbiddenWoods,MapWorldsBrambleValley"
       }
@@ -803,6 +818,11 @@
     {
       "title": {
         "name": "Perfection"
+      }
+    },
+    {
+      "title": {
+        "name": "Poisoned Faith"
       }
     },
     {
@@ -914,6 +934,11 @@
     {
       "title": {
         "name": "Something Dark"
+      }
+    },
+    {
+      "title": {
+        "name": "Soul Quenched"
       }
     },
     {
