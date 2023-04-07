@@ -604,10 +604,12 @@ ultimatumDecoder =
 
 leaguesDecoder : D.Decoder (List League)
 leaguesDecoder =
-    D.map2 League
+    -- skip leagues with no start date, like ruthless
+    D.map2 (\id -> Maybe.map (\at -> League id at))
         (D.field "id" D.string)
-        (D.field "registerAt" <| D.andThen (resultToDecoder << Result.map ISO8601.toPosix << ISO8601.fromString) D.string)
+        (D.maybe <| D.field "registerAt" <| D.andThen (resultToDecoder << Result.map ISO8601.toPosix << ISO8601.fromString) D.string)
         |> D.list
+        |> D.map (List.filterMap identity)
 
 
 divCardsDecoder : D.Decoder (List DivCard)
