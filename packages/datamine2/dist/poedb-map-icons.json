@@ -1,467 +1,475 @@
 [
   {
-    "name": "Whakawairua Tuahu",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VbmlxdWVNYXBFeWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7c20a66814/UniqueMapEye.png"
-  },
-  {
-    "name": "Terrace Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9IaWdoR2FyZGVucyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxfV0/14f41992b4/HighGardens.png"
-  },
-  {
-    "name": "Lava Lake Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jwc2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MX1d/1a9f6931bb/Corpse.png"
-  },
-  {
-    "name": "Strand Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdHJhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MX1d/621c57ded4/Strand.png"
-  },
-  {
-    "name": "Mausoleum Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXVzb2xldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MX1d/b988ecb1ed/Mausoleum.png"
-  },
-  {
-    "name": "The Twilight Temple",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9DZWxlc3RpYWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2b43e37784/Celestial.png"
-  },
-  {
-    "name": "Forking River Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gb3JraW5nUml2ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Mn1d/537f9d58ab/ForkingRiver.png"
-  },
-  {
-    "name": "Alleyways Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BbGxleXdheXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Mn1d/6cc8be548c/Alleyways.png"
-  },
-  {
-    "name": "Spider Forest Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TcGlkZXJGb3Jlc3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Mn1d/fe93333e07/SpiderForest.png"
-  },
-  {
-    "name": "Castle Ruins Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXN0bGVSdWlucyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoyfV0/e0072c55f0/CastleRuins.png"
-  },
-  {
-    "name": "Cage Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYWdlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjJ9XQ/717df8b14e/Cage.png"
-  },
-  {
-    "name": "Moon Temple Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MdW5hcmlzVGVtcGxlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjJ9XQ/af310d6860/LunarisTemple.png"
-  },
-  {
-    "name": "Arachnid Tomb Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmFjaG5pZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoyfV0/607839f111/Arachnid.png"
-  },
-  {
-    "name": "Crimson Temple Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TYW5jdHVhcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Mn1d/5e3c3d5e4c/Sanctuary.png"
-  },
-  {
     "name": "Olmec's Sanctum",
     "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9vbG1lYyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/844fea2e54/olmec.png"
-  },
-  {
-    "name": "The Putrid Cloister",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9QdXRyaWRDbG9pc3RlciIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/4113992f12/PutridCloister.png"
-  },
-  {
-    "name": "Caldera Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BYnlzcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjozfV0/5afc601547/Abyss.png"
-  },
-  {
-    "name": "Plateau Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF0ZWF1IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjN9XQ/4199c9fb3e/Plateau.png"
-  },
-  {
-    "name": "Port Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9RdWF5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjN9XQ/3253a2d8da/Quay.png"
-  },
-  {
-    "name": "Coves Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3ZlcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjozfV0/eac07becc5/Coves.png"
-  },
-  {
-    "name": "Phantasmagoria Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaGFudGFzbWFnb3JpYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjozfV0/fad3c8275b/Phantasmagoria.png"
-  },
-  {
-    "name": "Bone Crypt Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXRhY29tYiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjozfV0/6880e78e17/Catacomb.png"
-  },
-  {
-    "name": "Museum Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NdXNldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6M31d/81c72a16f3/Museum.png"
-  },
-  {
-    "name": "Sepulchre Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TZXB1bGNocmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6M31d/fe4426e365/Sepulchre.png"
-  },
-  {
-    "name": "Vaults of Atziri",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VbmlxdWVNYXAxIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/7612528d07/UniqueMap1.png"
-  },
-  {
-    "name": "Mao Kun",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9GYWlyZ3JhdmVzTWFwMDEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1c1de7d51/FairgravesMap01.png"
-  },
-  {
-    "name": "Maelström of Chaos",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9NYWVsc3Ryb21vZkNoYW9zIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/7772c4e971/MaelstromofChaos.png"
-  },
-  {
-    "name": "Atoll Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BdG9sbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo0fV0/59c41443bf/Atoll.png"
-  },
-  {
-    "name": "Coral Ruins Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jwc2VUcmVuY2giLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NH1d/d6aa811996/CorpseTrench.png"
-  },
-  {
-    "name": "Shore Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaG9yZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo0fV0/7702c43f45/Shore.png"
-  },
-  {
-    "name": "Spider Lair Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TcGlkZXJMYWlyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjR9XQ/1eabd69387/SpiderLair.png"
-  },
-  {
-    "name": "Arachnid Nest Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmFjaG5pZE5lc3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NH1d/8556932661/ArachnidNest.png"
-  },
-  {
-    "name": "Vaal Pyramid Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYWFsUHlyYW1pZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo0fV0/7ee369c429/VaalPyramid.png"
-  },
-  {
-    "name": "Thicket Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UaGlja2V0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjR9XQ/d3b3275123/Thicket.png"
-  },
-  {
-    "name": "Residence Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SZXNpZGVuY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NH1d/9b58d982ec/Residence.png"
-  },
-  {
-    "name": "The Vinktar Square",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UaGVWaW5rdGFyU3F1YXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d26b82ca56/TheVinktarSquare.png"
-  },
-  {
-    "name": "Poorjoy's Asylum",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9Qb29yam95c0FzeWx1bSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d7e9aba922/PoorjoysAsylum.png"
-  },
-  {
-    "name": "Bog Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Cb2ciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NX1d/85771d89e9/Bog.png"
-  },
-  {
-    "name": "Courtyard Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3VydHlhcmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NX1d/b7bd8fec38/Courtyard.png"
-  },
-  {
-    "name": "Pier Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaWVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjV9XQ/e41446ba96/Pier.png"
-  },
-  {
-    "name": "Acid Caverns Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdWxwaHVyVmVudHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NX1d/b17ab8b7da/SulphurVents.png"
-  },
-  {
-    "name": "Ivory Temple Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Jdm9yeVRlbXBsZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo1fV0/e3153edf90/IvoryTemple.png"
-  },
-  {
-    "name": "Silo Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Sb2JvdFR1bm5lbFNpbG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NX1d/ac0bdff810/RobotTunnelSilo.png"
-  },
-  {
-    "name": "Laboratory Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjV9XQ/19d1a1326d/Laboratory.png"
-  },
-  {
-    "name": "Temple Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UZW1wbGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NX1d/a4adfca12f/Temple.png"
-  },
-  {
-    "name": "Acton's Nightmare",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9tdXNpY2JveCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/765ebfd00f/musicbox.png"
-  },
-  {
-    "name": "Sulphur Vents Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jyb3Npb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Nn1d/00474526ca/Corrosion.png"
-  },
-  {
-    "name": "Volcano Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Wb2xjYW5vIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjZ9XQ/b36b647e20/Volcano.png"
-  },
-  {
-    "name": "Iceberg Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9JY2ViZXJnIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjZ9XQ/c5ef9e75a9/Iceberg.png"
-  },
-  {
-    "name": "Peninsula Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EcnlQZW5pbnN1bGEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Nn1d/a36d9bf0ec/DryPeninsula.png"
-  },
-  {
-    "name": "Promenade Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Qcm9tZW5hZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Nn1d/58298345c6/Promenade.png"
-  },
-  {
-    "name": "Haunted Mansion Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaGFtYmVycyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo2fV0/a3f67f6419/Chambers.png"
-  },
-  {
-    "name": "Overgrown Shrine Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PdmVyZ3Jvd25TaHJpbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Nn1d/a78570c7a6/OvergrownShrine.png"
-  },
-  {
-    "name": "Death and Taxes",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9EZWF0aGFuZFRheGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0cc72adc19/DeathandTaxes.png"
-  },
-  {
-    "name": "Crater Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UcmlidW5hbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo3fV0/09c3098df9/Tribunal.png"
-  },
-  {
-    "name": "Frozen Cabins Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gcm96ZW5DYWJpbnMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6N31d/da90c31dd4/FrozenCabins.png"
-  },
-  {
-    "name": "Precinct Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QcmVjaW5jdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo3fV0/e5fc6bc251/Precinct.png"
-  },
-  {
-    "name": "Mineral Pools Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NaW5lcmFsUG9vbHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6N31d/98eb84608f/MineralPools.png"
-  },
-  {
-    "name": "Factory Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9GYWN0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjd9XQ/0757bf2f4a/Factory.png"
-  },
-  {
-    "name": "Necropolis Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9OZWNyb3BvbGlzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjd9XQ/79ff32759a/Necropolis.png"
-  },
-  {
-    "name": "Burial Chambers Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CdXJpYWxDaGFtYmVycyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo3fV0/6615b9ba0e/BurialChambers.png"
-  },
-  {
-    "name": "Primordial Blocks Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QcmltZXZhbFJ1aW5zIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/1d61cc15f1/PrimevalRuins.png"
-  },
-  {
-    "name": "Arsenal Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcnNlbmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/bb52396cdb/Arsenal.png"
-  },
-  {
-    "name": "Crimson Township Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Dcmltc29uVG93bnNoaXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6OH1d/08d6940814/CrimsonTownship.png"
-  },
-  {
-    "name": "Estuary Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Fc3R1YXJ5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/f617193e9d/Estuary.png"
-  },
-  {
-    "name": "Dungeon Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EdW5nZW9uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/55f9775171/Dungeon.png"
-  },
-  {
-    "name": "Leyline Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdWxwaHVyV2FzdGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/b6e2644d3c/SulphurWastes.png"
-  },
-  {
-    "name": "Academy Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BY2FkZW15IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/45502e1334/Academy.png"
-  },
-  {
-    "name": "Primordial Pool Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Qcmltb3JkaWFsUG9vbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo5fV0/951d6c9ec1/PrimordialPool.png"
-  },
-  {
-    "name": "Desert Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZXNlcnQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6OX1d/f5c060baa5/Desert.png"
-  },
-  {
-    "name": "Arcade Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmNhZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6OX1d/63cc362244/Arcade.png"
-  },
-  {
-    "name": "Bazaar Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CYXphYXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6OX1d/2658dc2d2d/Bazaar.png"
-  },
-  {
-    "name": "Colosseum Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xvc3NldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6OX1d/4bc2bc6872/Colosseum.png"
-  },
-  {
-    "name": "Dark Forest Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EYXJrRm9yZXN0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjl9XQ/2c35ed8383/DarkForest.png"
-  },
-  {
-    "name": "Caer Blaidd, Wolfpack's Den",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9Xb2xmTWFwIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/db94bff258/WolfMap.png"
-  },
-  {
-    "name": "Gardens Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UZXJyYWNlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEwfV0/8c196dd1df/Terrace.png"
-  },
-  {
-    "name": "Grave Trough Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CdXJuIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEwfV0/b0437a9a13/Burn.png"
-  },
-  {
-    "name": "Lookout Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Mb29rb3V0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEwfV0/3eb1244dc1/Lookout.png"
-  },
-  {
-    "name": "Forbidden Woods Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gb3JiaWRkZW5Xb29kcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMH1d/f4adb80c67/ForbiddenWoods.png"
-  },
-  {
-    "name": "Underground River Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9VbmRlcmdyb3VuZFJpdmVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEwfV0/b60df611e8/UndergroundRiver.png"
-  },
-  {
-    "name": "Defiled Cathedral Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZWZpbGVkQ2F0aGVkcmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEwfV0/065874797c/DefiledCathedral.png"
-  },
-  {
-    "name": "Dry Sea Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZXNlcnRTaGlwR3JhdmV5YXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjExfV0/4c2bd19395/DesertShipGraveyard.png"
-  },
-  {
-    "name": "Wasteland Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XYXN0ZWxhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTF9XQ/ebd6a26e8d/Wasteland.png"
-  },
-  {
-    "name": "Mesa Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NZXNhIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjExfV0/d9f4bb6fd3/Mesa.png"
-  },
-  {
-    "name": "Infested Valley Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9JbmZlc3RhdGlvbiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMX1d/5beab7e0bd/Infestation.png"
-  },
-  {
-    "name": "City Square Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaXR5U3F1YXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjExfV0/b1c2ad092a/CitySquare.png"
-  },
-  {
-    "name": "Villa Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WaWxsYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMX1d/273337f2cd/Villa.png"
-  },
-  {
-    "name": "The Coward's Trial",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VbmRlYWRTaWVnZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/53f1dbdcb4/UndeadSiege.png"
-  },
-  {
-    "name": "Hallowed Ground",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9IYWxsb3dlZEdyb3VuZCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/0dfbdc7da9/HallowedGround.png"
   },
   {
     "name": "Colonnade Map",
     "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xvbm5hZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTJ9XQ/e568f48cde/Colonnade.png"
   },
   {
-    "name": "Shipyard Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaGlweWFyZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMn1d/c07dc768b4/Shipyard.png"
+    "name": "Alleyways Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BbGxleXdheXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Mn1d/6cc8be548c/Alleyways.png"
   },
   {
-    "name": "Cold River Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xkUml2ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTJ9XQ/056dd8eaeb/ColdRiver.png"
+    "name": "Scriptorium Map",
+    "icon": "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Scriptorium.png?scale=1"
   },
   {
-    "name": "Cemetery Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DZW1ldGVyeSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMn1d/25914a1d6c/Cemetery.png"
-  },
-  {
-    "name": "Cursed Crypt Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DcnlwdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMn1d/5d2f6c59ef/Crypt.png"
-  },
-  {
-    "name": "Courthouse Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3VydGhvdXNlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEyfV0/c8428d6870/Courthouse.png"
-  },
-  {
-    "name": "Plaza Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF6YSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxM31d/b6ec7a9dd4/Plaza.png"
-  },
-  {
-    "name": "Orchard Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PcmNoYXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEzfV0/57aff57263/Orchard.png"
-  },
-  {
-    "name": "Lair Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWlyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEzfV0/cc5445c6dc/Lair.png"
-  },
-  {
-    "name": "Channel Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaGFubmVsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEzfV0/79504ba473/Channel.png"
-  },
-  {
-    "name": "Shrine Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaHJpbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTN9XQ/6065805e0d/Shrine.png"
-  },
-  {
-    "name": "Doryani's Machinarium",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9Eb3J5YW5pcyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/581444be53/Doryanis.png"
-  },
-  {
-    "name": "Canyon Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYW55b24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTR9XQ/e3ba1f3a67/Canyon.png"
-  },
-  {
-    "name": "Sunken City Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdW5rZW5DaXR5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjE0fV0/5ce36158d8/SunkenCity.png"
-  },
-  {
-    "name": "Maze Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXplIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjE0fV0/903ef1dfe8/Maze.png"
-  },
-  {
-    "name": "Carcass Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXJjYXNzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjE0fV0/2ff22a7813/Carcass.png"
-  },
-  {
-    "name": "Underground Sea Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9VbmRlcmdyb3VuZFNlYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxNH1d/710d1a8771/UndergroundSea.png"
+    "name": "Bone Crypt Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXRhY29tYiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjozfV0/6880e78e17/Catacomb.png"
   },
   {
     "name": "Pillars of Arun",
     "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9QaWxsYXJzT2ZWYXN0aXJpIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/f030aac473/PillarsOfVastiri.png"
   },
   {
+    "name": "Dry Sea Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZXNlcnRTaGlwR3JhdmV5YXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjExfV0/4c2bd19395/DesertShipGraveyard.png"
+  },
+  {
     "name": "Dunes Map",
     "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EdW5lcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxNX1d/04dc64b7b4/Dunes.png"
   },
   {
-    "name": "Ashen Wood Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EcnlXb29kcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxNX1d/4b34f9d390/DryWoods.png"
+    "name": "Belfry Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CZWxmcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTF9XQ/0d629edc10/Belfry.png"
   },
   {
-    "name": "Overgrown Ruin Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PdmVyZ3Jvd25SdWluIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjE1fV0/5c7d7e71ca/OvergrownRuin.png"
+    "name": "Precinct Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QcmVjaW5jdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo3fV0/e5fc6bc251/Precinct.png"
   },
   {
-    "name": "Foundry Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UaGF1bWF0dXJneUR1bmdlb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTV9XQ/fc0c37af1c/ThaumaturgyDungeon.png"
+    "name": "Stagnation Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdGFnbmF0aW9uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/0647875235/Stagnation.png"
+  },
+  {
+    "name": "Excavation Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9FeGNhdmF0aW9uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/23ea0bd154/Excavation.png"
+  },
+  {
+    "name": "Silo Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Sb2JvdFR1bm5lbFNpbG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NX1d/ac0bdff810/RobotTunnelSilo.png"
   },
   {
     "name": "Grotto Map",
     "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Hcm90dG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTV9XQ/fb19daf9f9/Grotto.png"
   },
   {
-    "name": "Ghetto Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9HaGV0dG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTZ9XQ/3c55d6e2bf/Ghetto.png"
+    "name": "Whakawairua Tuahu",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VbmlxdWVNYXBFeWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/7c20a66814/UniqueMapEye.png"
+  },
+  {
+    "name": "Acton's Nightmare",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9tdXNpY2JveCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/765ebfd00f/musicbox.png"
+  },
+  {
+    "name": "Primordial Pool Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Qcmltb3JkaWFsUG9vbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo5fV0/951d6c9ec1/PrimordialPool.png"
+  },
+  {
+    "name": "Primordial Blocks Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QcmltZXZhbFJ1aW5zIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/1d61cc15f1/PrimevalRuins.png"
+  },
+  {
+    "name": "Infested Valley Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9JbmZlc3RhdGlvbiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMX1d/5beab7e0bd/Infestation.png"
+  },
+  {
+    "name": "Lair Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWlyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEzfV0/cc5445c6dc/Lair.png"
+  },
+  {
+    "name": "Fields Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9GaWVsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE0LCJtdCI6MTR9XQ/a83aeff332/Fields.png"
+  },
+  {
+    "name": "Strand Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdHJhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MX1d/621c57ded4/Strand.png"
+  },
+  {
+    "name": "Shrine Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaHJpbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTN9XQ/6065805e0d/Shrine.png"
+  },
+  {
+    "name": "Overgrown Shrine Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PdmVyZ3Jvd25TaHJpbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Nn1d/a78570c7a6/OvergrownShrine.png"
+  },
+  {
+    "name": "Vaults of Atziri",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VbmlxdWVNYXAxIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/7612528d07/UniqueMap1.png"
+  },
+  {
+    "name": "Hallowed Ground",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9IYWxsb3dlZEdyb3VuZCIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/0dfbdc7da9/HallowedGround.png"
+  },
+  {
+    "name": "The Twilight Temple",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9DZWxlc3RpYWwiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/2b43e37784/Celestial.png"
+  },
+  {
+    "name": "Orchard Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PcmNoYXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEzfV0/57aff57263/Orchard.png"
+  },
+  {
+    "name": "Lighthouse Map",
+    "icon": "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Beacon.png?scale=1"
+  },
+  {
+    "name": "Cemetery Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DZW1ldGVyeSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMn1d/25914a1d6c/Cemetery.png"
+  },
+  {
+    "name": "Port Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9RdWF5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjN9XQ/3253a2d8da/Quay.png"
+  },
+  {
+    "name": "Vaal Pyramid Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYWFsUHlyYW1pZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo0fV0/7ee369c429/VaalPyramid.png"
+  },
+  {
+    "name": "Moon Temple Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MdW5hcmlzVGVtcGxlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjJ9XQ/af310d6860/LunarisTemple.png"
+  },
+  {
+    "name": "Laboratory Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjV9XQ/19d1a1326d/Laboratory.png"
+  },
+  {
+    "name": "Tower Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Ub3dlciIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10IjoyfV0/4939b0c2d9/Tower.png"
+  },
+  {
+    "name": "Maelström of Chaos",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9NYWVsc3Ryb21vZkNoYW9zIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/7772c4e971/MaelstromofChaos.png"
+  },
+  {
+    "name": "The Vinktar Square",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9UaGVWaW5rdGFyU3F1YXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/d26b82ca56/TheVinktarSquare.png"
+  },
+  {
+    "name": "Marshes Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXJzaGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEyfV0/73f503fe75/Marshes.png"
+  },
+  {
+    "name": "Arcade Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmNhZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6OX1d/63cc362244/Arcade.png"
+  },
+  {
+    "name": "City Square Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaXR5U3F1YXJlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjExfV0/b1c2ad092a/CitySquare.png"
+  },
+  {
+    "name": "Courtyard Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3VydHlhcmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NX1d/b7bd8fec38/Courtyard.png"
+  },
+  {
+    "name": "Atoll Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BdG9sbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo0fV0/59c41443bf/Atoll.png"
+  },
+  {
+    "name": "Plateau Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF0ZWF1IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjN9XQ/4199c9fb3e/Plateau.png"
+  },
+  {
+    "name": "Mineral Pools Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NaW5lcmFsUG9vbHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6N31d/98eb84608f/MineralPools.png"
+  },
+  {
+    "name": "Residence Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SZXNpZGVuY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NH1d/9b58d982ec/Residence.png"
+  },
+  {
+    "name": "Mao Kun",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9GYWlyZ3JhdmVzTWFwMDEiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/e1c1de7d51/FairgravesMap01.png"
+  },
+  {
+    "name": "Pit Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaXQxIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjEyfV0/7e992bab25/Pit1.png"
+  },
+  {
+    "name": "Promenade Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Qcm9tZW5hZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Nn1d/58298345c6/Promenade.png"
+  },
+  {
+    "name": "Shore Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaG9yZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo0fV0/7702c43f45/Shore.png"
+  },
+  {
+    "name": "Castle Ruins Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXN0bGVSdWlucyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoyfV0/e0072c55f0/CastleRuins.png"
+  },
+  {
+    "name": "Toxic Sewer Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TZXdlciIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxNn1d/0bcffda4d9/Sewer.png"
+  },
+  {
+    "name": "Phantasmagoria Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaGFudGFzbWFnb3JpYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjozfV0/fad3c8275b/Phantasmagoria.png"
+  },
+  {
+    "name": "Waste Pool Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XYXN0ZVBvb2wiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTZ9XQ/3adf3f21f9/WastePool.png"
+  },
+  {
+    "name": "The Coward's Trial",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9VbmRlYWRTaWVnZSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/53f1dbdcb4/UndeadSiege.png"
+  },
+  {
+    "name": "Sulphur Vents Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jyb3Npb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Nn1d/00474526ca/Corrosion.png"
+  },
+  {
+    "name": "Canyon Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYW55b24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTR9XQ/e3ba1f3a67/Canyon.png"
+  },
+  {
+    "name": "Forbidden Woods Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gb3JiaWRkZW5Xb29kcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMH1d/f4adb80c67/ForbiddenWoods.png"
+  },
+  {
+    "name": "Coral Ruins Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jwc2VUcmVuY2giLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NH1d/d6aa811996/CorpseTrench.png"
+  },
+  {
+    "name": "Cursed Crypt Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DcnlwdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMn1d/5d2f6c59ef/Crypt.png"
+  },
+  {
+    "name": "Relic Chambers Map",
+    "icon": "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Antiquary.png?scale=1"
+  },
+  {
+    "name": "Chateau Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaGF0ZWF1IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjR9XQ/6d5b0cc5e0/Chateau.png"
+  },
+  {
+    "name": "Caldera Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BYnlzcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjozfV0/5afc601547/Abyss.png"
+  },
+  {
+    "name": "Shipyard Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaGlweWFyZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMn1d/c07dc768b4/Shipyard.png"
+  },
+  {
+    "name": "Armoury Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Bcm1vcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTR9XQ/c3c2005579/Armory.png"
+  },
+  {
+    "name": "Arachnid Tomb Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmFjaG5pZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoyfV0/607839f111/Arachnid.png"
+  },
+  {
+    "name": "Flooded Mine Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYXZlcm4iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjEzLCJtdCI6Mn1d/cd43ba209f/Cavern.png"
+  },
+  {
+    "name": "Crimson Temple Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TYW5jdHVhcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Mn1d/5e3c3d5e4c/Sanctuary.png"
+  },
+  {
+    "name": "Crystal Ore Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DcnlzdGFsT3JlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjl9XQ/aa25e2a29a/CrystalOre.png"
+  },
+  {
+    "name": "Wasteland Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XYXN0ZWxhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTF9XQ/ebd6a26e8d/Wasteland.png"
+  },
+  {
+    "name": "Pier Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaWVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjV9XQ/e41446ba96/Pier.png"
+  },
+  {
+    "name": "Ramparts Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SYW1wYXJ0cyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNn1d/70b9fb775f/Ramparts.png"
+  },
+  {
+    "name": "Cold River Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xkUml2ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTJ9XQ/056dd8eaeb/ColdRiver.png"
+  },
+  {
+    "name": "Siege Map",
+    "icon": "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Boulevard.png?scale=1"
+  },
+  {
+    "name": "Synthesised Map",
+    "icon": "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Boulevard.png?scale=1"
+  },
+  {
+    "name": "Overgrown Ruin Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PdmVyZ3Jvd25SdWluIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjE1fV0/5c7d7e71ca/OvergrownRuin.png"
+  },
+  {
+    "name": "Plaza Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF6YSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxM31d/b6ec7a9dd4/Plaza.png"
+  },
+  {
+    "name": "Arachnid Nest Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmFjaG5pZE5lc3QiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NH1d/8556932661/ArachnidNest.png"
+  },
+  {
+    "name": "Factory Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9GYWN0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjd9XQ/0757bf2f4a/Factory.png"
+  },
+  {
+    "name": "Foundry Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UaGF1bWF0dXJneUR1bmdlb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTV9XQ/fc0c37af1c/ThaumaturgyDungeon.png"
+  },
+  {
+    "name": "Cells Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DZWxscyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjozfV0/a0c69a2251/Cells.png"
+  },
+  {
+    "name": "Underground Sea Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9VbmRlcmdyb3VuZFNlYSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxNH1d/710d1a8771/UndergroundSea.png"
+  },
+  {
+    "name": "Beach Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CZWFjaCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10IjoxNH1d/e7e6ad8e78/Beach.png"
+  },
+  {
+    "name": "Frozen Cabins Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gcm96ZW5DYWJpbnMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6N31d/da90c31dd4/FrozenCabins.png"
+  },
+  {
+    "name": "Geode Map",
+    "icon": "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Quarry.png?scale=1"
+  },
+  {
+    "name": "Crimson Township Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Dcmltc29uVG93bnNoaXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6OH1d/08d6940814/CrimsonTownship.png"
+  },
+  {
+    "name": "Fungal Hollow Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9GdW5nYWxDYXZlcm5zIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjd9XQ/60cabeb621/FungalCaverns.png"
+  },
+  {
+    "name": "Malformation Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYWxmb3JtYXRpb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjEzLCJtdCI6N31d/11d00e3afa/Malformation.png"
+  },
+  {
+    "name": "The Putrid Cloister",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9QdXRyaWRDbG9pc3RlciIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/4113992f12/PutridCloister.png"
+  },
+  {
+    "name": "Death and Taxes",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9EZWF0aGFuZFRheGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/0cc72adc19/DeathandTaxes.png"
+  },
+  {
+    "name": "Desert Spring Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PYXNpcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10Ijo4fV0/e7be33aeca/Oasis.png"
+  },
+  {
+    "name": "Jungle Valley Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9KdW5nbGVWYWxsZXkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Nn1d/0127707652/JungleValley.png"
+  },
+  {
+    "name": "Wharf Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XaGFyZiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10Ijo1fV0/a552c79312/Wharf.png"
+  },
+  {
+    "name": "Necropolis Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9OZWNyb3BvbGlzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjd9XQ/79ff32759a/Necropolis.png"
+  },
+  {
+    "name": "Conservatory Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CYXRocyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTMsIm10Ijo0fV0/84674a1d05/Baths.png"
+  },
+  {
+    "name": "Museum Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NdXNldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6M31d/81c72a16f3/Museum.png"
+  },
+  {
+    "name": "Arid Lake Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmlkTGFrZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNn1d/54e57d4caa/AridLake.png"
+  },
+  {
+    "name": "Crater Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UcmlidW5hbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo3fV0/09c3098df9/Tribunal.png"
+  },
+  {
+    "name": "Thicket Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UaGlja2V0IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjR9XQ/d3b3275123/Thicket.png"
+  },
+  {
+    "name": "Leyline Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TdWxwaHVyV2FzdGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/b6e2644d3c/SulphurWastes.png"
+  },
+  {
+    "name": "Defiled Cathedral Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZWZpbGVkQ2F0aGVkcmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEwfV0/065874797c/DefiledCathedral.png"
+  },
+  {
+    "name": "Doryani's Machinarium",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9Eb3J5YW5pcyIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/581444be53/Doryanis.png"
+  },
+  {
+    "name": "Poorjoy's Asylum",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9Qb29yam95c0FzeWx1bSIsInciOjEsImgiOjEsInNjYWxlIjoxfV0/d7e9aba922/PoorjoysAsylum.png"
+  },
+  {
+    "name": "Terrace Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9IaWdoR2FyZGVucyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxfV0/14f41992b4/HighGardens.png"
+  },
+  {
+    "name": "Barrows Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CYXJyb3dzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjh9XQ/f67ebb7754/Barrows.png"
+  },
+  {
+    "name": "Dungeon Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EdW5nZW9uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/55f9775171/Dungeon.png"
+  },
+  {
+    "name": "Maze Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXplIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjE0fV0/903ef1dfe8/Maze.png"
+  },
+  {
+    "name": "Temple Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UZW1wbGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NX1d/a4adfca12f/Temple.png"
+  },
+  {
+    "name": "Caer Blaidd, Wolfpack's Den",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9Xb2xmTWFwIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/db94bff258/WolfMap.png"
+  },
+  {
+    "name": "Racecourse Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SYWNlY291cnNlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEwfV0/707f3eab94/Racecourse.png"
+  },
+  {
+    "name": "Colosseum Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xvc3NldW0iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6OX1d/4bc2bc6872/Colosseum.png"
+  },
+  {
+    "name": "Tropical Island Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Ucm9waWNhbElzbGFuZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10Ijo1fV0/64051de4a9/TropicalIsland.png"
+  },
+  {
+    "name": "Underground River Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9VbmRlcmdyb3VuZFJpdmVyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEwfV0/b60df611e8/UndergroundRiver.png"
+  },
+  {
+    "name": "Core Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3JlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjh9XQ/f9cc855c29/Core.png"
+  },
+  {
+    "name": "Dig Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EaWciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OX1d/5094325b04/Dig.png"
+  },
+  {
+    "name": "Volcano Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Wb2xjYW5vIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjZ9XQ/b36b647e20/Volcano.png"
+  },
+  {
+    "name": "Arsenal Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcnNlbmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/bb52396cdb/Arsenal.png"
   },
   {
     "name": "Pit of the Chimera Map",
     "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DaGltZXJhIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjAsIm1pIjoxfV0/71dee30aa2/Chimera.png"
   },
   {
-    "name": "Ancient City Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9WYWFsQ2l0eSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxNn1d/824623d7a6/VaalCity.png"
-  },
-  {
-    "name": "Graveyard Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9HcmF2ZXlhcmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjEzLCJtdCI6MTF9XQ/d5df73b95e/Graveyard.png"
+    "name": "Coves Map",
+    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3ZlcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjozfV0/eac07becc5/Coves.png"
   },
   {
     "name": "Lair of the Hydra Map",
@@ -478,9 +486,5 @@
   {
     "name": "Forge of the Phoenix Map",
     "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QaG9lbml4IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjAsIm1pIjoxfV0/220e2d92f4/Phoenix.png"
-  },
-  {
-    "name": "Toxic Sewer Map",
-    "icon": "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TZXdlciIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxNn1d/0bcffda4d9/Sewer.png"
   }
 ]
