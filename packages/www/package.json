@@ -7,10 +7,10 @@
   "scripts": {
     "prepare": "yarn test:fixture",
     "dev": "bash scripts/_build/version && bash scripts/_build/l10n",
-    "build": "yarn dev && elm-app build",
-    "start": "concurrently --kill-others \"yarn dev --watch\" \"bash -c 'ELM_DEBUGGER=false elm-app start'\"",
+    "build": "yarn dev && NODE_OPTIONS=--openssl-legacy-provider elm-app build",
+    "start": "concurrently --kill-others \"yarn dev --watch\" \"bash -c 'NODE_OPTIONS=--openssl-legacy-provider ELM_DEBUGGER=false elm-app start'\"",
     "test:fixture": "node ./tests/Fixture/build.js",
-    "test": "yarn dev && yarn test:fixture && elm-app test",
+    "test": "yarn dev && yarn test:fixture && NODE_OPTIONS=--openssl-legacy-provider elm-app test",
     "clean": "rm -rf build tmp"
   },
   "dependencies": {
