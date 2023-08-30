@@ -11,12 +11,7 @@ updates:
       interval: weekly
     open-pull-requests-limit: 10
   - package-ecosystem: npm
-    directory: "/packages/datamine"
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 10
-  - package-ecosystem: npm
-    directory: "/packages/datamine-wiki"
+    directory: "/packages/datamine2"
     schedule:
       interval: weekly
     open-pull-requests-limit: 10

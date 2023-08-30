@@ -18,11 +18,11 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20.x
 
       - run: yarn install --frozen-lockfile
       - working-directory: ./packages/datamine2
