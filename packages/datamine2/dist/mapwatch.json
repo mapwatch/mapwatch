@@ -6255,8 +6255,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Hats/FireIceHorns.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Lookout.dds",
+        [
+          3,
+          6,
+          10,
+          14,
+          16
+        ],
         null
       ],
       [
@@ -6271,10 +6277,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Beach.dds",
         [
-          11,
-          14,
-          16,
-          16,
+          2,
+          5,
+          9,
+          13,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CZWFjaCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10IjoxNH1d/e7e6ad8e78/Beach.png"
@@ -6289,8 +6295,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Weapon/CelestialStaff.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Graveyard.dds",
+        [
+          4,
+          7,
+          11,
+          15,
+          16
+        ],
         null
       ],
       [
@@ -6305,8 +6317,8 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Dungeon.dds",
         [
+          11,
           14,
-          16,
           16,
           16,
           16
@@ -6325,10 +6337,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Alleyways.dds",
         [
-          1,
-          4,
+          5,
           8,
           12,
+          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BbGxleXdheXMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6Mn1d/6cc8be548c/Alleyways.png"
@@ -6343,8 +6355,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/gloves/AbyssalImpGloves.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Pen.dds",
+        [
+          7,
+          10,
+          14,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -6357,7 +6375,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/BodyArmour/AbyssalImpBody.dds",
+        "Art/2DItems/Effects/Weapon/ScholarStaff.dds",
         null,
         null
       ],
@@ -6371,14 +6389,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/AridLake.dds",
-        [
-          13,
-          16,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/Portals/FirePortal.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcmlkTGFrZSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNn1d/54e57d4caa/AridLake.png"
       ],
       [
@@ -6393,9 +6405,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Cavern.dds",
         [
-          8,
-          11,
-          15,
+          9,
+          12,
+          16,
           16,
           16
         ],
@@ -6411,14 +6423,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Marshes.dds",
-        [
-          5,
-          8,
-          12,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/Portals/FireAndIcePortal.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYXJzaGVzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjEyfV0/73f503fe75/Marshes.png"
       ],
       [
@@ -6431,8 +6437,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/AbyssPortal.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Iceberg.dds",
+        [
+          4,
+          7,
+          11,
+          15,
+          16
+        ],
         null
       ],
       [
@@ -6445,8 +6457,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/Portals/ImpPortal.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Cage.dds",
+        [
+          4,
+          7,
+          11,
+          15,
+          16
+        ],
         null
       ],
       [
@@ -6461,8 +6479,8 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/FungalCaverns.dds",
         [
-          11,
           14,
+          16,
           16,
           16,
           16
@@ -6481,10 +6499,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Excavation.dds",
         [
-          2,
-          5,
-          9,
-          13,
+          11,
+          14,
+          16,
+          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9FeGNhdmF0aW9uIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjJ9XQ/23ea0bd154/Excavation.png"
@@ -6501,9 +6519,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/SulphurWastes.dds",
         [
-          13,
-          16,
-          16,
+          5,
+          8,
+          12,
           16,
           16
         ],
@@ -6519,7 +6537,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNportraits/CNAscendant.dds",
+        "Art/2DItems/Effects/Hats/IceHelmet.dds",
         null,
         null
       ],
@@ -6535,10 +6553,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Quay.dds",
         [
-          4,
-          7,
+          8,
           11,
           15,
+          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9RdWF5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjN9XQ/3253a2d8da/Quay.png"
@@ -6553,7 +6571,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNportraits/CNElementalist.dds",
+        "Art/2DItems/Effects/gloves/IceGloves.dds",
         null,
         null
       ],
@@ -6569,9 +6587,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Cells.dds",
         [
-          10,
-          13,
-          16,
+          5,
+          8,
+          12,
           16,
           16
         ],
@@ -6589,9 +6607,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Arcade.dds",
         [
-          5,
           8,
-          12,
+          11,
+          15,
           16,
           16
         ],
@@ -6609,9 +6627,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CitySquare.dds",
         [
-          5,
-          8,
-          12,
+          11,
+          14,
+          16,
           16,
           16
         ],
@@ -6627,14 +6645,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Antiquary.dds",
-        [
-          7,
-          10,
-          14,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/shoes/FireAndIceBoots.dds",
+        null,
         "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Antiquary.png?scale=1"
       ],
       [
@@ -6647,8 +6659,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/TencentBallFireFrame.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Courthouse.dds",
+        [
+          12,
+          15,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -6703,9 +6721,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Chateau.dds",
         [
-          7,
-          10,
-          14,
+          8,
+          11,
+          15,
           16,
           16
         ],
@@ -6735,14 +6753,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Grotto.dds",
-        [
-          2,
-          5,
-          9,
-          13,
-          16
-        ],
+        "Art/2DItems/Effects/Shields/FireShield.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Hcm90dG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTV9XQ/fb19daf9f9/Grotto.png"
       ],
       [
@@ -6755,8 +6767,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/TopPlayer.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Glacier.dds",
+        [
+          13,
+          16,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -6771,9 +6789,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Volcano.dds",
         [
-          16,
-          16,
-          16,
+          5,
+          8,
+          12,
           16,
           16
         ],
@@ -6789,14 +6807,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Beacon.dds",
-        [
-          4,
-          7,
-          11,
-          15,
-          16
-        ],
+        "Art/2DItems/Effects/IceWhirlingBlade.dds",
+        null,
         "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Beacon.png?scale=1"
       ],
       [
@@ -6809,14 +6821,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Canyon.dds",
-        [
-          7,
-          10,
-          14,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/Hats/FireHorns.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DYW55b24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTR9XQ/e3ba1f3a67/Canyon.png"
       ],
       [
@@ -6829,14 +6835,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Baths.dds",
-        [
-          12,
-          15,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/Hats/IceHorns.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CYXRocyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTMsIm10Ijo0fV0/84674a1d05/Baths.png"
       ],
       [
@@ -6851,9 +6851,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Corrosion.dds",
         [
-          7,
-          10,
-          14,
+          12,
+          15,
+          16,
           16,
           16
         ],
@@ -6869,8 +6869,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/1.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Chambers.dds",
+        [
+          9,
+          12,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -6923,8 +6929,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/1.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Channel.dds",
+        [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -6937,14 +6949,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Sewer.dds",
-        [
-          6,
-          9,
-          13,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/gloves/AbyssalImpGloves.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TZXdlciIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxNn1d/0bcffda4d9/Sewer.png"
       ],
       [
@@ -6957,7 +6963,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/1.dds",
+        "Art/2DItems/Effects/BodyArmour/AbyssalImpBody.dds",
         null,
         null
       ],
@@ -6971,8 +6977,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/1/2.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/IvoryTemple.dds",
+        [
+          16,
+          16,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -6985,7 +6997,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/2.dds",
+        "Art/2DItems/Effects/Shields/CelestialShield.dds",
         null,
         null
       ],
@@ -7001,10 +7013,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Barrows.dds",
         [
-          14,
-          16,
-          16,
-          16,
+          1,
+          4,
+          8,
+          12,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CYXJyb3dzIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNSwibXQiOjh9XQ/f67ebb7754/Barrows.png"
@@ -7019,8 +7031,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/4/2.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Mausoleum.dds",
+        [
+          12,
+          15,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -7033,14 +7051,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Fields.dds",
-        [
-          3,
-          6,
-          10,
-          14,
-          16
-        ],
+        "Art/2DItems/Effects/Portals/ImpPortal.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9GaWVsZHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE0LCJtdCI6MTR9XQ/a83aeff332/Fields.png"
       ],
       [
@@ -7053,14 +7065,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/JungleValley.dds",
-        [
-          12,
-          15,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/Weapon/weapon_imp.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9KdW5nbGVWYWxsZXkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6Nn1d/0127707652/JungleValley.png"
       ],
       [
@@ -7075,9 +7081,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Phantasmagoria.dds",
         [
-          6,
-          9,
-          13,
+          15,
+          16,
+          16,
           16,
           16
         ],
@@ -7093,8 +7099,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/1/3.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Academy.dds",
+        [
+          6,
+          9,
+          13,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -7109,9 +7121,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Thicket.dds",
         [
+          6,
+          9,
           13,
-          16,
-          16,
           16,
           16
         ],
@@ -7129,8 +7141,8 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Wharf.dds",
         [
-          12,
-          15,
+          14,
+          16,
           16,
           16,
           16
@@ -7147,7 +7159,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/4/3.dds",
+        "Art/2DItems/Effects/CNitems/CNportraits/CNElementalist.dds",
         null,
         null
       ],
@@ -7261,14 +7273,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Tribunal.dds",
-        [
-          13,
-          16,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/TencentBallLightningFrame.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UcmlidW5hbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo3fV0/09c3098df9/Tribunal.png"
       ],
       [
@@ -7281,14 +7287,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/CorpseTrench.dds",
-        [
-          7,
-          10,
-          14,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/TencentBallIceFrame.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3Jwc2VUcmVuY2giLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NH1d/d6aa811996/CorpseTrench.png"
       ],
       [
@@ -7301,8 +7301,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/4.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Crematorium.dds",
+        [
+          7,
+          10,
+          14,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -7317,10 +7323,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Residence.dds",
         [
-          5,
-          8,
-          12,
-          16,
+          3,
+          6,
+          10,
+          14,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SZXNpZGVuY2UiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NH1d/9b58d982ec/Residence.png"
@@ -7335,14 +7341,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Ramparts.dds",
-        [
-          9,
-          12,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/TencentS3HideOutFrame.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9SYW1wYXJ0cyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTUsIm10IjoxNn1d/70b9fb775f/Ramparts.png"
       ],
       [
@@ -7475,7 +7475,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/5.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/2/1.dds",
         null,
         null
       ],
@@ -7491,8 +7491,8 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ArachnidNest.dds",
         [
-          10,
-          13,
+          9,
+          12,
           16,
           16,
           16
@@ -7509,8 +7509,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/6.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Bazaar.dds",
+        [
+          5,
+          8,
+          12,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -7523,14 +7529,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Laboratory.dds",
-        [
-          4,
-          7,
-          11,
-          15,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/5/1.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWJvcmF0b3J5IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjV9XQ/19d1a1326d/Laboratory.png"
       ],
       [
@@ -7545,10 +7545,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Infestation.dds",
         [
-          3,
-          6,
-          10,
-          14,
+          16,
+          16,
+          16,
+          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9JbmZlc3RhdGlvbiIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMX1d/5beab7e0bd/Infestation.png"
@@ -7563,14 +7563,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/OvergrownRuin.dds",
-        [
-          9,
-          12,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/7/1.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PdmVyZ3Jvd25SdWluIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjE1fV0/5c7d7e71ca/OvergrownRuin.png"
       ],
       [
@@ -7643,14 +7637,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Armory.dds",
-        [
-          8,
-          11,
-          15,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/4/2.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Bcm1vcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTR9XQ/c3c2005579/Armory.png"
       ],
       [
@@ -7703,8 +7691,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/7.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/MudGeyser.dds",
+        [
+          15,
+          16,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -7759,9 +7753,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/TropicalIsland.dds",
         [
-          15,
-          16,
-          16,
+          5,
+          8,
+          12,
           16,
           16
         ],
@@ -7793,10 +7787,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/MineralPools.dds",
         [
+          2,
           5,
-          8,
-          12,
-          16,
+          9,
+          13,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NaW5lcmFsUG9vbHMiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6N31d/98eb84608f/MineralPools.png"
@@ -7851,7 +7845,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/8.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/4.dds",
         null,
         null
       ],
@@ -7867,10 +7861,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Tower.dds",
         [
-          4,
-          7,
-          11,
-          15,
+          10,
+          13,
+          16,
+          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Ub3dlciIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10IjoyfV0/4939b0c2d9/Tower.png"
@@ -7885,14 +7879,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/WastePool.dds",
-        [
-          6,
-          9,
-          13,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/3/4.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XYXN0ZVBvb2wiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTZ9XQ/3adf3f21f9/WastePool.png"
       ],
       [
@@ -7907,10 +7895,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Plateau.dds",
         [
-          5,
+          1,
+          4,
           8,
           12,
-          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF0ZWF1IiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjN9XQ/4199c9fb3e/Plateau.png"
@@ -7925,8 +7913,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/9.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Estuary.dds",
+        [
+          2,
+          5,
+          9,
+          13,
+          16
+        ],
         null
       ],
       [
@@ -7939,8 +7933,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/4/9.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Vault.dds",
+        [
+          10,
+          13,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -7993,8 +7993,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/9.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Arena.dds",
+        [
+          1,
+          4,
+          8,
+          12,
+          16
+        ],
         null
       ],
       [
@@ -8047,14 +8053,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Scriptorium.dds",
-        [
-          1,
-          4,
-          8,
-          12,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/5/5.dds",
+        null,
         "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Scriptorium.png?scale=1"
       ],
       [
@@ -8069,13 +8069,27 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Boulevard.dds",
         [
-          9,
-          12,
+          15,
+          16,
           16,
           16,
           16
         ],
         "https://web.poecdn.com/image/Art/2DItems/Maps/Atlas2Maps/New/Boulevard.png?scale=1"
+      ],
+      [
+        "MapWorldsSynthesisedWorld",
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        "Art/2DItems/Effects/CNitems/CNframes/7/5.dds",
+        null,
+        null
       ],
       [
         "MapWorldsShipyard",
@@ -8087,14 +8101,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Shipyard.dds",
-        [
-          8,
-          11,
-          15,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/1/6.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaGlweWFyZCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMn1d/c07dc768b4/Shipyard.png"
       ],
       [
@@ -8107,14 +8115,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Belfry.dds",
-        [
-          2,
-          5,
-          9,
-          13,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/2/6.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9CZWxmcnkiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6MTF9XQ/0d629edc10/Belfry.png"
       ],
       [
@@ -8129,9 +8131,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Arachnid.dds",
         [
-          8,
-          11,
-          15,
+          6,
+          9,
+          13,
           16,
           16
         ],
@@ -8149,10 +8151,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Wasteland.dds",
         [
+          2,
+          5,
           9,
-          12,
-          16,
-          16,
+          13,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9XYXN0ZWxhbmQiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTF9XQ/ebd6a26e8d/Wasteland.png"
@@ -8169,10 +8171,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Precinct.dds",
         [
-          2,
-          5,
-          9,
-          13,
+          7,
+          10,
+          14,
+          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QcmVjaW5jdCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo3fV0/e5fc6bc251/Precinct.png"
@@ -8187,8 +8189,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/11.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Bog.dds",
+        [
+          3,
+          6,
+          10,
+          14,
+          16
+        ],
         null
       ],
       [
@@ -8203,9 +8211,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Pier.dds",
         [
-          9,
-          12,
-          16,
+          7,
+          10,
+          14,
           16,
           16
         ],
@@ -8263,10 +8271,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Orchard.dds",
         [
-          4,
-          7,
-          11,
-          15,
+          10,
+          13,
+          16,
+          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PcmNoYXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEzfV0/57aff57263/Orchard.png"
@@ -8315,14 +8323,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Lair.dds",
-        [
-          3,
-          6,
-          10,
-          14,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/6/7.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9MYWlyIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEzfV0/cc5445c6dc/Lair.png"
       ],
       [
@@ -8337,10 +8339,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Colonnade.dds",
         [
-          1,
-          4,
-          8,
-          12,
+          11,
+          14,
+          16,
+          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xvbm5hZGUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTJ9XQ/e568f48cde/Colonnade.png"
@@ -8357,10 +8359,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/PrimordialPool.dds",
         [
-          3,
-          6,
-          10,
-          14,
+          4,
+          7,
+          11,
+          15,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Qcmltb3JkaWFsUG9vbCIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10Ijo5fV0/951d6c9ec1/PrimordialPool.png"
@@ -8375,8 +8377,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/12.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/SpiderForest.dds",
+        [
+          15,
+          16,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -8391,8 +8399,8 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Coves.dds",
         [
-          16,
-          16,
+          11,
+          14,
           16,
           16,
           16
@@ -8409,8 +8417,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/1/13.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Waterways.dds",
+        [
+          8,
+          11,
+          15,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -8425,9 +8439,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Factory.dds",
         [
-          10,
-          13,
-          16,
+          8,
+          11,
+          15,
           16,
           16
         ],
@@ -8443,8 +8457,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/13.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Mesa.dds",
+        [
+          3,
+          6,
+          10,
+          14,
+          16
+        ],
         null
       ],
       [
@@ -8459,9 +8479,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Pit1.dds",
         [
-          6,
-          9,
-          13,
+          7,
+          10,
+          14,
           16,
           16
         ],
@@ -8477,7 +8497,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/13.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/9.dds",
         null,
         null
       ],
@@ -8491,14 +8511,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/DefiledCathedral.dds",
-        [
-          13,
-          16,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/2/9.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZWZpbGVkQ2F0aGVkcmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjEwfV0/065874797c/DefiledCathedral.png"
       ],
       [
@@ -8511,8 +8525,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/13.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Summit.dds",
+        [
+          9,
+          12,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -8567,9 +8587,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/CastleRuins.dds",
         [
-          6,
-          9,
-          13,
+          8,
+          11,
+          15,
           16,
           16
         ],
@@ -8585,14 +8605,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/CrystalOre.dds",
-        [
-          8,
-          11,
-          15,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/7/9.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9DcnlzdGFsT3JlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjl9XQ/aa25e2a29a/CrystalOre.png"
       ],
       [
@@ -8605,7 +8619,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/14.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/10.dds",
         null,
         null
       ],
@@ -8621,10 +8635,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/PrimevalRuins.dds",
         [
-          3,
-          6,
-          10,
-          14,
+          2,
+          5,
+          9,
+          13,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QcmltZXZhbFJ1aW5zIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/1d61cc15f1/PrimevalRuins.png"
@@ -8701,8 +8715,8 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Racecourse.dds",
         [
-          15,
-          16,
+          9,
+          12,
           16,
           16,
           16
@@ -8721,9 +8735,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Abyss.dds",
         [
-          8,
-          11,
-          15,
+          13,
+          16,
+          16,
           16,
           16
         ],
@@ -8739,7 +8753,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/15.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/11.dds",
         null,
         null
       ],
@@ -8753,7 +8767,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/15.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/2/11.dds",
         null,
         null
       ],
@@ -8769,10 +8783,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Malformation.dds",
         [
+          4,
+          7,
           11,
-          14,
-          16,
-          16,
+          15,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9NYWxmb3JtYXRpb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjEzLCJtdCI6N31d/11d00e3afa/Malformation.png"
@@ -8789,9 +8803,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/HighGardens.dds",
         [
-          14,
-          16,
-          16,
+          8,
+          11,
+          15,
           16,
           16
         ],
@@ -8807,14 +8821,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Shrine.dds",
-        [
-          3,
-          6,
-          10,
-          14,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/5/11.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9TaHJpbmUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTN9XQ/6065805e0d/Shrine.png"
       ],
       [
@@ -8827,14 +8835,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Arsenal.dds",
-        [
-          16,
-          16,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/6/11.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9BcnNlbmFsIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjh9XQ/bb52396cdb/Arsenal.png"
       ],
       [
@@ -8847,14 +8849,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Oasis.dds",
-        [
-          12,
-          15,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/7/11.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9PYXNpcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTQsIm10Ijo4fV0/e7be33aeca/Oasis.png"
       ],
       [
@@ -8867,14 +8863,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Core.dds",
-        [
-          15,
-          16,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/1/12.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db3JlIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNCwibXQiOjh9XQ/f9cc855c29/Core.png"
       ],
       [
@@ -8889,7 +8879,7 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Colosseum.dds",
         [
-          15,
+          13,
           16,
           16,
           16,
@@ -8907,8 +8897,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/16.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/SulphurVents.dds",
+        [
+          6,
+          9,
+          13,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -8921,8 +8917,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/1/17.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/DarkForest.dds",
+        [
+          6,
+          9,
+          13,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -8937,9 +8939,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/Sanctuary.dds",
         [
-          8,
-          11,
-          15,
+          10,
+          13,
+          16,
           16,
           16
         ],
@@ -8955,14 +8957,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Plaza.dds",
-        [
-          10,
-          13,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/6/12.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9QbGF6YSIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxM31d/b6ec7a9dd4/Plaza.png"
       ],
       [
@@ -8975,14 +8971,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/Dig.dds",
-        [
-          16,
-          16,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/7/12.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EaWciLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE1LCJtdCI6OX1d/5094325b04/Dig.png"
       ],
       [
@@ -8995,8 +8985,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/5/17.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Palace.dds",
+        [
+          12,
+          15,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -9009,8 +9005,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/17.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Corpse.dds",
+        [
+          13,
+          16,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -9023,8 +9025,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/17.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Basilica.dds",
+        [
+          10,
+          13,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -9037,8 +9045,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/1/18.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/SunkenCity.dds",
+        [
+          13,
+          16,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -9051,8 +9065,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/18.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Reef.dds",
+        [
+          14,
+          16,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -9065,8 +9085,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/18.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Carcass.dds",
+        [
+          9,
+          12,
+          16,
+          16,
+          16
+        ],
         null
       ],
       [
@@ -9193,7 +9219,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/3/19.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/6/14.dds",
         null,
         null
       ],
@@ -9263,14 +9289,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/DesertShipGraveyard.dds",
-        [
-          2,
-          5,
-          9,
-          13,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/4/15.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9EZXNlcnRTaGlwR3JhdmV5YXJkIiwidyI6MSwiaCI6MSwic2NhbGUiOjEsIm1uIjoxNiwibXQiOjExfV0/4c2bd19395/DesertShipGraveyard.png"
       ],
       [
@@ -9283,7 +9303,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/2/20.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/5/15.dds",
         null,
         null
       ],
@@ -9317,7 +9337,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/4/20.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/7/15.dds",
         null,
         null
       ],
@@ -9333,9 +9353,9 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/FrozenCabins.dds",
         [
-          11,
+          7,
+          10,
           14,
-          16,
           16,
           16
         ],
@@ -9351,7 +9371,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/6/20.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/2/16.dds",
         null,
         null
       ],
@@ -9365,8 +9385,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNframes/7/20.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/Burn.dds",
+        [
+          2,
+          5,
+          9,
+          13,
+          16
+        ],
         null
       ],
       [
@@ -9379,14 +9405,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/CrimsonTownship.dds",
-        [
-          11,
-          14,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/4/16.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Dcmltc29uVG93bnNoaXAiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6OH1d/08d6940814/CrimsonTownship.png"
       ],
       [
@@ -9399,8 +9419,14 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_1_2.dds",
-        null,
+        "Art/2DItems/Maps/Atlas2Maps/New/ForkingRiver.dds",
+        [
+          3,
+          6,
+          10,
+          14,
+          16
+        ],
         null
       ],
       [
@@ -9413,14 +9439,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/ThaumaturgyDungeon.dds",
-        [
-          10,
-          13,
-          16,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/6/16.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9UaGF1bWF0dXJneUR1bmdlb24iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTV9XQ/fc0c37af1c/ThaumaturgyDungeon.png"
       ],
       [
@@ -9435,10 +9455,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/ColdRiver.dds",
         [
-          9,
-          12,
-          16,
-          16,
+          3,
+          6,
+          10,
+          14,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Db2xkUml2ZXIiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6MTJ9XQ/056dd8eaeb/ColdRiver.png"
@@ -9453,14 +9473,8 @@
         false,
         false,
         false,
-        "Art/2DItems/Maps/Atlas2Maps/New/ForbiddenWoods.dds",
-        [
-          7,
-          10,
-          14,
-          16,
-          16
-        ],
+        "Art/2DItems/Effects/CNitems/CNframes/1/17.dds",
+        null,
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Gb3JiaWRkZW5Xb29kcyIsInciOjEsImgiOjEsInNjYWxlIjoxLCJtbiI6MTYsIm10IjoxMH1d/f4adb80c67/ForbiddenWoods.png"
       ],
       [
@@ -9475,10 +9489,10 @@
         false,
         "Art/2DItems/Maps/Atlas2Maps/New/RobotTunnelSilo.dds",
         [
-          2,
-          5,
-          9,
-          13,
+          16,
+          16,
+          16,
+          16,
           16
         ],
         "https://web.poecdn.com/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9BdGxhczJNYXBzL05ldy9Sb2JvdFR1bm5lbFNpbG8iLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MSwibW4iOjE2LCJtdCI6NX1d/ac0bdff810/RobotTunnelSilo.png"
@@ -9493,7 +9507,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_1_7.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/3/17.dds",
         null,
         null
       ],
@@ -9507,7 +9521,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_1.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/4/17.dds",
         null,
         null
       ],
@@ -9521,7 +9535,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_2.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/5/17.dds",
         null,
         null
       ],
@@ -9535,7 +9549,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_3.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/6/17.dds",
         null,
         null
       ],
@@ -9549,7 +9563,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_4.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/7/17.dds",
         null,
         null
       ],
@@ -9563,7 +9577,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_5.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/18.dds",
         null,
         null
       ],
@@ -9577,7 +9591,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_6.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/2/18.dds",
         null,
         null
       ],
@@ -9591,7 +9605,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_2_7.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/3/18.dds",
         null,
         null
       ],
@@ -9605,7 +9619,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_1.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/4/18.dds",
         null,
         null
       ],
@@ -9619,7 +9633,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_2.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/5/18.dds",
         null,
         null
       ],
@@ -9633,7 +9647,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_3.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/6/18.dds",
         null,
         null
       ],
@@ -9647,7 +9661,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_4.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/7/18.dds",
         null,
         null
       ],
@@ -9661,7 +9675,7 @@
         false,
         false,
         false,
-        "Art/2DItems/Effects/CNitems/CNBadges/Grade_3_5.dds",
+        "Art/2DItems/Effects/CNitems/CNframes/1/19.dds",
         null,
         null
       ],
@@ -10086,7 +10100,7 @@
         null
       ],
       [
-        "HideoutCauseway",
+        "HideoutSunken",
         false,
         true,
         false,
@@ -10534,7 +10548,7 @@
         null
       ],
       [
-        "HideoutHaunted",
+        "HideoutHauntedMansion",
         false,
         true,
         false,
@@ -11011,6 +11025,34 @@
       ],
       [
         "HideoutArenaSearingExarch",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null
+      ],
+      [
+        "HideoutCrucible",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
+        null,
+        null
+      ],
+      [
+        "HideoutAncestralTrial",
         false,
         true,
         false,
@@ -12434,6 +12476,20 @@
         false,
         false,
         "Art/2DItems/Maps/TrialmasterMap.dds",
+        null,
+        null
+      ],
+      [
+        "HideoutExilecon23",
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        null,
         null,
         null
       ]
@@ -14355,6 +14411,7 @@
         "MapWorldsMuseumUnique": "The Putrid Cloister",
         "MapWorldsScriptorium": "Scriptorium",
         "MapWorldsSiege": "Siege",
+        "MapWorldsSynthesisedWorld": "Synthesised World",
         "MapWorldsShipyard": "Shipyard",
         "MapWorldsBelfry": "Belfry",
         "MapWorldsArachnidTomb": "Arachnid Tomb",
@@ -14477,7 +14534,7 @@
         "HideoutBaths": "Luxurious Hideout",
         "HideoutOssuary": "Skeletal Hideout",
         "HideoutCourts": "Stately Hideout",
-        "HideoutCauseway": "Sunken Hideout",
+        "HideoutSunken": "Sunken Hideout",
         "HideoutHighGardens": "Arboreal Hideout",
         "HideoutShipgraveyard": "Shipwreck Hideout",
         "HideoutForest": "Lush Hideout",
@@ -14509,7 +14566,7 @@
         "HideoutCrimsonTemple": "Sanguine Hideout",
         "HideoutTwilightTemple": "Divided Hideout",
         "HideoutMountain": "Alpine Hideout",
-        "HideoutHaunted": "Haunted Hideout",
+        "HideoutHauntedMansion": "Haunted Hideout",
         "HideoutMoonTemple": "Nocturnal Hideout",
         "HideoutPrimevalRuins": "Primeval Hideout",
         "HideoutDoomguard": "Doomguard Hideout",
@@ -14544,6 +14601,8 @@
         "HideoutCosmicAtlas": "Atlas Hideout",
         "HideoutArenaEaterOfWorlds": "Tangled Hideout",
         "HideoutArenaSearingExarch": "Searing Hideout",
+        "HideoutCrucible": "Forge of the Titans Hideout",
+        "HideoutAncestralTrial": "Ancestral Trial Hideout",
         "pvpTown": "Sarn Arena Staging Area",
         "AtlasExilesBoss5": "Eye of the Storm",
         "AfflictionTown6": "Lunacy's Watch",
@@ -14644,7 +14703,8 @@
         "UltimatumArena": "The Utzaal Arena",
         "UltimatumArenaEndgame": "The Utzaal Arena",
         "UltimatumBossArena": "The Tower of Ordeals",
-        "MapWorldsUltimatumBossArena": "The Tower of Ordeals"
+        "MapWorldsUltimatumBossArena": "The Tower of Ordeals",
+        "HideoutExilecon23": "ExileCon 2023 Hideout"
       }
     },
     "French": {
@@ -16000,21 +16060,21 @@
         "TrialmasterPlayerTookRewardRandom": "Le choix le plus prudent.",
         "TrialmasterPlayerTookReward2": "Le choix auquel je m'attendais.",
         "TrialmasterPlayerTookReward3": "Qu'il en soit ainsi, aussi décevant cela soit-il.",
-        "TheBlackStarDeathRandom": "<if:MS>{La lumière obscure s'estompe...}<elif:FS>{ }",
-        "TheBlackStarDeath2": "<if:MS>{Comme c'est… inattendu...}<elif:FS>{ }",
-        "CleansingFireDefeatedRandom": "<if:MS>{Improbable... !}<elif:FS>{ }",
-        "CleansingFireDefeated2": "<if:MS>{Improbable... !}<elif:FS>{ }",
-        "CleansingFireDefeated3": "<if:MS>{Improbable... !}<elif:FS>{ }",
-        "CleansingFireDefeated4": "<if:MS>{L'oisillon... n'est pas sans surprises...}<elif:FS>{ }",
-        "CleansingFireDefeated5": "<if:MS>{L'oisillon... n'est pas sans surprises...}<elif:FS>{ }",
-        "CleansingFireDefeated6": "<if:MS>{L'oisillon... n'est pas sans surprises...}<elif:FS>{ }",
-        "ConsumeBossDefeatedRandom": "<if:MS>{Tu nous refuses... la fuite de notre souffrance...}<elif:FS>{ }",
-        "ConsumeBossDefeated2": "<if:MS>{Tu nous refuses... la fuite de notre souffrance...}<elif:FS>{ }",
-        "ConsumeBossDefeated3": "<if:MS>{Tu nous refuses... la fuite de notre souffrance...}<elif:FS>{ }",
-        "DoomBossDefeatedRandom": "<if:MS>{La douleur... ne s'arrête jamais...}<elif:FS>{ }",
-        "DoomBossDefeated2": "<if:MS>{La douleur... ne s'arrête jamais...}<elif:FS>{ }",
-        "DoomBossDefeated3": "<if:MS>{Mourir... est insignifiant…}<elif:FS>{ }",
-        "DoomBossDefeated4": "<if:MS>{Mourir... est insignifiant…}<elif:FS>{ }"
+        "TheBlackStarDeathRandom": "La lumière obscure s'estompe...",
+        "TheBlackStarDeath2": "Comme c'est… inattendu...",
+        "CleansingFireDefeatedRandom": "Improbable... !",
+        "CleansingFireDefeated2": "Improbable... !",
+        "CleansingFireDefeated3": "Improbable... !",
+        "CleansingFireDefeated4": "L'oisillon... n'est pas sans surprises...",
+        "CleansingFireDefeated5": "L'oisillon... n'est pas sans surprises...",
+        "CleansingFireDefeated6": "L'oisillon... n'est pas sans surprises...",
+        "ConsumeBossDefeatedRandom": "Tu nous refuses... la fuite de notre souffrance...",
+        "ConsumeBossDefeated2": "Tu nous refuses... la fuite de notre souffrance...",
+        "ConsumeBossDefeated3": "Tu nous refuses... la fuite de notre souffrance...",
+        "DoomBossDefeatedRandom": "La douleur... ne s'arrête jamais...",
+        "DoomBossDefeated2": "La douleur... ne s'arrête jamais...",
+        "DoomBossDefeated3": "Mourir... est insignifiant…",
+        "DoomBossDefeated4": "Mourir... est insignifiant…"
       },
       "worldAreas": {
         "1_1_town": "Le Guet d'Œil de Lion",
@@ -16073,7 +16133,7 @@
         "1_SideArea6_6": "Corniche nuageuse",
         "1_SideArea7_4": "Dépôt scellé",
         "1_SideArea7_10": "Lotissement inondé",
-        "1_SideArea7_12": "Sanctuaire interdit",
+        "1_SideArea7_12": "Tombeau interdit",
         "1_SideArea8_3": "Quartier évacué",
         "1_SideArea8_5": "Caldarium dissimulé",
         "1_SideArea8_7": "Chambres au clair de lune",
@@ -16126,7 +16186,7 @@
         "MapSideArea6_6": "Corniche nuageuse",
         "MapSideArea7_4": "Dépôt scellé",
         "MapSideArea7_10": "Lotissement inondé",
-        "MapSideArea7_12": "Sanctuaire interdit",
+        "MapSideArea7_12": "Tombeau interdit",
         "MapSideArea8_3": "Quartier évacué",
         "MapSideArea8_5": "Caldarium dissimulé",
         "MapSideArea8_7": "Chambres au clair de lune",
@@ -16562,6 +16622,7 @@
         "MapWorldsMuseumUnique": "Le Cloître putride",
         "MapWorldsScriptorium": "Scriptorium",
         "MapWorldsSiege": "Siège",
+        "MapWorldsSynthesisedWorld": "Monde synthétisé",
         "MapWorldsShipyard": "Chantier naval",
         "MapWorldsBelfry": "Beffroi",
         "MapWorldsArachnidTomb": "Tombeau arachnide",
@@ -16591,7 +16652,7 @@
         "MapWorldsCastleRuins": "Château en ruines",
         "MapWorldsCrystalOre": "Gisement de cristal",
         "MapWorldsVilla": "Villa",
-        "MapWorldsTortureChamber": "Vestiges primordiaux",
+        "MapWorldsTortureChamber": "Quartiers primordiaux",
         "MapWorldsTortureChamberUnique": "Le Trésor maudit d'Oba",
         "MapWorldsNecropolis": "Nécropole",
         "MapWorldsNecropolisUnique": "La Mort et les Impôts",
@@ -16684,7 +16745,7 @@
         "HideoutBaths": "Repaire luxueux",
         "HideoutOssuary": "Repaire sépulcral",
         "HideoutCourts": "Repaire solennel",
-        "HideoutCauseway": "Repaire englouti",
+        "HideoutSunken": "Repaire englouti",
         "HideoutHighGardens": "Repaire arboricole",
         "HideoutShipgraveyard": "Repaire d'épaves",
         "HideoutForest": "Repaire luxuriant",
@@ -16716,7 +16777,7 @@
         "HideoutCrimsonTemple": "Repaire sanglant",
         "HideoutTwilightTemple": "Repaire scindé",
         "HideoutMountain": "Repaire alpin",
-        "HideoutHaunted": "Repaire hanté",
+        "HideoutHauntedMansion": "Repaire hanté",
         "HideoutMoonTemple": "Repaire nocturne",
         "HideoutPrimevalRuins": "Repaire primitif",
         "HideoutDoomguard": "Repaire de Garde-funeste",
@@ -16732,25 +16793,27 @@
         "HideoutBlankGrass": "Repaire des Vastes plaines",
         "HideoutBlankSea": "Repaire en Haute mer",
         "HideoutBlankSnow": "Repaire de l'Étendue glaciale",
-        "HideoutThaumaturgy": "Repaire thaumaturgique",
+        "HideoutThaumaturgy": "Repaire Thaumaturgique",
         "HideoutYaochi": "Repaire Yaochi",
         "HideoutHumanoidPet": "Repaire de Familiers humanoïdes",
         "HideoutRitualLeague": "Repaire du Ritualiste",
         "HideoutArenaMaven": "Repaire du Creuset",
         "HideoutHasina": "Repaire de la Taverne",
         "HideoutAzuriteCave": "Repaire de la Caverne d'Azurite",
-        "HideoutSynthesisHub": "Repaire de synthèse",
+        "HideoutSynthesisHub": "Repaire de Synthèse",
         "HideoutVeritaniaArena": "Repaire de la Rédemptrice",
         "HideoutBlankBlack": "Repaire du Néant obscur",
-        "HideoutTencentApocalypse": "Repaire cataclysmique",
-        "HideoutOlrothArena": "Repaire ancestral",
+        "HideoutTencentApocalypse": "Repaire Cataclysmique",
+        "HideoutOlrothArena": "Repaire Ancestral",
         "HideoutLight": "Repaire du Gardien du temps",
         "HideoutDark": "Repaire du Cimetière hanté",
-        "HideoutArenaBlackStar_": "Repaire antipodique",
-        "HideoutArenaInfiniteHunger": "Repaire agité",
+        "HideoutArenaBlackStar_": "Repaire Antipodique",
+        "HideoutArenaInfiniteHunger": "Repaire Agité",
         "HideoutCosmicAtlas": "Repaire de l'Atlas",
-        "HideoutArenaEaterOfWorlds": "Repaire enchevêtré",
-        "HideoutArenaSearingExarch": "Repaire ardent",
+        "HideoutArenaEaterOfWorlds": "Repaire Enchevêtré",
+        "HideoutArenaSearingExarch": "Repaire Ardent",
+        "HideoutCrucible": "Repaire Forge des Titans",
+        "HideoutAncestralTrial": "Repaire de l'Épreuve ancestrale",
         "pvpTown": "Scène de l'arène de Sarn",
         "AtlasExilesBoss5": "L'Œil du cyclone",
         "AfflictionTown6": "Le Guet de l'Œil accusateur",
@@ -16851,7 +16914,8 @@
         "UltimatumArena": "L'Arène d'Utzaal",
         "UltimatumArenaEndgame": "L'Arène d'Utzaal",
         "UltimatumBossArena": "La Tour des Épreuves",
-        "MapWorldsUltimatumBossArena": "La Tour des Épreuves"
+        "MapWorldsUltimatumBossArena": "La Tour des Épreuves",
+        "HideoutExilecon23": "Repaire de l'ExileCon 2023"
       }
     },
     "German": {
@@ -18722,7 +18786,7 @@
         "MapWorldsAshenWood": "Aschewald",
         "MapWorldsAtoll": "Atoll",
         "MapWorldsAtollUnique": "Mahlstrom des Chaos",
-        "MapWorldsCemetery": "Fleischacker",
+        "MapWorldsCemetery": "Totenacker",
         "MapWorldsCemeteryUnique": "Nacht des Grauens",
         "MapWorldsUndergroundSea": "Unterirdischer See",
         "MapWorldsTribunal": "Krater",
@@ -18769,6 +18833,7 @@
         "MapWorldsMuseumUnique": "Das faulige Kloster",
         "MapWorldsScriptorium": "Skriptorium",
         "MapWorldsSiege": "Belagerung",
+        "MapWorldsSynthesisedWorld": "Synthetisierte Welt",
         "MapWorldsShipyard": "Werft",
         "MapWorldsBelfry": "Glockenturm",
         "MapWorldsArachnidTomb": "Arachnidengruft",
@@ -18842,7 +18907,7 @@
         "MapWorldsFrozenCabins": "Gefrorene Hütten",
         "MapWorldsHarbingerPrison": "Gefängnis der Vorboten",
         "MapWorldsGraveTrough": "Grabmulde",
-        "MapWorldsCrimsonTownship": "Die Purpurne Gemeinde",
+        "MapWorldsCrimsonTownship": "Purpurne Gemeinde",
         "MapWorldsForkingRiver": "Flussgabelung",
         "MapWorldsFoundry": "Gießerei",
         "MapWorldsColdRiver_": "Kalter Fluss",
@@ -18891,7 +18956,7 @@
         "HideoutBaths": "Verstecktes Badehaus",
         "HideoutOssuary": "Verstecktes Ossuarium",
         "HideoutCourts": "Versteckter Hof",
-        "HideoutCauseway": "Versteckter Damm",
+        "HideoutSunken": "Versteckter Damm",
         "HideoutHighGardens": "Versteckte Hochgärten",
         "HideoutShipgraveyard": "Versteckter Schiffsfriedhof",
         "HideoutForest": "Versteckte Lichtung",
@@ -18923,7 +18988,7 @@
         "HideoutCrimsonTemple": "Versteckter Bluttempel",
         "HideoutTwilightTemple": "Versteckter Zwielichttempel",
         "HideoutMountain": "Verstecktes Gipfellager",
-        "HideoutHaunted": "Versteckte Geistervilla",
+        "HideoutHauntedMansion": "Versteckte Geistervilla",
         "HideoutMoonTemple": "Versteckter Mondtempel",
         "HideoutPrimevalRuins": "Urzeitliches Versteck",
         "HideoutDoomguard": "Unheilswächter-Versteck",
@@ -18958,6 +19023,8 @@
         "HideoutCosmicAtlas": "Atlas-Versteck",
         "HideoutArenaEaterOfWorlds": "Verstecktes Gewirr",
         "HideoutArenaSearingExarch": "Brennendes Versteck",
+        "HideoutCrucible": "Versteckte Schmiede der Titanen",
+        "HideoutAncestralTrial": "Versteck der Ahnenprüfung",
         "pvpTown": "Sarn-Arena, Sammelplatz",
         "AtlasExilesBoss5": "Auge des Sturms",
         "AfflictionTown6": "Löwenauges Wahn",
@@ -19057,8 +19124,9 @@
         "MavenBoss": "Die Gefühllosigkeit",
         "UltimatumArena": "Die Arena von Utzaal",
         "UltimatumArenaEndgame": "Die Arena von Utzaal",
-        "UltimatumBossArena": "Der Turm der Qualen",
-        "MapWorldsUltimatumBossArena": "Der Turm der Qualen"
+        "UltimatumBossArena": "Der Turm der Prüfungen",
+        "MapWorldsUltimatumBossArena": "Der Turm der Prüfungen",
+        "HideoutExilecon23": "Aotea-Versteck"
       }
     },
     "Japanese": {
@@ -19306,7 +19374,7 @@
         "BaranFourStoneFightc": "貴様は許しを求めているが、貴様はそれに値しない。",
         "BaranFourStoneFightd": "私は創造の火だ、貴様の魂を浄化してやろう。",
         "BaranFourStoneFighte": "無限に続く拷問の穴蔵へ放り込んでやろう。",
-        "BaranFourStoneStoryDeathTalk": "キラックが...お前をよこしたのか？彼をアトラスから遠ざけてくれ...私を助けることはできない...さもないと私を永久に助けようとして、自らの破滅を見つけるだけになってしまう...彼も終わってしまう...私のように...\r\n\r\nザナに伝えてくれ... 彼女は正しかった...我々を封印したのは...シルスは絶対に...",
+        "BaranFourStoneStoryDeathTalk": "キラックが...お前をよこしたのか？彼をアトラスから遠ざけてくれ...私を助けることはできない...さもないと私を永久に助けようとして、自らの破滅を見つけるだけになってしまう...彼も終わってしまう...私のように...\r\n\r\nザナに伝えてくれ... 彼女は正しかった...我々を封印したのは...シラスは絶対に...",
         "BaranFourStoneDeatha": "ザナに伝えてくれ... ... ...<italic>{悪魔め}、と...",
         "BaranFourStoneDeathb": "...兄に伝えてくれ... 私を助けることはできない、と...",
         "BaranFourStoneDeathc": "キラックを... アトラスから遠ざけてくれ... 何としてでも...",
@@ -20920,7 +20988,7 @@
         "MapWorldsSpiderLair": "蜘蛛の巣",
         "MapWorldsBarrows": "古墳",
         "MapWorldsMausoleum": "霊廟",
-        "MapWorldsFields": "原野",
+        "MapWorldsFields": "農地",
         "MapWorldsJungleValley": "ジャングルバレー",
         "MapWorldsPhantasmagoria": "ファンタズマゴリア",
         "MapWorldsAcademy": "学院",
@@ -20976,9 +21044,10 @@
         "MapWorldsMuseumUnique": "邪悪な学園",
         "MapWorldsScriptorium": "写字室",
         "MapWorldsSiege": "包囲された街",
+        "MapWorldsSynthesisedWorld": "合成された世界",
         "MapWorldsShipyard": "造船所",
         "MapWorldsBelfry": "鐘楼",
-        "MapWorldsArachnidTomb": "アラクニッドの墓",
+        "MapWorldsArachnidTomb": "アラクニドの墓",
         "MapWorldsWasteland": "荒野",
         "MapWorldsPrecinct": "貧民街",
         "MapWorldsBog": "湿原",
@@ -21069,7 +21138,7 @@
         "MapWorldsElder_River": "荒廃の島",
         "MapWorldsElder_Garden": "絶望の廃墟",
         "MapWorldsElderArena": "価値と意味の欠如",
-        "MapWorldsElderArenaUber": "シェイパーの世界",
+        "MapWorldsElderArenaUber": "シェイパーの領域",
         "MapWorldsPrimordialBoss1": "煮え滾る糜粥",
         "MapWorldsPrimordialBoss2": "対極の空虚",
         "MapWorldsPrimordialBoss3": "忍耐と英知の欠如",
@@ -21098,7 +21167,7 @@
         "HideoutBaths": "豪華な隠れ家",
         "HideoutOssuary": "骸骨の隠れ家",
         "HideoutCourts": "荘厳な隠れ家",
-        "HideoutCauseway": "水没した隠れ家",
+        "HideoutSunken": "水没した隠れ家",
         "HideoutHighGardens": "樹上の隠れ家",
         "HideoutShipgraveyard": "難破船の隠れ家",
         "HideoutForest": "緑豊かな隠れ家",
@@ -21130,7 +21199,7 @@
         "HideoutCrimsonTemple": "紅の隠れ家",
         "HideoutTwilightTemple": "分割された隠れ家",
         "HideoutMountain": "雪山の隠れ家",
-        "HideoutHaunted": "幽霊屋敷の隠れ家",
+        "HideoutHauntedMansion": "幽霊屋敷の隠れ家",
         "HideoutMoonTemple": "夜の隠れ家",
         "HideoutPrimevalRuins": "原初の隠れ家",
         "HideoutDoomguard": "ドゥームガードの隠れ家",
@@ -21165,6 +21234,8 @@
         "HideoutCosmicAtlas": "アトラスの隠れ家",
         "HideoutArenaEaterOfWorlds": "縺れた隠れ家",
         "HideoutArenaSearingExarch": "灼熱の隠れ家",
+        "HideoutCrucible": "タイタンの鍜治場の隠れ家",
+        "HideoutAncestralTrial": "先祖の試練の隠れ家",
         "pvpTown": "サーンアリーナ集合地点",
         "AtlasExilesBoss5": "嵐の中心",
         "AfflictionTown6": "狂気の見張り場",
@@ -21183,15 +21254,15 @@
         "HeistBunker7": "バンカー",
         "HeistBunker8": "バンカー",
         "HeistBunker9": "バンカー",
-        "HeistMines1": "密輸者の巣窟",
-        "HeistMines2": "密輸者の巣窟",
-        "HeistMines3": "密輸者の巣窟",
-        "HeistMines4": "密輸者の巣窟",
-        "HeistMines5": "密輸者の巣窟",
-        "HeistMines6": "密輸者の巣窟",
-        "HeistMines7": "密輸者の巣窟",
-        "HeistMines8": "密輸者の巣窟",
-        "HeistMines9": "密輸者の巣窟",
+        "HeistMines1": "密輸人の巣窟",
+        "HeistMines2": "密輸人の巣窟",
+        "HeistMines3": "密輸人の巣窟",
+        "HeistMines4": "密輸人の巣窟",
+        "HeistMines5": "密輸人の巣窟",
+        "HeistMines6": "密輸人の巣窟",
+        "HeistMines7": "密輸人の巣窟",
+        "HeistMines8": "密輸人の巣窟",
+        "HeistMines9": "密輸人の巣窟",
         "HeistDungeon1": "研究所",
         "HeistDungeon2": "研究所",
         "HeistDungeon3": "研究所",
@@ -21265,7 +21336,8 @@
         "UltimatumArena": "ウトザールアリーナ",
         "UltimatumArenaEndgame": "ウトザールアリーナ",
         "UltimatumBossArena": "試練の塔",
-        "MapWorldsUltimatumBossArena": "試練の塔"
+        "MapWorldsUltimatumBossArena": "試練の塔",
+        "HideoutExilecon23": "ExileCon 2023隠れ家"
       }
     },
     "Korean": {
@@ -23183,6 +23255,7 @@
         "MapWorldsMuseumUnique": "악취 나는 수도원",
         "MapWorldsScriptorium": "필사실",
         "MapWorldsSiege": "공성 구역",
+        "MapWorldsSynthesisedWorld": "결합 세계",
         "MapWorldsShipyard": "조선소",
         "MapWorldsBelfry": "종탑",
         "MapWorldsArachnidTomb": "거미류 무덤",
@@ -23305,7 +23378,7 @@
         "HideoutBaths": "호화로운 은신처",
         "HideoutOssuary": "해골 은신처",
         "HideoutCourts": "장엄한 은신처",
-        "HideoutCauseway": "가라앉은 은신처",
+        "HideoutSunken": "가라앉은 은신처",
         "HideoutHighGardens": "수목 은신처",
         "HideoutShipgraveyard": "난파선 은신처",
         "HideoutForest": "우거진 은신처",
@@ -23337,7 +23410,7 @@
         "HideoutCrimsonTemple": "핏빛 은신처",
         "HideoutTwilightTemple": "갈라진 은신처",
         "HideoutMountain": "고산지대 은신처",
-        "HideoutHaunted": "으스스한 은신처",
+        "HideoutHauntedMansion": "으스스한 은신처",
         "HideoutMoonTemple": "야밤 은신처",
         "HideoutPrimevalRuins": "원시 은신처",
         "HideoutDoomguard": "파멸수호병 은신처",
@@ -23372,6 +23445,8 @@
         "HideoutCosmicAtlas": "아틀라스 은신처",
         "HideoutArenaEaterOfWorlds": "얽힌 은신처",
         "HideoutArenaSearingExarch": "이글거리는 은신처",
+        "HideoutCrucible": "거신의 대장간 은신처",
+        "HideoutAncestralTrial": "선조들의 심판 은신처",
         "pvpTown": "사안 투기장",
         "AtlasExilesBoss5": "태풍의 눈",
         "AfflictionTown6": "광기의 초소",
@@ -23472,7 +23547,8 @@
         "UltimatumArena": "웃자알 투기장",
         "UltimatumArenaEndgame": "웃자알 투기장",
         "UltimatumBossArena": "시련의 탑",
-        "MapWorldsUltimatumBossArena": "시련의 탑"
+        "MapWorldsUltimatumBossArena": "시련의 탑",
+        "HideoutExilecon23": "엑자일콘 2023 은신처"
       }
     },
     "Portuguese": {
@@ -25384,16 +25460,17 @@
         "MapWorldsEstuary": "Estuário",
         "MapWorldsVault": "Forte",
         "MapWorldsTemple": "Templo",
-        "MapWorldsTempleUnique": "Asilo de Poorjoy",
+        "MapWorldsTempleUnique": "Hospício de Poorjoy",
         "MapWorldsArena": "Arena",
         "MapWorldsMuseum": "Museu",
         "MapWorldsMuseumUnique": "O Claustro Pútrido",
         "MapWorldsScriptorium": "Scriptorium",
         "MapWorldsSiege": "Cerco",
+        "MapWorldsSynthesisedWorld": "Mundo Sintetizado",
         "MapWorldsShipyard": "Estaleiro",
         "MapWorldsBelfry": "Campanário",
         "MapWorldsArachnidTomb": "Tumba Aracnídea",
-        "MapWorldsWasteland": "Terra Abandonada",
+        "MapWorldsWasteland": "Desértico",
         "MapWorldsPrecinct": "Precinto",
         "MapWorldsBog": "Brejo",
         "MapWorldsPier": "Píer",
@@ -25512,7 +25589,7 @@
         "HideoutBaths": "Refúgio Luxuoso",
         "HideoutOssuary": "Refúgio Mórbido",
         "HideoutCourts": "Refúgio Imponente",
-        "HideoutCauseway": "Refúgio Afundado",
+        "HideoutSunken": "Refúgio Afundado",
         "HideoutHighGardens": "Refúgio Arboreal",
         "HideoutShipgraveyard": "Refúgio Navio Naufragado",
         "HideoutForest": "Refúgio Exuberante",
@@ -25544,7 +25621,7 @@
         "HideoutCrimsonTemple": "Refúgio Sanguíneo",
         "HideoutTwilightTemple": "Refúgio Dividido",
         "HideoutMountain": "Refúgio Alpino",
-        "HideoutHaunted": "Refúgio Assombrado",
+        "HideoutHauntedMansion": "Refúgio Assombrado",
         "HideoutMoonTemple": "Refúgio Noturno",
         "HideoutPrimevalRuins": "Refúgio Primitivo",
         "HideoutDoomguard": "Refúgio Guardião Devastador",
@@ -25579,6 +25656,8 @@
         "HideoutCosmicAtlas": "Refúgio do Atlas",
         "HideoutArenaEaterOfWorlds": "Refúgio Emaranhado",
         "HideoutArenaSearingExarch": "Refúgio Cauterizado",
+        "HideoutCrucible": "Refúgio da Forja dos Titãs",
+        "HideoutAncestralTrial": "Refúgio Torneio Ancestral",
         "pvpTown": "Área de Testes da Arena de Sarn",
         "AtlasExilesBoss5": "Olho da Tempestade",
         "AfflictionTown6": "Vigia da Loucura",
@@ -25679,7 +25758,8 @@
         "UltimatumArena": "A Arena Utzaal",
         "UltimatumArenaEndgame": "A Arena Utzaal",
         "UltimatumBossArena": "A Torre das Provações",
-        "MapWorldsUltimatumBossArena": "A Torre das Provações"
+        "MapWorldsUltimatumBossArena": "A Torre das Provações",
+        "HideoutExilecon23": "Refúgio da ExileCon 2023"
       }
     },
     "Russian": {
@@ -27597,6 +27677,7 @@
         "MapWorldsMuseumUnique": "Тлетворная обитель",
         "MapWorldsScriptorium": "Скрипторий",
         "MapWorldsSiege": "Осаждённый город",
+        "MapWorldsSynthesisedWorld": "Синтезированный мир",
         "MapWorldsShipyard": "Верфь",
         "MapWorldsBelfry": "Колокольня",
         "MapWorldsArachnidTomb": "Паучья гробница",
@@ -27719,7 +27800,7 @@
         "HideoutBaths": "Роскошное убежище",
         "HideoutOssuary": "Костяное убежище",
         "HideoutCourts": "Парадное убежище",
-        "HideoutCauseway": "Затопленное убежище",
+        "HideoutSunken": "Затопленное убежище",
         "HideoutHighGardens": "Древесное убежище",
         "HideoutShipgraveyard": "Убежище на обломках корабля",
         "HideoutForest": "Лесное убежище",
@@ -27751,7 +27832,7 @@
         "HideoutCrimsonTemple": "Кроваво-красное убежище",
         "HideoutTwilightTemple": "Разделенное убежище",
         "HideoutMountain": "Высокогорное убежище",
-        "HideoutHaunted": "Убежище с привидениями",
+        "HideoutHauntedMansion": "Убежище с привидениями",
         "HideoutMoonTemple": "Ночное убежище",
         "HideoutPrimevalRuins": "Первобытное убежище",
         "HideoutDoomguard": "Убежище Стража Рока",
@@ -27786,6 +27867,8 @@
         "HideoutCosmicAtlas": "Убежище в Атласе",
         "HideoutArenaEaterOfWorlds": "Переплетённое убежище",
         "HideoutArenaSearingExarch": "Пламенное убежище",
+        "HideoutCrucible": "Убежище Кузни Титанов",
+        "HideoutAncestralTrial": "Убежище Испытания предков",
         "pvpTown": "Внутренние помещения арены Сарна",
         "AtlasExilesBoss5": "Око Шторма",
         "AfflictionTown6": "Застава безумия",
@@ -27886,7 +27969,8 @@
         "UltimatumArena": "Арена Утцааля",
         "UltimatumArenaEndgame": "Арена Утцааля",
         "UltimatumBossArena": "Башня испытаний",
-        "MapWorldsUltimatumBossArena": "Башня испытаний"
+        "MapWorldsUltimatumBossArena": "Башня испытаний",
+        "HideoutExilecon23": "Убежище ExileCon 2023"
       }
     },
     "Spanish": {
@@ -27918,7 +28002,7 @@
         "Metadata/Monsters/LeagueBetrayal/BetrayalThane": "Thane Jorgin el Desterrado",
         "Metadata/Monsters/LeagueBetrayal/BetrayalKeema": "Korell Goya, Hijo de Piedra",
         "Metadata/Monsters/LeagueBetrayal/BetrayalRin": "Rin Yuushu",
-        "Metadata/Monsters/LeagueBetrayal/BetrayalCameria": "Cameria la Sangrefría",
+        "Metadata/Monsters/LeagueBetrayal/BetrayalCameria": "Cameria el Sangrefría",
         "Metadata/Monsters/LeagueBetrayal/BetrayalAislin": "Aisling Laffrey, la Carnicera Silenciosa",
         "Metadata/Monsters/LeagueBetrayal/BetrayalRiker": "Riker Maloney, el Artesano de Medianoche",
         "Metadata/Monsters/LeagueBetrayal/BetrayalCatarina2": "Catarina, Maestra de la No-muerte",
@@ -29302,7 +29386,7 @@
         "1_SideArea4_3": "Mina Embrujada",
         "1_SideArea4_4": "Presa Abandonada",
         "1_SideArea4_7": "Sendero Desolado",
-        "1_SideArea5_2": "Barracónes Reclamados",
+        "1_SideArea5_2": "Barracones Reclamados",
         "1_SideArea5_3_1": "Sótano Sellado",
         "1_SideArea5_3_2": "Canal Recóndito",
         "1_SideArea5_4": "Archivos Prohibidos",
@@ -29355,7 +29439,7 @@
         "MapSideArea4_3": "Mina Embrujada",
         "MapSideArea4_4": "Presa Abandonada",
         "MapSideArea4_7": "Sendero Desolado",
-        "MapSideArea5_2": "Barracónes Reclamados",
+        "MapSideArea5_2": "Barracones Reclamados",
         "MapSideArea5_3_1": "Sótano Sellado",
         "MapSideArea5_3_2": "Canal Recóndito",
         "MapSideArea5_4": "Archivos Prohibidos",
@@ -29530,7 +29614,7 @@
         "2_Labyrinth_DG_quad": "Cruce del Dominio",
         "2_Labyrinth_DG_quad_bottleneck": "Cruce del Domino",
         "2_Labyrinth_DG_quad_door": "Cruce del Domino",
-        "2_Labyrinth_OH_end": "Cercado del la Hacienda",
+        "2_Labyrinth_OH_end": "Cercado de la Hacienda",
         "2_Labyrinth_OH_end_bottleneck": "Cercado de la Hacienda",
         "2_Labyrinth_OH_straight": "Camino de la Hacienda",
         "2_Labyrinth_OH_straight_bottleneck": "Camino de la Hacienda",
@@ -29704,96 +29788,96 @@
         "BreachBossFire": "Dominio de Xoph",
         "BreachBossCold": "Dominio de Tul",
         "BreachBossLightning": "Dominio de Esh",
-        "MapWorldsLookout": "Puesto de Observación",
+        "MapWorldsLookout": "Puesto de observación",
         "MapWorldsBeach": "Playa",
         "MapWorldsGraveyard": "Cementerio",
         "MapWorldsDungeon": "Mazmorra",
         "MapWorldsAlleyways": "Callejones",
         "MapWorldsPen": "Corral",
         "MapWorldsDesert": "Desierto",
-        "MapWorldsAridLake": "Lago Árido",
-        "MapWorldsFloodedMine": "Mina Inundada",
+        "MapWorldsAridLake": "Lago árido",
+        "MapWorldsFloodedMine": "Mina inundada",
         "MapWorldsMarshes": "Marjales",
         "MapWorldsIceberg": "Iceberg",
         "MapWorldsCage": "Jaula",
-        "MapWorldsSprings": "Hondonada Fúngica",
+        "MapWorldsSprings": "Hondonada fúngica",
         "MapWorldsExcavation": "Excavación",
-        "MapWorldsLeyline": "Línea Ley",
+        "MapWorldsLeyline": "Línea ley",
         "MapWorldsPeninsula": "Península",
         "MapWorldsPort": "Puerto",
-        "MapWorldsBurialChambers": "Aposentos del Entierro",
+        "MapWorldsBurialChambers": "Aposentos del entierro",
         "MapWorldsCells": "Celdas",
         "MapWorldsArcade": "Galería",
-        "MapWorldsCitySquare": "Plaza de Ciudad",
-        "MapWorldsRelicChambers": "Cámaras de Reliquias",
+        "MapWorldsCitySquare": "Plaza de ciudad",
+        "MapWorldsRelicChambers": "Cámaras de reliquias",
         "MapWorldsCourthouse": "Juzgado",
         "MapWorldsStrand": "Litoral",
         "MapWorldsStrandUnique": "Whakawairua Tuahu",
         "MapWorldsChateau": "Palacete",
-        "MapWorldsChateauUnique": "La Mansión Perandus",
+        "MapWorldsChateauUnique": "La mansión Perandus",
         "MapWorldsGrotto": "Gruta",
         "MapWorldsGorge": "Glaciar",
         "MapWorldsVolcano": "Volcán",
         "MapWorldsLighthouse": "Faro",
         "MapWorldsCanyon": "Cañón",
         "MapWorldsConservatory": "Conservatorio",
-        "MapWorldsSulphurVents": "Fumarolas de Azufre",
-        "MapWorldsHauntedMansion": "Mansión Embrujada",
+        "MapWorldsSulphurVents": "Fumarolas de azufre",
+        "MapWorldsHauntedMansion": "Mansión embrujada",
         "MapWorldsMaze": "Laberinto",
-        "MapWorldsMazeUnique": "Taller de Máquinas de Doryani",
+        "MapWorldsMazeUnique": "Taller de máquinas de Doryani",
         "MapWorldsChannel": "Cauce",
-        "MapWorldsToxicSewer": "Alcantarilla Tóxica",
-        "MapWorldsAncientCity": "Ciudad Antigua",
-        "MapWorldsIvoryTemple": "Templo de Marfil",
-        "MapWorldsSpiderLair": "Guarida de la Araña",
+        "MapWorldsToxicSewer": "Alcantarilla tóxica",
+        "MapWorldsAncientCity": "Ciudad antigua",
+        "MapWorldsIvoryTemple": "Templo de marfil",
+        "MapWorldsSpiderLair": "Guarida de la araña",
         "MapWorldsBarrows": "Túmulos",
         "MapWorldsMausoleum": "Mausoleo",
         "MapWorldsFields": "Campos",
-        "MapWorldsJungleValley": "Valle de la Jungla",
+        "MapWorldsJungleValley": "Valle de la jungla",
         "MapWorldsPhantasmagoria": "Fantasmagoria",
         "MapWorldsAcademy": "Academia",
         "MapWorldsThicket": "Matorral",
         "MapWorldsWharf": "Embarcadero",
-        "MapWorldsAshenWood": "Bosque Pálido",
+        "MapWorldsAshenWood": "Bosque pálido",
         "MapWorldsAtoll": "Atolón",
-        "MapWorldsAtollUnique": "Vorágine de Caos",
+        "MapWorldsAtollUnique": "Vorágine de caos",
         "MapWorldsCemetery": "Camposanto",
-        "MapWorldsCemeteryUnique": "Una Noche de Terror",
-        "MapWorldsUndergroundSea": "Mar Subterráneo",
+        "MapWorldsCemeteryUnique": "Una noche de terror",
+        "MapWorldsUndergroundSea": "Mar subterráneo",
         "MapWorldsTribunal": "Cráter",
-        "MapWorldsCoralRuins": "Ruinas de Coral",
-        "MapWorldsLavaChamber": "Cámara de Lava",
+        "MapWorldsCoralRuins": "Ruinas de coral",
+        "MapWorldsLavaChamber": "Cámara de lava",
         "MapWorldsResidence": "Residencia",
         "MapWorldsRamparts": "Murallas",
         "MapWorldsDunes": "Dunas",
         "MapWorldsDunesUnique": "Pilares de Arun",
-        "MapWorldsBoneCrypt": "Cripta de Hueso",
+        "MapWorldsBoneCrypt": "Cripta de hueso",
         "MapWorldsBoneCryptUnique": "Santuario de Olmec",
-        "MapWorldsUndergroundRiver": "Río Subterráneo",
-        "MapWorldsUndergroundRiverUnique": "Caer Blaidd, Madriguera de Lobos",
+        "MapWorldsUndergroundRiver": "Río subterráneo",
+        "MapWorldsUndergroundRiverUnique": "Caer Blaidd, Madriguera de lobos",
         "MapWorldsGardens": "Jardines",
-        "MapWorldsArachnidNest": "Nido Arácnido",
+        "MapWorldsArachnidNest": "Nido arácnido",
         "MapWorldsBazaar": "Bazar",
         "MapWorldsLaboratory": "Laboratorio",
-        "MapWorldsInfestedValley": "Valle Infestado",
-        "MapWorldsOvergrownRuin": "Ruinas Descuidadas",
-        "MapWorldsVaalPyramid": "Pirámide Vaal",
+        "MapWorldsInfestedValley": "Valle infestado",
+        "MapWorldsOvergrownRuin": "Ruinas descuidadas",
+        "MapWorldsVaalPyramid": "Pirámide vaal",
         "MapWorldsVaalPyramidUnique": "Cámaras de Atziri",
         "MapWorldsGeode": "Geoda",
         "MapWorldsArmoury": "Armería",
         "MapWorldsCourtyard": "Patio",
-        "MapWorldsCourtyardUnique": "La Plaza de Vinktar",
-        "MapWorldsMudGeyser": "Géiser de Fango",
+        "MapWorldsCourtyardUnique": "La plaza de Vinktar",
+        "MapWorldsMudGeyser": "Géiser de fango",
         "MapWorldsShore": "Orilla",
         "MapWorldsShoreUnique": "Mao Kun",
-        "MapWorldsTropicalIsland": "Isla Tropical",
-        "MapWorldsTropicalIslandUnique": "Paraíso Prístino",
-        "MapWorldsMineralPools": "Charcas Minerales",
-        "MapWorldsMoonTemple": "Templo de la Luna",
-        "MapWorldsMoonTempleUnique": "El Templo del Crepúsculo",
+        "MapWorldsTropicalIsland": "Isla tropical",
+        "MapWorldsTropicalIslandUnique": "Paraíso prístino",
+        "MapWorldsMineralPools": "Charcas minerales",
+        "MapWorldsMoonTemple": "Templo de la luna",
+        "MapWorldsMoonTempleUnique": "El Templo del crepúsculo",
         "MapWorldsSepulchre": "Sepulcro",
         "MapWorldsTower": "Torre",
-        "MapWorldsWastePool": "Charca de Desechos",
+        "MapWorldsWastePool": "Charca de desechos",
         "MapWorldsPlateau": "Meseta",
         "MapWorldsEstuary": "Estuario",
         "MapWorldsVault": "Bóveda",
@@ -29801,42 +29885,43 @@
         "MapWorldsTempleUnique": "Asilo de Poorjoy",
         "MapWorldsArena": "Arena",
         "MapWorldsMuseum": "Museo",
-        "MapWorldsMuseumUnique": "El Claustro Pútrido",
-        "MapWorldsScriptorium": "Sala del Escriba",
+        "MapWorldsMuseumUnique": "El claustro pútrido",
+        "MapWorldsScriptorium": "Sala del escriba",
         "MapWorldsSiege": "Asedio",
+        "MapWorldsSynthesisedWorld": "Mundo sintetizado",
         "MapWorldsShipyard": "Astillero",
         "MapWorldsBelfry": "Campanario",
-        "MapWorldsArachnidTomb": "Tumba Arácnida",
+        "MapWorldsArachnidTomb": "Tumba arácnida",
         "MapWorldsWasteland": "Páramo",
         "MapWorldsPrecinct": "Recinto",
         "MapWorldsBog": "Ciénaga",
         "MapWorldsPier": "Muelle",
-        "MapWorldsCursedCrypt": "Cripta Maldita",
-        "MapWorldsCursedCryptUnique": "La Prueba del Cobarde",
+        "MapWorldsCursedCrypt": "Cripta maldita",
+        "MapWorldsCursedCryptUnique": "La prueba del cobarde",
         "MapWorldsOrchard": "Huerto",
         "MapWorldsPromenade": "Rambla",
         "MapWorldsPromenadeUnique": "Salón de los Grandes Maestros",
         "MapWorldsLair": "Guarida",
         "MapWorldsColonnade": "Columnata",
-        "MapWorldsPrimordialPool": "Charca Primordial",
-        "MapWorldsSpiderForest": "Bosque de Arañas",
+        "MapWorldsPrimordialPool": "Charca primordial",
+        "MapWorldsSpiderForest": "Bosque de arañas",
         "MapWorldsCoves": "Caletas",
         "MapWorldsWaterways": "Canales",
         "MapWorldsFactory": "Fábrica",
         "MapWorldsMesa": "Mesa",
         "MapWorldsPit": "Hoyo",
         "MapWorldsPitUnique": "Promesa de Darbel",
-        "MapWorldsDefiledCathedral": "Catedral Profanada",
+        "MapWorldsDefiledCathedral": "Catedral profanada",
         "MapWorldsSummit": "Cima",
-        "MapWorldsOvergrownShrine": "Santuario Descuidado",
+        "MapWorldsOvergrownShrine": "Santuario descuidado",
         "MapWorldsOvergrownShrineUnique": "Pesadilla de Acton",
-        "MapWorldsCastleRuins": "Ruinas del Castillo",
-        "MapWorldsCrystalOre": "Mina de Cristal",
+        "MapWorldsCastleRuins": "Ruinas del castillo",
+        "MapWorldsCrystalOre": "Mina de cristal",
         "MapWorldsVilla": "Villa",
-        "MapWorldsTortureChamber": "Bloques Primordiales",
-        "MapWorldsTortureChamberUnique": "Tesoro Embrujado de Oba",
+        "MapWorldsTortureChamber": "Bloques primordiales",
+        "MapWorldsTortureChamberUnique": "Tesoro embrujado de Oba",
         "MapWorldsNecropolis": "Necrópolis",
-        "MapWorldsNecropolisUnique": "Muerte e Impuestos",
+        "MapWorldsNecropolisUnique": "Muerte e impuestos",
         "MapWorldsRacecourse_": "Estadio",
         "MapWorldsCaldera": "Caldera",
         "MapWorldsGhetto": "Gueto",
@@ -29845,31 +29930,31 @@
         "MapWorldsTerrace": "Terraza",
         "MapWorldsShrine": "Santuario",
         "MapWorldsArsenal": "Arsenal",
-        "MapWorldsDesertSpring": "Manantial de Desierto",
+        "MapWorldsDesertSpring": "Manantial del desierto",
         "MapWorldsCore": "Núcleo",
         "MapWorldsColosseum": "Coliseo",
-        "MapWorldsAcidLakes": "Cavernas Ácidas",
-        "MapWorldsDarkForest": "Bosque Oscuro",
-        "MapWorldsCrimsonTemple": "Templo Carmesí",
+        "MapWorldsAcidLakes": "Cavernas ácidas",
+        "MapWorldsDarkForest": "Bosque oscuro",
+        "MapWorldsCrimsonTemple": "Templo carmesí",
         "MapWorldsPlaza": "Plaza",
         "MapWorldsDig": "Perforación",
         "MapWorldsPalace": "Palacio",
-        "MapWorldsLavaLake": "Lago de Lava",
+        "MapWorldsLavaLake": "Lago de lava",
         "MapWorldsBasilica": "Basílica",
-        "MapWorldsSunkenCity": "Ciudad Hundida",
+        "MapWorldsSunkenCity": "Ciudad hundida",
         "MapWorldsReef": "Arrecife",
         "MapWorldsCarcass": "Cadáver",
-        "MapWorldsChimera": "Hoyo de la Quimera",
-        "MapWorldsHydra": "Guarida de la Hidra",
-        "MapWorldsPhoenix": "Forja del Fénix",
-        "MapWorldsMinotaur": "Laberinto del Minotauro",
+        "MapWorldsChimera": "Hoyo de la quimera",
+        "MapWorldsHydra": "Guarida de la hidra",
+        "MapWorldsPhoenix": "Forja del fénix",
+        "MapWorldsMinotaur": "Laberinto del minotauro",
         "MapWorldsShapersRealm": "Reino del Creador",
-        "MapWorldsVaalTemple": "Templo Vaal",
+        "MapWorldsVaalTemple": "Templo vaal",
         "MapWorldsHarbinger": "Isla del Heraldo",
-        "MapWorldsHarbingerLow": "La Cabecera de la Playa",
-        "MapWorldsHarbingerMid": "La Cabecera de la Playa",
-        "MapWorldsHarbingerHigh": "La Cabecera de la Playa",
-        "MapWorldsHarbingerUber": "La Cabecera de la Playa imbuída",
+        "MapWorldsHarbingerLow": "La cabecera de la playa",
+        "MapWorldsHarbingerMid": "La cabecera de la playa",
+        "MapWorldsHarbingerHigh": "La cabecera de la playa",
+        "MapWorldsHarbingerUber": "La cabecera de la playa imbuida",
         "MapWorldsDrySea": "Mar seco",
         "MapWorldsSteppes": "Estepas",
         "MapWorldsStagnation": "Estancamiento",
@@ -29913,7 +29998,7 @@
         "Hideout5_3": "Guarida Abandonada",
         "Hideout11_3": "Guarida Ensangrentada",
         "Hideout12_3": "Guarida Céntrica",
-        "Hideout13_3": "Gurida Alta",
+        "Hideout13_3": "Guarida Alta",
         "Hideout16_3": "Guarida de Almacenaje",
         "Hideout17_3": "Guarida Industrial",
         "Hideout24_1": "BarcodeGuarida1",
@@ -29926,7 +30011,7 @@
         "HideoutBaths": "Guarida Lujosa",
         "HideoutOssuary": "Guarida ósea",
         "HideoutCourts": "Guarida Majestuosa",
-        "HideoutCauseway": "Guarida Hundida",
+        "HideoutSunken": "Guarida Hundida",
         "HideoutHighGardens": "Guarida Arbórea",
         "HideoutShipgraveyard": "Guarida de Naufragio",
         "HideoutForest": "Guarida Frondosa",
@@ -29958,7 +30043,7 @@
         "HideoutCrimsonTemple": "Guarida Sanguina",
         "HideoutTwilightTemple": "Guarida Dividida",
         "HideoutMountain": "Guarida Alpina",
-        "HideoutHaunted": "Guarida Embrujada",
+        "HideoutHauntedMansion": "Guarida Embrujada",
         "HideoutMoonTemple": "Guarida Nocturna",
         "HideoutPrimevalRuins": "Guarida primitiva",
         "HideoutDoomguard": "Guarida de Guardia de Condenación",
@@ -29993,6 +30078,8 @@
         "HideoutCosmicAtlas": "Guarida del Atlas",
         "HideoutArenaEaterOfWorlds": "Guarida de amalgama",
         "HideoutArenaSearingExarch": "Guarida abrasada",
+        "HideoutCrucible": "Guarida de la Forja de los titanes",
+        "HideoutAncestralTrial": "Guarida del Torneo de los ancestros",
         "pvpTown": "Área de Preparación de la Arena de Sarn",
         "AtlasExilesBoss5": "El ojo de la tormenta",
         "AfflictionTown6": "Vigilia de la locura",
@@ -30084,7 +30171,7 @@
         "HeistMansion8": "Mansión",
         "HeistMansion9": "Mansión",
         "HeistBoss_AdmiralDarnaw": "Desembarco de Darnaw",
-        "HeistBoss_FreidrichTarollo": "La fosa sangrienda",
+        "HeistBoss_FreidrichTarollo": "La fosa sangrienta",
         "HeistBoss_Jamanra": "Tumba de los desterrados",
         "HeistBoss_Nashta": "Campamento saqueado",
         "HeistBoss_TheUnbreakable": "Combat Capacity Test Chamber",
@@ -30093,7 +30180,8 @@
         "UltimatumArena": "La Arena Utzaal",
         "UltimatumArenaEndgame": "La Arena Utzaal",
         "UltimatumBossArena": "La torre de los calvarios",
-        "MapWorldsUltimatumBossArena": "La torre de los calvarios"
+        "MapWorldsUltimatumBossArena": "La torre de los calvarios",
+        "HideoutExilecon23": "Guarida de ExileCon 2023"
       }
     },
     "Thai": {
@@ -30185,9 +30273,9 @@
         "JunOnKillingCatarinaTwo": "พวก​เขา​ไม่​ต้องการ​แบบ​นั้น​หรอก... ถ้า​มัน​ต้อง​แลก​กับ​ชีวิต​ของ​ผู้อื่น",
         "JunOnKillingCatarinaThree": "ข้า​ไม่​เอา​ด้วย",
         "VenariusBossFightDepart": "มัน​ไม่​จบ มัน​ไม่มี​วัน​จบ​สิ้น! ข้า​จะ​รวม​มนุษยชาติ​ให้​เป็น​หนึ่ง!",
-        "CassiaNewLane1": "มัน​แตก​ไมเซเลี่ยม​ใหม่! ... ราก​ใหม่!",
-        "CassiaNewLane2": "มัน​แตก​ไมเซเลี่ยม​ใหม่! ... ราก​ใหม่!",
-        "CassiaNewLane3": "มัน​แตก​ไมเซเลี่ยม​ใหม่! ... ราก​ใหม่!",
+        "CassiaNewLane1": "มัน​แตก​ไมซีเลียม​ใหม่! ... ราก​ใหม่!",
+        "CassiaNewLane2": "มัน​แตก​ไมซีเลียม​ใหม่! ... ราก​ใหม่!",
+        "CassiaNewLane3": "มัน​แตก​ไมซีเลียม​ใหม่! ... ราก​ใหม่!",
         "CassiaNewLane4": "เชื้อ​รา​ร้าย​กำลัง​กระจาย!",
         "CassiaNewLane5": "เชื้อ​รา​ร้าย​กำลัง​กระจาย!",
         "CassiaNewLane6": "เชื้อรา​ร้าย​กำลัง​กระจาย!",
@@ -31439,7 +31527,7 @@
         "TrialmasterReturnsAfterDefeatRandom": "...และ​การ​รับ​ใช้​ของ​ข้า​ก็​ดำเนิน​ต่อ​ไป ท่านเคออส​หัว​เราะ เจ้า​มนุษย์​เอ๋ย และ​ทรัพย์​สมบัติ​ก็​ตกเป็น​ของ​เจ้า",
         "TrialmasterAboutHisDefeat": "เจ้า​ไม่ใช่​ผู้​เดียว​ที่​มี​เส้น​ทาง​แยก​ออก​ไป​ใน​ชั่ว​ขณะ​แห่ง​ความ​บังเอิญ​หรอก นาย​ข้า เคออส มอง​เห็น​ทุก​สรรพ​สิ่ง เจ้า​เผชิญ​กับ​ชัยชนะ​... เช่น​เดียว​กับ​ข้า จาก​มุม​มอง​ของ​ข้า ข้า​ได้​สังหาร​เจ้า แล้ว​ท่าน​เคออส​ก็​ชัก​นำ​ข้า​มา​พบ​กับ​ความ​เป็น​ไป​ได้​อื่น นั่น​ก็​คือ​ความ​เป็น​ไป​ได้​นี้\r\n\r\nข้า​ยัง​รับ​ใช้​ต่อ​ไป​...",
         "TrialmasterIntroduction": "ข้า​ได้​เดิน​ไป​ตาม​โลก​ใบ​นี้​เพื่อ​หา​ผู้​ท้าทาย​ที่​เหมาะ​สม​มา​เนิ่น​นาน นาย​ข้า ท่าน​เคออส ได้​มอบ​หมาย​ให้​ข้า​ทำ​หน้าที่​นี้ มี​หลาย​ต่อ​หลาย​คน​ที่​ได้​เผชิญ​กับ​บท​ทดสอบ​ของ​ข้า​เพื่อ​ใฝ่​หาความ​ยิ่ง​ใหญ่ ไม่​ว่า​จะ​นัก​วิชาการ อาชญากร วีรชน หรือ​ผู้​ถ่อม​ตน​ก็ตาม ทุก​คน​ได้​ก้าว​ออก​มา​เผชิญ​กับ​บท​ทดสอบ และ​ส่วน​ใหญ่​ก็ได้​แพ้​พ่าย กฎ​นี้​ไม่​เคย​เปลี่ยนแปลง​ให้​กับ​พวก​เขา และ​มัน​จะ​ไม่​เปลี่ยนแปลง​ให้​กับ​เจ้า​เช่น​กัน จงนำ​มา​เพียง​สิ่ง​ที่​เจ้า​สามารถ​สูญ​เสีย​ไป​ได้​ ​นั่น​รวม​ถึง​ชีวิต​ของ​เจ้า​ด้วย",
-        "TrialmasterGossipChaos": "นาย​ของ​ข้า​คือ​แก่น​แท้​ของ​ทุก​สิ่ง​ที่​อาจ​เป็น​ไป ท่าน​คือ​การ​ทอย​เหรียญ ท่าน​คือ​การ​ทอย​ลูกเต๋า ไม่​ว่า​เจ้า​จะแพ้​หรือ​ชนะ เจตจำนง​ของ​ท่าน​ก็​ย่อม​เป็น​ผล แต่​ทว่า​โอกาส​ของ​เจ้า​ย่อม​ได้​รับ​อิทธิพล​จาก​ทักษะ​, ปัญญา​, และ​ความ​เกรียง​ไกร​ของ​เจ้า​เอง นี่​คือ​สิ่ง​ที่​ทำให้​ท่าน​เคออส​ชื่น​ชอบ​นัก มนุษย์​ที่​มี​ทักษะ​อาจ​พลิก​โอกาส​มา​เป็น​ผล​แก่​พวก​เขา​ได้ เพราะ​ใน​ลม​ต้าน​แห่ง​ผล​ที่​มิ​อาจ​ทราบ​นั้น ศร​ของ​ปรมาจารย์​ย่อม​แม่นยำ​ไป​กว่า​ศร​ของ​มือ​สมัคร​เล่น แสดง​ให้​ท่าน​เห็น​ความ​เชี่ยวชาญ​ของ​เจ้า แล้ว​ท่าน​จะ​ยิ้ม​ให้​กับ​เจ้า ทำให้​ท่าน​ประหลาด​ใจ​ด้วย​พรสวรรค์​อัน​สูงส่ง แล้ว​ท่าน​อาจ​หัวเราะ​เสีย​ด้วย​ซ้ำ ทรัพย์​สมบัติ​จะ​ตกลง​มา​เป็น​ห่า​ฝน​แก่​ผู้​ใด​ที่​มอบ​อารมณ์​ขัน​มา​สู่​ท่าน​เคออส",
+        "TrialmasterGossipChaos": "นาย​ของ​ข้า​คือ​แก่น​แท้​ของ​ทุก​สิ่ง​ที่​อาจ​เป็น​ไป ท่าน​คือ​การ​ทอย​เหรียญ ท่าน​คือ​การ​ทอย​ลูกเต๋า ไม่​ว่า​เจ้า​จะแพ้​หรือ​ชนะ เจตจำนง​ของ​ท่าน​ก็​ย่อม​เป็น​ผล แต่​ทว่า​โอกาส​ของ​เจ้า​ย่อม​ได้​รับ​อิทธิพล​จาก​ทักษะ​, ปัญญา​, และ​ความ​เกรียง​ไกร​ของ​เจ้า​เอง นี่​คือ​สิ่ง​ที่​ทำให้​ท่าน​เคออส​ชื่น​ชอบ​นัก มนุษย์​ที่​มี​ทักษะ​อาจ​พลิก​โอกาส​มา​เป็น​ผล​แก่​พวก​เขา​ได้ เพราะ​ใน​ลม​ต้าน​แห่ง​ผล​ที่​มิ​อาจ​ทราบ​นั้น ศร​ของ​ปรมาจารย์​ย่อม​แม่นยำ​ไป​กว่า​ศร​ของ​มือ​สมัคร​เล่น แสดง​ให้​ท่าน​เห็น​ความ​เชี่ยวชาญ​ของ​เจ้า แล้ว​ท่าน​จะ​ยิ้ม​ให้​กับ​เจ้า ทำให้​ท่าน​ประหลาด​ใจ​ด้วย​พรสวรรค์​อัน​สูงส่ง แล้ว​ท่าน​อาจ​หัวเราะ​เสีย​ด้วย​ซ้ำ ทรัพย์สมบัติ​จะ​โปรยปราย​ดั่ง​สายฝน​แก่​ผู้​ที่​นำ​อารมณ์​ขัน​มา​สู่​ท่าน​เคออส",
         "TrialmasterGossipDoryani": "ข้า​เคย​เป็น​มนุษย์​มา​ก่อน และ​ข้า​รู้​ว่า​มนุษย์​ที่​ข้า​เคย​เป็น​จะ​มี​ความ​รู้สึก​ใด​ต่อ​เรื่อง​บาง​อย่าง ชาย​คน​นั้น​คงจะ​เกลียด​ชัง​ดอร์ยานี​เป็น​ล้นพ้น​ที่​เป็น​ต้น​เหตุ​ของ​การ​ล่ม​สลาย​ของ​อารยธรรม​ที่​ยิ่ง​ใหญ่​ที่สุด​ใน​โลก โชค​ดี​ที่​ข้า​มิ​ถูก​กวน​ใจ​จาก​สิ่ง​ยึด​เหนี่ยว​เหล่า​นั้น​แล้ว ด้วย​ความ​สง่า​งาม​ของ​ท่าน​เค​ออส บัดนี้​ข้า​เข้าใจ​แล้ว​ว่า​ทุก​สิ่ง​ที่​เกิด​ขึ้น​ได้​ย่อม​เกิด​ขึ้น แม้​กระทั่ง​ตอน​นี้​ข้า​ก็​กำลัง​พิสูจน์​ความ​เกรียง​ไกร​ของ​ผู้​รอด​ชีวิต​อีก​คน​ที่​ถูก​ซัด​มา​สู่​เวร์แคลส์ท​แทน​เจ้า และ​ใน​สายตา​ของ​เธอ เจ้า​ก็​ตาย​ไป​แล้ว ทุก​สิ่ง​ที่​เจ้า​ทำ​สำเร็จ​นั้น​ไร้​ความ​หมาย ทุกสิ่ง​ที่​ดอร์ยานี​ทำลาย​ล้าง​นั้น​ก็​ไร้​ความ​หมาย​เช่น​เดียวกัน",
         "TrialmasterGossipAtziri": "ราชินี​นั้น​ถือเป็น​ตัวแทน​เกาะ​พิกล​แห่ง​ความ​มั่นคง​ที่​ท่าน​เคออส​ไม่​อาจ​ทำความ​เข้าใจ​ได้ เหตุการณ์​แทบ​ทุก​อย่าง​นั้น​เต็ม​ไป​ด้วย​ความ​เป็น​ไป​ได้​มากมาย แต่​ประวัติ​ของ​การ​มี​ตัว​ตน​ของ​เธอ​นั้น​เป็น​เส้น​ทาง​เดียว​ที่​ไร้​รอย​แยกใดๆ ไม่​ว่า​จะ​เป็น​โลก​จริง​หรือ​โลก​ใน​จินตนาการ โลก​ทุก​ใบ​ต่าง​ก็​มี​อัถ​สิริ​ที่​นำ​คน​ของ​เรา​มา​สู่​ความ​ย่อยยับ​ทั้ง​นั้น\r\n\r\nบัดนี้​เธอ​ก็​ยัง​จ้อง​มอง​เข้าไป​ใน​กระจก อยู่​ที่ไหน​สัก​แห่ง​ที่​อยู่​ไกล​เกิน​เงื้อม​มือ​ของ​นาย​ข้า ใน​สถาน​ที่​มี​ความ​คลั่ง​และ​ฝัน​ร้าย​สี​เลือด​... นาย​ของ​ข้า​ชอบ​ผล​ของ​โอกาส​อัน​ไม่​แน่นอน แต่​เขา​เกลียด​ชัง​ปริศนา​ลึกลับ​แห่ง​จักรวาล​ที่​ไม่มี​คำ​ตอบ​อัน​แน่ชัด โดย​เฉพาะ​อย่าง​ยิ่ง​เมื่อ​ปริศนา​ลึกลับ​นี้​มี​อำนาจ​เพียง​พอที่​จะ​กำหนด​เหตุ​อัน​ตายตัว​ต่อ​รากฐาน​แห่ง​การ​มี​ตัว​ตน",
         "TrialmasterGossipAnathema": "นาย​ข้า เคออส มัก​สัมผัส​ได้​ว่า​มี​อำนาจ​มุ่ง​ร้าย​ที่​อยู่​ใน​หมอก​ปริศนา​ของ​การ​สรร​สร้าง​อัน​ดิบ​เถื่อน​ที่​มุ่ง​จะ​ต่อกร​กับ​เขา มัน​ไม่​เผย​กาย​ของ​มัน​ออก​มา ไม่ มัน​เป็นอำนาจ​ผลัก​ดัน​อัน​แสน​ขลาด เป็น​อำนาจ​ที่​แอบ​ผูกมัด​ใย​แห่ง​โชค​ชะตา​เพื่อ​นำ​มนุษย์​จาก​แต่ละ​ยุค​สมัย​มา​ร่วม​กัน​เพื่อ​เจตจำนง​แห่ง​ความ​เป็น​ระเบียบ​เรียบร้อย มัน​เป็น​ความ​ขัด​แย้ง​ที่​ดำเนิน​มา​ชั่ว​นิรันดร์ เว้น​แต่​เพียง​ข้อ​ยกเว้น​เดียว​เพียง​เท่านั้น",
@@ -32011,6 +32099,7 @@
         "MapWorldsMuseumUnique": "The Putrid Cloister",
         "MapWorldsScriptorium": "Scriptorium",
         "MapWorldsSiege": "Siege",
+        "MapWorldsSynthesisedWorld": "โลกสังเคราะห์",
         "MapWorldsShipyard": "Shipyard",
         "MapWorldsBelfry": "Belfry",
         "MapWorldsArachnidTomb": "Arachnid Tomb",
@@ -32133,7 +32222,7 @@
         "HideoutBaths": "ที่ซ่อน Luxurious",
         "HideoutOssuary": "ที่ซ่อน Skeletal",
         "HideoutCourts": "ที่ซ่อน Stately",
-        "HideoutCauseway": "ที่ซ่อน Sunken",
+        "HideoutSunken": "ที่ซ่อน Sunken",
         "HideoutHighGardens": "ที่ซ่อน Arboreal",
         "HideoutShipgraveyard": "ที่ซ่อน Shipwreck",
         "HideoutForest": "ที่ซ่อน Lush",
@@ -32165,7 +32254,7 @@
         "HideoutCrimsonTemple": "ที่ซ่อน Sanguine",
         "HideoutTwilightTemple": "ที่ซ่อน Divided",
         "HideoutMountain": "ที่ซ่อน Alpine",
-        "HideoutHaunted": "ที่ซ่อน Haunted",
+        "HideoutHauntedMansion": "ที่ซ่อน Haunted",
         "HideoutMoonTemple": "ที่ซ่อน Nocturnal",
         "HideoutPrimevalRuins": "ที่ซ่อน Primeval",
         "HideoutDoomguard": "ที่ซ่อน Doomguard",
@@ -32200,6 +32289,8 @@
         "HideoutCosmicAtlas": "ที่ซ่อนสมุดแผนที่",
         "HideoutArenaEaterOfWorlds": "ที่ซ่อน Tangled",
         "HideoutArenaSearingExarch": "ที่ซ่อน Searing",
+        "HideoutCrucible": "ที่ซ่อนเตาหลอมแห่งไททัน",
+        "HideoutAncestralTrial": "ที่ซ่อน Ancestral Trial",
         "pvpTown": "Sarn Arena Staging Area",
         "AtlasExilesBoss5": "ใจกลางพายุ",
         "AfflictionTown6": "หอสังเกตการณ์สิ้นสติ",
@@ -32300,7 +32391,8 @@
         "UltimatumArena": "ลานประลองอัทซาล",
         "UltimatumArenaEndgame": "ลานประลองอัทซาล",
         "UltimatumBossArena": "หอคอยมหาอุปสรรค",
-        "MapWorldsUltimatumBossArena": "หอคอยมหาอุปสรรค"
+        "MapWorldsUltimatumBossArena": "หอคอยมหาอุปสรรค",
+        "HideoutExilecon23": "ที่ซ่อน ExileCon 2023"
       }
     },
     "Traditional Chinese": {
@@ -34218,6 +34310,7 @@
         "MapWorldsMuseumUnique": "腐臭迴廊",
         "MapWorldsScriptorium": "墓影書坊",
         "MapWorldsSiege": "禁斷圍城",
+        "MapWorldsSynthesisedWorld": "追憶世界",
         "MapWorldsShipyard": "熾炎船塢",
         "MapWorldsBelfry": "雲頂鐘樓",
         "MapWorldsArachnidTomb": "異蛛墓塚",
@@ -34340,7 +34433,7 @@
         "HideoutBaths": "藏身處 - 奢華帝堡",
         "HideoutOssuary": "藏身處 - 骸骨墓場",
         "HideoutCourts": "藏身處 - 莊嚴之室",
-        "HideoutCauseway": "藏身處 - 沉淪地域",
+        "HideoutSunken": "藏身處 - 沉淪地域",
         "HideoutHighGardens": "藏身處 - 樹之棲所",
         "HideoutShipgraveyard": "藏身處 - 廢棄沈船",
         "HideoutForest": "藏身處 - 富饒之地",
@@ -34372,7 +34465,7 @@
         "HideoutCrimsonTemple": "藏身處 - 緋紅之殿",
         "HideoutTwilightTemple": "藏身處 - 暮光之殿",
         "HideoutMountain": "藏身處 - 山麓營地",
-        "HideoutHaunted": "藏身處 - 森幽莊園",
+        "HideoutHauntedMansion": "藏身處 - 森幽莊園",
         "HideoutMoonTemple": "藏身處 - 黑夜神殿",
         "HideoutPrimevalRuins": "藏身處 - 上古廢墟",
         "HideoutDoomguard": "藏身處 - 厄夜衛士",
@@ -34407,6 +34500,8 @@
         "HideoutCosmicAtlas": "藏身處 - 輿圖",
         "HideoutArenaEaterOfWorlds": "藏身處 - 吞噬天地",
         "HideoutArenaSearingExarch": "藏身處 - 灼烙總督",
+        "HideoutCrucible": "藏身處 - 泰坦族的熔爐",
+        "HideoutAncestralTrial": "藏身處 - 祖靈的試煉",
         "pvpTown": "薩恩競技場 - 準備區域",
         "AtlasExilesBoss5": "暴風之眼",
         "AfflictionTown6": "狂魔之望",
@@ -34507,7 +34602,8 @@
         "UltimatumArena": "奧札爾競技場",
         "UltimatumArenaEndgame": "奧札爾競技場",
         "UltimatumBossArena": "磨難之塔",
-        "MapWorldsUltimatumBossArena": "磨難之塔"
+        "MapWorldsUltimatumBossArena": "磨難之塔",
+        "HideoutExilecon23": "藏身處 - 流亡嘉年華2023"
       }
     }
   },
