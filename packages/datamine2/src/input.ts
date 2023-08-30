@@ -1,7 +1,6 @@
 import * as fs from 'fs/promises'
 import * as t from 'io-ts'
 import * as F from 'fp-ts/function'
-import * as E from 'fp-ts/Either'
 import * as A from 'fp-ts/Array'
 
 export interface Input {
@@ -15,14 +14,14 @@ export interface Input {
     worldAreas: WorldArea[]
     mapIcons: MapIcon[]
 
-    lang: {[name: string]: Lang}
+    lang: { [name: string]: Lang }
 
-    worldAreasById: {[key: string]: WorldArea}
-    worldAreasByIndex: {[key: number]: WorldArea}
-    atlasNodesByWorldArea: {[key: number]: AtlasNode}
-    uniqueMapsByWorldArea: {[key: number]: UniqueMap}
-    itemVisualIdentityByIndex: {[key: number]: ItemVisualIdentity}
-    mapIconsByName: {[key: string]: MapIcon}
+    worldAreasById: { [key: string]: WorldArea }
+    worldAreasByIndex: { [key: number]: WorldArea }
+    atlasNodesByWorldArea: { [key: number]: AtlasNode }
+    uniqueMapsByWorldArea: { [key: number]: UniqueMap }
+    itemVisualIdentityByIndex: { [key: number]: ItemVisualIdentity }
+    mapIconsByName: { [key: string]: MapIcon }
 }
 
 export interface Lang {
@@ -31,7 +30,7 @@ export interface Lang {
     npcTextAudio: NPCTextAudio[]
     worldAreas: WorldAreaLang[]
 
-    worldAreasById: {[id: string]: WorldAreaLang}
+    worldAreasById: { [id: string]: WorldAreaLang }
 }
 
 export const AtlasNode = t.type({
@@ -110,8 +109,8 @@ export const WorldAreaLang = t.type({
 export type WorldAreaLang = t.TypeOf<typeof WorldAreaLang>
 
 const DATA_DIR = `${__dirname}/../build/data`
-const DATA_MAIN = `${DATA_DIR}/main/English`
-const DATA_LANG = `${DATA_DIR}/lang`
+const DATA_MAIN = `${DATA_DIR}/main/tables/English`
+const DATA_LANG = `${DATA_DIR}/lang/tables`
 const DIST_DIR = `${__dirname}/../dist`
 
 export async function load(): Promise<Input> {
@@ -139,7 +138,7 @@ export async function load(): Promise<Input> {
     const uniqueMapsByWorldArea = Object.fromEntries(uniqueMaps.map(a => [a.WorldAreasKey, a]))
     const itemVisualIdentityByIndex = Object.fromEntries(itemVisualIdentity.map(a => [a._index, a]))
     const mapIconsByName = Object.fromEntries(mapIcons.map(a => [a.name, a]))
-    return {atlasNodes, itemVisualIdentity, ultimatumModifiers, uniqueMaps, worldAreas, mapIcons, lang, worldAreasById, worldAreasByIndex, atlasNodesByWorldArea, uniqueMapsByWorldArea, itemVisualIdentityByIndex, mapIconsByName}
+    return { atlasNodes, itemVisualIdentity, ultimatumModifiers, uniqueMaps, worldAreas, mapIcons, lang, worldAreasById, worldAreasByIndex, atlasNodesByWorldArea, uniqueMapsByWorldArea, itemVisualIdentityByIndex, mapIconsByName }
 }
 
 async function loadLang(lang: string): Promise<Lang> {
@@ -150,14 +149,14 @@ async function loadLang(lang: string): Promise<Lang> {
         loadFile(`${DATA_LANG}/${lang}/WorldAreas.json`, WorldAreaLang),
     ])
     const worldAreasById = Object.fromEntries(worldAreas.map(w => [w.Id, w]))
-    return {backendErrors, npcs, npcTextAudio, worldAreas, worldAreasById}
+    return { backendErrors, npcs, npcTextAudio, worldAreas, worldAreasById }
 }
 
 async function loadFile<A>(path: string, codec: t.Type<A>): Promise<A[]> {
     const body = await fs.readFile(path)
     const json = JSON.parse(body.toString())
     // https://stackoverflow.com/questions/68301926/io-ts-parse-array-of-eithers-validations
-    const {left, right} = F.pipe(
+    const { left, right } = F.pipe(
         json,
         A.map(codec.decode),
         A.separate,
