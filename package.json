@@ -21,7 +21,7 @@
     "clean:npm": "yarn clean && lerna exec 'rimraf ./node_modules' --stream && rimraf ./node_modules"
   },
   "engines": {
-    "node": "16.x"
+    "node": ">=20 <22"
   },
   "workspaces": {
     "//nohoist": "./packages/electron needs all production packages non-hoisted for its build step",
