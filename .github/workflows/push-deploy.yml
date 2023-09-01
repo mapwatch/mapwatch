@@ -51,7 +51,7 @@ jobs:
           AWS_S3_BUCKET: mapwatch.erosson.org
           AWS_REGION: us-east-1
           SOURCE_DIR: packages/www/build/
-  deploy-electron:
+  deploy-electron-windows:
     # https://github.com/marketplace/actions/electron-builder-action
     runs-on: windows-latest
     # needs: deploy-www
@@ -77,9 +77,41 @@ jobs:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Match `yarn build:all`'s arguments. We're running this CI on Windows
-          # to build for Windows, but it can build for Linux too
-          args: --win --linux deb tar.xz AppImage --x64
+          # Match `yarn build:windows`'s arguments
+          args: --win --x64
+          # If the commit is tagged with a version (e.g. "v1.0.0"),
+          # release the app after building
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+          # electron-builder has always been a bit flaky for me
+          max_attempts: 3
+  deploy-electron-linux:
+    # https://github.com/marketplace/actions/electron-builder-action
+    runs-on: ubuntu-latest
+    # needs: deploy-www
+    steps:
+      - uses: actions/checkout@v3
+      # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+      - run: yarn --frozen-lockfile --network-timeout 100000
+      - run: yarn test
+      # `yarn build` the website. Required for the electron-builder action.
+      - run: yarn build --ignore @mapwatch/electron2
+      - name: Electron Builder Action
+        uses: samuelmeuli/action-electron-builder@v1.6.0
+        with:
+          package_root: packages/electron2
+          # don't run our electron package's `yarn build`.
+          # it runs `electron-builder` - but `action-electron-builder` does that,
+          # and it's better integrated with github actions (runs faster, doesn't
+          # crash)
+          skip_build: true
+          # GitHub token, automatically provided to the action
+          # (No need to define this secret in the repo settings)
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Match `yarn build:linux`'s arguments
+          args: --linux deb tar.gz AppImage --x64
           # If the commit is tagged with a version (e.g. "v1.0.0"),
           # release the app after building
           release: ${{ startsWith(github.ref, 'refs/tags/v') }}
