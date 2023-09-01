@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "start": "bash -c \"electron . --spawn_www --app_url=http://localhost:3000\"",
-    "build": "yarn build:windows",
+    "build": "yarn build:all",
     "build:all": "electron-builder --win --linux deb tar.xz AppImage --x64",
     "build:windows": "electron-builder --win --x64",
     "build:linux": "electron-builder --linux deb tar.xz AppImage --x64",

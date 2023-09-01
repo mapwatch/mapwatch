@@ -63,15 +63,23 @@ jobs:
           node-version: 20.x
       - run: yarn --frozen-lockfile --network-timeout 100000
       - run: yarn test
+      # `yarn build` the website. Required for the electron-builder action.
       - run: yarn build --ignore @mapwatch/electron2
       - name: Electron Builder Action
         uses: samuelmeuli/action-electron-builder@v1.6.0
         with:
           package_root: packages/electron2
-          skip_build: true  # I already built it above; just monorepo things
+          # don't run our electron package's `yarn build`.
+          # it runs `electron-builder` - but `action-electron-builder` does that,
+          # and it's better integrated with github actions (runs faster, doesn't
+          # crash)
+          skip_build: true
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Match `yarn build:all`'s arguments. We're running this CI on Windows
+          # to build for Windows, but it can build for Linux too
+          args: --win --linux deb tar.xz AppImage --x64
           # If the commit is tagged with a version (e.g. "v1.0.0"),
           # release the app after building
           release: ${{ startsWith(github.ref, 'refs/tags/v') }}
