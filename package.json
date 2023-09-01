@@ -24,10 +24,7 @@
     "node": ">=20 <22"
   },
   "workspaces": {
-    "//nohoist": "./packages/electron needs all production packages non-hoisted for its build step",
-    "nohoist": [
-      "@mapwatch/electron/**"
-    ],
+    "nohoist": [],
     "packages": [
       "packages/*"
     ]

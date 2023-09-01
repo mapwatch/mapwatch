@@ -3,10 +3,17 @@
   "version": "1.0.5",
   "main": "src/main.js",
   "license": "GPL-3.0",
+  "homepage": "https://mapwatch.erosson.org",
+  "repository": "github:mapwatch/mapwatch",
+  "author": "Evan Rosson <git@erosson.org>",
   "private": true,
   "scripts": {
     "start": "bash -c \"electron . --spawn_www --app_url=http://localhost:3000\"",
-    "build": "electron-builder --win --x64",
+    "build": "yarn build:windows",
+    "build:all": "electron-builder --win --linux deb tar.xz AppImage --x64",
+    "build:windows": "electron-builder --win --x64",
+    "build:linux": "electron-builder --linux deb tar.xz AppImage --x64",
+    "build:linux2": "electron-builder --linux dir --x64",
     "release": "yarn build --publish always"
   },
   "build": {
@@ -20,6 +27,9 @@
     ],
     "appImage": {},
     "win": {
+      "icon": "src/favicon.png"
+    },
+    "linux": {
       "icon": "src/favicon.png"
     },
     "publish": [

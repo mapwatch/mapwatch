@@ -47,6 +47,7 @@ function main() {
       // https://electronjs.org/docs/tutorial/security
       enableRemoteModule: false,
       nodeIntegration: false,
+      sandbox: false,
       contextIsolation: true,
       additionalArguments: [`--mapwatchElectronFlags=${JSON.stringify({ version: electron.app.getVersion() })}`],
     }

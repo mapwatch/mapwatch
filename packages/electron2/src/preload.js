@@ -1,5 +1,6 @@
 const { contextBridge } = require('electron')
 const args = require('minimist')(process.argv.slice(2))
+throw new Error('test error')
 
 console.log('preloading...', args.mapwatchElectronFlags)
 if (!args.mapwatchElectronFlags) {
