@@ -29,11 +29,22 @@ jobs:
           FOLDER: packages/mapwatch.github.io/
 
       # https://github.com/marketplace/actions/s3-sync?version=v0.5.1
-      - name: S3 Sync
+      # 1) delete old files, and upload cacheable things: everything but the root html file
+      - name: S3 Sync - push cacheable files, delete old files
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
-          # args: --acl public-read --follow-symlinks --delete
-          args: --delete
+          args: --exclude '*.html' --cache-control max-age=86400,public --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_S3_BUCKET: mapwatch.erosson.org
+          AWS_REGION: us-east-1
+          SOURCE_DIR: packages/www/build/
+      # 2) upload non-cacheable things: the root html file
+      - name: S3 Sync - push non-cacheable files
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        with:
+          args: --exclude '*' --include '*.html' --cache-control no-cache
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
