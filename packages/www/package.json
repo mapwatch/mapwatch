@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@fluent/web": "^0.2.1",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.14.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.1.2",
