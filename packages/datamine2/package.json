@@ -8,7 +8,7 @@
     "version": "./scripts/version.sh"
   },
   "devDependencies": {
-    "@types/jsdom": "^20.0.0",
+    "@types/jsdom": "^21.1.3",
     "@types/minimist": "^1.2.2",
     "@types/node": "^18.7.5",
     "@types/node-fetch": "2",
