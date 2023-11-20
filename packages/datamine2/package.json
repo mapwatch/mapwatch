@@ -20,6 +20,6 @@
     "jquery": "^3.6.0",
     "jsdom": "^20.0.0",
     "node-fetch": "2",
-    "pathofexile-dat": "^8.0.0"
+    "pathofexile-dat": "^9.0.0"
   }
 }
