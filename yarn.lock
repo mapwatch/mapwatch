@@ -8748,10 +8748,10 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-ooz-wasm@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ooz-wasm/-/ooz-wasm-1.0.1.tgz#0aa3b898ba0f063926b7b4a019cb138d3c58ffb0"
-  integrity sha512-YprakwWwn4flT9NU/ipBw/ajQwq6Z+sdPy3DsuUKSpdXkfFEI8WWaLC/SvzAKacKwyOrbkzR5oKeKYOvM8oRaw==
+ooz-wasm@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ooz-wasm/-/ooz-wasm-2.0.0.tgz#71ecc6bf1a61026ac3bc55ea8d7d781570c170bc"
+  integrity sha512-Ewk+Vga2m9niFGV5qT+4EKfBnFEQSQfnTdOWSlnQcpDB2OAdk7TpRHfKqxLSLhDKRjKjw9R+sGlOreWW8ABR0A==
 
 opn@5.4.0:
   version "5.4.0"
@@ -9152,18 +9152,18 @@ path-type@^4.0.0:
   resolved "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-pathofexile-dat-schema@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/pathofexile-dat-schema/-/pathofexile-dat-schema-3.0.0.tgz#2507fbe3215203cebdf0cf5cc9a8aa0e637d6f77"
-  integrity sha512-j9Fg0SCHZMVN4Qke3S4f2d7HqBshFdUT/nvUQgQ3GcbMseeuS7dm+l84WbzHCZcZSSHPIwHttMYq5GsUurM74Q==
+pathofexile-dat-schema@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/pathofexile-dat-schema/-/pathofexile-dat-schema-4.0.0.tgz#6e67cdddd16b5ea3096eb923ddd01b5e9b8c170a"
+  integrity sha512-GyGEmWLYFT1j8kGYfXvIz2C9HPG2HaOlnGRLlyOMZEmIOykWzyLQvj2WHiPymaeO+ZmD8EOWmkc3YzNDzJD9JA==
 
-pathofexile-dat@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/pathofexile-dat/-/pathofexile-dat-8.0.0.tgz#a6e78c699033a3336746144b441c0db1e93b04cc"
-  integrity sha512-4RThYvjkkcG8MyC5MOs7Ej2QZvYTY3HscKq55N4hSdSo8N1/XxgpZDGPy0keqJMOf5b0W67mNos+5HS6F140ow==
+pathofexile-dat@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/pathofexile-dat/-/pathofexile-dat-9.1.0.tgz#10c86f614939ba039c7a9185bb9ecfe4f8af47eb"
+  integrity sha512-mDMFIQVnY4g0V2gX9xyaQ8SOPlSBGL7C69TGQMufY5xuifRVoov69nvvqsbjAUZLvUJeec6l1Sx/ozKbsrMI7Q==
   dependencies:
-    ooz-wasm "^1.0.0"
-    pathofexile-dat-schema "^3.0.0"
+    ooz-wasm "^2.0.0"
+    pathofexile-dat-schema "^4.0.0"
 
 pbkdf2@^3.0.3:
   version "3.0.17"
