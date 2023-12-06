@@ -20,17 +20,20 @@
     },
     {
       "title": {
-        "name": "A Familiar Call"
+        "name": "A Familiar Call",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "A Fate Worse Than Death"
+        "name": "A Fate Worse Than Death",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "A Modest Request"
+        "name": "A Modest Request",
+        "drop areas": null
       }
     },
     {
@@ -71,7 +74,8 @@
     },
     {
       "title": {
-        "name": "Akil's Prophecy"
+        "name": "Akil's Prophecy",
+        "drop areas": null
       }
     },
     {
@@ -88,22 +92,26 @@
     },
     {
       "title": {
-        "name": "Alone in the Darkness"
+        "name": "Alone in the Darkness",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Altered Perception"
+        "name": "Altered Perception",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Ambitious Obsession"
+        "name": "Ambitious Obsession",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Anarchy's Price"
+        "name": "Anarchy's Price",
+        "drop areas": null
       }
     },
     {
@@ -116,6 +124,12 @@
       "title": {
         "name": "Assassin's Favour",
         "drop areas": "1_3_5,2_8_8,MapAtlasArcade,MapAtlasBazaar,MapAtlasQuay,MapWorldsAlleyways,MapWorldsBazaar,MapWorldsArcade,MapWorldsPort"
+      }
+    },
+    {
+      "title": {
+        "name": "Assassin's Gift",
+        "drop areas": null
       }
     },
     {
@@ -138,13 +152,14 @@
     },
     {
       "title": {
-        "name": "Auspicious Ambitions"
+        "name": "Auspicious Ambitions",
+        "drop areas": null
       }
     },
     {
       "title": {
         "name": "Azure Rage",
-        "drop areas": "MapWorldsFactory"
+        "drop areas": "MapWorldsFactory,MapWorldsPort"
       }
     },
     {
@@ -161,7 +176,8 @@
     },
     {
       "title": {
-        "name": "Beauty Through Death"
+        "name": "Beauty Through Death",
+        "drop areas": null
       }
     },
     {
@@ -172,12 +188,14 @@
     },
     {
       "title": {
-        "name": "Birth of the Three"
+        "name": "Birth of the Three",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Blessing of God"
+        "name": "Blessing of God",
+        "drop areas": null
       }
     },
     {
@@ -212,17 +230,20 @@
     },
     {
       "title": {
-        "name": "Bowyer's Dream"
+        "name": "Bowyer's Dream",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Broken Promises"
+        "name": "Broken Promises",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Broken Truce"
+        "name": "Broken Truce",
+        "drop areas": null
       }
     },
     {
@@ -245,7 +266,8 @@
     },
     {
       "title": {
-        "name": "Brush, Paint and Palette"
+        "name": "Brush, Paint and Palette",
+        "drop areas": null
       }
     },
     {
@@ -268,7 +290,8 @@
     },
     {
       "title": {
-        "name": "Cameria's Cut"
+        "name": "Cameria's Cut",
+        "drop areas": null
       }
     },
     {
@@ -285,7 +308,8 @@
     },
     {
       "title": {
-        "name": "Chasing Risk"
+        "name": "Chasing Risk",
+        "drop areas": null
       }
     },
     {
@@ -296,7 +320,8 @@
     },
     {
       "title": {
-        "name": "Choking Guilt"
+        "name": "Choking Guilt",
+        "drop areas": null
       }
     },
     {
@@ -307,7 +332,8 @@
     },
     {
       "title": {
-        "name": "Council of Cats"
+        "name": "Council of Cats",
+        "drop areas": null
       }
     },
     {
@@ -324,22 +350,26 @@
     },
     {
       "title": {
-        "name": "Dark Dreams"
+        "name": "Dark Dreams",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Dark Temptation"
+        "name": "Dark Temptation",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Dark Temptation"
+        "name": "Dark Temptation",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Darker Half"
+        "name": "Darker Half",
+        "drop areas": null
       }
     },
     {
@@ -356,22 +386,26 @@
     },
     {
       "title": {
-        "name": "Deathly Designs"
+        "name": "Deathly Designs",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Dementophobia"
+        "name": "Dementophobia",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Demigod's Wager"
+        "name": "Demigod's Wager",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Desecrated Virtue"
+        "name": "Desecrated Virtue",
+        "drop areas": null
       }
     },
     {
@@ -400,44 +434,50 @@
     },
     {
       "title": {
-        "name": "Divine Beauty"
+        "name": "Divine Beauty",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Divine Justice"
+        "name": "Divine Justice",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Doedre's Madness"
+        "name": "Doedre's Madness",
+        "drop areas": null
       }
     },
     {
       "title": {
         "name": "Doryani's Epiphany",
-        "drop areas": "MapWorldsMazeUnique"
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Draped in Dreams"
+        "name": "Draped in Dreams",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Duality"
+        "name": "Duality",
+        "drop areas": null
       }
     },
     {
       "title": {
         "name": "Dying Anguish",
-        "drop areas": "MapWorldsArsenal,MapWorldsColonnade,MapWorldsGhetto,MapWorldsPort,MapWorldsPromenade,MapWorldsPrecinct"
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Dying Light"
+        "name": "Dying Light",
+        "drop areas": null
       }
     },
     {
@@ -454,6 +494,12 @@
     },
     {
       "title": {
+        "name": "Eldritch Perfection",
+        "drop areas": null
+      }
+    },
+    {
+      "title": {
         "name": "Emperor of Purity",
         "drop areas": "2_7_5_1,2_7_5_2,MapAtlasOvergrownRuin,MapAtlasOvergrownShrine,MapAtlasSprings,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine"
       }
@@ -466,43 +512,50 @@
     },
     {
       "title": {
-        "name": "Endless Night"
+        "name": "Endless Night",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Etched in Blood"
+        "name": "Etched in Blood",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Eternal Bonds"
+        "name": "Eternal Bonds",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Ever-Changing"
+        "name": "Ever-Changing",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Fateful Meeting"
+        "name": "Fateful Meeting",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Fire of Unknown Origin",
+        "name": "Fire Of Unknown Origin",
         "drop areas": "MapWorldsResidence,MapWorldsAcademy"
       }
     },
     {
       "title": {
-        "name": "Forbidden Power"
+        "name": "Forbidden Power",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Friendship"
+        "name": "Friendship",
+        "drop areas": null
       }
     },
     {
@@ -519,7 +572,8 @@
     },
     {
       "title": {
-        "name": "Gemcutter's Mercy"
+        "name": "Gemcutter's Mercy",
+        "drop areas": null
       }
     },
     {
@@ -554,12 +608,14 @@
     },
     {
       "title": {
-        "name": "Guardian's Challenge"
+        "name": "Guardian's Challenge",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Harmony of Souls"
+        "name": "Harmony of Souls",
+        "drop areas": null
       }
     },
     {
@@ -582,7 +638,8 @@
     },
     {
       "title": {
-        "name": "His Judgement"
+        "name": "His Judgement",
+        "drop areas": null
       }
     },
     {
@@ -605,7 +662,14 @@
     },
     {
       "title": {
-        "name": "Hubris"
+        "name": "Hubris",
+        "drop areas": null
+      }
+    },
+    {
+      "title": {
+        "name": "Hubris",
+        "drop areas": null
       }
     },
     {
@@ -622,17 +686,20 @@
     },
     {
       "title": {
-        "name": "Hunter's Reward"
+        "name": "Hunter's Reward",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Immortal Resolve"
+        "name": "Immortal Resolve",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Imperfect Memories"
+        "name": "Imperfect Memories",
+        "drop areas": null
       }
     },
     {
@@ -649,12 +716,14 @@
     },
     {
       "title": {
-        "name": "Judging Voices"
+        "name": "Judging Voices",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Justified Ambition"
+        "name": "Justified Ambition",
+        "drop areas": null
       }
     },
     {
@@ -689,7 +758,8 @@
     },
     {
       "title": {
-        "name": "Lethean Temptation"
+        "name": "Lethean Temptation",
+        "drop areas": null
       }
     },
     {
@@ -706,12 +776,14 @@
     },
     {
       "title": {
-        "name": "Lost Worlds"
+        "name": "Lost Worlds",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Love Through Ice"
+        "name": "Love Through Ice",
+        "drop areas": null
       }
     },
     {
@@ -722,7 +794,8 @@
     },
     {
       "title": {
-        "name": "Luck of the Vaal"
+        "name": "Luck of the Vaal",
+        "drop areas": null
       }
     },
     {
@@ -739,7 +812,8 @@
     },
     {
       "title": {
-        "name": "Luminous Trove"
+        "name": "Luminous Trove",
+        "drop areas": null
       }
     },
     {
@@ -762,7 +836,8 @@
     },
     {
       "title": {
-        "name": "Matryoshka"
+        "name": "Matryoshka",
+        "drop areas": null
       }
     },
     {
@@ -785,7 +860,8 @@
     },
     {
       "title": {
-        "name": "Misery in Darkness"
+        "name": "Misery in Darkness",
+        "drop areas": null
       }
     },
     {
@@ -797,7 +873,7 @@
     {
       "title": {
         "name": "Monochrome",
-        "drop areas": "MapWorldsAtollUnique,MapWorldsBoneCryptUnique,MapWorldsCemeteryUnique,MapWorldsCourtyardUnique,MapWorldsCursedCryptUnique,MapWorldsDunesUnique,MapWorldsHarbingerLow,MapWorldsHarbingerMid,MapWorldsHarbingerHigh,MapWorldsHarbingerUber,MapWorldsMazeUnique,MapWorldsMoonTempleUnique,MapWorldsMuseumUnique,MapWorldsNecropolisUnique,MapWorldsOvergrownShrineUnique,MapWorldsShoreUnique,MapWorldsStrandUnique,MapWorldsPromenadeUnique,MapWorldsTempleUnique,MapWorldsVaalPyramidUnique,MapWorldsUndergroundRiverUnique,MapWorldsTortureChamberUnique"
+        "drop areas": "MapWorldsAtollUnique,MapWorldsBoneCryptUnique,MapWorldsCemeteryUnique,MapWorldsCourtyardUnique,MapWorldsCursedCryptUnique,MapWorldsDunesUnique,MapWorldsHarbingerMid,MapWorldsHarbingerHigh,MapWorldsHarbingerUber,MapWorldsMazeUnique,MapWorldsMoonTempleUnique,MapWorldsMuseumUnique,MapWorldsNecropolisUnique,MapWorldsOvergrownShrineUnique,MapWorldsShoreUnique,MapWorldsStrandUnique,MapWorldsPromenadeUnique,MapWorldsTempleUnique,MapWorldsVaalPyramidUnique,MapWorldsUndergroundRiverUnique,MapWorldsTortureChamberUnique"
       }
     },
     {
@@ -814,7 +890,8 @@
     },
     {
       "title": {
-        "name": "Nook's Crown"
+        "name": "Nook's Crown",
+        "drop areas": null
       }
     },
     {
@@ -831,7 +908,8 @@
     },
     {
       "title": {
-        "name": "Perfection"
+        "name": "Perfection",
+        "drop areas": null
       }
     },
     {
@@ -842,7 +920,8 @@
     },
     {
       "title": {
-        "name": "Prejudice"
+        "name": "Prejudice",
+        "drop areas": null
       }
     },
     {
@@ -859,7 +938,8 @@
     },
     {
       "title": {
-        "name": "Prometheus' Armoury"
+        "name": "Prometheus' Armoury",
+        "drop areas": null
       }
     },
     {
@@ -883,33 +963,37 @@
     {
       "title": {
         "name": "Rats",
-        "drop areas": "2_8_9,MapAtlasArsenal,MapWorldsFactory,MapWorldsArsenal"
+        "drop areas": "2_8_9,MapAtlasArsenal,MapWorldsFactory,MapWorldsArsenal,MapWorldsPort"
       }
     },
     {
       "title": {
         "name": "Rebirth",
-        "drop areas": "1_3_7,1_3_8_1,1_4_3_3,1_5_1,1_5_3b,2_6_14,2_7_1,2_7_4,2_7_7,2_8_5,2_9_1,2_9_3,2_9_4,2_9_5,2_9_8,2_10_2,2_10_4,2_10_7,2_10_8,2_10_9,2_7_12_2,2_8_13"
+        "drop areas": "1_3_7,1_3_8_1,1_4_3_3,1_5_1,1_5_3b,2_6_14,2_7_1,2_7_4,2_7_7,2_8_5,2_9_1,2_9_3,2_9_4,2_9_5,2_9_8,2_10_2,2_10_4,2_10_7,2_10_8,2_10_9,2_7_12_2,2_8_13,2_6_11"
       }
     },
     {
       "title": {
-        "name": "Rebirth and Renewal"
+        "name": "Rebirth and Renewal",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Reckless Ambition"
+        "name": "Reckless Ambition",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Remembrance"
+        "name": "Remembrance",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Sambodhi's Vow"
+        "name": "Sambodhi's Vow",
+        "drop areas": null
       }
     },
     {
@@ -927,7 +1011,7 @@
     {
       "title": {
         "name": "Seven Years Bad Luck",
-        "drop areas": "2_10_4,MapWorldsDefiledCathedral,MapWorldsCrimsonTemple,MapWorldsSepulchre"
+        "drop areas": "MapWorldsDefiledCathedral,MapWorldsCrimsonTemple"
       }
     },
     {
@@ -938,17 +1022,20 @@
     },
     {
       "title": {
-        "name": "Silence and Frost"
+        "name": "Silence and Frost",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Society's Remorse"
+        "name": "Society's Remorse",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Something Dark"
+        "name": "Something Dark",
+        "drop areas": null
       }
     },
     {
@@ -959,7 +1046,8 @@
     },
     {
       "title": {
-        "name": "Squandered Prosperity"
+        "name": "Squandered Prosperity",
+        "drop areas": null
       }
     },
     {
@@ -970,12 +1058,14 @@
     },
     {
       "title": {
-        "name": "Succor of the Sinless"
+        "name": "Succor of the Sinless",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Terrible Secret of Space"
+        "name": "Terrible Secret of Space",
+        "drop areas": null
       }
     },
     {
@@ -998,7 +1088,8 @@
     },
     {
       "title": {
-        "name": "The Aesthete"
+        "name": "The Aesthete",
+        "drop areas": null
       }
     },
     {
@@ -1033,12 +1124,14 @@
     },
     {
       "title": {
-        "name": "The Aspirant"
+        "name": "The Aspirant",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Astromancer"
+        "name": "The Astromancer",
+        "drop areas": null
       }
     },
     {
@@ -1049,12 +1142,14 @@
     },
     {
       "title": {
-        "name": "The Awakened"
+        "name": "The Awakened",
+        "drop areas": "MapWorldsGardens,MapWorldsHauntedMansion,MapWorldsPalace,MapWorldsTower,MapWorldsUndergroundSea,MapWorldsAtollUnique,MapWorldsCemeteryUnique,MapWorldsNecropolisUnique"
       }
     },
     {
       "title": {
-        "name": "The Bargain"
+        "name": "The Bargain",
+        "drop areas": null
       }
     },
     {
@@ -1065,7 +1160,8 @@
     },
     {
       "title": {
-        "name": "The Bear Woman"
+        "name": "The Bear Woman",
+        "drop areas": null
       }
     },
     {
@@ -1082,7 +1178,8 @@
     },
     {
       "title": {
-        "name": "The Bitter Blossom"
+        "name": "The Bitter Blossom",
+        "drop areas": null
       }
     },
     {
@@ -1093,17 +1190,20 @@
     },
     {
       "title": {
-        "name": "The Blessing of Moosh"
+        "name": "The Blessing of Moosh",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Body"
+        "name": "The Body",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Bones"
+        "name": "The Bones",
+        "drop areas": null
       }
     },
     {
@@ -1114,12 +1214,14 @@
     },
     {
       "title": {
-        "name": "The Breach"
+        "name": "The Breach",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Brittle Emperor"
+        "name": "The Brittle Emperor",
+        "drop areas": null
       }
     },
     {
@@ -1130,17 +1232,20 @@
     },
     {
       "title": {
-        "name": "The Cacophony"
+        "name": "The Cacophony",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Calling"
+        "name": "The Calling",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Card Sharp"
+        "name": "The Card Sharp",
+        "drop areas": null
       }
     },
     {
@@ -1151,7 +1256,8 @@
     },
     {
       "title": {
-        "name": "The Cartographer"
+        "name": "The Cartographer",
+        "drop areas": null
       }
     },
     {
@@ -1169,7 +1275,7 @@
     {
       "title": {
         "name": "The Catch",
-        "drop areas": "MapWorldsStrand,MapWorldsShipyard,MapWorldsBeach,MapWorldsAtoll,MapWorldsTropicalIsland,MapWorldsShore,MapWorldsPeninsula,MapWorldsCoves,MapWorldsAtollUnique"
+        "drop areas": "MapWorldsStrand,MapWorldsShipyard,MapWorldsBeach,MapWorldsAtoll,MapWorldsTropicalIsland,MapWorldsShore,MapWorldsPeninsula,MapWorldsCoves,MapWorldsAtollUnique,MapWorldsPlateau"
       }
     },
     {
@@ -1180,7 +1286,8 @@
     },
     {
       "title": {
-        "name": "The Celestial Stone"
+        "name": "The Celestial Stone",
+        "drop areas": null
       }
     },
     {
@@ -1191,12 +1298,14 @@
     },
     {
       "title": {
-        "name": "The Cheater"
+        "name": "The Cheater",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Chosen"
+        "name": "The Chosen",
+        "drop areas": null
       }
     },
     {
@@ -1207,12 +1316,14 @@
     },
     {
       "title": {
-        "name": "The Conduit"
+        "name": "The Conduit",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Craving"
+        "name": "The Craving",
+        "drop areas": null
       }
     },
     {
@@ -1247,7 +1358,8 @@
     },
     {
       "title": {
-        "name": "The Deal"
+        "name": "The Deal",
+        "drop areas": null
       }
     },
     {
@@ -1264,7 +1376,8 @@
     },
     {
       "title": {
-        "name": "The Demon"
+        "name": "The Demon",
+        "drop areas": null
       }
     },
     {
@@ -1281,7 +1394,8 @@
     },
     {
       "title": {
-        "name": "The Devastator"
+        "name": "The Devastator",
+        "drop areas": null
       }
     },
     {
@@ -1310,12 +1424,14 @@
     },
     {
       "title": {
-        "name": "The Dreamer"
+        "name": "The Dreamer",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Dreamland"
+        "name": "The Dreamland",
+        "drop areas": null
       }
     },
     {
@@ -1338,12 +1454,14 @@
     },
     {
       "title": {
-        "name": "The Eldritch Decay"
+        "name": "The Eldritch Decay",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Emptiness"
+        "name": "The Emptiness",
+        "drop areas": null
       }
     },
     {
@@ -1354,7 +1472,8 @@
     },
     {
       "title": {
-        "name": "The Endless Darkness"
+        "name": "The Endless Darkness",
+        "drop areas": null
       }
     },
     {
@@ -1365,7 +1484,8 @@
     },
     {
       "title": {
-        "name": "The Enforcer"
+        "name": "The Enforcer",
+        "drop areas": null
       }
     },
     {
@@ -1382,12 +1502,14 @@
     },
     {
       "title": {
-        "name": "The Escape"
+        "name": "The Escape",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Eternal War"
+        "name": "The Eternal War",
+        "drop areas": null
       }
     },
     {
@@ -1404,7 +1526,8 @@
     },
     {
       "title": {
-        "name": "The Eye of Terror"
+        "name": "The Eye of Terror",
+        "drop areas": null
       }
     },
     {
@@ -1422,7 +1545,7 @@
     {
       "title": {
         "name": "The Feast",
-        "drop areas": "2_8_2_1,MapAtlasSewer,MapAtlasWastePool,MapWorldsWastePool,MapWorldsToxicSewer,MapWorldsHydra"
+        "drop areas": "2_8_2_1,MapAtlasSewer,MapAtlasWastePool,MapWorldsWastePool,MapWorldsToxicSewer,MapWorldsHydra,2_8_2_2"
       }
     },
     {
@@ -1433,17 +1556,20 @@
     },
     {
       "title": {
-        "name": "The Finishing Touch"
+        "name": "The Finishing Touch",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Fishmonger"
+        "name": "The Fishmonger",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Fletcher"
+        "name": "The Fletcher",
+        "drop areas": null
       }
     },
     {
@@ -1454,7 +1580,8 @@
     },
     {
       "title": {
-        "name": "The Fool"
+        "name": "The Fool",
+        "drop areas": null
       }
     },
     {
@@ -1513,7 +1640,8 @@
     },
     {
       "title": {
-        "name": "The Gemcutter"
+        "name": "The Gemcutter",
+        "drop areas": null
       }
     },
     {
@@ -1536,17 +1664,20 @@
     },
     {
       "title": {
-        "name": "The Greatest Intentions"
+        "name": "The Greatest Intentions",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Gulf"
+        "name": "The Gulf",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Hale Heart"
+        "name": "The Hale Heart",
+        "drop areas": null
       }
     },
     {
@@ -1563,7 +1694,8 @@
     },
     {
       "title": {
-        "name": "The Heroic Shot"
+        "name": "The Heroic Shot",
+        "drop areas": null
       }
     },
     {
@@ -1580,7 +1712,8 @@
     },
     {
       "title": {
-        "name": "The Hook"
+        "name": "The Hook",
+        "drop areas": null
       }
     },
     {
@@ -1615,7 +1748,8 @@
     },
     {
       "title": {
-        "name": "The Insane Cat"
+        "name": "The Insane Cat",
+        "drop areas": null
       }
     },
     {
@@ -1632,7 +1766,8 @@
     },
     {
       "title": {
-        "name": "The Jester"
+        "name": "The Jester",
+        "drop areas": null
       }
     },
     {
@@ -1691,7 +1826,8 @@
     },
     {
       "title": {
-        "name": "The Lich"
+        "name": "The Lich",
+        "drop areas": null
       }
     },
     {
@@ -1702,22 +1838,26 @@
     },
     {
       "title": {
-        "name": "The Lion"
+        "name": "The Lion",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Long Con"
+        "name": "The Long Con",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Long Watch"
+        "name": "The Long Watch",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Lord in Black"
+        "name": "The Lord in Black",
+        "drop areas": null
       }
     },
     {
@@ -1746,23 +1886,26 @@
     },
     {
       "title": {
-        "name": "The Magma Crab"
+        "name": "The Magma Crab",
+        "drop areas": null
       }
     },
     {
       "title": {
         "name": "The Master",
-        "drop areas": "MapWorldsLair,MapWorldsPen"
+        "drop areas": "MapWorldsLair,MapWorldsPen,MapWorldsFields"
       }
     },
     {
       "title": {
-        "name": "The Master Artisan"
+        "name": "The Master Artisan",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Mayor"
+        "name": "The Mayor",
+        "drop areas": null
       }
     },
     {
@@ -1785,7 +1928,8 @@
     },
     {
       "title": {
-        "name": "The Mind's Eyes"
+        "name": "The Mind's Eyes",
+        "drop areas": null
       }
     },
     {
@@ -1808,17 +1952,20 @@
     },
     {
       "title": {
-        "name": "The Obscured"
+        "name": "The Obscured",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Offering"
+        "name": "The Offering",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Offspring"
+        "name": "The Offspring",
+        "drop areas": null
       }
     },
     {
@@ -1889,22 +2036,26 @@
     },
     {
       "title": {
-        "name": "The Price of Devotion"
+        "name": "The Price of Devotion",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Price of Loyalty"
+        "name": "The Price of Loyalty",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Price of Prescience"
+        "name": "The Price of Prescience",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Price of Protection"
+        "name": "The Price of Protection",
+        "drop areas": null
       }
     },
     {
@@ -1915,7 +2066,8 @@
     },
     {
       "title": {
-        "name": "The Prince of Darkness"
+        "name": "The Prince of Darkness",
+        "drop areas": null
       }
     },
     {
@@ -1926,12 +2078,14 @@
     },
     {
       "title": {
-        "name": "The Progeny of Lunaris"
+        "name": "The Progeny of Lunaris",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Puzzle"
+        "name": "The Puzzle",
+        "drop areas": null
       }
     },
     {
@@ -1961,12 +2115,13 @@
     {
       "title": {
         "name": "The Return of the Rat",
-        "drop areas": "2_8_9,2_9_9,MapWorldsArsenal,MapWorldsFactory"
+        "drop areas": "2_8_9,2_9_9,MapWorldsArsenal,MapWorldsFactory,MapWorldsPort"
       }
     },
     {
       "title": {
-        "name": "The Risk"
+        "name": "The Risk",
+        "drop areas": null
       }
     },
     {
@@ -1983,7 +2138,8 @@
     },
     {
       "title": {
-        "name": "The Rusted Bard"
+        "name": "The Rusted Bard",
+        "drop areas": null
       }
     },
     {
@@ -2006,7 +2162,8 @@
     },
     {
       "title": {
-        "name": "The Samurai's Eye"
+        "name": "The Samurai's Eye",
+        "drop areas": null
       }
     },
     {
@@ -2017,7 +2174,8 @@
     },
     {
       "title": {
-        "name": "The Scavenger"
+        "name": "The Scavenger",
+        "drop areas": null
       }
     },
     {
@@ -2040,7 +2198,8 @@
     },
     {
       "title": {
-        "name": "The Sephirot"
+        "name": "The Sephirot",
+        "drop areas": null
       }
     },
     {
@@ -2051,13 +2210,14 @@
     },
     {
       "title": {
-        "name": "The Shieldbearer"
+        "name": "The Shieldbearer",
+        "drop areas": null
       }
     },
     {
       "title": {
         "name": "The Shortcut",
-        "drop areas": "1_SideArea1_1,1_SideArea1_2,1_SideArea1_3,1_SideArea1_4_,1_SideArea1_5,1_SideArea1_6,1_SideArea2_1,1_SideArea2_2,1_SideArea2_3,1_SideArea2_4,1_SideArea2_5,1_SideArea2_6,1_SideArea2_7,1_SideArea2_8,1_SideArea3_1,1_SideArea3_2,1_SideArea3_3,1_SideArea3_4,1_SideArea3_5,1_SideArea3_6,1_SideArea3_7,1_SideArea3_8,1_SideArea3_9_,1_SideArea3_10,1_SideArea3_11,1_SideArea3_12,1_SideArea4_1,1_SideArea4_2,1_SideArea4_3,1_SideArea4_4,1_SideArea4_7,1_SideArea5_2,1_SideArea5_3_1,1_SideArea5_3_2,1_Sidearea5_4,1_Sidearea5_4b,1_Sidearea5_5,1_Sidearea5_6,1_Sidearea5_7,1_Sidearea5_8,1_Sidearea6_4,1_SideArea6_6,1_Sidearea7_4,1_Sidearea7_10,1_Sidearea7_12,1_Sidearea8_3,1_Sidearea8_5,1_Sidearea8_7,1_Sidearea9_3,1_Sidearea9_5,1_Sidearea9_6,1_Sidearea9_9,1_Sidearea10_3,EndGame_Labyrinth_trials_spikes,EndGame_Labyrinth_trials_spinners,EndGame_Labyrinth_trials_sawblades_,EndGame_Labyrinth_trials_lava_,EndGame_Labyrinth_trials_roombas,EndGame_Labyrinth_trials_arrows"
+        "drop areas": "MapSideArea1_1,MapSideArea1_2,MapSideArea1_3,MapSideArea1_4,MapSideArea1_5,MapSideArea1_6,MapSideArea2_1,MapSideArea2_2,MapSideArea2_3,MapSideArea2_4,MapSideArea2_5,MapSideArea2_6,MapSideArea2_7,MapSideArea2_8,MapSideArea3_1,MapSideArea3_2,MapSideArea3_3,MapSideArea3_4,MapSideArea3_5,MapSideArea3_6,MapSideArea3_7,MapSideArea3_8,MapSideArea3_9,MapSideArea3_10,MapSideArea3_11,MapSideArea3_12,MapSideArea4_1,MapSideArea4_2,MapSideArea4_3,MapSideArea4_4,MapSideArea4_7,MapSideArea5_2,MapSideArea5_3_1,MapSideArea5_3_2,MapSideArea5_4,MapSideArea5_4b,MapSideArea5_5,MapSideArea5_6,MapSideArea5_7,MapSideArea5_8,MapSideArea6_4,MapSideArea6_6,MapSideArea7_4,MapSideArea7_10,MapSideArea7_12,MapSideArea8_3,MapSideArea8_5,MapSideArea8_7,MapSideArea9_3,MapSideArea9_5,MapSideArea9_6,MapSideArea9_9,MapSideArea10_3,EndGame_Labyrinth_trials_spikes,EndGame_Labyrinth_trials_spinners,EndGame_Labyrinth_trials_sawblades_#,EndGame_Labyrinth_trials_lava_#,EndGame_Labyrinth_trials_roombas,EndGame_Labyrinth_trials_arrows"
       }
     },
     {
@@ -2080,7 +2240,8 @@
     },
     {
       "title": {
-        "name": "The Skeleton"
+        "name": "The Skeleton",
+        "drop areas": null
       }
     },
     {
@@ -2115,7 +2276,8 @@
     },
     {
       "title": {
-        "name": "The Strategist"
+        "name": "The Strategist",
+        "drop areas": null
       }
     },
     {
@@ -2150,7 +2312,8 @@
     },
     {
       "title": {
-        "name": "The Sustenance"
+        "name": "The Sustenance",
+        "drop areas": null
       }
     },
     {
@@ -2180,7 +2343,7 @@
     {
       "title": {
         "name": "The Tireless Extractor",
-        "drop areas": "MapWorldsSilo,MapWorldsFactory"
+        "drop areas": "MapWorldsSilo,MapWorldsFactory,MapWorldsPort"
       }
     },
     {
@@ -2197,7 +2360,8 @@
     },
     {
       "title": {
-        "name": "The Transformation"
+        "name": "The Transformation",
+        "drop areas": "MapWorldsGardens,MapWorldsHauntedMansion,MapWorldsPalace,MapWorldsTower,MapWorldsUndergroundSea,MapWorldsAtollUnique,MapWorldsCemeteryUnique,MapWorldsNecropolisUnique"
       }
     },
     {
@@ -2238,7 +2402,8 @@
     },
     {
       "title": {
-        "name": "The Undisputed"
+        "name": "The Undisputed",
+        "drop areas": null
       }
     },
     {
@@ -2255,12 +2420,14 @@
     },
     {
       "title": {
-        "name": "The Valkyrie"
+        "name": "The Valkyrie",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "The Valley of Steel Boxes"
+        "name": "The Valley of Steel Boxes",
+        "drop areas": null
       }
     },
     {
@@ -2278,7 +2445,7 @@
     {
       "title": {
         "name": "The Void",
-        "drop areas": "MapWorldsShapersRealm"
+        "drop areas": "MapWorldsShapersRealm,MapWorldsElderArenaUber"
       }
     },
     {
@@ -2319,7 +2486,8 @@
     },
     {
       "title": {
-        "name": "The Whiteout"
+        "name": "The Whiteout",
+        "drop areas": null
       }
     },
     {
@@ -2348,7 +2516,8 @@
     },
     {
       "title": {
-        "name": "The Wolf's Legacy"
+        "name": "The Wolf's Legacy",
+        "drop areas": null
       }
     },
     {
@@ -2371,7 +2540,8 @@
     },
     {
       "title": {
-        "name": "The World Eater"
+        "name": "The World Eater",
+        "drop areas": null
       }
     },
     {
@@ -2389,13 +2559,13 @@
     {
       "title": {
         "name": "Thirst for Knowledge",
-        "drop areas": "1_3_17_1,1_3_17_2,MapWorldsMuseum,MapWorldsAcademy,MapWorldsScriptorium"
+        "drop areas": "MapWorldsMuseum,MapWorldsAcademy,MapWorldsScriptorium"
       }
     },
     {
       "title": {
         "name": "Three Faces in the Dark",
-        "drop areas": "2_8_9,2_8_10,2_9_9,MapWorldsFactory,MapWorldsArsenal,MapAtlasArsenal,MapAtlasCastleRuins"
+        "drop areas": "2_8_9,2_9_9,MapWorldsFactory,MapWorldsArsenal,MapAtlasArsenal,MapAtlasCastleRuins,MapWorldsPort"
       }
     },
     {
@@ -2430,12 +2600,14 @@
     },
     {
       "title": {
-        "name": "Treasures of the Vaal"
+        "name": "Treasures of the Vaal",
+        "drop areas": null
       }
     },
     {
       "title": {
-        "name": "Triskaidekaphobia"
+        "name": "Triskaidekaphobia",
+        "drop areas": null
       }
     },
     {
@@ -2452,7 +2624,8 @@
     },
     {
       "title": {
-        "name": "Underground Forest"
+        "name": "Underground Forest",
+        "drop areas": null
       }
     },
     {
@@ -2463,13 +2636,14 @@
     },
     {
       "title": {
-        "name": "Vanity"
+        "name": "Vanity",
+        "drop areas": null
       }
     },
     {
       "title": {
         "name": "Vile Power",
-        "drop areas": "2_9_10_2,MapWorldsCore,MapWorldsToxicSewer,MapWorldsWastePool,MapWorldsCarcass,MapWorldsPhantasmagoria,MapWorldsAcidLakes,MapWorldsMalformation,2_7_12_2,1_3_10_1"
+        "drop areas": "2_9_10_2,MapWorldsCore,MapWorldsToxicSewer,MapWorldsWastePool,MapWorldsCarcass,MapWorldsPhantasmagoria,MapWorldsAcidLakes,MapWorldsMalformation,2_7_12_2,1_3_10_1,2_7_12_1,2_8_2_1"
       }
     },
     {
@@ -2480,7 +2654,8 @@
     },
     {
       "title": {
-        "name": "Void of the Elements"
+        "name": "Void of the Elements",
+        "drop areas": null
       }
     },
     {
@@ -2497,7 +2672,8 @@
     },
     {
       "title": {
-        "name": "Winter's Embrace"
+        "name": "Winter's Embrace",
+        "drop areas": null
       }
     }
   ]
