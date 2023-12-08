@@ -51,8 +51,8 @@ export function filter(w: WorldArea): boolean {
 export function build(w: input.WorldArea, i: input.Input): WorldArea {
     const a = i.atlasNodesByWorldArea[w._index]
     // a sanity check to make sure expected maps are imported. adjust as ggg rotates maps across leagues
-    // if (w.Id == 'MapWorldsGrotto' && !a) throw new Error('grotto should be on the atlas')
-    if (w.Id == 'MapWorldsBeach' && !a) throw new Error('beach should be on the atlas')
+    if (w.Id == 'MapWorldsGrotto' && !a) throw new Error('grotto should be on the atlas')
+    // if (w.Id == 'MapWorldsBeach' && !a) throw new Error('beach should be on the atlas')
     const u = i.uniqueMapsByWorldArea[w._index]
     const _IsLabTrial = w.Id.startsWith('EndGame_Labyrinth_trials_')
     const _IsLabyrinth = w.Id.includes('_Labyrinth_') && !w.Id.includes("_Labyrinth_Airlock") && !_IsLabTrial
