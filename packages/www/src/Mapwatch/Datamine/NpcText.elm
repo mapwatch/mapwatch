@@ -111,6 +111,8 @@ toString tokens =
 
                 Newline ->
                     [ accum ]
+
+
     in
     tokens
         -- if some npctext has multiple lines, drop everything after the first line, as loglines don't include newlines.
@@ -168,6 +170,7 @@ italic =
     P.succeed Italic
         |. P.oneOf
             [ P.symbol "<italic>{"
+            , P.symbol "<i>{"
 
             -- the Thai translation of "BaranFourStoneDeatha" puts a zero-width space in the middle of this tag. Most inconvenient.
             -- https://www.fileformat.info/info/unicode/char/200b/index.htm

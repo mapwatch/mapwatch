@@ -562,6 +562,8 @@ createNPCTextSet lang npcId npcTextFilter =
                 npcTexts ->
                     -- TODO we probably need to localize the ": " separator!
                     npcTexts
+                        -- a few new texts have nested syntax blocks, like "<if:MS>{<i>{...}}". Parser can't handle that yet. So just skip them
+                        |> List.filter (\(textId, text) -> textId /= "Trialmaster323Hinekora" && textId /= "Trialmaster323OrderOfTheDjinn" && textId /= "Trialmaster323TheBeginningOfTime" && textId /= "Trialmaster323Exception")
                         |> List.map
                             (\( textId, text ) ->
                                 NpcText.parse text
