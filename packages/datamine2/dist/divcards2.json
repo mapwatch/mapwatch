@@ -368,6 +368,12 @@
     },
     {
       "title": {
+        "name": "Dark Temptation",
+        "drop areas": null
+      }
+    },
+    {
+      "title": {
         "name": "Darker Half",
         "drop areas": null
       }
@@ -453,7 +459,7 @@
     {
       "title": {
         "name": "Doryani's Epiphany",
-        "drop areas": null
+        "drop areas": "MapWorldsMazeUnique"
       }
     },
     {
@@ -471,7 +477,7 @@
     {
       "title": {
         "name": "Dying Anguish",
-        "drop areas": null
+        "drop areas": "MapWorldsArsenal,MapWorldsColonnade,MapWorldsGhetto,MapWorldsPort,MapWorldsPromenade,MapWorldsPrecinct"
       }
     },
     {
@@ -567,7 +573,7 @@
     {
       "title": {
         "name": "Further Invention",
-        "drop areas": "MapWorldsVault,MapWorldsFoundry"
+        "drop areas": "MapWorldsVault,MapWorldsFoundry,MapWorldsLaboratory"
       }
     },
     {
@@ -638,12 +644,6 @@
     },
     {
       "title": {
-        "name": "His Judgement",
-        "drop areas": null
-      }
-    },
-    {
-      "title": {
         "name": "Home",
         "drop areas": "MapWorldsTower,MapWorldsResidence,MapWorldsAlleyways,MapWorldsSunkenCity,MapWorldsArcade,MapWorldsCrimsonTownship,MapWorldsCitySquare,MapWorldsAncientCity,MapWorldsBazaar,MapWorldsChateau,MapWorldsHauntedMansion,MapWorldsSiege"
       }
@@ -687,6 +687,12 @@
     {
       "title": {
         "name": "Hunter's Reward",
+        "drop areas": null
+      }
+    },
+    {
+      "title": {
+        "name": "I See Brothers",
         "drop areas": null
       }
     },
@@ -873,7 +879,7 @@
     {
       "title": {
         "name": "Monochrome",
-        "drop areas": "MapWorldsAtollUnique,MapWorldsBoneCryptUnique,MapWorldsCemeteryUnique,MapWorldsCourtyardUnique,MapWorldsCursedCryptUnique,MapWorldsDunesUnique,MapWorldsHarbingerMid,MapWorldsHarbingerHigh,MapWorldsHarbingerUber,MapWorldsMazeUnique,MapWorldsMoonTempleUnique,MapWorldsMuseumUnique,MapWorldsNecropolisUnique,MapWorldsOvergrownShrineUnique,MapWorldsShoreUnique,MapWorldsStrandUnique,MapWorldsPromenadeUnique,MapWorldsTempleUnique,MapWorldsVaalPyramidUnique,MapWorldsUndergroundRiverUnique,MapWorldsTortureChamberUnique"
+        "drop areas": null
       }
     },
     {
@@ -963,7 +969,7 @@
     {
       "title": {
         "name": "Rats",
-        "drop areas": "2_8_9,MapAtlasArsenal,MapWorldsFactory,MapWorldsArsenal,MapWorldsPort"
+        "drop areas": "2_8_9,MapAtlasArsenal,MapWorldsFactory,MapWorldsArsenal,MapWorldsPort,2_9_9"
       }
     },
     {
@@ -1143,7 +1149,7 @@
     {
       "title": {
         "name": "The Awakened",
-        "drop areas": "MapWorldsGardens,MapWorldsHauntedMansion,MapWorldsPalace,MapWorldsTower,MapWorldsUndergroundSea,MapWorldsAtollUnique,MapWorldsCemeteryUnique,MapWorldsNecropolisUnique"
+        "drop areas": null
       }
     },
     {
@@ -1275,7 +1281,7 @@
     {
       "title": {
         "name": "The Catch",
-        "drop areas": "MapWorldsStrand,MapWorldsShipyard,MapWorldsBeach,MapWorldsAtoll,MapWorldsTropicalIsland,MapWorldsShore,MapWorldsPeninsula,MapWorldsCoves,MapWorldsAtollUnique,MapWorldsPlateau"
+        "drop areas": "MapWorldsStrand,MapWorldsShipyard,MapWorldsBeach,MapWorldsAtoll,MapWorldsTropicalIsland,MapWorldsShore,MapWorldsPeninsula,MapWorldsCoves,MapWorldsAtollUnique,MapWorldsPlateau,MapWorldsReef"
       }
     },
     {
@@ -1389,7 +1395,7 @@
     {
       "title": {
         "name": "The Destination",
-        "drop areas": "MapWorldsTropicalIsland,MapWorldsBeach,MapWorldsShore,MapWorldsSprings"
+        "drop areas": "MapWorldsTropicalIsland,MapWorldsBeach,MapWorldsShore,MapWorldsSprings,MapWorldsChannel"
       }
     },
     {
@@ -1761,7 +1767,7 @@
     {
       "title": {
         "name": "The Inventor",
-        "drop areas": "2_7_12_1,2_7_12_2,MapAtlasVaalPyramid,MapAtlasMaze,MapWorldsMaze,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVaalPyramidUnique,MapWorldsMazeUnique"
+        "drop areas": "2_7_12_1,2_7_12_2,MapAtlasVaalPyramid,MapAtlasMaze,MapWorldsMaze,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVaalPyramidUnique,MapWorldsMazeUnique,1_2_14_3"
       }
     },
     {
@@ -2361,7 +2367,7 @@
     {
       "title": {
         "name": "The Transformation",
-        "drop areas": "MapWorldsGardens,MapWorldsHauntedMansion,MapWorldsPalace,MapWorldsTower,MapWorldsUndergroundSea,MapWorldsAtollUnique,MapWorldsCemeteryUnique,MapWorldsNecropolisUnique"
+        "drop areas": null
       }
     },
     {
@@ -2373,7 +2379,7 @@
     {
       "title": {
         "name": "The Tumbleweed",
-        "drop areas": "MapWorldsDesertSpring,MapWorldsDunes,MapWorldsDrySea"
+        "drop areas": "MapWorldsDesertSpring,MapWorldsDunes,MapWorldsDrySea,MapWorldsDesert"
       }
     },
     {
@@ -2445,7 +2451,7 @@
     {
       "title": {
         "name": "The Void",
-        "drop areas": "MapWorldsShapersRealm,MapWorldsElderArenaUber"
+        "drop areas": "MapWorldsShapersRealm,MapWorldsElderArena,MapWorldsElderArenaUber,MavenBoss"
       }
     },
     {
@@ -2668,6 +2674,12 @@
       "title": {
         "name": "Wealth and Power",
         "drop areas": "MapWorldsMoonTemple,MapWorldsColdRiver_"
+      }
+    },
+    {
+      "title": {
+        "name": "Who Asked",
+        "drop areas": "MapWorldsPhoenix,MapWorldsFoundry"
       }
     },
     {
