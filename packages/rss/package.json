@@ -5,7 +5,7 @@
   "license": "GPL-3.0",
   "private": true,
   "scripts": {
-    "prepare": "yarn build",
+    "// prepare": "yarn build",
     "build": "bash -c \"mkdir -p ./dist && node ./src/rss.js > ./dist/rss.xml\"",
     "clean": "rimraf ./dist *.log"
   },
