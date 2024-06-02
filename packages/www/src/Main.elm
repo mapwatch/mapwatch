@@ -43,70 +43,94 @@ view model =
 
 viewBody : Model -> Html Msg
 viewBody rmodel =
-    case rmodel of
-        Err err ->
-            pre [] [ text err ]
+    if True then
+        div []
+            [ h1 [] [ text "Mapwatch is no longer maintained." ]
+            , p [] [ text "Mapwatch used to show statistics about your recent Path of Exile mapping activity, based on your `client.txt` file." ]
+            , p [] [ text "Thanks for your love over the years!" ]
+            , h3 [] [ text "What can you use instead?" ]
+            , p []
+                [ b [] [ text "For a current-map stopwatch" ]
+                , text ", the "
+                , a [ A.target "_blank", A.href "https://www.pathofexile.com/shop/item/TimekeepersMapDeviceVariations" ] [ text "Timekeeper's Map Device" ]
+                , text " is available in the shop now. It's better than Mapwatch ever was - well worth the cost!"
+                ]
+            , p []
+                [ b [] [ text "For a history of your maps this league" ]
+                , text ", I'm not aware of any direct replacements. Heard good things about "
+                , a [ A.target "_blank", A.href "https://github.com/exilence-ce/exilence-ce" ] [ text "Exilence CE" ]
+                , text " and "
+                , a [ A.target "_blank", A.href "https://poestack-next.vercel.app/" ] [ text "Poestack" ]
+                , text ", but haven't personally used either one. Good luck."
+                ]
+            , p [] []
+            ]
 
-        Ok model ->
-            let
-                v =
-                    case model.route of
-                        History ->
-                            Page.History.view model
+    else
+        case rmodel of
+            Err err ->
+                pre [] [ text err ]
 
-                        HistoryTSV ->
-                            Page.HistoryTSV.view model
+            Ok model ->
+                let
+                    v =
+                        case model.route of
+                            History ->
+                                Page.History.view model
 
-                        GSheets ->
-                            Page.GSheets.view model
+                            HistoryTSV ->
+                                Page.HistoryTSV.view model
 
-                        Maps ->
-                            Page.Maps.view model
+                            GSheets ->
+                                Page.GSheets.view model
 
-                        Encounters ->
-                            Page.Encounters.view model
+                            Maps ->
+                                Page.Maps.view model
 
-                        Bosses ->
-                            Page.Bosses.view model
+                            Encounters ->
+                                Page.Encounters.view model
 
-                        SharedBosses code ->
-                            Page.SharedBosses.view code model
+                            Bosses ->
+                                Page.Bosses.view model
 
-                        Timer ->
-                            Page.Timer.view model
+                            SharedBosses code ->
+                                Page.SharedBosses.view code model
 
-                        Overlay ->
-                            Page.Overlay.view model
+                            Timer ->
+                                Page.Timer.view model
 
-                        Debug ->
-                            Page.Debug.view model
+                            Overlay ->
+                                Page.Overlay.view model
 
-                        DebugDumpLines ->
-                            Page.DumpLines.view model
+                            Debug ->
+                                Page.Debug.view model
 
-                        DebugDatamine ->
-                            Page.DebugDatamine.view model.query model.mapwatch.datamine
+                            DebugDumpLines ->
+                                Page.DumpLines.view model
 
-                        Changelog ->
-                            Page.Changelog.view model
+                            DebugDatamine ->
+                                Page.DebugDatamine.view model.query model.mapwatch.datamine
 
-                        Privacy ->
-                            Page.Privacy.view model
+                            Changelog ->
+                                Page.Changelog.view model
 
-                        Settings ->
-                            Page.Settings.view model
+                            Privacy ->
+                                Page.Privacy.view model
 
-                        LogSlice posStart posEnd ->
-                            Page.LogSlice.view posStart posEnd model
+                            Settings ->
+                                Page.Settings.view model
 
-                        NotFound loc ->
-                            Page.NotFound.view model
-            in
-            div
-                (if Feature.isActive Feature.DebugLocalization model.query then
-                    [ A.class "debug-localization" ]
+                            LogSlice posStart posEnd ->
+                                Page.LogSlice.view posStart posEnd model
 
-                 else
-                    []
-                )
-                [ v ]
+                            NotFound loc ->
+                                Page.NotFound.view model
+                in
+                div
+                    (if Feature.isActive Feature.DebugLocalization model.query then
+                        [ A.class "debug-localization" ]
+
+                     else
+                        []
+                    )
+                    [ v ]
