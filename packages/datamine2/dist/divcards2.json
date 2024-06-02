@@ -51,7 +51,7 @@
     {
       "title": {
         "name": "A Sea of Blue",
-        "drop areas": "MapWorldsMineralPools,MapWorldsCrystalOre,MapWorldsTortureChamber,MapWorldsGrotto"
+        "drop areas": "MapWorldsMineralPools,MapWorldsCrystalOre,MapWorldsTortureChamber,MapWorldsGrotto,MapWorldsCitadel,MapWorldsZiggurat"
       }
     },
     {
@@ -201,13 +201,7 @@
     {
       "title": {
         "name": "Blind Venture",
-        "drop areas": "1_5_7,2_10_8,MapAtlasMuseum,MapWorldsRelicChambers,MapWorldsMuseum"
-      }
-    },
-    {
-      "title": {
-        "name": "Booba",
-        "drop areas": "MapAtlasMuseumUnique,MapAtlasVaalPyramid,MapAtlasVaalPyramidUnique_,MapWorldsVaalPyramidUnique"
+        "drop areas": "1_5_7,2_10_8,MapAtlasMuseum,MapWorldsRelicChambers,MapWorldsMuseum,MapWorldsSanctuary"
       }
     },
     {
@@ -327,7 +321,7 @@
     {
       "title": {
         "name": "Costly Curio",
-        "drop areas": "MapWorldsMuseum,MapWorldsRelicChambers"
+        "drop areas": "MapWorldsMuseum,MapWorldsRelicChambers,MapWorldsSanctuary"
       }
     },
     {
@@ -339,7 +333,7 @@
     {
       "title": {
         "name": "Coveted Possession",
-        "drop areas": "1_3_6,1_5_6,2_10_9,MapAtlasCatacomb_,MapWorldsBoneCrypt"
+        "drop areas": "1_3_6,1_5_6,2_10_9,MapAtlasCatacomb_,MapWorldsBoneCrypt,MapWorldsSanctuary,MapWorldsZiggurat"
       }
     },
     {
@@ -381,7 +375,7 @@
     {
       "title": {
         "name": "Death",
-        "drop areas": "MapAtlasBog,MapAtlasMarshes,MapAtlasMudGeyser,MapWorldsBog,MapWorldsMudGeyser,MapWorldsMarshes"
+        "drop areas": "MapAtlasBog,MapAtlasMarshes,MapAtlasMudGeyser,MapWorldsBog,MapWorldsMudGeyser,MapWorldsMarshes,MapWorldsAbomination"
       }
     },
     {
@@ -453,7 +447,7 @@
     {
       "title": {
         "name": "Doryani's Epiphany",
-        "drop areas": null
+        "drop areas": "MapWorldsMazeUnique"
       }
     },
     {
@@ -471,7 +465,7 @@
     {
       "title": {
         "name": "Dying Anguish",
-        "drop areas": null
+        "drop areas": "MapWorldsArsenal,MapWorldsColonnade,MapWorldsGhetto,MapWorldsPort,MapWorldsPromenade,MapWorldsPrecinct"
       }
     },
     {
@@ -567,7 +561,7 @@
     {
       "title": {
         "name": "Further Invention",
-        "drop areas": "MapWorldsVault,MapWorldsFoundry"
+        "drop areas": "MapWorldsVault,MapWorldsFoundry,MapWorldsLaboratory"
       }
     },
     {
@@ -603,7 +597,7 @@
     {
       "title": {
         "name": "Grave Knowledge",
-        "drop areas": "2_10_9,MapWorldsCursedCrypt,MapWorldsBoneCrypt,MapWorldsNecropolis,MapWorldsCursedCryptUnique,2_7_4,1_3_6,1_5_6"
+        "drop areas": "2_10_9,MapWorldsCursedCrypt,MapWorldsBoneCrypt,MapWorldsNecropolis,MapWorldsCursedCryptUnique,2_7_4,1_3_6,1_5_6,MapWorldsCitadel,MapWorldsZiggurat,MapWorldsSanctuary"
       }
     },
     {
@@ -615,7 +609,7 @@
     {
       "title": {
         "name": "Harmony of Souls",
-        "drop areas": null
+        "drop areas": "MapWorldsAbomination"
       }
     },
     {
@@ -634,12 +628,6 @@
       "title": {
         "name": "Heterochromia",
         "drop areas": "MapAtlasEstuary,MapAtlasGorge,MapWorldsEstuary,MapWorldsMoonTempleUnique"
-      }
-    },
-    {
-      "title": {
-        "name": "His Judgement",
-        "drop areas": null
       }
     },
     {
@@ -687,6 +675,12 @@
     {
       "title": {
         "name": "Hunter's Reward",
+        "drop areas": null
+      }
+    },
+    {
+      "title": {
+        "name": "I See Brothers",
         "drop areas": null
       }
     },
@@ -771,7 +765,7 @@
     {
       "title": {
         "name": "Lingering Remnants",
-        "drop areas": "MapWorldsAcademy,MapWorldsAcidLakes,MapWorldsAlleyways,MapWorldsAncientCity,MapWorldsArachnidNest,MapWorldsArachnidTomb,MapWorldsArcade,MapWorldsArena,MapWorldsAridLake,MapWorldsArmoury,MapWorldsArsenal,MapWorldsAshenWood,MapWorldsAtoll,MapWorldsBarrows,MapWorldsBasilica,MapWorldsBazaar,MapWorldsBeach,MapWorldsBelfry,MapWorldsBog,MapWorldsBoneCrypt,MapWorldsBrambleValley,MapWorldsBurialChambers,MapWorldsCage,MapWorldsCaldera,MapWorldsCanyon,MapWorldsCarcass,MapWorldsCastleRuins,MapWorldsCells,MapWorldsCemetery,MapWorldsChannel,MapWorldsChateau,MapWorldsCitySquare,MapWorldsColdRiver_,MapWorldsColonnade,MapWorldsColosseum,MapWorldsConservatory,MapWorldsCoralRuins,MapWorldsCore,MapWorldsCourthouse,MapWorldsCourtyard,MapWorldsCoves,MapWorldsTribunal,MapWorldsCrimsonTemple,MapWorldsCrimsonTownship,MapWorldsCrystalOre,MapWorldsCursedCrypt,MapWorldsDarkForest,MapWorldsDefiledCathedral,MapWorldsDesert,MapWorldsDesertSpring,MapWorldsDig,MapWorldsDrySea,MapWorldsDunes,MapWorldsDungeon,MapWorldsEstuary,MapWorldsExcavation,MapWorldsFactory,MapWorldsFields,MapWorldsFloodedMine,MapWorldsForbiddenWoods,MapWorldsForkingRiver,MapWorldsFoundry,MapWorldsFrozenCabins,MapWorldsSprings,MapWorldsGardens,MapWorldsGeode,MapWorldsGhetto,MapWorldsGorge,MapWorldsGraveTrough,MapWorldsGraveyard,MapWorldsGrotto,MapWorldsHauntedMansion,MapWorldsIceberg,MapWorldsInfestedValley,MapWorldsIvoryTemple,MapWorldsJungleValley,MapWorldsLaboratory,MapWorldsLair,MapWorldsLavaChamber,MapWorldsLavaLake,MapWorldsLeyline,MapWorldsLighthouse,MapWorldsLookout,MapWorldsMalformation,MapWorldsMarshes,MapWorldsMausoleum,MapWorldsMaze,MapWorldsMesa,MapWorldsMineralPools,MapWorldsMoonTemple,MapWorldsMudGeyser,MapWorldsMuseum,MapWorldsNecropolis,MapWorldsOrchard,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine,MapWorldsPalace,MapWorldsPark,MapWorldsPen,MapWorldsPeninsula,MapWorldsPhantasmagoria,MapWorldsPier,MapWorldsPit,MapWorldsPlateau,MapWorldsPlaza,MapWorldsPort,MapWorldsPrecinct,MapWorldsTortureChamber,MapWorldsPrimordialPool,MapWorldsPromenade,MapWorldsRacecourse_,MapWorldsRamparts,MapWorldsReef,MapWorldsRelicChambers,MapWorldsResidence,MapWorldsScriptorium,MapWorldsSepulchre,MapWorldsShipyard,MapWorldsShore,MapWorldsShrine,MapWorldsSiege,MapWorldsSilo,MapWorldsSpiderForest,MapWorldsSpiderLair,MapWorldsStagnation,MapWorldsStrand,MapWorldsSulphurVents,MapWorldsSummit,MapWorldsSunkenCity,MapWorldsTemple,MapWorldsTerrace,MapWorldsThicket,MapWorldsTower,MapWorldsToxicSewer,MapWorldsTropicalIsland,MapWorldsUndergroundRiver,MapWorldsUndergroundSea,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVault,MapWorldsVilla,MapWorldsVolcano,MapWorldsWastePool,MapWorldsWasteland,MapWorldsWaterways,MapWorldsWharf,MapWorldsPhoenix,MapWorldsMinotaur,MapWorldsHydra,MapWorldsChimera"
+        "drop areas": "MapWorldsAcademy,MapWorldsAcidLakes,MapWorldsAlleyways,MapWorldsAncientCity,MapWorldsArachnidNest,MapWorldsArachnidTomb,MapWorldsArcade,MapWorldsArena,MapWorldsAridLake,MapWorldsArmoury,MapWorldsArsenal,MapWorldsAshenWood,MapWorldsAtoll,MapWorldsBarrows,MapWorldsBasilica,MapWorldsBazaar,MapWorldsBeach,MapWorldsBelfry,MapWorldsBog,MapWorldsBoneCrypt,MapWorldsBrambleValley,MapWorldsBurialChambers,MapWorldsCage,MapWorldsCaldera,MapWorldsCanyon,MapWorldsCarcass,MapWorldsCastleRuins,MapWorldsCells,MapWorldsCemetery,MapWorldsChannel,MapWorldsChateau,MapWorldsCitySquare,MapWorldsColdRiver_,MapWorldsColonnade,MapWorldsColosseum,MapWorldsConservatory,MapWorldsCoralRuins,MapWorldsCore,MapWorldsCourthouse,MapWorldsCourtyard,MapWorldsCoves,MapWorldsTribunal,MapWorldsCrimsonTemple,MapWorldsCrimsonTownship,MapWorldsCrystalOre,MapWorldsCursedCrypt,MapWorldsDarkForest,MapWorldsDefiledCathedral,MapWorldsDesert,MapWorldsDesertSpring,MapWorldsDig,MapWorldsDrySea,MapWorldsDunes,MapWorldsDungeon,MapWorldsEstuary,MapWorldsExcavation,MapWorldsFactory,MapWorldsFields,MapWorldsFloodedMine,MapWorldsForbiddenWoods,MapWorldsForkingRiver,MapWorldsFoundry,MapWorldsFrozenCabins,MapWorldsSprings,MapWorldsGardens,MapWorldsGeode,MapWorldsGhetto,MapWorldsGorge,MapWorldsGraveTrough,MapWorldsGraveyard,MapWorldsGrotto,MapWorldsHauntedMansion,MapWorldsIceberg,MapWorldsInfestedValley,MapWorldsIvoryTemple,MapWorldsJungleValley,MapWorldsLaboratory,MapWorldsLair,MapWorldsLavaChamber,MapWorldsLavaLake,MapWorldsLeyline,MapWorldsLighthouse,MapWorldsLookout,MapWorldsMalformation,MapWorldsMarshes,MapWorldsMausoleum,MapWorldsMaze,MapWorldsMesa,MapWorldsMineralPools,MapWorldsMoonTemple,MapWorldsMudGeyser,MapWorldsMuseum,MapWorldsNecropolis,MapWorldsOrchard,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine,MapWorldsPalace,MapWorldsPark,MapWorldsPen,MapWorldsPeninsula,MapWorldsPhantasmagoria,MapWorldsPier,MapWorldsPit,MapWorldsPlateau,MapWorldsPlaza,MapWorldsPort,MapWorldsPrecinct,MapWorldsTortureChamber,MapWorldsPrimordialPool,MapWorldsPromenade,MapWorldsRacecourse_,MapWorldsRamparts,MapWorldsReef,MapWorldsRelicChambers,MapWorldsResidence,MapWorldsScriptorium,MapWorldsSepulchre,MapWorldsShipyard,MapWorldsShore,MapWorldsShrine,MapWorldsSiege,MapWorldsSilo,MapWorldsSpiderForest,MapWorldsSpiderLair,MapWorldsStagnation,MapWorldsStrand,MapWorldsSulphurVents,MapWorldsSummit,MapWorldsSunkenCity,MapWorldsTemple,MapWorldsTerrace,MapWorldsThicket,MapWorldsTower,MapWorldsToxicSewer,MapWorldsTropicalIsland,MapWorldsUndergroundRiver,MapWorldsUndergroundSea,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVault,MapWorldsVilla,MapWorldsVolcano,MapWorldsWastePool,MapWorldsWasteland,MapWorldsWaterways,MapWorldsWharf,MapWorldsPhoenix,MapWorldsMinotaur,MapWorldsHydra,MapWorldsChimera,MapWorldsAbomination,MapWorldsCitadel,MapWorldsFortress,MapWorldsSanctuary,MapWorldsZiggurat"
       }
     },
     {
@@ -807,7 +801,7 @@
     {
       "title": {
         "name": "Lucky Deck",
-        "drop areas": "MapWorldsAcademy,MapWorldsAcidLakes,MapWorldsAlleyways,MapWorldsAncientCity,MapWorldsArachnidNest,MapWorldsArachnidTomb,MapWorldsArcade,MapWorldsArena,MapWorldsAridLake,MapWorldsArmoury,MapWorldsArsenal,MapWorldsAshenWood,MapWorldsAtoll,MapWorldsBarrows,MapWorldsBasilica,MapWorldsBazaar,MapWorldsBeach,MapWorldsBelfry,MapWorldsBog,MapWorldsBoneCrypt,MapWorldsBrambleValley,MapWorldsBurialChambers,MapWorldsCage,MapWorldsCaldera,MapWorldsCanyon,MapWorldsCarcass,MapWorldsCastleRuins,MapWorldsCells,MapWorldsCemetery,MapWorldsChannel,MapWorldsChateau,MapWorldsCitySquare,MapWorldsColdRiver_,MapWorldsColonnade,MapWorldsColosseum,MapWorldsConservatory,MapWorldsCoralRuins,MapWorldsCore,MapWorldsCourthouse,MapWorldsCourtyard,MapWorldsCoves,MapWorldsTribunal,MapWorldsCrimsonTemple,MapWorldsCrimsonTownship,MapWorldsCrystalOre,MapWorldsCursedCrypt,MapWorldsDarkForest,MapWorldsDefiledCathedral,MapWorldsDesert,MapWorldsDesertSpring,MapWorldsDig,MapWorldsDrySea,MapWorldsDunes,MapWorldsDungeon,MapWorldsEstuary,MapWorldsExcavation,MapWorldsFactory,MapWorldsFields,MapWorldsFloodedMine,MapWorldsForbiddenWoods,MapWorldsForkingRiver,MapWorldsFoundry,MapWorldsFrozenCabins,MapWorldsSprings,MapWorldsGardens,MapWorldsGeode,MapWorldsGhetto,MapWorldsGorge,MapWorldsGraveTrough,MapWorldsGraveyard,MapWorldsGrotto,MapWorldsHauntedMansion,MapWorldsIceberg,MapWorldsInfestedValley,MapWorldsIvoryTemple,MapWorldsJungleValley,MapWorldsLaboratory,MapWorldsLair,MapWorldsLavaChamber,MapWorldsLavaLake,MapWorldsLeyline,MapWorldsLighthouse,MapWorldsLookout,MapWorldsMalformation,MapWorldsMarshes,MapWorldsMausoleum,MapWorldsMaze,MapWorldsMesa,MapWorldsMineralPools,MapWorldsMoonTemple,MapWorldsMudGeyser,MapWorldsMuseum,MapWorldsNecropolis,MapWorldsOrchard,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine,MapWorldsPalace,MapWorldsPark,MapWorldsPen,MapWorldsPeninsula,MapWorldsPhantasmagoria,MapWorldsPier,MapWorldsPit,MapWorldsPlateau,MapWorldsPlaza,MapWorldsPort,MapWorldsPrecinct,MapWorldsTortureChamber,MapWorldsPrimordialPool,MapWorldsPromenade,MapWorldsRacecourse_,MapWorldsRamparts,MapWorldsReef,MapWorldsRelicChambers,MapWorldsResidence,MapWorldsScriptorium,MapWorldsSepulchre,MapWorldsShipyard,MapWorldsShore,MapWorldsShrine,MapWorldsSiege,MapWorldsSilo,MapWorldsSpiderForest,MapWorldsSpiderLair,MapWorldsStagnation,MapWorldsStrand,MapWorldsSulphurVents,MapWorldsSummit,MapWorldsSunkenCity,MapWorldsTemple,MapWorldsTerrace,MapWorldsThicket,MapWorldsTower,MapWorldsToxicSewer,MapWorldsTropicalIsland,MapWorldsUndergroundRiver,MapWorldsUndergroundSea,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVault,MapWorldsVilla,MapWorldsVolcano,MapWorldsWastePool,MapWorldsWasteland,MapWorldsWaterways,MapWorldsWharf"
+        "drop areas": "MapWorldsZiggurat"
       }
     },
     {
@@ -855,7 +849,7 @@
     {
       "title": {
         "name": "Might is Right",
-        "drop areas": "1_5_6,1_5_7,2_10_8,2_10_9,MapWorldsSepulchre,MapWorldsMausoleum,MapWorldsRelicChambers"
+        "drop areas": "1_5_6,1_5_7,2_10_8,2_10_9,MapWorldsSepulchre,MapWorldsMausoleum,MapWorldsRelicChambers,MapWorldsZiggurat"
       }
     },
     {
@@ -873,7 +867,7 @@
     {
       "title": {
         "name": "Monochrome",
-        "drop areas": "MapWorldsAtollUnique,MapWorldsBoneCryptUnique,MapWorldsCemeteryUnique,MapWorldsCourtyardUnique,MapWorldsCursedCryptUnique,MapWorldsDunesUnique,MapWorldsHarbingerMid,MapWorldsHarbingerHigh,MapWorldsHarbingerUber,MapWorldsMazeUnique,MapWorldsMoonTempleUnique,MapWorldsMuseumUnique,MapWorldsNecropolisUnique,MapWorldsOvergrownShrineUnique,MapWorldsShoreUnique,MapWorldsStrandUnique,MapWorldsPromenadeUnique,MapWorldsTempleUnique,MapWorldsVaalPyramidUnique,MapWorldsUndergroundRiverUnique,MapWorldsTortureChamberUnique"
+        "drop areas": null
       }
     },
     {
@@ -885,7 +879,7 @@
     {
       "title": {
         "name": "No Traces",
-        "drop areas": "2_10_8,1_5_6,2_10_9,MapWorldsSepulchre,MapWorldsMausoleum,MapWorldsRelicChambers"
+        "drop areas": "2_10_8,1_5_6,2_10_9,MapWorldsSepulchre,MapWorldsMausoleum,MapWorldsRelicChambers,MapWorldsZiggurat"
       }
     },
     {
@@ -963,7 +957,7 @@
     {
       "title": {
         "name": "Rats",
-        "drop areas": "2_8_9,MapAtlasArsenal,MapWorldsFactory,MapWorldsArsenal,MapWorldsPort"
+        "drop areas": "2_8_9,MapAtlasArsenal,MapWorldsFactory,MapWorldsArsenal,MapWorldsPort,2_9_9"
       }
     },
     {
@@ -1041,7 +1035,7 @@
     {
       "title": {
         "name": "Soul Quenched",
-        "drop areas": "MapWorldsFactory,MapWorldsFoundry,MapWorldsPhoenix,MapWorldsSilo"
+        "drop areas": "MapWorldsFactory,MapWorldsFoundry,MapWorldsPhoenix,MapWorldsSilo,MapWorldsFortress"
       }
     },
     {
@@ -1059,7 +1053,7 @@
     {
       "title": {
         "name": "Succor of the Sinless",
-        "drop areas": null
+        "drop areas": "MapWorldsSanctuary"
       }
     },
     {
@@ -1119,7 +1113,7 @@
     {
       "title": {
         "name": "The Artist",
-        "drop areas": "MapAtlasOvergrownRuin,MapAtlasOvergrownShrine,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine"
+        "drop areas": "MapWorldsAbomination"
       }
     },
     {
@@ -1143,7 +1137,7 @@
     {
       "title": {
         "name": "The Awakened",
-        "drop areas": "MapWorldsGardens,MapWorldsHauntedMansion,MapWorldsPalace,MapWorldsTower,MapWorldsUndergroundSea,MapWorldsAtollUnique,MapWorldsCemeteryUnique,MapWorldsNecropolisUnique"
+        "drop areas": null
       }
     },
     {
@@ -1185,7 +1179,7 @@
     {
       "title": {
         "name": "The Blazing Fire",
-        "drop areas": "1_5_3b,1_5_4b,2_10_2,2_10_3,MapWorldsHauntedMansion,MapWorldsAlleyways,MapWorldsCrimsonTemple,MapWorldsCitySquare,MapWorldsDefiledCathedral,MapWorldsSilo,MapWorldsLookout,2_10_4"
+        "drop areas": "1_5_3b,1_5_4b,2_10_2,2_10_3,MapWorldsHauntedMansion,MapWorldsAlleyways,MapWorldsCrimsonTemple,MapWorldsCitySquare,MapWorldsDefiledCathedral,MapWorldsSilo,MapWorldsLookout,2_10_4,2_10_5"
       }
     },
     {
@@ -1209,7 +1203,7 @@
     {
       "title": {
         "name": "The Brawny Battle Mage",
-        "drop areas": "MapWorldsBurialChambers,MapWorldsSpiderForest,MapWorldsMuseumUnique,MapWorldsSepulchre,MapWorldsWastePool,MapWorldsPhantasmagoria"
+        "drop areas": "MapWorldsBurialChambers,MapWorldsSpiderForest,MapWorldsMuseumUnique,MapWorldsSepulchre,MapWorldsWastePool,MapWorldsPhantasmagoria,MapWorldsAbomination"
       }
     },
     {
@@ -1275,13 +1269,13 @@
     {
       "title": {
         "name": "The Catch",
-        "drop areas": "MapWorldsStrand,MapWorldsShipyard,MapWorldsBeach,MapWorldsAtoll,MapWorldsTropicalIsland,MapWorldsShore,MapWorldsPeninsula,MapWorldsCoves,MapWorldsAtollUnique,MapWorldsPlateau"
+        "drop areas": "MapWorldsStrand,MapWorldsShipyard,MapWorldsBeach,MapWorldsAtoll,MapWorldsTropicalIsland,MapWorldsShore,MapWorldsPeninsula,MapWorldsCoves,MapWorldsAtollUnique,MapWorldsPlateau,MapWorldsReef"
       }
     },
     {
       "title": {
         "name": "The Celestial Justicar",
-        "drop areas": "2_7_4,MapWorldsCursedCrypt,MapAtlasCrypt,MapWorldsBoneCrypt,MapWorldsCursedCryptUnique"
+        "drop areas": "2_7_4,MapWorldsCursedCrypt,MapAtlasCrypt,MapWorldsBoneCrypt,MapWorldsCursedCryptUnique,MapWorldsCitadel,MapWorldsZiggurat"
       }
     },
     {
@@ -1299,7 +1293,7 @@
     {
       "title": {
         "name": "The Cheater",
-        "drop areas": null
+        "drop areas": "MapWorldsFortress"
       }
     },
     {
@@ -1389,7 +1383,7 @@
     {
       "title": {
         "name": "The Destination",
-        "drop areas": "MapWorldsTropicalIsland,MapWorldsBeach,MapWorldsShore,MapWorldsSprings"
+        "drop areas": "MapWorldsTropicalIsland,MapWorldsBeach,MapWorldsShore,MapWorldsSprings,MapWorldsChannel,MapWorldsWaterways"
       }
     },
     {
@@ -1401,7 +1395,7 @@
     {
       "title": {
         "name": "The Doctor",
-        "drop areas": "MapWorldsBurialChambers,MapWorldsSpiderForest,MapWorldsMuseumUnique,MapWorldsSepulchre,MapWorldsWastePool,MapWorldsPhantasmagoria"
+        "drop areas": "MapWorldsBurialChambers,MapWorldsSpiderForest,MapWorldsMuseumUnique,MapWorldsSepulchre,MapWorldsWastePool,MapWorldsPhantasmagoria,MapWorldsAbomination"
       }
     },
     {
@@ -1419,7 +1413,7 @@
     {
       "title": {
         "name": "The Dragon's Heart",
-        "drop areas": "Map2Tier15_2,MapWorldsAcademy,MapWorldsAcidLakes,MapWorldsAlleyways,MapWorldsAncientCity,MapWorldsArachnidNest,MapWorldsArachnidTomb,MapWorldsArcade,MapWorldsArena,MapWorldsAridLake,MapWorldsArmoury,MapWorldsArsenal,MapWorldsAshenWood,MapWorldsAtoll,MapWorldsBarrows,MapWorldsBasilica,MapWorldsBazaar,MapWorldsBeach,MapWorldsBelfry,MapWorldsBog,MapWorldsBoneCrypt,MapWorldsBrambleValley,MapWorldsBurialChambers,MapWorldsCage,MapWorldsCaldera,MapWorldsCanyon,MapWorldsCarcass,MapWorldsCastleRuins,MapWorldsCells,MapWorldsCemetery,MapWorldsChannel,MapWorldsChateau,MapWorldsCitySquare,MapWorldsColdRiver_,MapWorldsColonnade,MapWorldsColosseum,MapWorldsConservatory,MapWorldsCoralRuins,MapWorldsCore,MapWorldsCourthouse,MapWorldsCourtyard,MapWorldsCoves,MapWorldsTribunal,MapWorldsCrimsonTemple,MapWorldsCrimsonTownship,MapWorldsCrystalOre,MapWorldsCursedCrypt,MapWorldsDarkForest,MapWorldsDefiledCathedral,MapWorldsDesert,MapWorldsDesertSpring,MapWorldsDig,MapWorldsDrySea,MapWorldsDunes,MapWorldsDungeon,MapWorldsEstuary,MapWorldsExcavation,MapWorldsFactory,MapWorldsFields,MapWorldsFloodedMine,MapWorldsForbiddenWoods,MapWorldsForkingRiver,MapWorldsFoundry,MapWorldsFrozenCabins,MapWorldsSprings,MapWorldsGardens,MapWorldsGeode,MapWorldsGhetto,MapWorldsGorge,MapWorldsGraveTrough,MapWorldsGraveyard,MapWorldsGrotto,MapWorldsHauntedMansion,MapWorldsIceberg,MapWorldsInfestedValley,MapWorldsIvoryTemple,MapWorldsJungleValley,MapWorldsLaboratory,MapWorldsLair,MapWorldsLavaChamber,MapWorldsLavaLake,MapWorldsLeyline,MapWorldsLighthouse,MapWorldsLookout,MapWorldsMalformation,MapWorldsMarshes,MapWorldsMausoleum,MapWorldsMaze,MapWorldsMesa,MapWorldsMineralPools,MapWorldsMoonTemple,MapWorldsMudGeyser,MapWorldsMuseum,MapWorldsNecropolis,MapWorldsOrchard,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine,MapWorldsPalace,MapWorldsPark,MapWorldsPen,MapWorldsPeninsula,MapWorldsPhantasmagoria,MapWorldsPier,MapWorldsPit,MapWorldsPlateau,MapWorldsPlaza,MapWorldsPort,MapWorldsPrecinct,MapWorldsTortureChamber,MapWorldsPrimordialPool,MapWorldsPromenade,MapWorldsRacecourse_,MapWorldsRamparts,MapWorldsReef,MapWorldsRelicChambers,MapWorldsResidence,MapWorldsScriptorium,MapWorldsSepulchre,MapWorldsShipyard,MapWorldsShore,MapWorldsShrine,MapWorldsSiege,MapWorldsSilo,MapWorldsSpiderForest,MapWorldsSpiderLair,MapWorldsStagnation,MapWorldsStrand,MapWorldsSulphurVents,MapWorldsSummit,MapWorldsSunkenCity,MapWorldsTemple,MapWorldsTerrace,MapWorldsThicket,MapWorldsTower,MapWorldsToxicSewer,MapWorldsTropicalIsland,MapWorldsUndergroundRiver,MapWorldsUndergroundSea,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVault,MapWorldsVilla,MapWorldsVolcano,MapWorldsWastePool,MapWorldsWasteland,MapWorldsWaterways,MapWorldsWharf,MapWorldsPhoenix,MapWorldsMinotaur,MapWorldsHydra,MapWorldsChimera"
+        "drop areas": "MapWorldsFortress"
       }
     },
     {
@@ -1467,7 +1461,7 @@
     {
       "title": {
         "name": "The Encroaching Darkness",
-        "drop areas": "MapWorldsAcademy,MapWorldsAcidLakes,MapWorldsAlleyways,MapWorldsAncientCity,MapWorldsArachnidNest,MapWorldsArachnidTomb,MapWorldsArcade,MapWorldsArena,MapWorldsAridLake,MapWorldsArmoury,MapWorldsArsenal,MapWorldsAshenWood,MapWorldsAtoll,MapWorldsBarrows,MapWorldsBasilica,MapWorldsBazaar,MapWorldsBeach,MapWorldsBelfry,MapWorldsBog,MapWorldsBoneCrypt,MapWorldsBrambleValley,MapWorldsBurialChambers,MapWorldsCage,MapWorldsCaldera,MapWorldsCanyon,MapWorldsCarcass,MapWorldsCastleRuins,MapWorldsCells,MapWorldsCemetery,MapWorldsChannel,MapWorldsChateau,MapWorldsCitySquare,MapWorldsColdRiver_,MapWorldsColonnade,MapWorldsColosseum,MapWorldsConservatory,MapWorldsCoralRuins,MapWorldsCore,MapWorldsCourthouse,MapWorldsCourtyard,MapWorldsCoves,MapWorldsTribunal,MapWorldsCrimsonTemple,MapWorldsCrimsonTownship,MapWorldsCrystalOre,MapWorldsCursedCrypt,MapWorldsDarkForest,MapWorldsDefiledCathedral,MapWorldsDesert,MapWorldsDesertSpring,MapWorldsDig,MapWorldsDrySea,MapWorldsDunes,MapWorldsDungeon,MapWorldsEstuary,MapWorldsExcavation,MapWorldsFactory,MapWorldsFields,MapWorldsFloodedMine,MapWorldsForbiddenWoods,MapWorldsForkingRiver,MapWorldsFoundry,MapWorldsFrozenCabins,MapWorldsSprings,MapWorldsGardens,MapWorldsGeode,MapWorldsGhetto,MapWorldsGorge,MapWorldsGraveTrough,MapWorldsGraveyard,MapWorldsGrotto,MapWorldsHauntedMansion,MapWorldsIceberg,MapWorldsInfestedValley,MapWorldsIvoryTemple,MapWorldsJungleValley,MapWorldsLaboratory,MapWorldsLair,MapWorldsLavaChamber,MapWorldsLavaLake,MapWorldsLeyline,MapWorldsLighthouse,MapWorldsLookout,MapWorldsMalformation,MapWorldsMarshes,MapWorldsMausoleum,MapWorldsMaze,MapWorldsMesa,MapWorldsMineralPools,MapWorldsMoonTemple,MapWorldsMudGeyser,MapWorldsMuseum,MapWorldsNecropolis,MapWorldsOrchard,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine,MapWorldsPalace,MapWorldsPark,MapWorldsPen,MapWorldsPeninsula,MapWorldsPhantasmagoria,MapWorldsPier,MapWorldsPit,MapWorldsPlateau,MapWorldsPlaza,MapWorldsPort,MapWorldsPrecinct,MapWorldsTortureChamber,MapWorldsPrimordialPool,MapWorldsPromenade,MapWorldsRacecourse_,MapWorldsRamparts,MapWorldsReef,MapWorldsRelicChambers,MapWorldsResidence,MapWorldsScriptorium,MapWorldsSepulchre,MapWorldsShipyard,MapWorldsShore,MapWorldsShrine,MapWorldsSiege,MapWorldsSilo,MapWorldsSpiderForest,MapWorldsSpiderLair,MapWorldsStagnation,MapWorldsStrand,MapWorldsSulphurVents,MapWorldsSummit,MapWorldsSunkenCity,MapWorldsTemple,MapWorldsTerrace,MapWorldsThicket,MapWorldsTower,MapWorldsToxicSewer,MapWorldsTropicalIsland,MapWorldsUndergroundRiver,MapWorldsUndergroundSea,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVault,MapWorldsVilla,MapWorldsVolcano,MapWorldsWastePool,MapWorldsWasteland,MapWorldsWaterways,MapWorldsWharf,MapWorldsPhoenix,MapWorldsMinotaur,MapWorldsHydra,MapWorldsChimera"
+        "drop areas": "MapWorldsAcademy,MapWorldsAcidLakes,MapWorldsAlleyways,MapWorldsAncientCity,MapWorldsArachnidNest,MapWorldsArachnidTomb,MapWorldsArcade,MapWorldsArena,MapWorldsAridLake,MapWorldsArmoury,MapWorldsArsenal,MapWorldsAshenWood,MapWorldsAtoll,MapWorldsBarrows,MapWorldsBasilica,MapWorldsBazaar,MapWorldsBeach,MapWorldsBelfry,MapWorldsBog,MapWorldsBoneCrypt,MapWorldsBrambleValley,MapWorldsBurialChambers,MapWorldsCage,MapWorldsCaldera,MapWorldsCanyon,MapWorldsCarcass,MapWorldsCastleRuins,MapWorldsCells,MapWorldsCemetery,MapWorldsChannel,MapWorldsChateau,MapWorldsCitySquare,MapWorldsColdRiver_,MapWorldsColonnade,MapWorldsColosseum,MapWorldsConservatory,MapWorldsCoralRuins,MapWorldsCore,MapWorldsCourthouse,MapWorldsCourtyard,MapWorldsCoves,MapWorldsTribunal,MapWorldsCrimsonTemple,MapWorldsCrimsonTownship,MapWorldsCrystalOre,MapWorldsCursedCrypt,MapWorldsDarkForest,MapWorldsDefiledCathedral,MapWorldsDesert,MapWorldsDesertSpring,MapWorldsDig,MapWorldsDrySea,MapWorldsDunes,MapWorldsDungeon,MapWorldsEstuary,MapWorldsExcavation,MapWorldsFactory,MapWorldsFields,MapWorldsFloodedMine,MapWorldsForbiddenWoods,MapWorldsForkingRiver,MapWorldsFoundry,MapWorldsFrozenCabins,MapWorldsSprings,MapWorldsGardens,MapWorldsGeode,MapWorldsGhetto,MapWorldsGorge,MapWorldsGraveTrough,MapWorldsGraveyard,MapWorldsGrotto,MapWorldsHauntedMansion,MapWorldsIceberg,MapWorldsInfestedValley,MapWorldsIvoryTemple,MapWorldsJungleValley,MapWorldsLaboratory,MapWorldsLair,MapWorldsLavaChamber,MapWorldsLavaLake,MapWorldsLeyline,MapWorldsLighthouse,MapWorldsLookout,MapWorldsMalformation,MapWorldsMarshes,MapWorldsMausoleum,MapWorldsMaze,MapWorldsMesa,MapWorldsMineralPools,MapWorldsMoonTemple,MapWorldsMudGeyser,MapWorldsMuseum,MapWorldsNecropolis,MapWorldsOrchard,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine,MapWorldsPalace,MapWorldsPark,MapWorldsPen,MapWorldsPeninsula,MapWorldsPhantasmagoria,MapWorldsPier,MapWorldsPit,MapWorldsPlateau,MapWorldsPlaza,MapWorldsPort,MapWorldsPrecinct,MapWorldsTortureChamber,MapWorldsPrimordialPool,MapWorldsPromenade,MapWorldsRacecourse_,MapWorldsRamparts,MapWorldsReef,MapWorldsRelicChambers,MapWorldsResidence,MapWorldsScriptorium,MapWorldsSepulchre,MapWorldsShipyard,MapWorldsShore,MapWorldsShrine,MapWorldsSiege,MapWorldsSilo,MapWorldsSpiderForest,MapWorldsSpiderLair,MapWorldsStagnation,MapWorldsStrand,MapWorldsSulphurVents,MapWorldsSummit,MapWorldsSunkenCity,MapWorldsTemple,MapWorldsTerrace,MapWorldsThicket,MapWorldsTower,MapWorldsToxicSewer,MapWorldsTropicalIsland,MapWorldsUndergroundRiver,MapWorldsUndergroundSea,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVault,MapWorldsVilla,MapWorldsVolcano,MapWorldsWastePool,MapWorldsWasteland,MapWorldsWaterways,MapWorldsWharf,MapWorldsPhoenix,MapWorldsMinotaur,MapWorldsHydra,MapWorldsChimera,MapWorldsAbomination,MapWorldsCitadel,MapWorldsFortress,MapWorldsSanctuary,MapWorldsZiggurat"
       }
     },
     {
@@ -1491,7 +1485,7 @@
     {
       "title": {
         "name": "The Enlightened",
-        "drop areas": "MapWorldsCrimsonTemple,MapWorldsIvoryTemple,MapWorldsTemple,MapWorldsDefiledCathedral,MapWorldsLookout,MapWorldsBelfry,MapWorldsMoonTempleUnique,MapWorldsMoonTemple,MapWorldsBasilica"
+        "drop areas": "MapWorldsCrimsonTemple,MapWorldsIvoryTemple,MapWorldsTemple,MapWorldsDefiledCathedral,MapWorldsLookout,MapWorldsBelfry,MapWorldsMoonTempleUnique,MapWorldsMoonTemple,MapWorldsBasilica,MapWorldsSanctuary"
       }
     },
     {
@@ -1599,7 +1593,7 @@
     {
       "title": {
         "name": "The Forsaken",
-        "drop areas": "MapWorldsBoneCrypt,MapWorldsNecropolis,MapWorldsCursedCryptUnique,MapWorldsCursedCrypt"
+        "drop areas": "MapWorldsBoneCrypt,MapWorldsNecropolis,MapWorldsCursedCryptUnique,MapWorldsCursedCrypt,MapWorldsCitadel,MapWorldsZiggurat"
       }
     },
     {
@@ -1629,7 +1623,7 @@
     {
       "title": {
         "name": "The Gambler",
-        "drop areas": "MapWorldsAcademy,MapWorldsAcidLakes,MapWorldsAlleyways,MapWorldsAncientCity,MapWorldsArachnidNest,MapWorldsArachnidTomb,MapWorldsArcade,MapWorldsArena,MapWorldsAridLake,MapWorldsArmoury,MapWorldsArsenal,MapWorldsAshenWood,MapWorldsAtoll,MapWorldsBarrows,MapWorldsBasilica,MapWorldsBazaar,MapWorldsBeach,MapWorldsBelfry,MapWorldsBog,MapWorldsBoneCrypt,MapWorldsBrambleValley,MapWorldsBurialChambers,MapWorldsCage,MapWorldsCaldera,MapWorldsCanyon,MapWorldsCarcass,MapWorldsCastleRuins,MapWorldsCells,MapWorldsCemetery,MapWorldsChannel,MapWorldsChateau,MapWorldsCitySquare,MapWorldsColdRiver_,MapWorldsColonnade,MapWorldsColosseum,MapWorldsConservatory,MapWorldsCoralRuins,MapWorldsCore,MapWorldsCourthouse,MapWorldsCourtyard,MapWorldsCoves,MapWorldsTribunal,MapWorldsCrimsonTemple,MapWorldsCrimsonTownship,MapWorldsCrystalOre,MapWorldsCursedCrypt,MapWorldsDarkForest,MapWorldsDefiledCathedral,MapWorldsDesert,MapWorldsDesertSpring,MapWorldsDig,MapWorldsDrySea,MapWorldsDunes,MapWorldsDungeon,MapWorldsEstuary,MapWorldsExcavation,MapWorldsFactory,MapWorldsFields,MapWorldsFloodedMine,MapWorldsForbiddenWoods,MapWorldsForkingRiver,MapWorldsFoundry,MapWorldsFrozenCabins,MapWorldsSprings,MapWorldsGardens,MapWorldsGeode,MapWorldsGhetto,MapWorldsGorge,MapWorldsGraveTrough,MapWorldsGraveyard,MapWorldsGrotto,MapWorldsHauntedMansion,MapWorldsIceberg,MapWorldsInfestedValley,MapWorldsIvoryTemple,MapWorldsJungleValley,MapWorldsLaboratory,MapWorldsLair,MapWorldsLavaChamber,MapWorldsLavaLake,MapWorldsLeyline,MapWorldsLighthouse,MapWorldsLookout,MapWorldsMalformation,MapWorldsMarshes,MapWorldsMausoleum,MapWorldsMaze,MapWorldsMesa,MapWorldsMineralPools,MapWorldsMoonTemple,MapWorldsMudGeyser,MapWorldsMuseum,MapWorldsNecropolis,MapWorldsOrchard,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine,MapWorldsPalace,MapWorldsPark,MapWorldsPen,MapWorldsPeninsula,MapWorldsPhantasmagoria,MapWorldsPier,MapWorldsPit,MapWorldsPlateau,MapWorldsPlaza,MapWorldsPort,MapWorldsPrecinct,MapWorldsTortureChamber,MapWorldsPrimordialPool,MapWorldsPromenade,MapWorldsRacecourse_,MapWorldsRamparts,MapWorldsReef,MapWorldsRelicChambers,MapWorldsResidence,MapWorldsScriptorium,MapWorldsSepulchre,MapWorldsShipyard,MapWorldsShore,MapWorldsShrine,MapWorldsSiege,MapWorldsSilo,MapWorldsSpiderForest,MapWorldsSpiderLair,MapWorldsStagnation,MapWorldsStrand,MapWorldsSulphurVents,MapWorldsSummit,MapWorldsSunkenCity,MapWorldsTemple,MapWorldsTerrace,MapWorldsThicket,MapWorldsTower,MapWorldsToxicSewer,MapWorldsTropicalIsland,MapWorldsUndergroundRiver,MapWorldsUndergroundSea,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVault,MapWorldsVilla,MapWorldsVolcano,MapWorldsWastePool,MapWorldsWasteland,MapWorldsWaterways,MapWorldsWharf,MapWorldsPhoenix,MapWorldsMinotaur,MapWorldsHydra,MapWorldsChimera"
+        "drop areas": "MapWorldsAcademy,MapWorldsAcidLakes,MapWorldsAlleyways,MapWorldsAncientCity,MapWorldsArachnidNest,MapWorldsArachnidTomb,MapWorldsArcade,MapWorldsArena,MapWorldsAridLake,MapWorldsArmoury,MapWorldsArsenal,MapWorldsAshenWood,MapWorldsAtoll,MapWorldsBarrows,MapWorldsBasilica,MapWorldsBazaar,MapWorldsBeach,MapWorldsBelfry,MapWorldsBog,MapWorldsBoneCrypt,MapWorldsBrambleValley,MapWorldsBurialChambers,MapWorldsCage,MapWorldsCaldera,MapWorldsCanyon,MapWorldsCarcass,MapWorldsCastleRuins,MapWorldsCells,MapWorldsCemetery,MapWorldsChannel,MapWorldsChateau,MapWorldsCitySquare,MapWorldsColdRiver_,MapWorldsColonnade,MapWorldsColosseum,MapWorldsConservatory,MapWorldsCoralRuins,MapWorldsCore,MapWorldsCourthouse,MapWorldsCourtyard,MapWorldsCoves,MapWorldsTribunal,MapWorldsCrimsonTemple,MapWorldsCrimsonTownship,MapWorldsCrystalOre,MapWorldsCursedCrypt,MapWorldsDarkForest,MapWorldsDefiledCathedral,MapWorldsDesert,MapWorldsDesertSpring,MapWorldsDig,MapWorldsDrySea,MapWorldsDunes,MapWorldsDungeon,MapWorldsEstuary,MapWorldsExcavation,MapWorldsFactory,MapWorldsFields,MapWorldsFloodedMine,MapWorldsForbiddenWoods,MapWorldsForkingRiver,MapWorldsFoundry,MapWorldsFrozenCabins,MapWorldsSprings,MapWorldsGardens,MapWorldsGeode,MapWorldsGhetto,MapWorldsGorge,MapWorldsGraveTrough,MapWorldsGraveyard,MapWorldsGrotto,MapWorldsHauntedMansion,MapWorldsIceberg,MapWorldsInfestedValley,MapWorldsIvoryTemple,MapWorldsJungleValley,MapWorldsLaboratory,MapWorldsLair,MapWorldsLavaChamber,MapWorldsLavaLake,MapWorldsLeyline,MapWorldsLighthouse,MapWorldsLookout,MapWorldsMalformation,MapWorldsMarshes,MapWorldsMausoleum,MapWorldsMaze,MapWorldsMesa,MapWorldsMineralPools,MapWorldsMoonTemple,MapWorldsMudGeyser,MapWorldsMuseum,MapWorldsNecropolis,MapWorldsOrchard,MapWorldsOvergrownRuin,MapWorldsOvergrownShrine,MapWorldsPalace,MapWorldsPark,MapWorldsPen,MapWorldsPeninsula,MapWorldsPhantasmagoria,MapWorldsPier,MapWorldsPit,MapWorldsPlateau,MapWorldsPlaza,MapWorldsPort,MapWorldsPrecinct,MapWorldsTortureChamber,MapWorldsPrimordialPool,MapWorldsPromenade,MapWorldsRacecourse_,MapWorldsRamparts,MapWorldsReef,MapWorldsRelicChambers,MapWorldsResidence,MapWorldsScriptorium,MapWorldsSepulchre,MapWorldsShipyard,MapWorldsShore,MapWorldsShrine,MapWorldsSiege,MapWorldsSilo,MapWorldsSpiderForest,MapWorldsSpiderLair,MapWorldsStagnation,MapWorldsStrand,MapWorldsSulphurVents,MapWorldsSummit,MapWorldsSunkenCity,MapWorldsTemple,MapWorldsTerrace,MapWorldsThicket,MapWorldsTower,MapWorldsToxicSewer,MapWorldsTropicalIsland,MapWorldsUndergroundRiver,MapWorldsUndergroundSea,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVault,MapWorldsVilla,MapWorldsVolcano,MapWorldsWastePool,MapWorldsWasteland,MapWorldsWaterways,MapWorldsWharf,MapWorldsPhoenix,MapWorldsMinotaur,MapWorldsHydra,MapWorldsChimera,MapWorldsAbomination,MapWorldsCitadel,MapWorldsFortress,MapWorldsSanctuary,MapWorldsZiggurat"
       }
     },
     {
@@ -1719,7 +1713,7 @@
     {
       "title": {
         "name": "The Hunger",
-        "drop areas": "1_4_6_1,1_4_6_2,1_4_6_3,2_9_10_2,2_9_10_1,MapAtlasCore,MapAtlasMalformation,MapAtlasPhantasmagoria,MapWorldsPhantasmagoria,MapWorldsCarcass,MapWorldsMalformation,MapWorldsCore"
+        "drop areas": "1_4_6_1,1_4_6_2,1_4_6_3,2_9_10_2,2_9_10_1,MapAtlasCore,MapAtlasMalformation,MapAtlasPhantasmagoria,MapWorldsPhantasmagoria,MapWorldsCarcass,MapWorldsMalformation,MapWorldsCore,MapWorldsAbomination"
       }
     },
     {
@@ -1731,19 +1725,19 @@
     {
       "title": {
         "name": "The Incantation",
-        "drop areas": "MapAtlasBurialChambers,MapAtlasSpiderForest,MapAtlasSprings,MapWorldsSpiderForest,MapWorldsBurialChambers,MapWorldsMuseumUnique,MapWorldsSepulchre,MapWorldsWastePool,MapWorldsPhantasmagoria"
+        "drop areas": "MapAtlasBurialChambers,MapAtlasSpiderForest,MapAtlasSprings,MapWorldsSpiderForest,MapWorldsBurialChambers,MapWorldsMuseumUnique,MapWorldsSepulchre,MapWorldsWastePool,MapWorldsPhantasmagoria,MapWorldsAbomination"
       }
     },
     {
       "title": {
         "name": "The Innocent",
-        "drop areas": "1_5_5,MapWorldsBasilica,MapWorldsDefiledCathedral"
+        "drop areas": "1_5_5,MapWorldsBasilica,MapWorldsDefiledCathedral,MapWorldsSanctuary"
       }
     },
     {
       "title": {
         "name": "The Inoculated",
-        "drop areas": "MapAtlasAcidLakes,MapAtlasShore,MapWorldsAcidLakes,MapWorldsPrimordialPool,MapWorldsMudGeyser,MapWorldsStagnation,MapWorldsMarshes,MapWorldsSulphurVents,MapWorldsBog"
+        "drop areas": "MapAtlasAcidLakes,MapAtlasShore,MapWorldsAcidLakes,MapWorldsPrimordialPool,MapWorldsMudGeyser,MapWorldsStagnation,MapWorldsMarshes,MapWorldsSulphurVents,MapWorldsBog,MapWorldsAbomination"
       }
     },
     {
@@ -1755,13 +1749,13 @@
     {
       "title": {
         "name": "The Insatiable",
-        "drop areas": "2_9_10_2,MapWorldsCarcass,MapWorldsCore"
+        "drop areas": "2_9_10_2,MapWorldsCarcass,MapWorldsCore,MapWorldsAbomination"
       }
     },
     {
       "title": {
         "name": "The Inventor",
-        "drop areas": "2_7_12_1,2_7_12_2,MapAtlasVaalPyramid,MapAtlasMaze,MapWorldsMaze,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVaalPyramidUnique,MapWorldsMazeUnique"
+        "drop areas": "2_7_12_1,2_7_12_2,MapAtlasVaalPyramid,MapAtlasMaze,MapWorldsMaze,MapWorldsVaalPyramid,MapWorldsVaalTemple,MapWorldsVaalPyramidUnique,MapWorldsMazeUnique,1_2_14_3"
       }
     },
     {
@@ -1773,7 +1767,7 @@
     {
       "title": {
         "name": "The Jeweller's Boon",
-        "drop areas": "MapWorldsCrystalOre,MapWorldsMineralPools,MapWorldsTortureChamber,MapWorldsGrotto"
+        "drop areas": "MapWorldsCrystalOre,MapWorldsMineralPools,MapWorldsTortureChamber,MapWorldsGrotto,MapWorldsCitadel,MapWorldsZiggurat"
       }
     },
     {
@@ -1863,7 +1857,7 @@
     {
       "title": {
         "name": "The Lord of Celebration",
-        "drop areas": "MapWorldsCrimsonTemple,MapWorldsResidence,MapWorldsIvoryTemple,MapWorldsCrimsonTownship,MapWorldsLaboratory,MapWorldsBasilica,MapWorldsPalace,MapWorldsConservatory,MapWorldsHauntedMansion,MapWorldsVault,MapWorldsVilla,MapWorldsChateau,MapWorldsTemple,MapWorldsRelicChambers,MapWorldsMoonTempleUnique,MapWorldsVaalPyramidUnique"
+        "drop areas": "MapWorldsCrimsonTemple,MapWorldsResidence,MapWorldsIvoryTemple,MapWorldsCrimsonTownship,MapWorldsLaboratory,MapWorldsBasilica,MapWorldsPalace,MapWorldsConservatory,MapWorldsHauntedMansion,MapWorldsVault,MapWorldsVilla,MapWorldsChateau,MapWorldsTemple,MapWorldsRelicChambers,MapWorldsMoonTempleUnique,MapWorldsVaalPyramidUnique,MapWorldsSanctuary"
       }
     },
     {
@@ -1941,13 +1935,13 @@
     {
       "title": {
         "name": "The Nurse",
-        "drop areas": "1_4_6_3,2_6_7_2,MapWorldsTower,MapWorldsCells,MapWorldsCore,MapWorldsCarcass,MapWorldsScriptorium,2_9_10_2"
+        "drop areas": "1_4_6_3,2_6_7_2,MapWorldsTower,MapWorldsCells,MapWorldsCore,MapWorldsCarcass,MapWorldsScriptorium,2_9_10_2,MapWorldsAbomination"
       }
     },
     {
       "title": {
         "name": "The Oath",
-        "drop areas": "2_9_10_1,2_9_10_2,MapAtlasCore,MapAtlasMalformation,MapAtlasPhantasmagoria,MapWorldsCore,MapWorldsPhantasmagoria,MapWorldsMalformation,MapWorldsCarcass"
+        "drop areas": "2_9_10_1,2_9_10_2,MapAtlasCore,MapAtlasMalformation,MapAtlasPhantasmagoria,MapWorldsCore,MapWorldsPhantasmagoria,MapWorldsMalformation,MapWorldsCarcass,MapWorldsAbomination"
       }
     },
     {
@@ -1971,7 +1965,7 @@
     {
       "title": {
         "name": "The Old Man",
-        "drop areas": "MapWorldsStrand,MapWorldsLighthouse,MapWorldsPeninsula,MapWorldsPier,MapWorldsShore,MapWorldsTropicalIsland,MapWorldsWharf,MapWorldsAtoll"
+        "drop areas": "MapWorldsStrand,MapWorldsLighthouse,MapWorldsPeninsula,MapWorldsPier,MapWorldsShore,MapWorldsTropicalIsland,MapWorldsWharf,MapWorldsAtoll,MapWorldsReef"
       }
     },
     {
@@ -1989,7 +1983,7 @@
     {
       "title": {
         "name": "The Opulent",
-        "drop areas": "MapAtlasPalace,MapAtlasChateau,MapAtlasVault,MapAtlasVilla,MapWorldsChateau,MapWorldsRelicChambers,MapWorldsConservatory,MapWorldsVault,MapWorldsResidence,MapWorldsLaboratory,MapWorldsTemple,MapWorldsIvoryTemple,MapWorldsCrimsonTemple,MapWorldsVilla,MapWorldsVaalPyramidUnique,MapWorldsHauntedMansion,MapWorldsPalace,MapWorldsBasilica,MapWorldsCrimsonTownship,MapWorldsMoonTempleUnique"
+        "drop areas": "MapAtlasPalace,MapAtlasChateau,MapAtlasVault,MapAtlasVilla,MapWorldsChateau,MapWorldsRelicChambers,MapWorldsConservatory,MapWorldsVault,MapWorldsResidence,MapWorldsLaboratory,MapWorldsTemple,MapWorldsIvoryTemple,MapWorldsCrimsonTemple,MapWorldsVilla,MapWorldsVaalPyramidUnique,MapWorldsHauntedMansion,MapWorldsPalace,MapWorldsBasilica,MapWorldsCrimsonTownship,MapWorldsMoonTempleUnique,MapWorldsSanctuary"
       }
     },
     {
@@ -2025,7 +2019,7 @@
     {
       "title": {
         "name": "The Polymath",
-        "drop areas": "1_5_7,2_10_8,MapWorldsRelicChambers,MapWorldsMuseum"
+        "drop areas": "1_5_7,2_10_8,MapWorldsRelicChambers,MapWorldsMuseum,MapWorldsSanctuary"
       }
     },
     {
@@ -2097,7 +2091,7 @@
     {
       "title": {
         "name": "The Rabbit's Foot",
-        "drop areas": "MapWorldsCursedCrypt,MapWorldsCursedCryptUnique,MapWorldsBoneCrypt"
+        "drop areas": "MapWorldsCursedCrypt,MapWorldsCursedCryptUnique,MapWorldsBoneCrypt,MapWorldsCitadel,MapWorldsZiggurat"
       }
     },
     {
@@ -2163,7 +2157,7 @@
     {
       "title": {
         "name": "The Samurai's Eye",
-        "drop areas": null
+        "drop areas": "MapWorldsZiggurat"
       }
     },
     {
@@ -2211,7 +2205,7 @@
     {
       "title": {
         "name": "The Shieldbearer",
-        "drop areas": null
+        "drop areas": "MapWorldsCitadel"
       }
     },
     {
@@ -2265,7 +2259,7 @@
     {
       "title": {
         "name": "The Standoff",
-        "drop areas": "1_5_3b,1_5_4b,2_10_3,MapWorldsLavaChamber,MapWorldsPhoenix,MapWorldsTribunal,MapWorldsLavaLake,MapWorldsEstuary,MapWorldsSilo,1_3_3_1,2_10_2"
+        "drop areas": "1_5_3b,1_5_4b,2_10_3,MapWorldsLavaChamber,MapWorldsPhoenix,MapWorldsTribunal,MapWorldsLavaLake,MapWorldsEstuary,MapWorldsSilo,1_3_3_1,2_10_2,MapWorldsFortress"
       }
     },
     {
@@ -2301,7 +2295,7 @@
     {
       "title": {
         "name": "The Surveyor",
-        "drop areas": "MapAtlasPhantasmagoria,MapAtlasMalformation,MapAtlasCore,MapWorldsMalformation,MapWorldsCore,MapWorldsPhantasmagoria,MapWorldsCarcass"
+        "drop areas": "MapAtlasPhantasmagoria,MapAtlasMalformation,MapAtlasCore,MapWorldsMalformation,MapWorldsCore,MapWorldsPhantasmagoria,MapWorldsCarcass,MapWorldsAbomination"
       }
     },
     {
@@ -2343,7 +2337,7 @@
     {
       "title": {
         "name": "The Tireless Extractor",
-        "drop areas": "MapWorldsSilo,MapWorldsFactory,MapWorldsPort"
+        "drop areas": "MapWorldsSilo,MapWorldsFactory,MapWorldsPort,MapWorldsFortress,MapWorldsFoundry,MapWorldsPhoenix"
       }
     },
     {
@@ -2361,7 +2355,7 @@
     {
       "title": {
         "name": "The Transformation",
-        "drop areas": "MapWorldsGardens,MapWorldsHauntedMansion,MapWorldsPalace,MapWorldsTower,MapWorldsUndergroundSea,MapWorldsAtollUnique,MapWorldsCemeteryUnique,MapWorldsNecropolisUnique"
+        "drop areas": null
       }
     },
     {
@@ -2373,7 +2367,7 @@
     {
       "title": {
         "name": "The Tumbleweed",
-        "drop areas": "MapWorldsDesertSpring,MapWorldsDunes,MapWorldsDrySea"
+        "drop areas": "MapWorldsDesertSpring,MapWorldsDunes,MapWorldsDrySea,MapWorldsDesert"
       }
     },
     {
@@ -2445,7 +2439,7 @@
     {
       "title": {
         "name": "The Void",
-        "drop areas": "MapWorldsShapersRealm,MapWorldsElderArenaUber"
+        "drop areas": "MapWorldsAbomination,MapWorldsCitadel,MapWorldsFortress,MapWorldsSanctuary,MapWorldsZiggurat"
       }
     },
     {
@@ -2505,7 +2499,7 @@
     {
       "title": {
         "name": "The Witch",
-        "drop areas": "MapWorldsSpiderForest,MapWorldsBurialChambers,MapWorldsMuseumUnique,MapWorldsSepulchre,MapWorldsWastePool,MapWorldsPhantasmagoria"
+        "drop areas": "MapWorldsSpiderForest,MapWorldsBurialChambers,MapWorldsMuseumUnique,MapWorldsSepulchre,MapWorldsWastePool,MapWorldsPhantasmagoria,MapWorldsAbomination"
       }
     },
     {
@@ -2553,7 +2547,7 @@
     {
       "title": {
         "name": "The Wretched",
-        "drop areas": "MapAtlasCells,MapAtlasOvergrownShrineUnique,MapWorldsNecropolis,MapWorldsBoneCrypt,MapWorldsOvergrownShrineUnique,MapWorldsCursedCryptUnique,MapWorldsCursedCrypt"
+        "drop areas": "MapAtlasCells,MapAtlasOvergrownShrineUnique,MapWorldsNecropolis,MapWorldsBoneCrypt,MapWorldsOvergrownShrineUnique,MapWorldsCursedCryptUnique,MapWorldsCursedCrypt,MapWorldsZiggurat,MapWorldsCitadel"
       }
     },
     {
@@ -2643,7 +2637,7 @@
     {
       "title": {
         "name": "Vile Power",
-        "drop areas": "2_9_10_2,MapWorldsCore,MapWorldsToxicSewer,MapWorldsWastePool,MapWorldsCarcass,MapWorldsPhantasmagoria,MapWorldsAcidLakes,MapWorldsMalformation,2_7_12_2,1_3_10_1,2_7_12_1,2_8_2_1"
+        "drop areas": "2_9_10_2,MapWorldsCore,MapWorldsToxicSewer,MapWorldsWastePool,MapWorldsCarcass,MapWorldsPhantasmagoria,MapWorldsAcidLakes,MapWorldsMalformation,2_7_12_2,1_3_10_1,2_7_12_1,2_8_2_1,MapWorldsAbomination"
       }
     },
     {
@@ -2667,7 +2661,13 @@
     {
       "title": {
         "name": "Wealth and Power",
-        "drop areas": "MapWorldsMoonTemple,MapWorldsColdRiver_"
+        "drop areas": "MapWorldsCitadel"
+      }
+    },
+    {
+      "title": {
+        "name": "Who Asked",
+        "drop areas": "MapWorldsPhoenix,MapWorldsFoundry,MapWorldsSilo,MapWorldsFortress"
       }
     },
     {
