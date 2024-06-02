@@ -18,4 +18,4 @@ The GPL license means you must keep your copy open-source. I'd also appreciate i
 
 ## I'm a developer. Can you make me a maintainer of the original Mapwatch repository?
 
-Absolutely not. I won't risk giving anyone the chance to backdoor Mapwatch, especially since it used to be connected to a downloadable program. If you'd like to keep Mapwatch going, please fork your own copy.
+Absolutely not. I won't risk giving anyone the chance to backdoor my version of Mapwatch, especially since it used to be connected to a downloadable program. If you'd like to keep Mapwatch going, please fork your own copy and build trust with your own users.
