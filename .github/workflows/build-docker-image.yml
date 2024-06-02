@@ -79,6 +79,7 @@ jobs:
           cut-off: 3 days ago UTC
           keep-at-least: 5
           skip-tags: master
-          account-type: personal
+          account-type: org
+          org-name: mapwatch
           token: ${{ secrets.GITHUB_TOKEN }}
           token-type: github-token
