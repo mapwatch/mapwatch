@@ -46,7 +46,7 @@ viewBody rmodel =
     if True then
         div []
             [ h1 [] [ text "Mapwatch is no longer maintained." ]
-            , p [] [ text "Mapwatch used to show statistics about your recent Path of Exile mapping activity, based on your `client.txt` file." ]
+            , p [] [ text "Mapwatch used to show statistics about your recent Path of Exile mapping activity, based on your ", code [] [ text "client.txt" ], text " file." ]
             , p [] [ text "Thanks for your love over the years!" ]
             , h3 [] [ text "What can you use instead?" ]
             , p []
