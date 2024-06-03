@@ -57,11 +57,13 @@ viewBody rmodel =
                 ]
             , p []
                 [ b [] [ text "For a history of your maps this league" ]
-                , text ", I'm not aware of any direct replacements. Heard good things about "
+                , text ", I've heard good things about "
+                , a [ A.target "_blank", A.href "https://github.com/dermow/TraXile" ] [ text "TraXile" ]
+                , text ". Other options include "
                 , a [ A.target "_blank", A.href "https://github.com/exilence-ce/exilence-ce" ] [ text "Exilence CE" ]
                 , text " and "
                 , a [ A.target "_blank", A.href "https://poestack-next.vercel.app/" ] [ text "Poestack" ]
-                , text ", but haven't personally used either one. Good luck."
+                , text ". I haven't personally used any of these, so good luck!"
                 ]
             , p [] []
             ]
