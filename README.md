@@ -20,6 +20,6 @@ The GPL license means you must keep your copy open-source. I'd also appreciate i
 
 Absolutely not. I won't risk giving anyone the chance to backdoor my version of Mapwatch, especially since it used to be connected to a downloadable program. If you'd like to keep Mapwatch going, please fork your own copy and build trust with your own users.
 
-## Is mypoe.site/mapwatch related to this tool, mapwatch.erosson.org?
+## I found another tool named "Mapwatch". Is it related to the original Mapwatch?
 
-No, mypoe.site/mapwatch is *not* related to this tool. It has the same name, but it is not the same tool, and I am not its developer.
+No, mypoe.site/mapwatch is not related to this tool, the original Mapwatch. It uses the same name, and it does something similar, but it is not the same tool. It was created much later than this one. I am not its developer.

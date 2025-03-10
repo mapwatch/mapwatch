@@ -46,7 +46,7 @@ viewBody rmodel =
     if True then
         div []
             [ h1 [] [ text "Mapwatch is no longer maintained." ]
-            , p [] [ text "Mapwatch used to show statistics about your recent Path of Exile mapping activity, based on your ", code [] [ text "client.txt" ], text " file." ]
+            , p [] [ text "Mapwatch used to show statistics about your recent Path of Exile mapping activity, based on your ", code [] [ text "client.txt" ], text " file. As of June 2024, it's discontinued." ]
             , p [] [ text "Thanks for your love over the years!" ]
             , h3 [] [ text "What can you use instead?" ]
             , p []
@@ -65,7 +65,8 @@ viewBody rmodel =
                 , a [ A.target "_blank", A.href "https://poestack-next.vercel.app/" ] [ text "Poestack" ]
                 , text ". I haven't personally used any of these, so good luck!"
                 ]
-            , p [] []
+            , h3 [] [ text "I found another tool named \"Mapwatch\". Is it related to the original Mapwatch?" ]
+            , p [] [ text "No, \"mypoe.site[/]mapwatch\" is not related to this tool, the original Mapwatch. It uses the same name, and it does something similar, but it is not the same tool. It was created much later than this one. I am not its developer." ]
             ]
 
     else
