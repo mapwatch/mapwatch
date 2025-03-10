@@ -1,6 +1,6 @@
 # Mapwatch is no longer maintained.
 
-Mapwatch used to show statistics about your recent Path of Exile mapping activity, based on your `client.txt` file.
+Mapwatch used to show statistics about your recent Path of Exile mapping activity, based on your `client.txt` file. [As of June 2024, it's discontinued](https://github.com/mapwatch/mapwatch/issues/557#issuecomment-2143715711).
 
 Thanks for your love over the years!
 
@@ -19,3 +19,7 @@ The GPL license means you must keep your copy open-source. I'd also appreciate i
 ## I'm a developer. Can you make me a maintainer of the original Mapwatch repository?
 
 Absolutely not. I won't risk giving anyone the chance to backdoor my version of Mapwatch, especially since it used to be connected to a downloadable program. If you'd like to keep Mapwatch going, please fork your own copy and build trust with your own users.
+
+## Is mypoe.site/mapwatch related to this tool, mapwatch.erosson.org?
+
+No, mypoe.site/mapwatch is *not* related to this tool. It has the same name, but it is not the same tool, and I am not its developer.
